@@ -6,6 +6,9 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isDev = process.env.NODE_ENV === 'development';
+const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
@@ -19,6 +22,9 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  future: {
+    experimental_faster: true
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -32,8 +38,15 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['ko'],
+    localeConfigs: {
+      ko: {
+        label: 'KOR',
+        direction: 'ltr',
+        htmlLang: 'ko-KR',
+      }
+    }
   },
 
   presets: [
@@ -69,7 +82,9 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [ 'docusaurus-plugin-sass', {} ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
