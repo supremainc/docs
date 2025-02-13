@@ -77,13 +77,14 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.scss'),
+          customCss: './src/css/custom.scss'
         },
       }),
     ],
   ],
   plugins: [
-    [ 'docusaurus-plugin-sass', {} ]
+    [ 'docusaurus-plugin-sass', {} ],
+    ['./src/plugins/tailwind-config.js', {}],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
