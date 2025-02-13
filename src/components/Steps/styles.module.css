@@ -1,0 +1,24 @@
+.fdsteps {
+  counter-reset: step;
+  border-left-width: 1px;
+  margin-left: 1rem;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.fdstep:before {
+  background-color: var(--color-fd-secondary);
+  color: var(--color-fd-secondary-foreground);
+  content: counter(step);
+  counter-increment: step;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: flex;
+  position: absolute;
+  left: -1rem;
+}
