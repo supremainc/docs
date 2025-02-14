@@ -2,7 +2,7 @@
   border: 1px solid var(--ifm-menu-color);
   border-radius: 5px;
   font-family: 'Noto Sans Coptic';
-  padding: 15px 15px 15px 15px;
+  padding: 15px 15px 20px 15px;
   margin-top: 20px;
 }
 .top {
@@ -50,7 +50,7 @@ ul li.fileitem:last-of-type {
 ul li[type='file'] span.name, ul li[type='folder'] span.name {
   display: table-cell;
   margin-right: 15px;
-  min-width: 240px;
+  min-width: 140px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -65,6 +65,8 @@ ul li[type='file'] span.name, ul li[type='folder'] span.name {
 ul li span.desc {
   font-family: 'Noto Sans KR, Noto Sans, Noto Sans JP';
   display: table-cell;
+  font-weight: 400;
+  font-size: .9rem;
 }
 
 ul li.fileitem ul {

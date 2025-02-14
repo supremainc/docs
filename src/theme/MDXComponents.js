@@ -4,6 +4,7 @@ import Xclude from '@site/src/components/Xclude';
 import { Steps, Step } from '@site/src/components/Steps';
 import { Folder, File } from '@site/src/components/Files';
 import Head from '@site/src/components/Head';
+import Image from '@site/src/components/Image';
 import DocsSidebar from '@site/src/components/Toc';
 import Collection from "@site/src/components/Collection";
 import Kbd from '@site/src/components/Kbd';
@@ -19,6 +20,7 @@ export default {
     Folder,
     File,
     Head,
+    Image,
     DocsSidebar,
     Collection,
     Kbd,

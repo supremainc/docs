@@ -1,3 +1,6 @@
+// @import url(fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -51,4 +54,15 @@ ul.breadcrumbs {
   h4 { font-size: var(--ifm-h4-font-size); }
   h5 { font-size: var(--ifm-h5-font-size); }
   h6 { font-size: var(--ifm-h6-font-size); }
+
+  p.hasimg {
+    margin-top: var(--ifm-leading);
+    img {
+      padding-left: 0;
+      padding-right: 0;
+      &.w--400 {
+        width: 400px;
+      }
+    }
+  }
 }
