@@ -1,3 +1,11 @@
+:root {
+  --color-fd-secondary-foreground: #e8e8e8;
+}
+
+[data-theme='dark'] {
+  --color-fd-secondary-foreground: #333;
+}
+
 .fdsteps {
   counter-reset: step;
   border-left-width: 1px;
@@ -7,7 +15,7 @@
 }
 
 .fdstep:before {
-  background-color: var(--color-fd-secondary);
+  background-color: var(--ifm-color-primary-lightest);
   color: var(--color-fd-secondary-foreground);
   content: counter(step);
   counter-increment: step;
@@ -17,6 +25,7 @@
   width: 2rem;
   height: 2rem;
   font-size: 0.875rem;
+  font-weight: bold;
   line-height: 1.25rem;
   display: flex;
   position: absolute;
