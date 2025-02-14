@@ -1,0 +1,103 @@
+.btnwrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 87px;
+  position: fixed;
+}
+
+.modalopenbutton, .modalclosebtn {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.modalopenbtn {
+  cursor: pointer;
+  width: fit-content;
+  width: -moz-fit-content;
+  min-width: 84.47px;
+  height: 26px;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: bold;
+  padding: 3px 0;
+  border: none;
+  background-color: #598cf1;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.modalclosebtn {
+  position: relative;
+  display: block;
+  align-items: end;
+  margin-top: 15px;
+  margin-right: 15px;
+  background: none;
+  border: none;
+}
+
+.modalcontainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modalcontent {
+  background-color: var(--shortcut-background-color);
+  width: 38%;
+  min-height: 530px;
+  padding: 0px;
+}
+
+.h1Title {
+  font-size: 1rem;
+}
+
+.modalcontent > form > div > div:first-of-type div {
+  display: -webkit-box;
+}
+
+.modalcontent > form > div > div:nth-of-type(2) {
+  /* URL 입력 주소 감추기 */
+  display: none; 
+}
+
+.modalcontent > form > div > div:nth-of-type(4) {
+  margin-bottom: 5px;
+}
+
+.modalcontent > form > div > div:nth-of-type(4) input {
+  width: 70%;
+  height: 25px;
+}
+.modalcontent > form > div > div:nth-of-type(4) p {
+  display: none;
+}
+
+.modalcontent form div textarea {
+  width: 100%;
+  height: 130px;
+  resize: none;
+}
+
+.submitbtn {
+  position: relative;
+  display: block;
+  align-items: center;
+  padding: 5px 5px;
+  color: #fff;
+  background-color: #598cf1;
+  border: none;
+  border-radius: 5px;
+}
+
+.modalcontent form .emaildesc {
+  font-size: .8rem;
+}

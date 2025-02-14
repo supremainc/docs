@@ -1,0 +1,54 @@
+{
+  "fvv": 1,
+  "pageHistory": 0,
+  "fbzx": "7163460488620654395",
+  "action": "e/1FAIpQLSemcyCE9n_zq8rHzKWtuuywnzggYq9NeFsB4w3FwLSKI_v6iA",
+  "title": "Feedback",
+  "description": "",
+  "fields": [
+    {
+      "label": "이 문서가 도움이 되었나요?;components.feedback.question",
+      "description": null,
+      "type": "RADIO",
+      "id": "857652938",
+      "options": [
+        {
+          "label": "😊 Good",
+          "custom": false
+        },
+        {
+          "label": "😫 Bad",
+          "custom": false
+        }
+      ],
+      "required": true
+    },
+    {
+      "label": "문서 url 주소를 입력해주세요.",
+      "description": null,
+      "type": "SHORT_ANSWER",
+      "id": "199330391",
+      "required": false
+    },
+    {
+      "label": "평가에 대해 자세히 알려주세요.;components.feedback.details",
+      "description": null,
+      "type": "LONG_ANSWER",
+      "id": "1718017240",
+      "required": false
+    },
+    {
+      "label": "이메일 주소를 남겨주세요.(Option);components.feedback.email",
+      "description": null,
+      "type": "SHORT_ANSWER",
+      "id": "1036772456",
+      "required": false
+    }
+  ],
+  "fieldsOrder": {
+    "199330391": 1,
+    "857652938": 0,
+    "1036772456": 3,
+    "1718017240": 2
+  }
+}
