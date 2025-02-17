@@ -5,35 +5,47 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import ConfigLocalized from './docusaurus.config.localized.json';
 
 const isDev = process.env.NODE_ENV === 'development';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const defaultLocale = 'ko';
+
+function getLocalizedConfigValue(key) {
+  const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
+  const values = ConfigLocalized[key];
+  if (!values) {
+    throw new Error(`Localized config key=${key} not found`);
+  }
+  const value = values[currentLocale] ?? values[defaultLocale];
+  if (!value) {
+    throw new Error(
+      `Localized value for config key=${key} not found for both currentLocale=${currentLocale} or defaultLocale=${defaultLocale}`,
+    );
+  }
+  return value;
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Suprema Docs',
+  tagline: getLocalizedConfigValue('tagline'),
   favicon: 'img/favicon.ico',
-
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
   future: {
     experimental_faster: true
   },
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
+  projectName: 'suprema.docs', // Usually your repo name.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -48,7 +60,6 @@ const config = {
       }
     }
   },
-
   presets: [
     [
       'classic',
@@ -61,38 +72,15 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
-          customCss: './src/css/custom.scss'
+          customCss: './src/css/custom.scss',
         },
       }),
     ],
   ],
   plugins: [
     [ 'docusaurus-plugin-sass', {} ],
-    [
-      '@docusaurus/plugin-content-docs', {
-        id: 'platform',
-        path: 'platform',
-        routeBasePath: 'platform',
-        breadcrumbs: true,
-        sidebarPath: './sidebarsplatform.js',
-      }
-    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -100,19 +88,30 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Suprema Docs',
+        title: 'Docs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Suprema Docs',
+          src: 'img/suprema_logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'dropdown',
+            label: 'Platform',
             position: 'left',
-            label: 'Tutorial',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'biostarx',
+                label: 'BioStar X',
+              },
+            ]
           },
-          {to: '/blog', label: 'Blog', position: 'left'}
+          {
+            type: 'dropdown',
+            label: 'Devices',
+            position: 'left',
+            items: []
+          },
         ],
       },
       footer: {

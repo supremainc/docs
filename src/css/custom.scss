@@ -35,6 +35,10 @@
 }
 
 // layout 스타일
+// logo
+.navbar__logo img {
+  width: 120px;
+}
 ul.breadcrumbs {
   li.breadcrumbs__item:first-of-type a {
     padding: 0;
