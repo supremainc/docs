@@ -84,7 +84,15 @@ const config = {
   ],
   plugins: [
     [ 'docusaurus-plugin-sass', {} ],
-    ['./src/plugins/tailwind-config.js', {}],
+    [
+      '@docusaurus/plugin-content-docs', {
+        id: 'platform',
+        path: 'platform',
+        routeBasePath: 'platform',
+        breadcrumbs: true,
+        sidebarPath: './sidebarsplatform.js',
+      }
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

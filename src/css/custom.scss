@@ -7,11 +7,6 @@
  * work well for content-centric websites.
  */
 
-/* tailwind.scss */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
@@ -23,6 +18,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-color-gray: #333;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -35,6 +31,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-color-gray: #dadada;
 }
 
 // layout 스타일
@@ -45,6 +42,7 @@ ul.breadcrumbs {
     top: 2px
   }
 }
+// layout 스타일
 
 // markdown 콘텐츠 스타일 
 .markdown {

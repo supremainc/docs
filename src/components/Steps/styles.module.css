@@ -8,7 +8,7 @@
 
 .fdsteps {
   counter-reset: step;
-  border-left-width: 1px;
+  border-left: 1px solid var(--ifm-color-color-gray);
   margin-left: 1rem;
   padding-left: 1.75rem;
   position: relative;
