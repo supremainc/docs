@@ -1,6 +1,10 @@
 {
   "tagline": {
-    "ko": "슈프리마의 모든 제품 및 BioStar X 관련 정보를 이곳에서 확인하세요.",
-    "en": "Check out all of Suprema's products and BioStar X related information here."
+    "ko": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
+    "en": "Check out all of Suprema's products and BioStar related information here."
+  },
+  "copyright": {
+    "ko": "Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369",
+    "en": "Copyright © Suprema Inc. All rights reserved."
   }
 }

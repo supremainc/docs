@@ -19,15 +19,15 @@ const sidebars = {
   biostarx: [
     {
         type: 'category',
-        label: 'BioStar X',
+        label: 'BioStar 2',
         collapsed: false,
         collapsible: false,
         link: {
             type: 'doc',
-            id: 'platform/biostar-x/index'
+            id: 'platform/biostar2/index'
         },
         items: [
-            'platform/biostar-x/install'
+            'platform/biostar2/install'
         ],
     },
   ],

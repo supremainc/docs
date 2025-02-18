@@ -9,41 +9,97 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #009fe8;
+  --ifm-color-primary-dark: #008fd1;
+  --ifm-color-primary-darker: #0087c5;
+  --ifm-color-primary-darkest: #006fa2;
+  --ifm-color-primary-light: #00afff;
+  --ifm-color-primary-lighter: #0cb2ff;
+  --ifm-color-primary-lightest: #2fbdff;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-color-color-gray: #333;
+  --ifm-footer-padding-vertical: 28px;
+  --ifm-footer-padding-horizontal: 1rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #009fe8;
+  --ifm-color-primary-dark: #008fd1;
+  --ifm-color-primary-darker: #0087c5;
+  --ifm-color-primary-darkest: #006fa2;
+  --ifm-color-primary-light: #00afff;
+  --ifm-color-primary-lighter: #0cb2ff;
+  --ifm-color-primary-lightest: #2fbdff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-color-color-gray: #dadada;
 }
 
+// 언어별 폰트 설정
+html[lang='ko-KR'] * {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html[lang='ja-JP'] * {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+html[lang='en-US'] * {
+  font-family: 'Noto Sans', sans-serif;
+}
+// 언어별 폰트 설정
+
+// index.js 페이지
+.hero__title, .hero__subtitle {
+  color: #fff;
+}
+// index.js 페이지
+
 // layout 스타일
-// logo
-.navbar__logo img {
-  width: 120px;
+a.navbar__brand {
+  font-size: 18px;
+  color: #595757;
+  &:hover {
+    color: #595757;
+  }
+  &:visited {
+    color: #595757;
+  }
 }
 ul.breadcrumbs {
   li.breadcrumbs__item:first-of-type a {
     padding: 0;
     position: relative;
     top: 2px
+  }
+}
+footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .footer__logo {
+    margin-top: 0;
+  }
+  .sns--right {
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+  ul.sns__list {
+    list-style: none;
+    margin: 0;
+    li {
+      float: left;
+      margin: 0 10px;
+    }
+  }
+  .footer__copyright {
+    color: #898989;
+    font-size: .8rem;
+    margin-top: 15px;
   }
 }
 // layout 스타일
@@ -65,6 +121,14 @@ ul.breadcrumbs {
       &.w--400 {
         width: 400px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  footer {
+    .sns--right {
+      display: none;
     }
   }
 }

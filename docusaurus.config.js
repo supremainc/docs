@@ -33,7 +33,7 @@ function getLocalizedConfigValue(key) {
 const config = {
   title: 'Suprema Docs',
   tagline: getLocalizedConfigValue('tagline'),
-  favicon: 'img/favicon.ico',
+  favicon: 'https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico',
   // Set the production url of your site here
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -86,12 +86,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/sns_img02.jpg',
       navbar: {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'img/suprema_logo.svg',
+          src: 'img/suprema-logo.svg',
+          width: '120px',
         },
         items: [
           {
@@ -102,7 +103,7 @@ const config = {
               {
                 type: 'docSidebar',
                 sidebarId: 'biostarx',
-                label: 'BioStar X',
+                label: 'BioStar 2',
               },
             ]
           },
@@ -115,49 +116,19 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'Suprema Security & biometrics',
+          src: 'img/suprema-logo-bottom.svg',
+          width: '173px',
+        },
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+            label: 'Stack Overflow',
+            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
         theme: prismThemes.github,
