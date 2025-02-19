@@ -21168,6 +21168,11 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 var routesChunkNames = __webpack_require__("7138");
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
 /* ESM default export */ const registry = ({
+    "11b43341": [
+        ()=>__webpack_require__.e(/* import() | 11b43341 */ "467").then(__webpack_require__.t.bind(__webpack_require__, 9989, 19)),
+        "@generated/docusaurus-plugin-content-docs/default/p/docs-7fc.json",
+        /*require.resolve*/(9989)
+    ],
     "17896441": [
         ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("212"), __webpack_require__.e("16"), __webpack_require__.e("177"), __webpack_require__.e("48")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
         "@theme/DocItem",
@@ -21177,11 +21182,6 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>Promise.all(/* import() | 1f391b9e */ [__webpack_require__.e("212"), __webpack_require__.e("16"), __webpack_require__.e("493")]).then(__webpack_require__.bind(__webpack_require__, 3219)),
         "@theme/MDXPage",
         /*require.resolve*/(3219)
-    ],
-    "22dd74f7": [
-        ()=>__webpack_require__.e(/* import() | 22dd74f7 */ "279").then(__webpack_require__.t.bind(__webpack_require__, 7293, 19)),
-        "@generated/docusaurus-plugin-content-docs/default/p/index-466.json",
-        /*require.resolve*/(7293)
     ],
     "393be207": [
         ()=>Promise.all(/* import() | 393be207 */ [__webpack_require__.e("16"), __webpack_require__.e("969")]).then(__webpack_require__.bind(__webpack_require__, 8553)),
@@ -21526,36 +21526,36 @@ function ComponentCreator(path, hash) {
 
 /* ESM default export */ const routes = ([
     {
-        path: '/markdown-page',
-        component: ComponentCreator('/markdown-page', '3d7'),
+        path: '/docs/markdown-page',
+        component: ComponentCreator('/docs/markdown-page', 'c78'),
         exact: true
     },
     {
-        path: '/',
-        component: ComponentCreator('/', '2e1'),
+        path: '/docs/',
+        component: ComponentCreator('/docs/', '6fa'),
         exact: true
     },
     {
-        path: '/',
-        component: ComponentCreator('/', 'c8a'),
+        path: '/docs/',
+        component: ComponentCreator('/docs/', '020'),
         routes: [
             {
-                path: '/',
-                component: ComponentCreator('/', '43b'),
+                path: '/docs/',
+                component: ComponentCreator('/docs/', '3f1'),
                 routes: [
                     {
-                        path: '/',
-                        component: ComponentCreator('/', 'a31'),
+                        path: '/docs/',
+                        component: ComponentCreator('/docs/', '954'),
                         routes: [
                             {
-                                path: '/platform/biostar2/',
-                                component: ComponentCreator('/platform/biostar2/', 'd63'),
+                                path: '/docs/platform/biostar2/',
+                                component: ComponentCreator('/docs/platform/biostar2/', '906'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/platform/biostar2/install',
-                                component: ComponentCreator('/platform/biostar2/install', 'ea7'),
+                                path: '/docs/platform/biostar2/install',
+                                component: ComponentCreator('/docs/platform/biostar2/install', 'e2b'),
                                 exact: true,
                                 sidebar: "biostarx"
                             }
@@ -22436,7 +22436,7 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/index","path":"/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/platform/biostar2/install","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/platform/biostar2/","label":"BioStar 2"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/index","path":"/docs/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/docs/platform/biostar2/install","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar2/","label":"BioStar 2"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
@@ -28962,7 +28962,7 @@ __webpack_require__.d(__webpack_exports__, {
   "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
   "url": "https://docs.supremainc.com",
-  "baseUrl": "/",
+  "baseUrl": "/docs/",
   "noIndex": true,
   "future": {
     "experimental_faster": {
@@ -33022,7 +33022,7 @@ module.exports = JSON.parse('{"theme.AnnouncementBar.closeButtonAriaLabel":"닫�
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/-2e1":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/-c8a":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/-43b":{"__comp":"a7bd4aaa","__props":"22dd74f7"},"/-a31":{"__comp":"a94703ab"},"/platform/biostar2/-d63":{"__comp":"17896441","content":"6cd7ec80"},"/platform/biostar2/install-ea7":{"__comp":"17896441","content":"546a091b"}}')
+module.exports = JSON.parse('{"/docs/markdown-page-c78":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-020":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-3f1":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-954":{"__comp":"a94703ab"},"/docs/platform/biostar2/-906":{"__comp":"17896441","content":"6cd7ec80"},"/docs/platform/biostar2/install-e2b":{"__comp":"17896441","content":"546a091b"}}')
 
 }),
 
