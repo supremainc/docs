@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import SNS from '@site/src/components/SNS';
+import SNS from '@site/src/components/Sns';
 import DropdownMenu from '@site/src/components/FamilySite';
 export default function FooterLayout({style, logo, copyright}) {
   return (
