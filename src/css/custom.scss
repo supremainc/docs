@@ -70,6 +70,8 @@ a.navbar__brand {
   }
 }
 ul.breadcrumbs {
+  float: left;
+  display: contents;
   li.breadcrumbs__item:first-of-type a {
     padding: 0;
     position: relative;
