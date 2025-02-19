@@ -1,6 +1,6 @@
 "use strict";
 (self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["48"], {
-"9094": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"7548": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -29,8 +29,65 @@ var Footer = __webpack_require__("2119");
 var Mobile = __webpack_require__("8070");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js
 var Desktop = __webpack_require__("2456");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Content/index.js
-var Content = __webpack_require__("9858");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
+var ThemeClassNames = __webpack_require__("6171");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
+var Heading = __webpack_require__("6055");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js + 63 modules
+var MDXContent = __webpack_require__("512");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Admonition/index.js + 15 modules
+var Admonition = __webpack_require__("4926");
+;// CONCATENATED MODULE: ./src/theme/DocItem/Content/index.js
+
+
+
+
+
+
+
+
+/**
+ Title can be declared inside md content or declared through
+ front matter and added manually. To make both cases consistent,
+ the added title is added under the same div.markdown block
+ See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
+
+ We render a "synthetic title" if:
+ - user doesn't ask to hide it with front matter
+ - the markdown content does not already contain a top-level h1 heading
+*/ function useSyntheticTitle() {
+    const { metadata, frontMatter, contentTitle } = (0,doc/* useDoc */.k)();
+    const shouldRender = !frontMatter.hide_title && typeof contentTitle === 'undefined';
+    if (!shouldRender) {
+        return null;
+    }
+    return metadata.title;
+}
+function DocItemContent(param) {
+    let { children } = param;
+    const { frontMatter } = (0,doc/* useDoc */.k)();
+    const syntheticTitle = useSyntheticTitle();
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: (0,clsx/* default */.Z)(ThemeClassNames/* ThemeClassNames,docs,docMarkdown */.k.docs.docMarkdown, 'markdown'),
+        children: [
+            syntheticTitle && /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
+                    as: "h1",
+                    children: syntheticTitle
+                })
+            }),
+            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsx)(Admonition/* default */.Z, {
+                type: "warning",
+                title: "Not translated",
+                children: "This page is currently being translated. We will complete the translation as soon as possible."
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
+                children: children
+            })
+        ]
+    });
+}
+
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocBreadcrumbs/index.js + 4 modules
 var DocBreadcrumbs = __webpack_require__("5872");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ContentVisibility/index.js + 3 modules
@@ -38,8 +95,6 @@ var ContentVisibility = __webpack_require__("7624");
 ;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const styles_module = ({"docItemContainer":"docItemContainer_c0TR","docItemCol":"docItemCol_z5aJ"});
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__("6171");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
 var TOCItems = __webpack_require__("6643");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCCollapsible/index.js + 3 modules
@@ -151,7 +206,7 @@ function DocItemLayout(param) {
                                     /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
                                         device: "mobile"
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(Content/* default */.Z, {
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemContent, {
                                         children: children
                                     }),
                                     /*#__PURE__*/ (0,jsx_runtime.jsx)(Footer/* default */.Z, {})

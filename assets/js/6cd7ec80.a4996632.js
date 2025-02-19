@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-index-mdx-6cd.json
-var site_docs_platform_biostar_2_index_mdx_6cd_namespaceObject = JSON.parse('{"id":"platform/biostar2/index","title":"BioStar 2","description":"BioStar 2","source":"@site/docs/platform/biostar2/index.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/","permalink":"/docs/platform/biostar2/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar 2"},"sidebar":"biostarx","next":{"title":"설치하기","permalink":"/docs/platform/biostar2/install"}}')
+var site_docs_platform_biostar_2_index_mdx_6cd_namespaceObject = JSON.parse('{"id":"platform/biostar2/index","title":"BioStar 2","description":"BioStar 2","source":"@site/docs/platform/biostar2/index.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/","permalink":"/docs/platform/biostar2/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar 2","isTranslationMissing":false},"sidebar":"biostarx","next":{"title":"설치하기","permalink":"/docs/platform/biostar2/install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -24,7 +24,8 @@ var lib = __webpack_require__("65");
 
 
 const frontMatter = {
-	title: 'BioStar 2'
+	title: 'BioStar 2',
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

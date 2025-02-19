@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-pages/default/site-src-pages-markdown-page-md-393.json
-var site_src_pages_markdown_page_md_393_namespaceObject = JSON.parse('{"type":"mdx","permalink":"/docs/markdown-page","source":"@site/src/pages/markdown-page.md","title":"Markdown page example","description":"You don\'t need React to write simple standalone pages.","frontMatter":{"title":"Markdown page example"},"unlisted":false}')
+var site_src_pages_markdown_page_md_393_namespaceObject = JSON.parse('{"type":"mdx","permalink":"/docs/en/markdown-page","source":"@site/src/pages/markdown-page.md","title":"Markdown page example","description":"You don\'t need React to write simple standalone pages.","frontMatter":{"title":"Markdown page example","isTranslationMissing":true},"unlisted":false}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -24,7 +24,8 @@ var lib = __webpack_require__("65");
 
 
 const frontMatter = {
-	title: 'Markdown page example'
+	title: 'Markdown page example',
+	isTranslationMissing: true
 };
 const contentTitle = 'Markdown page example';
 

@@ -1,5 +1,5 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["177"], {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["958"], {
 "7097": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   b: function() { return DocProvider; },
@@ -244,67 +244,6 @@ function DocBreadcrumbs() {
                 })
             ]
         })
-    });
-}
-
-
-}),
-"9858": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return DocItemContent; }
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
-/* ESM import */var clsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7026);
-/* ESM import */var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6171);
-/* ESM import */var _docusaurus_plugin_content_docs_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7097);
-/* ESM import */var _theme_Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6055);
-/* ESM import */var _theme_MDXContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(512);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-
-
-
-/**
- Title can be declared inside md content or declared through
- front matter and added manually. To make both cases consistent,
- the added title is added under the same div.markdown block
- See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
-
- We render a "synthetic title" if:
- - user doesn't ask to hide it with front matter
- - the markdown content does not already contain a top-level h1 heading
-*/ function useSyntheticTitle() {
-    const { metadata, frontMatter, contentTitle } = (0,_docusaurus_plugin_content_docs_client__WEBPACK_IMPORTED_MODULE_4__/* .useDoc */.k)();
-    const shouldRender = !frontMatter.hide_title && typeof contentTitle === 'undefined';
-    if (!shouldRender) {
-        return null;
-    }
-    return metadata.title;
-}
-function DocItemContent(param) {
-    let { children } = param;
-    const syntheticTitle = useSyntheticTitle();
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: (0,clsx__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */.Z)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_6__/* .ThemeClassNames.docs.docMarkdown */.k.docs.docMarkdown, 'markdown'),
-        children: [
-            syntheticTitle && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("header", {
-                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_Heading__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */.Z, {
-                    as: "h1",
-                    children: syntheticTitle
-                })
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_MDXContent__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */.Z, {
-                children: children
-            })
-        ]
     });
 }
 
@@ -673,8 +612,8 @@ function DocItemMetadata() {
     });
 }
 
-// EXTERNAL MODULE: ./src/theme/DocItem/Layout/index.js + 3 modules
-var Layout = __webpack_require__("9094");
+// EXTERNAL MODULE: ./src/theme/DocItem/Layout/index.js + 4 modules
+var Layout = __webpack_require__("7548");
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
