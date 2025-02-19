@@ -1,1 +1,0 @@
-gh workflow run preview.yml --ref preview
