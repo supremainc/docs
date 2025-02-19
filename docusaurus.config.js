@@ -31,7 +31,7 @@ function getLocalizedConfigValue(key) {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Suprema Docs',
+  title: getLocalizedConfigValue('title'),
   tagline: getLocalizedConfigValue('tagline'),
   favicon: 'https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico',
   // Set the production url of your site here
@@ -51,13 +51,18 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko'],
+    locales: ['ko', 'en'],
     localeConfigs: {
       ko: {
-        label: 'KOR',
+        label: '한국어',
         direction: 'ltr',
         htmlLang: 'ko-KR',
-      }
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
     }
   },
   presets: [
@@ -66,11 +71,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 
+            'https://github.com/supremainc/docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -113,6 +119,10 @@ const config = {
             position: 'left',
             items: []
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          }
         ],
       },
       footer: {

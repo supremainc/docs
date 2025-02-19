@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import SNS from '@site/src/components/SNS';
+import DropdownMenu from '@site/src/components/FamilySite';
 export default function FooterLayout({style, logo, copyright}) {
   return (
     <footer
@@ -17,6 +18,7 @@ export default function FooterLayout({style, logo, copyright}) {
           <ul className='sns__list'>
             <SNS />
           </ul>
+          <DropdownMenu />
         </div>
       </div>
       {(copyright) && (

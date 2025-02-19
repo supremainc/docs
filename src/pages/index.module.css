@@ -26,3 +26,7 @@
 .hero__title, .hero__subtitle {
   color: #fff !important;
 }
+
+.headsec {
+  margin-top: 60px;
+}

@@ -3,19 +3,19 @@ import Link from '@docusaurus/Link';
 const sns = [
   {
     link: 'http://pf.kakao.com/_xnkPxes',
-    img: '/img/foot_sns_06.png',
+    img: require('@site/static/img/foot_sns_06.png').default,
   },
   {
     link: 'https://blog.naver.com/supremakr',
-    img: '/img/foot_sns_05.png',
+    img: require('@site/static/img/foot_sns_05.png').default,
   },
   {
     link: 'https://www.youtube.com/user/supremainc',
-    img: '/img/foot_sns_04.png',
+    img: require('@site/static/img/foot_sns_04.png').default,
   },
   {
     link: 'https://www.instagram.com/official.suprema/',
-    img: '/img/foot_sns_instagram.svg',
+    img: require('@site/static/img/foot_sns_instagram.png').default,
     width: '35px',
   }
 ]
