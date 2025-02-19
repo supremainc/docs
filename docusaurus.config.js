@@ -89,6 +89,28 @@ const config = {
   plugins: [
     [ 'docusaurus-plugin-sass', {} ],
   ],
+  markdown: {
+    parseFrontMatter: async (params) => {
+      // Reuse the default parser
+      const result = await params.defaultParseFrontMatter(params);
+      const isPartial = params.filePath.includes("/_") || params.filePath.includes("\\_");
+      if (isPartial) {
+        return result;
+      }
+      // TODO fix weird undefined case!
+      const isDefaultLocale =
+        process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
+        typeof process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
+        process.env.DOCUSAURUS_CURRENT_LOCALE === "ko";
+      const isI18n = params.filePath.includes("/i18n/");
+      if (isDefaultLocale) {
+        result.frontMatter.isTranslationMissing = false;
+      } else {
+        result.frontMatter.isTranslationMissing = !isI18n;
+      }
+      return result;
+    }
+  },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
