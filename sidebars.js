@@ -22,11 +22,9 @@ const sidebars = {
         label: 'BioStar 2',
         collapsed: false,
         collapsible: false,
-        link: {
-            type: 'doc',
-            id: 'platform/biostar2/index'
-        },
+        className: 'p-title',
         items: [
+            'platform/biostar2/index',
             'platform/biostar2/install'
         ],
     },

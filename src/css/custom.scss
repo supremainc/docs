@@ -69,6 +69,18 @@ a.navbar__brand {
     color: #595757;
   }
 }
+.theme-doc-sidebar-menu {
+  li.p-title {
+    &> .menu__list-item-collapsible {
+      a.menu__link--active {
+        color: var(--ifm-menu-color);
+      }
+    }
+    ul.menu__list {
+      padding-left: 0;
+    }
+  }
+}
 ul.breadcrumbs {
   float: left;
   display: contents;
