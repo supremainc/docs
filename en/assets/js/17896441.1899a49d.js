@@ -189,16 +189,16 @@ function AdmonitionTypeInfo(props) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/theme/Admonition/Icon/Warning.js
+;// CONCATENATED MODULE: ./src/theme/Admonition/Icon/Danger.js
 
 
-function AdmonitionIconCaution(props) {
+function AdmonitionIconDanger(props) {
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("svg", {
-        viewBox: "0 0 16 16",
+        viewBox: "0 0 12 16",
         ...props,
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
             fillRule: "evenodd",
-            d: "M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
+            d: "M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
         })
     });
 }
@@ -210,9 +210,9 @@ function AdmonitionIconCaution(props) {
 
 
 
-const Warning_infimaClassName = 'alert alert--warning';
+const Warning_infimaClassName = 'alert alert--danger';
 const Warning_defaultProps = {
-    icon: /*#__PURE__*/ (0,jsx_runtime.jsx)(AdmonitionIconCaution, {}),
+    icon: /*#__PURE__*/ (0,jsx_runtime.jsx)(AdmonitionIconDanger, {}),
     title: /*#__PURE__*/ (0,jsx_runtime.jsx)(Translate/* default */.Z, {
         id: "theme.admonition.warning",
         description: "The default label used for the Warning admonition (:::warning)",
@@ -225,20 +225,6 @@ function AdmonitionTypeWarning(props) {
         ...props,
         className: (0,clsx/* default */.Z)(Warning_infimaClassName, props.className),
         children: props.children
-    });
-}
-
-;// CONCATENATED MODULE: ./src/theme/Admonition/Icon/Danger.js
-
-
-function AdmonitionIconDanger(props) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("svg", {
-        viewBox: "0 0 12 16",
-        ...props,
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
-            fillRule: "evenodd",
-            d: "M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
-        })
     });
 }
 
@@ -264,6 +250,20 @@ function AdmonitionTypeDanger(props) {
         ...props,
         className: (0,clsx/* default */.Z)(Danger_infimaClassName, props.className),
         children: props.children
+    });
+}
+
+;// CONCATENATED MODULE: ./src/theme/Admonition/Icon/Warning.js
+
+
+function AdmonitionIconCaution(props) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("svg", {
+        viewBox: "0 0 16 16",
+        ...props,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+            fillRule: "evenodd",
+            d: "M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
+        })
     });
 }
 
@@ -795,15 +795,15 @@ function DocItemLayout(param) {
 
 
 }),
-"937": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"7457": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   Z: () => (/* binding */ theme_MDXComponents)
 });
 
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js + 35 modules
-var MDXComponents = __webpack_require__("8169");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js + 15 modules
+var MDXComponents = __webpack_require__("5055");
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -895,6 +895,9 @@ function Step(param) {
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/Files/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Files_styles_module = ({"filetree":"filetree_c6T4","top":"top_ZAYt","type":"type_n_WQ","fileitem":"fileitem_PWvV","name":"name_iojM","ico":"ico_i25q","desc":"desc_hq9n"});
 ;// CONCATENATED MODULE: ./src/components/Files/openFolderIcon.js
 
 
@@ -955,11 +958,7 @@ function FileIcon(props) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/components/Files/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const Files_styles_module = ({"filetree":"filetree_c6T4","top":"top_ZAYt","type":"type_n_WQ","fileitem":"fileitem_PWvV","name":"name_iojM","ico":"ico_i25q","desc":"desc_hq9n"});
 ;// CONCATENATED MODULE: ./src/components/Files/index.js
-
 
 
 
@@ -1223,7 +1222,36 @@ var Tabs = __webpack_require__("8168");
 var TabItem = __webpack_require__("7645");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js + 3 modules
 var DocCardList = __webpack_require__("1552");
+;// CONCATENATED MODULE: ./src/components/Columns/index.js
+
+
+function Columns(param) {
+    let { children, className, style } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: "container center",
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            className: (0,clsx/* default */.Z)('row', className),
+            style: style,
+            children: children
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/Column/index.js
+
+
+function Column(param) {
+    let { children, className, style } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: (0,clsx/* default */.Z)('col', className),
+        style: style,
+        children: children
+    });
+}
+
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
+
+
 
 
 
@@ -1252,7 +1280,9 @@ var DocCardList = __webpack_require__("1552");
     Kbd: Kbd,
     Tabs: Tabs/* default */.Z,
     TabItem: TabItem/* default */.Z,
-    DocCardList: DocCardList/* default */.Z
+    DocCardList: DocCardList/* default */.Z,
+    Columns: Columns,
+    Column: Column
 });
 
 
