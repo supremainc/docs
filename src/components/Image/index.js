@@ -24,7 +24,7 @@ export default function Image({src, alt, className, alone}) {
                     loading="lazy"
                     src={imagePath}
                     alt={alt}
-                    className={clsx('container', className)}
+                    className={className}
                     onError={onError}
                 />
             </p>
