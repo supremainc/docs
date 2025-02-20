@@ -11,6 +11,8 @@ import Kbd from '@site/src/components/Kbd';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DocCardList from '@theme/DocCardList';
+import Columns from '@site/src/components/Columns';
+import Column from '@site/src/components/Column';
 export default {
     ...MDXComponents,
     Include,
@@ -26,5 +28,7 @@ export default {
     Kbd,
     Tabs,
     TabItem,
-    DocCardList
+    DocCardList,
+    Columns,
+    Column
 }
