@@ -181,8 +181,8 @@ footer {
   p.hasimg {
     margin-top: var(--ifm-leading);
     img {
-      padding-left: auto;
-      padding-right: auto;
+      margin-left: auto;
+      margin-right: auto;
       display: block;
       &.w--400 {
         width: 400px;
