@@ -28,6 +28,7 @@
   --ifm-h3-font-size: 1.6rem;
   --ifm-h4-font-size: 1.4rem;
   --ifm-h5-font-size: 1.2rem;
+  --ifm-admonition-font-size: 1rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -177,6 +178,9 @@ footer {
 .pagination-nav__label {
   font-size: 1rem;
 }
+.pagination-nav__sublabel {
+  font-size: var(--ifm-admonition-font-size);
+}
 // layout 스타일
 
 // markdown 콘텐츠 스타일 
@@ -252,6 +256,21 @@ footer {
     width: 100%;
     display: table;
   }
+  .col5--15-10-25 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 15%;
+        }
+        &:nth-of-type(2) {
+          width: 10%;
+        }
+        &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+          width: 25%;
+        }
+      }
+    }
+  }
 
   // Columns
   .container {
@@ -275,7 +294,15 @@ footer {
       display: none;
     }
   }
+}
+
+@media (max-width: 640px) and (max-width: 480px) {
   .markdown {
-    table {}
+    .overflow-x {
+      overflow-x: scroll;
+      table {
+        width: max-content;
+      }
+    }
   }
 }
