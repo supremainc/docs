@@ -92,10 +92,26 @@ keywords: [ 설치 안내 ]
 
 ### MariaDB
 
-1. *my.cnf* 파일을 열어 `[mysql]` 하단의 설정을 아래와 같이 변경하세요.
+1. *my.cnf* 파일에서 `[mysql]` 항목 하단의 옵션을 아래와 같이 변경하세요.
 
     ```ini title='my.cnf'
     character-set-server=utf8
     collation-server=utf8_unicode_ci
     max_connections = 600
     ```
+
+1. *my.cnf* 파일에서 `[mysql]` 항목 하단에 아래 옵션을 추가하세요.
+
+    ```ini title='my.cnf'
+    log_bin_trust_function_creators = 1
+    group_concat_max_len = 102400
+    ```
+
+3. 루트(root) 권한으로 MariaDB에 접속해 아래 명령어를 실행하세요.
+
+    ```sql title='SQL'
+    GRANT SUPER ON . TO user_id@'localhost' IDENTIFIED BY "password";
+    GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
+    ```
+
+  

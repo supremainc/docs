@@ -172,7 +172,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini' ]
+        additionalLanguages: [ 'ini', 'sql' ]
       },
     }),
 };
