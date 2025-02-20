@@ -178,6 +178,9 @@ footer {
 .pagination-nav__label {
   font-size: 1rem;
 }
+.pagination-nav__sublabel {
+  font-size: var(--ifm-admonition-font-size);
+}
 // layout 스타일
 
 // markdown 콘텐츠 스타일 
@@ -252,6 +255,21 @@ footer {
   table {
     width: 100%;
     display: table;
+  }
+  .col5--15-10-25 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 15%;
+        }
+        &:nth-of-type(2) {
+          width: 10%;
+        }
+        &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+          width: 25%;
+        }
+      }
+    }
   }
 
   // Columns
