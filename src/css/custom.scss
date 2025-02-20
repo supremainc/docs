@@ -28,6 +28,7 @@
   --ifm-h3-font-size: 1.6rem;
   --ifm-h4-font-size: 1.4rem;
   --ifm-h5-font-size: 1.2rem;
+  --ifm-admonition-font-size: 1rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -275,7 +276,15 @@ footer {
       display: none;
     }
   }
+}
+
+@media (max-width: 640px) and (max-width: 480px) {
   .markdown {
-    table {}
+    .overflow-x {
+      overflow-x: scroll;
+      table {
+        width: max-content;
+      }
+    }
   }
 }
