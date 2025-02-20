@@ -3,7 +3,6 @@ import styles from './styles.module.css';
 import OpenFolderIcon from './openFolderIcon';
 import CloseFolderIcon from './closeFolderIcon';
 import FileIcon from './fileIcon';
-import styles from './styles.module.css';
 
 export function Folder({ children, name, type, open = true }) {
   const [isOpen, setIsOpen] = useState(open);
