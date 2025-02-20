@@ -67,6 +67,9 @@ const config = {
       },
     }
   },
+  themes: [
+    '@saucelabs/theme-github-codeblock'
+  ],
   presets: [
     [
       'classic',
@@ -177,8 +180,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        additionalLanguages: [ 'ini', 'sql' ]
       },
     }),
 };

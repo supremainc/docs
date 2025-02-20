@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.biostarx.category.BioStar 2": {
+    "message": "BioStar 2",
+    "description": "The label for category BioStar 2 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.개요": {
+    "message": "개요",
+    "description": "The label for category 개요 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.Tutorial": {
+    "message": "Tutorial",
+    "description": "The label for category Tutorial in sidebar biostarx"
+  }
+}

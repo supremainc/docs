@@ -22,6 +22,8 @@
   --ifm-footer-padding-vertical: 28px;
   --ifm-footer-padding-horizontal: 1rem;
   --ifm-color-border: #797979;
+  --ifm-list-paragraph-margin: .7rem;
+  --ifm-paragraph-margin-bottom: .7rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -204,16 +206,49 @@ footer {
     --ifm-alert-foreground-color: #A32343;
   }
   /* Alert */
-
-  p.hasimg {
-    margin-top: var(--ifm-leading);
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      &.w--400 {
-        width: 400px;
+  p {
+    em {
+      font-style: normal;
+      font-family: 'Noto Sans Coptic';
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--ifm-color-color-gray);
+    }
+    code {
+      font-size: .85rem;
+      font-family: 'Noto Sans Coptic';
+    }
+    &.hasimg {
+      margin-top: var(--ifm-leading);
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        &.w--400 {
+          width: 400px;
+        }
       }
+    }
+  }
+
+  ul, ol {
+    padding-left: 23px;
+  }
+
+  pre * {
+    font-family: 'Noto Sans Coptic';
+  }
+
+  // Table
+  table {
+    width: 100%;
+    display: table;
+  }
+
+  // Columns
+  .container {
+    .text--left {
+      padding-left: 0;
     }
   }
 }

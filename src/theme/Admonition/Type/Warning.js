@@ -2,8 +2,8 @@ import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import AdmonitionLayout from '@theme/Admonition/Layout';
-import IconWarning from '@theme/Admonition/Icon/Warning';
-const infimaClassName = 'alert alert--warning';
+import IconWarning from '@theme/Admonition/Icon/Danger';
+const infimaClassName = 'alert alert--danger';
 const defaultProps = {
   icon: <IconWarning />,
   title: (
