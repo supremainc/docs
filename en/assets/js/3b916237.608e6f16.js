@@ -167,68 +167,71 @@ function _createMdxContent(props) {
           }), " 버전부터 지원됩니다. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar 2.6.0"
           }), " 버전 이하에서 최신 버전으로 업그레이드하려면 다음 차례로 설치하세요."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
-          children: [(0,jsx_runtime.jsx)(_components.thead, {
-            children: (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.th, {
-                children: "현재 버전"
-              }), (0,jsx_runtime.jsx)(_components.th, {
-                children: "업그레이드 순서"
-              })]
-            })
-          }), (0,jsx_runtime.jsxs)(_components.tbody, {
-            children: [(0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.2.1 > 2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2.2"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                rowSpan: "3",
-                children: "2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.tr, {
-              children: (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.2.1"
+        }), "\n", (0,jsx_runtime.jsx)("div", {
+          className: "overflow-x",
+          children: (0,jsx_runtime.jsxs)(_components.table, {
+            children: [(0,jsx_runtime.jsx)(_components.thead, {
+              children: (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.th, {
+                  children: "현재 버전"
+                }), (0,jsx_runtime.jsx)(_components.th, {
+                  children: "업그레이드 순서"
+                })]
               })
-            }), (0,jsx_runtime.jsx)(_components.tr, {
-              children: (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.2.2"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2.3"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2.4"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2.5"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                rowSpan: "2",
-                children: "2.6.4 > Latest version"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.tr, {
-              children: (0,jsx_runtime.jsx)(_components.td, {
-                children: "2.6"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "2.6.4 버전 이상"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "Latest version"
+            }), (0,jsx_runtime.jsxs)(_components.tbody, {
+              children: [(0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.2.1 > 2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
+                })]
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.2"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  rowSpan: "3",
+                  children: "2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
+                })]
+              }), (0,jsx_runtime.jsx)(_components.tr, {
+                children: (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.2.1"
+                })
+              }), (0,jsx_runtime.jsx)(_components.tr, {
+                children: (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.2.2"
+                })
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.3"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
+                })]
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.4"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.4.1 > 2.5.0 > 2.6.4 > Latest version"
+                })]
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.5"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  rowSpan: "2",
+                  children: "2.6.4 > Latest version"
+                })]
+              }), (0,jsx_runtime.jsx)(_components.tr, {
+                children: (0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.6"
+                })
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  children: "2.6.4 버전 이상"
+                }), (0,jsx_runtime.jsx)(_components.td, {
+                  children: "Latest version"
+                })]
               })]
             })]
-          })]
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
