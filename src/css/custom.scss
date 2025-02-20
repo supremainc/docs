@@ -76,9 +76,12 @@ a.navbar__brand {
         color: var(--ifm-menu-color);
       }
     }
-    ul.menu__list {
+    &> ul.menu__list {
       padding-left: 0;
     }
+  }
+  .theme-doc-sidebar-item-link-level-3 {
+    font-weight: 400;
   }
 }
 ul.breadcrumbs {
