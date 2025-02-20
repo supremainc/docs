@@ -117,6 +117,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/sns_img02.jpg',
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         title: 'Docs',
         logo: {
