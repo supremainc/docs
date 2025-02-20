@@ -10,5 +10,9 @@
   "copyright": {
     "ko": "Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369",
     "en": "Copyright © Suprema Inc. All rights reserved."
+  },
+  "announcementBar": {
+    "ko": "<b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 다음 링크에서 확인하세요.</b>",
+    "en": "<b>This document contains content that has not yet been released to the service version. For documentation on officially released features, please see the following links.</b>"
   }
 }

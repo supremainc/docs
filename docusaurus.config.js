@@ -117,6 +117,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/sns_img02.jpg',
+      announcementBar: {
+        id: 'annoucementbar',
+        content: getLocalizedConfigValue('announcementBar'),
+        backgroundColor: '#FFB27D',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       docs: {
         sidebar: {
           hideable: true,
