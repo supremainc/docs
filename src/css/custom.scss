@@ -24,6 +24,10 @@
   --ifm-color-border: #797979;
   --ifm-list-paragraph-margin: .7rem;
   --ifm-paragraph-margin-bottom: .7rem;
+  --ifm-h2-font-size: 1.8rem;
+  --ifm-h3-font-size: 1.6rem;
+  --ifm-h4-font-size: 1.4rem;
+  --ifm-h5-font-size: 1.2rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -64,6 +68,7 @@ html[lang='en-US'] * {
 a.navbar__brand {
   font-size: 18px;
   color: #595757;
+  margin-right: 100px;
   &:hover {
     color: #595757;
   }
@@ -232,7 +237,7 @@ footer {
   }
 
   ul, ol {
-    padding-left: 23px;
+    padding-left: 28px;
   }
 
   pre * {
