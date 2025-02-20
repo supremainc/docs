@@ -22,12 +22,33 @@ const sidebars = {
         label: 'BioStar 2',
         collapsed: false,
         collapsible: false,
-        link: {
-            type: 'doc',
-            id: 'platform/biostar2/index'
-        },
+        className: 'p-title',
         items: [
-            'platform/biostar2/install'
+            {
+              type: 'category',
+              label: '개요',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar2/index',
+              },
+              items: [
+                'platform/biostar2/getting-started',
+                'platform/biostar2/system-requirements',
+                'platform/biostar2/product-compatibility'
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Tutorial',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar2/tutorial',
+              },
+              items: [
+                'platform/biostar2/quick-start',
+                'platform/biostar2/custom-install',
+              ]
+            }
         ],
     },
   ],

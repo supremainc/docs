@@ -69,7 +69,24 @@ a.navbar__brand {
     color: #595757;
   }
 }
+.theme-doc-sidebar-menu {
+  li.p-title {
+    &> .menu__list-item-collapsible {
+      a.menu__link--active {
+        color: var(--ifm-menu-color);
+      }
+    }
+    &> ul.menu__list {
+      padding-left: 0;
+    }
+  }
+  .theme-doc-sidebar-item-link-level-3 {
+    font-weight: 400;
+  }
+}
 ul.breadcrumbs {
+  float: left;
+  display: contents;
   li.breadcrumbs__item:first-of-type a {
     padding: 0;
     position: relative;

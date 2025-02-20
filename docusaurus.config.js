@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import ConfigLocalized from './docusaurus.config.localized.json';
+const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
@@ -76,8 +77,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 
-            'https://github.com/supremainc/docs/tree/main/',
+          editUrl: 'https://github.com/supremainc/docs/tree/main/',
+          rehypePlugins: [ rehypeExtendedTable ],
         },
         blog: false,
         theme: {
