@@ -74,6 +74,7 @@ a.navbar__brand {
     &> .menu__list-item-collapsible {
       a.menu__link--active {
         color: var(--ifm-menu-color);
+        font-weight: 700;
       }
     }
     &> ul.menu__list {
