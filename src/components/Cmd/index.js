@@ -16,7 +16,7 @@ const ReplacementLocaleText = ({sid, className }) => {
       break;
   }
   try {
-    let localeText = locale[sid]
+    let localeText = locale[sid].replace('<br>', '');
     return <span className={clsx('cmd', className)}>{localeText}</span>;
 
   } catch (e) {
