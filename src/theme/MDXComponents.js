@@ -1,4 +1,5 @@
 import MDXComponents from '@theme-original/MDXComponents';
+import Cmd from '@site/src/components/Cmd';
 import Include from '@site/src/components/Include';
 import Xclude from '@site/src/components/Xclude';
 import { Steps, Step } from '@site/src/components/Steps';
@@ -13,8 +14,10 @@ import TabItem from '@theme/TabItem';
 import DocCardList from '@theme/DocCardList';
 import Columns from '@site/src/components/Columns';
 import Column from '@site/src/components/Column';
+import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 export default {
     ...MDXComponents,
+    Cmd,
     Include,
     Xclude,
     Steps,
@@ -30,5 +33,11 @@ export default {
     TabItem,
     DocCardList,
     Columns,
-    Column
+    Column,
+    Table,
+    Thead,
+    Th,
+    Tbody,
+    Row,
+    Td
 }
