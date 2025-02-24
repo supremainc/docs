@@ -20815,9 +20815,9 @@ var routesChunkNames = __webpack_require__("7138");
         /*require.resolve*/(6160)
     ],
     "efb123fd": [
-        ()=>__webpack_require__.e(/* import() | efb123fd */ "522").then(__webpack_require__.bind(__webpack_require__, 9762)),
+        ()=>__webpack_require__.e(/* import() | efb123fd */ "522").then(__webpack_require__.bind(__webpack_require__, 8691)),
         "@site/docs/platform/biostar2/product-compatibility.mdx",
-        /*require.resolve*/(9762)
+        /*require.resolve*/(8691)
     ],
     "f30d41f9": [
         ()=>__webpack_require__.e(/* import() | f30d41f9 */ "662").then(__webpack_require__.bind(__webpack_require__, 6986)),

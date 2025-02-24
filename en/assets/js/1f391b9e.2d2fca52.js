@@ -956,10 +956,13 @@ function Column(param) {
 ;// CONCATENATED MODULE: ./src/components/Table/index.js
 
 function Table(param) {
-    let { children } = param;
+    let { children, className } = param;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
         className: "overflow-x",
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("table", {
+            ...className && {
+                className: className
+            },
             children: children
         })
     });

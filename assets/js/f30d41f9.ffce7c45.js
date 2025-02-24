@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-tutorial-mdx-f30.json
-var site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject = JSON.parse('{"id":"platform/biostar2/tutorial","title":"Tutorial","description":"Description","source":"@site/docs/platform/biostar2/tutorial.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/tutorial","permalink":"/docs/en/platform/biostar2/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"Tutorial","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"제품별 버전 호환 정보","permalink":"/docs/en/platform/biostar2/product-compatibility"},"next":{"title":"간편 설치","permalink":"/docs/en/platform/biostar2/quick-start"}}')
+var site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject = JSON.parse('{"id":"platform/biostar2/tutorial","title":"Tutorial","description":"Description","source":"@site/docs/platform/biostar2/tutorial.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/tutorial","permalink":"/docs/platform/biostar2/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"Tutorial","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"제품별 펌웨어 호환 정보","permalink":"/docs/platform/biostar2/product-compatibility"},"next":{"title":"간편 설치","permalink":"/docs/platform/biostar2/quick-start"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'keyword1',
 		'keyword2'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
