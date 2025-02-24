@@ -45,7 +45,7 @@ const sidebars = {
                 id: 'platform/biostar2/tutorial',
               },
               items: [
-                'platform/biostar2/quick-start',
+                'platform/biostar2/express-install',
                 'platform/biostar2/custom-install',
                 'platform/biostar2/register-activation-key',
               ]
