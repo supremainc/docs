@@ -53,6 +53,7 @@ const config = {
   i18n: {
     defaultLocale: 'ko',
     locales: ['ko', 'en'],
+    path: 'docs/i18n',
     localeConfigs: {
       ko: {
         label: '한국어',
