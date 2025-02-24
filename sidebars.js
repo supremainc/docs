@@ -47,6 +47,7 @@ const sidebars = {
               items: [
                 'platform/biostar2/quick-start',
                 'platform/biostar2/custom-install',
+                'platform/biostar2/register-activation-key',
               ]
             }
         ],

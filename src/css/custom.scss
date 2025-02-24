@@ -194,6 +194,14 @@ footer {
   h5 { font-size: var(--ifm-h5-font-size); }
   h6 { font-size: var(--ifm-h6-font-size); }
 
+  section {
+    &.row {
+      h2 {
+        font-size: var(--ifm-h5-font-size);
+      }
+    }
+  }
+
   /* Alert */
   .alert {
     --ifm-alert-border-radius: 5px;
