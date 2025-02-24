@@ -262,6 +262,12 @@ footer {
   table {
     width: 100%;
     display: table;
+    p {
+      margin: 0;
+    }
+    ul {
+      margin-bottom: 0;
+    }
   }
   .col5--15-10-25 {
     table {
