@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-getting-started-mdx-3b9.json
-var site_docs_platform_biostar_2_getting_started_mdx_3b9_namespaceObject = JSON.parse('{"id":"platform/biostar2/getting-started","title":"시작하기 전에","description":"BioStar 2를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar2/getting-started.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/getting-started","permalink":"/docs/platform/biostar2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar 2를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/platform/biostar2/"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/platform/biostar2/system-requirements"}}')
+var site_docs_platform_biostar_2_getting_started_mdx_3b9_namespaceObject = JSON.parse('{"id":"platform/biostar2/getting-started","title":"시작하기 전에","description":"BioStar 2를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar2/getting-started.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/getting-started","permalink":"/docs/en/platform/biostar2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar 2를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/en/platform/biostar2/"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/en/platform/biostar2/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'SQL Server',
 		'데이터베이스'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -838,7 +838,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar 2"
           }), "를 빠르게 설치하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "quick-start",
+            href: "express-install",
             children: "다음 문서"
           }), "에서 확인할 수 있습니다."]
         }), "\n"]

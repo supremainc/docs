@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["662"], {
-"6986": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["885"], {
+"5989": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,24 +8,24 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_2_register_activation_key_mdx_f9c_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-tutorial-mdx-f30.json
-var site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject = JSON.parse('{"id":"platform/biostar2/tutorial","title":"Tutorial","description":"Description","source":"@site/docs/platform/biostar2/tutorial.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/tutorial","permalink":"/docs/platform/biostar2/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"Tutorial","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"제품별 펌웨어 호환 정보","permalink":"/docs/platform/biostar2/product-compatibility"},"next":{"title":"간편 설치","permalink":"/docs/platform/biostar2/quick-start"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-register-activation-key-mdx-f9c.json
+var site_docs_platform_biostar_2_register_activation_key_mdx_f9c_namespaceObject = JSON.parse('{"id":"platform/biostar2/register-activation-key","title":"활성화 키 등록하기","description":"Description","source":"@site/docs/platform/biostar2/register-activation-key.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/register-activation-key","permalink":"/docs/platform/biostar2/register-activation-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/register-activation-key.mdx","tags":[],"version":"current","frontMatter":{"id":"register-activation-key","title":"활성화 키 등록하기","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치","permalink":"/docs/platform/biostar2/custom-install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar2/tutorial.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar2/register-activation-key.mdx
 
 
 const frontMatter = {
-	id: 'tutorial',
-	title: 'Tutorial',
+	id: 'register-activation-key',
+	title: '활성화 키 등록하기',
 	description: 'Description',
 	keywords: [
 		'keyword1',
@@ -43,14 +43,7 @@ const assets = {
 
 const toc = [];
 function _createMdxContent(props) {
-  const _components = {
-    p: "p",
-    ...(0,lib/* useMDXComponents */.a)(),
-    ...props.components
-  };
-  return (0,jsx_runtime.jsx)(_components.p, {
-    children: "제품을 빠르게 시작하기 위한"
-  });
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {

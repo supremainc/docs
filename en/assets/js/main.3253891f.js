@@ -20759,6 +20759,11 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar2/install.mdx",
         /*require.resolve*/(4906)
     ],
+    "5a35c590": [
+        ()=>__webpack_require__.e(/* import() | 5a35c590 */ "118").then(__webpack_require__.bind(__webpack_require__, 4247)),
+        "@site/docs/platform/biostar2/express-install.mdx",
+        /*require.resolve*/(4247)
+    ],
     "5e95c892": [
         ()=>__webpack_require__.e(/* import() | 5e95c892 */ "432").then(__webpack_require__.bind(__webpack_require__, 3512)),
         "@theme/DocsRoot",
@@ -20794,11 +20799,6 @@ var routesChunkNames = __webpack_require__("7138");
         "@theme/DocVersionRoot",
         /*require.resolve*/(1443)
     ],
-    "a85dd062": [
-        ()=>__webpack_require__.e(/* import() | a85dd062 */ "898").then(__webpack_require__.bind(__webpack_require__, 2608)),
-        "@site/docs/platform/biostar2/quick-start.mdx",
-        /*require.resolve*/(2608)
-    ],
     "a94703ab": [
         ()=>Promise.all(/* import() | a94703ab */ [__webpack_require__.e("212"), __webpack_require__.e("914")]).then(__webpack_require__.bind(__webpack_require__, 928)),
         "@theme/DocRoot",
@@ -20823,6 +20823,11 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>__webpack_require__.e(/* import() | f30d41f9 */ "662").then(__webpack_require__.bind(__webpack_require__, 6986)),
         "@site/docs/platform/biostar2/tutorial.mdx",
         /*require.resolve*/(6986)
+    ],
+    "f9cbddb4": [
+        ()=>__webpack_require__.e(/* import() | f9cbddb4 */ "885").then(__webpack_require__.bind(__webpack_require__, 5989)),
+        "@site/docs/platform/biostar2/register-activation-key.mdx",
+        /*require.resolve*/(5989)
     ]
 });
 
@@ -21128,15 +21133,15 @@ function ComponentCreator(path, hash) {
     },
     {
         path: '/docs/en/',
-        component: ComponentCreator('/docs/en/', 'ccd'),
+        component: ComponentCreator('/docs/en/', '8ff'),
         routes: [
             {
                 path: '/docs/en/',
-                component: ComponentCreator('/docs/en/', 'ecd'),
+                component: ComponentCreator('/docs/en/', 'e0a'),
                 routes: [
                     {
                         path: '/docs/en/',
-                        component: ComponentCreator('/docs/en/', '1a2'),
+                        component: ComponentCreator('/docs/en/', '93f'),
                         routes: [
                             {
                                 path: '/docs/en/platform/biostar2/',
@@ -21147,6 +21152,12 @@ function ComponentCreator(path, hash) {
                             {
                                 path: '/docs/en/platform/biostar2/custom-install',
                                 component: ComponentCreator('/docs/en/platform/biostar2/custom-install', '98f'),
+                                exact: true,
+                                sidebar: "biostarx"
+                            },
+                            {
+                                path: '/docs/en/platform/biostar2/express-install',
+                                component: ComponentCreator('/docs/en/platform/biostar2/express-install', 'f18'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
@@ -21168,8 +21179,8 @@ function ComponentCreator(path, hash) {
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/quick-start',
-                                component: ComponentCreator('/docs/en/platform/biostar2/quick-start', '68f'),
+                                path: '/docs/en/platform/biostar2/register-activation-key',
+                                component: ComponentCreator('/docs/en/platform/biostar2/register-activation-key', '329'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
@@ -22062,9 +22073,9 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/custom-install","path":"/docs/en/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/en/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/en/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/docs/en/platform/biostar2/install"},{"id":"platform/biostar2/product-compatibility","path":"/docs/en/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/quick-start","path":"/docs/en/platform/biostar2/quick-start","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/en/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/en/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/custom-install","path":"/docs/en/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/express-install","path":"/docs/en/platform/biostar2/express-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/en/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/en/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/docs/en/platform/biostar2/install"},{"id":"platform/biostar2/product-compatibility","path":"/docs/en/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/register-activation-key","path":"/docs/en/platform/biostar2/register-activation-key","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/en/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/en/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"docs/i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
@@ -28617,6 +28628,7 @@ __webpack_require__.d(__webpack_exports__, {
       "ko",
       "en"
     ],
+    "path": "docs/i18n",
     "localeConfigs": {
       "ko": {
         "label": "한국어",
@@ -28628,8 +28640,7 @@ __webpack_require__.d(__webpack_exports__, {
         "direction": "ltr",
         "htmlLang": "en-US"
       }
-    },
-    "path": "i18n"
+    }
   },
   "themes": [
     "@saucelabs/theme-github-codeblock"
@@ -32601,12 +32612,12 @@ function __rewriteRelativeImportExtension(path, preserveJsx) {
 }),
 "2627": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device","externalLinks.FaceStationF2.desc":"Fusion Multimodal Terminal","externalLinks.XStation2.desc":"Versatile Intelligent Terminal","theme.docs.breadcrumbs.navAriaLabel":"Breadcrumbs","theme.admonition.caution":"Caution","theme.admonition.danger":"Danger","theme.admonition.info":"Info","theme.admonition.note":"Note","theme.admonition.tip":"Tip","theme.admonition.warning":"Warning","theme.docs.breadcrumbs.home":"Home","theme.ErrorPageContent.title":"This page crashed.","theme.BackToTopButton.buttonAriaLabel":"Scroll back to top","theme.blog.archive.title":"Archive","theme.blog.archive.description":"Archive","theme.blog.paginator.navAriaLabel":"Blog list page navigation","theme.blog.paginator.newerEntries":"Newer entries","theme.blog.paginator.olderEntries":"Older entries","theme.blog.post.paginator.navAriaLabel":"Blog post page navigation","theme.blog.post.paginator.newerPost":"Newer post","theme.blog.post.paginator.olderPost":"Older post","theme.tags.tagsPageLink":"View all tags","theme.colorToggle.ariaLabel":"Switch between dark and light mode (currently {mode})","theme.colorToggle.ariaLabel.mode.dark":"Dark mode","theme.colorToggle.ariaLabel.mode.light":"Light mode","theme.docs.DocCard.categoryDescription.plurals":"1 item|{count} items","theme.docs.paginator.navAriaLabel":"Docs pages","theme.docs.paginator.previous":"Previous","theme.docs.paginator.next":"Next","theme.docs.tagDocListPageTitle.nDocsTagged":"One doc tagged|{count} docs tagged","theme.docs.tagDocListPageTitle":"{nDocsTagged} with \\"{tagName}\\"","theme.docs.versionBadge.label":"Version: {versionLabel}","theme.docs.versions.unreleasedVersionLabel":"This is unreleased documentation for {siteTitle} {versionLabel} version.","theme.docs.versions.unmaintainedVersionLabel":"This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.","theme.docs.versions.latestVersionSuggestionLabel":"For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).","theme.docs.versions.latestVersionLinkLabel":"latest version","theme.common.editThisPage":"Edit this page","theme.common.headingLinkTitle":"Direct link to {heading}","theme.lastUpdated.atDate":" on {date}","theme.lastUpdated.byUser":" by {user}","theme.lastUpdated.lastUpdatedAtBy":"Last updated{atDate}{byUser}","theme.navbar.mobileVersionsDropdown.label":"Versions","theme.NotFound.title":"Page Not Found","theme.tags.tagsListLabel":"Tags:","theme.AnnouncementBar.closeButtonAriaLabel":"Close","theme.blog.sidebar.navAriaLabel":"Blog recent posts navigation","theme.CodeBlock.copied":"Copied","theme.CodeBlock.copyButtonAriaLabel":"Copy code to clipboard","theme.CodeBlock.copy":"Copy","theme.CodeBlock.wordWrapToggle":"Toggle word wrap","theme.DocSidebarItem.expandCategoryAriaLabel":"Expand sidebar category \'{label}\'","theme.DocSidebarItem.collapseCategoryAriaLabel":"Collapse sidebar category \'{label}\'","theme.NavBar.navAriaLabel":"Main","theme.navbar.mobileLanguageDropdown.label":"Languages","theme.NotFound.p1":"We could not find what you were looking for.","theme.NotFound.p2":"Please contact the owner of the site that linked you to the original URL and let them know their link is broken.","theme.TOCCollapsible.toggleButtonLabel":"On this page","theme.blog.post.readMore":"Read more","theme.blog.post.readMoreLabel":"Read more about {title}","theme.blog.post.readingTime.plurals":"One min read|{readingTime} min read","theme.docs.sidebar.collapseButtonTitle":"Collapse sidebar","theme.docs.sidebar.collapseButtonAriaLabel":"Collapse sidebar","theme.docs.sidebar.navAriaLabel":"Docs sidebar","theme.docs.sidebar.closeSidebarButtonAriaLabel":"Close navigation bar","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← Back to main men","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"Toggle navigation bar","theme.docs.sidebar.expandButtonTitle":"Expand sidebar","theme.docs.sidebar.expandButtonAriaLabel":"Expand sidebar","theme.blog.post.plurals":"One post|{count} posts","theme.blog.tagTitle":"{nPosts} tagged with \\"{tagName}\\"","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"Authors","theme.blog.authorsList.viewAll":"View all authors","theme.blog.author.noPosts":"This author has not written any posts yet.","theme.contentVisibility.unlistedBanner.title":"Unlisted page","theme.contentVisibility.unlistedBanner.message":"This page is unlisted. Search engines will not index it, and only users having a direct link can access it.","theme.contentVisibility.draftBanner.title":"Draft page","theme.contentVisibility.draftBanner.message":"This page is a draft. It will only be visible in dev and be excluded from the production build.","theme.ErrorPageContent.tryAgain":"Try again","theme.common.skipToMainContent":"Skip to main content","theme.tags.tagsPageTitle":"Tags"}')
+module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device","externalLinks.FaceStationF2.desc":"Fusion Multimodal Terminal","externalLinks.XStation2.desc":"Versatile Intelligent Terminal","theme.docs.breadcrumbs.navAriaLabel":"Breadcrumbs","theme.admonition.caution":"Caution","theme.admonition.danger":"Danger","theme.admonition.info":"Info","theme.admonition.note":"Note","theme.admonition.tip":"Tip","theme.admonition.warning":"Warning","theme.docs.breadcrumbs.home":"Home","theme.ErrorPageContent.title":"This page crashed.","theme.BackToTopButton.buttonAriaLabel":"Scroll back to top","theme.blog.archive.title":"Archive","theme.blog.archive.description":"Archive","theme.blog.paginator.navAriaLabel":"Blog list page navigation","theme.blog.paginator.newerEntries":"Newer entries","theme.blog.paginator.olderEntries":"Older entries","theme.blog.post.paginator.navAriaLabel":"Blog post page navigation","theme.blog.post.paginator.newerPost":"Newer post","theme.blog.post.paginator.olderPost":"Older post","theme.tags.tagsPageLink":"View all tags","theme.colorToggle.ariaLabel":"Switch between dark and light mode (currently {mode})","theme.colorToggle.ariaLabel.mode.dark":"Dark mode","theme.colorToggle.ariaLabel.mode.light":"Light mode","theme.docs.DocCard.categoryDescription.plurals":"1 item|{count} items","theme.docs.paginator.navAriaLabel":"Docs pages","theme.docs.paginator.previous":"Previous","theme.docs.paginator.next":"Next","theme.docs.tagDocListPageTitle.nDocsTagged":"One doc tagged|{count} docs tagged","theme.docs.tagDocListPageTitle":"{nDocsTagged} with \\"{tagName}\\"","theme.docs.versionBadge.label":"Version: {versionLabel}","theme.docs.versions.unreleasedVersionLabel":"This is unreleased documentation for {siteTitle} {versionLabel} version.","theme.docs.versions.unmaintainedVersionLabel":"This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.","theme.docs.versions.latestVersionSuggestionLabel":"For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).","theme.docs.versions.latestVersionLinkLabel":"latest version","theme.common.editThisPage":"Edit this page","theme.common.headingLinkTitle":"Direct link to {heading}","theme.lastUpdated.atDate":" on {date}","theme.lastUpdated.byUser":" by {user}","theme.lastUpdated.lastUpdatedAtBy":"Last updated{atDate}{byUser}","theme.navbar.mobileVersionsDropdown.label":"Versions","theme.NotFound.title":"Page Not Found","theme.tags.tagsListLabel":"Tags:","theme.AnnouncementBar.closeButtonAriaLabel":"Close","theme.blog.sidebar.navAriaLabel":"Blog recent posts navigation","theme.CodeBlock.copied":"Copied","theme.CodeBlock.copyButtonAriaLabel":"Copy code to clipboard","theme.CodeBlock.copy":"Copy","theme.CodeBlock.wordWrapToggle":"Toggle word wrap","theme.DocSidebarItem.expandCategoryAriaLabel":"Expand sidebar category \'{label}\'","theme.DocSidebarItem.collapseCategoryAriaLabel":"Collapse sidebar category \'{label}\'","theme.NavBar.navAriaLabel":"Main","theme.navbar.mobileLanguageDropdown.label":"Languages","theme.NotFound.p1":"We could not find what you were looking for.","theme.NotFound.p2":"Please contact the owner of the site that linked you to the original URL and let them know their link is broken.","theme.TOCCollapsible.toggleButtonLabel":"On this page","theme.blog.post.readMore":"Read more","theme.blog.post.readMoreLabel":"Read more about {title}","theme.blog.post.readingTime.plurals":"One min read|{readingTime} min read","theme.docs.sidebar.collapseButtonTitle":"Collapse sidebar","theme.docs.sidebar.collapseButtonAriaLabel":"Collapse sidebar","theme.docs.sidebar.navAriaLabel":"Docs sidebar","theme.docs.sidebar.closeSidebarButtonAriaLabel":"Close navigation bar","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← Back to main men","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"Toggle navigation bar","theme.docs.sidebar.expandButtonTitle":"Expand sidebar","theme.docs.sidebar.expandButtonAriaLabel":"Expand sidebar","theme.blog.post.plurals":"One post|{count} posts","theme.blog.tagTitle":"{nPosts} tagged with \\"{tagName}\\"","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"Authors","theme.blog.authorsList.viewAll":"View all authors","theme.blog.author.noPosts":"This author has not written any posts yet.","theme.contentVisibility.unlistedBanner.title":"Unlisted page","theme.contentVisibility.unlistedBanner.message":"This page is unlisted. Search engines will not index it, and only users having a direct link can access it.","theme.contentVisibility.draftBanner.title":"Draft page","theme.contentVisibility.draftBanner.message":"This page is a draft. It will only be visible in dev and be excluded from the production build.","theme.ErrorPageContent.tryAgain":"Try again","theme.common.skipToMainContent":"Skip to main content","theme.tags.tagsPageTitle":"Tags","biostar2.install.ok":"OK","biostar2.install.agree":"I accept the agreement","biostar2.install.next":"Next","biostar2.install.expressInstall":"Express installation","biostar2.install.customInstall":"Custom installation","biostar2.install.btnInstall":"Install","biostar2.install.complete":"Finish"}')
 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/en/markdown-page-d91":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-ccd":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-ecd":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-1a2":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/install-ae0":{"__comp":"17896441","content":"546a091b"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/quick-start-68f":{"__comp":"17896441","content":"a85dd062"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
+module.exports = JSON.parse('{"/docs/en/markdown-page-d91":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-8ff":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-e0a":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-93f":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/install-ae0":{"__comp":"17896441","content":"546a091b"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
 
 }),
 

@@ -478,6 +478,8 @@ var jsx_runtime = __webpack_require__("5893");
 var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
 var useDocusaurusContext = __webpack_require__("7262");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__("7670");
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
 var clsx = __webpack_require__("7026");
 ;// CONCATENATED MODULE: ./src/components/Cmd/ko.json
@@ -491,27 +493,43 @@ var en_namespaceObject = JSON.parse('{"ACB_ERROR_CODE.0":"Successful","ACB_ERROR
 
 
 
+
 const ReplacementLocaleText = (param)=>{
-    let { sid, className } = param;
+    let { sid, code, className } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
-    let locale;
-    switch(currentLocale){
-        case "ko":
-            locale = ko_namespaceObject;
-            break;
-        case "en":
-            locale = en_namespaceObject;
-            break;
-    }
-    try {
-        let localeText = locale[sid].replace('<br>', '');
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-            className: (0,clsx/* default */.Z)('cmd', className),
-            children: localeText
-        });
-    } catch (e) {
-        console.error(`Error rendering locale text for SID: ${sid}`, e);
-        return null;
+    if (sid) {
+        let locale;
+        switch(currentLocale){
+            case "ko":
+                locale = ko_namespaceObject;
+                break;
+            case "en":
+                locale = en_namespaceObject;
+                break;
+        }
+        try {
+            let localeText = locale[sid].replace('<br>', '');
+            return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                className: (0,clsx/* default */.Z)('cmd', className),
+                children: localeText
+            });
+        } catch (e) {
+            console.error(`Error rendering locale text for SID: ${sid}`, e);
+            return null;
+        }
+    } else if (code) {
+        try {
+            let localeText = (0,Translate/* translate */.I)({
+                id: `${code}`
+            });
+            return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                className: (0,clsx/* default */.Z)('cmd', className),
+                children: localeText
+            });
+        } catch (e) {
+            console.error(`Error rendering locale text for code: ${code}`, e);
+            return null;
+        }
     }
 };
 /* ESM default export */ const Cmd = (ReplacementLocaleText);
