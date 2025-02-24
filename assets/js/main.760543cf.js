@@ -20729,6 +20729,11 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 var routesChunkNames = __webpack_require__("7138");
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
 /* ESM default export */ const registry = ({
+    "11b43341": [
+        ()=>__webpack_require__.e(/* import() | 11b43341 */ "467").then(__webpack_require__.t.bind(__webpack_require__, 9989, 19)),
+        "@generated/docusaurus-plugin-content-docs/default/p/docs-7fc.json",
+        /*require.resolve*/(9989)
+    ],
     "17896441": [
         ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("212"), __webpack_require__.e("834"), __webpack_require__.e("305"), __webpack_require__.e("48")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
         "@theme/DocItem",
@@ -20748,11 +20753,6 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>__webpack_require__.e(/* import() | 3b916237 */ "422").then(__webpack_require__.bind(__webpack_require__, 9745)),
         "@site/docs/platform/biostar2/getting-started.mdx",
         /*require.resolve*/(9745)
-    ],
-    "3c097e0f": [
-        ()=>__webpack_require__.e(/* import() | 3c097e0f */ "951").then(__webpack_require__.t.bind(__webpack_require__, 1253, 19)),
-        "@generated/docusaurus-plugin-content-docs/default/p/docs-en-760.json",
-        /*require.resolve*/(1253)
     ],
     "546a091b": [
         ()=>__webpack_require__.e(/* import() | 546a091b */ "917").then(__webpack_require__.bind(__webpack_require__, 4906)),
@@ -20815,9 +20815,9 @@ var routesChunkNames = __webpack_require__("7138");
         /*require.resolve*/(6160)
     ],
     "efb123fd": [
-        ()=>__webpack_require__.e(/* import() | efb123fd */ "522").then(__webpack_require__.bind(__webpack_require__, 743)),
+        ()=>__webpack_require__.e(/* import() | efb123fd */ "522").then(__webpack_require__.bind(__webpack_require__, 9762)),
         "@site/docs/platform/biostar2/product-compatibility.mdx",
-        /*require.resolve*/(743)
+        /*require.resolve*/(9762)
     ],
     "f30d41f9": [
         ()=>__webpack_require__.e(/* import() | f30d41f9 */ "662").then(__webpack_require__.bind(__webpack_require__, 6986)),
@@ -21117,71 +21117,71 @@ function ComponentCreator(path, hash) {
 
 /* ESM default export */ const routes = ([
     {
-        path: '/docs/en/markdown-page',
-        component: ComponentCreator('/docs/en/markdown-page', 'd91'),
+        path: '/docs/markdown-page',
+        component: ComponentCreator('/docs/markdown-page', 'c78'),
         exact: true
     },
     {
-        path: '/docs/en/',
-        component: ComponentCreator('/docs/en/', '163'),
+        path: '/docs/',
+        component: ComponentCreator('/docs/', '6fa'),
         exact: true
     },
     {
-        path: '/docs/en/',
-        component: ComponentCreator('/docs/en/', 'ccd'),
+        path: '/docs/',
+        component: ComponentCreator('/docs/', '8b0'),
         routes: [
             {
-                path: '/docs/en/',
-                component: ComponentCreator('/docs/en/', 'ecd'),
+                path: '/docs/',
+                component: ComponentCreator('/docs/', '795'),
                 routes: [
                     {
-                        path: '/docs/en/',
-                        component: ComponentCreator('/docs/en/', '1a2'),
+                        path: '/docs/',
+                        component: ComponentCreator('/docs/', '3fc'),
                         routes: [
                             {
-                                path: '/docs/en/platform/biostar2/',
-                                component: ComponentCreator('/docs/en/platform/biostar2/', '33a'),
+                                path: '/docs/platform/biostar2/',
+                                component: ComponentCreator('/docs/platform/biostar2/', '906'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/custom-install',
-                                component: ComponentCreator('/docs/en/platform/biostar2/custom-install', '98f'),
+                                path: '/docs/platform/biostar2/custom-install',
+                                component: ComponentCreator('/docs/platform/biostar2/custom-install', '4c4'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/getting-started',
-                                component: ComponentCreator('/docs/en/platform/biostar2/getting-started', '841'),
+                                path: '/docs/platform/biostar2/getting-started',
+                                component: ComponentCreator('/docs/platform/biostar2/getting-started', 'e33'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/install',
-                                component: ComponentCreator('/docs/en/platform/biostar2/install', 'ae0'),
+                                path: '/docs/platform/biostar2/install',
+                                component: ComponentCreator('/docs/platform/biostar2/install', '2cc'),
                                 exact: true
                             },
                             {
-                                path: '/docs/en/platform/biostar2/product-compatibility',
-                                component: ComponentCreator('/docs/en/platform/biostar2/product-compatibility', 'a46'),
+                                path: '/docs/platform/biostar2/product-compatibility',
+                                component: ComponentCreator('/docs/platform/biostar2/product-compatibility', 'c76'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/quick-start',
-                                component: ComponentCreator('/docs/en/platform/biostar2/quick-start', '68f'),
+                                path: '/docs/platform/biostar2/quick-start',
+                                component: ComponentCreator('/docs/platform/biostar2/quick-start', '65b'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/system-requirements',
-                                component: ComponentCreator('/docs/en/platform/biostar2/system-requirements', '111'),
+                                path: '/docs/platform/biostar2/system-requirements',
+                                component: ComponentCreator('/docs/platform/biostar2/system-requirements', 'fcf'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/en/platform/biostar2/tutorial',
-                                component: ComponentCreator('/docs/en/platform/biostar2/tutorial', '06a'),
+                                path: '/docs/platform/biostar2/tutorial',
+                                component: ComponentCreator('/docs/platform/biostar2/tutorial', '7ba'),
                                 exact: true,
                                 sidebar: "biostarx"
                             }
@@ -22062,9 +22062,9 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/custom-install","path":"/docs/en/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/en/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/en/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/docs/en/platform/biostar2/install"},{"id":"platform/biostar2/product-compatibility","path":"/docs/en/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/quick-start","path":"/docs/en/platform/biostar2/quick-start","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/en/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/en/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/custom-install","path":"/docs/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/install","path":"/docs/platform/biostar2/install"},{"id":"platform/biostar2/product-compatibility","path":"/docs/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/quick-start","path":"/docs/platform/biostar2/quick-start","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
@@ -25965,7 +25965,7 @@ const sns = [
         width: '35px'
     }
 ];
-function snsList(item) {
+function SnsList(item) {
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
             to: item.link,
@@ -25984,7 +25984,9 @@ function SNS() {
         className: "footer__bottom sns--right",
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
             className: "sns__list",
-            children: sns.map(snsList)
+            children: sns.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(SnsList, {
+                    ...props
+                }, idx))
         })
     });
 }
@@ -28584,11 +28586,11 @@ __webpack_require__.d(__webpack_exports__, {
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  "title": "Suprema Docs",
-  "tagline": "Check out all of Suprema's products and BioStar related information here.",
+  "title": "슈프리마 Docs",
+  "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
   "url": "https://docs.supremainc.com",
-  "baseUrl": "/docs/en/",
+  "baseUrl": "/docs/",
   "noIndex": true,
   "future": {
     "experimental_faster": {
@@ -28637,9 +28639,12 @@ __webpack_require__.d(__webpack_exports__, {
       "classic",
       {
         "docs": {
-          "routeBasePath": "/",
           "sidebarPath": "./sidebars.js",
           "editUrl": "https://github.com/supremainc/docs/tree/main/",
+          "routeBasePath": "/",
+          "exclude": [
+            "common/**.{md,mdx}"
+          ],
           "rehypePlugins": [
             null
           ]
@@ -28673,7 +28678,7 @@ __webpack_require__.d(__webpack_exports__, {
     "image": "img/sns_img02.jpg",
     "announcementBar": {
       "id": "annoucementbar",
-      "content": "<b>This document contains content that has not yet been released to the service version. For documentation on officially released features, please see the following links.</b>",
+      "content": "<b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 다음 링크에서 확인하세요.</b>",
       "backgroundColor": "#FFB27D",
       "textColor": "#091E42",
       "isCloseable": true
@@ -28733,7 +28738,7 @@ __webpack_require__.d(__webpack_exports__, {
           "href": "https://stackoverflow.com/questions/tagged/docusaurus"
         }
       ],
-      "copyright": "Copyright © Suprema Inc. All rights reserved."
+      "copyright": "Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369"
     },
     "prism": {
       "additionalLanguages": [
@@ -32596,12 +32601,12 @@ function __rewriteRelativeImportExtension(path, preserveJsx) {
 }),
 "2627": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device","externalLinks.FaceStationF2.desc":"Fusion Multimodal Terminal","externalLinks.XStation2.desc":"Versatile Intelligent Terminal","theme.docs.breadcrumbs.navAriaLabel":"Breadcrumbs","theme.admonition.caution":"Caution","theme.admonition.danger":"Danger","theme.admonition.info":"Info","theme.admonition.note":"Note","theme.admonition.tip":"Tip","theme.admonition.warning":"Warning","theme.docs.breadcrumbs.home":"Home","theme.ErrorPageContent.title":"This page crashed.","theme.BackToTopButton.buttonAriaLabel":"Scroll back to top","theme.blog.archive.title":"Archive","theme.blog.archive.description":"Archive","theme.blog.paginator.navAriaLabel":"Blog list page navigation","theme.blog.paginator.newerEntries":"Newer entries","theme.blog.paginator.olderEntries":"Older entries","theme.blog.post.paginator.navAriaLabel":"Blog post page navigation","theme.blog.post.paginator.newerPost":"Newer post","theme.blog.post.paginator.olderPost":"Older post","theme.tags.tagsPageLink":"View all tags","theme.colorToggle.ariaLabel":"Switch between dark and light mode (currently {mode})","theme.colorToggle.ariaLabel.mode.dark":"Dark mode","theme.colorToggle.ariaLabel.mode.light":"Light mode","theme.docs.DocCard.categoryDescription.plurals":"1 item|{count} items","theme.docs.paginator.navAriaLabel":"Docs pages","theme.docs.paginator.previous":"Previous","theme.docs.paginator.next":"Next","theme.docs.tagDocListPageTitle.nDocsTagged":"One doc tagged|{count} docs tagged","theme.docs.tagDocListPageTitle":"{nDocsTagged} with \\"{tagName}\\"","theme.docs.versionBadge.label":"Version: {versionLabel}","theme.docs.versions.unreleasedVersionLabel":"This is unreleased documentation for {siteTitle} {versionLabel} version.","theme.docs.versions.unmaintainedVersionLabel":"This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.","theme.docs.versions.latestVersionSuggestionLabel":"For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).","theme.docs.versions.latestVersionLinkLabel":"latest version","theme.common.editThisPage":"Edit this page","theme.common.headingLinkTitle":"Direct link to {heading}","theme.lastUpdated.atDate":" on {date}","theme.lastUpdated.byUser":" by {user}","theme.lastUpdated.lastUpdatedAtBy":"Last updated{atDate}{byUser}","theme.navbar.mobileVersionsDropdown.label":"Versions","theme.NotFound.title":"Page Not Found","theme.tags.tagsListLabel":"Tags:","theme.AnnouncementBar.closeButtonAriaLabel":"Close","theme.blog.sidebar.navAriaLabel":"Blog recent posts navigation","theme.CodeBlock.copied":"Copied","theme.CodeBlock.copyButtonAriaLabel":"Copy code to clipboard","theme.CodeBlock.copy":"Copy","theme.CodeBlock.wordWrapToggle":"Toggle word wrap","theme.DocSidebarItem.expandCategoryAriaLabel":"Expand sidebar category \'{label}\'","theme.DocSidebarItem.collapseCategoryAriaLabel":"Collapse sidebar category \'{label}\'","theme.NavBar.navAriaLabel":"Main","theme.navbar.mobileLanguageDropdown.label":"Languages","theme.NotFound.p1":"We could not find what you were looking for.","theme.NotFound.p2":"Please contact the owner of the site that linked you to the original URL and let them know their link is broken.","theme.TOCCollapsible.toggleButtonLabel":"On this page","theme.blog.post.readMore":"Read more","theme.blog.post.readMoreLabel":"Read more about {title}","theme.blog.post.readingTime.plurals":"One min read|{readingTime} min read","theme.docs.sidebar.collapseButtonTitle":"Collapse sidebar","theme.docs.sidebar.collapseButtonAriaLabel":"Collapse sidebar","theme.docs.sidebar.navAriaLabel":"Docs sidebar","theme.docs.sidebar.closeSidebarButtonAriaLabel":"Close navigation bar","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← Back to main men","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"Toggle navigation bar","theme.docs.sidebar.expandButtonTitle":"Expand sidebar","theme.docs.sidebar.expandButtonAriaLabel":"Expand sidebar","theme.blog.post.plurals":"One post|{count} posts","theme.blog.tagTitle":"{nPosts} tagged with \\"{tagName}\\"","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"Authors","theme.blog.authorsList.viewAll":"View all authors","theme.blog.author.noPosts":"This author has not written any posts yet.","theme.contentVisibility.unlistedBanner.title":"Unlisted page","theme.contentVisibility.unlistedBanner.message":"This page is unlisted. Search engines will not index it, and only users having a direct link can access it.","theme.contentVisibility.draftBanner.title":"Draft page","theme.contentVisibility.draftBanner.message":"This page is a draft. It will only be visible in dev and be excluded from the production build.","theme.ErrorPageContent.tryAgain":"Try again","theme.common.skipToMainContent":"Skip to main content","theme.tags.tagsPageTitle":"Tags"}')
+module.exports = JSON.parse('{"theme.AnnouncementBar.closeButtonAriaLabel":"닫기","theme.BackToTopButton.buttonAriaLabel":"맨 위로 스크롤하기","theme.CodeBlock.copied":"복사했습니다","theme.CodeBlock.copy":"복사","theme.CodeBlock.copyButtonAriaLabel":"클립보드에 코드 복사","theme.CodeBlock.wordWrapToggle":"줄 바꿈 전환","theme.DocSidebarItem.collapseCategoryAriaLabel":"사이드바 분류 \'{label}\' 접기","theme.DocSidebarItem.expandCategoryAriaLabel":"사이드바 분류 \'{label}\' 펼치기","theme.ErrorPageContent.title":"페이지에 오류가 발생하였습니다.","theme.ErrorPageContent.tryAgain":"다시 시도해 보세요","theme.NavBar.navAriaLabel":"메인","theme.NotFound.p1":"원하는 페이지를 찾을 수 없습니다.","theme.NotFound.p2":"사이트 관리자에게 링크가 깨진 것을 알려주세요.","theme.NotFound.title":"페이지를 찾을 수 없습니다.","theme.TOCCollapsible.toggleButtonLabel":"이 페이지에서","theme.admonition.caution":"주의","theme.admonition.danger":"위험","theme.admonition.info":"알아두기","theme.admonition.note":"노트","theme.admonition.tip":"팁","theme.admonition.warning":"경고","theme.blog.archive.description":"게시물 목록","theme.blog.archive.title":"게시물 목록","theme.blog.author.noPosts":"작성자가 아직 게시글을 작성하지 않았습니다.","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"저자","theme.blog.authorsList.viewAll":"모든 저자 보기","theme.blog.paginator.navAriaLabel":"블로그 게시물 목록 탐색","theme.blog.paginator.newerEntries":"이전 페이지","theme.blog.paginator.olderEntries":"다음 페이지","theme.blog.post.paginator.navAriaLabel":"블로그 게시물 탐색","theme.blog.post.paginator.newerPost":"이전 게시물","theme.blog.post.paginator.olderPost":"다음 게시물","theme.blog.post.plurals":"{count}개 게시물","theme.blog.post.readMore":"자세히 보기","theme.blog.post.readMoreLabel":"{title} 에 대해 더 읽어보기","theme.blog.post.readingTime.plurals":"약 {readingTime}분","theme.blog.sidebar.navAriaLabel":"최근 블로그 문서 둘러보기","theme.blog.tagTitle":"\\"{tagName}\\" 태그로 연결된 {nPosts}개의 게시물이 있습니다.","theme.colorToggle.ariaLabel":"어두운 모드와 밝은 모드 전환하기 (현재 {mode})","theme.colorToggle.ariaLabel.mode.dark":"어두운 모드","theme.colorToggle.ariaLabel.mode.light":"밝은 모드","theme.common.editThisPage":"페이지 편집","theme.common.headingLinkTitle":"{heading}에 대한 직접 링크","theme.common.skipToMainContent":"본문으로 건너뛰기","theme.contentVisibility.draftBanner.message":"이 페이지는 아직 작성 중입니다. 개발 환경에서만 보이며 프로덕션 빌드에서는 제외됩니다.","theme.contentVisibility.draftBanner.title":"작성 중인 페이지","theme.contentVisibility.unlistedBanner.message":"이 문서는 색인되지 않습니다. 검색 엔진이 이 문서를 색인하지 않으며, 주소를 알고 있는 사용자만 접근할 수 있습니다.","theme.contentVisibility.unlistedBanner.title":"색인되지 않은 문서","theme.docs.DocCard.categoryDescription.plurals":"{count} 항목","theme.docs.breadcrumbs.home":"홈","theme.docs.breadcrumbs.navAriaLabel":"탐색 경로","theme.docs.paginator.navAriaLabel":"문서 페이지","theme.docs.paginator.next":"다음","theme.docs.paginator.previous":"이전","theme.docs.sidebar.closeSidebarButtonAriaLabel":"사이드바 닫기","theme.docs.sidebar.collapseButtonAriaLabel":"사이드바 숨기기","theme.docs.sidebar.collapseButtonTitle":"사이드바 숨기기","theme.docs.sidebar.expandButtonAriaLabel":"사이드바 열기","theme.docs.sidebar.expandButtonTitle":"사이드바 열기","theme.docs.sidebar.navAriaLabel":"문서 사이드바","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"사이드바 펼치거나 접기","theme.docs.tagDocListPageTitle":"{nDocsTagged} \\"{tagName}\\" 태그에 분류되었습니다","theme.docs.tagDocListPageTitle.nDocsTagged":"{count}개 문서가","theme.docs.versionBadge.label":"버전: {versionLabel}","theme.docs.versions.latestVersionLinkLabel":"최신 버전","theme.docs.versions.latestVersionSuggestionLabel":"최신 문서는 {latestVersionLink} ({versionLabel})을 확인하세요.","theme.docs.versions.unmaintainedVersionLabel":"{siteTitle} {versionLabel} 문서는 더 이상 업데이트되지 않습니다.","theme.docs.versions.unreleasedVersionLabel":"{siteTitle} {versionLabel} 문서는 아직 정식 공개되지 않았습니다.","theme.lastUpdated.atDate":" {date}에","theme.lastUpdated.byUser":" {user}가","theme.lastUpdated.lastUpdatedAtBy":"최종 수정: {atDate}{byUser}","theme.navbar.mobileLanguageDropdown.label":"언어","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← 메인 메뉴로 돌아가기","theme.navbar.mobileVersionsDropdown.label":"버전","theme.tags.tagsListLabel":"태그:","theme.tags.tagsPageLink":"모든 태그 보기","theme.tags.tagsPageTitle":"태그","externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스","externalLinks.FaceStationF2.desc":"퓨전 얼굴인증 장치","externalLinks.XStation2.desc":"차세대 모바일 출입인증 단말기"}')
 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/en/markdown-page-d91":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-ccd":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-ecd":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-1a2":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/install-ae0":{"__comp":"17896441","content":"546a091b"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/quick-start-68f":{"__comp":"17896441","content":"a85dd062"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
+module.exports = JSON.parse('{"/docs/markdown-page-c78":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-8b0":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-795":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-3fc":{"__comp":"a94703ab"},"/docs/platform/biostar2/-906":{"__comp":"17896441","content":"6cd7ec80"},"/docs/platform/biostar2/custom-install-4c4":{"__comp":"17896441","content":"9aeb0299"},"/docs/platform/biostar2/getting-started-e33":{"__comp":"17896441","content":"3b916237"},"/docs/platform/biostar2/install-2cc":{"__comp":"17896441","content":"546a091b"},"/docs/platform/biostar2/product-compatibility-c76":{"__comp":"17896441","content":"efb123fd"},"/docs/platform/biostar2/quick-start-65b":{"__comp":"17896441","content":"a85dd062"},"/docs/platform/biostar2/system-requirements-fcf":{"__comp":"17896441","content":"96551ba4"},"/docs/platform/biostar2/tutorial-7ba":{"__comp":"17896441","content":"f30d41f9"}}')
 
 }),
 
