@@ -1,7 +1,8 @@
-export function Table({ children }) {
+export function Table({ children, className }) {
   return (
-    <div className="overflow-x">
-      <table>
+    <div className='overflow-x'>
+      <table 
+        {...(className && {className: className})}>
         {children}
       </table>
     </div>
