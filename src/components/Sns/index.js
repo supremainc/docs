@@ -20,7 +20,7 @@ const sns = [
   }
 ]
 
-function snsList(item) {
+function SnsList(item) {
   return (
     <li>
       <Link to={item.link} target='_blank'>
@@ -36,7 +36,9 @@ export default function SNS() {
   return (
     <div className='footer__bottom sns--right'>
       <ul className='sns__list'>
-        {sns.map(snsList)}
+        {sns.map((props, idx) => (
+          <SnsList key={idx} {...props} />
+        ))}
       </ul>
     </div>
   )
