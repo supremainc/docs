@@ -262,6 +262,14 @@ footer {
   table {
     width: 100%;
     display: table;
+    &.col2-2-8 {
+      td:first-of-type {
+        width: 20%;
+      }
+      td:nth-of-type(2) {
+        width: 80%;
+      }
+    }
     p {
       margin: 0;
     }
