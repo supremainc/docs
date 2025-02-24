@@ -19,6 +19,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-color-color-gray: #333;
+  --ifm-color-color-ol-gray: #696969;
   --ifm-footer-padding-vertical: 28px;
   --ifm-footer-padding-horizontal: 1rem;
   --ifm-color-border: #797979;
@@ -43,6 +44,7 @@
   --ifm-color-primary-lightest: #2fbdff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-color-color-gray: #dadada;
+  --ifm-color-color-ol-gray: #b4b4b4;
   --ifm-color-border: #d1d1d1;
   --ifm-color-cmd: #bb7f8f;
 }
@@ -194,6 +196,14 @@ footer {
   h5 { font-size: var(--ifm-h5-font-size); }
   h6 { font-size: var(--ifm-h6-font-size); }
 
+  section {
+    &.row {
+      h2 {
+        font-size: var(--ifm-h5-font-size);
+      }
+    }
+  }
+
   /* Alert */
   .alert {
     --ifm-alert-border-radius: 5px;
@@ -241,6 +251,26 @@ footer {
         &.w--400 {
           width: 400px;
         }
+      }
+    }
+  }
+
+  ol {
+    li {
+      &::marker {
+        color: var(--ifm-color-color-ol-gray);
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  ol, ul {
+    p.hasimg {
+      margin-top: 0;
+      margin-bottom: 15px;
+      img {
+        margin-left: 0;
       }
     }
   }

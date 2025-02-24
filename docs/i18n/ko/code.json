@@ -318,5 +318,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "태그",
     "description": "The title of the tag list page"
+  },
+  "biostar2.install.ok": {
+    "message": "OK"
+  },
+  "biostar2.install.agree": {
+    "message": "동의"
+  },
+  "biostar2.install.next": {
+    "message": "다음"
+  },
+  "biostar2.install.expressInstall": {
+    "message": "간편 설치"
+  },
+  "biostar2.install.customInstall": {
+    "message": "사용자 정의 설치"
+  },
+  "biostar2.install.btnInstall": {
+    "message": "설치"
+  },
+  "biostar2.install.complete": {
+    "message": "완료"
   }
 }

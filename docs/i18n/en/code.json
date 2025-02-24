@@ -318,5 +318,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "biostar2.install.ok": {
+    "message": "OK"
+  },
+  "biostar2.install.agree": {
+    "message": "I accept the agreement"
+  },
+  "biostar2.install.next": {
+    "message": "Next"
+  },
+  "biostar2.install.expressInstall": {
+    "message": "Express installation"
+  },
+  "biostar2.install.customInstall": {
+    "message": "Custom installation"
+  },
+  "biostar2.install.btnInstall": {
+    "message": "Install"
+  },
+  "biostar2.install.complete": {
+    "message": "Finish"
   }
 }
