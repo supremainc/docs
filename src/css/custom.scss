@@ -22,7 +22,7 @@
   --ifm-color-color-ol-gray: #696969;
   --ifm-footer-padding-vertical: 28px;
   --ifm-footer-padding-horizontal: 1rem;
-  --ifm-color-border: #797979;
+  --ifm-color-border: #adadad;
   --ifm-list-paragraph-margin: .7rem;
   --ifm-paragraph-margin-bottom: .7rem;
   --ifm-h2-font-size: 1.8rem;
@@ -70,17 +70,27 @@ html[lang='en-US'] * {
 // index.js 페이지
 
 // layout 스타일
-a.navbar__brand {
-  font-size: 18px;
-  color: #595757;
-  margin-right: 100px;
-  &:hover {
+.navbar__items {
+  a.navbar__brand {
+    font-size: 18px;
     color: #595757;
+    margin-right: 100px;
+    &:hover {
+      color: #595757;
+    }
+    &:visited {
+      color: #595757;
+    }
   }
-  &:visited {
-    color: #595757;
+  .navbar__item {
+    a {
+      font-weight: 400;
+    }
   }
 }
+// nav.theme-doc-breadcrumbs {
+//   position: fixed;
+// }
 .theme-doc-sidebar-menu {
   li.p-title {
     &> .menu__list-item-collapsible {
@@ -264,7 +274,6 @@ footer {
       }
     }
   }
-
   ol, ul {
     p.hasimg {
       margin-top: 0;
@@ -402,5 +411,15 @@ footer {
   }
   .theme-doc-footer {
     display: none;
+  }
+  section.row {
+    article {
+      display: inline;
+      flex: none !important;
+      width: 50%;
+      > a.padding--lg {
+        padding: 20px !important;
+      }
+    }
   }
 }

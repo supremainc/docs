@@ -3,4 +3,13 @@
   padding-bottom: 0.8rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--ifm-color-border);
+  position: sticky;
+  top: 60px;
+  padding-top: 16px;
+  background-color: #fff;
+  box-shadow: 0 30px 30px rgb(255, 255, 255);
+}
+
+[data-theme='dark'] .breadcrumbsContainer {
+  background-color: var(--ifm-background-color);
 }
