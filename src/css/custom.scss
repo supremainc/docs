@@ -398,6 +398,11 @@ footer {
     img {
       max-width: 65%;
     }
+    ol {
+      li {
+        page-break-inside: avoid;
+      }
+    }
     table {
       font-size: .8rem;
       border: 1px;
@@ -408,18 +413,29 @@ footer {
     .theme-code-block {
       font-size: .8rem;
     }
+    .theme-admonition {
+      page-break-inside: avoid;
+    }
+    div.container {
+      .col {
+        display: inline;
+        flex: none !important;
+        float: left;
+        width: 50%;
+      }
+    }
+    section.row {
+      article {
+        display: inline;
+        flex: none !important;
+        width: 50%;
+        > a.padding--lg {
+          padding: 20px !important;
+        }
+      }
+    }
   }
   .theme-doc-footer {
     display: none;
-  }
-  section.row {
-    article {
-      display: inline;
-      flex: none !important;
-      width: 50%;
-      > a.padding--lg {
-        padding: 20px !important;
-      }
-    }
   }
 }
