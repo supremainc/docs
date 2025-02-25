@@ -357,3 +357,50 @@ footer {
     }
   }
 }
+
+// 인쇄 시 CSS 적용
+@media print {
+  @page {
+    size: A4;
+    margin-top: 1in;
+    margin-bottom: 1in;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+  }
+  nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
+    display: none;
+  }
+  .markdown {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+    print-color-adjust: exact !important;                 /*Firefox*/
+    h1 { font-size: 2rem; }
+    h2 { 
+      font-size: 1.8rem; 
+      page-break-before: auto;
+    }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.4rem; }
+    h5 { font-size: 1.2rem; }
+    h6 { font-size: 1rem; }
+    p {
+      font-size: .8rem;
+      line-height: 1.2;
+    }
+    img {
+      max-width: 65%;
+    }
+    table {
+      font-size: .8rem;
+      border: 1px;
+      td {
+        padding: .3rem;
+      }
+    }
+    .theme-code-block {
+      font-size: .8rem;
+    }
+  }
+  .theme-doc-footer {
+    display: none;
+  }
+}
