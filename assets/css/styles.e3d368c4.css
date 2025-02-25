@@ -4832,6 +4832,7 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
   padding-top: 16px;
   background-color: #fff;
   box-shadow: 0 30px 30px rgb(255, 255, 255);
+  z-index: 9999;
 }
 
 [data-theme='dark'] .breadcrumbsContainer_Alpn {
