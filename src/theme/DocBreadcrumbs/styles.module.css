@@ -13,4 +13,5 @@
 
 [data-theme='dark'] .breadcrumbsContainer {
   background-color: var(--ifm-background-color);
+  box-shadow: 0 30px 30px #1b1b1d;
 }
