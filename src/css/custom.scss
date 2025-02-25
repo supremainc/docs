@@ -70,6 +70,9 @@ html[lang='en-US'] * {
 // index.js 페이지
 
 // layout 스타일
+div[class*='docItemCol_z5aJ'] {
+  padding-left: 2rem;
+}
 .navbar__items {
   a.navbar__brand {
     font-size: 18px;
@@ -88,9 +91,6 @@ html[lang='en-US'] * {
     }
   }
 }
-// nav.theme-doc-breadcrumbs {
-//   position: fixed;
-// }
 .theme-doc-sidebar-menu {
   li.p-title {
     &> .menu__list-item-collapsible {
@@ -267,6 +267,7 @@ footer {
         margin-left: auto;
         margin-right: auto;
         display: block;
+        border: 1px solid var(--ifm-color-color-ol-gray);
         &.w--400 {
           width: 400px;
         }
