@@ -47,6 +47,10 @@ const sidebars = {
               items: [
                 'platform/biostar2/express-install',
                 'platform/biostar2/custom-install',
+                'platform/biostar2/login',
+                'platform/biostar2/manage-server',
+                'platform/biostar2/change-port',
+                'platform/biostar2/change-db',
                 'platform/biostar2/register-activation-key',
               ]
             }

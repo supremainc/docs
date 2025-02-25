@@ -1,8 +1,36 @@
 ---
 id: custom-install
-title: 사용자 정의 설치
-description: Description
-keywords: [keyword1, keyword2]
+title: 사용자 정의 설치하기
+description: 사용자가 이미지 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.
+keywords: [ 사용자 정의 설치 ]
 ---
 
-BioStar 2를 사용자 정의 설치하는 방법을 안내합니다.
+사용자가 이미지 설치한 데이터베이스와 연동하기 위한 <Cmd code='biostar2.install.customInstall' /> 방식을 안내합니다.
+
+:::info
+
+* **BioStar 2**와 연동하여 사용할 수 있는 데이터베이스는 아래와 같습니다.
+
+  * MariaDB 10.1.10
+
+  * MS SQL Server 2012 SP3
+
+  * MS SQL Server 2014 SP2
+
+  * MS SQL Server 2016 SP1
+
+  * MS SQL Server 2017
+
+  * MS SQL Server 2019
+
+* MS SQL Server의 보안 통신은 TLS 1.0 및 1.1을 지원합니다.
+
+* MS SQL Server를 데이터베이스로 설정하고, 데이터베이스 테이블 생성에 실패했다면 *C:\Program Files\BioStar 2(x64)\dbscript\mssql* 경로의 스크립트를 실행하여 테이블을 생성할 수 있습니다.
+
+* <Cmd code='biostar2.install.customInstall' />를 설치 옵션으로 선택할 때 **AC DB name**, **TA DB name**, **VE DB name**은 동일하게 설정할 수 없습니다.
+
+:::
+
+import InstallStep from '../../common/_biostar-install-steps.mdx';
+
+<InstallStep />

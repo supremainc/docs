@@ -1,92 +1,12 @@
 ---
 id: express-install
-title: 간편 설치
+title: 간편 설치하기
 description: BioStar 2를 빠르게 설치하는 방법을 안내합니다.
 keywords: [ 간편 설치 ]
 ---
 
-**BioStar 2**를 빠르게 설치하는 방법을 안내합니다. 아래 과정은 **BioStar 2**를 **신규 설치** 방식을 전제로 안내하고 있습니다. 업그레이드 또는 사용자 정의 설치로 진행하려면 [다음 문서](custom-install)를 참조하세요.
+**BioStar 2**를 **신규 설치** 방식을 전제로 안내합니다. 이미 설치한 데이터베이스와 연동하기 위해 <Cmd code='biostar2.install.customInstall' />로 진행하려면 [다음 문서](custom-install)를 참조하세요.
 
-1. [슈프리마 다운로드 센터](https://download.supremainc.com/)로 접속해 로그인한 후 설치 패키지(*BioStar 2 Setup(x64).X.Y.Z.BB.exe*)를 다운로드하세요.
+import InstallStep from '../../common/_biostar-install-steps.mdx';
 
-1. 다운로드한 설치 파일을 실행하세요.
-
-1. 사용할 언어를 선택하고 <Cmd code='biostar2.install.ok' /> 버튼을 선택하세요.
-
-    <Image src='/img/biostar2-install-select-language.png' />
-
-1. 설치를 계속하려면 <Cmd code='biostar2.install.agree' />를 선택하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-agree.png' />
-
-1. 관리자 계정 암호를 입력하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-input-admin-pw.png' />
-
-1. <Cmd code='biostar2.install.expressInstall' /> 옵션을 선택하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-select-quick.png' />
-
-1. 데이터베이스의 루트(root) 계정 암호를 입력하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-input-db-pw.png' />
-
-1. **BioStar 2**를 설치할 경로를 설정하고 <Cmd code='biostar2.install.next' />을 클릭하세요
-
-    <Image src='/img/biostar2-install-set-path.png' />
-
-1. 암호화 키를 저장할 경로를 설정하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-set-encrypt-path.png' />
-
-1. 데이터베이스에 저장되는 개인 정보 관리 권한 및 책임에 대한 안내를 읽고 설치를 계속하려면 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-read-covenant.png' />
-
-1. **BioStar 2**의 통신을 위한 포트를 설정하고 <Cmd code='biostar2.install.next' />을 클릭하세요.
-
-    <Image src='/img/biostar2-install-set-port.png' />
-
-1. **BioStar 2**의 구성 요소를 선택한 뒤 <Cmd code='biostar2.install.next' />을 클릭하세요. USB Device Agent를 선택하면 BioMini, BioMini Plus 2, DUALi DE-620을 사용하기 위한 USB Agent와 드라이버를 함께 설치합니다.
-
-    <Image src='/img/biostar2-install-additional.png' />
-
-1. 모든 설치 준비를 완료했다면 <Cmd code='biostar2.install.btnInstall' />를 클릭하세요.
-
-    <Image src='/img/biostar2-install-complete.png' />
-
-1. 부가 프로그램 설치 여부를 선택한 뒤 <Cmd code='biostar2.install.complete' />를 클릭하세요.
-
-    <Image src='/img/biostar2-install-additional-fin.png' />
-
-1. 설치 화면의 안내에 따라 **USB Device Agent** 설치를 완료하세요.
-
-    <Image src='/img/biostar2-install-additional-fin.png' />
-
-:::info
-
-* 다운로드한 파일명에서 `X.Y.Z`는 버전 정보이며, `BB`는 빌드 번호입니다.
-
-* 관리자 계정 암호는 **BioStar 2**를 설치한 다음 처음 로그인할 때 사용합니다.
-
-* 암호화 키의 저장 경로를 변경할 수 있습니다. 경로를 변경한 이후에 암호화 키 파일을 수정하거나 다른 경로로 이동시키면 시스템 오류가 발생할 수 있습니다.
-
-* **BioStar 2**를 삭제하면 암호화 키 파일도 함께 삭제합니다.
-
-* 제공된 USB Device Agent 인증서는 로컬 네트워크에만 적용할 수 있습니다.
-
-* 다른 프로그램에서 443 포트를 사용하고 있다면 BioStar 2 Setting 프로그램이 자동으로 실행되어 포트 번호를 변경할 수 있습니다. 포트 번호 변경에 대한 내용은 [다음 문서](change-port)를 참고하세요.
-
-* 데이터베이스 설정 변경에 대한 자세한 내용은 [다음 문서](change-db)를 참조하세요.
-
-:::
-
-:::warning
-
-* 관리자 또는 데이터베이스의 루트(root) 계정 암호를 분실하지 않도록 주의하세요.
-
-* 데이터베이스의 루트(root) 계정 암호는 AC, TA, Video DB 초기 암호로 사용합니다.
-
-* 암호를 분실하면 버전 업그레이드 및 DB 백업/복원이 불가능할 수 있습니다.
-
-:::
+<InstallStep />
