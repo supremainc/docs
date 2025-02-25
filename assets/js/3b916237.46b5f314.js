@@ -48,7 +48,7 @@ const toc = [{
   "id": "before",
   "level": 2
 }, {
-  "value": "데이터베이스 확인하기",
+  "value": "데이터베이스 확인",
   "id": "checkdb",
   "level": 2
 }, {
@@ -60,16 +60,16 @@ const toc = [{
   "id": "ms-sql-server",
   "level": 3
 }, {
-  "value": "포트 설정하기",
-  "id": "포트-설정하기",
+  "value": "포트 설정",
+  "id": "포트-설정",
   "level": 4
 }, {
-  "value": "사용자 및 데이터베이스 생성하기",
-  "id": "사용자-및-데이터베이스-생성하기",
+  "value": "사용자 및 데이터베이스 생성",
+  "id": "사용자-및-데이터베이스-생성",
   "level": 4
 }, {
-  "value": "Windows Authentication 데이터베이스 설정하기",
-  "id": "windows-authentication-데이터베이스-설정하기",
+  "value": "Windows Authentication 데이터베이스 설정",
+  "id": "windows-authentication-데이터베이스-설정",
   "level": 4
 }, {
   "value": "사전 설정",
@@ -367,7 +367,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "checkdb",
-      children: "데이터베이스 확인하기"
+      children: "데이터베이스 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar 2"
@@ -438,8 +438,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "포트-설정하기",
-      children: "포트 설정하기"
+      id: "포트-설정",
+      children: "포트 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -457,8 +457,8 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "사용자-및-데이터베이스-생성하기",
-      children: "사용자 및 데이터베이스 생성하기"
+      id: "사용자-및-데이터베이스-생성",
+      children: "사용자 및 데이터베이스 생성"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -554,8 +554,8 @@ function _createMdxContent(props) {
         children: "트랜잭션이 많은 환경에서는 로그를 주기적으로 백업하여 로그 파일의 크기가 증가하지 않도록 주의하세요."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "windows-authentication-데이터베이스-설정하기",
-      children: "Windows Authentication 데이터베이스 설정하기"
+      id: "windows-authentication-데이터베이스-설정",
+      children: "Windows Authentication 데이터베이스 설정"
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h5, {
