@@ -3991,7 +3991,7 @@ html[lang='en-US'] .desc_MGeg {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url(/docs/en/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
+  background: url(/docs/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
 }
 
 @media screen and (max-width: 996px) {
@@ -4837,6 +4837,7 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 
 [data-theme='dark'] .breadcrumbsContainer_Alpn {
   background-color: var(--ifm-background-color);
+  box-shadow: 0 30px 30px #1b1b1d;
 }
 .docItemContainer_c0TR header + *,
 .docItemContainer_c0TR article > *:first-child {
