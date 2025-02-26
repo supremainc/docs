@@ -228,6 +228,10 @@ footer {
     --ifm-alert-border-radius: 5px;
     color: var(--ifm-color-base);
     --ifm-alert-background-color: #F5F7F9;
+    a {
+      color: var(--ifm-color-primary-light);
+      text-decoration: underline dotted;
+    }
   }
   .alert--secondary {
     --ifm-alert-border-color: #102B8D;
