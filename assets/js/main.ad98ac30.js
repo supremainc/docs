@@ -29405,8 +29405,7 @@ __webpack_require__.d(__webpack_exports__, {
           "priority": 0.5,
           "ignorePatterns": [
             "/tags/**"
-          ],
-          "filename": "sitemap.xml"
+          ]
         },
         "svgr": {
           "svgrConfig": {}
