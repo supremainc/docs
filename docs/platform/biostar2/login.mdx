@@ -27,13 +27,13 @@ keywords: [ 로그인, 웹 브라우저 ]
 
     * 관리자 아이디는 **admin**입니다. 
 
-    * 최초 로그인할 때에는 웹 브라우저의 주소 표시줄에 **안전하지 않음** 경고가 표시됩니다.
+    * 최초 로그인할 때에는 웹 브라우저의 주소 표시줄에 **안전하지 않음** 경고가 표시됩니다. HTTPS 프로토콜을 적용하려면 [다음 문서](#using-https)를 참고하세요.
 
     :::
 
 로그인하면 대시보드 화면을 확인할 수 있습니다.
 
-<Image src='/img/login-dashboard.png' />
+<Image src='/img/common/login-dashboard.png' alone />
 
 :::info
 
@@ -42,5 +42,33 @@ keywords: [ 로그인, 웹 브라우저 ]
 * **BioStar 2**를 설치한 PC의 외부 IP 주소는 [다음 링크](https://whatismyipaddress.com/)로 접속해 확인할 수 있습니다.
 
 * **BioStar 2**는 **443** 포트를 기본으로 사용합니다. **443** 포트를 사용하는 프로그램이 있다면 종료하고, 다시 접속을 시도하세요. 해당 프로그램을 종료할 수 없다면 **BioStar Setting**을 실행하여 포트 번호를 변경하세요. 자세한 내용은 [다음 문서](change-port)를 참고하세요.
+
+:::
+
+## HTTPS 사용하기 {#using-https}
+
+**BioStar 2**를 설치한 PC에 HTTPS 프로토콜을 적용하려면 인증서를 설치해야 합니다.
+
+1. 로그인 화면에서 <Cmd sid='https.download' />를 클릭하세요.
+
+    <Image src='/img/biostar-login-download-https.png' />
+
+1. 다운로드한 파일(*cert-register-f305705478.zip*)의 압축을 해제하세요.
+
+1. *cert-register.exe* 파일을 실행하세요.
+
+1. **Enrollment Certification** 창이 나타나면 **BioStar 2**를 설치한 PC의 IP 주소를 입력하세요.
+
+    <Image src='/img/common/biostar-enrollment-certi.png' alone />
+
+1. 보안 경고 메시지를 확인하고 <Cmd sid='button.yes' className='bold' />를 클릭하세요.
+
+웹 브라우저를 다시 시작하고 등록한 IP 주소를 입력하면 아래와 같이 웹 브라우저의 주소 표시줄에 안전함 표시가 나타납니다.
+
+<Image src='/img/biostar-enrollment-result.png' />
+
+:::info
+
+인증서 적용 파일은 <Cmd sid='common.setting' /> > <Cmd sid='setting.https.https' /> 메뉴 경로에서도 다운로드할 수 있습니다.
 
 :::

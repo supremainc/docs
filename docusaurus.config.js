@@ -95,7 +95,18 @@ const config = {
     ],
   ],
   plugins: [
+    [ './src/plugins/suprema', {} ],
     [ 'docusaurus-plugin-sass', {} ],
+    [ 'plugin-image-zoom', {
+      selector: '.markdown img',
+      options: {
+        margin: 24,
+        background: '#BADA55',
+        scrollOffset: 0,
+        container: '#zoom-container',
+        template: '#zoom-template'
+      }
+    }]
   ],
   markdown: {
     parseFrontMatter: async (params) => {
