@@ -31,6 +31,7 @@
   --ifm-h5-font-size: 1.2rem;
   --ifm-admonition-font-size: 1rem;
   --ifm-color-cmd: #A32343;
+  --docsearch-searchbox-background: none !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -89,6 +90,12 @@ div[class*='docItemCol'] {
     a {
       font-weight: 400;
     }
+  }
+  div[class*='navbarSearchContainer'] {
+    padding-right: 0;
+  }
+  .DocSearch-Button-Placeholder, .DocSearch-Button-Keys {
+    display: none;
   }
 }
 .theme-doc-sidebar-menu {
