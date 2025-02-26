@@ -45,12 +45,17 @@ const toc = [{
   "value": "웹 브라우저에서 로그인하기",
   "id": "웹-브라우저에서-로그인하기",
   "level": 2
+}, {
+  "value": "HTTPS 사용하기",
+  "id": "using-https",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
     code: "code",
+    em: "em",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -59,7 +64,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image} = _components;
+  }, {Cmd, Image} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
@@ -117,7 +123,10 @@ function _createMdxContent(props) {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: ["최초 로그인할 때에는 웹 브라우저의 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "안전하지 않음"
-                }), " 경고가 표시됩니다."]
+                }), " 경고가 표시됩니다. HTTPS 프로토콜을 적용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "#using-https",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
               }), "\n"]
             }), "\n"]
           })
@@ -126,7 +135,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "로그인하면 대시보드 화면을 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/login-dashboard.png"
+      src: "/img/common/login-dashboard.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -159,6 +169,66 @@ function _createMdxContent(props) {
             }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "using-https",
+      children: "HTTPS 사용하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar 2"
+      }), "를 설치한 PC에 HTTPS 프로토콜을 적용하려면 인증서를 설치해야 합니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["로그인 화면에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "https.download"
+          }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostar-login-download-https.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["다운로드한 파일(", (0,jsx_runtime.jsx)(_components.em, {
+            children: "cert-register-f305705478.zip"
+          }), ")의 압축을 해제하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.em, {
+            children: "cert-register.exe"
+          }), " 파일을 실행하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Enrollment Certification"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar 2"
+          }), "를 설치한 PC의 IP 주소를 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostar-enrollment-certi.png",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["보안 경고 메시지를 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.yes",
+            className: "bold"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "웹 브라우저를 다시 시작하고 등록한 IP 주소를 입력하면 아래와 같이 웹 브라우저의 주소 표시줄에 안전함 표시가 나타납니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostar-enrollment-result.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["인증서 적용 파일은 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.setting"
+        }), " > ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.https.https"
+        }), " 메뉴 경로에서도 다운로드할 수 있습니다."]
       })
     })]
   });

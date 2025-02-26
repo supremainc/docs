@@ -331,7 +331,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-express-install-mdx-5a3.json
-var site_docs_platform_biostar_2_express_install_mdx_5a3_namespaceObject = JSON.parse('{"id":"platform/biostar2/express-install","title":"간편 설치하기","description":"BioStar 2를 빠르게 설치하는 방법을 안내합니다.","source":"@site/docs/platform/biostar2/express-install.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/express-install","permalink":"/docs/en/platform/biostar2/express-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/express-install.mdx","tags":[],"version":"current","frontMatter":{"id":"express-install","title":"간편 설치하기","description":"BioStar 2를 빠르게 설치하는 방법을 안내합니다.","keywords":["간편 설치"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Tutorial","permalink":"/docs/en/platform/biostar2/tutorial"},"next":{"title":"사용자 정의 설치하기","permalink":"/docs/en/platform/biostar2/custom-install"}}')
+var site_docs_platform_biostar_2_express_install_mdx_5a3_namespaceObject = JSON.parse('{"id":"platform/biostar2/express-install","title":"간편 설치하기","description":"BioStar 2를 빠르게 설치하는 방법을 안내합니다.","source":"@site/docs/platform/biostar2/express-install.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/express-install","permalink":"/docs/platform/biostar2/express-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/express-install.mdx","tags":[],"version":"current","frontMatter":{"id":"express-install","title":"간편 설치하기","description":"BioStar 2를 빠르게 설치하는 방법을 안내합니다.","keywords":["간편 설치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Tutorial","permalink":"/docs/platform/biostar2/tutorial"},"next":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar2/custom-install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -348,7 +348,7 @@ const frontMatter = {
 	keywords: [
 		'간편 설치'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -372,10 +372,10 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "를 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "신규 설치"
-      }), " 방식을 전제로 안내합니다. 이미 설치한 데이터베이스와 연동하기 위해 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 방식으로 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar 2"
+      }), "를 설치하는 방법을 안내합니다. 이미 설치한 데이터베이스와 연동하기 위해 ", (0,jsx_runtime.jsx)(Cmd, {
         code: "biostar2.install.customInstall"
       }), "로 진행하려면 ", (0,jsx_runtime.jsx)(_components.a, {
         href: "custom-install",

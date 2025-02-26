@@ -123,7 +123,7 @@ __webpack_require__.hmd = function (module) {
           // return url for filenames not based on template
           
           // return url for filenames based on template
-          return "assets/js/" + ({"112": "aba21aa0","118": "5a35c590","130": "c4f5d8e4","14": "6cd7ec80","149": "8c97916a","211": "a7bd4aaa","29": "5e95a2a5","365": "a7456010","415": "febd5c44","422": "3b916237","432": "5e95c892","441": "36873d08","48": "17896441","493": "1f391b9e","522": "efb123fd","662": "f30d41f9","885": "f9cbddb4","90": "96551ba4","914": "a94703ab","951": "3c097e0f","969": "393be207","98": "9aeb0299",}[chunkId] || chunkId) + "." + {"112": "17e9e58c","118": "46a74ab9","130": "07b38392","14": "d8a26441","149": "0b9fd34b","211": "de931d05","29": "46f5616e","305": "873aca79","365": "56587bbe","415": "d517451d","422": "65847ed9","432": "14fc9c2a","441": "947ebe86","48": "3a3ade68","493": "c814366a","522": "f885a9f7","662": "661f7049","834": "73660e7e","853": "faa23560","885": "1411f81f","90": "d7e8f5c5","914": "219ec656","951": "e93a5f4e","969": "1071a216","98": "4c43e772",}[chunkId] + ".js";
+          return "assets/js/" + ({"112": "aba21aa0","118": "5a35c590","130": "c4f5d8e4","14": "6cd7ec80","149": "8c97916a","211": "a7bd4aaa","29": "5e95a2a5","365": "a7456010","415": "febd5c44","422": "3b916237","432": "5e95c892","441": "36873d08","467": "11b43341","48": "17896441","493": "1f391b9e","522": "efb123fd","662": "f30d41f9","885": "f9cbddb4","90": "96551ba4","914": "a94703ab","969": "393be207","98": "9aeb0299",}[chunkId] || chunkId) + "." + {"112": "17e9e58c","118": "ee8c1a1f","130": "07b38392","14": "1a37bc31","149": "67ab3c6e","211": "de931d05","29": "67694b0c","305": "873aca79","365": "56587bbe","415": "bc18543d","422": "46b5f314","432": "14fc9c2a","441": "03fe63d8","467": "c4c7576b","48": "3a3ade68","493": "c814366a","522": "6586845e","662": "55005c63","834": "73660e7e","853": "faa23560","885": "ecd545f8","90": "4cfccf20","914": "219ec656","969": "8950137e","98": "04c6c2f5",}[chunkId] + ".js";
         };
       
 })();
@@ -141,7 +141,7 @@ __webpack_require__.hmd = function (module) {
 // webpack/runtime/get_full_hash
 (() => {
 __webpack_require__.h = function () {
-	return "c73cba823cfe25c6";
+	return "9344ada574dbb97a";
 };
 
 })();
@@ -280,7 +280,7 @@ __webpack_require__.O = function (result, chunkIds, fn, priority) {
 })();
 // webpack/runtime/public_path
 (() => {
-__webpack_require__.p = "/docs/en/";
+__webpack_require__.p = "/docs/";
 
 })();
 // webpack/runtime/rspack_version
@@ -293,7 +293,7 @@ __webpack_require__.rv = function () {
 // webpack/runtime/ChunkAssetRuntimeModule
 (() => {
 // Docusaurus function to get chunk asset
-__webpack_require__.gca = function(chunkId) { chunkId = {"17896441":"48","6cd7ec80":"14","5e95a2a5":"29","96551ba4":"90","9aeb0299":"98","aba21aa0":"112","5a35c590":"118","c4f5d8e4":"130","8c97916a":"149","a7bd4aaa":"211","a7456010":"365","febd5c44":"415","3b916237":"422","5e95c892":"432","36873d08":"441","1f391b9e":"493","efb123fd":"522","f30d41f9":"662","f9cbddb4":"885","a94703ab":"914","3c097e0f":"951","393be207":"969"}[chunkId]||chunkId; return __webpack_require__.p + __webpack_require__.u(chunkId); };
+__webpack_require__.gca = function(chunkId) { chunkId = {"17896441":"48","6cd7ec80":"14","5e95a2a5":"29","96551ba4":"90","9aeb0299":"98","aba21aa0":"112","5a35c590":"118","c4f5d8e4":"130","8c97916a":"149","a7bd4aaa":"211","a7456010":"365","febd5c44":"415","3b916237":"422","5e95c892":"432","36873d08":"441","11b43341":"467","1f391b9e":"493","efb123fd":"522","f30d41f9":"662","f9cbddb4":"885","a94703ab":"914","393be207":"969"}[chunkId]||chunkId; return __webpack_require__.p + __webpack_require__.u(chunkId); };
 })();
 // webpack/runtime/jsonp_chunk_loading
 (() => {

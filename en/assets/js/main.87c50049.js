@@ -1674,6 +1674,706 @@ module.exports = Array.isArray || function (arr) {
 
 
 }),
+"6373": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ src_zoom)
+});
+
+// EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
+var docusaurus_config = __webpack_require__("5150");
+;// CONCATENATED MODULE: ./node_modules/plugin-image-zoom/node_modules/medium-zoom/dist/medium-zoom.esm.js
+/*! medium-zoom 1.0.8 | MIT License | https://github.com/francoischalifour/medium-zoom */
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var medium_zoom_esm_isSupported = function isSupported(node) {
+  return node.tagName === 'IMG';
+};
+
+/* eslint-disable-next-line no-prototype-builtins */
+var medium_zoom_esm_isNodeList = function isNodeList(selector) {
+  return NodeList.prototype.isPrototypeOf(selector);
+};
+
+var medium_zoom_esm_isNode = function isNode(selector) {
+  return selector && selector.nodeType === 1;
+};
+
+var medium_zoom_esm_isSvg = function isSvg(image) {
+  var source = image.currentSrc || image.src;
+  return source.substr(-4).toLowerCase() === '.svg';
+};
+
+var medium_zoom_esm_getImagesFromSelector = function getImagesFromSelector(selector) {
+  try {
+    if (Array.isArray(selector)) {
+      return selector.filter(medium_zoom_esm_isSupported);
+    }
+
+    if (medium_zoom_esm_isNodeList(selector)) {
+      // Do not use spread operator or Array.from() for IE support
+      return [].slice.call(selector).filter(medium_zoom_esm_isSupported);
+    }
+
+    if (medium_zoom_esm_isNode(selector)) {
+      return [selector].filter(medium_zoom_esm_isSupported);
+    }
+
+    if (typeof selector === 'string') {
+      // Do not use spread operator or Array.from() for IE support
+      return [].slice.call(document.querySelectorAll(selector)).filter(medium_zoom_esm_isSupported);
+    }
+
+    return [];
+  } catch (err) {
+    throw new TypeError('The provided selector is invalid.\n' + 'Expects a CSS selector, a Node element, a NodeList or an array.\n' + 'See: https://github.com/francoischalifour/medium-zoom');
+  }
+};
+
+var medium_zoom_esm_createOverlay = function createOverlay(background) {
+  var overlay = document.createElement('div');
+  overlay.classList.add('medium-zoom-overlay');
+  overlay.style.background = background;
+
+  return overlay;
+};
+
+var medium_zoom_esm_cloneTarget = function cloneTarget(template) {
+  var _template$getBounding = template.getBoundingClientRect(),
+      top = _template$getBounding.top,
+      left = _template$getBounding.left,
+      width = _template$getBounding.width,
+      height = _template$getBounding.height;
+
+  var clone = template.cloneNode();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+
+  clone.removeAttribute('id');
+  clone.style.position = 'absolute';
+  clone.style.top = top + scrollTop + 'px';
+  clone.style.left = left + scrollLeft + 'px';
+  clone.style.width = width + 'px';
+  clone.style.height = height + 'px';
+  clone.style.transform = '';
+
+  return clone;
+};
+
+var medium_zoom_esm_createCustomEvent = function createCustomEvent(type, params) {
+  var eventParams = _extends({
+    bubbles: false,
+    cancelable: false,
+    detail: undefined
+  }, params);
+
+  if (typeof window.CustomEvent === 'function') {
+    return new CustomEvent(type, eventParams);
+  }
+
+  var customEvent = document.createEvent('CustomEvent');
+  customEvent.initCustomEvent(type, eventParams.bubbles, eventParams.cancelable, eventParams.detail);
+
+  return customEvent;
+};
+
+var medium_zoom_esm_mediumZoom = function mediumZoom(selector) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  /**
+   * Ensure the compatibility with IE11 if no Promise polyfill are used.
+   */
+  var Promise = window.Promise || function Promise(fn) {
+    function noop() {}
+    fn(noop, noop);
+  };
+
+  var _handleClick = function _handleClick(event) {
+    var target = event.target;
+
+
+    if (target === overlay) {
+      close();
+      return;
+    }
+
+    if (images.indexOf(target) === -1) {
+      return;
+    }
+
+    toggle({ target: target });
+  };
+
+  var _handleScroll = function _handleScroll() {
+    if (isAnimating || !active.original) {
+      return;
+    }
+
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (Math.abs(scrollTop - currentScroll) > zoomOptions.scrollOffset) {
+      setTimeout(close, 150);
+    }
+  };
+
+  var _handleKeyUp = function _handleKeyUp(event) {
+    var key = event.key || event.keyCode;
+
+    // Close if escape key is pressed
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      close();
+    }
+  };
+
+  var update = function update() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    var newOptions = options;
+
+    if (options.background) {
+      overlay.style.background = options.background;
+    }
+
+    if (options.container && options.container instanceof Object) {
+      newOptions.container = _extends({}, zoomOptions.container, options.container);
+    }
+
+    if (options.template) {
+      var template = medium_zoom_esm_isNode(options.template) ? options.template : document.querySelector(options.template);
+
+      newOptions.template = template;
+    }
+
+    zoomOptions = _extends({}, zoomOptions, newOptions);
+
+    images.forEach(function (image) {
+      image.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:update', {
+        detail: { zoom: zoom }
+      }));
+    });
+
+    return zoom;
+  };
+
+  var clone = function clone() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    return mediumZoom(_extends({}, zoomOptions, options));
+  };
+
+  var attach = function attach() {
+    for (var _len = arguments.length, selectors = Array(_len), _key = 0; _key < _len; _key++) {
+      selectors[_key] = arguments[_key];
+    }
+
+    var newImages = selectors.reduce(function (imagesAccumulator, currentSelector) {
+      return [].concat(imagesAccumulator, medium_zoom_esm_getImagesFromSelector(currentSelector));
+    }, []);
+
+    newImages.filter(function (newImage) {
+      return images.indexOf(newImage) === -1;
+    }).forEach(function (newImage) {
+      images.push(newImage);
+      newImage.classList.add('medium-zoom-image');
+    });
+
+    eventListeners.forEach(function (_ref) {
+      var type = _ref.type,
+          listener = _ref.listener,
+          options = _ref.options;
+
+      newImages.forEach(function (image) {
+        image.addEventListener(type, listener, options);
+      });
+    });
+
+    return zoom;
+  };
+
+  var detach = function detach() {
+    for (var _len2 = arguments.length, selectors = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      selectors[_key2] = arguments[_key2];
+    }
+
+    if (active.zoomed) {
+      close();
+    }
+
+    var imagesToDetach = selectors.length > 0 ? selectors.reduce(function (imagesAccumulator, currentSelector) {
+      return [].concat(imagesAccumulator, medium_zoom_esm_getImagesFromSelector(currentSelector));
+    }, []) : images;
+
+    imagesToDetach.forEach(function (image) {
+      image.classList.remove('medium-zoom-image');
+      image.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:detach', {
+        detail: { zoom: zoom }
+      }));
+    });
+
+    images = images.filter(function (image) {
+      return imagesToDetach.indexOf(image) === -1;
+    });
+
+    return zoom;
+  };
+
+  var on = function on(type, listener) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    images.forEach(function (image) {
+      image.addEventListener('medium-zoom:' + type, listener, options);
+    });
+
+    eventListeners.push({ type: 'medium-zoom:' + type, listener: listener, options: options });
+
+    return zoom;
+  };
+
+  var off = function off(type, listener) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    images.forEach(function (image) {
+      image.removeEventListener('medium-zoom:' + type, listener, options);
+    });
+
+    eventListeners = eventListeners.filter(function (eventListener) {
+      return !(eventListener.type === 'medium-zoom:' + type && eventListener.listener.toString() === listener.toString());
+    });
+
+    return zoom;
+  };
+
+  var open = function open() {
+    var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        target = _ref2.target;
+
+    var _animate = function _animate() {
+      var container = {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0
+      };
+      var viewportWidth = void 0;
+      var viewportHeight = void 0;
+
+      if (zoomOptions.container) {
+        if (zoomOptions.container instanceof Object) {
+          // The container is given as an object with properties like width, height, left, top
+          container = _extends({}, container, zoomOptions.container);
+
+          // We need to adjust custom options like container.right or container.bottom
+          viewportWidth = container.width - container.left - container.right - zoomOptions.margin * 2;
+          viewportHeight = container.height - container.top - container.bottom - zoomOptions.margin * 2;
+        } else {
+          // The container is given as an element
+          var zoomContainer = medium_zoom_esm_isNode(zoomOptions.container) ? zoomOptions.container : document.querySelector(zoomOptions.container);
+
+          var _zoomContainer$getBou = zoomContainer.getBoundingClientRect(),
+              _width = _zoomContainer$getBou.width,
+              _height = _zoomContainer$getBou.height,
+              _left = _zoomContainer$getBou.left,
+              _top = _zoomContainer$getBou.top;
+
+          container = _extends({}, container, {
+            width: _width,
+            height: _height,
+            left: _left,
+            top: _top
+          });
+        }
+      }
+
+      viewportWidth = viewportWidth || container.width - zoomOptions.margin * 2;
+      viewportHeight = viewportHeight || container.height - zoomOptions.margin * 2;
+
+      var zoomTarget = active.zoomedHd || active.original;
+      var naturalWidth = medium_zoom_esm_isSvg(zoomTarget) ? viewportWidth : zoomTarget.naturalWidth || viewportWidth;
+      var naturalHeight = medium_zoom_esm_isSvg(zoomTarget) ? viewportHeight : zoomTarget.naturalHeight || viewportHeight;
+
+      var _zoomTarget$getBoundi = zoomTarget.getBoundingClientRect(),
+          top = _zoomTarget$getBoundi.top,
+          left = _zoomTarget$getBoundi.left,
+          width = _zoomTarget$getBoundi.width,
+          height = _zoomTarget$getBoundi.height;
+
+      var scaleX = Math.min(Math.max(width, naturalWidth), viewportWidth) / width;
+      var scaleY = Math.min(Math.max(height, naturalHeight), viewportHeight) / height;
+      var scale = Math.min(scaleX, scaleY);
+      var translateX = (-left + (viewportWidth - width) / 2 + zoomOptions.margin + container.left) / scale;
+      var translateY = (-top + (viewportHeight - height) / 2 + zoomOptions.margin + container.top) / scale;
+      var transform = 'scale(' + scale + ') translate3d(' + translateX + 'px, ' + translateY + 'px, 0)';
+
+      active.zoomed.style.transform = transform;
+
+      if (active.zoomedHd) {
+        active.zoomedHd.style.transform = transform;
+      }
+    };
+
+    return new Promise(function (resolve) {
+      if (target && images.indexOf(target) === -1) {
+        resolve(zoom);
+        return;
+      }
+
+      var _handleOpenEnd = function _handleOpenEnd() {
+        isAnimating = false;
+        active.zoomed.removeEventListener('transitionend', _handleOpenEnd);
+        active.original.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:opened', {
+          detail: { zoom: zoom }
+        }));
+
+        resolve(zoom);
+      };
+
+      if (active.zoomed) {
+        resolve(zoom);
+        return;
+      }
+
+      if (target) {
+        // The zoom was triggered manually via a click
+        active.original = target;
+      } else if (images.length > 0) {
+var _images = images;
+        active.original = _images[0];
+      } else {
+        resolve(zoom);
+        return;
+      }
+
+      active.original.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:open', {
+        detail: { zoom: zoom }
+      }));
+
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      isAnimating = true;
+      active.zoomed = medium_zoom_esm_cloneTarget(active.original);
+
+      document.body.appendChild(overlay);
+
+      if (zoomOptions.template) {
+        var template = medium_zoom_esm_isNode(zoomOptions.template) ? zoomOptions.template : document.querySelector(zoomOptions.template);
+        active.template = document.createElement('div');
+        active.template.appendChild(template.content.cloneNode(true));
+
+        document.body.appendChild(active.template);
+      }
+
+      // If the selected <img> tag is inside a <picture> tag, set the
+      // currently-applied source as the cloned `src=` attribute.
+      // (as these might differ, or src= might be unset in some cases)
+      if (active.original.parentElement && active.original.parentElement.tagName === 'PICTURE' && active.original.currentSrc) {
+        active.zoomed.src = active.original.currentSrc;
+      }
+
+      document.body.appendChild(active.zoomed);
+
+      window.requestAnimationFrame(function () {
+        document.body.classList.add('medium-zoom--opened');
+      });
+
+      active.original.classList.add('medium-zoom-image--hidden');
+      active.zoomed.classList.add('medium-zoom-image--opened');
+
+      active.zoomed.addEventListener('click', close);
+      active.zoomed.addEventListener('transitionend', _handleOpenEnd);
+
+      if (active.original.getAttribute('data-zoom-src')) {
+        active.zoomedHd = active.zoomed.cloneNode();
+
+        // Reset the `scrset` property or the HD image won't load.
+        active.zoomedHd.removeAttribute('srcset');
+        active.zoomedHd.removeAttribute('sizes');
+        // Remove loading attribute so the browser can load the image normally
+        active.zoomedHd.removeAttribute('loading');
+
+        active.zoomedHd.src = active.zoomed.getAttribute('data-zoom-src');
+
+        active.zoomedHd.onerror = function () {
+          clearInterval(getZoomTargetSize);
+          console.warn('Unable to reach the zoom image target ' + active.zoomedHd.src);
+          active.zoomedHd = null;
+          _animate();
+        };
+
+        // We need to access the natural size of the full HD
+        // target as fast as possible to compute the animation.
+        var getZoomTargetSize = setInterval(function () {
+          if ( active.zoomedHd.complete) {
+            clearInterval(getZoomTargetSize);
+            active.zoomedHd.classList.add('medium-zoom-image--opened');
+            active.zoomedHd.addEventListener('click', close);
+            document.body.appendChild(active.zoomedHd);
+            _animate();
+          }
+        }, 10);
+      } else if (active.original.hasAttribute('srcset')) {
+        // If an image has a `srcset` attribuet, we don't know the dimensions of the
+        // zoomed (HD) image (like when `data-zoom-src` is specified).
+        // Therefore the approach is quite similar.
+        active.zoomedHd = active.zoomed.cloneNode();
+
+        // Resetting the sizes attribute tells the browser to load the
+        // image best fitting the current viewport size, respecting the `srcset`.
+        active.zoomedHd.removeAttribute('sizes');
+
+        // In Firefox, the `loading` attribute needs to be set to `eager` (default
+        // value) for the load event to be fired.
+        active.zoomedHd.removeAttribute('loading');
+
+        // Wait for the load event of the hd image. This will fire if the image
+        // is already cached.
+        var loadEventListener = active.zoomedHd.addEventListener('load', function () {
+          active.zoomedHd.removeEventListener('load', loadEventListener);
+          active.zoomedHd.classList.add('medium-zoom-image--opened');
+          active.zoomedHd.addEventListener('click', close);
+          document.body.appendChild(active.zoomedHd);
+          _animate();
+        });
+      } else {
+        _animate();
+      }
+    });
+  };
+
+  var close = function close() {
+    return new Promise(function (resolve) {
+      if (isAnimating || !active.original) {
+        resolve(zoom);
+        return;
+      }
+
+      var _handleCloseEnd = function _handleCloseEnd() {
+        active.original.classList.remove('medium-zoom-image--hidden');
+        document.body.removeChild(active.zoomed);
+        if (active.zoomedHd) {
+          document.body.removeChild(active.zoomedHd);
+        }
+        document.body.removeChild(overlay);
+        active.zoomed.classList.remove('medium-zoom-image--opened');
+        if (active.template) {
+          document.body.removeChild(active.template);
+        }
+
+        isAnimating = false;
+        active.zoomed.removeEventListener('transitionend', _handleCloseEnd);
+
+        active.original.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:closed', {
+          detail: { zoom: zoom }
+        }));
+
+        active.original = null;
+        active.zoomed = null;
+        active.zoomedHd = null;
+        active.template = null;
+
+        resolve(zoom);
+      };
+
+      isAnimating = true;
+      document.body.classList.remove('medium-zoom--opened');
+      active.zoomed.style.transform = '';
+
+      if (active.zoomedHd) {
+        active.zoomedHd.style.transform = '';
+      }
+
+      // Fade out the template so it's not too abrupt
+      if (active.template) {
+        active.template.style.transition = 'opacity 150ms';
+        active.template.style.opacity = 0;
+      }
+
+      active.original.dispatchEvent(medium_zoom_esm_createCustomEvent('medium-zoom:close', {
+        detail: { zoom: zoom }
+      }));
+
+      active.zoomed.addEventListener('transitionend', _handleCloseEnd);
+    });
+  };
+
+  var toggle = function toggle() {
+    var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        target = _ref3.target;
+
+    if (active.original) {
+      return close();
+    }
+
+    return open({ target: target });
+  };
+
+  var getOptions = function getOptions() {
+    return zoomOptions;
+  };
+
+  var getImages = function getImages() {
+    return images;
+  };
+
+  var getZoomedImage = function getZoomedImage() {
+    return active.original;
+  };
+
+  var images = [];
+  var eventListeners = [];
+  var isAnimating = false;
+  var scrollTop = 0;
+  var zoomOptions = options;
+  var active = {
+    original: null,
+    zoomed: null,
+    zoomedHd: null,
+    template: null
+
+    // If the selector is omitted, it's replaced by the options
+  };if (Object.prototype.toString.call(selector) === '[object Object]') {
+    zoomOptions = selector;
+  } else if (selector || typeof selector === 'string' // to process empty string as a selector
+  ) {
+      attach(selector);
+    }
+
+  // Apply the default option values
+  zoomOptions = _extends({
+    margin: 0,
+    background: '#fff',
+    scrollOffset: 40,
+    container: null,
+    template: null
+  }, zoomOptions);
+
+  var overlay = medium_zoom_esm_createOverlay(zoomOptions.background);
+
+  document.addEventListener('click', _handleClick);
+  document.addEventListener('keyup', _handleKeyUp);
+  document.addEventListener('scroll', _handleScroll);
+  window.addEventListener('resize', close);
+
+  var zoom = {
+    open: open,
+    close: close,
+    toggle: toggle,
+    update: update,
+    clone: clone,
+    attach: attach,
+    detach: detach,
+    on: on,
+    off: off,
+    getOptions: getOptions,
+    getImages: getImages,
+    getZoomedImage: getZoomedImage
+  };
+
+  return zoom;
+};
+
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var medium_zoom_esm_css = ".medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}";
+styleInject(medium_zoom_esm_css);
+
+/* ESM default export */ const medium_zoom_esm = (medium_zoom_esm_mediumZoom);
+
+;// CONCATENATED MODULE: ./node_modules/plugin-image-zoom/src/zoom.js
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+const { themeConfig } = docusaurus_config["default"];
+
+/* ESM default export */ const src_zoom = ((function () {
+
+  if ( typeof window === 'undefined' ) {
+    return null;
+  }
+
+  // Backwards compatibility
+  const { zoomSelector = '.markdown img' } = themeConfig;
+
+  // Allow medium-zoom options: https://www.npmjs.com/package/medium-zoom#options
+  const {
+    imageZoom: {
+      selector = zoomSelector,
+      options,
+    } = {},
+  } = themeConfig;
+
+  setTimeout(() => {
+    medium_zoom_esm(selector, options);
+  }, 1000);
+
+
+  return {
+    onRouteUpdate({ location , previousLocation}) {
+      if( location && location.hash && location.hash.length ) {
+        return;
+      }
+
+      if (!previousLocation || location.pathname === previousLocation.pathname) {
+        return;
+      }
+
+      setTimeout(() => {
+        medium_zoom_esm(selector, options);
+      }, 1000);
+
+    },
+  };
+})());
+
+
+}),
 "9525": (function () {
 Prism.languages.ini = {
 
@@ -20729,11 +21429,6 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 var routesChunkNames = __webpack_require__("7138");
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
 /* ESM default export */ const registry = ({
-    "11b43341": [
-        ()=>__webpack_require__.e(/* import() | 11b43341 */ "467").then(__webpack_require__.t.bind(__webpack_require__, 9989, 19)),
-        "@generated/docusaurus-plugin-content-docs/default/p/docs-7fc.json",
-        /*require.resolve*/(9989)
-    ],
     "17896441": [
         ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("212"), __webpack_require__.e("834"), __webpack_require__.e("305"), __webpack_require__.e("48")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
         "@theme/DocItem",
@@ -20758,6 +21453,11 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>__webpack_require__.e(/* import() | 3b916237 */ "422").then(__webpack_require__.bind(__webpack_require__, 9745)),
         "@site/docs/platform/biostar2/getting-started.mdx",
         /*require.resolve*/(9745)
+    ],
+    "3c097e0f": [
+        ()=>__webpack_require__.e(/* import() | 3c097e0f */ "951").then(__webpack_require__.t.bind(__webpack_require__, 1253, 19)),
+        "@generated/docusaurus-plugin-content-docs/default/p/docs-en-760.json",
+        /*require.resolve*/(1253)
     ],
     "5a35c590": [
         ()=>__webpack_require__.e(/* import() | 5a35c590 */ "118").then(__webpack_require__.bind(__webpack_require__, 4247)),
@@ -21137,96 +21837,96 @@ function ComponentCreator(path, hash) {
 
 /* ESM default export */ const routes = ([
     {
-        path: '/docs/markdown-page',
-        component: ComponentCreator('/docs/markdown-page', 'c78'),
+        path: '/docs/en/markdown-page',
+        component: ComponentCreator('/docs/en/markdown-page', 'd91'),
         exact: true
     },
     {
-        path: '/docs/',
-        component: ComponentCreator('/docs/', '6fa'),
+        path: '/docs/en/',
+        component: ComponentCreator('/docs/en/', '163'),
         exact: true
     },
     {
-        path: '/docs/',
-        component: ComponentCreator('/docs/', 'a80'),
+        path: '/docs/en/',
+        component: ComponentCreator('/docs/en/', '92a'),
         routes: [
             {
-                path: '/docs/',
-                component: ComponentCreator('/docs/', 'f85'),
+                path: '/docs/en/',
+                component: ComponentCreator('/docs/en/', 'c70'),
                 routes: [
                     {
-                        path: '/docs/',
-                        component: ComponentCreator('/docs/', '85c'),
+                        path: '/docs/en/',
+                        component: ComponentCreator('/docs/en/', '3e9'),
                         routes: [
                             {
-                                path: '/docs/platform/biostar2/',
-                                component: ComponentCreator('/docs/platform/biostar2/', '906'),
+                                path: '/docs/en/platform/biostar2/',
+                                component: ComponentCreator('/docs/en/platform/biostar2/', '33a'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/change-db',
-                                component: ComponentCreator('/docs/platform/biostar2/change-db', 'a61'),
+                                path: '/docs/en/platform/biostar2/change-db',
+                                component: ComponentCreator('/docs/en/platform/biostar2/change-db', '802'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/change-port',
-                                component: ComponentCreator('/docs/platform/biostar2/change-port', '9a8'),
+                                path: '/docs/en/platform/biostar2/change-port',
+                                component: ComponentCreator('/docs/en/platform/biostar2/change-port', 'bf0'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/custom-install',
-                                component: ComponentCreator('/docs/platform/biostar2/custom-install', '4c4'),
+                                path: '/docs/en/platform/biostar2/custom-install',
+                                component: ComponentCreator('/docs/en/platform/biostar2/custom-install', '98f'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/express-install',
-                                component: ComponentCreator('/docs/platform/biostar2/express-install', '8ad'),
+                                path: '/docs/en/platform/biostar2/express-install',
+                                component: ComponentCreator('/docs/en/platform/biostar2/express-install', 'f18'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/getting-started',
-                                component: ComponentCreator('/docs/platform/biostar2/getting-started', 'e33'),
+                                path: '/docs/en/platform/biostar2/getting-started',
+                                component: ComponentCreator('/docs/en/platform/biostar2/getting-started', '841'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/login',
-                                component: ComponentCreator('/docs/platform/biostar2/login', '5fc'),
+                                path: '/docs/en/platform/biostar2/login',
+                                component: ComponentCreator('/docs/en/platform/biostar2/login', '7b9'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/manage-server',
-                                component: ComponentCreator('/docs/platform/biostar2/manage-server', 'd9f'),
+                                path: '/docs/en/platform/biostar2/manage-server',
+                                component: ComponentCreator('/docs/en/platform/biostar2/manage-server', 'eea'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/product-compatibility',
-                                component: ComponentCreator('/docs/platform/biostar2/product-compatibility', 'c76'),
+                                path: '/docs/en/platform/biostar2/product-compatibility',
+                                component: ComponentCreator('/docs/en/platform/biostar2/product-compatibility', 'a46'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/register-activation-key',
-                                component: ComponentCreator('/docs/platform/biostar2/register-activation-key', '363'),
+                                path: '/docs/en/platform/biostar2/register-activation-key',
+                                component: ComponentCreator('/docs/en/platform/biostar2/register-activation-key', '329'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/system-requirements',
-                                component: ComponentCreator('/docs/platform/biostar2/system-requirements', 'fcf'),
+                                path: '/docs/en/platform/biostar2/system-requirements',
+                                component: ComponentCreator('/docs/en/platform/biostar2/system-requirements', '111'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar2/tutorial',
-                                component: ComponentCreator('/docs/platform/biostar2/tutorial', '7ba'),
+                                path: '/docs/en/platform/biostar2/tutorial',
+                                component: ComponentCreator('/docs/en/platform/biostar2/tutorial', '06a'),
                                 exact: true,
                                 sidebar: "biostarx"
                             }
@@ -21303,7 +22003,8 @@ var ExecutionEnvironment = __webpack_require__("3262");
     __webpack_require__(9193),
     __webpack_require__(3902),
     __webpack_require__(6928),
-    __webpack_require__(1355)
+    __webpack_require__(1355),
+    __webpack_require__(6373)
 ]);
 
 // EXTERNAL MODULE: ./.docusaurus/routes.js + 3 modules
@@ -22107,13 +22808,13 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/change-db","path":"/docs/platform/biostar2/change-db","sidebar":"biostarx"},{"id":"platform/biostar2/change-port","path":"/docs/platform/biostar2/change-port","sidebar":"biostarx"},{"id":"platform/biostar2/custom-install","path":"/docs/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/express-install","path":"/docs/platform/biostar2/express-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/login","path":"/docs/platform/biostar2/login","sidebar":"biostarx"},{"id":"platform/biostar2/manage-server","path":"/docs/platform/biostar2/manage-server","sidebar":"biostarx"},{"id":"platform/biostar2/product-compatibility","path":"/docs/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/register-activation-key","path":"/docs/platform/biostar2/register-activation-key","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar2/index","docs":[{"id":"platform/biostar2/change-db","path":"/docs/en/platform/biostar2/change-db","sidebar":"biostarx"},{"id":"platform/biostar2/change-port","path":"/docs/en/platform/biostar2/change-port","sidebar":"biostarx"},{"id":"platform/biostar2/custom-install","path":"/docs/en/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/express-install","path":"/docs/en/platform/biostar2/express-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/en/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/en/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/login","path":"/docs/en/platform/biostar2/login","sidebar":"biostarx"},{"id":"platform/biostar2/manage-server","path":"/docs/en/platform/biostar2/manage-server","sidebar":"biostarx"},{"id":"platform/biostar2/product-compatibility","path":"/docs/en/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/register-activation-key","path":"/docs/en/platform/biostar2/register-activation-key","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/en/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/en/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar2/","label":"개요"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"docs/i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"docs/i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
-var site_metadata_namespaceObject = JSON.parse('{"docusaurusVersion":"3.7.0","siteVersion":"0.0.0","pluginVersions":{"docusaurus-plugin-content-docs":{"type":"package","name":"@docusaurus/plugin-content-docs","version":"3.7.0"},"docusaurus-plugin-content-pages":{"type":"package","name":"@docusaurus/plugin-content-pages","version":"3.7.0"},"docusaurus-plugin-sitemap":{"type":"package","name":"@docusaurus/plugin-sitemap","version":"3.7.0"},"docusaurus-plugin-svgr":{"type":"package","name":"@docusaurus/plugin-svgr","version":"3.7.0"},"docusaurus-theme-classic":{"type":"package","name":"@docusaurus/theme-classic","version":"3.7.0"},"docusaurus-plugin-sass":{"type":"package","name":"docusaurus-plugin-sass","version":"0.2.6"},"docusaurus-theme-github-codeblock":{"type":"package","name":"@saucelabs/theme-github-codeblock","version":"0.3.0"}}}')
+var site_metadata_namespaceObject = JSON.parse('{"docusaurusVersion":"3.7.0","siteVersion":"0.0.0","pluginVersions":{"docusaurus-plugin-content-docs":{"type":"package","name":"@docusaurus/plugin-content-docs","version":"3.7.0"},"docusaurus-plugin-content-pages":{"type":"package","name":"@docusaurus/plugin-content-pages","version":"3.7.0"},"docusaurus-plugin-sitemap":{"type":"package","name":"@docusaurus/plugin-sitemap","version":"3.7.0"},"docusaurus-plugin-svgr":{"type":"package","name":"@docusaurus/plugin-svgr","version":"3.7.0"},"docusaurus-theme-classic":{"type":"package","name":"@docusaurus/theme-classic","version":"3.7.0"},"suprema-plugin":{"type":"project"},"docusaurus-plugin-sass":{"type":"package","name":"docusaurus-plugin-sass","version":"0.2.6"},"docusaurus-plugin-image-zoom":{"type":"package","name":"plugin-image-zoom","version":"1.1.0"},"docusaurus-theme-github-codeblock":{"type":"package","name":"@saucelabs/theme-github-codeblock","version":"0.3.0"}}}')
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/docusaurusContext.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -28631,11 +29332,11 @@ __webpack_require__.d(__webpack_exports__, {
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  "title": "슈프리마 Docs",
-  "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
+  "title": "Suprema Docs",
+  "tagline": "Check out all of Suprema's products and BioStar related information here.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
   "url": "https://docs.supremainc.com",
-  "baseUrl": "/docs/",
+  "baseUrl": "/docs/en/",
   "noIndex": true,
   "future": {
     "experimental_faster": {
@@ -28703,8 +29404,25 @@ __webpack_require__.d(__webpack_exports__, {
   ],
   "plugins": [
     [
+      "./src/plugins/suprema",
+      {}
+    ],
+    [
       "docusaurus-plugin-sass",
       {}
+    ],
+    [
+      "plugin-image-zoom",
+      {
+        "selector": ".markdown img",
+        "options": {
+          "margin": 24,
+          "background": "#BADA55",
+          "scrollOffset": 0,
+          "container": "#zoom-container",
+          "template": "#zoom-template"
+        }
+      }
     ]
   ],
   "markdown": {
@@ -28723,7 +29441,7 @@ __webpack_require__.d(__webpack_exports__, {
     "image": "img/sns_img02.jpg",
     "announcementBar": {
       "id": "annoucementbar",
-      "content": "<b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 다음 링크에서 확인하세요.</b>",
+      "content": "<b>This document contains content that has not yet been released to the service version. For documentation on officially released features, please see the following links.</b>",
       "backgroundColor": "#FFB27D",
       "textColor": "#091E42",
       "isCloseable": true
@@ -28783,7 +29501,7 @@ __webpack_require__.d(__webpack_exports__, {
           "href": "https://stackoverflow.com/questions/tagged/docusaurus"
         }
       ],
-      "copyright": "Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369"
+      "copyright": "Copyright © Suprema Inc. All rights reserved."
     },
     "prism": {
       "additionalLanguages": [
@@ -32646,12 +33364,12 @@ function __rewriteRelativeImportExtension(path, preserveJsx) {
 }),
 "2627": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"theme.AnnouncementBar.closeButtonAriaLabel":"닫기","theme.BackToTopButton.buttonAriaLabel":"맨 위로 스크롤하기","theme.CodeBlock.copied":"복사했습니다","theme.CodeBlock.copy":"복사","theme.CodeBlock.copyButtonAriaLabel":"클립보드에 코드 복사","theme.CodeBlock.wordWrapToggle":"줄 바꿈 전환","theme.DocSidebarItem.collapseCategoryAriaLabel":"사이드바 분류 \'{label}\' 접기","theme.DocSidebarItem.expandCategoryAriaLabel":"사이드바 분류 \'{label}\' 펼치기","theme.ErrorPageContent.title":"페이지에 오류가 발생하였습니다.","theme.ErrorPageContent.tryAgain":"다시 시도해 보세요","theme.NavBar.navAriaLabel":"메인","theme.NotFound.p1":"원하는 페이지를 찾을 수 없습니다.","theme.NotFound.p2":"사이트 관리자에게 링크가 깨진 것을 알려주세요.","theme.NotFound.title":"페이지를 찾을 수 없습니다.","theme.TOCCollapsible.toggleButtonLabel":"이 페이지에서","theme.admonition.caution":"주의","theme.admonition.danger":"위험","theme.admonition.info":"알아두기","theme.admonition.note":"노트","theme.admonition.tip":"팁","theme.admonition.warning":"경고","theme.blog.archive.description":"게시물 목록","theme.blog.archive.title":"게시물 목록","theme.blog.author.noPosts":"작성자가 아직 게시글을 작성하지 않았습니다.","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"저자","theme.blog.authorsList.viewAll":"모든 저자 보기","theme.blog.paginator.navAriaLabel":"블로그 게시물 목록 탐색","theme.blog.paginator.newerEntries":"이전 페이지","theme.blog.paginator.olderEntries":"다음 페이지","theme.blog.post.paginator.navAriaLabel":"블로그 게시물 탐색","theme.blog.post.paginator.newerPost":"이전 게시물","theme.blog.post.paginator.olderPost":"다음 게시물","theme.blog.post.plurals":"{count}개 게시물","theme.blog.post.readMore":"자세히 보기","theme.blog.post.readMoreLabel":"{title} 에 대해 더 읽어보기","theme.blog.post.readingTime.plurals":"약 {readingTime}분","theme.blog.sidebar.navAriaLabel":"최근 블로그 문서 둘러보기","theme.blog.tagTitle":"\\"{tagName}\\" 태그로 연결된 {nPosts}개의 게시물이 있습니다.","theme.colorToggle.ariaLabel":"어두운 모드와 밝은 모드 전환하기 (현재 {mode})","theme.colorToggle.ariaLabel.mode.dark":"어두운 모드","theme.colorToggle.ariaLabel.mode.light":"밝은 모드","theme.common.editThisPage":"페이지 편집","theme.common.headingLinkTitle":"{heading}에 대한 직접 링크","theme.common.skipToMainContent":"본문으로 건너뛰기","theme.contentVisibility.draftBanner.message":"이 페이지는 아직 작성 중입니다. 개발 환경에서만 보이며 프로덕션 빌드에서는 제외됩니다.","theme.contentVisibility.draftBanner.title":"작성 중인 페이지","theme.contentVisibility.unlistedBanner.message":"이 문서는 색인되지 않습니다. 검색 엔진이 이 문서를 색인하지 않으며, 주소를 알고 있는 사용자만 접근할 수 있습니다.","theme.contentVisibility.unlistedBanner.title":"색인되지 않은 문서","theme.docs.DocCard.categoryDescription.plurals":"{count} 항목","theme.docs.breadcrumbs.home":"홈","theme.docs.breadcrumbs.navAriaLabel":"탐색 경로","theme.docs.paginator.navAriaLabel":"문서 페이지","theme.docs.paginator.next":"다음","theme.docs.paginator.previous":"이전","theme.docs.sidebar.closeSidebarButtonAriaLabel":"사이드바 닫기","theme.docs.sidebar.collapseButtonAriaLabel":"사이드바 숨기기","theme.docs.sidebar.collapseButtonTitle":"사이드바 숨기기","theme.docs.sidebar.expandButtonAriaLabel":"사이드바 열기","theme.docs.sidebar.expandButtonTitle":"사이드바 열기","theme.docs.sidebar.navAriaLabel":"문서 사이드바","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"사이드바 펼치거나 접기","theme.docs.tagDocListPageTitle":"{nDocsTagged} \\"{tagName}\\" 태그에 분류되었습니다","theme.docs.tagDocListPageTitle.nDocsTagged":"{count}개 문서가","theme.docs.versionBadge.label":"버전: {versionLabel}","theme.docs.versions.latestVersionLinkLabel":"최신 버전","theme.docs.versions.latestVersionSuggestionLabel":"최신 문서는 {latestVersionLink} ({versionLabel})을 확인하세요.","theme.docs.versions.unmaintainedVersionLabel":"{siteTitle} {versionLabel} 문서는 더 이상 업데이트되지 않습니다.","theme.docs.versions.unreleasedVersionLabel":"{siteTitle} {versionLabel} 문서는 아직 정식 공개되지 않았습니다.","theme.lastUpdated.atDate":" {date}에","theme.lastUpdated.byUser":" {user}가","theme.lastUpdated.lastUpdatedAtBy":"최종 수정: {atDate}{byUser}","theme.navbar.mobileLanguageDropdown.label":"언어","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← 메인 메뉴로 돌아가기","theme.navbar.mobileVersionsDropdown.label":"버전","theme.tags.tagsListLabel":"태그:","theme.tags.tagsPageLink":"모든 태그 보기","theme.tags.tagsPageTitle":"태그","externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스","externalLinks.FaceStationF2.desc":"퓨전 얼굴인증 장치","externalLinks.XStation2.desc":"차세대 모바일 출입인증 단말기","biostar2.install.ok":"OK","biostar2.install.agree":"동의","biostar2.install.next":"다음","biostar2.install.expressInstall":"간편 설치","biostar2.install.customInstall":"사용자 정의 설치","biostar2.install.btnInstall":"설치","biostar2.install.complete":"완료"}')
+module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device","externalLinks.FaceStationF2.desc":"Fusion Multimodal Terminal","externalLinks.XStation2.desc":"Versatile Intelligent Terminal","theme.docs.breadcrumbs.navAriaLabel":"Breadcrumbs","theme.admonition.caution":"Caution","theme.admonition.danger":"Danger","theme.admonition.info":"Info","theme.admonition.note":"Note","theme.admonition.tip":"Tip","theme.admonition.warning":"Warning","theme.docs.breadcrumbs.home":"Home","theme.ErrorPageContent.title":"This page crashed.","theme.BackToTopButton.buttonAriaLabel":"Scroll back to top","theme.blog.archive.title":"Archive","theme.blog.archive.description":"Archive","theme.blog.paginator.navAriaLabel":"Blog list page navigation","theme.blog.paginator.newerEntries":"Newer entries","theme.blog.paginator.olderEntries":"Older entries","theme.blog.post.paginator.navAriaLabel":"Blog post page navigation","theme.blog.post.paginator.newerPost":"Newer post","theme.blog.post.paginator.olderPost":"Older post","theme.tags.tagsPageLink":"View all tags","theme.colorToggle.ariaLabel":"Switch between dark and light mode (currently {mode})","theme.colorToggle.ariaLabel.mode.dark":"Dark mode","theme.colorToggle.ariaLabel.mode.light":"Light mode","theme.docs.DocCard.categoryDescription.plurals":"1 item|{count} items","theme.docs.paginator.navAriaLabel":"Docs pages","theme.docs.paginator.previous":"Previous","theme.docs.paginator.next":"Next","theme.docs.tagDocListPageTitle.nDocsTagged":"One doc tagged|{count} docs tagged","theme.docs.tagDocListPageTitle":"{nDocsTagged} with \\"{tagName}\\"","theme.docs.versionBadge.label":"Version: {versionLabel}","theme.docs.versions.unreleasedVersionLabel":"This is unreleased documentation for {siteTitle} {versionLabel} version.","theme.docs.versions.unmaintainedVersionLabel":"This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.","theme.docs.versions.latestVersionSuggestionLabel":"For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).","theme.docs.versions.latestVersionLinkLabel":"latest version","theme.common.editThisPage":"Edit this page","theme.common.headingLinkTitle":"Direct link to {heading}","theme.lastUpdated.atDate":" on {date}","theme.lastUpdated.byUser":" by {user}","theme.lastUpdated.lastUpdatedAtBy":"Last updated{atDate}{byUser}","theme.navbar.mobileVersionsDropdown.label":"Versions","theme.NotFound.title":"Page Not Found","theme.tags.tagsListLabel":"Tags:","theme.AnnouncementBar.closeButtonAriaLabel":"Close","theme.blog.sidebar.navAriaLabel":"Blog recent posts navigation","theme.CodeBlock.copied":"Copied","theme.CodeBlock.copyButtonAriaLabel":"Copy code to clipboard","theme.CodeBlock.copy":"Copy","theme.CodeBlock.wordWrapToggle":"Toggle word wrap","theme.DocSidebarItem.expandCategoryAriaLabel":"Expand sidebar category \'{label}\'","theme.DocSidebarItem.collapseCategoryAriaLabel":"Collapse sidebar category \'{label}\'","theme.NavBar.navAriaLabel":"Main","theme.navbar.mobileLanguageDropdown.label":"Languages","theme.NotFound.p1":"We could not find what you were looking for.","theme.NotFound.p2":"Please contact the owner of the site that linked you to the original URL and let them know their link is broken.","theme.TOCCollapsible.toggleButtonLabel":"On this page","theme.blog.post.readMore":"Read more","theme.blog.post.readMoreLabel":"Read more about {title}","theme.blog.post.readingTime.plurals":"One min read|{readingTime} min read","theme.docs.sidebar.collapseButtonTitle":"Collapse sidebar","theme.docs.sidebar.collapseButtonAriaLabel":"Collapse sidebar","theme.docs.sidebar.navAriaLabel":"Docs sidebar","theme.docs.sidebar.closeSidebarButtonAriaLabel":"Close navigation bar","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← Back to main men","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"Toggle navigation bar","theme.docs.sidebar.expandButtonTitle":"Expand sidebar","theme.docs.sidebar.expandButtonAriaLabel":"Expand sidebar","theme.blog.post.plurals":"One post|{count} posts","theme.blog.tagTitle":"{nPosts} tagged with \\"{tagName}\\"","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"Authors","theme.blog.authorsList.viewAll":"View all authors","theme.blog.author.noPosts":"This author has not written any posts yet.","theme.contentVisibility.unlistedBanner.title":"Unlisted page","theme.contentVisibility.unlistedBanner.message":"This page is unlisted. Search engines will not index it, and only users having a direct link can access it.","theme.contentVisibility.draftBanner.title":"Draft page","theme.contentVisibility.draftBanner.message":"This page is a draft. It will only be visible in dev and be excluded from the production build.","theme.ErrorPageContent.tryAgain":"Try again","theme.common.skipToMainContent":"Skip to main content","theme.tags.tagsPageTitle":"Tags","biostar2.install.ok":"OK","biostar2.install.agree":"I accept the agreement","biostar2.install.next":"Next","biostar2.install.expressInstall":"Express installation","biostar2.install.customInstall":"Custom installation","biostar2.install.btnInstall":"Install","biostar2.install.complete":"Finish"}')
 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/markdown-page-c78":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-a80":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-f85":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-85c":{"__comp":"a94703ab"},"/docs/platform/biostar2/-906":{"__comp":"17896441","content":"6cd7ec80"},"/docs/platform/biostar2/change-db-a61":{"__comp":"17896441","content":"febd5c44"},"/docs/platform/biostar2/change-port-9a8":{"__comp":"17896441","content":"8c97916a"},"/docs/platform/biostar2/custom-install-4c4":{"__comp":"17896441","content":"9aeb0299"},"/docs/platform/biostar2/express-install-8ad":{"__comp":"17896441","content":"5a35c590"},"/docs/platform/biostar2/getting-started-e33":{"__comp":"17896441","content":"3b916237"},"/docs/platform/biostar2/login-5fc":{"__comp":"17896441","content":"5e95a2a5"},"/docs/platform/biostar2/manage-server-d9f":{"__comp":"17896441","content":"36873d08"},"/docs/platform/biostar2/product-compatibility-c76":{"__comp":"17896441","content":"efb123fd"},"/docs/platform/biostar2/register-activation-key-363":{"__comp":"17896441","content":"f9cbddb4"},"/docs/platform/biostar2/system-requirements-fcf":{"__comp":"17896441","content":"96551ba4"},"/docs/platform/biostar2/tutorial-7ba":{"__comp":"17896441","content":"f30d41f9"}}')
+module.exports = JSON.parse('{"/docs/en/markdown-page-d91":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-92a":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-c70":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-3e9":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/change-db-802":{"__comp":"17896441","content":"febd5c44"},"/docs/en/platform/biostar2/change-port-bf0":{"__comp":"17896441","content":"8c97916a"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/login-7b9":{"__comp":"17896441","content":"5e95a2a5"},"/docs/en/platform/biostar2/manage-server-eea":{"__comp":"17896441","content":"36873d08"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
 
 }),
 
