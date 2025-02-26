@@ -95,8 +95,7 @@ const config = {
           lastmod: 'date',
           changefreq: 'always',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
+          ignorePatterns: ['/tags/**']
         },
         svgr: {
           svgrConfig: {
