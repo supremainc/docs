@@ -268,8 +268,8 @@ footer {
     &.hasimg {
       margin-top: var(--ifm-leading);
       img {
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         display: block;
         border: 1px solid var(--ifm-color-color-ol-gray);
         &.w--400 {
@@ -309,7 +309,7 @@ footer {
     color: var(--ifm-color-cmd);
   }
 
-  span.cmd.bold {
+  span.cmd.bold, span.bold {
     font-weight: bold;
     color: var(--ifm-color-color-gray);
   }

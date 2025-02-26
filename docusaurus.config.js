@@ -92,6 +92,16 @@ const config = {
         },
       }),
     ],
+    [
+      '@docusaurus/plugin-svgr',
+      {
+        svgr: {
+          svgrConfig: {
+            /* SVGR config */
+          },
+        },
+      }
+    ]
   ],
   plugins: [
     [ './src/plugins/suprema', {} ],

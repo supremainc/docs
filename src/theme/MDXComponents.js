@@ -15,6 +15,7 @@ import DocCardList from '@theme/DocCardList';
 import Columns from '@site/src/components/Columns';
 import Column from '@site/src/components/Column';
 import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
+import { Start } from '@site/src/components/Winkey';
 export default {
     ...MDXComponents,
     Cmd,
@@ -39,5 +40,6 @@ export default {
     Th,
     Tbody,
     Row,
-    Td
+    Td,
+    Start
 }
