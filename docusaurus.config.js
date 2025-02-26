@@ -94,6 +94,7 @@ const config = {
     ],
   ],
   plugins: [
+    [ './src/plugins/suprema', {} ],
     [ 'docusaurus-plugin-sass', {} ],
     [ 'plugin-image-zoom', {
       selector: '.markdown img',

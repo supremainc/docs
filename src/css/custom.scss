@@ -70,7 +70,7 @@ html[lang='en-US'] * {
 // index.js 페이지
 
 // layout 스타일
-div[class*='docItemCol_z5aJ'] {
+div[class*='docItemCol'] {
   padding-left: 2rem;
 }
 .navbar__items {
@@ -274,7 +274,13 @@ footer {
       }
     }
   }
-
+  ul {
+    li:first-of-type {
+      p {
+        margin-top: 0;
+      }
+    }
+  }
   ol {
     li {
       &::marker {
@@ -297,6 +303,11 @@ footer {
   span.cmd {
     font-weight: 600;
     color: var(--ifm-color-cmd);
+  }
+
+  span.cmd.bold {
+    font-weight: bold;
+    color: var(--ifm-color-color-gray);
   }
 
   ul, ol {
