@@ -40,7 +40,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs/',
-  noIndex: true,
+  noIndex: false,
   future: {
     experimental_faster: true
   },
@@ -93,9 +93,10 @@ const config = {
         },
         sitemap: {
           lastmod: 'date',
-          changefreq: 'daily',
+          changefreq: 'always',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
         svgr: {
           svgrConfig: {
