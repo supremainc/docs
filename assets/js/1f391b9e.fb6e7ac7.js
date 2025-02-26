@@ -463,7 +463,7 @@ function Admonition(unprocessedProps) {
 
 
 }),
-"2836": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"2592": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1024,7 +1024,56 @@ function Td(param) {
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/Winkey/win-logo.svg
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+
+const SvgWinLogo = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    width: 30,
+    height: 30,
+    viewBox: "0 0 452.986 452.986",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react.createElement("path", {
+    d: "M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z",
+    style: {
+      fill: "currentColor"
+    }
+  }));
+};
+/* ESM default export */ const win_logo = (SvgWinLogo);
+;// CONCATENATED MODULE: ./src/components/Winkey/index.js
+
+
+
+function Start() {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                className: "bold",
+                children: (0,Translate/* translate */.I)({
+                    id: "windows.key.start"
+                })
+            }),
+            " ",
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(win_logo, {
+                width: "1rem",
+                height: "1rem"
+            })
+        ]
+    });
+}
+
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
+
 
 
 
@@ -1066,7 +1115,8 @@ function Td(param) {
     Th: Th,
     Tbody: Tbody,
     Row: Row,
-    Td: Td
+    Td: Td,
+    Start: Start
 });
 
 

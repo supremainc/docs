@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-login-mdx-5e9.json
-var site_docs_platform_biostar_2_login_mdx_5e9_namespaceObject = JSON.parse('{"id":"platform/biostar2/login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","source":"@site/docs/platform/biostar2/login.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/login","permalink":"/docs/platform/biostar2/login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/login.mdx","tags":[],"version":"current","frontMatter":{"id":"login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar2/custom-install"},"next":{"title":"서버 관리하기","permalink":"/docs/platform/biostar2/manage-server"}}')
+var site_docs_platform_biostar_2_login_mdx_5e9_namespaceObject = JSON.parse('{"id":"platform/biostar2/login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","source":"@site/docs/platform/biostar2/login.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/login","permalink":"/docs/en/platform/biostar2/login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/login.mdx","tags":[],"version":"current","frontMatter":{"id":"login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/en/platform/biostar2/custom-install"},"next":{"title":"서버 관리하기","permalink":"/docs/en/platform/biostar2/manage-server"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'로그인',
 		'웹 브라우저'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -224,7 +224,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["인증서 적용 파일은 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["HTTPS 프로토콜 적용 파일은 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.setting"
         }), " > ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "setting.https.https"
