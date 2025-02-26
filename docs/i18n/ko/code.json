@@ -319,6 +319,9 @@
     "message": "태그",
     "description": "The title of the tag list page"
   },
+  "windows.key.start": {
+    "message": "시작"
+  },
   "biostar2.install.ok": {
     "message": "OK"
   },
