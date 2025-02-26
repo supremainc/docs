@@ -3587,43 +3587,9 @@ body {
  * LICENSE file in the root directory of this source tree.
  */
 
-.backToTopButton_sjWU {
-  position: fixed;
-  right: 1.3rem;
-  bottom: 1.3rem;
-  border-radius: 50%;
-  background-color: var(--ifm-color-emphasis-200);
-  width: 3rem;
-  height: 3rem;
-  z-index: calc(var(--ifm-z-index-fixed) - 1);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
-  opacity: 0;
-  transform: scale(0);
-  visibility: hidden;
-}
-
-.backToTopButton_sjWU::after {
-  content: ' ';
-  display: inline-block;
-  -webkit-mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
-          mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
-  background-color: var(--ifm-color-emphasis-1000);
-  width: 100%;
-  height: 100%;
-}
-
-@media (hover: hover) {
-  .backToTopButton_sjWU:hover {
-    background-color: var(--ifm-color-emphasis-300);
-  }
-}
-
-.backToTopButtonShow_xfvO {
-  opacity: 1;
-  transform: scale(1);
-  visibility: visible;
+.iconEdit_Z9Sw {
+  margin-right: 0.3em;
+  vertical-align: sub;
 }
 
 /**
@@ -3633,69 +3599,15 @@ body {
  * LICENSE file in the root directory of this source tree.
  */
 
-:root {
-  --docusaurus-collapse-button-bg: transparent;
-  --docusaurus-collapse-button-bg-hover: rgb(0 0 0 / 10%);
-}
-
-[data-theme='dark']:root {
-  --docusaurus-collapse-button-bg: rgb(255 255 255 / 5%);
-  --docusaurus-collapse-button-bg-hover: rgb(255 255 255 / 10%);
+.lastUpdated_JAkA {
+  font-size: smaller;
+  font-style: italic;
+  margin-top: 0.2rem;
 }
 
 @media (min-width: 997px) {
-  .collapseSidebarButton_PEFL {
-    display: block !important;
-    background-color: var(--docusaurus-collapse-button-bg);
-    height: 40px;
-    position: sticky;
-    bottom: 0;
-    border-radius: 0;
-    border: 1px solid var(--ifm-toc-border-color);
-  }
-
-  .collapseSidebarButtonIcon_kv0_ {
-    transform: rotate(180deg);
-    margin-top: 4px;
-  }
-
-  [dir='rtl'] .collapseSidebarButtonIcon_kv0_ {
-    transform: rotate(0);
-  }
-
-  .collapseSidebarButton_PEFL:hover,
-  .collapseSidebarButton_PEFL:focus {
-    background-color: var(--docusaurus-collapse-button-bg-hover);
-  }
-}
-
-.collapseSidebarButton_PEFL {
-  display: none;
-  margin: 0;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.menuExternalLink_NmtK {
-  align-items: center;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-@media (min-width: 997px) {
-  .menuHtmlItem_M9Kj {
-    padding: var(--ifm-menu-link-padding-vertical)
-      var(--ifm-menu-link-padding-horizontal);
+  .lastUpdated_JAkA {
+    text-align: right;
   }
 }
 
@@ -3706,313 +3618,105 @@ body {
  * LICENSE file in the root directory of this source tree.
  */
 
-@media (min-width: 997px) {
-  .menu_SIkG {
-    flex-grow: 1;
-    padding: 0.5rem;
-  }
-  @supports (scrollbar-gutter: stable) {
-    .menu_SIkG {
-      padding: 0.5rem 0 0.5rem 0.5rem;
-      scrollbar-gutter: stable;
-    }
-  }
-
-  .menuWithAnnouncementBar_GW3s {
-    margin-bottom: var(--docusaurus-announcement-bar-height);
-  }
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-@media (min-width: 997px) {
-  .sidebar_njMd {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding-top: var(--ifm-navbar-height);
-    width: var(--doc-sidebar-width);
-  }
-
-  .sidebarWithHideableNavbar_wUlq {
-    padding-top: 0;
-  }
-
-  .sidebarHidden_VK0M {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .sidebarLogo_isFc {
-    display: flex !important;
-    align-items: center;
-    margin: 0 var(--ifm-navbar-padding-horizontal);
-    min-height: var(--ifm-navbar-height);
-    max-height: var(--ifm-navbar-height);
-    color: inherit !important;
-    -webkit-text-decoration: none !important;
-    text-decoration: none !important;
-  }
-
-  .sidebarLogo_isFc img {
-    margin-right: 0.5rem;
-    height: 2rem;
-  }
-}
-
-.sidebarLogo_isFc {
-  display: none;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-@media (min-width: 997px) {
-  .expandButton_TmdG {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color var(--ifm-transition-fast) ease;
-    background-color: var(--docusaurus-collapse-button-bg);
-  }
-
-  .expandButton_TmdG:hover,
-  .expandButton_TmdG:focus {
-    background-color: var(--docusaurus-collapse-button-bg-hover);
-  }
-
-  .expandButtonIcon_i1dp {
-    transform: rotate(0);
-  }
-
-  [dir='rtl'] .expandButtonIcon_i1dp {
-    transform: rotate(180deg);
-  }
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-:root {
-  --doc-sidebar-width: 300px;
-  --doc-sidebar-hidden-width: 30px;
-}
-
-.docSidebarContainer_YfHR {
-  display: none;
-}
-
-@media (min-width: 997px) {
-  .docSidebarContainer_YfHR {
-    display: block;
-    width: var(--doc-sidebar-width);
-    margin-top: calc(-1 * var(--ifm-navbar-height));
-    border-right: 1px solid var(--ifm-toc-border-color);
-    will-change: width;
-    transition: width var(--ifm-transition-fast) ease;
-    clip-path: inset(0);
-  }
-
-  .docSidebarContainerHidden_DPk8 {
-    width: var(--doc-sidebar-hidden-width);
-    cursor: pointer;
-  }
-
-  .sidebarViewport_aRkj {
-    top: 0;
-    position: sticky;
-    height: 100%;
-    max-height: 100vh;
-  }
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.docMainContainer_TBSr {
+.tocCollapsibleButton_TO0P {
+  font-size: inherit;
   display: flex;
-  width: 100%;
-}
-
-@media (min-width: 997px) {
-  .docMainContainer_TBSr {
-    flex-grow: 1;
-    max-width: calc(100% - var(--doc-sidebar-width));
-  }
-
-  .docMainContainerEnhanced_lQrH {
-    max-width: calc(100% - var(--doc-sidebar-hidden-width));
-  }
-
-  .docItemWrapperEnhanced_JWYK {
-    max-width: calc(
-      var(--ifm-container-width) + var(--doc-sidebar-width)
-    ) !important;
-  }
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.docRoot_UBD9 {
-  display: flex;
-  width: 100%;
-}
-
-.docsWrapper_hBAB {
-  display: flex;
-  flex: 1 0 auto;
-}
-
-.grid_Emyk {
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 25px;
   justify-content: space-between;
-  align-items: flex-start;
-  align-content: flex-start;
-  border-bottom: 1px solid var(--ifm-color-border);
-}
-
-.product_n29p.grid_Emyk {
-  padding-top: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
-
-.grid_Emyk:last-of-type {
-  border-bottom: none;
-}
-
-.grid_Emyk .cardItem_IQRN {
+  align-items: center;
+  padding: 0.4rem 0.8rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--ifm-color-border);
-  border-radius: 10px;
 }
 
-.cardItem_IQRN a {
-  display: block;
-  padding: 15px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: var(--ifm-color-color-gray);
+.tocCollapsibleButton_TO0P::after {
+  content: '';
+  background: var(--ifm-menu-link-sublist-icon) 50% 50% / 2rem 2rem no-repeat;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+  height: 1.25rem;
+  width: 1.25rem;
+  transform: rotate(180deg);
+  transition: transform var(--ifm-transition-fast);
 }
 
-.flex_jYBC {
-  display: flex;
+.tocCollapsibleButtonExpanded_MG3E::after {
+  transform: none;
 }
 
-.product_n29p.grid_Emyk .cardItem_IQRN {
-  height: 266.2px;
-}
-
-.product_n29p.grid_Emyk .cardItem_IQRN a .flex_jYBC {
-  display: block;
-}
-
-.product_n29p.grid_Emyk .cardItem_IQRN:hover {
-  border: 3px solid var(--ifm-color-primary-darkest);
-  border-radius: 10px;
-  background-color: ;
-}
-
-.logo_qTox {
-  align-content: center;
-  height: 45px;
-}
-
-.product_n29p.grid_Emyk .cardItem_IQRN .logo_qTox {
-  height: 150px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.title_grZK {
-  margin-left: 15px;
-  align-content: center;
-}
-
-.product_n29p.grid_Emyk .cardItem_IQRN a .flex_jYBC .title_grZK {
-  margin-left: 0;
-  padding: 0 10px;
-}
-
-.title_grZK h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.desc_MGeg {
-  font-size: .8rem;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-html[lang='en-US'] .desc_MGeg {
-  line-height: 1.2;
-}
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
-.heroBanner_qdFl {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: url(/docs/en/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
+.tocCollapsible_ETCw {
+  background-color: var(--ifm-menu-color-background-active);
+  border-radius: var(--ifm-global-radius);
+  margin: 1rem 0;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner_qdFl {
-    padding: 2rem;
+.tocCollapsibleContent_vkbj > ul {
+  border-left: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  padding: 0.2rem 0;
+  font-size: 15px;
+}
+
+.tocCollapsibleContent_vkbj ul li {
+  margin: 0.4rem 0.8rem;
+}
+
+.tocCollapsibleContent_vkbj a {
+  display: block;
+}
+
+.tocCollapsibleExpanded_sAul {
+  transform: none;
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  /* Prevent hydration FOUC, as the mobile TOC needs to be server-rendered */
+  .tocMobile_ITEo {
+    display: none;
   }
 }
 
-.buttons_AeoN {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media print {
+  .tocMobile_ITEo {
+    display: none;
+  }
 }
 
-.hero__title_sobY, .hero__subtitle_AUTZ {
-  color: #fff !important;
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.tableOfContents_bqdL {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
 }
 
-.headsec_hWdZ {
-  margin-top: 60px;
+@media (max-width: 996px) {
+  .tableOfContents_bqdL {
+    display: none;
+  }
+
+  .docItemContainer_F8PC {
+    padding: 0 0.3rem;
+  }
 }
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -4527,124 +4231,11 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 *:hover > .hash-link {
   opacity: 1;
 }
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.iconEdit_Z9Sw {
-  margin-right: 0.3em;
-  vertical-align: sub;
-}
-
 .tocList_VIMH {
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
   color: var(--ifm-font-color-base) !important;
 }
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.lastUpdated_JAkA {
-  font-size: smaller;
-  font-style: italic;
-  margin-top: 0.2rem;
-}
-
-@media (min-width: 997px) {
-  .lastUpdated_JAkA {
-    text-align: right;
-  }
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.tocCollapsibleButton_TO0P {
-  font-size: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4rem 0.8rem;
-  width: 100%;
-}
-
-.tocCollapsibleButton_TO0P::after {
-  content: '';
-  background: var(--ifm-menu-link-sublist-icon) 50% 50% / 2rem 2rem no-repeat;
-  filter: var(--ifm-menu-link-sublist-icon-filter);
-  height: 1.25rem;
-  width: 1.25rem;
-  transform: rotate(180deg);
-  transition: transform var(--ifm-transition-fast);
-}
-
-.tocCollapsibleButtonExpanded_MG3E::after {
-  transform: none;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.tocCollapsible_ETCw {
-  background-color: var(--ifm-menu-color-background-active);
-  border-radius: var(--ifm-global-radius);
-  margin: 1rem 0;
-}
-
-.tocCollapsibleContent_vkbj > ul {
-  border-left: none;
-  border-top: 1px solid var(--ifm-color-emphasis-300);
-  padding: 0.2rem 0;
-  font-size: 15px;
-}
-
-.tocCollapsibleContent_vkbj ul li {
-  margin: 0.4rem 0.8rem;
-}
-
-.tocCollapsibleContent_vkbj a {
-  display: block;
-}
-
-.tocCollapsibleExpanded_sAul {
-  transform: none;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-@media (min-width: 997px) {
-  /* Prevent hydration FOUC, as the mobile TOC needs to be server-rendered */
-  .tocMobile_ITEo {
-    display: none;
-  }
-}
-
-@media print {
-  .tocMobile_ITEo {
-    display: none;
-  }
-}
-
 .kbd_QsL_ {
   background-color: #ddd;
   font-size: .7rem;
@@ -4678,30 +4269,6 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 
 .tabItem_Ymn6 > *:last-child {
   margin-bottom: 0;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-.tableOfContents_bqdL {
-  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  overflow-y: auto;
-  position: sticky;
-  top: calc(var(--ifm-navbar-height) + 1rem);
-}
-
-@media (max-width: 996px) {
-  .tableOfContents_bqdL {
-    display: none;
-  }
-
-  .docItemContainer_F8PC {
-    padding: 0 0.3rem;
-  }
 }
 
 /**
@@ -4887,7 +4454,429 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
  * LICENSE file in the root directory of this source tree.
  */
 
-.mdxPageWrapper_j9I6 {
+.backToTopButton_sjWU {
+  position: fixed;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-200);
+  width: 3rem;
+  height: 3rem;
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+}
+
+.backToTopButton_sjWU::after {
+  content: ' ';
+  display: inline-block;
+  -webkit-mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
+          mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
+  background-color: var(--ifm-color-emphasis-1000);
+  width: 100%;
+  height: 100%;
+}
+
+@media (hover: hover) {
+  .backToTopButton_sjWU:hover {
+    background-color: var(--ifm-color-emphasis-300);
+  }
+}
+
+.backToTopButtonShow_xfvO {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+:root {
+  --docusaurus-collapse-button-bg: transparent;
+  --docusaurus-collapse-button-bg-hover: rgb(0 0 0 / 10%);
+}
+
+[data-theme='dark']:root {
+  --docusaurus-collapse-button-bg: rgb(255 255 255 / 5%);
+  --docusaurus-collapse-button-bg-hover: rgb(255 255 255 / 10%);
+}
+
+@media (min-width: 997px) {
+  .collapseSidebarButton_PEFL {
+    display: block !important;
+    background-color: var(--docusaurus-collapse-button-bg);
+    height: 40px;
+    position: sticky;
+    bottom: 0;
+    border-radius: 0;
+    border: 1px solid var(--ifm-toc-border-color);
+  }
+
+  .collapseSidebarButtonIcon_kv0_ {
+    transform: rotate(180deg);
+    margin-top: 4px;
+  }
+
+  [dir='rtl'] .collapseSidebarButtonIcon_kv0_ {
+    transform: rotate(0);
+  }
+
+  .collapseSidebarButton_PEFL:hover,
+  .collapseSidebarButton_PEFL:focus {
+    background-color: var(--docusaurus-collapse-button-bg-hover);
+  }
+}
+
+.collapseSidebarButton_PEFL {
+  display: none;
+  margin: 0;
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.menuExternalLink_NmtK {
+  align-items: center;
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  .menuHtmlItem_M9Kj {
+    padding: var(--ifm-menu-link-padding-vertical)
+      var(--ifm-menu-link-padding-horizontal);
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  .menu_SIkG {
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+  @supports (scrollbar-gutter: stable) {
+    .menu_SIkG {
+      padding: 0.5rem 0 0.5rem 0.5rem;
+      scrollbar-gutter: stable;
+    }
+  }
+
+  .menuWithAnnouncementBar_GW3s {
+    margin-bottom: var(--docusaurus-announcement-bar-height);
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  .sidebar_njMd {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: var(--ifm-navbar-height);
+    width: var(--doc-sidebar-width);
+  }
+
+  .sidebarWithHideableNavbar_wUlq {
+    padding-top: 0;
+  }
+
+  .sidebarHidden_VK0M {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebarLogo_isFc {
+    display: flex !important;
+    align-items: center;
+    margin: 0 var(--ifm-navbar-padding-horizontal);
+    min-height: var(--ifm-navbar-height);
+    max-height: var(--ifm-navbar-height);
+    color: inherit !important;
+    -webkit-text-decoration: none !important;
+    text-decoration: none !important;
+  }
+
+  .sidebarLogo_isFc img {
+    margin-right: 0.5rem;
+    height: 2rem;
+  }
+}
+
+.sidebarLogo_isFc {
+  display: none;
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  .expandButton_TmdG {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--ifm-transition-fast) ease;
+    background-color: var(--docusaurus-collapse-button-bg);
+  }
+
+  .expandButton_TmdG:hover,
+  .expandButton_TmdG:focus {
+    background-color: var(--docusaurus-collapse-button-bg-hover);
+  }
+
+  .expandButtonIcon_i1dp {
+    transform: rotate(0);
+  }
+
+  [dir='rtl'] .expandButtonIcon_i1dp {
+    transform: rotate(180deg);
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+:root {
+  --doc-sidebar-width: 300px;
+  --doc-sidebar-hidden-width: 30px;
+}
+
+.docSidebarContainer_YfHR {
+  display: none;
+}
+
+@media (min-width: 997px) {
+  .docSidebarContainer_YfHR {
+    display: block;
+    width: var(--doc-sidebar-width);
+    margin-top: calc(-1 * var(--ifm-navbar-height));
+    border-right: 1px solid var(--ifm-toc-border-color);
+    will-change: width;
+    transition: width var(--ifm-transition-fast) ease;
+    clip-path: inset(0);
+  }
+
+  .docSidebarContainerHidden_DPk8 {
+    width: var(--doc-sidebar-hidden-width);
+    cursor: pointer;
+  }
+
+  .sidebarViewport_aRkj {
+    top: 0;
+    position: sticky;
+    height: 100%;
+    max-height: 100vh;
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.docMainContainer_TBSr {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 997px) {
+  .docMainContainer_TBSr {
+    flex-grow: 1;
+    max-width: calc(100% - var(--doc-sidebar-width));
+  }
+
+  .docMainContainerEnhanced_lQrH {
+    max-width: calc(100% - var(--doc-sidebar-hidden-width));
+  }
+
+  .docItemWrapperEnhanced_JWYK {
+    max-width: calc(
+      var(--ifm-container-width) + var(--doc-sidebar-width)
+    ) !important;
+  }
+}
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.docRoot_UBD9 {
+  display: flex;
+  width: 100%;
+}
+
+.docsWrapper_hBAB {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.grid_Emyk {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 25px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-bottom: 1px solid var(--ifm-color-border);
+}
+
+.product_n29p.grid_Emyk {
+  padding-top: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid_Emyk:last-of-type {
+  border-bottom: none;
+}
+
+.grid_Emyk .cardItem_IQRN {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 10px;
+}
+
+.cardItem_IQRN a {
+  display: block;
+  padding: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--ifm-color-color-gray);
+}
+
+.flex_jYBC {
+  display: flex;
+}
+
+.product_n29p.grid_Emyk .cardItem_IQRN {
+  height: 266.2px;
+}
+
+.product_n29p.grid_Emyk .cardItem_IQRN a .flex_jYBC {
+  display: block;
+}
+
+.product_n29p.grid_Emyk .cardItem_IQRN:hover {
+  border: 3px solid var(--ifm-color-primary-darkest);
+  border-radius: 10px;
+  background-color: ;
+}
+
+.logo_qTox {
+  align-content: center;
+  height: 45px;
+}
+
+.product_n29p.grid_Emyk .cardItem_IQRN .logo_qTox {
+  height: 150px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title_grZK {
+  margin-left: 15px;
+  align-content: center;
+}
+
+.product_n29p.grid_Emyk .cardItem_IQRN a .flex_jYBC .title_grZK {
+  margin-left: 0;
+  padding: 0 10px;
+}
+
+.title_grZK h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.desc_MGeg {
+  font-size: .8rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+html[lang='en-US'] .desc_MGeg {
+  line-height: 1.2;
+}
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner_qdFl {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: url(/docs/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner_qdFl {
+    padding: 2rem;
+  }
+}
+
+.buttons_AeoN {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.hero__title_sobY, .hero__subtitle_AUTZ {
+  color: #fff !important;
+}
+
+.headsec_hWdZ {
+  margin-top: 60px;
+}

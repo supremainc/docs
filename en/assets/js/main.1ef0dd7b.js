@@ -21430,24 +21430,14 @@ var routesChunkNames = __webpack_require__("7138");
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
 /* ESM default export */ const registry = ({
     "17896441": [
-        ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("212"), __webpack_require__.e("834"), __webpack_require__.e("305"), __webpack_require__.e("48")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
+        ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("212"), __webpack_require__.e("288"), __webpack_require__.e("48")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
         "@theme/DocItem",
         /*require.resolve*/(7509)
-    ],
-    "1f391b9e": [
-        ()=>Promise.all(/* import() | 1f391b9e */ [__webpack_require__.e("212"), __webpack_require__.e("834"), __webpack_require__.e("493")]).then(__webpack_require__.bind(__webpack_require__, 3219)),
-        "@theme/MDXPage",
-        /*require.resolve*/(3219)
     ],
     "36873d08": [
         ()=>__webpack_require__.e(/* import() | 36873d08 */ "441").then(__webpack_require__.bind(__webpack_require__, 1385)),
         "@site/docs/platform/biostar2/manage-server.mdx",
         /*require.resolve*/(1385)
-    ],
-    "393be207": [
-        ()=>__webpack_require__.e(/* import() | 393be207 */ "969").then(__webpack_require__.bind(__webpack_require__, 8553)),
-        "@site/src/pages/markdown-page.md",
-        /*require.resolve*/(8553)
     ],
     "3b916237": [
         ()=>__webpack_require__.e(/* import() | 3b916237 */ "422").then(__webpack_require__.bind(__webpack_require__, 9745)),
@@ -21836,11 +21826,6 @@ function ComponentCreator(path, hash) {
 
 
 /* ESM default export */ const routes = ([
-    {
-        path: '/docs/en/markdown-page',
-        component: ComponentCreator('/docs/en/markdown-page', 'd91'),
-        exact: true
-    },
     {
         path: '/docs/en/',
         component: ComponentCreator('/docs/en/', '163'),
@@ -29337,7 +29322,7 @@ __webpack_require__.d(__webpack_exports__, {
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
   "url": "https://docs.supremainc.com",
   "baseUrl": "/docs/en/",
-  "noIndex": true,
+  "noIndex": false,
   "future": {
     "experimental_faster": {
       "swcJsLoader": true,
@@ -29401,7 +29386,7 @@ __webpack_require__.d(__webpack_exports__, {
         },
         "sitemap": {
           "lastmod": "date",
-          "changefreq": "daily",
+          "changefreq": "always",
           "priority": 0.5,
           "ignorePatterns": [
             "/tags/**"
@@ -33380,7 +33365,7 @@ module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/en/markdown-page-d91":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-92a":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-c70":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-3e9":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/change-db-802":{"__comp":"17896441","content":"febd5c44"},"/docs/en/platform/biostar2/change-port-bf0":{"__comp":"17896441","content":"8c97916a"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/login-7b9":{"__comp":"17896441","content":"5e95a2a5"},"/docs/en/platform/biostar2/manage-server-eea":{"__comp":"17896441","content":"36873d08"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
+module.exports = JSON.parse('{"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-92a":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-c70":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-3e9":{"__comp":"a94703ab"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/change-db-802":{"__comp":"17896441","content":"febd5c44"},"/docs/en/platform/biostar2/change-port-bf0":{"__comp":"17896441","content":"8c97916a"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/login-7b9":{"__comp":"17896441","content":"5e95a2a5"},"/docs/en/platform/biostar2/manage-server-eea":{"__comp":"17896441","content":"36873d08"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
 
 }),
 

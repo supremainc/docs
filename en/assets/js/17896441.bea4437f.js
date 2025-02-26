@@ -379,12 +379,12 @@ var Paginator = __webpack_require__("4813");
 var DocVersionBanner = __webpack_require__("9548");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBadge/index.js
 var DocVersionBadge = __webpack_require__("1987");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Footer/index.js + 4 modules
-var Footer = __webpack_require__("2119");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Footer/index.js + 11 modules
+var Footer = __webpack_require__("2540");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Mobile/index.js + 1 modules
 var Mobile = __webpack_require__("8070");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js
-var Desktop = __webpack_require__("2456");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js + 2 modules
+var Desktop = __webpack_require__("5445");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
 var ThemeClassNames = __webpack_require__("6171");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
