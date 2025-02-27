@@ -26174,7 +26174,7 @@ function DocSearch(param) {
             return;
         }
         // prevents duplicate key insertion in the modal input
-        // event.preventDefault();
+        event.preventDefault();
         setInitialQuery(event.key);
         openModal();
     }, [
@@ -26187,7 +26187,7 @@ function DocSearch(param) {
         isOpen,
         onOpen: openModal,
         onClose: closeModal,
-        onKeyDown: handleInput,
+        onInput: handleInput,
         searchButtonRef
     });
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -26214,7 +26214,6 @@ function DocSearch(param) {
                 navigator: navigator,
                 transformItems: transformItems,
                 hitComponent: Hit,
-                transformSearchClient: transformSearchClient,
                 ...props.searchPagePath && {
                     resultsFooterComponent
                 },
