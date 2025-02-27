@@ -33,9 +33,17 @@
 
 .appcontainer {
   padding: 0;
-  margin-bottom: 20pt;
+  margin-top: 20pt;
 }
 
-.aa-Autocomplete {
-  width: 70%;
+@media (max-width: 695px) {
+  .appcontainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .appcontainer {
+    display: none;
+  }
 }

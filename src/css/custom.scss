@@ -434,6 +434,14 @@ footer {
   }
 }
 
+@media (max-width: 695px) {
+  .aa-Autocomplete {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
 @media (max-width: 640px) and (max-width: 480px) {
   .markdown {
     .overflow-x {
