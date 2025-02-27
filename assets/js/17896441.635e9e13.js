@@ -802,8 +802,8 @@ __webpack_require__.d(__webpack_exports__, {
   Z: () => (/* binding */ theme_MDXComponents)
 });
 
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js + 15 modules
-var MDXComponents = __webpack_require__("5055");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js + 16 modules
+var MDXComponents = __webpack_require__("964");
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -1274,8 +1274,8 @@ function Kbd(param) {
 var Tabs = __webpack_require__("8168");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
 var TabItem = __webpack_require__("7645");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js + 3 modules
-var DocCardList = __webpack_require__("1552");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js + 2 modules
+var DocCardList = __webpack_require__("8399");
 ;// CONCATENATED MODULE: ./src/components/Columns/index.js
 
 

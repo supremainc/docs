@@ -309,7 +309,7 @@ const SvgKnowledgeLogo = _ref => {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgKnowledgeLogo);
 
 }),
-"6160": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"5637": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -320,15 +320,17 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
 var clsx = __webpack_require__("7026");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__("3367");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
 var useDocusaurusContext = __webpack_require__("7262");
 ;// CONCATENATED MODULE: ./src/components/ExternalLinkCard/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const styles_module = ({"grid":"grid_Emyk","product":"product_n29p","cardItem":"cardItem_IQRN","flex":"flex_jYBC","logo":"logo_qTox","title":"title_grZK","desc":"desc_MGeg"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__("3367");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
 var Translate = __webpack_require__("7670");
 ;// CONCATENATED MODULE: ./src/components/ExternalLinkCard/index.js
@@ -478,14 +480,143 @@ function ProductLinkCard() {
     });
 }
 
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 69 modules
-var Layout = __webpack_require__("35");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 71 modules
+var Layout = __webpack_require__("609");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
 var Heading = __webpack_require__("6055");
 ;// CONCATENATED MODULE: ./src/pages/index.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ"});
+/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi","aa-Autocomplete":"aa-Autocomplete_FgIB"});
+// EXTERNAL MODULE: ./node_modules/react-dom/client.js
+var client = __webpack_require__("745");
+// EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 69 modules
+var autocomplete = __webpack_require__("3915");
+;// CONCATENATED MODULE: ./src/components/Autocomplete/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Autocomplete_styles_module = ({"itemContent":"itemContent_fcoZ","aaItemLink":"aaItemLink_RHtO","title":"title__Y14","hitname":"hitname_qfOW","hitbreadcrums":"hitbreadcrums_co_g","content":"content_TTLw"});
+;// CONCATENATED MODULE: ./src/components/Autocomplete/index.js
+
+
+
+
+
+
+
+function Autocomplete(props) {
+    const containerRef = (0,react.useRef)(null);
+    const panelRootRef = (0,react.useRef)(null);
+    const rootRef = (0,react.useRef)(null);
+    (0,react.useEffect)(()=>{
+        if (!containerRef.current) {
+            return undefined;
+        }
+        const search = (0,autocomplete/* autocomplete */.H)({
+            container: containerRef.current,
+            renderer: {
+                createElement: react.createElement,
+                Fragment: react.Fragment,
+                render: ()=>{}
+            },
+            render (param, root) {
+                let { children } = param;
+                if (!panelRootRef.current || rootRef.current !== root) {
+                    rootRef.current = root;
+                    panelRootRef.current?.unmount();
+                    panelRootRef.current = (0,client.createRoot)(root);
+                }
+                panelRootRef.current.render(children);
+            },
+            ...props
+        });
+        return ()=>{
+            search.destroy();
+        };
+    }, [
+        props
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        ref: containerRef,
+        className: "searchbox"
+    });
+}
+function replaceMark(content) {
+    const change = content.replaceAll('__aa-highlight__', '').replaceAll('__/aa-highlight__', '');
+    return change;
+}
+function ProductItem(param) {
+    let { hit, components } = param;
+    const titles = [
+        hit.hierarchy.lvl0,
+        hit.hierarchy.lvl1,
+        hit.hierarchy.lvl2,
+        hit.hierarchy.lvl3,
+        hit.hierarchy.lvl4,
+        hit.hierarchy.lvl5
+    ];
+    const title = titles.filter((element, i)=>element !== null);
+    const last = title.length - 1;
+    const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "");
+    // console.log(hit);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+        to: durl,
+        target: "_blank",
+        className: Autocomplete_styles_module.aaItemLink,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            className: (0,clsx/* default */.Z)("aa-ItemContent", Autocomplete_styles_module.itemContent),
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: "aa-ItemTitle",
+                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    children: [
+                        /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
+                            className: Autocomplete_styles_module.title,
+                            children: title[last]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: Autocomplete_styles_module.hitbreadcrums,
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                    className: Autocomplete_styles_module.hitname,
+                                    children: hit.hierarchy.lvl0
+                                }),
+                                !hit._snippetResult.sidelvl2.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                    className: Autocomplete_styles_module.hitname,
+                                    children: replaceMark(hit._snippetResult.sidelvl2.value)
+                                }),
+                                !hit._snippetResult.sidelvl3.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                    className: Autocomplete_styles_module.hitname,
+                                    children: replaceMark(hit._snippetResult.sidelvl3.value)
+                                }),
+                                !hit._snippetResult.sidelvl4.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                    className: Autocomplete_styles_module.hitname,
+                                    children: replaceMark(hit._snippetResult.sidelvl4.value)
+                                })
+                            ]
+                        }),
+                        hit.content && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                            className: Autocomplete_styles_module.content,
+                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(components.Snippet, {
+                                attribute: "content",
+                                hit: hit
+                            })
+                        })
+                    ]
+                }, hit.id)
+            })
+        })
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-theme-classic/dist/theme.min.css
+var theme_min = __webpack_require__("8521");
+// EXTERNAL MODULE: ./node_modules/algoliasearch/dist/lite/builds/browser.js + 2 modules
+var browser = __webpack_require__("4349");
+// EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/requesters/getAlgoliaResults.js + 4 modules
+var getAlgoliaResults = __webpack_require__("9398");
 ;// CONCATENATED MODULE: ./src/pages/index.js
+
+
+
+
 
 
 
@@ -496,6 +627,12 @@ var Heading = __webpack_require__("6055");
 
 function HomepageHeader() {
     const { siteConfig } = (0,useDocusaurusContext/* default */.Z)();
+    const appId = siteConfig.themeConfig.algolia.appId;
+    const apiKey = siteConfig.themeConfig.algolia.apiKey;
+    const indexName = siteConfig.themeConfig.algolia.indexName;
+    const searchClient = (0,browser/* liteClient */.C)(appId, apiKey);
+    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
+    const lang = currentLocale;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
         className: (0,clsx/* default */.Z)('hero hero--primary', index_module.heroBanner),
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -511,11 +648,74 @@ function HomepageHeader() {
                     children: siteConfig.tagline
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: index_module.buttons,
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
-                        className: "button button--secondary button--lg",
-                        to: ".",
-                        children: "검색"
+                    className: index_module.appcontainer,
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Autocomplete, {
+                        openOnFocus: false,
+                        getSources: (param)=>{
+                            let { query } = param;
+                            return [
+                                {
+                                    sourceId: 'products',
+                                    getItems (param) {
+                                        let { query } = param;
+                                        return (0,getAlgoliaResults/* getAlgoliaResults */.g)({
+                                            searchClient,
+                                            queries: [
+                                                {
+                                                    indexName: indexName,
+                                                    query,
+                                                    params: {
+                                                        hitsPerPage: 10,
+                                                        attributesToSnippet: [
+                                                            'content:30',
+                                                            'sidelvl2',
+                                                            'sidelvl3',
+                                                            'sidelvl4'
+                                                        ],
+                                                        snippetEllipsisText: '...',
+                                                        // filters: [`lang=${lang}`],
+                                                        facetFilters: [
+                                                            `language: ${lang}`
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        });
+                                    },
+                                    templates: {
+                                        item (param) {
+                                            let { item, components } = param;
+                                            return /*#__PURE__*/ (0,jsx_runtime.jsx)(ProductItem, {
+                                                hit: item,
+                                                components: components
+                                            });
+                                        }
+                                    }
+                                }
+                            ];
+                        },
+                        onSubmit: (event)=>{
+                            // Code to run when the form submits
+                            const Searchparam = event.state.query;
+                            if (Searchparam) {
+                                const searchUrl = `search?q=${encodeURIComponent(Searchparam)}`;
+                                window.location.href = searchUrl;
+                            }
+                        },
+                        onStateChange: (state)=>{
+                            // 검색 결과 목록에서 Enter를 입력하면 해당 item으로 이동하는 코드
+                            const curid = state.state.activeItemId !== null ? state.state.activeItemId : false;
+                            if (curid !== false) {
+                                const activeUrl = state.state.collections[0].items[curid].url;
+                                const curOrigin = window.location.origin;
+                                const goUrl = activeUrl.replace("https://docs.whatap.io", curOrigin);
+                                window.onkeydown = (e)=>{
+                                    if (e.keyCode === 13) {
+                                        window.location.href = goUrl;
+                                    }
+                                };
+                            }
+                        }
                     })
                 })
             ]

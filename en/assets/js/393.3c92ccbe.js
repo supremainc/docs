@@ -1,4 +1,4 @@
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["288"], {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["393"], {
 "1841": (function (module, exports, __webpack_require__) {
 "use strict";
 
@@ -1363,7 +1363,7 @@ function ContentVisibility(param) {
 
 
 }),
-"1552": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"8399": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 
 // EXPORTS
@@ -1381,103 +1381,8 @@ var clsx = __webpack_require__("7026");
 var docsUtils = __webpack_require__("6563");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__("3367");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
-var useDocusaurusContext = __webpack_require__("7262");
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/usePluralForm.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-// We want to ensurer a stable plural form order in all cases
-// It is more convenient and natural to handle "small values" first
-// See https://x.com/sebastienlorber/status/1366820663261077510
-const OrderedPluralForms = [
-    'zero',
-    'one',
-    'two',
-    'few',
-    'many',
-    'other'
-];
-function sortPluralForms(pluralForms) {
-    return OrderedPluralForms.filter((pf)=>pluralForms.includes(pf));
-}
-// Hardcoded english/fallback implementation
-const EnglishPluralForms = {
-    locale: 'en',
-    pluralForms: sortPluralForms([
-        'one',
-        'other'
-    ]),
-    select: (count)=>count === 1 ? 'one' : 'other'
-};
-function createLocalePluralForms(locale) {
-    const pluralRules = new Intl.PluralRules(locale);
-    return {
-        locale,
-        pluralForms: sortPluralForms(pluralRules.resolvedOptions().pluralCategories),
-        select: (count)=>pluralRules.select(count)
-    };
-}
-/**
- * Poor man's `PluralSelector` implementation, using an English fallback. We
- * want a lightweight, future-proof and good-enough solution. We don't want a
- * perfect and heavy solution.
- *
- * Docusaurus classic theme has only 2 deeply nested labels requiring complex
- * plural rules. We don't want to use `Intl` + `PluralRules` polyfills + full
- * ICU syntax (react-intl) just for that.
- *
- * Notes:
- * - 2021: 92+% Browsers support `Intl.PluralRules`, and support will increase
- * in the future
- * - NodeJS >= 13 has full ICU support by default
- * - In case of "mismatch" between SSR and Browser ICU support, React keeps
- * working!
- */ function useLocalePluralForms() {
-    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
-    return (0,react.useMemo)(()=>{
-        try {
-            return createLocalePluralForms(currentLocale);
-        } catch (err) {
-            console.error(`Failed to use Intl.PluralRules for locale "${currentLocale}".
-Docusaurus will fallback to the default (English) implementation.
-Error: ${err.message}
-`);
-            return EnglishPluralForms;
-        }
-    }, [
-        currentLocale
-    ]);
-}
-function selectPluralMessage(pluralMessages, count, localePluralForms) {
-    const separator = '|';
-    const parts = pluralMessages.split(separator);
-    if (parts.length === 1) {
-        return parts[0];
-    }
-    if (parts.length > localePluralForms.pluralForms.length) {
-        console.error(`For locale=${localePluralForms.locale}, a maximum of ${localePluralForms.pluralForms.length} plural forms are expected (${localePluralForms.pluralForms.join(',')}), but the message contains ${parts.length}: ${pluralMessages}`);
-    }
-    const pluralForm = localePluralForms.select(count);
-    const pluralFormIndex = localePluralForms.pluralForms.indexOf(pluralForm);
-    // In case of not enough plural form messages, we take the last one (other)
-    // instead of returning undefined
-    return parts[Math.min(pluralFormIndex, parts.length - 1)];
-}
-/**
- * Reads the current locale and returns an interface very similar to
- * `Intl.PluralRules`.
- */ function usePluralForm() {
-    const localePluralForm = useLocalePluralForms();
-    return {
-        selectMessage: (count, pluralMessages)=>selectPluralMessage(pluralMessages, count, localePluralForm)
-    };
-} //# sourceMappingURL=usePluralForm.js.map
-
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/usePluralForm.js
+var usePluralForm = __webpack_require__("1107");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/isInternalUrl.js
 var isInternalUrl = __webpack_require__("9999");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
@@ -1504,7 +1409,7 @@ var Heading = __webpack_require__("6055");
 
 
 function useCategoryItemsPlural() {
-    const { selectMessage } = usePluralForm();
+    const { selectMessage } = (0,usePluralForm/* usePluralForm */.c)();
     return (count)=>selectMessage(count, (0,Translate/* translate */.I)({
             message: '1 item|{count} items',
             id: 'theme.docs.DocCard.categoryDescription.plurals',
@@ -2200,8 +2105,8 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__("7294");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js + 2 modules
-var metadataUtils = __webpack_require__("9258");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js + 1 modules
+var metadataUtils = __webpack_require__("5231");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
 var doc = __webpack_require__("7097");
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Metadata/index.js
@@ -2462,7 +2367,7 @@ function IconHome(props) {
 
 
 }),
-"5055": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"964": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 
 // EXPORTS
@@ -2796,8 +2701,14 @@ function MDXImg(props) {
 
 // EXTERNAL MODULE: ./src/theme/Admonition/index.js + 14 modules
 var Admonition = __webpack_require__("2475");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Noop.js
-var Noop = __webpack_require__("308");
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Noop.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /* ESM default export */ const Noop = ((()=>null));
+
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXComponents/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -2852,7 +2763,7 @@ const MDXComponents = {
             ...props
         }),
     admonition: Admonition/* default */.Z,
-    mermaid: Noop/* default */.Z
+    mermaid: Noop
 };
 /* ESM default export */ const theme_MDXComponents = (MDXComponents);
 
@@ -3750,6 +3661,109 @@ function processAdmonitionProps(props) {
         children: rest
     };
 } //# sourceMappingURL=admonitionUtils.js.map
+
+
+}),
+"1107": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.d(__webpack_exports__, {
+  c: function() { return usePluralForm; }
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
+/* ESM import */var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7262);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+// We want to ensurer a stable plural form order in all cases
+// It is more convenient and natural to handle "small values" first
+// See https://x.com/sebastienlorber/status/1366820663261077510
+const OrderedPluralForms = [
+    'zero',
+    'one',
+    'two',
+    'few',
+    'many',
+    'other'
+];
+function sortPluralForms(pluralForms) {
+    return OrderedPluralForms.filter((pf)=>pluralForms.includes(pf));
+}
+// Hardcoded english/fallback implementation
+const EnglishPluralForms = {
+    locale: 'en',
+    pluralForms: sortPluralForms([
+        'one',
+        'other'
+    ]),
+    select: (count)=>count === 1 ? 'one' : 'other'
+};
+function createLocalePluralForms(locale) {
+    const pluralRules = new Intl.PluralRules(locale);
+    return {
+        locale,
+        pluralForms: sortPluralForms(pluralRules.resolvedOptions().pluralCategories),
+        select: (count)=>pluralRules.select(count)
+    };
+}
+/**
+ * Poor man's `PluralSelector` implementation, using an English fallback. We
+ * want a lightweight, future-proof and good-enough solution. We don't want a
+ * perfect and heavy solution.
+ *
+ * Docusaurus classic theme has only 2 deeply nested labels requiring complex
+ * plural rules. We don't want to use `Intl` + `PluralRules` polyfills + full
+ * ICU syntax (react-intl) just for that.
+ *
+ * Notes:
+ * - 2021: 92+% Browsers support `Intl.PluralRules`, and support will increase
+ * in the future
+ * - NodeJS >= 13 has full ICU support by default
+ * - In case of "mismatch" between SSR and Browser ICU support, React keeps
+ * working!
+ */ function useLocalePluralForms() {
+    const { i18n: { currentLocale } } = (0,_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z)();
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>{
+        try {
+            return createLocalePluralForms(currentLocale);
+        } catch (err) {
+            console.error(`Failed to use Intl.PluralRules for locale "${currentLocale}".
+Docusaurus will fallback to the default (English) implementation.
+Error: ${err.message}
+`);
+            return EnglishPluralForms;
+        }
+    }, [
+        currentLocale
+    ]);
+}
+function selectPluralMessage(pluralMessages, count, localePluralForms) {
+    const separator = '|';
+    const parts = pluralMessages.split(separator);
+    if (parts.length === 1) {
+        return parts[0];
+    }
+    if (parts.length > localePluralForms.pluralForms.length) {
+        console.error(`For locale=${localePluralForms.locale}, a maximum of ${localePluralForms.pluralForms.length} plural forms are expected (${localePluralForms.pluralForms.join(',')}), but the message contains ${parts.length}: ${pluralMessages}`);
+    }
+    const pluralForm = localePluralForms.select(count);
+    const pluralFormIndex = localePluralForms.pluralForms.indexOf(pluralForm);
+    // In case of not enough plural form messages, we take the last one (other)
+    // instead of returning undefined
+    return parts[Math.min(pluralFormIndex, parts.length - 1)];
+}
+/**
+ * Reads the current locale and returns an interface very similar to
+ * `Intl.PluralRules`.
+ */ function usePluralForm() {
+    const localePluralForm = useLocalePluralForms();
+    return {
+        selectMessage: (count, pluralMessages)=>selectPluralMessage(pluralMessages, count, localePluralForm)
+    };
+} //# sourceMappingURL=usePluralForm.js.map
 
 
 }),
