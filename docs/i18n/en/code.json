@@ -319,8 +319,11 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
+  "index.search": {
+    "message": "Search"
+  },
   "windows.key.start": {
-    "message": "시작"
+    "message": "Start"
   },
   "biostar2.install.ok": {
     "message": "OK"

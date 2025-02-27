@@ -209,7 +209,11 @@ const config = {
         apiKey: '4882650c3591013a4db2f9211c31c4f4',
         indexName: 'supremaincio',
         contextualSearch: true,
-        searchParameters: {},
+        searchParameters: {
+          attributesToSnippet: [
+            [ 'content:30' ]
+          ]
+        },
         searchPagePath: 'search',
       }
     }),

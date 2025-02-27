@@ -68,6 +68,52 @@ html[lang='en-US'] * {
 .hero__title, .hero__subtitle {
   color: #fff;
 }
+.aa-Autocomplete {
+  width: 70%;
+  margin: 0 auto !important;
+  .aa-Input {
+    width: 70%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+  }
+}
+.aa-Panel {
+  width: 70%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  .aa-Item {
+    border-bottom: 1px solid var(--ifm-color-primary-darkest);
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+.aa-ItemContent {
+  a {
+    text-decoration: none;
+    .aa-ItemTitle {
+      h3 {
+        font-size: 1.2rem;
+      }
+      .hit-breadcrums {
+        mark {
+          background-color: yellow;
+        }
+      }
+    }
+    .content {
+      color: #333;
+      mark {
+        background-color: yellow;
+      }
+    }
+  }
+}
 // index.js 페이지
 
 // layout 스타일
