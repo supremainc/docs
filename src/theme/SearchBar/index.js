@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
 import Head from '@docusaurus/Head';
@@ -122,7 +122,8 @@ function DocSearch({externalUrlRegex, ...props}) {
   // TODO remove "as any" after React 19 upgrade
   const searchButtonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [initialQuery, setInitialQuery] = useState(undefined);
+  // initialQuery 를 제거
+  // const [initialQuery, setInitialQuery] = useState(undefined);
   const prepareSearchContainer = useCallback(() => {
     if (!searchContainer.current) {
       const divElement = document.createElement('div');
@@ -132,22 +133,24 @@ function DocSearch({externalUrlRegex, ...props}) {
   }, []);
   const openModal = useCallback(() => {
     prepareSearchContainer();
-    importDocSearchModalIfNeeded().then(() => setIsOpen(true));
+    importDocSearchModalIfNeeded().then(() => {
+        setIsOpen(true);
+    });
   }, [prepareSearchContainer]);
   const closeModal = useCallback(() => {
     setIsOpen(false);
     searchButtonRef.current?.focus();
-    setInitialQuery(undefined);
+    // setInitialQuery(undefined); 제거
   }, []);
   const handleInput = useCallback(
     (event) => {
       if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
-        // ignore browser's ctrl+f
-        return;
+          // ignore browser's ctrl+f
+          return;
       }
       // prevents duplicate key insertion in the modal input
       event.preventDefault();
-      setInitialQuery(event.key);
+      // setInitialQuery(event.key); 제거
       openModal();
     },
     [openModal],
@@ -160,6 +163,16 @@ function DocSearch({externalUrlRegex, ...props}) {
     onInput: handleInput,
     searchButtonRef,
   });
+  const [searchQuery, setSearchQuery] = useState(''); // 검색어를 저장할 상태 변수
+
+    useEffect(() => {
+        const input = document.querySelector('.DocSearch-Input'); // 모달 내 input 요소 선택
+        if (isOpen && input) {
+            input.value = searchQuery;
+            input.focus(); //input 포커싱
+            input.setSelectionRange(searchQuery.length, searchQuery.length)
+        }
+    }, [isOpen]);
   return (
     <>
       <Head>
@@ -189,7 +202,7 @@ function DocSearch({externalUrlRegex, ...props}) {
           <DocSearchModal
             onClose={closeModal}
             initialScrollY={window.scrollY}
-            initialQuery={initialQuery}
+            //initialQuery={initialQuery} 제거
             navigator={navigator}
             transformItems={transformItems}
             hitComponent={Hit}
@@ -201,6 +214,7 @@ function DocSearch({externalUrlRegex, ...props}) {
             {...props}
             translations={props.translations?.modal ?? translations.modal}
             searchParameters={searchParameters}
+            onQueryChange={(query) => setSearchQuery(query)} // 쿼리가 변경될 때 상태 업데이트
           />,
           searchContainer.current,
         )}
