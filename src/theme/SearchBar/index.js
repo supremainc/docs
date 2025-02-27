@@ -146,7 +146,7 @@ function DocSearch({externalUrlRegex, ...props}) {
         return;
       }
       // prevents duplicate key insertion in the modal input
-      event.preventDefault();
+      // event.preventDefault();
       setInitialQuery(event.key);
       openModal();
     },
@@ -157,7 +157,7 @@ function DocSearch({externalUrlRegex, ...props}) {
     isOpen,
     onOpen: openModal,
     onClose: closeModal,
-    onInput: handleInput, // 기존 onInput을 onKeyDown으로 변경
+    onKeyDown: handleInput, // 기존 onInput을 onKeyDown으로 변경
     searchButtonRef,
   });
   return (
@@ -193,7 +193,7 @@ function DocSearch({externalUrlRegex, ...props}) {
             navigator={navigator}
             transformItems={transformItems}
             hitComponent={Hit}
-            // transformSearchClient={transformSearchClient}
+            transformSearchClient={transformSearchClient}
             {...(props.searchPagePath && {
               resultsFooterComponent,
             })}
