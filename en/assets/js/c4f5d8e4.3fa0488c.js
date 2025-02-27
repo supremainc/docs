@@ -486,7 +486,7 @@ var Layout = __webpack_require__("609");
 var Heading = __webpack_require__("6055");
 ;// CONCATENATED MODULE: ./src/pages/index.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi","aa-Autocomplete":"aa-Autocomplete_FgIB"});
+/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__("745");
 // EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 69 modules
