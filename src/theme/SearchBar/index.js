@@ -132,7 +132,27 @@ function DocSearch({externalUrlRegex, ...props}) {
   }, []);
   const openModal = useCallback(() => {
     prepareSearchContainer();
-    importDocSearchModalIfNeeded().then(() => setIsOpen(true));
+    importDocSearchModalIfNeeded().then(() => {
+      setIsOpen(true);
+  
+      // 안드로이드 키보드 문제 해결을 위한 가상 input 요소 생성
+      const tempInput = document.createElement("input");
+      tempInput.style.position = "absolute";
+      tempInput.style.opacity = "0";
+      tempInput.style.height = "0";
+      tempInput.style.width = "0";
+      tempInput.style.top = "-1000px";
+      document.body.appendChild(tempInput);
+      tempInput.focus(); // 가상 input을 먼저 포커스하여 키보드를 띄움
+  
+      setTimeout(() => {
+        tempInput.remove(); // 가상 input 요소 제거
+        const inputElement = document.querySelector(".DocSearch-Input");
+        if (inputElement) {
+          inputElement.focus(); // DocSearch 검색 입력 필드로 포커스 이동
+        }
+      }, 500); // 500ms 후 포커스 이동
+    });
   }, [prepareSearchContainer]);
   const closeModal = useCallback(() => {
     setIsOpen(false);
