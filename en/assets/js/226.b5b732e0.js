@@ -1,4 +1,4 @@
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["158"], {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["226"], {
 "7331": (function (module) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -7062,6 +7062,43 @@ module.exports = '3.24.1';
 
 
 }),
+"2814": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.d(__webpack_exports__, {
+  K: function() { return useSearchQueryString; }
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
+/* ESM import */var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7262);
+/* ESM import */var _utils_historyUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9207);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+const SEARCH_PARAM_QUERY = 'q';
+/**
+ * Permits to read/write the current search query string
+ */ function useSearchQueryString() {
+    return (0,_utils_historyUtils__WEBPACK_IMPORTED_MODULE_2__/* .useQueryString */.Nc)(SEARCH_PARAM_QUERY);
+}
+/**
+ * Permits to create links to the search page with the appropriate query string
+ */ function useSearchLinkCreator() {
+    const { siteConfig: { baseUrl, themeConfig } } = useDocusaurusContext();
+    const { algolia: { searchPagePath } } = themeConfig;
+    return useCallback((searchValue)=>// Refer to https://github.com/facebook/docusaurus/pull/2838
+        // Note: if searchPagePath is falsy, useSearchPage() will not be called
+        `${baseUrl}${searchPagePath}?${SEARCH_PARAM_QUERY}=${encodeURIComponent(searchValue)}`, [
+        baseUrl,
+        searchPagePath
+    ]);
+} //# sourceMappingURL=useSearchPage.js.map
+
+
+}),
 "1107": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 __webpack_require__.d(__webpack_exports__, {
@@ -7162,6 +7199,70 @@ function selectPluralMessage(pluralMessages, count, localePluralForms) {
         selectMessage: (count, pluralMessages)=>selectPluralMessage(pluralMessages, count, localePluralForm)
     };
 } //# sourceMappingURL=usePluralForm.js.map
+
+
+}),
+"6799": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.d(__webpack_exports__, {
+  L: function() { return useAlgoliaThemeConfig; }
+});
+/* ESM import */var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7262);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+function useAlgoliaThemeConfig() {
+    const { siteConfig: { themeConfig } } = (0,_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)();
+    return themeConfig;
+}
+
+
+}),
+"7598": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.d(__webpack_exports__, {
+  l: function() { return useSearchResultUrlProcessor; }
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
+/* ESM import */var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1626);
+/* ESM import */var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3187);
+/* ESM import */var _useAlgoliaThemeConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6799);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+function replacePathname(pathname, replaceSearchResultPathname) {
+    return replaceSearchResultPathname ? pathname.replaceAll(new RegExp(replaceSearchResultPathname.from, 'g'), replaceSearchResultPathname.to) : pathname;
+}
+/**
+ * Process the search result url from Algolia to its final form, ready to be
+ * navigated to or used as a link
+ */ function useSearchResultUrlProcessor() {
+    const { withBaseUrl } = (0,_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_1__/* .useBaseUrlUtils */.Cg)();
+    const { algolia: { externalUrlRegex, replaceSearchResultPathname } } = (0,_useAlgoliaThemeConfig__WEBPACK_IMPORTED_MODULE_2__/* .useAlgoliaThemeConfig */.L)();
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((url)=>{
+        const parsedURL = new URL(url);
+        // Algolia contains an external domain => navigate to URL
+        if ((0,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_3__/* .isRegexpStringMatch */.F)(externalUrlRegex, parsedURL.href)) {
+            return url;
+        }
+        // Otherwise => transform to relative URL for SPA navigation
+        const relativeUrl = `${parsedURL.pathname + parsedURL.hash}`;
+        return withBaseUrl(replacePathname(relativeUrl, replaceSearchResultPathname));
+    }, [
+        withBaseUrl,
+        externalUrlRegex,
+        replaceSearchResultPathname
+    ]);
+}
 
 
 }),
