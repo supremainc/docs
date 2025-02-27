@@ -69,7 +69,7 @@ const config = {
     }
   },
   themes: [
-    '@saucelabs/theme-github-codeblock'
+    '@saucelabs/theme-github-codeblock',
   ],
   presets: [
     [
@@ -185,6 +185,10 @@ const config = {
             items: []
           },
           {
+            type: 'search',
+            position: 'right',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           }
@@ -208,6 +212,18 @@ const config = {
       prism: {
         additionalLanguages: [ 'ini', 'sql' ]
       },
+      algolia: {
+        appId: '11LXF9EJH7',
+        apiKey: '4882650c3591013a4db2f9211c31c4f4',
+        indexName: 'supremaincio',
+        contextualSearch: true,
+        searchParameters: {
+          attributesToSnippet: [
+            [ 'content:30' ]
+          ]
+        },
+        searchPagePath: 'search',
+      }
     }),
 };
 

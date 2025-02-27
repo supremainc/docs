@@ -30,3 +30,12 @@
 .headsec {
   margin-top: 60px;
 }
+
+.appcontainer {
+  padding: 0 10%;
+  margin-bottom: 20pt;
+}
+
+.aa-Autocomplete {
+  width: 70%;
+}

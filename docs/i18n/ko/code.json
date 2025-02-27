@@ -319,6 +319,9 @@
     "message": "태그",
     "description": "The title of the tag list page"
   },
+  "index.search": {
+    "message": "검색"
+  },
   "windows.key.start": {
     "message": "시작"
   },

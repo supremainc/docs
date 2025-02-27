@@ -1,0 +1,30 @@
+.itemContent {
+  padding: 10px 10px;
+}
+.aaItemLink {
+  text-decoration: none;
+  color: var(--ifm-color-cmd);
+}
+.aaItemLink:hover {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.hitname::after {
+  content: ' > ';
+}
+.hitname:last-of-type::after {
+  content: '';
+}
+.hitbreadcrums {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #727272;
+}
+.content {
+  margin-top: 8px;
+  font-size: .9rem;
+}
