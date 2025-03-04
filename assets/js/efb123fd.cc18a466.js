@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-product-compatibility-mdx-efb.json
-var site_docs_platform_biostar_2_product_compatibility_mdx_efb_namespaceObject = JSON.parse('{"id":"platform/biostar2/product-compatibility","title":"제품별 펌웨어 호환 정보","description":"BioStar 2를 설치 또는 업그레이드하기 전에 연결할 제품의 펌웨어 호환 정보를 확인하세요.","source":"@site/docs/platform/biostar2/product-compatibility.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/product-compatibility","permalink":"/docs/en/platform/biostar2/product-compatibility","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/product-compatibility.mdx","tags":[],"version":"current","frontMatter":{"id":"product-compatibility","title":"제품별 펌웨어 호환 정보","description":"BioStar 2를 설치 또는 업그레이드하기 전에 연결할 제품의 펌웨어 호환 정보를 확인하세요.","keywords":["펌웨어 호환 정보"],"toc_max_heading_level":2,"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"시스템 최소 요구 사항","permalink":"/docs/en/platform/biostar2/system-requirements"},"next":{"title":"Tutorial","permalink":"/docs/en/platform/biostar2/tutorial"}}')
+var site_docs_platform_biostar_2_product_compatibility_mdx_efb_namespaceObject = JSON.parse('{"id":"platform/biostar2/product-compatibility","title":"제품별 펌웨어 호환 정보","description":"BioStar 2를 설치 또는 업그레이드하기 전에 연결할 제품의 펌웨어 호환 정보를 확인하세요.","source":"@site/docs/platform/biostar2/product-compatibility.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/product-compatibility","permalink":"/docs/platform/biostar2/product-compatibility","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/product-compatibility.mdx","tags":[],"version":"current","frontMatter":{"id":"product-compatibility","title":"제품별 펌웨어 호환 정보","description":"BioStar 2를 설치 또는 업그레이드하기 전에 연결할 제품의 펌웨어 호환 정보를 확인하세요.","keywords":["펌웨어 호환 정보"],"toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 최소 요구 사항","permalink":"/docs/platform/biostar2/system-requirements"},"next":{"title":"튜토리얼","permalink":"/docs/platform/biostar2/tutorial"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -10688,7 +10688,7 @@ const product_compatibility_frontMatter = {
 		'펌웨어 호환 정보'
 	],
 	toc_max_heading_level: 2,
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const product_compatibility_contentTitle = undefined;
 
