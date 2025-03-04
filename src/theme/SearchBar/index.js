@@ -146,7 +146,7 @@ function DocSearch({externalUrlRegex, ...props}) {
         return;
       }
       // prevents duplicate key insertion in the modal input
-      // event.preventDefault();
+      event.preventDefault();
       setInitialQuery(event.key);
       openModal();
     },
