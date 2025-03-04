@@ -39,7 +39,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Tutorial',
+              label: '튜토리얼',
               link: {
                 type: 'doc',
                 id: 'platform/biostar2/tutorial',

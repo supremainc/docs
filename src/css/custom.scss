@@ -117,6 +117,9 @@ html[lang='en-US'] * {
 // index.js 페이지
 
 // layout 스타일
+.DocSearch-Hit-title {
+  overflow: hidden;
+}
 div[class*='docItemCol'] {
   padding-left: 2rem;
 }
