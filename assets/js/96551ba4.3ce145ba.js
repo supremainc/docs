@@ -65,7 +65,7 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설치하기 위한 시스템 최소 요구 사항을 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x col5--15-10-25",
@@ -186,13 +186,13 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "는 Google 크롬에 최적화되어 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "는 Windows 7을 지원하지만 Windows 7에 대한 Microsoft의 기술 지원이 종료되었으므로 시스템 설치 시 운영체제 선택에 유의하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -205,9 +205,9 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["MS SQL Server와 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "가 서로 다른 PC에 설치되어 있으면 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "가 설치된 PC에 Native Client를 설치해야 합니다. ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=50402",
               children: "Link 2"

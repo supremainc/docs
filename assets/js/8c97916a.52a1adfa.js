@@ -59,13 +59,13 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar 2 Setting"
           }), "을 클릭하세요."]
@@ -103,7 +103,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "로 접속하세요."]
         }), "\n"]
       }), "\n"]

@@ -387,7 +387,7 @@ function ExternalLinkCard() {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const externalLinks = [
         {
-            title: 'BioStar 2',
+            title: 'BioStar X',
             url: './platform/biostar2',
             Svg: (__webpack_require__(2930)/* ["default"] */.Z),
             height: '45px'
@@ -540,7 +540,8 @@ function Autocomplete(props) {
     });
 }
 function replaceMark(content) {
-    const change = content.replaceAll('__aa-highlight__', '').replaceAll('__/aa-highlight__', '');
+    // const change = content.replaceAll('__aa-highlight__', '').replaceAll('__/aa-highlight__', '');
+    const change = content;
     return change;
 }
 function ProductItem(param) {
@@ -576,19 +577,34 @@ function ProductItem(param) {
                             children: [
                                 /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                                     className: Autocomplete_styles_module.hitname,
-                                    children: hit.hierarchy.lvl0
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(components.Snippet, {
+                                        attribute: [
+                                            'hierarchy',
+                                            'lvl0'
+                                        ],
+                                        hit: hit
+                                    })
                                 }),
                                 !hit._snippetResult.sidelvl2.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                                     className: Autocomplete_styles_module.hitname,
-                                    children: replaceMark(hit._snippetResult.sidelvl2.value)
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(components.Snippet, {
+                                        attribute: "sidelvl2",
+                                        hit: hit
+                                    })
                                 }),
                                 !hit._snippetResult.sidelvl3.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                                     className: Autocomplete_styles_module.hitname,
-                                    children: replaceMark(hit._snippetResult.sidelvl3.value)
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(components.Snippet, {
+                                        attribute: "sidelvl3",
+                                        hit: hit
+                                    })
                                 }),
                                 !hit._snippetResult.sidelvl4.value == '' && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                                     className: Autocomplete_styles_module.hitname,
-                                    children: replaceMark(hit._snippetResult.sidelvl4.value)
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(components.Snippet, {
+                                        attribute: "sidelvl4",
+                                        hit: hit
+                                    })
                                 })
                             ]
                         }),
@@ -668,6 +684,11 @@ function HomepageHeader() {
                                                         hitsPerPage: 10,
                                                         attributesToSnippet: [
                                                             'content:30',
+                                                            'hierarchy.lvl0',
+                                                            'hierarchy.lvl1',
+                                                            'hierarchy.lvl2',
+                                                            'hierarchy.lvl3',
+                                                            'hierarchy.lvl4',
                                                             'sidelvl2',
                                                             'sidelvl3',
                                                             'sidelvl4'

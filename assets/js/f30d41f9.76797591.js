@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-tutorial-mdx-f30.json
-var site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject = JSON.parse('{"id":"platform/biostar2/tutorial","title":"튜토리얼","description":"BioStar 2의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","source":"@site/docs/platform/biostar2/tutorial.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/tutorial","permalink":"/docs/en/platform/biostar2/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"튜토리얼","description":"BioStar 2의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","keywords":["Tutorial","설치","기본 설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"제품별 펌웨어 호환 정보","permalink":"/docs/en/platform/biostar2/product-compatibility"},"next":{"title":"간편 설치하기","permalink":"/docs/en/platform/biostar2/express-install"}}')
+var site_docs_platform_biostar_2_tutorial_mdx_f30_namespaceObject = JSON.parse('{"id":"platform/biostar2/tutorial","title":"튜토리얼","description":"BioStar 2의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","source":"@site/docs/platform/biostar2/tutorial.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/tutorial","permalink":"/docs/platform/biostar2/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"튜토리얼","description":"BioStar 2의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","keywords":["Tutorial","설치","기본 설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"제품별 펌웨어 호환 정보","permalink":"/docs/platform/biostar2/product-compatibility"},"next":{"title":"간편 설치하기","permalink":"/docs/platform/biostar2/express-install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'설치',
 		'기본 설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -54,9 +54,9 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다. 직관적인 설명과 절차를 따라가며 쉽고 빠르게 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설정하고 운영할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });

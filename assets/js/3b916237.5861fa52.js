@@ -120,18 +120,18 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 시작하기 전에 알아야 할 내용을 안내합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 32비트 운영 체제와 64비트 운영 체제를 지원합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설치하려는 PC의 시스템 사양을 확인한 후 설치하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "before",
       children: "설치 전 참고 사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설치하기 전에 다음 사항을 확인하고 설치를 진행하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -145,7 +145,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar 1"
           }), "이 설치된 PC에 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "를 설치하지 마세요. 프로그램 성능에 문제가 발생할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -161,7 +161,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), " 최신 버전으로의 업그레이드는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "2.6.0"
           }), " 버전부터 지원됩니다. ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -257,9 +257,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["MS SQL Server와 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "가 서로 다른 PC에 설치되어 있는 경우 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "를 설치한 PC에 Native Client를 설치해야 합니다. ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=50402",
             children: "Link 4"
@@ -274,13 +274,13 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["기존 버전의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "에서 데이터베이스를 백업할 때 모든 서비스를 사용 중지한 후 진행하세요. 또한, AC 데이터베이스와 TA 데이터베이스를 함께 백업하고, 복원하지 않으면 TA 데이터베이스를 사용할 수 없습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), " 데이터베이스를 백업하려면 ", (0,jsx_runtime.jsx)(_components.em, {
             children: "\\Program Files\\BioStar 2(x64)\\util"
           }), " 폴더의 ", (0,jsx_runtime.jsx)(_components.em, {
@@ -296,9 +296,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "가 사용하는 포트의 기본 값은 아래와 같습니다. 다른 프로그램에서 동일한 포트를 점유한다면, ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "가 정상 구동되지 않을 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
@@ -370,7 +370,7 @@ function _createMdxContent(props) {
       children: "데이터베이스 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설치하기 전에 사용자가 직접 구성한 데이터베이스를 사용한다면 아래 사항을 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "mariadb",
@@ -818,7 +818,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "를 설치하기 위한 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "system-requirements",
             children: "시스템의 최소 사양"
@@ -827,7 +827,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), " 버전에 따라 추가된 기능과 호환되는 주변 장치의 펌웨어 호환 정보를 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "product-compatibility",
             children: "다음 문서"
@@ -836,7 +836,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "를 빠르게 설치하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "express-install",
             children: "다음 문서"

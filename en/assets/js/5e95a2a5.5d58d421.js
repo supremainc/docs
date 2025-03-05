@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-2-login-mdx-5e9.json
-var site_docs_platform_biostar_2_login_mdx_5e9_namespaceObject = JSON.parse('{"id":"platform/biostar2/login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","source":"@site/docs/platform/biostar2/login.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/login","permalink":"/docs/platform/biostar2/login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/login.mdx","tags":[],"version":"current","frontMatter":{"id":"login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar2/custom-install"},"next":{"title":"서버 관리하기","permalink":"/docs/platform/biostar2/manage-server"}}')
+var site_docs_platform_biostar_2_login_mdx_5e9_namespaceObject = JSON.parse('{"id":"platform/biostar2/login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","source":"@site/docs/platform/biostar2/login.mdx","sourceDirName":"platform/biostar2","slug":"/platform/biostar2/login","permalink":"/docs/en/platform/biostar2/login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar2/login.mdx","tags":[],"version":"current","frontMatter":{"id":"login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/en/platform/biostar2/custom-install"},"next":{"title":"서버 관리하기","permalink":"/docs/en/platform/biostar2/manage-server"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'로그인',
 		'웹 브라우저'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -70,9 +70,9 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["설치 패키지를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), " 설치를 모두 완료했다면 웹 브라우저로 접속해 정상 동작하는지 확인하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 웹 기반 서비스를 제공하여 언제 어디서든 접속할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "웹-브라우저에서-로그인하기",
@@ -93,7 +93,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
-                  children: "BioStar 2"
+                  children: "BioStar X"
                 }), "를 다른 PC에 설치했다면 해당 PC의 IP 주소를 입력하세요. 예, ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "https://192.168.0.1"
                 })]
@@ -101,7 +101,7 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: ["'localhost'를 ", (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "BioStar 2"
+                  children: "BioStar X"
                 }), " 접속 주소로 사용하지 마세요."]
               }), "\n"]
             }), "\n"]
@@ -147,7 +147,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "를 설치한 PC의 외부 IP 주소는 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://whatismyipaddress.com/",
               children: "다음 링크"
@@ -156,7 +156,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar 2"
+              children: "BioStar X"
             }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "443"
             }), " 포트를 기본으로 사용합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -175,7 +175,7 @@ function _createMdxContent(props) {
       children: "HTTPS 사용하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 설치한 PC에 HTTPS 프로토콜을 적용하려면 인증서를 설치해야 합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -203,7 +203,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment Certification"
           }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2"
+            children: "BioStar X"
           }), "를 설치한 PC의 IP 주소를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostar-enrollment-certi.png",

@@ -69,16 +69,16 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), " 서버의 상태를 관리하는 방법을 안내합니다. 실행 중인 서비스를 종료하거나 다시 시작할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "biostar-2-setting",
       children: "BioStar 2 Setting"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. ", (0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar 2 Setting"
       }), "을 클릭하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -91,9 +91,9 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar 2"
+          children: "BioStar X"
         }), " 서버의 시간 설정을 변경했다면 Core Web Server 서비스를 종료하고 다시 시작하세요. 다시 시작하지 않으면 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar 2"
+          children: "BioStar X"
         }), "가 동작하지 않을 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -101,7 +101,7 @@ function _createMdxContent(props) {
       children: "서비스 종료하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 종료하려면, ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Service Status"
       }), " 섹션에서 개별 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -115,7 +115,7 @@ function _createMdxContent(props) {
       children: "서버 시작하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "를 다시 시작하려면, ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Service Status"
       }), " 섹션에서 ", (0,jsx_runtime.jsx)(_components.strong, {

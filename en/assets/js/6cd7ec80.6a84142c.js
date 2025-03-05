@@ -86,27 +86,27 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다. 지문, 얼굴인식, 카드 인증 등 다양한 인증 방식을 지원하며, 강력한 보안 성능과 직관적인 사용자 인터페이스를 통해 기업, 공공기관, 산업 시설 등 다양한 환경에서 안전하고 효율적인 출입 관리를 실현할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "https://www.supremainc.com/en/asset/images/06_hub/suprema_enterprise_access_control4.jpg",
       alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["웹 기반으로 설계된 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 운영체제의 제약 없이 PC 및 모바일에서 언제 어디서나 출입 관리 및 근태 기록을 확인하고 제어할 수 있도록 지원합니다. 또한, 개방형 API 및 SDK를 통해 다양한 서드파티 시스템과 연동이 가능하여, 기존의 IT 인프라와 손쉽게 통합할 수 있으며 보안성과 확장성을 극대화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 단순한 출입 관리 시스템을 넘어, 기록 및 포렌식 보고, 알람 및 화재 구역 관리, 출입증 작성, 강력한 실시간 모니터링 기능을 제공합니다. 이를 통해 보안 관리자와 기업 운영자는 출입 이력을 효과적으로 추적하고, 실시간으로 보안 상태를 모니터링하며, 신속하게 대응할 수 있습니다. 또한, 방문자 관리 및 근태 시스템과 통합 운영이 가능하여 복잡한 다중 시스템 사용을 최소화하고 보다 효율적인 보안 환경을 구축할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 기업이 보안, 안전 및 규정 준수 목표를 효과적으로 달성할 수 있도록 지원하는 완벽한 통합 보안 플랫폼입니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "강력한-웹-기반-출입-통제",
       children: "강력한 웹 기반 출입 통제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 웹 브라우저를 통해 어디서나 접속 가능하며, 운영체제에 관계없이 다양한 기기에서 사용할 수 있는 유연한 관리 환경을 제공합니다. 사용자는 PC, 태블릿, 모바일 디바이스를 활용하여 출입 통제 및 근태 관리를 손쉽게 운영할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "멀티-인증-보안-시스템",
@@ -136,7 +136,7 @@ function _createMdxContent(props) {
       children: "직관적인 사용자 인터페이스(UI)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 대시보드 기반의 직관적인 UI를 제공하여 사용자가 손쉽게 출입 및 근태 정보를 관리할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -159,7 +159,7 @@ function _createMdxContent(props) {
       children: "확장성과 유연성"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 기업의 규모와 보안 요구 사항에 맞춰 소규모부터 대규모까지 확장 가능한 시스템을 제공합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -177,14 +177,14 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 기업과 기관의 다양한 보안 환경을 지원하는 강력한 플랫폼으로, 보다 스마트하고 효율적인 보안 관리가 가능합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "개방형-통합-보안-api",
       children: "개방형 통합 보안 API"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 슈프리마의 개방형 보안 API를 통해 다양한 시스템과의 연결 및 연동을 지원합니다. 이를 통해 기업은 기존 IT 인프라와의 원활한 통합이 가능하며 보안 프로세스를 간소화하고 업무 자동화를 실현할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -205,7 +205,7 @@ function _createMdxContent(props) {
       children: "최고 수준의 사이버 보안 강화"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "는 AES-256 데이터 암호화를 적용하고, 국제 보안 인증인 ISO 27001, ISO 27701을 취득하여 최고 수준의 사이버 보안 환경을 제공합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
