@@ -461,6 +461,12 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .DocSearch-Commands, .DocSearch-Hit-Tree {
+    display: flex !important;
+  }
+}
+
 // 인쇄 시 CSS 적용
 @media print {
   @page {
