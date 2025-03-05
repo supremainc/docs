@@ -120,6 +120,11 @@ html[lang='en-US'] * {
 .DocSearch-Hit-title {
   overflow: hidden;
 }
+.DocSearch-Input {
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
 div[class*='docItemCol'] {
   padding-left: 2rem;
 }
@@ -453,6 +458,12 @@ footer {
         width: max-content;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .DocSearch-Commands, .DocSearch-Hit-Tree {
+    display: flex !important;
   }
 }
 

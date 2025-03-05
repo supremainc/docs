@@ -43,6 +43,16 @@ module.exports = function () {
                   observer.observe(document.body, { childList: true, subtree: true });
   
                   // console.log("MutationObserver가 동작 중...");
+                  function changeinput() {
+                    const inputElements = document.querySelectorAll(".DocSearch-Input");
+                    inputElements.forEach(input => {
+                        input.setAttribute("autocomplete", "off");
+                        input.setAttribute("spellcheck", "false");
+                        input.setAttribute("onCompositionStart", "false");
+                        input.setAttribute("onCompositionEnd", "false");
+                    });
+                  }
+                  changeinput();
                 })();
               `,
             },
