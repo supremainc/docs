@@ -4131,6 +4131,13 @@ CSS variables, meant to be overridden by final theme
   padding: 15px 15px 20px 15px;
   margin-top: 20px;
 }
+
+.filetree_c6T4 .filetree_c6T4 {
+  margin-top: 15px;
+  padding: 0;
+  border: none;
+}
+
 .top_ZAYt {
   font-weight: 500;
   font-size: 18px;
@@ -4141,6 +4148,12 @@ CSS variables, meant to be overridden by final theme
   background: none;
   cursor: pointer;
   margin-left: 10px;
+}
+
+.filetree_c6T4 .filetree_c6T4 .top_ZAYt {
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .top_ZAYt .type_n_WQ {
@@ -4156,6 +4169,11 @@ CSS variables, meant to be overridden by final theme
   list-style-type: none;
   margin-left: 0px;
   padding-left: 28px;
+  margin-bottom: 0;
+}
+
+.filetree_c6T4 .filetree_c6T4 ul.fileitem_PWvV {
+  padding-left: 24px;
 }
 
 ul li.fileitem_PWvV {
@@ -4176,9 +4194,13 @@ ul li.fileitem_PWvV:last-of-type {
 ul li[type='file'] span.name_iojM, ul li[type='folder'] span.name_iojM {
   display: table-cell;
   margin-right: 15px;
-  min-width: 140px;
+  min-width: 158px;
   font-size: 14px;
   font-weight: 600;
+}
+
+.filetree_c6T4 .filetree_c6T4 ul li[type='file'] span.name_iojM, ul li span.name_iojM {
+  min-width: 134px;
 }
 
 .ico_i25q {
@@ -4971,7 +4993,7 @@ html[lang='en-US'] .desc_MGeg {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url(/docs/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
+  background: url(/docs/en/assets/images/hero-c042a648ebbd1b7589cd3bd8294b4ab4.png) no-repeat center center/cover;
 }
 
 @media screen and (max-width: 996px) {
