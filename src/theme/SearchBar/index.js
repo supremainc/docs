@@ -246,6 +246,7 @@ function DocSearch({externalUrlRegex, ...props}) {
             {...props}
             translations={props.translations?.modal ?? translations.modal}
             searchParameters={searchParameters}
+            ignoreCompositionEvents={true}
           />,
           searchContainer.current,
         )}
