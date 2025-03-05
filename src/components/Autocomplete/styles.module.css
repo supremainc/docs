@@ -3,10 +3,11 @@
 }
 .aaItemLink {
   text-decoration: none;
-  color: var(--ifm-color-cmd);
+  color: var(--ifm-color-color-gray);
 }
 .aaItemLink:hover {
   text-decoration: none;
+  color: unset;
 }
 
 .title {

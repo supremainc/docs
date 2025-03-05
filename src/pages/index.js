@@ -20,7 +20,7 @@ function HomepageHeader() {
   const lang = currentLocale;
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className={clsx('container', styles.containerRef)}>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -40,8 +40,8 @@ function HomepageHeader() {
                       query,
                       params: {
                         hitsPerPage: 10,
-                        attributesToSnippet: ['content:30', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
-                        snippetEllipsisText: '...',
+                        attributesToSnippet: ['content:60', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
+                        snippetEllipsisText: '…',
                         // filters: [`lang=${lang}`],
                         facetFilters: [`language: ${lang}`],
                         // highlightPreTag: `<mark>`,
@@ -80,6 +80,7 @@ function HomepageHeader() {
                   }
               }
           }}
+          // detachedMediaQuery="(max-width: 1280px)"
         />
         </div>
       </div>
