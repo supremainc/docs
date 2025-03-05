@@ -168,7 +168,6 @@ function DocSearch({externalUrlRegex, ...props}) {
   const searchButtonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [initialQuery, setInitialQuery] = useState(undefined);
-  const [isComposing, setIsComposing] = useState(false);
   const prepareSearchContainer = useCallback(() => {
     if (!searchContainer.current) {
       const divElement = document.createElement('div');
@@ -185,41 +184,6 @@ function DocSearch({externalUrlRegex, ...props}) {
     searchButtonRef.current?.focus();
     setInitialQuery(undefined);
   }, []);
-  // START : 수정된 코드
-  const handleKeyDown = useCallback(
-    (event) => {
-      if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
-        // ignore browser's ctrl+f
-        return;
-      }
-
-      // keydown 이벤트에서 한글 조합 중인지 감지
-        if (event.nativeEvent.isComposing) {
-        setIsComposing(true);
-      } else {
-        setIsComposing(false);
-         // prevents duplicate key insertion in the modal input
-        event.preventDefault();
-        setInitialQuery(event.key);
-        openModal();
-      }
-    },
-    [openModal],
-  );
-
-  const handleCompositionEnd = useCallback(() => {
-      setIsComposing(false);
-  }, []);
-
-  const handleKeyUp = useCallback(
-    (event) => {
-        if (isComposing) {
-          return;
-        }
-    },
-    [isComposing],
-  );
-  // END : 수정된 코드
   const handleInput = useCallback(
     (event) => {
       if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
@@ -238,10 +202,7 @@ function DocSearch({externalUrlRegex, ...props}) {
     isOpen,
     onOpen: openModal,
     onClose: closeModal,
-    // onKeyDown: handleInput, // 기존 onInput을 onKeyDown으로 변경
-    onKeyDown: handleKeyDown,
-    onCompositionEnd: handleCompositionEnd,
-    onKeyUp:handleKeyUp,
+    onKeyDown: handleInput, // 기존 onInput을 onKeyDown으로 변경
     searchButtonRef,
   });
   return (
