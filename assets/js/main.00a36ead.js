@@ -26100,14 +26100,8 @@ function Hit(param) {
     let { hit, children } = param;
     //START SWIZZLED CODE
     let sdkName = '';
-    if (hit.url.includes('web-sdk')) {
-        sdkName = 'Web SDK';
-    } else if (hit.url.includes('react-native-sdk')) {
-        sdkName = 'React Native SDK';
-    } else if (hit.url.includes('android-sdk')) {
-        sdkName = 'Android SDK';
-    } else if (hit.url.includes('ios-sdk')) {
-        sdkName = 'iOS SDK';
+    if (hit.url.includes('biostar')) {
+        sdkName = 'BioStar X';
     }
     //END SWIZZLED CODE
     return(//START SWIZZLED CODE
@@ -26126,10 +26120,10 @@ function Hit(param) {
             /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                 style: {
                     color: 'var(--ifm-color-content)',
-                    fontSize: 'inherit',
+                    fontSize: '.8rem',
                     flexShrink: 0,
                     marginLeft: 'auto',
-                    paddingRight: '0.5rem'
+                    paddingRight: '1rem'
                 },
                 children: sdkName
             })
@@ -30298,19 +30292,19 @@ __webpack_require__.d(__webpack_exports__, {
       "indexName": "supremaincio",
       "contextualSearch": true,
       "searchParameters": {
+        "attributesToHighlight": [],
         "attributesToSnippet": [
-          [
-            "content:30",
-            "hierarchy.lvl0",
-            "hierarchy.lvl1",
-            "hierarchy.lvl2",
-            "hierarchy.lvl3",
-            "hierarchy.lvl4",
-            "sidelvl2",
-            "sidelvl3",
-            "sidelvl4"
-          ]
-        ]
+          "content:20",
+          "hierarchy.lvl0",
+          "hierarchy.lvl1",
+          "hierarchy.lvl2",
+          "hierarchy.lvl3",
+          "hierarchy.lvl4",
+          "sidelvl2",
+          "sidelvl3",
+          "sidelvl4"
+        ],
+        "snippetEllipsisText": "…"
       },
       "searchPagePath": "search"
     },

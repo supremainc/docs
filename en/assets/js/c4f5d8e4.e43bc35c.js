@@ -486,7 +486,7 @@ var Layout = __webpack_require__("609");
 var Heading = __webpack_require__("6055");
 ;// CONCATENATED MODULE: ./src/pages/index.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
+/* ESM default export */ const index_module = ({"heroBanner":"heroBanner_qdFl","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi","containerRef":"containerRef_P_fM"});
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__("745");
 // EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 69 modules
@@ -652,7 +652,7 @@ function HomepageHeader() {
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
         className: (0,clsx/* default */.Z)('hero hero--primary', index_module.heroBanner),
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-            className: "container",
+            className: (0,clsx/* default */.Z)('container', index_module.containerRef),
             children: [
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                     as: "h1",
@@ -683,7 +683,7 @@ function HomepageHeader() {
                                                     params: {
                                                         hitsPerPage: 10,
                                                         attributesToSnippet: [
-                                                            'content:30',
+                                                            'content:60',
                                                             'hierarchy.lvl0',
                                                             'hierarchy.lvl1',
                                                             'hierarchy.lvl2',
@@ -693,7 +693,7 @@ function HomepageHeader() {
                                                             'sidelvl3',
                                                             'sidelvl4'
                                                         ],
-                                                        snippetEllipsisText: '...',
+                                                        snippetEllipsisText: '…',
                                                         // filters: [`lang=${lang}`],
                                                         facetFilters: [
                                                             `language: ${lang}`
