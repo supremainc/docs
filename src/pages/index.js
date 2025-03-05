@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {ExternalLinkCard, ProductLinkCard} from '@site/src/components/ExternalLinkCard';
 import Layout from '@theme/Layout';
@@ -41,10 +40,12 @@ function HomepageHeader() {
                       query,
                       params: {
                         hitsPerPage: 10,
-                        attributesToSnippet: ['content:30', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
+                        attributesToSnippet: ['content:30', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
                         snippetEllipsisText: '...',
                         // filters: [`lang=${lang}`],
-                        facetFilters: [`language: ${lang}`]
+                        facetFilters: [`language: ${lang}`],
+                        // highlightPreTag: `<mark>`,
+                        // highlightPostTag: `</mark>`,
                       }
                     },
                   ],

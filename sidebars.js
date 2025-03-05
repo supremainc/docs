@@ -19,7 +19,7 @@ const sidebars = {
   biostarx: [
     {
         type: 'category',
-        label: 'BioStar 2',
+        label: 'BioStar X',
         collapsed: false,
         collapsible: false,
         className: 'p-title',

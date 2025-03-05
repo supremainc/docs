@@ -28,7 +28,7 @@ export function ExternalLinkCard() {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const externalLinks = [
     {
-      title: 'BioStar 2',
+      title: 'BioStar X',
       url: './platform/biostar2',
       Svg: require('@site/static/img/biostar2-logo.svg').default,
       height: '45px'
