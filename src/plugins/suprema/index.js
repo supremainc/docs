@@ -48,8 +48,6 @@ module.exports = function () {
                     inputElements.forEach(input => {
                         input.setAttribute("autocomplete", "off");
                         input.setAttribute("spellcheck", "false");
-                        input.setAttribute("onCompositionStart", "false");
-                        input.setAttribute("onCompositionEnd", "false");
                     });
                   }
                   changeinput();
