@@ -80,9 +80,54 @@ function useResultsFooterComponent({closeModal}) {
     [closeModal],
   );
 }
-function Hit({hit, children}) {
-  return <Link to={hit.url}>{children}</Link>;
+// function Hit({hit, children}) {
+//   return <Link to={hit.url}>{children}</Link>;
+// }
+function Hit({ hit, children }) {
+	//START SWIZZLED CODE
+	let sdkName = '';
+	if (hit.url.includes('web-sdk')) {
+		sdkName = 'Web SDK';
+	} else if (hit.url.includes('react-native-sdk')) {
+		sdkName = 'React Native SDK';
+	} else if (hit.url.includes('android-sdk')) {
+		sdkName = 'Android SDK';
+	} else if (hit.url.includes('ios-sdk')) {
+		sdkName = 'iOS SDK';
+	}
+	//END SWIZZLED CODE
+
+	return (
+		//START SWIZZLED CODE
+		<Link
+			to={hit.url}
+			style={{
+				display: 'flex',
+				alignItems: 'center',
+				minWidth: 0,
+				overflow: 'hidden',
+				textOverflow: 'ellipsis',
+				whiteSpace: 'nowrap',
+			}}
+		>
+			{children}
+			<span
+				style={{
+					color: 'var(--ifm-color-content)',
+					fontSize: 'inherit',
+					flexShrink: 0,
+					marginLeft: 'auto',
+					paddingRight: '0.5rem',
+				}}
+			>
+				{sdkName}
+			</span>
+		</Link>
+		// Original code: <Link to={hit.url}>{children}</Link>
+		//END SWIZZLED CODE
+	);
 }
+
 function ResultsFooter({state, onClose}) {
   const createSearchLink = useSearchLinkCreator();
   return (
