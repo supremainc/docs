@@ -166,7 +166,7 @@ const config = {
               {
                 type: 'docSidebar',
                 sidebarId: 'biostarx',
-                label: 'BioStar 2',
+                label: 'BioStar X',
               },
             ]
           },
