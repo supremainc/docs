@@ -52,7 +52,7 @@ export function ProductItem({ hit, components }) {
     );
     const last = title.length - 1;
     const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "")
-    console.log(hit);
+    // console.log(hit);
     return (
         <Link to={durl} target="_blank" className={styles.aaItemLink}>
             <div className={clsx("aa-ItemContent", styles.itemContent)}>
