@@ -37,13 +37,13 @@
 }
 
 @media (max-width: 695px) {
+  .heroBanner {
+    padding: 1rem;
+  }
+  .heroBanner .containerRef {
+    padding: 1rem 0;
+  }
   .appcontainer {
     width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .appcontainer {
-    display: none;
   }
 }

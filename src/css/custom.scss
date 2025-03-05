@@ -71,6 +71,9 @@ html[lang='en-US'] * {
 .aa-Autocomplete {
   width: 70%;
   margin: 0 auto !important;
+  .aa-Form {
+    border: 1px solid var(--ifm-color-primary);
+  }
   .aa-Input {
     width: 70%;
     height: 2.5rem;
@@ -449,6 +452,9 @@ footer {
   .aa-Autocomplete {
     width: 100%;
     margin: 0;
+  }
+  .aa-Panel {
+    width: 100%;
   }
 }
 
