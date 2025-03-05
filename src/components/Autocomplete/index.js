@@ -40,7 +40,8 @@ export function Autocomplete(props) {
 }
 
 function replaceMark(content) {
-    const change = content.replaceAll('__aa-highlight__', '').replaceAll('__/aa-highlight__', '')
+    // const change = content.replaceAll('__aa-highlight__', '').replaceAll('__/aa-highlight__', '');
+    const change = content;
     return change;
 }
 
@@ -51,7 +52,7 @@ export function ProductItem({ hit, components }) {
     );
     const last = title.length - 1;
     const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "")
-    // console.log(hit);
+    console.log(hit);
     return (
         <Link to={durl} target="_blank" className={styles.aaItemLink}>
             <div className={clsx("aa-ItemContent", styles.itemContent)}>
@@ -60,21 +61,22 @@ export function ProductItem({ hit, components }) {
                             <h3 className={styles.title}>{title[last]}</h3>
                             <div className={styles.hitbreadcrums}>
                                 <span className={styles.hitname}>
-                                    {hit.hierarchy.lvl0}
+                                    {/* {hit.hierarchy.lvl0} */}
+                                    <components.Snippet attribute={['hierarchy', 'lvl0']} hit={hit} />
                                 </span>
                                 {!hit._snippetResult.sidelvl2.value == '' && (
                                     <span className={styles.hitname}>
-                                        {replaceMark(hit._snippetResult.sidelvl2.value)}
+                                        <components.Snippet attribute="sidelvl2" hit={hit} />
                                     </span>
                                 )}
                                 {!hit._snippetResult.sidelvl3.value == '' && (
                                     <span className={styles.hitname}>
-                                        {replaceMark(hit._snippetResult.sidelvl3.value)}
+                                        <components.Snippet attribute="sidelvl3" hit={hit} />
                                     </span>
                                 )}
                                 {!hit._snippetResult.sidelvl4.value == '' && (
                                     <span className={styles.hitname}>
-                                        {replaceMark(hit._snippetResult.sidelvl4.value)}
+                                        <components.Snippet attribute="sidelvl4" hit={hit} />
                                     </span>
                                 )}
                             </div>

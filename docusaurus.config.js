@@ -211,7 +211,7 @@ const config = {
         contextualSearch: true,
         searchParameters: {
           attributesToSnippet: [
-            [ 'content:30' ]
+            ['content:30', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4']
           ]
         },
         searchPagePath: 'search',
