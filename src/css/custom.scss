@@ -120,6 +120,11 @@ html[lang='en-US'] * {
 .DocSearch-Hit-title {
   overflow: hidden;
 }
+.DocSearch-Input {
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
 div[class*='docItemCol'] {
   padding-left: 2rem;
 }
