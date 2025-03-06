@@ -35,7 +35,7 @@ export default function DocItemContent({children}) {
         </header>
       )}
       {frontMatter.isTranslationMissing && (
-        <Admonition type="caution" title="Not translated">
+        <Admonition type="note" title="Not translated">
           This page is currently being translated. We will complete the translation as soon as possible.
         </Admonition>
       )}

@@ -54,7 +54,6 @@ const config = {
   i18n: {
     defaultLocale: 'ko',
     locales: ['ko', 'en'],
-    path: 'docs/i18n',
     localeConfigs: {
       ko: {
         label: '한국어',
@@ -133,7 +132,7 @@ const config = {
         process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
         typeof process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
         process.env.DOCUSAURUS_CURRENT_LOCALE === "ko";
-      const isI18n = params.filePath.includes("/docs/i18n/") || params.filePath.includes("\\docs\\i18n\\");
+      const isI18n = params.filePath.includes("/i18n/") || params.filePath.includes("\\i18n\\");
       if (isDefaultLocale) {
         result.frontMatter.isTranslationMissing = false;
       } else {
