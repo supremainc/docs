@@ -82,7 +82,8 @@ const config = {
           editUrl: 'https://github.com/supremainc/docs/tree/main/',
           routeBasePath: '/',
           exclude: [
-            'common/**.{md,mdx}'
+            'common/**.{md,mdx}',
+            '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },

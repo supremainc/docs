@@ -65,7 +65,8 @@ const sidebars = {
       collapsible: false,
       className: 'p-title',
       items: [
-        'legal/disclaimers'
+        'legal/disclaimers',
+        'legal/open-source-licenses'
       ]
     }
   ]
