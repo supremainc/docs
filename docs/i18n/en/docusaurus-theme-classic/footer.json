@@ -1,0 +1,10 @@
+{
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/docusaurus"
+  },
+  "logo.alt": {
+    "message": "Suprema Security & biometrics",
+    "description": "The alt text of footer logo"
+  }
+}

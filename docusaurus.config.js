@@ -83,7 +83,8 @@ const config = {
           editUrl: 'https://github.com/supremainc/docs/tree/main/',
           routeBasePath: '/',
           exclude: [
-            'common/**.{md,mdx}'
+            'common/**.{md,mdx}',
+            '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -132,7 +133,7 @@ const config = {
         process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
         typeof process.env.DOCUSAURUS_CURRENT_LOCALE === "undefined" ||
         process.env.DOCUSAURUS_CURRENT_LOCALE === "ko";
-      const isI18n = params.filePath.includes("/i18n/");
+      const isI18n = params.filePath.includes("/docs/i18n/") || params.filePath.includes("\\docs\\i18n\\");
       if (isDefaultLocale) {
         result.frontMatter.isTranslationMissing = false;
       } else {
@@ -183,6 +184,12 @@ const config = {
             label: 'Devices',
             position: 'left',
             items: []
+          },
+          {
+            type: 'doc',
+            label: 'Legal',
+            position: 'left',
+            docId: 'legal/disclaimers'
           },
           {
             type: 'search',

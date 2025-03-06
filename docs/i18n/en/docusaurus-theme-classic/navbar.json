@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Suprema Docs",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Platform": {
+    "message": "Platform",
+    "description": "Navbar item with label Platform"
+  },
+  "item.label.Devices": {
+    "message": "Devices",
+    "description": "Navbar item with label Devices"
+  },
+  "item.label.BioStar 2": {
+    "message": "BioStar 2",
+    "description": "Navbar item with label BioStar 2"
+  }
+}

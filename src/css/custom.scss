@@ -147,6 +147,7 @@ div[class*='docItemCol'] {
     }
   }
   .navbar__item {
+    font-weight: 400;
     a {
       font-weight: 400;
     }
@@ -320,6 +321,7 @@ footer {
     --ifm-alert-foreground-color: #A32343;
   }
   /* Alert */
+
   p {
     em {
       font-style: normal;
@@ -428,6 +430,13 @@ footer {
   .container {
     .text--left {
       padding-left: 0;
+    }
+  }
+
+  // License
+  .lower-latin {
+    ul {
+      list-style-type: lower-latin;
     }
   }
 }
