@@ -27,6 +27,7 @@ function useSyntheticTitle() {
 export default function DocItemContent({children}) {
   const { frontMatter } = useDoc();
   const syntheticTitle = useSyntheticTitle();
+  console.log(frontMatter);
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (

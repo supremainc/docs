@@ -18,45 +18,57 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   biostarx: [
     {
-        type: 'category',
-        label: 'BioStar X',
-        collapsed: false,
-        collapsible: false,
-        className: 'p-title',
-        items: [
-            {
-              type: 'category',
-              label: '개요',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar2/index',
-              },
-              items: [
-                'platform/biostar2/getting-started',
-                'platform/biostar2/system-requirements',
-                'platform/biostar2/product-compatibility'
-              ],
-            },
-            {
-              type: 'category',
-              label: '튜토리얼',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar2/tutorial',
-              },
-              items: [
-                'platform/biostar2/express-install',
-                'platform/biostar2/custom-install',
-                'platform/biostar2/login',
-                'platform/biostar2/manage-server',
-                'platform/biostar2/change-port',
-                'platform/biostar2/change-db',
-                'platform/biostar2/register-activation-key',
-              ]
-            }
-        ],
+      type: 'category',
+      label: 'BioStar X',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        {
+          type: 'category',
+          label: '개요',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar2/index',
+          },
+          items: [
+            'platform/biostar2/getting-started',
+            'platform/biostar2/system-requirements',
+            'platform/biostar2/product-compatibility'
+          ],
+        },
+        {
+          type: 'category',
+          label: '튜토리얼',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar2/tutorial',
+          },
+          items: [
+            'platform/biostar2/express-install',
+            'platform/biostar2/custom-install',
+            'platform/biostar2/login',
+            'platform/biostar2/manage-server',
+            'platform/biostar2/change-port',
+            'platform/biostar2/change-db',
+            'platform/biostar2/register-activation-key',
+          ]
+        }
+      ],
     },
   ],
+  legal: [
+    {
+      type: 'category',
+      label: 'Legal',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        'legal/disclaimers'
+      ]
+    }
+  ]
 };
 
 export default sidebars;
