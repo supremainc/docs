@@ -22839,7 +22839,7 @@ var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
 var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar2/index","docs":[{"id":"legal/disclaimers","path":"/docs/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar2/change-db","path":"/docs/platform/biostar2/change-db","sidebar":"biostarx"},{"id":"platform/biostar2/change-port","path":"/docs/platform/biostar2/change-port","sidebar":"biostarx"},{"id":"platform/biostar2/custom-install","path":"/docs/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/express-install","path":"/docs/platform/biostar2/express-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/login","path":"/docs/platform/biostar2/login","sidebar":"biostarx"},{"id":"platform/biostar2/manage-server","path":"/docs/platform/biostar2/manage-server","sidebar":"biostarx"},{"id":"platform/biostar2/product-compatibility","path":"/docs/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/register-activation-key","path":"/docs/platform/biostar2/register-activation-key","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar2/","label":"개요"}},"legal":{"link":{"path":"/docs/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"docs/i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
@@ -30008,7 +30008,6 @@ __webpack_require__.d(__webpack_exports__, {
       "ko",
       "en"
     ],
-    "path": "docs/i18n",
     "localeConfigs": {
       "ko": {
         "label": "한국어",
@@ -30020,7 +30019,8 @@ __webpack_require__.d(__webpack_exports__, {
         "direction": "ltr",
         "htmlLang": "en-US"
       }
-    }
+    },
+    "path": "i18n"
   },
   "themes": [
     "@saucelabs/theme-github-codeblock"

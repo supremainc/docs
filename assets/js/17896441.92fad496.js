@@ -433,7 +433,7 @@ function DocItemContent(param) {
                 })
             }),
             frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsx)(Admonition/* default */.Z, {
-                type: "caution",
+                type: "note",
                 title: "Not translated",
                 children: "This page is currently being translated. We will complete the translation as soon as possible."
             }),

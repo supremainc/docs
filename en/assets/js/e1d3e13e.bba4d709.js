@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["798"], {
-"5638": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["332"], {
+"7365": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,19 +8,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ open_source_licenses_MDXContent),
   frontMatter: () => (/* binding */ open_source_licenses_frontMatter),
-  metadata: () => (/* reexport */ site_docs_legal_open_source_licenses_mdx_f81_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ open_source_licenses_toc),
   contentTitle: () => (/* binding */ open_source_licenses_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-legal-open-source-licenses-mdx-f81.json
-var site_docs_legal_open_source_licenses_mdx_f81_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"오픈 소스 라이선스","description":"---","source":"@site/docs/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/en/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"오픈 소스 라이선스","toc_max_heading_level":2,"isTranslationMissing":true},"sidebar":"legal","previous":{"title":"면책 조항","permalink":"/docs/en/legal/disclaimers"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-legal-open-source-licenses-mdx-e1d.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"Open Source Licensse","description":"---","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/en/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"Open Source Licensse","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"Disclaimers","permalink":"/docs/en/legal/disclaimers"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/common/_apache-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_apache-license.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -195,7 +195,7 @@ function MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_gnu-general-public-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-general-public-license.mdx
 
 
 const _gnu_general_public_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -596,7 +596,7 @@ function _gnu_general_public_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_gnu-lesser-general-public-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-lesser-general-public-license.mdx
 
 
 const _gnu_lesser_general_public_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -792,7 +792,7 @@ function _gnu_lesser_general_public_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_mit-open-source-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_mit-open-source-license.mdx
 
 
 const _mit_open_source_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -841,7 +841,7 @@ function _mit_open_source_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_openssl-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_openssl-license.mdx
 
 
 const _openssl_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -934,7 +934,7 @@ function _openssl_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_original-ssleay-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_original-ssleay-license.mdx
 
 
 const _original_ssleay_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1031,7 +1031,7 @@ function _original_ssleay_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_sil-open-font-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_sil-open-font-license.mdx
 
 
 const _sil_open_font_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1156,14 +1156,14 @@ function _sil_open_font_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/legal/open-source-licenses.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx
 
 
 const open_source_licenses_frontMatter = {
 	id: 'open-source-licenses',
-	title: '오픈 소스 라이선스',
+	title: 'Open Source Licensse',
 	toc_max_heading_level: 2,
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const open_source_licenses_contentTitle = undefined;
 

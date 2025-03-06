@@ -21447,11 +21447,6 @@ var routesChunkNames = __webpack_require__("7138");
         "@theme/DocItem",
         /*require.resolve*/(7509)
     ],
-    "1814c8c4": [
-        ()=>__webpack_require__.e(/* import() | 1814c8c4 */ "891").then(__webpack_require__.bind(__webpack_require__, 5550)),
-        "@site/docs/legal/disclaimers.mdx",
-        /*require.resolve*/(5550)
-    ],
     "1a4e3797": [
         ()=>Promise.all(/* import() | 1a4e3797 */ [__webpack_require__.e("212"), __webpack_require__.e("247"), __webpack_require__.e("158"), __webpack_require__.e("230")]).then(__webpack_require__.bind(__webpack_require__, 8606)),
         "@theme/SearchPage",
@@ -21461,6 +21456,11 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>__webpack_require__.e(/* import() | 36873d08 */ "441").then(__webpack_require__.bind(__webpack_require__, 1385)),
         "@site/docs/platform/biostar2/manage-server.mdx",
         /*require.resolve*/(1385)
+    ],
+    "3708f180": [
+        ()=>__webpack_require__.e(/* import() | 3708f180 */ "203").then(__webpack_require__.bind(__webpack_require__, 530)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx",
+        /*require.resolve*/(530)
     ],
     "3b916237": [
         ()=>__webpack_require__.e(/* import() | 3b916237 */ "422").then(__webpack_require__.bind(__webpack_require__, 9745)),
@@ -21542,6 +21542,11 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/src/pages/index.js",
         /*require.resolve*/(5637)
     ],
+    "e1d3e13e": [
+        ()=>__webpack_require__.e(/* import() | e1d3e13e */ "332").then(__webpack_require__.bind(__webpack_require__, 7365)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx",
+        /*require.resolve*/(7365)
+    ],
     "efb123fd": [
         ()=>__webpack_require__.e(/* import() | efb123fd */ "522").then(__webpack_require__.bind(__webpack_require__, 8691)),
         "@site/docs/platform/biostar2/product-compatibility.mdx",
@@ -21551,11 +21556,6 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>__webpack_require__.e(/* import() | f30d41f9 */ "662").then(__webpack_require__.bind(__webpack_require__, 6986)),
         "@site/docs/platform/biostar2/tutorial.mdx",
         /*require.resolve*/(6986)
-    ],
-    "f813c43e": [
-        ()=>__webpack_require__.e(/* import() | f813c43e */ "798").then(__webpack_require__.bind(__webpack_require__, 5638)),
-        "@site/docs/legal/open-source-licenses.mdx",
-        /*require.resolve*/(5638)
     ],
     "f9cbddb4": [
         ()=>__webpack_require__.e(/* import() | f9cbddb4 */ "885").then(__webpack_require__.bind(__webpack_require__, 5989)),
@@ -21871,25 +21871,25 @@ function ComponentCreator(path, hash) {
     },
     {
         path: '/docs/en/',
-        component: ComponentCreator('/docs/en/', '129'),
+        component: ComponentCreator('/docs/en/', 'bc8'),
         routes: [
             {
                 path: '/docs/en/',
-                component: ComponentCreator('/docs/en/', 'f6f'),
+                component: ComponentCreator('/docs/en/', '6f9'),
                 routes: [
                     {
                         path: '/docs/en/',
-                        component: ComponentCreator('/docs/en/', 'cad'),
+                        component: ComponentCreator('/docs/en/', 'cec'),
                         routes: [
                             {
                                 path: '/docs/en/legal/disclaimers',
-                                component: ComponentCreator('/docs/en/legal/disclaimers', 'd40'),
+                                component: ComponentCreator('/docs/en/legal/disclaimers', '865'),
                                 exact: true,
                                 sidebar: "legal"
                             },
                             {
                                 path: '/docs/en/legal/open-source-licenses',
-                                component: ComponentCreator('/docs/en/legal/open-source-licenses', '174'),
+                                component: ComponentCreator('/docs/en/legal/open-source-licenses', '286'),
                                 exact: true,
                                 sidebar: "legal"
                             },
@@ -22839,7 +22839,7 @@ var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
 var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar2/index","docs":[{"id":"legal/disclaimers","path":"/docs/en/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/en/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar2/change-db","path":"/docs/en/platform/biostar2/change-db","sidebar":"biostarx"},{"id":"platform/biostar2/change-port","path":"/docs/en/platform/biostar2/change-port","sidebar":"biostarx"},{"id":"platform/biostar2/custom-install","path":"/docs/en/platform/biostar2/custom-install","sidebar":"biostarx"},{"id":"platform/biostar2/express-install","path":"/docs/en/platform/biostar2/express-install","sidebar":"biostarx"},{"id":"platform/biostar2/getting-started","path":"/docs/en/platform/biostar2/getting-started","sidebar":"biostarx"},{"id":"platform/biostar2/index","path":"/docs/en/platform/biostar2/","sidebar":"biostarx"},{"id":"platform/biostar2/login","path":"/docs/en/platform/biostar2/login","sidebar":"biostarx"},{"id":"platform/biostar2/manage-server","path":"/docs/en/platform/biostar2/manage-server","sidebar":"biostarx"},{"id":"platform/biostar2/product-compatibility","path":"/docs/en/platform/biostar2/product-compatibility","sidebar":"biostarx"},{"id":"platform/biostar2/register-activation-key","path":"/docs/en/platform/biostar2/register-activation-key","sidebar":"biostarx"},{"id":"platform/biostar2/system-requirements","path":"/docs/en/platform/biostar2/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar2/tutorial","path":"/docs/en/platform/biostar2/tutorial","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar2/","label":"Overview"}},"legal":{"link":{"path":"/docs/en/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"docs/i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
@@ -30008,7 +30008,6 @@ __webpack_require__.d(__webpack_exports__, {
       "ko",
       "en"
     ],
-    "path": "docs/i18n",
     "localeConfigs": {
       "ko": {
         "label": "한국어",
@@ -30020,7 +30019,8 @@ __webpack_require__.d(__webpack_exports__, {
         "direction": "ltr",
         "htmlLang": "en-US"
       }
-    }
+    },
+    "path": "i18n"
   },
   "themes": [
     "@saucelabs/theme-github-codeblock"
@@ -34058,7 +34058,7 @@ module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/en/search-d2a":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-129":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-f6f":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-cad":{"__comp":"a94703ab"},"/docs/en/legal/disclaimers-d40":{"__comp":"17896441","content":"1814c8c4"},"/docs/en/legal/open-source-licenses-174":{"__comp":"17896441","content":"f813c43e"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/change-db-802":{"__comp":"17896441","content":"febd5c44"},"/docs/en/platform/biostar2/change-port-bf0":{"__comp":"17896441","content":"8c97916a"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/login-7b9":{"__comp":"17896441","content":"5e95a2a5"},"/docs/en/platform/biostar2/manage-server-eea":{"__comp":"17896441","content":"36873d08"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
+module.exports = JSON.parse('{"/docs/en/search-d2a":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-bc8":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-6f9":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-cec":{"__comp":"a94703ab"},"/docs/en/legal/disclaimers-865":{"__comp":"17896441","content":"3708f180"},"/docs/en/legal/open-source-licenses-286":{"__comp":"17896441","content":"e1d3e13e"},"/docs/en/platform/biostar2/-33a":{"__comp":"17896441","content":"6cd7ec80"},"/docs/en/platform/biostar2/change-db-802":{"__comp":"17896441","content":"febd5c44"},"/docs/en/platform/biostar2/change-port-bf0":{"__comp":"17896441","content":"8c97916a"},"/docs/en/platform/biostar2/custom-install-98f":{"__comp":"17896441","content":"9aeb0299"},"/docs/en/platform/biostar2/express-install-f18":{"__comp":"17896441","content":"5a35c590"},"/docs/en/platform/biostar2/getting-started-841":{"__comp":"17896441","content":"3b916237"},"/docs/en/platform/biostar2/login-7b9":{"__comp":"17896441","content":"5e95a2a5"},"/docs/en/platform/biostar2/manage-server-eea":{"__comp":"17896441","content":"36873d08"},"/docs/en/platform/biostar2/product-compatibility-a46":{"__comp":"17896441","content":"efb123fd"},"/docs/en/platform/biostar2/register-activation-key-329":{"__comp":"17896441","content":"f9cbddb4"},"/docs/en/platform/biostar2/system-requirements-111":{"__comp":"17896441","content":"96551ba4"},"/docs/en/platform/biostar2/tutorial-06a":{"__comp":"17896441","content":"f30d41f9"}}')
 
 }),
 
