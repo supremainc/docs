@@ -9,7 +9,7 @@ module.exports = function () {
               innerHTML: `
                 (function() {
                   function attachLinkClickEvents() {
-                    document.querySelectorAll(".markdown a").forEach(anchor => {
+                    document.querySelectorAll("main a").forEach(anchor => {
                       if (!anchor.hasAttribute("data-event-added")) {
                         anchor.setAttribute("data-event-added", "true");
                         anchor.addEventListener("click", function (event) {
@@ -21,7 +21,7 @@ module.exports = function () {
                             const targetId = href.split("#")[1];
                             const targetElement = document.getElementById(targetId);
                             if (targetElement) {
-                              const offset = 140; // 원하는 offset 값 (예: 네비게이션 높이)
+                              const offset = 150; // 원하는 offset 값 (예: 네비게이션 높이)
                               const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
                               window.scrollTo({
                                 top: targetPosition,
@@ -43,16 +43,6 @@ module.exports = function () {
                   observer.observe(document.body, { childList: true, subtree: true });
   
                   // console.log("MutationObserver가 동작 중...");
-                  function changeinput() {
-                    const inputElements = document.querySelectorAll(".DocSearch-Input");
-                    inputElements.forEach(input => {
-                        input.setAttribute("autocomplete", "off");
-                        input.setAttribute("spellcheck", "false");
-                        input.setAttribute("onCompositionStart", "false");
-                        input.setAttribute("onCompositionEnd", "false");
-                    });
-                  }
-                  changeinput();
                 })();
               `,
             },
