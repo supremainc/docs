@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const dropdownRef = useRef(null);
 
   const links = [
     { name: 'OEM FINGERPRINT MODULES', url: `https://www.suprema.co.kr/embedded-modules/${currentLocale}/main.asp` },
@@ -11,8 +12,21 @@ const DropdownMenu = () => {
     { name: 'MOCA SYSTEM', url: 'https://www.airfob.com/' },
   ];
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+  }, []);
+
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={dropdownRef}>
       <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
