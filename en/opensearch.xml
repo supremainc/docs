@@ -4,8 +4,8 @@
   <ShortName>Suprema Docs</ShortName>
   <Description>Search Suprema Docs</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.supremainc.com/docs/en/https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://docs.supremainc.com/docs/en/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.supremainc.com/docs/en/opensearch.xml" />
-  <moz:SearchForm>https://docs.supremainc.com/docs/en/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://docs.supremainc.com/en/https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://docs.supremainc.com/en/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.supremainc.com/en/opensearch.xml" />
+  <moz:SearchForm>https://docs.supremainc.com/en/</moz:SearchForm>
 </OpenSearchDescription>
