@@ -29,12 +29,11 @@ const sidebars = {
           label: '개요',
           link: {
             type: 'doc',
-            id: 'platform/biostar2/index',
+            id: 'platform/biostar_x/index',
           },
           items: [
-            'platform/biostar2/getting-started',
-            'platform/biostar2/system-requirements',
-            'platform/biostar2/product-compatibility'
+            'platform/biostar_x/getting-started',
+            'platform/biostar_x/system-requirements',
           ],
         },
         {
@@ -42,16 +41,16 @@ const sidebars = {
           label: '튜토리얼',
           link: {
             type: 'doc',
-            id: 'platform/biostar2/tutorial',
+            id: 'platform/biostar_x/tutorial',
           },
           items: [
-            'platform/biostar2/express-install',
-            'platform/biostar2/custom-install',
-            'platform/biostar2/login',
-            'platform/biostar2/manage-server',
-            'platform/biostar2/change-port',
-            'platform/biostar2/change-db',
-            'platform/biostar2/register-activation-key',
+            'platform/biostar_x/express-install',
+            'platform/biostar_x/custom-install',
+            'platform/biostar_x/login',
+            'platform/biostar_x/manage-server',
+            'platform/biostar_x/change-port',
+            'platform/biostar_x/change-db',
+            'platform/biostar_x/register-activation-key',
           ]
         }
       ],
