@@ -53,6 +53,23 @@ const sidebars = {
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
           ]
+        },
+        {
+          type: 'category',
+          label: '활용 안내',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '사용자 관리',
+              items: [
+                'platform/biostar_x/how-to-guide-user-add-group',
+              ]
+            }
+          ]
         }
       ],
     },

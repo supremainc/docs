@@ -290,8 +290,22 @@ footer {
 
   section {
     &.row {
-      h2 {
-        font-size: var(--ifm-h5-font-size);
+      a.padding--lg {
+        padding: 20px !important;
+        h2 {
+          font-size: var(--ifm-h4-font-size);
+          font-weight: 600;
+        }
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-height: 1.2;
+          min-height: 2.5em;
+          white-space: normal;
+        }
       }
     }
   }
