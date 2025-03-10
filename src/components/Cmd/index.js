@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import koLocale from './ko.json';
 import enLocale from './en.json';
 
-const ReplacementLocaleText = ({sid, code, className }) => {
+const ReplacementLocaleText = ({sid, code, className, children }) => {
   const { i18n: {currentLocale} } = useDocusaurusContext();
   if (sid) {
     let locale;
@@ -36,6 +36,8 @@ const ReplacementLocaleText = ({sid, code, className }) => {
       console.error(`Error rendering locale text for code: ${code}`, e);
       return null;
     }
+  } else if (children) {
+    return <span className={clsx('cmd', className)}>{children}</span>
   }
 };
 

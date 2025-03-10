@@ -47,10 +47,10 @@ const sidebars = {
             'platform/biostar_x/express-install',
             'platform/biostar_x/custom-install',
             'platform/biostar_x/login',
+            'platform/biostar_x/register-license-key',
             'platform/biostar_x/manage-server',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
-            'platform/biostar_x/register-activation-key',
           ]
         }
       ],

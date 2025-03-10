@@ -16,6 +16,7 @@ import Columns from '@site/src/components/Columns';
 import Column from '@site/src/components/Column';
 import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
+import IcLicense from '@site/static/img/menus/ico-license.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -41,5 +42,6 @@ export default {
     Tbody,
     Row,
     Td,
-    Start
+    Start,
+    IcLicense
 }
