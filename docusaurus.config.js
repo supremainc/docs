@@ -82,6 +82,7 @@ const config = {
           routeBasePath: '/',
           exclude: [
             'common/**.{md,mdx}',
+            '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
