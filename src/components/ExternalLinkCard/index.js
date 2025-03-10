@@ -30,7 +30,7 @@ export function ExternalLinkCard() {
     {
       title: 'BioStar X',
       url: './platform/biostar2',
-      Svg: require('@site/static/img/biostar2-logo.svg').default,
+      Svg: require('@site/static/img/biostar-x-logo.svg').default,
       height: '45px'
     },
     {
