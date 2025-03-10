@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["387"], {
-"437": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["342"], {
+"6015": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-db-mdx-137.json
-var site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-db","title":"데이터베이스 변경하기","description":"Description","source":"@site/docs/platform/biostar_x/change-db.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-db","permalink":"/docs/platform/biostar_x/change-db","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-db.mdx","tags":[],"version":"current","frontMatter":{"id":"change-db","title":"데이터베이스 변경하기","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-mdx-c4e.json
+var site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","source":"@site/docs/platform/biostar_x/how-to-guide.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide","permalink":"/docs/en/platform/biostar_x/how-to-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","keywords":["활용 안내","How-to Guide"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"데이터베이스 변경하기","permalink":"/docs/en/platform/biostar_x/change-db"},"next":{"title":"사용자 그룹 추가하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-user-add-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/change-db.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide.mdx
 
 
 const frontMatter = {
-	id: 'change-db',
-	title: '데이터베이스 변경하기',
-	description: 'Description',
+	id: 'how-to-guide',
+	title: '활용 안내(How-to Guide)',
+	description: 'BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'활용 안내',
+		'How-to Guide'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -43,7 +43,20 @@ const assets = {
 
 const toc = [];
 function _createMdxContent(props) {
-  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
+  const _components = {
+    p: "p",
+    strong: "strong",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  }, {DocCardList} = _components;
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다."]
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+  });
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
@@ -56,6 +69,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
