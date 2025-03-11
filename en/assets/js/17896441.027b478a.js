@@ -193,14 +193,33 @@ function AdmonitionTypeInfo(props) {
 
 
 function AdmonitionIconDanger(props) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("svg", {
-        viewBox: "0 0 12 16",
-        ...props,
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
-            fillRule: "evenodd",
-            d: "M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
-        })
-    });
+    return(// <svg viewBox="0 0 12 16" {...props}>
+    //   <path
+    //     fillRule="evenodd"
+    //     d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"
+    //   />
+    // </svg>
+    /*#__PURE__*/ (0,jsx_runtime.jsxs)("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        "stroke-width": "2",
+        stroke: "#A32343",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        class: "lucide lucide-triangle-alert mr-2 text-red-500",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+                d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
+                fill: "none"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+                d: "M12 9v4"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+                d: "M12 17h.01"
+            })
+        ]
+    }));
 }
 
 ;// CONCATENATED MODULE: ./src/theme/Admonition/Type/Warning.js
@@ -430,9 +449,10 @@ function DocItemContent(param) {
     (0,react.useEffect)(()=>{
         if (location.hash) {
             const targetId = location.hash.substring(1);
+            w;
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
-                const offset = 150; // 원하는 offset 값 (예: 네비게이션 높이)
+                const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({
                     top: targetPosition,
@@ -815,7 +835,7 @@ function DocItemLayout(param) {
 
 
 }),
-"5529": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"1707": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1464,7 +1484,35 @@ const SvgIcoLicense = _ref => {
   })));
 };
 /* ESM default export */ const ico_license = (SvgIcoLicense);
+;// CONCATENATED MODULE: ./static/img/menus/ico-add.svg
+var ico_add_path;
+function ico_add_extends() { return ico_add_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_add_extends.apply(null, arguments); }
+
+const SvgIcoAdd = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_add_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_add_path || (ico_add_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "#000",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M3.333 8h9.334M8 3.333v9.334"
+  })));
+};
+/* ESM default export */ const ico_add = (SvgIcoAdd);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
+
 
 
 
@@ -1510,7 +1558,8 @@ const SvgIcoLicense = _ref => {
     Row: Row,
     Td: Td,
     Start: Start,
-    IcLicense: ico_license
+    IcLicense: ico_license,
+    IcAdd: ico_add
 });
 
 

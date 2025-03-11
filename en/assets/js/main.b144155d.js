@@ -21462,6 +21462,11 @@ var routesChunkNames = __webpack_require__("7138");
         "@theme/SearchPage",
         /*require.resolve*/(8606)
     ],
+    "1a61e0bb": [
+        ()=>__webpack_require__.e(/* import() | 1a61e0bb */ "338").then(__webpack_require__.bind(__webpack_require__, 6545)),
+        "@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx",
+        /*require.resolve*/(6545)
+    ],
     "1cc21783": [
         ()=>__webpack_require__.e(/* import() | 1cc21783 */ "319").then(__webpack_require__.bind(__webpack_require__, 7930)),
         "@site/docs/platform/biostar_x/tutorial-add-device.mdx",
@@ -21886,15 +21891,15 @@ function ComponentCreator(path, hash) {
     },
     {
         path: '/docs/en/',
-        component: ComponentCreator('/docs/en/', '46f'),
+        component: ComponentCreator('/docs/en/', 'e29'),
         routes: [
             {
                 path: '/docs/en/',
-                component: ComponentCreator('/docs/en/', '06f'),
+                component: ComponentCreator('/docs/en/', '49b'),
                 routes: [
                     {
                         path: '/docs/en/',
-                        component: ComponentCreator('/docs/en/', '8d8'),
+                        component: ComponentCreator('/docs/en/', 'a66'),
                         routes: [
                             {
                                 path: '/docs/en/legal/disclaimers',
@@ -21947,6 +21952,12 @@ function ComponentCreator(path, hash) {
                             {
                                 path: '/docs/en/platform/biostar_x/how-to-guide-edit-user',
                                 component: ComponentCreator('/docs/en/platform/biostar_x/how-to-guide-edit-user', '2c5'),
+                                exact: true,
+                                sidebar: "biostarx"
+                            },
+                            {
+                                path: '/docs/en/platform/biostar_x/how-to-guide-enroll-credential',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/how-to-guide-enroll-credential', '47b'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
@@ -22870,7 +22881,7 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar_x/index","docs":[{"id":"legal/disclaimers","path":"/docs/en/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/en/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/change-db","path":"/docs/en/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/en/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/en/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide","path":"/docs/en/platform/biostar_x/how-to-guide","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-add-user","path":"/docs/en/platform/biostar_x/how-to-guide-add-user","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-edit-user","path":"/docs/en/platform/biostar_x/how-to-guide-edit-user","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/en/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/en/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/en/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/en/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/en/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/en/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/en/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/en/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/en/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar_x/","label":"Overview"}},"legal":{"link":{"path":"/docs/en/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar_x/index","docs":[{"id":"legal/disclaimers","path":"/docs/en/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/en/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/change-db","path":"/docs/en/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/en/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/en/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide","path":"/docs/en/platform/biostar_x/how-to-guide","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-add-user","path":"/docs/en/platform/biostar_x/how-to-guide-add-user","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-edit-user","path":"/docs/en/platform/biostar_x/how-to-guide-edit-user","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-enroll-credential","path":"/docs/en/platform/biostar_x/how-to-guide-enroll-credential","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/en/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/en/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/en/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/en/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/en/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/en/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/en/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/en/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/en/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar_x/","label":"Overview"}},"legal":{"link":{"path":"/docs/en/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
@@ -34101,7 +34112,7 @@ module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/en/search-d2a":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-46f":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-06f":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-8d8":{"__comp":"a94703ab"},"/docs/en/legal/disclaimers-865":{"__comp":"17896441","content":"3708f180"},"/docs/en/legal/open-source-licenses-286":{"__comp":"17896441","content":"e1d3e13e"},"/docs/en/platform/biostar_x/-c62":{"__comp":"17896441","content":"e2ca401e"},"/docs/en/platform/biostar_x/change-db-dc4":{"__comp":"17896441","content":"1371bad0"},"/docs/en/platform/biostar_x/change-port-aa5":{"__comp":"17896441","content":"1fa8891f"},"/docs/en/platform/biostar_x/getting-started-0b2":{"__comp":"17896441","content":"b09a922e"},"/docs/en/platform/biostar_x/how-to-guide-2eb":{"__comp":"17896441","content":"c4e1843d"},"/docs/en/platform/biostar_x/how-to-guide-add-user-198":{"__comp":"17896441","content":"264fa07d"},"/docs/en/platform/biostar_x/how-to-guide-edit-user-2c5":{"__comp":"17896441","content":"0db07676"},"/docs/en/platform/biostar_x/manage-server-3b9":{"__comp":"17896441","content":"425e46b9"},"/docs/en/platform/biostar_x/system-requirements-726":{"__comp":"17896441","content":"ff083161"},"/docs/en/platform/biostar_x/tutorial-b0d":{"__comp":"17896441","content":"b450d2c0"},"/docs/en/platform/biostar_x/tutorial-add-device-3cb":{"__comp":"17896441","content":"1cc21783"},"/docs/en/platform/biostar_x/tutorial-custom-install-d4e":{"__comp":"17896441","content":"dd4ec03e"},"/docs/en/platform/biostar_x/tutorial-express-install-956":{"__comp":"17896441","content":"36281e77"},"/docs/en/platform/biostar_x/tutorial-login-1c2":{"__comp":"17896441","content":"41752823"},"/docs/en/platform/biostar_x/tutorial-register-license-key-a9b":{"__comp":"17896441","content":"854cb7eb"}}')
+module.exports = JSON.parse('{"/docs/en/search-d2a":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-e29":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-49b":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-a66":{"__comp":"a94703ab"},"/docs/en/legal/disclaimers-865":{"__comp":"17896441","content":"3708f180"},"/docs/en/legal/open-source-licenses-286":{"__comp":"17896441","content":"e1d3e13e"},"/docs/en/platform/biostar_x/-c62":{"__comp":"17896441","content":"e2ca401e"},"/docs/en/platform/biostar_x/change-db-dc4":{"__comp":"17896441","content":"1371bad0"},"/docs/en/platform/biostar_x/change-port-aa5":{"__comp":"17896441","content":"1fa8891f"},"/docs/en/platform/biostar_x/getting-started-0b2":{"__comp":"17896441","content":"b09a922e"},"/docs/en/platform/biostar_x/how-to-guide-2eb":{"__comp":"17896441","content":"c4e1843d"},"/docs/en/platform/biostar_x/how-to-guide-add-user-198":{"__comp":"17896441","content":"264fa07d"},"/docs/en/platform/biostar_x/how-to-guide-edit-user-2c5":{"__comp":"17896441","content":"0db07676"},"/docs/en/platform/biostar_x/how-to-guide-enroll-credential-47b":{"__comp":"17896441","content":"1a61e0bb"},"/docs/en/platform/biostar_x/manage-server-3b9":{"__comp":"17896441","content":"425e46b9"},"/docs/en/platform/biostar_x/system-requirements-726":{"__comp":"17896441","content":"ff083161"},"/docs/en/platform/biostar_x/tutorial-b0d":{"__comp":"17896441","content":"b450d2c0"},"/docs/en/platform/biostar_x/tutorial-add-device-3cb":{"__comp":"17896441","content":"1cc21783"},"/docs/en/platform/biostar_x/tutorial-custom-install-d4e":{"__comp":"17896441","content":"dd4ec03e"},"/docs/en/platform/biostar_x/tutorial-express-install-956":{"__comp":"17896441","content":"36281e77"},"/docs/en/platform/biostar_x/tutorial-login-1c2":{"__comp":"17896441","content":"41752823"},"/docs/en/platform/biostar_x/tutorial-register-license-key-a9b":{"__comp":"17896441","content":"854cb7eb"}}')
 
 }),
 

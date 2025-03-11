@@ -121,7 +121,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Credential"
-          }), " 섹션에서 사용자의 생체 인식 정보를 등록하세요."]
+          }), " 섹션에서 사용자의 크리덴셜을 등록하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
