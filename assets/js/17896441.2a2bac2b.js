@@ -449,7 +449,6 @@ function DocItemContent(param) {
     (0,react.useEffect)(()=>{
         if (location.hash) {
             const targetId = location.hash.substring(1);
-            w;
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
