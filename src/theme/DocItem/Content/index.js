@@ -33,7 +33,7 @@ export default function DocItemContent({children}) {
 
   useEffect(() => {
     if (location.hash) {
-      const targetId = location.hash.substring(1);w
+      const targetId = location.hash.substring(1);
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
