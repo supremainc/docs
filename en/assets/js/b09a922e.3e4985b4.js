@@ -118,14 +118,17 @@ function _createMdxContent(props) {
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "를 시작하기 전에 알아야 할 내용을 안내합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "는 32비트 운영 체제와 64비트 운영 체제를 지원합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "를 설치하려는 PC의 시스템 사양을 확인한 후 설치하세요."]
+    children: [(0,jsx_runtime.jsx)(_components.admonition, {
+      type: "tip",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "를 시작하기 전에 알아야 할 내용을 안내합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "는 32비트 운영 체제와 64비트 운영 체제를 지원합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "를 설치하려는 PC의 시스템 사양을 확인한 후 설치하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "before",
       children: "설치 전 참고 사항"

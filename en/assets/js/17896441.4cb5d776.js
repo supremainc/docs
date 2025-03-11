@@ -393,7 +393,10 @@ var Heading = __webpack_require__("6055");
 var MDXContent = __webpack_require__("4430");
 // EXTERNAL MODULE: ./src/theme/Admonition/index.js + 14 modules
 var Admonition = __webpack_require__("2475");
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__("6550");
 ;// CONCATENATED MODULE: ./src/theme/DocItem/Content/index.js
+
 
 
 
@@ -423,6 +426,23 @@ function DocItemContent(param) {
     let { children } = param;
     const { frontMatter } = (0,doc/* useDoc */.k)();
     const syntheticTitle = useSyntheticTitle();
+    const location = (0,react_router/* useLocation */.TH)();
+    (0,react.useEffect)(()=>{
+        if (location.hash) {
+            const targetId = location.hash.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const offset = 150; // 원하는 offset 값 (예: 네비게이션 높이)
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [
+        location.hash
+    ]);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
         className: (0,clsx/* default */.Z)(ThemeClassNames/* ThemeClassNames,docs,docMarkdown */.k.docs.docMarkdown, 'markdown'),
         children: [

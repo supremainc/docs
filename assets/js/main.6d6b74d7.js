@@ -21442,6 +21442,11 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 var routesChunkNames = __webpack_require__("7138");
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
 /* ESM default export */ const registry = ({
+    "0db07676": [
+        ()=>__webpack_require__.e(/* import() | 0db07676 */ "786").then(__webpack_require__.bind(__webpack_require__, 5365)),
+        "@site/docs/platform/biostar_x/how-to-guide-edit-user.mdx",
+        /*require.resolve*/(5365)
+    ],
     "11b43341": [
         ()=>__webpack_require__.e(/* import() | 11b43341 */ "467").then(__webpack_require__.t.bind(__webpack_require__, 9989, 19)),
         "@generated/docusaurus-plugin-content-docs/default/p/docs-7fc.json",
@@ -21477,10 +21482,10 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/change-port.mdx",
         /*require.resolve*/(6845)
     ],
-    "1fff5cb1": [
-        ()=>__webpack_require__.e(/* import() | 1fff5cb1 */ "291").then(__webpack_require__.bind(__webpack_require__, 1462)),
-        "@site/docs/platform/biostar_x/how-to-guide-user-add-group.mdx",
-        /*require.resolve*/(1462)
+    "264fa07d": [
+        ()=>__webpack_require__.e(/* import() | 264fa07d */ "441").then(__webpack_require__.bind(__webpack_require__, 1013)),
+        "@site/docs/platform/biostar_x/how-to-guide-add-user.mdx",
+        /*require.resolve*/(1013)
     ],
     "36281e77": [
         ()=>__webpack_require__.e(/* import() | 36281e77 */ "504").then(__webpack_require__.bind(__webpack_require__, 6759)),
@@ -21881,15 +21886,15 @@ function ComponentCreator(path, hash) {
     },
     {
         path: '/docs/',
-        component: ComponentCreator('/docs/', 'a88'),
+        component: ComponentCreator('/docs/', '4d0'),
         routes: [
             {
                 path: '/docs/',
-                component: ComponentCreator('/docs/', '2ef'),
+                component: ComponentCreator('/docs/', '04d'),
                 routes: [
                     {
                         path: '/docs/',
-                        component: ComponentCreator('/docs/', '247'),
+                        component: ComponentCreator('/docs/', '4d7'),
                         routes: [
                             {
                                 path: '/docs/legal/disclaimers',
@@ -21934,8 +21939,14 @@ function ComponentCreator(path, hash) {
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/how-to-guide-user-add-group',
-                                component: ComponentCreator('/docs/platform/biostar_x/how-to-guide-user-add-group', '218'),
+                                path: '/docs/platform/biostar_x/how-to-guide-add-user',
+                                component: ComponentCreator('/docs/platform/biostar_x/how-to-guide-add-user', '8e5'),
+                                exact: true,
+                                sidebar: "biostarx"
+                            },
+                            {
+                                path: '/docs/platform/biostar_x/how-to-guide-edit-user',
+                                component: ComponentCreator('/docs/platform/biostar_x/how-to-guide-edit-user', '504'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
@@ -22859,13 +22870,13 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar_x/index","docs":[{"id":"legal/disclaimers","path":"/docs/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/change-db","path":"/docs/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide","path":"/docs/platform/biostar_x/how-to-guide","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-user-add-group","path":"/docs/platform/biostar_x/how-to-guide-user-add-group","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar_x/","label":"개요"}},"legal":{"link":{"path":"/docs/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar_x/index","docs":[{"id":"legal/disclaimers","path":"/docs/legal/disclaimers","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/change-db","path":"/docs/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide","path":"/docs/platform/biostar_x/how-to-guide","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-add-user","path":"/docs/platform/biostar_x/how-to-guide-add-user","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-edit-user","path":"/docs/platform/biostar_x/how-to-guide-edit-user","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar_x/","label":"개요"}},"legal":{"link":{"path":"/docs/legal/disclaimers","label":"legal/disclaimers"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
-var site_metadata_namespaceObject = JSON.parse('{"docusaurusVersion":"3.7.0","siteVersion":"0.0.0","pluginVersions":{"docusaurus-plugin-content-docs":{"type":"package","name":"@docusaurus/plugin-content-docs","version":"3.7.0"},"docusaurus-plugin-content-pages":{"type":"package","name":"@docusaurus/plugin-content-pages","version":"3.7.0"},"docusaurus-plugin-sitemap":{"type":"package","name":"@docusaurus/plugin-sitemap","version":"3.7.0"},"docusaurus-plugin-svgr":{"type":"package","name":"@docusaurus/plugin-svgr","version":"3.7.0"},"docusaurus-theme-classic":{"type":"package","name":"@docusaurus/theme-classic","version":"3.7.0"},"docusaurus-theme-search-algolia":{"type":"package","name":"@docusaurus/theme-search-algolia","version":"3.7.0"},"suprema-plugin":{"type":"project"},"docusaurus-plugin-sass":{"type":"package","name":"docusaurus-plugin-sass","version":"0.2.6"},"docusaurus-plugin-image-zoom":{"type":"package","name":"plugin-image-zoom","version":"1.1.0"},"docusaurus-theme-github-codeblock":{"type":"package","name":"@saucelabs/theme-github-codeblock","version":"0.3.0"}}}')
+var site_metadata_namespaceObject = JSON.parse('{"docusaurusVersion":"3.7.0","siteVersion":"0.0.0","pluginVersions":{"docusaurus-plugin-content-docs":{"type":"package","name":"@docusaurus/plugin-content-docs","version":"3.7.0"},"docusaurus-plugin-content-pages":{"type":"package","name":"@docusaurus/plugin-content-pages","version":"3.7.0"},"docusaurus-plugin-sitemap":{"type":"package","name":"@docusaurus/plugin-sitemap","version":"3.7.0"},"docusaurus-plugin-svgr":{"type":"package","name":"@docusaurus/plugin-svgr","version":"3.7.0"},"docusaurus-theme-classic":{"type":"package","name":"@docusaurus/theme-classic","version":"3.7.0"},"docusaurus-theme-search-algolia":{"type":"package","name":"@docusaurus/theme-search-algolia","version":"3.7.0"},"docusaurus-plugin-sass":{"type":"package","name":"docusaurus-plugin-sass","version":"0.2.6"},"docusaurus-plugin-image-zoom":{"type":"package","name":"plugin-image-zoom","version":"1.1.0"},"docusaurus-theme-github-codeblock":{"type":"package","name":"@saucelabs/theme-github-codeblock","version":"0.3.0"}}}')
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/docusaurusContext.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -30097,10 +30108,6 @@ __webpack_require__.d(__webpack_exports__, {
   ],
   "plugins": [
     [
-      "./src/plugins/suprema",
-      {}
-    ],
-    [
       "docusaurus-plugin-sass",
       {}
     ],
@@ -34094,7 +34101,7 @@ module.exports = JSON.parse('{"theme.AnnouncementBar.closeButtonAriaLabel":"닫�
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/search-320":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-a88":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-2ef":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-247":{"__comp":"a94703ab"},"/docs/legal/disclaimers-d3b":{"__comp":"17896441","content":"1814c8c4"},"/docs/legal/open-source-licenses-127":{"__comp":"17896441","content":"f813c43e"},"/docs/platform/biostar_x/-bf5":{"__comp":"17896441","content":"e2ca401e"},"/docs/platform/biostar_x/change-db-c3d":{"__comp":"17896441","content":"1371bad0"},"/docs/platform/biostar_x/change-port-48d":{"__comp":"17896441","content":"1fa8891f"},"/docs/platform/biostar_x/getting-started-5d4":{"__comp":"17896441","content":"b09a922e"},"/docs/platform/biostar_x/how-to-guide-a01":{"__comp":"17896441","content":"c4e1843d"},"/docs/platform/biostar_x/how-to-guide-user-add-group-218":{"__comp":"17896441","content":"1fff5cb1"},"/docs/platform/biostar_x/manage-server-2f5":{"__comp":"17896441","content":"425e46b9"},"/docs/platform/biostar_x/system-requirements-65e":{"__comp":"17896441","content":"ff083161"},"/docs/platform/biostar_x/tutorial-c20":{"__comp":"17896441","content":"b450d2c0"},"/docs/platform/biostar_x/tutorial-add-device-e96":{"__comp":"17896441","content":"1cc21783"},"/docs/platform/biostar_x/tutorial-custom-install-caa":{"__comp":"17896441","content":"dd4ec03e"},"/docs/platform/biostar_x/tutorial-express-install-757":{"__comp":"17896441","content":"36281e77"},"/docs/platform/biostar_x/tutorial-login-5c9":{"__comp":"17896441","content":"41752823"},"/docs/platform/biostar_x/tutorial-register-license-key-dcf":{"__comp":"17896441","content":"854cb7eb"}}')
+module.exports = JSON.parse('{"/docs/search-320":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-4d0":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-04d":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-4d7":{"__comp":"a94703ab"},"/docs/legal/disclaimers-d3b":{"__comp":"17896441","content":"1814c8c4"},"/docs/legal/open-source-licenses-127":{"__comp":"17896441","content":"f813c43e"},"/docs/platform/biostar_x/-bf5":{"__comp":"17896441","content":"e2ca401e"},"/docs/platform/biostar_x/change-db-c3d":{"__comp":"17896441","content":"1371bad0"},"/docs/platform/biostar_x/change-port-48d":{"__comp":"17896441","content":"1fa8891f"},"/docs/platform/biostar_x/getting-started-5d4":{"__comp":"17896441","content":"b09a922e"},"/docs/platform/biostar_x/how-to-guide-a01":{"__comp":"17896441","content":"c4e1843d"},"/docs/platform/biostar_x/how-to-guide-add-user-8e5":{"__comp":"17896441","content":"264fa07d"},"/docs/platform/biostar_x/how-to-guide-edit-user-504":{"__comp":"17896441","content":"0db07676"},"/docs/platform/biostar_x/manage-server-2f5":{"__comp":"17896441","content":"425e46b9"},"/docs/platform/biostar_x/system-requirements-65e":{"__comp":"17896441","content":"ff083161"},"/docs/platform/biostar_x/tutorial-c20":{"__comp":"17896441","content":"b450d2c0"},"/docs/platform/biostar_x/tutorial-add-device-e96":{"__comp":"17896441","content":"1cc21783"},"/docs/platform/biostar_x/tutorial-custom-install-caa":{"__comp":"17896441","content":"dd4ec03e"},"/docs/platform/biostar_x/tutorial-express-install-757":{"__comp":"17896441","content":"36281e77"},"/docs/platform/biostar_x/tutorial-login-5c9":{"__comp":"17896441","content":"41752823"},"/docs/platform/biostar_x/tutorial-register-license-key-dcf":{"__comp":"17896441","content":"854cb7eb"}}')
 
 }),
 
