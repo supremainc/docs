@@ -37,7 +37,7 @@ export default function DocItemContent({children}) {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        const offset = 150; // 원하는 offset 값 (예: 네비게이션 높이)
+        const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
         const targetPosition =
           targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
