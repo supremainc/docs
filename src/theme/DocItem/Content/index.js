@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import Admonition from '@theme/Admonition';
+import { useLocation } from '@docusaurus/router';
+
 /**
  Title can be declared inside md content or declared through
  front matter and added manually. To make both cases consistent,
@@ -27,6 +29,27 @@ function useSyntheticTitle() {
 export default function DocItemContent({children}) {
   const { frontMatter } = useDoc();
   const syntheticTitle = useSyntheticTitle();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offset = 150; // 원하는 offset 값 (예: 네비게이션 높이)
+        const targetPosition =
+          targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [location.hash]);
+
+
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (

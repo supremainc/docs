@@ -66,7 +66,8 @@ const sidebars = {
               type: 'category',
               label: '사용자 관리',
               items: [
-                'platform/biostar_x/how-to-guide-user-add-group',
+                'platform/biostar_x/how-to-guide-add-user',
+                'platform/biostar_x/how-to-guide-edit-user',
               ]
             }
           ]
