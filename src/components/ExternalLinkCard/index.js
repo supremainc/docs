@@ -8,16 +8,19 @@ import {translate} from '@docusaurus/Translate';
 function CardItem({Svg, img, title, url, height, desc}) {
   return (
     <div className={styles.cardItem}>
-      <Link to={url} target='_blank'>
+      <Link to={url} target={(url.includes('biostar_x'))? '_self' : '_blank'}>
         <div className={styles.flex}>
-          <div className={styles.logo}>
+          <div className={(title !== '')? clsx(styles.logo) : clsx(styles.logo, styles.center)}>
             {(Svg) && <Svg role="img" height={height} />}
             {(img) && <img src={img} width='auto' height={height} />}
           </div>
-          <div className={styles.title}>
-            <h3>{title}</h3>
-            {(desc) && <p className={styles.desc} dangerouslySetInnerHTML={{__html: desc}} />}
-          </div>
+          {
+            (title) &&
+            <div className={styles.title}>
+              <h3>{title}</h3>
+              {(desc) && <p className={styles.desc} dangerouslySetInnerHTML={{__html: desc}} />}
+            </div>
+          }
         </div>
       </Link>
     </div>
@@ -28,10 +31,10 @@ export function ExternalLinkCard() {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const externalLinks = [
     {
-      title: 'BioStar X',
+      title: '',
       url: './platform/biostar_x',
-      Svg: require('@site/static/img/biostar-x-logo.svg').default,
-      height: '45px'
+      Svg: require('@site/static/img/logo-biostar-x.svg').default,
+      height: '47px',
     },
     {
       title: 'Knowledge Center',

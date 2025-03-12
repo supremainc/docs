@@ -57,6 +57,9 @@
   align-content: center;
   height: 45px;
 }
+.center {
+  margin: 0 auto;
+}
 
 .product.grid .cardItem .logo {
   height: 150px;
