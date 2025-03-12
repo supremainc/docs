@@ -42,7 +42,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "사용자 추가하기",
+  "value": "사용자 추가",
   "id": "add-user",
   "level": 2
 }, {
@@ -81,7 +81,7 @@ function _createMdxContent(props) {
       children: "새로운 사용자를 추가하는 방법을 안내합니다. 사용자의 사진 및 이름, 이메일, 전화번호 등과 같은 정보를 입력하고 사용자의 출입 권한 및 생체 정보를 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "add-user",
-      children: "사용자 추가하기"
+      children: "사용자 추가"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

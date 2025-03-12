@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-enroll-credential-mdx-1a6.json
-var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/how-to-guide-edit-user"}}')
+var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/en/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-edit-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -41,47 +41,72 @@ const assets = {
 
 
 const toc = [{
-  "value": "지문 등록하기",
+  "value": "지문 등록",
   "id": "enroll-fingerprint",
   "level": 2
 }, {
-  "value": "얼굴 등록하기",
+  "value": "얼굴 등록",
   "id": "enroll-face",
   "level": 2
 }, {
-  "value": "비주얼 페이스 등록하기",
-  "id": "비주얼-페이스-등록하기",
+  "value": "비주얼 페이스 등록",
+  "id": "비주얼-페이스-등록",
   "level": 2
 }, {
-  "value": "카드 등록하기",
-  "id": "카드-등록하기",
+  "value": "출입 카드 등록",
+  "id": "출입-카드-등록",
   "level": 2
 }, {
-  "value": "모바일 등록하기",
-  "id": "모바일-등록하기",
+  "value": "CSN 카드",
+  "id": "csn-카드",
+  "level": 3
+}, {
+  "value": "Wiegand 카드",
+  "id": "wiegand-카드",
+  "level": 3
+}, {
+  "value": "Smart Card",
+  "id": "smart-card",
+  "level": 3
+}, {
+  "value": "Read Card",
+  "id": "read-card",
+  "level": 3
+}, {
+  "value": "모바일 등록",
+  "id": "모바일-등록",
   "level": 2
 }, {
-  "value": "QR/Barcode 등록하기",
-  "id": "qrbarcode-등록하기",
+  "value": "QR/Barcode 등록",
+  "id": "qrbarcode-등록",
   "level": 2
 }, {
-  "value": "Passcode 등록하기",
-  "id": "passcode-등록하기",
+  "value": "Passcode 등록",
+  "id": "passcode-등록",
   "level": 2
 }, {
-  "value": "Access PIN 등록하기",
-  "id": "access-pin-등록하기",
+  "value": "Access PIN 등록",
+  "id": "access-pin-등록",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     blockquote: "blockquote",
     h2: "h2",
+    h3: "h3",
     img: "img",
     li: "li",
+    ol: "ol",
     p: "p",
     strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -131,7 +156,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-fingerprint",
-      children: "지문 등록하기"
+      children: "지문 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "지문 인증을 지원하는 장치를 통해 사용자의 지문 정보를 등록할 수 있습니다. 지문은 지문 스캐너가 설치된 장치에서 스캔할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -178,7 +203,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["지문은 최대 10개까지 등록할 수 있습니다. 원하는 번호 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["지문은 최대 10개까지 등록할 수 있습니다. 각 번호에 한 개의 지문을 등록할 수 있습니다. 원하는 번호를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Scan Fingerprint"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -241,7 +266,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-face",
-      children: "얼굴 등록하기"
+      children: "얼굴 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "얼굴 인증을 지원하는 장치를 통해 사용자의 얼굴 정보를 등록할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -333,8 +358,8 @@ function _createMdxContent(props) {
         children: "얼굴 인증률이 낮다면 얼굴 정보를 삭제하고 새로운 얼굴 정보를 등록하세요"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "비주얼-페이스-등록하기",
-      children: "비주얼 페이스 등록하기"
+      id: "비주얼-페이스-등록",
+      children: "비주얼 페이스 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "비주얼 페이스(Visual Face)는 사용자의 얼굴을 비주얼 카메라로 촬영한 인증 수단입니다. 적외선 카메라로 촬영한 얼굴 정보와 구분되며, 비주얼 페이스를 지원하는 장치에서만 사용할 수 있습니다. 비주얼 페이스는 사용자의 모바일 기기에서 비대면으로 등록할 수도 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -439,38 +464,333 @@ function _createMdxContent(props) {
           }), ": 스캔한 비주얼 페이스를 프로필 이미지로 사용하려면 옵션을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Use as Profile Image"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Delete"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Delete"
+          }), ": 등록한 비주얼 페이스를 삭제할 수 있습니다. 삭제하려는 순번 버튼을 선택하고 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "비주얼 페이스를 사용할 수 있는 장치는 아래와 같습니다."
-      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "FaceStation F2, BioStation 3, BioEntry W3"
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "비주얼 페이스를 사용할 수 있는 장치는 아래와 같습니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "FaceStation F2, BioStation 3, BioEntry W3"
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "비주얼 페이스를 다른 방식으로 불러오거나 모바일 기기 또는 웹캠으로 등록할 수 있습니다. 자세한 내용은 다음 문서를 참고하세요."
+          }), "\n"]
         }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "출입-카드-등록",
+      children: "출입 카드 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자에게 출입 카드를 할당할 수 있습니다. 장치가 지원하는 카드 종류는 장치의 매뉴얼을 참고하세요."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "USB 에이전트를 이용한 카드 등록"
+        })
+      }), (0,jsx_runtime.jsx)("div", {
+        className: "table-fixed",
+        children: (0,jsx_runtime.jsxs)(_components.table, {
+          children: [(0,jsx_runtime.jsx)(_components.thead, {
+            children: (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.th, {
+                children: "카드 종류"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "CSN"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Wiegand"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "스마트 카드"
+              })]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.tbody, {
+            children: [(0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "EM"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "MIFARE"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "✅"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "✅"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "DESFire"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "✅"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "✅"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "FeliCa"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "✅"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "HID Prox"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: "HID iCLASS"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "❌"
+              })]
+            })]
+          })]
+        })
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "csn-카드",
+      children: "CSN 카드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Type"
+          }), " 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "CSN"
+          }), "을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Registration Option"
+          }), " 항목에서 원하는 카드 등록 방식을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Register by Card Reader"
+              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Device"
+              }), " 목록에서 카드를 스캔할 장치를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Read Card"
+              }), " 버튼을 클릭하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Assign Card"
+              }), ": 목록에서 사용자에게 할당하려는 카드를 선택하세요. 입력 필드를 통해 검색할 수도 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Enter Manually"
+              }), ": 카드 번호를 직접 입력하거나 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Use User ID"
+              }), " 버튼을 클릭하세요."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "wiegand-카드",
+      children: "Wiegand 카드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Type"
+          }), " 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Wiegand"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Data Format"
+          }), " 항목에서 카드 데이터 형식을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Registration Option"
+          }), " 항목에서 원하는 카드 등록 방식을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Register by Card Reader"
+              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Device"
+              }), " 목록에서 카드를 스캔할 장치를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Read Card"
+              }), " 버튼을 클릭하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Assign Card"
+              }), ": 목록에서 사용자에게 할당하려는 카드를 선택하세요. 입력 필드를 통해 검색할 수도 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Enter Manually"
+              }), ": 식별 코드(Facility Code)와 카드 ID를 직접 입력하세요."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: "Card Data Format"
+        }), " 항목에 원하는 카드 데이터 형식이 없다면 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#",
+          children: "다음 문서"
+        }), "를 참조하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "smart-card",
+      children: "Smart Card"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "read-card",
+      children: "Read Card"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "카드-등록하기",
-      children: "카드 등록하기"
+      id: "모바일-등록",
+      children: "모바일 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "모바일-등록하기",
-      children: "모바일 등록하기"
+      id: "qrbarcode-등록",
+      children: "QR/Barcode 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "qrbarcode-등록하기",
-      children: "QR/Barcode 등록하기"
+      id: "passcode-등록",
+      children: "Passcode 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "passcode-등록하기",
-      children: "Passcode 등록하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "access-pin-등록하기",
-      children: "Access PIN 등록하기"
+      id: "access-pin-등록",
+      children: "Access PIN 등록"
     })]
   });
 }
