@@ -48,9 +48,8 @@
 }
 
 .product.grid .cardItem:hover {
-  border: 3px solid var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary-darkest);
   border-radius: 10px;
-  background-color: ;
 }
 
 .logo {
