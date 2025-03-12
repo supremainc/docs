@@ -46,11 +46,11 @@ const toc = [{
   "level": 2
 }, {
   "value": "얼굴 등록하기",
-  "id": "얼굴-등록하기",
+  "id": "enroll-face",
   "level": 2
 }, {
-  "value": "Visual 페이스 등록하기",
-  "id": "visual-페이스-등록하기",
+  "value": "비주얼 페이스 등록하기",
+  "id": "비주얼-페이스-등록하기",
   "level": 2
 }, {
   "value": "카드 등록하기",
@@ -76,6 +76,7 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
+    blockquote: "blockquote",
     h2: "h2",
     img: "img",
     li: "li",
@@ -95,7 +96,7 @@ function _createMdxContent(props) {
         children: "Launcher"
       }), " > ", (0,jsx_runtime.jsx)(Cmd, {
         children: "User"
-      }), " 페이지로 이동해, 아래 두 가지 방식으로 크리덴션을 등록할 수 있습니다."]
+      }), " 페이지로 이동해, 아래 두 가지 방식으로 크리덴션을 등록하거나 추가, 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -121,6 +122,13 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsx)(_components.p, {
         children: "사용자의 신원을 확인하기 위한 데이터입니다. 일반적으로 디지털 서명, 스마트카드, 바이오 정보, 사용자 이름과 비밀번호 등이 있습니다."
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: "1:1 Security Level"
+        }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을 수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-fingerprint",
       children: "지문 등록하기"
@@ -130,7 +138,7 @@ function _createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "지문을 스캔하기 전에..."
+          children: "지문을 등록하기 전에..."
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -229,22 +237,225 @@ function _createMdxContent(props) {
               height: "98"
             })
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["지문을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "1:1 Security Level"
-            }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을 수록 지문 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
-          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "얼굴-등록하기",
+      id: "enroll-face",
       children: "얼굴 등록하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "얼굴 인증을 지원하는 장치를 통해 사용자의 얼굴 정보를 등록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "얼굴을 등록하기 전에..."
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "얼굴을 등록할 때 장치와 얼굴의 거리를 40 ~ 80cm로 유지하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "표정이 변하지 않도록 주의하세요. (웃는 얼굴, 찡그린 얼굴, 윙크 등)"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치 화면의 지시에 따르지 않으면 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "눈이나 눈썹이 가려지지 않도록 주의하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "모자, 마스크, 선글라스, 안대를 착용하지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "안경을 착용한 사용자는 안경 착용 전/후 얼굴을 모두 등록할 것을 권장합니다."
+          }), "\n"]
+        }), "\n"]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: "Credential"
+      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Face"
+      }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요. 얼굴 등록 창이 나타나면 각 항목을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Enroll"
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enrollment Device"
+          }), ": 얼굴을 등록할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Face Pose Variation"
+          }), ": 얼굴을 등록할 때 얼굴의 위치, 각도, 거리에 대한 민감도를 설정할 수 있습니다. 정밀한 얼굴 템플릿을 얻으려면 높은 값으로 설정하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Add"
+          }), ": 얼굴을 추가하려면 버튼을 클릭하세요. 최대 5개의 얼굴을 추가할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Scan Face"
+          }), ": 얼굴을 스캔하려면 버튼을 클릭하세요. 버튼을 클릭하고 장치 화면의 지시에 따라 얼굴을 스캔하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Use as Profile Image"
+          }), ": 스캔한 얼굴을 프로필 이미지로 사용하려면 옵션을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Clear"
+          }), ": 등록한 얼굴을 삭제할 수 있습니다. 삭제하려는 순번 버튼을 선택하고 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "얼굴 인증률이 낮다면 얼굴 정보를 삭제하고 새로운 얼굴 정보를 등록하세요"
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "visual-페이스-등록하기",
-      children: "Visual 페이스 등록하기"
+      id: "비주얼-페이스-등록하기",
+      children: "비주얼 페이스 등록하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "비주얼 페이스(Visual Face)는 사용자의 얼굴을 비주얼 카메라로 촬영한 인증 수단입니다. 적외선 카메라로 촬영한 얼굴 정보와 구분되며, 비주얼 페이스를 지원하는 장치에서만 사용할 수 있습니다. 비주얼 페이스는 사용자의 모바일 기기에서 비대면으로 등록할 수도 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "비주얼 페이스를 등록하기 전에..."
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치로 등록할 때 장치와 얼굴의 거리는 60 ~ 100cm로 유지하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치로 등록할 때 움직이지 말고 정면으로 서서 얼굴을 등록하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치 또는 모바일 기기로 등록할 때 화면의 지시에 따르지 않으면 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "표정이 변하지 않도록 주의하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "마스크, 모자, 안대를 착용하지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "고개를 들거나 숙이지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "진한 화장을 하지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "눈을 감지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "양쪽 어깨가 모두 나타나도록 하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "두 명의 얼굴이 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
+          }), "\n"]
+        }), "\n"]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: "Credential"
+      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Visual Face"
+      }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요. 비주얼 페이스 등록 창이 나타나면 각 항목을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Enroll"
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enrollment Device"
+          }), ": 비주얼 페이스를 등록할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Add"
+          }), ": 비주얼 페이스를 추가하려면 버튼을 클릭하세요. 최대 2개의 비주얼 페이스를 추가할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Scan"
+          }), ": 비주얼 페이스를 스캔하려면 버튼을 클릭하세요. 버튼을 클릭하고 장치 화면의 지시에 따라 비주얼 페이스를 스캔하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Upload Image"
+          }), ": 비주얼 페이스로 사용할 이미지를 업로드할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "지원하는 이미지 파일의 크기는 최대 10Mb입니다."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "지원하는 이미지 파일은 JPG, JPEG, PNG 형식입니다."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Use as Profile Image"
+          }), ": 스캔한 비주얼 페이스를 프로필 이미지로 사용하려면 옵션을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Use as Profile Image"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Delete"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "비주얼 페이스를 사용할 수 있는 장치는 아래와 같습니다."
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "FaceStation F2, BioStation 3, BioEntry W3"
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "카드-등록하기",
       children: "카드 등록하기"

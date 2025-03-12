@@ -174,6 +174,12 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "1:1 Security Level"
+            }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을 수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["크리덴셜 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "how-to-guide-enroll-credential",
               children: "다음 문서"
