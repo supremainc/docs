@@ -50,43 +50,59 @@ const toc = [{
   "level": 2
 }, {
   "value": "비주얼 페이스 등록",
-  "id": "비주얼-페이스-등록",
+  "id": "enroll-visualface",
   "level": 2
 }, {
   "value": "출입 카드 등록",
-  "id": "출입-카드-등록",
+  "id": "enroll-card",
   "level": 2
 }, {
   "value": "CSN 카드",
-  "id": "csn-카드",
+  "id": "csncard",
   "level": 3
 }, {
   "value": "Wiegand 카드",
-  "id": "wiegand-카드",
+  "id": "wiegandcard",
   "level": 3
 }, {
-  "value": "Smart Card",
-  "id": "smart-card",
+  "value": "스마트 카드",
+  "id": "smardcard",
   "level": 3
 }, {
   "value": "Read Card",
-  "id": "read-card",
+  "id": "readcard",
   "level": 3
 }, {
   "value": "모바일 등록",
-  "id": "모바일-등록",
+  "id": "enroll-mobile",
   "level": 2
+}, {
+  "value": "템플릿 온 모바일",
+  "id": "template-on-mobile",
+  "level": 3
+}, {
+  "value": "CSN 모바일 카드",
+  "id": "csn-모바일-카드",
+  "level": 3
 }, {
   "value": "QR/Barcode 등록",
-  "id": "qrbarcode-등록",
+  "id": "enroll-qrbarcode",
   "level": 2
 }, {
+  "value": "BioStar 2 QR",
+  "id": "biostarxqr",
+  "level": 3
+}, {
+  "value": "QR/Barcode",
+  "id": "qrbarcode",
+  "level": 3
+}, {
   "value": "Passcode 등록",
-  "id": "passcode-등록",
+  "id": "enroll-passcode",
   "level": 2
 }, {
   "value": "Access PIN 등록",
-  "id": "access-pin-등록",
+  "id": "enroll-accesspin",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -358,7 +374,7 @@ function _createMdxContent(props) {
         children: "얼굴 인증률이 낮다면 얼굴 정보를 삭제하고 새로운 얼굴 정보를 등록하세요"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "비주얼-페이스-등록",
+      id: "enroll-visualface",
       children: "비주얼 페이스 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "비주얼 페이스(Visual Face)는 사용자의 얼굴을 비주얼 카메라로 촬영한 인증 수단입니다. 적외선 카메라로 촬영한 얼굴 정보와 구분되며, 비주얼 페이스를 지원하는 장치에서만 사용할 수 있습니다. 비주얼 페이스는 사용자의 모바일 기기에서 비대면으로 등록할 수도 있습니다."
@@ -488,7 +504,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입-카드-등록",
+      id: "enroll-card",
       children: "출입 카드 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자에게 출입 카드를 할당할 수 있습니다. 장치가 지원하는 카드 종류는 장치의 매뉴얼을 참고하세요."
@@ -642,7 +658,7 @@ function _createMdxContent(props) {
         })
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "csn-카드",
+      id: "csncard",
       children: "CSN 카드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -701,7 +717,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "wiegand-카드",
+      id: "wiegandcard",
       children: "Wiegand 카드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -771,25 +787,616 @@ function _createMdxContent(props) {
         }), " 항목에 원하는 카드 데이터 형식이 없다면 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#",
           children: "다음 문서"
-        }), "를 참조하세요."]
+        }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "smart-card",
-      children: "Smart Card"
+      id: "smardcard",
+      children: "스마트 카드"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "액세스 온 카드 또는 보안 크리덴셜 카드, 커스텀 스마트 카드를 등록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Type"
+          }), " 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Smart Card"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), " 항목에서 카드를 등록할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치를 선택하면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Layout Format"
+          }), " 항목에 설정된 카드 레이아웃 형식이 표시됩니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Smart Card Type"
+          }), "에서 원하는 카드 종류를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Secure Credential Card"
+              }), ": 사용자의 정보(카드 ID, PIN, 출입 그룹, 기간, 지문 템플릿, 얼굴 템플릿, 개인 인증 모드)를 카드에 저장할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Access on Card"
+              }), ": 사용자의 정보(카드 ID, PIN, 지문 템플릿, 얼굴 템플릿)를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "BioStar X"
+              }), "에 저장된 사용자 정보를 사용하려면 서버 매칭 옵션이 활성화되어 있어야 합니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                children: "Custom Smart Card"
+              }), ": 타사에서 발급한 스마트 카드를 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Read Card"
+              }), " 버튼을 클릭해 카드 ID를 등록하세요."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Write Smart Card"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["스마트 카드에 저장하는 사용자 정보는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에 저장된 정보를 사용합니다. 만약 변경한 사용자 정보를 저장하지 않으면, 스마트 카드에 잘못된 사용자 정보를 저장할 수 있습니다. 또한, 변경한 사용자 정보를 장치와 동기화하지 않으면 장치가 인증을 수행하지 못할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치에 스마트 카드 레이아웃을 설정하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Secure Credential Card"
+            }), "는 카드 ID를 직접 설정할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Custom Smart Card"
+            }), "를 사용할 수 있는 장치와 펌웨어 버전은 아래 목록을 참고하세요."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "XPass D2 펌웨어 1.7.1 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioEntry P2 펌웨어 1.5.1 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioEntry W2 펌웨어 1.8.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStation 2a 펌웨어 1.1.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "X-Station 2 펌웨어 1.3.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStation 3 펌웨어 1.3.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioEntry W3 펌웨어 1.0.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioLite N2 펌웨어 1.6.2 이상"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["새로운 스마트 카드 레이아웃을 설정하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["스마트 카드를 포맷하여 정보를 다시 기록하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "read-card",
+      id: "readcard",
       children: "Read Card"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "스마트 카드를 포맷하고 정보를 다시 기록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Card Type"
+          }), " 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Read Card"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), " 항목에서 카드를 등록할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Smart Card Type"
+          }), "을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Read Card"
+          }), " 버튼을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 정보를 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Format Card"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Device"
+            }), " 항목의 장치 목록은 스마트 카드 레이아웃이 설정되어야 표시되며, 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드는 포맷할 수 없습니다."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "모바일-등록",
+      id: "enroll-mobile",
       children: "모바일 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "슈프리마의 에어팝 포탈(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다. 모바일 출입 카드는 각 사용자가 개별 등록하거나 CSV 불러오기 기능을 이용해 다수의 사용자를 한 번에 등록할 수도 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "에어팝 포탈에서 설정한 모바일 출입 카드 발송 방법에 따라 사용자의 이메일 또는 전화번호를 입력해야 합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "CSN Mobile 카드"
+            }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "템플릿 온 모바일"
+            }), " 중 하나만 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["에어팝 포탈 및 모바일 출입 카드 사용에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "template-on-mobile",
+      children: "템플릿 온 모바일"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "템플릿 온 모바일"
+      }), "은 사용자의 바이오 메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버, 에어팝 포탈(Airfob Portal)과 장치에 사용자 데이터를 저장하지 않고도 바이오 메트릭으로 인증할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["이 기능은 바이오 메트릭을 크리덴셜로 사용하고 싶으나 개인정보 보호로 인해 서버 및 장치에 생체 정보를 저장할 수 없는 환경에서 유용하게 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "템플릿 온 모바일"
+      }), "의 발급과 바이오 메트릭 템플릿 등록 과정이 따로 진행되기 때문에, 사용자는 관리자와 대면하지 않고도 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "템플릿 온 모바일"
+      }), " 지원 장치에서 직접 비주얼 페이스를 등록할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Mobile"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "모바일 등록 창이 나타나면 Card Type에서 Template on Mobile을 선택하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Smart Card Type에서 원하는 카드 종류를 선택하세요."
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "Access On Card: 사용자의 정보(카드 ID, PIN, 출입 그룹, 기간, 개인 인증 모드)를 카드에 저장할 수 있습니다."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "UID:"
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Card Information 섹션의 각 항목을 설정하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Information 섹션에서 원하는 옵션을 활성화하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["등록한 사용자의 메일 주로로 발급 메일을 발송합니다. 메일의 링크를 통해 에어팝 패스(Airfob Pass) 애플리케이션을 설치하고, 모바일 기기에 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "템플릿 온 모바일"
+      }), " 발급을 완료해야 사용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "tip",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "템플릿 온 모바일 인증 방법"
+        })
+      }), (0,jsx_runtime.jsx)(_components.p, {
+        children: "사용자는 템플릿 온 모바일을 발급받은 모바일 기기를 장치에 태그하고, 화면의 안내에 따라 얼굴을 인증하세요."
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "유효기간은 다이나믹 사이트를 사용할 때 활성화됩니다. 사용자의 모바일 출입 카드의 만료 기간 및 사용 기간을 설정할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Information 섹션의 사진, 부서, 직함 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "템플릿 온 모바일"
+            }), "을 사용할 수 있는 장치와 펌웨어 버전은 아래 목록을 참고하세요."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStation 3 펌웨어 1.2.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioEntry W3 펌웨어 1.0.0 이상"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "CSN Mobile 카드"
+            }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "템플릿 온 모바일"
+            }), " 중 하나만 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "템플릿 온 모바일"
+            }), "은 사용자당 하나만 발급할 수 있습니다."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "csn-모바일-카드",
+      children: "CSN 모바일 카드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Mobile"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "모바일 등록 창이 나타나면 Card Type에서 CSN Mobile을 선택하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Smart Card Type에서 원하는 카드 종류를 선택하세요."
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "Access On Card: 사용자의 정보(카드 ID, PIN, 출입 그룹, 기간, 개인 인증 모드)를 카드에 저장할 수 있습니다."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "UID:"
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Card Information 섹션의 각 항목을 설정하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Information 섹션에서 원하는 옵션을 활성화하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "유효기간은 다이나믹 사이트를 사용할 때 활성화됩니다. 사용자의 모바일 출입 카드의 만료 기간 및 사용 기간을 설정할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Information 섹션의 사진, 부서, 직함 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["이메일 또는 텍스트 메시지를 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제했다면, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "재전송"
+            }), " 버튼을 클릭하고 활성화 코드를 다시 발급할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["CSN Mobile 애플리케이션에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://www.csn.edu/csn-mobile-apps",
+              children: "다음 링크"
+            }), "를 참조하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "qrbarcode-등록",
+      id: "enroll-qrbarcode",
       children: "QR/Barcode 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "QR 코드 또는 바코드를 사용자 인증 수단으로 사용할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "QR/Barcode 인증을 사용할 수 있는 스캐너를 포함하는 장치는 아래를 참고하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "X-Station 2 (XS2-QDPB, XS2-QAPB)"
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "QR/Barcode 인증을 사용할 수 있는 카메라를 포함하는 장치는 아래 목록을 참고하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) 펌웨어 1.2.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStation 3 (BS3-DB, BS3-APWB) 펌웨어 1.1.0 이상"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["카메라로 QR/Barcode 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "#",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "biostarxqr",
+      children: "BioStar 2 QR"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에서 암호화된 PIN을 포함한 QR 코드를 사용자에게 발급할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "QR/Barcode"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["QR/바코드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "QR/Barcode Type"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "BioSar 2 QR"
+          }), "을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["카드 ID를 직접 입력하거나 카드 ID를 자동 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Use Random ID"
+          }), " 옵션을 활성화하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자에게 발급한 QR 코드를 사용자 정보에 등록된 이메일 주소로 전송합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["중복된 카드 ID 생성을 방지하기 위해 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Input Type"
+            }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Use Random ID"
+            }), " 옵션을 활성화하기를 권장합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar 2 QR"
+            }), "을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar 2 QR"
+            }), "을 발급하려면 반드시 사용자 정보에 이메일 주소를 등록해야 합니다."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "qrbarcode",
+      children: "QR/Barcode"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "외부의 기타 발급처에서 발급된 QR/바코드를 사용자에게 등록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "QR/Barcode"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["QR/바코드 등록 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "QR/Barcode Type"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "QR/Barcode"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "카드 ID를 입력하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "카드 ID는 영문, 숫자, 특수 기호를 포함하여 최대 32자까지 입력할 수 있습니다."
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "passcode-등록",
+      id: "enroll-passcode",
       children: "Passcode 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자가 장치에 비밀번호를 입력해 출입할 수 있도록 비밀번호를 할당할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Passcode"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Passcode 등록 창이 나타나면 Passcode를 입력하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Confirm Passcode 항목에 한번 더 Passcode를 입력하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["CSV 불러오기 기능을 이용해 다수의 사용자 PIN을 한 번에 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "access-pin-등록",
+      id: "enroll-accesspin",
       children: "Access PIN 등록"
     })]
   });
