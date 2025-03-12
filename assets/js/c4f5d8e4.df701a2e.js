@@ -374,7 +374,7 @@ function ExternalLinkCard() {
     const externalLinks = [
         {
             title: 'BioStar X',
-            url: './platform/biostar2',
+            url: './platform/biostar_x',
             Svg: (__webpack_require__(4208)/* ["default"] */.Z),
             height: '45px'
         },
