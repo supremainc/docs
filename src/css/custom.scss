@@ -317,7 +317,6 @@ footer {
     --ifm-alert-background-color: #F5F7F9;
     a {
       color: var(--ifm-color-primary-light);
-      text-decoration: underline dotted;
     }
   }
   .alert--secondary {
@@ -390,6 +389,11 @@ footer {
         margin-left: 0;
       }
     }
+  }
+
+  a {
+    color: var(--ifm-color-primary-light);
+    text-decoration: underline dotted;
   }
 
   span.cmd {
