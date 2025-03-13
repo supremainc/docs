@@ -16,8 +16,14 @@ import Columns from '@site/src/components/Columns';
 import Column from '@site/src/components/Column';
 import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
+import { NextStep, NextItem } from '@site/src/components/NextStep';
+// icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
+import IcClose from '@site/static/img/menus/ico-close.svg';
+import IcCamera from '@site/static/img/menus/ico-camera.svg';
+import IcUpload from '@site/static/img/menus/ico-upload.svg';
+import IcTrash from '@site/static/img/menus/ico-trash.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -44,6 +50,12 @@ export default {
     Row,
     Td,
     Start,
+    NextStep,
+    NextItem,
     IcLicense,
-    IcAdd
+    IcAdd,
+    IcClose,
+    IcCamera,
+    IcUpload,
+    IcTrash
 }

@@ -1,0 +1,43 @@
+.nextStep {
+  margin-top: 3rem;
+}
+
+.nextStepTitle {
+  font-weight: 600;
+}
+
+.nextStepContent {
+  display: block;
+  border: 1px solid var(--ifm-color-border);
+  padding: 1rem;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.nextStepContent p::after {
+  content: "→";
+  float: right;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  color: var(--ifm-color-border);
+}
+
+.nextStepContent + .nextStepContent {
+  border-top: none
+}
+
+.nextStepContent:hover {
+  background-color: var(--ifm-color-nextstep-background);
+}
+
+.nextStepContent:hover p::after {
+  color: var(--ifm-color-color-gray);
+}
+
+.nextStepContent p {
+  margin: 0;
+  color: var(--ifm-color-content);
+}

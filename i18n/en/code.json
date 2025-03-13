@@ -319,6 +319,10 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
+  "theme.docs.nextStep": {
+    "message": "Next step",
+    "description": "The label for the next step section"
+  },
   "index.search": {
     "message": "Search"
   },

@@ -319,6 +319,10 @@
     "message": "태그",
     "description": "The title of the tag list page"
   },
+  "theme.docs.nextStep": {
+    "message": "다음 단계",
+    "description": "The label for the next step section"
+  },
   "index.search": {
     "message": "검색"
   },
