@@ -176,7 +176,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
               children: "1:1 Security Level"
-            }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을 수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+            }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -295,6 +295,27 @@ function _createMdxContent(props) {
       }), " 섹션에서 사용자의 생체 인식 정보를 등록하세요. 하나 이상의 인증 방법을 등록할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+          children: "1:1 Security Level"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치에서 설정한 바이오메트릭 1", ":N", " 보안 등급과 상관없이 사용자에게 별도의 보안 등급을 부여할 수 있습니다. 장치의 1", ":N", " 보안 등급을 높게 설정해 자주 인증에 실패하는 사용자가 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "1:1 Security Level"
+          }), "을 낮게 설정하여 인증 실패를 완화할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Private Auth Mode를 Biometric으로 설정했다면, 입력된 사용자를 알 수 없기 때문에 1:1 보안 등급을 적용할 수 없으며, 사용자 특정이 가능한 카드 또는 ID로 인증 모드를 설정했을 때에만 1:1 보안 등급을 적용할 수 있습니다."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 지문 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Fingerprint"
         }), "\n"]

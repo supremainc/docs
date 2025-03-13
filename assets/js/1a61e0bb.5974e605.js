@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-enroll-credential-mdx-1a6.json
-var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/en/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-edit-user"}}')
+var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/how-to-guide-edit-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -168,13 +168,13 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
           children: "1:1 Security Level"
-        }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을 수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+        }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-fingerprint",
       children: "지문 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "지문 인증을 지원하는 장치를 통해 사용자의 지문 정보를 등록할 수 있습니다. 지문은 지문 스캐너가 설치된 장치에서 스캔할 수 있습니다."
+      children: "사용자의 지문을 등록해 출입을 위한 인증 수단으로 사용할 수 있습니다. 지문 인증을 지원하는 장치를 통해 사용자의 지문 정보를 등록하세요. 지문은 지문 스캐너가 설치된 장치에서 스캔할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -284,7 +284,7 @@ function _createMdxContent(props) {
       id: "enroll-face",
       children: "얼굴 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "얼굴 인증을 지원하는 장치를 통해 사용자의 얼굴 정보를 등록할 수 있습니다."
+      children: "사용자의 얼굴을 등록해 출입을 위한 인증 수단으로 사용할 수 있습니다. 얼굴 인증을 지원하는 장치를 통해 사용자의 얼굴 정보를 등록하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -1398,6 +1398,40 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-accesspin",
       children: "Access PIN 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자가 장치에 비밀번호를 입력해 출입할 수 있도록 비밀번호를 할당할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Credential"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Access PIN"
+          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Access PIN 등록 창이 나타나면 PIN을 입력하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Confirm Access PIN 항목에 한번 더 PIN을 입력하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Enroll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["CSV 불러오기 기능을 이용해 다수의 사용자 PIN을 한 번에 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     })]
   });
 }
