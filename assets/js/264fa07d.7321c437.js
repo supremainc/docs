@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-add-user-mdx-264.json
-var site_docs_platform_biostar_x_how_to_guide_add_user_mdx_264_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-add-user","permalink":"/docs/en/platform/biostar_x/how-to-guide-add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"활용 안내(How-to Guide)","permalink":"/docs/en/platform/biostar_x/how-to-guide"},"next":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-edit-user"}}')
+var site_docs_platform_biostar_x_how_to_guide_add_user_mdx_264_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-add-user","permalink":"/docs/platform/biostar_x/how-to-guide-add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"활용 안내(How-to Guide)","permalink":"/docs/platform/biostar_x/how-to-guide"},"next":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/how-to-guide-edit-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -57,15 +57,13 @@ const toc = [{
   "value": "생체 인식 정보",
   "id": "credential",
   "level": 3
-}, {
-  "value": "다음 단계",
-  "id": "다음-단계",
-  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    blockquote: "blockquote",
+    code: "code",
     h2: "h2",
     h3: "h3",
     li: "li",
@@ -145,7 +143,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 목록에서 추가한 사용자를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -205,7 +203,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "사진"
-          }), ": 사용자의 사진을 등록할 수 있습니다. 웹캡으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다."]
+          }), ": 사용자의 사진을 등록하세요. 웹캡으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -220,11 +218,6 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(IcTrash, {}), ": 현재 적용된 사진을 삭제할 수 있습니다."]
             }), "\n"]
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "모바일 출입 카드에 사용자의 사진을 표시하려면 반드시 사진을 추가해야 합니다."
-          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -233,50 +226,106 @@ function _createMdxContent(props) {
           }), ": 사용자에게 부여할 고유 ID를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "First Name"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "First Name"
+          }), " / ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Last Name"
+          }), ": 사용자의 이름을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Last Name"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Email"
+          }), ": 이메일을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Email"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Telephone"
+          }), ": 전화번호를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Telephone"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Department"
+          }), ": 사용자가 소속된 부서를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Department"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Title"
+          }), ": 사용자의 직함을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Title"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Group"
+          }), ": 사용자의 그룹을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Group"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Period"
+          }), ": 사용자 계정을 사용할 기간을 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Period"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Status"
+          }), ": 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Status"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Custom Field"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Custom Field"
+          }), ": 사용자의 부가 정보를 설정할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Custom Field를 추가하는 방법에 대한 자세한 내용은 다음 문서를 참고하세요."
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사용자 이름은 특수 기호를 포함하여 최대 48자까지 입력할 수 있습니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "특수 기호: ~, !, @, #, $, %, ^, &, (, ), -, _, =, +, [, ], {, }, ;, ,"
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "모바일 출입 카드에 사용자의 사진, 부서, 직함을 표시하려면, 반드시 사진을 추가하고 부서와 직함을 입력하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["직함 및 부서명은 특수 기호(공백, ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "_"
+            }), ")를 포함해 최대 64자까지 입력할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "모바일 출입 카드를 사용한다면, 발송 방법에 따라 이메일 전송 시 사용자의 이메일을, 문자 메시지 전송 시 사용자의 전화번호를 반드시 입력하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "비주얼 페이스 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["사용자 그룹 추가 및 관리에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참조하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Custom Field를 추가하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "permission",
@@ -287,38 +336,66 @@ function _createMdxContent(props) {
       }), " 섹션에서 사용자의 출입 권한을 설정하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Operation Level"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Operation Level"
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 메뉴에 접근할 수 있는 권한을 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "User IP"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "User IP"
+          }), ": 등록한 IP주소와 사용자 PC의 IP 주소가 일치할 때 로그인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Multi-Factor Auth"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Multi-Factor Auth"
+          }), ": 2회 이상의 인증 절차를 통해 사용자를 인증할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Access Group"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Access Group"
+          }), ": 출입 그룹을 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Private Auth Mode"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Private Auth Mode"
+          }), ": 기본 인증 방식을 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Exclude Device Auth Mode"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Exclude Device Auth Mode"
+          }), ": 장치의 기본 인증 방식을 무시하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Private Auth Mode"
+          }), " 항목에서 설정한 갱인 인증만 사용하도록 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Access Exception"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Access Exception"
+          }), ": 사용자가 출입을 제한하도록 예외를 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Extended Door Open Time"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Extended Door Open Time"
+          }), ": 연장된 출입 시간 동안의 출입 허용 여부를 설정할 수 있습니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["출입 권한 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "how-to-guide-set-permission",
+          children: "다음 문서"
+        }), "를 참조하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "credential",
       children: "생체 인식 정보"
@@ -421,14 +498,6 @@ function _createMdxContent(props) {
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "다음-단계",
-      children: "다음 단계"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자 정보를 수정하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "how-to-guide-edit-user",
-        children: "다음 문서"
-      }), "를 참고하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
       children: [(0,jsx_runtime.jsx)(NextItem, {
         to: "how-to-guide-edit-user",
