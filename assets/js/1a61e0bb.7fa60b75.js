@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-enroll-credential-mdx-1a6.json
-var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/en/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-edit-user"}}')
+var site_docs_platform_biostar_x_how_to_guide_enroll_credential_mdx_1a6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-enroll-credential","permalink":"/docs/platform/biostar_x/how-to-guide-enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/how-to-guide-set-permission"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -151,7 +151,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "기존 사용자"
-          }), ": 사용자 목록에서 사용자를 선택하면 화면 오른쪽에 표시되는 프로필 화면에서 See More 버튼을 클릭하세요. 사용자 정보를 수정할 수 있는 창이 나타나면 Credential 섹션에서 크리덴셜을 등록할 수 있습니다."]
+          }), ": 사용자 목록에서 사용자를 선택하세요. 화면 오른쪽에 표시되는 프로필 화면에서 See More 버튼을 클릭하세요. 사용자 정보를 수정할 수 있는 창이 나타나면 Credential 섹션에서 크리덴셜을 등록할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {

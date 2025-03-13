@@ -835,7 +835,7 @@ function DocItemLayout(param) {
 
 
 }),
-"1707": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"5145": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1450,6 +1450,41 @@ function Start() {
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/NextStep/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const NextStep_styles_module = ({"nextStep":"nextStep_vIAY","nextStepTitle":"nextStepTitle_jt8w","nextStepContent":"nextStepContent_apx2"});
+;// CONCATENATED MODULE: ./src/components/NextStep/index.js
+
+
+
+
+function NextStep(param) {
+    let { children } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: NextStep_styles_module.nextStep,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: NextStep_styles_module.nextStepTitle,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("h4", {
+                    children: (0,Translate/* translate */.I)({
+                        id: 'theme.docs.nextStep',
+                        message: '다음 단계'
+                    })
+                })
+            }),
+            children
+        ]
+    });
+}
+function NextItem(param) {
+    let { children, to } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+        to: to,
+        className: NextStep_styles_module.nextStepContent,
+        children: children
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var _path, _path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -1511,6 +1546,124 @@ const SvgIcoAdd = _ref => {
   })));
 };
 /* ESM default export */ const ico_add = (SvgIcoAdd);
+;// CONCATENATED MODULE: ./static/img/menus/ico-close.svg
+var ico_close_path;
+function ico_close_extends() { return ico_close_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_close_extends.apply(null, arguments); }
+
+const SvgIcoClose = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_close_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_close_path || (ico_close_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "#000",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "m12 4-8 8M4 4l8 8"
+  })));
+};
+/* ESM default export */ const ico_close = (SvgIcoClose);
+;// CONCATENATED MODULE: ./static/img/menus/ico-camera.svg
+var ico_camera_path, ico_camera_path2;
+function ico_camera_extends() { return ico_camera_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_camera_extends.apply(null, arguments); }
+
+const SvgIcoCamera = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_camera_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 18,
+    height: 18,
+    fill: "none",
+    viewBox: "0 0 18 18",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_camera_path || (ico_camera_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.5,
+    d: "M10.875 3h-3.75L5.25 5.25H3a1.5 1.5 0 0 0-1.5 1.5v6.75A1.5 1.5 0 0 0 3 15h12a1.5 1.5 0 0 0 1.5-1.5V6.75a1.5 1.5 0 0 0-1.5-1.5h-2.25z"
+  })), ico_camera_path2 || (ico_camera_path2 = /*#__PURE__*/react.createElement("path", {
+    stroke: "#000",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.5,
+    d: "M9 12a2.25 2.25 0 1 0 0-4.5A2.25 2.25 0 0 0 9 12"
+  })));
+};
+/* ESM default export */ const ico_camera = (SvgIcoCamera);
+;// CONCATENATED MODULE: ./static/img/menus/ico-upload.svg
+var ico_upload_path;
+function ico_upload_extends() { return ico_upload_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_upload_extends.apply(null, arguments); }
+
+const SvgIcoUpload = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_upload_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_upload_path || (ico_upload_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "M14 10v2.667A1.334 1.334 0 0 1 12.667 14H3.333A1.334 1.334 0 0 1 2 12.667V10M11.333 5.333 8 2 4.667 5.333M8 2v8"
+  })));
+};
+/* ESM default export */ const ico_upload = (SvgIcoUpload);
+;// CONCATENATED MODULE: ./static/img/menus/ico-trash.svg
+var ico_trash_path;
+function ico_trash_extends() { return ico_trash_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_trash_extends.apply(null, arguments); }
+
+const SvgIcoTrash = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_trash_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_trash_path || (ico_trash_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "M2 4h12M12.667 4v9.333c0 .667-.667 1.334-1.334 1.334H4.667c-.667 0-1.334-.667-1.334-1.334V4M5.333 4V2.667C5.333 2 6 1.333 6.667 1.333h2.666c.667 0 1.334.667 1.334 1.334V4M6.667 7.333v4M9.333 7.333v4"
+  })));
+};
+/* ESM default export */ const ico_trash = (SvgIcoTrash);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -1526,6 +1679,12 @@ const SvgIcoAdd = _ref => {
 
 
 
+
+
+
+
+
+// icon images svg
 
 
 
@@ -1558,8 +1717,14 @@ const SvgIcoAdd = _ref => {
     Row: Row,
     Td: Td,
     Start: Start,
+    NextStep: NextStep,
+    NextItem: NextItem,
     IcLicense: ico_license,
-    IcAdd: ico_add
+    IcAdd: ico_add,
+    IcClose: ico_close,
+    IcCamera: ico_camera,
+    IcUpload: ico_upload,
+    IcTrash: ico_trash
 });
 
 

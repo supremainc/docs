@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-edit-user-mdx-0db.json
-var site_docs_platform_biostar_x_how_to_guide_edit_user_mdx_0db_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/how-to-guide-edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-edit-user","permalink":"/docs/platform/biostar_x/how-to-guide-edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_x/how-to-guide-add-user"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/how-to-guide-enroll-credential"}}')
+var site_docs_platform_biostar_x_how_to_guide_edit_user_mdx_0db_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/how-to-guide-edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-edit-user","permalink":"/docs/platform/biostar_x/how-to-guide-edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_x/how-to-guide-add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/how-to-guide-set-permission"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -41,22 +41,36 @@ const assets = {
 
 
 
-const toc = [];
+const toc = [{
+  "value": "사용자 정보 수정",
+  "id": "사용자-정보-수정",
+  "level": 2
+}, {
+  "value": "사용자 정보 일괄 수정",
+  "id": "사용자-정보-일괄-수정",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자의 정보를 수정하고 권한을 변경하는 방법을 안내합니다. 사용자의 기본 정보를 수정하고 사용자의 출입 권한 및 크리덴셜을 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "사용자-정보-수정",
+      children: "사용자 정보 수정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -91,10 +105,6 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "생체 인식 정보를 추가하려면 다음 문서를 참조하세요."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               children: "Information"
@@ -123,6 +133,58 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "사용자-정보-일괄-수정",
+      children: "사용자 정보 일괄 수정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "한 개 이상의 사용자 정보를 일괄 수정할 수 있습니다. 이 기능은 다수의 사용자에게 동일한 출입 권한이나 그룹을 설정할 때 유용합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "User"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 목록에서 1명 이상의 사용자를 선택하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Batch Edit"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "일관 편집 화면 창이 나타나면 원하는 정보를 수정하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["수정한 정보를 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Save"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "사용자의 ID 및 이름, 이메일, 전화번호, 크리덴셜과 같은 개인정보는 일괄 수정할 수 없습니다."
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
+      children: [(0,jsx_runtime.jsx)(NextItem, {
+        to: "how-to-guide-set-permission",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자의 출입 권한 설정 방법을 확인하세요."
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "how-to-guide-enroll-credential",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 크리덴션을 등록하고 출입 인증 방식을 설정하세요."
+        })
+      })]
     })]
   });
 }
