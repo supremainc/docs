@@ -68,6 +68,7 @@ const sidebars = {
               items: [
                 'platform/biostar_x/how-to-guide-add-user',
                 'platform/biostar_x/how-to-guide-edit-user',
+                'platform/biostar_x/how-to-guide-set-permission',
                 'platform/biostar_x/how-to-guide-enroll-credential',
               ]
             }

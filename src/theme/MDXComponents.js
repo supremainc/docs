@@ -18,6 +18,7 @@ import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
+import IcClose from '@site/static/img/menus/ico-close.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -45,5 +46,6 @@ export default {
     Td,
     Start,
     IcLicense,
-    IcAdd
+    IcAdd,
+    IcClose
 }
