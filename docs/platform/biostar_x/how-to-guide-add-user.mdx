@@ -27,7 +27,7 @@ keywords: [ 사용자, 사용자 그룹 ]
 
 사용자 목록에서 추가한 사용자를 확인할 수 있습니다.
 
-:::info
+:::note
 
 * 출입 권한 및 생체 인식 정보는 선택 사항입니다. 기본 정보를 입력하고 저장한 후에 수정하거나 추가할 수 있습니다.
 
@@ -47,7 +47,7 @@ keywords: [ 사용자, 사용자 그룹 ]
 
 <Cmd>Information</Cmd> 섹션에서 사용자의 기본 정보를 입력하세요.
 
-* **사진**: 사용자의 사진을 등록할 수 있습니다. 웹캡으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다.
+* **사진**: 사용자의 사진을 등록하세요. 웹캡으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다.
 
   * <IcCamera/>: PC에 웹캡이 연결되어 있다면 버튼을 클릭해 사진을 촬영하고 등록할 수 있습니다.
 
@@ -55,37 +55,43 @@ keywords: [ 사용자, 사용자 그룹 ]
 
   * <IcTrash/>: 현재 적용된 사진을 삭제할 수 있습니다.
 
-  :::info
-
-  모바일 출입 카드에 사용자의 사진을 표시하려면 반드시 사진을 추가해야 합니다.
-
-  :::
-
 * <Cmd>ID</Cmd>: 사용자에게 부여할 고유 ID를 입력하세요.
 
-* First Name
+* <Cmd>First Name</Cmd> / <Cmd>Last Name</Cmd>: 사용자의 이름을 입력하세요.
 
-* Last Name
+* <Cmd>Email</Cmd>: 이메일을 입력하세요.
 
-* Email
+* <Cmd>Telephone</Cmd>: 전화번호를 입력하세요.
 
-* Telephone
+* <Cmd>Department</Cmd>: 사용자가 소속된 부서를 입력하세요.
 
-* Department
+* <Cmd>Title</Cmd>: 사용자의 직함을 입력하세요.
 
-* Title
+* <Cmd>Group</Cmd>: 사용자의 그룹을 선택하세요.
 
-* Group
+* <Cmd>Period</Cmd>: 사용자 계정을 사용할 기간을 설정하세요.
 
-* Period
+* <Cmd>Status</Cmd>: 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다.
 
-* Status
+* <Cmd>Custom Field</Cmd>: 사용자의 부가 정보를 설정할 수 있습니다.
 
-* Custom Field
+:::note
 
-:::info
+* 사용자 이름은 특수 기호를 포함하여 최대 48자까지 입력할 수 있습니다.
 
-Custom Field를 추가하는 방법에 대한 자세한 내용은 다음 문서를 참고하세요.
+  > 특수 기호: \~, !, @, \#, \$, \%, \^, &, (, ), \-, \_, =, +, \[, \], \{, \}, ;, ,
+
+* 모바일 출입 카드에 사용자의 사진, 부서, 직함을 표시하려면, 반드시 사진을 추가하고 부서와 직함을 입력하세요.
+
+* 직함 및 부서명은 특수 기호(공백, `_`)를 포함해 최대 64자까지 입력할 수 있습니다.
+
+* 모바일 출입 카드를 사용한다면, 발송 방법에 따라 이메일 전송 시 사용자의 이메일을, 문자 메시지 전송 시 사용자의 전화번호를 반드시 입력하세요.
+
+* 비주얼 페이스 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요.
+
+* 사용자 그룹 추가 및 관리에 대한 자세한 내용은 [다음 문서](#)를 참조하세요.
+
+* Custom Field를 추가하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
 :::
 
@@ -93,21 +99,27 @@ Custom Field를 추가하는 방법에 대한 자세한 내용은 다음 문서�
 
 <Cmd>Permission</Cmd> 섹션에서 사용자의 출입 권한을 설정하세요.
 
-* Operation Level
+* <Cmd>Operation Level</Cmd>: **BioStar X** 메뉴에 접근할 수 있는 권한을 설정할 수 있습니다.
 
-* User IP
+* <Cmd>User IP</Cmd>: 등록한 IP주소와 사용자 PC의 IP 주소가 일치할 때 로그인할 수 있습니다.
 
-* Multi-Factor Auth
+* <Cmd>Multi-Factor Auth</Cmd>: 2회 이상의 인증 절차를 통해 사용자를 인증할 수 있습니다.
 
-* Access Group
+* <Cmd>Access Group</Cmd>: 출입 그룹을 설정할 수 있습니다.
 
-* Private Auth Mode
+* <Cmd>Private Auth Mode</Cmd>: 기본 인증 방식을 설정할 수 있습니다.
 
-* Exclude Device Auth Mode
+* <Cmd>Exclude Device Auth Mode</Cmd>: 장치의 기본 인증 방식을 무시하고 <Cmd>Private Auth Mode</Cmd> 항목에서 설정한 갱인 인증만 사용하도록 설정할 수 있습니다.
 
-* Access Exception
+* <Cmd>Access Exception</Cmd>: 사용자가 출입을 제한하도록 예외를 설정할 수 있습니다.
 
-* Extended Door Open Time
+* <Cmd>Extended Door Open Time</Cmd>: 연장된 출입 시간 동안의 출입 허용 여부를 설정할 수 있습니다.
+
+:::note
+
+출입 권한 설정에 대한 자세한 내용은 [다음 문서](how-to-guide-set-permission)를 참조하세요.
+
+:::
 
 ### 생체 인식 정보 {#credential}
 
@@ -140,10 +152,6 @@ Custom Field를 추가하는 방법에 대한 자세한 내용은 다음 문서�
 * <Cmd>Passcode</Cmd>: 사용자에게 비밀번호를 할당하고 출입 장치에 비밀번호를 입력하여 출입을 허용합니다. Passcode 등록에 대한 자세한 내용은 [다음 문서](how-to-guide-enroll-credential#enroll-passcode)를 참고하세요.
 
 * <Cmd>Access PIN</Cmd>: 사용자에게 PIN 번호를 할당하고 출입 장치에 PIN 번호를 입력하여 출입을 허용합니다. Access PIN 등록에 대한 자세한 내용은 [다음 문서](how-to-guide-enroll-credential#enroll-accesspin)를 참고하세요.
-
-## 다음 단계
-
-사용자 정보를 수정하는 방법에 대한 자세한 내용은 [다음 문서](how-to-guide-edit-user)를 참고하세요.
 
 <NextStep>
 <NextItem to='how-to-guide-edit-user'>
