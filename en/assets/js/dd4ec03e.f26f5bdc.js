@@ -348,7 +348,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-custom-install-mdx-dd4.json
-var site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미지 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","source":"@site/docs/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/en/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미지 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","keywords":["사용자 정의 설치"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"간편 설치하기","permalink":"/docs/en/platform/biostar_x/tutorial-express-install"},"next":{"title":"로그인하기","permalink":"/docs/en/platform/biostar_x/tutorial-login"}}')
+var site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","source":"@site/docs/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/en/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","keywords":["사용자 정의 설치"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"간편 설치하기","permalink":"/docs/en/platform/biostar_x/tutorial-express-install"},"next":{"title":"로그인하기","permalink":"/docs/en/platform/biostar_x/tutorial-login"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -361,7 +361,7 @@ var _biostar_install_steps = __webpack_require__("6378");
 const frontMatter = {
 	id: 'tutorial-custom-install',
 	title: '사용자 정의 설치하기',
-	description: '사용자가 이미지 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.',
+	description: '사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.',
 	keywords: [
 		'사용자 정의 설치'
 	],
