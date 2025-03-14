@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["342"], {
-"6015": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["626"], {
+"1812": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_delete_user_mdx_b9b_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-mdx-c4e.json
-var site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","source":"@site/docs/platform/biostar_x/how-to-guide.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide","permalink":"/docs/en/platform/biostar_x/how-to-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","keywords":["활용 안내","How-to Guide"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"데이터베이스 변경하기","permalink":"/docs/en/platform/biostar_x/change-db"},"next":{"title":"사용자 추가하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-add-user"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-delete-user-mdx-b9b.json
+var site_docs_platform_biostar_x_how_to_guide_delete_user_mdx_b9b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-delete-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-delete-user","permalink":"/docs/platform/biostar_x/how-to-guide-delete-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-delete-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","keywords":["사용자","삭제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/how-to-guide-enroll-credential"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-delete-user.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide',
-	title: '활용 안내(How-to Guide)',
-	description: 'BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.',
+	id: 'how-to-guide-delete-user',
+	title: '사용자 삭제하기',
+	description: '등록한 사용자를 삭제하는 방법을 안내합니다.',
 	keywords: [
-		'활용 안내',
-		'How-to Guide'
+		'사용자',
+		'삭제'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -44,18 +44,48 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    li: "li",
+    ol: "ol",
     p: "p",
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {Cmd} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+      }), "에 등록한 사용자를 퇴사, 계약 종료, 보안 위반 등의 사유로 삭제해야 하는 경우, 다음의 안내에 따라 삭제할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "User"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 목록에서 삭제할 사용자를 선택하세요. 1명 이상 선택할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Delete"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["확인 메시지가 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "확인"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자 목록에서 선택한 사용자가 삭제된 것을 확인하세요."
+    })]
   });
 }
 function MDXContent(props = {}) {

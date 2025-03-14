@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["342"], {
-"6015": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["153"], {
+"2267": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,31 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_user_manage_mdx_d94_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-mdx-c4e.json
-var site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","source":"@site/docs/platform/biostar_x/how-to-guide.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide","permalink":"/docs/platform/biostar_x/how-to-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","keywords":["활용 안내","How-to Guide"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"데이터베이스 변경하기","permalink":"/docs/platform/biostar_x/change-db"},"next":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_x/how-to-guide-add-user"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-user-manage-mdx-d94.json
+var site_docs_platform_biostar_x_how_to_guide_user_manage_mdx_d94_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-user-manage","title":"사용자 관리","description":"사용자를 추가하고 기본 정보 및 권한, 크리덴셜을 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-user-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-user-manage","permalink":"/docs/en/platform/biostar_x/how-to-guide-user-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-user-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-user-manage","title":"사용자 관리","description":"사용자를 추가하고 기본 정보 및 권한, 크리덴셜을 등록하는 방법을 안내합니다.","keywords":["사용자","크리덴셜","기본 정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"그룹 추가하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-add-user-group"},"next":{"title":"사용자 추가하기","permalink":"/docs/en/platform/biostar_x/how-to-guide-add-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-user-manage.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide',
-	title: '활용 안내(How-to Guide)',
-	description: 'BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.',
+	id: 'how-to-guide-user-manage',
+	title: '사용자 관리',
+	description: '사용자를 추가하고 기본 정보 및 권한, 크리덴셜을 등록하는 방법을 안내합니다.',
 	keywords: [
-		'활용 안내',
-		'How-to Guide'
+		'사용자',
+		'크리덴셜',
+		'기본 정보'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -48,13 +49,16 @@ function _createMdxContent(props) {
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
+  }, {Cmd, DocCardList} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다."]
+      }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "User"
+      }), " 페이지를 사용해 사용자를 추가하고, 기본 정보 및 권한, 크리덴셜을 등록하 방법을 안내합니다. 등록한 내용을 확인하고 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
