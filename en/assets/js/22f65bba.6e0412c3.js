@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["342"], {
-"6015": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["839"], {
+"5567": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,29 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-mdx-c4e.json
-var site_docs_platform_biostar_x_how_to_guide_mdx_c4e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","source":"@site/docs/platform/biostar_x/how-to-guide.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide","permalink":"/docs/platform/biostar_x/how-to-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide","title":"활용 안내(How-to Guide)","description":"BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.","keywords":["활용 안내","How-to Guide"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"데이터베이스 변경하기","permalink":"/docs/platform/biostar_x/change-db"},"next":{"title":"사용자 그룹 관리","permalink":"/docs/platform/biostar_x/user-group-manage"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-template-mdx-22f.json
+var site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-template","title":"사용자 템플릿 관리","description":"사용자 템플릿을 생성해 조직별, 부서별 기본 정보를 미리 입력해할 수 있습니다.","source":"@site/docs/platform/biostar_x/user-template.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-template","permalink":"/docs/en/platform/biostar_x/user-template","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-template.mdx","tags":[],"version":"current","frontMatter":{"id":"user-template","title":"사용자 템플릿 관리","description":"사용자 템플릿을 생성해 조직별, 부서별 기본 정보를 미리 입력해할 수 있습니다.","keywords":["사용자 템플릿"],"isTranslationMissing":true}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/user-template.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide',
-	title: '활용 안내(How-to Guide)',
-	description: 'BioStar X의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다.',
+	id: 'user-template',
+	title: '사용자 템플릿 관리',
+	description: '사용자 템플릿을 생성해 조직별, 부서별 기본 정보를 미리 입력해할 수 있습니다.',
 	keywords: [
-		'활용 안내',
-		'How-to Guide'
+		'사용자 템플릿'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -43,20 +42,7 @@ const assets = {
 
 const toc = [];
 function _createMdxContent(props) {
-  const _components = {
-    p: "p",
-    strong: "strong",
-    ...(0,lib/* useMDXComponents */.a)(),
-    ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 핵심 기능을 활용하는 방법을 안내합니다. 구체적인 목표를 달성하는 데 실용적인 활용 가이드입니다."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
-  });
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
@@ -69,9 +55,6 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
