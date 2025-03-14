@@ -62,30 +62,20 @@ const sidebars = {
             id: 'platform/biostar_x/how-to-guide',
           },
           items: [
-            {
-              type: 'category',
-              label: '사용자 그룹 관리',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/how-to-guide-user-group-manage'
-              },
-              items: [
-                'platform/biostar_x/how-to-guide-add-user-group'
-              ]
-            },
+            'platform/biostar_x/user-group-manage',
             {
               type: 'category',
               label: '사용자 관리',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_x/how-to-guide-user-manage'
+                id: 'platform/biostar_x/user-manage'
               },
               items: [
-                'platform/biostar_x/how-to-guide-add-user',
-                'platform/biostar_x/how-to-guide-edit-user',
-                'platform/biostar_x/how-to-guide-set-permission',
-                'platform/biostar_x/how-to-guide-enroll-credential',
-                'platform/biostar_x/how-to-guide-delete-user',
+                'platform/biostar_x/add-user',
+                'platform/biostar_x/edit-user',
+                'platform/biostar_x/set-permission',
+                'platform/biostar_x/enroll-credential',
+                'platform/biostar_x/delete-user',
               ]
             }
           ]
