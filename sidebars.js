@@ -64,12 +64,28 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: '사용자 그룹 관리',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/how-to-guide-user-group-manage'
+              },
+              items: [
+                'platform/biostar_x/how-to-guide-add-user-group'
+              ]
+            },
+            {
+              type: 'category',
               label: '사용자 관리',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/how-to-guide-user-manage'
+              },
               items: [
                 'platform/biostar_x/how-to-guide-add-user',
                 'platform/biostar_x/how-to-guide-edit-user',
                 'platform/biostar_x/how-to-guide-set-permission',
                 'platform/biostar_x/how-to-guide-enroll-credential',
+                'platform/biostar_x/how-to-guide-delete-user',
               ]
             }
           ]
