@@ -127,7 +127,7 @@ function _createMdxContent(props) {
         sid: "setting.server.license.button.activate"
       }), " 버튼을 클릭해 라이선스 파일을 업로드하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "활성화 키를 가지고 있지 않다면 회사 이름만 입력하세요."
       })

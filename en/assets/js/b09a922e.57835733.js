@@ -304,7 +304,7 @@ function _createMdxContent(props) {
             children: "BioStar X"
           }), "가 정상 구동되지 않을 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
+          type: "note",
           children: (0,jsx_runtime.jsxs)(Columns, {
             children: [(0,jsx_runtime.jsx)(Column, {
               className: "text--left",
@@ -422,7 +422,7 @@ function _createMdxContent(props) {
       id: "ms-sql-server",
       children: "MS SQL Server"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

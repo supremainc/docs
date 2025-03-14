@@ -86,7 +86,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "그룹의 출입 권한을 수정하면 해당 그룹에 속한 모든 사용자에게 자동 적용되므로 관리자의 업무 부당을 줄일 수 있습니다. 조직 변경이나 신규 프로젝트 발생 시 빠르게 권한을 조정할 수 있습니다."
+          children: "그룹의 출입 권한을 수정하면 해당 그룹에 속한 모든 사용자에게 자동 적용되므로 관리자의 업무 부담을 줄일 수 있습니다. 조직 변경이나 신규 프로젝트 발생 시 빠르게 권한을 조정할 수 있습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -140,7 +140,7 @@ function _createMdxContent(props) {
       src: "/img/biostarx-main-launcher.png",
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -224,7 +224,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostar-enrollment-result.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["HTTPS 프로토콜 적용 파일은 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.setting"

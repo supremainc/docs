@@ -154,21 +154,19 @@ function _createMdxContent(props) {
           }), ": 사용자 목록에서 사용자를 선택하세요. 화면 오른쪽에 표시되는 프로필 화면에서 See More 버튼을 클릭하세요. 사용자 정보를 수정할 수 있는 창이 나타나면 Credential 섹션에서 크리덴셜을 등록할 수 있습니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "크리덴셜이란?"
-        })
-      }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "사용자의 신원을 확인하기 위한 데이터입니다. 일반적으로 디지털 서명, 스마트카드, 바이오 정보, 사용자 이름과 비밀번호 등이 있습니다."
-      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
           children: "1:1 Security Level"
         }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "크리덴셜"
+        }), "이란 사용자의 신원을 확인하기 위한 데이터입니다. 일반적으로 디지털 서명, 스마트카드, 바이오 정보, 사용자 이름과 비밀번호 등이 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-fingerprint",
@@ -250,7 +248,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -369,7 +367,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "얼굴 인증률이 낮다면 얼굴 정보를 삭제하고 새로운 얼굴 정보를 등록하세요"
       })
@@ -379,7 +377,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "비주얼 페이스(Visual Face)는 사용자의 얼굴을 비주얼 카메라로 촬영한 인증 수단입니다. 적외선 카메라로 촬영한 얼굴 정보와 구분되며, 비주얼 페이스를 지원하는 장치에서만 사용할 수 있습니다. 비주얼 페이스는 사용자의 모바일 기기에서 비대면으로 등록할 수도 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
           children: "비주얼 페이스를 등록하기 전에..."
@@ -509,7 +507,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자에게 출입 카드를 할당할 수 있습니다. 장치가 지원하는 카드 종류는 장치의 매뉴얼을 참고하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
           children: "USB 에이전트를 이용한 카드 등록"
@@ -1101,7 +1099,7 @@ function _createMdxContent(props) {
         children: "사용자는 템플릿 온 모바일을 발급받은 모바일 기기를 장치에 태그하고, 화면의 안내에 따라 얼굴을 인증하세요."
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1189,7 +1187,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1220,7 +1218,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "QR 코드 또는 바코드를 사용자 인증 수단으로 사용할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1293,7 +1291,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자에게 발급한 QR 코드를 사용자 정보에 등록된 이메일 주소로 전송합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1354,7 +1352,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "카드 ID는 영문, 숫자, 특수 기호를 포함하여 최대 32자까지 입력할 수 있습니다."
       })
@@ -1388,7 +1386,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["CSV 불러오기 기능을 이용해 다수의 사용자 PIN을 한 번에 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#",
@@ -1425,7 +1423,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["CSV 불러오기 기능을 이용해 다수의 사용자 PIN을 한 번에 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#",

@@ -155,7 +155,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["사전 정의된 사용자 권한 외 새로운 사용자 권한을 추가하려면 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#",
@@ -168,7 +168,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 IP 주소를 등록하면, 계정에 등록한 IP 정보와 일치할 경우에만 PC에 로그인할 수 있습니다. 이를 통해 보안을 강화할 수 있습니다. Permission 섹션의 User IP 항목에서 사용자의 IP 주소를 입력하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: [(0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -212,7 +212,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자의 출입 그룹을 설정해 조직별, 부서별로 출입을 제한할 수 있습니다. Permission 섹션의 Access Group 항목에서 출입 그룹을 선택하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["출입 그룹 추가 및 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#",
