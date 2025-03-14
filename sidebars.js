@@ -65,7 +65,7 @@ const sidebars = {
             'platform/biostar_x/user-group-manage',
             {
               type: 'category',
-              label: '사용자 관리',
+              label: '사용자 관리하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/user-manage'
