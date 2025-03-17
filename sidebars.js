@@ -79,6 +79,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/user-template',
+            'platform/biostar_x/login-with-mfa',
           ]
         }
       ],
