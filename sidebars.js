@@ -76,9 +76,10 @@ const sidebars = {
                 'platform/biostar_x/set-permission',
                 'platform/biostar_x/enroll-credential',
                 'platform/biostar_x/delete-user',
-                'platform/biostar_x/user-template',
               ]
-            }
+            },
+            'platform/biostar_x/user-template',
+            'platform/biostar_x/login-with-mfa',
           ]
         }
       ],
