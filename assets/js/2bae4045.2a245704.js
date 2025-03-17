@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/en/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/edit-user"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/edit-user"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'권한'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -50,8 +50,8 @@ const toc = [{
   "id": "user-ip",
   "level": 2
 }, {
-  "value": "이중 인증(TBD)",
-  "id": "이중-인증tbd",
+  "value": "멀티팩터 인증",
+  "id": "멀티팩터-인증",
   "level": 2
 }, {
   "value": "출입 그룹",
@@ -195,16 +195,31 @@ function _createMdxContent(props) {
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "이중-인증tbd",
-      children: "이중 인증(TBD)"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이중 인증을 사용하면 사용자에게 추가 인증을 요청하여 출입을 허용할 수 있습니다. Permission 섹션의 Multi-Factor Auth 항목에서 사용자의 이중 인증을 설정하세요."
+      id: "멀티팩터-인증",
+      children: "멀티팩터 인증"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "멀티팩터 인증"
+      }), "을 활성화하면 사용자는 BioStar X에 로그인 시 지문 인증을 추가해 로그인할 수 있습니다. Permission 섹션의 Multi-Factor Auth 항목에서 사용자의 이중 인증을 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "멀티팩터 인증"
-        }), "(Multi-factor authentication, MFA)이란, 2회 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다. 멀티팩터 인증을 사용해 계정에 대한 보안을 강화할 수 있습니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "멀티팩터 인증"
+            }), "(Multi-factor authentication, MFA)이란, 2회 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다. 멀티팩터 인증을 사용해 계정에 대한 보안을 강화할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "멀티팩터 인증"
+            }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "login-with-mfa",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "access-group",
