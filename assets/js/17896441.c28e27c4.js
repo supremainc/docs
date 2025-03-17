@@ -835,7 +835,7 @@ function DocItemLayout(param) {
 
 
 }),
-"5145": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"2069": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1664,6 +1664,34 @@ const SvgIcoTrash = _ref => {
   })));
 };
 /* ESM default export */ const ico_trash = (SvgIcoTrash);
+;// CONCATENATED MODULE: ./static/img/menus/ico-down-arrow.svg
+var ico_down_arrow_path;
+function ico_down_arrow_extends() { return ico_down_arrow_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_down_arrow_extends.apply(null, arguments); }
+
+const SvgIcoDownArrow = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_down_arrow_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_down_arrow_path || (ico_down_arrow_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "#000",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "m4 6 4 4 4-4"
+  })));
+};
+/* ESM default export */ const ico_down_arrow = (SvgIcoDownArrow);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -1685,6 +1713,7 @@ const SvgIcoTrash = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -1724,7 +1753,8 @@ const SvgIcoTrash = _ref => {
     IcClose: ico_close,
     IcCamera: ico_camera,
     IcUpload: ico_upload,
-    IcTrash: ico_trash
+    IcTrash: ico_trash,
+    IcDown: ico_down_arrow
 });
 
 
