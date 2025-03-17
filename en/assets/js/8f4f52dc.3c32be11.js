@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["480"], {
-"9067": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["943"], {
+"8807": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,29 +8,28 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_migration_visual_face_mdx_42b_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_trace_user_access_log_mdx_8f4_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-migration-visual-face-mdx-42b.json
-var site_docs_platform_biostar_x_migration_visual_face_mdx_42b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/migration-visual-face","title":"비주얼 페이스 마이그레이션","description":"BioStar X 이전 버전에서 등록한 비주얼 페이스를 최신 알고리즘으로 업그레이드하여 인식 성능을 향상시킬 수 있습니다.","source":"@site/docs/platform/biostar_x/migration-visual-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/migration-visual-face","permalink":"/docs/en/platform/biostar_x/migration-visual-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/migration-visual-face.mdx","tags":[],"version":"current","frontMatter":{"id":"migration-visual-face","title":"비주얼 페이스 마이그레이션","description":"BioStar X 이전 버전에서 등록한 비주얼 페이스를 최신 알고리즘으로 업그레이드하여 인식 성능을 향상시킬 수 있습니다.","keywords":["비주얼 페이스","마이그레이션","얼굴 인식"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 출입 이력 추적하기","permalink":"/docs/en/platform/biostar_x/trace-user-access-log"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/en/platform/biostar_x/user-template"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-trace-user-access-log-mdx-8f4.json
+var site_docs_platform_biostar_x_trace_user_access_log_mdx_8f4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/trace-user-access-log","title":"사용자 출입 이력 추적하기","description":"사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/trace-user-access-log.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/trace-user-access-log","permalink":"/docs/en/platform/biostar_x/trace-user-access-log","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/trace-user-access-log.mdx","tags":[],"version":"current","frontMatter":{"id":"trace-user-access-log","title":"사용자 출입 이력 추적하기","description":"사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.","keywords":["사용자","출입 이력"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치로 사용자 정보 전송 및 삭제하기","permalink":"/docs/en/platform/biostar_x/user-info-with-device"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/en/platform/biostar_x/user-template"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/migration-visual-face.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/trace-user-access-log.mdx
 
 
 const frontMatter = {
-	id: 'migration-visual-face',
-	title: '비주얼 페이스 마이그레이션',
-	description: 'BioStar X 이전 버전에서 등록한 비주얼 페이스를 최신 알고리즘으로 업그레이드하여 인식 성능을 향상시킬 수 있습니다.',
+	id: 'trace-user-access-log',
+	title: '사용자 출입 이력 추적하기',
+	description: '사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.',
 	keywords: [
-		'비주얼 페이스',
-		'마이그레이션',
-		'얼굴 인식'
+		'사용자',
+		'출입 이력'
 	],
 	isTranslationMissing: true
 };
@@ -45,23 +44,20 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     li: "li",
     ol: "ol",
     p: "p",
-    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcMore} = _components;
+  }, {Cmd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcMore) _missingMdxReference("IcMore", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 이전 버전에서 등록한 비주얼 페이스를 최신 알고리즘으로 업그레이드하여 인식 성능을 향상시킬 수 있습니다."]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자의 출입 이력을 추적하고 확인하는 것은 보안을 강화하고 운영 효율성을 높이는 데 매우 중요합니다. 출입 이력을 통해 보안 위협을 사전에 예방하고, 운영을 최적화할 수 있습니다. 출입 권한이 없는 구역이나 허가되지 않은 시간에 출입을 시도한 사용자를 파악할 수 있습니다. 이를 통해 보안 위협에 신속하게 대응할 수 있습니다. 반복적인 인증 실패나 비정상 시간대의 출입과 같은 이상 징후를 파악하여 보안 위협을 조기에 발견할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "다음 단계에 따라 사용자의 출입 이력을 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -73,42 +69,53 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 비주얼 페이스를 마이그레이션할 사용자의 가장 왼쪽에 체크박스를 클릭하세요."
+          children: "사용자 목록에서 출입 이력을 확인하려는 사용자를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 오른쪽 상단의 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Visual Face Migration"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["경고 팝업창의 내용을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.continue"
-          }), "을 클릭하세요."]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "화면 오른쪽에 선택한 사용자의 프로필 정보가 표시됩니다."
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "비주얼 페이스 마이그레이션이 진행됩니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["프로필 화면 아래에 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Trace"
+      }), " 섹션에서 해당 사용자의 출입 이력을 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Trace"
+      }), " 섹션에서는 제공하는 정보는 아래를 참고하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Data"
+          }), ": 출입이 발생한 날짜와 시간입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), ": 출입이 발생한 장치의 이름입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Event"
+          }), ": 출입 이벤트에 대한 상세 설명입니다."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "비주얼 페이스 마이그레이션을 완료하면 총 비주얼 페이스 수, 성공 및 실패 건수를 확인할 수 있는 팝업창이 나타납니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["실시간 출입 이벤트는 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Monitoring"
+            }), " 페이지에서 확인할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["비주얼 페이스 마이그레이션을 실패하면, 실패한 사용자 목록을 CSV 파일로 다운로드할 수 있습니다. 마이그레이션에 실패한 비주얼 페이스를 일괄 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "button.delete"
-            }), " 버튼을 클릭하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["마이그레이션 성공 후, 장치에 사용자 정보를 동기화하여 변경 사항을 적용하세요. 장치에 사용자 정보를 전송하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "user-info-with-device",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+            children: ["지나간 과거의 출입 이벤트는 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Data"
+            }), " 페이지에서 확인할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })
