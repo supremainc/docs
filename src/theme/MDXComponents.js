@@ -25,6 +25,7 @@ import IcCamera from '@site/static/img/menus/ico-camera.svg';
 import IcUpload from '@site/static/img/menus/ico-upload.svg';
 import IcTrash from '@site/static/img/menus/ico-trash.svg';
 import IcDown from '@site/static/img/menus/ico-down-arrow.svg';
+import IcMore from '@site/static/img/menus/ico-more.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -59,5 +60,6 @@ export default {
     IcCamera,
     IcUpload,
     IcTrash,
-    IcDown
+    IcDown,
+    IcMore
 }
