@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-port-mdx-1fa.json
-var site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"포트 변경하기","description":"BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"포트 변경하기","description":"BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","keywords":["BioStar 2 Setting","포트"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 관리하기","permalink":"/docs/platform/biostar_x/manage-server"},"next":{"title":"데이터베이스 변경하기","permalink":"/docs/platform/biostar_x/change-db"}}')
+var site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"포트 변경하기","description":"BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"포트 변경하기","description":"BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","keywords":["BioStar X Setting","포트"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 관리하기","permalink":"/docs/platform/biostar_x/manage-server"},"next":{"title":"데이터베이스 변경하기","permalink":"/docs/platform/biostar_x/change-db"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,9 +26,9 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'change-port',
 	title: '포트 변경하기',
-	description: 'BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.',
+	description: 'BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.',
 	keywords: [
-		'BioStar 2 Setting',
+		'BioStar X Setting',
 		'포트'
 	],
 	isTranslationMissing: false
@@ -67,13 +67,13 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2 Setting"
+            children: "BioStar X Setting"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2 Setting"
+            children: "BioStar X Setting"
           }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Service Status"
           }), " 섹션에서 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -118,7 +118,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStar 2에 접속해 포트를 변경하는 방법에 대한 자세한 내용은 [다음 문서]를 참조하세요."
+            children: "BioStar X에 접속해 포트를 변경하는 방법에 대한 자세한 내용은 [다음 문서]를 참조하세요."
           }), "\n"]
         }), "\n"]
       })

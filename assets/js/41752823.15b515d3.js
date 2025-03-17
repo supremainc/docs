@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-login-mdx-417.json
-var site_docs_platform_biostar_x_tutorial_login_mdx_417_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","source":"@site/docs/platform/biostar_x/tutorial-login.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-login","permalink":"/docs/platform/biostar_x/tutorial-login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-login.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar 2에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar_x/tutorial-custom-install"},"next":{"title":"라이선스 키 등록하기","permalink":"/docs/platform/biostar_x/tutorial-register-license-key"}}')
+var site_docs_platform_biostar_x_tutorial_login_mdx_417_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar X에 로그인하세요.","source":"@site/docs/platform/biostar_x/tutorial-login.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-login","permalink":"/docs/platform/biostar_x/tutorial-login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-login.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar X에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar_x/tutorial-custom-install"},"next":{"title":"라이선스 키 등록하기","permalink":"/docs/platform/biostar_x/tutorial-register-license-key"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'tutorial-login',
 	title: '로그인하기',
-	description: '웹 브라우저로 접속해 BioStar 2에 로그인하세요.',
+	description: '웹 브라우저로 접속해 BioStar X에 로그인하세요.',
 	keywords: [
 		'로그인',
 		'웹 브라우저'

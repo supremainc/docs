@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-index-mdx-e2c.json
-var site_docs_platform_biostar_x_index_mdx_e2c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/index","title":"개요","description":"BioStar 2는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.","source":"@site/docs/platform/biostar_x/index.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/","permalink":"/docs/en/platform/biostar_x/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/index.mdx","tags":[],"version":"current","frontMatter":{"title":"개요","description":"BioStar 2는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.","keywords":["출입통제","근태 관리","생체 인식","다중 인증","모바일 출입 카드","방문자 관리","데이터 암호화","보안 API","기업 보안"],"isTranslationMissing":true},"sidebar":"biostarx","next":{"title":"시작하기 전에","permalink":"/docs/en/platform/biostar_x/getting-started"}}')
+var site_docs_platform_biostar_x_index_mdx_e2c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/index","title":"개요","description":"BioStar X는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.","source":"@site/docs/platform/biostar_x/index.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/","permalink":"/docs/platform/biostar_x/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/index.mdx","tags":[],"version":"current","frontMatter":{"title":"개요","description":"BioStar X는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.","keywords":["출입통제","근태 관리","생체 인식","다중 인증","모바일 출입 카드","방문자 관리","데이터 암호화","보안 API","기업 보안"],"isTranslationMissing":false},"sidebar":"biostarx","next":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,7 +25,7 @@ var lib = __webpack_require__("65");
 
 const frontMatter = {
 	title: '개요',
-	description: 'BioStar 2는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.',
+	description: 'BioStar X는 차세대 웹 기반 출입 통제 및 근태 관리 플랫폼으로, 슈프리마의 혁신적인 생체 인식 기술과 최신 보안 솔루션을 결합한 강력한 보안 시스템입니다.',
 	keywords: [
 		'출입통제',
 		'근태 관리',
@@ -37,7 +37,7 @@ const frontMatter = {
 		'보안 API',
 		'기업 보안'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

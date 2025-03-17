@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-manage-server-mdx-425.json
-var site_docs_platform_biostar_x_manage_server_mdx_425_namespaceObject = JSON.parse('{"id":"platform/biostar_x/manage-server","title":"서버 관리하기","description":"BioStar 2 서버의 상태를 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/manage-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/manage-server","permalink":"/docs/en/platform/biostar_x/manage-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/manage-server.mdx","tags":[],"version":"current","frontMatter":{"id":"manage-server","title":"서버 관리하기","description":"BioStar 2 서버의 상태를 관리하는 방법을 안내합니다.","keywords":["BioStar 2 Setting","서버 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 등록하기","permalink":"/docs/en/platform/biostar_x/tutorial-add-device"},"next":{"title":"포트 변경하기","permalink":"/docs/en/platform/biostar_x/change-port"}}')
+var site_docs_platform_biostar_x_manage_server_mdx_425_namespaceObject = JSON.parse('{"id":"platform/biostar_x/manage-server","title":"서버 관리하기","description":"BioStar X 서버의 상태를 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/manage-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/manage-server","permalink":"/docs/en/platform/biostar_x/manage-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/manage-server.mdx","tags":[],"version":"current","frontMatter":{"id":"manage-server","title":"서버 관리하기","description":"BioStar X 서버의 상태를 관리하는 방법을 안내합니다.","keywords":["BioStar X Setting","서버 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 등록하기","permalink":"/docs/en/platform/biostar_x/tutorial-add-device"},"next":{"title":"포트 변경하기","permalink":"/docs/en/platform/biostar_x/change-port"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,9 +26,9 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'manage-server',
 	title: '서버 관리하기',
-	description: 'BioStar 2 서버의 상태를 관리하는 방법을 안내합니다.',
+	description: 'BioStar X 서버의 상태를 관리하는 방법을 안내합니다.',
 	keywords: [
-		'BioStar 2 Setting',
+		'BioStar X Setting',
 		'서버 관리'
 	],
 	isTranslationMissing: true
@@ -42,8 +42,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "BioStar 2 Setting",
-  "id": "biostar-2-setting",
+  "value": "BioStar X Setting",
+  "id": "biostar-x-setting",
   "level": 2
 }, {
   "value": "서비스 종료하기",
@@ -72,17 +72,17 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), " 서버의 상태를 관리하는 방법을 안내합니다. 실행 중인 서비스를 종료하거나 다시 시작할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "biostar-2-setting",
-      children: "BioStar 2 Setting"
+      id: "biostar-x-setting",
+      children: "BioStar X Setting"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. ", (0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2 Setting"
+        children: "BioStar X Setting"
       }), "을 클릭하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2 Setting"
+        children: "BioStar X Setting"
       }), " 창이 나타납니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostar-setting-window.png",

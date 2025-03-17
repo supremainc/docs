@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["107"], {
-"6845": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["943"], {
+"8807": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_trace_user_access_log_mdx_8f4_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-port-mdx-1fa.json
-var site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"포트 변경하기","description":"BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/en/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"포트 변경하기","description":"BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","keywords":["BioStar 2 Setting","포트"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"서버 관리하기","permalink":"/docs/en/platform/biostar_x/manage-server"},"next":{"title":"데이터베이스 변경하기","permalink":"/docs/en/platform/biostar_x/change-db"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-trace-user-access-log-mdx-8f4.json
+var site_docs_platform_biostar_x_trace_user_access_log_mdx_8f4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/trace-user-access-log","title":"사용자 출입 이력 추적하기","description":"사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/trace-user-access-log.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/trace-user-access-log","permalink":"/docs/platform/biostar_x/trace-user-access-log","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/trace-user-access-log.mdx","tags":[],"version":"current","frontMatter":{"id":"trace-user-access-log","title":"사용자 출입 이력 추적하기","description":"사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.","keywords":["사용자","출입 이력"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치로 사용자 정보 전송 및 삭제하기","permalink":"/docs/platform/biostar_x/user-info-with-device"},"next":{"title":"비주얼 페이스 마이그레이션","permalink":"/docs/platform/biostar_x/migration-visual-face"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/change-port.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/trace-user-access-log.mdx
 
 
 const frontMatter = {
-	id: 'change-port',
-	title: '포트 변경하기',
-	description: 'BioStar 2의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.',
+	id: 'trace-user-access-log',
+	title: '사용자 출입 이력 추적하기',
+	description: '사용자의 출입 이력을 추적하고 확인하는 방법을 안내합니다.',
 	keywords: [
-		'BioStar 2 Setting',
-		'포트'
+		'사용자',
+		'출입 이력'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -45,66 +45,61 @@ const toc = [];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
-    code: "code",
     li: "li",
     ol: "ol",
     p: "p",
-    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, Start} = _components;
-  if (!Image) _missingMdxReference("Image", true);
-  if (!Start) _missingMdxReference("Start", true);
+  }, {Cmd} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다."]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자의 출입 이력을 추적하고 확인하는 것은 보안을 강화하고 운영 효율성을 높이는 데 매우 중요합니다. 출입 이력을 통해 보안 위협을 사전에 예방하고, 운영을 최적화할 수 있습니다. 출입 권한이 없는 구역이나 허가되지 않은 시간에 출입을 시도한 사용자를 파악할 수 있습니다. 이를 통해 보안 위협에 신속하게 대응할 수 있습니다. 반복적인 인증 실패나 비정상 시간대의 출입과 같은 이상 징후를 파악하여 보안 위협을 조기에 발견할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "다음 단계에 따라 사용자의 출입 이력을 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2 Setting"
-          }), "을 클릭하세요."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "User"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 목록에서 출입 이력을 확인하려는 사용자를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "화면 오른쪽에 선택한 사용자의 프로필 정보가 표시됩니다."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["프로필 화면 아래에 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Trace"
+      }), " 섹션에서 해당 사용자의 출입 이력을 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Trace"
+      }), " 섹션에서는 제공하는 정보는 아래를 참고하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Data"
+          }), ": 출입이 발생한 날짜와 시간입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2 Setting"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Service Status"
-          }), " 섹션에서 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Stop"
-          }), " 버튼을 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostar-setting-window.png",
-          alone: true
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), ": 출입이 발생한 장치의 이름입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "HTTPS Port"
-          }), " 입력 필드가 활성화되면 변경할 포트 번호를 입력하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostar-setting-change-port.png",
-          alone: true
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Service Status"
-          }), " 섹션에서 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Start"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "로 접속하세요."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Event"
+          }), ": 출입 이벤트에 대한 상세 설명입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -112,13 +107,15 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["포트 번호를 450으로 변경했다면 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "https://{ip_address}:450"
-            }), "을 입력하세요."]
+            children: ["실시간 출입 이벤트는 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Monitoring"
+            }), " 페이지에서 확인할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStar 2에 접속해 포트를 변경하는 방법에 대한 자세한 내용은 [다음 문서]를 참조하세요."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["지나간 과거의 출입 이벤트는 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Data"
+            }), " 페이지에서 확인할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })
