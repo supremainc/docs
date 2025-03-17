@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["39"], {
-"9959": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["338"], {
+"857": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,28 +8,28 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-edit-user-mdx-fa1.json
-var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_x/add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-info-with-device-mdx-338.json
+var site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/user-info-with-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-info-with-device","permalink":"/docs/platform/biostar_x/user-info-with-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-info-with-device.mdx","tags":[],"version":"current","frontMatter":{"id":"user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.","keywords":["사용자","장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/platform/biostar_x/user-template"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/edit-user.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/user-info-with-device.mdx
 
 
 const frontMatter = {
-	id: 'edit-user',
-	title: '사용자 정보 수정하기',
-	description: '사용자의 입력된 정보를 수정하고 권한을 변경해보세요.',
+	id: 'user-info-with-device',
+	title: '장치로 사용자 정보 전송 및 삭제하기',
+	description: '사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.',
 	keywords: [
 		'사용자',
-		'사용자 그룹'
+		'장치'
 	],
 	isTranslationMissing: false
 };
@@ -42,12 +42,12 @@ const assets = {
 
 
 const toc = [{
-  "value": "사용자 정보 수정",
-  "id": "사용자-정보-수정",
+  "value": "장치로 사용자 정보 전송",
+  "id": "transfer-to-device",
   "level": 2
 }, {
-  "value": "사용자 정보 일괄 수정",
-  "id": "사용자-정보-일괄-수정",
+  "value": "장치에서 사용자 정보 삭제",
+  "id": "delete-from-device",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -58,19 +58,23 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, NextItem, NextStep} = _components;
+  }, {Cmd, IcMore} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!NextItem) _missingMdxReference("NextItem", true);
-  if (!NextStep) _missingMdxReference("NextStep", true);
+  if (!IcMore) _missingMdxReference("IcMore", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 정보를 수정하고 권한을 변경하는 방법을 안내합니다. 사용자의 기본 정보를 수정하고 사용자의 출입 권한 및 크리덴셜을 변경할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입 통제를 위해 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버에 등록한 사용자 정보를 장치로 전송하거나 삭제하는 기능을 제공합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-정보-수정",
-      children: "사용자 정보 수정"
+      id: "transfer-to-device",
+      children: "장치로 사용자 정보 전송"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "장치로 사용자 정보를 전송하면, 장치는 사용자 데이터를 활용하여 출입 권한을 판단하고, 오프라인 환경에서도 인증을 수행할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -82,22 +86,93 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 수정할 사용자를 선택하세요."
+          children: "사용자 목록에서 사용자 정보를 전송하려는 사용자의 가장 왼쪽에 체크 박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 오른쪽에 사용자의 프로필 정보가 표시되면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+          children: ["화면 오른쪽 상단의 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Transfer to Device"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 정보를 수정할 수 있는 창이 나타납니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Transfer to Device"
+          }), " 창이 나타나면 장치 목록에서 사용자 정보를 전송할 장치를 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["원하는 항목을 수정하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Save"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Send"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 장치로 사용자 정보를 전송합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["중복되는 사용자 정보를 장치에 덮어쓰기하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "user.overwriteWhenTransfer"
+            }), "를 선택하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "검색 아이콘 버튼을 클릭해 장치를 검색할 수도 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["사용자 정보를 전송하려면 장치가 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 서버에 연결되어 있어야 합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치에 이미 등록된 사용자의 정보를 변경한 경우, 변경 사항을 장치에 반영하려면 사용자 정보를 다시 전송해야 합니다. 사용자 정보를 장치와 동기화하는 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.server.automaticUserSync"
+            }), " 옵션을 이용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "delete-from-device",
+      children: "장치에서 사용자 정보 삭제"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "각각의 장치에서 사용자 정보를 삭제할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "User"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 목록에서 장치에서 삭제할 사용자의 가장 왼쪽에 체크 박스를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.header.removeFromDevice"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.header.removeFromDevice"
+          }), " 창이 나타나면 선택한 사용자 정보를 삭제할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.delete"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -105,86 +180,27 @@ function _createMdxContent(props) {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "Information"
-            }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "add-user#information",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "검색 아이콘 버튼을 클릭해 장치를 검색할 수도 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "Permission"
-            }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "add-user#permission",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+              sid: "setting.server.automaticUserSync"
+            }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "device.Input.unsupervised"
+            }), "으로 설정해야 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "user.header.removeFromDevice"
+            }), " 버튼이 활성화됩니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "Credential"
-            }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "add-user#credential",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+            children: ["사용자 정보는 장치에서만 삭제되고, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 서버버에 유지됩니다."]
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-정보-일괄-수정",
-      children: "사용자 정보 일괄 수정"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "한 개 이상의 사용자 정보를 일괄 수정할 수 있습니다. 이 기능은 다수의 사용자에게 동일한 출입 권한이나 그룹을 설정할 때 유용합니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "User"
-          }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 1명 이상의 사용자를 선택하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Batch Edit"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "일관 편집 화면 창이 나타나면 원하는 정보를 수정하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정한 정보를 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Save"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "사용자의 ID 및 이름, 이메일, 전화번호, 크리덴셜과 같은 개인정보는 일괄 수정할 수 없습니다."
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
-      children: [(0,jsx_runtime.jsx)(NextItem, {
-        to: "set-permission",
-        children: (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자의 출입 권한 설정 방법을 확인하세요."
-        })
-      }), (0,jsx_runtime.jsx)(NextItem, {
-        to: "enroll-credential",
-        children: (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 크리덴션을 등록하고 출입 인증 방식을 설정하세요."
-        })
-      })]
     })]
   });
 }

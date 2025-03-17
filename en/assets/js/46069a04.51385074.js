@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-delete-user-mdx-460.json
-var site_docs_platform_biostar_x_delete_user_mdx_460_namespaceObject = JSON.parse('{"id":"platform/biostar_x/delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/delete-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/delete-user","permalink":"/docs/platform/biostar_x/delete-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/delete-user.mdx","tags":[],"version":"current","frontMatter":{"id":"delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","keywords":["사용자","삭제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/platform/biostar_x/user-template"}}')
+var site_docs_platform_biostar_x_delete_user_mdx_460_namespaceObject = JSON.parse('{"id":"platform/biostar_x/delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/delete-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/delete-user","permalink":"/docs/en/platform/biostar_x/delete-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/delete-user.mdx","tags":[],"version":"current","frontMatter":{"id":"delete-user","title":"사용자 삭제하기","description":"등록한 사용자를 삭제하는 방법을 안내합니다.","keywords":["사용자","삭제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"},"next":{"title":"장치로 사용자 정보 전송 및 삭제하기","permalink":"/docs/en/platform/biostar_x/user-info-with-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'삭제'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -44,6 +44,8 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    admonition: "admonition",
     li: "li",
     ol: "ol",
     p: "p",
@@ -85,6 +87,14 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 목록에서 선택한 사용자가 삭제된 것을 확인하세요."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["사용자 정보를 삭제하기 전에 장치에서 사용자 정보를 우선 삭제하세요. 장치에서 사용자 정보를 삭제하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "user-info-with-device#delete-from-device",
+          children: "다음 문서"
+        }), "를 참조하세요."]
+      })
     })]
   });
 }

@@ -835,7 +835,7 @@ function DocItemLayout(param) {
 
 
 }),
-"2069": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"6750": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1684,7 +1684,7 @@ const SvgIcoDownArrow = _ref => {
   }, props), title ? /*#__PURE__*/react.createElement("title", {
     id: titleId
   }, title) : null, ico_down_arrow_path || (ico_down_arrow_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
+    stroke: "currentColor",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: 1.333,
@@ -1692,6 +1692,34 @@ const SvgIcoDownArrow = _ref => {
   })));
 };
 /* ESM default export */ const ico_down_arrow = (SvgIcoDownArrow);
+;// CONCATENATED MODULE: ./static/img/menus/ico-more.svg
+var ico_more_path;
+function ico_more_extends() { return ico_more_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_more_extends.apply(null, arguments); }
+
+const SvgIcoMore = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_more_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_more_path || (ico_more_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "M8 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M12.667 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M3.333 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334"
+  })));
+};
+/* ESM default export */ const ico_more = (SvgIcoMore);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -1713,6 +1741,7 @@ const SvgIcoDownArrow = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -1754,7 +1783,8 @@ const SvgIcoDownArrow = _ref => {
     IcCamera: ico_camera,
     IcUpload: ico_upload,
     IcTrash: ico_trash,
-    IcDown: ico_down_arrow
+    IcDown: ico_down_arrow,
+    IcMore: ico_more
 });
 
 

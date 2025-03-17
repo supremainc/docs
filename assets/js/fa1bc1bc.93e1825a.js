@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-edit-user-mdx-fa1.json
-var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/en/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 추가하기","permalink":"/docs/en/platform/biostar_x/add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/en/platform/biostar_x/set-permission"}}')
+var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_x/add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -68,6 +68,11 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자의 정보를 수정하고 권한을 변경하는 방법을 안내합니다. 사용자의 기본 정보를 수정하고 사용자의 출입 권한 및 크리덴셜을 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "관리자(Administrator) 등급의 권한은 수정할 수 없습니다."
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "사용자-정보-수정",
       children: "사용자 정보 수정"
@@ -183,6 +188,11 @@ function _createMdxContent(props) {
         to: "enroll-credential",
         children: (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자 크리덴션을 등록하고 출입 인증 방식을 설정하세요."
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "user-info-with-device",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 정보를 변경했다면 장치로 전송해야 합니다. 사용자 정보를 장치로 전송하는 방법을 확인하세요."
         })
       })]
     })]
