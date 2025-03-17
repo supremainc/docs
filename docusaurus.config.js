@@ -39,7 +39,7 @@ const config = {
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
   future: {
     experimental_faster: true
   },
