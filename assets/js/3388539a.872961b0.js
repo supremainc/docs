@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-info-with-device-mdx-338.json
-var site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/user-info-with-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-info-with-device","permalink":"/docs/platform/biostar_x/user-info-with-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-info-with-device.mdx","tags":[],"version":"current","frontMatter":{"id":"user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.","keywords":["사용자","장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/platform/biostar_x/user-template"}}')
+var site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/user-info-with-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-info-with-device","permalink":"/docs/platform/biostar_x/user-info-with-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-info-with-device.mdx","tags":[],"version":"current","frontMatter":{"id":"user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","keywords":["사용자","장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"},"next":{"title":"사용자 템플릿 관리하기","permalink":"/docs/platform/biostar_x/user-template"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'user-info-with-device',
 	title: '장치로 사용자 정보 전송 및 삭제하기',
-	description: '사용자 정보를 등록된 장치로 전송하는 방법을 안내합니다.',
+	description: '사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.',
 	keywords: [
 		'사용자',
 		'장치'
@@ -136,6 +136,10 @@ function _createMdxContent(props) {
               href: "#",
               children: "다음 문서"
             }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치마다 등록할 수 있는 사용자 수에 제한이 있습니다. 장치에 등록할 수 있는 사용자 수를 확인하세요."
           }), "\n"]
         }), "\n"]
       })

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-template-mdx-22f.json
-var site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","source":"@site/docs/platform/biostar_x/user-template.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-template","permalink":"/docs/platform/biostar_x/user-template","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-template.mdx","tags":[],"version":"current","frontMatter":{"id":"user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","keywords":["사용자 템플릿"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치로 사용자 정보 전송 및 삭제하기","permalink":"/docs/platform/biostar_x/user-info-with-device"},"next":{"title":"멀티팩터 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"}}')
+var site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","source":"@site/docs/platform/biostar_x/user-template.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-template","permalink":"/docs/en/platform/biostar_x/user-template","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-template.mdx","tags":[],"version":"current","frontMatter":{"id":"user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","keywords":["사용자 템플릿"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치로 사용자 정보 전송 및 삭제하기","permalink":"/docs/en/platform/biostar_x/user-info-with-device"},"next":{"title":"멀티팩터 인증으로 로그인하기","permalink":"/docs/en/platform/biostar_x/login-with-mfa"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'사용자 템플릿'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -102,7 +102,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["템플릿 생성 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Information"
-          }), "에서 사용자 ID, 이름, 부서, 직책등을 입력하세요."]
+          }), "에서 템플릿 이름, 이메일, 부서, 직책 등을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -118,7 +118,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "템플릿 목록에 추가한 새 템플릿이 나타나는지 확인하세요."
+      children: "템플릿 목록에서 추가한 새 템플릿을 확인하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -179,9 +179,11 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Save"
-          }), " 버튼을 클릭하면 신규 사용자가 저장됩니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자 목록에서 템플릿으로 추가한 신규 사용자를 확인하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -222,9 +224,11 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["수정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Save"
-          }), " 버튼을 클릭하면 템플릿이 저장됩니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "수정한 내용이 템플릿에 반영됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "템플릿-삭제",
       children: "템플릿 삭제"
@@ -263,7 +267,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "템플릿 목록에서 선택한 템플릿에 삭제됩니다."
+      children: "템플릿 목록에서 선택한 템플릿이 삭제됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
