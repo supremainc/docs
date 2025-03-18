@@ -1,0 +1,35 @@
+import React from 'react';
+import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
+import Head from '@docusaurus/Head';
+import {useLocation} from '@docusaurus/router';
+
+export default function Cover() {
+    const location = useLocation();
+    const urlParams = new URLSearchParams(location.search);
+    const title = urlParams.get('title') || "Suprema";
+    const subtitle = urlParams.get('sub') || "...";
+    const ver = urlParams.get('ver') || "ver";
+    const lang = urlParams.get('lang') || "Language";
+    const num = urlParams.get('num') || "Number";
+    return (
+        <Layout>
+        <Head>
+            <meta name="robots" content="noindex, nofollow"/>
+        </Head>
+            <div className={styles.coverpage}>
+                <div className={styles.title}>
+                    <h1>{title}</h1>
+                    <h2>{subtitle}</h2>
+                    <div className={styles.ver}>{ver}</div>
+                    <div className={styles.lang}>{lang}</div>
+                    <div className={styles.number}>{num}</div>
+                </div>
+                <div className={styles.footer}>
+                    <img src={useBaseUrl('img/suprema-logo-bottom.svg')} className={styles.logo} />
+                </div>
+            </div>
+        </Layout>
+    );
+}
