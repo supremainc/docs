@@ -78,6 +78,7 @@ const sidebars = {
                 'platform/biostar_x/delete-user',
                 'platform/biostar_x/user-info-with-device',
                 'platform/biostar_x/trace-user-access-log',
+                'platform/biostar_x/export-import-user-info',
               ]
             },
             'platform/biostar_x/user-template',
