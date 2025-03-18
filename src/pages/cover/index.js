@@ -7,19 +7,22 @@ import clsx from 'clsx';
 import {useLocation} from '@docusaurus/router';
 
 export default function Cover() {
-    const location = useLocation();
-    const urlParams = new URLSearchParams(location.search);
-    const title = urlParams.get('title') || "Suprema";
-    const subtitle = urlParams.get('sub') || "...";
-    const ver = urlParams.get('ver') || "ver";
-    const lang = urlParams.get('lang') || "Language";
-    const num = urlParams.get('num') || "Number";
-    const next = urlParams.get('next') || "/";
+    const {search} = useLocation();
+    const params = Object.fromEntries(new URLSearchParams(search));
+    const {
+        title = "Suprema",
+        sub: subtitle = "...",
+        ver = "ver",
+        lang = "Language",
+        num = "Number",
+        next = "/"
+    } = params;
+    
     return (
         <Layout>
-        <Head>
-            <meta name="robots" content="noindex, nofollow"/>
-        </Head>
+            <Head>
+                <meta name="robots" content="noindex, nofollow"/>
+            </Head>
             <div className={styles.coverpage}>
                 <div className={styles.title}>
                     <h1>{title}</h1>
@@ -29,10 +32,12 @@ export default function Cover() {
                     <div className={styles.number}>{num}</div>
                 </div>
                 <div className={styles.footer}>
-                    <img src={useBaseUrl('img/suprema-logo-bottom.svg')} className={styles.logo} />
+                    <img src={useBaseUrl('img/suprema-logo-bottom.svg')} className={styles.logo} alt="Suprema Logo" />
                 </div>
-                <a class={clsx(styles.next,"pagination-nav__link pagination-nav__link--next")} href={next}><div class="pagination-nav__sublabel">다음</div></a>
-                <div class="page-break"></div>
+                <a className={clsx(styles.next, "pagination-nav__link pagination-nav__link--next")} href={next}>
+                    <div className="pagination-nav__sublabel">다음</div>
+                </a>
+                <div className="page-break"></div>
             </div>
         </Layout>
     );
