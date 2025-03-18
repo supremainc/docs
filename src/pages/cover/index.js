@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import Head from '@docusaurus/Head';
+import clsx from 'clsx';
 import {useLocation} from '@docusaurus/router';
 
 export default function Cover() {
@@ -13,6 +14,7 @@ export default function Cover() {
     const ver = urlParams.get('ver') || "ver";
     const lang = urlParams.get('lang') || "Language";
     const num = urlParams.get('num') || "Number";
+    const next = urlParams.get('next') || "/";
     return (
         <Layout>
         <Head>
@@ -29,6 +31,8 @@ export default function Cover() {
                 <div className={styles.footer}>
                     <img src={useBaseUrl('img/suprema-logo-bottom.svg')} className={styles.logo} />
                 </div>
+                <a class={clsx(styles.next,"pagination-nav__link pagination-nav__link--next")} href={next}><div class="pagination-nav__sublabel">다음</div></a>
+                <div class="page-break"></div>
             </div>
         </Layout>
     );

@@ -48,6 +48,9 @@
   .title .lang {
     margin-top: 4.7rem;
   }
+  .next {
+    display: none;
+  }
   .footer {
     width: 100%;
     text-align: center;
