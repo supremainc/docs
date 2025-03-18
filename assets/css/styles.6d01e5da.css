@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -4627,6 +4628,65 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
   padding: 0.09em 0;
 }
 
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  .coverpage_s00n {
+    height: 100vh;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
+  }
+  .title_Ox8A {
+    position: absolute;
+    top: 2.0276in;
+    height: 3.7795in;
+    width: 100%;
+    background-color: #a42444;
+    padding: 0.5315in 0.3937in 0.4633in 0.785in;
+    color: #fff;
+  }
+  .title_Ox8A h1 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 50pt;
+    margin-bottom: 0;
+  }
+  .title_Ox8A h2 {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 26pt;
+    margin-bottom: 0;
+  }
+  .title_Ox8A .ver_YY1T {
+    font-family: "Noto Sans";
+    font-weight: medium;
+    font-size: 10pt;
+    position: relative;
+    left: 4px;
+    margin-top: .2rem;
+  }
+  .title_Ox8A .lang_UZLZ, .title_Ox8A .number__Jg4 {
+    font-weight: medium;
+    font-size: 10pt;
+    position: relative;
+    text-align: right;
+  }
+  .title_Ox8A .lang_UZLZ {
+    margin-top: 4.7rem;
+  }
+  .footer_XGkm {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0.6037in;
+  }
+  .logo_jjey {
+    width: 113px;
+    height: auto;
+  }
+}
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
