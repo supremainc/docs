@@ -41,3 +41,9 @@
   margin: 0;
   color: var(--ifm-color-content);
 }
+
+@media print {
+  .nextStep {
+    display: none;
+  }
+}
