@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
@@ -17,6 +17,22 @@ export default function Cover() {
         num = "Number",
         next = "/"
     } = params;
+
+    useEffect(() => {
+        // 특정 페이지에서만 @page 스타일을 동적으로 추가
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @page {
+                margin: 0;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 컴포넌트 언마운트 시 스타일 제거
+        return () => {
+            document.head.removeChild(style);
+        };
+    }, []);
     
     return (
         <Layout>

@@ -363,7 +363,7 @@ footer {
       font-family: 'Noto Sans Coptic';
     }
     &.hasimg {
-      margin-top: var(--ifm-leading);
+      margin-top: calc(1.25 * .5rem) !important;
       img {
         // margin-left: auto;
         // margin-right: auto;
@@ -541,10 +541,13 @@ footer {
 @media print {
   @page {
     size: A4;
-    margin-top: 1in;
-    margin-bottom: 1in;
+    margin-top: 0.5in;
+    margin-bottom: 0in;
     margin-left: 0.5in;
     margin-right: 0.5in;
+  }
+  div[class*='docItemCol'] {
+    padding: 0;
   }
   nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
     display: none;
@@ -556,6 +559,7 @@ footer {
     h2 { 
       font-size: 1.8rem; 
       page-break-before: auto;
+      padding-top: 0;
     }
     h3 { font-size: 1.6rem; }
     h4 { font-size: 1.4rem; }
