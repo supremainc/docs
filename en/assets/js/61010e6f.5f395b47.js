@@ -19,9 +19,11 @@ var Layout = __webpack_require__("609");
 var useBaseUrl = __webpack_require__("3187");
 ;// CONCATENATED MODULE: ./src/pages/cover/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"coverpage":"coverpage_s00n","title":"title_Ox8A","ver":"ver_YY1T","lang":"lang_UZLZ","number":"number__Jg4","footer":"footer_XGkm","logo":"logo_jjey"});
+/* ESM default export */ const styles_module = ({"coverpage":"coverpage_s00n","title":"title_Ox8A","ver":"ver_YY1T","lang":"lang_UZLZ","number":"number__Jg4","next":"next_L80O","footer":"footer_XGkm","logo":"logo_jjey"});
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
 var Head = __webpack_require__("1199");
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__("7026");
 // EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
 var react_router = __webpack_require__("6550");
 ;// CONCATENATED MODULE: ./src/pages/cover/index.js
@@ -32,14 +34,25 @@ var react_router = __webpack_require__("6550");
 
 
 
+
 function Cover() {
-    const location = (0,react_router/* useLocation */.TH)();
-    const urlParams = new URLSearchParams(location.search);
-    const title = urlParams.get('title') || "Suprema";
-    const subtitle = urlParams.get('sub') || "...";
-    const ver = urlParams.get('ver') || "ver";
-    const lang = urlParams.get('lang') || "Language";
-    const num = urlParams.get('num') || "Number";
+    const { search } = (0,react_router/* useLocation */.TH)();
+    const params = Object.fromEntries(new URLSearchParams(search));
+    const { title = "Suprema", sub: subtitle = "...", ver = "ver", lang = "Language", num = "Number", next = "/" } = params;
+    (0,react.useEffect)(()=>{
+        // 특정 페이지에서만 @page 스타일을 동적으로 추가
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @page {
+                margin: 0;
+            }
+        `;
+        document.head.appendChild(style);
+        // 컴포넌트 언마운트 시 스타일 제거
+        return ()=>{
+            document.head.removeChild(style);
+        };
+    }, []);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Layout/* default */.Z, {
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
@@ -78,8 +91,20 @@ function Cover() {
                         className: styles_module.footer,
                         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
                             src: (0,useBaseUrl/* default */.ZP)('img/suprema-logo-bottom.svg'),
-                            className: styles_module.logo
+                            className: styles_module.logo,
+                            alt: "Suprema Logo"
                         })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
+                        className: (0,clsx/* default */.Z)(styles_module.next, "pagination-nav__link pagination-nav__link--next"),
+                        href: next,
+                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                            className: "pagination-nav__sublabel",
+                            children: "다음"
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: "page-break"
                     })
                 ]
             })
