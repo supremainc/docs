@@ -1192,8 +1192,10 @@ var useBaseUrl = __webpack_require__("3187");
 
 
 
+
+
 function Image(param) {
-    let { src, alt, className, alone } = param;
+    let { src, alt, className, alone, caption, ico } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const imagePath = currentLocale === 'ko' || alone ? (0,useBaseUrl/* default */.ZP)(src) : (0,useBaseUrl/* default */.ZP)(src.replace('/img/', `/img/${currentLocale}/`));
     const errTarget = (0,useBaseUrl/* default */.ZP)('/img/default-placeholder-image.webp');
@@ -1201,18 +1203,44 @@ function Image(param) {
     function onError(e) {
         e.target.src = errTarget;
     }
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-            className: "hasimg",
-            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
-                loading: "lazy",
-                src: imagePath,
-                alt: alt,
-                className: className,
-                onError: onError
+    if (ico) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+            loading: "lazy",
+            src: imagePath,
+            alt: alt,
+            className: (0,clsx/* default */.Z)('ico', className),
+            onError: onError
+        });
+    } else {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
+            children: caption ? /*#__PURE__*/ (0,jsx_runtime.jsxs)("figure", {
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+                        loading: "lazy",
+                        src: imagePath,
+                        alt: alt,
+                        className: (0,clsx/* default */.Z)('img', className),
+                        onError: onError
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("figcaption", {
+                        children: (0,Translate/* translate */.I)({
+                            id: 'theme.figureCaption.desc',
+                            message: '위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.'
+                        })
+                    })
+                ]
+            }) : /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                className: "hasimg",
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+                    loading: "lazy",
+                    src: imagePath,
+                    alt: alt,
+                    className: className,
+                    onError: onError
+                })
             })
-        })
-    });
+        });
+    }
 }
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsSidebar.js
