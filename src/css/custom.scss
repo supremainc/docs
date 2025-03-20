@@ -373,6 +373,9 @@ footer {
           width: 400px;
         }
       }
+      img.none {
+        border: none;
+      }
     }
   }
   ul ul, ul ol, ol ol, ol ul {
@@ -412,6 +415,20 @@ footer {
       img {
         margin-left: 0;
       }
+    }
+  }
+
+  figure {
+    img {
+      border: 1px solid;
+    }
+    img.none {
+      border: none;
+    }
+    figcaption {
+      font-size: .8rem;
+      color: var(--ifm-color-color-gray);
+      text-align: center;
     }
   }
 
@@ -541,8 +558,8 @@ footer {
 @media print {
   @page {
     size: A4;
-    margin-top: 0.5in;
-    margin-bottom: 0in;
+    margin-top: 0.7in;
+    margin-bottom: 0.7in;
     margin-left: 0.5in;
     margin-right: 0.5in;
   }
@@ -568,6 +585,10 @@ footer {
     p {
       font-size: .8rem;
       line-height: 1.2;
+      svg {
+        position: relative;
+        top: 2px;
+      }
     }
     img {
       max-width: 65%;
