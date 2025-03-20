@@ -323,6 +323,10 @@
     "message": "Next step",
     "description": "The label for the next step section"
   },
+  "theme.figureCaption.desc": {
+    "message": "The image above is an example screen and may differ from the actual screen.",
+    "description": "The description for the figure caption"
+  },
   "index.search": {
     "message": "Search"
   },
