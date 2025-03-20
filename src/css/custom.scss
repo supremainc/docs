@@ -376,6 +376,13 @@ footer {
       img.none {
         border: none;
       }
+      img.ico {
+        display: inline-block;
+        position: relative;
+        border: none;
+        top: 4px;
+        height: 22px;
+      }
     }
   }
   ul ul, ul ol, ol ol, ol ul {
