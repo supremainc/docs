@@ -56,10 +56,10 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '활용 안내',
+          label: '사용자(User)',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/how-to-guide',
+            id: 'platform/biostar_x/how-to-guide-user',
           },
           items: [
             'platform/biostar_x/user-group-manage',
@@ -81,10 +81,22 @@ const sidebars = {
                 'platform/biostar_x/export-import-user-info',
               ]
             },
+            'platform/biostar_x/search-users',
             'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
             'platform/biostar_x/migration-visual-face'
+          ]
+        },
+        {
+          type: 'category',
+          label: '모니터링(Monitoring)',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-monitoring',
+          },
+          items: [
+            'platform/biostar_x/check-door-status'
           ]
         }
       ],
