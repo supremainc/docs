@@ -376,13 +376,13 @@ footer {
       img.none {
         border: none;
       }
-      img.ico {
-        display: inline-block;
-        position: relative;
-        border: none;
-        top: 4px;
-        height: 22px;
-      }
+    }
+    img.ico {
+      display: inline-block;
+      position: relative;
+      border: none;
+      top: 4px;
+      height: 22px;
     }
   }
   ul ul, ul ol, ol ol, ol ul {
@@ -398,6 +398,23 @@ footer {
       p + .theme-admonition {
         margin-top: 1rem;
       }
+    }
+    p.hasimg {
+      margin-top: 0;
+      margin-bottom: 15px;
+      img {
+        margin-left: 0;
+      }
+    }
+    figure {
+      text-align: left;
+      margin-left: 0;
+      img {
+        margin-left: 0;
+      }
+    }
+    figcaption {
+      text-align: left;
     }
     li:last-of-type {
       margin-bottom: 0;
@@ -415,19 +432,13 @@ footer {
       }
     }
   }
-  ol, ul {
-    p.hasimg {
-      margin-top: 0;
-      margin-bottom: 15px;
-      img {
-        margin-left: 0;
-      }
-    }
-  }
 
   figure {
+    text-align: center;
     img {
       border: 1px solid;
+      margin-left: auto;
+      margin-right: auto;
     }
     img.none {
       border: none;
