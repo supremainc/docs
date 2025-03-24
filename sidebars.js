@@ -82,6 +82,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/user-template',
+            'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
             'platform/biostar_x/migration-visual-face'
           ]
