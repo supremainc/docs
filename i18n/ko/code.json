@@ -327,6 +327,18 @@
     "message": "위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.",
     "description": "The description for the figure caption"
   },
+  "theme.cover.address": {
+    "message": "<b>(주) 슈프리마</b><br/>13554 경기도 성남시 분당구 정자일로 248 파크뷰타워 17층<br/>영업 문의 1522 4507(1번) korea@suprema.co.kr | 고객지원 1522 4507(2번) cs@suprema.co.kr",
+    "description": "The address of the company"
+  },
+  "theme.cover.copyright": {
+    "message": "© 2025 Suprema Inc. 이 문서에 표기된 슈프리마, 제품명, 번호는 슈프리마의 등록 상표입니다. 모든 회사명과 제품명은 해당 회사의 상표이거나 등록 상표입니다. 제품 외관, 제조 상태 및 사양은 사전 통지 없이 변경될 수 있습니다.",
+    "description": "The copyright of the company"
+  },
+  "theme.cover.qrCodetext": {
+    "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp",
+    "description": "The QR code text"
+  },
   "index.search": {
     "message": "검색"
   },

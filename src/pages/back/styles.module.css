@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.coverpage {
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 74%, rgba(217,224,229,1) 100%);
+  padding: 0.6299in;
+  align-content: end;
+}
+.footer {
+  display: flow-root;
+  width: 100%;
+}
+.logo {
+  background-color: #a42444;
+  float: left;
+  width: 1.572in;
+  height: 97.95px;
+}
+.logo img {
+  width: 1.572in;
+  height: auto;
+}
+.address {
+  margin-left: 0.1603in;
+  width: 5.2756in;
+  height: 97.95px;
+  float: left;
+  align-content: center;
+}
+.address p {
+  font-size: 8pt;
+  color: #6c6e71;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.3rem;
+}
+.address b {
+  font-size: 9pt;
+}
+.qrcontents {
+  height: 37.79px;
+}
+.qrtext {
+  font-size: 7pt;
+  color: #6c6e71;
+  float: left;
+  line-height: 1.3;
+  margin-left: 0.0512in;
+  align-content: center;
+}
+.qr {
+  width: 0.3937in;
+  height: 0.3937in;
+}
+.qrimage {
+  width: 0.3937in;
+  height: 0.3937in;
+  float: left;
+}
+.copyright {
+  font-size: 7pt;
+  display: block;
+  width: 100%;
+  color: #6c6e71;
+  margin-top: 0.1575in;
+}

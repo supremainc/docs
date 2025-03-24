@@ -1,60 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-@media print {
-  .coverpage {
-    height: 100vh;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
-  }
-  .title {
-    position: absolute;
-    top: 2.0276in;
-    height: 3.7795in;
-    width: 100%;
-    background-color: #a42444;
-    padding: 0.5315in 0.3937in 0.4633in 0.785in;
-    color: #fff;
-  }
-  .title h1 {
-    font-family: "Montserrat";
-    font-weight: bold;
-    font-size: 50pt;
-    margin-bottom: 0;
-  }
-  .title h2 {
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-size: 26pt;
-    margin-bottom: 0;
-  }
-  .title .ver {
-    font-family: "Noto Sans";
-    font-weight: medium;
-    font-size: 10pt;
-    position: relative;
-    left: 4px;
-    margin-top: .2rem;
-  }
-  .title .lang, .title .number {
-    font-weight: medium;
-    font-size: 10pt;
-    position: relative;
-    text-align: right;
-  }
-  .title .lang {
-    margin-top: 4.7rem;
-  }
-  .next {
-    display: none;
-  }
-  .footer {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0.6037in;
-  }
-  .logo {
-    width: 113px;
-    height: auto;
-  }
+.coverpage {
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
+}
+.title {
+  position: absolute;
+  top: 2.0276in;
+  height: 3.7795in;
+  width: 100%;
+  background-color: #a42444;
+  padding: 0.5315in 0.3937in 0.4633in 0.785in;
+  color: #fff;
+}
+.title h1 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 50pt;
+  margin-bottom: 0;
+}
+.title h2 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 26pt;
+  margin-bottom: 0;
+}
+.title .ver {
+  font-family: "Noto Sans";
+  font-weight: medium;
+  font-size: 10pt;
+  position: relative;
+  left: 4px;
+  margin-top: .2rem;
+}
+.title .lang, .title .number {
+  font-weight: medium;
+  font-size: 10pt;
+  position: relative;
+  text-align: right;
+}
+.title .lang {
+  margin-top: 4.7rem;
+}
+.next {
+  display: none;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0.6037in;
+}
+.logo {
+  width: 113px;
+  height: auto;
 }

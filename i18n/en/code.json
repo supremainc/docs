@@ -327,6 +327,18 @@
     "message": "The image above is an example screen and may differ from the actual screen.",
     "description": "The description for the figure caption"
   },
+  "theme.cover.address": {
+    "message": "<b>Suprema Inc.</b><br/>17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA<br/>Tel: +82 31 783 4502 | Fax: +82 31 783 4503 | Inquiry: sales_sys@supremainc.com",
+    "description": "The address of the company"
+  },
+  "theme.cover.copyright": {
+    "message": "© 2025 Suprema Inc. Suprema and identifying product names and numbers herein are registered trade marks of Suprema, Inc.<br/>All non-Suprema brands and product names are trademarks or registered trademarks of their respective companies.<br/>Product appearance, build status and/or specifications are subject to change without notice.",
+    "description": "The copyright of the company"
+  },
+  "theme.cover.qrCodetext": {
+    "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp",
+    "description": "The QR code text"
+  },
   "index.search": {
     "message": "Search"
   },
