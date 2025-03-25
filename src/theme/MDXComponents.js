@@ -17,6 +17,7 @@ import Column from '@site/src/components/Column';
 import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
+import { Glossary } from '@site/src/components/Glossary';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -54,6 +55,7 @@ export default {
     Start,
     NextStep,
     NextItem,
+    Glossary,
     IcLicense,
     IcAdd,
     IcClose,
