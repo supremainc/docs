@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-check-door-status-mdx-761.json
-var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 확인하고 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 확인하고 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"모니터링(Monitoring)","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"}}')
+var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 확인하고 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/en/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 확인하고 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"모니터링(Monitoring)","permalink":"/docs/en/platform/biostar_x/how-to-guide-monitoring"},"next":{"title":"출입문 제어하기","permalink":"/docs/en/platform/biostar_x/control-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'출입문'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
