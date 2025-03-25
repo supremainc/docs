@@ -96,7 +96,8 @@ const sidebars = {
             id: 'platform/biostar_x/how-to-guide-monitoring',
           },
           items: [
-            'platform/biostar_x/check-door-status'
+            'platform/biostar_x/check-door-status',
+            'platform/biostar_x/control-door'
           ]
         }
       ],
