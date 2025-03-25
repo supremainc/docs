@@ -835,7 +835,7 @@ function DocItemLayout(param) {
 
 
 }),
-"6750": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"4461": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -866,40 +866,37 @@ var en_namespaceObject = JSON.parse('{"ACB_ERROR_CODE.0":"Successful","ACB_ERROR
 
 
 
+// 다국어 지원을 위한 locale mapping
+const localeMap = {
+    ko: ko_namespaceObject,
+    en: en_namespaceObject
+};
 const ReplacementLocaleText = (param)=>{
     let { sid, code, className, children } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     if (sid) {
-        let locale;
-        switch(currentLocale){
-            case "ko":
-                locale = ko_namespaceObject;
-                break;
-            case "en":
-                locale = en_namespaceObject;
-                break;
-        }
-        try {
-            let localeText = locale[sid].replace('<br>', '');
-            return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                className: (0,clsx/* default */.Z)('cmd', className),
-                children: localeText
-            });
-        } catch (e) {
-            console.error(`Error rendering locale text for SID: ${sid}`, e);
+        // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
+        const locale = localeMap[currentLocale] || localeMap.en;
+        const localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+        if (!localeText) {
+            console.error(`Locale text not found for SID: ${sid}`);
             return null;
         }
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+            className: (0,clsx/* default */.Z)('cmd', className),
+            children: localeText
+        });
     } else if (code) {
         try {
-            let localeText = (0,Translate/* translate */.I)({
-                id: `${code}`
+            const localeText = (0,Translate/* translate */.I)({
+                id: code
             });
             return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                 className: (0,clsx/* default */.Z)('cmd', className),
                 children: localeText
             });
-        } catch (e) {
-            console.error(`Error rendering locale text for code: ${code}`, e);
+        } catch (error) {
+            console.error(`Error rendering locale text for code: ${code}`, error);
             return null;
         }
     } else if (children) {
@@ -908,6 +905,7 @@ const ReplacementLocaleText = (param)=>{
             children: children
         });
     }
+    return null;
 };
 /* ESM default export */ const Cmd = (ReplacementLocaleText);
 
@@ -1513,6 +1511,82 @@ function NextItem(param) {
     });
 }
 
+;// CONCATENATED MODULE: ./i18n/ko/glossary.json
+var glossary_namespaceObject = JSON.parse('{"1on1":{"name":"1:1 인증","description":"사용자 자신이 자신임을 확인받는 인증 방법입니다. 개인의 바이오 정보와 데이터베이스에 저장된 바이오 정보를 일대일로 비교하여 검증합니다."},"1onN":{"name":"1:N 인증","description":"데이터베이스에서 사용자 정보를 찾아내는 인증 방법입니다. 개인의 바이오 정보와 등록된 모든 데이터베이스의 정보를 비교하여 식별하는 방식입니다."},"apb":{"name":"안티 패스백(Anti-Passback, APB)","description":"출입 통제를 위해 구조적인 방법으로서, 출입문 안쪽/바깥쪽에 출입 통제 장치를 설치하여 구역에 출입할 때 반드시 인증을 통해 출입해야하는 기능입니다. 카드를 사용해 출입할 때 리더기에 카드를 인식하지 않고 앞 사람을 따라 입실했다면, 퇴실할 때 출입문이 열리지 않으며 <b>안티 패스백</b> 이벤트가 발생합니다.<br/><b>안티 패스백</b>은 Hard APB와 Soft APB로 구분합니다. <b>안티 패스백</b> 위반 시 Hard APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입할 수 없으며, Soft APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입은 가능합니다."},"relay":{"name":"릴레이(Relay)","description":"전기 회로의 개폐를 다른 전기 회로의 전류, 전압, 주파수 등의 변화에 따라 자동으로 실행하는 제어 기기입니다. 주로 출입문을 잠그거나 여는 신호를 제어합니다."}}')
+;// CONCATENATED MODULE: ./i18n/en/glossary.json
+var en_glossary_namespaceObject = JSON.parse('{"apb":{"name":"안티 패스백(Anti-Passback, APB)","description":"출입 통제를 위해 구조적인 방법으로서, 출입문 안쪽/바깥쪽에 출입 통제 장치를 설치하여 구역에 출입할 때 반드시 인증을 통해 출입해야하는 기능입니다. 카드를 사용해 출입할 때 리더기에 카드를 인식하지 않고 앞 사람을 따라 입실했다면, 퇴실할 때 출입문이 열리지 않으며 <b>안티 패스백</b> 이벤트가 발생합니다.<br/><b>안티 패스백</b>은 Hard APB와 Soft APB로 구분합니다. <b>안티 패스백</b> 위반 시 Hard APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입할 수 없으며, Soft APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입은 가능합니다."},"relay":{"name":"릴레이(Relay)","description":"전기 회로의 개폐를 다른 전기 회로의 전류, 전압, 주파수 등의 변화에 따라 자동으로 실행하는 제어 기기입니다. 주로 출입문을 잠그거나 여는 신호를 제어합니다."}}')
+;// CONCATENATED MODULE: ./src/components/Glossary/index.js
+
+
+
+
+// 각 로케일에 맞는 glossary 파일을 정적으로 import
+
+
+const glossaryMap = {
+    ko: glossary_namespaceObject,
+    en: en_glossary_namespaceObject
+};
+function Glossary(param) {
+    let { termid } = param;
+    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
+    // 현재 로케일에 맞는 glossary 객체 가져오기, 기본값은 영어
+    const glossary = glossaryMap[currentLocale] || en_glossary_namespaceObject;
+    const term = glossary[termid];
+    if (!term) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            children: "Term not found"
+        });
+    }
+    const { name, description } = term;
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("p", {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("b", {
+                children: name
+            }),
+            ": ",
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                dangerouslySetInnerHTML: {
+                    __html: description
+                }
+            })
+        ]
+    });
+}
+function GlossaryAll() {
+    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
+    const glossary = glossaryMap[currentLocale] || en_glossary_namespaceObject;
+    // glossary 객체를 key와 value를 포함한 배열로 변환 후 정렬
+    const sortedEntries = Object.entries(glossary).sort((param, param1)=>{
+        let [, a] = param, [, b] = param1;
+        return a.name.localeCompare(b.name, currentLocale);
+    });
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("dl", {
+        children: sortedEntries.map((param)=>{
+            let [key, term] = param;
+            return /*#__PURE__*/ (0,jsx_runtime.jsxs)(react.Fragment, {
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("dt", {
+                        children: [
+                            term.name,
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+                                className: "hash-link",
+                                to: `#${key}`,
+                                children: "​"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("dd", {
+                        dangerouslySetInnerHTML: {
+                            __html: term.description
+                        }
+                    })
+                ]
+            }, key);
+        })
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var _path, _path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -1768,6 +1842,7 @@ const SvgIcoMore = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -1805,6 +1880,8 @@ const SvgIcoMore = _ref => {
     Start: Start,
     NextStep: NextStep,
     NextItem: NextItem,
+    Glossary: Glossary,
+    GlossaryAll: GlossaryAll,
     IcLicense: ico_license,
     IcAdd: ico_add,
     IcClose: ico_close,
