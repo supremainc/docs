@@ -1,6 +1,6 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-
+import Link from '@docusaurus/Link';
 // 각 로케일에 맞는 glossary 파일을 정적으로 import
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
@@ -47,7 +47,14 @@ export function GlossaryAll() {
 		<dl>
 			{sortedEntries.map(([key, term]) => (
 				<React.Fragment key={key}>
-					<dt id={key}>{term.name}</dt>
+					<dt>
+            {term.name} 
+            <Link
+                className="hash-link"
+                to={`#${key}`}>
+                &#8203;
+            </Link>
+          </dt>
 					<dd dangerouslySetInnerHTML={{ __html: term.description }} />
 				</React.Fragment>
 			))}
