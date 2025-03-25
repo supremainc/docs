@@ -295,6 +295,19 @@ footer {
   }
   h6 { font-size: var(--ifm-h6-font-size); }
 
+  dl {
+    dt {
+      font-weight: 600;
+      color: var(--ifm-color-cmd);
+    }
+    dd + dt {
+      margin-top: 1.5rem;
+    }
+    dd {
+      margin-top: .5rem;
+    }
+  }
+
   section {
     &.row {
       a.padding--lg {
@@ -600,7 +613,7 @@ footer {
     h4 { font-size: 1.4rem; }
     h5 { font-size: 1.2rem; }
     h6 { font-size: 1rem; }
-    p {
+    p, dt, dd {
       font-size: .8rem;
       line-height: 1.2;
       svg {

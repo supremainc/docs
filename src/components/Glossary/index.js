@@ -15,7 +15,7 @@ export function Glossary({ termid }) {
     i18n: { currentLocale },
   } = useDocusaurusContext();
 
-  // 현재 로케일에 맞는 glossary 객체 가져오기, 기본값은 한국어
+  // 현재 로케일에 맞는 glossary 객체 가져오기, 기본값은 영어
   const glossary = glossaryMap[currentLocale] || glossary_en;
 
   const term = glossary[termid];
@@ -29,4 +29,28 @@ export function Glossary({ termid }) {
       <b>{name}</b>: <span dangerouslySetInnerHTML={{ __html: description }} />
     </p>
   );
+}
+
+export function GlossaryAll() {
+	const {
+		i18n: { currentLocale },
+	} = useDocusaurusContext();
+
+	const glossary = glossaryMap[currentLocale] || glossary_en;
+
+	// glossary 객체를 key와 value를 포함한 배열로 변환 후 정렬
+	const sortedEntries = Object.entries(glossary).sort(([, a], [, b]) =>
+		a.name.localeCompare(b.name, currentLocale)
+	);
+
+	return (
+		<dl>
+			{sortedEntries.map(([key, term]) => (
+				<React.Fragment key={key}>
+					<dt id={key}>{term.name}</dt>
+					<dd dangerouslySetInnerHTML={{ __html: term.description }} />
+				</React.Fragment>
+			))}
+		</dl>
+	);
 }

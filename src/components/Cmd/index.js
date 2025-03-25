@@ -18,7 +18,7 @@ const ReplacementLocaleText = ({ sid, code, className, children }) => {
   const { i18n: { currentLocale } } = useDocusaurusContext();
 
   if (sid) {
-    // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 한국어
+    // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
     const locale = localeMap[currentLocale] || localeMap.en;
     const localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
 

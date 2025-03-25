@@ -116,6 +116,9 @@ const sidebars = {
         'legal/open-source-licenses'
       ]
     }
+  ],
+  reference: [
+    'reference/glossary'
   ]
 };
 
