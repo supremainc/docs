@@ -8,6 +8,13 @@
   text-transform: uppercase;
 }
 
+.admonitionHeadingNote {
+  font: var(--ifm-heading-font-weight) var(--ifm-admonition-font-size) /
+    var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  display: inline;
+  position: absolute;
+}
+
 /* Heading alone without content (does not handle fragment content) */
 .admonitionHeading:not(:last-child) {
   margin-bottom: 0.3rem;
@@ -32,7 +39,15 @@
 
 .admonitionContent {
   margin-left: 28px;
+  position: relative;
 }
 .admonitionContent > :last-child {
   margin-bottom: 0;
+}
+
+@media print {
+  .admonitionHeading {
+    font-size: .8rem;
+    margin-left: 6px;
+  }
 }

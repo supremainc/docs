@@ -342,6 +342,21 @@ footer {
       color: var(--ifm-color-primary-light);
     }
   }
+  .theme-admonition-note {
+    // background: url('./img/ico-note.svg') no-repeat 15px 18px;
+    background-color: var(--ifm-alert-background-color);
+    .admNote {
+      position: absolute;
+      left: -27px;
+      top: 4px;
+      svg {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        fill: #102B8D;
+      }
+    }
+  }
   .alert--secondary {
     --ifm-alert-border-color: #102B8D;
     --ifm-alert-foreground-color: #102B8D;
@@ -657,6 +672,16 @@ footer {
     }
     .theme-admonition {
       page-break-inside: avoid;
+    }
+    .theme-admonition-note {
+      .admNote {
+        top: -3px;
+        left: 2px
+        svg {
+          width: 16.63px !important;
+          height: 16.63px !important;
+        }
+      }
     }
     div.container {
       .col {
