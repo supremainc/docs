@@ -51,7 +51,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "멀티팩터 인증",
-  "id": "멀티팩터-인증",
+  "id": "multi-factor-authentication",
   "level": 2
 }, {
   "value": "출입 그룹",
@@ -195,7 +195,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "멀티팩터-인증",
+      id: "multi-factor-authentication",
       children: "멀티팩터 인증"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

@@ -1336,7 +1336,7 @@ const Collection = (param)=>{
 
 function Kbd(param) {
     let { children } = param;
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("kbd", {
         className: Kbd_styles_module.kbd,
         children: children
     });

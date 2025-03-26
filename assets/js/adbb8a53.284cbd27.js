@@ -48,15 +48,15 @@ const toc = [{
   "level": 2
 }, {
   "value": "릴레이 개방",
-  "id": "릴레이-개방",
+  "id": "relay-open",
   "level": 3
 }, {
   "value": "릴레이 해제",
-  "id": "릴레이-해제",
+  "id": "relay-release",
   "level": 3
 }, {
   "value": "릴레이 잠금",
-  "id": "릴레이-잠금",
+  "id": "relay-lock",
   "level": 3
 }, {
   "value": "출입문 Arm 장치 제어하기",
@@ -68,11 +68,11 @@ const toc = [{
   "level": 2
 }, {
   "value": "카메라 영상 확인",
-  "id": "카메라-영상-확인",
+  "id": "camera-video",
   "level": 3
 }, {
   "value": "카메라 상세 정보 확인",
-  "id": "카메라-상세-정보-확인",
+  "id": "camera-detail",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -123,7 +123,7 @@ function _createMdxContent(props) {
         termid: "relay"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "릴레이-개방",
+      id: "relay-open",
       children: "릴레이 개방"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문과 연결된 릴레이 장치를 통해 출입문의 잠금을 해제할 수 있습니다. 개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -157,7 +157,7 @@ function _createMdxContent(props) {
         }), " 상태로 변경하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "릴레이-해제",
+      id: "relay-release",
       children: "릴레이 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문과 연결된 릴레이 장치를 통해 출입문을 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -166,7 +166,7 @@ function _createMdxContent(props) {
         children: "해제"
       }), "를 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "릴레이-잠금",
+      id: "relay-lock",
       children: "릴레이 잠금"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문과 연결된 릴레이 장치를 통해 출입문을 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -199,7 +199,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 카메라 장치를 제어할 수 있습니다. 카메라 장치의 영상을 실시간으로 확인하거나 상세 정보를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "카메라-영상-확인",
+      id: "camera-video",
       children: "카메라 영상 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["카메라 장치의 영상을 실시간으로 확인하려면, 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -224,7 +224,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "카메라-상세-정보-확인",
+      id: "camera-detail",
       children: "카메라 상세 정보 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["카메라의 상세 정보를 확인하려면, 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {

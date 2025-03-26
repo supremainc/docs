@@ -43,11 +43,11 @@ const assets = {
 
 const toc = [{
   "value": "사용자 정보 수정",
-  "id": "사용자-정보-수정",
+  "id": "user-information-modification",
   "level": 2
 }, {
   "value": "사용자 정보 일괄 수정",
-  "id": "사용자-정보-일괄-수정",
+  "id": "user-information-collective-modification",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -74,7 +74,7 @@ function _createMdxContent(props) {
         children: "관리자(Administrator) 등급의 권한은 수정할 수 없습니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-정보-수정",
+      id: "user-information-modification",
       children: "사용자 정보 수정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -139,7 +139,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-정보-일괄-수정",
+      id: "user-information-collective-modification",
       children: "사용자 정보 일괄 수정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "한 개 이상의 사용자 정보를 일괄 수정할 수 있습니다. 이 기능은 다수의 사용자에게 동일한 출입 권한이나 그룹을 설정할 때 유용합니다."

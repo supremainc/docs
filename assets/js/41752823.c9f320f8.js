@@ -43,7 +43,7 @@ const assets = {
 
 const toc = [{
   "value": "웹 브라우저에서 로그인하기",
-  "id": "웹-브라우저에서-로그인하기",
+  "id": "log-in-from-a-web-browser",
   "level": 2
 }, {
   "value": "HTTPS 사용하기",
@@ -75,7 +75,7 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), "는 웹 기반 서비스를 제공하여 언제 어디서든 접속할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "웹-브라우저에서-로그인하기",
+      id: "log-in-from-a-web-browser",
       children: "웹 브라우저에서 로그인하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {

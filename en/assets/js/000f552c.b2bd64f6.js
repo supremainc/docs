@@ -44,27 +44,27 @@ const assets = {
 
 const toc = [{
   "value": "출입문 개방",
-  "id": "출입문-개방",
+  "id": "door-open",
   "level": 2
 }, {
   "value": "출입문 해제",
-  "id": "출입문-해제",
+  "id": "door-unlock",
   "level": 2
 }, {
   "value": "출입문 잠금",
-  "id": "lock",
+  "id": "door-lock",
   "level": 2
 }, {
   "value": "출입문 카메라 확인",
-  "id": "check-camera",
+  "id": "door-camera",
   "level": 2
 }, {
   "value": "알람 해제",
-  "id": "dismiss-alarm",
+  "id": "alarm-reset",
   "level": 2
 }, {
   "value": "APB 해제",
-  "id": "antipassback",
+  "id": "apb-reset",
   "level": 2
 }, {
   "value": "상세 보기",
@@ -121,7 +121,7 @@ function _createMdxContent(props) {
         children: "모니터링"
       }), "을 클릭하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입문-개방",
+      id: "door-open",
       children: "출입문 개방"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -155,7 +155,7 @@ function _createMdxContent(props) {
         }), " 상태로 변경하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입문-해제",
+      id: "door-unlock",
       children: "출입문 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문을 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -164,7 +164,7 @@ function _createMdxContent(props) {
         children: "해제"
       }), "를 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "lock",
+      id: "door-lock",
       children: "출입문 잠금"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문을 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -187,7 +187,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "check-camera",
+      id: "door-camera",
       children: "출입문 카메라 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문과 연결된 카메라를 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -218,14 +218,14 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "dismiss-alarm",
+      id: "alarm-reset",
       children: "알람 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         children: "알람 해제"
       }), "를 클릭하면, 화면 오른쪽 위에 알람 해제된 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "antipassback",
+      id: "apb-reset",
       children: "APB 해제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "안티 패스백 위반이 발생했을 때, APB 알람을 해제할 수 있습니다."

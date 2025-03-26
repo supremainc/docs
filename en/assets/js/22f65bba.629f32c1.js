@@ -42,19 +42,19 @@ const assets = {
 
 const toc = [{
   "value": "사용자 템플릿 생성",
-  "id": "사용자-템플릿-생성",
+  "id": "create-a-user-template",
   "level": 2
 }, {
   "value": "템플릿으로 사용자 추가",
-  "id": "템플릿으로-사용자-추가",
+  "id": "add-user-as-a-template",
   "level": 2
 }, {
   "value": "템플릿 수정",
-  "id": "템플릿-수정",
+  "id": "template-modification",
   "level": 2
 }, {
   "value": "템플릿 삭제",
-  "id": "템플릿-삭제",
+  "id": "delete-template",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -75,7 +75,7 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 템플릿은 조직 및 부서별 기본 정보를 표준화하여, 신규 사용자 등록 프로세스를 간소화하고 관리 효율을 높일 수 있습니다. 템플릿을 사용해 모든 신규 사용자에 대해 일관된 정보와 권한을 빠르고 정확하게 적용할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-템플릿-생성",
+      id: "create-a-user-template",
       children: "사용자 템플릿 생성"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -148,7 +148,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "템플릿으로-사용자-추가",
+      id: "add-user-as-a-template",
       children: "템플릿으로 사용자 추가"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "추가한 템플릿으로 신규 사용자를 추가하려면 다음 단계를 따르세요."
@@ -193,7 +193,7 @@ function _createMdxContent(props) {
         }), "를 참조하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "템플릿-수정",
+      id: "template-modification",
       children: "템플릿 수정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "이미 만들어진 사용자 템플릿을 수정할 수 있습니다."
@@ -230,7 +230,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "수정한 내용이 템플릿에 반영됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "템플릿-삭제",
+      id: "delete-template",
       children: "템플릿 삭제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "불필요한 사용자 템플릿을 삭제할 수 있습니다."

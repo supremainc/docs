@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-group-manage-mdx-e91.json
-var site_docs_platform_biostar_x_user_group_manage_mdx_e91_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","source":"@site/docs/platform/biostar_x/user-group-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-group-manage","permalink":"/docs/platform/biostar_x/user-group-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-group-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","keywords":["사용자","그룹","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자(User)","permalink":"/docs/platform/biostar_x/how-to-guide-user"},"next":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"}}')
+var site_docs_platform_biostar_x_user_group_manage_mdx_e91_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","source":"@site/docs/platform/biostar_x/user-group-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-group-manage","permalink":"/docs/en/platform/biostar_x/user-group-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-group-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","keywords":["사용자","그룹","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자(User)","permalink":"/docs/en/platform/biostar_x/how-to-guide-user"},"next":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'그룹',
 		'출입 통제'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -44,27 +44,27 @@ const assets = {
 
 const toc = [{
   "value": "그룹 추가",
-  "id": "그룹-추가",
+  "id": "group-additional",
   "level": 2
 }, {
   "value": "상위 그룹 생성하기",
-  "id": "상위-그룹-생성하기",
+  "id": "creating-a-higher-group",
   "level": 3
 }, {
   "value": "하위 그룹 생성하기",
-  "id": "하위-그룹-생성하기",
+  "id": "creating-a-lower-group",
   "level": 3
 }, {
   "value": "그룹 이름 변경",
-  "id": "그룹-이름-변경",
+  "id": "group-name-change",
   "level": 2
 }, {
   "value": "그룹 삭제",
-  "id": "그룹-삭제",
+  "id": "group-deletion",
   "level": 2
 }, {
   "value": "그룹 검색",
-  "id": "그룹-검색",
+  "id": "group-search",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -106,7 +106,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "그룹-추가",
+      id: "group-additional",
       children: "그룹 추가"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "여러 명의 사용자를 효율적으로 관리하기 위해 그룹을 생성하세요. 사용자가 속한 조직 등으로 이름을 등록하면 편리하게 관리할 수 있습니다."
@@ -132,7 +132,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "상위-그룹-생성하기",
+      id: "creating-a-higher-group",
       children: "상위 그룹 생성하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -163,7 +163,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "하위-그룹-생성하기",
+      id: "creating-a-lower-group",
       children: "하위 그룹 생성하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -184,7 +184,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "그룹-이름-변경",
+      id: "group-name-change",
       children: "그룹 이름 변경"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 속한 그룹의 이름을 변경할 수 있습니다. 조직 또는 부서의 이름이 변경되었을 때 그룹 이름도 같이 변경하는 것을 권장합니다."
@@ -224,7 +224,7 @@ function _createMdxContent(props) {
         children: "사용자 그룹 이름은 최대 48자까지 입력할 수 있습니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "그룹-삭제",
+      id: "group-deletion",
       children: "그룹 삭제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 속한 그룹의 이름을 변경할 수 있습니다. 조직 또는 부서의 이름이 변경되었을 때 그룹 이름도 같이 변경하는 것을 권장합니다."
@@ -255,7 +255,7 @@ function _createMdxContent(props) {
         children: "User Group"
       }), " 목록에서 선택한 그룹이 삭제된 것을 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "그룹-검색",
+      id: "group-search",
       children: "그룹 검색"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "많은 사용자 그룹 중에서 특정 그룹을 빠르게 찾으려면 검색 기능을 사용하세요."

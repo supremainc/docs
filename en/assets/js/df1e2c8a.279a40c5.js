@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-enroll-credential-mdx-df1.json
-var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"},"next":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"}}')
+var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/en/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/en/platform/biostar_x/set-permission"},"next":{"title":"사용자 삭제하기","permalink":"/docs/en/platform/biostar_x/delete-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -82,7 +82,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "CSN 모바일 카드",
-  "id": "csn-모바일-카드",
+  "id": "csnmobilecard",
   "level": 3
 }, {
   "value": "QR/Barcode 등록",
@@ -1142,7 +1142,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "csn-모바일-카드",
+      id: "csnmobilecard",
       children: "CSN 모바일 카드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {

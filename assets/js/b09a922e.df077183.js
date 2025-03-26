@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-getting-started-mdx-b09.json
-var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/en/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/en/platform/biostar_x/"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/en/platform/biostar_x/system-requirements"}}')
+var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/platform/biostar_x/"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'SQL Server',
 		'데이터베이스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -61,31 +61,31 @@ const toc = [{
   "level": 3
 }, {
   "value": "포트 설정",
-  "id": "포트-설정",
+  "id": "port-setting",
   "level": 4
 }, {
   "value": "사용자 및 데이터베이스 생성",
-  "id": "사용자-및-데이터베이스-생성",
+  "id": "create-a-user-and-database",
   "level": 4
 }, {
   "value": "Windows Authentication 데이터베이스 설정",
-  "id": "windows-authentication-데이터베이스-설정",
+  "id": "windows-authentication-database-settings",
   "level": 4
 }, {
   "value": "사전 설정",
-  "id": "사전-설정",
+  "id": "preliminary-setting",
   "level": 5
 }, {
   "value": "Active Directory 계정으로 MS SQL Windows Authentication을 사용하기 위한 설정",
-  "id": "active-directory-계정으로-ms-sql-windows-authentication을-사용하기-위한-설정",
+  "id": "settings-for-using-ms-sql",
   "level": 5
 }, {
   "value": "데이터베이스 설정",
-  "id": "데이터베이스-설정",
+  "id": "database-setting",
   "level": 5
 }, {
   "value": "다음 단계",
-  "id": "다음-단계",
+  "id": "next-step",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -441,7 +441,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "포트-설정",
+      id: "port-setting",
       children: "포트 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -460,7 +460,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "사용자-및-데이터베이스-생성",
+      id: "create-a-user-and-database",
       children: "사용자 및 데이터베이스 생성"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -557,12 +557,12 @@ function _createMdxContent(props) {
         children: "트랜잭션이 많은 환경에서는 로그를 주기적으로 백업하여 로그 파일의 크기가 증가하지 않도록 주의하세요."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "windows-authentication-데이터베이스-설정",
+      id: "windows-authentication-database-settings",
       children: "Windows Authentication 데이터베이스 설정"
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h5, {
-          id: "사전-설정",
+          id: "preliminary-setting",
           children: "사전 설정"
         }), (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -659,7 +659,7 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h5, {
-          id: "active-directory-계정으로-ms-sql-windows-authentication을-사용하기-위한-설정",
+          id: "settings-for-using-ms-sql",
           children: "Active Directory 계정으로 MS SQL Windows Authentication을 사용하기 위한 설정"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -724,7 +724,7 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h5, {
-          id: "데이터베이스-설정",
+          id: "database-setting",
           children: "데이터베이스 설정"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -815,7 +815,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "다음-단계",
+      id: "next-step",
       children: "다음 단계"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
