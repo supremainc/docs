@@ -118,6 +118,50 @@ export function ProductLinkCard({ productLinks: productLinksProp }) {
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
       })}`
+    },
+    {
+      title: 'BioEntry W3',
+      url: '#',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.BioEntryW3.desc",
+        message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
+      })}`
+    },
+    {
+      title: 'BioStation 3',
+      url: `#`,
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
+      height: '150px',
+      desc: 'The New Door Access Experience'
+    },
+    {
+      title: 'BioStation 2a',
+      url: `#`,
+      img: 'https://www.supremainc.com/images/upload/products/EN/20231013111341886.png',
+      height: '150px',
+      desc: 'Feel the Power of AI'
+    },
+    {
+      title: 'FaceStation F2',
+      url: '#',
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.FaceStationF2.desc",
+        message: "퓨전 얼굴인증 장치"
+      })}`
+    },
+    {
+      title: 'X-Station 2',
+      url: '#',
+      img: 'https://www.suprema.co.kr/en/asset/images/common/xStation2_OAPB_v2.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
+      })}`
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;

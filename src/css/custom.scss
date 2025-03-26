@@ -63,14 +63,12 @@ html[lang='en-US'] * {
 // 언어별 폰트 설정
 
 // index.js 페이지
-.hero__title, .hero__subtitle {
-  color: #fff;
-}
 .aa-Autocomplete {
-  width: 70%;
+  width: 50%;
   margin: 0 auto !important;
   .aa-Form {
     border: 1px solid var(--ifm-color-primary);
+    border-radius: 10px;
   }
   .aa-Input {
     width: 70%;

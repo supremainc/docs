@@ -8,7 +8,12 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url('../../static/img/hero.png') no-repeat center center/cover;
+  height: 380px;
+  background: 
+    url('../../static/img/hero.png') no-repeat center center/cover;
+    /* url('../../static/img/banner/biostar2_6_banner_deco1.png') no-repeat left bottom -200px / auto, 
+    url('../../static/img/banner/biostar2_6_banner_deco2.png') no-repeat right bottom -50px / auto, 
+    url('../../static/img/banner/biostar2_6_banner.jpg') no-repeat center center/cover; */
 }
 
 @media screen and (max-width: 996px) {
@@ -21,6 +26,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero__title {
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.3em;
+  font-weight: 300;
 }
 
 .hero__title, .hero__subtitle {
