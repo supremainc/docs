@@ -11,7 +11,7 @@ function CardItem({Svg, img, title, url, height, desc}) {
       <Link to={url} target={(url.includes('biostar_x'))? '_self' : '_blank'}>
         <div className={styles.flex}>
           <div className={(title !== '')? clsx(styles.logo) : clsx(styles.logo, styles.center)}>
-            {(Svg) && <Svg role="img" height={height} />}
+            {(Svg) && <Svg role="img" width='auto' height={height} />}
             {(img) && <img src={img} width='auto' height={height} />}
           </div>
           {
@@ -27,9 +27,9 @@ function CardItem({Svg, img, title, url, height, desc}) {
   )
 }
 
-export function ExternalLinkCard() {
+export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const externalLinks = [
+  const defaultExternalLinks = [
     {
       title: '',
       url: './platform/biostar_x',
@@ -61,20 +61,20 @@ export function ExternalLinkCard() {
       height: '45px'
     }
   ];
-  
+  const externalLinks = externalLinksProp || defaultExternalLinks;
+
   return (
     <div className={clsx('container', styles.grid)}>
-      {/* Card item */}
       {externalLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
       ))}
     </div>
-  )
+  );
 }
 
-export function ProductLinkCard() {
+export function ProductLinkCard({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const externalLinks = [
+  const defaultProductLinks = [
     {
       title: 'BioEntry W3',
       url: '#',
@@ -120,13 +120,13 @@ export function ProductLinkCard() {
       })}`
     }
   ];
-  
+  const productLinks = productLinksProp || defaultProductLinks;
+
   return (
     <div className={clsx('container', styles.product, styles.grid)}>
-      {/* Card item */}
-      {externalLinks.map((props, idx) => (
+      {productLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
       ))}
     </div>
-  )
+  );
 }
