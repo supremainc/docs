@@ -15,9 +15,10 @@ function AdmonitionContainer({type, className, children}) {
     </div>
   );
 }
-function AdmonitionHeading({icon, title}) {
+function AdmonitionHeading({icon, title, type}) {
+  console.log(type);
   return (
-    <div className={styles.admonitionHeading}>
+    <div className={(type === 'note') ? styles.admonitionHeadingNote : styles.admonitionHeading}>
       <span className={styles.admonitionIcon}>{icon}</span>
       {title}
     </div>
@@ -32,7 +33,7 @@ export default function AdmonitionLayout(props) {
   const {type, icon, title, children, className} = props;
   return (
     <AdmonitionContainer type={type} className={className}>
-      {title || icon ? <AdmonitionHeading title={title} icon={icon} /> : null}
+      {title || icon ? <AdmonitionHeading title={title} icon={icon} type={type} /> : null}
       <AdmonitionContent>{children}</AdmonitionContent>
     </AdmonitionContainer>
   );

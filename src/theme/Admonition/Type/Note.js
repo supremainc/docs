@@ -6,20 +6,21 @@ import IconNote from '@theme/Admonition/Icon/Note';
 const infimaClassName = 'alert alert--secondary';
 const defaultProps = {
   icon: <IconNote />,
-  title: (
-    <Translate
-      id="theme.admonition.note"
-      description="The default label used for the Note admonition (:::note)">
-      note
-    </Translate>
-  ),
+  // title: (
+  //   <Translate
+  //     id="theme.admonition.note"
+  //     description="The default label used for the Note admonition (:::note)">
+  //     note
+  //   </Translate>
+  // ),
 };
 export default function AdmonitionTypeNote(props) {
   return (
     <AdmonitionLayout
-      {...defaultProps}
+      // {...defaultProps}
       {...props}
       className={clsx(infimaClassName, props.className)}>
+      <div className='admNote'><IconNote /></div>
       {props.children}
     </AdmonitionLayout>
   );

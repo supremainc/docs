@@ -63,14 +63,12 @@ html[lang='en-US'] * {
 // 언어별 폰트 설정
 
 // index.js 페이지
-.hero__title, .hero__subtitle {
-  color: #fff;
-}
 .aa-Autocomplete {
-  width: 70%;
+  width: 50%;
   margin: 0 auto !important;
   .aa-Form {
     border: 1px solid var(--ifm-color-primary);
+    border-radius: 10px;
   }
   .aa-Input {
     width: 70%;
@@ -340,6 +338,21 @@ footer {
     --ifm-alert-background-color: #F5F7F9;
     a {
       color: var(--ifm-color-primary-light);
+    }
+  }
+  .theme-admonition-note {
+    // background: url('./img/ico-note.svg') no-repeat 15px 18px;
+    background-color: var(--ifm-alert-background-color);
+    .admNote {
+      position: absolute;
+      left: -27px;
+      top: 4px;
+      svg {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        fill: #102B8D;
+      }
     }
   }
   .alert--secondary {
@@ -657,6 +670,16 @@ footer {
     }
     .theme-admonition {
       page-break-inside: avoid;
+    }
+    .theme-admonition-note {
+      .admNote {
+        top: -3px;
+        left: 2px
+        svg {
+          width: 16.63px !important;
+          height: 16.63px !important;
+        }
+      }
     }
     div.container {
       .col {

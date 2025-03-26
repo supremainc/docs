@@ -11,7 +11,7 @@ function CardItem({Svg, img, title, url, height, desc}) {
       <Link to={url} target={(url.includes('biostar_x'))? '_self' : '_blank'}>
         <div className={styles.flex}>
           <div className={(title !== '')? clsx(styles.logo) : clsx(styles.logo, styles.center)}>
-            {(Svg) && <Svg role="img" height={height} />}
+            {(Svg) && <Svg role="img" width='auto' height={height} />}
             {(img) && <img src={img} width='auto' height={height} />}
           </div>
           {
@@ -27,9 +27,9 @@ function CardItem({Svg, img, title, url, height, desc}) {
   )
 }
 
-export function ExternalLinkCard() {
+export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const externalLinks = [
+  const defaultExternalLinks = [
     {
       title: '',
       url: './platform/biostar_x',
@@ -61,20 +61,64 @@ export function ExternalLinkCard() {
       height: '45px'
     }
   ];
-  
+  const externalLinks = externalLinksProp || defaultExternalLinks;
+
   return (
     <div className={clsx('container', styles.grid)}>
-      {/* Card item */}
       {externalLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
       ))}
     </div>
-  )
+  );
 }
 
-export function ProductLinkCard() {
+export function ProductLinkCard({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const externalLinks = [
+  const defaultProductLinks = [
+    {
+      title: 'BioEntry W3',
+      url: '#',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.BioEntryW3.desc",
+        message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
+      })}`
+    },
+    {
+      title: 'BioStation 3',
+      url: `#`,
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
+      height: '150px',
+      desc: 'The New Door Access Experience'
+    },
+    {
+      title: 'BioStation 2a',
+      url: `#`,
+      img: 'https://www.supremainc.com/images/upload/products/EN/20231013111341886.png',
+      height: '150px',
+      desc: 'Feel the Power of AI'
+    },
+    {
+      title: 'FaceStation F2',
+      url: '#',
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.FaceStationF2.desc",
+        message: "퓨전 얼굴인증 장치"
+      })}`
+    },
+    {
+      title: 'X-Station 2',
+      url: '#',
+      img: 'https://www.suprema.co.kr/en/asset/images/common/xStation2_OAPB_v2.png',
+      height: '150px',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
+      })}`
+    },
     {
       title: 'BioEntry W3',
       url: '#',
@@ -120,13 +164,13 @@ export function ProductLinkCard() {
       })}`
     }
   ];
-  
+  const productLinks = productLinksProp || defaultProductLinks;
+
   return (
     <div className={clsx('container', styles.product, styles.grid)}>
-      {/* Card item */}
-      {externalLinks.map((props, idx) => (
+      {productLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
       ))}
     </div>
-  )
+  );
 }
