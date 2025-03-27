@@ -2,3 +2,45 @@
   text-decoration: none !important;
   color: var(--ifm-font-color-base) !important;
 }
+
+.toc {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  margin-top: 4rem !important;
+}
+
+.toc ul {
+  list-style-type: none;
+}
+
+.toc > ul > li > a {
+  color: var(--ifm-color-cmd) !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--ifm-color-border);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.toc > ul > li {
+  margin-top: 2rem;
+}
+
+.toc > ul > li:first-of-type {
+  margin-top: 0;
+}
+
+.toc > ul > li > ul {
+  padding-left: 0;;
+}
+
+.toc > ul > li > ul > li > a {
+  color: var(--ifm-color-content) !important;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.toc > ul > li > ul > li > ul {
+  padding-left: .8rem;
+}

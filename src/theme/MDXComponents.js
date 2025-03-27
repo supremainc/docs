@@ -18,6 +18,7 @@ import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
+import DocsSidebar from '@site/src/components/Toc';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -57,6 +58,7 @@ export default {
     NextItem,
     Glossary,
     GlossaryAll,
+    DocsSidebar,
     IcLicense,
     IcAdd,
     IcClose,

@@ -626,13 +626,16 @@ footer {
   div[class*='docItemCol'] {
     padding: 0;
   }
+  .theme-doc-sidebar-container {
+    display: none;
+  }
   nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
     display: none;
   }
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
     print-color-adjust: exact !important;                 /*Firefox*/
-    h1 { font-size: 2rem; }
+    h1 { font-size: 2rem; margin-top: 0;}
     h2 { 
       font-size: 1.8rem; 
       page-break-before: auto;
