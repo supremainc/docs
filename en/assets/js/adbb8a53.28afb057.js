@@ -43,7 +43,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "출입문 릴레이 장치 제어하기",
+  "value": "출입문 릴레이 장치 제어",
   "id": "control-relay",
   "level": 2
 }, {
@@ -59,11 +59,11 @@ const toc = [{
   "id": "relay-lock",
   "level": 3
 }, {
-  "value": "출입문 Arm 장치 제어하기",
+  "value": "출입문 Arm 장치 제어",
   "id": "control-arm",
   "level": 2
 }, {
-  "value": "출입문 카메라 장치 제어하기",
+  "value": "출입문 카메라 장치 제어",
   "id": "control-camera",
   "level": 2
 }, {
@@ -114,7 +114,7 @@ function _createMdxContent(props) {
       }), "을 클릭하세요. 출입문 목록에서 출입문을 선택하세요. 하위 목록에서 연결된 슬레이브 장치를 선택하고, 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "control-relay",
-      children: "출입문 릴레이 장치 제어하기"
+      children: "출입문 릴레이 장치 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 릴레이 장치를 제어할 수 있습니다. 릴레이 장치에서 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -190,12 +190,12 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "control-arm",
-      children: "출입문 Arm 장치 제어하기"
+      children: "출입문 Arm 장치 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "TBD"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "control-camera",
-      children: "출입문 카메라 장치 제어하기"
+      children: "출입문 카메라 장치 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 카메라 장치를 제어할 수 있습니다. 카메라 장치의 영상을 실시간으로 확인하거나 상세 정보를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {

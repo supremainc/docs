@@ -35,7 +35,6 @@ function AdmonitionContainer(param) {
 }
 function AdmonitionHeading(param) {
     let { icon, title, type } = param;
-    console.log(type);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
         className: type === 'note' ? styles_module.admonitionHeadingNote : styles_module.admonitionHeading,
         children: [
@@ -646,7 +645,7 @@ function BreadcrumbsItem(param) {
         },
         className: (0,clsx/* default */.Z)('breadcrumbs__item', {
             'breadcrumbs__item--active': active
-        }),
+        }, 'item-' + String(index + 1)),
         children: [
             children,
             /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
@@ -1246,7 +1245,7 @@ function Image(param) {
 var docsSidebar = __webpack_require__("4684");
 ;// CONCATENATED MODULE: ./src/components/Toc/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const Toc_styles_module = ({"tocList":"tocList_VIMH"});
+/* ESM default export */ const Toc_styles_module = ({"tocList":"tocList_VIMH","toc":"toc_fhyy"});
 ;// CONCATENATED MODULE: ./src/components/Toc/index.js
 
 
@@ -1297,10 +1296,12 @@ const DocsSidebar = ()=>{
         console.error("useDocsSidebar() returned undefined or invalid data:", sidebar);
         return null;
     }
+    // console.log(sidebar.items[0].items);
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
         id: "toc",
+        className: Toc_styles_module.toc,
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
-            children: sidebar.items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(SidebarItem, {
+            children: sidebar.items[0].items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(SidebarItem, {
                     item: item
                 }, index))
         })
@@ -1844,6 +1845,7 @@ const SvgIcoMore = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -1883,6 +1885,7 @@ const SvgIcoMore = _ref => {
     NextItem: NextItem,
     Glossary: Glossary,
     GlossaryAll: GlossaryAll,
+    DocsSidebar: Toc,
     IcLicense: ico_license,
     IcAdd: ico_add,
     IcClose: ico_close,
