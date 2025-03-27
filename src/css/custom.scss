@@ -627,7 +627,7 @@ footer {
     padding: 0;
   }
   .theme-doc-sidebar-container {
-    display: none;
+    display: none !important;
   }
   nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
     display: none;
