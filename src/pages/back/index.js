@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import Head from '@docusaurus/Head';
 import { translate } from '@docusaurus/Translate';
+import clsx from 'clsx';
 
 export default function Backcover() {
   const { i18n: {currentLocale} } = useDocusaurusContext();
@@ -12,27 +13,14 @@ export default function Backcover() {
   const address = `${translate({id: "theme.cover.address"})}`
   const copyright = `${translate({id: "theme.cover.copyright"})}`
   const qrtext = `${translate({id: "theme.cover.qrCodetext"})}`
-  useEffect(() => {
-    // 특정 페이지에서만 @page 스타일을 동적으로 추가
-    const style = document.createElement('style');
-    style.innerHTML = `
-      @page {
-          margin: 0;
-      }
-    `;
-    document.head.appendChild(style);
 
-    // 컴포넌트 언마운트 시 스타일 제거
-    return () => {
-      document.head.removeChild(style);
-    };
-}, []);
   return (
     <Layout>
       <Head>
         <meta name="robots" content="noindex, nofollow"/>
+        <style>{`@page {margin: 0;}`}</style>
       </Head>
-      <div className={styles.coverpage}>
+      <div className={clsx(styles.backpage, 'backcoverpage')}>
         <div className={styles.footer}>
           <div className={styles.logo}>
             <img src={useBaseUrl('img/common/logo_back.svg')}/>

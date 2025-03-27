@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.coverpage {
+.backpage {
   height: 100vh;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 74%, rgba(217,224,229,1) 100%);
