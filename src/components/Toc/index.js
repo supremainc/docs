@@ -43,11 +43,11 @@ const DocsSidebar = () => {
     console.error("useDocsSidebar() returned undefined or invalid data:", sidebar);
     return null;
   }
-
+  console.log(sidebar.items[0].items);
   return (
-    <section id='toc'>
+    <section id='toc' className={styles.toc}>
       <ul>
-        {sidebar.items.map((item, index) => (
+        {sidebar.items[0].items.map((item, index) => (
           <SidebarItem key={index} item={item} />
         ))}
       </ul>
