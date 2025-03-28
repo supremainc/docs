@@ -472,10 +472,15 @@ function DocItemContent(param) {
                     children: syntheticTitle
                 })
             }),
-            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsx)(Admonition/* default */.Z, {
+            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsxs)(Admonition/* default */.Z, {
                 type: "note",
-                title: "Not translated",
-                children: "This page is currently being translated. We will complete the translation as soon as possible."
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("b", {
+                        children: "Not translated"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("br", {}),
+                    "This page is currently being translated. We will complete the translation as soon as possible."
+                ]
             }),
             /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
                 children: children
