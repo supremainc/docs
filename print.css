@@ -10,8 +10,8 @@
 @page {
   size: A4;
   prince-shrink-to-fit: none;
-  @top-right { content: string(doctitle);font-size: .75rem; }
-  @bottom-center { content: counter(page);font-size: .75rem; }
+  @top-right { content: string(doctitle);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
+  @bottom-center { content: counter(page);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
 }
 
 @page:first {
