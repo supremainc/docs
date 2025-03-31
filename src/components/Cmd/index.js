@@ -34,12 +34,14 @@ const ReplacementLocaleText = ({ sid, code, className, children, product }) => {
 
   if (sid) {
     // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
-    const locale = localeMap[currentLocale] || localeMap.en;
     let localeText;
+
     if (product === 'x') {
+      const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       const text = getLocaleText(locale, sid);
       localeText = text ? text.replace('<br>', '') : null;
     } else {
+      const locale = localeMap[currentLocale] || localeMap.en;
       localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
     }
     
