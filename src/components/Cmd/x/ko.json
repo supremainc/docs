@@ -1,0 +1,500 @@
+{
+  "common": {
+    "apply": "적용",
+    "select": "선택",
+    "selectAll": "모두 선택",
+    "cancel": "취소",
+    "open": "열림",
+    "more": "더 보기",
+    "add": "추가",
+    "close": "닫기",
+    "save": "저장",
+    "enroll": "등록",
+    "clearAll": "초기화",
+    "search": "검색",
+    "batchEdit": "일괄 편집",
+    "delete": "삭제",
+    "removeAll": "모두 제거",
+    "noResult": "결과 없음",
+    "use": "사용",
+    "notUse": "사용하지 않음",
+    "enabled": "활성",
+    "disabled": "비활성",
+    "people": "사용자",
+    "acknowledge": "확인",
+    "ignore": "보류",
+    "notAvailable": "사용 불가",
+    "needHelp": "도움이 필요하세요?",
+    "copyright": "©2025 suprema Inc. All rights reserved.",
+    "dialog": {
+      "columnSetting": {
+        "title": "열 레이아웃",
+        "layout": "레이아웃",
+        "dialogSettings": "열 설정",
+        "reset": "기본 열"
+      },
+      "columnFilter": {
+        "filter": "필터",
+        "selected": "선택됨"
+      }
+    },
+    "header": {
+      "launcher": "런처",
+      "user": "사용자",
+      "arena": "모니터링",
+      "data": "데이터",
+      "setting": "설정",
+      "action": "액션",
+      "logout": "로그아웃",
+      "dashboard": "대시보드"
+    }
+  },
+  "auth": {
+    "login": "로그인",
+    "id": "아이디",
+    "password": "비밀번호",
+    "rememberId": "아이디 기억하기"
+  },
+  "notFound": {
+    "title": "404 - 페이지를 찾을 수 없습니다.",
+    "description": "찾으려는 페이지가 존재하지 않습니다.",
+    "goHome": "홈으로 이동"
+  },
+  "arena": {
+    "title": "모니터링",
+    "map": {
+      "title": "맵",
+      "doorControl": "출입문 제어",
+      "noSelect": "비디오를\u003Cbr\u003E선택하세요",
+      "noDoor": "출입문 없음"
+    },
+    "video": {
+      "title": "비디오"
+    },
+    "user": {
+      "title": "사용자"
+    },
+    "recentEvent": "최근 이벤트",
+    "eventTable": {
+      "title": "이벤트",
+      "date": "날짜 시간",
+      "area": "지역",
+      "door": "출입문",
+      "device": "장치",
+      "userGroup": "사용자 그룹",
+      "user": "사용자",
+      "cardId": "카드 ID",
+      "port": "포트",
+      "event": "이벤트",
+      "status": "상태",
+      "view": "보기",
+      "columnLayout": "열 레이아웃",
+      "clearEvents": "이벤트 비우기",
+      "toolbar": {
+        "alarmEvents": "알람만 보기",
+        "allEvents": "모든 이벤트",
+        "relatedEvents": "연관 이벤트만 보기",
+        "play": "시작",
+        "pause": "일시 중지"
+      }
+    },
+    "tree": {
+      "door": {
+        "title": "출입문",
+        "allDoorGroups": "모든 출입문 그룹",
+        "doorRelay": "출입문 릴레이",
+        "doorContact": "출입문 센서",
+        "allElevatorGroups": "모든 엘리베이터 그룹",
+        "allZones": "모든 구역"
+      },
+      "map": {
+        "title": "맵",
+        "allAreas": "모든 구역"
+      },
+      "device": {
+        "title": "장치",
+        "allDevices": "모든 장치",
+        "allCameraGroups": "모든 카메라 그룹",
+        "relay": "릴레이",
+        "input": "입력",
+        "output": "출력",
+        "auxInput": "보조 입력",
+        "tamper": "탬퍼",
+        "supervisedInput": "Supervised 입력"
+      },
+      "tooltip": {
+        "alarm": "알람",
+        "datetime": "날짜 시간"
+      },
+      "expandAll": "모두 펼치기",
+      "collapseAll": "모두 접기",
+      "syncError": "동기화 오류",
+      "disconnected": "연결 끊김",
+      "communicationError": "커뮤니케이션스 서버 오류",
+      "contextMenu": {
+        "unlock": "개방",
+        "lock": "잠금",
+        "unlockOnce": "일시",
+        "unlockTimed": "시간 설정",
+        "unlockPermanent": "고정",
+        "lockTimed": "시간 설정",
+        "lockPermanent": "고정",
+        "normalize": "해제",
+        "openVideo": "비디오 열기",
+        "clearAlarm": "알람 해제",
+        "clearApb": "APB 해제",
+        "arm": "경비",
+        "disarm": "경비 해제",
+        "viewDetail": "상세 보기",
+        "openMap": "맵 열기",
+        "findDoorInTree": "상태 트리에서 출입문 찾기",
+        "findDeviceInTree": "상태 트리에서 장치 찾기",
+        "addNewGroup": "새 그룹 추가",
+        "renameGroup": "그룹 이름 변경",
+        "expandBelow": "하위 펼치기",
+        "collapseBelow": "하위 접기",
+        "deleteGroup": "그룹 삭제",
+        "enable": "활성화",
+        "disable": "비활성화",
+        "musterReport": "소집 리포트",
+        "occupancyMonitoring": "재실 인원 제한 모니터링",
+        "reconnect": "재연결",
+        "reboot": "재시작",
+        "deviceOn": "장치 켜기",
+        "deviceOff": "장치 끄기",
+        "devicePattern": "장치 패턴",
+        "eventDetail": "상세 보기"
+      }
+    },
+    "preview": {
+      "description": "설명",
+      "user": {
+        "previewTitle": "사용자",
+        "profileImage": "프로필 이미지",
+        "id": "ID",
+        "name": "이름",
+        "email": "이메일",
+        "phone": "전화번호",
+        "department": "부서",
+        "title": "직함",
+        "group": "그룹",
+        "period": "기간",
+        "status": "상태",
+        "privateAuthMode": "개인 인증 모드"
+      },
+      "door": {
+        "title": "출입문",
+        "name": "이름",
+        "entry": "입실 장치",
+        "exit": "퇴실 장치",
+        "status": "상태",
+        "lockStatus": "잠금 상태",
+        "alarm": "알람",
+        "group": "그룹",
+        "entryDevice": "입실 장치",
+        "exitDevice": "퇴실 장치",
+        "doorRelay": "릴레이",
+        "reason": "사유",
+        "lastRelayActionTime": "마지막 릴레이 동작",
+        "exitButton": "퇴실 버튼",
+        "doorSensor": "출입문 센서",
+        "doorOpenTime": "출입문 열림 시간",
+        "heldOpenTime": "장시간 열림 시간",
+        "scheduleLocked": "스케줄에 의한 잠김",
+        "scheduleUnlocked": "스케줄에 의한 개방",
+        "emergencyLocked": "비상상태에 의한 잠김",
+        "emergencyUnlocked": "비상상태에 의한 개방",
+        "operatorLocked": "관리자에 의한 잠김",
+        "operatorUnlocked": "관리자에 의한 개방",
+        "locked": "잠김",
+        "unlocked": "개방"
+      },
+      "device": {
+        "title": "장치",
+        "id": "ID",
+        "name": "이름",
+        "connection": "연결 상태",
+        "door": "출입문",
+        "timeZone": "표준 시간대",
+        "group": "그룹",
+        "productName": "모델명",
+        "time": "장치 시간",
+        "ipAddress": "IP 주소",
+        "authMode": "인증 모드"
+      },
+      "event": {
+        "title": "이벤트",
+        "dateTime": "날짜 시간",
+        "door": "출입문",
+        "device": "장치",
+        "user": "사용자",
+        "status": "상태",
+        "active": "활성",
+        "acknowledge": "확인"
+      },
+      "elevator": {
+        "title": "엘리베이터"
+      }
+    },
+    "message": {
+      "forXSeconds": "출입문 {{actionType}}을(를) 위해 시간(초)을 입력하세요.",
+      "alarmClearedSuccessfully": "알람 해제 성공",
+      "alarmClearFailed": "알람 해제 실패",
+      "doorUnlockedOnce": "출입문 일시 개방 성공",
+      "doorUnlockedFor": "출입문 시간 설정 개방 성공 ({{time}}초)",
+      "doorUnlockedPermanently": "출입문 고정 개방 성공",
+      "doorUnlockFailed": "출입문 개방 실패",
+      "doorLockedPermanently": "출입문 고정 잠금 성공",
+      "doorLockedFor": "출입문 시간 설정 잠금 성공 ({{time}}초)",
+      "doorLockFailed": "출입문 잠금 실패",
+      "doorNormalized": "출입문 해제 성공",
+      "doorNormalizeFailed": "출입문 해제 실패",
+      "armedSuccessfully": "출입문 경비 성공",
+      "armFailed": "출입문 경비 실패",
+      "disarmedSuccessfully": "출입문 경비 해제 성공",
+      "disarmFailed": "출입문 경비 해제 실패",
+      "apbFailed": "APB 해제 실패 : 사용자를 지정하세요.",
+      "clearApbSuccess": "APB 해제 성공",
+      "clearApbFailed": "APB 해제 실패",
+      "invalidTime": "유효하지 않은 시간",
+      "zoneArmedSuccessfully": "경비 성공",
+      "zoneArmFailed": "경비 실패",
+      "zoneDisarmedSuccessfully": "경비 해제 성공",
+      "zoneDisarmFailed": "경비 해제 실패",
+      "zoneEnableSuccess": "구역 활성화 성공",
+      "zoneEnableFailed": "구역 활성화 실패",
+      "zoneDisableSuccess": "구역 비활성화 성공",
+      "zoneDisableFailed": "구역 비활성화 실패",
+      "gridSpace": "그리드 공간이 부족합니다.",
+      "playSupport": "지원되지 않는 유형입니다.",
+      "playerSize": "다른 영역의 일부를 침범할 수 없습니다."
+    }
+  },
+  "team": {
+    "sidebar": {
+      "user": "사용자",
+      "template": "사용자 템플릿"
+    },
+    "user": {
+      "table": {
+        "id": "ID",
+        "name": "이름",
+        "firstName": "이름",
+        "lastName": "성",
+        "department": "부서",
+        "title": "직함",
+        "email": "이메일",
+        "phone": "전화번호",
+        "group": "그룹",
+        "accessGroup": "출입 그룹",
+        "period": "기간",
+        "startDate": "시작 날짜",
+        "endDate": "종료 날짜",
+        "operator": "권한 등급",
+        "fingerprint": "지문",
+        "face": "",
+        "visualFace": "얼굴",
+        "card": "카드",
+        "pin": "PIN",
+        "qr": "QR/바코드",
+        "mobile": "모바일 액세스",
+        "status": "상태"
+      },
+      "dialog": {
+        "newUser": "새 사용자",
+        "newTemplate": "새 사용자 템플릿",
+        "printCard": "카드 인쇄",
+        "scanId": "신분증 스캔",
+        "noCredential": "",
+        "detail": "",
+        "extend": "확장",
+        "standard": "일반",
+        "extendAuthMode": "확장 인증 모드",
+        "extendAuthModeMessage": "확장 인증 모드는 FaceStation F2, BioStation 3, BioEntry W3 에서만 사용할 수 있습니다."
+      },
+      "tom": "템플릿 온 모바일",
+      "csn": "CSN 모바일",
+      "aoc": "액세스 온 카드",
+      "uid": "UID",
+      "cardInformation": "카드 정보",
+      "information": "정보",
+      "biostarQr": "바이오스타 QR 코드",
+      "qrBarcode": "QR/바코드",
+      "manualEnter": "수동 입력",
+      "cardId": "카드 ID",
+      "scanCard": "카드 읽기",
+      "allow": "허용",
+      "deny": "거부",
+      "permission": {
+        "title": "권한",
+        "operatorLevel": "권한 등급",
+        "userIp": "사용자 IP",
+        "multiFactorAuth": "다중 인증",
+        "accessGroup": "출입 그룹",
+        "privateAuthMode": "개인 인증 모드",
+        "excludeDeviceAuthMode": "장치 기본 인증 모드",
+        "accessException": "출입 예외",
+        "extendedDoorOpenTime": "연장된 출입문 열림 시간"
+      },
+      "credential": {
+        "title": "크리덴셜",
+        "securityLevel": {
+          "title": "보안 수준",
+          "default": "장치 기본값",
+          "lowest": "가장낮음",
+          "low": "낮음",
+          "normal": "보통",
+          "high": "높음",
+          "highest": "가장 높음"
+        },
+        "fingerprint": {
+          "title": "지문",
+          "enrollFingerprint": "지문 등록",
+          "fingerprintQuality": "지문 품질",
+          "viewFingerprintImage": "지문 이미지 보기",
+          "checkFingerprint": "지문 확인",
+          "scanFingerprint": "지문 스캔",
+          "duress": "협박 지문"
+        },
+        "face": "",
+        "visualFace": {
+          "title": "얼굴",
+          "enrollVisualFace": "얼굴 등록",
+          "useAsProfileImage": "프로필 이미지로 사용"
+        },
+        "card": {
+          "title": "카드",
+          "registByCardReader": "카드 리더기로 등록",
+          "assignCard": "카드 할당",
+          "cardDataFormat": "카드 데이터 형식",
+          "cardLayoutFormat": "카드 레이아웃 형식",
+          "biometricCredential": "생체 인증",
+          "writeSmartCard": "스마트 카드 쓰기",
+          "supremaSmartCardLayoutFormat": "Suprema 스마트 레이아웃",
+          "customSmartCardLayoutFormat": "사용자 정의 스마트 카드 레이아웃",
+          "formatCard": "카드 포맷"
+        },
+        "mobile": {
+          "title": "모바일 인증",
+          "enrollMobile": "모바일 등록",
+          "photo": "사진"
+        },
+        "qrBarcode": {
+          "title": "QR/바코드",
+          "enrollQrBarcode": "QR/바코드 등록",
+          "qrBarcodeType": "QR/바코드 타입",
+          "inputType": "입력 타입",
+          "randomIdPlaceholder": "랜덤 ID",
+          "useRandomId": "랜덤 ID 사용"
+        },
+        "cardType": "카드 타입",
+        "smartCardType": "스마트 카드 타입",
+        "privateAuthMode": "개인 인증 모드",
+        "passcode": {
+          "title": "패스코드",
+          "enrollPasscode": "패스코드 등록",
+          "confirmPasscode": "패스코드 확인"
+        },
+        "accessPin": {
+          "title": "액세스 PIN",
+          "enrollAccessPin": "액세스 PIN 등록",
+          "confirmAccessPin": "액세스 PIN 확인"
+        },
+        "label": "크리덴셜",
+        "enrollDevice": "장치 등록",
+        "clear": "초기화",
+        "enrollCard": "카드 등록",
+        "scan": "스캔",
+        "uploadImage": "이미지 업로드",
+        "resistrationOption": "등록 옵션",
+        "device": "장치",
+        "accessGroup": "출입 그룹",
+        "period": "기간"
+      },
+      "message": {
+        "placeCardNear": "카드 리더기에 카드를 대십시오.",
+        "scanFaceWithDevice": "장치에 얼굴을 스캔하세요.",
+        "noFaceTemplate": "얼굴 템플릿이 없습니다.",
+        "noFingerprintTemplate": "지문 템플릿이 없습니다.",
+        "selectDevice": "장치를 선택하세요.",
+        "csnCardId": "CSN 카드 ID",
+        "formatComplete": "포맷 완료",
+        "selectFingerprint": "지문을 선택하세요.",
+        "existFingerprint": "이미 등록된 지문이 있습니다. {{users}}",
+        "notExistFingerprint": "등록된 지문이 없습니다."
+      },
+      "status": {
+        "inactive": "비활성"
+      },
+      "newUser": "새 사용자",
+      "selected": "선택된 항목"
+    },
+    "userTemplate": {
+      "title": "사용자 템플릿",
+      "newTemplate": "새 사용자 템플릿",
+      "id": "ID",
+      "accessGroup": "출입 그룹",
+      "table": {
+        "name": "이름",
+        "email": "이메일",
+        "phone": "전화번호",
+        "department": "부서",
+        "group": "그룹",
+        "period": "기간",
+        "status": "상태",
+        "customField": "사용자 정의 필드",
+        "accessGroup": "출입 그룹",
+        "operator": "권한 등급"
+      }
+    },
+    "batchEdit": {
+      "title": "일괄 편집",
+      "selectedUsers": "(선택된 사용자 {{count}})"
+    },
+    "event": {
+      "trace": "최근 이벤트"
+    },
+    "tree": {
+      "userGroup": "사용자 그룹",
+      "accessExplorer": "액세스 탐색기"
+    },
+    "enrollCard": "",
+    "firemanCard": "비상 개방 카드",
+    "expandAll": "모두 펼치기",
+    "collapseAll": "모두 접기"
+  },
+  "event": {
+    "dialog": {
+      "acEvent": {
+        "alarm": "",
+        "datetime": "날짜 시간",
+        "door": "출입문",
+        "device": "장치"
+      }
+    }
+  },
+  "setting": {
+    "tree": {
+      "expandAll": "모두 펼치기",
+      "collapseAll": "모두 접기"
+    },
+    "toolbar": {
+      "dialog": {
+        "exportDeviceConfig": {
+          "title": "장치 설정 파일로 내보내기",
+          "download": "다운로드",
+          "exportSuccess": "장치 설정 파일 내보내기 성공",
+          "exportFailed": "장치 설정 파일 내보내기 실패"
+        },
+        "importDeviceConfig": {
+          "title": "장치 설정 파일 가져오기",
+          "upload": "업로드",
+          "import": "가져오기",
+          "importSuccess": "장치 설정 파일 가져오기 성공",
+          "importFailed": "장치 설정 파일 가져오기 실패",
+          "fileName": "파일 이름"
+        }
+      }
+    }
+  }
+}

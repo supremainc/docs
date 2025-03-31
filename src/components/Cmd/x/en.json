@@ -1,0 +1,501 @@
+{
+  "common": {
+    "apply": "Apply",
+    "select": "Select",
+    "selectAll": "Select All",
+    "cancel": "Cancel",
+    "open": "Open",
+    "more": "More",
+    "add": "Add",
+    "close": "Close",
+    "save": "Save",
+    "enroll": "Enroll",
+    "clearAll": "Clear All",
+    "search": "Search",
+    "batchEdit": "Batch Edit",
+    "delete": "Delete",
+    "removeAll": "Remove All",
+    "noResult": "No Result",
+    "use": "Use",
+    "notUse": "Not Use",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "people": "People",
+    "acknowledge": "Acknowledge",
+    "ignore": "Ignore",
+    "notAvailable": "Not Available",
+    "needHelp": "Need Help?",
+    "copyright": "©2025 suprema Inc. All rights reserved.",
+    "dialog": {
+      "columnSetting": {
+        "title": "Column Layout",
+        "layout": "Layout",
+        "dialogSettings": "Column Setting",
+        "reset": "Reset to Default"
+      },
+      "columnFilter": {
+        "filter": "Filter",
+        "selected": "Selected"
+      }
+    },
+    "header": {
+      "launcher": "Launcher",
+      "user": "User",
+      "arena": "Monitoring",
+      "data": "Data",
+      "setting": "Settings",
+      "action": "Action",
+      "logout": "Logout",
+      "dashboard": "Dashboard"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "id": "ID",
+    "password": "Password",
+    "rememberId": "Remember ID"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "Page does not exist.",
+    "goHome": "Go to Home"
+  },
+  "arena": {
+    "title": "Monitoring",
+    "map": {
+      "title": "Map",
+      "doorControl": "Door Control",
+      "noSelect": "Select Video",
+      "noDoor": "No Door"
+    },
+    "video": {
+      "title": "Video"
+    },
+    "user": {
+      "title": "User"
+    },
+    "recentEvent": "Recent Event",
+    "eventTable": {
+      "title": "Event",
+      "date": "Datetime",
+      "area": "Area",
+      "door": "Door",
+      "device": "Device",
+      "userGroup": "User Group",
+      "user": "User",
+      "cardId": "Card ID",
+      "port": "Port",
+      "event": "Event",
+      "status": "Status",
+      "view": "View",
+      "columnLayout": "Column Layout",
+      "clearEvents": "Clear Event",
+      "toolbar": {
+        "alarmEvents": "Alarm Events",
+        "allEvents": "All Events",
+        "relatedEvents": "Related Events",
+        "play": "Play",
+        "pause": "Pause"
+      }
+    },
+    "tree": {
+      "door": {
+        "title": "Door",
+        "allDoorGroups": "All Door Groups",
+        "doorRelay": "Door Relay",
+        "doorContact": "Door Contact",
+        "allElevatorGroups": "All Elevator Groups",
+        "allZones": "All Zones"
+      },
+      "map": {
+        "title": "Map",
+        "allAreas": "All Areas"
+      },
+      "device": {
+        "title": "Device",
+        "allDevices": "All Devices",
+        "allCameraGroups": "All Camera Groups",
+        "relay": "Relay",
+        "input": "Input",
+        "output": "Output",
+        "auxInput": "Aux Input",
+        "tamper": "Tamper",
+        "supervisedInput": "Supervised Input"
+      },
+      "tooltip": {
+        "alarm": "Alarm",
+        "datetime": "Datetime"
+      },
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All",
+      "syncError": "Sync Error",
+      "disconnected": "Disconnected",
+      "communicationError": "Communications Server Error",
+      "contextMenu": {
+        "unlock": "Unlock",
+        "lock": "Lock",
+        "unlockOnce": "Once",
+        "unlockTimed": "Timed",
+        "unlockPermanent": "Permanent",
+        "lockTimed": "Timed",
+        "lockPermanent": "Permanent",
+        "normalize": "Normalize",
+        "openVideo": "Open Video",
+        "clearAlarm": "Clear Alarm",
+        "clearApb": "Clear APB",
+        "arm": "Arm",
+        "disarm": "Disarm",
+        "viewDetail": "View Detail",
+        "openMap": "Open Map",
+        "findDoorInTree": "Find Door In Status Tree",
+        "findDeviceInTree": "Find Device In Status Tree",
+        "addNewGroup": "Add New Group",
+        "renameGroup": "Rename Group",
+        "expandBelow": "Expand Below",
+        "collapseBelow": "Collapse Below",
+        "deleteGroup": "Delete Group",
+        "enable": "Enable",
+        "disable": "Disable",
+        "musterReport": "Muster Report",
+        "occupancyMonitoring": "Occupancy Monitoring",
+        "reconnect": "Reconnect",
+        "reboot": "Reboot",
+        "deviceOn": "Device On",
+        "deviceOff": "Device Off",
+        "devicePattern": "Device Pattern",
+        "eventDetail": "View Detail"
+      }
+    },
+    "preview": {
+      "description": "Description",
+      "user": {
+        "previewTitle": "User",
+        "profileImage": "Profile Image",
+        "id": "ID",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "department": "Department",
+        "title": "Title",
+        "group": "Group",
+        "period": "Period",
+        "status": "Status",
+        "privateAuthMode": "Private Auth Mode"
+      },
+      "door": {
+        "title": "Door",
+        "name": "Name",
+        "entry": "Entry",
+        "exit": "Exit",
+        "status": "Status",
+        "lockStatus": "Lock Status",
+        "alarm": "Alarm",
+        "group": "Group",
+        "entryDevice": "Entry Device",
+        "exitDevice": "Exit Device",
+        "doorRelay": "Door Relay",
+        "reason": "Reason",
+        "lastRelayActionTime": "Last Relay Action",
+        "exitButton": "Exit Button",
+        "doorSensor": "Door Sensor",
+        "doorOpenTime": "Door Open Time",
+        "heldOpenTime": "Held Open Time",
+        "scheduleLocked": "Locked by Schedule",
+        "scheduleUnlocked": "Unlocked by Schedule",
+        "emergencyLocked": "Locked by Emergency",
+        "emergencyUnlocked": "Unlocked by Emergency",
+        "operatorLocked": "Locked by Operator",
+        "operatorUnlocked": "Unlocked by Operator",
+        "locked": "Locked",
+        "unlocked": "Unlocked"
+      },
+      "device": {
+        "title": "Device",
+        "id": "ID",
+        "name": "Name",
+        "connection": "Connection Status",
+        "door": "Door",
+        "timeZone": "Time Zone",
+        "group": "Group",
+        "productName": "Model Name",
+        "time": "Device Time",
+        "ipAddress": "IP Address",
+        "authMode": "Auth Mode"
+      },
+      "event": {
+        "title": "Event",
+        "dateTime": "Date & Time",
+        "door": "Door",
+        "device": "Device",
+        "user": "User",
+        "status": "Status",
+        "active": "Active",
+        "acknowledge": "Acknowledge"
+      },
+      "elevator": {
+        "title": "Elevator"
+      }
+    },
+    "message": {
+      "forXSeconds": "Enter the time to {{actionType}} the door in seconds",
+      "clearAlarmSuccessfully": "Alarm cleared.",
+      "clearAlarmFailed": "Failed to clear alarm.",
+      "doorUnlockedOnce": "Door unlocked once.",
+      "doorUnlockedFor": "Door unlocked for {{time}} seconds.",
+      "doorUnlockedPermanently": "Door unlocked permanently.",
+      "doorUnlockFailed": "Failed to unlock door.",
+      "doorLockedPermanently": "Door locked permanently.",
+      "doorLockedFor": "Door locked for {{time}} seconds.",
+      "doorLockFailed": "Failed to lock door.",
+      "doorNormalized": "Door normalized.",
+      "doorNormalizeFailed": "Failed to normalize door.",
+      "armedSuccessfully": "Armed successfully.",
+      "armFailed": "Failed to arm.",
+      "disarmedSuccessfully": "Disarmed successfully.",
+      "disarmFailed": "Failed to disarm.",
+      "apbFailed": "Failed to clear APB: No users selected.",
+      "clearApbSuccess": "APB cleared successfully.",
+      "clearApbFailed": "Failed to clear APB.",
+      "invalidTime": "Invalid time.",
+      "zoneArmedSuccessfully": "Zone armed successfully.",
+      "zoneArmFailed": "Failed to arm zone.",
+      "zoneDisarmedSuccessfully": "Zone disarmed successfully.",
+      "zoneDisarmFailed": "Failed to disarm zone.",
+      "zoneEnableSuccess": "Zone enabled successfully.",
+      "zoneEnableFailed": "Failed to enable zone.",
+      "zoneDisableSuccess": "Zone disabled successfully.",
+      "zoneDisableFailed": "Failed to disable zone.",
+      "gridSpace":"Not enough grid space.",
+      "playSupport":"Not Supported Type.",
+      "playerSize":"The tile has already been taken."
+
+    }
+  },
+  "team": {
+    "sidebar": {
+      "user": "User",
+      "template": "User Template"
+    },
+    "user": {
+      "table": {
+        "id": "ID",
+        "name": "Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "department": "Department",
+        "title": "Title",
+        "email": "Email",
+        "phone": "Phone",
+        "group": "Group",
+        "accessGroup": "Access Group",
+        "period": "Period",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "operator": "Operator",
+        "fingerprint": "Fingerprint",
+        "face": "",
+        "visualFace": "Face",
+        "card": "Card",
+        "pin": "PIN",
+        "qr": "QR/Barcode",
+        "mobile": "Mobile Access",
+        "status": "Status"
+      },
+      "dialog": {
+        "newUser": "New User",
+        "newTemplate": "New User Template",
+        "printCard": "Print Card",
+        "scanId": "Scan ID",
+        "noCredential": "",
+        "detail": "",
+        "extend": "Extend",
+        "standard": "Standard",
+        "extendAuthMode": "Extended Auth Mode",
+        "extendAuthModeMessage": "Extended Auth Mode is only supported by FaceStation F2, BioStation3, and BioEntry W3"
+      },
+      "tom": "Template on Mobile",
+      "csn": "CSN",
+      "aoc": "Access on Card",
+      "uid": "UID",
+      "cardInformation": "Card Information",
+      "information": "Information",
+      "biostarQr": "BioStar QR",
+      "qrBarcode": "QR/Barcode",
+      "manualEnter": "Enter Manually",
+      "cardId": "Card ID",
+      "scanCard": "Read Card",
+      "allow": "Allow",
+      "deny": "Deny",
+      "permission": {
+        "title": "Permission",
+        "operatorLevel": "Account Level",
+        "userIp": "User IP",
+        "multiFactorAuth": "Multi-Factor Auth",
+        "accessGroup": "Access Group",
+        "privateAuthMode": "Private Authentication Mode",
+        "excludeDeviceAuthMode": "Device Default Auth Mode",
+        "accessException": "Access Exception",
+        "extendedDoorOpenTime": "Extended Door Open Time"
+      },
+      "credential": {
+        "title": "Credential",
+        "securityLevel": {
+          "title": "Security Level",
+          "default": "Device Default",
+          "lowest": "Lowest",
+          "low": "Low",
+          "normal": "Normal",
+          "high": "High",
+          "highest": "Highest"
+        },
+        "fingerprint": {
+          "title": "Fingerprint",
+          "enrollFingerprint": "Enroll Fingerprint",
+          "fingerprintQuality": "Fingerprint Quality",
+          "viewFingerprintImage": "View Fingerprint Image",
+          "checkFingerprint": "Check Fingerprint",
+          "scanFingerprint": "Scan Fingerprint",
+          "duress": "Duress"
+        },
+        "visualFace": {
+          "title": "Face",
+          "enrollVisualFace": "Enroll Face",
+          "useAsProfileImage": "Use as Profile Image"
+        },
+        "face": "",
+        "card": {
+          "title": "Card",
+          "registByCardReader": "Register by Card Reader",
+          "assignCard": "Assign Card",
+          "cardDataFormat": "Card Data Format",
+          "cardLayoutFormat": "Card Layout Format",
+          "biometricCredential": "Biometric Credential",
+          "writeSmartCard": "Write Smart Card",
+          "supremaSmartCardLayoutFormat": "Suprema Smart Card Layout Format",
+          "customSmartCardLayoutFormat": "Custom Smart Card Layout Format",
+          "formatCard": "Format Card"
+        },
+        "mobile": {
+          "title": "Mobile Access",
+          "enrollMobile": "Enroll Mobile",
+          "photo": "Photo"
+        },
+        "qrBarcode": {
+          "title": "QR/Barcode",
+          "enrollQrBarcode": "Enroll QR/Barcode",
+          "qrBarcodeType": "QR/Barcode Type",
+          "inputType": "Input Type",
+          "randomIdPlaceholder": "Random ID",
+          "useRandomId": "Use Random ID"
+        },
+        "cardType": "Card Type",
+        "smartCardType": "Smart Card Type",
+        "privateAuthMode": "Private Auth Mode",
+        "passcode": {
+          "title": "Passcode",
+          "enrollPasscode": "Enroll Passcode",
+          "confirmPasscode": "Confirm Passcode"
+        },
+        "accessPin": {
+          "title": "Access PIN",
+          "enrollAccessPin": "Enroll Access PIN",
+          "confirmAccessPin": "Confirm Access PIN"
+        },
+        "label": "Credential",
+        "enrollDevice": "Enrollment Device",
+        "clear": "Clear",
+        "enrollCard": "Enroll Card",
+        "scan": "Scan",
+        "uploadImage": "Upload Images",
+        "resistrationOption": "Registration Option",
+        "device": "Device",
+        "accessGroup": "Access Group",
+        "period": "Period"
+      },
+      "message": {
+        "placeCardNear": "Please place the card near the reader.",
+        "scanFaceWithDevice": "Please start to scan face with the selected device",
+        "noFaceTemplate": "No face templates",
+        "noFingerprintTemplate": "No fingerprint templates",
+        "selectDevice": "Please select a device",
+        "csnCardId": "CSN Card ID",
+        "formatComplete": "Format Completed",
+        "selectFingerprint": "Please select a fingerprint",
+        "existFingerprint": "Fingerprint already exists {{users}}",
+        "notExistFingerprint": "Fingerprint does not exist"
+      },
+      "status": {
+        "inactive": "Inactive"
+      },
+      "newUser": "New User",
+      "selected": "Selected Item"
+    },
+    "userTemplate": {
+      "title": "User Template",
+      "newTemplate": "New User Template",
+      "id": "ID",
+      "accessGroup": "Access Group",
+      "table": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "department": "Department",
+        "group": "Group",
+        "period": "Period",
+        "status": "Status",
+        "customField": "Custom Field",
+        "accessGroup": "Access Group",
+        "operator": "Operator"
+      }
+    },
+    "batchEdit": {
+      "title": "Batch Edit",
+      "selectedUsers": "(Selected {{count}} Users)"
+    },
+    "event": {
+      "trace": "Recent Event"
+    },
+    "tree": {
+      "userGroup": "User Group",
+      "accessExplorer": "Access Explorer"
+    },
+    "enrollCard": "",
+    "firemanCard": "Lock Override Card",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All"
+  },
+  "event": {
+    "dialog": {
+      "acEvent": {
+        "alarm": "",
+        "datetime": "Datetime",
+        "door": "Door",
+        "device": "Device"
+      }
+    }
+  },
+  "setting": {
+    "tree": {
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
+    },
+    "toolbar": {
+      "dialog": {
+        "exportDeviceConfig": {
+          "title": "Export Device Configuration",
+          "download": "Download",
+          "exportSuccess": "Exporting device configuration as file has succeeded.",
+          "exportFailed": "Failed to export device configuration as file."
+        },
+        "importDeviceConfig": {
+          "title": "Import Device Configuration",
+          "upload": "Upload",
+          "import": "Import",
+          "importSuccess": "Importing device configuration as file has succeeded.",
+          "importFailed": "Failed to import device configuration file.",
+          "fileName": "File Name"
+        }
+      }
+    }
+  }
+}

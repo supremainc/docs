@@ -650,6 +650,9 @@ footer {
     p, dt, dd {
       font-size: .8rem;
       line-height: 1.2;
+      code {
+        font-size: .75rem;
+      }
       svg {
         position: relative;
         top: 2px;
