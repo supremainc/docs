@@ -51,6 +51,9 @@
 // 언어별 폰트 설정
 html[lang='ko-KR'] * {
   font-family: 'Noto Sans KR', sans-serif;
+  p, li {
+    word-break: keep-all;
+  }
 }
 
 html[lang='ja-JP'] * {
@@ -650,6 +653,9 @@ footer {
     p, dt, dd {
       font-size: .8rem;
       line-height: 1.2;
+      code {
+        font-size: .75rem;
+      }
       svg {
         position: relative;
         top: 2px;
