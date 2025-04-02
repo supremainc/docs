@@ -41,7 +41,7 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs/',
   future: {
-    experimental_faster: true
+    experimental_faster: isDev ? false : true
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
