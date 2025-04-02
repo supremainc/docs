@@ -35,7 +35,7 @@ import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
 import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
 import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
 import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
-import IcArm from '@site/static/img/menus/ico-arm.svg';
+import IcArm from '@site/static/img/menus/ico-arms.svg';
 export default {
     ...MDXComponents,
     Cmd,
