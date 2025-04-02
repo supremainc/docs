@@ -29,6 +29,10 @@ import IcUpload from '@site/static/img/menus/ico-upload.svg';
 import IcTrash from '@site/static/img/menus/ico-trash.svg';
 import IcDown from '@site/static/img/menus/ico-down-arrow.svg';
 import IcMore from '@site/static/img/menus/ico-more.svg';
+import IcErr from '@site/static/img/menus/ico-err.svg';
+import IcNotsync from '@site/static/img/menus/ico-notsync.svg';
+import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
+import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -68,5 +72,8 @@ export default {
     IcUpload,
     IcTrash,
     IcDown,
-    IcMore
+    IcMore,
+    IcErr,
+    IcNotsync,
+    IcDoorClose, IcDoorOpen
 }

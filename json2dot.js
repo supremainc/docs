@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const {convert} = require('convert-json-to-dot/convert');
 
-const object = path.join(__dirname, 'src/components/Cmd/x/en.json');
-const output = path.join(__dirname, 'src/components/Cmd/x/en_dot.json');
+const object = path.join(__dirname, 'src/components/Cmd/x/_ko.json');
+const output = path.join(__dirname, 'src/components/Cmd/x/ko.json');
 
 fs.readFile(object, 'utf-8', (err, data) => {
     if (!err) {
