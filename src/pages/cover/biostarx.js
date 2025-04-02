@@ -8,7 +8,6 @@ import clsx from 'clsx';
 
 export default function Cover() {
     const { i18n: { currentLocale, label }, siteConfig } = useDocusaurusContext();
-    console.log(label);
     const title = "BioStar X";
     const subtitle = "User Guide";
     const ver = "v1.0.0";
