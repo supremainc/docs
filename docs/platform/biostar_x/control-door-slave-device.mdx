@@ -7,13 +7,13 @@ keywords: [ 모니터링, 출입문, 슬레이브 장치 ]
 
 출입문과 연결된 슬레이브 장치를 제어할 수 있습니다. 제어할 수 있는 장치는 아래와 같습니다.
 
-* 출입문 릴레이
-
-* Arm
+* <Cmd sid='arena.tree.door.doorRelay' className='normal' />
 
 * 카메라
 
-<Cmd sid='common.header.launcher' /> 페이지에서 <Cmd>모니터링</Cmd>을 클릭하세요. 출입문 목록에서 출입문을 선택하세요. 하위 목록에서 연결된 슬레이브 장치를 선택하고, 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
+* <Cmd sid='arena.tree.contextMenu.arm' className='normal' />
+
+<Cmd sid='common.header.launcher' /> 페이지에서 <Cmd sid='common.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 <Cmd sid='common.header.arena' />을 선택하세요. 출입문 목록에서 출입문을 선택하세요. 하위 목록에서 연결된 슬레이브 장치를 선택하고, 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
 
 ## 출입문 릴레이 장치 제어 {#control-relay}
 
@@ -27,36 +27,37 @@ keywords: [ 모니터링, 출입문, 슬레이브 장치 ]
 
 ### 릴레이 개방 {#relay-open}
 
-출입문과 연결된 릴레이 장치를 통해 출입문의 잠금을 해제할 수 있습니다. 개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 <Cmd>개방</Cmd>을 클릭하고 원하는 옵션을 선택하세요.
+출입문과 연결된 릴레이 장치를 통해 출입문의 잠금을 해제할 수 있습니다. 개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.unlock' />을 클릭하고 원하는 옵션을 선택하세요.
 
-* <Cmd>일시</Cmd>: 한번만 출입문을 개방합니다.
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />: 한번만 출입문을 개방합니다.
 
-* <Cmd>시간 설정</Cmd>: 일정 시간 동안 출입문을 개방합니다. 원하는 시간을 초(second) 단위로 입력하세요.
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: 일정 시간 동안 출입문을 개방합니다. 원하는 시간을 초(second) 단위로 입력하세요.
 
-* <Cmd>고정</Cmd>: 시간에 상관 없이 출입문을 개방합니다.
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: 시간에 상관 없이 출입문을 개방합니다.
 
 :::tip
 
-이 기능을 통해 외부 손님이 방문할 때 출입문을 일시적으로 개방하여 편리하게 출입할 수 있도록 할 수 있습니다. 출입문을 개방한 후에는 반드시 <Cmd>해제</Cmd> 상태로 변경하세요.
+이 기능을 통해 외부 손님이 방문할 때 출입문을 일시적으로 개방하여 편리하게 출입할 수 있도록 할 수 있습니다. 출입문을 개방한 후에는 반드시 <Cmd sid='arena.tree.contextMenu.normalize' /> 상태로 변경하세요.
 
 :::
 
 ### 릴레이 해제 {#relay-release}
 
-출입문과 연결된 릴레이 장치를 통해 출입문을 <Cmd>해제</Cmd> 상태로 변경하면 허가된 사용자만 출입할 수 있습니다. 팝업 메뉴에서 <Cmd>해제</Cmd>를 클릭하세요. 
+출입문과 연결된 릴레이 장치를 통해 출입문을 <Cmd sid='arena.tree.contextMenu.normalize' /> 상태로 변경하면 허가된 사용자만 출입할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.normalize' />를 클릭하세요. 
 
 ### 릴레이 잠금 {#relay-lock}
 
-출입문과 연결된 릴레이 장치를 통해 출입문을 <Cmd>잠금</Cmd> 상태로 변경하면 아무도 출입할 수 없습니다. 팝업 메뉴에서 <Cmd>잠금</Cmd>을 클릭하고 원하는 옵션을 선택하세요.
+출입문과 연결된 릴레이 장치를 통해 출입문을 <Cmd sid='arena.tree.contextMenu.lock' /> 상태로 변경하면 아무도 출입할 수 없습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.lock' />을 클릭하고 원하는 옵션을 선택하세요.
 
-* <Cmd>시간 설정</Cmd>: 일정 시간 동안 출입문을 잠금합니다. 원하는 시간을 초(second) 단위로 입력하세요.
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: 일정 시간 동안 출입문을 잠금합니다. 원하는 시간을 초(second) 단위로 입력하세요.
 
-* <Cmd>고정</Cmd>: 시간에 상관 없이 출입문을 잠금합니다.
+* <Cmd sid='arena.tree.contextMenu.lockPermanent' />: 시간에 상관 없이 출입문을 잠금합니다.
 
 
-## 출입문 Arm 장치 제어 {#control-arm}
+## 출입문 경비 장치 제어 {#control-arm}
 
-TBD
+출입문과 연결된 경비 장치를 통해 출입문의 경비 상태를 일시적으로 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.disarm' />를 클릭하세요.
+
 
 ## 출입문 카메라 장치 제어 {#control-camera}
 
@@ -76,4 +77,4 @@ TBD
 
 ### 카메라 상세 정보 확인 {#camera-detail}
 
-카메라의 상세 정보를 확인하려면, 팝업 메뉴에서 <Cmd>상세 정보</Cmd>를 클릭하세요. 화면 오른쪽에 카메라의 상세 정보가 표시됩니다.
+카메라의 상세 정보를 확인하려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.viewDetail' />를 클릭하세요. 화면 오른쪽에 카메라의 상세 정보가 표시됩니다.

@@ -18,7 +18,8 @@ import { Table, Thead, Th, Tbody, Row, Td } from '@site/src/components/Table';
 import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
-import DocsSidebar from '@site/src/components/Toc';
+import Num from '@site/src/components/Num';
+import { StatusOK, StatusFail } from '@site/src/components/Status';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -28,6 +29,13 @@ import IcUpload from '@site/static/img/menus/ico-upload.svg';
 import IcTrash from '@site/static/img/menus/ico-trash.svg';
 import IcDown from '@site/static/img/menus/ico-down-arrow.svg';
 import IcMore from '@site/static/img/menus/ico-more.svg';
+import IcErr from '@site/static/img/menus/ico-err.svg';
+import IcNotsync from '@site/static/img/menus/ico-notsync.svg';
+import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
+import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
+import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
+import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
+import IcArm from '@site/static/img/menus/ico-arm.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -58,7 +66,9 @@ export default {
     NextItem,
     Glossary,
     GlossaryAll,
-    DocsSidebar,
+    Num,
+    StatusOK,
+    StatusFail,
     IcLicense,
     IcAdd,
     IcClose,
@@ -66,5 +76,12 @@ export default {
     IcUpload,
     IcTrash,
     IcDown,
-    IcMore
+    IcMore,
+    IcErr,
+    IcNotsync,
+    IcDoorClose,
+    IcDoorOpen,
+    IcRelayLock,
+    IcRelayUnlock,
+    IcArm
 }

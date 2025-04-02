@@ -1,0 +1,14 @@
+.ok {
+  background-color: #7ad600;
+}
+
+.fail {
+  background-color: #ff4f01;
+}
+
+.status {
+  border-radius: 9999px;
+  width: .75rem;
+  height: .75rem;
+  display: inline-block;
+}

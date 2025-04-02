@@ -31,10 +31,10 @@ const getLocaleText = (locale, sid) => {
 
 const ReplacementLocaleText = ({ sid, code, className, children, product }) => {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  let localeText;
 
   if (sid) {
     // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
-    let localeText;
 
     if (product === '2') {
       const locale = localeMap[currentLocale] || localeMap.en;
@@ -55,7 +55,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product }) => {
     return <span className={clsx('cmd', className)}>{localeText}</span>;
   } else if (code) {
     try {
-      const localeText = translate({ id: code });
+      localeText = translate({ id: code });
       return <span className={clsx('cmd', className)}>{localeText}</span>;
     } catch (error) {
       console.error(`Error rendering locale text for code: ${code}`, error);

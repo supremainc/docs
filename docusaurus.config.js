@@ -42,7 +42,7 @@ const config = {
   baseUrl: '/docs/',
   noIndex: false,
   future: {
-    experimental_faster: true
+    experimental_faster: isDev ? false : true
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
