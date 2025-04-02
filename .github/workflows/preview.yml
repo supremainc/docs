@@ -20,9 +20,8 @@ jobs:
         with:
           node-version: 18
           cache: npm
-
-      - name: update docs
-        run: git submodule update --init
+      # - name: update docs
+      #   run: git submodule update --init
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
