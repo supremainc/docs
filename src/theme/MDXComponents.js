@@ -19,6 +19,7 @@ import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import DocsSidebar from '@site/src/components/Toc';
+import Num from '@site/src/components/Num';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -59,6 +60,7 @@ export default {
     Glossary,
     GlossaryAll,
     DocsSidebar,
+    Num,
     IcLicense,
     IcAdd,
     IcClose,
