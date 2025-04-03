@@ -98,7 +98,9 @@ const sidebars = {
           items: [
             'platform/biostar_x/check-door-status',
             'platform/biostar_x/control-door',
-            'platform/biostar_x/control-door-slave-device'
+            'platform/biostar_x/control-door-slave-device',
+            'platform/biostar_x/check-zone-status',
+            'platform/biostar_x/check-elevator-status',
           ]
         }
       ],
