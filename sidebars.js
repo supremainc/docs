@@ -103,6 +103,7 @@ const sidebars = {
             'platform/biostar_x/control-elevator',
             'platform/biostar_x/check-zone-status',
             'platform/biostar_x/control-zone',
+            'platform/biostar_x/monitoring-video',
           ]
         }
       ],
