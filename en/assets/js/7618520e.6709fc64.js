@@ -290,7 +290,7 @@ function _createMdxContent(props) {
               },
               children: (0,jsx_runtime.jsx)(StatusFail, {})
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문이 열린 상태입니다."
+              children: "카메라가 꺼져있거나 연결이 해제된 상태입니다."
             })]
           })]
         })]
