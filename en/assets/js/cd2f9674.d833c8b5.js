@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-elevator-mdx-cd2.json
-var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"}}')
+var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/en/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/en/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/en/platform/biostar_x/check-zone-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'엘리베이터'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -43,15 +43,15 @@ const assets = {
 
 const toc = [{
   "value": "알람 해제",
-  "id": "알람-해제",
+  "id": "clear-alarm",
   "level": 2
 }, {
   "value": "상세 정보 확인",
-  "id": "상세-정보-확인",
+  "id": "detail-view",
   "level": 2
 }, {
   "value": "층 출입 제어",
-  "id": "층-출입-제어",
+  "id": "floor-access-control",
   "level": 2
 }, {
   "value": "층 개방",
@@ -59,11 +59,11 @@ const toc = [{
   "level": 3
 }, {
   "value": "층 해제",
-  "id": "door-unlock",
+  "id": "floor-unlock",
   "level": 3
 }, {
   "value": "층 잠금",
-  "id": "door-lock",
+  "id": "floor-lock",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -117,14 +117,14 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "알람-해제",
+      id: "clear-alarm",
       children: "알람 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["해당 엘리베이터터에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
       }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "상세-정보-확인",
+      id: "detail-view",
       children: "상세 정보 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["엘리베이터에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -153,7 +153,7 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "층-출입-제어",
+      id: "floor-access-control",
       children: "층 출입 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "엘리베이터로 이동할 수 있는 층을 제어할 수 있습니다. 엘리베이터에 설정된 층의 릴레이를 클릭하고 오른쪽 마우스 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택하세요."
@@ -186,7 +186,7 @@ function _createMdxContent(props) {
         }), " 상태로 변경하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "door-unlock",
+      id: "floor-unlock",
       children: "층 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["선택한 층을 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -195,7 +195,7 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.normalize"
       }), "를 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "door-lock",
+      id: "floor-lock",
       children: "층 잠금"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["선택한 층을 ", (0,jsx_runtime.jsx)(Cmd, {

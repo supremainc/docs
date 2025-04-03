@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-door-mdx-000.json
-var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/en/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/en/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/en/platform/biostar_x/control-door-slave-device"}}')
+var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/platform/biostar_x/control-door-slave-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'출입문'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -39,6 +39,7 @@ const assets = {
 
 };
 
+/*이런 경우 화면에 탭을 추가하고 <Cmd sid='arena.tree.contextMenu.openVideo' />를 다시 클릭하세요.*/
 
 
 const toc = [{
@@ -122,16 +123,6 @@ function _createMdxContent(props) {
       }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: ["출입문에서 사용할 수 있는 제어 기능은 모니터링 섹션에 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "arena.map.doorControl"
-        }), " 도구에서도 이용할 수 있습니다."]
-      }), (0,jsx_runtime.jsx)(Image, {
-        src: "/img/monitoring-door-control.png",
-        alt: "출입문 제어"
-      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "door-open",
       children: "출입문 개방"
@@ -206,17 +197,40 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.openVideo"
       }), "를 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
-      }), " 섹션에서 비디오를 재생할 수 있습니다."]
+      }), " 섹션의 비디오 타일에 선택한 카메라의 영상이 추가됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-door-control-open-video.png",
+      alt: "비디오 열기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["비디오를 선택한 상태에서는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.map.doorControl"
+      }), " 도구를 통해 출입문을 제어할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-door-control.png",
+      alt: "출입문 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.map.doorControl"
+            }), " 도구는 출입문에 카메라가 연계되어 있어야 사용할 수 있습니다. 선택한 카메라가 출입문과 연계되어 있지 않으면 사용할 수 없습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "이 기능은 출입문에 카메라가 연결되어 있어야 사용할 수 있습니다."
+            children: "비디오 타일에는 화면 왼쪽 상단부터 차례로 추가되며, 현재 화면에 추가할 공간이 없으면 에러 메시지가 표시됩니다. "
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["출입문에 카메라 장치를 연결하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["출입문에 카메라를 연계하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["비디오 모니터링에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "#",
               children: "다음 문서"
             }), "를 참고하세요."]
