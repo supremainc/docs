@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-zone-mdx-f5b.json
-var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"구역 제어하기","description":"구역을 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"구역 제어하기","description":"구역을 제어하는 방법을 안내합니다.","keywords":["모니터링","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"}}')
+var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'control-zone',
 	title: '구역 제어하기',
-	description: '구역을 제어하는 방법을 안내합니다.',
+	description: '구역을 제어하고 상세 정보를 확인하세요.',
 	keywords: [
 		'모니터링',
 		'구역'
@@ -43,27 +43,31 @@ const assets = {
 
 const toc = [{
   "value": "APB 해제",
-  "id": "apb-해제",
+  "id": "apb-release",
   "level": 2
 }, {
   "value": "알람 해제",
-  "id": "알람-해제",
+  "id": "alarm",
   "level": 2
 }, {
   "value": "구역 활성화/비활성화",
-  "id": "구역-활성화비활성화",
+  "id": "zone-revitalizationdisabled",
   "level": 2
 }, {
   "value": "경비 구역 제어",
-  "id": "경비-구역-제어",
+  "id": "security-zone-control",
   "level": 2
 }, {
   "value": "소집 구역 보고서 확인",
-  "id": "소집-구역-보고서-확인",
+  "id": "confirmation-of-muster-reports",
+  "level": 2
+}, {
+  "value": "재실 인원 제한 구역 모니터링",
+  "id": "monitoring-of-restrictions-on-the-number-of-people",
   "level": 2
 }, {
   "value": "상세 정보 확인",
-  "id": "상세-정보-확인",
+  "id": "detail-information-confirmation",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -151,13 +155,13 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "apb-해제",
+      id: "apb-release",
       children: "APB 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "안티패스백"
       }), " 구역의 APB 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.tree.contextMenu.clearAlarm"
+        sid: "arena.tree.contextMenu.clearApb"
       }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -165,8 +169,8 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "arena.tree.contextMenu.clearAlarm"
-            }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              sid: "arena.tree.contextMenu.clearApb"
+            }), " 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "안티패스백"
             }), " 구역에서만 사용할 수 있습니다."]
           }), "\n"]
@@ -191,14 +195,21 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "알람-해제",
+      id: "alarm",
       children: "알람 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["해당 구역에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
       }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "arena.tree.contextMenu.clearAlarm"
+        }), " 기능은 재실 인원 제한 구역에서는 사용할 수 없습니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구역-활성화비활성화",
+      id: "zone-revitalizationdisabled",
       children: "구역 활성화/비활성화"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["구역을 활성화하거나 사용하지 않는 구역은 비활성화할 수 있습니다. 비활성화된 구역은 ", (0,jsx_runtime.jsx)(IcDisable, {
@@ -210,7 +221,7 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.disable"
       }), "를 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "경비-구역-제어",
+      id: "security-zone-control",
       children: "경비 구역 제어"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["경비 구역의 경비 상태를 제어할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -219,7 +230,7 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.disarm"
       }), "을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
+      type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -227,7 +238,7 @@ function _createMdxContent(props) {
               sid: "arena.tree.contextMenu.arm"
             }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "arena.tree.contextMenu.disarm"
-            }), "는 경비 구역에서만 사용할 수 있습니다."]
+            }), " 기능은은 경비 구역에서만 사용할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -239,19 +250,62 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "소집-구역-보고서-확인",
+      id: "confirmation-of-muster-reports",
       children: "소집 구역 보고서 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["소집 구역에 대한 보고서를 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.musterReport"
-      }), "를 클릭하세요. 새 창이 열리면 소집 구역에 대한 보고서를 확인할 수 있습니다."]
+      }), "를 클릭하세요. 새 창이 열리면 소집 구역에 대한 보고서를 확인할 수 있는 페이지로 이동합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.tree.contextMenu.musterReport"
+            }), " 기능은은 소집 구역에서만 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["소집 구역 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "상세-정보-확인",
+      id: "monitoring-of-restrictions-on-the-number-of-people",
+      children: "재실 인원 제한 구역 모니터링"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["재실 인원 제한 구역에 대한 상태를 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.occupancyMonitoring"
+      }), "를 클릭하세요. 새 창이 열리면 재실 인원 제한 구역을 모니터링하는 페이지로 이동합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.tree.contextMenu.occupancyMonitoring"
+            }), " 기능은 재실 인원 제한 구역에서만 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["재실 인원 제한 구역 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "detail-information-confirmation",
       children: "상세 정보 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["구역에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.viewDetail"
-      }), "를 클릭하면, 화면 오른쪽에 구역 상세 정보와 이벤트 발생 이력이 표시됩니다."]
+      }), "를 클릭하세요. 화면 오른쪽에 구역 상세 정보와 이벤트 발생 이력이 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

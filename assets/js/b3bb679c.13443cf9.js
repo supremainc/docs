@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-check-elevator-status-mdx-b3b.json
-var site_docs_platform_biostar_x_check_elevator_status_mdx_b3b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-elevator-status","title":"엘리베이터 점검하기","description":"엘리베이터의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-elevator-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-elevator-status","permalink":"/docs/en/platform/biostar_x/check-elevator-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-elevator-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-elevator-status","title":"엘리베이터 점검하기","description":"엘리베이터의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"슬레이브 장치 제어하기","permalink":"/docs/en/platform/biostar_x/control-door-slave-device"},"next":{"title":"구역 점검하기","permalink":"/docs/en/platform/biostar_x/check-zone-status"}}')
+var site_docs_platform_biostar_x_check_elevator_status_mdx_b3b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-elevator-status","title":"엘리베이터 점검하기","description":"엘리베이터의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-elevator-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-elevator-status","permalink":"/docs/platform/biostar_x/check-elevator-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-elevator-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-elevator-status","title":"엘리베이터 점검하기","description":"엘리베이터의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"슬레이브 장치 제어하기","permalink":"/docs/platform/biostar_x/control-door-slave-device"},"next":{"title":"엘리베이터 제어하기","permalink":"/docs/platform/biostar_x/control-elevator"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'엘리베이터'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

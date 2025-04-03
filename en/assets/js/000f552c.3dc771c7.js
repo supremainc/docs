@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-door-mdx-000.json
-var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/en/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/en/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/en/platform/biostar_x/control-door-slave-device"}}')
+var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/en/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/en/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/en/platform/biostar_x/control-door-slave-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'control-door',
 	title: '출입문 제어하기',
-	description: '출입문을 제어하는 방법을 안내합니다.',
+	description: '출입문을 제어하고 상세 정보를 확인하세요.',
 	keywords: [
 		'모니터링',
 		'출입문'
@@ -82,9 +82,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Glossary} = _components;
+  }, {Cmd, Glossary, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Glossary) _missingMdxReference("Glossary", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입문을 제어하는 방법을 안내합니다. 출입문을 일정 시간 동안 잠금하거나 출입문과 연결된 카메라를 확인하고, 발생한 알람을 해제할 수 있습니다."
@@ -121,6 +122,16 @@ function _createMdxContent(props) {
       }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsxs)(_components.p, {
+        children: ["출입문에서 사용할 수 있는 제어 기능은 모니터링 섹션에 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "arena.map.doorControl"
+        }), " 도구에서도 이용할 수 있습니다."]
+      }), (0,jsx_runtime.jsx)(Image, {
+        src: "/img/monitoring-door-control.png",
+        alt: "출입문 제어"
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "door-open",
       children: "출입문 개방"
@@ -151,7 +162,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["이 기능을 통해 외부 손님이 방문할 때 출입문을 일시적으로 개방하여 편리하게 출입할 수 있도록 할 수 있습니다. 출입문을 개방한 후에는 반드시 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["외부 손님이 방문할 때 출입문을 일시적으로 개방하여 편리하게 출입할 수 있도록 할 수 있습니다. 출입문을 개방한 후에는 반드시 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "arena.tree.contextMenu.normalize"
         }), " 상태로 변경하세요."]
       })
@@ -276,7 +287,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.viewDetail"
-      }), "를 클릭하면, 화면 오른쪽에 출입문 상세 정보와 이벤트 발생 이력이 표시됩니다."]
+      }), "를 클릭하세요. 화면 오른쪽에 출입문 상세 정보와 이벤트 발생 이력이 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

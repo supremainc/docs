@@ -215,7 +215,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.fingerprint.viewFingerprintImage"
-          }), ": 토글 버튼을 클릭하면, 지문을 스캔했을 때 원본 이미지를 확인할 수 있습니다."]
+          }), ": 토글 버튼을 클릭하세요. 지문을 스캔했을 때 원본 이미지를 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
