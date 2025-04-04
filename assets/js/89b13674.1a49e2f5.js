@@ -52,6 +52,10 @@ const toc = [{
   "id": "출입문-제어-도구",
   "level": 2
 }, {
+  "value": "영상 알람 확인하기",
+  "id": "영상-알람-확인하기",
+  "level": 2
+}, {
   "value": "비디오 타일 레이아웃 설정",
   "id": "비디오-타일-레이아웃-설정",
   "level": 2
@@ -68,16 +72,12 @@ const toc = [{
   "id": "영상-위치-변경하기",
   "level": 3
 }, {
-  "value": "전체 영상으로 보기",
-  "id": "전체-영상으로-보기",
+  "value": "전체 화면 보기",
+  "id": "전체-화면-보기",
   "level": 2
 }, {
   "value": "영상 닫기",
   "id": "영상-닫기",
-  "level": 2
-}, {
-  "value": "영상 알람 확인하기",
-  "id": "영상-알람-확인하기",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -199,6 +199,32 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "영상-알람-확인하기",
+      children: "영상 알람 확인하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 알람 아이콘이 3초간 표시된 후 사라졌다가 다시 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-alarm.png",
+      alt: "알람"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입문의 알람을 해제하려면 출입문 목록에서 오른쪽 마우스 버튼을 클릭하고, 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.clearAlarm"
+      }), "를 클릭하세요. 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.map.doorControl"
+      }), " 도구에서  ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.clearAlarm"
+      }), "를 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 영상의 화면 상단에 성공 또는 실패 메시지가 표시됩니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["화면 아래에 이벤트 목록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "비디오-타일-레이아웃-설정",
       children: "비디오 타일 레이아웃 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -247,8 +273,8 @@ function _createMdxContent(props) {
       src: "/img/monitoring-video-move-position.png",
       alt: "영상 위치 변경"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "전체-영상으로-보기",
-      children: "전체 영상으로 보기"
+      id: "전체-화면-보기",
+      children: "전체 화면 보기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -262,32 +288,6 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-video-close.png",
       alt: "영상 닫기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "영상-알람-확인하기",
-      children: "영상 알람 확인하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 알람 아이콘이 3초간 표시된 후 사라졌다가 다시 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-video-alarm.png",
-      alt: "알람"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입문의 알람을 해제하려면 출입문 목록에서 오른쪽 마우스 버튼을 클릭하고, 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.tree.contextMenu.clearAlarm"
-      }), "를 클릭하세요. 또는 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.map.doorControl"
-      }), " 도구에서  ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.tree.contextMenu.clearAlarm"
-      }), "를 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "선택한 영상의 화면 상단에 성공 또는 실패 메시지가 표시됩니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["화면 아래에 이벤트 목록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "#",
-          children: "다음 문서"
-        }), "를 참고하세요."]
-      })
     })]
   });
 }
