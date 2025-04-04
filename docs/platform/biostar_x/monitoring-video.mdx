@@ -7,7 +7,9 @@ keywords: [ 모니터링 , 비디오 ]
 
 출입문 또는 구역, 장치와 연계된 카메라의 영상을 모니터링하는 방법을 안내합니다. 
 
-## 카메라 영상 추가
+## 영상 추가하기
+
+비디오 타일에 카메라 영상을 추가하여 모니터링할 수 있습니다. 비디오 타일은 화면 가운데 위치하며, 여러 개의 카메라 영상을 동시에 모니터링할 수 있습니다.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='arena.tree.door.title' /> 또는 <Cmd sid='arena.tree.map.title' />, <Cmd sid='arena.tree.device.title' /> 탭에서 영상을 확인할 카메라 장치를 선택하세요.
 
@@ -20,6 +22,10 @@ keywords: [ 모니터링 , 비디오 ]
 <Image src='/img/monitoring-door-control-open-video.png' alt='비디오 열기' />
 
 :::info
+
+* 사이드바의 출입문 목록에서 카메라를 선택하고 드래그해서 비디오 타일에 드롭할 수도 있습니다.
+
+  <Image src='/img/monitoring-door-control-open-video-drag-drop.png' alt='Drag and drop' />
 
 * 비디오 타일에는 화면 왼쪽 상단부터 차례로 추가되며, 현재 화면에 추가할 공간이 없으면 에러 메시지가 표시됩니다. {/* 이런 경우 화면에 탭을 추가하고 <Cmd sid='arena.tree.contextMenu.openVideo' />를 다시 클릭하세요. */}
 
@@ -55,9 +61,53 @@ keywords: [ 모니터링 , 비디오 ]
 
 1. 프레임의 경계 위로 마우스 커서를 가져가면, 크기를 조절할 수 있는 커서 모양으로 변경됩니다.
 
-1. 모서리를 클릭한 채 원하는 크기로 드래그하세요. 
+1. 모서리를 클릭하고 원하는 크기로 드래그하세요. 
 
     <Image src='/img/monitoring-video-adjust-size-02.png' alt='영상 크기 조절' />
 
 배치된 타일의 크기에 비례하여 영상의 크기를 조절할 수 있습니다. 반대로 영상의 크기를 줄일 수도 있습니다.
 
+<Image src='/img/monitoring-video-adjust-size-03.png' alt='영상 크기 조절' />
+
+### 영상 크기 키우기
+
+영상을 비디오 타일 전체 크기로 키우려면 영상을 더블 클릭하세요. 영상이 비디오 타일의 크기로 늘어납니다.
+
+<Image src='/img/monitoring-video-extend.gif' />
+
+### 영상 위치 변경하기
+
+위치를 변경할 영상을 클릭하고 원하는 위치로 드래그하세요. 선택한 영상의 위치를 변경할 수 있습니다.
+
+<Image src='/img/monitoring-video-move-position.png' alt='영상 위치 변경' />
+
+{/* 크기를 늘린 영상은 이동되지 않습니다. ??? */}
+
+
+## 영상 닫기
+
+비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 <IcClose /> 버튼을 클릭하세요.
+
+<Image src='/img/monitoring-video-close.png' alt='영상 닫기' />
+
+
+## 전체 영상으로 보기
+
+비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 <IcFullscreen /> 버튼을 클릭하세요.
+
+<Image src='/img/monitoring-video-fullscreen.png' alt='전체 화면' />
+
+
+## 영상 알람 확인하기
+
+카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다.
+
+<Image src='/img/monitoring-video-alarm.png' alt='알람' />
+
+:::info
+
+* 화면 아래에 이벤트 목록에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* 출입문의 알람을 해제하려면 출입문 목록에서 오른쪽 마우스 버튼을 클릭하고, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 선택하세요. 또는 <Cmd sid='arena.map.doorControl' /> 도구에서  <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 클릭하세요.
+
+:::
