@@ -38,6 +38,7 @@ import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
 import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcDisable from '@site/static/img/menus/ico-disable.svg';
 import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
+import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -87,5 +88,6 @@ export default {
     IcRelayUnlock,
     IcArm,
     IcDisable,
-    IcFullscreen
+    IcFullscreen,
+    IcRestorscreen
 }
