@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"5298": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"4584": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2815,6 +2815,41 @@ const SvgIcoFullscreen = _ref => {
   })));
 };
 /* ESM default export */ const ico_fullscreen = (SvgIcoFullscreen);
+;// CONCATENATED MODULE: ./static/img/menus/ico-restorescreen.svg
+var ico_restorescreen_g, ico_restorescreen_defs;
+function ico_restorescreen_extends() { return ico_restorescreen_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_restorescreen_extends.apply(null, arguments); }
+
+const SvgIcoRestorescreen = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_restorescreen_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_restorescreen_g || (ico_restorescreen_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M11.23 1.539h-1.076v2.8a1.422 1.422 0 0 0 1.615 1.507h2.693V4.77h-2.693a.475.475 0 0 1-.538-.484zm.54 9.692h2.692v-1.077h-2.693a1.428 1.428 0 0 0-1.615 1.615v2.693h1.077v-2.693a.476.476 0 0 1 .538-.538M5.845 1.539H4.77v2.8a.444.444 0 0 1-.484.43H1.539v1.077h2.8A1.44 1.44 0 0 0 5.846 4.34zM1.54 11.23h2.8a.467.467 0 0 1 .43.538v2.693h1.077v-2.693a1.422 1.422 0 0 0-1.507-1.615h-2.8z"
+  }), /*#__PURE__*/react.createElement("path", {
+    fillOpacity: 0.25,
+    d: "M4.77 1.538v2.8q-.038.409-.485.431H1.538v1.077h2.8q1.425-.084 1.508-1.508v-2.8zm5.384 0v2.8q.07 1.507 1.615 1.508h2.692V4.77H11.77q-.5.002-.538-.484V1.538zm-8.616 8.616v1.077h2.8q.433.052.431.538v2.692h1.077V11.77q0-1.545-1.508-1.615zm10.231 0q-1.615 0-1.615 1.615v2.692h1.077V11.77q0-.538.538-.538h2.692v-1.077zM4.231 1h2.154l-.001 3.37C6.31 5.596 5.596 6.31 4.37 6.384H1V4.232h3.23zm5.384 0h2.154v3.23H15v2.155h-3.23c-1.31-.002-2.094-.738-2.153-2.022V1M1 9.615h3.363c1.284.06 2.02.845 2.022 2.154v3.23H4.23v-3.23H1zm10.77 0H15v2.154h-3.23V15H9.614v-3.23c0-1.369.785-2.154 2.154-2.154"
+  }))), ico_restorescreen_defs || (ico_restorescreen_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_restorescreen = (SvgIcoRestorescreen);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -2839,6 +2874,7 @@ const SvgIcoFullscreen = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -2905,7 +2941,8 @@ const SvgIcoFullscreen = _ref => {
     IcRelayUnlock: ico_relay_unlock,
     IcArm: ico_arms,
     IcDisable: ico_disable,
-    IcFullscreen: ico_fullscreen
+    IcFullscreen: ico_fullscreen,
+    IcRestorscreen: ico_restorescreen
 });
 
 

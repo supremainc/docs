@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/en/platform/biostar_x/control-zone"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,12 +26,12 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'monitoring-video',
 	title: '비디오 모니터링하기',
-	description: '출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.',
+	description: '비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.',
 	keywords: [
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -93,14 +93,15 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcClose, IcFullscreen, Image} = _components;
+  }, {Cmd, IcClose, IcFullscreen, IcRestorscreen, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
+  if (!IcRestorscreen) _missingMdxReference("IcRestorscreen", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "출입문 또는 구역, 장치와 연계된 카메라의 영상을 모니터링하는 방법을 안내합니다."
+      children: "비디오 모니터링 기능을 통해 출입문, 구역, 장치와 연계된 카메라 영상을 실시간으로 확인하고 제어할 수 있습니다. 이 문서에서는 비디오 타일을 활용하여 카메라 영상을 추가하고, 크기 조정, 위치 변경, 전체 화면 보기 등 다양한 작업을 수행하는 방법을 안내합니다. 또한, 알람 상태 확인 및 해제와 같은 관리 기능을 통해 보안 상황에 신속히 대응할 수 있도록 지원합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -145,7 +146,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "사이드바의 출입문 목록에서 카메라를 선택하고 드래그해서 비디오 타일에 드롭할 수도 있습니다."
+            children: "사이드바의 출입문 목록에서 카메라를 선택하고 비디오 타일 영역으로 드래그 앤 드롭 방식으로 영상을 추가할 수도 있습니다."
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/monitoring-door-control-open-video-drag-drop.png",
             alt: "Drag and drop"
@@ -167,7 +168,9 @@ function _createMdxContent(props) {
       id: "출입문-제어-도구",
       children: "출입문 제어 도구"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["카메라의 영상을 비디오 타일에 추가했다면, 출입문을 제어할 수 있는 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["영상을 추가한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.map.doorControl"
+      }), " 도구를 활용해 추가 작업을 수행할 수 있습니다. 출입문과 연계된 카메라를 선택하면 출입문을 제어할 수 있는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.map.doorControl"
       }), " 도구가 활성화됩니다. 출입문을 개방하거나 잠금, 해제, 알람 해제 등의 기능을 사용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -280,6 +283,10 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-video-fullscreen.png",
       alt: "전체 화면"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["전체 화면을 종료하려면 화면 오른쪽 위에 ", (0,jsx_runtime.jsx)(IcRestorscreen, {}), " 버튼을 클릭하세요. 또는 키보드의 ", (0,jsx_runtime.jsx)("kbd", {
+        children: "ESC"
+      }), " 키를 누르세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "영상-닫기",
       children: "영상 닫기"
