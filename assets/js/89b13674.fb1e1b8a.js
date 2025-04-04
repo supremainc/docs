@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/en/platform/biostar_x/control-zone"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -45,39 +45,39 @@ const assets = {
 
 const toc = [{
   "value": "영상 추가하기",
-  "id": "영상-추가하기",
+  "id": "add-video",
   "level": 2
 }, {
   "value": "출입문 제어 도구",
-  "id": "출입문-제어-도구",
+  "id": "door-control-tool",
   "level": 2
 }, {
   "value": "영상 알람 확인하기",
-  "id": "영상-알람-확인하기",
+  "id": "check-the-video-alarm",
   "level": 2
 }, {
   "value": "비디오 타일 레이아웃 설정",
-  "id": "비디오-타일-레이아웃-설정",
+  "id": "video-tile-layout-setting",
   "level": 2
 }, {
   "value": "영상 크기 변경",
-  "id": "영상-크기-변경",
+  "id": "change-video-size",
   "level": 3
 }, {
   "value": "영상 크기 확대",
-  "id": "영상-크기-확대",
+  "id": "video-size-enlargement",
   "level": 3
 }, {
   "value": "영상 위치 변경하기",
-  "id": "영상-위치-변경하기",
+  "id": "changing-the-video-location",
   "level": 3
 }, {
   "value": "전체 화면 보기",
-  "id": "전체-화면-보기",
+  "id": "full-screen",
   "level": 2
 }, {
   "value": "영상 닫기",
-  "id": "영상-닫기",
+  "id": "close-the-video",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -110,7 +110,7 @@ function _createMdxContent(props) {
         }), "은 화면 중앙에 위치한 카메라 영상 표시 영역입니다. 여러 개의 카메라 영상을 동시에 배치하고 모니터링할 수 있는 인터페이스 구성 요소입니다. 사용자는 비디오 타일에서 영상의 크기를 조정하거나 위치를 변경하고, 필요에 따라 영상을 닫거나 전체 화면으로 전환할 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "영상-추가하기",
+      id: "add-video",
       children: "영상 추가하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "비디오 타일에 카메라 영상을 추가하여 모니터링할 수 있습니다. 비디오 타일은 화면 가운데 위치하며, 여러 개의 카메라 영상을 동시에 모니터링할 수 있습니다."
@@ -165,7 +165,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입문-제어-도구",
+      id: "door-control-tool",
       children: "출입문 제어 도구"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["영상을 추가한 후 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -202,7 +202,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "영상-알람-확인하기",
+      id: "check-the-video-alarm",
       children: "영상 알람 확인하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 알람 아이콘이 3초간 표시된 후 사라졌다가 다시 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다."
@@ -228,12 +228,12 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "비디오-타일-레이아웃-설정",
+      id: "video-tile-layout-setting",
       children: "비디오 타일 레이아웃 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "비디오 타일에 배치한 영상은 크기를 변경하거나 원하는 위치로 변경할 수 있습니다. 중요도에 따라 영상의 크기를 조정하고 위치를 변경하여 모니터링하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "영상-크기-변경",
+      id: "change-video-size",
       children: "영상 크기 변경"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -261,14 +261,14 @@ function _createMdxContent(props) {
       src: "/img/monitoring-video-adjust-size-03.png",
       alt: "영상 크기 조절"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "영상-크기-확대",
+      id: "video-size-enlargement",
       children: "영상 크기 확대"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "영상을 비디오 타일 전체 크기로 확대하려면 영상을 더블 클릭하세요. 영상이 비디오 타일의 크기로 확대됩니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/monitoring-video-extend.gif"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "영상-위치-변경하기",
+      id: "changing-the-video-location",
       children: "영상 위치 변경하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "위치를 변경할 영상을 클릭하고 원하는 위치로 드래그하세요. 선택한 영상의 위치를 변경할 수 있습니다."
@@ -276,7 +276,7 @@ function _createMdxContent(props) {
       src: "/img/monitoring-video-move-position.png",
       alt: "영상 위치 변경"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "전체-화면-보기",
+      id: "full-screen",
       children: "전체 화면 보기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
@@ -288,7 +288,7 @@ function _createMdxContent(props) {
         children: "ESC"
       }), " 키를 누르세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "영상-닫기",
+      id: "close-the-video",
       children: "영상 닫기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
