@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/en/platform/biostar_x/control-zone"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"출입문 또는 구역과 연계된 카메라를 모니터링하고 제어하세요.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -40,11 +40,12 @@ const assets = {
 };
 
 /*이런 경우 화면에 탭을 추가하고 <Cmd sid='arena.tree.contextMenu.openVideo' />를 다시 클릭하세요.*/
+/*크기를 늘린 영상은 이동되지 않습니다. ???*/
 
 
 const toc = [{
-  "value": "카메라 영상 추가",
-  "id": "카메라-영상-추가",
+  "value": "영상 추가하기",
+  "id": "영상-추가하기",
   "level": 2
 }, {
   "value": "출입문 제어 도구",
@@ -58,6 +59,26 @@ const toc = [{
   "value": "영상 크기 변경하기",
   "id": "영상-크기-변경하기",
   "level": 3
+}, {
+  "value": "영상 크기 키우기",
+  "id": "영상-크기-키우기",
+  "level": 3
+}, {
+  "value": "영상 위치 변경하기",
+  "id": "영상-위치-변경하기",
+  "level": 3
+}, {
+  "value": "영상 닫기",
+  "id": "영상-닫기",
+  "level": 2
+}, {
+  "value": "전체 영상으로 보기",
+  "id": "전체-영상으로-보기",
+  "level": 2
+}, {
+  "value": "영상 알람 확인하기",
+  "id": "영상-알람-확인하기",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -71,15 +92,19 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, IcClose, IcFullscreen, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcClose) _missingMdxReference("IcClose", true);
+  if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입문 또는 구역, 장치와 연계된 카메라의 영상을 모니터링하는 방법을 안내합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "카메라-영상-추가",
-      children: "카메라 영상 추가"
+      id: "영상-추가하기",
+      children: "영상 추가하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "비디오 타일에 카메라 영상을 추가하여 모니터링할 수 있습니다. 비디오 타일은 화면 가운데 위치하며, 여러 개의 카메라 영상을 동시에 모니터링할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -111,6 +136,13 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사이드바의 출입문 목록에서 카메라를 선택하고 드래그해서 비디오 타일에 드롭할 수도 있습니다."
+          }), "\n", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/monitoring-door-control-open-video-drag-drop.png",
+            alt: "Drag and drop"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "비디오 타일에는 화면 왼쪽 상단부터 차례로 추가되며, 현재 화면에 추가할 공간이 없으면 에러 메시지가 표시됩니다. "
           }), "\n"]
@@ -176,7 +208,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "모서리를 클릭한 채 원하는 크기로 드래그하세요."
+          children: "모서리를 클릭하고 원하는 크기로 드래그하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/monitoring-video-adjust-size-02.png",
           alt: "영상 크기 조절"
@@ -184,6 +216,70 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "배치된 타일의 크기에 비례하여 영상의 크기를 조절할 수 있습니다. 반대로 영상의 크기를 줄일 수도 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-adjust-size-03.png",
+      alt: "영상 크기 조절"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "영상-크기-키우기",
+      children: "영상 크기 키우기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "영상을 비디오 타일 전체 크기로 키우려면 영상을 더블 클릭하세요. 영상이 비디오 타일의 크기로 늘어납니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-extend.gif"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "영상-위치-변경하기",
+      children: "영상 위치 변경하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "위치를 변경할 영상을 클릭하고 원하는 위치로 드래그하세요. 선택한 영상의 위치를 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-move-position.png",
+      alt: "영상 위치 변경"
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "영상-닫기",
+      children: "영상 닫기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-close.png",
+      alt: "영상 닫기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "전체-영상으로-보기",
+      children: "전체 영상으로 보기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-fullscreen.png",
+      alt: "전체 화면"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "영상-알람-확인하기",
+      children: "영상 알람 확인하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-alarm.png",
+      alt: "알람"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["화면 아래에 이벤트 목록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["출입문의 알람을 해제하려면 출입문 목록에서 오른쪽 마우스 버튼을 클릭하고, 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.tree.contextMenu.clearAlarm"
+            }), "를 선택하세요. 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.map.doorControl"
+            }), " 도구에서  ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "arena.tree.contextMenu.clearAlarm"
+            }), "를 클릭하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     })]
   });
 }
