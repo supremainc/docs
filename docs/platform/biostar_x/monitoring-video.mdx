@@ -40,6 +40,19 @@ keywords: [ 모니터링 , 비디오 ]
 :::
 
 
+## 영상 제어하기
+
+비디오 타일에 배치한 영상은 기본적으로 실시간 재생됩니다. 영상의 재생 도구를 통해 영상을 멈추거나 과거 시간의 영상을 조회할 수 있습니다.
+
+<Image src='/img/monitoring-video-player.png' alt='플레이어' />
+
+* <Num num='1' />: 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다.
+
+* <Num num='2' /> <IcPlay/> / <IcPause/>: 버튼을 클릭하면 영상을 일시 정지하거나 재생할 수 있습니다.
+
+* <Num num='3' />: 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다.
+
+
 ## 출입문 제어 도구 {#door-control-tool}
 
 영상을 추가한 후 <Cmd sid='arena.map.doorControl' /> 도구를 활용해 추가 작업을 수행할 수 있습니다. 출입문과 연계된 카메라를 선택하면 출입문을 제어할 수 있는 <Cmd sid='arena.map.doorControl' /> 도구가 활성화됩니다. 출입문을 개방하거나 잠금, 해제, 알람 해제 등의 기능을 사용할 수 있습니다.
@@ -110,11 +123,23 @@ keywords: [ 모니터링 , 비디오 ]
 
 ## 전체 화면 보기 {#full-screen}
 
-비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 <IcFullscreen /> 버튼을 클릭하세요.
+<Columns>
+<Column className='align-left'>
 
 <Image src='/img/monitoring-video-fullscreen.png' alt='전체 화면' />
 
+</Column>
+<Column>
+
+비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 <IcFullscreen /> 버튼을 클릭하세요.
+
 전체 화면을 종료하려면 화면 오른쪽 위에 <IcRestorscreen/> 버튼을 클릭하세요. 또는 키보드의 <kbd>ESC</kbd> 키를 누르세요.
+
+</Column>
+
+</Columns>
+
+
 
 
 ## 영상 닫기 {#close-the-video}
