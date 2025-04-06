@@ -585,6 +585,13 @@ footer {
 
   // Columns
   .container {
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+      p.hasimg {
+        margin-top: 0 !important;
+      }
+    }
     .text--left {
       padding-left: 0;
     }
