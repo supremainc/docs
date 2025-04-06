@@ -4437,11 +4437,11 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 .leadNum_DX6E {
   display: inline-block;
   position: relative;
+  top: 4px;
 }
 .leadNum_DX6E svg {
   width: 22px;
   position: relative;
-  top: 5px;
 }
 .ok_qziF {
   background-color: #7ad600;

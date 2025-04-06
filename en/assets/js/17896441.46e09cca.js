@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"4584": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"4407": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1384,7 +1384,7 @@ var DocCardList = __webpack_require__("8399");
 function Columns(param) {
     let { children, className, style } = param;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: "container center",
+        className: "container center columns",
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
             className: (0,clsx/* default */.Z)('row', className),
             style: style,
@@ -2850,6 +2850,76 @@ const SvgIcoRestorescreen = _ref => {
   })))));
 };
 /* ESM default export */ const ico_restorescreen = (SvgIcoRestorescreen);
+;// CONCATENATED MODULE: ./static/img/menus/ico-play.svg
+var ico_play_g, ico_play_defs;
+function ico_play_extends() { return ico_play_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_play_extends.apply(null, arguments); }
+
+const SvgIcoPlay = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_play_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_play_g || (ico_play_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M13.026 8.638a.4.4 0 0 0 .252-.318.47.47 0 0 0 0-.447.6.6 0 0 0-.252-.319L3.615 2.071a.72.72 0 0 0-.822.134.93.93 0 0 0-.126.447v10.713a.62.62 0 0 0 .126.383.66.66 0 0 0 .379.255.6.6 0 0 0 .443-.134z"
+  }), /*#__PURE__*/react.createElement("path", {
+    fillOpacity: 0.25,
+    d: "M3.245 14a.6.6 0 0 0 .369-.132l9.411-5.229q.202-.075.253-.319.111-.19 0-.446a.6.6 0 0 0-.253-.319L3.614 2.071a.8.8 0 0 0-.442-.064.8.8 0 0 0-.38.192.93.93 0 0 0-.126.446v10.713a.62.62 0 0 0 .127.383q.165.21.379.255a1 1 0 0 0 .073.004m0 .667q-.078 0-.158-.01l-.052-.009a1.32 1.32 0 0 1-.765-.494 1.27 1.27 0 0 1-.27-.778V2.63c.006-.266.078-.522.213-.76l.054-.096.083-.074q.3-.267.69-.346l.046-.008c.278-.036.55.004.802.117l.031.014 9.485 5.53q.378.26.501.64c.127.313.126.63 0 .91a1.06 1.06 0 0 1-.59.684L3.97 14.432a1.27 1.27 0 0 1-.726.235"
+  }))), ico_play_defs || (ico_play_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_play = (SvgIcoPlay);
+;// CONCATENATED MODULE: ./static/img/menus/ico-pause.svg
+var ico_pause_g, ico_pause_defs;
+function ico_pause_extends() { return ico_pause_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_pause_extends.apply(null, arguments); }
+
+const SvgIcoPause = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_pause_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_pause_g || (ico_pause_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M9.666 13.555A.555.555 0 0 1 9.111 13V3a.555.555 0 0 1 .555-.555h2.223a.555.555 0 0 1 .555.555v10a.555.555 0 0 1-.556.555zm-5.555 0A.555.555 0 0 1 3.556 13V3a.555.555 0 0 1 .555-.555h2.222A.556.556 0 0 1 6.89 3v10a.555.555 0 0 1-.556.555z"
+  }), /*#__PURE__*/react.createElement("path", {
+    fillOpacity: 0.25,
+    d: "M11.889 13.555a.556.556 0 0 0 .556-.555V3a.556.556 0 0 0-.556-.555H9.667A.556.556 0 0 0 9.11 3V13c0 .306.249.555.556.555zm-5.556 0A.556.556 0 0 0 6.889 13V3a.556.556 0 0 0-.556-.555H4.11A.555.555 0 0 0 3.556 3V13c0 .306.248.555.555.555zm5.556.556H9.667A1.11 1.11 0 0 1 8.555 13V3c0-.612.499-1.11 1.112-1.11h2.222C12.5 1.89 13 2.387 13 3v10c0 .612-.499 1.11-1.111 1.11m-5.556 0H4.11c-.612 0-1.11-.499-1.11-1.111V3c0-.612.498-1.11 1.11-1.11h2.222c.613 0 1.111.498 1.111 1.11v10c0 .612-.498 1.11-1.111 1.11"
+  }))), ico_pause_defs || (ico_pause_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_pause = (SvgIcoPause);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -2874,6 +2944,8 @@ const SvgIcoRestorescreen = _ref => {
 
 
 // icon images svg
+
+
 
 
 
@@ -2942,7 +3014,9 @@ const SvgIcoRestorescreen = _ref => {
     IcArm: ico_arms,
     IcDisable: ico_disable,
     IcFullscreen: ico_fullscreen,
-    IcRestorscreen: ico_restorescreen
+    IcRestorscreen: ico_restorescreen,
+    IcPlay: ico_play,
+    IcPause: ico_pause
 });
 
 

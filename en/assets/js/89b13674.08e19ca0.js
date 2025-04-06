@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/en/platform/biostar_x/control-zone"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -46,6 +46,10 @@ const assets = {
 const toc = [{
   "value": "영상 추가하기",
   "id": "add-video",
+  "level": 2
+}, {
+  "value": "영상 제어하기",
+  "id": "영상-제어하기",
   "level": 2
 }, {
   "value": "출입문 제어 도구",
@@ -93,12 +97,17 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcClose, IcFullscreen, IcRestorscreen, Image} = _components;
+  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Column) _missingMdxReference("Column", true);
+  if (!Columns) _missingMdxReference("Columns", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
+  if (!IcPause) _missingMdxReference("IcPause", true);
+  if (!IcPlay) _missingMdxReference("IcPlay", true);
   if (!IcRestorscreen) _missingMdxReference("IcRestorscreen", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Num) _missingMdxReference("Num", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "비디오 모니터링 기능을 통해 출입문, 구역, 장치와 연계된 카메라 영상을 실시간으로 확인하고 제어할 수 있습니다. 이 문서에서는 비디오 타일을 활용하여 카메라 영상을 추가하고, 크기 조정, 위치 변경, 전체 화면 보기 등 다양한 작업을 수행하는 방법을 안내합니다. 또한, 알람 상태 확인 및 해제와 같은 관리 기능을 통해 보안 상황에 신속히 대응할 수 있도록 지원합니다."
@@ -164,6 +173,34 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "영상-제어하기",
+      children: "영상 제어하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "비디오 타일에 배치한 영상은 기본적으로 실시간 재생됩니다. 영상의 재생 도구를 통해 영상을 멈추거나 과거 시간의 영상을 조회할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-video-player.png",
+      alt: "플레이어"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Num, {
+            num: "1"
+          }), ": 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Num, {
+            num: "2"
+          }), " ", (0,jsx_runtime.jsx)(IcPlay, {}), " / ", (0,jsx_runtime.jsx)(IcPause, {}), ": 버튼을 클릭하면 영상을 일시 정지하거나 재생할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Num, {
+            num: "3"
+          }), ": 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "door-control-tool",
       children: "출입문 제어 도구"
@@ -278,15 +315,22 @@ function _createMdxContent(props) {
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "full-screen",
       children: "전체 화면 보기"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-video-fullscreen.png",
-      alt: "전체 화면"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["전체 화면을 종료하려면 화면 오른쪽 위에 ", (0,jsx_runtime.jsx)(IcRestorscreen, {}), " 버튼을 클릭하세요. 또는 키보드의 ", (0,jsx_runtime.jsx)("kbd", {
-        children: "ESC"
-      }), " 키를 누르세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsx)(Column, {
+        className: "align-left",
+        children: (0,jsx_runtime.jsx)(Image, {
+          src: "/img/monitoring-video-fullscreen.png",
+          alt: "전체 화면"
+        })
+      }), (0,jsx_runtime.jsxs)(Column, {
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["전체 화면을 종료하려면 화면 오른쪽 위에 ", (0,jsx_runtime.jsx)(IcRestorscreen, {}), " 버튼을 클릭하세요. 또는 키보드의 ", (0,jsx_runtime.jsx)("kbd", {
+            children: "ESC"
+          }), " 키를 누르세요."]
+        })]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "close-the-video",
       children: "영상 닫기"
