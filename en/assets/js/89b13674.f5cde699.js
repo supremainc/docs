@@ -83,6 +83,10 @@ const toc = [{
   "value": "영상 닫기",
   "id": "close-the-video",
   "level": 2
+}, {
+  "value": "모든 영상 닫기",
+  "id": "모든-영상-닫기",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -97,12 +101,13 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
+  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcMore, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
+  if (!IcMore) _missingMdxReference("IcMore", true);
   if (!IcPause) _missingMdxReference("IcPause", true);
   if (!IcPlay) _missingMdxReference("IcPlay", true);
   if (!IcRestorscreen) _missingMdxReference("IcRestorscreen", true);
@@ -317,7 +322,6 @@ function _createMdxContent(props) {
       children: "전체 화면 보기"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsx)(Column, {
-        className: "align-left",
         children: (0,jsx_runtime.jsx)(Image, {
           src: "/img/monitoring-video-fullscreen.png",
           alt: "전체 화면"
@@ -334,11 +338,24 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "close-the-video",
       children: "영상 닫기"
+    }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsx)(Column, {
+        children: (0,jsx_runtime.jsx)(Image, {
+          src: "/img/monitoring-video-close.png",
+          alt: "영상 닫기"
+        })
+      }), (0,jsx_runtime.jsx)(Column, {
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "모든-영상-닫기",
+      children: "모든 영상 닫기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-video-close.png",
-      alt: "영상 닫기"
+      children: ["비디오 타일에 배치한 모든 영상을 닫으려면 화면 오른쪽 상단에 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Close All"
+      }), "을 클릭하세요."]
     })]
   });
 }
