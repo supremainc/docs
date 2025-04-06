@@ -39,6 +39,8 @@ import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcDisable from '@site/static/img/menus/ico-disable.svg';
 import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
 import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
+import IcPlay from '@site/static/img/menus/ico-play.svg';
+import IcPause from '@site/static/img/menus/ico-pause.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -89,5 +91,7 @@ export default {
     IcArm,
     IcDisable,
     IcFullscreen,
-    IcRestorscreen
+    IcRestorscreen,
+    IcPlay,
+    IcPause
 }
