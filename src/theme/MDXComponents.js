@@ -41,6 +41,8 @@ import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
 import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
 import IcPlay from '@site/static/img/menus/ico-play.svg';
 import IcPause from '@site/static/img/menus/ico-pause.svg';
+import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
+import IcFilter from '@site/static/img/menus/ico-filter.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -93,5 +95,7 @@ export default {
     IcFullscreen,
     IcRestorscreen,
     IcPlay,
-    IcPause
+    IcPause,
+    IcAlarm,
+    IcFilter
 }
