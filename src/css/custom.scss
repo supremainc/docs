@@ -265,6 +265,10 @@ footer {
 .pagination-nav__sublabel {
   font-size: var(--ifm-admonition-font-size);
 }
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 2;
+}
 // layout 스타일
 
 // markdown 콘텐츠 스타일 
@@ -379,7 +383,7 @@ footer {
   }
   /* Alert */
 
-  p {
+  p, li {
     em {
       // font-style: normal;
       font-family: 'Noto Sans Coptic';
@@ -502,6 +506,9 @@ footer {
   span.cmd.normal {
     font-weight: normal;
     color: inherit;
+  }
+  span.text-blue-500 {
+    color: #3b82f6;
   }
 
   ul, ol {

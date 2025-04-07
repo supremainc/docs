@@ -38,7 +38,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
     },
     {
       title: 'Knowledge Center',
-      url: `https://kb.supremainc.com/home/doku.php?id=${currentLocale}:start`,
+      url: `https://kb.supremainc.com/knowledge/doku.php?id=${currentLocale}:start`,
       Svg: require('@site/static/img/knowledge-logo.svg').default,
       height: '45px'
     },
