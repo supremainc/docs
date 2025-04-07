@@ -56,7 +56,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '사용자(User)',
+          label: '사용자',
           link: {
             type: 'doc',
             id: 'platform/biostar_x/how-to-guide-user',
@@ -90,7 +90,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '모니터링(Monitoring)',
+          label: '모니터링',
           link: {
             type: 'doc',
             id: 'platform/biostar_x/how-to-guide-monitoring',
@@ -104,6 +104,7 @@ const sidebars = {
             'platform/biostar_x/check-zone-status',
             'platform/biostar_x/control-zone',
             'platform/biostar_x/monitoring-video',
+            'platform/biostar_x/monitoring-event'
           ]
         }
       ],
