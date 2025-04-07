@@ -437,7 +437,7 @@ function ExternalLinkCard(param) {
         },
         {
             title: 'Knowledge Center',
-            url: `https://kb.supremainc.com/home/doku.php?id=${currentLocale}:start`,
+            url: `https://kb.supremainc.com/knowledge/doku.php?id=${currentLocale}:start`,
             Svg: (__webpack_require__(2105)/* ["default"] */.Z),
             height: '45px'
         },

@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"3097": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"9281": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1579,7 +1579,7 @@ function NextItem(param) {
 }
 
 ;// CONCATENATED MODULE: ./i18n/ko/glossary.json
-var glossary_namespaceObject = JSON.parse('{"1on1":{"name":"1:1 인증","description":"사용자 자신이 자신임을 확인받는 인증 방법입니다. 개인의 바이오 정보와 데이터베이스에 저장된 바이오 정보를 일대일로 비교하여 검증합니다."},"1onN":{"name":"1:N 인증","description":"데이터베이스에서 사용자 정보를 찾아내는 인증 방법입니다. 개인의 바이오 정보와 등록된 모든 데이터베이스의 정보를 비교하여 식별하는 방식입니다."},"apb":{"name":"안티 패스백(Anti-Passback, APB)","description":"출입 통제를 위해 구조적인 방법으로서, 출입문 안쪽/바깥쪽에 출입 통제 장치를 설치하여 구역에 출입할 때 반드시 인증을 통해 출입해야하는 기능입니다. 카드를 사용해 출입할 때 리더기에 카드를 인식하지 않고 앞 사람을 따라 입실했다면, 퇴실할 때 출입문이 열리지 않으며 <b>안티 패스백</b> 이벤트가 발생합니다.<br/><b>안티 패스백</b>은 Hard APB와 Soft APB로 구분합니다. <b>안티 패스백</b> 위반 시 Hard APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입할 수 없으며, Soft APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입은 가능합니다."},"relay":{"name":"릴레이(Relay)","description":"전기 회로의 개폐를 다른 전기 회로의 전류, 전압, 주파수 등의 변화에 따라 자동으로 실행하는 제어 기기입니다. 주로 출입문을 잠그거나 여는 신호를 제어합니다."},"credential":{"name":"크리덴셜(Credential)","description":"사용자의 신원을 확인하기 위한 데이터입니다. 일반적으로 디지털 서명, 스마트카드, 바이오 정보, 사용자 이름과 비밀번호 등이 있습니다."},"armzone":{"name":"경비 구역","description":"주로 업무 종료 이후 경비를 개시하며, 경비 개시 후 허가받지 않은 사람이 출입을 시도하면 설정된 알람이나 릴레이 신호가 출력됩니다."},"zone":{"name":"구역","description":"출입 규칙의 적용 대상이 되는 장치 그룹, 이벤트를 모니터링하기 위해 사용합니다. 구역은 출입 통제 시스템의 기본 단위로, 안티패스백 구역 및 화재 경보 구역, 스케줄 잠금/개방 구역, 경비 구역, 인터락 구역, 소집 구역, 재실 인원 제한 구역을 설정할 수 있습니다."}}')
+var glossary_namespaceObject = JSON.parse('{"1on1":{"name":"1:1 인증","description":"사용자 자신이 자신임을 확인받는 인증 방법입니다. 개인의 바이오 정보와 데이터베이스에 저장된 바이오 정보를 일대일로 비교하여 검증합니다."},"1onN":{"name":"1:N 인증","description":"데이터베이스에서 사용자 정보를 찾아내는 인증 방법입니다. 개인의 바이오 정보와 등록된 모든 데이터베이스의 정보를 비교하여 식별하는 방식입니다."},"apb":{"name":"안티 패스백(Anti-Passback, APB)","description":"출입 통제를 위해 구조적인 방법으로서, 출입문 안쪽/바깥쪽에 출입 통제 장치를 설치하여 구역에 출입할 때 반드시 인증을 통해 출입해야하는 기능입니다. 카드를 사용해 출입할 때 리더기에 카드를 인식하지 않고 앞 사람을 따라 입실했다면, 퇴실할 때 출입문이 열리지 않으며 <b>안티 패스백</b> 이벤트가 발생합니다.<br/><b>안티 패스백</b>은 Hard APB와 Soft APB로 구분합니다. <b>안티 패스백</b> 위반 시 Hard APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입할 수 없으며, Soft APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입은 가능합니다."},"relay":{"name":"릴레이(Relay)","description":"전기 회로의 개폐를 다른 전기 회로의 전류, 전압, 주파수 등의 변화에 따라 자동으로 실행하는 제어 기기입니다. 주로 출입문을 잠그거나 여는 신호를 제어합니다."},"credential":{"name":"크리덴셜(Credential)","description":"사용자의 신원을 확인하기 위한 데이터입니다. 일반적으로 디지털 서명, 스마트카드, 바이오 정보, 사용자 이름과 비밀번호 등이 있습니다."},"armzone":{"name":"경비 구역","description":"주로 업무 종료 이후 경비를 개시하며, 경비 개시 후 허가받지 않은 사람이 출입을 시도하면 설정된 알람이나 릴레이 신호가 출력됩니다."},"zone":{"name":"구역","description":"출입 규칙의 적용 대상이 되는 장치 그룹, 이벤트를 모니터링하기 위해 사용합니다. 구역은 출입 통제 시스템의 기본 단위로, 안티패스백 구역 및 화재 경보 구역, 스케줄 잠금/개방 구역, 경비 구역, 인터락 구역, 소집 구역, 재실 인원 제한 구역을 설정할 수 있습니다."},"alarm":{"name":"알람","description":"시스템에서 발생한 이벤트 중 실시간으로 조치가 필요한 이벤트입니다."}}')
 ;// CONCATENATED MODULE: ./i18n/en/glossary.json
 var en_glossary_namespaceObject = JSON.parse('{"apb":{"name":"안티 패스백(Anti-Passback, APB)","description":"출입 통제를 위해 구조적인 방법으로서, 출입문 안쪽/바깥쪽에 출입 통제 장치를 설치하여 구역에 출입할 때 반드시 인증을 통해 출입해야하는 기능입니다. 카드를 사용해 출입할 때 리더기에 카드를 인식하지 않고 앞 사람을 따라 입실했다면, 퇴실할 때 출입문이 열리지 않으며 <b>안티 패스백</b> 이벤트가 발생합니다.<br/><b>안티 패스백</b>은 Hard APB와 Soft APB로 구분합니다. <b>안티 패스백</b> 위반 시 Hard APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입할 수 없으며, Soft APB는 <b>안티 패스백</b> 이벤트를 생성하고 출입은 가능합니다."},"relay":{"name":"릴레이(Relay)","description":"전기 회로의 개폐를 다른 전기 회로의 전류, 전압, 주파수 등의 변화에 따라 자동으로 실행하는 제어 기기입니다. 주로 출입문을 잠그거나 여는 신호를 제어합니다."}}')
 ;// CONCATENATED MODULE: ./src/components/Glossary/index.js
@@ -2957,6 +2957,69 @@ const SvgIcoPause = _ref => {
   })))));
 };
 /* ESM default export */ const ico_pause = (SvgIcoPause);
+;// CONCATENATED MODULE: ./static/img/menus/ico-alarm.svg
+var ico_alarm_g, ico_alarm_defs;
+function ico_alarm_extends() { return ico_alarm_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_alarm_extends.apply(null, arguments); }
+
+const SvgIcoAlarm = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_alarm_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_alarm_g || (ico_alarm_g = /*#__PURE__*/react.createElement("g", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M4.667 12V8a3.333 3.333 0 1 1 6.666 0v4M3.333 14a.667.667 0 0 0 .667.667h8a.667.667 0 0 0 .667-.667v-.667A1.334 1.334 0 0 0 11.333 12H4.667a1.334 1.334 0 0 0-1.334 1.333zM14 8h.667M12.333 3 12 3.333M1.333 8H2M8 1.333V2M3.286 3.286l.471.471M8 8v4"
+  }))), ico_alarm_defs || (ico_alarm_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_alarm = (SvgIcoAlarm);
+;// CONCATENATED MODULE: ./static/img/menus/ico-filter.svg
+var ico_filter_path;
+function ico_filter_extends() { return ico_filter_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_filter_extends.apply(null, arguments); }
+
+const SvgIcoFilter = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_filter_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_filter_path || (ico_filter_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "M6.667 13.333a.67.67 0 0 0 .368.597l1.334.667A.667.667 0 0 0 9.333 14V9.333c0-.33.123-.649.345-.894l4.815-5.326A.667.667 0 0 0 14 2H2a.667.667 0 0 0-.495 1.113L6.322 8.44c.222.245.345.564.345.894z"
+  })));
+};
+/* ESM default export */ const ico_filter = (SvgIcoFilter);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -2981,6 +3044,8 @@ const SvgIcoPause = _ref => {
 
 
 // icon images svg
+
+
 
 
 
@@ -3053,7 +3118,9 @@ const SvgIcoPause = _ref => {
     IcFullscreen: ico_fullscreen,
     IcRestorscreen: ico_restorescreen,
     IcPlay: ico_play,
-    IcPause: ico_pause
+    IcPause: ico_pause,
+    IcAlarm: ico_alarm,
+    IcFilter: ico_filter
 });
 
 

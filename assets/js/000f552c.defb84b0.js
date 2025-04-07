@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-door-mdx-000.json
-var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/en/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/en/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/en/platform/biostar_x/control-door-slave-device"}}')
+var site_docs_platform_biostar_x_control_door_mdx_000_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door","permalink":"/docs/platform/biostar_x/control-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door","title":"출입문 제어하기","description":"출입문을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 점검하기","permalink":"/docs/platform/biostar_x/check-door-status"},"next":{"title":"슬레이브 장치 제어하기","permalink":"/docs/platform/biostar_x/control-door-slave-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'출입문'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -113,6 +113,25 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "알람 이벤트를 실시간으로 확인하고 해제할 수 있습니다. 신속한 대응을 통해 출입 상황을 신속하게 파악할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "출입문을 원격으로 제어하여 출입을 관리하세요. 특정 시간 동안 출입문을 개방하거나 잠금 상태로 설정할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "출입문과 연결된 카메라를 통해 실시간으로 출입 상황을 모니터링할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "출입문을 잠금 상태로 유지함으로써 허가된 사용자만 출입할 수 있도록 보안을 강화할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.a, {
+            href: "../../reference/glossary#apb",
+            children: "안티 패스백"
+          }), " 기능을 통해 무단 출입을 방지하고, 출입 기록을 정확하게 관리할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
