@@ -3,6 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
 import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
+import useImageDimensions from './useImageDimensions'; 
 
 export default function Image({src, alt, className, alone, caption, ico}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
@@ -13,6 +14,7 @@ export default function Image({src, alt, className, alone, caption, ico}) {
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
 
+    const dimensions = useImageDimensions(imagePath);
     // Handle image loading errors
     function onError(e) {
         e.target.src = errTarget;
@@ -26,6 +28,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                 alt={alt}
                 className={clsx('ico', className)}
                 onError={onError}
+                width={dimensions.width || undefined}
+                height={dimensions.height || undefined}
             />
         );
     } else {
@@ -39,6 +43,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                             alt={alt}
                             className={clsx('img', className)}
                             onError={onError}
+                            width={dimensions.width || undefined}
+                            height={dimensions.height || undefined}
                         />
                         <figcaption>
                             {translate({
@@ -54,6 +60,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                             alt={alt}
                             className={className}
                             onError={onError}
+                            width={dimensions.width || undefined}
+                            height={dimensions.height || undefined}
                         />
                     </p>
                     }
