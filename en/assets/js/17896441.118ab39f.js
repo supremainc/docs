@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"4407": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"3097": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1213,6 +1213,35 @@ function Head(param) {
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
 var useBaseUrl = __webpack_require__("3187");
+;// CONCATENATED MODULE: ./src/components/Image/useImageDimensions.js
+
+function useImageDimensions(src) {
+    const [dimensions, setDimensions] = (0,react.useState)({
+        width: null,
+        height: null
+    });
+    (0,react.useEffect)(()=>{
+        if (!src) return; // src가 없으면 로직 실행 중단
+        const img = new Image();
+        img.src = src;
+        img.onload = ()=>{
+            setDimensions({
+                width: img.width,
+                height: img.height
+            });
+        };
+        img.onerror = ()=>{
+            setDimensions({
+                width: null,
+                height: null
+            });
+        };
+    }, [
+        src
+    ]);
+    return dimensions;
+}
+
 ;// CONCATENATED MODULE: ./src/components/Image/index.js
 
 
@@ -1220,11 +1249,13 @@ var useBaseUrl = __webpack_require__("3187");
 
 
 
-function Image(param) {
+
+function Image_Image(param) {
     let { src, alt, className, alone, caption, ico } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const imagePath = currentLocale === 'ko' || alone ? (0,useBaseUrl/* default */.ZP)(src) : (0,useBaseUrl/* default */.ZP)(src.replace('/img/', `/img/${currentLocale}/`));
     const errTarget = (0,useBaseUrl/* default */.ZP)('/img/default-placeholder-image.webp');
+    const dimensions = useImageDimensions(imagePath);
     // Handle image loading errors
     function onError(e) {
         e.target.src = errTarget;
@@ -1235,7 +1266,9 @@ function Image(param) {
             src: imagePath,
             alt: alt,
             className: (0,clsx/* default */.Z)('ico', className),
-            onError: onError
+            onError: onError,
+            width: dimensions.width || undefined,
+            height: dimensions.height || undefined
         });
     } else {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
@@ -1246,7 +1279,9 @@ function Image(param) {
                         src: imagePath,
                         alt: alt,
                         className: (0,clsx/* default */.Z)('img', className),
-                        onError: onError
+                        onError: onError,
+                        width: dimensions.width || undefined,
+                        height: dimensions.height || undefined
                     }),
                     /*#__PURE__*/ (0,jsx_runtime.jsx)("figcaption", {
                         children: (0,Translate/* translate */.I)({
@@ -1262,7 +1297,9 @@ function Image(param) {
                     src: imagePath,
                     alt: alt,
                     className: className,
-                    onError: onError
+                    onError: onError,
+                    width: dimensions.width || undefined,
+                    height: dimensions.height || undefined
                 })
             })
         });
@@ -2974,7 +3011,7 @@ const SvgIcoPause = _ref => {
     Folder: Folder,
     File: File,
     Head: Head,
-    Image: Image,
+    Image: Image_Image,
     DocsSidebar: Toc,
     Collection: components_Collection,
     Kbd: Kbd,

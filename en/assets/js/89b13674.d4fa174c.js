@@ -60,6 +60,10 @@ const toc = [{
   "id": "check-the-video-alarm",
   "level": 2
 }, {
+  "value": "비디오 로그 확인하기",
+  "id": "check-video-log",
+  "level": 2
+}, {
   "value": "비디오 타일 레이아웃 설정",
   "id": "video-tile-layout-setting",
   "level": 2
@@ -191,18 +195,30 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Num, {
             num: "1"
-          }), ": 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다."]
+          }), ": 카메라 장치의 이름입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Num, {
             num: "2"
-          }), " ", (0,jsx_runtime.jsx)(IcPlay, {}), " / ", (0,jsx_runtime.jsx)(IcPause, {}), ": 버튼을 클릭하면 영상을 일시 정지하거나 재생할 수 있습니다."]
+          }), ": 영상을 전체 화면(", (0,jsx_runtime.jsx)(IcFullscreen, {}), ")으로 재상하거나 비디오 타일에서 제외(", (0,jsx_runtime.jsx)(IcClose, {}), ")할 수 있는 버튼입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Num, {
             num: "3"
+          }), ": 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Num, {
+            num: "4"
+          }), " ", (0,jsx_runtime.jsx)(IcPlay, {}), " / ", (0,jsx_runtime.jsx)(IcPause, {}), ": 버튼을 클릭하면 영상을 일시 정지하거나 재생할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Num, {
+            num: "5"
           }), ": 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다."]
         }), "\n"]
       }), "\n"]
@@ -268,6 +284,32 @@ function _createMdxContent(props) {
           href: "#",
           children: "다음 문서"
         }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "check-video-log",
+      children: "비디오 로그 확인하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["규칙으로 설정된 출입문에 특정 이벤트가 발생하면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.eventTable.title"
+      }), " 섹션 목록의 해당 이벤트 항목에는 비디오 로그 아이콘이 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "비디오 로그 아이콘이 표시된 이벤트 항목을 클릭하면 화면 오른쪽에 상세 정보가 나타납니다. 특정 이벤트가 발생한 시간의 영상을 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "비디오 로그 아이콘은 출입문에 카메라가 연계되어 있어야 표시됩니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이벤트 설정 규칙 기준 가장 첫번째로 연결한 카메라를 우선 재생합니다. 영상을 보다 큰 화면으로 재생하려면 화면을 더블 클릭하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "출입문에는 최대 4개의 카메라를 연결할 수 있으며, 영상 하단의 카메라 버튼을 클릭해 원하는 카메라의 영상을 재생할 수 있습니다. 연결된 카메라가 한 개라면 카메라 버튼은 표시되지 않습니다."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "video-tile-layout-setting",

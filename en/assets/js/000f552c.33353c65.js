@@ -231,7 +231,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["비디오 모니터링에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+              href: "monitoring-video",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
