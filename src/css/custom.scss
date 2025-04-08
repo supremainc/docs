@@ -353,7 +353,7 @@ footer {
     .admNote {
       position: absolute;
       left: -27px;
-      top: 4px;
+      top: 2px;
       svg {
         display: inline-block;
         width: 1.3em;
@@ -690,7 +690,7 @@ footer {
     h4 { font-size: 1.4rem; }
     h5 { font-size: 1.2rem; }
     h6 { font-size: 1rem; }
-    p, dt, dd {
+    p, dt, dd, li {
       font-size: .8rem;
       line-height: 1.2;
       code {
