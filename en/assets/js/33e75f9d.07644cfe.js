@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-event-mdx-33e.json
-var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간으로 발생하는 이벤트를 확인하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간으로 발생하는 이벤트를 확인하고 관리하는 방법을 안내합니다.","keywords":["모니터링","이벤트"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간으로 발생하는 이벤트를 확인하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/en/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간으로 발생하는 이벤트를 확인하고 관리하는 방법을 안내합니다.","keywords":["모니터링","이벤트"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-video"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'이벤트'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -39,9 +39,18 @@ const assets = {
 
 };
 
+/*예시 이미지 추가*/
 
 
 const toc = [{
+  "value": "이벤트 목록 확인하기",
+  "id": "event-list",
+  "level": 2
+}, {
+  "value": "색상에 따른 이벤트 구분하기",
+  "id": "event-color",
+  "level": 2
+}, {
   "value": "알람 이벤트 확인하기",
   "id": "alarm-event",
   "level": 2
@@ -78,12 +87,12 @@ const toc = [{
   "id": "이벤트-관련-기능-사용하기",
   "level": 2
 }, {
-  "value": "알림 확인 및 해소 기록하기",
-  "id": "알림-확인-및-해소-기록하기",
+  "value": "알람 확인 및 조치 기록하기",
+  "id": "알람-확인-및-조치-기록하기",
   "level": 2
 }, {
-  "value": "확인하지 않은 알람 보기",
-  "id": "확인하지-않은-알람-보기",
+  "value": "확인하지 않은 알람 이벤트 보기",
+  "id": "확인하지-않은-알람-이벤트-보기",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -116,6 +125,111 @@ function _createMdxContent(props) {
       children: ["모니터링 페이지에서 화면 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"
       }), " 섹션에서는 실시간으로 발생하는 이벤트를 확인하고 관리할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "event-list",
+      children: "이벤트 목록 확인하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.eventTable.title"
+      }), " 섹션에서는 발생한 이벤트를 실시간으로 확인할 수 있습니다. 이벤트는 아래 정보를 포함합니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.date"
+          }), ": 이벤트가 발생한 날짜와 시각입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.area"
+          }), ": 이벤트가 발생한 구역입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.door"
+          }), ": 이벤트가 발생한 출입문입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.device"
+          }), ": 이벤트가 발생한 장치입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.userGroup"
+          }), ": 이벤트를 발생시킨 사용자 그룹입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.user"
+          }), ": 이벤트를 발생시킨 사용자입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "arena.eventTable.port"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.event"
+          }), ": 이벤트 상세 내용입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.status"
+          }), ": 이벤트 상태입니다. 활성화된 이벤트의 경우 Active 상태로 표시됩니다. 알람 이벤트의 경우 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.acknowledge"
+          }), " 버튼이 표시됩니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.view"
+          }), ": 이벤트에 출입문과 연결된 카메라의 영상 정보를 포함하고 있다면 비디오 아이콘이 표시됩니다. 아이콘을 클릭하면 영상을 확인할 수 있습니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "개별 이벤트를 클릭하면 화면 오른쪽에 상세 정보가 나타납니다. 상세 정보에는 이벤트 발생 시각과 구역, 출입문, 장치, 사용자 그룹, 사용자, 포트, 이벤트 상세 내용이 포함됩니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이벤트에 출입문과 연결된 카메라의 영상 또는 이미지 정보를 포함하고 있다면 비디오 및 이미지 로그를 같이 확인할 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "event-color",
+      children: "색상에 따른 이벤트 구분하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "이벤트 목록에서 발생한 이벤트는 색상으로 구분할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "색상 없음: 일반 이벤트입니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "노란색: 경고 이벤트입니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "빨강색: 알람 이벤트입니다. 시스템에서 발생한 이벤트 중 조치가 필요한 이벤트입니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "녹색: 해소된 알람 이벤트입니다."
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "alarm-event",
       children: "알람 이벤트 확인하기"
@@ -433,8 +547,8 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "알림-확인-및-해소-기록하기",
-      children: "알림 확인 및 해소 기록하기"
+      id: "알람-확인-및-조치-기록하기",
+      children: "알람 확인 및 조치 기록하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["알람 이벤트가 발생하면 이벤트 목록의 상태 컬럼에 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.acknowledge"
@@ -487,8 +601,65 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "확인하지-않은-알람-보기",
-      children: "확인하지 않은 알람 보기"
+      id: "확인하지-않은-알람-이벤트-보기",
+      children: "확인하지 않은 알람 이벤트 보기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "아직 확인하지 않은 알람 이벤트를 한번에 확인하고 조치 사항을 기록할 수 있는 기능을 제공합니다. 동일한 알람 이벤트가 여러 개 발생했을 때 유용하게 이용할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.title"
+          }), " 섹션 오른쪽 상단에 아이콘 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["알람 이벤트 팝업 창이 나타나면 왼쪽 목록에서 조치 사항을 기록할 알람 이벤트를 선택하세요. 모든 이벤트를 선택하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.selectAll"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Memo"
+          }), " 입력 필드에 알람 이벤트에 대한 조치 사항을 입력하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.acknowledge"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 이벤트에 대한 조치 사항을 기록합니다. 알람 이벤트 팝업 창은 닫힙니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "tip",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "알람 이벤트를 한 개만 선택하면 이벤트에 대한 상세 정보를 확인할 수 있습니다. 해당 알람 이벤트에 대해 다른 사용자가 조치 사항을 우선 기록했다면, 기록한 내용이 표시됩니다. 현재 사용자는 조치 사항을 수정할 수 있습니다."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["알람 이벤트 목록에서 한 개 이상의 이벤트를 선택해야 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.acknowledge"
+            }), " 버튼을 클릭할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Alarm History"
+            }), " 버튼을 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.header.data"
+            }), " 페이지의 알람 히스토리 기능으로 이동합니다. 알람 히스토리 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     })]
   });
 }
