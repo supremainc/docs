@@ -444,16 +444,6 @@ footer {
         margin-left: 0;
       }
     }
-    figure {
-      text-align: left;
-      margin-left: 0;
-      img {
-        margin-left: 0;
-      }
-    }
-    figcaption {
-      text-align: left;
-    }
     li:last-of-type {
       margin-bottom: 0;
     }
@@ -472,11 +462,11 @@ footer {
   }
 
   figure {
-    text-align: center;
+    margin-left: 0;
     img {
       border: 1px solid;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 0;
+      max-height: fit-content;
     }
     img.none {
       border: none;
@@ -484,7 +474,7 @@ footer {
     figcaption {
       font-size: .8rem;
       color: var(--ifm-color-color-gray);
-      text-align: center;
+      text-align: left;
     }
   }
 
