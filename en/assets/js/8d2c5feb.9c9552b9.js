@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-door-mdx-8d2.json
-var site_docs_platform_biostar_x_monitoring_door_mdx_8d2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-door","title":"출입문 모니터링하기","description":"출입문과 관련한 장치, 엘리베이터, 구역을 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-door","permalink":"/docs/platform/biostar_x/monitoring-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-door.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-door","title":"출입문 모니터링하기","description":"출입문과 관련한 장치, 엘리베이터, 구역을 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","keywords":["모니터링","출입문","장치","엘리베이터","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"모니터링(Monitoring)","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"},"next":{"title":"출입문 점검하기","permalink":"/docs/platform/biostar_x/check-door-status"}}')
+var site_docs_platform_biostar_x_monitoring_door_mdx_8d2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-door","title":"출입문 모니터링하기","description":"출입문과 관련한 장치, 엘리베이터, 구역을 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-door","permalink":"/docs/en/platform/biostar_x/monitoring-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-door.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-door","title":"출입문 모니터링하기","description":"출입문과 관련한 장치, 엘리베이터, 구역을 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","keywords":["모니터링","출입문","장치","엘리베이터","구역"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"모니터링","permalink":"/docs/en/platform/biostar_x/how-to-guide-monitoring"},"next":{"title":"출입문 점검하기","permalink":"/docs/en/platform/biostar_x/check-door-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'엘리베이터',
 		'구역'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

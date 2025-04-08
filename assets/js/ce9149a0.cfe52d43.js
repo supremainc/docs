@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["5001"], {
-"6826": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["1320"], {
+"6326": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_user_mdx_492_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_monitoring_mdx_ce9_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-user-mdx-492.json
-var site_docs_platform_biostar_x_how_to_guide_user_mdx_492_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-user","title":"사용자(User)","description":"BioStar X의 핵심 기능 중 하나인 사용자 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-user","permalink":"/docs/en/platform/biostar_x/how-to-guide-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-user.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-user","title":"사용자(User)","description":"BioStar X의 핵심 기능 중 하나인 사용자 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","keywords":["활용 안내","사용자"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"데이터베이스 변경하기","permalink":"/docs/en/platform/biostar_x/change-db"},"next":{"title":"사용자 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/user-group-manage"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-monitoring-mdx-ce9.json
+var site_docs_platform_biostar_x_how_to_guide_monitoring_mdx_ce9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-monitoring","title":"모니터링","description":"BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-monitoring.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-monitoring","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-monitoring.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-monitoring","title":"모니터링","description":"BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","keywords":["활용 안내","사용자"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"비주얼 페이스 마이그레이션","permalink":"/docs/platform/biostar_x/migration-visual-face"},"next":{"title":"출입문 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-user.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-monitoring.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide-user',
-	title: '사용자(User)',
-	description: 'BioStar X의 핵심 기능 중 하나인 사용자 페이지에서 활용할 수 있는 기능에 대해 안내합니다.',
+	id: 'how-to-guide-monitoring',
+	title: '모니터링',
+	description: 'BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.',
 	keywords: [
 		'활용 안내',
 		'사용자'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -57,10 +57,14 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 핵심 기능 중 하나인 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.header.user"
-      }), " 페이지에서 활용할 수 있는 다양한 기능에 대해 안내합니다. 이 페이지에서는 사용자 그룹 관리, 사용자 관리, 사용자 템플릿 관리, 출입 권한별 사용자 확인 등 다양한 기능을 통해 사용자를 효율적으로 관리하고, 권한을 통해 보안을 강화하는 방법을 소개합니다. 각 기능을 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "를 더욱 효과적으로 활용해 보세요."]
+        sid: "common.header.arena"
+      }), " 페이지에서 활용할 수 있는 기능에 대해 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.header.launcher"
+      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.header.arena"
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.header.arena"
+      }), "을 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }

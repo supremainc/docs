@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-db-mdx-137.json
-var site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-db","title":"데이터베이스 변경하기","description":"Description","source":"@site/docs/platform/biostar_x/change-db.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-db","permalink":"/docs/platform/biostar_x/change-db","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-db.mdx","tags":[],"version":"current","frontMatter":{"id":"change-db","title":"데이터베이스 변경하기","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"},"next":{"title":"사용자(User)","permalink":"/docs/platform/biostar_x/how-to-guide-user"}}')
+var site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-db","title":"데이터베이스 변경하기","description":"Description","source":"@site/docs/platform/biostar_x/change-db.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-db","permalink":"/docs/en/platform/biostar_x/change-db","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-db.mdx","tags":[],"version":"current","frontMatter":{"id":"change-db","title":"데이터베이스 변경하기","description":"Description","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"포트 변경하기","permalink":"/docs/en/platform/biostar_x/change-port"},"next":{"title":"사용자","permalink":"/docs/en/platform/biostar_x/how-to-guide-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'keyword1',
 		'keyword2'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

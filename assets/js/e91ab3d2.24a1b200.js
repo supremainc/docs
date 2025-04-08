@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-group-manage-mdx-e91.json
-var site_docs_platform_biostar_x_user_group_manage_mdx_e91_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","source":"@site/docs/platform/biostar_x/user-group-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-group-manage","permalink":"/docs/en/platform/biostar_x/user-group-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-group-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","keywords":["사용자","그룹","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자(User)","permalink":"/docs/en/platform/biostar_x/how-to-guide-user"},"next":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"}}')
+var site_docs_platform_biostar_x_user_group_manage_mdx_e91_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","source":"@site/docs/platform/biostar_x/user-group-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-group-manage","permalink":"/docs/platform/biostar_x/user-group-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-group-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"user-group-manage","title":"사용자 그룹 관리하기","description":"사용자 그룹을 활용하여 보안성, 관리 효율성, 확장성을 높이고 출입 통제 운영을 최적화하세요.","keywords":["사용자","그룹","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자","permalink":"/docs/platform/biostar_x/how-to-guide-user"},"next":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'그룹',
 		'출입 통제'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
