@@ -97,7 +97,7 @@
     "description": "The name for the light color mode"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 item|{count} items",
+    "message": "1 article|{count} articles",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
@@ -322,6 +322,10 @@
   "theme.docs.nextStep": {
     "message": "Next step",
     "description": "The label for the next step section"
+  },
+  "theme.docs.overview.viewContent": {
+    "message": "Read more",
+    "description": "The label for the view content button"
   },
   "theme.figureCaption.desc": {
     "message": "The image above is an example screen and may differ from the actual screen.",

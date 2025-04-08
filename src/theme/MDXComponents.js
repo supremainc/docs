@@ -20,6 +20,7 @@ import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
 import { StatusOK, StatusFail } from '@site/src/components/Status';
+import Overview from '@site/src/components/Overview';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -76,6 +77,7 @@ export default {
     Num,
     StatusOK,
     StatusFail,
+    Overview,
     IcLicense,
     IcAdd,
     IcClose,

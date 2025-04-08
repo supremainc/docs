@@ -97,7 +97,7 @@
     "description": "The name for the light color mode"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} 항목",
+    "message": "{count} 문서",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
@@ -322,6 +322,10 @@
   "theme.docs.nextStep": {
     "message": "다음 단계",
     "description": "The label for the next step section"
+  },
+  "theme.docs.overview.viewContent": {
+    "message": "둘러보기",
+    "description": "The label for the view content button"
   },
   "theme.figureCaption.desc": {
     "message": "위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.",
