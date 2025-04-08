@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"9281": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"4621": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2295,6 +2295,197 @@ function StatusFail() {
     });
 }
 
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsUtils.js
+var docsUtils = __webpack_require__("6563");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/usePluralForm.js
+var usePluralForm = __webpack_require__("1107");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/isInternalUrl.js
+var isInternalUrl = __webpack_require__("9999");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
+var Heading = __webpack_require__("6055");
+;// CONCATENATED MODULE: ./src/components/Overview/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Overview_styles_module = ({"overviewItems":"overviewItems_zrdh","ovHeading":"ovHeading_JZ3p","linkarrow":"linkarrow_tKYj","subItemslength":"subItemslength_j4iP","Heading":"Heading_MxTq","griddesc":"griddesc_YdRa","ovSubitems":"ovSubitems_FjOq","ovSubitem":"ovSubitem_xwiF","desc":"desc_MAOP"});
+;// CONCATENATED MODULE: ./src/components/Overview/overviewitem.js
+
+
+
+
+
+
+
+
+
+
+
+function useCategoryItemsPlural() {
+    const { selectMessage } = (0,usePluralForm/* usePluralForm */.c)();
+    return (count)=>selectMessage(count, (0,Translate/* translate */.I)({
+            id: 'theme.docs.DocCard.categoryDescription.plurals'
+        }, {
+            count
+        }));
+}
+function MoreIcon() {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("svg", {
+        stroke: "currentColor",
+        fill: "currentColor",
+        "stroke-width": "0",
+        viewBox: "0 0 24 24",
+        class: "css-l1p2hr",
+        height: "1em",
+        width: "1em",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+                fill: "none",
+                d: "M0 0h24v24H0V0z"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("path", {
+                d: "M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"
+            })
+        ]
+    });
+}
+function renderSubItems(items, parentLink) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
+        className: Overview_styles_module.ovSubitems,
+        children: [
+            items.slice(0, 3).map((subItem)=>{
+                const subItemHref = (0,docsUtils/* findFirstSidebarItemLink */.LM)(subItem);
+                const isInternal = (0,isInternalUrl/* default */.Z)(subItemHref);
+                return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                    className: Overview_styles_module.ovSubitem,
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+                        className: (0,clsx/* default */.Z)(Overview_styles_module.overviewLink, isInternal && Overview_styles_module.overviewLinkInternal),
+                        to: subItemHref,
+                        children: subItem.label
+                    })
+                }, subItem.label);
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)(Link/* default */.Z, {
+                className: Overview_styles_module.ovMoreitems,
+                to: parentLink,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(MoreIcon, {}),
+                    " ",
+                    useCategoryItemsPlural()(items.length)
+                ]
+            })
+        ]
+    });
+}
+function OverviewLink(param) {
+    let { item } = param;
+    const { siteConfig } = (0,useDocusaurusContext/* default */.Z)();
+    const href = (0,docsUtils/* findFirstSidebarItemLink */.LM)(item);
+    if (!href) {
+        return null;
+    }
+    const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
+    const doc = (0,docsUtils/* useDocById */.xz)(docId);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
+        className: Overview_styles_module.ovItem,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
+            className: "margin-bottom--lg",
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
+                    as: "h2",
+                    className: Overview_styles_module.ovHeading,
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)(Link/* default */.Z, {
+                        to: item.href,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                className: Overview_styles_module.Heading,
+                                children: item.label
+                            }),
+                            item.type === 'category' ? /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                        className: Overview_styles_module.linkarrow,
+                                        children: "→"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                        className: Overview_styles_module.subItemslength,
+                                        children: useCategoryItemsPlural()(item.items.length)
+                                    })
+                                ]
+                            }) : /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                className: Overview_styles_module.linkarrow,
+                                children: [
+                                    "→ ",
+                                    (0,Translate/* translate */.I)({
+                                        id: 'theme.docs.overview.viewContent',
+                                        "message": "둘러보기"
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                item.type === 'category' ? /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    className: Overview_styles_module.griddesc,
+                    children: [
+                        doc?.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                            dangerouslySetInnerHTML: {
+                                __html: doc.description
+                            }
+                        }),
+                        item.type === 'category' && /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+                            children: renderSubItems(item.items, item.href)
+                        })
+                    ]
+                }) : /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: Overview_styles_module.desc,
+                    children: doc?.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                        dangerouslySetInnerHTML: {
+                            __html: doc.description
+                        }
+                    })
+                })
+            ]
+        })
+    });
+}
+function OverviewItem(param) {
+    let { item } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(OverviewLink, {
+        item: item
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/Overview/index.js
+
+
+
+
+
+function DocCardListForCurrentSidebarCategory(param) {
+    let { className } = param;
+    const category = (0,docsUtils/* useCurrentSidebarCategory */.jA)();
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Overview, {
+        items: category.items,
+        className: className
+    });
+}
+function Overview(props) {
+    const { items, className } = props;
+    if (!items) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)(DocCardListForCurrentSidebarCategory, {
+            ...props
+        });
+    }
+    const filteredItems = (0,docsUtils/* filterDocCardListItems */.MN)(items);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
+        children: filteredItems.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("article", {
+                className: Overview_styles_module.overviewItems,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(OverviewItem, {
+                    item: item
+                })
+            }, index))
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -3043,6 +3234,7 @@ const SvgIcoFilter = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -3099,6 +3291,7 @@ const SvgIcoFilter = _ref => {
     Num: Num,
     StatusOK: StatusOK,
     StatusFail: StatusFail,
+    Overview: Overview,
     IcLicense: ico_license,
     IcAdd: ico_add,
     IcClose: ico_close,
