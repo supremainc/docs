@@ -51,7 +51,7 @@
 // 언어별 폰트 설정
 html[lang='ko-KR'] * {
   font-family: 'Noto Sans KR', sans-serif;
-  p, li {
+  * {
     word-break: keep-all;
   }
 }
