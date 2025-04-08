@@ -96,13 +96,23 @@ const sidebars = {
             id: 'platform/biostar_x/how-to-guide-monitoring',
           },
           items: [
-            'platform/biostar_x/check-door-status',
-            'platform/biostar_x/control-door',
-            'platform/biostar_x/control-door-slave-device',
-            'platform/biostar_x/check-elevator-status',
-            'platform/biostar_x/control-elevator',
-            'platform/biostar_x/check-zone-status',
-            'platform/biostar_x/control-zone',
+            {
+              type: 'category',
+              label: '출입문 모니터링하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/monitoring-door'
+              },
+              items: [
+                'platform/biostar_x/check-door-status',
+                'platform/biostar_x/control-door',
+                'platform/biostar_x/control-door-slave-device',
+                'platform/biostar_x/check-elevator-status',
+                'platform/biostar_x/control-elevator',
+                'platform/biostar_x/check-zone-status',
+                'platform/biostar_x/control-zone',
+              ]
+            },
             'platform/biostar_x/monitoring-video',
             'platform/biostar_x/monitoring-event'
           ]
