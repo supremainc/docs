@@ -3,17 +3,56 @@
  * and scoped locally.
  */
 
+
+.heroLayout {
+  background-image:
+    linear-gradient(to right bottom, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 80%),
+    linear-gradient(to left top, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 90%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.00) 60%, rgba(0, 0, 0, 1.00) 100%),
+    /* radial-gradient(100.25% 103.79% at 35.53% 36.93%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 57.72%, rgba(0, 0, 0, 0.00) 100%), */
+    url('./index-bg.png')
+    ;
+  background-repeat: no-repeat;
+  background-position: top center / cover;
+}
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 80px 0 70px 0;
   position: relative;
   overflow: hidden;
   height: 380px;
-  background: 
-    url('../../static/img/hero.png') no-repeat center center/cover;
-    /* url('../../static/img/banner/biostar2_6_banner_deco1.png') no-repeat left bottom -200px / auto, 
-    url('../../static/img/banner/biostar2_6_banner_deco2.png') no-repeat right bottom -50px / auto, 
-    url('../../static/img/banner/biostar2_6_banner.jpg') no-repeat center center/cover; */
+  color: #fff;
+}
+a.banner {
+  text-decoration: none;
+  color: #fff;
+}
+.section__banner {
+  border-radius: 8px;
+}
+.section__banner:hover {
+  outline: 2px solid #fff;
+}
+.banner__biostar {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+.banner__biostarh2 {
+  margin-top: 1.3rem;
+  font-family: 'Montserrat' !important;
+}
+.banner__biostar__img {
+  text-align: right;
+}
+
+.containerRef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 
 @media screen and (max-width: 996px) {
@@ -31,8 +70,8 @@
 .hero__title {
   font-size: 4em;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-family: 'Montserrat', 'Noto Sans JP', 'Noto Sans KR' !important;
 }
 
 .hero__subtitle {
@@ -40,12 +79,13 @@
   font-weight: 300;
 }
 
-.hero__title, .hero__subtitle {
-  color: #fff !important;
-}
-
 .headsec {
   margin-top: 60px;
+  color: #fff;
+}
+
+.headsec h2 {
+  font-family: 'Montserrat', 'Noto Sans JP', 'Noto Sans KR' !important;
 }
 
 .appcontainer {

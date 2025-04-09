@@ -1,5 +1,5 @@
 // @import url(fonts.css);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /**
  * Any CSS included here will be global. The classic template
@@ -9,6 +9,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-container-width-xl: 1600px;
   --ifm-color-primary: #009fe8;
   --ifm-color-primary-dark: #008fd1;
   --ifm-color-primary-darker: #0087c5;
@@ -67,14 +68,18 @@ html[lang='en-US'] * {
 
 // index.js 페이지
 .aa-Autocomplete {
-  width: 50%;
-  margin: 0 auto !important;
+  width: 76%;
+  margin: 0 !important;
   .aa-Form {
-    border: 1px solid var(--ifm-color-primary);
+    --aa-input-icon-size: 24px;
+    border: 1px solid var(--ifm-color-cmd);
     border-radius: 10px;
+    .aa-Label svg {
+      color: #aaa;
+    }
   }
   .aa-Input {
-    width: 70%;
+    width: 100%;
     height: 2.5rem;
     font-size: 1.2rem;
     padding-left: 10px;
@@ -122,6 +127,9 @@ html[lang='en-US'] * {
 // index.js 페이지
 
 // layout 스타일
+.navbar__title {
+  font-family: 'Montserrat' !important;
+}
 .DocSearch-Hit-title {
   overflow: hidden;
 }

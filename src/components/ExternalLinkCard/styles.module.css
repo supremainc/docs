@@ -1,19 +1,21 @@
 .grid {
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 25px;
-  justify-content: space-between;
+  width: 100%;
+  padding-top: 15px;
   align-items: flex-start;
   align-content: flex-start;
-  border-bottom: 1px solid var(--ifm-color-border);
+  justify-content: space-between;
 }
 
-.product.grid {
-  padding-top: 15px;
+.grid.externalLinks {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1rem;
+}
+
+.grid.product {
+  padding-bottom: 80px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 25px;
 }
 
 .grid:last-of-type {
@@ -25,7 +27,6 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--ifm-color-border);
-  border-radius: 10px;
   /* filter: grayscale(100%); */
 }
 
@@ -37,7 +38,7 @@
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: var(--ifm-color-color-gray);
+  color: #fff;
 }
 
 .flex {

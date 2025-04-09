@@ -27,15 +27,21 @@ function CardItem({Svg, img, title, url, height, desc}) {
   )
 }
 
+function ExternalLinkBanner({Svg, img, title, url, desc}) {
+  return (
+    <Link to={url} target='_blank' className={styles.externalLink}>
+      <div className={styles.externalLinkitem}>
+        <div className={styles.externalLinkLogo}>
+          {(Svg) && <Svg role="img" width='auto' height={height} />}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
-    {
-      title: '',
-      url: './platform/biostar_x',
-      Svg: require('@site/static/img/logo-biostar-x.svg').default,
-      height: '47px',
-    },
     {
       title: 'Knowledge Center',
       url: `https://kb.supremainc.com/knowledge/doku.php?id=${currentLocale}:start`,
@@ -64,7 +70,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (
-    <div className={clsx('container', styles.grid)}>
+    <div className={clsx('container', styles.grid, styles.externalLinks)}>
       {externalLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
       ))}
