@@ -113,6 +113,7 @@ const sidebars = {
                 'platform/biostar_x/control-zone',
               ]
             },
+            'platform/biostar_x/monitoring-map',
             'platform/biostar_x/monitoring-video',
             'platform/biostar_x/monitoring-event'
           ]
