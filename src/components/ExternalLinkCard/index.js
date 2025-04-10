@@ -29,7 +29,7 @@ function ExternalLinkBanner({Svg, title, url, desc, height}) {
     <Link to={url} target='_blank' className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
-          <div className={styles.circle}>{(Svg) && <Svg role="img" width='auto' height={height} />}</div>
+          <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
         </div>
         <div className={styles.externalLiinkDesc}>
           <Heading as='h3' className={styles.externalLinkTitle}>{title}</Heading>
