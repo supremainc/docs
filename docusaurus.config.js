@@ -163,19 +163,19 @@ const config = {
           {
             type: 'doc',
             label: 'BioStar X',
-            position: 'left',
+            position: 'right',
             docId: 'platform/biostar_x/index'
           },
           {
             type: 'dropdown',
             label: 'Devices',
-            position: 'left',
+            position: 'right',
             items: []
           },
           {
             type: 'doc',
             label: 'Legal',
-            position: 'left',
+            position: 'right',
             docId: 'legal/disclaimers'
           },
           {
