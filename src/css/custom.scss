@@ -620,6 +620,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 1160px) {
+  .aa-Autocomplete {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 890px) {
   footer {
     .sns--right {

@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {ExternalLinkCard, ProductLinkCard} from '@site/src/components/ExternalLinkCard';
+import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController} from '@site/src/components/ExternalLinkCard';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -93,10 +93,10 @@ function HomepageHeader() {
               <div>
                 <BioStarLogo width='284' height='78' />
                 <Heading as='h2' className={styles.banner__biostarh2}>New BioStar</Heading>
-                <p>출입통제의 한계를 넘는 보안의 새로운 기준, <br/>AI 기반 통합 보안 플랫폼</p>
+                <p>출입통제의 한계를 넘는 보안의 새로운 기준, AI 기반 통합 보안 플랫폼</p>
               </div>
               <div className={styles.banner__biostar__img}>
-                <img src={require('@site/static/img/banner/biostarx-banner.png').default} width='284px' height='217px'/>
+                {/* <img src={require('@site/static/img/banner/biostarx-banner.png').default} width='284px' height='217px'/> */}
               </div>
             </div>
           </Link>
@@ -115,13 +115,24 @@ export default function Home() {
       <main className={styles.heroLayout}>
         <HomepageHeader />
         <div className={clsx('container', styles.headsec)}>
-          <Heading as="h2">Developer</Heading>
+          <Heading as='h2'>Developers</Heading>
         </div>
         <ExternalLinkCard />
+        
         <div className={clsx('container', styles.headsec)}>
-          <Heading as="h2">Suprema Devices</Heading>
+          <Heading as='h2'>Biometric Readers</Heading>
         </div>
-        <ProductLinkCard />
+        <BiometricReader />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>RF/Mobile Devices</Heading>
+        </div>
+        <RfMobileDevices />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>Intelligent Controller</Heading>
+        </div>
+        <IntenlligentController />
       </main>
     </Layout>
   );
