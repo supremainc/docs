@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/en/platform/biostar_x/control-zone"},"next":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"맵 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-map"},"next":{"title":"이벤트 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-event"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

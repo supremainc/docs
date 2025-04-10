@@ -342,7 +342,7 @@ function ExternalLinkBanner(param) {
                         className: styles_module.circle,
                         children: Svg && /*#__PURE__*/ (0,jsx_runtime.jsx)(Svg, {
                             role: "img",
-                            width: "auto",
+                            width: "100%",
                             height: height
                         })
                     })

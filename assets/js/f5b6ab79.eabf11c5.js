@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-zone-mdx-f5b.json
-var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/en/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","구역"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"구역 점검하기","permalink":"/docs/en/platform/biostar_x/check-zone-status"},"next":{"title":"비디오 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"},"next":{"title":"맵 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-map"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'구역'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
