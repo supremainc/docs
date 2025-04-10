@@ -1,0 +1,59 @@
+---
+id: monitoring-map
+title: 맵 모니터링하기
+description: 맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다.
+keywords: [ 모니터링, 맵]
+---
+
+맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다. <Cmd sid='arena.title' /> 페이지는 <Cmd sid='common.header.launcher' /> 페이지에서 <Cmd sid='arena.title' />을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 <Cmd sid='arena.title' />을 선택하여 진입할 수 있습니다.
+
+**BioStar X**에서는 한 개의 구역(Area)에 여러 개의 층을 구성할 수 있습니다. 한 개의 층(Floor)에는 도면을 기준으로 출입문(Door), 카메라(Camera)를 설정해 모니터링할 수 있습니다. 아래 그림을 참고하세요.
+
+![Area structure](/img/common/monitoring-map-area-tree.png)
+
+그림과 같이 구성한 지역을 구글 지도와 연동하여 지도 위의 구역역(Area) → 층(Floor) 순으로 접근하여 출입문과 카메라를 모니터링하고 제어할 수 있습니다. 이러한 구조는 <Cmd sid='arena.title' /> 페이지의 사이드바에서도 같은 구조로 확인할 수 있습니다. 
+
+![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
+
+:::info
+
+맵을 구성하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+:::
+
+## 맵 열기
+
+모든 구역에 설정된 각 구역이 구글 지도와 연동되어 있다면, <Cmd sid='arena.title' /> 섹션의 비디오 타일에 지도를 표시할 수 있습니다.
+
+1. 화면 왼쪽 사이드 바에서 지도로 확인할 구역을 선택하세요.
+
+1. 마우스 오른쪽 버튼을 클릭하세요. 
+
+1. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.openMap' />를 클릭하세요.
+
+ <Cmd sid='arena.title' /> 섹션의 비디오 타일에 선택한 구역의 지도가 표시됩니다.
+
+<Image src='/img/monitoring-map-open-map.png' alt='맵 열기' />
+
+
+:::info
+
+* 해당 구역을 더블 클릭해도 맵을 열 수 있습니다.
+
+* 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.
+
+:::
+
+## 맵 구성 요소
+
+지도에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 지도에 표시된 구성 요소에 대한 설명은 아래를 참고하세요.
+
+| 구성 요소 | 설명 |
+| :--: | -- |
+| ![Area](/img/common/monitoring-map-area-icon.svg) | **구역**(Area): 구역을 클릭하면 해당 구역에 설정된 층(Floor)으로 진입할 수 있습니다. |
+| ![Camera](/img/common/monitoring-map-camera-icon.svg) | **카메라**: 카메라를 클릭하면 해당 구역의 영상을 재생할 수 있습니다. |
+| ![Camera Error](/img/common/monitoring-map-err-camera-icon.svg) | **카메라 오류**: 카메라가 연결되지 않았거나, 전원이 꺼져 있는 경우에 표시됩니다. |
+
+## 층(Floor)으로 진입하기
+
+지도에서 

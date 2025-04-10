@@ -81,6 +81,8 @@
   margin-bottom: 1rem;
   outline: 1px solid #333;
   border-radius: 5px;
+  transition:
+    outline .5s ease-in
 }
 
 .productLink {

@@ -520,6 +520,15 @@ footer {
   pre * {
     font-family: 'Noto Sans Coptic';
   }
+  // Column width
+  .columns {
+    .col {
+      height: fit-content;
+    }
+    .width--10 {
+      max-width: 10%;
+    }
+  }
 
   // Table
   table {
