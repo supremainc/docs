@@ -3,17 +3,64 @@
  * and scoped locally.
  */
 
+
+.heroLayout {
+  background-image:
+    linear-gradient(to right bottom, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 80%),
+    linear-gradient(to left top, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 90%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.00) 10%, rgba(0, 0, 0, 1.00) 80%),
+    /* radial-gradient(100.25% 103.79% at 35.53% 36.93%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 57.72%, rgba(0, 0, 0, 0.00) 100%), */
+    url('./index-bg.png')
+    ;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000;
+  padding-bottom: 80px;
+}
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 80px 0 10px 0;
   position: relative;
   overflow: hidden;
-  height: 380px;
-  background: 
-    url('../../static/img/hero.png') no-repeat center center/cover;
-    /* url('../../static/img/banner/biostar2_6_banner_deco1.png') no-repeat left bottom -200px / auto, 
-    url('../../static/img/banner/biostar2_6_banner_deco2.png') no-repeat right bottom -50px / auto, 
-    url('../../static/img/banner/biostar2_6_banner.jpg') no-repeat center center/cover; */
+  color: #fff;
+}
+a.banner {
+  text-decoration: none;
+  color: #fff;
+}
+.section__banner {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.section__banner:hover {
+  outline: 2px solid #fff;
+}
+.banner__biostar {
+  width: 100%;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+.banner__biostarh2 {
+  margin-top: 1.3rem;
+  font-family: 'Montserrat' !important;
+}
+.banner__biostar__img {
+  text-align: right;
+  background: url('./biostarx-banner.png') no-repeat center center/cover;
+}
+
+.containerRef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1160px) {
+  .containerRef {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -31,8 +78,8 @@
 .hero__title {
   font-size: 4em;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 3.7rem;
+  font-family: 'Montserrat', 'Noto Sans JP', 'Noto Sans KR' !important;
 }
 
 .hero__subtitle {
@@ -40,12 +87,14 @@
   font-weight: 300;
 }
 
-.hero__title, .hero__subtitle {
-  color: #fff !important;
+.headsec {
+  margin-top: 90px;
+  color: #fff;
 }
 
-.headsec {
-  margin-top: 60px;
+.headsec h2 {
+  font-family: 'Montserrat', 'Noto Sans JP', 'Noto Sans KR' !important;
+  font-size: 2.3rem;
 }
 
 .appcontainer {
@@ -60,7 +109,10 @@
   .heroBanner .containerRef {
     padding: 1rem 0;
   }
-  .appcontainer {
-    width: 100%;
+  .banner__biostar {
+    grid-template-columns: 1fr;
+  }
+  .banner__biostar__img, .banner__biostarh2 {
+    display: none;
   }
 }

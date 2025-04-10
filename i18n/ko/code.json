@@ -1,12 +1,30 @@
 {
   "externalLinks.BioEntryW3.desc": {
-    "message": "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
+    "message": "Simple, Durable, Secure AI 기반 얼굴인증 디바이스"
   },
   "externalLinks.FaceStationF2.desc": {
     "message": "퓨전 얼굴인증 장치"
   },
   "externalLinks.XStation2.desc": {
     "message": "차세대 모바일 출입인증 단말기"
+  },
+  "externalLinks.BioentryP2.desc": {
+    "message": "콤팩트 지문인식 단말기"
+  },
+  "externalLinks.XPass2.desc": {
+    "message": "옥외형 콤팩트 RFID 리더"
+  },
+  "externalLinks.XPassS2.desc": {
+    "message": "IP RFID 출입통제 단말기"
+  },
+  "externalLinks.Aiirfobpatch.desc": {
+    "message": "모바일 출입카드 변환장치"
+  },
+  "externalLinks.CoreStation.desc": {
+    "message": "지능형 바이오인식 컨트롤러"
+  },
+  "externalLinks.CoreStationEnclosure.desc": {
+    "message": "CoreStation 전용 함체"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",

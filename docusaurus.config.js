@@ -164,20 +164,15 @@ const config = {
         logo: {
           alt: 'Suprema Docs',
           src: 'img/suprema-logo.svg',
+          srcDark: 'img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Platform',
+            type: 'doc',
+            label: 'BioStar X',
             position: 'left',
-            items: [
-              {
-                type: 'docSidebar',
-                sidebarId: 'biostarx',
-                label: 'BioStar X',
-              },
-            ]
+            docId: 'platform/biostar_x/index'
           },
           {
             type: 'dropdown',
