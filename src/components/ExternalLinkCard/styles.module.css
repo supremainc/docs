@@ -78,18 +78,15 @@
   display: grid;
   grid-template-columns: 100px 1fr;
   background: rgba(0, 0, 0, 0.4);
-  border-top-left-radius: 20px;
   margin-bottom: 1rem;
+  outline: 1px solid #333;
+  border-radius: 5px;
 }
 
 .productLink {
   display: block;
   text-decoration: none;
   color: #fff;
-}
-
-[data-theme='dark'] .product.grid .cardItem:hover {
-  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
 }
 
 .product.grid .cardItem:hover {

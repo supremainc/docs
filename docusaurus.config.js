@@ -156,6 +156,7 @@ const config = {
         logo: {
           alt: 'Suprema Docs',
           src: 'img/suprema-logo.svg',
+          srcDark: 'img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
