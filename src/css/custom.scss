@@ -75,7 +75,7 @@ html[lang='en-US'] * {
   margin: 0 !important;
   .aa-Form {
     --aa-input-icon-size: 24px;
-    border: 1px solid var(--ifm-color-cmd);
+    border: 2px solid var(--ifm-color-cmd);
     border-radius: 10px;
     .aa-Label svg {
       color: #aaa;
@@ -179,6 +179,13 @@ div[class*='docItemCol'] {
     }
     &> ul.menu__list {
       padding-left: 0;
+    }
+  }
+  li {
+    hr {
+      margin: 1rem 64px 1rem 12px;
+      border-top: 1px dotted;
+      border: none;
     }
   }
   .theme-doc-sidebar-item-link-level-3 {
@@ -498,6 +505,15 @@ footer {
   span.cmd {
     font-weight: 600;
     color: var(--ifm-color-cmd);
+  }
+
+  span.sep {
+    display: inline-block;
+    position: relative;
+    margin: 0 .7rem;
+    font-size: .8rem;
+    font-weight: bold;
+    top: -2px;
   }
 
   span.cmd.bold, span.bold {

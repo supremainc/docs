@@ -21,6 +21,7 @@ import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
 import { StatusOK, StatusFail } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
+import Separator from '@site/src/components/Separator';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -78,6 +79,7 @@ export default {
     StatusOK,
     StatusFail,
     Overview,
+    Separator,
     IcLicense,
     IcAdd,
     IcClose,
