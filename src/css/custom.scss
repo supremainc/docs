@@ -480,6 +480,27 @@ footer {
     }
   }
 
+  .bug--lists {
+    ol {
+      width: 100%;
+      li {
+        &:hover {
+          background-color: var(--ifm-color-nextstep-background);
+        }
+        p {
+          position: relative;
+          width: 80%;
+          padding: .2rem .5rem .2rem 0;
+          .badge {
+            position: absolute;
+            right: -24%;
+            top: .3rem;
+          }
+        }
+      }
+    }
+  }
+
   figure {
     margin-left: 0;
     img {
@@ -514,6 +535,16 @@ footer {
     font-size: .8rem;
     font-weight: bold;
     top: -2px;
+  }
+
+  span.badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--ifm-color-nextstep-background);
+    background-color: var(--ifm-color-border);
+    border-radius: 20px;
   }
 
   span.cmd.bold, span.bold {
