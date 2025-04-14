@@ -2777,7 +2777,7 @@ __webpack_require__.d(__webpack_exports__, {
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(65);
-/* ESM import */var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4621);
+/* ESM import */var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1554);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
