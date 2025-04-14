@@ -489,12 +489,23 @@ footer {
         }
         p {
           position: relative;
-          width: 80%;
-          padding: .2rem .5rem .2rem 0;
+          width: 100%;
+          padding: .2rem 0;
+          padding-right: calc(0.5rem + 138px);
           .badge {
             position: absolute;
-            right: -24%;
+            right: 0;
             top: .4rem;
+            text-align: center;
+            width: 138px;
+          }
+        }
+        ul {
+          li {
+            margin-right: calc(0.5rem + 138px);
+            p {
+              padding-right: 0;
+            }
           }
         }
       }
@@ -700,19 +711,6 @@ footer {
   }
   .aa-Panel {
     width: 100%;
-  }
-  .markdown {
-    .bug--lists {
-      ol {
-        li {
-          padding-right: 2.2rem;
-        }
-      }
-      .badge {
-        bottom: .4rem;
-        top: unset !important
-      }
-    }
   }
 }
 
