@@ -47,6 +47,8 @@ import IcPlay from '@site/static/img/menus/ico-play.svg';
 import IcPause from '@site/static/img/menus/ico-pause.svg';
 import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
 import IcFilter from '@site/static/img/menus/ico-filter.svg';
+import IcMove from '@site/static/img/menus/ico-move.svg';
+import IcBack from '@site/static/img/menus/ico-back.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -105,5 +107,7 @@ export default {
     IcPlay,
     IcPause,
     IcAlarm,
-    IcFilter
+    IcFilter,
+    IcMove,
+    IcBack
 }
