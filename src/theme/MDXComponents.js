@@ -21,6 +21,9 @@ import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
 import { StatusOK, StatusFail } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
+import Separator from '@site/src/components/Separator';
+import Badge from '@site/src/components/Badge';
+import BugLists from '@site/src/components/BugLists';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -44,6 +47,8 @@ import IcPlay from '@site/static/img/menus/ico-play.svg';
 import IcPause from '@site/static/img/menus/ico-pause.svg';
 import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
 import IcFilter from '@site/static/img/menus/ico-filter.svg';
+import IcMove from '@site/static/img/menus/ico-move.svg';
+import IcBack from '@site/static/img/menus/ico-back.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -78,6 +83,9 @@ export default {
     StatusOK,
     StatusFail,
     Overview,
+    Separator,
+    Badge,
+    BugLists,
     IcLicense,
     IcAdd,
     IcClose,
@@ -99,5 +107,7 @@ export default {
     IcPlay,
     IcPause,
     IcAlarm,
-    IcFilter
+    IcFilter,
+    IcMove,
+    IcBack
 }

@@ -11,7 +11,7 @@ keywords: [ 모니터링, 맵]
 
 ![Area structure](/img/common/monitoring-map-area-tree.png)
 
-그림과 같이 구성한 지역을 구글 지도와 연동하여 지도 위의 구역역(Area) → 층(Floor) 순으로 접근하여 출입문과 카메라를 모니터링하고 제어할 수 있습니다. 이러한 구조는 <Cmd sid='arena.title' /> 페이지의 사이드바에서도 같은 구조로 확인할 수 있습니다. 
+그림과 같이 구성한 지역을 구글 지도와 연동하여 지도 위의 구역(Area) → 층(Floor) 순으로 접근하여 출입문과 카메라를 모니터링하고 제어할 수 있습니다. 이러한 구조는 <Cmd sid='arena.title' /> 페이지의 사이드바에서도 같은 구조로 확인할 수 있습니다. 
 
 ![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
 
@@ -21,39 +21,118 @@ keywords: [ 모니터링, 맵]
 
 :::
 
+## 구성 요소 및 옵션 기능
+
+### 구성 요소
+
+지도에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 구역을 통해서 층(Floor)으로 접근할 수 있습니다. 층에는 출입문과 카메라를 확인할 수 있습니다.
+
+<div className='col2--20-80'>
+
+| 구성 요소 | 설명 |
+| :--: | -- |
+| ![Area](/img/common/monitoring-map-area-icon.svg) | **구역**(Area): 구역을 클릭하면 해당 구역에 설정된 층(Floor)으로 진입할 수 있습니다. |
+| ![Door](/img/common/monitoring-map-floor-door-icon.svg) | **출입문**: 출입문을 클릭하면 해당 출입문을 제어할 수 있는 팝업 메뉴가 표시됩니다. 제공하는 기능에 대한 자세한 내용은 [다음 문서](control-door)를 참고하세요. |
+| ![Camera](/img/common/monitoring-map-camera-icon.svg) | **카메라**: 카메라를 클릭하면 해당 구역의 영상을 재생할 수 있습니다. |
+| ![Camera Error](/img/common/monitoring-map-err-camera-icon.svg) | **카메라 오류**: 카메라가 연결되지 않았거나, 전원이 꺼져 있는 경우에 표시됩니다. |
+
+</div>
+
+### 옵션 기능
+
+맵 또는 층에서 제공하는 옵션 기능은 아래와 같습니다.
+
+<div className='col2--20-80'>
+
+| 기능 | 설명 |
+| :--: | -- |
+| ![Zoom in/out](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![Zoom in/out](/img/common/monitoring-map-zoom-reduce-horizon.svg) | 지도의 왼쪽 위, 오른쪽 아래에 위치한 버튼을 클릭해 확대/축소할 수 있습니다. 또는 마우스 휠을 사용하여 맵을 확대하거나 축소할 수 있습니다.|
+| <IcClose width='30' height='30'/> | 비디오 타일에 위치한 맵 또는 층을 닫으려면 오른쪽 위에 버튼을 클릭하세요. |
+| <IcMove width='30' height='30'/> | 지도 위에 마우스를 오버하면 표시되는 아이콘을 클릭해 드래그하면 지도를 비디오 타일의 다른 위치로 이동할 수 있습니다. |
+
+</div>
+
+:::info
+
+* 지도 위에서 마우스를 클릭한 상태로 드래그하면 지도를 이동할 수 있습니다. 기본 동작 방식은 구글 지도 환경과 동일합니다.
+
+* 지도를 더블 클릭하면 전체 화면으로 확대됩니다. 다시 더블 클릭하거나 <Kbd>ESC</Kbd> 키를 누르면 원래 크기로 돌아갑니다.
+
+:::
+
 ## 맵 열기
 
 모든 구역에 설정된 각 구역이 구글 지도와 연동되어 있다면, <Cmd sid='arena.title' /> 섹션의 비디오 타일에 지도를 표시할 수 있습니다.
 
-1. 화면 왼쪽 사이드 바에서 지도로 확인할 구역을 선택하세요.
+1. 화면 왼쪽 사이드바에서 지도로 확인할 구역을 선택하세요.
 
 1. 마우스 오른쪽 버튼을 클릭하세요. 
 
 1. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.openMap' />를 클릭하세요.
 
- <Cmd sid='arena.title' /> 섹션의 비디오 타일에 선택한 구역의 지도가 표시됩니다.
+<Cmd sid='arena.title' /> 섹션의 비디오 타일에 선택한 구역의 지도가 표시됩니다.
 
 <Image src='/img/monitoring-map-open-map.png' alt='맵 열기' />
 
 
 :::info
 
-* 해당 구역을 더블 클릭해도 맵을 열 수 있습니다.
+* 화면 왼쪽 사이드바에서 해당 구역을 더블 클릭해도 맵을 열 수 있습니다.
 
 * 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.
 
 :::
 
-## 맵 구성 요소
+## 층으로 진입하기
 
-지도에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 지도에 표시된 구성 요소에 대한 설명은 아래를 참고하세요.
+지도에서 층으로 진입하려면 구역(Area)을 클릭하세요. 팝업 메뉴에 진입할 수 있는 층 목록이 표시되면 원하는 층을 선택하세요. 선택한 층의 도면과 출입문, 카메라를 확인할 수 있습니다.
 
-| 구성 요소 | 설명 |
-| :--: | -- |
-| ![Area](/img/common/monitoring-map-area-icon.svg) | **구역**(Area): 구역을 클릭하면 해당 구역에 설정된 층(Floor)으로 진입할 수 있습니다. |
-| ![Camera](/img/common/monitoring-map-camera-icon.svg) | **카메라**: 카메라를 클릭하면 해당 구역의 영상을 재생할 수 있습니다. |
-| ![Camera Error](/img/common/monitoring-map-err-camera-icon.svg) | **카메라 오류**: 카메라가 연결되지 않았거나, 전원이 꺼져 있는 경우에 표시됩니다. |
+<Image src='/img/monitoring-map-select-floor.png' alt='층 선택하기' />
 
-## 층(Floor)으로 진입하기
+* 출입문을 클릭하면 해당 출입문을 제어할 수 있는 팝업 메뉴가 표시됩니다. 제공하는 기능에 대한 자세한 내용은 [다음 문서](control-door)를 참고하세요.
 
-지도에서 
+  <Image src='/img/monitoring-map-floor-control-door.png' alt='출입문 제어' />
+
+* 카메라를 클릭하면 해당 구역의 영상을 재생할 수 있습니다.
+
+  <Image src='/img/monitoring-map-select-floor-play-video.png' alt='카메라 영상 재생' />
+
+:::info
+
+* 층(Floor)에 출입문과 카메라를 설정하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* 구역이 표시되는 지도로 이동하려면 왼쪽 상단의 <IcBack/> 버튼을 클릭하세요.
+
+* 영상 제어 방법 및 영상에 표시되는 도구에 대한 자세한 내용은 [다음 문서](monitoring-video#control-video)를 참고하세요.
+
+* 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.
+
+:::
+
+
+## 다른 층으로 이동하기
+
+다른 층으로 이동하려면 지도 왼쪽 상단의 선택 옵션을 클릭하고, 목록에서 이동하길 원하는 층을 선택하세요.
+
+<Image src='/img/monitoring-map-select-floor-list-box.png' alt='다른 층 선택하기' />
+
+:::info
+
+구역이 표시되는 지도로 이동하려면 왼쪽 상단의 <IcBack/> 버튼을 클릭하세요.
+
+:::
+
+
+## 카메라 제어하기
+
+* 비디오 타일에 카메라 영상을 배치하고 재생하려면, 화면 왼쪽 사이드바의 <Cmd sid='arena.map.title' /> 목록에서 카메라를 더블 클릭하세요. 또는 마우스 오른쪽 버튼을 클릭하고 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.openVideo' />를 클릭하세요.
+
+* 카메라의 이름, 위치 등과 같은 상세 정보를 확인하려면 화면 왼쪽 사이드바의 <Cmd sid='arena.map.title' /> 목록에서 카메라를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.viewDetail' />를 클릭하세요.
+
+:::info
+
+* 비디오 타일에는 화면 왼쪽 상단부터 차례로 추가되며, 현재 화면에 추가할 공간이 없으면 에러 메시지가 표시됩니다.
+
+* 영상 제어 방법 및 영상에 표시되는 도구에 대한 자세한 내용은 [다음 문서](monitoring-video#control-video)를 참고하세요.
+
+:::

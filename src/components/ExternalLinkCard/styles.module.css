@@ -99,23 +99,20 @@
   border-radius: 5px;
 }
 
-.cardItem:hover {
-  border-radius: 5px;
-}
-
 .productImg {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   height: 100px;
   background: rgba(255, 255, 255, 1);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .productImg img {
   display: inline-block;
   margin: 0 auto;
 }
+
 .center {
   margin: 0 auto;
 }
