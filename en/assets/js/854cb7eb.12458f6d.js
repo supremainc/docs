@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-register-license-key-mdx-854.json
-var site_docs_platform_biostar_x_tutorial_register_license_key_mdx_854_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","source":"@site/docs/platform/biostar_x/tutorial-register-license-key.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-register-license-key","permalink":"/docs/platform/biostar_x/tutorial-register-license-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-register-license-key.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/tutorial-login"},"next":{"title":"장치 등록하기","permalink":"/docs/platform/biostar_x/tutorial-add-device"}}')
+var site_docs_platform_biostar_x_tutorial_register_license_key_mdx_854_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","source":"@site/docs/platform/biostar_x/tutorial-register-license-key.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-register-license-key","permalink":"/docs/en/platform/biostar_x/tutorial-register-license-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-register-license-key.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"로그인하기","permalink":"/docs/en/platform/biostar_x/tutorial-login"},"next":{"title":"장치 등록하기","permalink":"/docs/en/platform/biostar_x/tutorial-add-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'라이선스'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -69,9 +69,9 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), " 라이선스를 구매했다면 라이선스 키를 등록하고 더 많은 기능을 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Settings"
-      }), " > ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
         children: "License"
-      }), " > ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         children: "BioStar X"
       }), " 메뉴로 진입하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {

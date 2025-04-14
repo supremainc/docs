@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-login-with-mfa-mdx-b73.json
-var site_docs_platform_biostar_x_login_with_mfa_mdx_b73_namespaceObject = JSON.parse('{"id":"platform/biostar_x/login-with-mfa","title":"멀티팩터 인증으로 로그인하기","description":"BioStar X에 로그인할 때 멀티팩터 인증 기능을 사용하면 계정의 보안을 향상시킬 수 있습니다.","source":"@site/docs/platform/biostar_x/login-with-mfa.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/login-with-mfa","permalink":"/docs/platform/biostar_x/login-with-mfa","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/login-with-mfa.mdx","tags":[],"version":"current","frontMatter":{"id":"login-with-mfa","title":"멀티팩터 인증으로 로그인하기","description":"BioStar X에 로그인할 때 멀티팩터 인증 기능을 사용하면 계정의 보안을 향상시킬 수 있습니다.","keywords":["로그인","MFA","다중 인증"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 권한별 사용자 확인하기","permalink":"/docs/platform/biostar_x/view-user-by-access"},"next":{"title":"비주얼 페이스 마이그레이션","permalink":"/docs/platform/biostar_x/migration-visual-face"}}')
+var site_docs_platform_biostar_x_login_with_mfa_mdx_b73_namespaceObject = JSON.parse('{"id":"platform/biostar_x/login-with-mfa","title":"멀티팩터 인증으로 로그인하기","description":"BioStar X에 로그인할 때 멀티팩터 인증 기능을 사용하면 계정의 보안을 향상시킬 수 있습니다.","source":"@site/docs/platform/biostar_x/login-with-mfa.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/login-with-mfa","permalink":"/docs/en/platform/biostar_x/login-with-mfa","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/login-with-mfa.mdx","tags":[],"version":"current","frontMatter":{"id":"login-with-mfa","title":"멀티팩터 인증으로 로그인하기","description":"BioStar X에 로그인할 때 멀티팩터 인증 기능을 사용하면 계정의 보안을 향상시킬 수 있습니다.","keywords":["로그인","MFA","다중 인증"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입 권한별 사용자 확인하기","permalink":"/docs/en/platform/biostar_x/view-user-by-access"},"next":{"title":"비주얼 페이스 마이그레이션","permalink":"/docs/en/platform/biostar_x/migration-visual-face"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'MFA',
 		'다중 인증'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -139,9 +139,9 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["지문 인증을 사용해 로그인할 수 없다면 슈프리마 기술지원팀(", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://support.supremainc.com)%EC%9C%BC%EB%A1%9C",
-              children: "https://support.supremainc.com)으로"
-            }), " 문의하세요."]
+              href: "https://support.supremainc.com",
+              children: "support.supremainc.com"
+            }), ")으로 문의하세요."]
           }), "\n"]
         }), "\n"]
       })

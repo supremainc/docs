@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-map-mdx-7e7.json
-var site_docs_platform_biostar_x_monitoring_map_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-map.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-map","permalink":"/docs/platform/biostar_x/monitoring-map","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-map.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다.","keywords":["모니터링","맵"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"},"next":{"title":"비디오 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_monitoring_map_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","source":"@site/docs/platform/biostar_x/monitoring-map.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-map","permalink":"/docs/platform/biostar_x/monitoring-map","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-map.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","keywords":["모니터링","맵","구역","층"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"},"next":{"title":"장치 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,10 +26,12 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'monitoring-map',
 	title: '맵 모니터링하기',
-	description: '맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다.',
+	description: '맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.',
 	keywords: [
 		'모니터링',
-		'맵'
+		'맵',
+		'구역',
+		'층'
 	],
 	isTranslationMissing: false
 };
@@ -43,31 +45,31 @@ const assets = {
 
 const toc = [{
   "value": "구성 요소 및 옵션 기능",
-  "id": "구성-요소-및-옵션-기능",
+  "id": "component-and-options",
   "level": 2
 }, {
   "value": "구성 요소",
-  "id": "구성-요소",
+  "id": "component",
   "level": 3
 }, {
   "value": "옵션 기능",
-  "id": "옵션-기능",
+  "id": "options",
   "level": 3
 }, {
   "value": "맵 열기",
-  "id": "맵-열기",
+  "id": "open-map",
   "level": 2
 }, {
   "value": "층으로 진입하기",
-  "id": "층으로-진입하기",
+  "id": "entry-floor",
   "level": 2
 }, {
   "value": "다른 층으로 이동하기",
-  "id": "다른-층으로-이동하기",
+  "id": "move-to-another-floor",
   "level": 2
 }, {
   "value": "카메라 제어하기",
-  "id": "카메라-제어하기",
+  "id": "control-camera",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -98,8 +100,10 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   if (!Kbd) _missingMdxReference("Kbd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 확인하고, 제어하는 방법을 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "맵 모니터링 기능을 통해 구역과 구역 내 층별 출입문, 카메라 현황을 실시간으로 확인하고, 제어하는 방법을 안내합니다. 맵 모니터링은 구글 지도와 연동된 시각적 인터페이스를 통해 구역(Area)과 층(Floor)을 손쉽게 탐색하며, 출입문 제어, 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.title"
       }), " 페이지는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.launcher"
@@ -139,13 +143,13 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구성-요소-및-옵션-기능",
+      id: "component-and-options",
       children: "구성 요소 및 옵션 기능"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "구성-요소",
+      id: "component",
       children: "구성 요소"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "지도에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 구역을 통해서 층(Floor)으로 접근할 수 있습니다. 층에는 출입문과 카메라를 확인할 수 있습니다."
+      children: "맵 또는 층에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 구역을 통해서 층(Floor)으로 접근할 수 있습니다. 층에는 출입문과 카메라를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "col2--20-80",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -167,7 +171,7 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: (0,jsx_runtime.jsx)(_components.img, {
-                alt: "Area",
+                alt: "구역 아이콘",
                 src: (__webpack_require__(6465)/* ["default"] */.Z) + "",
                 width: "45",
                 height: "45"
@@ -183,7 +187,7 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: (0,jsx_runtime.jsx)(_components.img, {
-                alt: "Door",
+                alt: "출입문 아이콘",
                 src: (__webpack_require__(590)/* ["default"] */.Z) + "",
                 width: "45",
                 height: "45"
@@ -202,7 +206,7 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: (0,jsx_runtime.jsx)(_components.img, {
-                alt: "Camera",
+                alt: "카메라 아이콘",
                 src: (__webpack_require__(9232)/* ["default"] */.Z) + "",
                 width: "45",
                 height: "45"
@@ -218,7 +222,7 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: (0,jsx_runtime.jsx)(_components.img, {
-                alt: "Camera Error",
+                alt: "카메라 오류 아이콘",
                 src: (__webpack_require__(5109)/* ["default"] */.Z) + "",
                 width: "45",
                 height: "45"
@@ -232,7 +236,7 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "옵션-기능",
+      id: "options",
       children: "옵션 기능"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "맵 또는 층에서 제공하는 옵션 기능은 아래와 같습니다."
@@ -257,18 +261,18 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: [(0,jsx_runtime.jsx)(_components.img, {
-                alt: "Zoom in/out",
+                alt: "확대/축소",
                 src: (__webpack_require__(281)/* ["default"] */.Z) + "",
                 width: "24",
                 height: "51"
               }), " / ", (0,jsx_runtime.jsx)(_components.img, {
-                alt: "Zoom in/out",
+                alt: "확대/축소",
                 src: (__webpack_require__(9301)/* ["default"] */.Z) + "",
                 width: "51",
                 height: "24"
               })]
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "지도의 왼쪽 위, 오른쪽 아래에 위치한 버튼을 클릭해 확대/축소할 수 있습니다. 또는 마우스 휠을 사용하여 맵을 확대하거나 축소할 수 있습니다."
+              children: "맵의 왼쪽 위, 오른쪽 아래에 위치한 버튼을 클릭해 확대/축소할 수 있습니다. 또는 마우스 휠을 사용하여 맵을 확대하거나 축소할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -292,7 +296,7 @@ function _createMdxContent(props) {
                 height: "30"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "지도 위에 마우스를 오버하면 표시되는 아이콘을 클릭해 드래그하면 지도를 비디오 타일의 다른 위치로 이동할 수 있습니다."
+              children: "맵 위에 마우스를 오버하면 표시되는 아이콘을 클릭해 드래그하면 맵을 비디오 타일의 다른 위치로 이동할 수 있습니다."
             })]
           })]
         })]
@@ -302,27 +306,27 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지도 위에서 마우스를 클릭한 상태로 드래그하면 지도를 이동할 수 있습니다. 기본 동작 방식은 구글 지도 환경과 동일합니다."
+            children: "맵 위에서 마우스를 클릭한 상태로 드래그하면 위치를 이동할 수 있습니다. 기본 동작 방식은 구글 지도 환경과 동일합니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["지도를 더블 클릭하면 전체 화면으로 확대됩니다. 다시 더블 클릭하거나 ", (0,jsx_runtime.jsx)(Kbd, {
+            children: ["맵을 더블 클릭하면 전체 화면으로 확대됩니다. 다시 더블 클릭하거나 ", (0,jsx_runtime.jsx)(Kbd, {
               children: "ESC"
             }), " 키를 누르면 원래 크기로 돌아갑니다."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "맵-열기",
+      id: "open-map",
       children: "맵 열기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["모든 구역에 설정된 각 구역이 구글 지도와 연동되어 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.title"
-      }), " 섹션의 비디오 타일에 지도를 표시할 수 있습니다."]
+      }), " 섹션의 비디오 타일에 맵을 표시할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "화면 왼쪽 사이드바에서 지도로 확인할 구역을 선택하세요."
+          children: "화면 왼쪽 사이드바에서 맵으로 확인할 구역을 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -338,7 +342,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.title"
-      }), " 섹션의 비디오 타일에 선택한 구역의 지도가 표시됩니다."]
+      }), " 섹션의 비디오 타일에 선택한 구역의 맵이 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-map-open-map.png",
       alt: "맵 열기"
@@ -356,10 +360,10 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "층으로-진입하기",
+      id: "entry-floor",
       children: "층으로 진입하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "지도에서 층으로 진입하려면 구역(Area)을 클릭하세요. 팝업 메뉴에 진입할 수 있는 층 목록이 표시되면 원하는 층을 선택하세요. 선택한 층의 도면과 출입문, 카메라를 확인할 수 있습니다."
+      children: "맵에서 층으로 진입하려면 구역(Area)을 클릭하세요. 팝업 메뉴에 진입할 수 있는 층 목록이 표시되면 원하는 층을 선택하세요. 선택한 층의 도면과 출입문, 카메라를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-map-select-floor.png",
       alt: "층 선택하기"
@@ -394,7 +398,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["구역이 표시되는 지도로 이동하려면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcBack, {}), " 버튼을 클릭하세요."]
+            children: ["구역이 표시되는 맵으로 이동하려면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcBack, {}), " 버튼을 클릭하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -410,20 +414,20 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "다른-층으로-이동하기",
+      id: "move-to-another-floor",
       children: "다른 층으로 이동하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "다른 층으로 이동하려면 지도 왼쪽 상단의 선택 옵션을 클릭하고, 목록에서 이동하길 원하는 층을 선택하세요."
+      children: "다른 층으로 이동하려면 맵 왼쪽 상단의 선택 옵션을 클릭하고, 목록에서 이동하길 원하는 층을 선택하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-map-select-floor-list-box.png",
       alt: "다른 층 선택하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["구역이 표시되는 지도로 이동하려면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcBack, {}), " 버튼을 클릭하세요."]
+        children: ["구역이 표시되는 맵으로 이동하려면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcBack, {}), " 버튼을 클릭하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "카메라-제어하기",
+      id: "control-camera",
       children: "카메라 제어하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {

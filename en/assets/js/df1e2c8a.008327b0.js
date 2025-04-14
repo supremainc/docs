@@ -132,7 +132,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.launcher"
-      }), " > ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.user"
       }), " 페이지로 이동해, 아래 두 가지 방식으로 크리덴션을 등록하거나 추가, 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

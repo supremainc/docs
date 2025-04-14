@@ -77,9 +77,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. ", (0,jsx_runtime.jsx)(Start, {}), " > ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X Setting"
       }), "을 클릭하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X Setting"
