@@ -1024,7 +1024,7 @@ function Home() {
                     className: (0,clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
-                        children: "Biometric Readers"
+                        children: "Biometric Devices"
                     })
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(BiometricReader, {}),
