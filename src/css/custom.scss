@@ -755,26 +755,50 @@ footer {
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
     print-color-adjust: exact !important;                 /*Firefox*/
-    h1 { font-size: 2rem; margin-top: 0;}
+    h1 { 
+      font-size: 2rem;
+      margin-top: 0;
+      color: var(--ifm-color-cmd);
+    }
     h2 { 
-      font-size: 1.8rem; 
+      font-size: 1.6rem;
       page-break-before: auto;
       padding-top: 0;
+      margin-bottom: .5rem;
     }
-    h3 { font-size: 1.6rem; }
-    h4 { font-size: 1.4rem; }
-    h5 { font-size: 1.2rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    h5 { font-size: 1.1rem; }
     h6 { font-size: 1rem; }
+    hr {
+      border: 1px solid var(--ifm-color-cmd);
+      margin-top: 0;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    a {
+      color: var(--ifm-color-cmd) !important;
+      text-decoration: none !important;
+    }
     p, dt, dd, li {
-      font-size: .8rem;
-      line-height: 1.2;
+      font-size: .8rem !important;
+      line-height: 1.4;
       code {
-        font-size: .75rem;
+        font-size: .7rem;
       }
       svg {
         position: relative;
         top: 2px;
       }
+    }
+    ol {
+      ul {
+        margin: .25rem 0
+      }
+    }
+    li::marker {
+      font-size: .8rem !important;
     }
     img {
       max-width: 65%;
@@ -822,6 +846,24 @@ footer {
         width: 50%;
         > a.padding--lg {
           padding: 20px !important;
+        }
+      }
+    }
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: 0 !important;
+            .badge {
+              position: relative;
+              background: #696969;
+              display: inline-block !important;
+              width: auto !important;
+              font-size: 0.6rem !important;
+              top: 0 !important;
+              padding: .2rem .3rem !important;
+            }
+          }
         }
       }
     }
