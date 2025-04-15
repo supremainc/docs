@@ -120,7 +120,7 @@ export default function Home() {
         <ExternalLinkCard />
         
         <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Biometric Readers</Heading>
+          <Heading as='h2'>Biometric Devices</Heading>
         </div>
         <BiometricReader />
 
