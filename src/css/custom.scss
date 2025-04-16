@@ -321,6 +321,7 @@ footer {
   dl {
     dt {
       font-weight: 600;
+      font-size: 1.1rem;;
       color: var(--ifm-color-cmd);
     }
     dd + dt {
@@ -328,6 +329,7 @@ footer {
     }
     dd {
       margin-top: .5rem;
+      margin-left: 1.5rem;
     }
   }
 

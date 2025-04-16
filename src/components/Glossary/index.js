@@ -47,7 +47,7 @@ export function GlossaryAll() {
 		<dl>
 			{sortedEntries.map(([key, term]) => (
 				<React.Fragment key={key}>
-					<dt>
+					<dt id={key}>
             {term.name} 
             <Link
                 className="hash-link"
