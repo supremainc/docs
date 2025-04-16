@@ -95,7 +95,7 @@ function _createMdxContent(props) {
         sid: "common.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
-      }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. 화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.door.title"
@@ -290,7 +290,7 @@ function _createMdxContent(props) {
               },
               children: (0,jsx_runtime.jsx)(StatusFail, {})
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "카메라가 꺼져있거나 연결이 해제된 상태입니다."
+              children: "카메라가 꺼져 있거나 연결이 해제된 상태입니다."
             })]
           })]
         })]

@@ -139,7 +139,7 @@ function _createMdxContent(props) {
         sid: "common.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
-      }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {

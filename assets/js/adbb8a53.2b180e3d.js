@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-door-slave-device-mdx-adb.json
-var site_docs_platform_biostar_x_control_door_slave_device_mdx_adb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-door-slave-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door-slave-device","permalink":"/docs/en/platform/biostar_x/control-door-slave-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door-slave-device.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문","슬레이브 장치"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 제어하기","permalink":"/docs/en/platform/biostar_x/control-door"},"next":{"title":"엘리베이터 점검하기","permalink":"/docs/en/platform/biostar_x/check-elevator-status"}}')
+var site_docs_platform_biostar_x_control_door_slave_device_mdx_adb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-door-slave-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door-slave-device","permalink":"/docs/platform/biostar_x/control-door-slave-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door-slave-device.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문","슬레이브 장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"},"next":{"title":"엘리베이터 점검하기","permalink":"/docs/platform/biostar_x/check-elevator-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'출입문',
 		'슬레이브 장치'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -113,7 +113,7 @@ function _createMdxContent(props) {
         sid: "common.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
-      }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.door.title"

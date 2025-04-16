@@ -77,7 +77,7 @@ function _createMdxContent(props) {
         sid: "common.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
-      }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.arena"
       }), "을 선택하세요. 화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.door.title"

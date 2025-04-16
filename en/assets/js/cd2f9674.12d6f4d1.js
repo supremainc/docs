@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-elevator-mdx-cd2.json
-var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"}}')
+var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/en/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/en/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/en/platform/biostar_x/check-zone-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'엘리베이터'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -91,7 +91,7 @@ function _createMdxContent(props) {
             sid: "common.header.launcher"
           }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.header.arena"
-          }), "을 클릭하거나 화면 왼쪽 상단의 바로가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.header.arena"
           }), "을 선택하세요."]
         }), "\n"]

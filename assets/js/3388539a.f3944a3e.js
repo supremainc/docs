@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-info-with-device-mdx-338.json
-var site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/user-info-with-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-info-with-device","permalink":"/docs/en/platform/biostar_x/user-info-with-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-info-with-device.mdx","tags":[],"version":"current","frontMatter":{"id":"user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","keywords":["사용자","장치"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 삭제하기","permalink":"/docs/en/platform/biostar_x/delete-user"},"next":{"title":"사용자 출입 이력 추적하기","permalink":"/docs/en/platform/biostar_x/trace-user-access-log"}}')
+var site_docs_platform_biostar_x_user_info_with_device_mdx_338_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/user-info-with-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-info-with-device","permalink":"/docs/platform/biostar_x/user-info-with-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-info-with-device.mdx","tags":[],"version":"current","frontMatter":{"id":"user-info-with-device","title":"장치로 사용자 정보 전송 및 삭제하기","description":"사용자 정보를 등록된 장치로 전송하거나 삭제하는 방법을 안내합니다.","keywords":["사용자","장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"},"next":{"title":"사용자 출입 이력 추적하기","permalink":"/docs/platform/biostar_x/trace-user-access-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'장치'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -114,7 +114,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["중복되는 사용자 정보를 장치에 덮어쓰기하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["중복되는 사용자 정보를 장치에 덮어쓰기 하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "user.overwriteWhenTransfer",
               product: "2"
             }), "를 선택하세요."]
@@ -208,7 +208,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["사용자 정보는 장치에서만 삭제되고, ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " 서버버에 유지됩니다."]
+            }), " 서버에 유지됩니다."]
           }), "\n"]
         }), "\n"]
       })
