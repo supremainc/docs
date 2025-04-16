@@ -444,7 +444,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.visualFace.title"
           }), ": 비주얼 페이스는 사용자의 얼굴을 비주얼 카메라로 촬영한 인증 수단입니다. 사용자의 비주얼 페이스를 등록하고 얼굴 인식을 통해 사용자의 출입을 허용합니다. 얼굴 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "enroll-credential#enroll-face",
+            href: "enroll-credential#enroll-visualface",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
