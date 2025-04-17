@@ -422,7 +422,8 @@ footer {
         // margin-right: auto;
         display: block;
         border: 1px solid var(--ifm-color-color-ol-gray);
-        max-height: fit-content;
+        max-width: 100%;
+        height: auto;
         &.w--400 {
           width: 400px;
         }
@@ -530,7 +531,8 @@ footer {
     img {
       border: 1px solid;
       margin-left: 0;
-      max-height: fit-content;
+      max-width: 100%;
+      height: auto;
     }
     img.none {
       border: none;
