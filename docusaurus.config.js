@@ -183,6 +183,12 @@ const config = {
           },
           {
             type: 'doc',
+            label: 'Reference',
+            position: 'right',
+            docId: 'reference/index'
+          },
+          {
+            type: 'doc',
             label: 'Legal',
             position: 'right',
             docId: 'legal/disclaimers'

@@ -136,7 +136,20 @@ const sidebars = {
     }
   ],
   reference: [
-    'reference/glossary'
+    {
+      type: 'category',
+      label: '참조 문서',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'reference/index',
+      },
+      items: [
+        'reference/glossary'
+      ]
+    }
   ]
 };
 
