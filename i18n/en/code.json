@@ -327,6 +327,10 @@
     "message": "Read more",
     "description": "The label for the view content button"
   },
+  "theme.docs.glossary.all": {
+    "message": "All",
+    "description": "The label for the glossary all button"
+  },
   "theme.figureCaption.desc": {
     "message": "The image above is an example screen and may differ from the actual screen.",
     "description": "The description for the figure caption"

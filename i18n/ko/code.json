@@ -345,6 +345,10 @@
     "message": "둘러보기",
     "description": "The label for the view content button"
   },
+  "theme.docs.glossary.all": {
+    "message": "전체",
+    "description": "The label for the glossary all button"
+  },
   "theme.figureCaption.desc": {
     "message": "위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.",
     "description": "The description for the figure caption"
