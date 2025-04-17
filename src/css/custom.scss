@@ -66,6 +66,25 @@ html[lang='ja-JP'] * {
 
 html[lang='en-US'] * {
   font-family: 'Noto Sans', sans-serif;
+  .markdown {
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: calc(0.5rem + 177px);
+            .badge {
+              width: 177px;
+            }
+          }
+        }
+      }
+      ul {
+        li {
+          margin-right: calc(0.5rem + 177px);
+        }
+      }
+    }
+  }
 }
 // 언어별 폰트 설정
 
