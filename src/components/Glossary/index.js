@@ -32,22 +32,22 @@ export function Glossary({ termid }) {
 }
 
 export function GlossaryAll() {
-	const {
-		i18n: { currentLocale },
-	} = useDocusaurusContext();
+  const {
+    i18n: { currentLocale },
+  } = useDocusaurusContext();
 
-	const glossary = glossaryMap[currentLocale] || glossary_en;
+  const glossary = glossaryMap[currentLocale] || glossary_en;
 
-	// glossary 객체를 key와 value를 포함한 배열로 변환 후 정렬
-	const sortedEntries = Object.entries(glossary).sort(([, a], [, b]) =>
-		a.name.localeCompare(b.name, currentLocale)
-	);
+  // glossary 객체를 key와 value를 포함한 배열로 변환 후 정렬
+  const sortedEntries = Object.entries(glossary).sort(([, a], [, b]) =>
+    a.name.localeCompare(b.name, currentLocale)
+  );
 
-	return (
-		<dl>
-			{sortedEntries.map(([key, term]) => (
-				<React.Fragment key={key}>
-					<dt id={key}>
+  return (
+    <dl>
+      {sortedEntries.map(([key, term]) => (
+        <React.Fragment key={key}>
+          <dt id={key}>
             {term.name} 
             <Link
                 className="hash-link"
@@ -55,9 +55,9 @@ export function GlossaryAll() {
                 &#8203;
             </Link>
           </dt>
-					<dd dangerouslySetInnerHTML={{ __html: term.description }} />
-				</React.Fragment>
-			))}
-		</dl>
-	);
+          <dd dangerouslySetInnerHTML={{ __html: term.description }} />
+        </React.Fragment>
+      ))}
+    </dl>
+  );
 }
