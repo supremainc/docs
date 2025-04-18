@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-legal-open-source-licenses-mdx-f81.json
-var site_docs_legal_open_source_licenses_mdx_f81_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"오픈 소스 라이선스","description":"---","source":"@site/docs/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"오픈 소스 라이선스","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"면책 조항","permalink":"/docs/legal/disclaimers"}}')
+var site_docs_legal_open_source_licenses_mdx_f81_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"오픈 소스 라이선스","description":"---","source":"@site/docs/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"오픈 소스 라이선스","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"최종 사용자 라이선스 계약","permalink":"/docs/legal/eula"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
