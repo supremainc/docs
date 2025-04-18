@@ -131,6 +131,7 @@ const sidebars = {
       className: 'p-title',
       items: [
         'legal/disclaimers',
+        'legal/eula',
         'legal/open-source-licenses'
       ]
     }
