@@ -40,6 +40,7 @@ import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
 import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
 import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
 import IcArm from '@site/static/img/menus/ico-arms.svg';
+import IcDisarm from '@site/static/img/menus/ico-disarms.svg';
 import IcDisable from '@site/static/img/menus/ico-disable.svg';
 import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
 import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
@@ -101,6 +102,7 @@ export default {
     IcRelayLock,
     IcRelayUnlock,
     IcArm,
+    IcDisarm,
     IcDisable,
     IcFullscreen,
     IcRestorscreen,
