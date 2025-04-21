@@ -816,6 +816,13 @@ footer {
       border: 1px solid var(--ifm-color-cmd);
       margin-top: 0;
     }
+    details {
+      background: none !important;
+      summary {
+        display: block;
+        position: relative;
+      }
+    }
     .page-break {
       page-break-before: always;
     }
