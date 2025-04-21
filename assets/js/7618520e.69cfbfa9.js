@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-check-door-status-mdx-761.json
-var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 점검하기","description":"출입문의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/en/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 점검하기","description":"출입문의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-door"},"next":{"title":"출입문 제어하기","permalink":"/docs/en/platform/biostar_x/control-door"}}')
+var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 점검하기","description":"출입문의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 점검하기","description":"출입문의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-door"},"next":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'출입문'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -75,9 +75,10 @@ function _createMdxContent(props) {
     tr: "tr",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcArm, IcDoorClose, IcDoorOpen, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image, StatusFail, StatusOK} = _components;
+  }, {Cmd, IcArm, IcDisarm, IcDoorClose, IcDoorOpen, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image, StatusFail, StatusOK} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcArm) _missingMdxReference("IcArm", true);
+  if (!IcDisarm) _missingMdxReference("IcDisarm", true);
   if (!IcDoorClose) _missingMdxReference("IcDoorClose", true);
   if (!IcDoorOpen) _missingMdxReference("IcDoorOpen", true);
   if (!IcErr) _missingMdxReference("IcErr", true);
@@ -89,7 +90,7 @@ function _createMdxContent(props) {
   if (!StatusOK) _missingMdxReference("StatusOK", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "출입문 및 관련 장비의 상태를 정확하게 파악하는 것은 보안 시스템의 핵심입니다. 이 문서에서는 장치의 상태를 확인하는 방법과 오류 발생 시 대처 방안을 안내합니다. 안내된 아이콘과 상세 설명을 통해 관리자들이 각 장치의 작동 상태를 한눈에 파악하고, 문제 발생 시 신속하게 대응할 수 있도록 돕습니다"
+      children: "출입문 및 관련 장비의 상태를 정확하게 파악하는 것은 보안 시스템의 핵심입니다. 이 문서에서는 장치의 상태를 확인하는 방법과 오류 발생 시 대처 방안을 안내합니다. 안내된 아이콘과 상세 설명을 통해 관리자들이 각각 장치의 작동 상태를 한눈에 파악하고, 문제 발생 시 신속하게 대응할 수 있도록 돕습니다"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "common.header.launcher"
@@ -314,8 +315,8 @@ function _createMdxContent(props) {
               children: "설명"
             })]
           })
-        }), (0,jsx_runtime.jsx)(_components.tbody, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -327,7 +328,19 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "경비가 활성화된 상태입니다."
             })]
-          })
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: (0,jsx_runtime.jsx)(IcDisarm, {
+                width: "auto",
+                height: "35px"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "경비가 비활성화된 상태입니다."
+            })]
+          })]
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

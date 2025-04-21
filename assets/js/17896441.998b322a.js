@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"1554": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"22": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2516,6 +2516,29 @@ function BugLists(param) {
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/Jira/index.js
+
+
+function Jira(param) {
+    let { num } = param;
+    let jiraLink;
+    if (num.startsWith('SW5' || 0)) {
+        jiraLink = 'https://jira.suprema.co.kr/browse/' + num;
+    } else {
+        jiraLink = 'http://bss-jira.suprema.co.kr:8880/browse/' + num;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Link/* default */.Z, {
+        to: jiraLink,
+        target: "_blank",
+        className: "jira-link",
+        children: [
+            "[",
+            num,
+            "]"
+        ]
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -3010,6 +3033,46 @@ const SvgIcoArms = _ref => {
   })))));
 };
 /* ESM default export */ const ico_arms = (SvgIcoArms);
+;// CONCATENATED MODULE: ./static/img/menus/ico-disarms.svg
+var ico_disarms_g, ico_disarms_defs;
+function ico_disarms_extends() { return ico_disarms_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_disarms_extends.apply(null, arguments); }
+
+const SvgIcoDisarms = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_disarms_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_disarms_g || (ico_disarms_g = /*#__PURE__*/react.createElement("g", {
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    stroke: "#AAA",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8m0 3.2Q3.2 12.8 3.2 8V3.68L8 3.2l4.8.42V8q0 4.8-4.8 5.6"
+  }), /*#__PURE__*/react.createElement("path", {
+    fill: "#A9A9A9",
+    d: "M11.503 12.78 2.986 4.263A1.001 1.001 0 0 1 4.4 2.848l8.517 8.517a1.001 1.001 0 0 1-1.414 1.415"
+  }), /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M4.117 3.131a.6.6 0 1 0-.848.849l8.517 8.517a.6.6 0 0 0 .848-.849zm.566-.565 8.517 8.517a1.4 1.4 0 0 1 0 1.98 1.4 1.4 0 0 1-1.98 0L2.703 4.544a1.4 1.4 0 0 1 0-1.98 1.4 1.4 0 0 1 1.98 0"
+  }))), ico_disarms_defs || (ico_disarms_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_disarms = (SvgIcoDisarms);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-disable.svg
 var ico_disable_g, ico_disable_defs;
 function ico_disable_extends() { return ico_disable_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_disable_extends.apply(null, arguments); }
@@ -3338,7 +3401,9 @@ const SvgIcoBack = _ref => {
 
 
 
+
 // icon images svg
+
 
 
 
@@ -3400,6 +3465,7 @@ const SvgIcoBack = _ref => {
     Separator: Separator,
     Badge: Badge,
     BugLists: BugLists,
+    Jira: Jira,
     IcLicense: ico_license,
     IcAdd: ico_add,
     IcClose: ico_close,
@@ -3415,6 +3481,7 @@ const SvgIcoBack = _ref => {
     IcRelayLock: ico_relay_lock,
     IcRelayUnlock: ico_relay_unlock,
     IcArm: ico_arms,
+    IcDisarm: ico_disarms,
     IcDisable: ico_disable,
     IcFullscreen: ico_fullscreen,
     IcRestorscreen: ico_restorescreen,
