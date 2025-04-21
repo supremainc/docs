@@ -24,6 +24,7 @@ import Overview from '@site/src/components/Overview';
 import Separator from '@site/src/components/Separator';
 import Badge from '@site/src/components/Badge';
 import BugLists from '@site/src/components/BugLists';
+import Jira from '@site/src/components/Jira';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -87,6 +88,7 @@ export default {
     Separator,
     Badge,
     BugLists,
+    Jira,
     IcLicense,
     IcAdd,
     IcClose,
