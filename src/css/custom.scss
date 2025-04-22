@@ -870,6 +870,11 @@ footer {
       line-height: 1.4;
       code {
         font-size: .7rem;
+        background-color: var(--ifm-color-border);
+        border-radius: var(--ifm-code-border-radius);
+        padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
+        vertical-align: middle;
+        border: none !important;
       }
       svg {
         position: relative;
