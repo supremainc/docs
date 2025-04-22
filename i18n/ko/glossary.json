@@ -533,7 +533,7 @@
   },
   "alarm": {
     "name": "알람(Alarm)",
-    "description": "시스템에서 발생한 이벤트 중 실시간으로 조치가 필요한 이벤트 종류입니다.."
+    "description": "시스템에서 발생한 이벤트 중 실시간으로 조치가 필요한 이벤트 종류입니다."
   },
   "alarm_action": {
     "name": "알람 액션(Alarm action)",
