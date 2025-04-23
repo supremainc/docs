@@ -389,6 +389,7 @@ footer {
     --ifm-alert-background-color: #F5F7F9;
     a {
       color: var(--ifm-color-markdown-link);
+      text-decoration: none;
     }
   }
   .theme-admonition-note {
