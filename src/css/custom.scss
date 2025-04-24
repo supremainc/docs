@@ -363,6 +363,10 @@ footer {
         padding: 20px !important;
         color: var(--ifm-color-content);
         text-decoration: none;
+        border-bottom-color: var(--ifm-color-emphasis-200);
+        &:hover {
+          border-bottom: 1px solid var(--ifm-color-primary);
+        }
         h2 {
           font-size: var(--ifm-h4-font-size);
           font-weight: 600;
