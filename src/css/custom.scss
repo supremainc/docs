@@ -357,6 +357,15 @@ footer {
     }
   }
 
+  .tabs-container {
+    ul.tabs {
+      padding-left: 0;
+    }
+    h4.tab-label {
+      display: none;
+    }
+  }
+
   section {
     &.row {
       a.padding--lg {
@@ -865,6 +874,19 @@ footer {
     hr {
       border: 1px solid var(--ifm-color-cmd);
       margin-top: 0;
+    }
+    .tabs-container {
+      ul.tabs {
+        padding-left: 0;
+        display: none;
+      }
+      h4.tab-label {
+        display: block;
+        margin-top: 1rem;
+      }
+      .margin-top--md > div {
+        display: block;
+      }
     }
     details {
       background: none !important;
