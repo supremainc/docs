@@ -26,10 +26,6 @@
   color: var(--ifm-color-content)
 }
 
-.ovHeading a:hover .Heading{
-  text-decoration: underline;
-}
-
 .griddesc {
   display: grid;
   grid-template-columns: 1fr 1fr;
