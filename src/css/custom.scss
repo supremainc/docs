@@ -603,7 +603,8 @@ footer {
 
   a {
     color: var(--ifm-color-markdown-link);
-    text-decoration: underline dotted;
+    text-decoration: none;
+    border-bottom: 1px solid;
   }
 
   a:hover {
