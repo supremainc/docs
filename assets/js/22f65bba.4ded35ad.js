@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-user-template-mdx-22f.json
-var site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","source":"@site/docs/platform/biostar_x/user-template.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-template","permalink":"/docs/en/platform/biostar_x/user-template","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-template.mdx","tags":[],"version":"current","frontMatter":{"id":"user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","keywords":["사용자 템플릿"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 검색하기","permalink":"/docs/en/platform/biostar_x/search-users"},"next":{"title":"출입 권한별 사용자 확인하기","permalink":"/docs/en/platform/biostar_x/view-user-by-access"}}')
+var site_docs_platform_biostar_x_user_template_mdx_22f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","source":"@site/docs/platform/biostar_x/user-template.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/user-template","permalink":"/docs/platform/biostar_x/user-template","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/user-template.mdx","tags":[],"version":"current","frontMatter":{"id":"user-template","title":"사용자 템플릿 관리하기","description":"사용자 템플릿을 활용하면, 신규 사용자 등록을 표준화하고 시간을 절약하여 효율적인 사용자 관리가 가능합니다.","keywords":["사용자 템플릿"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 검색하기","permalink":"/docs/platform/biostar_x/search-users"},"next":{"title":"출입 권한별 사용자 확인하기","permalink":"/docs/platform/biostar_x/view-user-by-access"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'사용자 템플릿'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -90,7 +90,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.sidebar.template"
-          }), "를 클릭하세요."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -210,7 +210,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.sidebar.template"
-          }), "를 클릭하세요."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -247,11 +247,11 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.sidebar.template"
-          }), "를 클릭하세요."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "템플릿 목록에서 삭제하려는 항목의 가장 왼쪽의 체크박스를 클릭하세요."
+          children: "템플릿 목록에서 삭제하려는 항목의 가장 왼쪽에 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

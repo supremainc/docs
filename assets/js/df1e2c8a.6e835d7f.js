@@ -289,20 +289,12 @@ function _createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "얼굴을 등록하기 전에..."
+          children: "얼굴 등록 시 주의 사항"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치로 등록할 때 장치와 얼굴의 거리는 60 ~ 100cm로 유지하세요."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치로 등록할 때 움직이지 말고 정면으로 서서 얼굴을 등록하세요."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 또는 모바일 기기로 등록할 때 화면의 지시에 따르지 않으면 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
+            children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -311,6 +303,10 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "마스크, 모자, 안대를 착용하지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "마스크를 착용한 얼굴을 등록하지 마세요. 마스크를 착용한 얼굴과 착용하지 않은 얼굴을 모두 등록할 경우 오인식률이 높아질 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -326,11 +322,19 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "양쪽 어깨가 모두 나타나도록 하세요."
+            children: "화면에 양쪽 어깨가 모두 나타나도록 하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "두 명의 얼굴이 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
+            children: "움직이지 말고 정면으로 서서 얼굴을 등록하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "화면의 지시에 따르지 않을 경우 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
           }), "\n"]
         }), "\n"]
       })]
@@ -418,7 +422,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자에게 출입 카드를 할당할 수 있습니다. 장치가 지원하는 카드 종류는 장치의 매뉴얼을 참고하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
           children: "USB 에이전트를 이용한 카드 등록"
@@ -933,7 +937,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "CSN Mobile 카드"
+              children: "CSN 모바일 카드"
             }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "템플릿 온 모바일"
             }), " 중 하나만 사용할 수 있습니다."]
@@ -997,7 +1001,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "team.user.uid"
-              }), ": 보안 크리덴셜 카드입니다. 사용자의 (카드 ID, PIN)를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), ": 보안 크리덴셜 카드입니다. 사용자의 카드 ID, PIN 데이터를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
               }), "에 저장된 사용자 정보를 사용하려면 서버 매칭이 켜져 있어야 합니다."]
             }), "\n"]
@@ -1023,7 +1027,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["등록한 사용자의 메일 주로로 발급 메일을 발송합니다. 메일의 링크를 통해 에어팝 패스(Airfob Pass) 애플리케이션을 설치하고, 모바일 기기에 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["등록한 사용자의 메일 주소로 발급 메일을 발송합니다. 메일의 링크를 통해 에어팝 패스(Airfob Pass) 애플리케이션을 설치하고, 모바일 기기에 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "템플릿 온 모바일"
       }), " 발급을 완료해야 사용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -1043,8 +1047,10 @@ function _createMdxContent(props) {
             children: "유효기간은 다이나믹 사이트를 사용할 때 활성화됩니다. 사용자의 모바일 출입 카드의 만료 기간 및 사용 기간을 설정할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Information 섹션의 사진, 부서, 직함 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.user.information"
+            }), " 섹션의 사진, 부서, 직함 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1065,7 +1071,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "CSN Mobile 카드"
+              children: "CSN 모바일 카드"
             }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "템플릿 온 모바일"
             }), " 중 하나만 사용할 수 있습니다."]
@@ -1116,7 +1122,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "team.user.uid"
-              }), ": 보안 크리덴셜 카드입니다. 사용자의 (카드 ID, PIN)를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), ": 보안 크리덴셜 카드입니다. 사용자의 카드 ID, PIN 데이터를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
               }), "에 저장된 사용자 정보를 사용하려면 서버 매칭이 켜져 있어야 합니다."]
             }), "\n"]
@@ -1156,13 +1162,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이메일 또는 텍스트 메시지를 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제했다면, ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["이메일 또는 텍스트 메시지를 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제하여 활성화 코드를 다시 발급하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "재전송"
-            }), " 버튼을 클릭하고 활성화 코드를 다시 발급할 수 있습니다."]
+            }), " 버튼을 클릭하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["CSN Mobile 애플리케이션에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["CSN 모바일 애플리케이션에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://www.csn.edu/csn-mobile-apps",
               children: "다음 링크"
             }), "를 참고하세요."]
@@ -1335,13 +1341,13 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.passcode.enrollPasscode"
-          }), " 창이 나타나면 패스코드드를 입력하세요."]
+          }), " 창이 나타나면 패스코드를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.passcode.confirmPasscode"
-          }), " 항목에 한번 더 패스코드드를 입력하세요."]
+          }), " 항목에 한번 더 패스코드를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
