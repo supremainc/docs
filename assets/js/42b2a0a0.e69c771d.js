@@ -55,8 +55,8 @@ const toc = [{
   "id": "비주얼-페이스-템플릿-타입-관련-유의사항",
   "level": 3
 }, {
-  "value": "사용 시 유의사항",
-  "id": "사용-시-유의사항",
+  "value": "유의사항",
+  "id": "유의사항",
   "level": 3
 }, {
   "value": "마이그레이션하기",
@@ -178,8 +178,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용-시-유의사항",
-      children: "사용 시 유의사항"
+      id: "유의사항",
+      children: "유의사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
@@ -234,7 +234,22 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "비주얼 페이스 마이그레이션이 진행됩니다."
+      children: "비주얼 페이스 마이그레이션을 진행합니다. 비주얼 페이스 마이그레이션을 완료하면 총 비주얼 페이스 수, 성공 및 실패 건수를 확인할 수 있는 팝업창이 나타납니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["마이그레이션 성공 후, 장치에 사용자 정보를 동기화하여 변경 사항을 적용하세요. 장치에 사용자 정보를 전송하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "user-info-with-device",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["비주얼 페이스 마이그레이션을 실패하면, 실패한 사용자 목록을 CSV 파일로 다운로드할 수 있습니다. 마이그레이션에 실패한 비주얼 페이스를 일괄 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.delete"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -250,28 +265,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "비주얼 페이스 마이그레이션을 완료하면 총 비주얼 페이스 수, 성공 및 실패 건수를 확인할 수 있는 팝업창이 나타납니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "사용자에 따라 등록된 비주얼 페이스 이미지의 크기가 클수록 템플릿 생성 시 시간이 다소 오래 소요될 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "비주얼 페이스 1,000개 기준 소요 시간은 약 18분이며 서버의 성능에 따라 달라질 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["비주얼 페이스 마이그레이션을 실패하면, 실패한 사용자 목록을 CSV 파일로 다운로드할 수 있습니다. 마이그레이션에 실패한 비주얼 페이스를 일괄 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.delete"
-            }), " 버튼을 클릭하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["마이그레이션 성공 후, 장치에 사용자 정보를 동기화하여 변경 사항을 적용하세요. 장치에 사용자 정보를 전송하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "user-info-with-device",
-              children: "다음 문서"
-            }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
