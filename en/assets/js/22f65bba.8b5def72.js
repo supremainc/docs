@@ -165,7 +165,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.dialog.newUser"
-          }), " 버튼오른쪽에 ", (0,jsx_runtime.jsx)(IcDown, {}), " 버튼을 클릭하세요."]
+          }), " 버튼 오른쪽에 ", (0,jsx_runtime.jsx)(IcDown, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

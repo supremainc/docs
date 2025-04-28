@@ -227,7 +227,7 @@ function _createMdxContent(props) {
       id: "group-deletion",
       children: "그룹 삭제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자가 속한 그룹의 이름을 변경할 수 있습니다. 조직 또는 부서의 이름이 변경되었을 때 그룹 이름도 같이 변경하는 것을 권장합니다."
+      children: "사용자가 속한 그룹의 이름을 삭제할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

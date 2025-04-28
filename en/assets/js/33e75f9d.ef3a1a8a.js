@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-event-mdx-33e.json
-var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","keywords":["모니터링","이벤트 모니터링","실시간 이벤트","알람 이벤트","경고 이벤트","이벤트 필터링"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/en/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","keywords":["모니터링","이벤트 모니터링","실시간 이벤트","알람 이벤트","경고 이벤트","이벤트 필터링"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-video"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -35,7 +35,7 @@ const frontMatter = {
 		'경고 이벤트',
 		'이벤트 필터링'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -175,8 +175,12 @@ function _createMdxContent(props) {
           }), ": 이벤트를 발생시킨 사용자입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "arena.eventTable.port"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.port"
+          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "TBD"
+          })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -219,23 +223,31 @@ function _createMdxContent(props) {
       children: "이벤트 목록에서 발생한 이벤트는 색상으로 구분할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "색상 없음: 일반 이벤트입니다."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "노란색: 경고 이벤트입니다. 출입이 허용되지 않은 구역에 사용자가 출입을 시도했거나, 출입문이 열려 있는 경우와 같이 주의가 필요한 이벤트입니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "색상 없음"
+          }), ": 일반 이벤트입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["빨강색: ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "노란색"
+          }), ": 경고 이벤트입니다. 출입이 허용되지 않은 구역에 사용자가 출입을 시도했거나, 출입문이 열려 있는 경우와 같이 주의가 필요한 이벤트입니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "빨강색"
+          }), ": ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#alarm",
             children: "알람"
           }), " 이벤트입니다. 시스템에서 발생한 이벤트 중 조치가 필요한 이벤트입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "녹색: 해소된 알람 이벤트입니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "녹색"
+          }), ": 해소된 알람 이벤트입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {

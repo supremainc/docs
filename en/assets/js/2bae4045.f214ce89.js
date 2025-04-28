@@ -193,9 +193,9 @@ function _createMdxContent(props) {
       children: "사용자 IP"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 IP 주소를 등록하면, 계정에 등록한 IP 정보와 일치할 경우에만 PC에 로그인할 수 있습니다. 이를 통해 보안을 강화할 수 있습니다. Permission 섹션의 User IP 항목에서 사용자의 IP 주소를 입력하세요."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.ul, {
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "IP 주소는 xxx.xxx.xxx.xxx 형식으로 입력할 수 있으며 각 옥텟은 0~255 범위의 숫자로만 입력할 수 있습니다."
@@ -209,17 +209,7 @@ function _createMdxContent(props) {
             children: "클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다."
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다."
-          }), "\n"]
-        }), "\n"]
-      })]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multi-factor-authentication",
       children: "멀티팩터 인증"

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-elevator-mdx-cd2.json
-var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/en/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/en/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/en/platform/biostar_x/check-zone-status"}}')
+var site_docs_platform_biostar_x_control_elevator_mdx_cd2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-elevator.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-elevator","permalink":"/docs/platform/biostar_x/control-elevator","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-elevator.mdx","tags":[],"version":"current","frontMatter":{"id":"control-elevator","title":"엘리베이터 제어하기","description":"엘리베이터를 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 점검하기","permalink":"/docs/platform/biostar_x/check-elevator-status"},"next":{"title":"구역 점검하기","permalink":"/docs/platform/biostar_x/check-zone-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'엘리베이터'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -120,7 +120,7 @@ function _createMdxContent(props) {
       id: "clear-alarm",
       children: "알람 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["해당 엘리베이터터에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["해당 엘리베이터에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
       }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
