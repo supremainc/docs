@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/en/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/edit-user"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/edit-user"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'권한'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -228,7 +228,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "멀티팩터 인증"
-            }), "(Multi-factor authentication, MFA)이란, 2회 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다. 멀티팩터 인증을 사용해 계정에 대한 보안을 강화할 수 있습니다."]
+            }), "(Multi-factor authentication, MFA)이란, 두 가지 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다. 멀티팩터 인증을 사용해 계정에 대한 보안을 강화할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
