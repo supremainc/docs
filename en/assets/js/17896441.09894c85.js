@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"22": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"181": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1432,8 +1432,140 @@ function Kbd(param) {
     });
 }
 
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__("8168");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
+var scrollUtils = __webpack_require__("4718");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/tabsUtils.js
+var tabsUtils = __webpack_require__("2371");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__("6735");
+;// CONCATENATED MODULE: ./src/theme/Tabs/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Tabs_styles_module = ({"tabList":"tabList_TRJ7","tabItem":"tabItem_hGfb"});
+;// CONCATENATED MODULE: ./src/theme/Tabs/index.js
+
+
+
+
+
+
+function TabList(param) {
+    let { className, block, selectedValue, selectValue, tabValues } = param;
+    const tabRefs = [];
+    const { blockElementScrollPositionUntilNextRender } = (0,scrollUtils/* useScrollPositionBlocker */.o5)();
+    const handleTabChange = (event)=>{
+        const newTab = event.currentTarget;
+        const newTabIndex = tabRefs.indexOf(newTab);
+        const newTabValue = tabValues[newTabIndex].value;
+        if (newTabValue !== selectedValue) {
+            blockElementScrollPositionUntilNextRender(newTab);
+            selectValue(newTabValue);
+        }
+    };
+    const handleKeydown = (event)=>{
+        let focusElement = null;
+        switch(event.key){
+            case 'Enter':
+                {
+                    handleTabChange(event);
+                    break;
+                }
+            case 'ArrowRight':
+                {
+                    const nextTab = tabRefs.indexOf(event.currentTarget) + 1;
+                    focusElement = tabRefs[nextTab] ?? tabRefs[0];
+                    break;
+                }
+            case 'ArrowLeft':
+                {
+                    const prevTab = tabRefs.indexOf(event.currentTarget) - 1;
+                    focusElement = tabRefs[prevTab] ?? tabRefs[tabRefs.length - 1];
+                    break;
+                }
+            default:
+                break;
+        }
+        focusElement?.focus();
+    };
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
+        role: "tablist",
+        "aria-orientation": "horizontal",
+        className: (0,clsx/* default */.Z)('tabs', {
+            'tabs--block': block
+        }, className),
+        children: tabValues.map((param)=>{
+            let { value, label, attributes } = param;
+            return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                // TODO extract TabListItem
+                role: "tab",
+                tabIndex: selectedValue === value ? 0 : -1,
+                "aria-selected": selectedValue === value,
+                ref: (tabControl)=>{
+                    tabRefs.push(tabControl);
+                },
+                onKeyDown: handleKeydown,
+                onClick: handleTabChange,
+                ...attributes,
+                className: (0,clsx/* default */.Z)('tabs__item', Tabs_styles_module.tabItem, attributes?.className, {
+                    'tabs__item--active': selectedValue === value
+                }),
+                children: label ?? value
+            }, value);
+        })
+    });
+}
+function TabContent(param) {
+    let { lazy, children, selectedValue } = param;
+    const childTabs = (Array.isArray(children) ? children : [
+        children
+    ]).filter(Boolean);
+    if (lazy) {
+        const selectedTabItem = childTabs.find((tabItem)=>tabItem.props.value === selectedValue);
+        if (!selectedTabItem) {
+            // fail-safe or fail-fast? not sure what's best here
+            return null;
+        }
+        return /*#__PURE__*/ (0,react.cloneElement)(selectedTabItem, {
+            className: (0,clsx/* default */.Z)('margin-top--md', selectedTabItem.props.className)
+        });
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: "margin-top--md",
+        children: childTabs.map((tabItem, i)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                hidden: tabItem.props.value !== selectedValue,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("h4", {
+                        className: "tab-label",
+                        children: tabItem.props.label
+                    }),
+                    tabItem
+                ]
+            }, i))
+    });
+}
+function TabsComponent(props) {
+    const tabs = (0,tabsUtils/* useTabs */.Y)(props);
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: (0,clsx/* default */.Z)('tabs-container', Tabs_styles_module.tabList),
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(TabList, {
+                ...tabs,
+                ...props
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(TabContent, {
+                ...tabs,
+                ...props
+            })
+        ]
+    });
+}
+function Tabs(props) {
+    const isBrowser = (0,useIsBrowser/* default */.Z)();
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(TabsComponent, {
+        ...props,
+        children: (0,tabsUtils/* sanitizeTabsChildren */.h)(props.children)
+    }, String(isBrowser));
+}
+
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
 var TabItem = __webpack_require__("7645");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js + 2 modules
@@ -2325,7 +2457,7 @@ var isInternalUrl = __webpack_require__("9999");
 var Heading = __webpack_require__("6055");
 ;// CONCATENATED MODULE: ./src/components/Overview/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const Overview_styles_module = ({"overviewItems":"overviewItems_zrdh","ovHeading":"ovHeading_JZ3p","linkarrow":"linkarrow_tKYj","subItemslength":"subItemslength_j4iP","Heading":"Heading_MxTq","griddesc":"griddesc_YdRa","ovSubitems":"ovSubitems_FjOq","ovSubitem":"ovSubitem_xwiF","desc":"desc_MAOP"});
+/* ESM default export */ const Overview_styles_module = ({"overviewItems":"overviewItems_zrdh","ovHeading":"ovHeading_JZ3p","linkarrow":"linkarrow_tKYj","subItemslength":"subItemslength_j4iP","griddesc":"griddesc_YdRa","ovSubitems":"ovSubitems_FjOq","ovSubitem":"ovSubitem_xwiF","desc":"desc_MAOP"});
 ;// CONCATENATED MODULE: ./src/components/Overview/overviewitem.js
 
 
@@ -3461,7 +3593,7 @@ const SvgIcoBack = _ref => {
     DocsSidebar: Toc,
     Collection: components_Collection,
     Kbd: Kbd,
-    Tabs: Tabs/* default */.Z,
+    Tabs: Tabs,
     TabItem: TabItem/* default */.Z,
     DocCardList: DocCardList/* default */.Z,
     Columns: Columns,

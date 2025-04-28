@@ -1,4 +1,4 @@
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["5393"], {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["2626"], {
 "1841": (function (module, exports, __webpack_require__) {
 "use strict";
 
@@ -2777,7 +2777,7 @@ __webpack_require__.d(__webpack_exports__, {
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(65);
-/* ESM import */var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* ESM import */var _theme_MDXComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(181);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -3261,33 +3261,63 @@ function TabItem(param) {
 
 
 }),
-"8168": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"1899": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
-
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ Tabs)
+  X: function() { return processAdmonitionProps; }
 });
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
 
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__("5893");
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("7294");
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__("7026");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
-var scrollUtils = __webpack_require__("4718");
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__("6550");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsomorphicLayoutEffect.js
-var useIsomorphicLayoutEffect = __webpack_require__("8714");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/historyUtils.js
-var historyUtils = __webpack_require__("9207");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/jsUtils.js
-var jsUtils = __webpack_require__("9413");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/storageUtils.js + 1 modules
-var storageUtils = __webpack_require__("4510");
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/tabsUtils.js
+// Workaround because it's difficult in MDX v1 to provide a MDX title as props
+// See https://github.com/facebook/docusaurus/pull/7152#issuecomment-1145779682
+function extractMDXAdmonitionTitle(children) {
+    const items = react__WEBPACK_IMPORTED_MODULE_1__.Children.toArray(children);
+    const mdxAdmonitionTitleWrapper = items.find((item)=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(item) && item.type === 'mdxAdmonitionTitle');
+    const rest = items.filter((item)=>item !== mdxAdmonitionTitleWrapper);
+    const mdxAdmonitionTitle = mdxAdmonitionTitleWrapper?.props.children;
+    return {
+        mdxAdmonitionTitle,
+        rest: rest.length > 0 ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+            children: rest
+        }) : null
+    };
+}
+function processAdmonitionProps(props) {
+    const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(props.children);
+    const title = props.title ?? mdxAdmonitionTitle;
+    return {
+        ...props,
+        // Do not return "title: undefined" prop
+        // this might create unwanted props overrides when merging props
+        // For example: {...default,...props}
+        ...title && {
+            title
+        },
+        children: rest
+    };
+} //# sourceMappingURL=admonitionUtils.js.map
+
+
+}),
+"2371": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.d(__webpack_exports__, {
+  Y: function() { return useTabs; },
+  h: function() { return sanitizeTabsChildren; }
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
+/* ESM import */var _docusaurus_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6550);
+/* ESM import */var _docusaurus_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8714);
+/* ESM import */var _docusaurus_theme_common_internal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9207);
+/* ESM import */var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9413);
+/* ESM import */var _index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4510);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -3305,8 +3335,8 @@ function isTabItem(comp) {
     return !!props && typeof props === 'object' && 'value' in props;
 }
 function sanitizeTabsChildren(children) {
-    return react.Children.toArray(children).filter((child)=>child !== '\n').map((child)=>{
-        if (!child || /*#__PURE__*/ (0,react.isValidElement)(child) && isTabItem(child)) {
+    return react__WEBPACK_IMPORTED_MODULE_0__.Children.toArray(children).filter((child)=>child !== '\n').map((child)=>{
+        if (!child || /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(child) && isTabItem(child)) {
             return child;
         }
         // child.type.name will give non-sensical values in prod because of
@@ -3327,14 +3357,14 @@ function extractChildrenTabValues(children) {
     });
 }
 function ensureNoDuplicateValue(values) {
-    const dup = (0,jsUtils/* duplicates */.lx)(values, (a, b)=>a.value === b.value);
+    const dup = (0,_index__WEBPACK_IMPORTED_MODULE_2__/* .duplicates */.lx)(values, (a, b)=>a.value === b.value);
     if (dup.length > 0) {
         throw new Error(`Docusaurus error: Duplicate values "${dup.map((a)=>a.value).join(', ')}" found in <Tabs>. Every value needs to be unique.`);
     }
 }
 function useTabValues(props) {
     const { values: valuesProp, children } = props;
-    return (0,react.useMemo)(()=>{
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>{
         const values = valuesProp ?? extractChildrenTabValues(children);
         ensureNoDuplicateValue(values);
         return values;
@@ -3389,13 +3419,13 @@ function getQueryStringKey(param) {
 }
 function useTabQueryString(param) {
     let { queryString = false, groupId } = param;
-    const history = (0,react_router/* useHistory */.k6)();
+    const history = (0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_3__/* .useHistory */.k6)();
     const key = getQueryStringKey({
         queryString,
         groupId
     });
-    const value = (0,historyUtils/* useQueryStringValue */._X)(key);
-    const setValue = (0,react.useCallback)((newValue)=>{
+    const value = (0,_docusaurus_theme_common_internal__WEBPACK_IMPORTED_MODULE_4__/* .useQueryStringValue */._X)(key);
+    const setValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((newValue)=>{
         if (!key) {
             return; // no-op
         }
@@ -3417,8 +3447,8 @@ function useTabQueryString(param) {
 function useTabStorage(param) {
     let { groupId } = param;
     const key = getStorageKey(groupId);
-    const [value, storageSlot] = (0,storageUtils/* useStorageSlot */.Nk)(key);
-    const setValue = (0,react.useCallback)((newValue)=>{
+    const [value, storageSlot] = (0,_index__WEBPACK_IMPORTED_MODULE_5__/* .useStorageSlot */.Nk)(key);
+    const setValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((newValue)=>{
         if (!key) {
             return; // no-op
         }
@@ -3435,7 +3465,7 @@ function useTabStorage(param) {
 function useTabs(props) {
     const { defaultValue, queryString = false, groupId } = props;
     const tabValues = useTabValues(props);
-    const [selectedValue, setSelectedValue] = (0,react.useState)(()=>getInitialStateValue({
+    const [selectedValue, setSelectedValue] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(()=>getInitialStateValue({
             defaultValue,
             tabValues
         }));
@@ -3459,14 +3489,14 @@ function useTabs(props) {
     })();
     // Sync in a layout/sync effect is important, for useScrollPositionBlocker
     // See https://github.com/facebook/docusaurus/issues/8625
-    (0,useIsomorphicLayoutEffect/* default */.Z)(()=>{
+    (0,_docusaurus_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z)(()=>{
         if (valueToSync) {
             setSelectedValue(valueToSync);
         }
     }, [
         valueToSync
     ]);
-    const selectValue = (0,react.useCallback)((newValue)=>{
+    const selectValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((newValue)=>{
         if (!isValidValue({
             value: newValue,
             tabValues
@@ -3487,180 +3517,6 @@ function useTabs(props) {
         tabValues
     };
 } //# sourceMappingURL=tabsUtils.js.map
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
-var useIsBrowser = __webpack_require__("6735");
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"tabList":"tabList__CuJ","tabItem":"tabItem_LNqP"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-
-
-function TabList(param) {
-    let { className, block, selectedValue, selectValue, tabValues } = param;
-    const tabRefs = [];
-    const { blockElementScrollPositionUntilNextRender } = (0,scrollUtils/* useScrollPositionBlocker */.o5)();
-    const handleTabChange = (event)=>{
-        const newTab = event.currentTarget;
-        const newTabIndex = tabRefs.indexOf(newTab);
-        const newTabValue = tabValues[newTabIndex].value;
-        if (newTabValue !== selectedValue) {
-            blockElementScrollPositionUntilNextRender(newTab);
-            selectValue(newTabValue);
-        }
-    };
-    const handleKeydown = (event)=>{
-        let focusElement = null;
-        switch(event.key){
-            case 'Enter':
-                {
-                    handleTabChange(event);
-                    break;
-                }
-            case 'ArrowRight':
-                {
-                    const nextTab = tabRefs.indexOf(event.currentTarget) + 1;
-                    focusElement = tabRefs[nextTab] ?? tabRefs[0];
-                    break;
-                }
-            case 'ArrowLeft':
-                {
-                    const prevTab = tabRefs.indexOf(event.currentTarget) - 1;
-                    focusElement = tabRefs[prevTab] ?? tabRefs[tabRefs.length - 1];
-                    break;
-                }
-            default:
-                break;
-        }
-        focusElement?.focus();
-    };
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
-        role: "tablist",
-        "aria-orientation": "horizontal",
-        className: (0,clsx/* default */.Z)('tabs', {
-            'tabs--block': block
-        }, className),
-        children: tabValues.map((param)=>{
-            let { value, label, attributes } = param;
-            return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                // TODO extract TabListItem
-                role: "tab",
-                tabIndex: selectedValue === value ? 0 : -1,
-                "aria-selected": selectedValue === value,
-                ref: (tabControl)=>{
-                    tabRefs.push(tabControl);
-                },
-                onKeyDown: handleKeydown,
-                onClick: handleTabChange,
-                ...attributes,
-                className: (0,clsx/* default */.Z)('tabs__item', styles_module.tabItem, attributes?.className, {
-                    'tabs__item--active': selectedValue === value
-                }),
-                children: label ?? value
-            }, value);
-        })
-    });
-}
-function TabContent(param) {
-    let { lazy, children, selectedValue } = param;
-    const childTabs = (Array.isArray(children) ? children : [
-        children
-    ]).filter(Boolean);
-    if (lazy) {
-        const selectedTabItem = childTabs.find((tabItem)=>tabItem.props.value === selectedValue);
-        if (!selectedTabItem) {
-            // fail-safe or fail-fast? not sure what's best here
-            return null;
-        }
-        return /*#__PURE__*/ (0,react.cloneElement)(selectedTabItem, {
-            className: (0,clsx/* default */.Z)('margin-top--md', selectedTabItem.props.className)
-        });
-    }
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: "margin-top--md",
-        children: childTabs.map((tabItem, i)=>/*#__PURE__*/ (0,react.cloneElement)(tabItem, {
-                key: i,
-                hidden: tabItem.props.value !== selectedValue
-            }))
-    });
-}
-function TabsComponent(props) {
-    const tabs = useTabs(props);
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: (0,clsx/* default */.Z)('tabs-container', styles_module.tabList),
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(TabList, {
-                ...tabs,
-                ...props
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(TabContent, {
-                ...tabs,
-                ...props
-            })
-        ]
-    });
-}
-function Tabs(props) {
-    const isBrowser = (0,useIsBrowser/* default */.Z)();
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(TabsComponent, {
-        ...props,
-        children: sanitizeTabsChildren(props.children)
-    }, String(isBrowser));
-}
-
-
-}),
-"1899": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-__webpack_require__.d(__webpack_exports__, {
-  X: function() { return processAdmonitionProps; }
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7294);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-// Workaround because it's difficult in MDX v1 to provide a MDX title as props
-// See https://github.com/facebook/docusaurus/pull/7152#issuecomment-1145779682
-function extractMDXAdmonitionTitle(children) {
-    const items = react__WEBPACK_IMPORTED_MODULE_1__.Children.toArray(children);
-    const mdxAdmonitionTitleWrapper = items.find((item)=>/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(item) && item.type === 'mdxAdmonitionTitle');
-    const rest = items.filter((item)=>item !== mdxAdmonitionTitleWrapper);
-    const mdxAdmonitionTitle = mdxAdmonitionTitleWrapper?.props.children;
-    return {
-        mdxAdmonitionTitle,
-        rest: rest.length > 0 ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-            children: rest
-        }) : null
-    };
-}
-function processAdmonitionProps(props) {
-    const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(props.children);
-    const title = props.title ?? mdxAdmonitionTitle;
-    return {
-        ...props,
-        // Do not return "title: undefined" prop
-        // this might create unwanted props overrides when merging props
-        // For example: {...default,...props}
-        ...title && {
-            title
-        },
-        children: rest
-    };
-} //# sourceMappingURL=admonitionUtils.js.map
 
 
 }),
