@@ -4388,6 +4388,7 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 .nextStepContent_apx2 {
   display: block;
   border: 1px solid var(--ifm-color-border);
+  border-bottom: 1px solid var(--ifm-color-border) !important;
   padding: 1rem;
   align-items: center;
   -webkit-text-decoration: none !important;
@@ -4406,7 +4407,7 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 }
 
 .nextStepContent_apx2 + .nextStepContent_apx2 {
-  border-top: none
+  border-top: none;
 }
 
 .nextStepContent_apx2:hover {
@@ -5354,7 +5355,7 @@ html[lang='en-US'] .desc_MGeg {
     linear-gradient(to left top, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 90%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.00) 10%, rgba(0, 0, 0, 1.00) 80%),
     /* radial-gradient(100.25% 103.79% at 35.53% 36.93%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 57.72%, rgba(0, 0, 0, 0.00) 100%), */
-    url(/docs/en/assets/images/index-bg-0bc050a78ae825f2ddbf6cfc49f47017.png)
+    url(/docs/assets/images/index-bg-0bc050a78ae825f2ddbf6cfc49f47017.png)
     ;
   background-repeat: no-repeat;
   background-position: top center;
@@ -5393,7 +5394,7 @@ a.banner_d9gt {
 }
 .banner__biostar__img_WPsw {
   text-align: right;
-  background: url(/docs/en/assets/images/biostarx-banner-a16322505a95185c89ee2f6fd06db2fb.png) no-repeat center center/cover;
+  background: url(/docs/assets/images/biostarx-banner-a16322505a95185c89ee2f6fd06db2fb.png) no-repeat center center/cover;
 }
 
 .containerRef_P_fM {
