@@ -1,0 +1,200 @@
+---
+id: getting-started
+title: 시작하기
+description: Description
+keywords: [구성품, 명칭 및 기능, 케이블 및 커넥터]
+---
+
+## 구성품
+
+<div className='overflow-x'>
+
+| <Image src='/img/device/c-device-bs3.svg' className='none' alone /> | <Image src='/img/device/c-wall-bracket-bs3.svg' className='none' alone /> | <Image src='/img/device/c-drilling-template-bs3.svg' className='none' alone /> |
+| -- | -- | -- |
+| BioStation 3 | 벽걸이용 브래킷 | 드릴링 템플릿 |
+| <Image src='/img/device/c-connection-cables-bs3.svg' className='none' alone /> | <Image src='/img/device/c-diode1.svg' className='none' alone /> | <Image src='/img/device/c-resistor.svg' className='none' alone /> |
+| 연결 케이블 | 다이오드 | 120 Ω 저항 |
+| <Image src='/img/device/c-pvc-anchors2.svg' className='none' alone /> | <Image src='/img/device/c-fixing-screws2.svg' className='none' alone /> | <Image src='/img/device/c-bracket-fixing-screw.svg' className='none' alone /> |
+| PVC 앵커 x2 | 고정용 나사 x2 | 브래킷 고정용 나사(별 모양) |
+| \> | \> | <Image src='/img/device/c-quick-guide.svg' alone /> |
+| \> | \> | 퀵 가이드 |
+
+</div>
+
+:::info
+
+* 구성품은 설치 환경에 따라 달라질 수 있습니다.
+
+* 브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+* 제품 사용에 대한 내용은 [슈프리마 웹 사이트](https://www.supremainc.com)에 접속하여 사용자 가이드를 확인하세요.
+
+:::
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-bs3.png' className='none' alone />
+
+* **적외선 카메라**: 적외선 이미지를 촬영합니다.
+
+* **비주얼 카메라**: 실제 이미지를 촬영합니다.
+
+* **LCD 화면**: 동작을 위한 UI를 제공합니다.
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+    * 초록색: 인증 성공
+
+    * 빨간색: 인증 실패
+
+    * 파란색: 정상 동작 상태
+
+    * 파란색/초록색 점멸:
+
+        * DHCP를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+        * 슬레이브 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+    * 빨간색/보라색 점멸: 장치 잠금 상태
+
+    * 노란색 점멸: 입력 대기 상태
+
+* **스피커**: 소리를 들을 수 있습니다.
+
+* **이더넷**: 이더넷 케이블을 연결합니다.
+
+* **TTL 입력 (5핀)**: TTL 입력 케이블을 연결합니다.
+
+* **USB 확장 포트 (5핀)**: 기타 액세서리 제품을 연결할 수 있습니다.
+
+* **Wiegand 출력 (4핀)**: Wiegand 출력 케이블을 연결합니다.
+
+* **Wiegand 입력 (4핀)**: Wiegand 입력 케이블을 연결합니다.
+
+* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+
+* **릴레이 (3핀)**: 릴레이 케이블을 연결합니다.
+
+* **전원 (2핀)**: 전원 케이블을 연결합니다.
+
+* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
+
+## 케이블 및 커넥터
+
+### 전원
+
+<Image src='/img/device/cable-power-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | PWR +VDC | 빨간색(흰띠) |
+| 2 | PWR GND | 검은색(흰띠) |
+
+</div>
+
+### 릴레이
+
+<Image src='/img/device/cable-relay-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | RLY NO | 흰색 |
+| 2 | RLY COM | 파란색 |
+| 3 | RLY NC | 주황색 |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | 485 TRXP | 파란색 |
+| 2 | 485 TRXN | 노란색 |
+| 3 | 485 GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### TTL 입력
+
+<Image src='/img/device/cable-ttl-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | TTL IN0 | 빨간색 |
+| 2 | TTL IN1 | 노란색 |
+| 3 | TTL IN2 | 주황색 |
+| 4 | TTL GND | 검은색 |
+| 5 | SH GND | 회색 |
+
+</div>
+
+### Wiegand 입력
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | WG D0 | 초록색 |
+| 2 | WG D1 | 흰색 |
+| 3 | WG GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### Wiegand 출력
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | WG D0 | 초록색 |
+| 2 | WG D1 | 흰색 |
+| 3 | WG GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA />
+
+## QR 코드 및 장치 라이선스에 대한 참고 사항
+
+### 올바른 QR 코드 인증 방법
+
+사용자에게 QR 코드를 발급하여 인증 수단으로 사용할 수 있습니다. 인식률을 높이기 위해 화면의 안내에 따라 올바르게 QR 코드를 스캔하세요.
+
+<Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
+
+* 장치의 카메라와 QR 코드 사이의 거리를 30 ~ 40 cm로 유지하세요.
+
+* QR 코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요.
+
+* 모바일 장치에 내려받은 QR 코드로 인증할 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하세요.
+
+* 화면의 지시에 따르지 않을 경우 QR 코드 인식이 오래 걸리거나 실패할 수 있습니다.
+
+### 장치 라이선스 참고 사항
+
+* QR 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요.
+
+* 장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다.
+
+* 장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다.
