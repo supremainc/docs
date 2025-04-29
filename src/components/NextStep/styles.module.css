@@ -9,6 +9,7 @@
 .nextStepContent {
   display: block;
   border: 1px solid var(--ifm-color-border);
+  border-bottom: 1px solid var(--ifm-color-border) !important;
   padding: 1rem;
   align-items: center;
   text-decoration: none !important;
@@ -26,7 +27,7 @@
 }
 
 .nextStepContent + .nextStepContent {
-  border-top: none
+  border-top: none;
 }
 
 .nextStepContent:hover {
