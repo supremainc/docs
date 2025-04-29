@@ -450,8 +450,18 @@ footer {
       color: var(--ifm-color-color-gray);
     }
     code {
+      position: relative;
+      top: -2px;
       font-size: .85rem;
       font-family: 'Noto Sans Coptic';
+      background-color: #dceaffd8;
+      color: #1549c6;
+      border: 1px solid #dceaffd8;
+      border-radius: 0.3em;
+      padding: 0.1em 0.2em;
+      line-height: 1;
+//      white-space: break-spaces;
+//      word-break: break-word;
     }
     &.hasimg {
       margin-top: calc(1.25 * .5rem) !important;
