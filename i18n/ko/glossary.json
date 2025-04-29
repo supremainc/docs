@@ -261,7 +261,7 @@
   },
   "dummy_reader": {
     "name": "더미 리더(Dummy Reader)",
-    "description": "사용자 데이터 저장이나 판단은 수행하지 않으며, 얼굴, 지문 및 카드 등 크리덴셜 데이터를 읽어 컨트롤 장치로 전송하는 역할만을 수행하는 장치입니다.."
+    "description": "사용자 데이터 저장이나 판단은 수행하지 않으며, 얼굴, 지문 및 카드 등 크리덴셜 데이터를 읽어 컨트롤 장치로 전송하는 역할만을 수행하는 장치입니다."
   },
   "daisy_chain": {
     "name": "데이지 체인(Daisy Chain)",
@@ -377,7 +377,7 @@
   },
   "backlight": {
     "name": "백 라이트(Backlight)",
-    "description": "액정 표시 장치의 가시성을 위해 액정 뒤에서 비추는 조명입니다.."
+    "description": "액정 표시 장치의 가시성을 위해 액정 뒤에서 비추는 조명입니다."
   },
   "backlight_timeout": {
     "name": "백 라이트 타임아웃(Backlight timeout)",
@@ -541,7 +541,7 @@
   },
   "password": {
     "name": "암호",
-    "description": "개인이 사용자 ID와 함께 인증을 위해 사용하는 문자열입니다.."
+    "description": "개인이 사용자 ID와 함께 인증을 위해 사용하는 문자열입니다."
   },
   "encryption": {
     "name": "암호화",
@@ -633,7 +633,7 @@
   },
   "io_device": {
     "name": "입출력 장치",
-    "description": "정보 입출력 기능을 수행하는 장치입니다.."
+    "description": "정보 입출력 기능을 수행하는 장치입니다."
   },
   "lock": {
     "name": "잠금 장치",
