@@ -357,6 +357,15 @@ footer {
     }
   }
 
+  .tabs-container {
+    ul.tabs {
+      padding-left: 0;
+    }
+    h4.tab-label {
+      display: none;
+    }
+  }
+
   section {
     &.row {
       a.padding--lg {
@@ -477,9 +486,20 @@ footer {
   p:has(.jira-link) {
     margin-top: 2rem;
     font-weight: 600;
+    margin-bottom: .5rem;
+    .jira-link::before {
+      content: "\a";
+      display: block;
+    }
+    .badge + .jira-link::before {
+      display: inline-block;
+    }
     &+ol {
       list-style: none;
       border-left: 1px solid;
+      background: var(--ifm-color-nextstep-background);
+      padding-top: .2rem;
+      padding-bottom: .8rem;
     }
   }
   ul ul, ul ol, ol ol, ol ul {
@@ -583,7 +603,8 @@ footer {
 
   a {
     color: var(--ifm-color-markdown-link);
-    text-decoration: underline dotted;
+    text-decoration: none;
+    border-bottom: 1px solid;
   }
 
   a:hover {
@@ -865,6 +886,19 @@ footer {
     hr {
       border: 1px solid var(--ifm-color-cmd);
       margin-top: 0;
+    }
+    .tabs-container {
+      ul.tabs {
+        padding-left: 0;
+        display: none;
+      }
+      h4.tab-label {
+        display: block;
+        margin-top: 1rem;
+      }
+      .margin-top--md > div {
+        display: block;
+      }
     }
     details {
       background: none !important;
