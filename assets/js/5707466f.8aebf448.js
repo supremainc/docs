@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-add-user-mdx-570.json
-var site_docs_platform_biostar_x_add_user_mdx_570_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user","permalink":"/docs/en/platform/biostar_x/add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"},"next":{"title":"사용자 정보 수정하기","permalink":"/docs/en/platform/biostar_x/edit-user"}}')
+var site_docs_platform_biostar_x_add_user_mdx_570_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user","permalink":"/docs/platform/biostar_x/add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user","title":"사용자 추가하기","description":"새로운 사용자를 추가하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"},"next":{"title":"사용자 정보 수정하기","permalink":"/docs/platform/biostar_x/edit-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -293,43 +293,43 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["특수 기호: ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "~"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "!"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "@"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "#"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "$"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "%"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "^"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "&"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "("
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: ")"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "-"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "_"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "="
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "+"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "["
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "]"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "{"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "}"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+              }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: ";"
-              }), ", ", (0,jsx_runtime.jsx)("code", {
+              }), " ", (0,jsx_runtime.jsx)("code", {
                 children: "`"
               })]
             }), "\n"]
@@ -340,9 +340,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["직함 및 부서명은 특수 기호(공백, ", (0,jsx_runtime.jsx)(_components.code, {
+            children: ["직함 및 부서명은 특수 기호 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "공백"
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
               children: "_"
-            }), ")를 포함해 최대 64자까지 입력할 수 있습니다."]
+            }), "를 포함해 최대 64자까지 입력할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -55,8 +55,8 @@ const toc = [{
   "id": "비주얼-페이스-템플릿-타입-관련-유의사항",
   "level": 3
 }, {
-  "value": "유의사항",
-  "id": "유의사항",
+  "value": "장치 관련 유의사항",
+  "id": "장치-관련-유의사항",
   "level": 3
 }, {
   "value": "마이그레이션하기",
@@ -178,8 +178,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "유의사항",
-      children: "유의사항"
+      id: "장치-관련-유의사항",
+      children: "장치 관련 유의사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
