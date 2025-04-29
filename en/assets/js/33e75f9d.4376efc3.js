@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-event-mdx-33e.json
-var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","keywords":["모니터링","이벤트 모니터링","실시간 이벤트","알람 이벤트","경고 이벤트","이벤트 필터링"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_monitoring_event_mdx_33e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","source":"@site/docs/platform/biostar_x/monitoring-event.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-event","permalink":"/docs/en/platform/biostar_x/monitoring-event","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-event.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-event","title":"이벤트 모니터링하기","description":"이벤트 모니터링 기능을 통해 실시간 이벤트를 확인하고 관리하는 방법을 안내합니다. 알람 이벤트, 경고 이벤트, 필터링 및 상태 관리 등 다양한 기능을 활용해 효율적으로 이벤트를 처리하세요.","keywords":["모니터링","이벤트 모니터링","실시간 이벤트","알람 이벤트","경고 이벤트","이벤트 필터링"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"비디오 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-video"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -35,7 +35,7 @@ const frontMatter = {
 		'경고 이벤트',
 		'이벤트 필터링'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -410,7 +410,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "필터 조건을 저장한 탭은 사용자 계정에 저장합니다. 다른 사용자 계정으로 로그인하면 저장한 탭은 표시되지 않습니다."
+            children: "필터 조건을 저장한 탭은 사용자 계정에 저장됩니다. 다른 사용자 계정으로 로그인하면 저장한 탭은 표시되지 않습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
