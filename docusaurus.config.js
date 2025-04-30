@@ -152,7 +152,7 @@ const config = {
         content: getLocalizedConfigValue('announcementBar'),
         backgroundColor: '#FFB27D',
         textColor: '#091E42',
-        isCloseable: true,
+        isCloseable: false,
       },
       docs: {
         sidebar: {
