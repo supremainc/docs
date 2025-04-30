@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-add-user-basic-info-mdx-bd4.json
-var site_docs_platform_biostar_x_add_user_basic_info_mdx_bd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user-basic-info","title":"사용자 기본 정보 입력하기","description":"사용자의 기본 정보 입력에 대한 자세한 내용은 안내합니다.","source":"@site/docs/platform/biostar_x/add-user-basic-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user-basic-info","permalink":"/docs/en/platform/biostar_x/add-user-basic-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user-basic-info.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user-basic-info","title":"사용자 기본 정보 입력하기","description":"사용자의 기본 정보 입력에 대한 자세한 내용은 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 등록하기","permalink":"/docs/en/platform/biostar_x/add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/en/platform/biostar_x/set-permission"}}')
+var site_docs_platform_biostar_x_add_user_basic_info_mdx_bd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user-basic-info","title":"사용자 기본 정보 입력하기","description":"사용자의 기본 정보 입력에 대한 자세한 내용은 안내합니다.","source":"@site/docs/platform/biostar_x/add-user-basic-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user-basic-info","permalink":"/docs/platform/biostar_x/add-user-basic-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user-basic-info.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user-basic-info","title":"사용자 기본 정보 입력하기","description":"사용자의 기본 정보 입력에 대한 자세한 내용은 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 등록하기","permalink":"/docs/platform/biostar_x/add-user"},"next":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -54,11 +54,13 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcCamera, IcTrash, IcUpload} = _components;
+  }, {Cmd, IcCamera, IcTrash, IcUpload, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcCamera) _missingMdxReference("IcCamera", true);
   if (!IcTrash) _missingMdxReference("IcTrash", true);
   if (!IcUpload) _missingMdxReference("IcUpload", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -231,6 +233,27 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
+      children: [(0,jsx_runtime.jsx)(NextItem, {
+        to: "set-permission",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.user.permission.title"
+          }), " 섹션에서 사용자의 출입 권한 설정 방법을 확인하세요."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "enroll-credential",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.user.credential.title"
+          }), " 섹션에서 사용자 크리덴션을 등록하고 출입 인증 방식을 설정하세요."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "edit-user",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 정보를 수정하는 방법을 확인하세요."
+        })
+      })]
     })]
   });
 }

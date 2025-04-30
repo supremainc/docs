@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-add-user-mdx-570.json
-var site_docs_platform_biostar_x_add_user_mdx_570_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user","title":"사용자 등록하기","description":"새로운 사용자를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user","permalink":"/docs/en/platform/biostar_x/add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user","title":"사용자 등록하기","description":"새로운 사용자를 등록하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/user-group-manage"},"next":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/en/platform/biostar_x/add-user-basic-info"}}')
+var site_docs_platform_biostar_x_add_user_mdx_570_namespaceObject = JSON.parse('{"id":"platform/biostar_x/add-user","title":"사용자 등록하기","description":"새로운 사용자를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/add-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/add-user","permalink":"/docs/platform/biostar_x/add-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/add-user.mdx","tags":[],"version":"current","frontMatter":{"id":"add-user","title":"사용자 등록하기","description":"새로운 사용자를 등록하는 방법을 안내합니다.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_x/user-group-manage"},"next":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/platform/biostar_x/add-user-basic-info"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -114,7 +114,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
       notitle: true,
       children: [(0,jsx_runtime.jsx)(NextItem, {
-        to: "edit-user",
+        to: "add-user-basic-info",
         children: (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.information"
