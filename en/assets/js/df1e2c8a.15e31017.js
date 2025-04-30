@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-enroll-credential-mdx-df1.json
-var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"},"next":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"}}')
+var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/en/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/en/platform/biostar_x/set-permission"},"next":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -166,6 +166,29 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsx)(Glossary, {
         termid: "credential"
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "securityLevel",
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        className: "bold",
+        sid: "team.user.credential.securityLevel.title"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치에서 설정한 바이오메트릭 1", ":N", " 보안 등급과 상관없이 사용자에게 별도의 보안 등급을 부여할 수 있습니다. 장치의 1", ":N", " 보안 등급을 높게 설정해 자주 인증에 실패하는 사용자가 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.user.credential.securityLevel.title"
+      }), "을 낮게 설정하여 인증 실패를 완화할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Private Auth Mode를 Biometric으로 설정했다면, 입력된 사용자를 알 수 없기 때문에 1:1 보안 등급을 적용할 수 없으며, 사용자 특정이 가능한 카드 또는 ID로 인증 모드를 설정했을 때에만 1:1 보안 등급을 적용할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 지문 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-fingerprint",
       children: "지문 등록"

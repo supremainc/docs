@@ -1707,13 +1707,13 @@ function Start() {
 
 
 function NextStep(param) {
-    let { children } = param;
+    let { notitle, children } = param;
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
         className: NextStep_styles_module.nextStep,
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                 className: NextStep_styles_module.nextStepTitle,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("h4", {
+                children: notitle ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)("h4", {
                     children: (0,Translate/* translate */.I)({
                         id: 'theme.docs.nextStep',
                         message: '다음 단계'
@@ -2909,28 +2909,28 @@ const SvgIcoMoreBlack = _ref => {
   } = _ref;
   return /*#__PURE__*/react.createElement("svg", ico_more_black_extends({
     xmlns: "http://www.w3.org/2000/svg",
-    width: 19,
-    height: 17,
+    width: 21,
+    height: 18,
     fill: "none",
-    viewBox: "0 0 19 17",
+    viewBox: "0 0 21 18",
     "aria-labelledby": titleId
   }, props), title ? /*#__PURE__*/react.createElement("title", {
     id: titleId
   }, title) : null, ico_more_black_path || (ico_more_black_path = /*#__PURE__*/react.createElement("path", {
     fill: "#1A1A2E",
-    d: "M17.54.05H1.47A1.42 1.42 0 0 0 .05 1.47v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V1.47A1.42 1.42 0 0 0 17.54.05"
+    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
   })), ico_more_black_path2 || (ico_more_black_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#231815",
+    stroke: "currentColor",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    strokeWidth: 0.1,
-    d: "M17.54.05H1.47A1.42 1.42 0 0 0 .05 1.47v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V1.47A1.42 1.42 0 0 0 17.54.05"
+    strokeWidth: 0.5,
+    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
   })), _path3 || (_path3 = /*#__PURE__*/react.createElement("path", {
     stroke: "#fff",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: 1.33,
-    d: "M9.5 8.69a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M14.17 8.69a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M4.84 8.69a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
+    d: "M10.45 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M15.12 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M5.79 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
   })));
 };
 /* ESM default export */ const ico_more_black = (SvgIcoMoreBlack);
@@ -2960,7 +2960,7 @@ const SvgIcoMoreWhite = _ref => {
     stroke: "#000",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    strokeWidth: 0.3,
+    strokeWidth: 0.5,
     d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
   })), ico_more_white_path3 || (ico_more_white_path3 = /*#__PURE__*/react.createElement("path", {
     stroke: "#000",

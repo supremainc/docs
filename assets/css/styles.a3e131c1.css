@@ -4377,8 +4377,12 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
   font-size: 0.8rem;
 }
 
-.nextStep_vIAY {
+.nextStep_vIAY h4 {
   margin-top: 3rem;
+}
+
+.nextStep_vIAY {
+  margin-bottom: 2rem;
 }
 
 .nextStepTitle_jt8w {
