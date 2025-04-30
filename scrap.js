@@ -20,7 +20,19 @@ async function parseSitemap(sitemapXml) {
     const parser = new xml2js.Parser();
     const result = await parser.parseStringPromise(sitemapXml);
     const urls = result.urlset.url.map((urlObj) => urlObj.loc[0]);
-    return urls;
+    // 제외할 URL 목록
+    const excludeUrls = [
+      'https://supremainc.github.io/docs/search',
+      'https://supremainc.github.io/docs/legal/disclaimers',
+      'https://supremainc.github.io/docs/legal/eula',
+      'https://supremainc.github.io/docs/legal/open-source-licenses',
+      'https://supremainc.github.io/docs/reference/glossary',
+      'https://supremainc.github.io/docs/platform/biostar_x/toc'
+    ];
+
+    // 제외할 URL 필터링
+    const filteredUrls = urls.filter((url) => !excludeUrls.includes(url));
+    return filteredUrls;
   } catch (error) {
     console.error(`Error parsing sitemap: ${error.message}`);
     return [];
@@ -35,7 +47,13 @@ async function fetchAndParseUrl(url) {
 
     // 예: <title> 태그와 <meta name="description"> 내용 추출
     const title = $('header h1').text();
-    const description = $('.theme-doc-markdown.markdown').text();
+    const description = $('.theme-doc-markdown.markdown')
+      .clone()
+      .find('table')
+      .remove()
+      .end()
+      .text()
+      .replace(title, '');
 
     return { url, title, description };
   } catch (error) {

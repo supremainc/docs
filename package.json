@@ -45,6 +45,7 @@
     "convert-json-to-dot": "^1.0.5",
     "docusaurus-plugin-sass": "^0.2.6",
     "docusaurus-prince-pdf": "^1.2.1",
+    "hanspell": "^0.9.7",
     "node-fetch": "^3.3.2",
     "properties-to-json": "^0.2.1",
     "sass": "^1.84.0",
