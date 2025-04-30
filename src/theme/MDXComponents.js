@@ -33,7 +33,8 @@ import IcCamera from '@site/static/img/menus/ico-camera.svg';
 import IcUpload from '@site/static/img/menus/ico-upload.svg';
 import IcTrash from '@site/static/img/menus/ico-trash.svg';
 import IcDown from '@site/static/img/menus/ico-down-arrow.svg';
-import IcMore from '@site/static/img/menus/ico-more.svg';
+import IcMoreB from '@site/static/img/menus/ico-more-black.svg';
+import IcMoreW from '@site/static/img/menus/ico-more-white.svg';
 import IcErr from '@site/static/img/menus/ico-err.svg';
 import IcNotsync from '@site/static/img/menus/ico-notsync.svg';
 import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
@@ -96,7 +97,8 @@ export default {
     IcUpload,
     IcTrash,
     IcDown,
-    IcMore,
+    IcMoreB,
+    IcMoreW,
     IcErr,
     IcNotsync,
     IcDoorClose,
