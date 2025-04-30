@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-video-mdx-89b.json
-var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/en/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-device"},"next":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"}}')
+var site_docs_platform_biostar_x_monitoring_video_mdx_89b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-video.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-video","permalink":"/docs/platform/biostar_x/monitoring-video","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-video.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-video","title":"비디오 모니터링하기","description":"비디오 모니터링 기능의 주요 작업(영상 추가, 크기 조정, 위치 변경, 알람 확인 등)을 단계적으로 안내합니다.","keywords":["모니터링","비디오"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-device"},"next":{"title":"이벤트 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-event"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'모니터링',
 		'비디오'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -105,13 +105,13 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcMore, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
+  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcMoreB, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
-  if (!IcMore) _missingMdxReference("IcMore", true);
+  if (!IcMoreB) _missingMdxReference("IcMoreB", true);
   if (!IcPause) _missingMdxReference("IcPause", true);
   if (!IcPlay) _missingMdxReference("IcPlay", true);
   if (!IcRestorscreen) _missingMdxReference("IcRestorscreen", true);
@@ -406,7 +406,7 @@ function _createMdxContent(props) {
       id: "close-all-video",
       children: "모든 영상 닫기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["비디오 타일에 배치한 모든 영상을 닫으려면 화면 오른쪽 상단에 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["비디오 타일에 배치한 모든 영상을 닫으려면 화면 오른쪽 상단에 ", (0,jsx_runtime.jsx)(IcMoreB, {}), " 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Close All"
       }), "을 클릭하세요."]
     })]

@@ -114,14 +114,14 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcAdd, IcAlarm, IcClose, IcErr, IcFilter, IcMore, IcPause, IcPlay, Kbd} = _components;
+  }, {Cmd, IcAdd, IcAlarm, IcClose, IcErr, IcFilter, IcMoreB, IcPause, IcPlay, Kbd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAdd) _missingMdxReference("IcAdd", true);
   if (!IcAlarm) _missingMdxReference("IcAlarm", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcErr) _missingMdxReference("IcErr", true);
   if (!IcFilter) _missingMdxReference("IcFilter", true);
-  if (!IcMore) _missingMdxReference("IcMore", true);
+  if (!IcMoreB) _missingMdxReference("IcMoreB", true);
   if (!IcPause) _missingMdxReference("IcPause", true);
   if (!IcPlay) _missingMdxReference("IcPlay", true);
   if (!Kbd) _missingMdxReference("Kbd", true);
@@ -470,7 +470,7 @@ function _createMdxContent(props) {
         sid: "arena.eventTable.title"
       }), " 섹션 목록에서 이벤트를 지울 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"
-      }), " 섹션 오른쪽 상단에 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 클릭하고 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 섹션 오른쪽 상단에 ", (0,jsx_runtime.jsx)(IcMoreB, {}), " 버튼을 클릭하고 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.clearEvents"
       }), "를 선택하세요. 이벤트 목록에 불필요한 이벤트가 많이 쌓여 있다면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.clearEvents"

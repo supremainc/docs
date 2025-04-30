@@ -76,10 +76,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Details, IcMore} = _components;
+  }, {Cmd, Details, IcMoreW} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
-  if (!IcMore) _missingMdxReference("IcMore", true);
+  if (!IcMoreW) _missingMdxReference("IcMoreW", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -222,7 +222,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 오른쪽 상단의 더보기(", (0,jsx_runtime.jsx)(IcMore, {}), ") 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "비주얼 페이스 마이그레이션"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
