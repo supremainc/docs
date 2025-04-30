@@ -30535,7 +30535,7 @@ __webpack_require__.d(__webpack_exports__, {
       "content": "<b>This document contains content that has not yet been released to the service version. For documentation on officially released features, please see the following links.</b>",
       "backgroundColor": "#FFB27D",
       "textColor": "#091E42",
-      "isCloseable": true
+      "isCloseable": false
     },
     "docs": {
       "sidebar": {
