@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-device-mdx-3a5.json
-var site_docs_platform_biostar_x_monitoring_device_mdx_3a5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-device","title":"장치 모니터링하기","description":"모든 구역과 출입문에 연결된 장치 및 카메라를 실시간으로 모니터링하세요. 장치와 카메라의 상태 점검, 상세 정보 확인, 카메라 영상 재생 등 다양한 기능을 통해 효율적으로 관리할 수 있습니다.","source":"@site/docs/platform/biostar_x/monitoring-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-device","permalink":"/docs/en/platform/biostar_x/monitoring-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-device.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-device","title":"장치 모니터링하기","description":"모든 구역과 출입문에 연결된 장치 및 카메라를 실시간으로 모니터링하세요. 장치와 카메라의 상태 점검, 상세 정보 확인, 카메라 영상 재생 등 다양한 기능을 통해 효율적으로 관리할 수 있습니다.","keywords":["모니터링","장치","카메라"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"맵 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-map"},"next":{"title":"비디오 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-video"}}')
+var site_docs_platform_biostar_x_monitoring_device_mdx_3a5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-device","title":"장치 모니터링하기","description":"모든 구역과 출입문에 연결된 장치 및 카메라를 실시간으로 모니터링하세요. 장치와 카메라의 상태 점검, 상세 정보 확인, 카메라 영상 재생 등 다양한 기능을 통해 효율적으로 관리할 수 있습니다.","source":"@site/docs/platform/biostar_x/monitoring-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-device","permalink":"/docs/platform/biostar_x/monitoring-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-device.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-device","title":"장치 모니터링하기","description":"모든 구역과 출입문에 연결된 장치 및 카메라를 실시간으로 모니터링하세요. 장치와 카메라의 상태 점검, 상세 정보 확인, 카메라 영상 재생 등 다양한 기능을 통해 효율적으로 관리할 수 있습니다.","keywords":["모니터링","장치","카메라"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"맵 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-map"},"next":{"title":"비디오 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-video"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'장치',
 		'카메라'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -184,7 +184,7 @@ function _createMdxContent(props) {
         sid: "arena.tree.device.title"
       }), " 탭에서 영상을 재생할 카메라를 더블 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
+      type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -200,7 +200,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
+      type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: "비디오 타일에 카메라 영상을 추가하는 방법은 아래와 같은 방식도 지원합니다."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
