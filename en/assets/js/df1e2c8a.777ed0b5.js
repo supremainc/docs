@@ -1261,7 +1261,7 @@ function _createMdxContent(props) {
             sid: "team.user.credential.qrBarcode.qrBarcodeType"
           }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.biostarQr"
-          }), "을 선택하세요."]
+          }), "를 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1293,7 +1293,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.biostarQr"
-            }), "을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), "를 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "#",
               children: "다음 문서"
             }), "를 참고하세요."]
@@ -1302,7 +1302,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.biostarQr"
-            }), "을 발급하려면 반드시 사용자 정보에 이메일 주소를 등록해야 합니다."]
+            }), "를 발급하려면 반드시 사용자 정보에 이메일 주소를 등록해야 합니다."]
           }), "\n"]
         }), "\n"]
       })
