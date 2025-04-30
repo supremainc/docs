@@ -1,5 +1,9 @@
-.nextStep {
+.nextStep h4 {
   margin-top: 3rem;
+}
+
+.nextStep {
+  margin-bottom: 2rem;
 }
 
 .nextStepTitle {
