@@ -30427,7 +30427,7 @@ __webpack_require__.d(__webpack_exports__, {
   "title": "Suprema Docs",
   "tagline": "Check out all of Suprema's products and BioStar related information here.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
-  "url": "https://docs.supremainc.com",
+  "url": "https://supremainc.github.io",
   "baseUrl": "/docs/en/",
   "noIndex": false,
   "future": {

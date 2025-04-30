@@ -30427,7 +30427,7 @@ __webpack_require__.d(__webpack_exports__, {
   "title": "Suprema Docs",
   "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
-  "url": "https://docs.supremainc.com",
+  "url": "https://supremainc.github.io",
   "baseUrl": "/docs/",
   "noIndex": false,
   "future": {
