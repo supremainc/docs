@@ -65,16 +65,26 @@ const sidebars = {
             'platform/biostar_x/user-group-manage',
             {
               type: 'category',
+              label: '사용자 등록하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/add-user'
+              },
+              items: [
+                'platform/biostar_x/add-user-basic-info',
+                'platform/biostar_x/set-permission',
+                'platform/biostar_x/enroll-credential',
+              ]
+            },
+            {
+              type: 'category',
               label: '사용자 관리하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/user-manage'
               },
               items: [
-                'platform/biostar_x/add-user',
                 'platform/biostar_x/edit-user',
-                'platform/biostar_x/set-permission',
-                'platform/biostar_x/enroll-credential',
                 'platform/biostar_x/delete-user',
                 'platform/biostar_x/user-info-with-device',
                 'platform/biostar_x/trace-user-access-log',
