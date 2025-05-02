@@ -40,13 +40,17 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/types": "3.7.0",
+    "axios": "^1.9.0",
+    "cheerio": "^1.0.0",
     "convert-json-to-dot": "^1.0.5",
     "docusaurus-plugin-sass": "^0.2.6",
     "docusaurus-prince-pdf": "^1.2.1",
+    "hanspell": "^0.9.7",
     "node-fetch": "^3.3.2",
     "properties-to-json": "^0.2.1",
     "sass": "^1.84.0",
-    "string_decoder": "^1.3.0"
+    "string_decoder": "^1.3.0",
+    "xml2js": "^0.6.2"
   },
   "browserslist": {
     "production": [
