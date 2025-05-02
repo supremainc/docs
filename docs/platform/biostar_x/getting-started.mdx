@@ -54,7 +54,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 * **BioStar X** 데이터베이스를 백업하려면 *\Program Files\BioStar 2(x64)\util* 폴더의 *enckey* 파일과 *\Program Files\BioStar 2(x64)* 폴더의 *system.conf*, *setting.conf* 파일도 반드시 함께 백업하세요. 그렇지 않으면, 데이터베이스를 사용할 수 없게 됩니다.
 
-* **BioStar X**가 사용하는 포트의 기본 값은 아래와 같습니다. 다른 프로그램에서 동일한 포트를 점유한다면, **BioStar X**가 정상 구동되지 않을 수 있습니다.
+* **BioStar X**가 사용하는 포트의 기본값은 아래와 같습니다. 다른 프로그램에서 동일한 포트를 점유한다면, **BioStar X**가 정상 구동되지 않을 수 있습니다.
 
   :::info
 
@@ -63,7 +63,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
   * HTTP 포트: 80
 
-  * 웹소켓 포트: 9002
+  * 웹 소켓 포트: 9002
 
   * 데이터베이스 포트: 3312
 
@@ -126,7 +126,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 :::info
 
-* 모든 데이터베이스 및 테이블의 `Collation` 옵션을 대소문자를 구분하지 않는 CI(Case-insensitive)로 설정하세요.
+* 모든 데이터베이스 및 테이블의 `Collation` 옵션을 대소문자로 구분하지 않는 CI(Case-insensitive)로 설정하세요.
 
 * 데이터베이스 이름에는 숫자, 영문(대소문자 구분), 특수 기호 `-` `_`만 사용할 수 있습니다.
 
@@ -154,7 +154,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 1. **데이터베이스 이름** 필드에 원하는 이름을 입력하세요.
 
-10. **소유자** 필드에 **3** 단계에서 설정한 로그인 이름을 입력하세요.
+10. **소유자** 필드에 **3**단계에서 설정한 로그인 이름을 입력하세요.
 
 :::tip
 
@@ -212,9 +212,9 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 1. Windows 방화벽에 1433 포트를 예외로 추가하세요.
 
-1. SQL Server에 비어있는 **ac**, **ta**, **ve** 데이터베이스를 **sysadmin** 인증으로 생성하세요.
+1. SQL Server에 비어 있는 **ac**, **ta**, **ve** 데이터베이스를 **sysadmin** 인증으로 생성하세요.
 
-1. SQL Server에 도메인 사용자가 Windows Authentication을 사용하도록 설정하고 **ac**, **ta**, **ve** 데이터베이스에 **sysadmin**를 제외한 나머지 모든 권한을 할당하세요.
+1. SQL Server에 도메인 사용자가 Windows Authentication을 사용하도록 설정하고 **ac**, **ta**, **ve** 데이터베이스에 **sysadmin**을 제외한 나머지 모든 권한을 할당하세요.
 
 1. 로컬 컴퓨터를 제외한 모든 서비스를 *services.msc*에서 연결하세요.
 

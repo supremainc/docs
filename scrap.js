@@ -59,6 +59,12 @@ async function fetchAndParseUrl(url) {
       .find('article[class*="overviewItems"]')
       .remove()
       .end()
+      .find('div[class*="nextStepTitle"]')
+      .remove()
+      .end()
+      .find('.theme-code-block')
+      .remove()
+      .end()
       .text()
       .replace(title, '');
 
