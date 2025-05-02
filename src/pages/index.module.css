@@ -2,35 +2,39 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
-
 .heroLayout {
   background-image:
-    linear-gradient(to right bottom, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 80%),
-    linear-gradient(to left top, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 1.00) 90%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.00) 10%, rgba(0, 0, 0, 1.00) 80%),
+    linear-gradient(to right bottom, var(--main-black-0) 20%, var(--main-black) 80%),
+    linear-gradient(to left top, var(--main-black-0) 20%, var(--main-black) 90%),
+    linear-gradient(180deg, var(--main-black-0) 10%, var(--main-black) 55%),
     /* radial-gradient(100.25% 103.79% at 35.53% 36.93%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 57.72%, rgba(0, 0, 0, 0.00) 100%), */
     url('./index-bg.png')
     ;
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: #000;
+  background-color: var(--main-black);
   padding-bottom: 80px;
 }
 .heroBanner {
   padding: 80px 0 10px 0;
   position: relative;
   overflow: hidden;
-  color: #fff;
+  /* color: #fff; */
 }
 a.banner {
   text-decoration: none;
-  color: #fff;
+  color: var(--main-text-color);
 }
 .section__banner {
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--main-black-6);
+  border: 1px solid;
 }
+
+[data-theme='dark'] .section__banner {
+  border: none;
+}
+
 .section__banner:hover {
   outline: 2px solid #fff;
 }
@@ -84,12 +88,12 @@ a.banner {
 
 .hero__subtitle {
   font-size: 1.3em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .headsec {
   margin-top: 90px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .headsec h2 {
