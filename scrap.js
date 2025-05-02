@@ -106,7 +106,6 @@ if (urlArgIndex !== -1 && args[urlArgIndex + 1]) {
   const singleUrl = args[urlArgIndex + 1];
   (async () => {
     const result = await fetchAndParseUrl(singleUrl);
-    console.log(result);
     fs.writeFileSync('docs.json', JSON.stringify([result], null, 2), 'utf-8');
     console.log('Single URL result saved to docs.json');
   })();
