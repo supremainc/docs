@@ -357,6 +357,10 @@ footer {
     }
   }
 
+  .theme-code-block {
+    margin: .5rem 0;
+  }
+
   .tabs-container {
     ul.tabs {
       padding-left: 0;
@@ -449,7 +453,7 @@ footer {
       font-weight: 500;
       color: var(--ifm-color-color-gray);
     }
-    code {
+    &>code {
       position: relative;
       top: -2px;
       font-size: .85rem;
@@ -460,8 +464,8 @@ footer {
       border-radius: 0.3em;
       padding: 0.1em 0.2em;
       line-height: 1;
-//      white-space: break-spaces;
-//      word-break: break-word;
+      // white-space: break-spaces;
+      // word-break: break-word;
     }
     &.hasimg {
       margin-top: calc(1.25 * .5rem) !important;
