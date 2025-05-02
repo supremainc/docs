@@ -36,7 +36,7 @@ a.banner {
 }
 
 .section__banner:hover {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--main-text-color);
 }
 .banner__biostar {
   width: 100%;
