@@ -24,3 +24,7 @@ package-lock.json
 
 # crowdin
 crowdin.yml
+
+# hanspell
+docs.json
+spelling_report.json
