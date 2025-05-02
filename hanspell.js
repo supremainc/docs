@@ -20,7 +20,7 @@ async function checkSpelling() {
       // description을 \n 단위로 나누기
       const lines = (description || '').split('\n').filter((line) => line.trim() !== '');
 
-      const lineResults = [];
+      let lineResults = [];
 
       for (const line of lines) {
         const results = [];
@@ -55,12 +55,21 @@ async function checkSpelling() {
         lineResults.push(lineData);
       }
 
-      // 문서별 결과 저장
-      report.push({
-        url,
-        title,
-        lineResults,
-      });
+      // results가 없거나 모두 빈 배열인 lineResults는 제외
+      lineResults = lineResults.filter(
+        (line) =>
+          Array.isArray(line.results) &&
+          line.results.length > 0 &&
+          line.results.some((r) => Array.isArray(r) ? r.length > 0 : r && Object.keys(r).length > 0)
+      );
+
+      if (lineResults.length > 0) {
+        report.push({
+          url,
+          title,
+          lineResults,
+        });
+      }
     }
 
     // 결과를 JSON 파일로 저장

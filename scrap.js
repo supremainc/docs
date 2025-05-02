@@ -22,6 +22,7 @@ async function parseSitemap(sitemapXml) {
     const urls = result.urlset.url.map((urlObj) => urlObj.loc[0]);
     // 제외할 URL 목록
     const excludeUrls = [
+      'https://supremainc.github.io/docs/',
       'https://supremainc.github.io/docs/search',
       'https://supremainc.github.io/docs/legal/disclaimers',
       'https://supremainc.github.io/docs/legal/eula',
@@ -50,6 +51,12 @@ async function fetchAndParseUrl(url) {
     const description = $('.theme-doc-markdown.markdown')
       .clone()
       .find('table')
+      .remove()
+      .end()
+      .find('div[class*="admonitionHeading"]')
+      .remove()
+      .end()
+      .find('article[class*="overviewItems"]')
       .remove()
       .end()
       .text()
