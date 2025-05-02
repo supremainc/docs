@@ -97,5 +97,20 @@ async function main() {
   console.log('Results saved to docs.json');
 }
 
-// 실행
-main();
+// 커맨드라인 인자 처리
+const args = process.argv.slice(2);
+const urlArgIndex = args.indexOf('-u');
+
+if (urlArgIndex !== -1 && args[urlArgIndex + 1]) {
+  // -u 옵션이 있으면 해당 URL만 파싱
+  const singleUrl = args[urlArgIndex + 1];
+  (async () => {
+    const result = await fetchAndParseUrl(singleUrl);
+    console.log(result);
+    fs.writeFileSync('docs.json', JSON.stringify([result], null, 2), 'utf-8');
+    console.log('Single URL result saved to docs.json');
+  })();
+} else {
+  // 그렇지 않으면 전체 main 로직 실행
+  main();
+}
