@@ -13,19 +13,19 @@
 }
 
 .externalLink {
-  color: #fff;
-  border: 1px solid #fff;
+  color: var(--main-text-color);
+  border: 1px solid;
 }
 
 .externalLink:hover, .productLink:hover {
   text-decoration: none;
-  color: #fff;
+  color: var(--main-text-color);
 }
 
 .externalLinkitem {
   display: grid;
   grid-template-columns: 95px 1fr;
-  background: #333;
+  background: var(--main-black);
 }
 
 .externalLinkLogo {
@@ -45,7 +45,7 @@
 }
 
 .circle {
-  background: #fff;
+  background: var(--main-circle-color);
   border-radius: 50%;
   width: 68px;
   height: 68px;
@@ -77,9 +77,9 @@
   width: 100%;
   display: grid;
   grid-template-columns: 100px 1fr;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--main-black-4);
   margin-bottom: 1rem;
-  outline: 1px solid #333;
+  outline: 1px solid var(--main-text-color);
   border-radius: 5px;
   transition:
     outline .5s ease-in
@@ -88,11 +88,11 @@
 .productLink {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: var(--main-text-color);
 }
 
 .product.grid .cardItem:hover {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--main-text-color);
 }
 
 .product.grid {
