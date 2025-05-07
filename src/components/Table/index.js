@@ -35,9 +35,9 @@ export function Tbody({children}) {
   )
 }
 
-export function Row({children}) {
+export function Row({children, className}) {
   return (
-    <tr>
+    <tr className={className}>
       {children}
     </tr>
   )
