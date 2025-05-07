@@ -161,7 +161,34 @@ const sidebars = {
         'reference/glossary'
       ]
     }
-  ]
+  ],
+  bioStation3: [
+    {
+      type: 'category',
+      label: 'BioStation 3',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        {
+          type: 'category',
+          label: '목차',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3/index',
+          },
+          items: [
+            'device/biostation_3/safety-instructions',
+            'device/biostation_3/getting-started',
+            'device/biostation_3/installation',
+            'device/biostation_3/product-specifications',
+            'device/biostation_3/regulatory-information',
+            'device/biostation_3/appendices',
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export default sidebars;
