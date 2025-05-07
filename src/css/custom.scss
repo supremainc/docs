@@ -819,6 +819,113 @@ footer {
       list-style-type: lower-latin;
     }
   }
+
+  // techspec
+  .techspec {
+    width: 100%;
+    display: block;
+    p {
+      margin-bottom: 0;
+    }
+    .techspec-section.noborder {
+      border-bottom: none;
+    }
+    .techspec-section {
+      width: 100%;
+      display: flex;
+      position: relative;
+      border-bottom: 1px solid var(--ifm-color-border);
+      padding: 1.5rem 0;
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      .techspecs-rowheader {
+        float: left;
+        width: 22%;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      .techspecs-size, .techspecs-weight {
+        width: 100%;
+        display: flex;
+        .small-c5 + .small-c5 {
+          margin-left: 35px;
+        }
+      }
+      .techspecs-body {
+        float: left;
+        padding-left: 1.5rem;
+        width: 78%;
+        .small-c5 {
+          // width: 50%;
+          position: relative;
+          text-align: center;
+          ul {
+            align-content: center;
+            margin-left: 25px;
+            text-align: left;
+          }
+          img {
+            display: block;
+            border: none;
+            margin: 0 auto;
+          }
+          figure {
+            position: relative;
+            margin: 0;
+            figcaption {
+              font-size: .85rem;
+            }
+          }
+          .absolute {
+            position: absolute;
+            font-size: .75rem;
+          }
+        }
+        .row {
+          display: flex;
+          margin: 0 0;
+        }
+        .row + .row {
+          margin-top: 1rem;
+        }
+        ul {
+          margin: 0;
+          li {
+            margin: 0;
+          }
+        }
+        .column {
+          float: left;
+        }
+        .model {
+          font-weight: 600;
+        }
+        .small-l1 {
+          width: 25%;
+        }
+        .small-l2 {
+          width: 75%;
+        }
+      }
+      .techspecs-body.center {
+        text-align: center;
+      }
+    }
+  }
+  .with-2-columns {
+    .techspecs-columnheader, .techspecs-column {
+      float: left;
+      width: 36%;
+      margin-left: 1rem
+    }
+    .techspecs-columnheader {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  }
 }
 
 // Dark theme
