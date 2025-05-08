@@ -24,7 +24,7 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
       <div className='column small-l2'>
         **얼굴**
         
-        * 인증 거리: 0.3\~1.0m
+        * 인증 거리<sup><a href='#anno1'></a></sup>: 0.3\~1.0m
         
         * 인증 높이: 1.4\~1.9m
         
@@ -39,22 +39,22 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
     <div className='techspecs-rowheader'>RF 카드</div>
     <div className='techspecs-body'>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-DB</div>
+        <div className='column small-l1'>BS3-DB</div>
         <div className='column small-l2'>
-          125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos
+          125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos
         </div>
       </div>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-APWB</div>
+        <div className='column small-l1'>BS3-APWB</div>
         <div className='column small-l2'>
-          125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos
+          125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos
         </div>
       </div>
     </div>
    </div>
 
   <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RF 인식 거리<sup>2\)</sup></div>
+    <div className='techspecs-rowheader'>RF 인식 거리<sup><a href='#anno3'></a></sup></div>
     <div className='techspecs-body'>
       EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm
     </div>
@@ -75,9 +75,9 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
   </div>
 
   <div className='techspec-section'>
-    <div className='techspecs-rowheader'>QR/바코드</div>
+    <div className='techspecs-rowheader'>QR/바코드<sup><a href='#anno4'></a></sup></div>
     <div className='techspecs-body'>
-      지원
+      지원<sup><a href='#anno5'></a></sup>
     </div>
   </div>
 </div>
@@ -164,7 +164,7 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
 
   <div className='techspec-section'>
     <div className='techspecs-rowheader'>최대 사용자 수</div>
-    <div className='techspecs-body'>100,000<sup>6</sup></div>
+    <div className='techspecs-body'>100,000<sup><a href='#anno6'></a></sup></div>
   </div>
 
   <div className='techspec-section'>
@@ -208,11 +208,11 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
     <div className='techspecs-rowheader'>Wi-Fi</div>
     <div className='techspecs-body'>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-DB</div>
+        <div className='column small-l1'>BS3-DB</div>
         <div className='column small-l2'>미지원</div>
       </div>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-APWB</div>
+        <div className='column small-l1'>BS3-APWB</div>
         <div className='column small-l2'>지원 (802.11 b/ g/ n 2.4 GHz)</div>
       </div>
     </div>
@@ -247,11 +247,11 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
     <div className='techspecs-rowheader'>PoE+</div>
     <div className='techspecs-body'>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-DB</div>
+        <div className='column small-l1'>BS3-DB</div>
         <div className='column small-l2'>미지원</div>
       </div>
       <div className='row'>
-        <div className='column small-l1 model'>BS3-APWB</div>
+        <div className='column small-l1'>BS3-APWB</div>
         <div className='column small-l2'>지원 (IEEE 802.3at compliant)</div>
       </div>
     </div>
@@ -340,25 +340,26 @@ import Face from '@site/static/img/menus/spec-credential-face.svg';
 ## 크기 및 무게
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import DimenW from '@site/static/img/common/ico-w.svg';
+import DimenH from '@site/static/img/common/ico-h.svg';
+import DimenD from '@site/static/img/common/ico-d.svg';
 
 <div className='techspec with-2-columns'>
 
   <div className='techspec-section noborder'>
     <div className='techspecs-rowheader'>장치</div>
     <div className='techspecs-body'>
-      <div className='column small-c5'>
-        
-        <img src={useBaseUrl('/img/device/bs3-device-dimension.svg')} style={{width: 368, height: 446}} />
-        <div className='absolute width' style={{top:0 + '%', left:41 + '%'}}>82.5</div>
-        <div className='absolute height' style={{top:50 + '%', left:2 + '%'}}>171</div>
-        <div className='absolute thick' style={{top:0 + '%', left:89 + '%'}}>23.4</div>
-
+      <div className='column small-c5 modelimg'>
+        <img src={useBaseUrl('/img/device/bs3-device-dimension.svg')} />
       </div>
-      <div className='column small-c5'>
-      
-        * **BS3-DB**: 370 g
-        
-        * **BS3-APWB**: 380 g
+      <div className='column small-c5 desc'>
+        * 크기: **<DimenW/> 82.5mm × <DimenH/> 171mm × <DimenD/> 23.4mm**
+
+        * 무게
+
+          * **BS3-DB**: **370g**
+          
+          * **BS3-APWB**: **380g**
       </div>
     </div>
   </div>
@@ -366,20 +367,40 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <div className='techspec-section noborder'>
     <div className='techspecs-rowheader'>브라켓</div>
     <div className='techspecs-body'>
-      <div className='column small-c5'>
-        
-        <img src={useBaseUrl('/img/device/bs3-bracket-front-dimension.svg')} style={{width: 233, height: 441}} />
-        <div className='absolute width' style={{top:0 + '%', left:41 + '%'}}>82.5</div>
-        <div className='absolute height' style={{top:50 + '%', left:2 + '%'}}>171</div>
-        <div className='absolute thick' style={{top:0 + '%', left:89 + '%'}}>23.4</div>
-
+      <div className='column small-c5 modelimg'>
+        <img src={useBaseUrl('/img/device/bs3-bracket-front-dimension.svg')} style={{width: 223, height: 431}} />
       </div>
-      <div className='column small-c5'>
-      
-        * **BS3-DB**: 370 g
+      <div className='column small-c5 desc'>
+
+        * 크기: **<DimenW/> 72.9mm × <DimenH/> 164mm**
         
-        * **BS3-APWB**: 380 g
+        * 무게: **90g** (와셔 및 볼트 포함)
       </div>
     </div>
   </div>
 </div>
+
+:::note
+
+<span className='annotation' id='anno1'>1)</span> 표기된 최소 얼굴 인증 거리는 제품의 기본 설정이며, 권장하는 얼굴 인증 거리는 0.6 ~ 1.0 m입니다.
+
+<span className='annotation' id='anno2'>2)</span> DESFire EV2/EV3 카드는 DESFire EV1 카드와 하위 호환되므로, DESFire EV1 카드의 기능을 포함하여 CSN 및 스마트 카드 기능이 지원됩니다.
+
+<span className='annotation' id='anno3'>3)</span> RF 인식 거리는 설치 환경에 따라 다를 수 있습니다.
+
+<span className='annotation' id='anno4'>4)</span> 최대 32개의 ASCII 코드 문자열로 구성된 QR/바코드를 지원합니다.
+
+<span className='annotation' id='anno5'>5)</span> 별도의 장치 라이선스가 필요합니다.
+
+<span className='annotation' id='anno6'>6)</span> 표기된 최소 얼굴 인증 거리는 제품의 기본 설정이며, 권장하는 얼굴 인증 거리는 0.6\~1.0m입니다.
+
+<span className='annotation' id='anno7'>7)</span> 크리덴셜 없이 등록된 사용자 기준입니다.
+
+BioStation 3가 마스터 장치일 때 지문 센서가 있는 장치를 슬레이브로 연결하면 슬레이브 장치를 사용하여 지문을 인증할 수
+있습니다.
+
+* 최대 지문 크리덴셜 수 (1:N): 100,000
+
+* 최대 지문 크리덴셜 수 (1:1): 100,000
+
+:::

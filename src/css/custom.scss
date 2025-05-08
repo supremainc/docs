@@ -327,6 +327,7 @@ footer {
 
 // markdown 콘텐츠 스타일 
 .markdown {
+  counter-reset: count;
   h1 { font-size: var(--ifm-h1-font-size); }
   h2 { 
     --ifm-h2-font-size: 1.8rem;
@@ -821,11 +822,22 @@ footer {
   }
 
   // techspec
+  span.annotation {
+    color: var(--ifm-color-cmd);
+    font-weight: 600;
+  }
+
   .techspec {
     width: 100%;
     display: block;
     p {
       margin-bottom: 0;
+    }
+    sup a {
+      color: var(--ifm-color-cmd);
+    }
+    sup a::before {
+      content: counter(count)  ")";
     }
     .techspec-section.noborder {
       border-bottom: none;
@@ -843,8 +855,8 @@ footer {
       .techspecs-rowheader {
         float: left;
         width: 22%;
-        font-weight: 600;
         font-size: 1.1rem;
+        color: var(--ifm-color-color-ol-gray);
       }
       .techspecs-size, .techspecs-weight {
         width: 100%;
@@ -853,23 +865,38 @@ footer {
           margin-left: 35px;
         }
       }
+      sup {
+        // counter-reset: count;
+        counter-increment: count;
+      }
+      sup#dupl {
+        counter-increment: none;
+      }
       .techspecs-body {
         float: left;
         padding-left: 1.5rem;
+        font-weight: 600;
         width: 78%;
-        .small-c5 {
-          // width: 50%;
-          position: relative;
+        .modelimg {
+          background: #fff;
           text-align: center;
+          padding: .5rem;
+        }
+        .desc {
+          padding-left: 2rem;
+        }
+        .small-c5 {
+          width: 50%;
+          position: relative;
           ul {
             align-content: center;
-            margin-left: 25px;
             text-align: left;
           }
           img {
             display: block;
             border: none;
             margin: 0 auto;
+            max-width: 430;
           }
           figure {
             position: relative;
@@ -898,9 +925,6 @@ footer {
         }
         .column {
           float: left;
-        }
-        .model {
-          font-weight: 600;
         }
         .small-l1 {
           width: 25%;
