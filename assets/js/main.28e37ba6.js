@@ -21773,9 +21773,9 @@ var routesChunkNames = __webpack_require__("7138");
         /*require.resolve*/(9959)
     ],
     "fbed35e5": [
-        ()=>__webpack_require__.e(/* import() | fbed35e5 */ "3206").then(__webpack_require__.bind(__webpack_require__, 1664)),
+        ()=>__webpack_require__.e(/* import() | fbed35e5 */ "3206").then(__webpack_require__.bind(__webpack_require__, 8654)),
         "@site/docs/device/biostation_3/product-specifications.mdx",
-        /*require.resolve*/(1664)
+        /*require.resolve*/(8654)
     ],
     "ff083161": [
         ()=>__webpack_require__.e(/* import() | ff083161 */ "9493").then(__webpack_require__.bind(__webpack_require__, 5290)),
