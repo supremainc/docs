@@ -823,7 +823,7 @@ footer {
 
   // techspec
   span.annotation {
-    color: var(--ifm-color-cmd);
+    color: var(--ifm-color-markdown-link);
     font-weight: 600;
   }
 
@@ -832,9 +832,6 @@ footer {
     display: block;
     p {
       margin-bottom: 0;
-    }
-    sup a {
-      color: var(--ifm-color-cmd);
     }
     sup a::before {
       content: counter(count)  ")";
