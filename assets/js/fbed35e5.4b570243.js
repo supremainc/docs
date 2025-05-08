@@ -245,11 +245,11 @@ function _createMdxContent(props) {
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "매칭 속도 0.2초 이내"
+                  children: "매칭 속도: 0.2초 이내"
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "위조 얼굴 검출 지원"
+                  children: "위조 얼굴 검출: 지원"
                 }), "\n"]
               }), "\n"]
             })]
@@ -460,7 +460,10 @@ function _createMdxContent(props) {
         className: "techspec-section",
         children: [(0,jsx_runtime.jsx)("div", {
           className: "techspecs-rowheader",
-          children: "IP 등급"
+          children: (0,jsx_runtime.jsx)("a", {
+            href: "../../reference/glossary#ip_rating",
+            children: "IP 등급"
+          })
         }), (0,jsx_runtime.jsx)("div", {
           className: "techspecs-body",
           children: "IP65"
@@ -469,7 +472,10 @@ function _createMdxContent(props) {
         className: "techspec-section",
         children: [(0,jsx_runtime.jsx)("div", {
           className: "techspecs-rowheader",
-          children: "IK 등급"
+          children: (0,jsx_runtime.jsx)("a", {
+            href: "../../reference/glossary#ik_rating",
+            children: "IK 등급"
+          })
         }), (0,jsx_runtime.jsx)("div", {
           className: "techspecs-body",
           children: "IK06"
@@ -516,15 +522,23 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)("div", {
           className: "techspecs-rowheader",
           children: "최대 크리덴셜 수 (1:1)"
-        }), (0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsx)("div", {
           className: "techspecs-body",
-          children: [(0,jsx_runtime.jsx)(_components.p, {
-            children: "얼굴: 100,000"
-          }), (0,jsx_runtime.jsx)(_components.p, {
-            children: "카드: 100,000"
-          }), (0,jsx_runtime.jsx)(_components.p, {
-            children: "PIN: 100,000"
-          })]
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "얼굴: 100,000"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "카드: 100,000"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "PIN: 100,000"
+              }), "\n"]
+            }), "\n"]
+          })
         })]
       }), (0,jsx_runtime.jsxs)("div", {
         className: "techspec-section",
@@ -932,7 +946,10 @@ function _createMdxContent(props) {
           id: "anno7",
           children: "7)"
         }), " 크리덴셜 없이 등록된 사용자 기준입니다."]
-      }), (0,jsx_runtime.jsx)(_components.p, {
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
         children: "BioStation 3가 마스터 장치일 때 지문 센서가 있는 장치를 슬레이브로 연결하면 슬레이브 장치를 사용하여 지문을 인증할 수\n있습니다."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
