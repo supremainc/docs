@@ -29967,7 +29967,13 @@ __webpack_require__.d(__webpack_exports__, {
           "type": "dropdown",
           "label": "Devices",
           "position": "right",
-          "items": []
+          "items": [
+            {
+              "type": "doc",
+              "label": "BioStation 3",
+              "docId": "device/biostation_3/index"
+            }
+          ]
         },
         {
           "type": "doc",
