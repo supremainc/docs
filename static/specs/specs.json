@@ -1,0 +1,12 @@
+{
+  "biostation3": {
+    "biometrics": {
+      "face": {
+        "auth_distance": "0.3 ~ 1.0 m",
+        "auth_height": "1.4 ~ 1.9 m",
+        "matching_speed": "0.2",
+        "live_face_detection": true
+      }
+    }
+  }
+}
