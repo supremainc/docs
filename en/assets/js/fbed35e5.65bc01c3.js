@@ -220,7 +220,10 @@ function _createMdxContent(props) {
           className: "techspecs-body",
           children: [(0,jsx_runtime.jsx)("div", {
             className: "column small-l1",
-            children: (0,jsx_runtime.jsx)(spec_credential_face, {})
+            children: (0,jsx_runtime.jsx)(spec_credential_face, {
+              width: "80",
+              height: "80"
+            })
           }), (0,jsx_runtime.jsxs)("div", {
             className: "column small-l2",
             children: [(0,jsx_runtime.jsx)(_components.p, {
