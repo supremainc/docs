@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-product-specifications-mdx-fbe.json
-var site_docs_device_biostation_3_product_specifications_mdx_fbe_namespaceObject = JSON.parse('{"id":"device/biostation_3/product-specifications","title":"제품 사양","description":"BioStation 3 제품에 대한 사양 정보입니다.","source":"@site/docs/device/biostation_3/product-specifications.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/product-specifications","permalink":"/docs/device/biostation_3/product-specifications","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/product-specifications.mdx","tags":[],"version":"current","frontMatter":{"id":"product-specifications","title":"제품 사양","description":"BioStation 3 제품에 대한 사양 정보입니다.","isTranslationMissing":false}}')
+var site_docs_device_biostation_3_product_specifications_mdx_fbe_namespaceObject = JSON.parse('{"id":"device/biostation_3/product-specifications","title":"제품 사양","description":"BioStation 3 제품에 대한 사양 정보입니다.","source":"@site/docs/device/biostation_3/product-specifications.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/product-specifications","permalink":"/docs/en/device/biostation_3/product-specifications","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/product-specifications.mdx","tags":[],"version":"current","frontMatter":{"id":"product-specifications","title":"제품 사양","description":"BioStation 3 제품에 대한 사양 정보입니다.","isTranslationMissing":true}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -149,7 +149,7 @@ const frontMatter = {
 	id: 'product-specifications',
 	title: '제품 사양',
 	description: 'BioStation 3 제품에 대한 사양 정보입니다.',
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -939,12 +939,6 @@ function _createMdxContent(props) {
           className: "annotation",
           id: "anno6",
           children: "6)"
-        }), " 표기된 최소 얼굴 인증 거리는 제품의 기본 설정이며, 권장하는 얼굴 인증 거리는 0.6~1.0m입니다."]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)("span", {
-          className: "annotation",
-          id: "anno7",
-          children: "7)"
         }), " 크리덴셜 없이 등록된 사용자 기준입니다."]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {

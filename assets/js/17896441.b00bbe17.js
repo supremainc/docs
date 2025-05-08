@@ -840,7 +840,7 @@ function DocItemLayout(param) {
 
 
 }),
-"9133": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"742": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2690,6 +2690,65 @@ function Jira(param) {
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/Productpart/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Productpart_styles_module = ({"product_parts":"product_parts_onew","absolute":"absolute_ttT6","right":"right_kGa2","desc":"desc_Lo6A"});
+;// CONCATENATED MODULE: ./src/components/Productpart/index.js
+
+
+
+
+
+function Productpart(param) {
+    let { src, maxHeight, maxWidth, children } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: "overflow-x",
+        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+            className: Productpart_styles_module.product_parts,
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
+                    src: (0,useBaseUrl/* default */.ZP)(src),
+                    className: "none",
+                    style: {
+                        maxHeight: maxHeight,
+                        maxWidth: maxWidth
+                    }
+                }),
+                children
+            ]
+        })
+    });
+}
+function Callout(param) {
+    let { children, width, position } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+        children: react.Children.map(children, (child)=>/*#__PURE__*/ react.isValidElement(child) ? /*#__PURE__*/ react.cloneElement(child, {
+                width,
+                position
+            }) : child)
+    });
+}
+function Item(param) {
+    let { children, width, position, top } = param;
+    let aligndir;
+    if (position === 'left') aligndir = 'right';
+    if (position === 'right') aligndir = 'left';
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: (0,clsx/* default */.Z)(Productpart_styles_module.absolute, Productpart_styles_module.desc),
+        style: {
+            width: width,
+            top: top,
+            ...position === 'left' ? {
+                left: 0
+            } : {
+                right: 0
+            },
+            textAlign: aligndir
+        },
+        children: children
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -3599,6 +3658,7 @@ const SvgIcoBack = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -3664,6 +3724,9 @@ const SvgIcoBack = _ref => {
     Badge: Badge,
     BugLists: BugLists,
     Jira: Jira,
+    Productpart: Productpart,
+    Callout: Callout,
+    Item: Item,
     IcLicense: ico_license,
     IcAdd: ico_add,
     IcClose: ico_close,

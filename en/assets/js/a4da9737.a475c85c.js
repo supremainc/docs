@@ -1229,8 +1229,11 @@ function getting_started_createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image} = _components;
+  }, {Callout, Image, Item, Productpart} = _components;
+  if (!Callout) _missingMdxReference("Callout", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Item) _missingMdxReference("Item", true);
+  if (!Productpart) _missingMdxReference("Productpart", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "구성품",
@@ -1414,10 +1417,64 @@ function getting_started_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "각-부분의-명칭-및-기능",
       children: "각 부분의 명칭 및 기능"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
+    }), "\n", (0,jsx_runtime.jsxs)(Productpart, {
       src: "/img/device/name-function-each-part-bs3.png",
-      className: "none",
-      alone: true
+      maxHeight: 570,
+      maxWidth: 570,
+      children: [(0,jsx_runtime.jsxs)(Callout, {
+        width: 160,
+        position: "left",
+        children: [(0,jsx_runtime.jsx)(Item, {
+          top: 33,
+          children: "적외선 카메라"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 137,
+          children: "LCD 화면"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 235,
+          children: "RF 카드 및 모바일 출입카드 인식부"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 350,
+          children: "스피커"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 398,
+          children: "이더넷"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 429,
+          children: "USB 확장 포트 (5핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 452,
+          children: "RS-485 (4핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 472,
+          children: "릴레이 (3핀)"
+        })]
+      }), (0,jsx_runtime.jsxs)(Callout, {
+        width: 160,
+        position: "right",
+        children: [(0,jsx_runtime.jsx)(Item, {
+          top: 33,
+          children: "비주얼 카메라"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 247,
+          children: "LED 상태 표시등"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 412,
+          children: "TTL 입력 (5핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 435,
+          children: "Wiegand 출력 (4핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 455,
+          children: "Wiegand 입력 (4핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 477,
+          children: "전원 (2핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 537,
+          children: "USB (Type-C) 메모리 슬롯"
+        })]
+      })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -3960,12 +4017,6 @@ function _createMdxContent(props) {
           className: "annotation",
           id: "anno6",
           children: "6)"
-        }), " 표기된 최소 얼굴 인증 거리는 제품의 기본 설정이며, 권장하는 얼굴 인증 거리는 0.6~1.0m입니다."]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)("span", {
-          className: "annotation",
-          id: "anno7",
-          children: "7)"
         }), " 크리덴셜 없이 등록된 사용자 기준입니다."]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
