@@ -4,7 +4,6 @@
       "label": "크리덴셜",
       "label_id": "specs.credentials.biometrics",
       "items": {
-
         "biometrics": {
           "label": "바이오 인식",
           "label_id": "specs.credentials.biometrics",
@@ -16,20 +15,24 @@
               "items": {
                 "auth_distance": {
                   "label": "인증 거리",
+                  "label_id": "specs.credentials.biometrics.face.auth_distance",
                   "value": "0.3 ~ 1.0 m",
                   "annotation_label": "anno1"
                 },
                 "auth_height": {
                   "label": "인증 높이",
+                  "label_id": "specs.credentials.biometrics.face.auth_height",
                   "value": "1.4 ~ 1.9 m"
                 },
                 "matching_speed": {
                   "label": "매칭 속도",
+                  "label_id": "specs.credentials.biometrics.face.matching_speed",
                   "value": "0.2초 이내"
                 },
                 "live_face_detection": {
                   "label": "위조 얼굴 검출",
-                  "value": "지원"
+                  "label_id": "specs.credentials.biometrics.face.live_face_detection",
+                  "value": true
                 }
               }
             }
