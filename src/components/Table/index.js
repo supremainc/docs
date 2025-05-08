@@ -12,17 +12,16 @@ export function Table({ children, className }) {
 export function Thead({ children }) {
   return (
     <thead>
-      <tr>
         {children}
-      </tr>
     </thead>
   )
 }
 
-export function Th({ children, colspan }) {
+export function Th({ children, colspan, rowspan }) {
   return (
     <th
       {...(colspan && {colspan: colspan})}
+      {...(rowspan && {rowspan: rowspan})}
     >{children}</th>
   )
 }
@@ -35,9 +34,9 @@ export function Tbody({children}) {
   )
 }
 
-export function Row({children}) {
+export function Row({children, className}) {
   return (
-    <tr>
+    <tr className={className}>
       {children}
     </tr>
   )

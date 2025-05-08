@@ -335,6 +335,12 @@ footer {
     font-weight: 600;
     // border-top: 1px dotted;
     padding-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+    .ico {
+      margin-top: -2px;
+      vertical-align: middle;
+      height: 30px;
+      width: auto;
+    };
   }
   h3 { 
     --ifm-h3-font-size: 1.5rem;
@@ -732,6 +738,18 @@ footer {
   table {
     width: 100%;
     display: table;
+    &.component {
+      table-layout: fixed;
+      tr.center td {
+        text-align: center;
+        p.hasimg img {
+          margin: 0 auto;
+        }
+      }
+      tr.white td {
+        background-color: #fff;
+      }
+    }
     &.col2-2-8 {
       td:first-of-type {
         width: 20%;
@@ -811,6 +829,12 @@ footer {
     }
     .text--left {
       padding-left: 0;
+    }
+    .text--center {
+      text-align: center;
+      p.hasimg img {
+        margin: 0 auto;
+      }
     }
   }
 

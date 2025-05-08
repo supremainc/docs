@@ -1,6 +1,6 @@
 ---
 id: installation
-title: 설치
+title: 설치하기
 description: Description
 keywords: [keyword1, keyword2]
 ---
@@ -32,7 +32,7 @@ keywords: [keyword1, keyword2]
     * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
 
     <Columns>
-    <Column className='text--left'>
+    <Column className='text--center'>
 
     <Image src='/img/device/installation-wall1-bs3.svg' className='none' alone />
 
@@ -48,7 +48,7 @@ keywords: [keyword1, keyword2]
 
     </Column>
 
-    <Column className='text--left'>
+    <Column className='text--center'>
     
     <Image src='/img/device/installation-wall2-bs3.svg' className='none' alone />
 
@@ -91,16 +91,35 @@ keywords: [keyword1, keyword2]
 
 * 전원 연결 시 BioStation 3와 전원 장치 간의 거리에 주의하세요. 장치와 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 장치와 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. BioStation 3는 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
 
-<div className='overflow-x'>
-
-| 케이블 규격 | \> | 최대 연장 길이 |
-| -- | -- | -- |
-| ^ | DC 24V | DC 12V |
-| 16 AWG | 150 m | 50 m |
-|18 AWG | 136 m | 30 m |
-|20 AWG | 90 m | 20 m |
-
-</div>
+<Table>
+<Thead>
+<Row>
+<Th rowspan='2'>케이블 규격</Th>
+<Th colspan='2'>최대 연장 길이</Th>
+</Row>
+<Row>
+<Th>DC 12V</Th>
+<Th>DC 24V</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>16 AWG</Td>
+<Td>50 m</Td>
+<Td>150 m</Td>
+</Row>
+<Row>
+<Td>18 AWG</Td>
+<Td>30 m</Td>
+<Td>136 m</Td>
+</Row>
+<Row>
+<Td>20 AWG</Td>
+<Td>20 m</Td>
+<Td>90 m</Td>
+</Row>
+</Tbody>
+</Table>
 
 * 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
 
@@ -222,7 +241,7 @@ Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연
 
 * 마스터 장치는 31개의 슬레이브 장치를 제어할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다.
 
-* 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+* 더 자세한 내용은 [슈프리마 기술 지원팀](CS@suprema.co.kr)에 문의하세요.
 
 :::
 
@@ -256,7 +275,7 @@ BioStation 3에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니�
 
 * 마스터 장치는 31개의 슬레이브 장치를 제어할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다.
 
-* 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+* 더 자세한 내용은 [슈프리마 기술 지원팀](CS@suprema.co.kr)에 문의하세요.
 
 :::
 
