@@ -1,0 +1,20 @@
+.product_parts {
+  position: relative;
+  width: fit-content;
+}
+
+.product_parts img {
+  width: fit-content;
+}
+
+.absolute {
+  position: absolute
+}
+
+.right {
+  text-align: right;
+}
+
+.desc {
+  font-size: .8rem;
+}
