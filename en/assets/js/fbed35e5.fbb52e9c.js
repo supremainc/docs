@@ -267,11 +267,11 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)("div", {
               className: "column small-l2",
               children: (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3", (0,jsx_runtime.jsx)("sup", {
+                children: ["125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3", (0,jsx_runtime.jsx)("sup", {
                   children: (0,jsx_runtime.jsx)("a", {
                     href: "#anno2"
                   })
-                }), ", FeliCa, iCLASS SE/SR/Seos"]
+                }), ", FeliCa"]
               })
             })]
           }), (0,jsx_runtime.jsxs)("div", {
