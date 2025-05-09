@@ -1,0 +1,41 @@
+.techspec {
+  width: 100%;
+  display: block;
+}
+
+.techspecSection {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid var(--ifm-color-border);
+  padding: 1.5rem 0;
+}
+
+.techspecSection.noborder {
+  border-bottom: none;
+}
+
+.techspecsRowheader {
+  float: left;
+  width: 22%;
+  font-size: 1.1rem;
+  color: var(--ifm-color-color-ol-gray);
+}
+
+.techspecsBody {
+  float: left;
+  padding-left: 1.5rem;
+  font-weight: 600;
+  width: 78%;
+}
+
+.column {
+  float: left;
+}
+
+.small_l1 {
+  width: 25%;
+}
+.small_l2 {
+  width: 75%;
+}

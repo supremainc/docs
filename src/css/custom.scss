@@ -826,6 +826,16 @@ footer {
     color: var(--ifm-color-markdown-link);
     font-weight: 600;
   }
+  sup {
+    // counter-reset: count;
+    counter-increment: count;
+  }
+  sup#dupl {
+    counter-increment: none;
+  }
+  sup a::before {
+    content: counter(count)  ")";
+  }
 
   .techspec {
     width: 100%;
@@ -833,9 +843,7 @@ footer {
     p {
       margin-bottom: 0;
     }
-    sup a::before {
-      content: counter(count)  ")";
-    }
+    
     .techspec-section.noborder {
       border-bottom: none;
     }
@@ -862,13 +870,8 @@ footer {
           margin-left: 35px;
         }
       }
-      sup {
-        // counter-reset: count;
-        counter-increment: count;
-      }
-      sup#dupl {
-        counter-increment: none;
-      }
+      
+      
       .techspecs-body {
         float: left;
         padding-left: 1.5rem;

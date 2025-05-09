@@ -5,12 +5,17 @@ description: BioStation 3 제품에 대한 사양 정보입니다.
 ---
 
 import Face from '@site/static/img/menus/spec-credential-face.svg';
+import { CredentialSectioin } from '@site/src/components/Specs';
+import specs from '@site/static/specs/bs3_specs.json';
+
 
 {/* <div className='techspec-section techspecs-header-row'>
   <div className='techspecs-rowheader'>&nbsp;</div>
   <div className='techspecs-columnheader'>BS3-DB</div>
   <div className='techspecs-columnheader'>BS3-APWB</div>
 </div> */}
+
+<CredentialSectioin data={specs.biostation3.credentials} />
 
 ## 크리덴셜
 

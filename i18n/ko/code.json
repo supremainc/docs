@@ -391,5 +391,26 @@
   },
   "biostar2.install.complete": {
     "message": "완료"
+  },
+  "specs.credentials": {
+    "message": "크리덴셜"
+  },
+  "specs.credentials.biometrics": {
+    "message": "바이오 인식"
+  },
+  "specs.credentials.rfcard": {
+    "message": "RF 카드"
+  },
+  "specs.credentials.rf_distance": {
+    "message": "RF 인식 거리"
+  },
+  "specs.credentials.mobile": {
+    "message": "모바일"
+  },
+  "specs.credentials.keypad": {
+    "message": "스크램블 키패드(PIN)"
+  },
+  "specs.credentials.qr_barcode": {
+    "message": "QR/바코드"
   }
 }
