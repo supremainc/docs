@@ -97,7 +97,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioStation 3',
-      url: `https://supremainc.github.io/docs/device/biostation_3`,
+      url: `/device/biostation_3`,
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
       desc: 'The New Door Access Experience'
     },
