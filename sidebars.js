@@ -188,6 +188,8 @@ const sidebars = {
             'device/biostation_3/admin-menu',
             'device/biostation_3/user',
             'device/biostation_3/authentication',
+            'device/biostation_3/settings',
+            'device/biostation_3/event-log',
           ],
         },
         'device/biostation_3/troubleshooting',
