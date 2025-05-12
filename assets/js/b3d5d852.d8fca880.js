@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-getting-started-mdx-b3d.json
-var site_docs_device_biostation_3_getting_started_mdx_b3d_namespaceObject = JSON.parse('{"id":"device/biostation_3/getting-started","title":"시작하기","description":"Description","source":"@site/docs/device/biostation_3/getting-started.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/getting-started","permalink":"/docs/en/device/biostation_3/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"Description","keywords":["구성품","명칭 및 기능","케이블 및 커넥터"],"isTranslationMissing":true},"sidebar":"bioStation3","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/en/device/biostation_3/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/en/device/biostation_3/installation"}}')
+var site_docs_device_biostation_3_getting_started_mdx_b3d_namespaceObject = JSON.parse('{"id":"device/biostation_3/getting-started","title":"시작하기","description":"Description","source":"@site/docs/device/biostation_3/getting-started.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/getting-started","permalink":"/docs/device/biostation_3/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"Description","keywords":["구성품","명칭 및 기능","케이블 및 커넥터"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/device/biostation_3/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/biostation_3/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -156,7 +156,7 @@ const getting_started_frontMatter = {
 		'명칭 및 기능',
 		'케이블 및 커넥터'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const getting_started_contentTitle = undefined;
 
@@ -229,7 +229,6 @@ const getting_started_toc = [{
 }];
 function getting_started_createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
@@ -366,13 +365,6 @@ function getting_started_createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["제품 사용에 대한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://www.supremainc.com",
-              children: "슈프리마 웹 사이트"
-            }), "에 접속하여 사용자 가이드를 확인하세요."]
           }), "\n"]
         }), "\n"]
       })

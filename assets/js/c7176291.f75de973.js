@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-user-mdx-c71.json
-var site_docs_device_biostation_3_user_mdx_c71_namespaceObject = JSON.parse('{"id":"device/biostation_3/user","title":"사용자","description":"사용자 정보를 등록, 편집, 삭제할 수 있으며, 등록된 사용자 현황도 확인할 수 있습니다.","source":"@site/docs/device/biostation_3/user.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/user","permalink":"/docs/en/device/biostation_3/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"사용자","description":"사용자 정보를 등록, 편집, 삭제할 수 있으며, 등록된 사용자 현황도 확인할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"bioStation3","previous":{"title":"관리자 메뉴","permalink":"/docs/en/device/biostation_3/admin-menu"},"next":{"title":"인증","permalink":"/docs/en/device/biostation_3/authentication"}}')
+var site_docs_device_biostation_3_user_mdx_c71_namespaceObject = JSON.parse('{"id":"device/biostation_3/user","title":"사용자","description":"사용자 정보를 등록, 편집, 삭제할 수 있으며, 등록된 사용자 현황도 확인할 수 있습니다.","source":"@site/docs/device/biostation_3/user.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/user","permalink":"/docs/device/biostation_3/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"사용자","description":"사용자 정보를 등록, 편집, 삭제할 수 있으며, 등록된 사용자 현황도 확인할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"관리자 메뉴","permalink":"/docs/device/biostation_3/admin-menu"},"next":{"title":"인증","permalink":"/docs/device/biostation_3/authentication"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'keyword1',
 		'keyword2'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -105,12 +105,12 @@ function _createMdxContent(props) {
           }), "을 선택한 뒤 원하는 항목을 설정하세요.", (0,jsx_runtime.jsx)("br", {}), "사용자 정보 등록은 2단계로 진행되며, 일부 옵션은 인증 수단을 등록한 뒤에 활성화됩니다."]
         }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
           children: [(0,jsx_runtime.jsx)(Column, {
-            className: "text--center",
+            className: "text--left",
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/device-user-add.png"
             })
           }), (0,jsx_runtime.jsx)(Column, {
-            className: "text--center",
+            className: "text--left",
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/device-user-add1.png"
             })
