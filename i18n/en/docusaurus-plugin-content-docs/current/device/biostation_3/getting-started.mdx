@@ -1,0 +1,289 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords: [Components, Name, Function, Cable, Connector]
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-bs3.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioStation 3</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Drilling Template</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Connection Cables</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+<Td>PVC Anchors x2</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+* Components may vary according to the installation environment.
+
+* When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+:::
+
+## Name and Function of Each Part
+
+<Productpart src='/img/device/name-function-each-part-bs3.svg' maxHeight={570} maxWidth={570}>
+<Callout width={160} position='left'>
+
+<Item top={38}>Microphone</Item>
+
+<Item top={139}>Display</Item>
+
+<Item top={237}>RF card and mobile access<br/>card authentication unit</Item>
+
+<Item top={347}>Speaker</Item>
+
+<Item top={395}>Ethernet</Item>
+
+<Item top={426}>USB expansion port (5-pin)</Item>
+
+<Item top={447}>RS-485 (4-pin)</Item>
+
+<Item top={468}>Relay (3-pin)</Item>
+
+</Callout>
+<Callout width={160} position='right'>
+
+<Item top={15}>Infrared camera</Item>
+
+<Item top={51}>Visual camera</Item>
+
+<Item top={249}>LED indicator</Item>
+
+<Item top={409}>TTL input (5-pin)</Item>
+
+<Item top={432}>Wiegand output (4-pin)</Item>
+
+<Item top={452}>Wiegand input (4-pin)</Item>
+
+<Item top={474}>Power supply (2-pin)</Item>
+
+<Item top={534}>USB (Type-C) memory slot</Item>
+
+</Callout>
+</Productpart>
+
+* **Microphone**: Transmits the voice of the user when the interphone is connected.
+
+    * Covering or blocking the microphone may interfere with voice transmission.
+
+* **Infrared camera**: Capture the infrared face image.
+
+* **Visual camera**: Capture an actual face image.
+
+* **Display**: Provides a UI for operation.
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+    * Green: Authentication success.
+
+    * Red: Authentication failure.
+
+    * Blue: Normal operation.
+
+    * Blue/Green blinking:
+
+        * Fails to receive an IP address when <Cmd>DHCP</Cmd> is enabled.
+
+        * Disconnection with the master device when in <Cmd>Slave</Cmd> mode.
+
+    * Red/Purple blinking: Device is locked.
+
+    * Yellow blinking: Waiting for an input.
+
+* **Speaker**: Delivers sound.
+
+* **Ethernet**: Connect the Ethernet cable.
+
+* **TTL input (5-pin)**: Connect the TTL input cable.
+
+* **USB expansion port (5-pin)**: Connect other accessory products.
+
+* **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
+
+* **Wiegand input (4-pin)**: Connect the Wiegand Input cable.
+
+* **RS-485 (4-pin)**: Connect the RS-485 cable.
+
+* **Relay (3-pin)**: Connect the Relay cable.
+
+* **Power supply (2-pin)**: Connects the power supply cable.
+
+* **USB (Type-C) memory slot**: Connects the USB memory.
+
+## Cables and Connectors
+
+### Power supply
+
+<Image src='/img/device/cable-power-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | PWR +VDC | Red (White stripe) |
+| 2 | PWR GND | Black (White stripe) |
+
+</div>
+
+### Relay
+
+<Image src='/img/device/cable-relay-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | RLY NO | White |
+| 2 | RLY COM | Blue |
+| 3 | RLY NC | Orange |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | 485 TRXP | Blue |
+| 2 | 485 TRXN | Yellow |
+| 3 | 485 GND | Black |
+| 4 | SH GND | Gray |
+
+</div>
+
+### TTL Input
+
+<Image src='/img/device/cable-ttl-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | TTL IN0 | Red |
+| 2 | TTL IN1 | Yellow |
+| 3 | TTL IN2 | Orange |
+| 4 | TTL GND | Black |
+| 5 | SH GND | Gray |
+
+</div>
+
+### Wiegand Input
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | WG D0 | Green |
+| 2 | WG D1 | White |
+| 3 | WG GND | Black |
+| 4 | SH GND | Gray |
+
+</div>
+
+### Wiegand Output
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name | Color |
+| -- | -- | -- |
+| 1 | WG D0 | Green |
+| 2 | WG D1 | White |
+| 3 | WG GND | Black |
+| 4 | SH GND | Gray |
+
+</div>
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA />
+
+## Note for QR Code Usage and Device License
+
+### How to scan a QR code
+
+You can issue a QR code to a user and use it as an authentication method. Scan the QR code properly by following the instructions on the screen to increase the recognition rate.
+
+<Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
+
+* Keep 30 ~ 40 cm of distance between the device’s camera and the QR code.
+
+* Position the QR code in the center of the scan screen of the device.
+
+* When authenticating with the QR code downloaded to your smartphone, adjust the brightness of your smartphone so that the device can read the QR code clearly.
+
+* If do not follow the instructions on the screen, it may take a long time to scan the QR code, or it may fail.
+
+### Notes for Device License
+
+* Using the QR Code authentication requires a separate device license. Contact the place of purchase to issue a device license.
+
+* The device license file is an encrypted file and cannot be modified arbitrarily.
+
+* Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
