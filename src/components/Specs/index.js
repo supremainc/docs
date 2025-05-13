@@ -1,37 +1,67 @@
+import React from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {translate} from '@docusaurus/Translate';
 import Head from '@site/src/components/Head';
 import clsx from 'clsx';
-import Face from '@site/static/img/menus/spec-credential-face.svg';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import glossary_ko from '@site/i18n/ko/glossary.json';
+import glossary_en from '@site/i18n/en/glossary.json';
+import DimenW from '@site/static/img/common/ico-w.svg';
+import DimenH from '@site/static/img/common/ico-h.svg';
+import DimenD from '@site/static/img/common/ico-d.svg';
+import Face from '@site/static/img/menus/spec-credential-face.svg';
+
+const glossaryMap = {
+  ko: glossary_ko,
+  en: glossary_en,
+};
 
 // 어노테이션 렌더링 유틸
 function AnnotationSup({ id }) {
   if (!id) return null;
   return (
-    <sup>
+    <sup id={`${id}_dest`}>
       <a href={`#${id}`}></a>
     </sup>
   );
 }
 
-function SupportedType({ type }) {
+export function Anno({ id, children }) {
+  return (
+    <Link to={`#${id}_dest`}><span calssName='annotation' id={id}>{children}</span></Link>
+  )
+}
+
+function SupportedType({ supported, annot }) {
   let supportedType;
-  if (type === true) {
-    supportedType = '지원'
+  if (supported === true) {
+    supportedType = translate({id: 'specs.common.supported'});
   } else {
-    supportedType = '미지원'
+    supportedType = translate({id: 'specs.common.Notsupported'});
   }
-  return supportedType
+
+  return (
+    <>
+      {supportedType}
+      {annot && <AnnotationSup id={annot} />}
+    </>
+  );
+}
+
+function Description({ contents }) {
+  return (
+    <>{contents}</>
+  )
 }
 
 
-export function CredentialSectioin({data}) {
+export function SpecSectioin({data}) {
+  const specs = data.items;
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  
-  const credentials = data.items;
-  console.log(credentials);
+  const glossary = glossaryMap[currentLocale] || glossary_en;
+
   return (
     <>
       <Head level={2} hashid={data.label_id}>
@@ -39,30 +69,104 @@ export function CredentialSectioin({data}) {
       </Head>
 
       <div className={styles.techspec}>
-        {Object.values(credentials).map((item, index) => (
-          <div className={styles.techspecSection}>
+        {Object.values(specs).map((item, index) => (
+          <div className={styles.techspecSection} key={item.label_id || index}>
             {/* techspecsRowheader */}
-            <div key={index} className={styles.techspecsRowheader}>
-              {translate({id: item.label_id})}
+            <div className={styles.techspecsRowheader}>
+              {item.label_link ? (
+                <>
+                  <Link to={item.label_link}>
+                    {translate({id: item.label_id})}
+                    <div className="tooltip" dangerouslySetInnerHTML={{__html: glossary[item.label_link.split('#')[1]].description}}/>
+                  </Link>
+                </>
+              ) : (
+                <>{translate({id: item.label_id})}</>
+              )}
               {item.annotation_label && <AnnotationSup id={item.annotation_label} />}
             </div>
+            
+            {/* type에 따라 분기 techspecsBody */}
+            {item.type === 'biometric' && (
+              // type이 biometric인 경우
+              <div className={styles.techspecsBody}>
+                {item.items
+                  ? Object.values(item.items).map((subitem) => (
+                      <React.Fragment key={subitem.label_id || subitem.label}>
+                        <div className={clsx(styles.column, styles.small_l1)}>
+                          {subitem.type === 'face' && (
+                            <Face width='80' height='80' />
+                          )}
+                        </div>
+                        <div className={clsx(styles.column, styles.small_l2)}>
+                          <p><strong>
+                            {translate({id: subitem.label_id})}
+                          </strong></p>
+                          <ul>
+                            {Object.values(subitem.items).map((subsubitem) => (
+                              <li key={subsubitem.label_id || subsubitem.label}>
+                                {translate({id: subsubitem.label_id})}
+                                {subsubitem.annotation_label && <AnnotationSup id={subsubitem.annotation_label} />}
+                                : {
+                                  typeof subsubitem.value === 'boolean' ? (
+                                    <SupportedType supported={subsubitem.value} annot={subsubitem.annotation_value} />
+                                  ) : typeof subsubitem.value === 'string' ? (
+                                    <Description contents={subsubitem.value} />
+                                  ) : null
+                                }
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </React.Fragment>
+                    ))
+                  : null
+                }
+              </div>
+            )}
 
-            {/* techspecsBody */}
-            <div key={index} className={styles.techspecsBody}>
-              {item.items
-                ? Object.values(item.items).map((subitem, subindex) => (
-                    <div key={subindex}>{subitem.label}</div>
-                  ))
-                : (
-                  <div>
-                    {item.value.typeof === 'boolean' ? (
-                      <SupportedType type={item.value} />
-                    ) : item.value.typeof === 'string' ? (
-                      {item.value}
-                    )}
-                  </div>
-                )}
-            </div>
+            {/* type에 따라 분기 model */}
+            {item.type === 'model' && (
+              <div className={styles.techspecsBody}>
+                {Object.values(item.items).map((subitem, subindex) => (
+                    <div key={subindex} className={styles.row}>
+                      <div className={clsx(styles.column, styles.small_l1)}>
+                        {subitem.label}
+                      </div>
+                      <div className={clsx(styles.column, styles.small_l2)}>
+                        <DescObj contents={subitem.value} />
+                      </div>
+                    </div>
+                ))}
+              </div>
+            )}
+
+            {!item.type && (
+              // type이 없는 경우
+              <div className={styles.techspecsBody}>
+                {item.items
+                  ? Object.values(item.items).map((subitem, subindex) => (
+                      <div key={subindex}>
+                        {subitem.label}
+                        {subitem.annotation_label && <AnnotationSup id={subitem.annotation_label} />}
+                      </div>
+                    ))
+                  : typeof item.value === 'boolean' ? (
+                      <SupportedType supported={item.value} annot={item.annotation_value} />
+                    ) : typeof item.value === 'string' ? (
+                      <>
+                        <Description contents={item.value} />
+                        {item.annotation_value && <AnnotationSup id={item.annotation_value} />}
+                      </>
+                    ) : typeof item.value === 'object' ? (
+                      <>
+                        <DescObj contents={item.value} />
+                        {item.annotation_value && <AnnotationSup id={item.annotation_value} />}
+                      </>
+                    ) : null
+                }
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -70,4 +174,102 @@ export function CredentialSectioin({data}) {
   )
 }
 
+function DescObj( {contents} ) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  // console.log(typeof contents[currentLocale]);
+  if (typeof contents[currentLocale] === 'string') {
+    return (
+      <>{contents[currentLocale]}</>
+    )
+  } else if (typeof contents[currentLocale] === 'object') {
+    return (
+      <ul>
+        {Object.values(contents[currentLocale]).map((item, index) => (
+          <li key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    )
+  } else if (typeof contents === 'object') {
+    return (
+      <ul>
+        {Object.values(contents).map((item, index) => (
+          <li key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    )
+  } else if (typeof contents === 'boolean') {
+    return (
+      <SupportedType suppported={contents} />
+    )
+  } else if (typeof contents[currentLocale] === 'undefined') {
+    return (
+      <p dangerouslySetInnerHTML={{__html: contents}}></p>
+    )
+  }
+}
 
+export function SpecSizeWieght({data}) {
+  const specs = data.items
+  return (
+    <>
+      <Head level={2} hashid={data.label_id}>
+        {translate({id: `${data.label_id}`})}
+      </Head>
+
+      <div className={styles.techspec}>
+        {Object.values(specs).map((item, index) => (
+          <div className={clsx(styles.techspecSection, styles.noborder)} key={item.label_id || index}>
+            <div className={styles.techspecsRowheader}>
+              {translate({id: item.label_id})}
+            </div>
+            <div className={styles.techspecsBody}>
+              <div className={clsx(styles.column, styles.small_c5, styles.modelimg)}>
+                <img src={useBaseUrl(item.product_img)} />
+              </div>
+              <div className={clsx(styles.column, styles.small_c5, styles.desc)}>
+                <ul>
+                  <li>
+                    {translate({id: 'specs.size_wieght.size'})}:&nbsp;
+                    <span className={styles.size}>
+                      <DimenW /> {item.size.width}mm
+                      × <DimenH /> {item.size.height}mm
+                      {item.size.depth && (
+                        <>
+                          &nbsp;x <DimenD /> {item.size.depth}mm
+                        </>
+                      )}
+                    </span>
+                  </li>
+                  <li>
+                    {translate({id: 'specs.size_wieght.weight'})}:&nbsp;
+                    {typeof item.weight === 'string' && (
+                      <>
+                        {item.weight}
+                        {item.weight_include && (
+                          <>&nbsp;{translate({id: 'specs.size_wieght.bracket.weight_include'})}</>
+                        )}
+                      </>
+                    )}
+                    {typeof item.weight === 'object' && (
+                      <ul>
+                        {Object.values(item.weight).map((subitem, subindex) => (
+                          <li key={subindex}>
+                            {subitem}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )
+}

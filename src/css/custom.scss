@@ -643,6 +643,8 @@ footer {
     font-weight: 600;
     color: var(--ifm-color-cmd);
     position: relative;
+  }
+  span.cmd, a {
     .tooltip {
       font-weight: 400;
       display: none;
@@ -657,7 +659,7 @@ footer {
       left: 50%;
       top: 130%;
       border-radius: 10px;
-      transform: translateX(-50%);
+      // transform: translateX(-50%);
     }
     .tooltip::before{
       width: 0;
@@ -665,7 +667,7 @@ footer {
       content: '';
       position: absolute;
       top: -10px;
-      left: 47%;
+      left: 3%;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-bottom: 10px solid rgba(0, 0, 0, 0.7);
@@ -821,11 +823,11 @@ footer {
     }
   }
 
-  // techspec
   span.annotation {
     color: var(--ifm-color-markdown-link);
     font-weight: 600;
   }
+  // techspec
   sup {
     // counter-reset: count;
     counter-increment: count;
@@ -835,120 +837,6 @@ footer {
   }
   sup a::before {
     content: counter(count)  ")";
-  }
-
-  .techspec {
-    width: 100%;
-    display: block;
-    p {
-      margin-bottom: 0;
-    }
-    
-    .techspec-section.noborder {
-      border-bottom: none;
-    }
-    .techspec-section {
-      width: 100%;
-      display: flex;
-      position: relative;
-      border-bottom: 1px solid var(--ifm-color-border);
-      padding: 1.5rem 0;
-      h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-      }
-      .techspecs-rowheader {
-        float: left;
-        width: 22%;
-        font-size: 1.1rem;
-        color: var(--ifm-color-color-ol-gray);
-      }
-      .techspecs-size, .techspecs-weight {
-        width: 100%;
-        display: flex;
-        .small-c5 + .small-c5 {
-          margin-left: 35px;
-        }
-      }
-      
-      
-      .techspecs-body {
-        float: left;
-        padding-left: 1.5rem;
-        font-weight: 600;
-        width: 78%;
-        .modelimg {
-          background: #fff;
-          text-align: center;
-          padding: .5rem;
-        }
-        .desc {
-          padding-left: 2rem;
-        }
-        .small-c5 {
-          width: 50%;
-          position: relative;
-          ul {
-            align-content: center;
-            text-align: left;
-          }
-          img {
-            display: block;
-            border: none;
-            margin: 0 auto;
-            max-width: 430;
-          }
-          figure {
-            position: relative;
-            margin: 0;
-            figcaption {
-              font-size: .85rem;
-            }
-          }
-          .absolute {
-            position: absolute;
-            font-size: .75rem;
-          }
-        }
-        .row {
-          display: flex;
-          margin: 0 0;
-        }
-        .row + .row {
-          margin-top: 1rem;
-        }
-        ul {
-          margin: 0;
-          li {
-            margin: 0;
-          }
-        }
-        .column {
-          float: left;
-        }
-        .small-l1 {
-          width: 25%;
-        }
-        .small-l2 {
-          width: 75%;
-        }
-      }
-      .techspecs-body.center {
-        text-align: center;
-      }
-    }
-  }
-  .with-2-columns {
-    .techspecs-columnheader, .techspecs-column {
-      float: left;
-      width: 36%;
-      margin-left: 1rem
-    }
-    .techspecs-columnheader {
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.8rem;
-    }
   }
 }
 

@@ -373,5 +373,197 @@
   },
   "biostar2.install.complete": {
     "message": "Finish"
+  },
+  "specs.common.supported": {
+    "message": "Supported"
+  },
+  "specs.common.Notsupported": {
+    "message": "Not supported"
+  },
+  "specs.credentials": {
+    "message": "Credentials"
+  },
+  "specs.credentials.biometrics": {
+    "message": "Biometric"
+  },
+  "specs.credentials.biometrics.face": {
+    "message": "Face"
+  },
+  "specs.credentials.rfcard": {
+    "message": "RF Card"
+  },
+  "specs.credentials.rf_distance": {
+    "message": "RF Read Range"
+  },
+  "specs.credentials.mobile": {
+    "message": "Mobile"
+  },
+  "specs.credentials.keypad": {
+    "message": "Scramble Keypad (PIN)"
+  },
+  "specs.credentials.qr_barcode": {
+    "message": "QR/Barcode"
+  },
+  "specs.credentials.biometrics.face.auth_distance": {
+    "message": "Authentication Distance"
+  },
+  "specs.credentials.biometrics.face.auth_height": {
+    "message": "Authentication Height"
+  },
+  "specs.credentials.biometrics.face.matching_speed": {
+    "message": "Matching Speed"
+  },
+  "specs.credentials.biometrics.face.live_face_detection": {
+    "message": "Live Face Detection"
+  },
+  "specs.general": {
+    "message": "General"
+  },
+  "specs.general.cpu": {
+    "message": "CPU"
+  },
+  "specs.general.memory": {
+    "message": "Memory"
+  },
+  "specs.general.crypto_chip": {
+    "message": "Crypto Chip"
+  },
+  "specs.general.lcd_type": {
+    "message": "Display"
+  },
+  "specs.general.lcd_resolution": {
+    "message": "Display Resolution"
+  },
+  "specs.general.sound": {
+    "message": "Sound"
+  },
+  "specs.general.operating_temp": {
+    "message": "Operating Temperature"
+  },
+  "specs.general.storage_temp": {
+    "message": "Storage Temperature"
+  },
+  "specs.general.operating_humidity": {
+    "message": "Operating Humidity"
+  },
+  "specs.general.storage_humidity": {
+    "message": "Storage Humidity"
+  },
+  "specs.general.camera": {
+    "message": "Camera"
+  },
+  "specs.general.ip_rating": {
+    "message": "IP Rating"
+  },
+  "specs.general.ik_rating": {
+    "message": "IK Rating"
+  },
+  "specs.general.certifications": {
+    "message": "Certifications"
+  },
+  "specs.storage": {
+    "message": "Capacity"
+  },
+  "specs.storage.max_users": {
+    "message": "Max. User"
+  },
+  "specs.storage.max_credentials_1n": {
+    "message": "Max. Credentials (1:N)"
+  },
+  "specs.storage.max_credentials_1on1": {
+    "message": "Max. Credentials (1:1)"
+  },
+  "specs.storage.max_text_logs": {
+    "message": "Max. Text logs"
+  },
+  "specs.storage.max_image_logs": {
+    "message": "Max. Image logs"
+  },
+  "specs.interface": {
+    "message": "Interfaces"
+  },
+  "specs.interface.ethernet": {
+    "message": "Ethernet"
+  },
+  "specs.interface.wifi": {
+    "message": "Wi-Fi"
+  },
+  "specs.interface.rs485": {
+    "message": "RS-485"
+  },
+  "specs.interface.rs485_protocol": {
+    "message": "RS-485 Communication Protocol"
+  },
+  "specs.interface.wiegand": {
+    "message": "Wiegand"
+  },
+  "specs.interface.ttl_input": {
+    "message": "TTL Input"
+  },
+  "specs.interface.relay": {
+    "message": "Relay"
+  },
+  "specs.interface.poe": {
+    "message": "PoE+"
+  },
+  "specs.interface.interphone": {
+    "message": "Intercom"
+  },
+  "specs.interface.rtsp": {
+    "message": "RTSP"
+  },
+  "specs.interface.usb": {
+    "message": "USB"
+  },
+  "specs.interface.usb_ext": {
+    "message": "USB Expansion Port"
+  },
+  "specs.interface.tamper": {
+    "message": "Tamper"
+  },
+  "specs.power": {
+    "message": "Electrical"
+  },
+  "specs.power.power": {
+    "message": "Power"
+  },
+  "specs.power.switch_input_vih": {
+    "message": "Switch Input VIH"
+  },
+  "specs.power.switch_input_vil": {
+    "message": "Switch Input VIL"
+  },
+  "specs.power.switch_pullup": {
+    "message": "Switch Pull-up Resistance"
+  },
+  "specs.power.wiegand_voh": {
+    "message": "Wiegand Output VOH"
+  },
+  "specs.power.wiegand_vol": {
+    "message": "Wiegand Output VOL"
+  },
+  "specs.power.wiegand_pullup": {
+    "message": "Wiegnad Output Pull-up Resistance"
+  },
+  "specs.power.relay": {
+    "message": "Relay"
+  },
+  "specs.size_wieght": {
+    "message": "Dimensions and Weight"
+  },
+  "specs.size_wieght.size": {
+    "message": "Dimensions"
+  },
+  "specs.size_wieght.weight": {
+    "message": "Weight"
+  },
+  "specs.size_wieght.device": {
+    "message": "Device"
+  },
+  "specs.size_wieght.bracket": {
+    "message": "Bracket"
+  },
+  "specs.size_wieght.bracket.weight_include": {
+    "message": "(Including washers and bolts)"
   }
 }

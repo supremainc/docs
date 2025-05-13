@@ -392,11 +392,20 @@
   "biostar2.install.complete": {
     "message": "완료"
   },
+  "specs.common.supported": {
+    "message": "지원"
+  },
+  "specs.common.Notsupported": {
+    "message": "미지원"
+  },
   "specs.credentials": {
     "message": "크리덴셜"
   },
   "specs.credentials.biometrics": {
     "message": "바이오 인식"
+  },
+  "specs.credentials.biometrics.face": {
+    "message": "얼굴"
   },
   "specs.credentials.rfcard": {
     "message": "RF 카드"
@@ -412,5 +421,167 @@
   },
   "specs.credentials.qr_barcode": {
     "message": "QR/바코드"
+  },
+  "specs.credentials.biometrics.face.auth_distance": {
+    "message": "인증 거리"
+  },
+  "specs.credentials.biometrics.face.auth_height": {
+    "message": "인증 높이"
+  },
+  "specs.credentials.biometrics.face.matching_speed": {
+    "message": "매칭 속도"
+  },
+  "specs.credentials.biometrics.face.live_face_detection": {
+    "message": "위조 얼굴 검출"
+  },
+  "specs.general": {
+    "message": "일반"
+  },
+  "specs.general.cpu": {
+    "message": "CPU"
+  },
+  "specs.general.memory": {
+    "message": "메모리"
+  },
+  "specs.general.crypto_chip": {
+    "message": "크립토 칩"
+  },
+  "specs.general.lcd_type": {
+    "message": "LCD 종류"
+  },
+  "specs.general.lcd_resolution": {
+    "message": "LCD 해상도"
+  },
+  "specs.general.sound": {
+    "message": "소리"
+  },
+  "specs.general.operating_temp": {
+    "message": "동작 온도"
+  },
+  "specs.general.storage_temp": {
+    "message": "보관 온도"
+  },
+  "specs.general.operating_humidity": {
+    "message": "동작 습도"
+  },
+  "specs.general.storage_humidity": {
+    "message": "보관 습도"
+  },
+  "specs.general.camera": {
+    "message": "카메라"
+  },
+  "specs.general.ip_rating": {
+    "message": "IP 등급"
+  },
+  "specs.general.ik_rating": {
+    "message": "IK 등급"
+  },
+  "specs.general.certifications": {
+    "message": "인증"
+  },
+  "specs.storage": {
+    "message": "저장 용량"
+  },
+  "specs.storage.max_users": {
+    "message": "최대 사용자 수"
+  },
+  "specs.storage.max_credentials_1n": {
+    "message": "최대 크리덴셜 수 (1:N)"
+  },
+  "specs.storage.max_credentials_1on1": {
+    "message": "최대 크리덴셜 수 (1:1)"
+  },
+  "specs.storage.max_text_logs": {
+    "message": "최대 텍스트 로그 수"
+  },
+  "specs.storage.max_image_logs": {
+    "message": "최대 이미지 로그 수"
+  },
+  "specs.interface": {
+    "message": "인터페이스"
+  },
+  "specs.interface.ethernet": {
+    "message": "이더넷"
+  },
+  "specs.interface.wifi": {
+    "message": "Wi-Fi"
+  },
+  "specs.interface.rs485": {
+    "message": "RS-485"
+  },
+  "specs.interface.rs485_protocol": {
+    "message": "RS-485 통신 프로토콜"
+  },
+  "specs.interface.wiegand": {
+    "message": "Wiegand"
+  },
+  "specs.interface.ttl_input": {
+    "message": "TTL 입력"
+  },
+  "specs.interface.relay": {
+    "message": "릴레이"
+  },
+  "specs.interface.poe": {
+    "message": "PoE+"
+  },
+  "specs.interface.interphone": {
+    "message": "인터폰"
+  },
+  "specs.interface.rtsp": {
+    "message": "RTSP"
+  },
+  "specs.interface.usb": {
+    "message": "USB"
+  },
+  "specs.interface.usb_ext": {
+    "message": "USB 확장 포트"
+  },
+  "specs.interface.tamper": {
+    "message": "템퍼"
+  },
+  "specs.power": {
+    "message": "전기 규격"
+  },
+  "specs.power.power": {
+    "message": "전원"
+  },
+  "specs.power.switch_input_vih": {
+    "message": "스위치 입력 VIH"
+  },
+  "specs.power.switch_input_vil": {
+    "message": "스위치 입력 VIL"
+  },
+  "specs.power.switch_pullup": {
+    "message": "스위치 풀업 저항"
+  },
+  "specs.power.wiegand_voh": {
+    "message": "Wiegand 출력 VOH"
+  },
+  "specs.power.wiegand_vol": {
+    "message": "Wiegand 출력 VOL"
+  },
+  "specs.power.wiegand_pullup": {
+    "message": "Wiegnad 출력 풀업 저항"
+  },
+  "specs.power.relay": {
+    "message": "릴레이"
+  },
+  "specs.size_wieght": {
+    "message": "크기 및 무게"
+  },
+  "specs.size_wieght.size": {
+    "message": "크기"
+  },
+  "specs.size_wieght.weight": {
+    "message": "무게"
+  },
+  "specs.size_wieght.device": {
+    "message": "장치"
+  },
+  "specs.size_wieght.bracket": {
+    "message": "브라켓"
+  },
+  "specs.size_wieght.bracket.weight_include": {
+    "message": "(와셔 및 볼트 포함)"
   }
 }
