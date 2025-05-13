@@ -847,14 +847,18 @@ footer {
     }
   }
 
-  span.annotation {
-    color: var(--ifm-color-markdown-link);
+  span.annotation a {
+    color: var(--ifm-color-cmd);
     font-weight: 600;
   }
   // techspec
   sup {
     // counter-reset: count;
     counter-increment: count;
+    a {
+      color: var(--ifm-color-cmd);
+      font-weight: 600;
+    }
   }
   sup#dupl {
     counter-increment: none;

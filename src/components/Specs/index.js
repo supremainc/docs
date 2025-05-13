@@ -30,7 +30,7 @@ function AnnotationSup({ id }) {
 
 export function Anno({ id, children }) {
   return (
-    <Link to={`#${id}_dest`}><span calssName='annotation' id={id}>{children}</span></Link>
+    <span className='annotation' id={id}><Link to={`#${id}_dest`}>{children}</Link></span>
   )
 }
 
