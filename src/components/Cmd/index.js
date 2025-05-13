@@ -57,7 +57,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
     if (tip) {
       const glossary = glossaryMap[currentLocale] || glossary_en;
       desc = glossary[tip]?.description;
-      console.log('desc', desc);
+      // console.log('desc', desc);
     }
     
     if (!localeText) {

@@ -26,6 +26,7 @@ import Badge from '@site/src/components/Badge';
 import BugLists from '@site/src/components/BugLists';
 import Jira from '@site/src/components/Jira';
 import { Productpart, Callout, Item } from '@site/src/components/Productpart';
+import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -92,6 +93,7 @@ export default {
     BugLists,
     Jira,
     Productpart, Callout, Item,
+    SpecSectioin, SpecSizeWieght, Anno,
     IcLicense,
     IcAdd,
     IcClose,
