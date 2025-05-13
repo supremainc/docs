@@ -1214,7 +1214,6 @@ function Head(param) {
     if (level === 'none') {
         return null;
     }
-    console.log(children);
     if (!hashid) {
         hid = children.join("_");
     } else {
@@ -2905,11 +2904,11 @@ function AnnotationSup(param) {
 }
 function Anno(param) {
     let { id, children } = param;
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
-        to: `#${id}_dest`,
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-            calssName: "annotation",
-            id: id,
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+        className: "annotation",
+        id: id,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+            to: `#${id}_dest`,
             children: children
         })
     });

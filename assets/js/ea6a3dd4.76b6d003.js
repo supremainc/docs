@@ -1398,7 +1398,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "영숫자"
-              }), ": 사용자 ID를 영문, 숫자, 기호 ", (0,jsx_runtime.jsx)(_components.code, {
+              }), ": 사용자 ID를 영문, 숫자, 일부 기호 ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "_"
               }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "-"
