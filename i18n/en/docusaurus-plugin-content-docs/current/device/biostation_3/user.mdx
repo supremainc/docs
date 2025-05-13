@@ -1,0 +1,140 @@
+---
+id: user
+title: User
+description: Describes how to register, edit, delete, and manage users.
+keywords: [Register, Edit, Delete, Manage]
+---
+
+Describes how to register, edit, delete, and manage users.
+
+## Registering User Information {#registering-user-information}
+
+The user information including credentials can be registered.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>USER</Cmd> → <Image src='/img/device/ico-add.svg' ico />, and choose a credential you want to enroll.<br/>There are two steps for the user registration. Some options are available after the credential has been registered.
+
+    <Image src='/img/device/device-user-add.png' className='none' />
+
+    * <Image src='/img/device/ico-photo.svg' ico />: Register a user photo.
+
+    * **Name**: Enter the user name.
+
+    * **ID**: Enter a number between 1 and 4294967295 to register as the user ID. If <Cmd>User ID Type</Cmd> set to <Cmd>Alphanumeric</Cmd>, a combination of alphanumeric characters and symbols `_` `-` can be used for the ID. Up to 32 characters can be input.
+
+    * <Cmd>Face</Cmd>: Enroll a face for user authentication. Press <Cmd>Face</Cmd> → <Cmd>Next</Cmd> and enroll a face according to the instructions on the screen. To add more faces, press <Image src='/img/device/ico-add.svg' ico />. Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
+
+    * <Cmd>Card / QR Code</Cmd>: Enroll a card for user authentication. Press <Cmd>Card / QR Code</Cmd> → <Cmd>Next</Cmd> and scan the card that will be assigned to the user. To enroll an additional card, press <Cmd>Card / QR Code</Cmd> → <Image src='/img/device/ico-add.svg' ico />.
+
+    * <Cmd>PIN</Cmd>: Enter the PIN you wish to use. Click <Cmd>PIN</Cmd> → <Cmd>Next</Cmd> to register the PIN to use. Enter the PIN again for confirmation and press <Cmd>OK</Cmd>. Enter a number between 4 and 16 digits to prevent leaking.
+
+    * <Cmd>Operator Level</Cmd>: Select the level you wish to assign to a user.
+
+        :::info
+
+        Available menus vary according to the set user level.
+
+        * <Cmd>None</Cmd>: This is the general user level and menus cannot be accessed.
+
+        * <Cmd>Administrator</Cmd>: All menus can be accessed.
+
+        * <Cmd>Configuration</Cmd>: <Cmd>AUTHENTICATION</Cmd>, <Cmd>DISPLAY & SOUND</Cmd>, <Cmd>DEVICE</Cmd>, <Cmd>NETWORK</Cmd> and <Cmd>EVENT LOG</Cmd> menus can be accessed.
+
+        * <Cmd>User Management</Cmd>: <Cmd>USER</Cmd> and <Cmd>EVENT LOG</Cmd> menus can be accessed.
+
+        :::
+
+    * <Cmd>Period</Cmd>: Set an expiry date to use the user account.
+
+    * <Cmd>Extended Private Auth Mode</Cmd>: Change the authentication method according to the user. You can set extended private auth mode. This mode allows you to combine user authentication methods, including both faces. Otherwise, you can use the device’s basic authentication mode.
+
+1. To complete the registration of user information, press <Cmd>Save</Cmd>.
+
+### Enrolling User Faces {#enrolling-user-faces}
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>USER</Cmd> → <Image src='/img/device/ico-add.svg' ico />.
+
+1. Select <Cmd>Face</Cmd> → <Cmd>Next</Cmd>.
+
+1. Adjust a distance between the face and screen and look straight at the camera of the device.
+
+1. Once your face is captured successfully, press <Cmd>OK</Cmd> → <Cmd>Save</Cmd>. To retake a photo, press <Cmd>Re-Shot</Cmd>.
+
+    :::info
+
+    * The visual face data of BioStation 3 are not compatible with face templates of FaceStation 2 or FaceLite.
+
+    * You can enroll visual face not only directly from BioStation 3 but from the BioStar 2 by uploading photos or importing CSV files. You can also enroll visual face with your smartphone via a link sent from BioStar 2. To learn more about how to enroll visual face for each method, please refer to the BioStar 2 Administrator Guide.
+
+    * To use a Visual Face feature correctly, take a picture by following instructions below.
+
+        * When enrolling a face, maintain a distance of 60 ~ 100 cm between the device and the face.
+
+        * Do not change your face expression.
+
+        * Do not wear a masks, hats, or eye patches.
+
+        * Do not enroll a face wearing a mask. It may increase the False Acceptance Rate (FAR) if both faces with and without a mask are enrolled.
+
+        * Do not raise head up or lower head.
+
+        * Do not wear thick makeup.
+
+        * Do not close your eyes.
+
+        * Make sure that both of your shoulders correctly appear on the screen.
+
+        * Stand still and enroll your face by staring at the screen.
+
+        * Be careful not to display two faces on the screen. Enroll one person at a time.
+
+        * If you do not follow the instructions on the screen, the face enrollment may take longer or may fail.
+
+    :::
+
+## Modifying User Information
+
+User Management or Administrator can modify the registered user information. A card or face can be added, and PIN and level can be modified.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>USER</Cmd> → <Image src='/img/device/ico-search.svg' ico />.
+
+1. Select your search terms. You can search for a user by <Cmd>All</Cmd>, <Cmd>User ID</Cmd>, <Cmd>Name</Cmd>, <Cmd>Face</Cmd> and <Cmd>Card</Cmd>.
+
+1. Select the user to modify.
+
+1. Modify the information by referring to [Registering User Information](#registering-user-information) and press <Cmd>OK</Cmd>.
+
+    * To delete a user, select <Image src='/img/device/ico-delete.svg' ico /> and then press <Cmd>OK</Cmd>.
+
+:::info
+
+The <Cmd>Access Group</Cmd> can be registered in BioStar 2. For detailed contents regarding registering an access group, refer to the BioStar 2 Administrator Guide.
+
+:::
+
+## Delete All Users
+
+You can delete all registered users at once.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>USER</Cmd> → <Image src='/img/device/ico-delete.svg' ico />.
+
+1. Check <Cmd>Delete All</Cmd> to delete all registered users and press <Cmd>OK</Cmd>.
+
+1. When you press <Cmd>OK</Cmd>, all registered users will be deleted.
+
+## View User Usage
+
+You can see the number of registered users, faces, and cards at a glance.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>USER</Cmd> → <Image src='/img/device/ico-info.svg' ico />. User usage information appears.
+
+    <Image src='/img/device/device-user-usage.png' />
