@@ -101,7 +101,7 @@
           "value": true
         },
         "lcd_type": {
-          "label": "LCD 종류",
+          "label": "디스플레이",
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "5.5\" IPS 컬러 LCD",
@@ -109,7 +109,7 @@
           }
         },
         "lcd_resolution": {
-          "label": "LCD 해상도",
+          "label": "화면 해상도",
           "label_id": "specs.general.lcd_resolution",
           "value": {
             "ko": "720 x 1280 픽셀",
@@ -150,7 +150,10 @@
         "camera": {
           "label": "카메라",
           "label_id": "specs.general.camera",
-          "value": "2 MP 2 EA"
+          "value": {
+            "ko": [ "적외선: 2M 픽셀", "비주얼: 2M 픽셀" ],
+            "en": [ "IR: 2M pixels", "Visual: 2M pixels" ]
+          }
         },
         "ip_rating": {
           "label": "IP 등급",
@@ -332,8 +335,8 @@
           "label": "전원",
           "label_id": "specs.power.power",
           "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 1 A", "전압/전류: 24 Vdc / 최대 0.65 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 1 A", "Voltage/Current: 24 Vdc / Max. 0.65 A" ]
+            "ko": [ "전압/전류: 12 Vdc / 최대 1 A", "전압/전류: 24 Vdc / 최대 0.7 A" ],
+            "en": [ "Voltage/Current: 12 Vdc / Max. 1 A", "Voltage/Current: 24 Vdc / Max. 0.7 A" ]
           }
         },
         "switch_input_vih": {
