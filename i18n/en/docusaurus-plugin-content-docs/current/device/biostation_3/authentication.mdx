@@ -1,0 +1,268 @@
+---
+id: authentication
+title: Authentication
+description: Describes the supported authentication methods and authentication procedures.
+keywords: [Auth Mode, Operation, PIN, Face, T&A Mode]
+---
+
+Describes the supported authentication methods and authentication procedures.
+
+## Auth Mode
+
+Set the authentication mode. You can make a combination of <Cmd>Face</Cmd>, <Cmd>PIN</Cmd>, <Cmd>Card / QR Code</Cmd>, or <Cmd>ID</Cmd> and you can also set a schedule for each authentication mode.
+
+### Registering Auth Mode {#registering-auth-mode}
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+
+1. Press <Image src='/img/device/ico-add.svg' ico />.
+
+1. Pressing <Image src='/img/device/ico-add1.svg' ico /> will display the credential that can be added on the screen. Select the credentials to add. Press the <Image src='/img/device/ico-cancel.svg' ico /> while the credential is added, and the added credential will be deleted.
+
+    <Image src='/img/device/device-authmode.png' />
+
+1. Set the authentication mode as desired and configure the <Cmd>Schedule</Cmd>.
+
+    <div className='overflow-x'>
+
+    | Category | Description |
+    | :--: | -- |
+    | Face | - <Image src='/img/device/ico-authmode-face.png' ico />: Mode to use a face only.<br/>- <Image src='/img/device/ico-authmode-face.png' ico /> + <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to authenticate with a face and then enter PIN. |
+    | Card / QR Code | - <Image src='/img/device/ico-authmode-card.png' ico />: Mode to use a card / QR code only.<br/>- <Image src='/img/device/ico-authmode-card.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico />: Mode to authenticate with a card / QR code and then authenticate with a face.<br/>- <Image src='/img/device/ico-authmode-card.png' ico /> + <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to authenticate with a card / QR code and then enter PIN.<br/>- <Image src='/img/device/ico-authmode-card.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico /> / <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to authenticate with a card / QR code and then authenticate with a face or enter PIN.<br/>- <Image src='/img/device/ico-authmode-card.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico /> + <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to authenticate with a card / QR code and then use both face authentication and PIN input. |
+    | ID | - <Image src='/img/device/ico-authmode-id.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico />: Mode to enter ID and then authenticate with a face.<br/>- <Image src='/img/device/ico-authmode-id.png' ico /> + <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to enter ID and then enter PIN.<br/>- <Image src='/img/device/ico-authmode-id.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico /> / <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to enter ID and then authenticate with a face or enter PIN.<br/>- <Image src='/img/device/ico-authmode-id.png' ico /> + <Image src='/img/device/ico-authmode-face.png' ico /> + <Image src='/img/device/ico-authmode-pin.png' ico />: Mode to enter ID and then use both face authentication and PIN input. |
+
+    </div>
+
+    :::info
+
+    * The <Cmd>Schedule</Cmd> can be set in BioStar 2. If there is no set schedule, only <Cmd>Always</Cmd> can be selected.
+
+    * For detailed contents regarding setting a <Cmd>Schedule</Cmd>, refer to the BioStar 2 Administrator Guide.
+
+    * To use <Cmd>QR Code</Cmd> authentication, <Cmd>QR Authentication</Cmd> must be activated in <Cmd>AUTHENTICATION</Cmd> → <Cmd>Operation</Cmd>, and a separate device license is required. For more information, refer to [License](settings#license).
+
+    :::
+
+1. To save the settings, press <Cmd>OK</Cmd>.
+
+### Modifying Auth Mode
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+
+1. Select the authentication mode to modify.
+
+1. Modify the authentication mode by referring to [Registering Auth Mode](#registering-auth-mode) and press <Cmd>OK</Cmd>.
+
+### Delete Auth Mode
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+
+1. Press <Image src='/img/device/ico-delete.svg' ico /> and select the authentication mode to delete. You can select multiple options.
+
+1. To delete the selected option, press <Cmd>OK</Cmd>.
+
+## Operation
+
+### Server Matching
+
+You can set up server matching.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> and activate <Cmd>Server Matching (Card, ID)</Cmd> in <Cmd>Operation</Cmd>.
+
+    <Image src='/img/device/device-auth-option.png' />
+
+    * <Cmd>Server Matching (Card, ID)</Cmd>: When this option is activated, it performs user authentication matching in BioStar 2, not in the device. It can be used when the device has too much user information or when the device is installed outside.
+
+    :::info
+
+    * <Cmd>Server Matching</Cmd> is only available for card and ID options.
+
+    * When you use the <Cmd>Server Matching</Cmd> option, you need to activate the option in both Biostar 2 and the device. Refer to the Administrator Guide of BioStar 2 to learn how to set the server matching settings in BioStar 2.
+
+    :::
+
+### QR Authentication
+
+You can activate QR code authentication.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> and activate <Cmd>QR Authentication</Cmd> in <Cmd>Operation</Cmd>.
+
+    <Image src='/img/device/device-auth-option-qr.png' />
+
+    * <Cmd>QR Authentication</Cmd>: Set whether to use QR Code authentication through the device's camera.
+
+    * <Cmd>Use QR as Card</Cmd>: Allows authentication with a QR code of the same data as the issued CSN card or Wiegand card. It can be set only when <Cmd>QR Authentication</Cmd> is activated.
+
+    :::info
+
+    Using the <Cmd>QR Authentication</Cmd> requires a separate device license. For more information, refer to [License](settings#license).
+
+    :::
+
+## PIN
+
+Set whether to use the scramble keypad when entering passwords.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd>, and set whether to use the <Cmd>Scramble Keypad</Cmd> in the <Cmd>PIN</Cmd>.
+
+    <Image src='/img/device/device-pin.png' />
+
+    * <Cmd>Scramble Keypad</Cmd>: When entering a password, the positions of the number keys are randomly shuffled to prevent password leakage.
+
+## Auth Result Display Option
+
+You can set the auth result display option.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>AUTHENTICATION</Cmd> and set the desired item in the <Cmd>Auth Result Display Option</Cmd>.
+
+    <Image src='/img/device/device-auth-result-display-option.png' />
+
+    * <Cmd>User ID Display</Cmd>: You can select how the user ID is displayed on the authentication result screen of the device.
+
+        * <Cmd>Display All</Cmd>: Displays the entire user ID.
+
+        * <Cmd>Mask All but First Letter</Cmd>: Displays only the first letter of the user ID.
+
+        * <Cmd>Hide All</Cmd>: Do not display the user ID.
+
+    * <Cmd>User Name Display</Cmd>: You can select how the user name is displayed on the authentication result screen of the device.
+
+        * <Cmd>Display All</Cmd>: Displays the entire user name.
+
+        * <Cmd>Mask All but First Letter</Cmd>: Displays only the first letter of the user name.
+
+        * <Cmd>Hide All</Cmd>: Do not display the user name.
+
+## Face
+
+얼굴 인증에 대한 설정을 변경할 수 있습니다.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. <Cmd>AUTHENTICATION</Cmd> → <Cmd>얼굴</Cmd>을 선택하세요.
+
+1. 원하는 항목을 변경하세요.
+
+    <Image src='/img/device/device-auth.png' />
+
+    * <Cmd>모션 센서 감도</Cmd>: 장치 주변에 움직임을 감지하는 감도를 설정합니다. <Cmd>모션 센서 감도</Cmd>를 <Cmd>끔</Cmd>으로 설정한 경우, 얼굴을 인증하려면 화면을 터치한 뒤 인증을 진행하세요.
+
+    * <Cmd>등록 대기 시간</Cmd>: 설정한 시간 동안 얼굴을 등록하지 못하면 얼굴 등록이 취소됩니다.
+
+    * <Cmd>인증 대기 시간</Cmd>: 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다.
+
+    * <Cmd>등록얼굴 중복검사</Cmd>: 얼굴 등록 시 중복 얼굴 여부를 검사할 수 있습니다.
+
+    * <Cmd>얼굴 검출 설정</Cmd>: 얼굴 인증 시 장치가 얼굴을 검출할 영역의 위치와 크기를 설정할 수 있습니다.
+
+        :::info
+
+        최적의 성능을 위해 얼굴 검출 설정의 하위 옵션은 기본 설정 값 사용을 권장합니다. 각 옵션의 기본 값은 다음과 같습니다.
+
+        * 최대 얼굴 회전 각도: 15
+
+        * 얼굴 인식 거리: 최소 30 cm, 최대 100 cm
+
+        * 얼굴 인식 영역 넓히기: 비활성화
+
+        :::
+
+    * <Cmd>ToM 등록</Cmd>: <Cmd>ToM 등록</Cmd>을 활성화하면 BioStar 2에서 발급받은 <Cmd>템플릿 온 모바일</Cmd>을 등록할 수 있습니다. <Cmd>템플릿 온 모바일</Cmd>은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드로 BioStar 2 서버, Airfob Portal과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다.
+
+        :::info
+
+        <Cmd>템플릿 온 모바일</Cmd>에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요.
+
+        :::
+
+    * <Cmd>비주얼 페이스 이미지 저장하기</Cmd>: 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다. 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다.
+
+        :::info
+
+        이 설정을 비활성화한 후에는 BioStar 2 v2.9.7 이상에 연결하여 사용하세요.
+
+        :::
+
+    * <Cmd>보안 등급</Cmd>: 1:N 인증을 위한 보안 등급을 설정할 수 있습니다.
+
+    * <Cmd>작동 모드</Cmd>: 얼굴 인증 시 장치의 작동 모드를 설정할 수 있습니다.
+
+        * <Cmd>퓨전 매칭</Cmd>: 비주얼 및 적외선 매칭이 모두 동작하여 얼굴 인증의 정확도를 높일 수 있습니다.
+
+        * <Cmd>빠른 인증</Cmd>: 사용자는 장치의 인증 범위 안에서 걸어가면서도 얼굴을 인증하는 등 빠르게 인증을 수행할 수 있습니다.
+
+    * <Cmd>위조 얼굴 검출</Cmd>: 사진 등의 위조 얼굴을 이용한 사용자 인증을 방지할 수 있습니다. <Cmd>작동 모드</Cmd>를 <Cmd>퓨전 매칭</Cmd>으로 설정할 때 활성화됩니다.
+
+        :::info
+
+        * 위조 얼굴 검출 성능을 개선하여 iBeta Level 1 ISO 30107-3 제시형 공격 탐지 시험에 통과하였습니다.
+
+        * 햇빛이 강한 환경에서는 <Cmd>위조 얼굴 검출</Cmd> 기능을 <Cmd>보통</Cmd>으로 사용하는 것을 권장합니다.
+
+        :::
+
+    * <Cmd>고급 설정</Cmd>: 마스크 검출 등 얼굴 인증에 대한 고급 설정을 변경할 수 있습니다.
+
+        * <Cmd>마스크 검출</Cmd>: 마스크 검출 사용 여부를 설정할 수 있습니다.
+
+        * <Cmd>검출 모드</Cmd>: 마스크 착용 여부를 확인하는 방식을 설정할 수 있습니다. <Cmd>마스크 검출</Cmd>을 <Cmd>사용</Cmd>으로 설정할 경우 활성화됩니다.
+
+        :::info
+
+        * <Cmd>마스크 착용 (하드)</Cmd>: 마스크를 착용하지 않은 사용자는 인증이 거부되며, 마스크 미착용 이벤트가 로그로 기록됩니다.
+
+        * <Cmd>마스크 착용 (소프트)</Cmd>: 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트가 로그로 기록됩니다.
+
+        * <Cmd>마스크 미착용</Cmd>: 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 인증 전 확인으로 고정됩니다.
+
+        :::
+
+    * <Cmd>마스크 검출 등급</Cmd>: 마스크 착용을 감지하는 감도를 설정할 수 있습니다. <Cmd>마스크 검출</Cmd>을 <Cmd>사용</Cmd>으로 설정할 경우 활성화됩니다.
+
+    * <Cmd>확인 모드</Cmd>: 장치의 용도에 따라 확인 모드를 설정할 수 있습니다.
+
+        :::info
+
+        * <Cmd>인증 후 확인</Cmd>: 인증을 수행한 뒤 사용자의 마스크 착용 여부를 확인합니다.
+
+        * <Cmd>인증 전 확인</Cmd>: 사용자의 마스크 착용 여부를 확인한 뒤 인증을 수행합니다.
+
+        * <Cmd>확인만</Cmd>: 장치를 마스크 착용 여부를 확인하는 용도로만 사용할 수 있습니다. 이 모드를 사용할 경우 인증과 관계없이 마스크를 착용한 사용자는 모두 출입할 수 있습니다.
+
+        :::
+
+## 근태
+
+근태 모드 등록 방법을 설정할 수 있습니다.
+
+1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
+
+1. <Cmd>AUTHENTICATION</Cmd> → <Cmd>근태</Cmd>를 선택하세요.
+
+1. 원하는 항목을 설정하세요.
+
+    <Image src='/img/device/device-auth2.png' />
+
+    * <Cmd>근태 모드</Cmd>: 근태 모드를 사용할 방법을 설정할 수 있습니다.
+
+    * <Cmd>근태 코드</Cmd>: 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 <Cmd>근태 코드</Cmd> → <Image src='/img/device/ico-add.svg' ico />을 선택한 뒤 화면에 표시할 아이콘, <Cmd>근태 이벤트 이름</Cmd>, <Cmd>스케줄</Cmd>을 설정하세요.
+
+    * <Cmd>근태 등록 필요</Cmd>: 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>수동변경</Cmd>으로 설정했을 때 사용할 수 있습니다.
+
+    * <Cmd>근태 고정 키</Cmd>: 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>고정</Cmd>으로 설정했을 때 사용할 수 있습니다.
+
+    * <Cmd>작업 코드</Cmd>: 작업 코드 사용 여부를 선택할 수 있습니다.

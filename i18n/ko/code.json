@@ -447,10 +447,10 @@
     "message": "크립토 칩"
   },
   "specs.general.lcd_type": {
-    "message": "LCD 종류"
+    "message": "디스플레이"
   },
   "specs.general.lcd_resolution": {
-    "message": "LCD 해상도"
+    "message": "화면 해상도"
   },
   "specs.general.sound": {
     "message": "소리"
