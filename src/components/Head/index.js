@@ -14,7 +14,6 @@ export default function Head ({level, hashid, children, className}) {
     if (level === 'none') {
         return null
     }
-    console.log(children);
     if (!hashid) {
         hid = children.join("_");
     } else {
