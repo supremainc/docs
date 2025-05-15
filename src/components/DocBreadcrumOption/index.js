@@ -31,8 +31,6 @@ const DocuementButton = () => {
   const curLocation = isClient ? window.location.href : '';
   const destURL = encodeURIComponent(curLocation);
   const target = `https://forms.office.com/Pages/ResponsePage.aspx?id=_bYDU8LVnkqxz7A7AWK9TZ3QlIh-_zNBvEgx2mDsll1UQjNOVDhQNEFHUjMyTUw4NUZWWktMTUwwTi4u&r41f093b8508c4bf1996887fab4eb1ad0=${destURL}`;
-  
-  console.log(target);
 
   // 팝업 창의 크기와 위치 설정 
   const popupWidth = 600;
