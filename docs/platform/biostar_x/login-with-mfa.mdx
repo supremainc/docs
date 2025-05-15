@@ -1,17 +1,19 @@
 ---
 id: login-with-mfa
-title: 멀티팩터 인증으로 로그인하기
-description: BioStar X에 로그인할 때 멀티팩터 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.
-keywords: [ 로그인, MFA, 다중 인증 ]
+title: 다중 인증으로 로그인하기
+description: BioStar X에 로그인할 때 다중 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.
+keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 ---
 
-**BioStar X**에 로그인 시 보안 강화를 위해 **멀티팩터 인증** 기능을 사용할 수 있습니다. <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 활성화하면 사용자 아이디와 비밀번호 조합에 지문 스캐너를 통한 지문 인증 단계를 추가합니다.
+**BioStar X**에 로그인 시 보안 강화를 위해 **다중 인증** 기능을 사용할 수 있습니다. <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 활성화하면 사용자 아이디와 비밀번호 조합에 지문 스캐너를 통한 지문 인증 단계를 추가합니다.
 
 :::info
 
-* **멀티팩터 인증**(Multi-factor authentication, MFA)이란, 두 가지 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다.
+* **다중 인증**(Multi-factor authentication, MFA)이란, 두 가지 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다.
 
-* <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용하려면 **BioStar X** 클라이언트 PC에 다중 인증 로그인을 지원하는 지문 스캐너를 연결해야 합니다. 지원되는 지문 스캐너 장치는 아래 목록을 참고하세요.
+* <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용하려는 사용자는 지문 정보를 등록하고, 아이디 및 비밀번호, 권한 등급을 모두 설정해야 합니다.
+
+* <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용하려면 **BioStar X** 클라이언트 PC에 다중 인증 로그인을 지원하는 지문 스캐너를 연결해야 합니다. 지문 스캐너로 지원하는 장치는 아래 목록을 참고하세요.
 
   * BioMini
 
@@ -27,14 +29,14 @@ keywords: [ 로그인, MFA, 다중 인증 ]
 
 :::caution
 
-* 전체 관리자(ID 1번) 계정에 멀티팩터 인증 기능을 설정한 후, 지문 인증 기능을 사용할 수 없게 되면 해당 계정으로 더 이상 로그인할 수 없으므로 주의하세요.
+* 전체 관리자(ID 1번) 계정에 다중 인증 기능을 설정한 후, 지문 인증 기능을 사용할 수 없게 되면 해당 계정으로 더 이상 로그인할 수 없으므로 주의하세요.
 
 * 지문 인증을 사용해 로그인할 수 없다면 [슈프리마 기술지원팀](https://support.supremainc.com)으로 문의하세요.
 
 :::
 
 
-## 멀티팩터 인증 설정 {#multi-factor-authentication-setting}
+## 다중 인증 설정 {#multi-factor-authentication-setting}
 
 <Cmd sid='team.user.permission.multiFactorAuth' />을 설정하려면 다음 단계를 따르세요.
 
@@ -44,40 +46,42 @@ keywords: [ 로그인, MFA, 다중 인증 ]
 
     또는 사용자를 선택하고 오른쪽 화면에 표시되는 프로필에서 <Cmd>See More</Cmd> 버튼을 클릭하세요.
 
-1. 사용자 프로필 화면이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 항목을 클릭해 활성화하세요.
+1. 사용자 프로필 화면이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 항목을 <Cmd sid='common.use' />으로 설정하세요.
 
-1. <Cmd sid='common.save' /> 버튼을 클릭하세요.
+    <Image src='/img/biostarx-edit-user-mfa-use.png' />
 
-멀티팩터 인증 설정을 완료합니다.
+1. 화면 오른쪽 상단의 <Cmd sid='common.save' /> 버튼을 클릭하세요.
+
+다중 인증 설정을 완료합니다.
 
 
-## 멀티팩터 인증 일괄 설정 {#multi-factor-authentication-batch-set}
+## 다중 인증 일괄 설정 {#multi-factor-authentication-batch-set}
 
 일괄 편집 기능을 사용해 여러 명의 사용자에게 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 적용할 수 있습니다.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
-1. 사용자 목록에서 <Cmd sid='team.user.permission.multiFactorAuth' />을 설정하려는 사용자의 가장 왼쪽에 체크 박스를 클릭하세요.
+1. 사용자 목록에서 다중 인증을 설정하려는 사용자의 가장 왼쪽에 체크 박스를 클릭하세요.
 
 1. 화면 오른쪽 상단의 <Cmd sid='common.batchEdit' /> 버튼을 클릭하세요.
 
-1. 일괄 편집 창이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 항목을 클릭해 활성화하세요.
+1. 일괄 편집 창이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 항목을 항목을 <Cmd sid='common.use' />으로 설정하세요.
 
-1. <Cmd sid='common.save' /> 버튼을 클릭하세요.
+    <Image src='/img/biostarx-batch-edit-user-mfa-use.png' />
 
-선택한 다수의 사용자에 대한 멀티팩터 인증 설정을 완료합니다.
+1. 화면 오른쪽 상단의 <Cmd sid='common.save' /> 버튼을 클릭하세요.
+
+선택한 다수의 사용자에 대한 다중 인증 설정을 완료합니다.
 
 :::info
 
-* 선택한 사용자 중 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 활성화하는 데 필요한 조건을 만족하지 않는 사용자는 팝업 메시지에 <Cmd>적용할 수 없는 사용자 목록</Cmd>을 통해 확인할 수 있습니다. 설정에 필요한 조건을 확인하고 다시 시도하세요.
-
-* 이 기능을 사용하려면 해당 사용자에게 지문 정보를 등록하고, 아이디 및 비밀번호, 권한 등급을 모두 설정해야 합니다.
+선택한 사용자 중 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 활성화하는 데 필요한 조건을 만족하지 않는 사용자는 팝업 메시지에 <Cmd>적용할 수 없는 사용자 목록</Cmd>을 통해 확인할 수 있습니다. 설정에 필요한 조건을 확인하고 다시 시도하세요.
 
 :::
 
-## 멀티팩터 인증으로 로그인 {#login-with-multi-factor-authentication}
+## 다중 인증으로 로그인 {#login-with-multi-factor-authentication}
 
-1. 웹 브라우저에서 **BioStar X** 로그인 화면으로 접속하세요.
+1. 웹 브라우저를 통해 **BioStar X** 로그인 화면으로 접속하세요.
 
 1. 사용자 아이디와 비밀번호를 입력해 로그인하세요.
 

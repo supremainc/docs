@@ -129,6 +129,17 @@ const sidebars = {
             'platform/biostar_x/monitoring-video',
             'platform/biostar_x/monitoring-event'
           ]
+        },
+        {
+          type: 'category',
+          label: 'UI 알아보기',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/ui-overview'
+          },
+          items: [
+            'platform/biostar_x/ui-launcher'
+          ]
         }
       ],
     },
