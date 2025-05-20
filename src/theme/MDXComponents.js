@@ -54,6 +54,10 @@ import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
 import IcFilter from '@site/static/img/menus/ico-filter.svg';
 import IcMove from '@site/static/img/menus/ico-move.svg';
 import IcBack from '@site/static/img/menus/ico-back.svg';
+import IcSvTime from '@site/static/img/menus/ico-serverTime.svg';
+import IcAccout from '@site/static/img/menus/ico-account.svg';
+import IcHelp from '@site/static/img/menus/ico-help.svg';
+import IcAibtn from '@site/static/img/menus/ico-aibtn.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -94,6 +98,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSectioin, SpecSizeWieght, Anno,
+    IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd,
     IcClose,
