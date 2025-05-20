@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-launcher-mdx-a60.json
-var site_docs_platform_biostar_x_ui_launcher_mdx_a60_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-launcher","title":"런처","description":"런처 페이지의 UI를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-launcher.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-launcher","permalink":"/docs/platform/biostar_x/ui-launcher","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-launcher.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-launcher","title":"런처","description":"런처 페이지의 UI를 안내합니다.","keywords":["런처","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_ui_launcher_mdx_a60_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-launcher.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-launcher","permalink":"/docs/en/platform/biostar_x/ui-launcher","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-launcher.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["런처","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"공통 UI","permalink":"/docs/en/platform/biostar_x/ui-common"},"next":{"title":"라이선스 정책","permalink":"/docs/en/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,12 +26,12 @@ var lib = __webpack_require__("65");
 const frontMatter = {
 	id: 'ui-launcher',
 	title: '런처',
-	description: '런처 페이지의 UI를 안내합니다.',
+	description: '런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.',
 	keywords: [
 		'런처',
 		'UI'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -44,8 +44,12 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    admonition: "admonition",
+    li: "li",
     p: "p",
     strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, Image} = _components;
@@ -59,12 +63,79 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), "의 시작 페이지로, 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 다양한 기능에 접근할 수 있는 중심 허브 역할을 합니다. 이 페이지는 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "의 주요 기능에 접근할 수 있는 중심 허브 역할을 합니다. 이 페이지는 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 모든 기능을 쉽게 탐색하고 사용할 수 있도록 설계되었습니다. 런처 페이지의 UI 구성 요소를 살펴보면 다음과 같습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-launcher.png",
       className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), " 페이지에서는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.user"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.arena"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.data"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.dashboard"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.setting"
+      }), " 페이지로 이동할 수 있는 링크를 제공합니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.user"
+          }), ": 사용자 그룹 관리, 사용자 관리, 사용자 템플릿 관리, 출입 권한별 사용자 확인 등 다양한 기능을 통해 사용자를 효율적으로 관리하고, 권한을 통해 보안을 강화할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "how-to-guide-user",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.arena"
+          }), ": 출입문과 관련한 장치, 엘리베이터, 구역을 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "how-to-guide-monitoring",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), ": 사용자와 관련한 다양한 데이터 및 통계 정보를 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "#",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.dashboard"
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에서 제공하는 다양한 데이터를 통해 사용자가 선택한 데이터 기반의 위젯을 추가하고, 배치하여 원하는 대시보드를 구성할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "#",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), ": 장치 및 구역, 사용자에 따른 권한, 언어, 시간 등 다양한 설정을 통해 사용자의 환경에 최적화된 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "를 구성할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "#",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info"
     })]
   });
 }
