@@ -645,6 +645,11 @@ footer {
     border-bottom: 2px solid;
   }
 
+  span[class*='leadNum'] + svg {
+    position: relative;
+    top: 6px;
+  }
+
   span.cmd {
     font-weight: 600;
     color: var(--ifm-color-cmd);

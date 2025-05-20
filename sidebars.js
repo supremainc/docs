@@ -138,6 +138,7 @@ const sidebars = {
             id: 'platform/biostar_x/ui-overview'
           },
           items: [
+            'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher'
           ]
         }
