@@ -5,9 +5,7 @@
       "hid": "power",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "전원이 공급되고 있으나 작동하지 않습니다.",
           "answer": [
             "단말기와 브래킷이 떨어져 있으면 탬퍼 스위치에 의해 작동하지 않을 수도 있습니다.",
@@ -23,9 +21,7 @@
       "hid": "pin",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "PIN을 분실했습니다.",
           "answer": [
             "일반 사용자의 PIN은 관리자에게 요청한 뒤 다시 입력하세요.",
@@ -33,9 +29,7 @@
           ]
         },
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "PIN을 입력한 뒤 <span class='cmd'>OK</span> 버튼을 눌러도 잠긴 문을 열 수 없습니다.",
           "answer": [
             "등록한 PIN을 정상적으로 입력하였는지 확인하세요.",
@@ -52,9 +46,7 @@
       "hid": "face",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "등록은 되었으나 얼굴 인증이 잘 되지 않고 오류가 많이 납니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-faces'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 얼굴을 다시 등록하세요.",
@@ -62,21 +54,32 @@
           ]
         },
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "갑자기 얼굴 인증이 되지 않습니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-faces'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 다시 시도하세요."
           ]
         },
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "<span class='cmd'>마스크 검출</span> 기능을 <span class='cmd'>사용</span>으로 설정하였으나 마스크 착용 시 얼굴 인증이 잘 되지 않고 오류가 많이 납니다.",
           "answer": [
             "마스크를 코끝까지 내리고 얼굴을 2회 인증한 뒤 다시 코를 덮고 얼굴 인증을 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."
+          ]
+        },
+        {
+          "product": [ "facestation_f2" ],
+          "question": "열화상 카메라 사용 시 온도가 정상적으로 측정되지 않습니다.",
+          "answer": [
+            "단말기에 열화상 카메라가 정상적으로 연결되었는지 확인하세요.",
+            "이마가 가려지지 않은 상태에서 온도 측정을 다시 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."
+          ]
+        },
+        {
+          "product": [ "facestation_f2" ],
+          "question": "열화상 카메라 사용 시 온도가 너무 낮게 측정됩니다.",
+          "answer": [
+            "동절기에 사용자가 장시간 동안 실외의 낮은 온도에 노출된 상태에서 온도를 측정할 경우 체온보다 낮게 측정될 수 있습니다. 실내에서 1~2분 대기한 뒤 다시 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."
           ]
         }
       ]
@@ -88,9 +91,7 @@
       "hid": "doorlock",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "문을 닫아도 잠금 장치는 잠기지 않습니다.",
           "answer": [
             "전기 잠금 장치의 이상일 수 있습니다. 설치 업체를 통해 점검을 받으세요."
@@ -105,12 +106,10 @@
       "hid": "time",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [  "biostation_3", "facestation_f2" ],
           "question": "갑자기 시간이 맞지 않습니다.",
           "answer": [
-            "BioStation 3에는 내장 배터리가 있으나, 오랫동안 전원이 공급되지 않으면 내장 배터리가 방전되어 시간이 달라질 수 있습니다. <a href='settings#date-time'>날짜와 시간</a> 메뉴를 참고하여 시간을 수정할 수 있습니다."
+            "장치에는 내장 배터리가 있으나, 오랫동안 전원이 공급되지 않으면 내장 배터리가 방전되어 시간이 달라질 수 있습니다. <a href='settings#date-time'>날짜와 시간</a> 메뉴를 참고하여 시간을 수정할 수 있습니다."
           ]
         }
       ]
@@ -122,12 +121,10 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [
-            "biostation_3"
-          ],
+          "product": [ "biostation_3", "facestation_f2" ],
           "question": "관리자 PIN을 분실하여 관리자 모드에 진입할 수 없습니다.",
           "answer": [
-            "BioStation 3는 관리자가 출입 허용 권한을 부여하기 때문에 관리자만 메뉴에 진입할 수 있습니다.",
+            "장치는 관리자가 출입 허용 권한을 부여하기 때문에 관리자만 메뉴에 진입할 수 있습니다.",
             "관리자 PIN 분실 시 설치 업체에 문의하세요."
           ]
         }

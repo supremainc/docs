@@ -5,7 +5,7 @@
       "hid": "power",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "The power is being supplied but the device does not operate.",
           "answer": [
             "If the terminal and the bracket are far away from each other, the device may not operate due to the temper switch.",
@@ -21,7 +21,7 @@
       "hid": "pin",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "I lost my PIN.",
           "answer": [
             "For a normal user PIN, request it from the administrator and enter it again.",
@@ -29,7 +29,7 @@
           ]
         },
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "I entered my PIN and pressed the <span class='cmd'>OK</span> button, but I still cannot open the door.",
           "answer": [
             "Check if you have entered the registered PIN correctly.",
@@ -46,7 +46,7 @@
       "hid": "face",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "The face has been registered but face authentication cannot be done smoothly, and errors occur frequently.",
           "answer": [
             "Check <a href='getting-started#cautions-enrolling-faces'>Cautions for enrolling a faces</a> and enroll the face again.",
@@ -54,17 +54,32 @@
           ]
         },
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "Face authentication has suddenly stopped working.",
           "answer": [
             "Check <a href='getting-started#cautions-authenticating-face'>Cautions for authenticating a face</a> and try again."
           ]
         },
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "<span class='cmd'>Mask Detection</span> is set to <span class='cmd'>Enabled</span>, but face authentication cannot be done smoothly when wearing a mask.",
           "answer": [
             "Authenticate your face twice with the mask pull down on the tip of your nose. Then, authenticate your face again wearing a mask that covers your nose completely. If the problem persists, contact the installation company."
+          ]
+        },
+        {
+          "product": [ "facestation_f2" ],
+          "question": "The thermal camera fails to measure temperature.",
+          "answer": [
+            "Check if the thermal camera is properly connected to the terminal.",
+            "Measure the temperature again without covering your forehead. If the problem persists, contact the installation company."
+          ]
+        },
+        {
+          "product": [ "facestation_f2" ],
+          "question": "The thermal camera measures lower temperature than actual temperature.",
+          "answer": [
+            "If a user measures the temperature after being exposed to cold temperatures for a long time, the temperature may be measured lower than the actual temperature. Wait for 1 to 2 minutes indoors and try again. If the problem persists, contact the installation company."
           ]
         }
       ]
@@ -76,7 +91,7 @@
       "hid": "doorlock",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "The door cannot be locked when I close the door.",
           "answer": [
             "The electric lock may be malfunctioning. Have an inspection through the installation company."
@@ -91,10 +106,10 @@
       "hid": "time",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "Suddenly the time has become incorrect.",
           "answer": [
-            "BioStation 3 is equipped with a built-in battery but if power is not supplied for a long time, the built-in battery may die, causing the time to become incorrect. You can correct the time by referring to <a href='settings#date-time'>Date & Time</a>."
+            "The device is equipped with a built-in battery but if power is not supplied for a long time, the built-in battery may die, causing the time to become incorrect. You can correct the time by referring to <a href='settings#date-time'>Date & Time</a>."
           ]
         }
       ]
@@ -106,10 +121,10 @@
       "hid": "admin",
       "contents": [
         {
-          "product": ["biostation_3"],
+          "product": ["biostation_3", "facestation_f2"],
           "question": "I lost my Admin PIN, so I cannot access the Admin mode.",
           "answer": [
-            "The administrator grants an access permission in BioStation 3, so only the administrator can access the Admin menu.",
+            "The administrator grants an access permission in the device, so only the administrator can access the Admin menu.",
             "If you have lost the Admin PIN, contact the installation company."
           ]
         }
