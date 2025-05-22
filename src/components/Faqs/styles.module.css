@@ -11,6 +11,7 @@
   anchor-name: --faqs;
   padding-right: 1.5rem;
   display: flex;
+  cursor: pointer;
 }
 
 .faq summary::marker {
