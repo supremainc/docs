@@ -44,7 +44,7 @@
 }
 
 .question {
-  display: block;
+  display: inline-block;
   flex-wrap: wrap;
   font-weight: 600;
   font-size: 1.3rem;
