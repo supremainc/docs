@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["344"], {
-"9705": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["3233"], {
+"7132": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,19 +8,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_settings_mdx_e60_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_biostation_3_settings_mdx_ea6_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-settings-mdx-e60.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_settings_mdx_e60_namespaceObject = JSON.parse('{"id":"device/biostation_3/settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/settings.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/settings","permalink":"/docs/en/device/biostation_3/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","keywords":["화면","소리","통신","장치"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"Authentication","permalink":"/docs/en/device/biostation_3/authentication"},"next":{"title":"이벤트 로그","permalink":"/docs/en/device/biostation_3/event-log"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-settings-mdx-ea6.json
+var site_docs_device_biostation_3_settings_mdx_ea6_namespaceObject = JSON.parse('{"id":"device/biostation_3/settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","source":"@site/docs/device/biostation_3/settings.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/settings","permalink":"/docs/device/biostation_3/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","keywords":["화면","소리","통신","장치"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"인증","permalink":"/docs/device/biostation_3/authentication"},"next":{"title":"이벤트 로그","permalink":"/docs/device/biostation_3/event-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/settings.mdx
+;// CONCATENATED MODULE: ./docs/device/biostation_3/settings.mdx
 
 
 const frontMatter = {
@@ -848,7 +848,9 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "시간 동기화"
-              }), ": 서버와 시간을 동기화 할 수 있습니다. 서버와 시간을 동기화 하려면 시간 동기화를 켜세요."]
+              }), ": 서버와 시간을 동기화 할 수 있습니다. 서버와 시간을 동기화 하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "시간 동기화"
+              }), "를 켜세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1315,7 +1317,9 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "네트워크 설정 유지"
-              }), ": 네트워크 설정을 제외한 모든 설정을 초기화합니다. 네트워크 설정을 제외한 모든 설정을 초기화하려면 확인을 누르세요. 이전 화면으로 돌아가려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": 네트워크 설정을 제외한 모든 설정을 초기화합니다. 네트워크 설정을 제외한 모든 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "확인"
+              }), "을 누르세요. 이전 화면으로 돌아가려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "취소"
               }), "를 누르세요."]
             }), "\n"]

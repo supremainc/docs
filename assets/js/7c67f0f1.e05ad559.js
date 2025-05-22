@@ -157,7 +157,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["대시보드에서 ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "대시보드"
+          }), "에서 ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/device/ico-eventlog.png",
             ico: true
           }), " → ", (0,jsx_runtime.jsx)(Image, {

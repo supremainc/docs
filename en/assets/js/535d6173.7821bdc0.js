@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-authentication-mdx-535.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_authentication_mdx_535_namespaceObject = JSON.parse('{"id":"device/biostation_3/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/authentication.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/authentication","permalink":"/docs/en/device/biostation_3/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Auth Mode","Operation","PIN","Face","T&A Mode"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"User","permalink":"/docs/en/device/biostation_3/user"},"next":{"title":"설정","permalink":"/docs/en/device/biostation_3/settings"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_authentication_mdx_535_namespaceObject = JSON.parse('{"id":"device/biostation_3/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/authentication.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/authentication","permalink":"/docs/en/device/biostation_3/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Auth Mode","Operation","PIN","Face","T&A Mode"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"User","permalink":"/docs/en/device/biostation_3/user"},"next":{"title":"Settings","permalink":"/docs/en/device/biostation_3/settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -85,8 +85,8 @@ const toc = [{
   "id": "face",
   "level": 2
 }, {
-  "value": "근태",
-  "id": "근태",
+  "value": "T&amp;A Mode",
+  "id": "ta-mode",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -612,7 +612,7 @@ function _createMdxContent(props) {
       id: "face",
       children: "Face"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "얼굴 인증에 대한 설정을 변경할 수 있습니다."
+      children: "You can change the configuration for facial authentication."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -623,67 +623,69 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "AUTHENTICATION"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "얼굴"
-          }), "을 선택하세요."]
+            children: "Face"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
+          children: "Select and set the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-auth.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "모션 센서 감도"
-              }), ": 장치 주변에 움직임을 감지하는 감도를 설정합니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "모션 센서 감도"
-              }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "끔"
-              }), "으로 설정한 경우, 얼굴을 인증하려면 화면을 터치한 뒤 인증을 진행하세요."]
+                children: "Motion Sensor"
+              }), ": Set the sensitivity for detecting motion near the device. If ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Motion Sensor"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Off"
+              }), ", tap the screen to authenticate the face."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "등록 대기 시간"
-              }), ": 설정한 시간 동안 얼굴을 등록하지 못하면 얼굴 등록이 취소됩니다."]
+                children: "Enroll Timeout"
+              }), ": If a face is not enrolled during the set time, the face enrollment will be canceled."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "인증 대기 시간"
-              }), ": 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다."]
+                children: "Auth Timeout"
+              }), ": If the authentication is not completed during the set time, the authentication will fail."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "등록얼굴 중복검사"
-              }), ": 얼굴 등록 시 중복 얼굴 여부를 검사할 수 있습니다."]
+                children: "Duplicate Check"
+              }), ": When enrolling a face, you can check duplicates."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "얼굴 검출 설정"
-              }), ": 얼굴 인증 시 장치가 얼굴을 검출할 영역의 위치와 크기를 설정할 수 있습니다."]
+                children: "Face Detect Setting"
+              }), ": Set the face authentication area by adjusting the size and position of the detected area."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
               type: "info",
-              children: [(0,jsx_runtime.jsx)(_components.p, {
-                children: "최적의 성능을 위해 얼굴 검출 설정의 하위 옵션은 기본 설정 값 사용을 권장합니다. 각 옵션의 기본 값은 다음과 같습니다."
+              children: [(0,jsx_runtime.jsxs)(_components.p, {
+                children: ["It is recommended to maintain the default values of options under ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: "Face Detect Setting"
+                }), ". The default values of each option are as follows:"]
               }), (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "최대 얼굴 회전 각도: 15"
+                    children: "Maximum Head Pose Angle: 15"
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "얼굴 인식 거리: 최소 30 cm, 최대 100 cm"
+                    children: "Detection Distance: Min 30 cm, Max 100 cm"
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "얼굴 인식 영역 넓히기: 비활성화"
+                    children: "Wide Search: Deactivated"
                   }), "\n"]
                 }), "\n"]
               })]
@@ -691,82 +693,82 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "ToM 등록"
-              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "ToM 등록"
-              }), "을 활성화하면 BioStar 2에서 발급받은 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "템플릿 온 모바일"
-              }), "을 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "템플릿 온 모바일"
-              }), "은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드로 BioStar 2 서버, Airfob Portal과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다."]
+                children: "ToM Enrollment"
+              }), ": Enabling ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "ToM Enrollment"
+              }), " can be enrolled the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Template on Mobile"
+              }), " issued by BioStar 2. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Template on Mobile"
+              }), " is a Mobile Access card in which the user’s biometric templates can be stored so you can still use biometric authentication although your biometric information is not stored in BioStar 2 server, Airfob Portal, or device."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  children: "템플릿 온 모바일"
-                }), "에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요."]
+                children: ["For detailed contents regarding ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: "Template on Mobile"
+                }), ", refer to the BioStar 2 Administrator Guide."]
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "비주얼 페이스 이미지 저장하기"
-              }), ": 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다. 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다."]
+                children: "Store Visual Face Image"
+              }), ": Set whether to store both the actual image and the template in the visual face or to store only the template without storing the actual image. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "이 설정을 비활성화한 후에는 BioStar 2 v2.9.7 이상에 연결하여 사용하세요."
+                children: "After disabling this setting, please use BioStar 2 v2.9.7 or higher."
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "보안 등급"
-              }), ": 1", ":N", " 인증을 위한 보안 등급을 설정할 수 있습니다."]
+                children: "Security Level"
+              }), ": Set the security level for 1", ":N", " authentication."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "작동 모드"
-              }), ": 얼굴 인증 시 장치의 작동 모드를 설정할 수 있습니다."]
+                children: "Operation Mode"
+              }), ": Set the operation mode of the device when the face is authenticated."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
-                    children: "퓨전 매칭"
-                  }), ": 비주얼 및 적외선 매칭이 모두 동작하여 얼굴 인증의 정확도를 높일 수 있습니다."]
+                    children: "Fusion Matching"
+                  }), ": Use both visual and infrared cameras to increase the face authentication accuracy."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
-                    children: "빠른 인증"
-                  }), ": 사용자는 장치의 인증 범위 안에서 걸어가면서도 얼굴을 인증하는 등 빠르게 인증을 수행할 수 있습니다."]
+                    children: "Fast Matching"
+                  }), ": The device authenticates users who pass an access point without a pause within the authentication distance."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "위조 얼굴 검출"
-              }), ": 사진 등의 위조 얼굴을 이용한 사용자 인증을 방지할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "작동 모드"
-              }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "퓨전 매칭"
-              }), "으로 설정할 때 활성화됩니다."]
+                children: "Fake Detection"
+              }), ": The device prevents user authentication using fake faces, such as photos. It is available when ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Operation Mode"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Fusion Matching"
+              }), "."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "위조 얼굴 검출 성능을 개선하여 iBeta Level 1 ISO 30107-3 제시형 공격 탐지 시험에 통과하였습니다."
+                    children: "Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test."
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                    children: ["햇빛이 강한 환경에서는 ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "위조 얼굴 검출"
-                    }), " 기능을 ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "보통"
-                    }), "으로 사용하는 것을 권장합니다."]
+                    children: ["We recommend using the ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "Fake Detection"
+                    }), " feature set to ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "Normal"
+                    }), " in environments with strong sunlight."]
                   }), "\n"]
                 }), "\n"]
               })
@@ -774,24 +776,24 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "고급 설정"
-              }), ": 마스크 검출 등 얼굴 인증에 대한 고급 설정을 변경할 수 있습니다."]
+                children: "Advanced Settings"
+              }), ": Set the settings of the face authentication, such as mask detection."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
-                    children: "마스크 검출"
-                  }), ": 마스크 검출 사용 여부를 설정할 수 있습니다."]
+                    children: "Mask Detection"
+                  }), ": Set the mask detection mode to detect whether a user is wearing a mask or not."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
-                    children: "검출 모드"
-                  }), ": 마스크 착용 여부를 확인하는 방식을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                    children: "마스크 검출"
-                  }), "을 ", (0,jsx_runtime.jsx)(Cmd, {
-                    children: "사용"
-                  }), "으로 설정할 경우 활성화됩니다."]
+                    children: "Detection Mode"
+                  }), ": Set the method for verifying whether a mask is being worn. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
+                    children: "Mask Detection"
+                  }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                    children: "Enabled"
+                  }), "."]
                 }), "\n"]
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -800,20 +802,22 @@ function _createMdxContent(props) {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "마스크 착용 (하드)"
-                    }), ": 마스크를 착용하지 않은 사용자는 인증이 거부되며, 마스크 미착용 이벤트가 로그로 기록됩니다."]
+                      children: "Require Mask (Hard)"
+                    }), ": Users not wearing a mask will be denied authentication and a mask non-compliance event logs."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "마스크 착용 (소프트)"
-                    }), ": 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트가 로그로 기록됩니다."]
+                      children: "Require Mask (Soft)"
+                    }), ": Users not wearing a mask can be authenticated, but a mask non-compliance event logs."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "마스크 미착용"
-                    }), ": 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 인증 전 확인으로 고정됩니다."]
+                      children: "Require No Mask"
+                    }), ": Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "Check Before Authentication"
+                    }), "."]
                   }), "\n"]
                 }), "\n"]
               })
@@ -821,38 +825,38 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "마스크 검출 등급"
-              }), ": 마스크 착용을 감지하는 감도를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "마스크 검출"
-              }), "을 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "사용"
-              }), "으로 설정할 경우 활성화됩니다."]
+                children: "Mask Detection Level"
+              }), ": Set the sensitivity to detect wearing a mask. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Mask Detection"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Enabled"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "확인 모드"
-              }), ": 장치의 용도에 따라 확인 모드를 설정할 수 있습니다."]
+                children: "Check Mode"
+              }), ": Set the check mode depending on the usage."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "인증 후 확인"
-                    }), ": 인증을 수행한 뒤 사용자의 마스크 착용 여부를 확인합니다."]
+                      children: "Check After Authentication"
+                    }), ": Authenticate and then detect whether the user is wearing a mask."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "인증 전 확인"
-                    }), ": 사용자의 마스크 착용 여부를 확인한 뒤 인증을 수행합니다."]
+                      children: "Check Before Authentication"
+                    }), ": Detect whether the user is wearing a mask and then authenticates."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "확인만"
-                    }), ": 장치를 마스크 착용 여부를 확인하는 용도로만 사용할 수 있습니다. 이 모드를 사용할 경우 인증과 관계없이 마스크를 착용한 사용자는 모두 출입할 수 있습니다."]
+                      children: "Check Only"
+                    }), ": Detect whether a user is wearing a mask without authentication. When this mode is activated, any user wearing a mask can access it regardless of authentication."]
                   }), "\n"]
                 }), "\n"]
               })
@@ -861,10 +865,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "근태",
-      children: "근태"
+      id: "ta-mode",
+      children: "T&A Mode"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "근태 모드 등록 방법을 설정할 수 있습니다."
+      children: "You can set how to register T&A mode."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -875,64 +879,66 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "AUTHENTICATION"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "근태"
-          }), "를 선택하세요."]
+            children: "T&A"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 설정하세요."
+          children: "Select and set the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-auth2.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 모드"
-              }), ": 근태 모드를 사용할 방법을 설정할 수 있습니다."]
+                children: "T&A Mode"
+              }), ": Set the method to use T&A mode."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 코드"
-              }), ": 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 코드"
+                children: "T&A Code"
+              }), ": You can register T&A events. Select ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "T&A Code"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
                 src: "/img/device/ico-add.svg",
                 ico: true
-              }), "을 선택한 뒤 화면에 표시할 아이콘, ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 이벤트 이름"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "스케줄"
-              }), "을 설정하세요."]
+              }), " to register a T&A event and set an icon, ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "T&A Event Name"
+              }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Schedule"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 등록 필요"
-              }), ": 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 모드"
-              }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "수동변경"
-              }), "으로 설정했을 때 사용할 수 있습니다."]
+                children: "T&A Required"
+              }), ": Set to require a user to select a T&A event when authenticating. This option can be used when ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "T&A Mode"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "By User"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 고정 키"
-              }), ": 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "근태 모드"
-              }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "고정"
-              }), "으로 설정했을 때 사용할 수 있습니다."]
+                children: "Fixed T&A Key"
+              }), ": Set to use only a T&A event selected by the administrator. This option can be used when ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "T&A Mode"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Fixed"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "작업 코드"
-              }), ": 작업 코드 사용 여부를 선택할 수 있습니다."]
+                children: "Job Code"
+              }), ": Select whether to use ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Job Code"
+              }), "."]
             }), "\n"]
           }), "\n"]
         }), "\n"]

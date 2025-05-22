@@ -273,7 +273,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "product-specifications#electrical",
+            href: "product-specifications#specs.power",
             children: "Power"
           }), " in the product specifications for maximum current consumption specifications."]
         }), "\n"]

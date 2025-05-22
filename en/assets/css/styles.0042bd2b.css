@@ -4708,7 +4708,7 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 }
 
 .question_NGz8 {
-  display: block;
+  display: inline-block;
   flex-wrap: wrap;
   font-weight: 600;
   font-size: 1.3rem;

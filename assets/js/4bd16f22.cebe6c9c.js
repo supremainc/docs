@@ -670,8 +670,10 @@ function _createMdxContent(props) {
               }), ": 얼굴 인증 시 장치가 얼굴을 검출할 영역의 위치와 크기를 설정할 수 있습니다."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
               type: "info",
-              children: [(0,jsx_runtime.jsx)(_components.p, {
-                children: "최적의 성능을 위해 얼굴 검출 설정의 하위 옵션은 기본 설정 값 사용을 권장합니다. 각 옵션의 기본 값은 다음과 같습니다."
+              children: [(0,jsx_runtime.jsxs)(_components.p, {
+                children: ["최적의 성능을 위해 ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: "얼굴 검출 설정"
+                }), "의 하위 옵션은 기본 설정 값 사용을 권장합니다. 각 옵션의 기본 값은 다음과 같습니다."]
               }), (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -813,7 +815,9 @@ function _createMdxContent(props) {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       children: "마스크 미착용"
-                    }), ": 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 인증 전 확인으로 고정됩니다."]
+                    }), ": 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "인증 전 확인"
+                    }), "으로 고정됩니다."]
                   }), "\n"]
                 }), "\n"]
               })
