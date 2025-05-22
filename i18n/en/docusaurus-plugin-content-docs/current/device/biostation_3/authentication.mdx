@@ -149,120 +149,120 @@ You can set the auth result display option.
 
 ## Face
 
-얼굴 인증에 대한 설정을 변경할 수 있습니다.
+You can change the configuration for facial authentication.
 
 1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
 
-1. <Cmd>AUTHENTICATION</Cmd> → <Cmd>얼굴</Cmd>을 선택하세요.
+1. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Face</Cmd>.
 
-1. 원하는 항목을 변경하세요.
+1. Select and set the desired item.
 
     <Image src='/img/device/device-auth.png' />
 
-    * <Cmd>모션 센서 감도</Cmd>: 장치 주변에 움직임을 감지하는 감도를 설정합니다. <Cmd>모션 센서 감도</Cmd>를 <Cmd>끔</Cmd>으로 설정한 경우, 얼굴을 인증하려면 화면을 터치한 뒤 인증을 진행하세요.
+    * <Cmd>Motion Sensor</Cmd>: Set the sensitivity for detecting motion near the device. If <Cmd>Motion Sensor</Cmd> is set to <Cmd>Off</Cmd>, tap the screen to authenticate the face.
 
-    * <Cmd>등록 대기 시간</Cmd>: 설정한 시간 동안 얼굴을 등록하지 못하면 얼굴 등록이 취소됩니다.
+    * <Cmd>Enroll Timeout</Cmd>: If a face is not enrolled during the set time, the face enrollment will be canceled.
 
-    * <Cmd>인증 대기 시간</Cmd>: 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다.
+    * <Cmd>Auth Timeout</Cmd>: If the authentication is not completed during the set time, the authentication will fail.
 
-    * <Cmd>등록얼굴 중복검사</Cmd>: 얼굴 등록 시 중복 얼굴 여부를 검사할 수 있습니다.
+    * <Cmd>Duplicate Check</Cmd>: When enrolling a face, you can check duplicates.
 
-    * <Cmd>얼굴 검출 설정</Cmd>: 얼굴 인증 시 장치가 얼굴을 검출할 영역의 위치와 크기를 설정할 수 있습니다.
-
-        :::info
-
-        최적의 성능을 위해 얼굴 검출 설정의 하위 옵션은 기본 설정 값 사용을 권장합니다. 각 옵션의 기본 값은 다음과 같습니다.
-
-        * 최대 얼굴 회전 각도: 15
-
-        * 얼굴 인식 거리: 최소 30 cm, 최대 100 cm
-
-        * 얼굴 인식 영역 넓히기: 비활성화
-
-        :::
-
-    * <Cmd>ToM 등록</Cmd>: <Cmd>ToM 등록</Cmd>을 활성화하면 BioStar 2에서 발급받은 <Cmd>템플릿 온 모바일</Cmd>을 등록할 수 있습니다. <Cmd>템플릿 온 모바일</Cmd>은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드로 BioStar 2 서버, Airfob Portal과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다.
+    * <Cmd>Face Detect Setting</Cmd>: Set the face authentication area by adjusting the size and position of the detected area.
 
         :::info
 
-        <Cmd>템플릿 온 모바일</Cmd>에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요.
+        It is recommended to maintain the default values of options under <Cmd>Face Detect Setting</Cmd>. The default values of each option are as follows:
+
+        * Maximum Head Pose Angle: 15
+
+        * Detection Distance: Min 30 cm, Max 100 cm
+
+        * Wide Search: Deactivated
 
         :::
 
-    * <Cmd>비주얼 페이스 이미지 저장하기</Cmd>: 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다. 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다.
+    * <Cmd>ToM Enrollment</Cmd>: Enabling <Cmd>ToM Enrollment</Cmd> can be enrolled the <Cmd>Template on Mobile</Cmd> issued by BioStar 2. <Cmd>Template on Mobile</Cmd> is a Mobile Access card in which the user’s biometric templates can be stored so you can still use biometric authentication although your biometric information is not stored in BioStar 2 server, Airfob Portal, or device.
 
         :::info
 
-        이 설정을 비활성화한 후에는 BioStar 2 v2.9.7 이상에 연결하여 사용하세요.
+        For detailed contents regarding <Cmd>Template on Mobile</Cmd>, refer to the BioStar 2 Administrator Guide.
 
         :::
 
-    * <Cmd>보안 등급</Cmd>: 1:N 인증을 위한 보안 등급을 설정할 수 있습니다.
-
-    * <Cmd>작동 모드</Cmd>: 얼굴 인증 시 장치의 작동 모드를 설정할 수 있습니다.
-
-        * <Cmd>퓨전 매칭</Cmd>: 비주얼 및 적외선 매칭이 모두 동작하여 얼굴 인증의 정확도를 높일 수 있습니다.
-
-        * <Cmd>빠른 인증</Cmd>: 사용자는 장치의 인증 범위 안에서 걸어가면서도 얼굴을 인증하는 등 빠르게 인증을 수행할 수 있습니다.
-
-    * <Cmd>위조 얼굴 검출</Cmd>: 사진 등의 위조 얼굴을 이용한 사용자 인증을 방지할 수 있습니다. <Cmd>작동 모드</Cmd>를 <Cmd>퓨전 매칭</Cmd>으로 설정할 때 활성화됩니다.
+    * <Cmd>Store Visual Face Image</Cmd>: Set whether to store both the actual image and the template in the visual face or to store only the template without storing the actual image. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
 
         :::info
 
-        * 위조 얼굴 검출 성능을 개선하여 iBeta Level 1 ISO 30107-3 제시형 공격 탐지 시험에 통과하였습니다.
-
-        * 햇빛이 강한 환경에서는 <Cmd>위조 얼굴 검출</Cmd> 기능을 <Cmd>보통</Cmd>으로 사용하는 것을 권장합니다.
+        After disabling this setting, please use BioStar 2 v2.9.7 or higher.
 
         :::
 
-    * <Cmd>고급 설정</Cmd>: 마스크 검출 등 얼굴 인증에 대한 고급 설정을 변경할 수 있습니다.
+    * <Cmd>Security Level</Cmd>: Set the security level for 1:N authentication.
 
-        * <Cmd>마스크 검출</Cmd>: 마스크 검출 사용 여부를 설정할 수 있습니다.
+    * <Cmd>Operation Mode</Cmd>: Set the operation mode of the device when the face is authenticated.
 
-        * <Cmd>검출 모드</Cmd>: 마스크 착용 여부를 확인하는 방식을 설정할 수 있습니다. <Cmd>마스크 검출</Cmd>을 <Cmd>사용</Cmd>으로 설정할 경우 활성화됩니다.
+        * <Cmd>Fusion Matching</Cmd>: Use both visual and infrared cameras to increase the face authentication accuracy.
+
+        * <Cmd>Fast Matching</Cmd>: The device authenticates users who pass an access point without a pause within the authentication distance.
+
+    * <Cmd>Fake Detection</Cmd>: The device prevents user authentication using fake faces, such as photos. It is available when <Cmd>Operation Mode</Cmd> is set to <Cmd>Fusion Matching</Cmd>.
 
         :::info
 
-        * <Cmd>마스크 착용 (하드)</Cmd>: 마스크를 착용하지 않은 사용자는 인증이 거부되며, 마스크 미착용 이벤트가 로그로 기록됩니다.
+        * Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test.
 
-        * <Cmd>마스크 착용 (소프트)</Cmd>: 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트가 로그로 기록됩니다.
-
-        * <Cmd>마스크 미착용</Cmd>: 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 인증 전 확인으로 고정됩니다.
+        * We recommend using the <Cmd>Fake Detection</Cmd> feature set to <Cmd>Normal</Cmd> in environments with strong sunlight.
 
         :::
 
-    * <Cmd>마스크 검출 등급</Cmd>: 마스크 착용을 감지하는 감도를 설정할 수 있습니다. <Cmd>마스크 검출</Cmd>을 <Cmd>사용</Cmd>으로 설정할 경우 활성화됩니다.
+    * <Cmd>Advanced Settings</Cmd>: Set the settings of the face authentication, such as mask detection.
 
-    * <Cmd>확인 모드</Cmd>: 장치의 용도에 따라 확인 모드를 설정할 수 있습니다.
+        * <Cmd>Mask Detection</Cmd>: Set the mask detection mode to detect whether a user is wearing a mask or not.
+
+        * <Cmd>Detection Mode</Cmd>: Set the method for verifying whether a mask is being worn. This is activated when the <Cmd>Mask Detection</Cmd> is set to <Cmd>Enabled</Cmd>.
 
         :::info
 
-        * <Cmd>인증 후 확인</Cmd>: 인증을 수행한 뒤 사용자의 마스크 착용 여부를 확인합니다.
+        * <Cmd>Require Mask (Hard)</Cmd>: Users not wearing a mask will be denied authentication and a mask non-compliance event logs.
 
-        * <Cmd>인증 전 확인</Cmd>: 사용자의 마스크 착용 여부를 확인한 뒤 인증을 수행합니다.
+        * <Cmd>Require Mask (Soft)</Cmd>: Users not wearing a mask can be authenticated, but a mask non-compliance event logs.
 
-        * <Cmd>확인만</Cmd>: 장치를 마스크 착용 여부를 확인하는 용도로만 사용할 수 있습니다. 이 모드를 사용할 경우 인증과 관계없이 마스크를 착용한 사용자는 모두 출입할 수 있습니다.
+        * <Cmd>Require No Mask</Cmd>: Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to <Cmd>Check Before Authentication</Cmd>.
 
         :::
 
-## 근태
+    * <Cmd>Mask Detection Level</Cmd>: Set the sensitivity to detect wearing a mask. This is activated when the <Cmd>Mask Detection</Cmd> is set to <Cmd>Enabled</Cmd>.
 
-근태 모드 등록 방법을 설정할 수 있습니다.
+    * <Cmd>Check Mode</Cmd>: Set the check mode depending on the usage.
+
+        :::info
+
+        * <Cmd>Check After Authentication</Cmd>: Authenticate and then detect whether the user is wearing a mask.
+
+        * <Cmd>Check Before Authentication</Cmd>: Detect whether the user is wearing a mask and then authenticates.
+
+        * <Cmd>Check Only</Cmd>: Detect whether a user is wearing a mask without authentication. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+
+        :::
+
+## T&A Mode
+
+You can set how to register T&A mode.
 
 1. Press <Image src='/img/device/ico-menu.svg' ico /> and authenticate with the Admin level credential.
 
-1. <Cmd>AUTHENTICATION</Cmd> → <Cmd>근태</Cmd>를 선택하세요.
+1. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>T&A</Cmd>.
 
-1. 원하는 항목을 설정하세요.
+1. Select and set the desired item.
 
     <Image src='/img/device/device-auth2.png' />
 
-    * <Cmd>근태 모드</Cmd>: 근태 모드를 사용할 방법을 설정할 수 있습니다.
+    * <Cmd>T&A Mode</Cmd>: Set the method to use T&A mode.
 
-    * <Cmd>근태 코드</Cmd>: 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 <Cmd>근태 코드</Cmd> → <Image src='/img/device/ico-add.svg' ico />을 선택한 뒤 화면에 표시할 아이콘, <Cmd>근태 이벤트 이름</Cmd>, <Cmd>스케줄</Cmd>을 설정하세요.
+    * <Cmd>T&A Code</Cmd>: You can register T&A events. Select <Cmd>T&A Code</Cmd> → <Image src='/img/device/ico-add.svg' ico /> to register a T&A event and set an icon, <Cmd>T&A Event Name</Cmd> and <Cmd>Schedule</Cmd>.
 
-    * <Cmd>근태 등록 필요</Cmd>: 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>수동변경</Cmd>으로 설정했을 때 사용할 수 있습니다.
+    * <Cmd>T&A Required</Cmd>: Set to require a user to select a T&A event when authenticating. This option can be used when <Cmd>T&A Mode</Cmd> is set to <Cmd>By User</Cmd>.
 
-    * <Cmd>근태 고정 키</Cmd>: 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>고정</Cmd>으로 설정했을 때 사용할 수 있습니다.
+    * <Cmd>Fixed T&A Key</Cmd>: Set to use only a T&A event selected by the administrator. This option can be used when <Cmd>T&A Mode</Cmd> is set to <Cmd>Fixed</Cmd>.
 
-    * <Cmd>작업 코드</Cmd>: 작업 코드 사용 여부를 선택할 수 있습니다.
+    * <Cmd>Job Code</Cmd>: Select whether to use <Cmd>Job Code</Cmd>.
