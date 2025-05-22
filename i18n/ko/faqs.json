@@ -57,7 +57,7 @@
           "product": [ "biostation_3", "facestation_f2", "facelite", "facestation_2" ],
           "question": "갑자기 얼굴 인증이 되지 않습니다.",
           "answer": [
-            "<a href='getting-started#cautions-enrolling-faces'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 다시 시도하세요."
+            "<a href='getting-started#cautions-authenticating-face'>얼굴 인증 시 주의 사항</a>을 확인한 뒤 다시 시도하세요."
           ]
         },
         {
