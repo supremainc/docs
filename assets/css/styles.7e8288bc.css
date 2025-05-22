@@ -4240,190 +4240,6 @@ ul li.fileitem_PWvV ul {
 ul li.fileitem_PWvV ul li [type='file'] span.name_iojM {
   min-width: 215px;
 }
-.searchQueryInput_cpyO,
-.searchVersionInput_wf2r {
-  border-radius: var(--ifm-global-radius);
-  border: 2px solid var(--ifm-toc-border-color);
-  font: var(--ifm-font-size-base) var(--ifm-font-family-base);
-  padding: 0.8rem;
-  width: 100%;
-  background: var(--docsearch-searchbox-focus-background);
-  color: var(--docsearch-text-color);
-  margin-bottom: 0.5rem;
-  transition: border var(--ifm-transition-fast) ease;
-}
-
-.searchQueryInput_cpyO:focus,
-.searchVersionInput_wf2r:focus {
-  border-color: var(--docsearch-primary-color);
-  outline: none;
-}
-
-.searchQueryInput_cpyO::placeholder {
-  color: var(--docsearch-muted-color);
-}
-
-.searchResultsColumn_PLpb {
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-.algoliaLogo_YElR {
-  max-width: 150px;
-}
-
-.algoliaLogoPathFill_grp5 {
-  fill: var(--ifm-font-color-base);
-}
-
-.searchResultItem_AlWU {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--ifm-toc-border-color);
-}
-
-.searchResultItemHeading_HJFH {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.searchResultItemPath_x9Ef {
-  font-size: 0.8rem;
-  color: var(--ifm-color-content-secondary);
-  --ifm-breadcrumb-separator-size-multiplier: 1;
-}
-
-.searchResultItemSummary_jej3 {
-  margin: 0.5rem 0 0;
-  font-style: italic;
-}
-
-@media only screen and (max-width: 996px) {
-  .searchQueryColumn_hQFc {
-    max-width: 60% !important;
-  }
-
-  .searchVersionColumn_GkmC {
-    max-width: 40% !important;
-  }
-
-  .searchResultsColumn_PLpb {
-    max-width: 60% !important;
-  }
-
-  .searchLogoColumn_Mj_0 {
-    max-width: 40% !important;
-    padding-left: 0 !important;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .searchQueryColumn_hQFc {
-    max-width: 100% !important;
-  }
-
-  .searchVersionColumn_GkmC {
-    max-width: 100% !important;
-    padding-left: var(--ifm-spacing-horizontal) !important;
-  }
-}
-
-.loadingSpinner_E_zt {
-  width: 3rem;
-  height: 3rem;
-  border: 0.4em solid #eee;
-  border-top-color: var(--ifm-color-primary);
-  border-radius: 50%;
-  animation: loading-spin_hlTL 1s linear infinite;
-  margin: 0 auto;
-}
-
-@keyframes loading-spin_hlTL {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loader_ujSQ {
-  margin-top: 2rem;
-}
-
-.search-result-match {
-  color: var(--docsearch-hit-color);
-  background: rgb(255 215 142 / 25%);
-  padding: 0.09em 0;
-}
-
-.faq_GMal {
-  border-top: 2px solid var(--ifm-color-color-ol-gray);
-  border-bottom: 1px solid var(--ifm-color-color-ol-gray);
-  padding: 1.1rem 1.2rem 1.2rem 1.2rem;
-}
-
-.faq_GMal summary {
-  font-size: 1.2rem;
-  font-weight: 500;
-  position: relative;
-  anchor-name: --faqs;
-  padding-right: 1.5rem;
-  display: flex;
-}
-
-.faq_GMal summary::marker {
-  content: ' ';
-}
-
-.faq_GMal summary::before, .faq_GMal summary::after {
-  content: ' ';
-  border-block-start: 3px solid var(--ifm-color-cmd);
-  width: 1rem;
-  height: 0;
-  inset-block-start: 50%;
-  inset-inline-end: 0;
-  position: absolute;
-  position-anchor: --faqs;
-  position-area: top end;
-  display: inline-block;
-}
-
-.faq_GMal summary::after {
-  transform: rotate(90deg);
-}
-
-.faq_GMal[open] summary::after {
-  transform: rotate(0deg);
-}
-
-.faq_GMal[open] summary {
-  margin-bottom: 1rem;
-}
-
-.question_NGz8 {
-  display: block;
-  flex-wrap: wrap;
-  font-weight: 600;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  margin-right: 0.5rem;
-}
-
-.faq_GMal + .faq_GMal {
-  border-top: none;
-}
-
-.faqTitle_txQN {
-  margin-top: 3rem !important;
-}
-
-.faq_GMal .faqBody_ifca {
-  background: #eee;
-  padding: 1rem .5rem;
-  color: #333
-}
-
-.faq_GMal .faqBody_ifca ul {
-  margin-bottom: 8px;
-}
 /*
 When the navbar is sticky, ensure that on anchor click,
 the browser does not scroll that anchor behind the navbar
@@ -4846,6 +4662,76 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
     width: 100%;
   }
 }
+.faq_GMal {
+  border-top: 2px solid var(--ifm-color-color-ol-gray);
+  border-bottom: 1px solid var(--ifm-color-color-ol-gray);
+  padding: 1.1rem 1.2rem 1.2rem 1.2rem;
+}
+
+.faq_GMal summary {
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  anchor-name: --faqs;
+  padding-right: 1.5rem;
+  display: flex;
+}
+
+.faq_GMal summary::marker {
+  content: ' ';
+}
+
+.faq_GMal summary::before, .faq_GMal summary::after {
+  content: ' ';
+  border-block-start: 3px solid var(--ifm-color-cmd);
+  width: 1rem;
+  height: 0;
+  inset-block-start: 50%;
+  inset-inline-end: 0;
+  position: absolute;
+  position-anchor: --faqs;
+  position-area: top end;
+  display: inline-block;
+}
+
+.faq_GMal summary::after {
+  transform: rotate(90deg);
+}
+
+.faq_GMal[open] summary::after {
+  transform: rotate(0deg);
+}
+
+.faq_GMal[open] summary {
+  margin-bottom: 1rem;
+}
+
+.question_NGz8 {
+  display: block;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-right: 0.5rem;
+}
+
+.faq_GMal + .faq_GMal {
+  border-top: none;
+}
+
+.faqTitle_txQN {
+  margin-top: 3rem !important;
+}
+
+.faq_GMal .faqBody_ifca {
+  background: #eee;
+  padding: 1rem .5rem;
+  color: #333
+}
+
+.faq_GMal .faqBody_ifca ul {
+  margin-bottom: 8px;
+}
 .breadcrumbHomeIcon_xK9p {
   position: relative;
   top: 1px;
@@ -4987,6 +4873,120 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
     display: none;
   }
 }
+.searchQueryInput_cpyO,
+.searchVersionInput_wf2r {
+  border-radius: var(--ifm-global-radius);
+  border: 2px solid var(--ifm-toc-border-color);
+  font: var(--ifm-font-size-base) var(--ifm-font-family-base);
+  padding: 0.8rem;
+  width: 100%;
+  background: var(--docsearch-searchbox-focus-background);
+  color: var(--docsearch-text-color);
+  margin-bottom: 0.5rem;
+  transition: border var(--ifm-transition-fast) ease;
+}
+
+.searchQueryInput_cpyO:focus,
+.searchVersionInput_wf2r:focus {
+  border-color: var(--docsearch-primary-color);
+  outline: none;
+}
+
+.searchQueryInput_cpyO::placeholder {
+  color: var(--docsearch-muted-color);
+}
+
+.searchResultsColumn_PLpb {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.algoliaLogo_YElR {
+  max-width: 150px;
+}
+
+.algoliaLogoPathFill_grp5 {
+  fill: var(--ifm-font-color-base);
+}
+
+.searchResultItem_AlWU {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.searchResultItemHeading_HJFH {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.searchResultItemPath_x9Ef {
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  --ifm-breadcrumb-separator-size-multiplier: 1;
+}
+
+.searchResultItemSummary_jej3 {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 996px) {
+  .searchQueryColumn_hQFc {
+    max-width: 60% !important;
+  }
+
+  .searchVersionColumn_GkmC {
+    max-width: 40% !important;
+  }
+
+  .searchResultsColumn_PLpb {
+    max-width: 60% !important;
+  }
+
+  .searchLogoColumn_Mj_0 {
+    max-width: 40% !important;
+    padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .searchQueryColumn_hQFc {
+    max-width: 100% !important;
+  }
+
+  .searchVersionColumn_GkmC {
+    max-width: 100% !important;
+    padding-left: var(--ifm-spacing-horizontal) !important;
+  }
+}
+
+.loadingSpinner_E_zt {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4em solid #eee;
+  border-top-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: loading-spin_hlTL 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes loading-spin_hlTL {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader_ujSQ {
+  margin-top: 2rem;
+}
+
+.search-result-match {
+  color: var(--docsearch-hit-color);
+  background: rgb(255 215 142 / 25%);
+  padding: 0.09em 0;
+}
+
 .backpage_ksF4 {
   height: 100vh;
   background: rgb(255,255,255);

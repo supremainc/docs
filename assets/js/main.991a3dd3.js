@@ -20813,7 +20813,7 @@ var routesChunkNames = __webpack_require__("7138");
         /*require.resolve*/(942)
     ],
     "2ded3a67": [
-        ()=>Promise.all(/* import() | 2ded3a67 */ [__webpack_require__.e("6212"), __webpack_require__.e("1396")]).then(__webpack_require__.bind(__webpack_require__, 4819)),
+        ()=>__webpack_require__.e(/* import() | 2ded3a67 */ "1396").then(__webpack_require__.bind(__webpack_require__, 4819)),
         "@site/docs/device/biostation_3/troubleshooting.mdx",
         /*require.resolve*/(4819)
     ],
@@ -20983,7 +20983,7 @@ var routesChunkNames = __webpack_require__("7138");
         /*require.resolve*/(160)
     ],
     "9dfd9826": [
-        ()=>Promise.all(/* import() | 9dfd9826 */ [__webpack_require__.e("6212"), __webpack_require__.e("2385")]).then(__webpack_require__.bind(__webpack_require__, 8769)),
+        ()=>__webpack_require__.e(/* import() | 9dfd9826 */ "2385").then(__webpack_require__.bind(__webpack_require__, 8769)),
         "@site/docs/device/facestation_f2/troubleshooting.mdx",
         /*require.resolve*/(8769)
     ],

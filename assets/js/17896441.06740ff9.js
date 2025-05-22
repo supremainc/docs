@@ -1,61 +1,5 @@
 "use strict";
 (self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["7048"], {
-"7648": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Z: () => (/* binding */ Head)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__("5893");
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("7294");
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__("7026");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
-var useThemeConfig = __webpack_require__("6009");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__("3367");
-;// CONCATENATED MODULE: ./src/components/Head/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_Kz00","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WDcu"});
-;// CONCATENATED MODULE: ./src/components/Head/index.js
-
-
-
-
-
-
-function Head(param) {
-    let { level, hashid, children, className } = param;
-    const Headertag = `h${level}`;
-    let hid;
-    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
-    if (level === 'none') {
-        return null;
-    }
-    if (!hashid) {
-        hid = children.join("_");
-    } else {
-        hid = hashid;
-    }
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Headertag, {
-        className: (0,clsx/* default */.Z)('anchor', hideOnScroll ? styles_module.anchorWithHideOnScrollNavbar : styles_module.anchorWithStickyNavbar, className),
-        id: hid,
-        children: [
-            children,
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
-                className: "hash-link",
-                to: `#${hid}`,
-                children: "​"
-            })
-        ]
-    });
-}
-
-
-}),
 "2475": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
@@ -898,7 +842,7 @@ function DocItemLayout(param) {
 
 
 }),
-"5371": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"8977": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1250,8 +1194,47 @@ function File(param) {
     });
 }
 
-// EXTERNAL MODULE: ./src/components/Head/index.js + 1 modules
-var Head = __webpack_require__("7648");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
+var useThemeConfig = __webpack_require__("6009");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__("3367");
+;// CONCATENATED MODULE: ./src/components/Head/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Head_styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_Kz00","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WDcu"});
+;// CONCATENATED MODULE: ./src/components/Head/index.js
+
+
+
+
+
+
+function Head(param) {
+    let { level, hashid, children, className } = param;
+    const Headertag = `h${level}`;
+    let hid;
+    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
+    if (level === 'none') {
+        return null;
+    }
+    if (!hashid) {
+        hid = children.join("_");
+    } else {
+        hid = hashid;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Headertag, {
+        className: (0,clsx/* default */.Z)('anchor', hideOnScroll ? Head_styles_module.anchorWithHideOnScrollNavbar : Head_styles_module.anchorWithStickyNavbar, className),
+        id: hid,
+        children: [
+            children,
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+                className: "hash-link",
+                to: `#${hid}`,
+                children: "​"
+            })
+        ]
+    });
+}
+
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
 var useBaseUrl = __webpack_require__("3187");
 ;// CONCATENATED MODULE: ./src/components/Image/useImageDimensions.js
@@ -1349,8 +1332,6 @@ function Image_Image(param) {
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsSidebar.js
 var docsSidebar = __webpack_require__("4684");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__("3367");
 ;// CONCATENATED MODULE: ./src/components/Toc/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const Toc_styles_module = ({"tocList":"tocList_VIMH","toc":"toc_fhyy"});
@@ -2968,7 +2949,7 @@ function SpecSectioin(param) {
     const glossary = Specs_glossaryMap[currentLocale] || en_glossary_namespaceObject;
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head, {
                 level: 2,
                 hashid: data.label_id,
                 children: (0,Translate/* translate */.I)({
@@ -3148,7 +3129,7 @@ function SpecSizeWieght(param) {
     const specs = data.items;
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head, {
                 level: 2,
                 hashid: data.label_id,
                 children: (0,Translate/* translate */.I)({
@@ -3243,6 +3224,122 @@ function SpecSizeWieght(param) {
                         ]
                     }, item.label_id || index))
             })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/Faqs/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Faqs_styles_module = ({"faq":"faq_GMal","question":"question_NGz8","faqTitle":"faqTitle_txQN","faqBody":"faqBody_ifca"});
+;// CONCATENATED MODULE: ./i18n/ko/faqs.json
+var faqs_namespaceObject = JSON.parse('[{"category":{"title":"전원","hid":"power","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"전원이 공급되고 있으나 작동하지 않습니다.","answer":["단말기와 브래킷이 떨어져 있으면 탬퍼 스위치에 의해 작동하지 않을 수도 있습니다.","어댑터 또는 전원 연결 케이블을 확인하세요."]}]}},{"category":{"title":"PIN","hid":"pin","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"PIN을 분실했습니다.","answer":["일반 사용자의 PIN은 관리자에게 요청한 뒤 다시 입력하세요.","관리자 PIN 분실 시 설치 업체에 문의하세요."]},{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"PIN을 입력한 뒤 <span class=\'cmd\'>OK</span> 버튼을 눌러도 잠긴 문을 열 수 없습니다.","answer":["등록한 PIN을 정상적으로 입력하였는지 확인하세요.","최근에 PIN을 변경하지 않았는지 확인하세요.","PIN을 알 수 없는 경우 관리자에게 요청한 뒤 다시 입력하세요."]}]}},{"category":{"title":"QR/바코드","hid":"qrbarcode","contents":[{"product":["xstation_2"],"question":"QR/바코드 인식이 잘 되지 않습니다.","answer":["<a href=\'getting-started#how-to-scan-qrbarcode\'>올바른 QR/바코드 인증 방법</a>을 확인한 뒤 다시 시도하세요.","<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: 가이드 빔이 QR/바코드의 중앙에 오도록 위치시키세요.","<b>XS2-DPB</b>, <b>XS2-APB</b>: QR/바코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요.","모바일 장치에 내려 받은 QR/바코드일 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하거나 화면을 닦고 다시 시도하세요.","문제가 해결되지 않을 경우 QR/바코드를 발급한 관리자에게 문의하세요."]}]}},{"category":{"title":"얼굴","hid":"face","contents":[{"product":["biostation_3","facestation_f2","facelite","facestation_2"],"question":"등록은 되었으나 얼굴 인증이 잘 되지 않고 오류가 많이 납니다.","answer":["<a href=\'getting-started#cautions-enrolling-faces\'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 얼굴을 다시 등록하세요.","등록된 얼굴 개수가 많다면 <span class=\'cmd\'>매칭 대기 시간</span>을 변경한 뒤 다시 시도하세요."]},{"product":["biostation_3","facestation_f2","facelite","facestation_2"],"question":"갑자기 얼굴 인증이 되지 않습니다.","answer":["<a href=\'getting-started#cautions-authenticating-face\'>얼굴 인증 시 주의 사항</a>을 확인한 뒤 다시 시도하세요."]},{"product":["biostation_3","facestation_f2"],"question":"<span class=\'cmd\'>마스크 검출</span> 기능을 <span class=\'cmd\'>사용</span>으로 설정하였으나 마스크 착용 시 얼굴 인증이 잘 되지 않고 오류가 많이 납니다.","answer":["마스크를 코끝까지 내리고 얼굴을 2회 인증한 뒤 다시 코를 덮고 얼굴 인증을 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."]},{"product":["facestation_f2"],"question":"열화상 카메라 사용 시 온도가 정상적으로 측정되지 않습니다.","answer":["단말기에 열화상 카메라가 정상적으로 연결되었는지 확인하세요.","이마가 가려지지 않은 상태에서 온도 측정을 다시 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."]},{"product":["facestation_f2"],"question":"열화상 카메라 사용 시 온도가 너무 낮게 측정됩니다.","answer":["동절기에 사용자가 장시간 동안 실외의 낮은 온도에 노출된 상태에서 온도를 측정할 경우 체온보다 낮게 측정될 수 있습니다. 실내에서 1~2분 대기한 뒤 다시 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요."]}]}},{"category":{"title":"지문","hid":"fingerprint","contents":[{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2","biostation_a2","biostation_l2"],"question":"등록은 되었으나 지문 인식이 잘 되지 않고 오류가 많이 납니다.","answer":["<a href=\'getting-started#cautions-enrolling-fingers\'>올바른 지문 입력 방법</a>을 확인한 뒤 지문을 다시 등록하세요.","지문에 상처가 생기는 경우 기기는 다른 사람의 지문으로 잘못 인식될 수 있습니다.","등록된 지문 개수가 많다면 <span class=\'cmd\'>매칭 대기 시간</span>을 변경한 뒤 다시 시도하세요.","지문마다 특징의 차이로 인해 인식률에 차이가 있으니 다른 손가락의 지문을 등록하세요."]},{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2","biostation_a2","biostation_l2"],"question":"갑자기 지문 인식이 되지 않습니다.","answer":["손가락이나 지문 센서에 땀, 물기, 먼지 등이 묻어 있는지 확인한 뒤 깨끗이 닦아 주세요.","마른 수건 등으로 손가락과 지문 센서를 닦은 다음 다시 시도하세요.","손가락의 지문이 매우 건조할 때는 입김을 분 다음 다시 시도하세요."]},{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2"],"question":"지문 센서가 켜지지 않습니다.","answer":["<span class=\'cmd\'>센서 모드</span>가 <span class=\'cmd\'>자동 켜짐</span>으로 설정되어 있을 경우 지문 센서에 손가락을 댈 경우에만 센서가 켜집니다. 항상 지문 센서가 켜져 있길 원한다면 <span class=\'cmd\'>인증</span> → <span class=\'cmd\'>지문</span> → <span class=\'cmd\'>센서 모드</span>를 <span class=\'cmd\'>항상 켜짐</span>으로 설정하세요."]}]}},{"category":{"title":"문 잠금","hid":"doorlock","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"문을 닫아도 잠금 장치는 잠기지 않습니다.","answer":["전기 잠금 장치의 이상일 수 있습니다. 설치 업체를 통해 점검을 받으세요."]}]}},{"category":{"title":"시간","hid":"time","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"갑자기 시간이 맞지 않습니다.","answer":["장치에는 내장 배터리가 있으나, 오랫동안 전원이 공급되지 않으면 내장 배터리가 방전되어 시간이 달라질 수 있습니다. <a href=\'settings#date-time\'>날짜와 시간</a> 메뉴를 참고하여 시간을 수정할 수 있습니다."]}]}},{"category":{"title":"관리자 접속","hid":"admin","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"관리자 PIN을 분실하여 관리자 모드에 진입할 수 없습니다.","answer":["장치는 관리자가 출입 허용 권한을 부여하기 때문에 관리자만 메뉴에 진입할 수 있습니다.","관리자 PIN 분실 시 설치 업체에 문의하세요."]}]}}]')
+;// CONCATENATED MODULE: ./i18n/en/faqs.json
+var en_faqs_namespaceObject = JSON.parse('[{"category":{"title":"Power","hid":"power","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"The power is being supplied but the device does not operate.","answer":["If the terminal and the bracket are far away from each other, the device may not operate due to the temper switch.","Check the adaptor or the power cable."]}]}},{"category":{"title":"PIN","hid":"pin","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"I lost my PIN.","answer":["For a normal user PIN, request it from the administrator and enter it again.","If you have lost the Admin PIN, contact the installation company."]},{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"I entered my PIN and pressed the <span class=\'cmd\'>OK</span> button, but I still cannot open the door.","answer":["Check if you have entered the registered PIN correctly.","Check if you have changed the PIN recently.","If you cannot remember the PIN, request it from the administrator and enter it again."]}]}},{"category":{"title":"QR/바코드","hid":"qrbarcode","contents":[{"product":["xstation_2"],"question":"QR/바코드 인식이 잘 되지 않습니다.","answer":["Refer to <a href=\'getting-started#how-to-scan-qrbarcode\'>How to scan a QR/Barcode</a> and try again.","<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Place the guide beam at the center of the QR code.","<b>XS2-DPB</b>, <b>XS2-APB</b>: Position the QR/Barcode in the center of the scan screen of the device.","Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.","If the problem persists, contact the administrator who issued the QR/Barcode."]}]}},{"category":{"title":"Face","hid":"face","contents":[{"product":["biostation_3","facestation_f2","facelite","facestation_2"],"question":"The face has been registered but face authentication cannot be done smoothly, and errors occur frequently.","answer":["Check <a href=\'getting-started#cautions-enrolling-faces\'>Cautions for enrolling a faces</a> and enroll the face again.","If there are a large number of enrolled faces, change <span class=\'cmd\'>Matching Timeout</span> and try again."]},{"product":["biostation_3","facestation_f2","facelite","facestation_2"],"question":"Face authentication has suddenly stopped working.","answer":["Check <a href=\'getting-started#cautions-authenticating-face\'>Cautions for authenticating a face</a> and try again."]},{"product":["biostation_3","facestation_f2"],"question":"<span class=\'cmd\'>Mask Detection</span> is set to <span class=\'cmd\'>Enabled</span>, but face authentication cannot be done smoothly when wearing a mask.","answer":["Authenticate your face twice with the mask pull down on the tip of your nose. Then, authenticate your face again wearing a mask that covers your nose completely. If the problem persists, contact the installation company."]},{"product":["facestation_f2"],"question":"The thermal camera fails to measure temperature.","answer":["Check if the thermal camera is properly connected to the terminal.","Measure the temperature again without covering your forehead. If the problem persists, contact the installation company."]},{"product":["facestation_f2"],"question":"The thermal camera measures lower temperature than actual temperature.","answer":["If a user measures the temperature after being exposed to cold temperatures for a long time, the temperature may be measured lower than the actual temperature. Wait for 1 to 2 minutes indoors and try again. If the problem persists, contact the installation company."]}]}},{"category":{"title":"Fingerprint","hid":"fingerprint","contents":[{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2","biostation_a2","biostation_l2"],"question":"The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.","answer":["Check <a href=\'getting-started#cautions-enrolling-fingers\'>How to enroll a fingerprint</a> and enroll the fingerprint again.","If your fingerprint has a cut, the device may recognize your fingerprint as someone else\\\\\'s fingerprint.","If there are a large number of enrolled fingerprints, change <span class=\'cmd\'>Matching Timeout</span> and try again.","The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger."]},{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2","biostation_a2","biostation_l2"],"question":"Suddenly fingerprint authentication cannot be done.","answer":["Check if the finger or the fingerprint sensor is smeared with sweat, water or dust, and wipe the finger or the fingerprint sensor clean.","Wipe your finger and the fingerprint sensor with a dry towel and then try again.","If the fingerprint of your finger is too dry, blow on the fingerprint and then try again."]},{"product":["bioentry_n2","biostation_2","biostation_2a","biolite_n2"],"question":"The fingerprint sensor does not turn on.","answer":["When <span class=\'cmd\'>Sensor Mode</span> is set to <span class=\'cmd\'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to <span class=\'cmd\'>AUTH</span> → <span class=\'cmd\'>Fingerprint</span> → <span class=\'cmd\'>Sensor Mode</span> and then select <span class=\'cmd\'>Always On</span>."]}]}},{"category":{"title":"Door lock","hid":"doorlock","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"The door cannot be locked when I close the door.","answer":["The electric lock may be malfunctioning. Have an inspection through the installation company."]}]}},{"category":{"title":"Time","hid":"time","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"Suddenly the time has become incorrect.","answer":["The device is equipped with a built-in battery but if power is not supplied for a long time, the built-in battery may die, causing the time to become incorrect. You can correct the time by referring to <a href=\'settings#date-time\'>Date & Time</a>."]}]}},{"category":{"title":"Admin access","hid":"admin","contents":[{"product":["biostation_3","biostation_2","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","biostation_a2","biostation_l2","facelite","facestation_2","xstation_2"],"question":"I lost my Admin PIN, so I cannot access the Admin mode.","answer":["The administrator grants an access permission in the device, so only the administrator can access the Admin menu.","If you have lost the Admin PIN, contact the installation company."]}]}}]')
+;// CONCATENATED MODULE: ./src/components/Faqs/index.js
+
+
+
+
+
+
+
+
+
+/**
+ * FAQ 컴포넌트
+ * @param {Object} props
+ * @param {string|string[]} [props.product] - 필터링할 제품명(들)
+ */ function Faqs() {
+    const faqsMap = {
+        ko: faqs_namespaceObject,
+        en: en_faqs_namespaceObject
+    };
+    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
+    const location = (0,react_router/* useLocation */.TH)();
+    const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
+    console.log(cProd);
+    // product가 주어지면 해당 제품만 필터링, 아니면 전체 출력
+    const productList = Array.isArray(cProd) ? cProd : cProd ? [
+        cProd
+    ] : null;
+    const faqs = faqsMap[currentLocale] || en_faqs_namespaceObject;
+    // 카테고리별로 FAQ를 필터링
+    const filteredCategories = faqs.map((cat)=>{
+        const contentsArr = Array.isArray(cat.category.contents) ? cat.category.contents : [
+            cat.category.contents
+        ];
+        const filteredContents = productList ? contentsArr.filter((faq)=>faq.product.some((p)=>productList.includes(p))) : contentsArr;
+        return filteredContents.length > 0 ? {
+            title: cat.category.title,
+            hid: cat.category.hid,
+            contents: filteredContents
+        } : null;
+    }).filter(Boolean);
+    // FAQ 구조화 데이터 생성 (Google FAQPage Schema)
+    const faqStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": filteredCategories.flatMap((cat)=>cat.contents.map((faq)=>({
+                    "@type": "Question",
+                    "name": faq.question.replace(/<[^>]+>/g, ""),
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer.map((a)=>a.replace(/<[^>]+>/g, "")).join(" ")
+                    }
+                })))
+    };
+    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(faqStructuredData)
+                }
+            }),
+            filteredCategories.length === 0 ? /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                children: "해당 제품에 대한 FAQ가 없습니다."
+            }) : filteredCategories.map((cat, cidx)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)(react.Fragment, {
+                    children: [
+                        /*#__PURE__*/ (0,jsx_runtime.jsx)(Head, {
+                            hashid: cat.hid,
+                            level: 3,
+                            className: Faqs_styles_module.faqTitle,
+                            children: cat.title
+                        }),
+                        cat.contents.map((faq, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("details", {
+                                className: Faqs_styles_module.faq,
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("summary", {
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: Faqs_styles_module.question,
+                                                children: "Q."
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                dangerouslySetInnerHTML: {
+                                                    __html: faq.question
+                                                }
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                        className: Faqs_styles_module.faqBody,
+                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
+                                            style: {
+                                                marginTop: 8
+                                            },
+                                            children: faq.answer.map((a, i)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                                                    dangerouslySetInnerHTML: {
+                                                        __html: a
+                                                    }
+                                                }, i))
+                                        })
+                                    })
+                                ]
+                            }, idx))
+                    ]
+                }, cidx))
         ]
     });
 }
@@ -4303,6 +4400,7 @@ const SvgIcoAibtn = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -4343,7 +4441,7 @@ const SvgIcoAibtn = _ref => {
     Step: Step,
     Folder: Folder,
     File: File,
-    Head: Head/* default */.Z,
+    Head: Head,
     Image: Image_Image,
     DocsSidebar: Toc,
     Collection: components_Collection,
@@ -4378,6 +4476,7 @@ const SvgIcoAibtn = _ref => {
     SpecSectioin: SpecSectioin,
     SpecSizeWieght: SpecSizeWieght,
     Anno: Anno,
+    Faqs: Faqs,
     IcSvTime: ico_serverTime,
     IcAccout: ico_account,
     IcHelp: ico_help,
