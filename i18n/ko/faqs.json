@@ -5,7 +5,7 @@
       "hid": "power",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "전원이 공급되고 있으나 작동하지 않습니다.",
           "answer": [
             "단말기와 브래킷이 떨어져 있으면 탬퍼 스위치에 의해 작동하지 않을 수도 있습니다.",
@@ -21,7 +21,7 @@
       "hid": "pin",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "PIN을 분실했습니다.",
           "answer": [
             "일반 사용자의 PIN은 관리자에게 요청한 뒤 다시 입력하세요.",
@@ -29,7 +29,7 @@
           ]
         },
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "PIN을 입력한 뒤 <span class='cmd'>OK</span> 버튼을 눌러도 잠긴 문을 열 수 없습니다.",
           "answer": [
             "등록한 PIN을 정상적으로 입력하였는지 확인하세요.",
@@ -46,7 +46,7 @@
       "hid": "face",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "facestation_f2", "facelite", "facestation_2" ],
           "question": "등록은 되었으나 얼굴 인증이 잘 되지 않고 오류가 많이 납니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-faces'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 얼굴을 다시 등록하세요.",
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "facestation_f2", "facelite", "facestation_2" ],
           "question": "갑자기 얼굴 인증이 되지 않습니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-faces'>얼굴 등록 시 주의 사항</a>을 확인한 뒤 다시 시도하세요."
@@ -87,11 +87,45 @@
   },
   {
     "category": {
+      "title": "지문",
+      "hid": "fingerprint",
+      "contents": [
+        {
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "question": "등록은 되었으나 지문 인식이 잘 되지 않고 오류가 많이 납니다.",
+          "answer": [
+            "<a href='getting-started#cautions-enrolling-fingers'>올바른 지문 입력 방법</a>을 확인한 뒤 지문을 다시 등록하세요.",
+            "지문에 상처가 생기는 경우 기기는 다른 사람의 지문으로 잘못 인식될 수 있습니다.",
+            "등록된 지문 개수가 많다면 <span class='cmd'>매칭 대기 시간</span>을 변경한 뒤 다시 시도하세요.",
+            "지문마다 특징의 차이로 인해 인식률에 차이가 있으니 다른 손가락의 지문을 등록하세요."
+          ]
+        },
+        {
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "question": "갑자기 지문 인식이 되지 않습니다.",
+          "answer": [
+            "손가락이나 지문 센서에 땀, 물기, 먼지 등이 묻어 있는지 확인한 뒤 깨끗이 닦아 주세요.",
+            "마른 수건 등으로 손가락과 지문 센서를 닦은 다음 다시 시도하세요.",
+            "손가락의 지문이 매우 건조할 때는 입김을 분 다음 다시 시도하세요."
+          ]
+        },
+        {
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
+          "question": "지문 센서가 켜지지 않습니다.",
+          "answer": [
+            "<span class='cmd'>센서 모드</span>가 <span class='cmd'>자동 켜짐</span>으로 설정되어 있을 경우 지문 센서에 손가락을 댈 경우에만 센서가 켜집니다. 항상 지문 센서가 켜져 있길 원한다면 <span class='cmd'>인증</span> → <span class='cmd'>지문</span> → <span class='cmd'>센서 모드</span>를 <span class='cmd'>항상 켜짐</span>으로 설정하세요."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
       "title": "문 잠금",
       "hid": "doorlock",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "문을 닫아도 잠금 장치는 잠기지 않습니다.",
           "answer": [
             "전기 잠금 장치의 이상일 수 있습니다. 설치 업체를 통해 점검을 받으세요."
@@ -106,7 +140,7 @@
       "hid": "time",
       "contents": [
         {
-          "product": [  "biostation_3", "facestation_f2" ],
+          "product": [  "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "갑자기 시간이 맞지 않습니다.",
           "answer": [
             "장치에는 내장 배터리가 있으나, 오랫동안 전원이 공급되지 않으면 내장 배터리가 방전되어 시간이 달라질 수 있습니다. <a href='settings#date-time'>날짜와 시간</a> 메뉴를 참고하여 시간을 수정할 수 있습니다."
@@ -121,7 +155,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2" ],
           "question": "관리자 PIN을 분실하여 관리자 모드에 진입할 수 없습니다.",
           "answer": [
             "장치는 관리자가 출입 허용 권한을 부여하기 때문에 관리자만 메뉴에 진입할 수 있습니다.",
