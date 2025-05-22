@@ -142,6 +142,62 @@ const SvgSpecCredentialFace = _ref => {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgSpecCredentialFace);
 
 }),
+"7648": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Z: () => (/* binding */ Head)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__("5893");
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("7294");
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__("7026");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
+var useThemeConfig = __webpack_require__("6009");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__("3367");
+;// CONCATENATED MODULE: ./src/components/Head/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_Kz00","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WDcu"});
+;// CONCATENATED MODULE: ./src/components/Head/index.js
+
+
+
+
+
+
+function Head(param) {
+    let { level, hashid, children, className } = param;
+    const Headertag = `h${level}`;
+    let hid;
+    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
+    if (level === 'none') {
+        return null;
+    }
+    if (!hashid) {
+        hid = children.join("_");
+    } else {
+        hid = hashid;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Headertag, {
+        className: (0,clsx/* default */.Z)('anchor', hideOnScroll ? styles_module.anchorWithHideOnScrollNavbar : styles_module.anchorWithStickyNavbar, className),
+        id: hid,
+        children: [
+            children,
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+                className: "hash-link",
+                to: `#${hid}`,
+                children: "​"
+            })
+        ]
+    });
+}
+
+
+}),
 "2475": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
@@ -984,7 +1040,7 @@ function DocItemLayout(param) {
 
 
 }),
-"8316": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"3709": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -1120,7 +1176,7 @@ function InDoc(param) {
     const location = (0,react_router/* useLocation */.TH)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd);
         return isProduct ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
             children: /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
@@ -1152,7 +1208,7 @@ function XcludeDoc(param) {
     const location = (0,react_router/* useLocation */.TH)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[1] : location.pathname.split("/")[2];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd);
         return isProduct ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
             children: children
@@ -1336,47 +1392,8 @@ function File(param) {
     });
 }
 
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
-var useThemeConfig = __webpack_require__("6009");
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__("3367");
-;// CONCATENATED MODULE: ./src/components/Head/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const Head_styles_module = ({"anchorWithStickyNavbar":"anchorWithStickyNavbar_Kz00","anchorWithHideOnScrollNavbar":"anchorWithHideOnScrollNavbar_WDcu"});
-;// CONCATENATED MODULE: ./src/components/Head/index.js
-
-
-
-
-
-
-function Head(param) {
-    let { level, hashid, children, className } = param;
-    const Headertag = `h${level}`;
-    let hid;
-    const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
-    if (level === 'none') {
-        return null;
-    }
-    if (!hashid) {
-        hid = children.join("_");
-    } else {
-        hid = hashid;
-    }
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Headertag, {
-        className: (0,clsx/* default */.Z)('anchor', hideOnScroll ? Head_styles_module.anchorWithHideOnScrollNavbar : Head_styles_module.anchorWithStickyNavbar, className),
-        id: hid,
-        children: [
-            children,
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
-                className: "hash-link",
-                to: `#${hid}`,
-                children: "​"
-            })
-        ]
-    });
-}
-
+// EXTERNAL MODULE: ./src/components/Head/index.js + 1 modules
+var Head = __webpack_require__("7648");
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
 var useBaseUrl = __webpack_require__("3187");
 ;// CONCATENATED MODULE: ./src/components/Image/useImageDimensions.js
@@ -1474,6 +1491,8 @@ function Image_Image(param) {
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsSidebar.js
 var docsSidebar = __webpack_require__("4684");
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__("3367");
 ;// CONCATENATED MODULE: ./src/components/Toc/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const Toc_styles_module = ({"tocList":"tocList_VIMH","toc":"toc_fhyy"});
@@ -2981,7 +3000,7 @@ function SpecSectioin(param) {
     const glossary = Specs_glossaryMap[currentLocale] || en_glossary_namespaceObject;
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head, {
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
                 level: 2,
                 hashid: data.label_id,
                 children: (0,Translate/* translate */.I)({
@@ -3161,7 +3180,7 @@ function SpecSizeWieght(param) {
     const specs = data.items;
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head, {
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
                 level: 2,
                 hashid: data.label_id,
                 children: (0,Translate/* translate */.I)({
@@ -4356,7 +4375,7 @@ const SvgIcoAibtn = _ref => {
     Step: Step,
     Folder: Folder,
     File: File,
-    Head: Head,
+    Head: Head/* default */.Z,
     Image: Image_Image,
     DocsSidebar: Toc,
     Collection: components_Collection,
