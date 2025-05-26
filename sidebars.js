@@ -76,6 +76,7 @@ const sidebars = {
                 'platform/biostar_x/enroll-credential',
               ]
             },
+            'platform/biostar_x/view-users',
             {
               type: 'category',
               label: '사용자 관리하기',
@@ -92,7 +93,6 @@ const sidebars = {
                 'platform/biostar_x/export-import-user-info',
               ]
             },
-            'platform/biostar_x/search-users',
             'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
