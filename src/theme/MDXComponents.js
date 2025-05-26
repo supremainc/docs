@@ -59,6 +59,13 @@ import IcSvTime from '@site/static/img/menus/ico-serverTime.svg';
 import IcAccout from '@site/static/img/menus/ico-account.svg';
 import IcHelp from '@site/static/img/menus/ico-help.svg';
 import IcAibtn from '@site/static/img/menus/ico-aibtn.svg';
+import IcAdvSearch from '@site/static/img/menus/ico-adv-search.svg';
+import IcFw from '@site/static/img/menus/ico-move-forward.svg';
+import IcBw from '@site/static/img/menus/ico-move-backward.svg';
+import IcFirst from '@site/static/img/menus/ico-first-page.svg';
+import IcLast from '@site/static/img/menus/ico-last-page.svg';
+import IcAscend from '@site/static/img/menus/ico-ascend.svg';
+import IcDescend from '@site/static/img/menus/ico-descend.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -126,5 +133,7 @@ export default {
     IcAlarm,
     IcFilter,
     IcMove,
-    IcBack
+    IcBack,
+    IcAdvSearch,
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend
 }
