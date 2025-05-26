@@ -7,8 +7,6 @@ keywords: [ UI ]
 
 **BioStar X**의 사용자 인터페이스(User Interface, 이하 UI)는 사용자가 시스템을 쉽게 탐색하고 사용할 수 있도록 설계되었습니다. 이 문서에서는 **BioStar X**의 공통 UI 구성 요소를 안내합니다. 이 문서를 통해 **BioStar X**의 UI를 이해하고, 시스템을 보다 효율적으로 사용할 수 있습니다.
 
-## 헤더 {#header}
-
 화면의 헤더 영역은 모든 페이지에서 공통으로 사용되며, **BioStar X**의 다양한 기능에 접근할 수 있는 링크 버튼을 제공합니다.
 
 <Image src='/img/biostarx-header.png' />
@@ -26,47 +24,3 @@ keywords: [ UI ]
 * <Num num='6' /> <IcHelp width='26' height='26' /> **도움말**: **BioStar X**의 도움말 페이지로 이동할 수 있는 링크 버튼입니다.
 
 * <Num num='7' /> <IcAibtn width='26' height='26' /> **AI 프롬프트**: **BioStar X**의 AI 프롬프트 기능을 사용할 수 있는 버튼입니다. 버튼을 클릭하면 AI 프롬프트 창이 나타납니다. 사용자의 질문에 답변하고 원하는 기능을 실행할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.
-
-## 열(Column) 레이아웃 {#columnlayout}
-
-**BioStar X**에서는 사용자 목록, 이벤트 목록과 같은 다양한 정보를 테이블 형식으로 표시합니다. 사용자는 열(Column) 헤더 영역을 클릭하여 목록을 정렬하거나, 열의 크기를 조정할 수 있고, 목록에 표시되는 열을 선택하거나 숨길 수 있습니다.
-
-### 열 표시/숨기기 {#columnvisibility}
-
-목록형 페이지에서 테이블에 표시된 다양한 정보 중 원하는 항목만 선택해 화면에 표시할 수 있습니다. 예를 들어, <Cmd sid='shell.header.user' /> 페이지에서는 사용자의 아이디, 이름, 이메일 주소, 등록한 크레덴셜 현황 등을 열로 표시합니다. 사용자는 <Cmd sid='common.dialog.columnSetting.title' /> 기능을 사용해 필요한 정보만 선택하여 볼 수 있고, 설정한 내용을 템플릿으로 저장해 불러올 수도 있습니다.
-
-1. 목록 상단의 <IcMoreW /> 버튼을 클릭하세요.
-
-1. <Cmd sid='common.dialog.columnSetting.title' />을 클릭하세요.
-
-1. <Cmd sid='common.dialog.columnSetting.title' /> 창이 나타나면 <Cmd sid='common.dialog.columnSetting.layout' />에서 원하는 번호를 선택하세요.
-
-    <Image src='/img/biostarx-common-ui-column-layout.png' />
-
-1. <Cmd sid='common.dialog.columnSetting.dialogSettings' />에서 원하는 항목을 선택하거나 해제하세요.
-
-1. <Cmd sid='common.apply' /> 버튼을 클릭하세요.
-
-:::info
-
-* 페이지에 따라 <Cmd sid='common.dialog.columnSetting.dialogSettings' /> 항목의 구성은 다를 수 있습니다.
-
-* <Cmd sid='common.dialog.columnSetting.layout' />에서 선택한 번호는 템플릿을 의미합니다. 예를 들어, <Cmd sid='common.dialog.columnSetting.layout' />에서 1번을 선택하면 1번 템플릿의 열 레이아웃이 목록에 적용됩니다. 사용자는 1번부터 8번까지의 템플릿을 선택하고 저장할 수 있습니다.
-
-* 설정한 내용을 취소하고 기본값으로 되돌리려면 <Cmd sid='common.dialog.columnSetting.reset' /> 버튼을 클릭하세요.
-
-:::
-
-### 열 레이아웃 불러오기 {#columnlayoutload}
-
-목록형 페이지에서 사용자 맞춤형 열 레이아웃을 설정했다면 필요에 따라 저장한 레이아웃을 불러올 수 있습니다.
-
-1. 목록 상단의 <IcMoreW /> 버튼을 클릭하세요.
-
-1. <Cmd sid='common.dialog.columnSetting.title' />을 클릭하세요.
-
-1. <Cmd sid='common.dialog.columnSetting.layout' />에서 원하는 번호를 선택하세요.
-
-1. <Cmd sid='common.apply' /> 버튼을 클릭하세요.
-
-목록에 선택한 템플릿의 열 레이아웃이 적용됩니다.
