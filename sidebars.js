@@ -142,7 +142,24 @@ const sidebars = {
             'platform/biostar_x/ui-launcher'
           ]
         },
-        'platform/biostar_x/licensing',
+        {
+          type: 'category',
+          label: '통합 기능',
+          items: [
+            'platform/biostar_x/columnlayout'
+          ]
+        },
+        {
+          type: 'category',
+          label: '라이선스 정책',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/licensing',
+          },
+          items: [
+            'platform/biostar_x/bsx-licensing',
+          ]
+        }
       ],
     },
   ],
