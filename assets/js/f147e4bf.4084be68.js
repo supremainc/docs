@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-common-mdx-f14.json
-var site_docs_platform_biostar_x_ui_common_mdx_f14_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-common.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-common","permalink":"/docs/en/platform/biostar_x/ui-common","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-common.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"},"next":{"title":"런처","permalink":"/docs/en/platform/biostar_x/ui-launcher"}}')
+var site_docs_platform_biostar_x_ui_common_mdx_f14_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-common.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-common","permalink":"/docs/platform/biostar_x/ui-common","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-common.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"},"next":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'UI'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -40,42 +40,21 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "헤더",
-  "id": "header",
-  "level": 2
-}, {
-  "value": "열(Column) 레이아웃",
-  "id": "columnlayout",
-  "level": 2
-}, {
-  "value": "열 표시/숨기기",
-  "id": "columnvisibility",
-  "level": 3
-}, {
-  "value": "열 레이아웃 불러오기",
-  "id": "columnlayoutload",
-  "level": 3
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
-    admonition: "admonition",
-    h2: "h2",
-    h3: "h3",
     li: "li",
-    ol: "ol",
     p: "p",
     strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcAccout, IcAibtn, IcHelp, IcMoreW, IcSvTime, Image, Num} = _components;
+  }, {Cmd, IcAccout, IcAibtn, IcHelp, IcSvTime, Image, Num} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAccout) _missingMdxReference("IcAccout", true);
   if (!IcAibtn) _missingMdxReference("IcAibtn", true);
   if (!IcHelp) _missingMdxReference("IcHelp", true);
-  if (!IcMoreW) _missingMdxReference("IcMoreW", true);
   if (!IcSvTime) _missingMdxReference("IcSvTime", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Num) _missingMdxReference("Num", true);
@@ -88,9 +67,6 @@ function _createMdxContent(props) {
       }), "의 공통 UI 구성 요소를 안내합니다. 이 문서를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 UI를 이해하고, 시스템을 보다 효율적으로 사용할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "header",
-      children: "헤더"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["화면의 헤더 영역은 모든 페이지에서 공통으로 사용되며, ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
@@ -187,112 +163,6 @@ function _createMdxContent(props) {
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "columnlayout",
-      children: "열(Column) 레이아웃"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "에서는 사용자 목록, 이벤트 목록과 같은 다양한 정보를 테이블 형식으로 표시합니다. 사용자는 열(Column) 헤더 영역을 클릭하여 목록을 정렬하거나, 열의 크기를 조정할 수 있고, 목록에 표시되는 열을 선택하거나 숨길 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "columnvisibility",
-      children: "열 표시/숨기기"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["목록형 페이지에서 테이블에 표시된 다양한 정보 중 원하는 항목만 선택해 화면에 표시할 수 있습니다. 예를 들어, ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.user"
-      }), " 페이지에서는 사용자의 아이디, 이름, 이메일 주소, 등록한 크레덴셜 현황 등을 열로 표시합니다. 사용자는 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.dialog.columnSetting.title"
-      }), " 기능을 사용해 필요한 정보만 선택하여 볼 수 있고, 설정한 내용을 템플릿으로 저장해 불러올 수도 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["목록 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.title"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.title"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.layout"
-          }), "에서 원하는 번호를 선택하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-common-ui-column-layout.png"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.dialogSettings"
-          }), "에서 원하는 항목을 선택하거나 해제하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.apply"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["페이지에 따라 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.dialog.columnSetting.dialogSettings"
-            }), " 항목의 구성은 다를 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.dialog.columnSetting.layout"
-            }), "에서 선택한 번호는 템플릿을 의미합니다. 예를 들어, ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.dialog.columnSetting.layout"
-            }), "에서 1번을 선택하면 1번 템플릿의 열 레이아웃이 목록에 적용됩니다. 사용자는 1번부터 8번까지의 템플릿을 선택하고 저장할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["설정한 내용을 취소하고 기본값으로 되돌리려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.dialog.columnSetting.reset"
-            }), " 버튼을 클릭하세요."]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "columnlayoutload",
-      children: "열 레이아웃 불러오기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "목록형 페이지에서 사용자 맞춤형 열 레이아웃을 설정했다면 필요에 따라 저장한 레이아웃을 불러올 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["목록 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.title"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.dialog.columnSetting.layout"
-          }), "에서 원하는 번호를 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.apply"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "목록에 선택한 템플릿의 열 레이아웃이 적용됩니다."
     })]
   });
 }

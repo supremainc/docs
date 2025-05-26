@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["7795"], {
-"5715": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["621"], {
+"4870": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,25 +8,25 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_licensing_mdx_74f_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-licensing-mdx-74f.json
-var site_docs_platform_biostar_x_licensing_mdx_74f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"라이선스 정책","description":"BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"라이선스 정책","description":"BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-mdx-b16.json
+var site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing","permalink":"/docs/platform/biostar_x/bsx-licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/licensing.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/bsx-licensing.mdx
 
 
 const frontMatter = {
-	id: 'licensing',
-	title: '라이선스 정책',
-	description: 'BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.',
+	id: 'bsx-licensing',
+	title: 'BioStar X 라이선스 정책',
+	description: '모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.',
 	keywords: [
 		'라이선스'
 	],
@@ -84,10 +84,6 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 후속 버전으로 개발된 차세대 출입통제 소프트웨어입니다. 향상된 시스템 아키텍처와 확장된 기능, 그리고 더욱 유연한 라이선스 모델을 통해 현재와 미래의 다양한 구축 환경을 지원합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Starter"

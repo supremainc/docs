@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["782"], {
-"9607": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["5778"], {
+"3028": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,29 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_common_mdx_f14_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_column_layout_mdx_409_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-common-mdx-f14.json
-var site_docs_platform_biostar_x_ui_common_mdx_f14_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-common.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-common","permalink":"/docs/platform/biostar_x/ui-common","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-common.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-common","title":"공통 사용자 인터페이스 이해하기","description":"BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"},"next":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-column-layout-mdx-409.json
+var site_docs_platform_biostar_x_column_layout_mdx_409_namespaceObject = JSON.parse('{"id":"platform/biostar_x/columnlayout","title":"열(Column) 레이아웃","description":"목록형 페이지에서 제공하는 열 레이아웃 기능을 안내합니다.","source":"@site/docs/platform/biostar_x/column-layout.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/columnlayout","permalink":"/docs/en/platform/biostar_x/columnlayout","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/column-layout.mdx","tags":[],"version":"current","frontMatter":{"id":"columnlayout","title":"열(Column) 레이아웃","description":"목록형 페이지에서 제공하는 열 레이아웃 기능을 안내합니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/en/platform/biostar_x/ui-launcher"},"next":{"title":"라이선스 정책","permalink":"/docs/en/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-common.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/column-layout.mdx
 
 
 const frontMatter = {
-	id: 'ui-common',
-	title: '공통 사용자 인터페이스 이해하기',
-	description: 'BioStar X의 공통으로 사용되는 사용자 인터페이스(User Interface)를 안내합니다.',
+	id: 'columnlayout',
+	title: '열(Column) 레이아웃',
+	description: '목록형 페이지에서 제공하는 열 레이아웃 기능을 안내합니다.',
 	keywords: [
-		'UI'
+		'keyword1',
+		'keyword2'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -41,28 +42,18 @@ const assets = {
 
 
 const toc = [{
-  "value": "헤더",
-  "id": "header",
-  "level": 2
-}, {
-  "value": "열(Column) 레이아웃",
-  "id": "columnlayout",
-  "level": 2
-}, {
   "value": "열 표시/숨기기",
   "id": "columnvisibility",
-  "level": 3
+  "level": 2
 }, {
   "value": "열 레이아웃 불러오기",
   "id": "columnlayoutload",
-  "level": 3
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -70,131 +61,16 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcAccout, IcAibtn, IcHelp, IcMoreW, IcSvTime, Image, Num} = _components;
+  }, {Cmd, IcMoreW, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcAccout) _missingMdxReference("IcAccout", true);
-  if (!IcAibtn) _missingMdxReference("IcAibtn", true);
-  if (!IcHelp) _missingMdxReference("IcHelp", true);
   if (!IcMoreW) _missingMdxReference("IcMoreW", true);
-  if (!IcSvTime) _missingMdxReference("IcSvTime", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Num) _missingMdxReference("Num", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 사용자 인터페이스(User Interface, 이하 UI)는 사용자가 시스템을 쉽게 탐색하고 사용할 수 있도록 설계되었습니다. 이 문서에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 공통 UI 구성 요소를 안내합니다. 이 문서를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 UI를 이해하고, 시스템을 보다 효율적으로 사용할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "header",
-      children: "헤더"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["화면의 헤더 영역은 모든 페이지에서 공통으로 사용되며, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 다양한 기능에 접근할 수 있는 링크 버튼을 제공합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-header.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "1"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X 로고"
-          }), ": 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지로 돌아갈 수 있는 링크 버튼입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "2"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "바로가기"
-          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에서 제공하는 주요 페이지로 이동할 수 있는 링크를 제공합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "3"
-          }), " ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.action"
-          }), ": 서버 사용자가 설정한 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "액션"
-          }), "(Action) 기능을 실행할 수 있습니다. 버튼을 클릭하면 액션 목록이 나타납니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "#",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "4"
-          }), " ", (0,jsx_runtime.jsx)(IcSvTime, {
-            width: "26",
-            height: "26"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "서버 시간"
-          }), ": 운영 중인 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " 서버의 서버 시간을 확인할 수 있습니다. 마우스를 버튼 위로 오버하면 현재 서버 시간이 표시됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "5"
-          }), " ", (0,jsx_runtime.jsx)(IcAccout, {
-            width: "26",
-            height: "26"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "사용자 계정"
-          }), ": 현재 로그인한 사용자의 계정 정보를 확인할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "6"
-          }), " ", (0,jsx_runtime.jsx)(IcHelp, {
-            width: "26",
-            height: "26"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "도움말"
-          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "의 도움말 페이지로 이동할 수 있는 링크 버튼입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "7"
-          }), " ", (0,jsx_runtime.jsx)(IcAibtn, {
-            width: "26",
-            height: "26"
-          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "AI 프롬프트"
-          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "의 AI 프롬프트 기능을 사용할 수 있는 버튼입니다. 버튼을 클릭하면 AI 프롬프트 창이 나타납니다. 사용자의 질문에 답변하고 원하는 기능을 실행할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "#",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "columnlayout",
-      children: "열(Column) 레이아웃"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
       }), "에서는 사용자 목록, 이벤트 목록과 같은 다양한 정보를 테이블 형식으로 표시합니다. 사용자는 열(Column) 헤더 영역을 클릭하여 목록을 정렬하거나, 열의 크기를 조정할 수 있고, 목록에 표시되는 열을 선택하거나 숨길 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "columnvisibility",
       children: "열 표시/숨기기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -262,7 +138,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "columnlayoutload",
       children: "열 레이아웃 불러오기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

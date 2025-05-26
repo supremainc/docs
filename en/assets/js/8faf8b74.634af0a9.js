@@ -146,7 +146,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["사용자 목록에서 열(Column) 레이아웃을 변경할 수 있습니다. 열 레이아웃 변경에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "ui-common#columnvisibility",
+              href: "columnlayout",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
