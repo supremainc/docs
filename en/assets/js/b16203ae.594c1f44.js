@@ -38,6 +38,7 @@ const assets = {
 
 };
 
+/*라이선스 이름을 한글화하고, 각 문서별로 연결될 수 있도록 연관 문서 또는 다음 단계 추가할 것*/
 /*Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock*/
 
 
@@ -82,13 +83,13 @@ function _createMdxContent(props) {
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
+    children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Starter"
+        children: "스타터"
       }), "부터 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
+        children: "엘리트"
       }), "까지 총 다섯 가지 확장 가능한 라이선스 등급을 제공하며, 소규모 사업장부터 대규모 기업 환경까지 다양한 환경에 맞춰 선택할 수 있습니다. 모듈형 구조로 설계되어 비디오 연동, 모바일 출입, 멀티 서버 지원 등 다양한 옵션 기능을 추가할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "basic-license",
@@ -108,32 +109,32 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Device Manager"
+              children: "디바이스 매니저(Device Manager)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Starter"
+              children: "스타터(Starter)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Essential"
+              children: "에센셜(Essential)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Advanced"
+              children: "어드밴스(Advanced)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Enterprise"
+              children: "엔터프라이즈(Enterprise)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Elite"
+              children: "엘리트(Elite)"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -410,8 +411,8 @@ function _createMdxContent(props) {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Device Manager"
-        }), " 라이선스는 타사 출입통제 시스템(ACS)을 사용하는 고객이 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "디바이스 매니저"
+        }), " 라이선스는 타사 출입통제 시스템(Aceess Control System, ACS)을 사용하는 고객이 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
         }), "를 통해 슈프리마의 장치를 효율적으로 관리하고자 할 때 필요한 라이선스입니다."]
       })
@@ -420,13 +421,13 @@ function _createMdxContent(props) {
       children: "라이선스 업그레이드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["라이선스 업그레이드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
+        children: "엔터프라이즈"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
+        children: "엘리트"
       }), " 등급의 라이선스 보유자에게 제공합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Device Manager"
+        children: "디바이스 매니저"
       }), " 라이선스 보유자는 사용자 업그레이드(User Upgrades)만 구매할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
@@ -487,11 +488,11 @@ function _createMdxContent(props) {
       children: "기능 추가 옵션 (Feature Add-ons)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["다음 항목은 개별적으로 구매할 수 있으며, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
+        children: "엔터프라이즈"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
+        children: "엘리트"
       }), " 라이선스 등급에 추가 적용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "cols3--20-20-60 overflow-x",
@@ -510,7 +511,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Multi Comm Server"
+                children: "멀티 커뮤니케이션 서버 Init"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "기본 라이선스"
@@ -520,7 +521,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Multi Comm Server"
+                children: "멀티 커뮤니케이션 서버 Add-on"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "추가 서버"
@@ -540,7 +541,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Video"
+                children: "비디오"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "카메라 당"
@@ -551,7 +552,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "2",
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Server Matching"
+                children: "서버 매칭"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "지문"
@@ -577,7 +578,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Visitor"
+                children: "방문객"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템 당"
@@ -585,11 +586,11 @@ function _createMdxContent(props) {
               children: "관리자 및 운영자가 방문자 출입을 추적하거나 제어할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
               rowSpan: "2",
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "T&A"
-              })
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "근태 관리"
+              }), "(T&A)"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "Standard"
             }), (0,jsx_runtime.jsx)(_components.td, {
@@ -604,7 +605,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Remote Access"
+                children: "원격 접속"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템 당"
@@ -613,7 +614,10 @@ function _createMdxContent(props) {
                 children: "BioStar X"
               }), " 서버에 접속할 수 있는 보안 터널 기능을 제공합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
-              }), " 모바일 및 API의 외부 네트워크 접근을 위한 게이트웨이 역할도 수행합니다. 별도의 Ngrok 월간 구독이 필요합니다."]
+              }), " 모바일 및 API의 외부 네트워크 접근을 위한 게이트웨이 역할도 수행합니다. 별도의 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "https://ngrok.com/",
+                children: "ngrok"
+              }), " 월간 구독이 필요합니다."]
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -652,35 +656,18 @@ function _createMdxContent(props) {
       children: "패키지(Package)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["다음 항목은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
+        children: "엔터프라이즈"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
+        children: "엘리트"
       }), " 라이선스 등급에서 개별적으로 구매할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "col2--20-80 overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "기능"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
-            })]
-          })
-        }), (0,jsx_runtime.jsx)(_components.tbody, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "고급 출입통제 시스템"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 침입 경보(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 구역을 설정하고, 고급 출입통제 기능을 사용할 수 있는 패키지입니다."
-            })]
-          })
-        })]
-      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "고급 출입통제 시스템"
+        }), ": 안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 침입 경보(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 구역을 설정하고, 고급 출입통제 기능을 사용할 수 있는 패키지입니다."]
+      }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "reference",
       children: "참고 사항"
@@ -693,9 +680,7 @@ function _createMdxContent(props) {
             children: "BioStar 2"
           }), "에서는 어드밴스(Advanced) 이상 라이선스에서 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "구역"
-          }), "(", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Zone"
-          }), ") 기능을 지원하는 경우에만 제공합니다."]
+          }), "(Zone) 기능을 지원하는 경우에만 제공합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
