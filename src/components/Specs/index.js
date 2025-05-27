@@ -112,6 +112,8 @@ export function SpecSectioin({data}) {
                                     <SupportedType supported={subsubitem.value} annot={subsubitem.annotation_value} />
                                   ) : typeof subsubitem.value === 'string' ? (
                                     <Description contents={subsubitem.value} />
+                                  ) : typeof subsubitem.value === 'object' ? (
+                                    <Description contents={subsubitem.value[currentLocale]} />
                                   ) : null
                                 }
                               </li>
