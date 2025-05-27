@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["2057"], {
-"8150": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["9799"], {
+"5476": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,27 +8,27 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_admin_menu_mdx_cf2_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_troubleshooting_mdx_3bd_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-admin-menu-mdx-cf2.json
-var site_docs_device_biostation_3_admin_menu_mdx_cf2_namespaceObject = JSON.parse('{"id":"device/biostation_3/admin-menu","title":"관리자 메뉴","description":"관리자 권한으로 접근 가능한 주요 메뉴와 기능을 안내합니다.","source":"@site/docs/device/biostation_3/admin-menu.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/admin-menu","permalink":"/docs/device/biostation_3/admin-menu","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/admin-menu.mdx","tags":[],"version":"current","frontMatter":{"id":"admin-menu","title":"관리자 메뉴","description":"관리자 권한으로 접근 가능한 주요 메뉴와 기능을 안내합니다.","keywords":["관리자"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"사용하기","permalink":"/docs/device/biostation_3/using-device"},"next":{"title":"사용자","permalink":"/docs/device/biostation_3/user"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-troubleshooting-mdx-3bd.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_troubleshooting_mdx_3bd_namespaceObject = JSON.parse('{"id":"device/biostation_3/troubleshooting","title":"Troubleshooting","description":"This document provides information to solve unexpected issues that you may encounter when using the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/troubleshooting.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/troubleshooting","permalink":"/docs/en/device/biostation_3/troubleshooting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/troubleshooting.mdx","tags":[],"version":"current","frontMatter":{"id":"troubleshooting","title":"Troubleshooting","description":"This document provides information to solve unexpected issues that you may encounter when using the device.","keywords":["Troubleshooting"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"Event Logs","permalink":"/docs/en/device/biostation_3/event-log"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/biostation_3/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/device/biostation_3/admin-menu.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/troubleshooting.mdx
 
 
 const frontMatter = {
-	id: 'admin-menu',
-	title: '관리자 메뉴',
-	description: '관리자 권한으로 접근 가능한 주요 메뉴와 기능을 안내합니다.',
+	id: 'troubleshooting',
+	title: 'Troubleshooting',
+	description: 'This document provides information to solve unexpected issues that you may encounter when using the device.',
 	keywords: [
-		'관리자'
+		'Troubleshooting'
 	],
 	isTranslationMissing: false
 };
@@ -40,59 +40,18 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "대시보드",
-  "id": "대시보드",
-  "level": 2
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    admonition: "admonition",
-    h2: "h2",
-    li: "li",
-    ol: "ol",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
-  if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Image) _missingMdxReference("Image", true);
+  }, {Faqs} = _components;
+  if (!Faqs) _missingMdxReference("Faqs", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "관리자 권한으로 접근 가능한 주요 메뉴와 기능을 안내합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "대시보드",
-      children: "대시보드"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.", (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(Cmd, {
-            children: "대시보드"
-          }), "에서 장치 사용 현황 및 정보를 확인할 수 있습니다. 또는 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "사용자 등록 마법사"
-          }), "를 눌러 바로 사용자를 등록할 수도 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자를 등록하거나 장치를 설정하려면 대시보드 하단에서 원하는 메뉴를 선택하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/device-menu.png"
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["관리자가 지정되어 있지 않을 경우 ", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/ico-menu.svg",
-          ico: true
-        }), "을 누르면 ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "대시보드"
-        }), " 화면이 나타납니다."]
-      })
-    })]
+      children: "This document provides information to solve unexpected issues that you may encounter when using the device."
+    }), "\n", (0,jsx_runtime.jsx)(Faqs, {})]
   });
 }
 function MDXContent(props = {}) {

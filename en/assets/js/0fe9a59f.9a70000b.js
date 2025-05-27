@@ -93,8 +93,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -102,8 +103,9 @@ function _createMdxContent(props) {
           children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "USER"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), ", and choose a credential you want to enroll.", (0,jsx_runtime.jsx)("br", {}), "There are two steps for the user registration. Some options are available after the credential has been registered."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-add.png",
@@ -112,8 +114,9 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-photo.svg",
-                ico: true
+                src: "/img/common/ico-photo.svg",
+                ico: true,
+                alone: true
               }), ": Register a user photo."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -145,8 +148,9 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "Next"
               }), " and enroll a face according to the instructions on the screen. To add more faces, press ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), ". Please refer to ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "#enrolling-user-faces",
                 children: "Enrolling User Faces"
@@ -163,8 +167,9 @@ function _createMdxContent(props) {
               }), " and scan the card that will be assigned to the user. To enroll an additional card, press ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "Card / QR Code"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -258,8 +263,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -267,8 +273,9 @@ function _createMdxContent(props) {
           children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "USER"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -366,8 +373,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -375,8 +383,9 @@ function _createMdxContent(props) {
           children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "USER"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-search.svg",
-            ico: true
+            src: "/img/common/ico-search.svg",
+            ico: true,
+            alone: true
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -408,8 +417,9 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["To delete a user, select ", (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/ico-delete.svg",
-              ico: true
+              src: "/img/common/ico-delete.svg",
+              ico: true,
+              alone: true
             }), " and then press ", (0,jsx_runtime.jsx)(Cmd, {
               children: "OK"
             }), "."]
@@ -432,8 +442,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -441,8 +452,9 @@ function _createMdxContent(props) {
           children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "USER"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-delete.svg",
-            ico: true
+            src: "/img/common/ico-delete.svg",
+            ico: true,
+            alone: true
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -469,8 +481,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -478,8 +491,9 @@ function _createMdxContent(props) {
           children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             children: "USER"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-info.svg",
-            ico: true
+            src: "/img/common/ico-info.svg",
+            ico: true,
+            alone: true
           }), ". User usage information appears."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-usage.png"

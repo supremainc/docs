@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["2184"], {
-"8613": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["8491"], {
+"4371": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,19 +8,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ safety_instructions_MDXContent),
   frontMatter: () => (/* binding */ safety_instructions_frontMatter),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_safety_instructions_mdx_bdf_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_safety_instructions_mdx_b87_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ safety_instructions_toc),
   contentTitle: () => (/* binding */ safety_instructions_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-safety-instructions-mdx-bdf.json
-var site_docs_device_biostation_3_safety_instructions_mdx_bdf_namespaceObject = JSON.parse('{"id":"device/biostation_3/safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","source":"@site/docs/device/biostation_3/safety-instructions.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/safety-instructions","permalink":"/docs/device/biostation_3/safety-instructions","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/safety-instructions.mdx","tags":[],"version":"current","frontMatter":{"id":"safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","keywords":["준수 사항","주의사항"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"BioStation 3","permalink":"/docs/device/biostation_3/"},"next":{"title":"시작하기","permalink":"/docs/device/biostation_3/getting-started"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-safety-instructions-mdx-b87.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_safety_instructions_mdx_b87_namespaceObject = JSON.parse('{"id":"device/biostation_3/safety-instructions","title":"Safety Instructions","description":"This section provides essential safety guidelines that must be read and followed before installing and using the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/safety-instructions.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/safety-instructions","permalink":"/docs/en/device/biostation_3/safety-instructions","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/safety-instructions.mdx","tags":[],"version":"current","frontMatter":{"id":"safety-instructions","title":"Safety Instructions","description":"This section provides essential safety guidelines that must be read and followed before installing and using the device.","keywords":["Compliance Information","Safety Instructions"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"BioStation 3","permalink":"/docs/en/device/biostation_3/"},"next":{"title":"Getting Started","permalink":"/docs/en/device/biostation_3/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/common/_safety-instructions.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_safety-instructions.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -31,32 +31,32 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "준수 사항",
-  "id": "준수-사항",
+  "value": "Compliance Information",
+  "id": "compliance-information",
   "level": 2
 }, {
-  "value": "<Image></Image> 경고",
-  "id": "-경고",
+  "value": "<Image></Image> Warning",
+  "id": "-warning",
   "level": 2
 }, {
-  "value": "설치",
-  "id": "설치",
+  "value": "Installation",
+  "id": "installation",
   "level": 3
 }, {
-  "value": "사용",
-  "id": "사용",
+  "value": "Operation",
+  "id": "operation",
   "level": 3
 }, {
-  "value": "<Image></Image> 주의",
-  "id": "-주의",
+  "value": "<Image></Image> Caution",
+  "id": "-caution",
   "level": 2
 }, {
-  "value": "설치",
-  "id": "설치-1",
+  "value": "Installation",
+  "id": "installation-1",
   "level": 3
 }, {
-  "value": "사용",
-  "id": "사용-1",
+  "value": "Operation",
+  "id": "operation-1",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -76,309 +76,311 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "준수-사항",
-      children: "준수 사항"
+      id: "compliance-information",
+      children: "Compliance Information"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "warning",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "제품을 사용할 때 위반할 경우 심각한 상해나 사망에 이를 수 있는 경고 사항을 표기할 때 사용합니다."
+        children: "This symbol indicates situations that could result in death or severe injury."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "제품을 사용할 때 위반할 경우 경미한 상해나 제품 손상이 발생할 수 있는 주의 사항을 표기할 때 사용합니다."
+        children: "This symbol indicates situations that may result in moderate injury or property damage."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "제품을 사용할 때 참고 사항이나 추가 정보를 제공할 때 사용합니다."
+        children: "This symbol indicates notes or additional information."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "노트"
+          children: "NOTE"
         })
       }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "제품을 사용할 때 참고 사항이나 추가 정보를 제공할 때 사용합니다."
+        children: "This symbol indicates notes or additional information."
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "-경고",
+      id: "-warning",
       children: [(0,jsx_runtime.jsx)(Image, {
-        src: "/img/device/ico-caution.svg",
-        ico: true
-      }), " 경고"]
+        src: "/img/common/ico-caution.svg",
+        ico: true,
+        alone: true
+      }), " Warning"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "설치",
-      children: "설치"
+      id: "installation",
+      children: "Installation"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "고용량의 전원 공급 장치 사용 시 오배선에 각별히 주의하세요."
+        children: "When using a high-capacity power supply, please pay special attention to avoid miswiring."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "오배선 시 심각한 화재, 감전, 제품 손상이 발생할 수 있습니다."
+        children: "Miswiring may result in serious fire, electric shock, or product damage."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "사용자가 임의로 제품을 설치하거나 수리하지 마세요."
+        children: "Do not install or repair the product arbitrarily."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "화재, 감전, 부상의 원인이 됩니다."
+          children: "This may result in electric shock, fire, or product damage."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자의 임의 설치나 수리로 인해 제품이 손상된 경우 무상 수리 서비스가 제공되지 않습니다."
+          children: "Damages caused by any modifications or failure to follow installation instructions can void your manufacturer’s warranty."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 직사광선에 노출된 장소, 습기, 먼지나 그을음이 많은 장소, 가스가 샐 가능성이 있는 장소에 설치하지 마세요."
+        children: "Do not install the product in a place with direct sunlight, moisture, dust, soot, or a gas leak."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "화재 또는 감전의 원인이 됩니다."
+        children: "This may result in electric shock or fire."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 옥외에 설치할 경우 차양 및 통풍이 원활한 장소에 설치하세요."
+        children: "Install the product in a well-ventilated and cool place away from direct sunlight to prevent overheating when installing it outside."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 옥외에 설치할 경우 완전히 밀폐된 외함을 사용하지 마세요."
+        children: "Do not place the product inside the sealed enclosure when installing it outside."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "직사광선에 의해 외함 내부 온도가 상승하여 과열로 인한 화재, 감전, 제품 손상의 원인이 됩니다."
+        children: "It increases the internal temperature of the enclosure and this may result in electric shock, fire, or malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 전열기 등으로 인해 열이 발생하는 장소에 설치하지 마세요."
+        children: "Do not install the product in a location with heat from an electric heater."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "과열로 인한 화재 또는 감전의 원인이 됩니다."
+        children: "This may result in fire due to overheating."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "물기가 있는 곳에 설치하지 마세요."
+        children: "Install the product in a dry location."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "습기로 인한 감전 또는 제품 손상의 원인이 됩니다."
+        children: "Humidity and liquids may result in electric shock or product damage."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전자파 장해가 있는 곳에 설치하지 마세요."
+        children: "Do not install the product in a location where it will be affected by radio frequencies."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "감전 또는 제품 손상의 원인이 됩니다."
+        children: "This may result in fire or product damage."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용",
-      children: "사용"
+      id: "operation",
+      children: "Operation"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품 내부에 물, 음료수, 약품 등의 액체가 들어가지 않도록 주의하세요."
+        children: "Keep the product dry."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "화재, 감전, 제품 손상의 원인이 됩니다."
+        children: "Humidity and liquids may result in electric shock, fire, or product damage."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "손상된 전원 어댑터나 플러그, 헐거운 콘센트는 사용하지 마세요."
+        children: "Do not use damaged power supply adapters, plugs, or loose electrical sockets."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "접속이 불안정할 경우 화재 또는 감전의 원인이 됩니다."
+        children: "Unsecured connections may cause electric shock or fire."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전원 코드를 무리하게 구부리거나 망가뜨리지 마세요."
+        children: "Do not bend or damage the power cord."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "화재 또는 감전의 원인이 됩니다."
+        children: "This may result in electric shock or fire."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "-주의",
+      id: "-caution",
       children: [(0,jsx_runtime.jsx)(Image, {
-        src: "/img/device/ico-warning.svg",
-        ico: true
-      }), " 주의"]
+        src: "/img/common/ico-warning.svg",
+        ico: true,
+        alone: true
+      }), " Caution"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "설치-1",
-      children: "설치"
+      id: "installation-1",
+      children: "Installation"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 설치하기 전에 이 설명서를 반드시 읽고 제품을 안전하고 올바르게 설치하세요."
+        children: "Please read this manual before installing the product to ensure a safe and correct installation."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전원 케이블과 케이블을 배선할 때에는 반드시 연결하려는 모든 장치의 전원을 끈 상태에서 배선 및 연결하세요."
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "장치가 오작동할 수 있습니다."
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품에 전원을 연결하기 전에 다시 한번 설명서를 확인하여 배선이 올바르게 되었는지 확인한 후 전원을 연결하세요."
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 직사광선이나 자외선에 직접 노출된 장소에 설치하지 마세요."
+        children: "When wiring the power cable and other cables, make sure to connect them with the power turned off for all devices involved."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "제품 손상, 오작동 및 변색, 변형의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전원 케이블 등을 통행 장소에 방치하지 마세요."
+        children: "Before connecting power to the product, double-check the manual to ensure that the wiring is correct, then connect the power."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Do not install the product under direct sunlight or UV light."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "신체 상해 또는 제품 손상의 원인이 됩니다."
+        children: "This may result in product damage, malfunction, discoloration, or deformation."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "자석, TV, (CRT) 모니터, 스피커 등 자성이 강한 물체 주변에 설치하지 마세요."
+        children: "Do not install the power supply cable in a location where people pass by."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "This may result in injury or product damage."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "여러 대의 장치를 설치할 경우 최소 이격 거리를 확인하세요."
+        children: "Do not install the product near magnetic objects, such as a magnet, TV, monitor (especially CRT), or speaker."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "다른 장치의 RF 및 BLE 성능에 영향을 주어 장치가 오작동할 수 있습니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 슈프리마에서 판매하는 전원 어댑터를 사용할 것을 권장합니다."
+        children: "Keep the minimum distance between products when installing multiple products."
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "The product may be affected by radio frequencies emitted by other products and the product may malfunction."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. It is highly recommended to use the power adapter sold by Suprema."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "적합한 전원을 사용하지 않을 경우 장치가 오작동할 수 있습니다."
+          children: "If the right power supply is not used, the product may malfunction."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["최대 소모전류 규격은 제품 사양의 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Refer to the ", (0,jsx_runtime.jsx)(_components.a, {
             href: "product-specifications#specs.power",
-            children: "전원"
-          }), "을 참고하세요."]
+            children: "Power"
+          }), " in the product specifications for maximum current consumption specifications."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품과 Secure I/O 2, 전기정(전기식 잠금 장치)은 반드시 개별 전원을 사용하세요."
+        children: "Use a separate power supply for the Secure I/O 2, electric lock, and the product."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "장치가 오작동할 수 있습니다."
+        children: "If connecting and using the same power supply, the product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전원 장치와 PoE 전원을 함께 연결하지 마세요."
+        children: "Do not connect and use the power supply and Power over Ethernet (PoE) simultaneously."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "장치가 오작동할 수 있습니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다. 완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다."
+        children: "Make sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating). It is recommended to use the enclosure if the product is installed outside."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "방수·방진 성능이 저하될 경우 고장의 원인이 됩니다."
+        children: "The product may malfunction if the water-resistant and dust-resistant features are damaged."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용-1",
-      children: "사용"
+      id: "operation-1",
+      children: "Operation"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 떨어뜨리거나 충격을 주지 마세요."
+        children: "Do not drop the product or cause impacts to the product."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품의 펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요."
+        children: "Do not disconnect the power supply while upgrading the firmware of the product."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "암호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요."
+        children: "Do not disclose the password to others and change it regularly."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "불법 침입의 원인이 됩니다."
+        children: "This may result in illegal intrusion."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품의 버튼(터치패드)을 무리하게 누르거나 날카로운 도구를 사용해 누르지 마세요."
+        children: "Do not press buttons(touch pad) on the product by force or do not press them with a sharp tool."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 -20 °C ~ 50 °C 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요."
+        children: "Do not store your product in very hot or very cold places. It is recommended to use your product at temperatures from -20 °C to 50 °C."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 청소할 때 주의하세요."
+        children: "When cleaning the product, mind the following."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제품을 표면을 깨끗한 마른 천으로 부드럽게 닦으세요."
+          children: "Wipe the product with a clean and dry towel."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제품을 소독해야 할 경우 마른 천에 소독용 알코올을 적당량 묻힌 뒤 제품 표면을 부드럽게 닦으세요. 이소프로필 알코올이 70 ~ 75 % 함유된 소독용 알코올과 깨끗하고 보풀이 없는 부드러운 천을 사용하세요."
+          children: "If you need to sanitize the product, moisten the cloth or the wipe with a proper amount of rubbing alcohol and gently clean all exposed surfaces. Use rubbing alcohol (containing 70% Isopropyl alcohol) and a clean, non-abrasive cloth like lens wipe."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "소독제를 제품에 직접 분사하지 마세요."
+          children: "Do not apply liquid directly to the surface of the product."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 원래 용도 이외 다른 용도로 사용하지 마세요."
+        children: "Do not use the product for anything other than its intended use."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "고장의 원인이 됩니다."
+        children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "RTC 배터리"
+          children: "RTC Battery"
         })
       }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "승인되지 않거나 잘못된 종류의 배터리로 교체하면 폭발의 위험이 있습니다. 배터리는 거주 지역 또는 국제 폐기물 규정에 따라 폐기하세요."
+        children: "Use of an unapproved or incorrect type of battery may result in a risk of explosion. Discard the battery according to the appropriate regional or international waste regulations."
       })]
     })]
   });
@@ -400,16 +402,16 @@ function _missingMdxReference(id, component) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/device/biostation_3/safety-instructions.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/safety-instructions.mdx
 
 
 const safety_instructions_frontMatter = {
 	id: 'safety-instructions',
-	title: '안전을 위한 주의사항',
-	description: '장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.',
+	title: 'Safety Instructions',
+	description: 'This section provides essential safety guidelines that must be read and followed before installing and using the device.',
 	keywords: [
-		'준수 사항',
-		'주의사항'
+		'Compliance Information',
+		'Safety Instructions'
 	],
 	isTranslationMissing: false
 };
@@ -431,9 +433,9 @@ function safety_instructions_createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 위험이나 재산상의 손해를 막기 위해 제품을 사용하기 전에 이 설명서를 반드시 읽고 제품을 안전하고 올바르게 사용하세요."
+      children: "Please read this safety instructions before you use the product to prevent injury to yourself and others and to prevent property damage."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 설명서에서 말하는 제품이란 본체와 함께 제공되는 모든 구성품을 포함합니다."
+      children: "The term ‘product’ in this manual refers to the product and any items provided with the product."
     }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {})]
   });
 }

@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["9147"], {
-"8034": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["4071"], {
+"8135": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,27 +8,27 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_admin_menu_mdx_fee_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_index_mdx_e83_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-admin-menu-mdx-fee.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_admin_menu_mdx_fee_namespaceObject = JSON.parse('{"id":"device/biostation_3/admin-menu","title":"Admin Menu","description":"Provides guidance on the main menus and features accessible with administrator privileges.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/admin-menu.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/admin-menu","permalink":"/docs/en/device/biostation_3/admin-menu","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/admin-menu.mdx","tags":[],"version":"current","frontMatter":{"id":"admin-menu","title":"Admin Menu","description":"Provides guidance on the main menus and features accessible with administrator privileges.","keywords":["Admin"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"Using the Device","permalink":"/docs/en/device/biostation_3/using-device"},"next":{"title":"User","permalink":"/docs/en/device/biostation_3/user"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-index-mdx-e83.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_index_mdx_e83_namespaceObject = JSON.parse('{"id":"device/biostation_3/index","title":"BioStation 3","description":"BioStation 3 sets a new standard in access control, providing a new door access experience that enables improved security across all doors, for organizations of all sizes. This terminal is smaller than previous model, yet it has the largest variety of features.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/index.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/","permalink":"/docs/en/device/biostation_3/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStation 3","description":"BioStation 3 sets a new standard in access control, providing a new door access experience that enables improved security across all doors, for organizations of all sizes. This terminal is smaller than previous model, yet it has the largest variety of features.","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"bioStation3","next":{"title":"Safety Instructions","permalink":"/docs/en/device/biostation_3/safety-instructions"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/admin-menu.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/index.mdx
 
 
 const frontMatter = {
-	id: 'admin-menu',
-	title: 'Admin Menu',
-	description: 'Provides guidance on the main menus and features accessible with administrator privileges.',
+	title: 'BioStation 3',
+	description: 'BioStation 3 sets a new standard in access control, providing a new door access experience that enables improved security across all doors, for organizations of all sizes. This terminal is smaller than previous model, yet it has the largest variety of features.',
 	keywords: [
-		'Admin'
+		'keyword1',
+		'keyword2'
 	],
 	isTranslationMissing: false
 };
@@ -40,59 +40,26 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "DASHBOARD",
-  "id": "dashboard",
-  "level": 2
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    admonition: "admonition",
-    h2: "h2",
-    li: "li",
-    ol: "ol",
+    img: "img",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
-  if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Image) _missingMdxReference("Image", true);
+  }, {Overview} = _components;
+  if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Provides guidance on the main menus and features accessible with administrator privileges."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "dashboard",
-      children: "DASHBOARD"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), " and authenticate with the Admin level credential.", (0,jsx_runtime.jsx)("br", {}), "Check current device usage and information on the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "DASHBOARD"
-          }), ". Or select the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Enroll Wizard"
-          }), " to immediately register a user."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "To Enroll a user or set up a device, select the desired menu from the bottom of the dashboard."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/device-menu.png"
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If the administrator has not been designated, the ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "DASHBOARD"
-        }), " screen will be displayed when you press ", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/ico-menu.svg",
-          ico: true
-        }), "."]
+      children: "BioStation 3 sets a new standard in access control, providing a new door access experience that enables improved security across all doors, for organizations of all sizes. This terminal is smaller than previous model, yet it has the largest variety of features."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.img, {
+        alt: "Example banner",
+        src: (__webpack_require__(3595)/* ["default"] */.Z) + "",
+        width: "1000",
+        height: "452"
       })
-    })]
+    }), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -112,6 +79,13 @@ function _missingMdxReference(id, component) {
 }
 
 
+
+}),
+"3595": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Z: function() { return __WEBPACK_DEFAULT_EXPORT__; }
+});
+/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/biostation3-main-f8e7ac64bec634d35cd3b3d8e2590f07.png");
 
 }),
 "65": (function (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {

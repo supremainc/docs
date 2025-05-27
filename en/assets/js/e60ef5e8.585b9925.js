@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["3233"], {
-"7132": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["344"], {
+"9705": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_settings_mdx_ea6_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_settings_mdx_e60_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-settings-mdx-ea6.json
-var site_docs_device_biostation_3_settings_mdx_ea6_namespaceObject = JSON.parse('{"id":"device/biostation_3/settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","source":"@site/docs/device/biostation_3/settings.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/settings","permalink":"/docs/device/biostation_3/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"설정","description":"시스템 및 장치 설정 방법을 안내합니다.","keywords":["화면","소리","통신","장치"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"인증","permalink":"/docs/device/biostation_3/authentication"},"next":{"title":"이벤트 로그","permalink":"/docs/device/biostation_3/event-log"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-settings-mdx-e60.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_settings_mdx_e60_namespaceObject = JSON.parse('{"id":"device/biostation_3/settings","title":"Settings","description":"Provides instructions on how to set system and device configurations.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/settings.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/settings","permalink":"/docs/en/device/biostation_3/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"Settings","description":"Provides instructions on how to set system and device configurations.","keywords":["Display","Sound","Network","Device"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"Authentication","permalink":"/docs/en/device/biostation_3/authentication"},"next":{"title":"Event Logs","permalink":"/docs/en/device/biostation_3/event-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/device/biostation_3/settings.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/settings.mdx
 
 
 const frontMatter = {
 	id: 'settings',
-	title: '설정',
-	description: '시스템 및 장치 설정 방법을 안내합니다.',
+	title: 'Settings',
+	description: 'Provides instructions on how to set system and device configurations.',
 	keywords: [
-		'화면',
-		'소리',
-		'통신',
-		'장치'
+		'Display',
+		'Sound',
+		'Network',
+		'Device'
 	],
 	isTranslationMissing: false
 };
@@ -44,84 +44,84 @@ const assets = {
 
 
 const toc = [{
-  "value": "화면과 소리",
-  "id": "화면과-소리",
+  "value": "Display &amp; Sound",
+  "id": "display--sound",
   "level": 2
 }, {
-  "value": "통신",
-  "id": "통신",
+  "value": "Network",
+  "id": "network",
   "level": 2
 }, {
-  "value": "이더넷",
-  "id": "이더넷",
+  "value": "Ethernet",
+  "id": "ethernet",
   "level": 3
 }, {
-  "value": "무선 LAN",
-  "id": "무선-lan",
+  "value": "Wireless",
+  "id": "wireless",
   "level": 3
 }, {
-  "value": "서버",
-  "id": "서버",
+  "value": "Server",
+  "id": "server",
   "level": 3
 }, {
-  "value": "OSDP 통신 설정",
-  "id": "osdp-통신-설정",
+  "value": "OSDP Setting",
+  "id": "osdp-setting",
   "level": 3
 }, {
-  "value": "장치",
-  "id": "장치",
+  "value": "Devices",
+  "id": "devices",
   "level": 2
 }, {
-  "value": "IP 인터폰",
-  "id": "ip-인터폰",
+  "value": "Intercom",
+  "id": "intercom",
   "level": 3
 }, {
-  "value": "라이선스",
+  "value": "License",
   "id": "license",
   "level": 3
 }, {
-  "value": "릴레이",
-  "id": "릴레이",
+  "value": "Relay",
+  "id": "relay",
   "level": 3
 }, {
-  "value": "날짜와 시간",
+  "value": "Date &amp; Time",
   "id": "date-time",
   "level": 3
 }, {
-  "value": "일광절약시간",
-  "id": "일광절약시간",
+  "value": "Daylight Saving Time",
+  "id": "daylight-saving-time",
   "level": 3
 }, {
-  "value": "장치 정보",
-  "id": "장치-정보",
+  "value": "Device Information",
+  "id": "device-information",
   "level": 3
 }, {
-  "value": "메모리 정보",
-  "id": "메모리-정보",
+  "value": "Memory Information",
+  "id": "memory-information",
   "level": 3
 }, {
-  "value": "USB 메모리",
-  "id": "usb-메모리",
+  "value": "USB Memory",
+  "id": "usb-memory",
   "level": 3
 }, {
-  "value": "보안 탬퍼",
-  "id": "보안-탬퍼",
+  "value": "Secure Tamper",
+  "id": "secure-tamper",
   "level": 3
 }, {
   "value": "RTSP",
   "id": "rtsp",
   "level": 3
 }, {
-  "value": "장치 다시 시작",
-  "id": "장치-다시-시작",
+  "value": "Restart Device",
+  "id": "restart-device",
   "level": 3
 }, {
-  "value": "기본값 복원",
-  "id": "기본값-복원",
+  "value": "Restore Default",
+  "id": "restore-default",
   "level": 3
 }, {
-  "value": "사용자 ID 종류",
-  "id": "사용자-id-종류",
+  "value": "User ID Type",
+  "id": "user-id-type",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -142,154 +142,156 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "시스템 및 장치 설정 방법을 안내합니다."
+      children: "Provides instructions on how to set system and device configurations."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "화면과-소리",
-      children: "화면과 소리"
+      id: "display--sound",
+      children: "Display & Sound"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치의 화면과 소리에 대한 설정을 변경할 수 있습니다."
+      children: "You can change the display and sound settings of the device."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "화면과 소리"
-          }), "를 누르세요."]
+            children: "DISPLAY & SOUND"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
+          children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-displaysound.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "홈 화면"
-              }), ": 홈 화면의 배경에 표시할 항목을 선택할 수 있습니다."]
+                children: "Home Screen"
+              }), ": Select items to be displayed in the background of the home screen."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "언어"
-              }), ": 화면에 표시되는 언어를 선택할 수 있습니다."]
+                children: "Language"
+              }), ": Select the language that will be displayed on the screen."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 개인 메시지"
-              }), ": 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 개인 메시지"
-              }), "는 BioStar 2 Device SDK를 이용하여 설정할 수 있습니다. 설정하지 않은 경우, 장치에서 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 개인 메시지"
-              }), "를 활성화하더라도 인증 성공 시 메시지가 표시되지 않습니다."]
+                children: "Device Private Msg."
+              }), ": Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Device Private Msg."
+              }), " can be set using the BioStar 2 Device SDK. If not set, does not display a message when authentication is successful even if ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Device Private Msg."
+              }), " is enabled on the device."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 개인 메시지"
-              }), ": 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 개인 메시지"
-              }), "는 BioStar 2 API 를 이용하여 설정할 수 있습니다. 설정하지 않은 경우, 장치에서 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 개인 메시지"
-              }), "를 활성화하더라도 인증 성공 시 메시지가 표시되지 않습니다."]
+                children: "Server Private Msg."
+              }), ": Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server Private Msg."
+              }), " can be set using the BioStar 2 API. If not set, does not display a message when authentication is successful even if ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server Private Msg."
+              }), " is enabled on the device."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["BioStar 2 Device SDK에 대한 자세한 정보는 슈프리마 지식 베이스의 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "https://kb.supremainc.com/bs2sdk/doku.php",
-                  children: "BioStar 2 Device SDK 페이지"
-                }), "를 참고하세요."]
+                children: ["For more detailed information about the BioStar 2 Device SDK, visit the ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "https://kb.supremainc.com/bs2sdk/",
+                  children: "BioStar 2 Device SDK web page"
+                }), " on the Suprema Knowledge Base."]
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "화면 보호기"
-              }), ": 화면 보호기 사용 여부를 설정할 수 있습니다. 화면 보호기를 사용하면 장치를 사용하지 않을 때 화면 밝기를 줄여 불필요한 전력 소모를 줄일 수 있습니다."]
+                children: "Screen Saver"
+              }), ": Set this option to use the screen saver feature. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "메뉴 표시 시간"
-              }), ": 메뉴 화면이 자동으로 사라지는 시간(초)을 설정할 수 있습니다. 설정한 시간 동안 버튼 입력이 없다면 홈 화면으로 이동합니다."]
+                children: "Menu Timeout"
+              }), ": Set the time (sec) for the menu screen to disappear automatically. If there is no button input during a set time, the screen will return to the home screen."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "메시지 표시 시간"
-              }), ": 설정 완료 메시지나 알림 메시지 등이 자동으로 사라지는 시간(초)을 설정할 수 있습니다."]
+                children: "Message Timeout"
+              }), ": Set the time (sec) for a setting complete message or information message to disappear automatically."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "백라이트 시간"
-              }), ": 화면의 조명이 꺼지는 시간(초)을 설정할 수 있습니다."]
+                children: "Backlight Timeout"
+              }), ": Set the time (second) to turn off the lighting of screen."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "음성 안내"
-              }), ": 알림음 대신 음성 안내를 사용할 수 있습니다."]
+                children: "Voice Instruction"
+              }), ": Set to use the voice instruction instead of alarm sounds."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "볼륨"
-              }), ": 소리 크기를 설정할 수 있습니다."]
+                children: "Volume"
+              }), ": Set the volume."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 인터폰 스피커 음량"
-              }), ": IP 인터폰 사용 시 스피커에서 출력되는 음량의 크기를 조절할 수 있습니다."]
+                children: "Intercom Speaker Volume"
+              }), ": Adjust the speaker's output volume when using intercom."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 인터폰 마이크 음량"
-              }), ": IP 인터폰 사용 시 마이크에 입력되는 음량의 크기를 조절할 수 있습니다."]
+                children: "Intercom Microphone Volume"
+              }), ": Adjust the microphone's input volume when using intercom."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "통신",
-      children: "통신"
+      id: "network",
+      children: "Network"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이더넷, 서버, OSDP 통신과 같은 장치의 통신 설정을 변경할 수 있습니다."
+      children: "You can change the network settings of the device, such as Ethernet, server, OSDP, etc."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "이더넷",
-      children: "이더넷"
+      id: "ethernet",
+      children: "Ethernet"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "통신"
+            children: "NETWORK"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "이더넷"
-          }), "을 선택하세요."]
+            children: "Ethernet"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 설정하세요."
+          children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-ethernet.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -297,106 +299,107 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "DHCP"
-              }), ": DHCP 사용 여부를 설정하세요. DHCP 설정을 끄면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 주소"
+              }), ": Set whether to use DHCP. If DHCP setting is disabled, the user can modify ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "IP Address"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "게이트웨이"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서브넷마스크"
-              }), "를 사용자가 수정할 수 있습니다."]
+                children: "Gateway"
+              }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Subnet Mask"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 포트"
-              }), ": 장치의 포트를 설정할 수 있습니다."]
+                children: "Device Port"
+              }), ": Set the device port."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 주소"
-              }), ": 장치의 IP 주소를 확인할 수 있습니다. 수정하려면 DHCP 설정을 끄세요."]
+                children: "IP Address"
+              }), ": View the IP address of the device. To modify, disable DHCP setting."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "게이트웨이"
-              }), ": 장치의 게이트웨이를 확인할 수 있습니다. 수정하려면 DHCP 설정을 끄세요."]
+                children: "Gateway"
+              }), ": View the gateway of the device. To modify, disable DHCP setting."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "서브넷마스크"
-              }), ": 장치의 서브넷마스크를 확인할 수 있습니다. 수정하려면 DHCP 설정을 끄세요."]
+                children: "Subnet Mask"
+              }), ": View the subnet mask of the device. To modify, disable DHCP setting."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "도메인네임서버"
-              }), ": 도메인 네임 서버 주소를 설정할 수 있습니다."]
+                children: "DNS"
+              }), ": Set the DNS server address."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["To save the settings, press ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "를 누르세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
-          children: "이더넷"
-        }), "은 ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "무선 LAN"
-        }), "과 함께 사용할 수 없습니다."]
+          children: "Ethernet"
+        }), " cannot be used with ", (0,jsx_runtime.jsx)(Cmd, {
+          children: "Wireless"
+        }), " at the same time."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "무선-lan",
-      children: "무선 LAN"
+      id: "wireless",
+      children: "Wireless"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "통신"
+            children: "NETWORK"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "무선 LAN"
-          }), "을 선택하세요."]
+            children: "Wireless"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "연결 가능한 네트워크 목록이 나타납니다."
+          children: "The list of networks available to connect will be displayed."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-wifi.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "무선 네트워크 수동 연결"
-              }), ": 네트워크 정보를 직접 입력하여 무선 네트워크를 추가하고 연결할 수 있습니다."]
+                children: "Hidden Network"
+              }), ": Add and connect to a wireless network by entering network information manually."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     children: "SSID"
-                  }), ": SSID를 입력하세요. SSID는 영문(대소문자 구분), 숫자, 특수 기호를 포함하여 최대 32자까지 입력할 수 있습니다."]
+                  }), ": Enter the SSID. The SSID may be up to 32 characters long and include alphanumeric (case-sensitive), and special characters."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
-                    children: "비밀번호"
-                  }), ": 비밀번호를 입력하세요. 비밀번호는 영문, 숫자, 특수 기호만 입력할 수 있습니다."]
+                    children: "Password"
+                  }), ": Enter the password. The password can include alphanumeric and special characters only."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -404,22 +407,23 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["연결하려는 네트워크를 선택한 뒤 암호를 입력하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select the network you wish to connect to and enter the password. When you press ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "를 누르면 무선 네트워크에 연결됩니다."]
+          }), ", the connection to the wireless network will be made."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용하려는 무선 네트워크의 ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-wireless-info.svg",
-            ico: true
-          }), "을 누른 다음 DHCP 설정을 끄면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "IP 주소"
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-wireless-info.svg",
+            ico: true,
+            alone: true
+          }), " the wireless network you wish to use and then disable DHCP settings to allow users to modify the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "IP Address"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "게이트웨이"
-          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "서브넷마스크"
-          }), "를 사용자가 수정할 수 있습니다."]
+            children: "Gateway"
+          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Subnet Mask"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -428,121 +432,123 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "무선 LAN"
-            }), "은 BS3-APWB 모델만 사용할 수 있습니다."]
+              children: "Wireless"
+            }), " is only available for BS3-APWB model."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "무선 LAN"
-            }), "은 ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "이더넷"
-            }), "과 함께 사용할 수 없습니다."]
+              children: "Wireless"
+            }), " cannot be used with ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Ethernet"
+            }), " at the same time."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "무선 LAN"
-            }), "으로 연결하려면 무선 공유기가 필요합니다. 무선 공유기에 대한 설치 및 설정에 대한 내용은 무선 공유기의 사용자 설명서를 참고하세요."]
+            children: ["To connect to ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Wireless"
+            }), ", a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "서버",
-      children: "서버"
+      id: "server",
+      children: "Server"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "통신"
+            children: "NETWORK"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "서버"
-          }), "를 선택하세요."]
+            children: "Server"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 설정하세요."
+          children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-server.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 → 서버"
-              }), ": 장치에서 입력한 정보를 가진 서버로 직접 연결 신호를 보낼 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "장치 → 서버"
-              }), " 설정을 켜면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 IP"
+                children: "Device → Server"
+              }), ": You can send a connection signal from the device to a server with the input information directly. When the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Device → Server"
+              }), " is enabled, the user can enter the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server IP"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 URL"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 포트"
-              }), "를 사용자가 입력할 수 있습니다."]
+                children: "Server URL"
+              }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server Port"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 IP"
-              }), ": BioStar 2가 설치된 PC의 IP를 입력하세요."]
+                children: "Server IP"
+              }), ": Enter the IP address of the PC on which BioStar 2 is installed."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 URL"
-              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 IP"
-              }), " 대신 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 URL"
-              }), "을 입력할 수 있습니다."]
+                children: "Server URL"
+              }), ": Enter the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server URL"
+              }), " instead of ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Server IP"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "서버 포트"
-              }), ": BioStar 2가 설치된 PC의 포트를 입력하세요."]
+                children: "Server Port"
+              }), ": Enter the port of the PC on which BioStar 2 is installed."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["To save the settings, press ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "를 누르세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "osdp-통신-설정",
-      children: "OSDP 통신 설정"
+      id: "osdp-setting",
+      children: "OSDP Setting"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "통신"
-          }), "을 선택하세요."]
+            children: "NETWORK"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "OSDP 통신 설정"
-          }), "에서 원하는 항목을 설정하세요."]
+          children: ["Change the desired item in the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "OSDP Setting"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-osdp.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -550,92 +556,93 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "RS-485"
-              }), ": RS-485 동작 모드를 선택할 수 있습니다."]
+              }), ": Select the RS-485 mode."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "전송 속도"
-              }), ": 원하는 통신 속도를 선택할 수 있습니다."]
+                children: "Baud Rate"
+              }), ": Select the desired baud rate."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "인증 결과"
-              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "인텔리전트 슬레이브"
-              }), "를 사용할 경우 타사 컨트롤러 또는 장치의 인증 결과를 화면에 표시하도록 선택할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Authentication Result"
+              }), ": When using ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Intelligent Slave"
+              }), ", the authentication results of 3rd party controllers or devices can be selected to be displayed on the screen. This option can be used when ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "RS-485"
-              }), " 모드를 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "기본값"
-              }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "슬레이브"
-              }), "로 설정했을 때 사용할 수 있습니다."]
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Default"
+              }), " or ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Slave"
+              }), "."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "장치",
-      children: "장치"
+      id: "devices",
+      children: "Devices"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "ip-인터폰",
-      children: "IP 인터폰"
+      id: "intercom",
+      children: "Intercom"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "IP 인터폰의 계정과 내선을 설정할 수 있습니다."
+      children: "Set the account and extensions of intercom."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "IP 인터폰"
-          }), "을 누르세요."]
+            children: "Intercom"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-intercom.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 인터폰"
-              }), ": IP 인터폰 활성화 여부를 설정할 수 있습니다. IP 인터폰 설정을 켜면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "SIP 계정"
-              }), "과 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "내선"
-              }), "을 설정할 수 있습니다."]
+                children: "Intercom"
+              }), ": Set whether the intercom is enabled or not. To set the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "SIP Account"
+              }), " and the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Extensions"
+              }), ", activate this option."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "SIP 계정"
-              }), ": SIP 서버에 장치가 등록될 수 있도록 각 항목을 알맞게 입력하세요."]
+                children: "SIP Account"
+              }), ": Enter each item so that the device can be registered on the SIP server."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "IP 인터폰 비디오 해상도"
-              }), ": 장치에서 송출되는 IP 인터폰 영상의 해상도를 선택할 수 있습니다."]
+                children: "Intercom Video Resolution"
+              }), ": Select the resolution of the intercom video output from the device."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "내선"
-              }), ": 내선 번호를 추가 및 삭제할 수 있습니다."]
+                children: "Extensions"
+              }), ": Add, delete, or edit extension numbers."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "내선 번호 표시"
-              }), ": 내선 번호 표시 여부를 설정할 수 있습니다."]
+                children: "Display Extension Number"
+              }), ": Set whether to display the extension number."]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -643,13 +650,13 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["내선 번호에 ", (0,jsx_runtime.jsx)(Cmd, {
-                  children: "표시 이름"
-                }), "을 설정하지 않은 경우 전화 걸기 화면에서 수신자를 구별할 수 없게 됩니다."]
+                children: ["If ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: "Display Name"
+                }), " is not set, it will not be possible to distinguish receivers."]
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["내선 번호는 영문(대문자 또는 소문자), 숫자, 특수 기호 ", (0,jsx_runtime.jsx)(_components.code, {
+                children: ["Extension numbers can only enter alphanumeric (case sensitive), and special characters ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "+"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "-"
@@ -657,57 +664,59 @@ function _createMdxContent(props) {
                   children: "@"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "."
-                }), "만 입력할수 있습니다."]
+                }), "."]
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["To save the settings, press ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "를 누르세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "license",
-      children: "라이선스"
+      children: "License"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치 라이선스를 활성화하거나 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "슬레이브 장치 라이선스 목록"
-      }), "과 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "장치에 활성화된 라이선스 목록"
-      }), "을 확인할 수 있습니다."]
+      children: ["You can activate device licenses or view ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Licenses in Slave Devices"
+      }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Activated Licenses in Device"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "라이선스"
-          }), "를 누르세요."]
+            children: "License"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치 라이선스를 활성화하려면 라이선스가 저장된 USB를 장치에 연결하고 ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
-          }), "을 선택하세요."]
+          children: ["To activate the device license, connect the USB with the license to the device and select ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-license.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "활성화 할 수 있는 라이선스가 화면에 나타납니다. 원하는 라이선스를 활성화하세요."
+          children: "Licenses that can be activated appear on the screen. Activate the desired license."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-license1.png"
         }), "\n"]
@@ -717,275 +726,280 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 라이선스를 발급하려면 구입처에 문의하세요."
+            children: "Contact the place of purchase to issue a device license."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 라이선스 하나당 한가지의 기능을 사용할 수 있습니다."
+            children: "One feature is available per device license."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "하나의 장치 라이선스 파일에 다수의 장치 라이선스를 포함시킬 수 있습니다. (최대 100개까지 지원)"
+            children: "You can include multiple device licenses in one device license file. (Supports up to 100)"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 라이선스 파일은 암호화 된 파일이므로 임의로 수정할 수 없습니다."
+            children: "The device license file is an encrypted file and cannot be modified arbitrarily."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다."
+            children: "Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "릴레이",
-      children: "릴레이"
+      id: "relay",
+      children: "Relay"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "문열림 시간"
-      }), "과 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "퇴실 버튼"
-      }), "의 입력 포트를 설정할 수 있습니다."]
+      children: ["You can set the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Open Time"
+      }), " and the input port of the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Exit Button"
+      }), " in the device."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "릴레이"
-          }), "를 누르세요."]
+            children: "Relay"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-network-relay.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "릴레이"
-              }), ": 릴레이 활성화 여부를 설정할 수 있습니다. 릴레이 설정을 켜면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "문열림 시간"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "퇴실 버튼"
-              }), "을 설정할 수 있습니다."]
+                children: "Relay"
+              }), ": You can set whether relay is enabled or not. To set the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Open Time"
+              }), " and the input port of the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Exit Button"
+              }), ", activate this option."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "문열림 시간"
-              }), ": 정상적으로 사용자 인증이 수행되었을 때 출입문이 열려 있는 시간을 설정할 수 있습니다."]
+                children: "Open Time"
+              }), ": Set the duration for the door to remain open when standard user authentication has been carried out."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "퇴실 버튼"
-              }), ": 퇴실 버튼이 연결되어 있는 입력 포트를 선택하세요."]
+                children: "Exit Button"
+              }), ": Select the input port where the exit button is connected."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "입력 방식"
-              }), ": 퇴실 버튼 입력 포트의 스위치(", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Switch"
+              }), ": Select the type of switch (", (0,jsx_runtime.jsx)(Cmd, {
                 children: "N/O"
-              }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " or ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "N/C"
-              }), ") 종류를 선택할 수 있습니다."]
+              }), ") for the Exit Button's input port."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "date-time",
-      children: "날짜와 시간"
+      children: "Date & Time"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "날짜와 시간을 설정할 수 있습니다. 정확한 로그 데이터 수집을 위해 알맞게 설정하세요."
+      children: "You can set date and time. Set the date and time accurately in order to collect accurate log data."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "날짜와 시간"
-          }), "을 누르세요."]
+            children: "Date & Time"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
+          children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-datetime.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "날짜와 시간"
-              }), ": 현재 날짜와 시간을 확인할 수 있습니다. 직접 수정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "시간 동기화"
-              }), "를 끄세요."]
+                children: "Date & Time"
+              }), ": Check the current date and time. To modify it manually, disable ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Time Sync"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "표준 시간대"
-              }), ": 현재 지역의 시간 기준을 설정할 수 있습니다."]
+                children: "Time Zone"
+              }), ": Set the time reference of the current location."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "시간 동기화"
-              }), ": 서버와 시간을 동기화 할 수 있습니다. 서버와 시간을 동기화 하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "시간 동기화"
-              }), "를 켜세요."]
+                children: "Time Sync"
+              }), ": Synchronize the server and the time. If you wish to synchronize the server and the time, enable ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Time Sync"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "날짜 형식"
-              }), ": 날짜 형식을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Date Format"
+              }), ": Set the date format. You can select among ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "YYYY/MM/DD"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "MM/DD/YYYY"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " and ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "DD/MM/YYYY"
-              }), "를 선택할 수 있습니다."]
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "시간 형식"
-              }), ": 시간 형식을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "오전/오후"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "24시간"
-              }), "을 선택할 수 있습니다."]
+                children: "Time Format"
+              }), ": Set the time format. You can select either ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "AM/PM"
+              }), " or ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "24-Hour"
+              }), "."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "일광절약시간",
-      children: "일광절약시간"
+      id: "daylight-saving-time",
+      children: "Daylight Saving Time"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "일광 절약 시간제(DST)를 적용해 장치를 사용할 수 있습니다. 시작 및 종료 일시를 알맞게 설정하세요."
+      children: "You can use the device by applying daylight saving time. Set the start and end time correctly."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "일광절약시간"
-          }), "을 선택한 뒤 ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
-          }), "을 눌러 일광 절약 시간을 추가하세요."]
+            children: "Daylight Saving Time"
+          }), " and then press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
+          }), " to add additional daylight-saving time."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
+          children: "Select the desired item and change the setting."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-dst.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "이름"
-              }), ": 일광 절약 시간의 이름을 입력하세요."]
+                children: "Name"
+              }), ": Set the name of daylight-saving time."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "시작 월"
+                children: "Start Month"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "시작 주"
+                children: "Start Week"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "시작 요일"
+                children: "Start Day"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "시작 시간"
-              }), ": 일광 절약 시간 적용을 시작할 월, 주, 요일, 시간을 설정하세요."]
+                children: "Start Time"
+              }), ": Set details of when the daylight-saving time option begins."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "끝 월"
+                children: "End Month"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "끝 주"
+                children: "End Week"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "끝 요일"
+                children: "End Day"
               }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "끝 시간"
-              }), ": 일광 절약 시간 적용을 종료할 월, 주, 요일, 시간을 설정하세요."]
+                children: "End Time"
+              }), ": Set details of when the daylight-saving time ends."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["To save the settings, press ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "를 누르세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "장치-정보",
-      children: "장치 정보"
+      id: "device-information",
+      children: "Device Information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "모델명, 장치 ID, 시리얼 번호, 장치 및 펌웨어의 버전, 커널, MAC 주소를 확인할 수 있습니다."
+      children: "You can view the model name, device ID, serial number, device and firmware version, kernel, and MAC address."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치 정보"
-          }), "를 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "모델명"
+            children: "Device Info"
+          }), ". You can view the information including ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Model Name"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치 ID"
+            children: "Device ID"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "시리얼 번호"
+            children: "Serial No."
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             children: "HW"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             children: "FW"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "커널"
+            children: "Kernel"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             children: "MAC"
-          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "무선 MAC"
-          }), " 정보를 확인할 수 있습니다."]
+          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "WiFi MAC"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-info.png"
         }), "\n"]
@@ -995,94 +1009,96 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: ["When long-pressing the ", (0,jsx_runtime.jsx)(Cmd, {
               children: "MAC"
-            }), " 항목을 길게 터치하면 위조 얼굴 검출의 알고리즘 버전을 확인할 수 있는 ", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               children: "FAS_IR_SP"
-            }), " 정보가 표시됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " will be displayed, showing the version of the face anti-spoofing algorithm. If press ", (0,jsx_runtime.jsx)(Cmd, {
               children: "FAS_IR_SP"
-            }), " 항목 터치 시, 전체 해시값을 팝업 메시지로 확인할 수 있습니다."]
+            }), " to check the entire hash value in a pop-up message."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "무선 MAC"
-            }), " 항목은 BS3-APWB 모델에서만 확인할 수 있습니다."]
+              children: "WiFi MAC"
+            }), " can only be confirmed on the BS3-APWB model."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "메모리-정보",
-      children: "메모리 정보"
+      id: "memory-information",
+      children: "Memory Information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "메모리 사용 정보를 확인할 수 있습니다."
+      children: "View the status of memory usage."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "메모리 정보"
-          }), "를 선택하세요. 장치의 메모리 사용 현황을 확인할 수 있습니다."]
+            children: "Memory Info"
+          }), ". You can view the memory usage status of the device."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-memory.png"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "usb-메모리",
-      children: "USB 메모리"
+      id: "usb-memory",
+      children: "USB Memory"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치에 USB 메모리를 연결하여 장치로 사용자 정보를 가져오거나 장치에서 로그 및 사용자 정보를 내보낼 수 있습니다. 펌웨어를 업그레이드할 수도 있습니다."
+      children: "Connect USB Memory and import user information to the device or export log and user information from the device. You can also upgrade the firmware."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USB 메모리"
-          }), "를 선택하세요."]
+            children: "USB Memory"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 선택한 뒤 설정을 변경하세요."
+          children: "Select the desired item and change the setting."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-usb.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "가져오기"
-              }), ": 연결된 USB 메모리에서 사용자 정보를 가져올 수 있습니다."]
+                children: "Import"
+              }), ": Import user information from the connected USB memory."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "내보내기"
-              }), ": 연결된 USB 메모리에 내보낼 정보를 선택할 수 있습니다."]
+                children: "Export"
+              }), ": Select information you wish to export to the connected USB memory."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "펌웨어 업그레이드"
-              }), ": 연결된 USB 메모리에 펌웨어 파일이 저장되어 있다면 펌웨어를 업그레이드 할 수 있습니다."]
+                children: "FW Upgrade"
+              }), ": Upgrade the firmware if the firmware files are saved in the connected USB memory."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -1090,103 +1106,105 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요. 고장의 원인이 됩니다."
+        children: "Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "USB 메모리는 파일 시스템이 exFAT 형식인 제품을 사용할 것을 권장합니다. FAT32 형식인 USB 메모리를 사용하면 저장된 얼굴 데이터가 50,000개 이상일 경우 장치가 오작동할 수 있습니다."
+            children: "It is recommended to use a USB flash drive formatted in exFAT. USB flash drives in FAT32 format may malfunction when more than 50,000 face credentials are stored."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "USB 메모리의 여유 공간을 확인하세요. 얼굴 데이터 100,000개 기준 15GB 이상의 여유 공간이 필요합니다."
+            children: "Check the amount of free space on your USB flash drive. To save 100,000 face credentials, a minimum of 15 GB of free space is required."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지원하는 USB 메모리 종류는 아래와 같습니다. 다른 기종의 메모리를 사용할 경우 기능이 정상적으로 동작하지 않을 수 있습니다."
+            children: "The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally."
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "삼성전자: SUM-BSG 32GB"
+                children: "Samsung Electronics: SUM-BSG 32GB"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "LG전자: MU 1 USB 32GB, MU28GBC 32GB"
+                children: "LG Electronics: MU 1 USB 32GB, MU28GBC 32GB"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "샌디스크: Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB"
+                children: "SanDisk: Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "소니: USM-SA1 32GB"
+                children: "Sony: USM-SA1 32GB"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "트랜센드: JetFlash 760 32GB"
+                children: "Transcend: JetFlash 760 32GB"
               }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "위 지원하는 USB 메모리 종류는 USB Type-A로 테스트되었습니다. 각 USB 메모리를 BioStation 3와 연결하기 위해서는 별도의 USB Type-C 젠더가 필요합니다."
+        children: "The supported USB flash drives listed above were all tested with USB Type-A. To connect these USB flash drives to BioStation 3, a separate USB Type-C gender is required."
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "보안-탬퍼",
-      children: "보안 탬퍼"
+      id: "secure-tamper",
+      children: "Secure Tamper"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "보안 탬퍼 사용 여부를 설정할 수 있습니다. 보안 탬퍼가 발생할 경우 전체 사용자, 전체 로그, 보안 키가 삭제됩니다."
+      children: "When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
-          }), "를 선택하세요."]
+            children: "DEVICE"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["탬퍼 발생 시 전체 사용자, 전체 로그, 보안 키가 삭제되도록 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "보안 탬퍼"
-          }), " 설정을 켜세요."]
+          children: ["Activate ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Secure Tamper"
+          }), " to delete data of all registered users, all logs, and secure keys when a temper event occurs."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "rtsp",
       children: "RTSP"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "타사 비디오 관리 시스템(VMS)과 연결하여 BioStation 3의 비주얼 카메라를 통해 촬영된 영상을 모니터링 할 수 있습니다."
+      children: "A video management system (VMS) of another brand may be connected to monitor videos filmed with the BioStation 3 visual camera."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             children: "RTSP"
-          }), "를 선택하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 선택한 뒤 설정을 변경하세요."
+          children: "Select the desired item and change the setting."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-rtsp.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -1194,51 +1212,51 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "RTSP"
-              }), ": RTSP 활성화 여부를 설정할 수 있습니다. RTSP 설정을 켜면 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": You can set whether RTSP is enabled or not. To set the ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "ID"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "비밀번호"
+                children: "Password"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 주소"
+                children: "RTSP Address"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 포트"
-              }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 비디오 해상도"
-              }), "를 설정할 수 있습니다."]
+                children: "RTSP Port"
+              }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "RTSP Video Resolution"
+              }), " activate this option."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "ID"
-              }), ": ID를 입력하세요. ID는 영문(대소문자 구분), 숫자, 일부 기호 ", (0,jsx_runtime.jsx)(_components.code, {
+              }), ": Enter the ID. The ID may have up to 32 characters, in a combination of alphanumeric (case-sensitive) characters and certain symbols ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "-"
               }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "_"
-              }), "를 조합하여 최대 32자까지 입력할 수 있습니다."]
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "비밀번호"
-              }), ": 비밀번호를 입력하세요. 비밀번호는 영문(대문자 또는 소문자), 숫자를 조합하여 8~32자를 입력할 수 있습니다."]
+                children: "Password"
+              }), ": Enter the password. The password may have 8~32 characters in a combination of alphabetic (capital and lowercase letters) and numeric characters."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 주소"
-              }), ": RTSP 주소를 입력하세요."]
+                children: "RTSP Address"
+              }), ": Enter the RTSP address."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 포트"
-              }), ": RTSP 포트 번호를 입력하세요."]
+                children: "RTSP Port"
+              }), ": Enter the RTSP Port number."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "RTSP 비디오 해상도"
-              }), ": 장치에서 송출되는 RTSP 영상의 해상도를 선택할 수 있습니다."]
+                children: "RTSP Video Resolution"
+              }), ": Select the resolution of the RTSP video output from the device."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -1246,102 +1264,104 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "장치를 슬레이브 장치로 구성한 경우 RTSP 기능을 사용할 수 없습니다."
+        children: "When the device is configured as a slave device, the RTSP function may not be available."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "장치-다시-시작",
-      children: "장치 다시 시작"
+      id: "restart-device",
+      children: "Restart Device"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치를 다시 시작할 수 있습니다."
+      children: "The user can restart the device."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치 다시 시작"
-          }), "을 선택하세요."]
+            children: "Restart Device"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치를 다시 시작하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "확인"
-          }), "을 누르세요. 이전 화면으로 돌아가려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "취소"
-          }), "를 누르세요."]
+          children: ["To restart the device, press ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "OK"
+          }), ". To return to the previous screen, press ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Cancel"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "기본값-복원",
-      children: "기본값 복원"
+      id: "restore-default",
+      children: "Restore Default"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치 설정, 네트워크 설정, 사용자 권한 등이 초기화됩니다."
+      children: "Device settings, network settings, and operator levels will be reset."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "기본값 복원"
-          }), "을 선택하세요."]
+            children: "Restore Default"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "전체 설정"
-              }), ": 장치에 저장된 모든 설정을 초기화합니다. 장치 설정을 모두 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "확인"
-              }), "을 누르세요. 이전 화면으로 돌아가려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "취소"
-              }), "를 누르세요."]
+                children: "All settings"
+              }), ": Reset all settings stored on the device. To reset all device settings, press ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "OK"
+              }), ". To return to the previous screen, press ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Cancel"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "네트워크 설정 유지"
-              }), ": 네트워크 설정을 제외한 모든 설정을 초기화합니다. 네트워크 설정을 제외한 모든 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "확인"
-              }), "을 누르세요. 이전 화면으로 돌아가려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "취소"
-              }), "를 누르세요."]
+                children: "Keep Network Settings"
+              }), ": Reset all settings except for the network settings. To reset all settings except for the network settings, press ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "OK"
+              }), ". To return to the previous screen, press ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "Cancel"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "공장 초기화"
-              }), ": 장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다."]
+                children: "Factory Default"
+              }), ": Delete all the information saved in the device and the root certificate and restore default settings."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "루트 인증서 삭제"
-              }), ": 장치에 저장된 루트 인증서를 삭제합니다."]
+                children: "Delete the Root Certificate"
+              }), ": Delete the root certificate saved in the device."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "기본값 복원"
-          }), "을 실행할 경우 장치가 다시 시작됩니다."]
+          children: ["If you proceed to ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Restore Default"
+          }), ", the device will restart."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -1349,70 +1369,71 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "초기화를 실행할 경우 사용자 권한도 같이 초기화 됩니다. 초기화를 실행한 뒤 반드시 사용자 권한을 다시 설정하세요."
+            children: "When you reset, the operator level will be reset as well. After resetting, make sure to set the operator level again."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "초기화를 실행해도 언어 설정은 변경되지 않습니다."
+            children: "Language setting will not change after resetting."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "공장 초기화"
-            }), " 메뉴는 장치에 루트 인증서가 저장되었을 때 사용할 수 있습니다."]
+              children: "Factory Default"
+            }), " menu can be used when the root certificate is saved in the device."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "루트 인증서 삭제"
-            }), " 메뉴는 장치에 루트 인증서가 저장되어 있고 전체 관리자가 지정되었을 때 사용할 수 있습니다."]
+              children: "Delete the Root Certificate"
+            }), " menu can be used only when the root certificate is saved in the device and Administrator has been designated."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-id-종류",
-      children: "사용자 ID 종류"
+      id: "user-id-type",
+      children: "User ID Type"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치에 등록할 사용자 ID의 형태를 선택할 수 있습니다."
+      children: "Select the type of user ID to register to the device."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
-          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "설정"
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "장치"
+            children: "DEVICE"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "사용자 ID 종류"
-          }), "를 선택하세요."]
+            children: "User ID Type"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "숫자"
-              }), ": 사용자 ID를 숫자로만 입력할 수 있습니다."]
+                children: "Number"
+              }), ": You can register a user ID with numbers only."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "영숫자"
-              }), ": 사용자 ID를 영문, 숫자, 일부 기호 ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "Alphanumeric"
+              }), ": You can register a user ID with alphanumeric characters and symbols ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "_"
               }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "-"
-              }), "를 조합하여 입력할 수 있습니다."]
+              }), "."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 선택하세요."
+          children: "Select to the desired item."
         }), "\n"]
       }), "\n"]
     })]

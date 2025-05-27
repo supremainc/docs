@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["4945"], {
-"8610": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["4102"], {
+"1339": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,32 +8,32 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_installation_mdx_7c9_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_installation_mdx_77c_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-installation-mdx-7c9.json
-var site_docs_device_biostation_3_installation_mdx_7c9_namespaceObject = JSON.parse('{"id":"device/biostation_3/installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","source":"@site/docs/device/biostation_3/installation.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/installation","permalink":"/docs/device/biostation_3/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","keywords":["브래킷","전원","네트워크","입력","릴레이","독립형","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"시작하기","permalink":"/docs/device/biostation_3/getting-started"},"next":{"title":"사용하기","permalink":"/docs/device/biostation_3/using-device"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-installation-mdx-77c.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_installation_mdx_77c_namespaceObject = JSON.parse('{"id":"device/biostation_3/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/installation.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/installation","permalink":"/docs/en/device/biostation_3/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"bioStation3","previous":{"title":"Getting Started","permalink":"/docs/en/device/biostation_3/getting-started"},"next":{"title":"Using the Device","permalink":"/docs/en/device/biostation_3/using-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/device/biostation_3/installation.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/installation.mdx
 
 
 const frontMatter = {
 	id: 'installation',
-	title: '설치하기',
-	description: '설치에 필요한 전체 과정과 연결 예시를 제공합니다.',
+	title: 'Installation',
+	description: 'Provides the complete installation procedures and connection examples required for the device.',
 	keywords: [
-		'브래킷',
-		'전원',
-		'네트워크',
-		'입력',
-		'릴레이',
-		'독립형',
+		'Bracket',
+		'Power',
+		'Network',
+		'Input',
+		'Relay',
+		'Standalone',
 		'Secure I/O',
 		'Wiegand'
 	],
@@ -48,36 +48,36 @@ const assets = {
 
 
 const toc = [{
-  "value": "브래킷 및 제품 고정",
-  "id": "브래킷-및-제품-고정",
+  "value": "Fixing the Bracket and the Product",
+  "id": "fixing-the-bracket-and-the-product",
   "level": 2
 }, {
-  "value": "전원 연결",
-  "id": "전원-연결",
+  "value": "Power Supply Connection",
+  "id": "power-supply-connection",
   "level": 2
 }, {
-  "value": "네트워크 연결",
-  "id": "네트워크-연결",
+  "value": "Network Connection",
+  "id": "network-connection",
   "level": 2
 }, {
   "value": "TCP/IP",
   "id": "tcpip",
   "level": 3
 }, {
-  "value": "LAN 연결 (허브와 연결)",
-  "id": "lan-연결-허브와-연결",
+  "value": "LAN connection (connecting to a hub)",
+  "id": "lan-connection-connecting-to-a-hub",
   "level": 4
 }, {
-  "value": "LAN 연결 (PC와 직접 연결)",
-  "id": "lan-연결-pc와-직접-연결",
+  "value": "LAN connection (connecting to a PC directly)",
+  "id": "lan-connection-connecting-to-a-pc-directly",
   "level": 4
 }, {
-  "value": "TTL 입력 연결",
-  "id": "ttl-입력-연결",
+  "value": "TTL Input Connection",
+  "id": "ttl-input-connection",
   "level": 2
 }, {
-  "value": "릴레이 연결",
-  "id": "릴레이-연결",
+  "value": "Relay Connection",
+  "id": "relay-connection",
   "level": 2
 }, {
   "value": "Fail Safe Lock",
@@ -88,20 +88,20 @@ const toc = [{
   "id": "fail-secure-lock",
   "level": 3
 }, {
-  "value": "자동문 연결",
-  "id": "자동문-연결",
+  "value": "Automatic door connection",
+  "id": "automatic-door-connection",
   "level": 3
 }, {
-  "value": "독립형 연결",
-  "id": "독립형-연결",
+  "value": "Connecting as a Standalone",
+  "id": "connecting-as-a-standalone",
   "level": 2
 }, {
-  "value": "Secure I/O 2 연결",
-  "id": "secure-io-2-연결",
+  "value": "Connecting to Secure I/O 2",
+  "id": "connecting-to-secure-io-2",
   "level": 2
 }, {
-  "value": "Wiegand 연결",
-  "id": "wiegand-연결",
+  "value": "Wiegand Connection",
+  "id": "wiegand-connection",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -135,14 +135,14 @@ function _createMdxContent(props) {
   if (!Thead) _missingMdxReference("Thead", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "설치에 필요한 전체 과정과 연결 예시를 제공합니다."
+      children: "Provides the complete installation procedures and connection examples required for the device."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "브래킷-및-제품-고정",
-      children: "브래킷 및 제품 고정"
+      id: "fixing-the-bracket-and-the-product",
+      children: "Fixing the Bracket and the Product"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제공된 드릴링 템플릿을 이용하여 제품을 장착할 위치를 정하세요."
+          children: "Determine the correct position to install the bracket using the provided drilling template."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-recommended-bs3.svg",
           className: "none",
@@ -152,22 +152,22 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "장치를 설치할 최적의 높이는 136 cm입니다."
+                children: "The optimal height for installing device is 136 cm."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "장치를 직사 광선이나 자외선에 직접 노출된 장소에 설치하지 마세요."
+                children: "Install the device where it does not reach the direct sunlight or UV light."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "사용자가 얼굴을 인증할 때 얼굴에 직사광선이 닿지 않도록 설치 위치를 조정하세요."
+                children: "Adjust the installation position so that the face is not exposed to direct sunlight when a user tries to authenticate."
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStation 3를 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요."
+          children: "Fix the bracket firmly using fixing screws through the bracket to the position where BioStation 3 will be installed."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device1-bs3.svg",
           className: "none",
@@ -177,11 +177,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioStation 3를 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
+                children: "If installing BioStation 3 on a concrete wall, drill holes, insert PVC anchors, and fix them with fixing screws."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요."
+                children: "To avoid RF interference, a minimum separation distance must be maintained."
               }), "\n"]
             }), "\n"]
           }), (0,jsx_runtime.jsxs)(Columns, {
@@ -189,8 +189,7 @@ function _createMdxContent(props) {
               className: "text--center",
               children: [(0,jsx_runtime.jsx)(Image, {
                 src: "/img/device/installation-wall1-bs3.svg",
-                className: "none",
-                alone: true
+                className: "none"
               }), (0,jsx_runtime.jsx)("div", {
                 className: "overflow-x",
                 children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -200,12 +199,12 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "벽"
+                        children: "Wall thickness"
                       }), (0,jsx_runtime.jsx)(_components.th, {
                         style: {
                           textAlign: "center"
                         },
-                        children: "두께거리"
+                        children: "Distance"
                       })]
                     })
                   }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -253,19 +252,18 @@ function _createMdxContent(props) {
               className: "text--center",
               children: (0,jsx_runtime.jsx)(Image, {
                 src: "/img/device/installation-wall2-bs3.svg",
-                className: "none",
-                alone: true
+                className: "none"
               })
             })]
           }), (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요."
+              children: "When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference."
             }), "\n"]
           })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "케이블 커버를 장착한 뒤 커버에 끼워져 있는 6개의 나사를 돌려 단단히 고정하세요."
+          children: "After assembling the cable cover, fix it firmly using the six screws on the cover."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device2-bs3.svg",
           className: "none",
@@ -273,12 +271,12 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다."
+            children: "IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating)."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "고정된 브래킷 위에 BioStation 3를 장착하세요."
+          children: "Install BioStation 3 onto the fixed bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device3-bs3.svg",
           className: "none",
@@ -286,7 +284,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStation 3의 제품 고정용 나사를 돌려 BioStation 3와 브래킷을 조립하세요."
+          children: "Connect BioStation 3 to the bracket by rotating the product fixing screw of BioStation 3."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device4-bs3.svg",
           className: "none",
@@ -294,33 +292,32 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "전원-연결",
-      children: "전원 연결"
+      id: "power-supply-connection",
+      children: "Power Supply Connection"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-power-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "caution",
       children: [(0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다."
+            children: "Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device."
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["최대 소모전류 규격은 제품 사양의 ", (0,jsx_runtime.jsx)(_components.a, {
+              children: ["Refer to the ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "product-specifications#specs.power",
-                children: "전원"
-              }), "을 참고하세요."]
+                children: "Power"
+              }), " in the product specifications for maximum current consumption specifications."]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Secure I/O 2, 전기정(전기식 잠금장치), 제품은 반드시 개별 전원을 사용하세요. 전원을 함께 연결하여 사용하면 장치가 오작동할 수 있습니다."
+            children: "Use a separate power supply for Secure I/O 2, the electric lock, and the product respectively. If connecting and using the power supply to these devices together, the devices may malfunction."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "전원 연결 시 BioStation 3와 전원 장치 간의 거리에 주의하세요. 장치와 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 장치와 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. BioStation 3는 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요."
+            children: "When connecting the power supply, be aware of the distance between BioStation 3 and the power supply. The BioStation 3 should be connected as close as possible to the power supply so that the length of the connecting cable is kept to a minimum. If cable connections are made improperly it may cause the device to malfunction. It is recommended to use a 16 AWG or 18 AWG cable if the BioStation 3 is far from the power supply. The connection distance may differ depending on the standard of the cable used and the installation environment. BioStation 3 supports both DC 24 V and DC 12 V power, so check the maximum length according to the cable specification to ensure that the unit is properly powered."
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsxs)(Table, {
@@ -328,10 +325,10 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(Row, {
             children: [(0,jsx_runtime.jsx)(Th, {
               rowspan: "2",
-              children: "케이블 규격"
+              children: "Cable standard"
             }), (0,jsx_runtime.jsx)(Th, {
               colspan: "2",
-              children: "최대 연장 길이"
+              children: "Max. extended length"
             })]
           }), (0,jsx_runtime.jsxs)(Row, {
             children: [(0,jsx_runtime.jsx)(Th, {
@@ -370,280 +367,270 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요."
+            children: "DO NOT extend the length of power cable when using the power adapter."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "CAT5 UTP 2-Wire 케이블을 전원 공급 용도로 사용하지 마세요."
+            children: "DO NOT use the CAT5 UTP 2-Wire for power supply purpose."
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "네트워크-연결",
-      children: "네트워크 연결"
+      id: "network-connection",
+      children: "Network Connection"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "tcpip",
       children: "TCP/IP"
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "lan-연결-허브와-연결",
-      children: "LAN 연결 (허브와 연결)"
+      id: "lan-connection-connecting-to-a-hub",
+      children: "LAN connection (connecting to a hub)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다."
+      children: "You can connect the product to a hub using a general type CAT-5 cable."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-network-hub-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "lan-연결-pc와-직접-연결",
-      children: "LAN 연결 (PC와 직접 연결)"
+      id: "lan-connection-connecting-to-a-pc-directly",
+      children: "LAN connection (connecting to a PC directly)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3는 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다."
+      children: "BioStation 3 has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-network-direct-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "기가 비트 이더넷 스위치를 사용할 때 아래 정보를 확인하세요."
+        children: "When you use a gigabit network switch, please see below information."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "CAT-5e 비차폐 꼬임선(UTP)을 사용하세요."
+            children: "Use a Cat5e UTP(Unshielded Twisted Pair) cable."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "4 쌍(8 선)을 모두 네트워크 연결로 사용하세요."
+            children: "Use all 4 pairs (8 lines) of cable for network connection."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "네트워크 케이블의 일부 쌍이나 선을 다른 용도로 사용하지 마세요."
+            children: "DO NOT use the pair of cable for other purpose."
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "ttl-입력-연결",
-      children: "TTL 입력 연결"
+      id: "ttl-input-connection",
+      children: "TTL Input Connection"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-ttl-input-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "릴레이-연결",
-      children: "릴레이 연결"
+      id: "relay-connection",
+      children: "Relay Connection"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "fail-safe-lock",
       children: "Fail Safe Lock"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다."
+      children: "In order to use the Fail Safe Lock, connect N/C relay as shown in the figure below. There is normally a current flowing through the relay for the Fail Safe Lock. When the relay is activated, blocking the current flow, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will open."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-relay-fail-safe-lock-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요."
+            children: "Install a diode at both sides of the door lock wire as shown in the figure to protect the relay from the reverse current, which occurs when the door lock operates."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3와 출입문 잠금 장치는 별도의 전원을 사용하세요."
+            children: "Use a separate power supply for BioStation 3 and the door lock."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
+            children: "Suprema’s standalone intelligent readers contain internal relays that can directly lock/unlock doors without external controllers for added convenience. For access control applications in need of security, however, it is NOT recommended to use the internal relay of a reader to prevent any tampering attacks which can potentially trigger the door unlock. For such applications, it is highly recommended to use a separate relay unit for a lock control such as Suprema’s Secure I/O 2, DM-20 or CoreStation installed at a secure side of a door."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요."
+        children: "Take caution of the installation direction of the diode. Install the diode close to the door lock."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "fail-secure-lock",
       children: "Fail Secure Lock"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연결하세요. Fail Secure Lock은 평상 시 릴레이 회로에 전류가 흐르지 않으며, 릴레이가 동작하여 전류가 흐르면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 잠깁니다."
+      children: "In order to use the Fail Secure Lock, connect N/O relay as shown in the figure below There is normally no current flowing through the relay for the Fail Secure Lock. When the current flow is activated by the relay, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will lock."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-relay-fail-secure-lock-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요."
+            children: "Install a diode at both sides of the door lock wire as shown in the figure to protect the relay from the reverse current, which occurs when the door lock operates."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3와 출입문 잠금 장치는 별도의 전원을 사용하세요."
+            children: "Use a separate power supply for BioStation 3 and the door lock."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
+            children: "Suprema’s standalone intelligent readers contain internal relays that can directly lock/unlock doors without external controllers for added convenience. For access control applications in need of security, however, it is NOT recommended to use the internal relay of a reader to prevent any tampering attacks which can potentially trigger the door unlock. For such applications, it is highly recommended to use a separate relay unit for a lock control such as Suprema’s Secure I/O 2, DM-20 or CoreStation installed at a secure side of a door."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요."
+        children: "Take caution of the installation direction of the diode. Install the diode close to the door lock."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "자동문-연결",
-      children: "자동문 연결"
+      id: "automatic-door-connection",
+      children: "Automatic door connection"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-automatic-door-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "독립형-연결",
-      children: "독립형 연결"
+      id: "connecting-as-a-standalone",
+      children: "Connecting as a Standalone"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "별도의 I/O 장치를 연결하지 않고 BioStation 3를 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다."
+      children: "BioStation 3 can be connected to the door lock, door button, and door sensor directly without connecting a separate I/O device."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-standalone-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
+        children: "Suprema’s standalone intelligent readers contain internal relays that can directly lock/unlock doors without external controllers for added convenience. For access control applications in need of security, however, it is NOT recommended to use the internal relay of a reader to prevent any tampering attacks which can potentially trigger the door unlock. For such applications, it is highly recommended to use a separate relay unit for a lock control such as Suprema’s Secure I/O 2, DM-20 or CoreStation installed at a secure side of a door."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "RS-485 케이블로 슬레이브 장치를 연결하여 BioStation 3를 다중 출입문 제어 장치로 사용할 수 있습니다. 슬레이브 장치는 더미 리더로 사용되며 인증은 마스터 장치에서 수행합니다."
+            children: "BioStation 3 can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지문 인식 장치가 BioStation 3의 슬레이브 장치로 구성된 경우 다른 BioStation 3를 슬레이브 장치로 추가할 수 없습니다."
+            children: "If a fingerprint authentication device is configured as a slave device in BioStation 3, you cannot add another BioStation 3 as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지문 인식 장치가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 추가할 수 없습니다."
+            children: "If the fingerprint authentication device is the master device, BioStation 3 cannot be added as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "FaceStation F2가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 사용할 수 없으며, 반대의 경우로도 사용할 수 없습니다."
+            children: "If FaceStation F2 is a master device, BioStation 3 cannot be used as a slave device, and vice versa."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 1대의 BioStation 3만 슬레이브 장치로 추가할 수 있습니다."
+            children: "When you connect BioStation 3 as a slave device while BioStation 3 is the master device, only one BioStation 3 can be added as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다."
+            children: "When BioStation 3 is the master device and another BioStation 3 is connected to it as a slave device, you can connect one additional Secure I/O 2 and DM-20 each."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 OM-120을 추가로 연결할 수 없습니다."
+            children: "When BioStation 3 is the master device and another BioStation 3 is connected to it as a slave device, you cannot connect additional OM-120."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다."
+            children: "The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication speed."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 장치는 31개의 슬레이브 장치를 제어할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다."
+            children: "A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["더 자세한 내용은 슈프리마 기술 지원팀(", (0,jsx_runtime.jsx)(_components.a, {
-              href: "mailto:CS@suprema.co.kr",
-              children: "CS@suprema.co.kr"
-            }), ")에 문의하세요."]
+            children: ["For more information, contact the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://support.supremainc.com",
+              children: "Suprema technical support team"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "secure-io-2-연결",
-      children: "Secure I/O 2 연결"
+      id: "connecting-to-secure-io-2",
+      children: "Connecting to Secure I/O 2"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. BioStation 3와 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 BioStation 3의 전원이 차단되더라도 보안을 유지할 수 있습니다."
+      children: "Secure I/O 2 is an I/O device, can be connected to BioStation 3 with the RS-485 cable. Security can be maintained even if the connection between BioStation 3 and Secure I/O 2 has been lost or the power supply to BioStation 3 has been shut off due to external factors."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요."
+          children: "Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요."
+          children: "If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-sio2-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "RS-485 케이블로 슬레이브 장치를 연결하여 BioStation 3를 다중 출입문 제어 장치로 사용할 수 있습니다. 슬레이브 장치는 더미 리더로 사용되며 인증은 마스터 장치에서 수행합니다."
+            children: "BioStation 3 can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지문 인식 장치가 BioStation 3의 슬레이브 장치로 구성된 경우 다른 BioStation 3를 슬레이브 장치로 추가할 수 없습니다."
+            children: "If a fingerprint authentication device is configured as a slave device in BioStation 3, you cannot add another BioStation 3 as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "지문 인식 장치가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 추가할 수 없습니다."
+            children: "If the fingerprint authentication device is the master device, BioStation 3 cannot be added as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "FaceStation F2가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 사용할 수 없으며, 반대의 경우로도 사용할 수 없습니다."
+            children: "If FaceStation F2 is a master device, BioStation 3 cannot be used as a slave device, and vice versa."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 1대의 BioStation 3만 슬레이브 장치로 추가할 수 있습니다."
+            children: "When you connect BioStation 3 as a slave device while BioStation 3 is the master device, only one BioStation 3 can be added as a slave device."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다."
+            children: "When BioStation 3 is the master device and another BioStation 3 is connected to it as a slave device, you can connect one additional Secure I/O 2 and DM-20 each."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 OM-120을 추가로 연결할 수 없습니다."
+            children: "When BioStation 3 is the master device and another BioStation 3 is connected to it as a slave device, you cannot connect additional OM-120."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다."
+            children: "The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication speed."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 장치는 31개의 슬레이브 장치를 제어할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다."
+            children: "A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["더 자세한 내용은 슈프리마 기술 지원팀(", (0,jsx_runtime.jsx)(_components.a, {
-              href: "mailto:CS@suprema.co.kr",
-              children: "CS@suprema.co.kr"
-            }), ")에 문의하세요."]
+            children: ["For more information, contact the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://support.supremainc.com",
+              children: "Suprema technical support team"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "wiegand-연결",
-      children: "Wiegand 연결"
+      id: "wiegand-connection",
+      children: "Wiegand Connection"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Wiegand 입력 장치로 사용"
+      children: "Used as a Wiegand input device."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-wiegand-in-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Wiegand 출력 장치로 사용"
+      children: "Used as a Wiegand output device."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-wiegand-out-connection-bs3.png",
-      className: "none",
-      alone: true
+      className: "none"
     })]
   });
 }

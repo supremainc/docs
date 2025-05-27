@@ -185,8 +185,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -194,8 +195,9 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), "을 선택한 뒤 원하는 항목을 설정하세요.", (0,jsx_runtime.jsx)("br", {}), "사용자 정보 등록은 2단계로 진행되며, 일부 옵션은 인증 수단을 등록한 뒤에 활성화됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-add.png",
@@ -204,8 +206,9 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-photo.svg",
-                ico: true
+                src: "/img/common/ico-photo.svg",
+                ico: true,
+                alone: true
               }), ": 사용자 사진을 등록할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -237,8 +240,9 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "다음"
               }), "을 누른 뒤 화면의 지시에 따라 얼굴을 등록하세요. 얼굴을 더 등록하려면 ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), "을 누르세요. 얼굴 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "#enrolling-user-faces",
                 children: "사용자 얼굴 등록"
@@ -255,8 +259,9 @@ function _createMdxContent(props) {
               }), "을 누른 뒤 사용자에게 할당할 카드를 RF 카드 인증부에 스캔하세요. 카드를 더 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "카드 / QR코드"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), "을 누르세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -350,8 +355,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -359,8 +365,9 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -412,8 +419,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -421,8 +429,9 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-search.svg",
-            ico: true
+            src: "/img/common/ico-search.svg",
+            ico: true,
+            alone: true
           }), "을 누르세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -454,8 +463,9 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["사용자를 삭제하려면 ", (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/ico-delete.svg",
-              ico: true
+              src: "/img/common/ico-delete.svg",
+              ico: true,
+              alone: true
             }), "을 선택한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
               children: "확인"
             }), "을 누르세요."]
@@ -478,8 +488,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -487,8 +498,9 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-delete.svg",
-            ico: true
+            src: "/img/common/ico-delete.svg",
+            ico: true,
+            alone: true
           }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -515,8 +527,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -524,8 +537,9 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-info.svg",
-            ico: true
+            src: "/img/common/ico-info.svg",
+            ico: true,
+            alone: true
           }), "을 누르세요. 사용자 등록현황을 확인할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-usage.png"

@@ -1,147 +1,5 @@
 "use strict";
 (self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["7048"], {
-"9838": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return __WEBPACK_DEFAULT_EXPORT__; }
-});
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
-var _path, _path2;
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-
-const SvgIcoD = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), _path2 || (_path2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#fff",
-    d: "M12.294 18H8.351V6.364h4.023q1.732 0 2.977.699a4.67 4.67 0 0 1 1.92 1.994q.67 1.3.67 3.114 0 1.817-.675 3.125a4.67 4.67 0 0 1-1.938 2.005q-1.26.699-3.034.699m-1.835-1.824h1.733q1.215 0 2.028-.443.813-.45 1.222-1.335.409-.892.409-2.227 0-1.336-.41-2.216-.408-.887-1.21-1.324-.795-.444-1.977-.444H10.46z"
-  })));
-};
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcoD);
-
-}),
-"8440": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return __WEBPACK_DEFAULT_EXPORT__; }
-});
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
-var _path, _path2;
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-
-const SvgIcoH = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), _path2 || (_path2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#fff",
-    d: "M8.195 18V6.364h2.108v4.926h5.392V6.364h2.113V18h-2.113v-4.943h-5.392V18z"
-  })));
-};
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcoH);
-
-}),
-"7489": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return __WEBPACK_DEFAULT_EXPORT__; }
-});
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
-var _path, _path2;
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-
-const SvgIcoW = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), _path2 || (_path2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fill: "#fff",
-    d: "M8.042 19 4.758 7.364h2.267l2.096 8.55h.108l2.239-8.55h2.063l2.244 8.557h.102l2.097-8.557h2.267L16.957 19h-2.08l-2.33-8.165h-.09L10.12 19z"
-  })));
-};
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcoW);
-
-}),
-"6386": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return __WEBPACK_DEFAULT_EXPORT__; }
-});
-/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
-var _path;
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-
-const SvgSpecCredentialFace = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 100,
-    height: 100,
-    fill: "none",
-    viewBox: "0 0 100 100",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 8.333,
-    d: "M12.5 29.167v-8.334a8.333 8.333 0 0 1 8.333-8.333h8.334M70.833 12.5h8.334a8.333 8.333 0 0 1 8.333 8.333v8.334M87.5 70.833v8.334a8.333 8.333 0 0 1-8.333 8.333h-8.334M29.167 87.5h-8.334a8.333 8.333 0 0 1-8.333-8.333v-8.334M33.333 58.333s6.25 8.334 16.667 8.334 16.667-8.334 16.667-8.334M37.5 37.5h.042M62.5 37.5h.042"
-  })));
-};
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgSpecCredentialFace);
-
-}),
 "2475": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
@@ -984,7 +842,7 @@ function DocItemLayout(param) {
 
 
 }),
-"3585": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"8576": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2897,14 +2755,124 @@ function Item(param) {
 ;// CONCATENATED MODULE: ./src/components/Specs/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const Specs_styles_module = ({"techspec":"techspec_Rtka","techspecSection":"techspecSection_PLuv","noborder":"noborder_rJg0","techspecsRowheader":"techspecsRowheader_Q5m7","techspecsBody":"techspecsBody_jT1t","row":"row_rqYq","modelimg":"modelimg_j1pk","desc":"desc_XPla","small_c5":"small_c5_GAWh","size":"size_IQVK","column":"column_KT_5","small_l1":"small_l1_KuJa","small_l2":"small_l2_JaBV"});
-// EXTERNAL MODULE: ./static/img/common/ico-w.svg
-var ico_w = __webpack_require__("7489");
-// EXTERNAL MODULE: ./static/img/common/ico-h.svg
-var ico_h = __webpack_require__("8440");
-// EXTERNAL MODULE: ./static/img/common/ico-d.svg
-var ico_d = __webpack_require__("9838");
-// EXTERNAL MODULE: ./static/img/menus/spec-credential-face.svg
-var spec_credential_face = __webpack_require__("6386");
+;// CONCATENATED MODULE: ./static/img/common/ico-w.svg
+var ico_w_path, ico_w_path2;
+function ico_w_extends() { return ico_w_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_w_extends.apply(null, arguments); }
+
+const SvgIcoW = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_w_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 25,
+    height: 25,
+    fill: "none",
+    viewBox: "0 0 25 25",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_w_path || (ico_w_path = /*#__PURE__*/react.createElement("path", {
+    fill: "#333",
+    stroke: "#fff",
+    strokeWidth: 0.5,
+    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+  })), ico_w_path2 || (ico_w_path2 = /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M8.042 19 4.758 7.364h2.267l2.096 8.55h.108l2.239-8.55h2.063l2.244 8.557h.102l2.097-8.557h2.267L16.957 19h-2.08l-2.33-8.165h-.09L10.12 19z"
+  })));
+};
+/* ESM default export */ const ico_w = (SvgIcoW);
+;// CONCATENATED MODULE: ./static/img/common/ico-h.svg
+var ico_h_path, ico_h_path2;
+function ico_h_extends() { return ico_h_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_h_extends.apply(null, arguments); }
+
+const SvgIcoH = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_h_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 25,
+    height: 25,
+    fill: "none",
+    viewBox: "0 0 25 25",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_h_path || (ico_h_path = /*#__PURE__*/react.createElement("path", {
+    fill: "#333",
+    stroke: "#fff",
+    strokeWidth: 0.5,
+    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+  })), ico_h_path2 || (ico_h_path2 = /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M8.195 18V6.364h2.108v4.926h5.392V6.364h2.113V18h-2.113v-4.943h-5.392V18z"
+  })));
+};
+/* ESM default export */ const ico_h = (SvgIcoH);
+;// CONCATENATED MODULE: ./static/img/common/ico-d.svg
+var ico_d_path, ico_d_path2;
+function ico_d_extends() { return ico_d_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_d_extends.apply(null, arguments); }
+
+const SvgIcoD = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_d_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 25,
+    height: 25,
+    fill: "none",
+    viewBox: "0 0 25 25",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_d_path || (ico_d_path = /*#__PURE__*/react.createElement("path", {
+    fill: "#333",
+    stroke: "#fff",
+    strokeWidth: 0.5,
+    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+  })), ico_d_path2 || (ico_d_path2 = /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M12.294 18H8.351V6.364h4.023q1.732 0 2.977.699a4.67 4.67 0 0 1 1.92 1.994q.67 1.3.67 3.114 0 1.817-.675 3.125a4.67 4.67 0 0 1-1.938 2.005q-1.26.699-3.034.699m-1.835-1.824h1.733q1.215 0 2.028-.443.813-.45 1.222-1.335.409-.892.409-2.227 0-1.336-.41-2.216-.408-.887-1.21-1.324-.795-.444-1.977-.444H10.46z"
+  })));
+};
+/* ESM default export */ const ico_d = (SvgIcoD);
+;// CONCATENATED MODULE: ./static/img/menus/spec-credential-face.svg
+var spec_credential_face_path;
+function spec_credential_face_extends() { return spec_credential_face_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, spec_credential_face_extends.apply(null, arguments); }
+
+const SvgSpecCredentialFace = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", spec_credential_face_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 100,
+    height: 100,
+    fill: "none",
+    viewBox: "0 0 100 100",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, spec_credential_face_path || (spec_credential_face_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 8.333,
+    d: "M12.5 29.167v-8.334a8.333 8.333 0 0 1 8.333-8.333h8.334M70.833 12.5h8.334a8.333 8.333 0 0 1 8.333 8.333v8.334M87.5 70.833v8.334a8.333 8.333 0 0 1-8.333 8.333h-8.334M29.167 87.5h-8.334a8.333 8.333 0 0 1-8.333-8.333v-8.334M33.333 58.333s6.25 8.334 16.667 8.334 16.667-8.334 16.667-8.334M37.5 37.5h.042M62.5 37.5h.042"
+  })));
+};
+/* ESM default export */ const spec_credential_face = (SvgSpecCredentialFace);
 ;// CONCATENATED MODULE: ./src/components/Specs/index.js
 
 
@@ -3028,7 +2996,7 @@ function SpecSectioin(param) {
                                         children: [
                                             /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                                                 className: (0,clsx/* default */.Z)(Specs_styles_module.column, Specs_styles_module.small_l1),
-                                                children: subitem.type === 'face' && /*#__PURE__*/ (0,jsx_runtime.jsx)(spec_credential_face/* default */.Z, {
+                                                children: subitem.type === 'face' && /*#__PURE__*/ (0,jsx_runtime.jsx)(spec_credential_face, {
                                                     width: "80",
                                                     height: "80"
                                                 })
@@ -3201,18 +3169,18 @@ function SpecSizeWieght(param) {
                                                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
                                                             className: Specs_styles_module.size,
                                                             children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_w/* default */.Z, {}),
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_w, {}),
                                                                 " ",
                                                                 item.size.width,
                                                                 "mm \xd7 ",
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_h/* default */.Z, {}),
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_h, {}),
                                                                 " ",
                                                                 item.size.height,
                                                                 "mm",
                                                                 item.size.depth && /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
                                                                     children: [
                                                                         "\xa0x ",
-                                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_d/* default */.Z, {}),
+                                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_d, {}),
                                                                         " ",
                                                                         item.size.depth,
                                                                         "mm"

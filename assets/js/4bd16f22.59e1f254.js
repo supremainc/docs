@@ -133,8 +133,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -148,18 +149,21 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add1.svg",
-            ico: true
+            src: "/img/common/ico-add1.svg",
+            ico: true,
+            alone: true
           }), "을 누르면 추가할 수 있는 크리덴셜이 화면에 나타납니다. 원하는 크리덴셜을 추가하세요. 크리덴셜이 추가된 상태에서 ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-cancel.svg",
-            ico: true
+            src: "/img/common/ico-cancel.svg",
+            ico: true,
+            alone: true
           }), "을 누르면 추가한 크리덴셜을 삭제할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-authmode.png"
@@ -192,14 +196,17 @@ function _createMdxContent(props) {
                   children: "얼굴"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": 얼굴만 사용하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": 얼굴로 인증한 뒤 PIN을 입력하는 모드입니다."]
                 })]
               }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -210,38 +217,49 @@ function _createMdxContent(props) {
                   children: "카드 / QR 코드"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), ": 카드 / QR코드만 사용하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": 카드 / QR코드로 인증한 뒤 얼굴로 인증하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": 카드 / QR코드로 인증한 뒤 PIN을 입력하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": 카드 / QR코드로 인증한 뒤 얼굴로 인증하거나 PIN을 입력하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": 카드 / QR코드로 인증한 뒤 얼굴 인증과 PIN 입력을 모두 사용하는 모드입니다."]
                 })]
               }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -252,35 +270,45 @@ function _createMdxContent(props) {
                   children: "ID"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": ID를 입력한 뒤 얼굴로 인증하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": ID를 입력한 뒤 PIN을 입력하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": ID를 입력한 뒤 얼굴로 인증하거나 PIN을 입력하는 모드입니다.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": ID를 입력한 뒤 얼굴 인증과 PIN 입력을 모두 사용하는 모드입니다."]
                 })]
               })]
@@ -335,8 +363,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -368,8 +397,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -383,8 +413,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-delete.svg",
-            ico: true
+            src: "/img/common/ico-delete.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 삭제할 항목을 선택하세요. 여러 개를 선택할 수도 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -406,8 +437,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -455,8 +487,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -507,8 +540,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -539,8 +573,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -617,8 +652,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -873,8 +909,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -904,8 +941,9 @@ function _createMdxContent(props) {
               }), ": 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "근태 코드"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), "을 선택한 뒤 화면에 표시할 아이콘, ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "근태 이벤트 이름"
               }), ", ", (0,jsx_runtime.jsx)(Cmd, {

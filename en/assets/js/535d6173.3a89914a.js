@@ -133,8 +133,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -148,18 +149,21 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add.svg",
-            ico: true
+            src: "/img/common/ico-add.svg",
+            ico: true,
+            alone: true
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Pressing ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-add1.svg",
-            ico: true
+            src: "/img/common/ico-add1.svg",
+            ico: true,
+            alone: true
           }), " will display the credential that can be added on the screen. Select the credentials to add. Press the ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-cancel.svg",
-            ico: true
+            src: "/img/common/ico-cancel.svg",
+            ico: true,
+            alone: true
           }), " while the credential is added, and the added credential will be deleted."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-authmode.png"
@@ -192,14 +196,17 @@ function _createMdxContent(props) {
                   children: "Face"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to use a face only.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to authenticate with a face and then enter PIN."]
                 })]
               }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -210,38 +217,49 @@ function _createMdxContent(props) {
                   children: "Card / QR Code"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to use a card / QR code only.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to authenticate with a card / QR code and then authenticate with a face.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to authenticate with a card / QR code and then enter PIN.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to authenticate with a card / QR code and then authenticate with a face or enter PIN.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-card.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-card.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to authenticate with a card / QR code and then use both face authentication and PIN input."]
                 })]
               }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -252,35 +270,45 @@ function _createMdxContent(props) {
                   children: "ID"
                 }), (0,jsx_runtime.jsxs)(_components.td, {
                   children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to enter ID and then authenticate with a face.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to enter ID and then enter PIN.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to enter ID and then authenticate with a face or enter PIN.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-id.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-id.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-face.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-face.png",
+                    ico: true,
+                    alone: true
                   }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/device/ico-authmode-pin.png",
-                    ico: true
+                    src: "/img/common/ico-authmode-pin.png",
+                    ico: true,
+                    alone: true
                   }), ": Mode to enter ID and then use both face authentication and PIN input."]
                 })]
               })]
@@ -335,8 +363,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -368,8 +397,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -383,8 +413,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-delete.svg",
-            ico: true
+            src: "/img/common/ico-delete.svg",
+            ico: true,
+            alone: true
           }), " and select the authentication mode to delete. You can select multiple options."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -406,8 +437,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -455,8 +487,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -507,8 +540,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -539,8 +573,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -617,8 +652,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -873,8 +909,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/ico-menu.svg",
-            ico: true
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
           }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -904,8 +941,9 @@ function _createMdxContent(props) {
               }), ": You can register T&A events. Select ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "T&A Code"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/ico-add.svg",
-                ico: true
+                src: "/img/common/ico-add.svg",
+                ico: true,
+                alone: true
               }), " to register a T&A event and set an icon, ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "T&A Event Name"
               }), " and ", (0,jsx_runtime.jsx)(Cmd, {
