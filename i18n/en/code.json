@@ -548,22 +548,22 @@
   "specs.power.relay": {
     "message": "Relay"
   },
-  "specs.size_wieght": {
+  "specs.size_weight": {
     "message": "Dimensions and Weight"
   },
-  "specs.size_wieght.size": {
+  "specs.size_weight.size": {
     "message": "Dimensions"
   },
-  "specs.size_wieght.weight": {
+  "specs.size_weight.weight": {
     "message": "Weight"
   },
-  "specs.size_wieght.device": {
+  "specs.size_weight.device": {
     "message": "Device"
   },
-  "specs.size_wieght.bracket": {
+  "specs.size_weight.bracket": {
     "message": "Bracket"
   },
-  "specs.size_wieght.bracket.weight_include": {
+  "specs.size_weight.bracket.weight_include": {
     "message": "(Including washers and bolts)"
   }
 }

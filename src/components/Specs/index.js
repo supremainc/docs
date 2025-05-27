@@ -233,7 +233,7 @@ export function SpecSizeWieght({data}) {
               <div className={clsx(styles.column, styles.small_c5, styles.desc)}>
                 <ul>
                   <li>
-                    {translate({id: 'specs.size_wieght.size'})}:&nbsp;
+                    {translate({id: 'specs.size_weight.size'})}:&nbsp;
                     <span className={styles.size}>
                       <DimenW /> {item.size.width}mm
                       × <DimenH /> {item.size.height}mm
@@ -245,12 +245,12 @@ export function SpecSizeWieght({data}) {
                     </span>
                   </li>
                   <li>
-                    {translate({id: 'specs.size_wieght.weight'})}:&nbsp;
+                    {translate({id: 'specs.size_weight.weight'})}:&nbsp;
                     {typeof item.weight === 'string' && (
                       <>
                         {item.weight}
                         {item.weight_include && (
-                          <>&nbsp;{translate({id: 'specs.size_wieght.bracket.weight_include'})}</>
+                          <>&nbsp;{translate({id: 'specs.size_weight.bracket.weight_include'})}</>
                         )}
                       </>
                     )}

@@ -566,22 +566,22 @@
   "specs.power.relay": {
     "message": "릴레이"
   },
-  "specs.size_wieght": {
+  "specs.size_weight": {
     "message": "크기 및 무게"
   },
-  "specs.size_wieght.size": {
+  "specs.size_weight.size": {
     "message": "크기"
   },
-  "specs.size_wieght.weight": {
+  "specs.size_weight.weight": {
     "message": "무게"
   },
-  "specs.size_wieght.device": {
+  "specs.size_weight.device": {
     "message": "장치"
   },
-  "specs.size_wieght.bracket": {
+  "specs.size_weight.bracket": {
     "message": "브라켓"
   },
-  "specs.size_wieght.bracket.weight_include": {
+  "specs.size_weight.bracket.weight_include": {
     "message": "(와셔 및 볼트 포함)"
   },
   "externalLinks.FaceStation2.desc": {
