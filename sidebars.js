@@ -152,7 +152,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '라이선스 정책',
+          label: '라이선스',
           link: {
             type: 'doc',
             id: 'platform/biostar_x/licensing',
@@ -160,6 +160,7 @@ const sidebars = {
           items: [
             'platform/biostar_x/bsx-licensing',
             'platform/biostar_x/bs2-to-bsx-migration',
+            'platform/biostar_x/bsx-licensing-examples'
           ]
         }
       ],
