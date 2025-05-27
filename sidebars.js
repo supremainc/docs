@@ -139,7 +139,8 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/ui-common',
-            'platform/biostar_x/ui-launcher'
+            'platform/biostar_x/ui-launcher',
+            'platform/biostar_x/ui-user'
           ]
         },
         {
@@ -158,6 +159,7 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/bsx-licensing',
+            'platform/biostar_x/bs2-to-bsx-migration',
           ]
         }
       ],
