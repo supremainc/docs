@@ -3,7 +3,7 @@
   counter-reset: callout-counter;
   padding-left: 0;
 }
-.calloutLists ol li {
+.calloutLists ol > li {
   counter-increment: callout-counter;
   position: relative;
   margin: 25px 0;
