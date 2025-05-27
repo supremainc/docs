@@ -18,5 +18,21 @@
   "item.label.BioStar 2": {
     "message": "BioStar 2",
     "description": "Navbar item with label BioStar 2"
+  },
+  "item.label.BioStar X": {
+    "message": "BioStar X",
+    "description": "Navbar item with label BioStar X"
+  },
+  "item.label.Reference": {
+    "message": "Reference",
+    "description": "Navbar item with label Reference"
+  },
+  "item.label.Legal": {
+    "message": "Legal",
+    "description": "Navbar item with label Legal"
+  },
+  "item.label.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "Navbar item with label BioStation 3"
   }
 }

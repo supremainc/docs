@@ -14,5 +14,61 @@
   "sidebar.biostarx.category.Tutorial": {
     "message": "Tutorial",
     "description": "The label for category Tutorial in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.BioStar X": {
+    "message": "BioStar X",
+    "description": "The label for category BioStar X in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.튜토리얼": {
+    "message": "튜토리얼",
+    "description": "The label for category 튜토리얼 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.사용자": {
+    "message": "사용자",
+    "description": "The label for category 사용자 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.사용자 등록하기": {
+    "message": "사용자 등록하기",
+    "description": "The label for category 사용자 등록하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.사용자 관리하기": {
+    "message": "사용자 관리하기",
+    "description": "The label for category 사용자 관리하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.모니터링": {
+    "message": "모니터링",
+    "description": "The label for category 모니터링 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.출입문 모니터링하기": {
+    "message": "출입문 모니터링하기",
+    "description": "The label for category 출입문 모니터링하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.UI 알아보기": {
+    "message": "UI 알아보기",
+    "description": "The label for category UI 알아보기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.통합 기능": {
+    "message": "통합 기능",
+    "description": "The label for category 통합 기능 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.라이선스 정책": {
+    "message": "라이선스 정책",
+    "description": "The label for category 라이선스 정책 in sidebar biostarx"
+  },
+  "sidebar.legal.category.Legal": {
+    "message": "Legal",
+    "description": "The label for category Legal in sidebar legal"
+  },
+  "sidebar.reference.category.참조 문서": {
+    "message": "참조 문서",
+    "description": "The label for category 참조 문서 in sidebar reference"
+  },
+  "sidebar.bioStation3.category.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "The label for category BioStation 3 in sidebar bioStation3"
+  },
+  "sidebar.bioStation3.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar bioStation3"
   }
 }

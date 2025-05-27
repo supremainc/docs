@@ -28,7 +28,10 @@
                 "matching_speed": {
                   "label": "매칭 속도",
                   "label_id": "specs.credentials.biometrics.face.matching_speed",
-                  "value": "0.2초 이내"
+                  "value": {
+                    "ko": "0.2초 이내",
+                    "en": "Within 0.2 seconds"
+                  }
                 },
                 "live_face_detection": {
                   "label": "위조 얼굴 검출",
@@ -403,14 +406,14 @@
         }
       }
     },
-    "size_wieght": {
+    "size_weight": {
       "label": "크기 및 무게",
-      "label_id": "specs.size_wieght",
-      "type": "size_wieght",
+      "label_id": "specs.size_weight",
+      "type": "size_weight",
       "items": {
         "device": {
           "label": "장치",
-          "label_id": "specs.size_wieght.device",
+          "label_id": "specs.size_weight.device",
           "product_img": "/img/device/bs3-device-dimension.svg",
           "size": {
             "width": "82.5",
@@ -424,7 +427,7 @@
         },
         "bracket": {
           "label": "브라켓",
-          "label_id": "specs.size_wieght.bracket",
+          "label_id": "specs.size_weight.bracket",
           "product_img": "/img/device/bs3-bracket-front-dimension.svg",
           "size": {
             "width": "72.9",
