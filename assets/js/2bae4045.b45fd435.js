@@ -83,7 +83,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/en/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/en/platform/biostar_x/add-user-basic-info"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/platform/biostar_x/add-user-basic-info"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -101,7 +101,7 @@ const frontMatter = {
 		'사용자',
 		'권한'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -190,20 +190,20 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Administrator"
-          }), ": 모든 메뉴를 사용할 수 있는 관리자 등급입니다."]
+            children: "전체 관리자"
+          }), "(Administrator): 모든 메뉴를 사용할 수 있는 관리자 등급입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "User Operator"
-          }), ": 사용자와 설정 메뉴만 사용할 수 있는 등급입니다."]
+            children: "사용자 관리자"
+          }), "(User Operator): 사용자와 설정 메뉴만 사용할 수 있는 등급입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Monitoring Operator"
-          }), ": 모니터링과 설정 메뉴를 사용할 수 있으며, ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "모니터링 관리자"
+          }), "(Monitoring Operator): 모니터링과 설정 메뉴를 사용할 수 있으며, ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.dashboard"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.user"
@@ -218,28 +218,28 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Video Operator"
-          }), ": 모니터링과 설정 메뉴를 사용할 수 있는 등급입니다."]
+            children: "영상 관리자"
+          }), "(Video Operator): 모니터링과 설정 메뉴를 사용할 수 있는 등급입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "TA Operator"
-          }), ": 근태 관리 메뉴를 사용할 수 있으며 사용자 메뉴는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "근태 관리자"
+          }), "(TA Operator): 근태 관리 메뉴를 사용할 수 있으며 사용자 메뉴는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "보기"
           }), " 권한만 가집니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "User"
-          }), ": 자신의 사용자 정보와 근태 정보만을 확인할 수 있습니다."]
+            children: "사용자"
+          }), "(User): 자신의 사용자 정보와 근태 정보만을 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Visitor Operator"
-          }), ": 방문자 메뉴만 사용할 수 있는 등급입니다."]
+            children: "방문자 관리자"
+          }), "(Visitor Operator): 방문자 메뉴만 사용할 수 있는 등급입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

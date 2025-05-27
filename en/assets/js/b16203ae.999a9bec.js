@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-mdx-b16.json
-var site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing","permalink":"/docs/platform/biostar_x/bsx-licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"},"next":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration"}}')
+var site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing","title":"라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing","permalink":"/docs/en/platform/biostar_x/bsx-licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing","title":"라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/en/platform/biostar_x/licensing"},"next":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/en/platform/biostar_x/bs2-to-bsx-migration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,12 +25,12 @@ var lib = __webpack_require__("65");
 
 const frontMatter = {
 	id: 'bsx-licensing',
-	title: 'BioStar X 라이선스 정책',
+	title: '라이선스 정책',
 	description: '모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.',
 	keywords: [
 		'라이선스'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -212,7 +212,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "최대 Operator 수"
+                children: "최대 관리자 수"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -370,7 +370,7 @@ function _createMdxContent(props) {
                   children: "Upgradable"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(출입문/사용자/Operators)"
+                children: "(출입문/사용자/관리자)"
               })]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {

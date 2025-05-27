@@ -1,6 +1,6 @@
 "use strict";
-(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["7598"], {
-"4141": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self['webpackChunksuprema_docs'] = self['webpackChunksuprema_docs'] || []).push([["6100"], {
+"1112": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -8,30 +8,27 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_bs_2_to_bsx_migration_mdx_965_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bs-2-to-bsx-migration-mdx-965.json
-var site_docs_platform_biostar_x_bs_2_to_bsx_migration_mdx_965_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bs2-to-bsx-migration","permalink":"/docs/en/platform/biostar_x/bs2-to-bsx-migration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","tags":[],"version":"current","frontMatter":{"id":"bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","keywords":["BioStar 2","BioStar X","마이그레이션","업그레이드"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"BioStar X 라이선스 정책","permalink":"/docs/en/platform/biostar_x/bsx-licensing"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-examples-mdx-bc1.json
+var site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing-examples.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing-examples","permalink":"/docs/en/platform/biostar_x/bsx-licensing-examples","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing-examples.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/en/platform/biostar_x/bs2-to-bsx-migration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__("65");
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/bs2-to-bsx-migration.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/bsx-licensing-examples.mdx
 
 
 const frontMatter = {
-	id: 'bs2-to-bsx-migration',
-	title: 'BioStar 2에서 마이그레이션하기',
-	description: 'BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.',
+	id: 'bsx-licensing-examples',
+	title: '라이선스 적용 사례',
+	description: 'BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.',
 	keywords: [
-		'BioStar 2',
-		'BioStar X',
-		'마이그레이션',
-		'업그레이드'
+		'라이선스'
 	],
 	isTranslationMissing: true
 };
@@ -44,40 +41,60 @@ const assets = {
 
 
 const toc = [{
-  "value": "스타터(Starter) 라이선스 비교",
-  "id": "스타터starter-라이선스-비교",
+  "value": "소규모 조직(Entry-Level Site)",
+  "id": "소규모-조직entry-level-site",
   "level": 2
 }, {
-  "value": "베이직(Basic) VS 에센셜(Essential)",
-  "id": "베이직basic-vs-에센셜essential",
+  "value": "대상 및 요구 사항",
+  "id": "대상-및-요구-사항",
+  "level": 3
+}, {
+  "value": "적용 라이선스",
+  "id": "적용-라이선스",
+  "level": 3
+}, {
+  "value": "중간 규모 조직(Middle-End Site)",
+  "id": "중간-규모-조직middle-end-site",
   "level": 2
 }, {
-  "value": "스탠다드(Standard) VS 어드밴스(Advanced)",
-  "id": "스탠다드standard-vs-어드밴스advanced",
+  "value": "대상 및 요구 사항",
+  "id": "대상-및-요구-사항-1",
+  "level": 3
+}, {
+  "value": "적용 라이선스",
+  "id": "적용-라이선스-1",
+  "level": 3
+}, {
+  "value": "대규모 조직(High-End Site)",
+  "id": "대규모-조직high-end-site",
   "level": 2
 }, {
-  "value": "어드밴스(Advanced) 라이선스 비교",
-  "id": "어드밴스advanced-라이선스-비교",
+  "value": "대상 및 요구 사항",
+  "id": "대상-및-요구-사항-2",
+  "level": 3
+}, {
+  "value": "적용 라이선스",
+  "id": "적용-라이선스-2",
+  "level": 3
+}, {
+  "value": "엔터프라이즈 조직(Enterprise-Level Site)",
+  "id": "엔터프라이즈-조직enterprise-level-site",
   "level": 2
 }, {
-  "value": "프로페셔널(Professional) VS 엔터프라이즈(Enterprise)",
-  "id": "프로페셔널professional-vs-엔터프라이즈enterprise",
-  "level": 2
+  "value": "대상 및 요구 사항",
+  "id": "대상-및-요구-사항-3",
+  "level": 3
 }, {
-  "value": "엔터프라이즈(Enterprise) 라이선스 비교",
-  "id": "엔터프라이즈enterprise-라이선스-비교",
-  "level": 2
-}, {
-  "value": "엔터프라이즈(Enterprise) VS 엘리트(Elite)",
-  "id": "엔터프라이즈enterprise-vs-엘리트elite",
-  "level": 2
+  "value": "적용 라이선스",
+  "id": "적용-라이선스-3",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
-    admonition: "admonition",
     em: "em",
     h2: "h2",
+    h3: "h3",
+    li: "li",
     p: "p",
     strong: "strong",
     table: "table",
@@ -86,49 +103,52 @@ function _createMdxContent(props) {
     th: "th",
     thead: "thead",
     tr: "tr",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "로의 마이그레이션은 시스템의 성능과 보안을 향상시키고, 최신 기능을 활용할 수 있는 기회를 제공합니다. 이 문서에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "로 마이그레이션할 때의 주요 변경 사항과 고려해야 할 점을 안내합니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["업그레이드를 통해 여러 기능을 향상시키고 시스템 확장성을 확장시킬 수 있지만, 라이선스, 사용자 제한, 가격 구조 등에 변화가 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 동등한 라이선스 등급을 비교하고, 차이점에 대한 이해를 통해 고객의 원활한 도입과 운영을 지원합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), "의 라이선스별 가격에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "#",
-          children: "다음 링크"
-        }), "를 참고하세요."]
-      })
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "이 문서에서는 다양한 조직 환경에서 BioStar X 라이선스를 어떻게 적용할 수 있는지 대표적인 적용 사례를 안내합니다. 이를 통해 일반적인 시스템 구성 및 필요한 라이선스 구성 요소, 라이선스 모델의 유연성과 확장성을 이해할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "스타터starter-라이선스-비교",
-      children: "스타터(Starter) 라이선스 비교"
+      id: "소규모-조직entry-level-site",
+      children: "소규모 조직(Entry-Level Site)"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "대상-및-요구-사항",
+      children: "대상 및 요구 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "대상"
+          }), ": 100명의 직원과 단일 층의 사무실을 가진 오피스 매니저"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "요구 사항"
+          }), ":"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "직원과 방문객의 출입을 관리할 수 있는 신뢰성 있는 시스템"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "방문객 체크인 기록 기능"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "엘리베이터 제어, 고급 출입 통제(Advanced Access Control) ❌"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "적용-라이선스",
+      children: "적용 라이선스"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "로 전환할 때 기능과 라이선스의 차이를 이해하는 것이 중요합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 스타터 라이선스는 기본 기능만 필요로 하는 사용자를 위해 설계되었으며, 일회성 구매 비용이 발생합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "에서 일부 기능을 무료로 제공했습니다. 아래 표를 통해 스타터 라이선스의 주요 기능의 변화를 확인할 수 있습니다."]
+        children: "스타터"
+      }), "(Starter): 출입 통제 기능을 기본 제공하며, 원격 설정을 위한 클라우드 액세스 및 방문객 관리 기능을 추가로 선택할 수 있습니다. 사용자 100명과 최대 5개 출입문을 지원합니다. 낮은 비용으로 시작하기에 적합하며, 시스템 확장 시 어드밴스(Advanced) 라이선스로 업그레이드할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -140,14 +160,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar 2"
+              children: "사례"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar X"
+              children: "BioStar 2 스타터"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 스타터"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -160,14 +183,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "무제한"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "100"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "사용자 수 감소"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -185,7 +211,31 @@ function _createMdxContent(props) {
               },
               children: "5"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 제한 동일"
+              style: {
+                textAlign: "center"
+              },
+              children: "5"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "관리자"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "1"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "1"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "1"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
@@ -205,7 +255,10 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -223,7 +276,10 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -241,7 +297,10 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -259,7 +318,10 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -277,7 +339,10 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -295,40 +360,97 @@ function _createMdxContent(props) {
               },
               children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "근태 관리"
+              }), "(T&A)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "기본 비용"
+                children: "방문객"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "무료"
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "일회성 구매"
+              children: "💲"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             })]
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "주요 차이점은 사용자 수 제한과 일회성 구매 비용입니다. 주요 고급 기능이 필요한 고객은 BioStar X 어드밴스 라이선스로 업그레이드 해야 합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "베이직basic-vs-에센셜essential",
-      children: "베이직(Basic) VS 에센셜(Essential)"
+      id: "중간-규모-조직middle-end-site",
+      children: "중간 규모 조직(Middle-End Site)"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "대상-및-요구-사항-1",
+      children: "대상 및 요구 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "대상"
+          }), ": 500명의 직원과 인접한 두 개의 사업장을 운영하는 회사의 IT 매니저"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "요구 사항"
+          }), ":"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "근태 관리 시스템, API 연동 가능한 표준 기능, 얼굴 인식 지원"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "향후 400개 이상의 출입문 확장 가능성"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "별도의 관제 센터는 없으나 상주 경비원이 쉽게 제어할 수 있는 시스템"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "적용-라이선스-1",
+      children: "적용 라이선스"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 베이직 라이선스와 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "어드밴스"
+      }), "(Advanced): 외부 연동을 위한 API, 경비원이 제어할 수 있는 모바일 애플리케이션을 지원합니다. 필요한 경우 비디오 연동 기능을 추가할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 에센셜 라이선스로 전환할 때 기능면에서 변화는 적지만, 비용 구조와 사용자 수 제한이 변경되었습니다. 두 버전 모두 유사한 기능을 제공하지만 BioStar X의 에센셜 라이선스는 사용자 수 제한이 있으며 비용이 크게 증가합니다. 아래 표를 통해 베이직 라이선스와 에센셜 라이선스의 주요 기능의 변화를 확인할 수 있습니다."]
+      }), "는 다양한 인증 방식을 지원하며 대부분의 업그레이드를 무료로 제공하여 타사 시스템 대비 유지보수 비용이 저렴합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -340,14 +462,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar 2 베이직"
+              children: "사례"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar X 에센셜"
+              children: "BioStar 2 어드밴스"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 어드밴스"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -360,20 +485,432 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "500"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "무제한"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "1,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "사용자 수 감소"
+              children: "50,000"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "출입문"
               })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "128"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "관리자"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "3"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "무제한"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "20"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "구역"
+              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
+                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Interlock)"
+              })]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "엘이베이터"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "그래픽 맵"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "서버 매칭"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "클라우드"
+              }), "(원격 접속)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Active Directory"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "근태 관리"
+              }), "(T&A)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "방문객"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Multi Comm Server"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "비디오"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "API"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "대규모-조직high-end-site",
+      children: "대규모 조직(High-End Site)"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "대상-및-요구-사항-2",
+      children: "대상 및 요구 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "대상"
+          }), ": 5개의 건물에 2,000명의 직원이 있는 기업 캠퍼스의 보안 책임자"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "요구 사항"
+          }), ":"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "고급 출입 통제(Advanced Access Control), 구역 기반 제한(예, R&D, 재무 등), 엘리베이터 및 그래픽 맵 통합"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Active Directory 동기화가 포함된 중앙 집중식 보안 관리"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "확장 가능한 근태 관리 및 방문자 추적 기능"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "적용-라이선스-2",
+      children: "적용 라이선스"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "어드밴스"
+      }), "(Advanced) + 추가 기능(Access Control System, ACS): 엘리베이터 및 구역 제어를 위한 고급 출입 통제 시스템(ACS)과 API 연동을 통해 타사 시스템과의 통합, 상황 인식을 위한 그래픽 맵 기능을 지원합니다. 또한, 최대 128개의 출입문(추가 기능으로 확장 가능) 및 최대 5,000명의 사용자를 지원합니다. 엔터프라이즈 에디션의 비용 부담 없이 기업에 적용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "table--licensing overflow-x",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "항목"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "사례"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar 2 어드밴스"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 어드밴스"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 엔터프라이즈"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "사용자"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "2,000"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "무제한"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "50,000"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "100,000"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "출입문"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "128"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "500"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "관리자"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "5"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "무제한"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -383,204 +920,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "32"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 제한 증가"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "구역"
-              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Interlock)"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "엘리베이터"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "그래픽 맵"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "서버 매칭"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "클라우드"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Active Directory"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "❌"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["고급 기능이 필요한 고객은 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), " 어드밴스(Advanced) 라이선스로 업그레이드할 것을 권장합니다."]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "스탠다드standard-vs-어드밴스advanced",
-      children: "스탠다드(Standard) VS 어드밴스(Advanced)"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "에서는 스탠다드 라이선스가 비용 효율적인 옵션을 제공해 소규모에서 중규모 시스템에 적합한 견고한 세트를 갖추고 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 어드밴스 라이선스는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 스탠다드 라이선스와 동등한 등급으로, 시스템 확장성과 모듈형 기능면에서 크게 확장됩니다. 대부분의 환경에서는 전체 고급 기능 세트가 필요하지 않을 수 있지만 실시간 모니터링, 더 많은 사용자와 출입문 수, 비디오, 서버 매칭, 클라우드 서비스와 같은 기능을 선택할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["특히 제한된 기능이었던 출입문 잠금 일정 기능을 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 라이선스에 무료로 제공되어 필수 일정 기능에 대한 장벽을 낮췄습니다. 반면에 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 어드밴스 라이선스는 보다 모듈화된 라이선스 접근 방식을 채택하여 특정 고급 기능을 유료로 추가할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "table--licensing overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "항목"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar 2 스탠다드"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar X 어드밴스"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "사용자"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "무제한"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "50,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "대규모 환경에 적합한 증가"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "출입문"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "50"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "128"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 증가"
+              children: "40"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
@@ -598,12 +938,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "💲"
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              rowSpan: "2",
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "고급 출입 통제"
-              }), " 기능을 추가해 사용 가능"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -614,12 +959,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "❌"
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -630,14 +985,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "❌"
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -653,21 +1016,38 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "💲"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "선택 추가 기능으로 제공"
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "클라우드"
-              })
+              }), "(원격 접속)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -683,7 +1063,147 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "근태 관리"
+              }), "(T&A)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "600"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "방문객"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Multi Comm Server"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "비디오"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "API"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -693,29 +1213,47 @@ function _createMdxContent(props) {
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 어드밴스 라이선스는 중간 규모 시스템의 요구 사항을 충족하며, 플랫폼의 확장성과 유연성은 고객 요구 사항에 따라 보다 맞춤화된 솔루션을 제공합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "어드밴스advanced-라이선스-비교",
-      children: "어드밴스(Advanced) 라이선스 비교"
+      id: "엔터프라이즈-조직enterprise-level-site",
+      children: "엔터프라이즈 조직(Enterprise-Level Site)"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "대상-및-요구-사항-3",
+      children: "대상 및 요구 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "대상"
+          }), ": 10,000명 이상의 직원과 여러 글로벌 시설을 갖춘 다국적 공장 허브의 인프라 감독관"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "요구 사항"
+          }), ":"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "24시간 연중무휴 운영, 다중 사이트 제어가"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "구역 및 엘리베이터에 대한 고급 출입 통제 시스템(Access Control System), 비디오 및 외부 Active Directory 통합, 수천 명의 근태 관리 및 사용자 추적 기능을 지원하는 확장 가능한 이중화된 시스템"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "규정 준수 및 중앙 집중식 감사와 보고 기능 필수"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "적용-라이선스-3",
+      children: "적용 라이선스"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 어드밴스와 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 어드밴스는 동등한 등급의 라이선스이지만 주요 기능 및 가격 구조에서 차이가 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 어드밴스 라이선스는 대규모 시스템을 지원하지만, 이전에 번들로 제공했던 여러 기능을 모듈식 라이선스로 분리해 도입합니다. 이러한 변경 사항은 더 큰 유연성을 제공하지만 시스템의 특정 요구 사항에 따라 전체 비용이 달라질 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 어드밴스 라이선스에서 기본 포함된 구역, 엘리베이터 제어 및 Active Directory 통합과 같은 고급 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "고급 출입 통제"
-      }), "(Advanced Access Control) 모듈 또는 기타 유료 추가 기능으로 제공받을 수 있습니다. 추가 기능이 필요한 조직은 해당 모듈을 구매하거나 엔터프라이즈 라이선스로 업그레이드를 고려해야 합니다."]
+        children: "엔터프라이즈"
+      }), "(Enterprise) 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), "(Elite): 최대 500,000명의 사용자 및 2,000개의 출입문을 지원하며, 모든 출입 통제 시스템 기능을 포함합니다. 전체 API 액세스, 다중 사이트 및 다중 운영자 사용, Active Directory 및 클라우드 액세스를 지원합니다. 대규모 IT 팀과 운영 복잡성을 가진 조직에 적합합니다. 높은 비용을 요구하지만 제한 없는 사용을 통해 효율성, 보안 및 확장성을 보장합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -727,14 +1265,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar 2"
+              children: "사례"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "BioStar X"
+              children: "BioStar 2 엔터프라이즈"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 엔터프라이즈"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "BioStar X 엘리트"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -747,14 +1293,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "10,000+"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "무제한"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "50,000"
+              children: "100,000"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
+              style: {
+                textAlign: "center"
+              },
+              children: "500,000"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -770,360 +1324,28 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "100"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "128"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 소폭 증가"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "구역"
-              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Interlock)"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              rowSpan: "2",
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "고급 출입 통제"
-              }), " 기능을 추가해 사용 가능"]
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "엘리베이터"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "그래픽 맵"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "기본 패키지에 포함"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "서버 매칭"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "선택 추가 기능으로 제공"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "클라우드"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Active Directory"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 어드밴스 라이선스는 강력한 기능을 제공하지만 엔터프라이즈 수준의 기능이 필요하지 않은 조직에 적합합니다. 기능 추가에 대한 의존도가 높아짐에 따라 프로젝트 범위 및 가격 책정은 정확한 계획을 필요로 합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "프로페셔널professional-vs-엔터프라이즈enterprise",
-      children: "프로페셔널(Professional) VS 엔터프라이즈(Enterprise)"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 프로페셔널 라이선스를 사용 중인 조직은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엔터프라이즈 라이선스로 전환하는 것을 권장합니다. 엔터프라이즈 라이선스는 대규모 시스템에 적합하게 설계되었으며 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "고급 출입 통제"
-      }), "(Advanced Access Control) 기능을 기본 제공하며 별도의 추가 기능이 필요하지 않습니다. 기본 비용이 크게 증가하지만, 대규모 환경에 적합한 확장성과 유연성을 제공합니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["엔터프라이즈 라이선스에서는 최대 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "200,000"
-      }), "명의 사용자와 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "500"
-      }), "개의 출입문을 지원합니다. 고급 보안 환경 및 다중  사이트 관리, 복잡한 통합 요구가 있는 고객에게 적합합니다. 그러나 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 모듈식 설계 철학의 일환으로 별도 라이선스가 필요합니다."]
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "table--licensing overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "항목"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar 2 프로페셔널"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar X 엔터프라이즈"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "사용자"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "무제한"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "100,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "출입문"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "300"
-            }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "500"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "기업 규모의 환경에 적합"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "구역"
-              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Interlock)"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "엘리베이터"
+                children: "관리자"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "그래픽 맵"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "서버 매칭"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "선택 추가 기능으로 제공"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "클라우드"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Active Directory"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["엔터프라이즈 라이선스는 최대 확장성과 운영 제어가 필요한 대규모 조직에 적합합니다. 가격 인상이 상당하지만 번들로 제공하는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "고급 출입 통제"
-      }), "(Advanced Access Control) 기능과 높은 용량 한도를 감안하면 투자 가치가 있습니다. 엔터프라이즈 라이선스는 대규모 고객의 요구를 충족하는지 확인하기 위해 신중한 계획과 평가가 필요합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "엔터프라이즈enterprise-라이선스-비교",
-      children: "엔터프라이즈(Enterprise) 라이선스 비교"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "의 엔터프라이즈 라이선스를 사용 중인 고객이라면 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엔터프라이즈 라이선스로 전환하는 것이 비용 절감의 효과를 제공할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엔터프라이즈 라이선스는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), "보다 낮은 비용으로 사용할 수 있고, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "고급 출입 통제"
-      }), "(Advanced Access Control) 기능을 포함하고 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "다만, 사용자 수는 200,000명으로 제한되지만 출입문 수는 1,000개에서 500개로 감소합니다. 출입문이 많고 밀집된 환경의 고객은 신중하게 검토해야 합니다. 또한 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 별도의 라이선스가 필요합니다."
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "table--licensing overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "항목"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar 2"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar X"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "사용자"
-              })
+              children: "10"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -1133,27 +1355,12 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "100,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "출입문"
-              })
+              children: "40"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "1,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "500"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 감소, 검토 필요"
+              children: "100"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
@@ -1173,14 +1380,31 @@ function _createMdxContent(props) {
               },
               children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "기본 패키지 포함"
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "엘리베이터"
               })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -1207,6 +1431,16 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1217,21 +1451,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "💲"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "선택 추가 기능으로 제공"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "클라우드"
-              })
+              children: "❌"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -1242,161 +1462,22 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: "💲"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Active Directory"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "💲"
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엔터프라이즈 라이선스는 비용 효율적인 업그레이로 전환할 수 있는 기획를 제공합니다. 500개 이상의 출입문이나 번들로 제공되던 추가 서비스가 필요하지 않은 고객에게 적합합니다. 고객의 환경에 맞는 라이선스 선택을 통해 비용을 절감하고, 최신 기능을 활용할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "엔터프라이즈enterprise-vs-엘리트elite",
-      children: "엔터프라이즈(Enterprise) VS 엘리트(Elite)"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), " 엔터프라이즈 라이선스를 사용하는 대규모 고객 중 더욱 향상된 확장성이 필요하다면 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엘리트 라이선스로 전환하는 것을 고려할 수 있습니다. 기본 비용이 크게 증가하지만 최대 500,000명의 사용자와 2,000개의 출입문을 지원합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
-      }), " 엔터프라이즈 라이선스보다 지원하는 출입문 수가 두 배입니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엘리트 라이선스는 고급 출입 통제 기능을 기본으로 제공하며, 중앙 집중식, 고급 보안 및 다중 캠퍼스 환경에 적합합니다. 그러나 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 더 이상 번들로 제공하지 않으며 별도의 라이선스가 필요합니다. 이러한 기능은 대규모 환경에서 중요한 역할을 하므로, 엘리트 라이선스를 선택할 때 고려해야 합니다."]
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "table--licensing overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "항목"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar 2"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "BioStar X"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "비고"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "사용자"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "무제한"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "500,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: " "
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "출입문"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "1,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "2,000"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문 수 2배 증가, 광범위한 사용 환경에 적합"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "구역"
-              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Interlock)"
-              })]
+                children: "클라우드"
+              }), "(원격 접속)"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
               children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "기본 패키지 포함"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "엘리베이터"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "그래픽 맵"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "서버 매칭"
-              })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -1407,20 +1488,6 @@ function _createMdxContent(props) {
                 textAlign: "center"
               },
               children: "💲"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "선택 추가 기능으로 제공"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "클라우드"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -1441,15 +1508,151 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "근태 관리"
+              }), "(T&A)"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "4,000"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "방문객"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Multi Comm Server"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "비디오"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "❌"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️ (Suprema VMS)"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️ (Suprema VMS)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "API"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "✔️"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "💲"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
               children: "💲"
             })]
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["엘리트 라이선스는 미션 크리티컬(mission-critical) 엔터프라이즈 환경을 위해 설계되었습니다. 높은 처리량, 방대한 사용자 기반 및 복잡한 액세스 제어가 필수입니다. 이 라이선스가 필요한 고객은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "의 엘리트 라이선스를 통해 최신 기능과 확장성을 활용할 수 있습니다. 그러나 가격이 상당히 높기 때문에, 실제로 필요한 기능과 용량을 신중하게 검토해야 합니다."]
     })]
   });
 }

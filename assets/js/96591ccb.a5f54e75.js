@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bs-2-to-bsx-migration-mdx-965.json
-var site_docs_platform_biostar_x_bs_2_to_bsx_migration_mdx_965_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bs2-to-bsx-migration","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","tags":[],"version":"current","frontMatter":{"id":"bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","keywords":["BioStar 2","BioStar X","마이그레이션","업그레이드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X 라이선스 정책","permalink":"/docs/platform/biostar_x/bsx-licensing"}}')
+var site_docs_platform_biostar_x_bs_2_to_bsx_migration_mdx_965_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bs2-to-bsx-migration","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bs2-to-bsx-migration.mdx","tags":[],"version":"current","frontMatter":{"id":"bs2-to-bsx-migration","title":"BioStar 2에서 마이그레이션하기","description":"BioStar 2에서 BioStar X로의 마이그레이션 과정을 안내합니다.","keywords":["BioStar 2","BioStar X","마이그레이션","업그레이드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/bsx-licensing"},"next":{"title":"라이선스 적용 사례","permalink":"/docs/platform/biostar_x/bsx-licensing-examples"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -715,7 +715,7 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), "에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "고급 출입 통제"
-      }), "(Advanced Access Control) 모듈 또는 기타 유료 추가 기능으로 제공받을 수 있습니다. 추가 기능이 필요한 조직은 해당 모듈을 구매하거나 엔터프라이즈 라이선스로 업그레이드를 고려해야 합니다."]
+      }), "(Advanced Access Control System) 모듈 또는 기타 유료 추가 기능으로 제공받을 수 있습니다. 추가 기능이 필요한 조직은 해당 모듈을 구매하거나 엔터프라이즈 라이선스로 업그레이드를 고려해야 합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -1079,7 +1079,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["엔터프라이즈 라이선스는 최대 확장성과 운영 제어가 필요한 대규모 조직에 적합합니다. 가격 인상이 상당하지만 번들로 제공하는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "고급 출입 통제"
-      }), "(Advanced Access Control) 기능과 높은 용량 한도를 감안하면 투자 가치가 있습니다. 엔터프라이즈 라이선스는 대규모 고객의 요구를 충족하는지 확인하기 위해 신중한 계획과 평가가 필요합니다."]
+      }), " 기능과 높은 용량 한도를 감안하면 투자 가치가 있습니다. 엔터프라이즈 라이선스는 대규모 고객의 요구를 충족하는지 확인하기 위해 신중한 계획과 평가가 필요합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "엔터프라이즈enterprise-라이선스-비교",
       children: "엔터프라이즈(Enterprise) 라이선스 비교"
@@ -1094,7 +1094,7 @@ function _createMdxContent(props) {
         children: "BioStar 2"
       }), "보다 낮은 비용으로 사용할 수 있고, ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "고급 출입 통제"
-      }), "(Advanced Access Control) 기능을 포함하고 있습니다."]
+      }), " 기능을 포함하고 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "다만, 사용자 수는 200,000명으로 제한되지만 출입문 수는 1,000개에서 500개로 감소합니다. 출입문이 많고 밀집된 환경의 고객은 신중하게 검토해야 합니다. 또한 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 별도의 라이선스가 필요합니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
@@ -1280,7 +1280,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 엘리트 라이선스는 고급 출입 통제 기능을 기본으로 제공하며, 중앙 집중식, 고급 보안 및 다중 캠퍼스 환경에 적합합니다. 그러나 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 더 이상 번들로 제공하지 않으며 별도의 라이선스가 필요합니다. 이러한 기능은 대규모 환경에서 중요한 역할을 하므로, 엘리트 라이선스를 선택할 때 고려해야 합니다."]
+      }), "의 엘리트 라이선스는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "고급 출입 통제"
+      }), " 기능을 기본으로 제공하며, 중앙 집중식, 고급 보안 및 다중 캠퍼스 환경에 적합합니다. 그러나 서버 매칭, 클라우드 및 Active Directory 통합과 같은 기능은 더 이상 번들로 제공하지 않으며 별도의 라이선스가 필요합니다. 이러한 기능은 대규모 환경에서 중요한 역할을 하므로, 엘리트 라이선스를 선택할 때 고려해야 합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
