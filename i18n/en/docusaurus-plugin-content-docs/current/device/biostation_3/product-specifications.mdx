@@ -1,416 +1,54 @@
 ---
 id: product-specifications
-title: 제품 사양
-description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
-keywords: [크리덴셜, 일반, 얼굴, 저장 용량, 인터페이스, 전기 규격, 제품 치수]
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords: [Credentials, General, Face, Capacity, Interfaces, Electrical, Dimensions]
 ---
 
-제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+Provides key specifications of the product, including size, features, and performance.
 
-import Face from '@site/static/img/menus/spec-credential-face.svg';
+import specs from '@site/static/specs/bs3_specs.json';
 
-{/* <div className='techspec-section techspecs-header-row'>
-  <div className='techspecs-rowheader'>&nbsp;</div>
-  <div className='techspecs-columnheader'>BS3-DB</div>
-  <div className='techspecs-columnheader'>BS3-APWB</div>
-</div> */}
+{/* 크리덴션 */}
+<SpecSectioin data={specs.biostation3.credentials} />
 
-## 크리덴셜
+{/* 일반 */}
+<SpecSectioin data={specs.biostation3.general} />
 
-<div className='techspec with-2-columns'>
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>바이오 인식</div>
-    <div className='techspecs-body'>
-      <div className='column small-l1'>
-        <Face width='80' height='80' />
-      </div>
-      <div className='column small-l2'>
-        **얼굴**
-        
-        * 인증 거리<sup><a href='#anno1'></a></sup>: 0.3 ~ 1.0 m
-        
-        * 인증 높이: 1.4 ~ 1.9 m
-        
-        * 매칭 속도: 0.2초 이내
-        
-        * 위조 얼굴 검출: 지원
-      </div>
-    </div>
-  </div>
+{/* 저장 용량 */}
+<SpecSectioin data={specs.biostation3.storage} />
 
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RF 카드</div>
-    <div className='techspecs-body'>
-      <div className='row'>
-        <div className='column small-l1'>BS3-DB</div>
-        <div className='column small-l2'>
-          125 kHz EM & 13.56 MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup><a href='#anno2'></a></sup>, FeliCa
-        </div>
-      </div>
-      <div className='row'>
-        <div className='column small-l1'>BS3-APWB</div>
-        <div className='column small-l2'>
-          125 kHz EM, HID Prox & 13.56 MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos
-        </div>
-      </div>
-    </div>
-  </div>
+{/* 인터페이스 */}
+<SpecSectioin data={specs.biostation3.interface} />
 
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RF 인식 거리<sup><a href='#anno3'></a></sup></div>
-    <div className='techspecs-body'>
-      EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm
-    </div>
-  </div>
+{/* 전기 규격 */}
+<SpecSectioin data={specs.biostation3.power} />
 
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>모바일</div>
-    <div className='techspecs-body'>
-      NFC, BLE
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>스크램블 키패드(PIN)</div>
-    <div className='techspecs-body'>
-      지원
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>QR/바코드<sup><a href='#anno4'></a></sup></div>
-    <div className='techspecs-body'>
-      지원<sup><a href='#anno5'></a></sup>
-    </div>
-  </div>
-</div>
-
-## 일반
-
-<div className='techspec with-2-columns'>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>CPU</div>
-    <div className='techspecs-body'>1.5 GHz Quad Core</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>메모리</div>
-    <div className='techspecs-body'>32 GB Flash + 4 GB RAM</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>크립토 칩</div>
-    <div className='techspecs-body'>지원</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>디스플레이</div>
-    <div className='techspecs-body'>5.5" IPS 컬러 LCD</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>화면 해상도</div>
-    <div className='techspecs-body'>720 x 1280 픽셀</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>소리</div>
-    <div className='techspecs-body'>16 bit</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>동작 온도</div>
-    <div className='techspecs-body'>-20 °C ~ 50 °C</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>보관 온도</div>
-    <div className='techspecs-body'>-40 °C ~ 70 °C</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>동작 습도</div>
-    <div className='techspecs-body'>0 % ~ 80 %, 비응축</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>보관 습도</div>
-    <div className='techspecs-body'>0 % ~ 90 %, 비응축</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>카메라</div>
-    <div className='techspecs-body'>
-      * 적외선: 2M 픽셀
-      
-      * 비주얼: 2M 픽셀
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'><a href="../../reference/glossary#ip_rating">IP 등급</a></div>
-    <div className='techspecs-body'>IP65</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'><a href="../../reference/glossary#ik_rating">IK 등급</a></div>
-    <div className='techspecs-body'>IK06</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>인증</div>
-    <div className='techspecs-body'>CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, MIC, TELEC</div>
-  </div>
-
-</div>
-
-## 저장 용량
-
-<div className='techspec with-2-columns'>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>최대 사용자 수</div>
-    <div className='techspecs-body'>100,000<sup><a href='#anno6'></a></sup></div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>최대 크리덴셜 수 (1:N)</div>
-    <div className='techspecs-body'>얼굴: 50,000</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>최대 크리덴셜 수 (1:1)</div>
-    <div className='techspecs-body'>
-      * 얼굴: 100,000
-
-      * 카드: 100,000
-
-      * PIN: 100,000
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>최대 텍스트 로그 수</div>
-    <div className='techspecs-body'>5,000,000</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>최대 이미지 로그 수</div>
-    <div className='techspecs-body'>50,000</div>
-  </div>
-
-</div>
-
-## 인터페이스
-
-<div className='techspec with-2-columns'>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>이더넷</div>
-    <div className='techspecs-body'>지원 (10/100/1000 Mbps, 자동 MDI/MDI-X)</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>Wi-Fi</div>
-    <div className='techspecs-body'>
-      <div className='row'>
-        <div className='column small-l1'>BS3-DB</div>
-        <div className='column small-l2'>미지원</div>
-      </div>
-      <div className='row'>
-        <div className='column small-l1'>BS3-APWB</div>
-        <div className='column small-l2'>지원 (802.11 b/ g/ n 2.4 GHz)</div>
-      </div>
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RS-485</div>
-    <div className='techspecs-body'>1채널 마스터/슬레이브 (선택 가능)</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RS-485 통신 프로토콜</div>
-    <div className='techspecs-body'>OSDP V2 호환</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>Wiegand</div>
-    <div className='techspecs-body'>1채널 입력, 1채널 출력</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>TTL 입력</div>
-    <div className='techspecs-body'>입력 3채널</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>릴레이</div>
-    <div className='techspecs-body'>1개</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>PoE+</div>
-    <div className='techspecs-body'>
-      <div className='row'>
-        <div className='column small-l1'>BS3-DB</div>
-        <div className='column small-l2'>미지원</div>
-      </div>
-      <div className='row'>
-        <div className='column small-l1'>BS3-APWB</div>
-        <div className='column small-l2'>지원 (IEEE 802.3at compliant)</div>
-      </div>
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>인터폰</div>
-    <div className='techspecs-body'>지원</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>RTSP</div>
-    <div className='techspecs-body'>지원</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>USB</div>
-    <div className='techspecs-body'>USB 2.0 (Host)</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>USB 확장 포트</div>
-    <div className='techspecs-body'>지원</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>탬퍼</div>
-    <div className='techspecs-body'>지원</div>
-  </div>
-</div>
-
-## 전기 규격 {#electrical}
-
-<div className='techspec with-2-columns'>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>전원</div>
-    <div className='techspecs-body'>
-      * 전압 / 전류: 12 Vdc / 최대 1 A
-
-      * 전압 / 전류: 24 Vdc / 최대 0.7 A
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>스위치 입력 VIH</div>
-    <div className='techspecs-body'>
-      * 최소: 3 V
-      * 최대: 5 V
-    </div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>스위치 입력 VIL</div>
-    <div className='techspecs-body'>최대: 1 V</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>스위치 풀업 저항</div>
-    <div className='techspecs-body'>4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>Wiegand 출력 VOH</div>
-    <div className='techspecs-body'>4.8 V 이상</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>Wiegand 출력 VOL</div>
-    <div className='techspecs-body'>0.2 V 이하</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>Wiegnad 출력 풀업 저항</div>
-    <div className='techspecs-body'>1 kΩ으로 내부 풀업</div>
-  </div>
-
-  <div className='techspec-section'>
-    <div className='techspecs-rowheader'>릴레이</div>
-    <div className='techspecs-body'>
-      * 2 A @ 30 VDC Resistive load
-      * 1 A @ 30 VDC Inductive load
-    </div>
-  </div>
-</div>
-
-## 크기 및 무게
-
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import DimenW from '@site/static/img/common/ico-w.svg';
-import DimenH from '@site/static/img/common/ico-h.svg';
-import DimenD from '@site/static/img/common/ico-d.svg';
-
-<div className='techspec with-2-columns'>
-
-  <div className='techspec-section noborder'>
-    <div className='techspecs-rowheader'>장치</div>
-    <div className='techspecs-body'>
-      <div className='column small-c5 modelimg'>
-        <img src={useBaseUrl('/img/device/bs3-device-dimension.svg')} />
-      </div>
-      <div className='column small-c5 desc'>
-        * 크기: **<DimenW/> 82.5 mm x <DimenH/> 171 mm x <DimenD/> 23.4 mm**
-
-        * 무게
-
-          * **BS3-DB**: **370 g**
-          
-          * **BS3-APWB**: **380 g**
-      </div>
-    </div>
-  </div>
-
-  <div className='techspec-section noborder'>
-    <div className='techspecs-rowheader'>브라켓</div>
-    <div className='techspecs-body'>
-      <div className='column small-c5 modelimg'>
-        <img src={useBaseUrl('/img/device/bs3-bracket-front-dimension.svg')} style={{width: 223, height: 431}} />
-      </div>
-      <div className='column small-c5 desc'>
-
-        * 크기: **<DimenW/> 72.9 mm x <DimenH/> 164 mm**
-        
-        * 무게: **90 g** (와셔 및 볼트 포함)
-      </div>
-    </div>
-  </div>
-</div>
+{/* 크기 및 무게 */}
+<SpecSizeWieght data={specs.biostation3.size_wieght} />
 
 :::note
 
-<span className='annotation' id='anno1'>1)</span> 표기된 최소 얼굴 인증 거리는 제품의 기본 설정이며, 권장하는 얼굴 인증 거리는 0.6 ~ 1.0 m입니다.
+<Anno id='anno1'>1)</Anno> The minimum face authentication distance shown is the default setting for the product, and the recommended face authentication distance is 0.6 to 1.0 m.
 
-<span className='annotation' id='anno2'>2)</span> DESFire EV2/EV3 카드는 DESFire EV1 카드와 하위 호환되므로, DESFire EV1 카드의 기능을 포함하여 CSN 및 스마트 카드 기능이 지원됩니다.
+<Anno id='anno2'>2)</Anno> DESFire EV2/EV3 cards are supported by having backward compatibility of DESFire EV1 cards. CSN and smart card functions are compatible with BioStation 3.
 
-<span className='annotation' id='anno3'>3)</span> RF 인식 거리는 설치 환경에 따라 다를 수 있습니다.
+<Anno id='anno3'>3)</Anno> RF read range will vary depending on installation environment.
 
-<span className='annotation' id='anno4'>4)</span> 최대 32개의 ASCII 코드 문자열로 구성된 QR/바코드를 지원합니다.
+<Anno id='anno4'>4)</Anno> Supports QR/Barcodes composed of up to 32 ASCII code strings.
 
-<span className='annotation' id='anno5'>5)</span> 별도의 장치 라이선스가 필요합니다.
+<Anno id='anno5'>5)</Anno> Requires a separate license.
 
-<span className='annotation' id='anno6'>6)</span> 크리덴셜 없이 등록된 사용자 기준입니다.
+<Anno id='anno6'>6)</Anno> The number of users registered without having any credential data.
 
 :::
 
 :::info
 
-BioStation 3가 마스터 장치일 때 지문 센서가 있는 장치를 슬레이브로 연결하면 슬레이브 장치를 사용하여 지문을 인증할 수
-있습니다.
+If BioStation 3 is a master device and a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
 
-* 최대 지문 크리덴셜 수 (1:N): 100,000
+* Max. Fingerprint Credentials (1:N): 100,000
 
-* 최대 지문 크리덴셜 수 (1:1): 100,000
+* Max. Fingerprint Credentials (1:1): 100,000
 
 :::
