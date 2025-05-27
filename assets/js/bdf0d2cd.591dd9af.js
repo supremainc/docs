@@ -340,8 +340,8 @@ function _createMdxContent(props) {
         children: "고장의 원인이 됩니다."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "제품을 -20 °C ~ 50 °C 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요."
+      children: (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["제품을 ", props.name, " 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
@@ -436,7 +436,9 @@ function safety_instructions_createMdxContent(props) {
       children: "사용자의 위험이나 재산상의 손해를 막기 위해 제품을 사용하기 전에 이 설명서를 반드시 읽고 제품을 안전하고 올바르게 사용하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "이 설명서에서 말하는 제품이란 본체와 함께 제공되는 모든 구성품을 포함합니다."
-    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {})]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {
+      name: "-20 °C ~ 50 °C"
+    })]
   });
 }
 function safety_instructions_MDXContent(props = {}) {

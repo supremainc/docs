@@ -20747,35 +20747,30 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/control-door.mdx",
         /*require.resolve*/(3403)
     ],
-    "0d9570ff": [
-        ()=>__webpack_require__.e(/* import() | 0d9570ff */ "9923").then(__webpack_require__.bind(__webpack_require__, 9642)),
-        "@site/docs/device/biostation_3/regulatory-information.mdx",
-        /*require.resolve*/(9642)
+    "0fe9a59f": [
+        ()=>__webpack_require__.e(/* import() | 0fe9a59f */ "6767").then(__webpack_require__.bind(__webpack_require__, 7602)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/user.mdx",
+        /*require.resolve*/(7602)
     ],
     "10bd23ad": [
         ()=>__webpack_require__.e(/* import() | 10bd23ad */ "3222").then(__webpack_require__.bind(__webpack_require__, 6506)),
         "@site/docs/platform/biostar_x/export-import-user-info.mdx",
         /*require.resolve*/(6506)
     ],
-    "11b43341": [
-        ()=>__webpack_require__.e(/* import() | 11b43341 */ "4467").then(__webpack_require__.t.bind(__webpack_require__, 9989, 19)),
-        "@generated/docusaurus-plugin-content-docs/default/p/docs-7fc.json",
-        /*require.resolve*/(9989)
-    ],
     "1371bad0": [
         ()=>__webpack_require__.e(/* import() | 1371bad0 */ "1387").then(__webpack_require__.bind(__webpack_require__, 437)),
         "@site/docs/platform/biostar_x/change-db.mdx",
         /*require.resolve*/(437)
     ],
+    "13938da3": [
+        ()=>__webpack_require__.e(/* import() | 13938da3 */ "332").then(__webpack_require__.bind(__webpack_require__, 382)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/regulatory-information.mdx",
+        /*require.resolve*/(382)
+    ],
     "17896441": [
         ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("6212"), __webpack_require__.e("2626"), __webpack_require__.e("7048")]).then(__webpack_require__.bind(__webpack_require__, 7509)),
         "@theme/DocItem",
         /*require.resolve*/(7509)
-    ],
-    "1814c8c4": [
-        ()=>__webpack_require__.e(/* import() | 1814c8c4 */ "4891").then(__webpack_require__.bind(__webpack_require__, 5550)),
-        "@site/docs/legal/disclaimers.mdx",
-        /*require.resolve*/(5550)
     ],
     "197ee92b": [
         ()=>__webpack_require__.e(/* import() | 197ee92b */ "1723").then(__webpack_require__.bind(__webpack_require__, 9087)),
@@ -20812,16 +20807,6 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/set-permission.mdx",
         /*require.resolve*/(942)
     ],
-    "2ded3a67": [
-        ()=>__webpack_require__.e(/* import() | 2ded3a67 */ "1396").then(__webpack_require__.bind(__webpack_require__, 4819)),
-        "@site/docs/device/biostation_3/troubleshooting.mdx",
-        /*require.resolve*/(4819)
-    ],
-    "2e9131db": [
-        ()=>__webpack_require__.e(/* import() | 2e9131db */ "2471").then(__webpack_require__.bind(__webpack_require__, 328)),
-        "@site/docs/device/biostation_3/appendices.mdx",
-        /*require.resolve*/(328)
-    ],
     "33e75f9d": [
         ()=>__webpack_require__.e(/* import() | 33e75f9d */ "4610").then(__webpack_require__.bind(__webpack_require__, 2636)),
         "@site/docs/platform/biostar_x/monitoring-event.mdx",
@@ -20837,10 +20822,30 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/tutorial-express-install.mdx",
         /*require.resolve*/(6759)
     ],
+    "36a81036": [
+        ()=>__webpack_require__.e(/* import() | 36a81036 */ "1099").then(__webpack_require__.bind(__webpack_require__, 7305)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/product-specifications.mdx",
+        /*require.resolve*/(7305)
+    ],
+    "3708f180": [
+        ()=>__webpack_require__.e(/* import() | 3708f180 */ "9203").then(__webpack_require__.bind(__webpack_require__, 530)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx",
+        /*require.resolve*/(530)
+    ],
     "3a5e0c69": [
         ()=>__webpack_require__.e(/* import() | 3a5e0c69 */ "9865").then(__webpack_require__.bind(__webpack_require__, 6557)),
         "@site/docs/platform/biostar_x/monitoring-device.mdx",
         /*require.resolve*/(6557)
+    ],
+    "3bd88a6f": [
+        ()=>__webpack_require__.e(/* import() | 3bd88a6f */ "9799").then(__webpack_require__.bind(__webpack_require__, 5476)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/troubleshooting.mdx",
+        /*require.resolve*/(5476)
+    ],
+    "3c097e0f": [
+        ()=>__webpack_require__.e(/* import() | 3c097e0f */ "1951").then(__webpack_require__.t.bind(__webpack_require__, 1253, 19)),
+        "@generated/docusaurus-plugin-content-docs/default/p/docs-en-760.json",
+        /*require.resolve*/(1253)
     ],
     "4098788a": [
         ()=>__webpack_require__.e(/* import() | 4098788a */ "5778").then(__webpack_require__.bind(__webpack_require__, 3028)),
@@ -20872,11 +20877,6 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/how-to-guide-user.mdx",
         /*require.resolve*/(6826)
     ],
-    "4bd16f22": [
-        ()=>__webpack_require__.e(/* import() | 4bd16f22 */ "6945").then(__webpack_require__.bind(__webpack_require__, 3998)),
-        "@site/docs/device/biostation_3/authentication.mdx",
-        /*require.resolve*/(3998)
-    ],
     "52edf430": [
         ()=>__webpack_require__.e(/* import() | 52edf430 */ "8679").then(__webpack_require__.bind(__webpack_require__, 5718)),
         "@site/docs/platform/biostar_x/transfer-user-info-to-device.mdx",
@@ -20886,6 +20886,11 @@ var routesChunkNames = __webpack_require__("7138");
         ()=>Promise.all(/* import() | 5308dfd1 */ [__webpack_require__.e("6212"), __webpack_require__.e("7397")]).then(__webpack_require__.bind(__webpack_require__, 7921)),
         "@site/src/pages/back/index.js",
         /*require.resolve*/(7921)
+    ],
+    "535d6173": [
+        ()=>__webpack_require__.e(/* import() | 535d6173 */ "8934").then(__webpack_require__.bind(__webpack_require__, 9435)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/authentication.mdx",
+        /*require.resolve*/(9435)
     ],
     "5707466f": [
         ()=>__webpack_require__.e(/* import() | 5707466f */ "7294").then(__webpack_require__.bind(__webpack_require__, 9504)),
@@ -20907,10 +20912,10 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/src/pages/cover/index.js",
         /*require.resolve*/(4210)
     ],
-    "6419676a": [
-        ()=>__webpack_require__.e(/* import() | 6419676a */ "9822").then(__webpack_require__.bind(__webpack_require__, 9032)),
-        "@site/docs/legal/eula.mdx",
-        /*require.resolve*/(9032)
+    "6a03d820": [
+        ()=>__webpack_require__.e(/* import() | 6a03d820 */ "2143").then(__webpack_require__.bind(__webpack_require__, 6665)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx",
+        /*require.resolve*/(6665)
     ],
     "7220320d": [
         ()=>Promise.all(/* import() | 7220320d */ [__webpack_require__.e("6212"), __webpack_require__.e("4731")]).then(__webpack_require__.bind(__webpack_require__, 5393)),
@@ -20937,15 +20942,10 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/check-door-status.mdx",
         /*require.resolve*/(1325)
     ],
-    "7c67f0f1": [
-        ()=>__webpack_require__.e(/* import() | 7c67f0f1 */ "5685").then(__webpack_require__.bind(__webpack_require__, 7210)),
-        "@site/docs/device/biostation_3/event-log.mdx",
-        /*require.resolve*/(7210)
-    ],
-    "7c9a920f": [
-        ()=>__webpack_require__.e(/* import() | 7c9a920f */ "4945").then(__webpack_require__.bind(__webpack_require__, 8610)),
-        "@site/docs/device/biostation_3/installation.mdx",
-        /*require.resolve*/(8610)
+    "77c718eb": [
+        ()=>__webpack_require__.e(/* import() | 77c718eb */ "4102").then(__webpack_require__.bind(__webpack_require__, 1339)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/installation.mdx",
+        /*require.resolve*/(1339)
     ],
     "7e7678cf": [
         ()=>__webpack_require__.e(/* import() | 7e7678cf */ "5382").then(__webpack_require__.bind(__webpack_require__, 9042)),
@@ -20967,6 +20967,11 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/monitoring-video.mdx",
         /*require.resolve*/(3724)
     ],
+    "8a475c6c": [
+        ()=>__webpack_require__.e(/* import() | 8a475c6c */ "432").then(__webpack_require__.bind(__webpack_require__, 3659)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/appendices.mdx",
+        /*require.resolve*/(3659)
+    ],
     "8d2c5feb": [
         ()=>__webpack_require__.e(/* import() | 8d2c5feb */ "2053").then(__webpack_require__.bind(__webpack_require__, 3971)),
         "@site/docs/platform/biostar_x/monitoring-door.mdx",
@@ -20982,25 +20987,20 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/view-users.mdx",
         /*require.resolve*/(8739)
     ],
-    "9cbf3402": [
-        ()=>__webpack_require__.e(/* import() | 9cbf3402 */ "4969").then(__webpack_require__.bind(__webpack_require__, 4660)),
-        "@site/docs/device/biostation_3/using-device.mdx",
-        /*require.resolve*/(4660)
+    "96591ccb": [
+        ()=>__webpack_require__.e(/* import() | 96591ccb */ "7598").then(__webpack_require__.bind(__webpack_require__, 4141)),
+        "@site/docs/platform/biostar_x/bs2-to-bsx-migration.mdx",
+        /*require.resolve*/(4141)
     ],
-    "9ce35945": [
-        ()=>__webpack_require__.e(/* import() | 9ce35945 */ "3807").then(__webpack_require__.bind(__webpack_require__, 160)),
-        "@site/docs/reference/glossary.mdx",
-        /*require.resolve*/(160)
+    "9ae8b2f6": [
+        ()=>__webpack_require__.e(/* import() | 9ae8b2f6 */ "4640").then(__webpack_require__.bind(__webpack_require__, 124)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/using-device.mdx",
+        /*require.resolve*/(124)
     ],
     "9dfd9826": [
         ()=>__webpack_require__.e(/* import() | 9dfd9826 */ "2385").then(__webpack_require__.bind(__webpack_require__, 8769)),
         "@site/docs/device/facestation_f2/troubleshooting.mdx",
         /*require.resolve*/(8769)
-    ],
-    "a4da9737": [
-        ()=>__webpack_require__.e(/* import() | a4da9737 */ "6596").then(__webpack_require__.bind(__webpack_require__, 5852)),
-        "@site/docs/device/biostation_3/index.mdx",
-        /*require.resolve*/(5852)
     ],
     "a6086608": [
         ()=>__webpack_require__.e(/* import() | a6086608 */ "2824").then(__webpack_require__.bind(__webpack_require__, 8933)),
@@ -21047,30 +21047,30 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/check-elevator-status.mdx",
         /*require.resolve*/(1973)
     ],
-    "b3d5d852": [
-        ()=>__webpack_require__.e(/* import() | b3d5d852 */ "6960").then(__webpack_require__.bind(__webpack_require__, 5257)),
-        "@site/docs/device/biostation_3/getting-started.mdx",
-        /*require.resolve*/(5257)
-    ],
     "b450d2c0": [
         ()=>__webpack_require__.e(/* import() | b450d2c0 */ "5463").then(__webpack_require__.bind(__webpack_require__, 7591)),
         "@site/docs/platform/biostar_x/tutorial.mdx",
         /*require.resolve*/(7591)
+    ],
+    "b4c15cff": [
+        ()=>__webpack_require__.e(/* import() | b4c15cff */ "6063").then(__webpack_require__.bind(__webpack_require__, 9914)),
+        "@site/docs/platform/biostar_x/ui-user.mdx",
+        /*require.resolve*/(9914)
     ],
     "b7329038": [
         ()=>__webpack_require__.e(/* import() | b7329038 */ "8922").then(__webpack_require__.bind(__webpack_require__, 1043)),
         "@site/docs/platform/biostar_x/login-with-mfa.mdx",
         /*require.resolve*/(1043)
     ],
+    "b8789531": [
+        ()=>__webpack_require__.e(/* import() | b8789531 */ "8491").then(__webpack_require__.bind(__webpack_require__, 4371)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/safety-instructions.mdx",
+        /*require.resolve*/(4371)
+    ],
     "bd4e1fda": [
         ()=>__webpack_require__.e(/* import() | bd4e1fda */ "2868").then(__webpack_require__.bind(__webpack_require__, 332)),
         "@site/docs/platform/biostar_x/add-user-basic-info.mdx",
         /*require.resolve*/(332)
-    ],
-    "bdf0d2cd": [
-        ()=>__webpack_require__.e(/* import() | bdf0d2cd */ "2184").then(__webpack_require__.bind(__webpack_require__, 8613)),
-        "@site/docs/device/biostation_3/safety-instructions.mdx",
-        /*require.resolve*/(8613)
     ],
     "c141421f": [
         ()=>__webpack_require__.e(/* import() | c141421f */ "7738").then(__webpack_require__.t.bind(__webpack_require__, 3491, 19)),
@@ -21082,11 +21082,6 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/src/pages/index.js",
         /*require.resolve*/(9060)
     ],
-    "c7176291": [
-        ()=>__webpack_require__.e(/* import() | c7176291 */ "4883").then(__webpack_require__.bind(__webpack_require__, 62)),
-        "@site/docs/device/biostation_3/user.mdx",
-        /*require.resolve*/(62)
-    ],
     "cd2f9674": [
         ()=>__webpack_require__.e(/* import() | cd2f9674 */ "319").then(__webpack_require__.bind(__webpack_require__, 8344)),
         "@site/docs/platform/biostar_x/control-elevator.mdx",
@@ -21097,10 +21092,15 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/how-to-guide-monitoring.mdx",
         /*require.resolve*/(6326)
     ],
-    "cf2b2cbf": [
-        ()=>__webpack_require__.e(/* import() | cf2b2cbf */ "2057").then(__webpack_require__.bind(__webpack_require__, 8150)),
-        "@site/docs/device/biostation_3/admin-menu.mdx",
-        /*require.resolve*/(8150)
+    "cee6f4d2": [
+        ()=>__webpack_require__.e(/* import() | cee6f4d2 */ "9982").then(__webpack_require__.bind(__webpack_require__, 1692)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/legal/eula.mdx",
+        /*require.resolve*/(1692)
+    ],
+    "d863df38": [
+        ()=>__webpack_require__.e(/* import() | d863df38 */ "2152").then(__webpack_require__.bind(__webpack_require__, 3934)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/event-log.mdx",
+        /*require.resolve*/(3934)
     ],
     "dba3fedd": [
         ()=>__webpack_require__.e(/* import() | dba3fedd */ "6600").then(__webpack_require__.bind(__webpack_require__, 7627)),
@@ -21112,25 +21112,40 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/tutorial-custom-install.mdx",
         /*require.resolve*/(4109)
     ],
+    "dd7390d3": [
+        ()=>__webpack_require__.e(/* import() | dd7390d3 */ "6682").then(__webpack_require__.bind(__webpack_require__, 2415)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/getting-started.mdx",
+        /*require.resolve*/(2415)
+    ],
     "df1e2c8a": [
-        ()=>__webpack_require__.e(/* import() | df1e2c8a */ "3395").then(__webpack_require__.bind(__webpack_require__, 7200)),
+        ()=>__webpack_require__.e(/* import() | df1e2c8a */ "3395").then(__webpack_require__.bind(__webpack_require__, 9648)),
         "@site/docs/platform/biostar_x/enroll-credential.mdx",
-        /*require.resolve*/(7200)
+        /*require.resolve*/(9648)
+    ],
+    "e1d3e13e": [
+        ()=>__webpack_require__.e(/* import() | e1d3e13e */ "8332").then(__webpack_require__.bind(__webpack_require__, 7365)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx",
+        /*require.resolve*/(7365)
     ],
     "e2ca401e": [
         ()=>__webpack_require__.e(/* import() | e2ca401e */ "6141").then(__webpack_require__.bind(__webpack_require__, 2660)),
         "@site/docs/platform/biostar_x/index.mdx",
         /*require.resolve*/(2660)
     ],
-    "e91ab3d2": [
-        ()=>__webpack_require__.e(/* import() | e91ab3d2 */ "868").then(__webpack_require__.bind(__webpack_require__, 9914)),
-        "@site/docs/platform/biostar_x/user-group-manage.mdx",
-        /*require.resolve*/(9914)
+    "e60ef5e8": [
+        ()=>__webpack_require__.e(/* import() | e60ef5e8 */ "344").then(__webpack_require__.bind(__webpack_require__, 9705)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/settings.mdx",
+        /*require.resolve*/(9705)
     ],
-    "ea6a3dd4": [
-        ()=>__webpack_require__.e(/* import() | ea6a3dd4 */ "3233").then(__webpack_require__.bind(__webpack_require__, 7132)),
-        "@site/docs/device/biostation_3/settings.mdx",
-        /*require.resolve*/(7132)
+    "e83f301f": [
+        ()=>__webpack_require__.e(/* import() | e83f301f */ "4071").then(__webpack_require__.bind(__webpack_require__, 8135)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/index.mdx",
+        /*require.resolve*/(8135)
+    ],
+    "e91ab3d2": [
+        ()=>__webpack_require__.e(/* import() | e91ab3d2 */ "868").then(__webpack_require__.bind(__webpack_require__, 2177)),
+        "@site/docs/platform/biostar_x/user-group-manage.mdx",
+        /*require.resolve*/(2177)
     ],
     "f147e4bf": [
         ()=>__webpack_require__.e(/* import() | f147e4bf */ "782").then(__webpack_require__.bind(__webpack_require__, 9607)),
@@ -21142,20 +21157,15 @@ var routesChunkNames = __webpack_require__("7138");
         "@site/docs/platform/biostar_x/control-zone.mdx",
         /*require.resolve*/(4485)
     ],
-    "f813c43e": [
-        ()=>__webpack_require__.e(/* import() | f813c43e */ "1798").then(__webpack_require__.bind(__webpack_require__, 5638)),
-        "@site/docs/legal/open-source-licenses.mdx",
-        /*require.resolve*/(5638)
-    ],
     "fa1bc1bc": [
         ()=>__webpack_require__.e(/* import() | fa1bc1bc */ "8039").then(__webpack_require__.bind(__webpack_require__, 9959)),
         "@site/docs/platform/biostar_x/edit-user.mdx",
         /*require.resolve*/(9959)
     ],
-    "fbed35e5": [
-        ()=>__webpack_require__.e(/* import() | fbed35e5 */ "3206").then(__webpack_require__.bind(__webpack_require__, 7852)),
-        "@site/docs/device/biostation_3/product-specifications.mdx",
-        /*require.resolve*/(7852)
+    "fee74856": [
+        ()=>__webpack_require__.e(/* import() | fee74856 */ "9147").then(__webpack_require__.bind(__webpack_require__, 8034)),
+        "@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/admin-menu.mdx",
+        /*require.resolve*/(8034)
     ],
     "ff083161": [
         ()=>__webpack_require__.e(/* import() | ff083161 */ "9493").then(__webpack_require__.bind(__webpack_require__, 5290)),
@@ -21455,458 +21465,470 @@ function ComponentCreator(path, hash) {
 
 /* ESM default export */ const routes = ([
     {
-        path: '/docs/back',
-        component: ComponentCreator('/docs/back', 'bb1'),
+        path: '/docs/en/back',
+        component: ComponentCreator('/docs/en/back', '55b'),
         exact: true
     },
     {
-        path: '/docs/cover',
-        component: ComponentCreator('/docs/cover', '9bd'),
+        path: '/docs/en/cover',
+        component: ComponentCreator('/docs/en/cover', 'd22'),
         exact: true
     },
     {
-        path: '/docs/cover/biostarx',
-        component: ComponentCreator('/docs/cover/biostarx', '964'),
+        path: '/docs/en/cover/biostarx',
+        component: ComponentCreator('/docs/en/cover/biostarx', 'd75'),
         exact: true
     },
     {
-        path: '/docs/search',
-        component: ComponentCreator('/docs/search', '320'),
+        path: '/docs/en/search',
+        component: ComponentCreator('/docs/en/search', 'd2a'),
         exact: true
     },
     {
-        path: '/docs/',
-        component: ComponentCreator('/docs/', '6fa'),
+        path: '/docs/en/',
+        component: ComponentCreator('/docs/en/', '163'),
         exact: true
     },
     {
-        path: '/docs/',
-        component: ComponentCreator('/docs/', '5f6'),
+        path: '/docs/en/',
+        component: ComponentCreator('/docs/en/', '68a'),
         routes: [
             {
-                path: '/docs/',
-                component: ComponentCreator('/docs/', '521'),
+                path: '/docs/en/',
+                component: ComponentCreator('/docs/en/', 'c78'),
                 routes: [
                     {
-                        path: '/docs/',
-                        component: ComponentCreator('/docs/', '567'),
+                        path: '/docs/en/',
+                        component: ComponentCreator('/docs/en/', 'bfe'),
                         routes: [
                             {
-                                path: '/docs/device/biostation_3',
-                                component: ComponentCreator('/docs/device/biostation_3', 'a24'),
+                                path: '/docs/en/device/biostation_3',
+                                component: ComponentCreator('/docs/en/device/biostation_3', '298'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/admin-menu',
-                                component: ComponentCreator('/docs/device/biostation_3/admin-menu', 'a17'),
+                                path: '/docs/en/device/biostation_3/admin-menu',
+                                component: ComponentCreator('/docs/en/device/biostation_3/admin-menu', '5d4'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/appendices',
-                                component: ComponentCreator('/docs/device/biostation_3/appendices', 'ce0'),
+                                path: '/docs/en/device/biostation_3/appendices',
+                                component: ComponentCreator('/docs/en/device/biostation_3/appendices', 'd7f'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/authentication',
-                                component: ComponentCreator('/docs/device/biostation_3/authentication', 'c8c'),
+                                path: '/docs/en/device/biostation_3/authentication',
+                                component: ComponentCreator('/docs/en/device/biostation_3/authentication', 'a42'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/event-log',
-                                component: ComponentCreator('/docs/device/biostation_3/event-log', 'ef4'),
+                                path: '/docs/en/device/biostation_3/event-log',
+                                component: ComponentCreator('/docs/en/device/biostation_3/event-log', 'bb3'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/getting-started',
-                                component: ComponentCreator('/docs/device/biostation_3/getting-started', '103'),
+                                path: '/docs/en/device/biostation_3/getting-started',
+                                component: ComponentCreator('/docs/en/device/biostation_3/getting-started', 'c45'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/installation',
-                                component: ComponentCreator('/docs/device/biostation_3/installation', 'fab'),
+                                path: '/docs/en/device/biostation_3/installation',
+                                component: ComponentCreator('/docs/en/device/biostation_3/installation', 'd31'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/product-specifications',
-                                component: ComponentCreator('/docs/device/biostation_3/product-specifications', '623'),
+                                path: '/docs/en/device/biostation_3/product-specifications',
+                                component: ComponentCreator('/docs/en/device/biostation_3/product-specifications', 'cc2'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/regulatory-information',
-                                component: ComponentCreator('/docs/device/biostation_3/regulatory-information', '605'),
+                                path: '/docs/en/device/biostation_3/regulatory-information',
+                                component: ComponentCreator('/docs/en/device/biostation_3/regulatory-information', 'f04'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/safety-instructions',
-                                component: ComponentCreator('/docs/device/biostation_3/safety-instructions', '69c'),
+                                path: '/docs/en/device/biostation_3/safety-instructions',
+                                component: ComponentCreator('/docs/en/device/biostation_3/safety-instructions', 'de5'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/settings',
-                                component: ComponentCreator('/docs/device/biostation_3/settings', 'e86'),
+                                path: '/docs/en/device/biostation_3/settings',
+                                component: ComponentCreator('/docs/en/device/biostation_3/settings', '725'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/troubleshooting',
-                                component: ComponentCreator('/docs/device/biostation_3/troubleshooting', 'b95'),
+                                path: '/docs/en/device/biostation_3/troubleshooting',
+                                component: ComponentCreator('/docs/en/device/biostation_3/troubleshooting', '0af'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/user',
-                                component: ComponentCreator('/docs/device/biostation_3/user', '425'),
+                                path: '/docs/en/device/biostation_3/user',
+                                component: ComponentCreator('/docs/en/device/biostation_3/user', '27b'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/biostation_3/using-device',
-                                component: ComponentCreator('/docs/device/biostation_3/using-device', 'da1'),
+                                path: '/docs/en/device/biostation_3/using-device',
+                                component: ComponentCreator('/docs/en/device/biostation_3/using-device', '725'),
                                 exact: true,
                                 sidebar: "bioStation3"
                             },
                             {
-                                path: '/docs/device/facestation_f2/troubleshooting',
-                                component: ComponentCreator('/docs/device/facestation_f2/troubleshooting', '591'),
+                                path: '/docs/en/device/facestation_f2/troubleshooting',
+                                component: ComponentCreator('/docs/en/device/facestation_f2/troubleshooting', '865'),
                                 exact: true
                             },
                             {
-                                path: '/docs/legal/disclaimers',
-                                component: ComponentCreator('/docs/legal/disclaimers', 'd3b'),
+                                path: '/docs/en/legal/disclaimers',
+                                component: ComponentCreator('/docs/en/legal/disclaimers', '865'),
                                 exact: true,
                                 sidebar: "legal"
                             },
                             {
-                                path: '/docs/legal/eula',
-                                component: ComponentCreator('/docs/legal/eula', '56a'),
+                                path: '/docs/en/legal/eula',
+                                component: ComponentCreator('/docs/en/legal/eula', '194'),
                                 exact: true,
                                 sidebar: "legal"
                             },
                             {
-                                path: '/docs/legal/open-source-licenses',
-                                component: ComponentCreator('/docs/legal/open-source-licenses', '127'),
+                                path: '/docs/en/legal/open-source-licenses',
+                                component: ComponentCreator('/docs/en/legal/open-source-licenses', '286'),
                                 exact: true,
                                 sidebar: "legal"
                             },
                             {
-                                path: '/docs/platform/biostar_x',
-                                component: ComponentCreator('/docs/platform/biostar_x', 'c86'),
+                                path: '/docs/en/platform/biostar_x',
+                                component: ComponentCreator('/docs/en/platform/biostar_x', 'ea4'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/add-user',
-                                component: ComponentCreator('/docs/platform/biostar_x/add-user', 'c7c'),
+                                path: '/docs/en/platform/biostar_x/add-user',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/add-user', '6b1'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/add-user-basic-info',
-                                component: ComponentCreator('/docs/platform/biostar_x/add-user-basic-info', '268'),
+                                path: '/docs/en/platform/biostar_x/add-user-basic-info',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/add-user-basic-info', '9f4'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/bsx-licensing',
-                                component: ComponentCreator('/docs/platform/biostar_x/bsx-licensing', 'd33'),
+                                path: '/docs/en/platform/biostar_x/bs2-to-bsx-migration',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/bs2-to-bsx-migration', 'b78'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/change-db',
-                                component: ComponentCreator('/docs/platform/biostar_x/change-db', 'c3d'),
+                                path: '/docs/en/platform/biostar_x/bsx-licensing',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/bsx-licensing', '5b7'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/change-port',
-                                component: ComponentCreator('/docs/platform/biostar_x/change-port', '48d'),
+                                path: '/docs/en/platform/biostar_x/change-db',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/change-db', 'dc4'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/check-door-status',
-                                component: ComponentCreator('/docs/platform/biostar_x/check-door-status', 'cba'),
+                                path: '/docs/en/platform/biostar_x/change-port',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/change-port', 'aa5'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/check-elevator-status',
-                                component: ComponentCreator('/docs/platform/biostar_x/check-elevator-status', 'c4e'),
+                                path: '/docs/en/platform/biostar_x/check-door-status',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/check-door-status', 'e15'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/check-zone-status',
-                                component: ComponentCreator('/docs/platform/biostar_x/check-zone-status', '169'),
+                                path: '/docs/en/platform/biostar_x/check-elevator-status',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/check-elevator-status', '425'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/columnlayout',
-                                component: ComponentCreator('/docs/platform/biostar_x/columnlayout', 'b34'),
+                                path: '/docs/en/platform/biostar_x/check-zone-status',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/check-zone-status', 'fac'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/control-door',
-                                component: ComponentCreator('/docs/platform/biostar_x/control-door', 'b04'),
+                                path: '/docs/en/platform/biostar_x/columnlayout',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/columnlayout', 'c55'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/control-door-slave-device',
-                                component: ComponentCreator('/docs/platform/biostar_x/control-door-slave-device', '46c'),
+                                path: '/docs/en/platform/biostar_x/control-door',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/control-door', '083'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/control-elevator',
-                                component: ComponentCreator('/docs/platform/biostar_x/control-elevator', 'b0f'),
+                                path: '/docs/en/platform/biostar_x/control-door-slave-device',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/control-door-slave-device', '7e8'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/control-zone',
-                                component: ComponentCreator('/docs/platform/biostar_x/control-zone', '8a4'),
+                                path: '/docs/en/platform/biostar_x/control-elevator',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/control-elevator', '60f'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/delete-user',
-                                component: ComponentCreator('/docs/platform/biostar_x/delete-user', '06b'),
+                                path: '/docs/en/platform/biostar_x/control-zone',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/control-zone', '4a1'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/delete-user-info-from-device',
-                                component: ComponentCreator('/docs/platform/biostar_x/delete-user-info-from-device', 'a94'),
+                                path: '/docs/en/platform/biostar_x/delete-user',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/delete-user', '275'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/edit-user',
-                                component: ComponentCreator('/docs/platform/biostar_x/edit-user', 'd71'),
+                                path: '/docs/en/platform/biostar_x/delete-user-info-from-device',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/delete-user-info-from-device', '4e5'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/enroll-credential',
-                                component: ComponentCreator('/docs/platform/biostar_x/enroll-credential', 'c62'),
+                                path: '/docs/en/platform/biostar_x/edit-user',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/edit-user', '014'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/export-import-user-info',
-                                component: ComponentCreator('/docs/platform/biostar_x/export-import-user-info', 'c71'),
+                                path: '/docs/en/platform/biostar_x/enroll-credential',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/enroll-credential', 'ccb'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/getting-started',
-                                component: ComponentCreator('/docs/platform/biostar_x/getting-started', '5d4'),
+                                path: '/docs/en/platform/biostar_x/export-import-user-info',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/export-import-user-info', '888'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/how-to-guide-monitoring',
-                                component: ComponentCreator('/docs/platform/biostar_x/how-to-guide-monitoring', 'a6f'),
+                                path: '/docs/en/platform/biostar_x/getting-started',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/getting-started', '0b2'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/how-to-guide-user',
-                                component: ComponentCreator('/docs/platform/biostar_x/how-to-guide-user', 'd60'),
+                                path: '/docs/en/platform/biostar_x/how-to-guide-monitoring',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/how-to-guide-monitoring', '448'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/licensing',
-                                component: ComponentCreator('/docs/platform/biostar_x/licensing', '0bc'),
+                                path: '/docs/en/platform/biostar_x/how-to-guide-user',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/how-to-guide-user', '7a6'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/login-with-mfa',
-                                component: ComponentCreator('/docs/platform/biostar_x/login-with-mfa', 'b7d'),
+                                path: '/docs/en/platform/biostar_x/licensing',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/licensing', '86e'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/manage-server',
-                                component: ComponentCreator('/docs/platform/biostar_x/manage-server', '2f5'),
+                                path: '/docs/en/platform/biostar_x/login-with-mfa',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/login-with-mfa', '194'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/migration-visual-face',
-                                component: ComponentCreator('/docs/platform/biostar_x/migration-visual-face', '358'),
+                                path: '/docs/en/platform/biostar_x/manage-server',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/manage-server', '3b9'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/monitoring-device',
-                                component: ComponentCreator('/docs/platform/biostar_x/monitoring-device', '2da'),
+                                path: '/docs/en/platform/biostar_x/migration-visual-face',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/migration-visual-face', '67a'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/monitoring-door',
-                                component: ComponentCreator('/docs/platform/biostar_x/monitoring-door', '95b'),
+                                path: '/docs/en/platform/biostar_x/monitoring-device',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/monitoring-device', '7d8'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/monitoring-event',
-                                component: ComponentCreator('/docs/platform/biostar_x/monitoring-event', 'de1'),
+                                path: '/docs/en/platform/biostar_x/monitoring-door',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/monitoring-door', 'd1d'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/monitoring-map',
-                                component: ComponentCreator('/docs/platform/biostar_x/monitoring-map', '512'),
+                                path: '/docs/en/platform/biostar_x/monitoring-event',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/monitoring-event', '585'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/monitoring-video',
-                                component: ComponentCreator('/docs/platform/biostar_x/monitoring-video', '0b1'),
+                                path: '/docs/en/platform/biostar_x/monitoring-map',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/monitoring-map', '49d'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/set-permission',
-                                component: ComponentCreator('/docs/platform/biostar_x/set-permission', '947'),
+                                path: '/docs/en/platform/biostar_x/monitoring-video',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/monitoring-video', 'eab'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/system-requirements',
-                                component: ComponentCreator('/docs/platform/biostar_x/system-requirements', '65e'),
+                                path: '/docs/en/platform/biostar_x/set-permission',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/set-permission', '2e6'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/toc',
-                                component: ComponentCreator('/docs/platform/biostar_x/toc', 'dfd'),
+                                path: '/docs/en/platform/biostar_x/system-requirements',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/system-requirements', '726'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/trace-user-access-log',
-                                component: ComponentCreator('/docs/platform/biostar_x/trace-user-access-log', 'e3a'),
+                                path: '/docs/en/platform/biostar_x/toc',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/toc', 'ebe'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/transfer-user-info-to-device',
-                                component: ComponentCreator('/docs/platform/biostar_x/transfer-user-info-to-device', 'fcd'),
+                                path: '/docs/en/platform/biostar_x/trace-user-access-log',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/trace-user-access-log', 'db0'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial', 'c20'),
+                                path: '/docs/en/platform/biostar_x/transfer-user-info-to-device',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/transfer-user-info-to-device', '8db'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial-add-device',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial-add-device', 'e96'),
+                                path: '/docs/en/platform/biostar_x/tutorial',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial', 'b0d'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial-custom-install',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial-custom-install', 'caa'),
+                                path: '/docs/en/platform/biostar_x/tutorial-add-device',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial-add-device', '3cb'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial-express-install',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial-express-install', '757'),
+                                path: '/docs/en/platform/biostar_x/tutorial-custom-install',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial-custom-install', 'd4e'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial-login',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial-login', '5c9'),
+                                path: '/docs/en/platform/biostar_x/tutorial-express-install',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial-express-install', '956'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/tutorial-register-license-key',
-                                component: ComponentCreator('/docs/platform/biostar_x/tutorial-register-license-key', 'dcf'),
+                                path: '/docs/en/platform/biostar_x/tutorial-login',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial-login', '1c2'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/ui-common',
-                                component: ComponentCreator('/docs/platform/biostar_x/ui-common', '666'),
+                                path: '/docs/en/platform/biostar_x/tutorial-register-license-key',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/tutorial-register-license-key', 'a9b'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/ui-launcher',
-                                component: ComponentCreator('/docs/platform/biostar_x/ui-launcher', 'f33'),
+                                path: '/docs/en/platform/biostar_x/ui-common',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/ui-common', '6b3'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/ui-overview',
-                                component: ComponentCreator('/docs/platform/biostar_x/ui-overview', '830'),
+                                path: '/docs/en/platform/biostar_x/ui-launcher',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/ui-launcher', '6b6'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/user-group-manage',
-                                component: ComponentCreator('/docs/platform/biostar_x/user-group-manage', 'eb2'),
+                                path: '/docs/en/platform/biostar_x/ui-overview',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/ui-overview', '4b2'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/user-manage',
-                                component: ComponentCreator('/docs/platform/biostar_x/user-manage', '934'),
+                                path: '/docs/en/platform/biostar_x/ui-user',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/ui-user', '2aa'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/user-template',
-                                component: ComponentCreator('/docs/platform/biostar_x/user-template', '431'),
+                                path: '/docs/en/platform/biostar_x/user-group-manage',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/user-group-manage', '9d2'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/view-user-by-access',
-                                component: ComponentCreator('/docs/platform/biostar_x/view-user-by-access', '6e0'),
+                                path: '/docs/en/platform/biostar_x/user-manage',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/user-manage', '283'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/platform/biostar_x/view-users',
-                                component: ComponentCreator('/docs/platform/biostar_x/view-users', '23d'),
+                                path: '/docs/en/platform/biostar_x/user-template',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/user-template', 'cdc'),
                                 exact: true,
                                 sidebar: "biostarx"
                             },
                             {
-                                path: '/docs/reference',
-                                component: ComponentCreator('/docs/reference', 'f40'),
+                                path: '/docs/en/platform/biostar_x/view-user-by-access',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/view-user-by-access', '81f'),
+                                exact: true,
+                                sidebar: "biostarx"
+                            },
+                            {
+                                path: '/docs/en/platform/biostar_x/view-users',
+                                component: ComponentCreator('/docs/en/platform/biostar_x/view-users', '819'),
+                                exact: true,
+                                sidebar: "biostarx"
+                            },
+                            {
+                                path: '/docs/en/reference',
+                                component: ComponentCreator('/docs/en/reference', '88f'),
                                 exact: true,
                                 sidebar: "reference"
                             },
                             {
-                                path: '/docs/reference/glossary',
-                                component: ComponentCreator('/docs/reference/glossary', '33e'),
+                                path: '/docs/en/reference/glossary',
+                                component: ComponentCreator('/docs/en/reference/glossary', 'eef'),
                                 exact: true,
                                 sidebar: "reference"
                             }
@@ -22782,9 +22804,9 @@ var react = __webpack_require__("7294");
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__("5150");
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/","mainDocId":"platform/biostar_x/index","docs":[{"id":"device/biostation_3/admin-menu","path":"/docs/device/biostation_3/admin-menu","sidebar":"bioStation3"},{"id":"device/biostation_3/appendices","path":"/docs/device/biostation_3/appendices","sidebar":"bioStation3"},{"id":"device/biostation_3/authentication","path":"/docs/device/biostation_3/authentication","sidebar":"bioStation3"},{"id":"device/biostation_3/event-log","path":"/docs/device/biostation_3/event-log","sidebar":"bioStation3"},{"id":"device/biostation_3/getting-started","path":"/docs/device/biostation_3/getting-started","sidebar":"bioStation3"},{"id":"device/biostation_3/index","path":"/docs/device/biostation_3/","sidebar":"bioStation3"},{"id":"device/biostation_3/installation","path":"/docs/device/biostation_3/installation","sidebar":"bioStation3"},{"id":"device/biostation_3/product-specifications","path":"/docs/device/biostation_3/product-specifications","sidebar":"bioStation3"},{"id":"device/biostation_3/regulatory-information","path":"/docs/device/biostation_3/regulatory-information","sidebar":"bioStation3"},{"id":"device/biostation_3/safety-instructions","path":"/docs/device/biostation_3/safety-instructions","sidebar":"bioStation3"},{"id":"device/biostation_3/settings","path":"/docs/device/biostation_3/settings","sidebar":"bioStation3"},{"id":"device/biostation_3/troubleshooting","path":"/docs/device/biostation_3/troubleshooting","sidebar":"bioStation3"},{"id":"device/biostation_3/user","path":"/docs/device/biostation_3/user","sidebar":"bioStation3"},{"id":"device/biostation_3/using-device","path":"/docs/device/biostation_3/using-device","sidebar":"bioStation3"},{"id":"device/facestation_f2/troubleshooting","path":"/docs/device/facestation_f2/troubleshooting"},{"id":"legal/disclaimers","path":"/docs/legal/disclaimers","sidebar":"legal"},{"id":"legal/eula","path":"/docs/legal/eula","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/add-user","path":"/docs/platform/biostar_x/add-user","sidebar":"biostarx"},{"id":"platform/biostar_x/add-user-basic-info","path":"/docs/platform/biostar_x/add-user-basic-info","sidebar":"biostarx"},{"id":"platform/biostar_x/bsx-licensing","path":"/docs/platform/biostar_x/bsx-licensing","sidebar":"biostarx"},{"id":"platform/biostar_x/change-db","path":"/docs/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/check-door-status","path":"/docs/platform/biostar_x/check-door-status","sidebar":"biostarx"},{"id":"platform/biostar_x/check-elevator-status","path":"/docs/platform/biostar_x/check-elevator-status","sidebar":"biostarx"},{"id":"platform/biostar_x/check-zone-status","path":"/docs/platform/biostar_x/check-zone-status","sidebar":"biostarx"},{"id":"platform/biostar_x/columnlayout","path":"/docs/platform/biostar_x/columnlayout","sidebar":"biostarx"},{"id":"platform/biostar_x/control-door","path":"/docs/platform/biostar_x/control-door","sidebar":"biostarx"},{"id":"platform/biostar_x/control-door-slave-device","path":"/docs/platform/biostar_x/control-door-slave-device","sidebar":"biostarx"},{"id":"platform/biostar_x/control-elevator","path":"/docs/platform/biostar_x/control-elevator","sidebar":"biostarx"},{"id":"platform/biostar_x/control-zone","path":"/docs/platform/biostar_x/control-zone","sidebar":"biostarx"},{"id":"platform/biostar_x/delete-user","path":"/docs/platform/biostar_x/delete-user","sidebar":"biostarx"},{"id":"platform/biostar_x/delete-user-info-from-device","path":"/docs/platform/biostar_x/delete-user-info-from-device","sidebar":"biostarx"},{"id":"platform/biostar_x/edit-user","path":"/docs/platform/biostar_x/edit-user","sidebar":"biostarx"},{"id":"platform/biostar_x/enroll-credential","path":"/docs/platform/biostar_x/enroll-credential","sidebar":"biostarx"},{"id":"platform/biostar_x/export-import-user-info","path":"/docs/platform/biostar_x/export-import-user-info","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-monitoring","path":"/docs/platform/biostar_x/how-to-guide-monitoring","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-user","path":"/docs/platform/biostar_x/how-to-guide-user","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/licensing","path":"/docs/platform/biostar_x/licensing","sidebar":"biostarx"},{"id":"platform/biostar_x/login-with-mfa","path":"/docs/platform/biostar_x/login-with-mfa","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/migration-visual-face","path":"/docs/platform/biostar_x/migration-visual-face","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-device","path":"/docs/platform/biostar_x/monitoring-device","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-door","path":"/docs/platform/biostar_x/monitoring-door","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-event","path":"/docs/platform/biostar_x/monitoring-event","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-map","path":"/docs/platform/biostar_x/monitoring-map","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-video","path":"/docs/platform/biostar_x/monitoring-video","sidebar":"biostarx"},{"id":"platform/biostar_x/set-permission","path":"/docs/platform/biostar_x/set-permission","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/toc","path":"/docs/platform/biostar_x/toc","sidebar":"biostarx"},{"id":"platform/biostar_x/trace-user-access-log","path":"/docs/platform/biostar_x/trace-user-access-log","sidebar":"biostarx"},{"id":"platform/biostar_x/transfer-user-info-to-device","path":"/docs/platform/biostar_x/transfer-user-info-to-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-common","path":"/docs/platform/biostar_x/ui-common","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-launcher","path":"/docs/platform/biostar_x/ui-launcher","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-overview","path":"/docs/platform/biostar_x/ui-overview","sidebar":"biostarx"},{"id":"platform/biostar_x/user-group-manage","path":"/docs/platform/biostar_x/user-group-manage","sidebar":"biostarx"},{"id":"platform/biostar_x/user-manage","path":"/docs/platform/biostar_x/user-manage","sidebar":"biostarx"},{"id":"platform/biostar_x/user-template","path":"/docs/platform/biostar_x/user-template","sidebar":"biostarx"},{"id":"platform/biostar_x/view-user-by-access","path":"/docs/platform/biostar_x/view-user-by-access","sidebar":"biostarx"},{"id":"platform/biostar_x/view-users","path":"/docs/platform/biostar_x/view-users","sidebar":"biostarx"},{"id":"reference/glossary","path":"/docs/reference/glossary","sidebar":"reference"},{"id":"reference/index","path":"/docs/reference/","sidebar":"reference"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/platform/biostar_x/","label":"개요"}},"legal":{"link":{"path":"/docs/legal/disclaimers","label":"legal/disclaimers"}},"reference":{"link":{"path":"/docs/reference/","label":"참조 문서"}},"bioStation3":{"link":{"path":"/docs/device/biostation_3/","label":"BioStation 3"}}}}],"breadcrumbs":true}}}')
+var globalData_namespaceObject = JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs/en/","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs/en/","mainDocId":"platform/biostar_x/index","docs":[{"id":"device/biostation_3/admin-menu","path":"/docs/en/device/biostation_3/admin-menu","sidebar":"bioStation3"},{"id":"device/biostation_3/appendices","path":"/docs/en/device/biostation_3/appendices","sidebar":"bioStation3"},{"id":"device/biostation_3/authentication","path":"/docs/en/device/biostation_3/authentication","sidebar":"bioStation3"},{"id":"device/biostation_3/event-log","path":"/docs/en/device/biostation_3/event-log","sidebar":"bioStation3"},{"id":"device/biostation_3/getting-started","path":"/docs/en/device/biostation_3/getting-started","sidebar":"bioStation3"},{"id":"device/biostation_3/index","path":"/docs/en/device/biostation_3/","sidebar":"bioStation3"},{"id":"device/biostation_3/installation","path":"/docs/en/device/biostation_3/installation","sidebar":"bioStation3"},{"id":"device/biostation_3/product-specifications","path":"/docs/en/device/biostation_3/product-specifications","sidebar":"bioStation3"},{"id":"device/biostation_3/regulatory-information","path":"/docs/en/device/biostation_3/regulatory-information","sidebar":"bioStation3"},{"id":"device/biostation_3/safety-instructions","path":"/docs/en/device/biostation_3/safety-instructions","sidebar":"bioStation3"},{"id":"device/biostation_3/settings","path":"/docs/en/device/biostation_3/settings","sidebar":"bioStation3"},{"id":"device/biostation_3/troubleshooting","path":"/docs/en/device/biostation_3/troubleshooting","sidebar":"bioStation3"},{"id":"device/biostation_3/user","path":"/docs/en/device/biostation_3/user","sidebar":"bioStation3"},{"id":"device/biostation_3/using-device","path":"/docs/en/device/biostation_3/using-device","sidebar":"bioStation3"},{"id":"device/facestation_f2/troubleshooting","path":"/docs/en/device/facestation_f2/troubleshooting"},{"id":"legal/disclaimers","path":"/docs/en/legal/disclaimers","sidebar":"legal"},{"id":"legal/eula","path":"/docs/en/legal/eula","sidebar":"legal"},{"id":"legal/open-source-licenses","path":"/docs/en/legal/open-source-licenses","sidebar":"legal"},{"id":"platform/biostar_x/add-user","path":"/docs/en/platform/biostar_x/add-user","sidebar":"biostarx"},{"id":"platform/biostar_x/add-user-basic-info","path":"/docs/en/platform/biostar_x/add-user-basic-info","sidebar":"biostarx"},{"id":"platform/biostar_x/bs2-to-bsx-migration","path":"/docs/en/platform/biostar_x/bs2-to-bsx-migration","sidebar":"biostarx"},{"id":"platform/biostar_x/bsx-licensing","path":"/docs/en/platform/biostar_x/bsx-licensing","sidebar":"biostarx"},{"id":"platform/biostar_x/change-db","path":"/docs/en/platform/biostar_x/change-db","sidebar":"biostarx"},{"id":"platform/biostar_x/change-port","path":"/docs/en/platform/biostar_x/change-port","sidebar":"biostarx"},{"id":"platform/biostar_x/check-door-status","path":"/docs/en/platform/biostar_x/check-door-status","sidebar":"biostarx"},{"id":"platform/biostar_x/check-elevator-status","path":"/docs/en/platform/biostar_x/check-elevator-status","sidebar":"biostarx"},{"id":"platform/biostar_x/check-zone-status","path":"/docs/en/platform/biostar_x/check-zone-status","sidebar":"biostarx"},{"id":"platform/biostar_x/columnlayout","path":"/docs/en/platform/biostar_x/columnlayout","sidebar":"biostarx"},{"id":"platform/biostar_x/control-door","path":"/docs/en/platform/biostar_x/control-door","sidebar":"biostarx"},{"id":"platform/biostar_x/control-door-slave-device","path":"/docs/en/platform/biostar_x/control-door-slave-device","sidebar":"biostarx"},{"id":"platform/biostar_x/control-elevator","path":"/docs/en/platform/biostar_x/control-elevator","sidebar":"biostarx"},{"id":"platform/biostar_x/control-zone","path":"/docs/en/platform/biostar_x/control-zone","sidebar":"biostarx"},{"id":"platform/biostar_x/delete-user","path":"/docs/en/platform/biostar_x/delete-user","sidebar":"biostarx"},{"id":"platform/biostar_x/delete-user-info-from-device","path":"/docs/en/platform/biostar_x/delete-user-info-from-device","sidebar":"biostarx"},{"id":"platform/biostar_x/edit-user","path":"/docs/en/platform/biostar_x/edit-user","sidebar":"biostarx"},{"id":"platform/biostar_x/enroll-credential","path":"/docs/en/platform/biostar_x/enroll-credential","sidebar":"biostarx"},{"id":"platform/biostar_x/export-import-user-info","path":"/docs/en/platform/biostar_x/export-import-user-info","sidebar":"biostarx"},{"id":"platform/biostar_x/getting-started","path":"/docs/en/platform/biostar_x/getting-started","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-monitoring","path":"/docs/en/platform/biostar_x/how-to-guide-monitoring","sidebar":"biostarx"},{"id":"platform/biostar_x/how-to-guide-user","path":"/docs/en/platform/biostar_x/how-to-guide-user","sidebar":"biostarx"},{"id":"platform/biostar_x/index","path":"/docs/en/platform/biostar_x/","sidebar":"biostarx"},{"id":"platform/biostar_x/licensing","path":"/docs/en/platform/biostar_x/licensing","sidebar":"biostarx"},{"id":"platform/biostar_x/login-with-mfa","path":"/docs/en/platform/biostar_x/login-with-mfa","sidebar":"biostarx"},{"id":"platform/biostar_x/manage-server","path":"/docs/en/platform/biostar_x/manage-server","sidebar":"biostarx"},{"id":"platform/biostar_x/migration-visual-face","path":"/docs/en/platform/biostar_x/migration-visual-face","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-device","path":"/docs/en/platform/biostar_x/monitoring-device","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-door","path":"/docs/en/platform/biostar_x/monitoring-door","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-event","path":"/docs/en/platform/biostar_x/monitoring-event","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-map","path":"/docs/en/platform/biostar_x/monitoring-map","sidebar":"biostarx"},{"id":"platform/biostar_x/monitoring-video","path":"/docs/en/platform/biostar_x/monitoring-video","sidebar":"biostarx"},{"id":"platform/biostar_x/set-permission","path":"/docs/en/platform/biostar_x/set-permission","sidebar":"biostarx"},{"id":"platform/biostar_x/system-requirements","path":"/docs/en/platform/biostar_x/system-requirements","sidebar":"biostarx"},{"id":"platform/biostar_x/toc","path":"/docs/en/platform/biostar_x/toc","sidebar":"biostarx"},{"id":"platform/biostar_x/trace-user-access-log","path":"/docs/en/platform/biostar_x/trace-user-access-log","sidebar":"biostarx"},{"id":"platform/biostar_x/transfer-user-info-to-device","path":"/docs/en/platform/biostar_x/transfer-user-info-to-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial","path":"/docs/en/platform/biostar_x/tutorial","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-add-device","path":"/docs/en/platform/biostar_x/tutorial-add-device","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-custom-install","path":"/docs/en/platform/biostar_x/tutorial-custom-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-express-install","path":"/docs/en/platform/biostar_x/tutorial-express-install","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-login","path":"/docs/en/platform/biostar_x/tutorial-login","sidebar":"biostarx"},{"id":"platform/biostar_x/tutorial-register-license-key","path":"/docs/en/platform/biostar_x/tutorial-register-license-key","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-common","path":"/docs/en/platform/biostar_x/ui-common","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-launcher","path":"/docs/en/platform/biostar_x/ui-launcher","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-overview","path":"/docs/en/platform/biostar_x/ui-overview","sidebar":"biostarx"},{"id":"platform/biostar_x/ui-user","path":"/docs/en/platform/biostar_x/ui-user","sidebar":"biostarx"},{"id":"platform/biostar_x/user-group-manage","path":"/docs/en/platform/biostar_x/user-group-manage","sidebar":"biostarx"},{"id":"platform/biostar_x/user-manage","path":"/docs/en/platform/biostar_x/user-manage","sidebar":"biostarx"},{"id":"platform/biostar_x/user-template","path":"/docs/en/platform/biostar_x/user-template","sidebar":"biostarx"},{"id":"platform/biostar_x/view-user-by-access","path":"/docs/en/platform/biostar_x/view-user-by-access","sidebar":"biostarx"},{"id":"platform/biostar_x/view-users","path":"/docs/en/platform/biostar_x/view-users","sidebar":"biostarx"},{"id":"reference/glossary","path":"/docs/en/reference/glossary","sidebar":"reference"},{"id":"reference/index","path":"/docs/en/reference/","sidebar":"reference"}],"draftIds":[],"sidebars":{"biostarx":{"link":{"path":"/docs/en/platform/biostar_x/","label":"Overview"}},"legal":{"link":{"path":"/docs/en/legal/disclaimers","label":"legal/disclaimers"}},"reference":{"link":{"path":"/docs/en/reference/","label":"참조 문서"}},"bioStation3":{"link":{"path":"/docs/en/device/biostation_3/","label":"BioStation 3"}}}}],"breadcrumbs":true}}}')
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
-var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"ko","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
+var i18n_namespaceObject = JSON.parse('{"defaultLocale":"ko","locales":["ko","en"],"path":"i18n","currentLocale":"en","localeConfigs":{"ko":{"label":"한국어","direction":"ltr","htmlLang":"ko-KR","calendar":"gregory","path":"ko"},"en":{"label":"English","direction":"ltr","htmlLang":"en-US","calendar":"gregory","path":"en"}}}')
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
 var codeTranslations = __webpack_require__("2627");
 ;// CONCATENATED MODULE: ./.docusaurus/site-metadata.json
@@ -29936,10 +29958,10 @@ __webpack_require__.d(__webpack_exports__, {
  */
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   "title": "Suprema Docs",
-  "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
+  "tagline": "Check out all of Suprema's products and BioStar related information here.",
   "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
   "url": "https://supremainc.github.io",
-  "baseUrl": "/docs/",
+  "baseUrl": "/docs/en/",
   "noIndex": false,
   "future": {
     "experimental_faster": {
@@ -30045,7 +30067,7 @@ __webpack_require__.d(__webpack_exports__, {
     "image": "img/sns_img02.jpg",
     "announcementBar": {
       "id": "annoucementbar",
-      "content": "<b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 다음 링크에서 확인하세요.</b>",
+      "content": "<b>This document contains content that has not yet been released to the service version. For documentation on officially released features, please see the following links.</b>",
       "backgroundColor": "#FFB27D",
       "textColor": "#091E42",
       "isCloseable": false
@@ -34714,12 +34736,12 @@ function getBackgroundColor(zoom) {
 }),
 "2627": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"theme.AnnouncementBar.closeButtonAriaLabel":"닫기","theme.BackToTopButton.buttonAriaLabel":"맨 위로 스크롤하기","theme.CodeBlock.copied":"복사했습니다","theme.CodeBlock.copy":"복사","theme.CodeBlock.copyButtonAriaLabel":"클립보드에 코드 복사","theme.CodeBlock.wordWrapToggle":"줄 바꿈 전환","theme.DocSidebarItem.collapseCategoryAriaLabel":"사이드바 분류 \'{label}\' 접기","theme.DocSidebarItem.expandCategoryAriaLabel":"사이드바 분류 \'{label}\' 펼치기","theme.ErrorPageContent.title":"페이지에 오류가 발생하였습니다.","theme.ErrorPageContent.tryAgain":"다시 시도해 보세요","theme.NavBar.navAriaLabel":"메인","theme.NotFound.p1":"원하는 페이지를 찾을 수 없습니다.","theme.NotFound.p2":"사이트 관리자에게 링크가 깨진 것을 알려주세요.","theme.NotFound.title":"페이지를 찾을 수 없습니다.","theme.TOCCollapsible.toggleButtonLabel":"이 페이지에서","theme.admonition.caution":"주의","theme.admonition.danger":"위험","theme.admonition.info":"알아두기","theme.admonition.note":"노트","theme.admonition.tip":"팁","theme.admonition.warning":"경고","theme.blog.archive.description":"게시물 목록","theme.blog.archive.title":"게시물 목록","theme.blog.author.noPosts":"작성자가 아직 게시글을 작성하지 않았습니다.","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"저자","theme.blog.authorsList.viewAll":"모든 저자 보기","theme.blog.paginator.navAriaLabel":"블로그 게시물 목록 탐색","theme.blog.paginator.newerEntries":"이전 페이지","theme.blog.paginator.olderEntries":"다음 페이지","theme.blog.post.paginator.navAriaLabel":"블로그 게시물 탐색","theme.blog.post.paginator.newerPost":"이전 게시물","theme.blog.post.paginator.olderPost":"다음 게시물","theme.blog.post.plurals":"{count}개 게시물","theme.blog.post.readMore":"자세히 보기","theme.blog.post.readMoreLabel":"{title} 에 대해 더 읽어보기","theme.blog.post.readingTime.plurals":"약 {readingTime}분","theme.blog.sidebar.navAriaLabel":"최근 블로그 문서 둘러보기","theme.blog.tagTitle":"\\"{tagName}\\" 태그로 연결된 {nPosts}개의 게시물이 있습니다.","theme.colorToggle.ariaLabel":"어두운 모드와 밝은 모드 전환하기 (현재 {mode})","theme.colorToggle.ariaLabel.mode.dark":"어두운 모드","theme.colorToggle.ariaLabel.mode.light":"밝은 모드","theme.common.editThisPage":"페이지 편집","theme.common.headingLinkTitle":"{heading}에 대한 직접 링크","theme.common.skipToMainContent":"본문으로 건너뛰기","theme.contentVisibility.draftBanner.message":"이 페이지는 아직 작성 중입니다. 개발 환경에서만 보이며 프로덕션 빌드에서는 제외됩니다.","theme.contentVisibility.draftBanner.title":"작성 중인 페이지","theme.contentVisibility.unlistedBanner.message":"이 문서는 색인되지 않습니다. 검색 엔진이 이 문서를 색인하지 않으며, 주소를 알고 있는 사용자만 접근할 수 있습니다.","theme.contentVisibility.unlistedBanner.title":"색인되지 않은 문서","theme.docs.DocCard.categoryDescription.plurals":"{count} 문서","theme.docs.breadcrumbs.home":"홈","theme.docs.breadcrumbs.navAriaLabel":"탐색 경로","theme.docs.paginator.navAriaLabel":"문서 페이지","theme.docs.paginator.next":"다음","theme.docs.paginator.previous":"이전","theme.docs.sidebar.closeSidebarButtonAriaLabel":"사이드바 닫기","theme.docs.sidebar.collapseButtonAriaLabel":"사이드바 숨기기","theme.docs.sidebar.collapseButtonTitle":"사이드바 숨기기","theme.docs.sidebar.expandButtonAriaLabel":"사이드바 열기","theme.docs.sidebar.expandButtonTitle":"사이드바 열기","theme.docs.sidebar.navAriaLabel":"문서 사이드바","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"사이드바 펼치거나 접기","theme.docs.tagDocListPageTitle":"{nDocsTagged} \\"{tagName}\\" 태그에 분류되었습니다","theme.docs.tagDocListPageTitle.nDocsTagged":"{count}개 문서가","theme.docs.versionBadge.label":"버전: {versionLabel}","theme.docs.versions.latestVersionLinkLabel":"최신 버전","theme.docs.versions.latestVersionSuggestionLabel":"최신 문서는 {latestVersionLink} ({versionLabel})을 확인하세요.","theme.docs.versions.unmaintainedVersionLabel":"{siteTitle} {versionLabel} 문서는 더 이상 업데이트되지 않습니다.","theme.docs.versions.unreleasedVersionLabel":"{siteTitle} {versionLabel} 문서는 아직 정식 공개되지 않았습니다.","theme.lastUpdated.atDate":" {date}에","theme.lastUpdated.byUser":" {user}가","theme.lastUpdated.lastUpdatedAtBy":"최종 수정: {atDate}{byUser}","theme.navbar.mobileLanguageDropdown.label":"언어","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← 메인 메뉴로 돌아가기","theme.navbar.mobileVersionsDropdown.label":"버전","theme.tags.tagsListLabel":"태그:","theme.tags.tagsPageLink":"모든 태그 보기","theme.tags.tagsPageTitle":"태그","theme.SearchBar.label":"검색","theme.SearchBar.seeAll":"{count}개의 결과 확인하기","theme.SearchModal.errorScreen.helpText":"인터넷 연결을 다시 확인하시기 바랍니다.","theme.SearchModal.errorScreen.titleText":"결과를 불러올 수 없음","theme.SearchModal.footer.closeKeyAriaLabel":"Esc 키","theme.SearchModal.footer.closeText":"로 종료","theme.SearchModal.footer.navigateDownKeyAriaLabel":"화살표 아래 키","theme.SearchModal.footer.navigateText":"로 이동","theme.SearchModal.footer.navigateUpKeyAriaLabel":"화살표 위 키","theme.SearchModal.footer.searchByText":"검색 제공","theme.SearchModal.footer.selectKeyAriaLabel":"엔터 키","theme.SearchModal.footer.selectText":"로 선택","theme.SearchModal.noResultsScreen.noResultsText":"검색 결과 없음","theme.SearchModal.noResultsScreen.reportMissingResultsLinkText":"알려주시기 바랍니다.","theme.SearchModal.noResultsScreen.reportMissingResultsText":"검색 결과가 없는 것이 오류라고 생각되십니까?","theme.SearchModal.noResultsScreen.suggestedQueryText":"다른 추천 검색어","theme.SearchModal.placeholder":"문서 검색","theme.SearchModal.searchBox.cancelButtonText":"취소","theme.SearchModal.searchBox.resetButtonTitle":"검색어 초기화","theme.SearchModal.startScreen.favoriteSearchesTitle":"즐겨찾기","theme.SearchModal.startScreen.noRecentSearchesText":"최근 검색어 없음","theme.SearchModal.startScreen.recentSearchesTitle":"최근","theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle":"이 검색어를 즐겨찾기에서 삭제","theme.SearchModal.startScreen.removeRecentSearchButtonTitle":"이 검색어를 최근 검색어에서 삭제","theme.SearchModal.startScreen.saveRecentSearchButtonTitle":"이 검색어를 저장","theme.SearchPage.algoliaLabel":"Algolia로 검색","theme.SearchPage.documentsFound.plurals":"{count}개의 문서를 찾았습니다.","theme.SearchPage.emptyResultsTitle":"문서를 검색합니다.","theme.SearchPage.existingResultsTitle":"\\"{query}\\" 검색 결과","theme.SearchPage.fetchingNewResults":"새로운 검색 결과를 불러오는 중입니다.","theme.SearchPage.inputLabel":"검색","theme.SearchPage.inputPlaceholder":"검색어를 입력하세요.","theme.SearchPage.noResultsText":"검색 결과가 없습니다.","externalLinks.BioEntryW3.desc":"Simple, Durable, Secure AI 기반 얼굴인증 디바이스","externalLinks.FaceStationF2.desc":"퓨전 얼굴인증 장치","externalLinks.XStation2.desc":"차세대 모바일 출입인증 단말기","externalLinks.BioentryP2.desc":"콤팩트 지문인식 단말기","externalLinks.XPass2.desc":"옥외형 콤팩트 RFID 리더","externalLinks.XPassS2.desc":"IP RFID 출입통제 단말기","externalLinks.Aiirfobpatch.desc":"모바일 출입카드 변환장치","externalLinks.CoreStation.desc":"지능형 바이오인식 컨트롤러","externalLinks.CoreStationEnclosure.desc":"CoreStation 전용 함체","theme.docs.nextStep":"다음 단계","theme.docs.overview.viewContent":"둘러보기","theme.docs.glossary.all":"전체","theme.figureCaption.desc":"위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.","theme.cover.address":"<b>(주) 슈프리마</b><br/>13554 경기도 성남시 분당구 정자일로 248 파크뷰타워 17층<br/>영업 문의 1522 4507(1번) korea@suprema.co.kr | 고객지원 1522 4507(2번) cs@suprema.co.kr","theme.cover.copyright":"© 2025 Suprema Inc. 이 문서에 표기된 슈프리마, 제품명, 번호는 슈프리마의 등록 상표입니다. 모든 회사명과 제품명은 해당 회사의 상표이거나 등록 상표입니다. 제품 외관, 제조 상태 및 사양은 사전 통지 없이 변경될 수 있습니다.","theme.cover.qrCodetext":"For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp","index.search":"검색","windows.key.start":"시작","biostar2.install.ok":"OK","biostar2.install.agree":"동의","biostar2.install.next":"다음","biostar2.install.expressInstall":"간편 설치","biostar2.install.customInstall":"사용자 정의 설치","biostar2.install.btnInstall":"설치","biostar2.install.complete":"완료","specs.common.supported":"지원","specs.common.Notsupported":"미지원","specs.credentials":"크리덴셜","specs.credentials.biometrics":"바이오 인식","specs.credentials.biometrics.face":"얼굴","specs.credentials.rfcard":"RF 카드","specs.credentials.rf_distance":"RF 인식 거리","specs.credentials.mobile":"모바일","specs.credentials.keypad":"스크램블 키패드(PIN)","specs.credentials.qr_barcode":"QR/바코드","specs.credentials.biometrics.face.auth_distance":"인증 거리","specs.credentials.biometrics.face.auth_height":"인증 높이","specs.credentials.biometrics.face.matching_speed":"매칭 속도","specs.credentials.biometrics.face.live_face_detection":"위조 얼굴 검출","specs.general":"일반","specs.general.cpu":"CPU","specs.general.memory":"메모리","specs.general.crypto_chip":"크립토 칩","specs.general.lcd_type":"디스플레이","specs.general.lcd_resolution":"화면 해상도","specs.general.sound":"소리","specs.general.operating_temp":"동작 온도","specs.general.storage_temp":"보관 온도","specs.general.operating_humidity":"동작 습도","specs.general.storage_humidity":"보관 습도","specs.general.camera":"카메라","specs.general.ip_rating":"IP 등급","specs.general.ik_rating":"IK 등급","specs.general.certifications":"인증","specs.storage":"저장 용량","specs.storage.max_users":"최대 사용자 수","specs.storage.max_credentials_1n":"최대 크리덴셜 수 (1:N)","specs.storage.max_credentials_1on1":"최대 크리덴셜 수 (1:1)","specs.storage.max_text_logs":"최대 텍스트 로그 수","specs.storage.max_image_logs":"최대 이미지 로그 수","specs.interface":"인터페이스","specs.interface.ethernet":"이더넷","specs.interface.wifi":"Wi-Fi","specs.interface.rs485":"RS-485","specs.interface.rs485_protocol":"RS-485 통신 프로토콜","specs.interface.wiegand":"Wiegand","specs.interface.ttl_input":"TTL 입력","specs.interface.relay":"릴레이","specs.interface.poe":"PoE+","specs.interface.interphone":"인터폰","specs.interface.rtsp":"RTSP","specs.interface.usb":"USB","specs.interface.usb_ext":"USB 확장 포트","specs.interface.tamper":"템퍼","specs.power":"전기 규격","specs.power.power":"전원","specs.power.switch_input_vih":"스위치 입력 VIH","specs.power.switch_input_vil":"스위치 입력 VIL","specs.power.switch_pullup":"스위치 풀업 저항","specs.power.wiegand_voh":"Wiegand 출력 VOH","specs.power.wiegand_vol":"Wiegand 출력 VOL","specs.power.wiegand_pullup":"Wiegnad 출력 풀업 저항","specs.power.relay":"릴레이","specs.size_wieght":"크기 및 무게","specs.size_wieght.size":"크기","specs.size_wieght.weight":"무게","specs.size_wieght.device":"장치","specs.size_wieght.bracket":"브라켓","specs.size_wieght.bracket.weight_include":"(와셔 및 볼트 포함)"}')
+module.exports = JSON.parse('{"externalLinks.BioEntryW3.desc":"Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device","externalLinks.FaceStationF2.desc":"Fusion Multimodal Terminal","externalLinks.XStation2.desc":"Versatile Intelligent Terminal","theme.docs.breadcrumbs.navAriaLabel":"Breadcrumbs","theme.admonition.caution":"Caution","theme.admonition.danger":"Danger","theme.admonition.info":"Info","theme.admonition.note":"Note","theme.admonition.tip":"Tip","theme.admonition.warning":"Warning","theme.docs.breadcrumbs.home":"Home","theme.ErrorPageContent.title":"This page crashed.","theme.BackToTopButton.buttonAriaLabel":"Scroll back to top","theme.blog.archive.title":"Archive","theme.blog.archive.description":"Archive","theme.blog.paginator.navAriaLabel":"Blog list page navigation","theme.blog.paginator.newerEntries":"Newer entries","theme.blog.paginator.olderEntries":"Older entries","theme.blog.post.paginator.navAriaLabel":"Blog post page navigation","theme.blog.post.paginator.newerPost":"Newer post","theme.blog.post.paginator.olderPost":"Older post","theme.tags.tagsPageLink":"View all tags","theme.colorToggle.ariaLabel":"Switch between dark and light mode (currently {mode})","theme.colorToggle.ariaLabel.mode.dark":"Dark mode","theme.colorToggle.ariaLabel.mode.light":"Light mode","theme.docs.DocCard.categoryDescription.plurals":"1 article|{count} articles","theme.docs.paginator.navAriaLabel":"Docs pages","theme.docs.paginator.previous":"Previous","theme.docs.paginator.next":"Next","theme.docs.tagDocListPageTitle.nDocsTagged":"One doc tagged|{count} docs tagged","theme.docs.tagDocListPageTitle":"{nDocsTagged} with \\"{tagName}\\"","theme.docs.versionBadge.label":"Version: {versionLabel}","theme.docs.versions.unreleasedVersionLabel":"This is unreleased documentation for {siteTitle} {versionLabel} version.","theme.docs.versions.unmaintainedVersionLabel":"This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.","theme.docs.versions.latestVersionSuggestionLabel":"For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).","theme.docs.versions.latestVersionLinkLabel":"latest version","theme.common.editThisPage":"Edit this page","theme.common.headingLinkTitle":"Direct link to {heading}","theme.lastUpdated.atDate":" on {date}","theme.lastUpdated.byUser":" by {user}","theme.lastUpdated.lastUpdatedAtBy":"Last updated{atDate}{byUser}","theme.navbar.mobileVersionsDropdown.label":"Versions","theme.NotFound.title":"Page Not Found","theme.tags.tagsListLabel":"Tags:","theme.AnnouncementBar.closeButtonAriaLabel":"Close","theme.blog.sidebar.navAriaLabel":"Blog recent posts navigation","theme.CodeBlock.copied":"Copied","theme.CodeBlock.copyButtonAriaLabel":"Copy code to clipboard","theme.CodeBlock.copy":"Copy","theme.CodeBlock.wordWrapToggle":"Toggle word wrap","theme.DocSidebarItem.expandCategoryAriaLabel":"Expand sidebar category \'{label}\'","theme.DocSidebarItem.collapseCategoryAriaLabel":"Collapse sidebar category \'{label}\'","theme.NavBar.navAriaLabel":"Main","theme.navbar.mobileLanguageDropdown.label":"Languages","theme.NotFound.p1":"We could not find what you were looking for.","theme.NotFound.p2":"Please contact the owner of the site that linked you to the original URL and let them know their link is broken.","theme.TOCCollapsible.toggleButtonLabel":"On this page","theme.blog.post.readMore":"Read more","theme.blog.post.readMoreLabel":"Read more about {title}","theme.blog.post.readingTime.plurals":"One min read|{readingTime} min read","theme.docs.sidebar.collapseButtonTitle":"Collapse sidebar","theme.docs.sidebar.collapseButtonAriaLabel":"Collapse sidebar","theme.docs.sidebar.navAriaLabel":"Docs sidebar","theme.docs.sidebar.closeSidebarButtonAriaLabel":"Close navigation bar","theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel":"← Back to main men","theme.docs.sidebar.toggleSidebarButtonAriaLabel":"Toggle navigation bar","theme.docs.sidebar.expandButtonTitle":"Expand sidebar","theme.docs.sidebar.expandButtonAriaLabel":"Expand sidebar","theme.blog.post.plurals":"One post|{count} posts","theme.blog.tagTitle":"{nPosts} tagged with \\"{tagName}\\"","theme.blog.author.pageTitle":"{authorName} - {nPosts}","theme.blog.authorsList.pageTitle":"Authors","theme.blog.authorsList.viewAll":"View all authors","theme.blog.author.noPosts":"This author has not written any posts yet.","theme.contentVisibility.unlistedBanner.title":"Unlisted page","theme.contentVisibility.unlistedBanner.message":"This page is unlisted. Search engines will not index it, and only users having a direct link can access it.","theme.contentVisibility.draftBanner.title":"Draft page","theme.contentVisibility.draftBanner.message":"This page is a draft. It will only be visible in dev and be excluded from the production build.","theme.ErrorPageContent.tryAgain":"Try again","theme.common.skipToMainContent":"Skip to main content","theme.tags.tagsPageTitle":"Tags","theme.docs.nextStep":"Next step","theme.docs.overview.viewContent":"Read more","theme.docs.glossary.all":"All","theme.figureCaption.desc":"The image above is an example screen and may differ from the actual screen.","theme.cover.address":"<b>Suprema Inc.</b><br/>17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA<br/>Tel: +82 31 783 4502 | Fax: +82 31 783 4503 | Inquiry: sales_sys@supremainc.com","theme.cover.copyright":"© 2025 Suprema Inc. Suprema and identifying product names and numbers herein are registered trade marks of Suprema, Inc.<br/>All non-Suprema brands and product names are trademarks or registered trademarks of their respective companies.<br/>Product appearance, build status and/or specifications are subject to change without notice.","theme.cover.qrCodetext":"For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp","index.search":"Search","windows.key.start":"Start","biostar2.install.ok":"OK","biostar2.install.agree":"I accept the agreement","biostar2.install.next":"Next","biostar2.install.expressInstall":"Express installation","biostar2.install.customInstall":"Custom installation","biostar2.install.btnInstall":"Install","biostar2.install.complete":"Finish","specs.common.supported":"Supported","specs.common.Notsupported":"Not supported","specs.credentials":"Credentials","specs.credentials.biometrics":"Biometric","specs.credentials.biometrics.face":"Face","specs.credentials.rfcard":"RF Card","specs.credentials.rf_distance":"RF Read Range","specs.credentials.mobile":"Mobile","specs.credentials.keypad":"Scramble Keypad (PIN)","specs.credentials.qr_barcode":"QR/Barcode","specs.credentials.biometrics.face.auth_distance":"Authentication Distance","specs.credentials.biometrics.face.auth_height":"Authentication Height","specs.credentials.biometrics.face.matching_speed":"Matching Speed","specs.credentials.biometrics.face.live_face_detection":"Live Face Detection","specs.general":"General","specs.general.cpu":"CPU","specs.general.memory":"Memory","specs.general.crypto_chip":"Crypto Chip","specs.general.lcd_type":"Display","specs.general.lcd_resolution":"Display Resolution","specs.general.sound":"Sound","specs.general.operating_temp":"Operating Temperature","specs.general.storage_temp":"Storage Temperature","specs.general.operating_humidity":"Operating Humidity","specs.general.storage_humidity":"Storage Humidity","specs.general.camera":"Camera","specs.general.ip_rating":"IP Rating","specs.general.ik_rating":"IK Rating","specs.general.certifications":"Certifications","specs.storage":"Capacity","specs.storage.max_users":"Max. User","specs.storage.max_credentials_1n":"Max. Credentials (1:N)","specs.storage.max_credentials_1on1":"Max. Credentials (1:1)","specs.storage.max_text_logs":"Max. Text logs","specs.storage.max_image_logs":"Max. Image logs","specs.interface":"Interfaces","specs.interface.ethernet":"Ethernet","specs.interface.wifi":"Wi-Fi","specs.interface.rs485":"RS-485","specs.interface.rs485_protocol":"RS-485 Communication Protocol","specs.interface.wiegand":"Wiegand","specs.interface.ttl_input":"TTL Input","specs.interface.relay":"Relay","specs.interface.poe":"PoE+","specs.interface.interphone":"Intercom","specs.interface.rtsp":"RTSP","specs.interface.usb":"USB","specs.interface.usb_ext":"USB Expansion Port","specs.interface.tamper":"Tamper","specs.power":"Electrical","specs.power.power":"Power","specs.power.switch_input_vih":"Switch Input VIH","specs.power.switch_input_vil":"Switch Input VIL","specs.power.switch_pullup":"Switch Pull-up Resistance","specs.power.wiegand_voh":"Wiegand Output VOH","specs.power.wiegand_vol":"Wiegand Output VOL","specs.power.wiegand_pullup":"Wiegnad Output Pull-up Resistance","specs.power.relay":"Relay","specs.size_weight":"Dimensions and Weight","specs.size_weight.size":"Dimensions","specs.size_weight.weight":"Weight","specs.size_weight.device":"Device","specs.size_weight.bracket":"Bracket","specs.size_weight.bracket.weight_include":"(Including washers and bolts)"}')
 
 }),
 "7138": (function (module) {
 "use strict";
-module.exports = JSON.parse('{"/docs/back-bb1":{"__comp":"5308dfd1","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/cover-9bd":{"__comp":"61010e6f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/cover/biostarx-964":{"__comp":"7220320d","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/search-320":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/-6fa":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/-5f6":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/-521":{"__comp":"a7bd4aaa","__props":"11b43341"},"/docs/-567":{"__comp":"a94703ab"},"/docs/device/biostation_3-a24":{"__comp":"17896441","content":"a4da9737"},"/docs/device/biostation_3/admin-menu-a17":{"__comp":"17896441","content":"cf2b2cbf"},"/docs/device/biostation_3/appendices-ce0":{"__comp":"17896441","content":"2e9131db"},"/docs/device/biostation_3/authentication-c8c":{"__comp":"17896441","content":"4bd16f22"},"/docs/device/biostation_3/event-log-ef4":{"__comp":"17896441","content":"7c67f0f1"},"/docs/device/biostation_3/getting-started-103":{"__comp":"17896441","content":"b3d5d852"},"/docs/device/biostation_3/installation-fab":{"__comp":"17896441","content":"7c9a920f"},"/docs/device/biostation_3/product-specifications-623":{"__comp":"17896441","content":"fbed35e5"},"/docs/device/biostation_3/regulatory-information-605":{"__comp":"17896441","content":"0d9570ff"},"/docs/device/biostation_3/safety-instructions-69c":{"__comp":"17896441","content":"bdf0d2cd"},"/docs/device/biostation_3/settings-e86":{"__comp":"17896441","content":"ea6a3dd4"},"/docs/device/biostation_3/troubleshooting-b95":{"__comp":"17896441","content":"2ded3a67"},"/docs/device/biostation_3/user-425":{"__comp":"17896441","content":"c7176291"},"/docs/device/biostation_3/using-device-da1":{"__comp":"17896441","content":"9cbf3402"},"/docs/device/facestation_f2/troubleshooting-591":{"__comp":"17896441","content":"9dfd9826"},"/docs/legal/disclaimers-d3b":{"__comp":"17896441","content":"1814c8c4"},"/docs/legal/eula-56a":{"__comp":"17896441","content":"6419676a"},"/docs/legal/open-source-licenses-127":{"__comp":"17896441","content":"f813c43e"},"/docs/platform/biostar_x-c86":{"__comp":"17896441","content":"e2ca401e"},"/docs/platform/biostar_x/add-user-c7c":{"__comp":"17896441","content":"5707466f"},"/docs/platform/biostar_x/add-user-basic-info-268":{"__comp":"17896441","content":"bd4e1fda"},"/docs/platform/biostar_x/bsx-licensing-d33":{"__comp":"17896441","content":"b16203ae"},"/docs/platform/biostar_x/change-db-c3d":{"__comp":"17896441","content":"1371bad0"},"/docs/platform/biostar_x/change-port-48d":{"__comp":"17896441","content":"1fa8891f"},"/docs/platform/biostar_x/check-door-status-cba":{"__comp":"17896441","content":"7618520e"},"/docs/platform/biostar_x/check-elevator-status-c4e":{"__comp":"17896441","content":"b3bb679c"},"/docs/platform/biostar_x/check-zone-status-169":{"__comp":"17896441","content":"197ee92b"},"/docs/platform/biostar_x/columnlayout-b34":{"__comp":"17896441","content":"4098788a"},"/docs/platform/biostar_x/control-door-b04":{"__comp":"17896441","content":"000f552c"},"/docs/platform/biostar_x/control-door-slave-device-46c":{"__comp":"17896441","content":"adbb8a53"},"/docs/platform/biostar_x/control-elevator-b0f":{"__comp":"17896441","content":"cd2f9674"},"/docs/platform/biostar_x/control-zone-8a4":{"__comp":"17896441","content":"f5b6ab79"},"/docs/platform/biostar_x/delete-user-06b":{"__comp":"17896441","content":"46069a04"},"/docs/platform/biostar_x/delete-user-info-from-device-a94":{"__comp":"17896441","content":"1daa9002"},"/docs/platform/biostar_x/edit-user-d71":{"__comp":"17896441","content":"fa1bc1bc"},"/docs/platform/biostar_x/enroll-credential-c62":{"__comp":"17896441","content":"df1e2c8a"},"/docs/platform/biostar_x/export-import-user-info-c71":{"__comp":"17896441","content":"10bd23ad"},"/docs/platform/biostar_x/getting-started-5d4":{"__comp":"17896441","content":"b09a922e"},"/docs/platform/biostar_x/how-to-guide-monitoring-a6f":{"__comp":"17896441","content":"ce9149a0"},"/docs/platform/biostar_x/how-to-guide-user-d60":{"__comp":"17896441","content":"4922af3f"},"/docs/platform/biostar_x/licensing-0bc":{"__comp":"17896441","content":"74f848a3"},"/docs/platform/biostar_x/login-with-mfa-b7d":{"__comp":"17896441","content":"b7329038"},"/docs/platform/biostar_x/manage-server-2f5":{"__comp":"17896441","content":"425e46b9"},"/docs/platform/biostar_x/migration-visual-face-358":{"__comp":"17896441","content":"42b2a0a0"},"/docs/platform/biostar_x/monitoring-device-2da":{"__comp":"17896441","content":"3a5e0c69"},"/docs/platform/biostar_x/monitoring-door-95b":{"__comp":"17896441","content":"8d2c5feb"},"/docs/platform/biostar_x/monitoring-event-de1":{"__comp":"17896441","content":"33e75f9d"},"/docs/platform/biostar_x/monitoring-map-512":{"__comp":"17896441","content":"7e7678cf"},"/docs/platform/biostar_x/monitoring-video-0b1":{"__comp":"17896441","content":"89b13674"},"/docs/platform/biostar_x/set-permission-947":{"__comp":"17896441","content":"2bae4045"},"/docs/platform/biostar_x/system-requirements-65e":{"__comp":"17896441","content":"ff083161"},"/docs/platform/biostar_x/toc-dfd":{"__comp":"17896441","content":"88aab670"},"/docs/platform/biostar_x/trace-user-access-log-e3a":{"__comp":"17896441","content":"8f4f52dc"},"/docs/platform/biostar_x/transfer-user-info-to-device-fcd":{"__comp":"17896441","content":"52edf430"},"/docs/platform/biostar_x/tutorial-c20":{"__comp":"17896441","content":"b450d2c0"},"/docs/platform/biostar_x/tutorial-add-device-e96":{"__comp":"17896441","content":"1cc21783"},"/docs/platform/biostar_x/tutorial-custom-install-caa":{"__comp":"17896441","content":"dd4ec03e"},"/docs/platform/biostar_x/tutorial-express-install-757":{"__comp":"17896441","content":"36281e77"},"/docs/platform/biostar_x/tutorial-login-5c9":{"__comp":"17896441","content":"41752823"},"/docs/platform/biostar_x/tutorial-register-license-key-dcf":{"__comp":"17896441","content":"854cb7eb"},"/docs/platform/biostar_x/ui-common-666":{"__comp":"17896441","content":"f147e4bf"},"/docs/platform/biostar_x/ui-launcher-f33":{"__comp":"17896441","content":"a6086608"},"/docs/platform/biostar_x/ui-overview-830":{"__comp":"17896441","content":"743da213"},"/docs/platform/biostar_x/user-group-manage-eb2":{"__comp":"17896441","content":"e91ab3d2"},"/docs/platform/biostar_x/user-manage-934":{"__comp":"17896441","content":"34d03f68"},"/docs/platform/biostar_x/user-template-431":{"__comp":"17896441","content":"22f65bba"},"/docs/platform/biostar_x/view-user-by-access-6e0":{"__comp":"17896441","content":"dba3fedd"},"/docs/platform/biostar_x/view-users-23d":{"__comp":"17896441","content":"8faf8b74"},"/docs/reference-f40":{"__comp":"17896441","content":"747c2147"},"/docs/reference/glossary-33e":{"__comp":"17896441","content":"9ce35945"}}')
+module.exports = JSON.parse('{"/docs/en/back-55b":{"__comp":"5308dfd1","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/cover-d22":{"__comp":"61010e6f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/cover/biostarx-d75":{"__comp":"7220320d","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/search-d2a":{"__comp":"1a4e3797","__context":{"plugin":"c141421f"}},"/docs/en/-163":{"__comp":"c4f5d8e4","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs/en/-68a":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs/en/-c78":{"__comp":"a7bd4aaa","__props":"3c097e0f"},"/docs/en/-bfe":{"__comp":"a94703ab"},"/docs/en/device/biostation_3-298":{"__comp":"17896441","content":"e83f301f"},"/docs/en/device/biostation_3/admin-menu-5d4":{"__comp":"17896441","content":"fee74856"},"/docs/en/device/biostation_3/appendices-d7f":{"__comp":"17896441","content":"8a475c6c"},"/docs/en/device/biostation_3/authentication-a42":{"__comp":"17896441","content":"535d6173"},"/docs/en/device/biostation_3/event-log-bb3":{"__comp":"17896441","content":"d863df38"},"/docs/en/device/biostation_3/getting-started-c45":{"__comp":"17896441","content":"dd7390d3"},"/docs/en/device/biostation_3/installation-d31":{"__comp":"17896441","content":"77c718eb"},"/docs/en/device/biostation_3/product-specifications-cc2":{"__comp":"17896441","content":"36a81036"},"/docs/en/device/biostation_3/regulatory-information-f04":{"__comp":"17896441","content":"13938da3"},"/docs/en/device/biostation_3/safety-instructions-de5":{"__comp":"17896441","content":"b8789531"},"/docs/en/device/biostation_3/settings-725":{"__comp":"17896441","content":"e60ef5e8"},"/docs/en/device/biostation_3/troubleshooting-0af":{"__comp":"17896441","content":"3bd88a6f"},"/docs/en/device/biostation_3/user-27b":{"__comp":"17896441","content":"0fe9a59f"},"/docs/en/device/biostation_3/using-device-725":{"__comp":"17896441","content":"9ae8b2f6"},"/docs/en/device/facestation_f2/troubleshooting-865":{"__comp":"17896441","content":"9dfd9826"},"/docs/en/legal/disclaimers-865":{"__comp":"17896441","content":"3708f180"},"/docs/en/legal/eula-194":{"__comp":"17896441","content":"cee6f4d2"},"/docs/en/legal/open-source-licenses-286":{"__comp":"17896441","content":"e1d3e13e"},"/docs/en/platform/biostar_x-ea4":{"__comp":"17896441","content":"e2ca401e"},"/docs/en/platform/biostar_x/add-user-6b1":{"__comp":"17896441","content":"5707466f"},"/docs/en/platform/biostar_x/add-user-basic-info-9f4":{"__comp":"17896441","content":"bd4e1fda"},"/docs/en/platform/biostar_x/bs2-to-bsx-migration-b78":{"__comp":"17896441","content":"96591ccb"},"/docs/en/platform/biostar_x/bsx-licensing-5b7":{"__comp":"17896441","content":"b16203ae"},"/docs/en/platform/biostar_x/change-db-dc4":{"__comp":"17896441","content":"1371bad0"},"/docs/en/platform/biostar_x/change-port-aa5":{"__comp":"17896441","content":"1fa8891f"},"/docs/en/platform/biostar_x/check-door-status-e15":{"__comp":"17896441","content":"7618520e"},"/docs/en/platform/biostar_x/check-elevator-status-425":{"__comp":"17896441","content":"b3bb679c"},"/docs/en/platform/biostar_x/check-zone-status-fac":{"__comp":"17896441","content":"197ee92b"},"/docs/en/platform/biostar_x/columnlayout-c55":{"__comp":"17896441","content":"4098788a"},"/docs/en/platform/biostar_x/control-door-083":{"__comp":"17896441","content":"000f552c"},"/docs/en/platform/biostar_x/control-door-slave-device-7e8":{"__comp":"17896441","content":"adbb8a53"},"/docs/en/platform/biostar_x/control-elevator-60f":{"__comp":"17896441","content":"cd2f9674"},"/docs/en/platform/biostar_x/control-zone-4a1":{"__comp":"17896441","content":"f5b6ab79"},"/docs/en/platform/biostar_x/delete-user-275":{"__comp":"17896441","content":"46069a04"},"/docs/en/platform/biostar_x/delete-user-info-from-device-4e5":{"__comp":"17896441","content":"1daa9002"},"/docs/en/platform/biostar_x/edit-user-014":{"__comp":"17896441","content":"fa1bc1bc"},"/docs/en/platform/biostar_x/enroll-credential-ccb":{"__comp":"17896441","content":"df1e2c8a"},"/docs/en/platform/biostar_x/export-import-user-info-888":{"__comp":"17896441","content":"10bd23ad"},"/docs/en/platform/biostar_x/getting-started-0b2":{"__comp":"17896441","content":"b09a922e"},"/docs/en/platform/biostar_x/how-to-guide-monitoring-448":{"__comp":"17896441","content":"ce9149a0"},"/docs/en/platform/biostar_x/how-to-guide-user-7a6":{"__comp":"17896441","content":"4922af3f"},"/docs/en/platform/biostar_x/licensing-86e":{"__comp":"17896441","content":"74f848a3"},"/docs/en/platform/biostar_x/login-with-mfa-194":{"__comp":"17896441","content":"b7329038"},"/docs/en/platform/biostar_x/manage-server-3b9":{"__comp":"17896441","content":"425e46b9"},"/docs/en/platform/biostar_x/migration-visual-face-67a":{"__comp":"17896441","content":"42b2a0a0"},"/docs/en/platform/biostar_x/monitoring-device-7d8":{"__comp":"17896441","content":"3a5e0c69"},"/docs/en/platform/biostar_x/monitoring-door-d1d":{"__comp":"17896441","content":"8d2c5feb"},"/docs/en/platform/biostar_x/monitoring-event-585":{"__comp":"17896441","content":"33e75f9d"},"/docs/en/platform/biostar_x/monitoring-map-49d":{"__comp":"17896441","content":"7e7678cf"},"/docs/en/platform/biostar_x/monitoring-video-eab":{"__comp":"17896441","content":"89b13674"},"/docs/en/platform/biostar_x/set-permission-2e6":{"__comp":"17896441","content":"2bae4045"},"/docs/en/platform/biostar_x/system-requirements-726":{"__comp":"17896441","content":"ff083161"},"/docs/en/platform/biostar_x/toc-ebe":{"__comp":"17896441","content":"88aab670"},"/docs/en/platform/biostar_x/trace-user-access-log-db0":{"__comp":"17896441","content":"8f4f52dc"},"/docs/en/platform/biostar_x/transfer-user-info-to-device-8db":{"__comp":"17896441","content":"52edf430"},"/docs/en/platform/biostar_x/tutorial-b0d":{"__comp":"17896441","content":"b450d2c0"},"/docs/en/platform/biostar_x/tutorial-add-device-3cb":{"__comp":"17896441","content":"1cc21783"},"/docs/en/platform/biostar_x/tutorial-custom-install-d4e":{"__comp":"17896441","content":"dd4ec03e"},"/docs/en/platform/biostar_x/tutorial-express-install-956":{"__comp":"17896441","content":"36281e77"},"/docs/en/platform/biostar_x/tutorial-login-1c2":{"__comp":"17896441","content":"41752823"},"/docs/en/platform/biostar_x/tutorial-register-license-key-a9b":{"__comp":"17896441","content":"854cb7eb"},"/docs/en/platform/biostar_x/ui-common-6b3":{"__comp":"17896441","content":"f147e4bf"},"/docs/en/platform/biostar_x/ui-launcher-6b6":{"__comp":"17896441","content":"a6086608"},"/docs/en/platform/biostar_x/ui-overview-4b2":{"__comp":"17896441","content":"743da213"},"/docs/en/platform/biostar_x/ui-user-2aa":{"__comp":"17896441","content":"b4c15cff"},"/docs/en/platform/biostar_x/user-group-manage-9d2":{"__comp":"17896441","content":"e91ab3d2"},"/docs/en/platform/biostar_x/user-manage-283":{"__comp":"17896441","content":"34d03f68"},"/docs/en/platform/biostar_x/user-template-cdc":{"__comp":"17896441","content":"22f65bba"},"/docs/en/platform/biostar_x/view-user-by-access-81f":{"__comp":"17896441","content":"dba3fedd"},"/docs/en/platform/biostar_x/view-users-819":{"__comp":"17896441","content":"8faf8b74"},"/docs/en/reference-88f":{"__comp":"17896441","content":"747c2147"},"/docs/en/reference/glossary-eef":{"__comp":"17896441","content":"6a03d820"}}')
 
 }),
 

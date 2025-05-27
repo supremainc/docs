@@ -3026,6 +3026,8 @@ function SpecSectioin(param) {
                                                                         annot: subsubitem.annotation_value
                                                                     }) : typeof subsubitem.value === 'string' ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Description, {
                                                                         contents: subsubitem.value
+                                                                    }) : typeof subsubitem.value === 'object' ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Description, {
+                                                                        contents: subsubitem.value[currentLocale]
                                                                     }) : null
                                                                 ]
                                                             }, subsubitem.label_id || subsubitem.label))
@@ -3163,7 +3165,7 @@ function SpecSizeWieght(param) {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         (0,Translate/* translate */.I)({
-                                                            id: 'specs.size_wieght.size'
+                                                            id: 'specs.size_weight.size'
                                                         }),
                                                         ":\xa0",
                                                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
@@ -3193,7 +3195,7 @@ function SpecSizeWieght(param) {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         (0,Translate/* translate */.I)({
-                                                            id: 'specs.size_wieght.weight'
+                                                            id: 'specs.size_weight.weight'
                                                         }),
                                                         ":\xa0",
                                                         typeof item.weight === 'string' && /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -3203,7 +3205,7 @@ function SpecSizeWieght(param) {
                                                                     children: [
                                                                         "\xa0",
                                                                         (0,Translate/* translate */.I)({
-                                                                            id: 'specs.size_wieght.bracket.weight_include'
+                                                                            id: 'specs.size_weight.bracket.weight_include'
                                                                         })
                                                                     ]
                                                                 })

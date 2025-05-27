@@ -340,8 +340,8 @@ function _createMdxContent(props) {
         children: "The product may malfunction."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Do not store your product in very hot or very cold places. It is recommended to use your product at temperatures from -20 °C to 50 °C."
+      children: (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["Do not store your product in very hot or very cold places. It is recommended to use your product at temperatures from ", props.name, "."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
@@ -358,7 +358,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "If you need to sanitize the product, moisten the cloth or the wipe with a proper amount of rubbing alcohol and gently clean all exposed surfaces. Use rubbing alcohol (containing 70% Isopropyl alcohol) and a clean, non-abrasive cloth like lens wipe."
+          children: "If you need to sanitize the product, moisten the cloth or the wipe with a proper amount of rubbing alcohol and gently clean all exposed surfaces. Use rubbing alcohol (containing 70 % Isopropyl alcohol) and a clean, non-abrasive cloth like lens wipe."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -436,7 +436,9 @@ function safety_instructions_createMdxContent(props) {
       children: "Please read this safety instructions before you use the product to prevent injury to yourself and others and to prevent property damage."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "The term ‘product’ in this manual refers to the product and any items provided with the product."
-    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {})]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {
+      name: "-20 °C to 50 °C"
+    })]
   });
 }
 function safety_instructions_MDXContent(props = {}) {

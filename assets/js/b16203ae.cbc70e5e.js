@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-mdx-b16.json
-var site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing","permalink":"/docs/en/platform/biostar_x/bsx-licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/en/platform/biostar_x/licensing"}}')
+var site_docs_platform_biostar_x_bsx_licensing_mdx_b16_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing","permalink":"/docs/platform/biostar_x/bsx-licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing","title":"BioStar X 라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"},"next":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'라이선스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -271,17 +271,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "✅"
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "✅"
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "✅"
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
