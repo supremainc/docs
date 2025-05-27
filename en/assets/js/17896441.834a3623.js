@@ -842,7 +842,7 @@ function DocItemLayout(param) {
 
 
 }),
-"8576": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"9833": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -3346,6 +3346,20 @@ var en_faqs_namespaceObject = JSON.parse('[{"category":{"title":"Power","hid":"p
     });
 }
 
+;// CONCATENATED MODULE: ./src/components/Calloutlists/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Calloutlists_styles_module = ({"calloutLists":"calloutLists_Z4iK"});
+;// CONCATENATED MODULE: ./src/components/Calloutlists/index.js
+
+
+function Calloutlists(param) {
+    let { children } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: Calloutlists_styles_module.calloutLists,
+        children: children
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -4607,6 +4621,7 @@ const SvgIcoDescend = _ref => {
 
 
 
+
 // icon images svg
 
 
@@ -4690,6 +4705,7 @@ const SvgIcoDescend = _ref => {
     SpecSizeWieght: SpecSizeWieght,
     Anno: Anno,
     Faqs: Faqs,
+    Calloutlists: Calloutlists,
     IcSvTime: ico_serverTime,
     IcAccout: ico_account,
     IcHelp: ico_help,

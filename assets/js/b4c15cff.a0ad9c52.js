@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-user-mdx-b4c.json
-var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/en/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/en/platform/biostar_x/ui-launcher"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/en/platform/biostar_x/columnlayout"}}')
+var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/platform/biostar_x/columnlayout"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'UI'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -44,10 +44,15 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    li: "li",
+    ol: "ol",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Calloutlists, Cmd, Image} = _components;
+  if (!Calloutlists) _missingMdxReference("Calloutlists", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -60,6 +65,62 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-ui-user.png",
       className: "none"
+    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
+      children: (0,jsx_runtime.jsxs)(_components.ol, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "검색 입력 필드에 키워드를 입력하면 사이드 바에서 제공하는 메뉴를 검색하여 목록에 필터링할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사용자 관리 기능과 사용자를 빠르게 추가할 수 있는 템플릿 기능을 제공합니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "team.sidebar.user"
+                }), ": 사용자를 추가하고 크리덴셜을 추가할 수 있습니다. 여러 사용자의 크리덴셜을 한 번에 추가 및 관리할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "how-to-guide-user",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "team.sidebar.template"
+                }), ": 사용자 템플릿을 사용해 모든 신규 사용자에 대해 일관된 정보와 권한을 빠르고 정확하게 적용할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "user-template",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사용자 그룹 또는 출입 권한 그룹을 확인할 수 있습니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["사용자 그룹에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "user-group-manage",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["출입 권한 그룹에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "view-user-by-access",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "검색 입력 필드에 키워드를 입력하면 사용자 그룹 또는 출입 권한 그룹을 검색하여 목록에 필터링할 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      })
     })]
   });
 }

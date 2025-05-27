@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-examples-mdx-bc1.json
-var site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing-examples.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing-examples","permalink":"/docs/platform/biostar_x/bsx-licensing-examples","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing-examples.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration"}}')
+var site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing-examples.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing-examples","permalink":"/docs/en/platform/biostar_x/bsx-licensing-examples","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing-examples.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/en/platform/biostar_x/bs2-to-bsx-migration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'라이선스'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -128,18 +128,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "요구 사항"
           }), ":"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "직원과 방문객의 출입을 관리할 수 있는 신뢰성 있는 시스템"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "방문객 체크인 기록 기능"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "엘리베이터 제어, 고급 출입 통제(Advanced Access Control) ❌"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "직원과 방문객의 출입을 관리할 수 있는 신뢰성 있는 시스템"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "방문객 체크인 기록 기능"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "엘리베이터 제어, 고급 출입 통제(Advanced Access Control) ❌"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -428,18 +430,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "요구 사항"
           }), ":"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "근태 관리 시스템, API 연동 가능한 표준 기능, 얼굴 인식 지원"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "향후 400개 이상의 출입문 확장 가능성"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "별도의 관제 센터는 없으나 상주 경비원이 쉽게 제어할 수 있는 시스템"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "근태 관리 시스템, API 연동 가능한 표준 기능, 얼굴 인식 지원"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "향후 400개 이상의 출입문 확장 가능성"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "별도의 관제 센터는 없으나 상주 경비원이 쉽게 제어할 수 있는 시스템"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -793,18 +797,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "요구 사항"
           }), ":"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "고급 출입 통제(Advanced Access Control), 구역 기반 제한(예, R&D, 재무 등), 엘리베이터 및 그래픽 맵 통합"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Active Directory 동기화가 포함된 중앙 집중식 보안 관리"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "확장 가능한 근태 관리 및 방문자 추적 기능"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "고급 출입 통제(Advanced Access Control), 구역 기반 제한(예, R&D, 재무 등), 엘리베이터 및 그래픽 맵 통합"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "Active Directory 동기화가 포함된 중앙 집중식 보안 관리"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "확장 가능한 근태 관리 및 방문자 추적 기능"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -1231,18 +1237,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "요구 사항"
           }), ":"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "24시간 연중무휴 운영, 다중 사이트 제어가"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "구역 및 엘리베이터에 대한 고급 출입 통제 시스템(Access Control System), 비디오 및 외부 Active Directory 통합, 수천 명의 근태 관리 및 사용자 추적 기능을 지원하는 확장 가능한 이중화된 시스템"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "규정 준수 및 중앙 집중식 감사와 보고 기능 필수"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "24시간 연중무휴 운영, 다중 사이트 제어가"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "구역 및 엘리베이터에 대한 고급 출입 통제 시스템(Access Control System), 비디오 및 외부 Active Directory 통합, 수천 명의 근태 관리 및 사용자 추적 기능을 지원하는 확장 가능한 이중화된 시스템"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "규정 준수 및 중앙 집중식 감사와 보고 기능 필수"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
