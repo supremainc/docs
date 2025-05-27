@@ -1,0 +1,265 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-bs3.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioStation 3</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>드릴링 템플릿</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>연결 케이블</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>PVC 앵커 x2</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>브래킷 고정용 나사(별 모양)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+* 구성품은 설치 환경에 따라 달라질 수 있습니다.
+
+* 브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+:::
+
+## 각 부분의 명칭 및 기능
+
+<Productpart src='/img/device/name-function-each-part-bs3.svg' maxHeight={570} maxWidth={570}>
+<Callout width={160} position='left'>
+
+<Item top={33}>마이크</Item>
+
+<Item top={136}>디스플레이</Item>
+
+<Item top={236}>RF 카드 및 모바일<br/>출입카드 인식부</Item>
+
+<Item top={347}>스피커</Item>
+
+<Item top={396}>이더넷</Item>
+
+<Item top={428}>USB 확장 포트 (5핀)</Item>
+
+<Item top={468}>RS-485 (4핀)</Item>
+
+<Item top={491}>릴레이 (3핀)</Item>
+
+</Callout>
+<Callout width={160} position='right'>
+
+<Item top={10}>적외선 카메라</Item>
+
+<Item top={47}>비주얼 카메라</Item>
+
+<Item top={248}>LED 상태 표시등</Item>
+
+<Item top={411}>TTL 입력 (5핀)</Item>
+
+<Item top={434}>Wiegand 출력 (4핀)</Item>
+
+<Item top={454}>Wiegand 입력 (4핀)</Item>
+
+<Item top={477}>전원 (2핀)</Item>
+
+<Item top={539}>USB (Type-C) 메모리 슬롯</Item>
+
+</Callout>
+</Productpart>
+
+* **마이크**: 인터폰 연결 시 사용자의 음성을 전달합니다.
+
+    * 마이크를 가리거나 막으면 음성 전달이 원활하지 않을 수 있습니다.
+
+* **적외선 카메라**: 적외선 이미지를 촬영합니다.
+
+* **비주얼 카메라**: 실제 이미지를 촬영합니다.
+
+* **디스플레이**: 동작을 위한 UI를 제공합니다.
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+    * 초록색: 인증 성공
+
+    * 빨간색: 인증 실패
+
+    * 파란색: 정상 동작 상태
+
+    * 파란색/초록색 점멸:
+
+        * <Cmd>DHCP</Cmd>를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+        * <Cmd>슬레이브</Cmd> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+    * 빨간색/보라색 점멸: 장치 잠금 상태
+
+    * 노란색 점멸: 입력 대기 상태
+
+* **스피커**: 소리를 들을 수 있습니다.
+
+* **이더넷**: 이더넷 케이블을 연결합니다.
+
+* **TTL 입력 (5핀)**: TTL 입력 케이블을 연결합니다.
+
+* **USB 확장 포트 (5핀)**: 기타 액세서리 제품을 연결할 수 있습니다.
+
+* **Wiegand 출력 (4핀)**: Wiegand 출력 케이블을 연결합니다.
+
+* **Wiegand 입력 (4핀)**: Wiegand 입력 케이블을 연결합니다.
+
+* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+
+* **릴레이 (3핀)**: 릴레이 케이블을 연결합니다.
+
+* **전원 (2핀)**: 전원 케이블을 연결합니다.
+
+* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
+
+## 케이블 및 커넥터
+
+### 전원
+
+<Image src='/img/device/cable-power-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | PWR +VDC | 빨간색(흰띠) |
+| 2 | PWR GND | 검은색(흰띠) |
+
+</div>
+
+### 릴레이
+
+<Image src='/img/device/cable-relay-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | RLY NO | 흰색 |
+| 2 | RLY COM | 파란색 |
+| 3 | RLY NC | 주황색 |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | 485 TRXP | 파란색 |
+| 2 | 485 TRXN | 노란색 |
+| 3 | 485 GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### Input
+
+<Image src='/img/device/cable-ttl-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | INPUT0 | 빨간색 |
+| 2 | INPUT1 | 노란색 |
+| 3 | INPUT2 | 주황색 |
+| 4 | INPUT GND | 검은색 |
+| 5 | SH GND | 회색 |
+
+</div>
+
+### Wiegand 입력
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | WG D0 | 초록색 |
+| 2 | WG D1 | 흰색 |
+| 3 | WG GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### Wiegand 출력
+
+<Image src='/img/device/cable-wiegand-bs3.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | WG D0 | 초록색 |
+| 2 | WG D1 | 흰색 |
+| 3 | WG GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA />
