@@ -196,7 +196,7 @@ function DocSearch({externalUrlRegex, ...props}) {
     isOpen,
     onOpen: openModal,
     onClose: closeModal,
-    onKeyDown: handleInput, // 기존 onInput을 onKeyDown으로 변경
+    onInput: handleInput,
     searchButtonRef,
   });
   return (
@@ -223,6 +223,8 @@ function DocSearch({externalUrlRegex, ...props}) {
 
       {isOpen &&
         DocSearchModal &&
+        // TODO need to fix this React Compiler lint error
+        // eslint-disable-next-line react-compiler/react-compiler
         searchContainer.current &&
         createPortal(
           <DocSearchModal
@@ -242,6 +244,8 @@ function DocSearch({externalUrlRegex, ...props}) {
             searchParameters={searchParameters}
             ignoreCompositionEvents={true}
           />,
+          // TODO need to fix this React Compiler lint error
+          // eslint-disable-next-line react-compiler/react-compiler
           searchContainer.current,
         )}
     </>

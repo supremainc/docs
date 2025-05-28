@@ -2,10 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import SNS from '@site/src/components/Sns';
 import DropdownMenu from '@site/src/components/FamilySite';
+import {ThemeClassNames} from '@docusaurus/theme-common';
 export default function FooterLayout({style, logo, copyright}) {
   return (
     <footer
-      className={clsx('footer', {
+      className={clsx(ThemeClassNames.layout.footer.container, 'footer', {
         'footer--dark': style === 'dark',
       })}>
       <div className="container container-fluid">
