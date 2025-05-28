@@ -9,11 +9,11 @@ import Link from '@docusaurus/Link';
 import {useAllDocsData} from '@docusaurus/plugin-content-docs/client';
 import {
   HtmlClassNameProvider,
+  PageMetadata,
   useEvent,
   usePluralForm,
   useSearchQueryString,
 } from '@docusaurus/theme-common';
-import {useTitleFormatter} from '@docusaurus/theme-common/internal';
 import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
@@ -108,6 +108,24 @@ function SearchVersionSelectList({docsSearchVersionsHelpers}) {
     </div>
   );
 }
+function getSearchPageTitle(searchQuery) {
+  return searchQuery
+    ? translate(
+        {
+          id: 'theme.SearchPage.existingResultsTitle',
+          message: 'Search results for "{query}"',
+          description: 'The search page title for non-empty query',
+        },
+        {
+          query: searchQuery,
+        },
+      )
+    : translate({
+        id: 'theme.SearchPage.emptyResultsTitle',
+        message: 'Search the documentation',
+        description: 'The search page title for empty query',
+      });
+}
 function SearchPageContent() {
   const {
     i18n: {currentLocale},
@@ -119,6 +137,7 @@ function SearchPageContent() {
   const documentsFoundPlural = useDocumentsFoundPlural();
   const docsSearchVersionsHelpers = useDocsSearchVersionsHelpers();
   const [searchQuery, setSearchQuery] = useSearchQueryString();
+  const pageTitle = getSearchPageTitle(searchQuery);
   const initialSearchResultState = {
     items: [],
     query: null,
@@ -225,6 +244,8 @@ function SearchPageContent() {
   const observer = useRef(
     ExecutionEnvironment.canUseIntersectionObserver &&
       new IntersectionObserver(
+        // TODO need to fix this React Compiler lint error
+        // eslint-disable-next-line react-compiler/react-compiler
         (entries) => {
           const {
             isIntersecting,
@@ -238,23 +259,6 @@ function SearchPageContent() {
         {threshold: 1},
       ),
   );
-  const getTitle = () =>
-    searchQuery
-      ? translate(
-          {
-            id: 'theme.SearchPage.existingResultsTitle',
-            message: 'Search results for "{query}"',
-            description: 'The search page title for non-empty query',
-          },
-          {
-            query: searchQuery,
-          },
-        )
-      : translate({
-          id: 'theme.SearchPage.emptyResultsTitle',
-          message: 'Search the documentation',
-          description: 'The search page title for empty query',
-        });
   const makeSearch = useEvent((page = 0) => {
     if (contextualSearch) {
       algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default');
@@ -297,11 +301,11 @@ function SearchPageContent() {
     }
     makeSearch(searchResultState.lastPage);
   }, [makeSearch, searchResultState.lastPage]);
-
   return (
     <Layout>
+      <PageMetadata title={pageTitle} />
+
       <Head>
-        <title>{useTitleFormatter(getTitle())}</title>
         {/*
          We should not index search pages
           See https://github.com/facebook/docusaurus/pull/3233
@@ -310,7 +314,7 @@ function SearchPageContent() {
       </Head>
 
       <div className="container margin-vert--lg">
-        <Heading as="h1">{getTitle()}</Heading>
+        <Heading as="h1">{pageTitle}</Heading>
 
         <form className="row" onSubmit={(e) => e.preventDefault()}>
           <div
