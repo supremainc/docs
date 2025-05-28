@@ -78,6 +78,7 @@ function _createMdxContent(props) {
     admonition: "admonition",
     em: "em",
     h2: "h2",
+    li: "li",
     p: "p",
     strong: "strong",
     table: "table",
@@ -86,9 +87,12 @@ function _createMdxContent(props) {
     th: "th",
     thead: "thead",
     tr: "tr",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  };
+  }, {NextItem, NextStep} = _components;
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -108,13 +112,26 @@ function _createMdxContent(props) {
       }), "의 동등한 라이선스 등급을 비교하고, 차이점에 대한 이해를 통해 고객의 원활한 도입과 운영을 지원합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), "의 라이선스별 가격에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "#",
-          children: "다음 링크"
-        }), "를 참고하세요."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "bsx-licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 라이선스별 가격에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#",
+              children: "다음 링크"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "스타터starter-라이선스-비교",
@@ -1452,6 +1469,17 @@ function _createMdxContent(props) {
       children: ["엘리트 라이선스는 미션 크리티컬(mission-critical) 엔터프라이즈 환경을 위해 설계되었습니다. 높은 처리량, 방대한 사용자 기반 및 복잡한 액세스 제어가 필수입니다. 이 라이선스가 필요한 고객은 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 엘리트 라이선스를 통해 최신 기능과 확장성을 활용할 수 있습니다. 그러나 가격이 상당히 높기 때문에, 실제로 필요한 기능과 용량을 신중하게 검토해야 합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
+        to: "bsx-licensing-examples",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "의 라이선스 적용 사례를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar 2"
+          }), "와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다."]
+        })
+      })
     })]
   });
 }
@@ -1466,6 +1494,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 

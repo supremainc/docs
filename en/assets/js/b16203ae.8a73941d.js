@@ -38,7 +38,6 @@ const assets = {
 
 };
 
-/*라이선스 이름을 한글화하고, 각 문서별로 연결될 수 있도록 연관 문서 또는 다음 단계 추가할 것*/
 /*Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock*/
 
 
@@ -81,9 +80,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  };
+  }, {NextItem, NextStep} = _components;
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -763,6 +764,26 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
+      children: [(0,jsx_runtime.jsx)(NextItem, {
+        to: "bs2-to-bsx-migration",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar 2"
+          }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "로 마이그레이션하는 방법을 확인하세요."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "bsx-licensing-examples",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "의 라이선스 적용 사례를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar 2"
+          }), "와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다."]
+        })
+      })]
     })]
   });
 }
@@ -777,6 +798,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-bsx-licensing-examples-mdx-bc1.json
-var site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing-examples.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing-examples","permalink":"/docs/en/platform/biostar_x/bsx-licensing-examples","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing-examples.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/en/platform/biostar_x/bs2-to-bsx-migration"}}')
+var site_docs_platform_biostar_x_bsx_licensing_examples_mdx_bc1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","source":"@site/docs/platform/biostar_x/bsx-licensing-examples.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/bsx-licensing-examples","permalink":"/docs/platform/biostar_x/bsx-licensing-examples","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/bsx-licensing-examples.mdx","tags":[],"version":"current","frontMatter":{"id":"bsx-licensing-examples","title":"라이선스 적용 사례","description":"BioStar X의 라이선스 적용 사례를 통해 BioStar 2와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar 2에서 마이그레이션하기","permalink":"/docs/platform/biostar_x/bs2-to-bsx-migration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("5893");
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'라이선스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -91,6 +91,8 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    admonition: "admonition",
     em: "em",
     h2: "h2",
     h3: "h3",
@@ -110,6 +112,31 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "이 문서에서는 다양한 조직 환경에서 BioStar X 라이선스를 어떻게 적용할 수 있는지 대표적인 적용 사례를 안내합니다. 이를 통해 일반적인 시스템 구성 및 필요한 라이선스 구성 요소, 라이선스 모델의 유연성과 확장성을 이해할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "bsx-licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar 2"
+            }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "로의 마이그레이션에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "bs2-to-bsx-migration",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "소규모-조직entry-level-site",
       children: "소규모 조직(Entry-Level Site)"
