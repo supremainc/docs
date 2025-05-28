@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-edit-user-mdx-fa1.json
-var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"},"next":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"}}')
+var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/en/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"},"next":{"title":"사용자 삭제하기","permalink":"/docs/en/platform/biostar_x/delete-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -143,7 +143,7 @@ function _createMdxContent(props) {
       id: "user-information-collective-modification",
       children: "사용자 정보 일괄 수정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "한 개 이상의 사용자 정보를 일괄 수정할 수 있습니다. 이 기능은 다수의 사용자에게 동일한 출입 권한이나 그룹을 설정할 때 유용합니다."
+      children: "한 번에 여러 사용자의 정보나 출입 권한을 수정할 수 있습니다. 이 기능은 다수의 사용자에게 동일한 출입 권한이나 그룹을 설정할 때 유용합니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-view-users-mdx-8fa.json
-var site_docs_platform_biostar_x_view_users_mdx_8fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-users","title":"사용자 탐색하기","description":"원하는 사용자를 빠르게 검색하고 보는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-users.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-users","permalink":"/docs/en/platform/biostar_x/view-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-users.mdx","tags":[],"version":"current","frontMatter":{"id":"view-users","title":"사용자 탐색하기","description":"원하는 사용자를 빠르게 검색하고 보는 방법을 안내합니다.","keywords":["사용자","검색"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"},"next":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"}}')
+var site_docs_platform_biostar_x_view_users_mdx_8fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-users","title":"사용자 탐색하기","description":"원하는 사용자를 빠르게 검색하고 보는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-users.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-users","permalink":"/docs/platform/biostar_x/view-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-users.mdx","tags":[],"version":"current","frontMatter":{"id":"view-users","title":"사용자 탐색하기","description":"원하는 사용자를 빠르게 검색하고 보는 방법을 안내합니다.","keywords":["사용자","검색"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"},"next":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'검색'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -43,35 +43,35 @@ const assets = {
 
 const toc = [{
   "value": "사용자 목록 보기",
-  "id": "사용자-목록-보기",
+  "id": "view-user-list",
   "level": 2
 }, {
   "value": "보기 옵션 선택",
-  "id": "보기-옵션-선택",
+  "id": "select-view-options",
   "level": 2
 }, {
   "value": "사용자 목록 페이지 이동",
-  "id": "사용자-목록-페이지-이동",
+  "id": "user-list-page-moves",
   "level": 3
 }, {
   "value": "사용자 목록 표시 개수 변경",
-  "id": "사용자-목록-표시-개수-변경",
+  "id": "change-number-of-users-list-indications",
   "level": 3
 }, {
   "value": "사용자 목록 정렬",
-  "id": "사용자-목록-정렬",
+  "id": "user-list-alignment",
   "level": 3
 }, {
   "value": "사용자 검색",
-  "id": "사용자-검색",
+  "id": "user-search",
   "level": 2
 }, {
   "value": "일반 검색",
-  "id": "일반-검색",
+  "id": "general-search",
   "level": 3
 }, {
   "value": "고급 검색",
-  "id": "고급-검색",
+  "id": "advanced-search",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -111,7 +111,7 @@ function _createMdxContent(props) {
         sid: "shell.header.user"
       }), "를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-목록-보기",
+      id: "view-user-list",
       children: "사용자 목록 보기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 목록 페이지에서는 사용자의 기본 정보와 상태를 확인할 수 있으며, 각 사용자의 상세 정보를 열람하거나 수정할 수 있습니다."
@@ -153,15 +153,15 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "보기-옵션-선택",
+      id: "select-view-options",
       children: "보기 옵션 선택"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "화면 오른쪽 상단의 도구 버튼을 이용해 사용자 목록의 보기 옵션을 변경할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-목록-페이지-이동",
+      id: "user-list-page-moves",
       children: "사용자 목록 페이지 이동"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록에는 기본 10명의 사용자를 표시합니다. 페이지 상단의 버튼을 클릭해 다른 페이지로 이동할 수 있습니다."
+      children: "사용자 목록에는 기본 10명의 사용자를 표시합니다. 화면 상단의 버튼을 클릭해 다른 페이지로 이동할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-list-pagenation.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -189,14 +189,14 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-목록-표시-개수-변경",
+      id: "change-number-of-users-list-indications",
       children: "사용자 목록 표시 개수 변경"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 목록에 표시되는 사용자 수를 변경할 수 있습니다. 화면 오른쪽 상단의 목록 선택 상자에서 원하는 사용자 수를 선택하세요. 선택할 수 있는 옵션은 10명, 25명, 50명, 100명입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-list-select-row.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-목록-정렬",
+      id: "user-list-alignment",
       children: "사용자 목록 정렬"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자 목록의 정렬 기준을 변경할 수 있습니다. 목록 상단의 열 제목을 클릭하면 오름차순 또는 내림차순으로 정렬할 수 있습니다. 예를 들어, ", (0,jsx_runtime.jsx)(Cmd, {
@@ -205,7 +205,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-list-order.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-검색",
+      id: "user-search",
       children: "사용자 검색"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "특정 사용자를 검색하는 방법을 안내합니다. 사용자 목록 페이지에서 검색 기능을 사용하여 원하는 사용자를 빠르게 찾을 수 있습니다."
@@ -226,7 +226,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "일반-검색",
+      id: "general-search",
       children: "일반 검색"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자의 아이디, 이름을 기준으로 검색할 수 있습니다. 화면 상단의 검색 입력 필드에 원하는 키워드를 입력하고 ", (0,jsx_runtime.jsx)(Kbd, {
@@ -237,7 +237,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-search-result.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "고급-검색",
+      id: "advanced-search",
       children: "고급 검색"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자의 아이디, 이름, 이메일 주소, 전화번호 등을 특정해 검색할 수 있습니다."

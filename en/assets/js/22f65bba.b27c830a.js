@@ -56,22 +56,44 @@ const toc = [{
   "value": "템플릿 삭제",
   "id": "delete-template",
   "level": 2
+}, {
+  "value": "보기 옵션 선택",
+  "id": "select-view-options",
+  "level": 2
+}, {
+  "value": "템플릿 목록 페이지 이동",
+  "id": "template-list-page-moves",
+  "level": 3
+}, {
+  "value": "템플릿 목록 표시 개수 변경",
+  "id": "change-number-of-users-list-indications",
+  "level": 3
+}, {
+  "value": "템플릿 검색하기",
+  "id": "search-template",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcDown, Image} = _components;
+  }, {Cmd, IcBw, IcDown, IcFirst, IcFw, IcLast, Image, Kbd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcBw) _missingMdxReference("IcBw", true);
   if (!IcDown) _missingMdxReference("IcDown", true);
+  if (!IcFirst) _missingMdxReference("IcFirst", true);
+  if (!IcFw) _missingMdxReference("IcFw", true);
+  if (!IcLast) _missingMdxReference("IcLast", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Kbd) _missingMdxReference("Kbd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 템플릿은 조직 및 부서별 기본 정보를 표준화하여, 신규 사용자 등록 프로세스를 간소화하고 관리 효율을 높일 수 있습니다. 템플릿을 사용해 모든 신규 사용자에 대해 일관된 정보와 권한을 빠르고 정확하게 적용할 수 있습니다."
@@ -282,6 +304,68 @@ function _createMdxContent(props) {
           sid: "common.selectAll"
         }), " 버튼을 클릭하세요."]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "select-view-options",
+      children: "보기 옵션 선택"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "화면 오른쪽 상단의 도구 버튼을 이용해 사용자 템플릿 목록의 보기 옵션을 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["사용자 템플릿 목록에서 열(column)의 헤더 항목을 변경할 수 있습니다 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.menu.columnLayout"
+        }), " 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "columnlayout",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "template-list-page-moves",
+      children: "템플릿 목록 페이지 이동"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "템플릿 목록에는 기본 10개의 템플릿을 표시합니다. 화면 상단의 버튼을 클릭해 다른 페이지로 이동할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-users-template-list-pagenation.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(IcFirst, {}), " : 사용자 템플릿 목록의 첫 페이지로 이동합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(IcFw, {}), " : 사용자 템플릿 목록의 이전 페이지로 이동합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(IcBw, {}), " : 사용자 템플릿 목록의 다음 페이지로 이동합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(IcLast, {}), " : 사용자 템플릿 목록의 마지막 페이지로 이동합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["원하는 페이지로 이동하려면 숫자 입력 필드에 페이지 번호를 입력하고 ", (0,jsx_runtime.jsx)(Kbd, {
+            children: "Enter"
+          }), " 키를 누르세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "change-number-of-users-list-indications",
+      children: "템플릿 목록 표시 개수 변경"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "템플릿 목록에 표시되는 개수를 변경할 수 있습니다. 화면 오른쪽 상단의 목록 선택 상자에서 원하는 표시 개수를 선택하세요. 선택할 수 있는 옵션은 10, 25, 50, 100입니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-users-template-list-select-row.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "search-template",
+      children: "템플릿 검색하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["템플릿 목록에서 원하는 템플릿을 검색할 수 있습니다. 화면 오른쪽 상단의 검색 입력 필드에 키워드를 입력하고 ", (0,jsx_runtime.jsx)(Kbd, {
+        children: "Enter"
+      }), " 키를 누르세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-users-template-list-search.png"
     })]
   });
 }
