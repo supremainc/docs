@@ -150,19 +150,7 @@ const sidebars = {
             'platform/biostar_x/columnlayout'
           ]
         },
-        {
-          type: 'category',
-          label: '라이선스',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/licensing',
-          },
-          items: [
-            'platform/biostar_x/bsx-licensing',
-            'platform/biostar_x/bs2-to-bsx-migration',
-            'platform/biostar_x/bsx-licensing-examples'
-          ]
-        }
+        'platform/biostar_x/licensing'
       ],
     },
   ],
