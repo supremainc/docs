@@ -140,7 +140,8 @@ const sidebars = {
           items: [
             'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher',
-            'platform/biostar_x/ui-user'
+            'platform/biostar_x/ui-user',
+            'platform/biostar_x/ui-monitoring'
           ]
         },
         {
