@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-user-mdx-b4c.json
-var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/platform/biostar_x/columnlayout"}}')
+var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/ui-monitoring"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -138,6 +138,28 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "검색 입력 필드에 키워드를 입력하면 사용자 그룹 또는 출입 권한 그룹을 검색하여 목록에 필터링할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Image, {
+              src: "/img/menus/ico-more-black.svg",
+              ico: true,
+              alone: true
+            }), " 버튼을 클릭하면 목록의 트리 구조를 확장하거나 축소할 수 있는 기능을 제공합니다."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "team.expandAll"
+                }), ": 사이드 메뉴에서 사용자 그룹과 사용자를 모두 표시합니다."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "team.collapseAll"
+                }), ": 사이드 메뉴에서 사용자 그룹과 사용자를 모두 숨깁니다."]
+              }), "\n"]
+            }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -321,7 +343,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["화면 오른쪽 상단에 제공하는 페이지 이동 버튼을 클릭해 다음 또는 이전 사용자 목록을 확인할 수 있습니다. 또는 원하는 페이지를 지정해 이동할 수도 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+              href: "user-template#select-view-options",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
