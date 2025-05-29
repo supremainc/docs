@@ -67,6 +67,8 @@ import IcFirst from '@site/static/img/menus/ico-first-page.svg';
 import IcLast from '@site/static/img/menus/ico-last-page.svg';
 import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
+import IcSet from '@site/static/img/menus/ico-setting.svg';
+import IcEdit from '@site/static/img/menus/ico-edit.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -136,5 +138,5 @@ export default {
     IcMove,
     IcBack,
     IcAdvSearch,
-    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit
 }

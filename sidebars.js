@@ -23,13 +23,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x/index',
+      },
       items: [
         {
           type: 'category',
           label: '개요',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/index',
+            id: 'platform/biostar_x/overview',
           },
           items: [
             'platform/biostar_x/getting-started',
@@ -132,6 +136,28 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '설정',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-settings',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '장치 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-devices'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-device-group',
+                'platform/biostar_x/settings-adding-devices',
+              ]
+            }
+          ]
+        },
+        {
+          type: 'category',
           label: 'UI 알아보기',
           link: {
             type: 'doc',
@@ -147,6 +173,10 @@ const sidebars = {
         {
           type: 'category',
           label: '통합 기능',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/common-features',
+          },
           items: [
             'platform/biostar_x/columnlayout'
           ]
