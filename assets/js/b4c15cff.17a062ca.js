@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-user-mdx-b4c.json
-var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/en/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/en/platform/biostar_x/ui-launcher"},"next":{"title":"모니터링","permalink":"/docs/en/platform/biostar_x/ui-monitoring"}}')
+var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/ui-monitoring"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'UI'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -89,7 +89,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 키워드를 입력하면 사이드 바에서 제공하는 메뉴를 검색하여 목록에 필터링할 수 있습니다."
+            children: "검색 입력 필드에 키워드를 입력해 사이드 바에서 제공하는 메뉴를 검색할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -137,7 +137,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 키워드를 입력하면 사용자 그룹 또는 출입 권한 그룹을 검색하여 목록에 필터링할 수 있습니다."
+            children: "검색 입력 필드에 키워드를 입력하면 사용자 그룹 또는 출입 권한 그룹을 검색할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

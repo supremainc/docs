@@ -72,7 +72,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치, 출입문, 카메라 등 모니터링 목록에서 원하는 항목을 빠르게 찾을 수 있도록 키워드를 입력해 필터링할 수 있습니다."
+            children: "검색 입력 필드에 키워드를 입력해 장치, 출입문, 카메라 등 원하는 항목을 검색할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -137,9 +137,9 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["출입문, 카메라, 구역 등의 실시간 영상 또는 맵을 확인할 수 있는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "비디오 타일"
-            }), "입니다. 여러 카메라의 영상을 동시에 배치해 모니터링할 수 있습니다."]
+            }), "에서는 출입문, 카메라, 구역 등의 실시간 영상 또는 맵을 확인할 수 있습니다. 여러 카메라의 영상을 동시에 배치해 모니터링할 수 있습니다."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -159,18 +159,18 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["선택한 출입문이나 장치의 기능을 제어할 수 있는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "제어 패널"
-            }), "입니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), "에서는 선택한 출입문이나 장치의 기능을 제어할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "control-door",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["실시간으로 발생하는 이벤트를 시간순으로 확인할 수 있는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "이벤트 목록"
-            }), "입니다. 이벤트별로 상세 정보, 상태, 관련 사용자 및 장치 정보를 확인하고, 필요한 경우 이벤트에 대한 조치를 바로 취할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), "에서는 실시간으로 발생하는 이벤트를 시간순으로 확인할 수 있습니다. 이벤트별로 상세 정보, 상태, 관련 사용자 및 장치 정보를 확인하고, 필요한 경우 이벤트에 대한 조치를 바로 취할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "monitoring-event",
               children: "다음 문서"
             }), "를 참고하세요."]
