@@ -144,10 +144,10 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: '장치 설정하기',
+              label: '장치 관리하기',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_x/settings-devices'
+                id: 'platform/biostar_x/settings-manage-devices'
               },
               items: [
                 'platform/biostar_x/settings-manage-device-group',
@@ -156,6 +156,7 @@ const sidebars = {
                 'platform/biostar_x/settings-adding-slave-device',
                 'platform/biostar_x/settings-device-manage-device-users',
                 'platform/biostar_x/settings-device-upgrade-firmware',
+                'platform/biostar_x/settings-device-using-functions'
               ]
             }
           ]
