@@ -1,0 +1,41 @@
+---
+id: settings-adding-slave-device
+title: 슬레이브 장치 등록하기
+description: 마스터 장치에 슬레이브 장치를 추가하는 방법을 안내합니다.
+keywords: [장치, 슬레이브 장치]
+---
+
+등록한 [마스터 장치](../../reference/glossary#master_device)에 [슬레이브 장치](../../reference/glossary#slave_device)를 추가해 손쉽게 출입 통제 시스템의 네트워크를 확장할 수 있습니다. 마스터 장치와 슬레이브 장치는 RS-485 통신으로 연결할 수 있습니다. 장치뿐만 아니라 Secure I/O 2와 같은 부가 장치도 연결해 사용할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Device</Cmd>를 클릭하세요.
+
+1. 장치 목록에서 슬레이브 장치를 등록하려면 마스터 또는 슬레이브 장치 이름에서 마우스 오른쪽 버튼을 클릭하고 <Cmd sid='device.menu.searchSlaveDevice' product='2' />를 클릭하세요.
+
+    <Image src='/img/biostarx-setting-device-adding-slave-device.png' />
+
+1. 해당 마스터 장치에 연결된 슬레이브 장치 목록이 나타나면 등록할 장치를 선택하세요. 원하는 장치가 없다면 오른쪽 상단의 <Cmd sid='button.search' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-setting-device-adding-slave-list.png' />
+
+1. <Cmd sid='button.add' product='2' /> 버튼을 클릭하세요.
+
+1. 장치 등록 확인 메시지가 나타나면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+선택한 장치의 하위로 등록한 슬레이브 장치가 나타납니다.
+
+
+:::info
+
+* 지문 인식 장치가 마스터 장치일 때 얼굴 인증 장치를 슬레이브 장치로 추가할 수 없습니다.
+
+* 얼굴 인증 장치가 마스터 장치이고 다른 슬레이브 장치가 이미 추가되어 있다면 얼굴 인증 장치를 슬레이브 장치로 추가할 수 없습니다.
+
+* 얼굴 인증 장치가 마스터 장치이고 얼굴 인증 장치를 슬레이브 장치로 연결할 때 1대의 얼굴 인증 장치만 슬레이브 장치로 추가할 수 있습니다.
+
+* 얼굴 인증 장치가 마스터 장치이고 얼굴 인증 장치를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다.
+
+* 연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다.
+
+:::
