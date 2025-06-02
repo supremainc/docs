@@ -158,6 +158,18 @@ const sidebars = {
                 'platform/biostar_x/settings-device-upgrade-firmware',
                 'platform/biostar_x/settings-device-using-functions'
               ]
+            },
+            {
+              type: 'category',
+              label: '장치 세부 정보 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-device-details'
+              },
+              items: [
+                'platform/biostar_x/settings-device-details-info',
+                'platform/biostar_x/settings-device-details-info-1',
+              ]
             }
           ]
         },
