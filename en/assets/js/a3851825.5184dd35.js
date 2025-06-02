@@ -50,12 +50,22 @@ const toc = [{
   "value": "펌웨어 업그레이드",
   "id": "upgrade-firmware",
   "level": 2
+}, {
+  "value": "한 개의 장치 펌웨어 업그레이드",
+  "id": "한-개의-장치-펌웨어-업그레이드",
+  "level": 3
+}, {
+  "value": "여러 개의 장치 펌웨어 업그레이드",
+  "id": "여러-개의-장치-펌웨어-업그레이드",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     em: "em",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -75,7 +85,7 @@ function _createMdxContent(props) {
       id: "before-starting",
       children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치의 펌웨어를 업그레이드하기 전에 다음 사항을 확인하세요. 다운로드한 펌웨어 파일을 아래 경로에 저장하세요. ", (0,jsx_runtime.jsx)(_components.em, {
+      children: ["장치의 펌웨어를 업그레이드하기 전에 새로운 버전의 펌웨어 파일을 먼저 준비하세요. 다운로드한 펌웨어 파일을 아래 경로에 저장하세요. ", (0,jsx_runtime.jsx)(_components.em, {
         children: "firmware"
       }), " 폴더가 없다면 새로 생성하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -92,9 +102,57 @@ function _createMdxContent(props) {
           })]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["새로운 버전의 펌웨어 파일은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://download.supremainc.com",
+          children: "슈프리마 다운로드 센터"
+        }), "에서 장치 모델명을 검색하고 최신 버전의 펌웨어 파일을 다운로드하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "upgrade-firmware",
       children: "펌웨어 업그레이드"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "한-개의-장치-펌웨어-업그레이드",
+      children: "한 개의 장치 펌웨어 업그레이드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 목록에서 펌웨어를 업그레이드할 장치를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치 세부 정보 화면의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.information",
+            product: "2"
+          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.firmwareUpgrade",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-info-upgrade-firmware.png"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "장치에 대한 펌웨어 업그레이드를 진행합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "여러-개의-장치-펌웨어-업그레이드",
+      children: "여러 개의 장치 펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -129,8 +187,12 @@ function _createMdxContent(props) {
             sid: "device.firmwareUpgrade",
             product: "2"
           }), " 창이 나타나면 펌웨어 버전을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-upgrade-firmware-popup.png"
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 장치에 대한 펌웨어 업그레이드를 진행합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
