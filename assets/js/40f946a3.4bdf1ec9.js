@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-adding-devices-mdx-40f.json
-var site_docs_platform_biostar_x_settings_adding_devices_mdx_40f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-adding-devices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-adding-devices","permalink":"/docs/en/platform/biostar_x/settings-adding-devices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-adding-devices.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","keywords":["장치","장치 추가"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-device-group"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_adding_devices_mdx_40f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-adding-devices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-adding-devices","permalink":"/docs/platform/biostar_x/settings-adding-devices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-adding-devices.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","keywords":["장치","장치 추가"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-device-group"},"next":{"title":"Wiegand 장치 등록하기","permalink":"/docs/platform/biostar_x/settings-adding-wiegand"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'장치',
 		'장치 추가'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
