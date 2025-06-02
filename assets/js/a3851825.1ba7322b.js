@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-upgrade-firmware-mdx-a38.json
-var site_docs_platform_biostar_x_settings_device_upgrade_firmware_mdx_a38_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-upgrade-firmware","title":"펌웨어 업그레이드하기","description":"BioStar X와 연결된 장치의 펌웨어 업그레이드 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-upgrade-firmware.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-upgrade-firmware","permalink":"/docs/en/platform/biostar_x/settings-device-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-upgrade-firmware","title":"펌웨어 업그레이드하기","description":"BioStar X와 연결된 장치의 펌웨어 업그레이드 방법을 안내합니다.","keywords":["장치","펌웨어","업그레이드"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치에 등록한 사용자 관리하기","permalink":"/docs/en/platform/biostar_x/settings-device-manage-device-users"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_device_upgrade_firmware_mdx_a38_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-upgrade-firmware","title":"펌웨어 업그레이드하기","description":"BioStar X와 연결된 장치의 펌웨어 업그레이드 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-upgrade-firmware.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-upgrade-firmware","permalink":"/docs/platform/biostar_x/settings-device-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-upgrade-firmware","title":"펌웨어 업그레이드하기","description":"BioStar X와 연결된 장치의 펌웨어 업그레이드 방법을 안내합니다.","keywords":["장치","펌웨어","업그레이드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치에 등록한 사용자 관리하기","permalink":"/docs/platform/biostar_x/settings-device-manage-device-users"},"next":{"title":"장치 관리 기능 사용하기","permalink":"/docs/platform/biostar_x/settings-device-using-functions"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'펌웨어',
 		'업그레이드'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

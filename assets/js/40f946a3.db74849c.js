@@ -103,7 +103,10 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["대기 장치 그룹의 모든 대기 장치를 등록하려면 그룹 이름에서 마우스 오른쪽 버튼을 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "menu.device.waitingDevice",
+              product: "2"
+            }), " 그룹의 모든 장치를 등록하려면 그룹 이름에서 마우스 오른쪽 버튼을 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "device.menu.addAllWaitingDevices",
               product: "2"
             }), "를 클릭하세요. 장치를 각각 등록하려면 장치 이름에서 마우스 오른쪽 버튼을 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {

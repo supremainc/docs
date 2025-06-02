@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9023"], {
-4016: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8777"], {
+610: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -11,24 +11,25 @@ __webpack_require__.d(__webpack_exports__, {
   contentTitle: () => (/* binding */ contentTitle),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject)
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_manage_devices_mdx_7fb_namespaceObject)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-overview-mdx-743.json
-var site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/ui-overview.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-overview","permalink":"/docs/platform/biostar_x/ui-overview","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-overview.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","keywords":["UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"펌웨어 업그레이드하기","permalink":"/docs/platform/biostar_x/settings-device-upgrade-firmware"},"next":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/platform/biostar_x/ui-common"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-devices-mdx-7fb.json
+var site_docs_platform_biostar_x_settings_manage_devices_mdx_7fb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-devices","title":"장치 관리하기","description":"장치를 추가하거나 삭제, 수정에 대한 관리 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-devices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-devices","permalink":"/docs/platform/biostar_x/settings-manage-devices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-devices.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-devices","title":"장치 관리하기","description":"장치를 추가하거나 삭제, 수정에 대한 관리 방법을 안내합니다.","keywords":["설정","장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"설정","permalink":"/docs/platform/biostar_x/how-to-guide-settings"},"next":{"title":"장치 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-device-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-overview.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-manage-devices.mdx
 
 
 const frontMatter = {
-	id: 'ui-overview',
-	title: 'UI 알아보기',
-	description: 'BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.',
+	id: 'settings-manage-devices',
+	title: '장치 관리하기',
+	description: '장치를 추가하거나 삭제, 수정에 대한 관리 방법을 안내합니다.',
 	keywords: [
-		'UI'
+		'설정',
+		'장치'
 	],
 	isTranslationMissing: false
 };
@@ -44,13 +45,16 @@ const toc = [];
 function _createMdxContent(props) {
   const _components = {
     p: "p",
+    strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {DocCardList} = _components;
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다. BioStar X는 다양한 기능을 제공하며, 각 기능은 사용자 인터페이스(UI)를 통해 쉽게 접근할 수 있습니다. 각 페이지의 사용자 인터페이스를 살펴보면, BioStar X의 기능을 보다 쉽게 이해하고 활용할 수 있습니다. 아래는 BioStar X의 주요 페이지와 그 UI 구성 요소에 대한 설명입니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치를 추가하거나 삭제, 수정에 대한 관리 방법을 안내합니다. 장치에 등록된 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버로 가져오거나 원격으로 펌웨어를 업그레이드할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }

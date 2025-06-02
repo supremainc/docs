@@ -144,10 +144,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자 목록에서 장치에서 삭제할 사용자의 체크 박스를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["특정 사용자 정보를 장치에서 삭제하려면 삭제할 사용자를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.delete",
         product: "2"
-      }), " 버튼을 클릭하거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 버튼을 클릭하세요. 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " 서버로 전송하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.upload",
