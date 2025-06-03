@@ -57,7 +57,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "무선 LAN",
-  "id": "무선-lan",
+  "id": "wireless",
   "level": 3
 }, {
   "value": "서버",
@@ -356,7 +356,7 @@ function _createMdxContent(props) {
         }), "과 함께 사용할 수 없습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "무선-lan",
+      id: "wireless",
       children: "무선 LAN"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {

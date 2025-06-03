@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-info-mdx-a52.json
-var site_docs_platform_biostar_x_settings_device_details_info_mdx_a52_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-info","title":"장치 기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-info","permalink":"/docs/en/platform/biostar_x/settings-device-details-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-info.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-info","title":"장치 기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","keywords":["장치","정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 세부 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details"},"next":{"title":"기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info-1"}}')
+var site_docs_platform_biostar_x_settings_device_details_info_mdx_a52_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-info","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-info","permalink":"/docs/en/platform/biostar_x/settings-device-details-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-info.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-info","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","keywords":["장치","정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 세부 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details"},"next":{"title":"네트워크 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-network"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,7 +25,7 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'settings-device-details-info',
-	title: '장치 기본 정보 설정하기',
+	title: '기본 정보 설정하기',
 	description: '장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.',
 	keywords: [
 		'장치',
@@ -41,11 +41,36 @@ const assets = {
 
 
 
-const toc = [];
+const toc = [{
+  "value": "장치 이름 변경",
+  "id": "장치-이름-변경",
+  "level": 2
+}, {
+  "value": "장치 그룹 변경",
+  "id": "장치-그룹-변경",
+  "level": 2
+}, {
+  "value": "펌웨어 업그레이드",
+  "id": "펌웨어-업그레이드",
+  "level": 2
+}, {
+  "value": "장치의 날짜 및 시간 설정",
+  "id": "장치의-날짜-및-시간-설정",
+  "level": 2
+}, {
+  "value": "잠금 장치 해제",
+  "id": "잠금-장치-해제",
+  "level": 2
+}, {
+  "value": "장치 초기화",
+  "id": "장치-초기화",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     p: "p",
     strong: "strong",
@@ -63,25 +88,10 @@ function _createMdxContent(props) {
       }), " 섹션에서는 장치의 기본 정보를 설정할 수 있습니다. 장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인할 수 있습니다. 장치의 이름과 그룹을 변경하거나 장치의 펌웨어를 업그레이드할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-device-edit-info.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "아래는 장치에 설정된 기본 정보로 사용자가 변경할 수 없는 항목입니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.name",
-            product: "2"
-          }), ": 장치의 이름을 입력하세요. 장치 이름은 최대 48자까지 입력할 수 있습니다. 장치 이름은 장치 목록에서 장치를 식별하는 데 사용됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.group",
-            product: "2"
-          }), ": 장치가 속한 그룹을 선택하세요. 장치 그룹에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-manage-device-group",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.deviceId",
@@ -94,19 +104,6 @@ function _createMdxContent(props) {
             sid: "device.info.deviceType",
             product: "2"
           }), ": 장치의 종류를 확인할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.firmwareVersion",
-            product: "2"
-          }), ": 장치의 펌웨어 버전을 확인할 수 있습니다. 장치의 펌웨어를 업그레이드하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.firmwareUpgrade",
-            product: "2"
-          }), " 버튼을 클릭하세요. 장치의 펌웨어 업그레이드에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-device-upgrade-firmware",
-            children: "다음 문서"
-          }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -132,40 +129,65 @@ function _createMdxContent(props) {
             product: "2"
           }), ": 장치의 하드웨어 버전을 확인할 수 있습니다."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.factoryDefault",
-            product: "2"
-          }), ": 장치의 설정을 초기화할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.info.reset",
-                product: "2"
-              }), ": 장치의 모든 설정을 초기화합니다."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.info.reset.withoutNetwork",
-                product: "2"
-              }), ": 네트워크 설정은 유지하고 나머지 설정을 초기화합니다."]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.locked",
-            product: "2"
-          }), ": 작업 조건 및 동작에 의해 장치가 잠겼을 때 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.unlock",
-            product: "2"
-          }), " 버튼을 사용할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["사용자가 임의로 변경한 사항이 있다면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "button.apply",
+          product: "2"
+        }), " 버튼을 클릭하세요. 변경 사항을 저장하지 않으면 장치에 적용되지 않습니다."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "장치-이름-변경",
+      children: "장치 이름 변경"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["기본 설정된 장치의 이름을 변경할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.name",
+        product: "2"
+      }), " 항목에서 원하는 장치 이름을 입력하세요. 장치 이름은 최대 48자까지 입력할 수 있습니다. 장치 이름은 장치 목록에서 장치를 식별하는 데 사용합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "장치-그룹-변경",
+      children: "장치 그룹 변경"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치가 속한 그룹을 변경할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.group",
+        product: "2"
+      }), " 항목에서 원하는 장치 그룹을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["새로운 장치 그룹을 생성하거나 그룹 이름 변경 및 삭제에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-manage-device-group",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "펌웨어-업그레이드",
+      children: "펌웨어 업그레이드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치의 펌웨어 버전을 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.firmwareVersion",
+        product: "2"
+      }), " 항목을 확인하세요. 펌웨어를 업그레이드하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.firmwareUpgrade",
+        product: "2"
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["장치의 펌웨어 업그레이드에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-device-upgrade-firmware",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "장치의-날짜-및-시간-설정",
+      children: "장치의 날짜 및 시간 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "아래의 옵션을 통해 장치의 날짜와 시간을 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.timeZone",
@@ -229,6 +251,41 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "설정한 날짜와 시간은 이벤트 로그와 실시간에 로그에 기록됩니다. 장치의 날짜와 시간이 정확하지 않으면 로그 기록이 잘못될 수 있습니다."
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "잠금-장치-해제",
+      children: "잠금 장치 해제"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["작업 조건 및 동작에 의해 장치가 잠겼을 때 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.locked",
+        product: "2"
+      }), " 항목의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.unlock",
+        product: "2"
+      }), " 버튼을 클릭하세요. 장치의 잠금을 해제할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "장치-초기화",
+      children: "장치 초기화"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치의 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.factoryDefault",
+        product: "2"
+      }), " 항목에서 아래 기능 중 하나를 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.reset",
+            product: "2"
+          }), ": 장치의 모든 설정을 초기화합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.reset.withoutNetwork",
+            product: "2"
+          }), ": 네트워크 설정은 유지하고 나머지 설정을 초기화합니다."]
+        }), "\n"]
+      }), "\n"]
     })]
   });
 }

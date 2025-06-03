@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1683"], {
-9233: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3078"], {
+805: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -11,27 +11,27 @@ __webpack_require__.d(__webpack_exports__, {
   contentTitle: () => (/* binding */ contentTitle),
   assets: () => (/* binding */ assets),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_device_details_info_1_mdx_b2d_namespaceObject)
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_device_details_info_mdx_a52_namespaceObject)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-info-1-mdx-b2d.json
-var site_docs_platform_biostar_x_settings_device_details_info_1_mdx_b2d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-info-1","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-info-1.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-info-1","permalink":"/docs/en/platform/biostar_x/settings-device-details-info-1","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-info-1.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-info-1","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","keywords":["장치","정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-info-mdx-a52.json
+var site_docs_platform_biostar_x_settings_device_details_info_mdx_a52_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-info","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-info","permalink":"/docs/platform/biostar_x/settings-device-details-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-info.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-info","title":"기본 정보 설정하기","description":"장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.","keywords":["장치","정보"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치 세부 정보 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details"},"next":{"title":"네트워크 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-network"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-device-details-info-1.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-device-details-info.mdx
 
 
 const frontMatter = {
-	id: 'settings-device-details-info-1',
+	id: 'settings-device-details-info',
 	title: '기본 정보 설정하기',
 	description: '장치의 이름과 그룹, 표준 시간대, 하드웨어 및 펌웨어 버전 등을 확인하고 설정하는 방법을 안내합니다.',
 	keywords: [
 		'장치',
 		'정보'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
