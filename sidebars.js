@@ -168,7 +168,7 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/settings-device-details-info',
-                'platform/biostar_x/settings-device-details-info-1',
+                'platform/biostar_x/settings-device-details-network',
               ]
             }
           ]

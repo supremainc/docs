@@ -1,0 +1,115 @@
+---
+id: settings-device-details-network
+title: 네트워크 설정하기
+description: 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크 설정을 안내합니다.
+keywords: [장치, 네트워크, TCP/IP, RS-485, 서버 통신, 시리얼 통신, 일텐리전트 슬레이브]
+---
+
+등록한 장치의 네트워크 설정을 안내합니다. 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-edit-network.png' />
+
+:::info
+
+장치 종류에 따라 설정할 수 있는 네트워크 항목은 다를 수 있습니다.
+
+:::
+
+## TCP/IP 설정
+
+<Cmd sid='device.info.tcpIpSetting' product='2' /> 섹션에서 장치의 IP 주소를 설정할 수 있습니다.
+
+:::info
+
+장치를 등록할 때 IP 주소 설정에 대한 자세한 내용은 [다음 문서](settings-adding-devices#setipaddress)를 참고하세요.
+
+:::
+
+### 유동 IP 설정
+
+장치가 유동 IP를 사용하도록 설정하려면 <Cmd sid='device.info.useDhcp' product='2' /> 항목을 선택하세요. 장치가 DHCP 서버로부터 IP 주소를 자동으로 할당받습니다. 이 경우 장치의 IP 주소는 변경될 수 있습니다.
+
+### 고정 IP 설정
+
+장치의 IP 주소를 고정으로 설정하려면 <Cmd sid='device.info.useDhcp' product='2' /> 항목을 선택을 해제하세요. 아래의 네트워크 정보를 입력할 수 있습니다.
+
+* <Cmd sid='device.info.ipAddress' product='2' />: 장치의 IP 주소를 입력하세요. IP 주소는 `xxx.xxx.xxx.xxx` 형식으로 입력할 수 있으며 각 옥텟은 0\~255 범위의 숫자로만 입력할 수 있습니다.
+
+* <Cmd sid='device.info.subnetMask' product='2' />: 장치의 서브넷 마스크를 입력하세요.
+
+* <Cmd sid='device.info.gateway' product='2' />: 장치의 게이트웨이 주소를 입력하세요.
+
+* <Cmd sid='device.info.devicePort' product='2' />: 장치의 포트 번호를 입력하세요.
+
+* <Cmd sid='device.info.dnsServerAddress' product='2' />: 장치의 DNS 서버 주소를 입력하세요.
+
+:::info
+
+DNS 서버 주소를 입력할 수 있는 장치와 펌웨어 버전은 아래를 참고하세요.
+
+* BioStation L2 펌웨어 1.0.0 이상
+
+* BioStation A2 펌웨어 1.0.0 이상
+
+* BioStation 2 펌웨어 1.2.0 이상
+
+* BioLite Net 펌웨어 2.2.0 이상
+
+* BioEntry Plus 펌웨어 2.2.0 이상
+
+* BioEntry W 펌웨어 2.2.0 이상
+
+* XPass 펌웨어 2.2.0 이상
+
+* XPass S2 펌웨어 2.2.0 이상
+
+* FaceStation 2 펌웨어 1.0.0 이상
+
+* BioLite N2 펌웨어 1.0.0 이상
+
+* FaceLite 펌웨어 1.0.0 이상
+
+* XPass 2 펌웨어 1.0.0 이상
+
+* FaceStation F2 펌웨어 1.0.0 이상
+
+* X-Station 2 펌웨어 1.0.0 이상
+
+* BioStation 3 펌웨어 1.0.0 이상
+
+* BioEntry W3 펌웨어 1.0.0 이상
+
+:::
+
+
+## 무선 랜 설정
+
+장치의 무선 랜 설정을 켜거나 끌 수 있습니다. <Cmd sid='device.info.wlan' product='2' /> 섹션에서 <Cmd sid='device.info.enable' product='2' /> 항목을 선택하거나 해제하세요. 세부 항목은 장치에서 설정할 수 있으며, 자세한 내용은 장치의 사용자 가이드를 참고하세요.
+
+:::info
+
+무선 랜 설정을 지원하는 장치는 아래를 참고하세요.
+
+* BioStation 2
+
+* BioStation A2
+
+* FaceStation 2
+
+* [BioStation 3](../../device/biostation_3/settings#wireless)
+
+:::
+
+
+## 서버 통신 설정
+
+**BioStar X** 서버와 통신하는 방식을 설정할 수 있습니다. <Cmd sid='device.info.server' product='2' /> 섹션에서 아래 항목을 설정하세요.
+
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />: 이 옵션을 선택하면 장치에서 연결할 **BioStar X** 서버의 IP 주소와 포트 번호를 입력할 수 있습니다.
+
+
+:::info
+
+이 기능은 **BioStar X** 서버의 IP 주소가 변경될 때 유용하게 사용할 수 있습니다. **BioStar X** 서버의 IP 주소를 변경하기 전에 여러 개의 장치에서 이 옵션을 미리 설정하면 장치가 자동으로 변경된 IP 주소로 연결됩니다.
+
+:::
