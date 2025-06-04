@@ -45,7 +45,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
 
     if (product === '2') {
       const locale = localeMap[currentLocale] || localeMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+      localeText = locale[sid] 
+        ? locale[sid].replace('<br>', '').replace('</br>', '').replace('<br/>', ' ')
+        : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);

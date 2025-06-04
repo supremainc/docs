@@ -556,7 +556,7 @@ footer {
         margin-top: 0;
         margin-bottom: 0;
       }
-      p + .theme-admonition {
+      p + .theme-admonition, p + details {
         margin-top: 1rem;
       }
     }
