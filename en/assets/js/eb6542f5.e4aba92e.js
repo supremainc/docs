@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-auth-mdx-eb6.json
-var site_docs_platform_biostar_x_settings_device_details_auth_mdx_eb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-auth","title":"인증 설정하기","description":"장치의 사용자 인증에 대한 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-auth.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-auth","permalink":"/docs/en/platform/biostar_x/settings-device-details-auth","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-auth.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-auth","title":"인증 설정하기","description":"장치의 사용자 인증에 대한 설정을 안내합니다.","keywords":["장치","인증"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"네트워크 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-network"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_device_details_auth_mdx_eb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-auth","title":"인증 설정하기","description":"장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-auth.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-auth","permalink":"/docs/en/platform/biostar_x/settings-device-details-auth","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-auth.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-auth","title":"인증 설정하기","description":"장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다.","keywords":["장치","인증"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"네트워크 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-network"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(65);
 const frontMatter = {
 	id: 'settings-device-details-auth',
 	title: '인증 설정하기',
-	description: '장치의 사용자 인증에 대한 설정을 안내합니다.',
+	description: '장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다.',
 	keywords: [
 		'장치',
 		'인증'
@@ -89,7 +89,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.authentication",
         product: "2"
-      }), " 섹션에서는 장치의 사용자 인증을 설정합니다. 장치의 인증 방법, 권한, 서버 매칭, 인증 대기 시간 등을 설정할 수 있습니다."]
+      }), " 섹션에서는 장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -119,7 +119,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.authenticationMode",
             product: "2"
-          }), ": 한 개 이상의 크레덴셜을 조합해 장치의 인증 모드를 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": 한 개 이상의 크레덴셜을 조합해 장치의 인증 모드를 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#added-auth-mode",
             children: "다음 문서"
           }), "를 참고하세요."]
@@ -160,7 +160,7 @@ function _createMdxContent(props) {
                 product: "2"
               }), ": 서버 매칭 기능을 활성화합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
-              }), "를 설치한 서버에 저장된 사용자 정보를 이용하여 인증을 수행하는 서버 매칭 기능을 설정할 수 있습니다."]
+              }), "를 설치한 서버에 저장된 사용자 정보를 이용하여 인증을 수행하는 서버 매칭 기능을 설정하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -279,7 +279,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceDetection",
             product: "2"
-          }), ": 사용자가 인증할 때 장치에 내장된 카메라로 얼굴을 인식하는 알고리즘의 단계를 설정할 수 있습니다."]
+          }), ": 사용자가 인증할 때 장치에 내장된 카메라로 얼굴을 인식하는 알고리즘 단계를 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -423,7 +423,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.securityLevel",
             product: "2"
-          }), ": 지문을 인증할 때 사용할 보안 등급을 설정할 수 있습니다. 보안 등급이 높을수록 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": 지문을 인증할 때 사용할 보안 등급을 설정하세요. 보안 등급이 높을수록 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#frr",
             children: "본인 거부율(FRR)"
           }), "이 높아지지만 ", (0,jsx_runtime.jsx)(_components.a, {
@@ -436,21 +436,21 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.scanTimeout",
             product: "2"
-          }), ": 지문 스캔 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 지문을 스캔하지 못하면 인증을 실패합니다."]
+          }), ": 지문 스캔 대기 시간을 설정하세요. 설정한 시간 동안 지문을 스캔하지 못하면 인증을 실패합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.sensorSensitivity",
             product: "2"
-          }), ": 지문 인식 센서의 민감도를 설정할 수 있습니다. 센서 감도를 높여 정밀한 지문 정보를 얻으려면 센서 감도를 높게 설정하세요."]
+          }), ": 지문 인식 센서의 민감도를 설정하세요. 센서 감도를 높여 정밀한 지문 정보를 얻으려면 센서 감도를 높게 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.1NFastMode",
             product: "2"
-          }), ": 지문 인증 속도를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 지문 인증 속도를 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.auto",
             product: "2"
           }), "을 선택하면 장치에 등록된 총 지문 템플릿에 따라 인증 속도를 설정합니다."]
@@ -467,7 +467,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.matchingTimeout",
             product: "2"
-          }), ": 지문 매칭 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 인증을 완료하지 못하면 인증을 실패합니다."]
+          }), ": 지문 매칭 대기 시간을 설정하세요. 설정한 시간 동안 인증을 완료하지 못하면 인증을 실패합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -481,7 +481,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.sensorMode",
             product: "2"
-          }), ": 지문 센서의 작동 모드를 설정할 수 있습니다."]
+          }), ": 지문 센서의 작동 모드를 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -517,7 +517,7 @@ function _createMdxContent(props) {
           }), ": ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#fake_fp",
             children: "위조 지문"
-          }), " 검사 등급을 설정할 수 있습니다. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다."]
+          }), " 검사 등급을 설정하세요. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -574,7 +574,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.securityLevel",
             product: "2"
-          }), ": 얼굴을 인증할 때 사용할 보안 등급을 설정할 수 있습니다. 보안 등급이 높을수록 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": 얼굴을 인증할 때 사용할 보안 등급을 설정하세요. 보안 등급이 높을수록 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#frr",
             children: "본인 거부율(FRR)"
           }), "이 높아지지만 ", (0,jsx_runtime.jsx)(_components.a, {
@@ -594,7 +594,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.motionSensor",
             product: "2"
-          }), ": 장치 주변의 움직임을 감지하는 감도를 설정할 수 있습니다."]
+          }), ": 장치 주변의 움직임을 감지하는 감도를 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -608,7 +608,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceLFD",
             product: "2"
-          }), ": 위조 얼굴 검사 등급을 설정할 수 있습니다. 위조 얼굴 등록 검사 강화 등급이 높을수록 실제 얼굴에 대한 거부율도 높아질 수 있습니다."]
+          }), ": 위조 얼굴 검사 등급을 설정하세요. 위조 얼굴 등록 검사 강화 등급이 높을수록 실제 얼굴에 대한 거부율도 높아질 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -631,7 +631,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceQuickEnrollment",
             product: "2"
-          }), ": 빠른 얼굴 등록 사용 여부를 설정할 수 있습니다."]
+          }), ": 빠른 얼굴 등록 사용 여부를 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -657,7 +657,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceDetectSetting",
             product: "2"
-          }), ": 얼굴을 인증할 때 사용자의 얼굴을 인식하는 환경을 설정할 수 있습니다."]
+          }), ": 얼굴을 인증할 때 사용자의 얼굴을 인식하는 환경을 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -690,7 +690,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceOperationMode",
             product: "2"
-          }), ": 얼굴을 인증할 때 장치의 작동 모드를 설정할 수 있습니다."]
+          }), ": 얼굴을 인증할 때 장치의 작동 모드를 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -782,42 +782,42 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.useVisualBarcode",
             product: "2"
-          }), ": 장치의 카메라를 통한 QR/바코드 인증 사용 여부를 설정할 수 있습니다."]
+          }), ": 장치의 카메라를 통한 QR/바코드 인증 사용 여부를 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.qrCameraTimeout",
             product: "2"
-          }), ": 카메라의 스캔 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 QR/바코드를 스캔하지 못하면 인증이 실패됩니다."]
+          }), ": 카메라의 스캔 대기 시간을 설정하세요. 설정한 시간 동안 QR/바코드를 스캔하지 못하면 인증이 실패됩니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.normalize",
             product: "2"
-          }), ": 사용자에게 발급한 CSN 카드 또는 Wiegand 카드와 동일한 데이터의 QR코드로 인증할 수 있도록 설정할 수 있습니다."]
+          }), ": 사용자에게 발급한 CSN 카드 또는 Wiegand 카드와 동일한 데이터의 QR코드로 인증할 수 있도록 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.authmode.settings.motionSensor",
             product: "2"
-          }), ": 움직임을 감지하여 카메라가 스캔을 시작하는 감도를 설정할 수 있습니다."]
+          }), ": 움직임을 감지하여 카메라가 스캔을 시작하는 감도를 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.useBarcodeScanner",
             product: "2"
-          }), ": 장치의 스캐너를 통한 QR/바코드 인증 사용 여부를 설정할 수 있습니다."]
+          }), ": 장치의 스캐너를 통한 QR/바코드 인증 사용 여부를 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.qrScanTimeout",
             product: "2"
-          }), ": 스캔 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 QR/바코드를 스캔하지 못하면 인증이 실패됩니다."]
+          }), ": 스캔 대기 시간을 설정하세요. 설정한 시간 동안 QR/바코드를 스캔하지 못하면 인증이 실패됩니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -1092,13 +1092,13 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "NFC"
-          }), ": NFC를 통해 모바일 카드를 인식합니다."]
+          }), ": 모바일 기기에서 NFC 통신을 통해 모바일 카드를 인식합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BLE"
-          }), ": BLE를 통해 모바일 카드를 인식합니다."]
+          }), ": 저전력 블루투스(Bluetooth Low Energy, BLE) 통신를 통해 모바일 카드를 인식합니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
