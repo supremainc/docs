@@ -306,7 +306,7 @@ function _createMdxContent(props) {
       id: "securityLevel",
       children: "보안 수준 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치에서 설정한 바이오메트릭 1", ":N", " 보안 등급과 상관없이 사용자에게 별도의 보안 등급을 부여할 수 있습니다. 장치의 1", ":N", " 보안 등급을 높게 설정해 자주 인증에 실패하는 사용자가 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["장치에서 설정한 바이오 메트릭 1", ":N", " 보안 등급과 상관없이 사용자에게 별도의 보안 등급을 부여할 수 있습니다. 장치의 1", ":N", " 보안 등급을 높게 설정해 자주 인증에 실패하는 사용자가 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.credential.securityLevel.title"
       }), "을 낮게 설정하여 인증 실패를 완화할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.credential.securityLevel.title"

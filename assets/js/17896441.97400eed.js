@@ -917,7 +917,7 @@ const ReplacementLocaleText = (param)=>{
         // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
         if (product === '2') {
             const locale = localeMap[currentLocale] || localeMap.en;
-            localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+            localeText = locale[sid] ? locale[sid].replace('<br>', '').replace('</br>', '').replace('<br/>', ' ') : null;
         } else {
             // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
             // const text = getLocaleText(locale, sid);

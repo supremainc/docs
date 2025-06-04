@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-mdx-848.json
-var site_docs_platform_biostar_x_settings_device_details_mdx_848_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details","title":"장치 세부 정보 설정하기","description":"등록한 장치의 세부 정보를 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details","permalink":"/docs/platform/biostar_x/settings-device-details","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details","title":"장치 세부 정보 설정하기","description":"등록한 장치의 세부 정보를 설정하고 관리하는 방법을 안내합니다.","keywords":["설정","장치","장치 정보"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치 관리 기능 사용하기","permalink":"/docs/platform/biostar_x/settings-device-using-functions"},"next":{"title":"기본 정보 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-info"}}')
+var site_docs_platform_biostar_x_settings_device_details_mdx_848_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details","title":"장치 세부 기능 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details","permalink":"/docs/en/platform/biostar_x/settings-device-details","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details","title":"장치 세부 기능 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","keywords":["설정","장치","장치 정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 관리 기능 사용하기","permalink":"/docs/en/platform/biostar_x/settings-device-using-functions"},"next":{"title":"기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,14 +25,14 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'settings-device-details',
-	title: '장치 세부 정보 설정하기',
-	description: '등록한 장치의 세부 정보를 설정하고 관리하는 방법을 안내합니다.',
+	title: '장치 세부 기능 설정하기',
+	description: '등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.',
 	keywords: [
 		'설정',
 		'장치',
 		'장치 정보'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -58,7 +58,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "등록한 장치의 세부 정보를 설정하고 관리하는 방법을 안내합니다. 장치의 정보, 네트워크, 인증, 고급 설정 등의 세부 정보를 설정할 수 있습니다. 세부 정보는 RS-485 연결 방식이나 장치 종류에 따라 달라질 수 있습니다."
+      children: "등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다. 장치의 정보, 네트워크, 인증, 고급 설정 등의 세부 정보를 설정할 수 있습니다. 세부 정보는 RS-485 연결 방식이나 장치 종류에 따라 달라질 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -93,13 +93,24 @@ function _createMdxContent(props) {
               }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "네트워크"
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device.info.network",
+                product: "2"
+              }), ": 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "settings-device-details-network",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.info.authentication",
-              product: "2"
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device.info.authentication",
+                product: "2"
+              }), ": 장치의 사용자 인증과 관련한 옵션을 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "settings-device-details-auth",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

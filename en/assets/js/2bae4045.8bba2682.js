@@ -338,7 +338,7 @@ function _createMdxContent(props) {
               sid: "team.user.dialog.extendAuthMode"
             }), " 옵션을 활성화하면 얼굴과 지문을 포함하여 인증 모드를 조합할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.dialog.extendAuthMode"
-            }), " 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서만 지원합니다."]
+            }), " 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서 지원합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

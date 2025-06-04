@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-network-mdx-33b.json
-var site_docs_platform_biostar_x_settings_device_details_network_mdx_33b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-network","title":"네트워크 설정하기","description":"장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-network.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-network","permalink":"/docs/platform/biostar_x/settings-device-details-network","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-network.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-network","title":"네트워크 설정하기","description":"장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크 설정을 안내합니다.","keywords":["장치","네트워크","TCP/IP","RS-485","서버 통신","시리얼 통신","인텐리전트 슬레이브"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"기본 정보 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-info"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_device_details_network_mdx_33b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-network","title":"네트워크 설정하기","description":"장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-network.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-network","permalink":"/docs/en/platform/biostar_x/settings-device-details-network","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-network.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-network","title":"네트워크 설정하기","description":"장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크 설정을 안내합니다.","keywords":["장치","네트워크","TCP/IP","RS-485","서버 통신","시리얼 통신","인텔리전트 슬레이브"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info"},"next":{"title":"인증 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-auth"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,9 +34,9 @@ const frontMatter = {
 		'RS-485',
 		'서버 통신',
 		'시리얼 통신',
-		'인텐리전트 슬레이브'
+		'인텔리전트 슬레이브'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -88,12 +88,16 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Details, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Details) _missingMdxReference("Details", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "등록한 장치의 네트워크 설정을 안내합니다. 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.network",
+        product: "2"
+      }), " 섹션에서는 등록한 장치의 네트워크 설정을 안내합니다. 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-device-edit-network.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -101,7 +105,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치 종류에 따라 설정할 수 있는 네트워크 항목은 다를 수 있습니다."
+            children: "장치 종류에 따라 설정할 수 있는 네트워크 옵션은 다를 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -119,7 +123,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.tcpIpSetting",
         product: "2"
-      }), " 섹션에서는 장치의 IP 주소를 설정할 수 있습니다."]
+      }), " 그룹에서는 장치의 IP 주소를 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -135,7 +139,7 @@ function _createMdxContent(props) {
       children: ["장치가 유동 IP를 사용하도록 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.useDhcp",
         product: "2"
-      }), " 항목을 선택하세요. 장치가 DHCP 서버로부터 IP 주소를 자동으로 할당받습니다. 이 경우 장치의 IP 주소는 변경될 수 있습니다."]
+      }), " 그룹을 선택하세요. 장치가 DHCP 서버로부터 IP 주소를 자동으로 할당받습니다. 이 경우 장치의 IP 주소는 변경될 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "고정-ip-설정",
       children: "고정 IP 설정"
@@ -143,7 +147,7 @@ function _createMdxContent(props) {
       children: ["장치의 IP 주소를 고정으로 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.useDhcp",
         product: "2"
-      }), " 항목을 선택 해제하세요. 아래의 네트워크 정보를 입력할 수 있습니다."]
+      }), " 그룹을 선택 해제하세요. 아래의 네트워크 정보를 입력할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -183,10 +187,9 @@ function _createMdxContent(props) {
           }), ": 장치의 DNS 서버 주소를 입력하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "DNS 서버 주소를 입력할 수 있는 장치와 펌웨어 버전은 아래를 참고하세요."
+    }), "\n", (0,jsx_runtime.jsxs)(Details, {
+      children: [(0,jsx_runtime.jsx)("summary", {
+        children: "DNS 서버 주소를 입력할 수 있는 장치와 펌웨어 버전 보기"
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -261,7 +264,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.wlan",
         product: "2"
-      }), " 섹션에서는 장치의 무선 랜 설정을 켜거나 끌 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 그룹에서는 장치의 무선 랜 설정을 켜거나 끌 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.enable",
         product: "2"
       }), " 옵션을 선택하거나 해제하세요. 세부 항목은 장치에서 설정할 수 있으며, 자세한 내용은 장치의 사용자 가이드를 참고하세요."]
@@ -298,7 +301,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.server",
         product: "2"
-      }), " 섹션에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 그룹에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " 서버와 통신하는 방식을 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -339,10 +342,12 @@ function _createMdxContent(props) {
           children: "BioStar X"
         }), " 서버의 IP 주소를 변경하기 전에 여러 개의 장치에서 이 옵션을 미리 설정하면 장치가 자동으로 변경된 IP 주소로 연결합니다."]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "서버 주소에 도메인을 입력할 수 있는 장치와 펌웨어 버전은 아래를 참고하세요."
+    }), "\n", (0,jsx_runtime.jsxs)(Details, {
+      children: [(0,jsx_runtime.jsxs)("summary", {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "device.info.serverIP",
+          product: "2"
+        }), "에 도메인을 입력할 수 있는 장치와 펌웨어 버전 보기"]
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -425,7 +430,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.serialSetting",
         product: "2"
-      }), " 섹션에서는 RS-485 통신 방식으로 연결된 장치의 모드와 전송 속도, 표시할 인증 결과를 설정할 수 있습니다."]
+      }), " 그룹에서는 RS-485 통신 방식으로 연결된 장치의 모드와 전송 속도, 표시할 인증 결과를 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -489,7 +494,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.intelligentPD",
         product: "2"
-      }), " 섹션에서는 슈프리마 장치와 타사 컨트롤러를 연결한 환경에서 사용자가 지문으로 인증했을 때, 인증 결과를 ", (0,jsx_runtime.jsx)(_components.a, {
+      }), " 그룹에서는 슈프리마 장치와 타사 컨트롤러를 연결한 환경에서 사용자가 지문으로 인증했을 때, 인증 결과를 ", (0,jsx_runtime.jsx)(_components.a, {
         href: "../../reference/glossary#osdp",
         children: "Open Supervised Device Protocol(OSDP)"
       }), " 카드 데이터로 전송하여 다수의 1:1 또는 1", ":N", " 매칭을 지원합니다."]
@@ -539,53 +544,53 @@ function _createMdxContent(props) {
               product: "2"
             }), "을 선택했을 때 활성화됩니다."]
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.info.intelligentPD",
-              product: "2"
-            }), " 옵션을 지원하는 장치와 펌웨어 버전은 아래를 참고하세요."]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioEntry W2 펌웨어 1.6.3 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioStation L2 펌웨어 1.6.1 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioEntry P2 펌웨어 1.4.1 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "XPass 2 펌웨어 1.2.3 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "X-Station 2 펌웨어 1.1.0 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioLite N2 펌웨어 1.4.1 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "FaceStation F2 펌웨어 1.1.2 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioStation 3 펌웨어 1.0.0 이상"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioEntry W3 펌웨어 1.0.0 이상"
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsxs)(Details, {
+      children: [(0,jsx_runtime.jsxs)("summary", {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "device.info.intelligentPD",
+          product: "2"
+        }), " 옵션을 지원하는 장치와 펌웨어 버전 보기"]
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry W2 펌웨어 1.6.3 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation L2 펌웨어 1.6.1 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry P2 펌웨어 1.4.1 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "XPass 2 펌웨어 1.2.3 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "X-Station 2 펌웨어 1.1.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioLite N2 펌웨어 1.4.1 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "FaceStation F2 펌웨어 1.1.2 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation 3 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry W3 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n"]
+      })]
     })]
   });
 }

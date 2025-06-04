@@ -736,7 +736,7 @@ function _createMdxContent(props) {
                 children: "템플릿 온 모바일"
               }), "을 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "템플릿 온 모바일"
-              }), "은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드로 BioStar 2 서버, Airfob Portal과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다."]
+              }), "은 사용자의 바이오 메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드로 BioStar 2 서버, Airfob Portal과 장치에 사용자 데이터를 저장하지 않고도 바이오 메트릭으로 인증할 수 있습니다."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsxs)(_components.p, {
