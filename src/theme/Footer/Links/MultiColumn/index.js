@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
 import LinkItem from '@theme/Footer/LinkItem';
 function ColumnLinkItem({item}) {
   return item.html ? (
@@ -17,7 +18,12 @@ function ColumnLinkItem({item}) {
 }
 function Column({column}) {
   return (
-    <div className={clsx('col footer__col', column.className)}>
+    <div
+      className={clsx(
+        ThemeClassNames.layout.footer.column,
+        'col footer__col',
+        column.className,
+      )}>
       <div className="footer__title">{column.title}</div>
       <ul className="footer__items clean-list">
         {column.items.map((item, i) => (

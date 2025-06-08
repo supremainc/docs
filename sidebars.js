@@ -23,13 +23,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x/index',
+      },
       items: [
         {
           type: 'category',
           label: '개요',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/index',
+            id: 'platform/biostar_x/overview',
           },
           items: [
             'platform/biostar_x/getting-started',
@@ -132,6 +136,46 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '설정',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-settings',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '장치 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-devices'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-device-group',
+                'platform/biostar_x/settings-adding-devices',
+                'platform/biostar_x/settings-adding-wiegand',
+                'platform/biostar_x/settings-adding-slave-device',
+                'platform/biostar_x/settings-device-manage-device-users',
+                'platform/biostar_x/settings-device-upgrade-firmware',
+                'platform/biostar_x/settings-device-using-functions'
+              ]
+            },
+            {
+              type: 'category',
+              label: '장치 세부 정보 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-device-details'
+              },
+              items: [
+                'platform/biostar_x/settings-device-details-info',
+                'platform/biostar_x/settings-device-details-network',
+                'platform/biostar_x/settings-device-details-auth',
+              ]
+            }
+          ]
+        },
+        {
+          type: 'category',
           label: 'UI 알아보기',
           link: {
             type: 'doc',
@@ -140,28 +184,22 @@ const sidebars = {
           items: [
             'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher',
-            'platform/biostar_x/ui-user'
+            'platform/biostar_x/ui-user',
+            'platform/biostar_x/ui-monitoring'
           ]
         },
         {
           type: 'category',
           label: '통합 기능',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/common-features',
+          },
           items: [
             'platform/biostar_x/columnlayout'
           ]
         },
-        {
-          type: 'category',
-          label: '라이선스 정책',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/licensing',
-          },
-          items: [
-            'platform/biostar_x/bsx-licensing',
-            'platform/biostar_x/bs2-to-bsx-migration',
-          ]
-        }
+        'platform/biostar_x/licensing'
       ],
     },
   ],

@@ -28,6 +28,7 @@ import Jira from '@site/src/components/Jira';
 import { Productpart, Callout, Item } from '@site/src/components/Productpart';
 import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 import Faqs from '@site/src/components/Faqs';
+import Calloutlists from '@site/src/components/Calloutlists';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -66,6 +67,8 @@ import IcFirst from '@site/static/img/menus/ico-first-page.svg';
 import IcLast from '@site/static/img/menus/ico-last-page.svg';
 import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
+import IcSet from '@site/static/img/menus/ico-setting.svg';
+import IcEdit from '@site/static/img/menus/ico-edit.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -106,7 +109,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSectioin, SpecSizeWieght, Anno,
-    Faqs,
+    Faqs, Calloutlists,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd,
@@ -135,5 +138,5 @@ export default {
     IcMove,
     IcBack,
     IcAdvSearch,
-    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit
 }

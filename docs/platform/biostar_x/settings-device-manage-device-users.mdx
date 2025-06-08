@@ -1,0 +1,44 @@
+---
+id: settings-device-manage-device-users
+title: 장치에 등록한 사용자 관리하기
+description: 장치에 등록한 사용자를 관리하는 방법을 안내합니다.
+keywords: [장치, 사용자]
+---
+
+장치에 등록한 사용자 수, 지문 수, 얼굴 수, 카드 수를 확인할 수 있습니다. **BioStar X**에 등록하지 않았거나 이미 등록한 사용자 정보와 비교해 **BioStar X** 서버로 전송하거나 삭제할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Device</Cmd>를 클릭하세요.
+
+1. <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록에서 장치를 선택하고 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='button.manageUsersInDevice' product='2' />를 클릭하세요.
+
+    <Image src='/img/biostarx-setting-device-manage-device-users.png' />
+
+<Cmd sid='device.menu.manageUsersInDevice' product='2' /> 창이 나타나면 장치에 등록한 사용자 정보와 **BioStar X**에 등록한 사용자 정보를 비교할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-manage-device-users-popup.png' />
+
+<Cmd sid='common.status' product='2' /> 열에서 표시된 값을 참고하여 사용자 정보를 장치에서 삭제할지, **BioStar X** 서버로 전송할지 선택할 수 있습니다. <Cmd sid='common.status' product='2' /> 열의 값은 다음과 같습니다.
+
+* <Cmd sid='user.syncStatus.same' product='2' />: **BioStar X** 서버에 등록한 정보와 동일한 사용자
+
+* <Cmd sid='user.syncStatus.different' product='2' />: **BioStar X** 서버에 등록한 정보와 다른 사용자를
+
+* <Cmd sid='user.syncStatus.same' product='2' />: **BioStar X** 서버에 등록되어 있지 않은 사용자
+
+특정 사용자 정보를 장치에서 삭제하려면 삭제할 사용자를 선택하고 <Cmd sid='button.delete' product='2' /> 버튼을 클릭하세요. 사용자 정보를 **BioStar X** 서버로 전송하려면 <Cmd sid='button.upload' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='button.manageUsersInDevice' product='2' /> 기능은 하나의 장치만 선택해 사용할 수 있습니다.
+
+* <Cmd sid='button.upload' product='2' /> 버튼을 클릭할 때 **BioStar X** 서버에 동일한 ID를 가진 사용자가 있다면 장치의 정보로 업데이트할 수 있습니다.
+
+* 삭제한 사용자 정보는 장치에서만 삭제되며 **BioStar X** 서버에서는 유지됩니다.
+
+* 장치의 세부 설정에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+:::
