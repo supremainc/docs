@@ -238,7 +238,7 @@
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "이 페이지에서",
+    "message": "목차 보기",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {

@@ -69,6 +69,7 @@ import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
 import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
+import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -117,6 +118,7 @@ export default {
     IcCamera,
     IcUpload,
     IcTrash,
+    IcTrash2,
     IcDown,
     IcMoreB,
     IcMoreW,
