@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-9822: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+328: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -4660,6 +4660,38 @@ const SvgIcoEdit = _ref => {
   })))));
 };
 /* ESM default export */ const ico_edit = (SvgIcoEdit);
+;// CONCATENATED MODULE: ./static/img/menus/ico-trash2.svg
+var ico_trash2_g, ico_trash2_defs;
+function ico_trash2_extends() { return ico_trash2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_trash2_extends.apply(null, arguments); }
+
+const SvgIcoTrash2 = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_trash2_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_trash2_g || (ico_trash2_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M3 2h10v2H3zM7 1h2v1H7zM3 5h10l-2 10H5z"
+  }))), ico_trash2_defs || (ico_trash2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_trash2 = (SvgIcoTrash2);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -4693,6 +4725,7 @@ const SvgIcoEdit = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -4788,6 +4821,7 @@ const SvgIcoEdit = _ref => {
     IcCamera: ico_camera,
     IcUpload: ico_upload,
     IcTrash: ico_trash,
+    IcTrash2: ico_trash2,
     IcDown: ico_down_arrow,
     IcMoreB: ico_more_black,
     IcMoreW: ico_more_white,

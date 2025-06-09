@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-mdx-848.json
-var site_docs_platform_biostar_x_settings_device_details_mdx_848_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details","title":"장치 세부 기능 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details","permalink":"/docs/en/platform/biostar_x/settings-device-details","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details","title":"장치 세부 기능 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","keywords":["설정","장치","장치 정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 관리 기능 사용하기","permalink":"/docs/en/platform/biostar_x/settings-device-using-functions"},"next":{"title":"기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info"}}')
+var site_docs_platform_biostar_x_settings_device_details_mdx_848_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details","title":"장치 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details","permalink":"/docs/en/platform/biostar_x/settings-device-details","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details","title":"장치 설정하기","description":"등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.","keywords":["설정","장치","장치 정보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 관리 기능 사용하기","permalink":"/docs/en/platform/biostar_x/settings-device-using-functions"},"next":{"title":"기본 정보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-info"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,7 +25,7 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'settings-device-details',
-	title: '장치 세부 기능 설정하기',
+	title: '장치 설정하기',
 	description: '등록한 장치의 세부 기능을 설정하고 관리하는 방법을 안내합니다.',
 	keywords: [
 		'설정',
