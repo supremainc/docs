@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-advanced-mdx-8d4.json
-var site_docs_platform_biostar_x_settings_device_details_advanced_mdx_8d4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-device-details-advanced.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-advanced","permalink":"/docs/en/platform/biostar_x/settings-device-details-advanced","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-advanced.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","keywords":["장치","고급"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"인증 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-auth"},"next":{"title":"열화상 및 마스크 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-thermal-mask"}}')
+var site_docs_platform_biostar_x_settings_device_details_advanced_mdx_8d4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-device-details-advanced.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-advanced","permalink":"/docs/platform/biostar_x/settings-device-details-advanced","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-advanced.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","keywords":["장치","고급"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"인증 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-auth"},"next":{"title":"열화상 및 마스크 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-thermal-mask"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'장치',
 		'고급'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -304,7 +304,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["이 옵션은 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "device.info.tnaMode",
               product: "2"
             }), " 옵션을  ", (0,jsx_runtime.jsx)(Cmd, {

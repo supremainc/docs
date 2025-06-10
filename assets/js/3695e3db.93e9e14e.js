@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-thermal-mask-mdx-369.json
-var site_docs_platform_biostar_x_settings_device_details_thermal_mask_mdx_369_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-thermal-mask","title":"열화상 및 마스크 설정하기","description":"열화상 카메라 및 마스크 사용에 대한 세부 항목 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-thermal-mask.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-thermal-mask","permalink":"/docs/platform/biostar_x/settings-device-details-thermal-mask","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-thermal-mask.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-thermal-mask","title":"열화상 및 마스크 설정하기","description":"열화상 카메라 및 마스크 사용에 대한 세부 항목 설정을 안내합니다.","keywords":["장치","IP 인터폰"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"고급 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-advanced"},"next":{"title":"IP 인터폰 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-interphone"}}')
+var site_docs_platform_biostar_x_settings_device_details_thermal_mask_mdx_369_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-thermal-mask","title":"열화상 및 마스크 설정하기","description":"열화상 카메라 및 마스크 사용에 대한 세부 항목 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-thermal-mask.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-thermal-mask","permalink":"/docs/platform/biostar_x/settings-device-details-thermal-mask","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-thermal-mask.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-thermal-mask","title":"열화상 및 마스크 설정하기","description":"열화상 카메라 및 마스크 사용에 대한 세부 항목 설정을 안내합니다.","keywords":["장치","열화상 카메라","마스크"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"고급 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-advanced"},"next":{"title":"IP 인터폰 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-interphone"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -29,7 +29,8 @@ const frontMatter = {
 	description: '열화상 카메라 및 마스크 사용에 대한 세부 항목 설정을 안내합니다.',
 	keywords: [
 		'장치',
-		'IP 인터폰'
+		'열화상 카메라',
+		'마스크'
 	],
 	isTranslationMissing: false
 };
@@ -156,15 +157,14 @@ function _createMdxContent(props) {
                 product: "2"
               }), ": 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트 로그를 기록합니다."]
             }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device.thermal.maskCheckModeOff",
+                product: "2"
+              }), ": 마스크 검출 기능을 사용하지 않습니다."]
+            }), "\n"]
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["마스크 검출 기능을 사용하지 않으려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.thermal.maskCheckModeOff",
-              product: "2"
-            }), "을 선택하세요."]
-          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
