@@ -175,7 +175,8 @@ const sidebars = {
                 'platform/biostar_x/settings-device-details-interphone',
                 'platform/biostar_x/settings-device-details-rtsp',
               ]
-            }
+            },
+            'platform/biostar_x/settings-device-image-log',
           ]
         },
         {
