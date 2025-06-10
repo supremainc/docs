@@ -47,7 +47,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       const locale = localeMap[currentLocale] || localeMap.en;
       localeText = locale[sid] 
         ? locale[sid]
-          .replace('<br>', '').replace('</br>', '').replace('<br/>', ' ')
+          .replace('<br>', ' ').replace('</br>', '').replace('<br/>', ' ')
           .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
         : null;
     } else {
