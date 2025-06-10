@@ -173,6 +173,7 @@ const sidebars = {
                 'platform/biostar_x/settings-device-details-advanced',
                 'platform/biostar_x/settings-device-details-thermal-mask',
                 'platform/biostar_x/settings-device-details-interphone',
+                'platform/biostar_x/settings-device-details-rtsp',
               ]
             }
           ]
