@@ -97,7 +97,7 @@ const sidebars = {
                 'platform/biostar_x/export-import-user-info',
               ]
             },
-            'platform/biostar_x/user-template',
+            // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
             'platform/biostar_x/migration-visual-face'
@@ -173,10 +173,11 @@ const sidebars = {
                 'platform/biostar_x/settings-device-details-advanced',
                 'platform/biostar_x/settings-device-details-thermal-mask',
                 'platform/biostar_x/settings-device-details-interphone',
-                'platform/biostar_x/settings-device-details-rtsp',
+                'platform/biostar_x/settings-device-details-rtsp'
               ]
             },
             'platform/biostar_x/settings-device-image-log',
+            'platform/biostar_x/settings-device-usb-agent',
           ]
         },
         {
