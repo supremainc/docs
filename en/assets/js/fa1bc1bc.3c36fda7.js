@@ -54,6 +54,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    code: "code",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -71,8 +72,10 @@ function _createMdxContent(props) {
       children: "사용자의 정보를 수정하고 권한을 변경하는 방법을 안내합니다. 사용자의 기본 정보를 수정하고, 출입 권한 및 크리덴셜을 변경할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "관리자(Administrator) 등급의 권한은 수정할 수 없습니다."
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["최초 만들어진 아이디가 ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "1"
+        }), "인 사용자는 수정할 수 없습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "user-information-modification",

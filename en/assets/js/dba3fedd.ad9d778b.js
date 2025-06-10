@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-view-user-by-access-mdx-dba.json
-var site_docs_platform_biostar_x_view_user_by_access_mdx_dba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-user-by-access","title":"출입 권한별 사용자 확인하기","description":"출입 권한별로 등록된 사용자를 확인하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-user-by-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-user-by-access","permalink":"/docs/platform/biostar_x/view-user-by-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-user-by-access.mdx","tags":[],"version":"current","frontMatter":{"id":"view-user-by-access","title":"출입 권한별 사용자 확인하기","description":"출입 권한별로 등록된 사용자를 확인하는 방법을 안내합니다.","keywords":["사용자","출입 권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 템플릿 관리하기","permalink":"/docs/platform/biostar_x/user-template"},"next":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"}}')
+var site_docs_platform_biostar_x_view_user_by_access_mdx_dba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-user-by-access","title":"출입 권한별 사용자 확인하기","description":"출입 권한별로 등록된 사용자를 확인하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-user-by-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-user-by-access","permalink":"/docs/en/platform/biostar_x/view-user-by-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-user-by-access.mdx","tags":[],"version":"current","frontMatter":{"id":"view-user-by-access","title":"출입 권한별 사용자 확인하기","description":"출입 권한별로 등록된 사용자를 확인하는 방법을 안내합니다.","keywords":["사용자","출입 권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 내보내기/가져오기","permalink":"/docs/en/platform/biostar_x/export-import-user-info"},"next":{"title":"다중 인증으로 로그인하기","permalink":"/docs/en/platform/biostar_x/login-with-mfa"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'출입 권한'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

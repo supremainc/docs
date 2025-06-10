@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-image-log-mdx-1c4.json
-var site_docs_platform_biostar_x_settings_device_image_log_mdx_1c4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-image-log","title":"이미지 로그 설정하기","description":"장치에서 이미지 로그를 생성하기 위한 이벤트 및 스케줄 설정 방법, 이미지 로그의 삭제 옵션과 저장 경로 설정 방법 등을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-image-log.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-image-log","permalink":"/docs/platform/biostar_x/settings-device-image-log","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-image-log.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-image-log","title":"이미지 로그 설정하기","description":"장치에서 이미지 로그를 생성하기 위한 이벤트 및 스케줄 설정 방법, 이미지 로그의 삭제 옵션과 저장 경로 설정 방법 등을 안내합니다.","keywords":["장치","이미지 로그"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"RTSP 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-rtsp"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_device_image_log_mdx_1c4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-image-log","title":"이미지 로그 설정하기","description":"장치에서 이미지 로그를 생성하기 위한 이벤트 및 스케줄 설정 방법, 이미지 로그의 삭제 옵션과 저장 경로 설정 방법 등을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-image-log.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-image-log","permalink":"/docs/en/platform/biostar_x/settings-device-image-log","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-image-log.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-image-log","title":"이미지 로그 설정하기","description":"장치에서 이미지 로그를 생성하기 위한 이벤트 및 스케줄 설정 방법, 이미지 로그의 삭제 옵션과 저장 경로 설정 방법 등을 안내합니다.","keywords":["장치","이미지 로그"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"RTSP 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-rtsp"},"next":{"title":"USB 에이전트 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-usb-agent"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'장치',
 		'이미지 로그'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

@@ -41,20 +41,10 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "사용자",
-  "id": "user",
-  "level": 2
-}, {
-  "value": "사용자 템플릿",
-  "id": "user-template",
-  "level": 2
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
-    admonition: "admonition",
-    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
@@ -68,13 +58,6 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.user"
-      }), " 페이지의 사용자 인터페이스(User Interface)를 안내합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "user",
-      children: "사용자"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.user"
       }), " 페이지의 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -92,28 +75,13 @@ function _createMdxContent(props) {
             children: "검색 입력 필드에 키워드를 입력해 사이드 바에서 제공하는 메뉴를 검색할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "사용자 관리 기능과 사용자를 빠르게 추가할 수 있는 템플릿 기능을 제공합니다."
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.sidebar.user"
-                }), ": 사용자를 추가하고 크리덴셜을 추가할 수 있습니다. 여러 사용자의 크리덴셜을 한 번에 추가 및 관리할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "how-to-guide-user",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.sidebar.template"
-                }), ": 사용자 템플릿을 사용해 모든 신규 사용자에 대해 일관된 정보와 권한을 빠르고 정확하게 적용할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "user-template",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n"]
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.sidebar.user"
+            }), ": 사용자를 추가하고 크리덴셜을 추가할 수 있습니다. 여러 사용자의 크리덴셜을 한 번에 추가 및 관리할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "how-to-guide-user",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -283,14 +251,6 @@ function _createMdxContent(props) {
                   href: "add-user",
                   children: "다음 문서"
                 }), "를 참고하세요."]
-              }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                type: "note",
-                children: (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["사용자 템플릿 기능을 사용해 사용자를 등록하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-                    href: "user-template",
-                    children: "다음 문서"
-                  }), "를 참고하세요."]
-                })
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -311,71 +271,6 @@ function _createMdxContent(props) {
                 }), "를 참고하세요."]
               }), "\n"]
             }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "user-template",
-      children: "사용자 템플릿"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.user"
-      }), " 페이지의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.sidebar.template"
-      }), "은 조직 및 부서별 기본 정보를 표준화하여, 신규 사용자 등록 프로세스를 간소화하고 관리 효율을 높일 수 있는 기능입니다."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-ui-user-template.png",
-      className: "none"
-    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
-      children: (0,jsx_runtime.jsxs)(_components.ol, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 키워드를 입력하면 사이드 바에서 제공하는 메뉴를 검색하여 목록에 필터링할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "목록에 표시된 사용자 템플릿의 수를 확인할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["모든 사용자 템플릿을 선택하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.selectAll"
-            }), " 버튼을 클릭하세요. 선택한 사용자 템플릿의 개수가 버튼의 오른쪽에 표시됩니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["화면 오른쪽 상단에 제공하는 페이지 이동 버튼을 클릭해 다음 또는 이전 사용자 목록을 확인할 수 있습니다. 또는 원하는 페이지를 지정해 이동할 수도 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "user-template#select-view-options",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "키워드를 입력해 사용자 템플릿을 검색할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Image, {
-              src: "/img/menus/ico-more-white.svg",
-              ico: true,
-              alone: true
-            }), " 버튼을 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.menu.columnLayout"
-            }), " 기능을 사용할 수 있습니다. 사용자 템플릿 목록에서 열(column)의 헤더 항목을 변경할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "columnlayout",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["새로운 사용자 템플릿을 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.user.dialog.newTemplate"
-            }), " 버튼을 클릭하세요. 사용자 템플릿을 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.delete"
-            }), " 버튼을 클릭하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "user-template",
-              children: "다음 문서"
-            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
