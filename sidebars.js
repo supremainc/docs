@@ -171,6 +171,8 @@ const sidebars = {
                 'platform/biostar_x/settings-device-details-network',
                 'platform/biostar_x/settings-device-details-auth',
                 'platform/biostar_x/settings-device-details-advanced',
+                'platform/biostar_x/settings-device-details-thermal-mask',
+                'platform/biostar_x/settings-device-details-interphone',
               ]
             }
           ]
