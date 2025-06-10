@@ -853,8 +853,8 @@ function _createMdxContent(props) {
             }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "triggerAction.break_glass",
               product: "2"
-            }), " 옵션을 선택하여 사용자 정의 조건을 설정할 때 원하는 스케줄이 없다면 ", (0,jsx_runtime.jsx)(IcAdd, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "button.addSchedule",
+            }), " 옵션을 선택하여 사용자 정의 조건을 설정할 때 원하는 스케줄이 없다면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "button.plusAddSchedule",
               product: "2"
             }), "를 클릭하세요. 스케줄 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "#",
@@ -957,8 +957,8 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이미지 로그의 기본 설정 변경에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+            children: ["이미지 로그의 기본 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-device-image-log",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

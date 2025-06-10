@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-rtsp-mdx-7e7.json
-var site_docs_platform_biostar_x_settings_device_details_rtsp_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-rtsp","title":"RTSP 설정하기","description":"RTSP 스트리밍을 위한 세부 항목 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-rtsp.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-rtsp","permalink":"/docs/en/platform/biostar_x/settings-device-details-rtsp","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-rtsp.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-rtsp","title":"RTSP 설정하기","description":"RTSP 스트리밍을 위한 세부 항목 설정을 안내합니다.","keywords":["장치","RTSP"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"IP 인터폰 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-details-interphone"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_device_details_rtsp_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-rtsp","title":"RTSP 설정하기","description":"RTSP 스트리밍을 위한 세부 항목 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-details-rtsp.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-rtsp","permalink":"/docs/platform/biostar_x/settings-device-details-rtsp","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-rtsp.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-rtsp","title":"RTSP 설정하기","description":"RTSP 스트리밍을 위한 세부 항목 설정을 안내합니다.","keywords":["장치","RTSP"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"IP 인터폰 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-interphone"},"next":{"title":"이미지 로그 설정하기","permalink":"/docs/platform/biostar_x/settings-device-image-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'장치',
 		'RTSP'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
