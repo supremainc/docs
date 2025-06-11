@@ -182,6 +182,48 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "usb-agent-포트-설정",
       children: "USB Agent 포트 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "USB Agent가 사용하는 포트를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Device"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "USB Agent"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.usbAgent.port.title",
+            product: "2"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.usbAgent.port",
+            product: "2"
+          }), " 입력 필드에서 포트 번호를 입력하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["설정을 모두 완료했다면 화면 가장 아래에 있는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "USB Agent 클라이언트별 동작하는 프로그램으로 포트 번호 설정은 서버가 해당 포트 번호를 통신하기 위한 용도입니다."
+      })
     })]
   });
 }

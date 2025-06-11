@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["480"], {
-8753: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1904"], {
+245: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_migration_visual_face_mdx_42b_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_migration_face_mdx_c77_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-migration-visual-face-mdx-42b.json
-var site_docs_platform_biostar_x_migration_visual_face_mdx_42b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/migration-visual-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/migration-face","permalink":"/docs/platform/biostar_x/migration-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/migration-visual-face.mdx","tags":[],"version":"current","frontMatter":{"id":"migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","keywords":["얼굴","마이그레이션","얼굴 인식"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-migration-face-mdx-c77.json
+var site_docs_platform_biostar_x_migration_face_mdx_c77_namespaceObject = JSON.parse('{"id":"platform/biostar_x/migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/migration-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/migration-face","permalink":"/docs/platform/biostar_x/migration-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/migration-face.mdx","tags":[],"version":"current","frontMatter":{"id":"migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","keywords":["얼굴","마이그레이션","얼굴 인식"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/migration-visual-face.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/migration-face.mdx
 
 
 const frontMatter = {
