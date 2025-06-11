@@ -1,0 +1,113 @@
+---
+id: settings-add-door
+title: 출입문 추가하기
+description: 출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.
+keywords: [출입문, 보안, 출입 통제]
+---
+
+출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.
+
+## 시작하기 전에 {#before-start}
+
+* 출입문을 추가하기 전에 출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* 출입문을 추가하기 전에 장치를 등록하세요. 장치 등록에 대한 자세한 내용은 다음 문서를 참고하세요.
+
+  * [장치 등록하기](settings-adding-devices)
+
+  * [Wiegand 장치 등록하기](settings-adding-wiegand)
+
+  * [슬레이브 장치 등록하기](settings-adding-slave-device)
+
+
+## 출입문 추가 {#adding-door}
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Door</Cmd>를 클릭하세요.
+
+1. <Cmd sid='button.func.addDoor' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-setting-door-adding.png' />
+
+1. <Cmd sid='door.addNewDoor' product='2' /> 화면이 나타나면 각 섹션 항목을 차례로 설정하세요.
+
+    * <Cmd sid='common.information' product='2' />: 출입문의 기본 정보를 설정하세요. 자세한 내용은 [다음 문서](#info)를 참고하세요.
+
+    * <Cmd sid='device.info.configuration' product='2' />: 출입문과 연결된 장치와 퇴실 버튼, 출입문 세선 등을 설정하세요. 자세한 내용은 [다음 문서](#configdoor)를 참고하세요.
+
+    * <Cmd sid='common.option' product='2' />: 부가 옵션을 설정하세요.
+
+    * <Cmd sid='door.antiPassBack' product='2' />: 출입 이력을 관리하고 보안을 강화하기 위한 안티패스백 기능을 설정하세요.
+
+    * <Cmd sid='timedAPB.title' product='2' />: 안티패스백을 재인증할 수 있을 때까지 걸리는 초기화 시간을 설정할 수 있습니다.
+
+    * <Cmd sid='door.alarm' product='2' />: 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다.
+
+1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+
+### 기본 정보 설정 {#info}
+
+<Cmd sid='common.information' product='2' /> 섹션에서는 출입문의 이름 및 그룹, 설명을 입력하거나 변경할 수 있습니다.
+
+<Image src='/img/biostarx-setting-door-adding-info.png' />
+
+* <Cmd sid='common.name' product='2' />: 출입문의 이름을 입력하세요. 출입문의 위치를 특정할 수 있는 이름을 입력하면 편리하게 관리할 수 있습니다.
+
+* <Cmd sid='common.group' product='2' />: 출입문 그룹을 선택하세요.
+
+* <Cmd sid='common.description' product='2' />: 출입문에 대한 간단한 설명을 입력하세요.
+
+:::info
+
+* 출입문 이름은 최대 48자까지 입력할 수 있습니다.
+
+* 출입문 그룹 추가에 대한 자세한 내용은 [다음 문서](settings-manage-door-group)를 참고하세요.
+
+:::
+
+### 출입문 설정 {#configdoor}
+
+<Cmd sid='device.info.configuration' product='2' /> 섹션에서는 출입문과 연결된 장치와 퇴실 버튼, 출입문 세선 등을 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-door-adding-configuration.png' />
+
+* <Cmd sid='door.entryDevice' product='2' />: 입실할 때 사용할 장치를 선택하세요. 장치가 목록에 없다면 먼저 장치를 등록하세요.
+
+* <Cmd sid='common.doorRelay' product='2' />: 출입문 잠금 장치로 동작할 [릴레이](../../reference/glossary#relay)를 선택하세요.
+
+* <Cmd sid='door.exitButton' product='2' />: 퇴실 버튼으로 사용할 포트를 선택하세요.
+
+  * <Cmd sid='door.switchType' product='2' />: <Cmd>N/C</Cmd>([Normally Closed](../../reference/glossary#nc)) 또는 <Cmd>N/O</Cmd>([Normally Open](../../reference/glossary#no))으로 설정할 수 있습니다.
+
+  * <Cmd sid='door.simulateUnlockSupported' product='2' />: 퇴실 버튼 입력 시 출입문 열림 요청 로그는 발생하지만 릴레이는 동작하지 않도록 설정할 수 있습니다.
+
+* <Cmd sid='door.doorSensor' product='2' />: 출입문 상태를 확인할 때 사용할 포트를 선택하세요. <Cmd sid='common.none' product='2' />으로 설정하면 <Cmd sid='door.alarm' product='2' /> 섹션을 사용할 수 없습니다.
+
+  * <Cmd sid='door.switchType' product='2' />: <Cmd>N/C</Cmd>([Normally Closed](../../reference/glossary#nc)) 또는 <Cmd>N/O</Cmd>([Normally Open](../../reference/glossary#no))으로 설정할 수 있습니다.
+
+  * <Cmd sid='door.apbUseDoorSensor' product='2' />: <Cmd sid='zone.apbUseDoorSensor' product='2' /> 옵션을 사용할 때 출입문 센서 사용 여부를 설정할 수 있습니다.
+
+  :::note
+
+  <Cmd sid='timedAPB.title' product='2' />이 활성화되어 있다면 이 옵션은 사용할 수 없습니다.
+
+  :::
+
+* <Cmd sid='door.exitDevice' product='2' />: 퇴실할 때 사용할 장치를 선택하세요.
+
+:::info
+
+* <Cmd sid='door.entryDevice' product='2' />로 무선 도어락을 선택했다면 <Cmd sid='door.exitDevice' product='2' />에도 무선 도어락을 선택해야 합니다.
+
+* <Cmd sid='door.entryDevice' product='2' />로 무선 도어락을 선택했다면 <Cmd sid='common.doorRelay' product='2' /> 옵션은 사용할 수 없습니다.
+
+* CoreStation 모델은 입실 장치나 퇴실 장치로 사용할 수 없습니다.
+
+:::
+
+### 부가 옵션 설정 {#option}
+
+<Cmd sid='common.option' product='2' /> 섹션에서는 출입문에 대한 부가 옵션을 설정할 수 있습니다.
+
