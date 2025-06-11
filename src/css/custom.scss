@@ -31,6 +31,7 @@
   --docsearch-searchbox-background: none !important;
   --ifm-color-nextstep-background: #f5f5f5;
   --ifm-color-markdown-link: var(--ifm-color-primary);
+  --ifm-color-secondary-color: #102B8D;
   --main-black: rgba(255, 255, 255, 1.0);
   --main-black-6: rgba(255, 255, 255, 0.6);
   --main-black-0: rgba(255, 255, 255, 0.0);
@@ -52,9 +53,10 @@
   --ifm-color-color-gray: #dadada;
   --ifm-color-color-ol-gray: #b4b4b4;
   --ifm-color-border: #d1d1d1;
-  --ifm-color-cmd: #bb7f8f;
+  --ifm-color-cmd: #f89ca1;
   --ifm-color-nextstep-background: #4d4d4d;
   --ifm-color-markdown-link: var(--ifm-color-primary);
+  --ifm-color-secondary-color: #e2e2e2;
   --main-black: rgba(0, 0, 0, 1.0);
   --main-black-6: rgba(0, 0, 0, 0.6);
   --main-black-0: rgba(0, 0, 0, 0.0);
@@ -453,13 +455,13 @@ footer {
         display: inline-block;
         width: 1.3em;
         height: 1.3em;
-        fill: #102B8D;
+        fill: var(--ifm-color-secondary-color);
       }
     }
   }
   .alert--secondary {
-    --ifm-alert-border-color: #102B8D;
-    --ifm-alert-foreground-color: #102B8D;
+    --ifm-alert-border-color: var(--ifm-color-secondary-color);
+    --ifm-alert-foreground-color: var(--ifm-color-secondary-color);
   }
   .alert--info {
     --ifm-alert-border-color: var(--ifm-color-primary-light);
