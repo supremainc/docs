@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-door-group-mdx-e08.json
-var site_docs_platform_biostar_x_settings_manage_door_group_mdx_e08_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-door-group","title":"출입문 그룹 관리하기","description":"여러 개의 출입문을 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-door-group.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-door-group","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-door-group.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-door-group","title":"출입문 그룹 관리하기","description":"여러 개의 출입문을 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","keywords":["출입문","그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_manage_door_group_mdx_e08_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-door-group","title":"출입문 그룹 관리하기","description":"여러 개의 출입문을 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-door-group.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-door-group","permalink":"/docs/platform/biostar_x/settings-manage-door-group","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-door-group.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-door-group","title":"출입문 그룹 관리하기","description":"여러 개의 출입문을 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","keywords":["출입문","그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door"},"next":{"title":"출입문 추가하기","permalink":"/docs/platform/biostar_x/settings-add-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'출입문',
 		'그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

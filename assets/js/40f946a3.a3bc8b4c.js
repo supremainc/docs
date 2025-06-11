@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-adding-devices-mdx-40f.json
-var site_docs_platform_biostar_x_settings_adding_devices_mdx_40f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-adding-devices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-adding-devices","permalink":"/docs/en/platform/biostar_x/settings-adding-devices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-adding-devices.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","keywords":["장치","장치 추가"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-device-group"},"next":{"title":"Wiegand 장치 등록하기","permalink":"/docs/en/platform/biostar_x/settings-adding-wiegand"}}')
+var site_docs_platform_biostar_x_settings_adding_devices_mdx_40f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-adding-devices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-adding-devices","permalink":"/docs/platform/biostar_x/settings-adding-devices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-adding-devices.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-adding-devices","title":"장치 등록하기","description":"BioStar X에 장치를 등록하는 방법을 안내합니다.","keywords":["장치","장치 추가"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"장치 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-device-group"},"next":{"title":"Wiegand 장치 등록하기","permalink":"/docs/platform/biostar_x/settings-adding-wiegand"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'장치',
 		'장치 추가'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -42,6 +42,10 @@ const assets = {
 
 
 const toc = [{
+  "value": "시작하기 전에",
+  "id": "before-start",
+  "level": 2
+}, {
   "value": "간편 등록하기",
   "id": "quickadd-device",
   "level": 2
@@ -140,6 +144,18 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "before-start",
+      children: "시작하기 전에"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "장치를 등록하기 전에 다음 사항을 확인하세요."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "quickadd-device",
       children: "간편 등록하기"
