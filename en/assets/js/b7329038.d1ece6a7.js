@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-login-with-mfa-mdx-b73.json
-var site_docs_platform_biostar_x_login_with_mfa_mdx_b73_namespaceObject = JSON.parse('{"id":"platform/biostar_x/login-with-mfa","title":"다중 인증으로 로그인하기","description":"BioStar X에 로그인할 때 다중 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/login-with-mfa.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/login-with-mfa","permalink":"/docs/platform/biostar_x/login-with-mfa","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/login-with-mfa.mdx","tags":[],"version":"current","frontMatter":{"id":"login-with-mfa","title":"다중 인증으로 로그인하기","description":"BioStar X에 로그인할 때 다중 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.","keywords":["로그인","MFA","다중 인증","멀티팩터 인증"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 권한별 사용자 확인하기","permalink":"/docs/platform/biostar_x/view-user-by-access"},"next":{"title":"비주얼 페이스 마이그레이션","permalink":"/docs/platform/biostar_x/migration-visual-face"}}')
+var site_docs_platform_biostar_x_login_with_mfa_mdx_b73_namespaceObject = JSON.parse('{"id":"platform/biostar_x/login-with-mfa","title":"다중 인증으로 로그인하기","description":"BioStar X에 로그인할 때 다중 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/login-with-mfa.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/login-with-mfa","permalink":"/docs/en/platform/biostar_x/login-with-mfa","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/login-with-mfa.mdx","tags":[],"version":"current","frontMatter":{"id":"login-with-mfa","title":"다중 인증으로 로그인하기","description":"BioStar X에 로그인할 때 다중 인증 기능을 사용하면 계정의 보안을 향상할 수 있습니다.","keywords":["로그인","MFA","다중 인증","멀티팩터 인증"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/view-user-by-access"},"next":{"title":"얼굴 마이그레이션","permalink":"/docs/en/platform/biostar_x/migration-face"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'다중 인증',
 		'멀티팩터 인증'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
