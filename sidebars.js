@@ -178,6 +178,17 @@ const sidebars = {
             },
             'platform/biostar_x/settings-device-image-log',
             'platform/biostar_x/settings-device-usb-agent',
+            {
+              type: 'category',
+              label: '출입문 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-door'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-door-group',
+              ]
+            }
           ]
         },
         {
