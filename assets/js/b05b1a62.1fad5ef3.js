@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9023"], {
-4016: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4257"], {
+4746: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_manage_door_mdx_b05_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-overview-mdx-743.json
-var site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/ui-overview.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-overview","permalink":"/docs/platform/biostar_x/ui-overview","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-overview.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","keywords":["UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"USB 에이전트 설정하기","permalink":"/docs/platform/biostar_x/settings-device-usb-agent"},"next":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/platform/biostar_x/ui-common"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-door-mdx-b05.json
+var site_docs_platform_biostar_x_settings_manage_door_mdx_b05_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-door","permalink":"/docs/platform/biostar_x/settings-manage-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-door.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","keywords":["출입문","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"USB 에이전트 설정하기","permalink":"/docs/platform/biostar_x/settings-device-usb-agent"},"next":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-overview.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-manage-door.mdx
 
 
 const frontMatter = {
-	id: 'ui-overview',
-	title: 'UI 알아보기',
-	description: 'BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.',
+	id: 'settings-manage-door',
+	title: '출입문 관리하기',
+	description: '등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.',
 	keywords: [
-		'UI'
+		'출입문',
+		'설정'
 	],
 	isTranslationMissing: false
 };
@@ -50,7 +51,7 @@ function _createMdxContent(props) {
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다. BioStar X는 다양한 기능을 제공하며, 각 기능은 사용자 인터페이스(UI)를 통해 쉽게 접근할 수 있습니다. 각 페이지의 사용자 인터페이스를 살펴보면, BioStar X의 기능을 보다 쉽게 이해하고 활용할 수 있습니다. 아래는 BioStar X의 주요 페이지와 그 UI 구성 요소에 대한 설명입니다."
+      children: "등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다. 장치의 릴레이, 이중 인증, 안티패스백, 강제 문 열림, 장시간 문 열림에 대한 알람 등의 정보를 설정할 수 있으며, 설정한 출입문 정보는 출입 등급의 구성 요소로 사용됩니다."
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
