@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-door-add-mdx-fcf.json
-var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-add-door","permalink":"/docs/en/platform/biostar_x/settings-add-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-door-add","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-door-add","permalink":"/docs/platform/biostar_x/settings-door-add","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-door-add","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"},"next":{"title":"출입문 정보 수정하기","permalink":"/docs/platform/biostar_x/settings-door-edit-info"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -24,7 +24,7 @@ var lib = __webpack_require__(65);
 
 
 const frontMatter = {
-	id: 'settings-add-door',
+	id: 'settings-door-add',
 	title: '출입문 추가하기',
 	description: '출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.',
 	keywords: [
@@ -32,7 +32,7 @@ const frontMatter = {
 		'보안',
 		'출입 통제'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
