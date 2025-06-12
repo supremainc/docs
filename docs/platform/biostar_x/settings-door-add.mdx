@@ -5,7 +5,7 @@ description: 출입 통제에 사용할 출입문을 설정하세요. 출입문�
 keywords: [출입문, 보안, 출입 통제]
 ---
 
-출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.
+**BioStar X**에서 출입 통제 시스템의 핵심 요소인 출입문을 추가하고 설정하는 방법을 안내합니다. 출입문별로 입실·퇴실 장치를 연결하고, 안티패스백과 이중 인증 등 보안 기능을 설정하여 체계적인 출입 관리 환경을 구축할 수 있습니다. 또한 출입문 상태에 따른 알람 설정으로 보안 사고를 사전에 예방할 수 있습니다.
 
 ## 시작하기 전에 {#before-start}
 
@@ -34,15 +34,15 @@ keywords: [출입문, 보안, 출입 통제]
 
     * <Cmd sid='common.information' product='2' />: 출입문의 기본 정보를 설정하세요. 자세한 내용은 [다음 문서](#info)를 참고하세요.
 
-    * <Cmd sid='device.info.configuration' product='2' />: 출입문과 연결된 장치와 퇴실 버튼, 출입문 세선 등을 설정하세요. 자세한 내용은 [다음 문서](#configdoor)를 참고하세요.
+    * <Cmd sid='device.info.configuration' product='2' />: 출입문과 연결된 장치와 입실 및 퇴실 버튼, 출입문 센서를 설정하세요. 자세한 내용은 [다음 문서](#configdoor)를 참고하세요.
 
-    * <Cmd sid='common.option' product='2' />: 부가 옵션을 설정하세요.
+    * <Cmd sid='common.option' product='2' />: 부가 옵션을 설정하세요. 자세한 내용은 [다음 문서](#option)를 참고하세요.
 
-    * <Cmd sid='door.antiPassBack' product='2' />: 출입 이력을 관리하고 보안을 강화하기 위한 안티패스백 기능을 설정하세요.
+    * <Cmd sid='door.antiPassBack' product='2' />: 출입 이력을 관리하고 보안을 강화하기 위한 안티패스백 기능을 설정하세요. 자세한 내용은 [다음 문서](#antipassback)를 참고하세요.
 
-    * <Cmd sid='timedAPB.title' product='2' />: 안티패스백을 재인증할 수 있을 때까지 걸리는 초기화 시간을 설정할 수 있습니다.
+    * <Cmd sid='timedAPB.title' product='2' />: 안티패스백 기능의 초기화 시간을 설정할 수 있습니다. 자세한 내용은 [다음 문서](#timed-apb)를 참고하세요.
 
-    * <Cmd sid='door.alarm' product='2' />: 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다.
+    * <Cmd sid='door.alarm' product='2' />: 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다. 자세한 내용은 [다음 문서](#alarm)를 참고하세요.
 
 1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
@@ -115,7 +115,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 * <Cmd sid='common.open' product='2' />: 출입문 열림에 대한 옵션을 설정하세요.
 
-  * <Cmd sid='door.openTime' product='2' />: 사용자가 인증을 완료하고 출입문이 열린 채로 유지되는 시간을 설정하세요. 인증을 성공했을 때 릴레이가 활성화되는 시간이며, 이 시간이 지나면 릴레이는 출입문에 신호를 보내지 않습니다.
+  * <Cmd sid='door.openTime' product='2' />: 인증 완료 후 출입문이 열린 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 출입문이 자동으로 잠깁니다.
 
   * <Cmd sid='door.openOnce' product='2' />: 출입문이 닫힌 것을 출입문 센서가 감지하면 출입문이 잠깁니다. <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />을 <Cmd sid='door.openOnceOn' product='2' />으로 설정하면 사용할 수 없습니다.
 
@@ -141,11 +141,13 @@ keywords: [출입문, 보안, 출입 통제]
 
   * <Cmd sid='door.approvalGroup' product='2' />: 관리자가 속한 그룹을 설정할 수 있습니다. 이 옵션은 <Cmd sid='door.dualAuthentication.approvalType' product='2' />을 <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />으로 선택했을 때 사용할 수 있습니다.
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />: 첫 번째 크리덴셜을 인증하고 두 번째 크리덴셜을 인증하는 대기 시간을 설정하세요. 첫 번째 크리덴셜을 인증하고 설정한 시간 안에 두 번째 크리덴셜을 인증하지 않으면 출입문이 열리지 않습니다.
+  * <Cmd sid='door.authenticationTimeout' product='2' />: 첫 번째 인증 후 두 번째 인증까지의 대기 시간을 설정하세요. 설정된 시간 내에 두 번째 인증이 완료되지 않으면 출입문이 열리지 않습니다.
 
   :::info
 
-  * 기존에 **재실 인원 제한 구역**의 입실 및 퇴실 장치로 설정된 장치에 이중 인증을 설정하려면 <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' /> 메뉴에서 입실 및 퇴실 장치를 다시 설정하세요. 자세한 내용은 [다음 문서](#)를 참고하세요.
+  * 재실 인원 제한 구역에 설정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />
+
+    <Cmd sid='zone.occupancy.title' product='2' /> 설정에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
   * 스케줄 설정에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
