@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-view-user-by-access-mdx-dba.json
-var site_docs_platform_biostar_x_view_user_by_access_mdx_dba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-user-by-access","title":"출입 그룹 관리하기","description":"출입 그룹별로 등록된 사용자를 확인하고 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-user-by-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-user-by-access","permalink":"/docs/en/platform/biostar_x/view-user-by-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-user-by-access.mdx","tags":[],"version":"current","frontMatter":{"id":"view-user-by-access","title":"출입 그룹 관리하기","description":"출입 그룹별로 등록된 사용자를 확인하고 추가하는 방법을 안내합니다.","keywords":["사용자","출입 권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 정보 내보내기/가져오기","permalink":"/docs/en/platform/biostar_x/export-import-user-info"},"next":{"title":"다중 인증으로 로그인하기","permalink":"/docs/en/platform/biostar_x/login-with-mfa"}}')
+var site_docs_platform_biostar_x_view_user_by_access_mdx_dba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/view-user-by-access","title":"출입 그룹 관리하기","description":"출입 그룹별로 등록된 사용자를 확인하고 추가하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/view-user-by-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/view-user-by-access","permalink":"/docs/platform/biostar_x/view-user-by-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/view-user-by-access.mdx","tags":[],"version":"current","frontMatter":{"id":"view-user-by-access","title":"출입 그룹 관리하기","description":"출입 그룹별로 등록된 사용자를 확인하고 추가하는 방법을 안내합니다.","keywords":["사용자","출입 권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 정보 내보내기/가져오기","permalink":"/docs/platform/biostar_x/export-import-user-info"},"next":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'출입 권한'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -41,19 +41,10 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "출입 그룹별 사용자 확인",
-  "id": "출입-그룹별-사용자-확인",
-  "level": 2
-}, {
-  "value": "출입 그룹에 사용자 추가하기",
-  "id": "출입-그룹에-사용자-추가하기",
-  "level": 2
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
-    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
@@ -67,10 +58,7 @@ function _createMdxContent(props) {
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입-그룹별-사용자-확인",
-      children: "출입 그룹별 사용자 확인"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입 권한 그룹별로 등록한 사용자를 확인하는 방법을 안내합니다. 사용자의 출입 권한을 확인하고 사용자의 정보를 수정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -152,51 +140,6 @@ function _createMdxContent(props) {
           })]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입-그룹에-사용자-추가하기",
-      children: "출입 그룹에 사용자 추가하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "출입 그룹에 사용자를 추가하는 방법을 안내합니다. 출입 그룹에 사용자를 추가하면 해당 그룹의 출입 권한을 부여할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.user"
-          }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["트리 구조 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.tree.accessExplorer"
-          }), " 탭을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 출입 그룹을 선택하고 오른쪽 마우스 버튼을 클릭하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Assign"
-          }), "을 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-user-access-explorer-assign.png"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "팝업창이 나타나면 사용자 목록에서 원하는 사용자를 선택하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-user-access-explorer-assign-pop.png"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["원하는 사용자를 모두 선택했다면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.apply"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
     })]
   });
 }

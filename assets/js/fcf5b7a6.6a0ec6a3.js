@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-door-add-mdx-fcf.json
-var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-add-door","permalink":"/docs/en/platform/biostar_x/settings-add-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-add-door","permalink":"/docs/platform/biostar_x/settings-add-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'보안',
 		'출입 통제'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -62,6 +62,14 @@ const toc = [{
   "value": "부가 옵션 설정",
   "id": "option",
   "level": 3
+}, {
+  "value": "안티패스백 설정",
+  "id": "antipassback",
+  "level": 3
+}, {
+  "value": "시간 제한 안티패스백 설정",
+  "id": "timed-apb",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -72,6 +80,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -417,6 +426,299 @@ function _createMdxContent(props) {
         sid: "common.option",
         product: "2"
       }), " 섹션에서는 출입문에 대한 부가 옵션을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-door-adding-aditional-option.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.open",
+            product: "2"
+          }), ": 출입문 열림에 대한 옵션을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.openTime",
+                product: "2"
+              }), ": 사용자가 인증을 완료하고 출입문이 열린 채로 유지되는 시간을 설정하세요. 인증을 성공했을 때 릴레이가 활성화되는 시간이며, 이 시간이 지나면 릴레이는 출입문에 신호를 보내지 않습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.openOnce",
+                product: "2"
+              }), ": 출입문이 닫힌 것을 출입문 센서가 감지하면 출입문이 잠깁니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.option.openCondition.useAutoDoor",
+                product: "2"
+              }), "을 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.openOnceOn",
+                product: "2"
+              }), "으로 설정하면 사용할 수 없습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.option.openCondition.useAutoDoor",
+                product: "2"
+              }), ": 자동문을 출입문으로 사용하면 출입문 센서의 상태와 상관없이 릴레이를 동작할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.openOnce",
+                product: "2"
+              }), "을 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.openOnceOn",
+                product: "2"
+              }), "으로 설정하면 사용할 수 없습니다."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "door.openTime",
+              product: "2"
+            }), "은 사용하는 출입문 잠금 장치의 종류에 따라 다를 수 있습니다."]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "door.dualAuthentication",
+            product: "2"
+          }), ": 두 사람(일반 사용자와 관리자)이 크리덴셜을 인증하여 출입문을 열도록 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "common.device",
+                product: "2"
+              }), ": 이중 인증을 사용할 장치를 선택하세요. 이중 인증을 사용하지 않으려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.dualAuthentication.approvalType.none",
+                product: "2"
+              }), "을 선택하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.schedule",
+                product: "2"
+              }), ": 이중 인증을 사용할 스케줄을 선택하세요. 원하는 스케줄이 없다면 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "button.plusAddSchedule",
+                product: "2"
+              }), "를 클릭해 추가할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.dualAuthentication.approvalType",
+                product: "2"
+              }), ": 관리자 인증 순서를 설정하세요."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "door.dualAuthentication.approvalType.none",
+                    product: "2"
+                  }), ": 인증 그룹과 관계 없이 두 명의 인증이 필요합니다."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "door.dualAuthentication.approvalType.last",
+                    product: "2"
+                  }), ": 일반 사용자가 인증하고 설정된 인증 그룹에 포함된 사용자가 인증해야 합니다."]
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.approvalGroup",
+                product: "2"
+              }), ": 관리자가 속한 그룹을 설정할 수 있습니다. 이 옵션은 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.dualAuthentication.approvalType",
+                product: "2"
+              }), "을 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.dualAuthentication.approvalType.last",
+                product: "2"
+              }), "으로 선택했을 때 사용할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.authenticationTimeout",
+                product: "2"
+              }), ": 첫 번째 크리덴셜을 인증하고 두 번째 크리덴셜을 인증하는 대기 시간을 설정하세요. 첫 번째 크리덴셜을 인증하고 설정한 시간 안에 두 번째 크리덴셜을 인증하지 않으면 출입문이 열리지 않습니다."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["기존에 ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "재실 인원 제한 구역"
+                }), "의 입실 및 퇴실 장치로 설정된 장치에 이중 인증을 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "shell.header.setting"
+                }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: "Advanced ACS"
+                }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "zone.occupancy.title",
+                  product: "2"
+                }), " 메뉴에서 입실 및 퇴실 장치를 다시 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "#",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["스케줄 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "#",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "door.antiTailSensor",
+            product: "2"
+          }), ": 인증하지 않은 사람이 인증한 사람을 따라 출입하는 테일게이팅을 감지하도록 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.sensor",
+              product: "2"
+            }), ": 테일게이팅을 감지할 센서를 선택하세요."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "antipassback",
+      children: "안티패스백 설정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.a, {
+        href: "../../reference/glossary#apb",
+        children: "안티패스백"
+      }), "은 출입 이력을 관리하고 보안을 강화하기 위해 사용합니다. 사용자가 출입 카드로 입실 후 다른 사용자에게 카드를 넘겨주는 악용 사례를 막을 수 있으며, 외부인이 출입 권한을 가진 사용자를 뒤따라 들어올 때 나가지 못하도록 막을 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["아래를 참고하여 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "door.antiPassBack",
+        product: "2"
+      }), " 섹션에서 설정을 완료하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.type",
+            product: "2"
+          }), ": 안티패스백 종류를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.dualAuthentication.approvalType.none",
+                product: "2"
+              }), ": 안티패스백 기능을 사용하지 않습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.apbType.soft",
+                product: "2"
+              }), ": 안티패스백을 위반하면 출입은 가능하지만 경보를 울리거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "BioStar X"
+              }), "에 로그를 생성합니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "door.apbType.hard",
+                product: "2"
+              }), ": 안티패스백을 위반하면 출입할 수 없으며 경보를 울리거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "BioStar X"
+              }), "에 로그를 생성합니다."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "door.resetTime",
+            product: "2"
+          }), ": 안티패스백 기능이 초기화될 때까지의 시간을 설정하세요. 최대 7일(10080분)까지 설정할 수 있으며, 0으로 설정하면 초기화되지 않습니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["입실 장치와 퇴실 장치가 모두 설치된 경우 사용할 수 있으며, ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "device.info.configuration",
+              product: "2"
+            }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "door.exitDevice",
+              product: "2"
+            }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.none",
+              product: "2"
+            }), "으로 설정하면 사용할 수 없습니다. 퇴실 장치 설정 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#configdoor",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "door.antiPassBack",
+              product: "2"
+            }), " 섹션을 활성화하려면 RS-485로 구성된 마스터 장치와 슬레이브 장치가 필요합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "timedAPB.title",
+              product: "2"
+            }), " 섹션이 활성화되어 있으면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "door.antiPassBack",
+              product: "2"
+            }), "을 사용할 수 없습니다."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "timed-apb",
+      children: "시간 제한 안티패스백 설정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자가 출입 인증 후 동일한 장치에서 다시 인증을 시도할 때, 안티패스백 기능이 작동하여 즉시 재인증할 수 없습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "timedAPB.title",
+        product: "2"
+      }), " 섹션에서는 안티패스백 기능의 초기화 시간을 설정하여 사용자의 빈번한 입실을 효과적으로 제한할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "timedAPB.field",
+            product: "2"
+          }), ": 시간 제한 안티패스백 기능을 사용할 장치를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "door.resetTime",
+            product: "2"
+          }), ": 안티패스백 기능이 초기화될 때까지의 시간을 설정하세요. 입력 단위는 분(min)이며 기본값은 10분입니다. 최대 60분까지 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "zone.apb.bypassGroup",
+            product: "2"
+          }), ": 시간 제한 안티패스백 기능을 제한받지 않고 항상 통과할 수 있는 출입 그룹을 선택할 수 있습니다."]
+        }), "\n"]
+      }), "\n"]
     })]
   });
 }

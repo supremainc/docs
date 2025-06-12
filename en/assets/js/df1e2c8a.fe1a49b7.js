@@ -1,94 +1,5 @@
 "use strict";
 (self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3395"], {
-1294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  ZP: () => (MDXContent),
-  d$: () => (toc)
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(65);
-
-
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-
-
-
-
-
-const toc = [];
-function _createMdxContent(props) {
-  const _components = {
-    li: "li",
-    p: "p",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
-    ...props.components
-  };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-    children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "표정이 변하지 않도록 주의하세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "마스크, 모자, 안대를 착용하지 마세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "마스크를 착용한 얼굴을 등록하지 마세요. 마스크를 착용한 얼굴과 착용하지 않은 얼굴을 모두 등록할 경우 오인식률이 높아질 수 있습니다."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "고개를 들거나 숙이지 마세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "진한 화장을 하지 마세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "눈을 감지 마세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "화면에 양쪽 어깨가 모두 나타나도록 하세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "움직이지 말고, 정면으로 서서 얼굴을 등록하세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "화면의 지시에 따르지 않을 경우 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
-      }), "\n"]
-    }), "\n"]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-
-
-
-}),
 3449: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -157,43 +68,122 @@ function _missingMdxReference(id, component) {
 
 
 }),
-4945: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+7345: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  "default": () => (/* binding */ MDXContent),
-  toc: () => (/* binding */ toc),
+  frontMatter: () => (/* binding */ enroll_credential_frontMatter),
+  "default": () => (/* binding */ enroll_credential_MDXContent),
+  toc: () => (/* binding */ enroll_credential_toc),
   metadata: () => (/* reexport */ site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject),
   assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
+  contentTitle: () => (/* binding */ enroll_credential_contentTitle)
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-enroll-credential-mdx-df1.json
-var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"},"next":{"title":"사용자 탐색하기","permalink":"/docs/platform/biostar_x/view-users"}}')
+var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/en/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/en/platform/biostar_x/set-permission"},"next":{"title":"사용자 탐색하기","permalink":"/docs/en/platform/biostar_x/view-users"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_enter-user-page.mdx
 var _enter_user_page = __webpack_require__(3449);
-// EXTERNAL MODULE: ./docs/common/_enrolling-face-warning.mdx
-var _enrolling_face_warning = __webpack_require__(1294);
+;// CONCATENATED MODULE: ./docs/common/_enrolling-face-warning.mdx
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [];
+function _createMdxContent(props) {
+  const _components = {
+    li: "li",
+    p: "p",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return (0,jsx_runtime.jsxs)(_components.ul, {
+    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "표정이 변하지 않도록 주의하세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "마스크, 모자, 안대를 착용하지 마세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "마스크를 착용한 얼굴을 등록하지 마세요. 마스크를 착용한 얼굴과 착용하지 않은 얼굴을 모두 등록할 경우 오인식률이 높아질 수 있습니다."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "고개를 들거나 숙이지 마세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "진한 화장을 하지 마세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "눈을 감지 마세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "화면에 양쪽 어깨가 모두 나타나도록 하세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "움직이지 말고, 정면으로 서서 얼굴을 등록하세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "화면의 지시에 따르지 않을 경우 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
+      }), "\n"]
+    }), "\n"]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
 ;// CONCATENATED MODULE: ./docs/platform/biostar_x/enroll-credential.mdx
 
 
-const frontMatter = {
+const enroll_credential_frontMatter = {
 	id: 'enroll-credential',
 	title: '사용자 크리덴셜 등록하기',
 	description: '지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.',
 	keywords: [
 		'크리덴셜'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
-const contentTitle = undefined;
+const enroll_credential_contentTitle = undefined;
 
 const assets = {
 
@@ -203,7 +193,7 @@ const assets = {
 
 
 
-const toc = [..._enter_user_page/* toc */.d$, {
+const enroll_credential_toc = [..._enter_user_page/* toc */.d$, {
   "value": "보안 수준 설정",
   "id": "securityLevel",
   "level": 2
@@ -215,7 +205,7 @@ const toc = [..._enter_user_page/* toc */.d$, {
   "value": "얼굴 등록",
   "id": "enroll-visualface",
   "level": 2
-}, ..._enrolling_face_warning/* toc */.d$, {
+}, ...toc, {
   "value": "출입 카드 등록",
   "id": "enroll-card",
   "level": 2
@@ -236,7 +226,7 @@ const toc = [..._enter_user_page/* toc */.d$, {
   "id": "readcard",
   "level": 3
 }, {
-  "value": "모바일 인증 등록",
+  "value": "모바일 출입 카드 등록",
   "id": "enroll-mobile",
   "level": 2
 }, {
@@ -244,15 +234,11 @@ const toc = [..._enter_user_page/* toc */.d$, {
   "id": "enroll-qrbarcode",
   "level": 2
 }, {
-  "value": "패스코드 등록",
+  "value": "PIN 등록",
   "id": "enroll-passcode",
   "level": 2
-}, {
-  "value": "액세스 PIN 등록",
-  "id": "enroll-accesspin",
-  "level": 2
 }];
-function _createMdxContent(props) {
+function enroll_credential_createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
@@ -394,7 +380,8 @@ function _createMdxContent(props) {
       }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.credential.fingerprint.enrollFingerprint"
       }), " 창이 나타나면 각 항목을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.enroll"
+        sid: "button.apply",
+        product: "2"
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-new-user-credential-finger.png"
@@ -508,7 +495,7 @@ function _createMdxContent(props) {
         children: (0,jsx_runtime.jsx)(_components.strong, {
           children: "얼굴 등록 시 주의 사항"
         })
-      }), (0,jsx_runtime.jsx)(_enrolling_face_warning/* default */.ZP, {})]
+      }), (0,jsx_runtime.jsx)(MDXContent, {})]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.credential.title"
@@ -517,7 +504,8 @@ function _createMdxContent(props) {
       }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.credential.visualFace.enrollVisualFace"
       }), " 창이 나타나면 각 항목을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.enroll"
+        sid: "button.apply",
+        product: "2"
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-new-user-credential-face.png"
@@ -823,7 +811,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -890,7 +879,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1161,7 +1151,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-mobile",
-      children: "모바일 인증 등록"
+      children: "모바일 출입 카드 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다. 모바일 출입 카드는 각 사용자가 개별 등록하거나 CSV 불러오기 기능을 이용해 다수의 사용자를 한 번에 등록할 수도 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1264,7 +1254,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1399,7 +1390,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1515,7 +1507,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1587,7 +1580,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1598,7 +1592,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-passcode",
-      children: "패스코드 등록"
+      children: "PIN 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 장치에 비밀번호를 입력해 출입할 수 있도록 비밀번호를 할당할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -1606,30 +1600,20 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.title"
-          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.passcode.title"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
+          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.authMode.pin",
+            product: "2"
+          }), " 항목의 체크박스를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "입력 필드가 활성화되면 비밀번호를 입력하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.passcode.enrollPasscode"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.passcode.title"
-          }), " 항목에 비밀번호를 입력하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-new-user-credential-passcode.png"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.passcode.confirmPasscode"
-          }), " 항목에 앞서 입력한 비밀번호를 한 번 더 입력하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -1641,61 +1625,20 @@ function _createMdxContent(props) {
           children: "다음 문서"
         }), "를 참고하세요."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "enroll-accesspin",
-      children: "액세스 PIN 등록"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자가 장치에 비밀번호를 입력해 출입할 수 있도록 비밀번호를 할당할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.title"
-          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.accessPin.title"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.accessPin.enrollAccessPin"
-          }), " 창이 나타나면 PIN을 입력하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.credential.accessPin.confirmAccessPin"
-          }), " 항목에 한 번 더 PIN을 입력하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.enroll"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["CSV 불러오기 기능을 이용해 다수의 사용자 PIN을 한 번에 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "#",
-          children: "다음 문서"
-        }), "를 참고하세요."]
-      })
     })]
   });
 }
-function MDXContent(props = {}) {
+function enroll_credential_MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   };
   return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
     ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+    children: (0,jsx_runtime.jsx)(enroll_credential_createMdxContent, {
       ...props
     })
-  }) : _createMdxContent(props);
+  }) : enroll_credential_createMdxContent(props);
 }
 function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
