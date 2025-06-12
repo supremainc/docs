@@ -187,7 +187,9 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/settings-manage-door-group',
-                'platform/biostar_x/settings-add-door',
+                'platform/biostar_x/settings-door-add',
+                'platform/biostar_x/settings-door-edit-info',
+                'platform/biostar_x/settings-door-delete'
               ]
             }
           ]
