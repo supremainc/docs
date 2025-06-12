@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-door-add-mdx-fcf.json
-var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-add-door","permalink":"/docs/platform/biostar_x/settings-add-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-add-door","permalink":"/docs/en/platform/biostar_x/settings-add-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-add-door","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'보안',
 		'출입 통제'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -92,8 +92,10 @@ function _createMdxContent(props) {
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에서 출입 통제 시스템의 핵심 요소인 출입문을 추가하고 설정하는 방법을 안내합니다. 출입문별로 입실·퇴실 장치를 연결하고, 안티패스백과 이중 인증 등 보안 기능을 설정하여 체계적인 출입 관리 환경을 구축할 수 있습니다. 또한 출입문 상태에 따른 알람 설정으로 보안 사고를 사전에 예방할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "before-start",
       children: "시작하기 전에"
@@ -182,7 +184,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "device.info.configuration",
                 product: "2"
-              }), ": 출입문과 연결된 장치와 퇴실 버튼, 출입문 세선 등을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              }), ": 출입문과 연결된 장치와 입실 및 퇴실 버튼, 출입문 센서를 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "#configdoor",
                 children: "다음 문서"
               }), "를 참고하세요."]
@@ -192,28 +194,40 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.option",
                 product: "2"
-              }), ": 부가 옵션을 설정하세요."]
+              }), ": 부가 옵션을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#option",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "door.antiPassBack",
                 product: "2"
-              }), ": 출입 이력을 관리하고 보안을 강화하기 위한 안티패스백 기능을 설정하세요."]
+              }), ": 출입 이력을 관리하고 보안을 강화하기 위한 안티패스백 기능을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#antipassback",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "timedAPB.title",
                 product: "2"
-              }), ": 안티패스백을 재인증할 수 있을 때까지 걸리는 초기화 시간을 설정할 수 있습니다."]
+              }), ": 안티패스백 기능의 초기화 시간을 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#timed-apb",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "door.alarm",
                 product: "2"
-              }), ": 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다."]
+              }), ": 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#alarm",
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -445,7 +459,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "door.openTime",
                 product: "2"
-              }), ": 사용자가 인증을 완료하고 출입문이 열린 채로 유지되는 시간을 설정하세요. 인증을 성공했을 때 릴레이가 활성화되는 시간이며, 이 시간이 지나면 릴레이는 출입문에 신호를 보내지 않습니다."]
+              }), ": 인증 완료 후 출입문이 열린 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 출입문이 자동으로 잠깁니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -551,7 +565,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "door.authenticationTimeout",
                 product: "2"
-              }), ": 첫 번째 크리덴셜을 인증하고 두 번째 크리덴셜을 인증하는 대기 시간을 설정하세요. 첫 번째 크리덴셜을 인증하고 설정한 시간 안에 두 번째 크리덴셜을 인증하지 않으면 출입문이 열리지 않습니다."]
+              }), ": 첫 번째 인증 후 두 번째 인증까지의 대기 시간을 설정하세요. 설정된 시간 내에 두 번째 인증이 완료되지 않으면 출입문이 열리지 않습니다."]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -559,16 +573,19 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["기존에 ", (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "재실 인원 제한 구역"
-                }), "의 입실 및 퇴실 장치로 설정된 장치에 이중 인증을 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: ["재실 인원 제한 구역에 설정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "shell.header.setting"
                 }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                   children: "Advanced ACS"
                 }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "zone.occupancy.title",
                   product: "2"
-                }), " 메뉴에서 입실 및 퇴실 장치를 다시 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                })]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "zone.occupancy.title",
+                  product: "2"
+                }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "#",
                   children: "다음 문서"
                 }), "를 참고하세요."]
