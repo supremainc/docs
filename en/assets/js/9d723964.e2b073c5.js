@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-elevators-group-mdx-9d7.json
-var site_docs_platform_biostar_x_settings_manage_elevators_group_mdx_9d7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-elevators-group","title":"엘리베이터 그룹 관리하기","description":"여러 개의 엘리베이터를 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-elevators-group.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-elevators-group","permalink":"/docs/platform/biostar_x/settings-manage-elevators-group","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-elevators-group.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-elevators-group","title":"엘리베이터 그룹 관리하기","description":"여러 개의 엘리베이터를 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","keywords":["엘리베이터","그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-elevators"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_manage_elevators_group_mdx_9d7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-elevators-group","title":"엘리베이터 그룹 관리하기","description":"여러 개의 엘리베이터를 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-elevators-group.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-elevators-group","permalink":"/docs/en/platform/biostar_x/settings-manage-elevators-group","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-elevators-group.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-elevators-group","title":"엘리베이터 그룹 관리하기","description":"여러 개의 엘리베이터를 쉽게 관리할 수 있도록 그룹 설정 방법을 안내합니다.","keywords":["엘리베이터","그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-elevators"},"next":{"title":"엘리베이터 등록하기","permalink":"/docs/en/platform/biostar_x/settings-elevators-add"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'엘리베이터',
 		'그룹'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -53,11 +53,24 @@ const toc = [{
   "value": "엘리베이터 그룹 삭제",
   "id": "deleting-elevator-group",
   "level": 2
+}, {
+  "value": "그룹에 엘리베이터 추가",
+  "id": "adding-elevator-to-group",
+  "level": 2
+}, {
+  "value": "출입문 목록에서 그룹에 추가하기",
+  "id": "출입문-목록에서-그룹에-추가하기",
+  "level": 3
+}, {
+  "value": "출입문 정보에서 그룹에 추가하기",
+  "id": "출입문-정보에서-그룹에-추가하기",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -198,6 +211,78 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "엘리베이터 그룹을 삭제하면 그룹에 포함된 모든 엘리베이터가 삭제됩니다. 그룹에 포함된 엘리베이터를 삭제하지 않으려면 먼저 엘리베이터를 다른 그룹으로 이동한 후 그룹을 삭제하세요."
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "adding-elevator-to-group",
+      children: "그룹에 엘리베이터 추가"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "출입문-목록에서-그룹에-추가하기",
+      children: "출입문 목록에서 그룹에 추가하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Elevator"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "엘리베이터 목록에서 그룹에 추가할 엘리베이터를 선택하고 원하는 그룹으로 드래그하세요."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 엘리베이터가 그룹으로 이동합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "출입문-정보에서-그룹에-추가하기",
+      children: "출입문 정보에서 그룹에 추가하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Elevator"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "화면 오른쪽의 엘리베이터 목록에서 그룹에 추가할 엘리베이터를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["엘리베이터 정보 수정 화면이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.information",
+            product: "2"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.group",
+            product: "2"
+          }), " 옵션을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "원하는 그룹을 선택하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 가장 아래에 있는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
     })]
   });
 }
