@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9023"], {
-4016: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9117"], {
+3437: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_manage_elevators_mdx_e8c_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-overview-mdx-743.json
-var site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/ui-overview.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-overview","permalink":"/docs/en/platform/biostar_x/ui-overview","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-overview.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","keywords":["UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 삭제하기","permalink":"/docs/en/platform/biostar_x/settings-door-delete"},"next":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/en/platform/biostar_x/ui-common"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-elevators-mdx-e8c.json
+var site_docs_platform_biostar_x_settings_manage_elevators_mdx_e8c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-elevators","title":"엘리베이터 관리하기","description":"엘리베이터를 그룹 등록 및 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-elevators.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-elevators","permalink":"/docs/en/platform/biostar_x/settings-manage-elevators","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-elevators.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-elevators","title":"엘리베이터 관리하기","description":"엘리베이터를 그룹 등록 및 관리하는 방법을 안내합니다.","keywords":["엘리베이터","그룹 등록","관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 삭제하기","permalink":"/docs/en/platform/biostar_x/settings-door-delete"},"next":{"title":"엘리베이터 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-elevators-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-overview.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-manage-elevators.mdx
 
 
 const frontMatter = {
-	id: 'ui-overview',
-	title: 'UI 알아보기',
-	description: 'BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.',
+	id: 'settings-manage-elevators',
+	title: '엘리베이터 관리하기',
+	description: '엘리베이터를 그룹 등록 및 관리하는 방법을 안내합니다.',
 	keywords: [
-		'UI'
+		'엘리베이터',
+		'그룹 등록',
+		'관리'
 	],
 	isTranslationMissing: true
 };
@@ -50,7 +52,7 @@ function _createMdxContent(props) {
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다. BioStar X는 다양한 기능을 제공하며, 각 기능은 사용자 인터페이스(UI)를 통해 쉽게 접근할 수 있습니다. 각 페이지의 사용자 인터페이스를 살펴보면, BioStar X의 기능을 보다 쉽게 이해하고 활용할 수 있습니다. 아래는 BioStar X의 주요 페이지와 그 UI 구성 요소에 대한 설명입니다."
+      children: "엘리베이터를 그룹 등록 및 관리하는 방법을 안내합니다. 엘리베이터와 관련한 출입 통제 설정을 통해 특정 층에 대한 출입 권한을 제어할 수 있습니다. 이를 통해 보안과 편의성을 강화할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }

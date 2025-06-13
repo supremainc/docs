@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-door-add-mdx-fcf.json
-var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-door-add","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-door-add","permalink":"/docs/en/platform/biostar_x/settings-door-add","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-door-add","title":"출입문 추가하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group"},"next":{"title":"출입문 정보 수정하기","permalink":"/docs/en/platform/biostar_x/settings-door-edit-info"}}')
+var site_docs_platform_biostar_x_settings_door_add_mdx_fcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-door-add","title":"출입문 등록하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-door-add.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-door-add","permalink":"/docs/platform/biostar_x/settings-door-add","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-door-add.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-door-add","title":"출입문 등록하기","description":"출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.","keywords":["출입문","보안","출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"},"next":{"title":"출입문 정보 수정하기","permalink":"/docs/platform/biostar_x/settings-door-edit-info"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,14 +25,14 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'settings-door-add',
-	title: '출입문 추가하기',
+	title: '출입문 등록하기',
 	description: '출입 통제에 사용할 출입문을 설정하세요. 출입문에 따른 입실/퇴실 장치를 선택하거나 안티패스백을 설정하여 보안을 강화할 수 있으며 알람을 구성할 수 있습니다.',
 	keywords: [
 		'출입문',
 		'보안',
 		'출입 통제'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -47,7 +47,7 @@ const toc = [{
   "id": "before-start",
   "level": 2
 }, {
-  "value": "출입문 추가",
+  "value": "출입문 등록",
   "id": "adding-door",
   "level": 2
 }, {
@@ -95,21 +95,21 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에서 출입 통제 시스템의 핵심 요소인 출입문을 추가하고 설정하는 방법을 안내합니다. 출입문별로 입실·퇴실 장치를 연결하고, 안티패스백과 이중 인증 등 보안 기능을 설정하여 체계적인 출입 관리 환경을 구축할 수 있습니다. 또한 출입문 상태에 따른 알람 설정으로 보안 사고를 사전에 예방할 수 있습니다."]
+      }), "에서 출입 통제 시스템의 핵심 요소인 출입문을 등록하고 설정하는 방법을 안내합니다. 출입문별로 입실·퇴실 장치를 연결하고, 안티패스백과 이중 인증 등 보안 기능을 설정하여 체계적인 출입 관리 환경을 구축할 수 있습니다. 또한 출입문 상태에 따른 알람 설정으로 보안 사고를 사전에 예방할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "before-start",
       children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["출입문을 추가하기 전에 출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["출입문을 등록하기 전에 출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "출입문을 추가하기 전에 장치를 등록하세요. 장치 등록에 대한 자세한 내용은 다음 문서를 참고하세요."
+          children: "출입문을 등록하기 전에 장치를 등록하세요. 장치 등록에 대한 자세한 내용은 다음 문서를 참고하세요."
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -137,7 +137,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "adding-door",
-      children: "출입문 추가"
+      children: "출입문 등록"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -281,7 +281,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["출입문 그룹 추가에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["출입문 그룹 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-manage-door-group",
               children: "다음 문서"
             }), "를 참고하세요."]
