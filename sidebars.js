@@ -191,6 +191,17 @@ const sidebars = {
                 'platform/biostar_x/settings-door-edit-info',
                 'platform/biostar_x/settings-door-delete'
               ]
+            },
+            {
+              type: 'category',
+              label: '엘리베이터 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-elevators'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-elevators-group'
+              ]
             }
           ]
         },
