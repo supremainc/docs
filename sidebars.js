@@ -200,7 +200,8 @@ const sidebars = {
                 id: 'platform/biostar_x/settings-manage-elevators'
               },
               items: [
-                'platform/biostar_x/settings-manage-elevators-group'
+                'platform/biostar_x/settings-manage-elevators-group',
+                'platform/biostar_x/settings-elevators-add',
               ]
             }
           ]
