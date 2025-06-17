@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-328: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+8759: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -4421,6 +4421,34 @@ const SvgIcoAdvSearch = _ref => {
   })));
 };
 /* ESM default export */ const ico_adv_search = (SvgIcoAdvSearch);
+;// CONCATENATED MODULE: ./static/img/menus/ico-search.svg
+var ico_search_path;
+function ico_search_extends() { return ico_search_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_search_extends.apply(null, arguments); }
+
+const SvgIcoSearch = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_search_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_search_path || (ico_search_path = /*#__PURE__*/react.createElement("path", {
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.333,
+    d: "m14 14-2.893-2.893M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667"
+  })));
+};
+/* ESM default export */ const ico_search = (SvgIcoSearch);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move-forward.svg
 var ico_move_forward_path;
 function ico_move_forward_extends() { return ico_move_forward_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_forward_extends.apply(null, arguments); }
@@ -4765,6 +4793,7 @@ const SvgIcoTrash2 = _ref => {
 
 
 
+
 /* ESM default export */ const theme_MDXComponents = ({
     ...MDXComponents/* default */.Z,
     Cmd: Cmd,
@@ -4843,6 +4872,7 @@ const SvgIcoTrash2 = _ref => {
     IcMove: ico_move,
     IcBack: ico_back,
     IcAdvSearch: ico_adv_search,
+    IcSearch: ico_search,
     IcFw: ico_move_forward,
     IcBw: ico_move_backward,
     IcFirst: ico_first_page,

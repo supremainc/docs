@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9023"], {
-4016: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7069"], {
+3384: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_elevators_delete_mdx_72a_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-overview-mdx-743.json
-var site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/ui-overview.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-overview","permalink":"/docs/en/platform/biostar_x/ui-overview","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-overview.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","keywords":["UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 삭제하기","permalink":"/docs/en/platform/biostar_x/settings-elevators-delete"},"next":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/en/platform/biostar_x/ui-common"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-elevators-delete-mdx-72a.json
+var site_docs_platform_biostar_x_settings_elevators_delete_mdx_72a_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-elevators-delete.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-elevators-delete","permalink":"/docs/platform/biostar_x/settings-elevators-delete","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-elevators-delete.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","keywords":["엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 정보 수정하기","permalink":"/docs/platform/biostar_x/settings-elevators-edit-info"},"next":{"title":"운영 권한 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-account"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-overview.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-elevators-delete.mdx
 
 
 const frontMatter = {
-	id: 'ui-overview',
-	title: 'UI 알아보기',
-	description: 'BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.',
+	id: 'settings-elevators-delete',
+	title: '엘리베이터 삭제하기',
+	description: '등록된 엘리베이터를 삭제하는 방법을 안내합니다.',
 	keywords: [
-		'UI'
+		'엘리베이터'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -43,15 +43,55 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
+    li: "li",
+    ol: "ol",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {Cmd} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다. BioStar X는 다양한 기능을 제공하며, 각 기능은 사용자 인터페이스(UI)를 통해 쉽게 접근할 수 있습니다. 각 페이지의 사용자 인터페이스를 살펴보면, BioStar X의 기능을 보다 쉽게 이해하고 활용할 수 있습니다. 아래는 BioStar X의 주요 페이지와 그 UI 구성 요소에 대한 설명입니다."
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+      children: "등록된 엘리베이터를 삭제하는 방법을 안내합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Elevator"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "엘리베이터 목록에서 삭제하려는 엘리베이터의 체크박스를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단에 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.delete",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 엘리베이터가 삭제됩니다. 삭제된 엘리베이터는 복구할 수 없습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "button.delete",
+          product: "2"
+        }), " 버튼은 엘리베이터 목록에서 한 개 이상의 엘리베이터를 선택해야 활성화됩니다."]
+      })
+    })]
   });
 }
 function MDXContent(props = {}) {

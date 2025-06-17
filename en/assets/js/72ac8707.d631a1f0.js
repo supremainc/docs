@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-elevators-delete-mdx-72a.json
-var site_docs_platform_biostar_x_settings_elevators_delete_mdx_72a_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-elevators-delete.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-elevators-delete","permalink":"/docs/platform/biostar_x/settings-elevators-delete","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-elevators-delete.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","keywords":["엘리베이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 정보 수정하기","permalink":"/docs/platform/biostar_x/settings-elevators-edit-info"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_elevators_delete_mdx_72a_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-elevators-delete.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-elevators-delete","permalink":"/docs/en/platform/biostar_x/settings-elevators-delete","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-elevators-delete.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-elevators-delete","title":"엘리베이터 삭제하기","description":"등록된 엘리베이터를 삭제하는 방법을 안내합니다.","keywords":["엘리베이터"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 정보 수정하기","permalink":"/docs/en/platform/biostar_x/settings-elevators-edit-info"},"next":{"title":"운영 권한 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-account"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'엘리베이터'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
