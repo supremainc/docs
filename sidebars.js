@@ -214,7 +214,7 @@ const sidebars = {
                 id: 'platform/biostar_x/settings-manage-account'
               },
               items: [
-                
+                'platform/biostar_x/settings-adding-custom-account',
               ]
             }
           ]
