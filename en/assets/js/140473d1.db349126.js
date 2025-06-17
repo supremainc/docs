@@ -153,7 +153,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-account-mdx-140.json
-var site_docs_platform_biostar_x_settings_manage_account_mdx_140_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-account","title":"운영 권한 관리하기","description":"등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-account.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-account","permalink":"/docs/platform/biostar_x/settings-manage-account","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-account.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-account","title":"운영 권한 관리하기","description":"등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다.","keywords":["계정","운영 권한","커스텀 권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 삭제하기","permalink":"/docs/platform/biostar_x/settings-elevators-delete"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_manage_account_mdx_140_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-account","title":"운영 권한 관리하기","description":"등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-account.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-account","permalink":"/docs/en/platform/biostar_x/settings-manage-account","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-account.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-account","title":"운영 권한 관리하기","description":"등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다.","keywords":["계정","운영 권한","커스텀 권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"엘리베이터 삭제하기","permalink":"/docs/en/platform/biostar_x/settings-elevators-delete"},"next":{"title":"커스텀 권한 추가하기","permalink":"/docs/en/platform/biostar_x/settings-adding-custom-account"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -172,7 +172,7 @@ const frontMatter = {
 		'운영 권한',
 		'커스텀 권한'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -189,7 +189,7 @@ const toc = [{
   "level": 2
 }, ..._account_list/* toc */.d$, {
   "value": "사용자에게 운영 권한 부여하기",
-  "id": "사용자에게-운영-권한-부여하기",
+  "id": "addUserPermission",
   "level": 2
 }, {
   "value": "운영 권한 제외하기",
@@ -235,7 +235,7 @@ function _createMdxContent(props) {
         children: "Account"
       }), "를 클릭하세요. 권한 등급에 따라 기본 제공하는 계정을 참고하세요."]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_account_list/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자에게-운영-권한-부여하기",
+      id: "addUserPermission",
       children: "사용자에게 운영 권한 부여하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "일반 사용자에게 운영 권한을 부여하는 방법을 안내합니다."
@@ -367,34 +367,49 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "settings.account.menu.setting",
+            sid: "settings.account.menu.detailSetting",
             product: "2"
           }), ": 아이템별 권한이 부여된 그룹을 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.account.menu.setting",
+            product: "2"
+          }), ": 메뉴에 접근할 수 있는 권한을 확인할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.account.addUser",
             product: "2"
-          }), ": 매뉴에 접근할 수 있는 권한을 확인할 수 있습니다."]
+          }), ": 권한이 부여된 사용자를 확인할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.editRead",
                 product: "2"
-              }), ": 해당 메뉴의 설정을 수정하거나 확인할 수 있습니다."]
+              }), ": 해당 메뉴의 항목을 추가, 편집, 삭제할 수 있는 권한을 부여합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.read",
                 product: "2"
-              }), ": 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있습니다."]
+              }), ": 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["특정 사용자에게 권한을 부여하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#addUserPermission",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     })]
   });
 }
