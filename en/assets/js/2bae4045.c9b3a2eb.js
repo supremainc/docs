@@ -85,13 +85,6 @@ function _createMdxContent(props) {
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            sid: "setting.account.user",
-            product: "2"
-          }), ": 자신의 사용자 정보와 근태 정보만 확인할 수 있는 등급입니다."]
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.account.visitorOperator",
             product: "2"
           }), ": ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
@@ -221,7 +214,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/platform/biostar_x/add-user-basic-info"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/en/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/en/platform/biostar_x/add-user-basic-info"},"next":{"title":"사용자 크리덴셜 등록하기","permalink":"/docs/en/platform/biostar_x/enroll-credential"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -241,7 +234,7 @@ const frontMatter = {
 		'사용자',
 		'권한'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -277,14 +270,6 @@ const toc = [..._enter_user_page/* toc */.d$, {
   "value": "장치 기본 인증 방식 설정",
   "id": "excludeDeviceAuthMode",
   "level": 2
-}, {
-  "value": "출입 예외 설정",
-  "id": "accessException",
-  "level": 2
-}, {
-  "value": "연장 시간에 출입 설정",
-  "id": "extendedDoorOpenTime",
-  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -297,9 +282,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcClose, Image, NextItem, NextStep} = _components;
+  }, {Cmd, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcClose) _missingMdxReference("IcClose", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
@@ -408,20 +392,12 @@ function _createMdxContent(props) {
       }), " 항목에서 원하는 인증 방식을 선택하세요. 원하는 인증 방식을 추가로 선택할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.user.dialog.extendAuthMode"
-            }), " 옵션을 활성화하면 얼굴과 지문을 포함하여 인증 모드를 조합할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.user.dialog.extendAuthMode"
-            }), " 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서 지원합니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["추가한 인증 방식을 삭제하려면 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
-          }), "\n"]
-        }), "\n"]
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.user.dialog.extendAuthMode"
+        }), " 옵션을 활성화하면 얼굴과 지문을 포함하여 인증 모드를 조합할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.user.dialog.extendAuthMode"
+        }), " 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서 지원합니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "excludeDeviceAuthMode",
@@ -445,35 +421,6 @@ function _createMdxContent(props) {
           sid: "common.notUse"
         }), "으로 설정하면 장치에 설정된 인증 방식과 개인 인증 방식 모두를 사용할 수 있습니다."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "accessException",
-      children: "출입 예외 설정"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자가 모든 출입문을 자유롭게 출입하도록 허용하거나, 특정 출입문에 대해서만 출입을 제한하도록 예외를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.permission.title"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.permission.accessException"
-      }), " 항목에서 사용자가 출입할 수 있는 출입문(", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.allow"
-      }), ")과 출입을 제한할 출입문(", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.deny"
-      }), ")을 선택하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["추가한 출입문을 삭제하려면 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "extendedDoorOpenTime",
-      children: "연장 시간에 출입 설정"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["연장된 출입 시간 동안에도 출입을 허용할지 설정할 수 있습니다. 연장 출입 시간에 출입을 허용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.permission.title"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.permission.extendedDoorOpenTime"
-      }), " 항목을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.use"
-      }), "으로 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(NextStep, {
       children: (0,jsx_runtime.jsx)(NextItem, {
         to: "enroll-credential",

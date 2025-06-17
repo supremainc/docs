@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-edit-user-mdx-fa1.json
-var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/en/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/en/platform/biostar_x/user-manage"},"next":{"title":"사용자 삭제하기","permalink":"/docs/en/platform/biostar_x/delete-user"}}')
+var site_docs_platform_biostar_x_edit_user_mdx_fa1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","source":"@site/docs/platform/biostar_x/edit-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/edit-user","permalink":"/docs/platform/biostar_x/edit-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/edit-user.mdx","tags":[],"version":"current","frontMatter":{"id":"edit-user","title":"사용자 정보 수정하기","description":"사용자의 입력된 정보를 수정하고 권한을 변경해보세요.","keywords":["사용자","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 관리하기","permalink":"/docs/platform/biostar_x/user-manage"},"next":{"title":"사용자 삭제하기","permalink":"/docs/platform/biostar_x/delete-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'사용자 그룹'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -125,6 +125,15 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.user.credential.title"
+            }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "enroll-credential",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.permission.title"
             }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "set-permission",
@@ -134,11 +143,9 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.user.credential.title"
-            }), " 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "enroll-credential",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+              sid: "common.advanced",
+              product: "2"
+            }), " 섹션에서 사용자와 관련한 개인 메시지를 입력할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })
@@ -198,14 +205,14 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
       children: [(0,jsx_runtime.jsx)(NextItem, {
-        to: "set-permission",
-        children: (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자의 출입 권한 설정 방법을 확인하세요."
-        })
-      }), (0,jsx_runtime.jsx)(NextItem, {
         to: "enroll-credential",
         children: (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자 크리덴셜을 등록하고 출입 인증 방식을 설정하세요."
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "set-permission",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자의 출입 권한 설정 방법을 확인하세요."
         })
       }), (0,jsx_runtime.jsx)(NextItem, {
         to: "transfer-user-info-to-device",

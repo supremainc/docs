@@ -344,7 +344,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#package",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "고급 출입통제 시스템"
+                  children: "고급 출입 통제"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
                 children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)"
@@ -429,7 +429,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "디바이스 매니저"
-        }), " 라이선스는 타사 출입통제 시스템(Aceess Control System, ACS)을 사용하는 고객이 ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " 라이선스는 타사 소프트웨어 또는 타사 시스템을 사용하는 고객이 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
         }), "를 통해 슈프리마의 장치를 효율적으로 관리하고자 할 때 필요한 라이선스입니다."]
       })
@@ -682,7 +682,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "고급 출입통제 시스템"
+          children: "고급 출입 통제"
         }), ": 안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 침입 경보(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 구역을 설정하고, 고급 출입통제 기능을 사용할 수 있는 패키지입니다."]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
