@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 최소 요구 사항을 확인하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 최소 요구 사항을 확인하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/platform/biostar_x/tutorial"}}')
+var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 최소 요구 사항을 확인하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/en/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 최소 요구 사항을 확인하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/en/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/en/platform/biostar_x/tutorial"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'CPU',
 		'RAM'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -42,6 +42,21 @@ const assets = {
 
 };
 
+/*<div className='overflow-x col5--15-10-25'>
+
+| \> | 항목 | 소규모 조직 | 중간 규모 조직 | 대규모 조직 |
+| -- | -- | -- | -- | -- |
+| 사용 환경 | 장치 수 | 1 - 50 대 | 51 - 100 대 | 101 - 1,000 대 |
+| 시스템 환경(서버) | 운영체제 | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022<br/>* Mac OS 부트 캠프의 Windows 가상 환경은 지원되지 않습니다. |
+| ^ | 데이터베이스 | \> | \> | MariaDB 10.1.10, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019<br/>* MS SQL 보안 통신은 TLS 1.0 및 1.1을 지원합니다. |
+| ^ | CPU | 2 GHz 듀얼 코어 | 4 GHz 쿼드 코어 | 4 GHz 16 코어 |
+| ^ | RAM | 8 GB | 16 GB | 32 GB |
+| ^ | SSD | 512 GB | 1 TB | 1 TB |
+| 시스템 환경(클라이언트) | CPU | 1 GHz | 1 GHz | 1 GHz |
+| ^ | RAM | 4 GB | 4 GB | 4 GB |
+| ^ | 웹 브라우저 | \> | \> | Google 크롬 100 버전 이상 |
+
+</div>*/
 
 
 const toc = [];
@@ -67,7 +82,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "를 설치하기 위한 시스템 최소 요구 사항을 확인하세요."]
-    }), "\n", (0,jsx_runtime.jsx)("div", {
+    }), "\n", "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x col5--15-10-25",
       children: (0,jsx_runtime.jsxs)(_components.table, {
         children: [(0,jsx_runtime.jsx)(_components.thead, {
@@ -76,72 +91,52 @@ function _createMdxContent(props) {
               colSpan: "2",
               children: "항목"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "소규모 조직"
+              children: "최소 사양"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "중간 규모 조직"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "대규모 조직"
+              children: "권장 사양"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "사용 환경"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "장치 수"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 - 50 대"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "51 - 100 대"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "101 - 1,000 대"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "5",
               children: "시스템 환경(서버)"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "운영체제"
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              colSpan: "3",
-              children: ["Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022", (0,jsx_runtime.jsx)("br", {}), "* Mac OS 부트 캠프의 Windows 가상 환경은 지원되지 않습니다."]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              colSpan: "2",
+              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "데이터베이스"
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              colSpan: "3",
-              children: ["MariaDB 10.1.10, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019", (0,jsx_runtime.jsx)("br", {}), "* MS SQL 보안 통신은 TLS 1.0 및 1.1을 지원합니다."]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              colSpan: "2",
+              children: "MariaDB 10.1.10, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 201"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2 GHz 듀얼 코어"
+              children: "2.3GHz"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "4 GHz 쿼드 코어"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "4 GHz 16 코어"
+              children: "4.0GHz 16코어"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "8 GB"
+              children: "64GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16 GB"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32 GB"
+              children: "64GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "SSD"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "512 GB"
+              children: "1TB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 TB"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 TB"
+              children: "1TB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -150,27 +145,23 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 GHz"
+              children: "2.5GHz"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 GHz"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 GHz"
+              children: "4.0GHz 16코어"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "4 GB"
+              children: "16GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "4 GB"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "4 GB"
+              children: "128GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "웹 브라우저"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              colSpan: "3",
+              colSpan: "2",
               children: "Google 크롬 100 버전 이상"
             })]
           })]
@@ -180,6 +171,14 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Mac OS 부트 캠프의 Windows 가상 환경은 지원되지 않습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "MS SQL Server 보안 통신은 TLS 1.0 및 1.1을 지원합니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "최적의 성능을 위해 64bit 운영체제를 사용하세요."
           }), "\n"]
@@ -219,6 +218,10 @@ function _createMdxContent(props) {
               href: "mailto:CS@suprema.co.kr",
               children: "CS@suprema.co.kr"
             }), ")에 문의하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이미지 로그 기능을 사용하려면 최소 10TB 이상의 HDD를 추가 설치해야 합니다."
           }), "\n"]
         }), "\n"]
       })
