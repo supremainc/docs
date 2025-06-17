@@ -205,6 +205,17 @@ const sidebars = {
                 'platform/biostar_x/settings-elevators-edit-info',
                 'platform/biostar_x/settings-elevators-delete'
               ]
+            },
+            {
+              type: 'category',
+              label: '운영 권한 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-account'
+              },
+              items: [
+                
+              ]
             }
           ]
         },

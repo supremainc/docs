@@ -22,23 +22,9 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.operatorLevel' /> 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요.
 
-* **전체 관리자**(Administrator): 모든 메뉴를 사용할 수 있는 관리자 등급입니다.
+import AccountList from '../../common/_account-list.mdx';
 
-* **사용자 관리자**(User Operator): 사용자와 설정 메뉴만 사용할 수 있는 등급입니다.
-
-* **모니터링 관리자**(Monitoring Operator): 모니터링과 설정 메뉴를 사용할 수 있으며, <Cmd sid='shell.header.dashboard' />, <Cmd sid='shell.header.user' />, <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.setting' /> 메뉴는 **보기** 권한만 가집니다.
-
-* **영상 관리자**(Video Operator): 모니터링과 설정 메뉴를 사용할 수 있는 등급입니다.
-
-* **근태 관리자**(TA Operator): 근태 관리 메뉴를 사용할 수 있으며 사용자 메뉴는 **보기** 권한만 가집니다.
-
-* **방문자 관리자**(Visitor Operator): 방문자 메뉴만 사용할 수 있는 등급입니다.
-
-:::info
-
-사전 정의된 사용자 권한 외 새로운 사용자 권한을 추가하려면 [다음 문서](#)를 참고하세요.
-
-:::
+<AccountList />
 
 
 ## 사용자 IP 주소로 로그인 설정 {#userIp}
