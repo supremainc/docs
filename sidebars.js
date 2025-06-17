@@ -216,7 +216,18 @@ const sidebars = {
               items: [
                 'platform/biostar_x/settings-adding-custom-account',
               ]
-            }
+            },
+            {
+              type: 'category',
+              label: '출입 통제 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-access-control'
+              },
+              items: [
+                'platform/biostar_x/settings-access-control-manage-access-level',
+              ]
+            },
           ]
         },
         {
