@@ -236,20 +236,6 @@ const config = {
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         config: {}
-      },
-      algolia: {
-        appId: '11LXF9EJH7',
-        apiKey: '4882650c3591013a4db2f9211c31c4f4',
-        indexName: 'supremaincio',
-        contextualSearch: true,
-        searchParameters: {
-          attributesToHighlight: [],
-          attributesToSnippet: [
-            'content:20', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
-          ],
-          snippetEllipsisText: '…'
-        },
-        searchPagePath: 'search',
       }
     }),
 };
