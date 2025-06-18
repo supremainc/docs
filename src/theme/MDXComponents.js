@@ -54,6 +54,7 @@ import IcPlay from '@site/static/img/menus/ico-play.svg';
 import IcPause from '@site/static/img/menus/ico-pause.svg';
 import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
 import IcFilter from '@site/static/img/menus/ico-filter.svg';
+import IcFilter2 from '@site/static/img/menus/ico-filter2.svg';
 import IcMove from '@site/static/img/menus/ico-move.svg';
 import IcBack from '@site/static/img/menus/ico-back.svg';
 import IcSvTime from '@site/static/img/menus/ico-serverTime.svg';
@@ -66,10 +67,15 @@ import IcFw from '@site/static/img/menus/ico-move-forward.svg';
 import IcBw from '@site/static/img/menus/ico-move-backward.svg';
 import IcFirst from '@site/static/img/menus/ico-first-page.svg';
 import IcLast from '@site/static/img/menus/ico-last-page.svg';
+import IcFw2 from '@site/static/img/menus/ico-move-forward2.svg';
+import IcBw2 from '@site/static/img/menus/ico-move-backward2.svg';
+import IcFirst2 from '@site/static/img/menus/ico-first-page2.svg';
+import IcLast2 from '@site/static/img/menus/ico-last-page2.svg';
 import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
 import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
+import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
 export default {
     ...MDXComponents,
@@ -137,9 +143,10 @@ export default {
     IcPlay,
     IcPause,
     IcAlarm,
-    IcFilter,
+    IcFilter, IcFilter2,
     IcMove,
     IcBack,
     IcAdvSearch, IcSearch,
-    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEditUL,
+    IcFw2, IcBw2, IcFirst2, IcLast2
 }
