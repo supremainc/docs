@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-access-control-manage-access-level-mdx-ec9.json
-var site_docs_platform_biostar_x_settings_access_control_manage_access_level_mdx_ec9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-access-control-manage-access-level","permalink":"/docs/platform/biostar_x/settings-access-control-manage-access-level","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","keywords":["출입 등급"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 통제 설정하기","permalink":"/docs/platform/biostar_x/settings-access-control"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_settings_access_control_manage_access_level_mdx_ec9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-access-control-manage-access-level","permalink":"/docs/en/platform/biostar_x/settings-access-control-manage-access-level","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","keywords":["출입 등급"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입 통제 설정하기","permalink":"/docs/en/platform/biostar_x/settings-access-control"},"next":{"title":"출입 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-access-control-manage-access-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'출입 등급'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -129,14 +129,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.door",
             product: "2"
-          }), " 항목에서 출입 등급을 적용할 출입문을 선택하세요."]
+          }), " 항목에서 출입 등급에 적용할 출입문을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.schedule",
             product: "2"
-          }), " 항목에서 출입 등급을 적용할 스케줄을 선택하세요."]
+          }), " 항목에서 출입 등급에 적용할 스케줄을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
