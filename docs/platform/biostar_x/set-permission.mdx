@@ -22,25 +22,9 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.operatorLevel' /> 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요.
 
-* **전체 관리자**(Administrator): 모든 메뉴를 사용할 수 있는 관리자 등급입니다.
+import AccountList from '../../common/_account-list.mdx';
 
-* **사용자 관리자**(User Operator): 사용자와 설정 메뉴만 사용할 수 있는 등급입니다.
-
-* **모니터링 관리자**(Monitoring Operator): 모니터링과 설정 메뉴를 사용할 수 있으며, <Cmd sid='shell.header.dashboard' />, <Cmd sid='shell.header.user' />, <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.setting' /> 메뉴는 **보기** 권한만 가집니다.
-
-* **영상 관리자**(Video Operator): 모니터링과 설정 메뉴를 사용할 수 있는 등급입니다.
-
-* **근태 관리자**(TA Operator): 근태 관리 메뉴를 사용할 수 있으며 사용자 메뉴는 **보기** 권한만 가집니다.
-
-* **사용자**(User): 자신의 사용자 정보와 근태 정보만을 확인할 수 있습니다.
-
-* **방문자 관리자**(Visitor Operator): 방문자 메뉴만 사용할 수 있는 등급입니다.
-
-:::info
-
-사전 정의된 사용자 권한 외 새로운 사용자 권한을 추가하려면 [다음 문서](#)를 참고하세요.
-
-:::
+<AccountList />
 
 
 ## 사용자 IP 주소로 로그인 설정 {#userIp}
@@ -88,9 +72,7 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 :::info
 
-* <Cmd sid='team.user.dialog.extendAuthMode' /> 옵션을 활성화하면 얼굴과 지문을 포함하여 인증 모드를 조합할 수 있습니다. <Cmd sid='team.user.dialog.extendAuthMode' /> 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서 지원합니다.
-
-* 추가한 인증 방식을 삭제하려면 <IcClose/> 버튼을 클릭하세요.
+<Cmd sid='team.user.dialog.extendAuthMode' /> 옵션을 활성화하면 얼굴과 지문을 포함하여 인증 모드를 조합할 수 있습니다. <Cmd sid='team.user.dialog.extendAuthMode' /> 옵션은 FaceStation F2 및 BioStation 3, BioEntry W3 모델에서 지원합니다.
 
 :::
 
@@ -104,22 +86,6 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 <Cmd sid='team.user.permission.excludeDeviceAuthMode' /> 항목을 <Cmd sid='common.notUse' />으로 설정하면 장치에 설정된 인증 방식과 개인 인증 방식 모두를 사용할 수 있습니다.
 
 :::
-
-
-## 출입 예외 설정 {#accessException}
-
-사용자가 모든 출입문을 자유롭게 출입하도록 허용하거나, 특정 출입문에 대해서만 출입을 제한하도록 예외를 설정할 수 있습니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.accessException' /> 항목에서 사용자가 출입할 수 있는 출입문(<Cmd sid='team.user.allow' />)과 출입을 제한할 출입문(<Cmd sid='team.user.deny' />)을 선택하세요.
-
-:::info
-
-추가한 출입문을 삭제하려면 <IcClose/> 버튼을 클릭하세요.
-
-:::
-
-
-## 연장 시간에 출입 설정 {#extendedDoorOpenTime}
-
-연장된 출입 시간 동안에도 출입을 허용할지 설정할 수 있습니다. 연장 출입 시간에 출입을 허용하려면 <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.extendedDoorOpenTime' /> 항목을 클릭해 <Cmd sid='common.use' />으로 설정하세요.
 
 <NextStep>
 <NextItem to='enroll-credential'>

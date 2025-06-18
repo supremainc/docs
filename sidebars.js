@@ -97,10 +97,10 @@ const sidebars = {
                 'platform/biostar_x/export-import-user-info',
               ]
             },
-            'platform/biostar_x/user-template',
+            // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
-            'platform/biostar_x/migration-visual-face'
+            'platform/biostar_x/migration-face'
           ]
         },
         {
@@ -161,7 +161,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: '장치 세부 정보 설정하기',
+              label: '장치 설정하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/settings-device-details'
@@ -170,8 +170,64 @@ const sidebars = {
                 'platform/biostar_x/settings-device-details-info',
                 'platform/biostar_x/settings-device-details-network',
                 'platform/biostar_x/settings-device-details-auth',
+                'platform/biostar_x/settings-device-details-advanced',
+                'platform/biostar_x/settings-device-details-thermal-mask',
+                'platform/biostar_x/settings-device-details-interphone',
+                'platform/biostar_x/settings-device-details-rtsp'
               ]
-            }
+            },
+            'platform/biostar_x/settings-device-image-log',
+            'platform/biostar_x/settings-device-usb-agent',
+            {
+              type: 'category',
+              label: '출입문 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-door'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-door-group',
+                'platform/biostar_x/settings-door-add',
+                'platform/biostar_x/settings-door-edit-info',
+                'platform/biostar_x/settings-door-delete'
+              ]
+            },
+            {
+              type: 'category',
+              label: '엘리베이터 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-elevators'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-elevators-group',
+                'platform/biostar_x/settings-elevators-add',
+                'platform/biostar_x/settings-elevators-edit-info',
+                'platform/biostar_x/settings-elevators-delete'
+              ]
+            },
+            {
+              type: 'category',
+              label: '운영 권한 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-account'
+              },
+              items: [
+                'platform/biostar_x/settings-adding-custom-account',
+              ]
+            },
+            {
+              type: 'category',
+              label: '출입 통제 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-access-control'
+              },
+              items: [
+                'platform/biostar_x/settings-access-control-manage-access-level',
+              ]
+            },
           ]
         },
         {

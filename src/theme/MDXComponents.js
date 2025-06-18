@@ -61,6 +61,7 @@ import IcAccout from '@site/static/img/menus/ico-account.svg';
 import IcHelp from '@site/static/img/menus/ico-help.svg';
 import IcAibtn from '@site/static/img/menus/ico-aibtn.svg';
 import IcAdvSearch from '@site/static/img/menus/ico-adv-search.svg';
+import IcSearch from '@site/static/img/menus/ico-search.svg';
 import IcFw from '@site/static/img/menus/ico-move-forward.svg';
 import IcBw from '@site/static/img/menus/ico-move-backward.svg';
 import IcFirst from '@site/static/img/menus/ico-first-page.svg';
@@ -69,6 +70,7 @@ import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
 import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
+import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -117,6 +119,7 @@ export default {
     IcCamera,
     IcUpload,
     IcTrash,
+    IcTrash2,
     IcDown,
     IcMoreB,
     IcMoreW,
@@ -137,6 +140,6 @@ export default {
     IcFilter,
     IcMove,
     IcBack,
-    IcAdvSearch,
+    IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit
 }

@@ -1,0 +1,68 @@
+---
+id: settings-device-usb-agent
+title: USB 에이전트 설정하기
+description: 클라이언트 PC에서 BioStar X에 접속했을 때 USB 지문 등록 장치 및 카드 등록 장치를 사용하기 위한 방법을 안내합니다.
+keywords: [USB Agent]
+---
+
+클라이언트 PC에서 **BioStar X**에 접속했을 때 USB 지문 등록 장치 및 카드 등록 장치를 사용할 수 있도록 지원합니다. 이를 위해 USB Device Agent를 설치해야 합니다. 이 문서에는 USB Device Agent를 설치하고 설정하는 방법을 안내합니다.
+
+## USB Device Agent 설치하기 {#install-usb-agent}
+
+클라이언트 PC에서 **BioStar X**에 접속해 USB 지문 등록 장치 및 카드 등록 장치를 사용하려면 USB Device Agent를 설치해야 합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>를 클릭하세요.
+
+1. <Cmd sid='settings.usgAgent.lable' product='2' /> 섹션에서 <Cmd sid='button.download' product='2' /> 버튼을 클릭하세요.
+
+1. 다운로드한 파일을 실행해 화면의 안내에 따라 설치를 완료하세요.
+
+:::info
+
+Windows에서 **사용자 계정 컨트롤**이 활성화된 경우 USB Agent를 자동 실행할 수 없습니다. 사용자 계정 컨트롤을 끄거나 관리자 권한으로 직접 실행하세요.
+
+:::
+
+
+## USB 카드 장치 바이트 순서 설정 {#usb-card-device-byte-order}
+
+USB 카드 장치의 바이트 순서를 설정할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>를 클릭하세요.
+
+1. <Cmd sid='settings.usbAgent.byteOrder.title' product='2' /> 섹션에서 <Cmd sid='settings.usbAgent.byteOrder' product='2' /> 옵션을 설정하세요.
+
+    * <Cmd>MSB</Cmd>: 카드 데이터를 처리할 때 큰 바이트 단위에서 작은 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 왼쪽에서 오른쪽으로 순차 저장합니다.
+
+    * <Cmd>LSB</Cmd>: 카드 데이터를 처리할 때 작은 바이트 단위에서 큰 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 저장합니다.
+
+1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+<Cmd sid='settings.usbAgent.byteOrder' product='2' /> 옵션은 CSN 카드에 한해서만 적용할 수 있습니다.
+
+:::
+
+
+## USB Agent 포트 설정
+
+USB Agent가 사용하는 포트를 설정할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>를 클릭하세요.
+
+1. <Cmd sid='settings.usbAgent.port.title' product='2' /> 섹션의 <Cmd sid='settings.usbAgent.port' product='2' /> 입력 필드에서 포트 번호를 입력하세요.
+
+1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+USB Agent 클라이언트별 동작하는 프로그램으로 포트 번호 설정은 서버가 해당 포트 번호를 통신하기 위한 용도입니다.
+
+:::

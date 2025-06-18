@@ -10,13 +10,13 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-container-width-xl: 1600px;
-  --ifm-color-primary: #009fe8;
-  --ifm-color-primary-dark: #008fd1;
-  --ifm-color-primary-darker: #0087c5;
-  --ifm-color-primary-darkest: #006fa2;
-  --ifm-color-primary-light: #00afff;
-  --ifm-color-primary-lighter: #0cb2ff;
-  --ifm-color-primary-lightest: #2fbdff;
+  --ifm-color-primary: #5364d1;
+  --ifm-color-primary-dark: #3c4fcb;
+  --ifm-color-primary-darker: #3448c4;
+  --ifm-color-primary-darkest: #2b3ba1;
+  --ifm-color-primary-light: #6a79d7;
+  --ifm-color-primary-lighter: #7683da;
+  --ifm-color-primary-lightest: #98a2e3;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-color-color-gray: #333;
@@ -30,7 +30,8 @@
   --ifm-color-cmd: #A32343;
   --docsearch-searchbox-background: none !important;
   --ifm-color-nextstep-background: #f5f5f5;
-  --ifm-color-markdown-link: #1549c6;
+  --ifm-color-markdown-link: var(--ifm-color-primary);
+  --ifm-color-secondary-color: #102B8D;
   --main-black: rgba(255, 255, 255, 1.0);
   --main-black-6: rgba(255, 255, 255, 0.6);
   --main-black-0: rgba(255, 255, 255, 0.0);
@@ -41,20 +42,21 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #009fe8;
-  --ifm-color-primary-dark: #008fd1;
-  --ifm-color-primary-darker: #0087c5;
-  --ifm-color-primary-darkest: #006fa2;
-  --ifm-color-primary-light: #00afff;
-  --ifm-color-primary-lighter: #0cb2ff;
-  --ifm-color-primary-lightest: #2fbdff;
+  --ifm-color-primary: #949cff;
+  --ifm-color-primary-dark: #6c77ff;
+  --ifm-color-primary-darker: #5864ff;
+  --ifm-color-primary-darkest: #1b2cff;
+  --ifm-color-primary-light: #bcc1ff;
+  --ifm-color-primary-lighter: #d0d4ff;
+  --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-color-color-gray: #dadada;
   --ifm-color-color-ol-gray: #b4b4b4;
   --ifm-color-border: #d1d1d1;
-  --ifm-color-cmd: #bb7f8f;
+  --ifm-color-cmd: #f89ca1;
   --ifm-color-nextstep-background: #4d4d4d;
-  --ifm-color-markdown-link: #009fe8;
+  --ifm-color-markdown-link: var(--ifm-color-primary);
+  --ifm-color-secondary-color: #e2e2e2;
   --main-black: rgba(0, 0, 0, 1.0);
   --main-black-6: rgba(0, 0, 0, 0.6);
   --main-black-0: rgba(0, 0, 0, 0.0);
@@ -352,7 +354,7 @@ footer {
     font-size: var(--ifm-h4-font-size);
     font-weight: 400;
     .cmd {
-      font-size: 18px;
+      font-size: inherit;
     }
   }
   h5 { 
@@ -418,6 +420,20 @@ footer {
     }
   }
 
+  details {
+    .alert {
+      border-top: 1px solid #adadad;
+      border-right: 1px solid #adadad;
+      border-bottom: 1px solid #adadad;
+    }
+    .admNote + ul {
+      margin-top: 0;
+      li:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
   /* Alert */
   .alert {
     --ifm-alert-border-radius: 5px;
@@ -439,13 +455,13 @@ footer {
         display: inline-block;
         width: 1.3em;
         height: 1.3em;
-        fill: #102B8D;
+        fill: var(--ifm-color-secondary-color);
       }
     }
   }
   .alert--secondary {
-    --ifm-alert-border-color: #102B8D;
-    --ifm-alert-foreground-color: #102B8D;
+    --ifm-alert-border-color: var(--ifm-color-secondary-color);
+    --ifm-alert-foreground-color: var(--ifm-color-secondary-color);
   }
   .alert--info {
     --ifm-alert-border-color: var(--ifm-color-primary-light);

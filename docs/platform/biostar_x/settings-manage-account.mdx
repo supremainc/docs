@@ -1,0 +1,83 @@
+---
+id: settings-manage-account
+title: 운영 권한 관리하기
+description: 등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다.
+keywords: [계정, 운영 권한, 커스텀 권한]
+---
+
+등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다. 운영 권한은 사용자가 **Biostar X**에서 수행할 수 있는 작업을 제어하는 기능입니다. **커스텀 권한**은 기본 운영 권한 외에 추가적인 권한을 설정할 수 있는 기능입니다.
+
+## 권한 종류 확인하기
+
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요. 화면 왼쪽 사이드바에서 <Cmd>Account</Cmd>를 클릭하세요. 권한 등급에 따라 기본 제공하는 계정을 참고하세요.
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+
+## 사용자에게 운영 권한 부여하기 {#addUserPermission}
+
+일반 사용자에게 운영 권한을 부여하는 방법을 안내합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Account</Cmd>를 클릭하세요.
+
+1. 계정 목록에서 원하는 계정 종류를 클릭하세요.
+
+1. <Cmd sid='settings.account.addUser' product='2' /> 옵션에서 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요.
+
+1. 사용자 목록에서 운영 권한을 부여할 사용자를 선택하세요.
+
+1. 원하는 사용자를 모두 선택했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 사용자가 많아 찾기 어려울 때 <IcSearch /> 버튼을 클릭해 원하는 사용자를 검색하고 선택할 수 있습니다.
+
+* 운영 권한은 사용자 정보를 추가 또는 수정할 때 부여할 수도 있습니다. 자세한 내용은 [다음 문서](set-permission)를 참고하세요.
+
+* 사용자 정보를 추가 또는 수정할 때 권한을 이미 설정했다면 <Cmd sid='settings.account.addUser' product='2' /> 옵션에는 추가되어 있습니다.
+
+:::
+
+
+## 운영 권한 제외하기
+
+사용자에게 부여한 운영 권한을 제외하는 방법을 안내합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Account</Cmd>를 클릭하세요.
+
+1. 계정 목록에서 원하는 계정 종류를 클릭하세요.
+
+1. <Cmd sid='settings.account.addUser' product='2' /> 옵션에서 운영을 제외할 사용자의 <IcTrash2 /> 버튼을 클릭하세요.
+
+1. 설정을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+
+## 운영 권한 상세 정보 확인하기
+
+<Cmd>Account</Cmd> 메뉴의 계정 목록에서 계정을 클릭하면 해당 계정의 운영 권한 상세 정보를 확인할 수 있습니다.
+
+* <Cmd sid='common.name' product='2' />: 선택한 운영 권한의 이름입니다.
+
+* <Cmd sid='settings.accountList.columnDesc' product='2' />: 권한에 대한 간략한 설명을 확인할 수 있습니다.
+
+* <Cmd sid='settings.account.menu.detailSetting' product='2' />: 아이템별 권한이 부여된 그룹을 확인할 수 있습니다.
+
+* <Cmd sid='settings.account.menu.setting' product='2' />: 메뉴에 접근할 수 있는 권한을 확인할 수 있습니다. 
+
+* <Cmd sid='settings.account.addUser' product='2' />: 권한이 부여된 사용자를 확인할 수 있습니다.
+
+  * <Cmd sid='common.editRead' product='2' />: 해당 메뉴의 항목을 추가, 편집, 삭제할 수 있는 권한을 부여합니다.
+
+  * <Cmd sid='common.read' product='2' />: 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다.
+
+:::info
+
+특정 사용자에게 권한을 부여하는 방법은 [다음 문서](#addUserPermission)를 참고하세요.
+
+:::

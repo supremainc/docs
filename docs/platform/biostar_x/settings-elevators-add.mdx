@@ -1,0 +1,135 @@
+---
+id: settings-elevators-add
+title: 엘리베이터 등록하기
+description: 층 제어에 사용할 엘리베이터를 등록하는 방법을 안내합니다.
+keywords: [엘리베이터, 등록, 층 제어]
+---
+
+엘리베이터를 등록하고 설정하는 방법을 안내합니다. 엘리베이터는 층 제어에 사용되며, 출입문과 함께 출입 통제 시스템을 구성합니다. 엘리베이터를 등록하면 특정 층에 대한 출입 권한을 제어할 수 있습니다.
+
+## 시작하기 전에 {#before-start}
+
+* 엘리베이터를 등록하기 전에 출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* 엘리베이터를 등록하기 전에 장치를 등록하세요. 장치 등록에 대한 자세한 내용은 다음 문서를 참고하세요.
+
+  * [장치 등록하기](settings-adding-devices)
+
+  * [Wiegand 장치 등록하기](settings-adding-wiegand)
+
+  * [슬레이브 장치 등록하기](settings-adding-slave-device)
+
+
+## 엘리베이터 등록 {#adding-elevator}
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Elevator</Cmd>를 클릭하세요.
+
+1. <Cmd sid='elevator.new.title' product='2' /> 화면이 나타나면 각 섹션 항목을 차례로 설정하세요.
+
+    * <Cmd sid='common.information' product='2' />: 엘리베이터의 기본 정보를 설정하세요. 자세한 내용은 [다음 문서](#info)를 참고하세요.
+
+    * <Cmd sid='common.detail' product='2' />: 엘리베이터의 세부 정보를 설정하세요. 자세한 내용은 [다음 문서](#details)에서 확인하세요.
+
+    * <Cmd sid='common.option' product='2' />: 부가 옵션을 설정하세요. 자세한 내용은 [다음 문서](#option)를 참고하세요.
+
+    * <Cmd sid='door.alarm' product='2' />: 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 설정할 수 있습니다. 자세한 내용은 [다음 문서](#alarm)를 참고하세요.
+
+1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+
+### 기본 정보 설정 {#info}
+
+<Cmd sid='common.information' product='2' /> 섹션에서는 엘리베이터의 이름 및 그룹, 설명을 입력하거나 변경할 수 있습니다.
+
+* <Cmd sid='common.name' product='2' />: 엘리베이터의 이름을 입력하세요. 엘리베이터의 위치를 특정할 수 있는 이름을 입력하면 편리하게 관리할 수 있습니다.
+
+* <Cmd sid='common.group' product='2' />: 엘리베이터 그룹을 선택하세요.
+
+* <Cmd sid='common.description' product='2' />: 엘리베이터에 대한 간단한 설명을 입력하세요.
+
+:::info
+
+* 엘리베이터 이름은 최대 48자까지 입력할 수 있습니다.
+
+* 엘리베이터 그룹 등록에 대한 자세한 내용은 [다음 문서](settings-manage-elevators-group)를 참고하세요.
+
+:::
+
+
+### 상세 정보 설정 {#details}
+
+<Cmd sid='common.detail' product='2' /> 섹션에서는 엘리베이터의 세부 정보를 설정할 수 있습니다. 엘리베이터에 연결할 장치와 층 정보를 설정하세요.
+
+* <Cmd sid='elevator.list.column.controller' product='2' />: 엘리베이터 접근 권한을 제어할 장치를 선택하세요.
+
+* <Cmd sid='elevator.list.column.reader' product='2' />: 인증할 때 사용할 장치를 선택하세요.
+
+* <Cmd sid='elevator.list.column.module' product='2' />: 엘리베이터 버튼 릴레이를 제어할 장치를 선택하세요.
+
+* <Cmd sid='elevator.floor.totalFloor' product='2' />: 엘리베이터로 이동할 수 있는 총 층수를 입력하세요. 최대 192층까지 입력할 수 있습니다.
+
+* <Cmd sid='user.list.csvImport.autoMapping' product='2' />: 자동 매핑 사용 여부를 선택하세요. 자동 매핑을 사용하면 릴레이 번호를 순차적으로 부여합니다.
+
+* <Cmd sid='elevator.floor.setting.title' product='2' />: 층 이름과 층을 제어할 릴레이 번호를 설정하세요.
+
+:::info
+
+* <Cmd sid='elevator.list.column.controller' product='2' /> 옵션에서는 마스터 장치만 선택할 수 있습니다.
+
+  BioEntry Plus, BioEntry W, BioLite Net은 컨트롤러로 설정할 수 없습니다.
+
+* <Cmd sid='elevator.list.column.reader' product='2' /> 옵션에서는 마스터 장치, 슬레이브 장치, Wiegand 장치만 선택할 수 있으며, 최대 4개까지 선택할 수 있습니다.
+
+  OM-120 모델은 리더로 설정할 수 없습니다.
+
+* <Cmd sid='elevator.list.column.module' product='2' /> 옵션에서는 OM-120, DM-20, IM-120, SIO2 모델만 선택할 수 있습니다.
+
+:::
+
+
+### 부가 옵션 설정 {#option}
+
+<Cmd sid='common.option' product='2' /> 섹션에서는 엘리베이터의 부가 옵션을 설정할 수 있습니다.
+
+* <Cmd sid='elevator.option.relayTime' product='2' />: 층 버튼 릴에이에 대한 옵션을 설정하세요.
+
+  * <Cmd sid='door.openTime' product='2' />: 인증 완료 후 층 버튼이 활성화된 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 릴레이는 층 버튼에 신호를 보내지 않습니다.
+
+* <Cmd sid='door.dualAuthentication' product='2' />:  두 사람(일반 사용자와 관리자)이 크리덴셜을 인증하여 층 버튼이 활성화되도록 설정할 수 있습니다.
+
+  * <Cmd sid='common.device' product='2' />: 이중 인증을 사용할 장치를 선택하세요. 이중 인증을 사용하지 않으려면 <Cmd sid='common.none' product='2' />을 선택하세요.
+
+  * <Cmd sid='door.schedule' product='2' />: 이중 인증을 사용할 스케줄을 선택하세요. 원하는 스케줄이 없다면 <Cmd sid='button.plusAddSchedule' product='2' />를 클릭해 추가할 수 있습니다.
+
+  * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: 관리자 인증 순서를 설정하세요. 
+
+    * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: 인증 그룹과 관계 없이 두 명의 인증이 필요합니다. 
+    
+    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: 일반 사용자가 인증하고 설정된 인증 그룹에 포함된 사용자가 인증해야 합니다.
+
+  * <Cmd sid='door.approvalGroup' product='2' />: 관리자가 속한 그룹을 설정하세요. 이 옵션은 <Cmd sid='door.dualAuthentication.approvalType' product='2' />을 <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />으로 선택했을 때 사용할 수 있습니다.
+
+  * <Cmd sid='door.authenticationTimeout' product='2' />: 첫 번째 인증 후 두 번째 인증까지의 대기 시간을 설정하세요. 설정된 시간 내에 두 번째 인증이 완료되지 않으면 층 버튼이 활성화되지 않습니다.
+
+  :::info
+
+  * 재실 인원 제한 구역에 설정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />
+
+    <Cmd sid='zone.occupancy.title' product='2' /> 설정에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+  * 스케줄 설정에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+  :::
+
+* <Cmd sid='device.info.wiegandTamper' product='2' />: 탬포 신호를 출력할 포트를 설정하세요.
+
+
+### 알람 설정 {#alarm}
+
+<Cmd sid='door.alarm' product='2' /> 섹션에서는 탬퍼 입력을 감지하거나 별도의 입력 신호를 감지했을 때 수행할 동작을 설정할 수 있습니다.
+
+* <Cmd sid='triggerAction.trigger' product='2' />: 탬퍼 입력 감지 또는 별도의 입력 신호 감지를 설정하세요.
+
+* <Cmd sid='triggerAction.action' product='2' />: 설정한 작업 조건에 따라 수행할 동작을 설정하세요. 엘리베이터의 모든 층 버튼을 활성화하거나 특정 신호를 출력할 수 있습니다.

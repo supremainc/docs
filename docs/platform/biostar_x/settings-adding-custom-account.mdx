@@ -1,0 +1,82 @@
+---
+id: settings-adding-custom-account
+title: 커스텀 권한 추가하기
+description: 사용자가 원하는 권한 등급을 추가하는 방법을 안내합니다.
+keywords: [계정, 운영 권한, 커스텀 권한]
+---
+
+사용자가 원하는 권한 등급을 추가하는 방법을 안내합니다. 커스텀 권한은 기본 제공하는 운영 권한 외에 추가적인 권한을 설정할 수 있는 사용자 맞춤형 기능입니다.
+
+## 커스텀 권한 추가
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Account</Cmd>를 클릭하세요.
+
+1. <Cmd sid='setting.account.addCustomOperator' product='2' /> 버튼을 클릭하세요.
+
+1. 새로 생성하는 권한에 대한 이름과 설명을 입력하세요.
+
+1. 나머지 각 항목을 입력하거나 선택하세요.
+
+1. 설정을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 활성화된 라이선스 종류에 따라 설정할 수 있는 <Cmd sid='settings.account.menu.settings' product='2' />은 다를 수 있습니다.
+
+* <Cmd sid='settings.account.menu.detailSetting' product='2' />에 대한 자세한 내용은 [다음 문서](#detailSetting)를 참고하세요.
+
+* <Cmd sid='settings.account.menu.setting' product='2' />에 대한 자세한 내용은 [다음 문서](#menuSetting)를 참고하세요.
+
+* <Cmd sid='settings.account.addUser' product='2' />에 대한 자세한 내용은 [다음 문서](#addUser)를 참고하세요.
+
+:::
+
+
+### <Cmd sid='settings.account.menu.detailSetting' product='2' /> {#detailSetting}
+
+아이템에 대한 상세 권한을 설정하세요. 각 메뉴에 대한 수정 및 보기 권한을 부여할 그룹을 선택할 수 있습니다. 아이템 상세 권한은 <Cmd sid='common.permission.module.userGroup' product='2' />, <Cmd sid='common.permission.module.deviceGroup' product='2' />, <Cmd sid='common.permission.module.doorGroup' product='2' />, <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='common.permission.module.accessGroup' product='2' />, <Cmd sid='common.permission.module.zoneType' product='2' />, <Cmd sid='audit.menu.graphicMap' product='2' />에 대해 설정할 수 있으며, 각 메뉴에서 이미 생성되어 있는 그룹 정보를 기준으로 설정할 수 있습니다.
+
+:::info
+
+원하는 그룹이 없을 경우 해당 메뉴로 이동하여 새 그룹을 추가하세요. 그룹 추가에 대한 자세한 내용은 다음 문서를 참고하세요.
+
+* [사용자 그룹 등록 및 관리](user-group-manage)
+
+* [장치 그룹 등록 및 관리](settings-manage-device-group)
+
+* [출입문 그룹 등록 및 관리](settings-manage-door-group)
+
+* [엘리베이터 그룹 등록 및 관리](settings-manage-elevators-group)
+
+* [출입 그룹 등록 및 관리](#)
+
+* [그래픽 맵 그룹 등록 및 관리](#)
+
+:::
+
+### <Cmd sid='settings.account.menu.setting' product='2' /> {#menuSetting}
+
+개별 메뉴에 대한 **수정** 및 **보기** 권한을 설정하세요. 메뉴마다 다른 권한을 설정할 수 있습니다.
+
+* <Cmd sid='common.editRead' product='2' />: 해당 메뉴의 항목을 추가, 편집, 삭제할 수 있는 권한을 부여합니다.
+
+* <Cmd sid='common.read' product='2' />: 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다.
+
+:::info
+
+각 메뉴에 대한 **수정** 권한을 부여하면 <Cmd sid='button.add' product='2' /> 버튼이 활성화됩니다. 단, <Cmd sid='shell.header.dashboard' /> 및 <Cmd sid='shell.header.setting' /> 메뉴의 경우 추가 기능이 없으므로 <Cmd sid='setting.account.menu.canCreate.name' product='2' />으로 표시되며, <Cmd sid='common.permission.module.ac' product='2' /> 메뉴의 경우 <Cmd sid='settings.account.menu.detailSetting' product='2' />에서 <Cmd sid='common.permission.module.accessGroup' product='2' />을 <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' />으로 설정하고 **수정** 권한을 부여할 때에만 <Cmd sid='button.add' product='2' /> 버튼이 활성화됩니다.
+
+:::
+
+
+### <Cmd sid='settings.account.addUser' product='2' /> {#addUser}
+
+권한을 부여할 사용자 정보를 추가하거나 확인할 수 있습니다. 사용자를 추가하려면 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+사용자 목록에서 사용자의 <IcTrash2 /> 버튼을 클릭하면 해당 사용자는 권한에서 제외됩니다.
+
+:::

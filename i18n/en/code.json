@@ -220,7 +220,7 @@
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "View table of contents",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {
