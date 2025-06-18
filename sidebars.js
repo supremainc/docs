@@ -226,6 +226,7 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/settings-access-control-manage-access-level',
+                'platform/biostar_x/settings-access-control-manage-access-group',
               ]
             },
           ]
