@@ -290,43 +290,43 @@ const sidebars = {
       ]
     }
   ],
-  bioStation3: [
-    {
-      type: 'category',
-      label: 'BioStation 3',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/biostation_3/index',
-      },
-      items: [
-        'device/biostation_3/safety-instructions',
-        'device/biostation_3/getting-started',
-        'device/biostation_3/installation',
-        {
-          type: 'category',
-          label: '사용하기',
-          link: {
-            type: 'doc',
-            id: 'device/biostation_3/using-device',
-          },
-          items: [
-            'device/biostation_3/admin-menu',
-            'device/biostation_3/user',
-            'device/biostation_3/authentication',
-            'device/biostation_3/settings',
-            'device/biostation_3/event-log',
-          ],
-        },
-        'device/biostation_3/troubleshooting',
-        'device/biostation_3/product-specifications',
-        'device/biostation_3/regulatory-information',
-        'device/biostation_3/appendices',
-      ],
-    },
-  ],
+  // bioStation3: [
+  //   {
+  //     type: 'category',
+  //     label: 'BioStation 3',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/biostation_3/index',
+  //     },
+  //     items: [
+  //       'device/biostation_3/safety-instructions',
+  //       'device/biostation_3/getting-started',
+  //       'device/biostation_3/installation',
+  //       {
+  //         type: 'category',
+  //         label: '사용하기',
+  //         link: {
+  //           type: 'doc',
+  //           id: 'device/biostation_3/using-device',
+  //         },
+  //         items: [
+  //           'device/biostation_3/admin-menu',
+  //           'device/biostation_3/user',
+  //           'device/biostation_3/authentication',
+  //           'device/biostation_3/settings',
+  //           'device/biostation_3/event-log',
+  //         ],
+  //       },
+  //       'device/biostation_3/troubleshooting',
+  //       'device/biostation_3/product-specifications',
+  //       'device/biostation_3/regulatory-information',
+  //       'device/biostation_3/appendices',
+  //     ],
+  //   },
+  // ],
 };
 
 export default sidebars;

@@ -39,7 +39,7 @@ const config = {
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/help/',
   future: {
     v4: true,
     experimental_faster: true
@@ -68,7 +68,20 @@ const config = {
     }
   },
   themes: [
-    '@saucelabs/theme-github-codeblock',
+    ['@saucelabs/theme-github-codeblock', ({})],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: "/",
+        hashed: true,
+        removeDefaultStemmer: true,
+        language: ["ko", "en"],
+        highlightSearchTermsOnTargetPage: true,
+        searchBarPosition: "right",
+      })
+    ]
   ],
   presets: [
     [
@@ -81,6 +94,11 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/supremainc/docs/tree/main/',
           routeBasePath: '/',
+          include: [
+            'platform/biostar_x/**.{md,mdx}',
+            'legal/**.{md,mdx}',
+            'reference/**.{md,mdx}'
+          ],
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
@@ -158,18 +176,18 @@ const config = {
             position: 'right',
             docId: 'platform/biostar_x/index'
           },
-          {
-            type: 'dropdown',
-            label: 'Devices',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStation 3',
-                docId: 'device/biostation_3/index'
-              }
-            ]
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Devices',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStation 3',
+          //       docId: 'device/biostation_3/index'
+          //     }
+          //   ]
+          // },
           {
             type: 'doc',
             label: 'Reference',
