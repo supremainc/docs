@@ -232,6 +232,7 @@ const sidebars = {
                 'platform/biostar_x/settings-access-control-ac-status',
               ]
             },
+            'platform/biostar_x/settings-schedule',
           ]
         },
         {
