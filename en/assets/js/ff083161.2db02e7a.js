@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/platform/biostar_x/tutorial"}}')
+var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/en/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/en/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/en/platform/biostar_x/tutorial"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'CPU',
 		'RAM'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -174,7 +174,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.imageLog",
                 product: "2"
-              }), " 기능을 사용 시, 1,000,000개의 이미지 로그 기준 20GB 필요"]
+              }), " 기능을 사용 시, 1,000만 개의 이미지 로그 기준 200GB 필요"]
             })]
           })]
         })]
