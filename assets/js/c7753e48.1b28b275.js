@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-migration-face-mdx-c77.json
-var site_docs_platform_biostar_x_migration_face_mdx_c77_namespaceObject = JSON.parse('{"id":"platform/biostar_x/migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/migration-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/migration-face","permalink":"/docs/en/platform/biostar_x/migration-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/migration-face.mdx","tags":[],"version":"current","frontMatter":{"id":"migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","keywords":["얼굴","마이그레이션","얼굴 인식"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"다중 인증으로 로그인하기","permalink":"/docs/en/platform/biostar_x/login-with-mfa"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/en/platform/biostar_x/columnlayout"}}')
+var site_docs_platform_biostar_x_migration_face_mdx_c77_namespaceObject = JSON.parse('{"id":"platform/biostar_x/migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","source":"@site/docs/platform/biostar_x/migration-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/migration-face","permalink":"/docs/platform/biostar_x/migration-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/migration-face.mdx","tags":[],"version":"current","frontMatter":{"id":"migration-face","title":"얼굴 마이그레이션","description":"BioStar X 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다.","keywords":["얼굴","마이그레이션","얼굴 인식"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/platform/biostar_x/columnlayout"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'마이그레이션',
 		'얼굴 인식'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -84,7 +84,7 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다. 사용자를 동기화할 때 얼굴에서 실제 이미지를 제외한 템플릿만 전송하도록 프로토콜을 개선하여 동기화 소요 시간을 대폭 단축하고 개인 정보 관련 문제 발생을 방지할 수 있습니다."]
+      }), " 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다. 사용자를 동기화할 때 얼굴에서 이미지를 제외한 템플릿만 전송하도록 프로토콜을 개선하여 동기화 소요 시간을 대폭 단축하고 개인 정보 관련 문제 발생을 방지할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "시작하기-전에",
       children: "시작하기 전에"
@@ -97,7 +97,7 @@ function _createMdxContent(props) {
           children: "얼굴 마이그레이션이란?"
         })
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["BioStar X 서버에 이미 저장되어 있던 사용자의 실제 이미지로 두 가지 유형의 얼굴 템플릿을 생성하는 기능입니다. 사용자 동기화 시 얼굴을 템플릿으로만 동기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["BioStar X 서버에 이미 저장되어 있던 사용자의 이미지로 두 가지 유형의 얼굴 템플릿을 생성하는 기능입니다. 사용자 동기화 시 얼굴을 템플릿으로만 동기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
           children: "얼굴 마이그레이션"
         }), "을 진행해야 합니다."]
       })]
@@ -163,7 +163,7 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               children: "얼굴 마이그레이션"
-            }), "을 하기 전, FaceStation F2만 연결하여 사용하던 환경에 BioStation 3나 BioEntry W3를 추가하여 동기화하면 템플릿 타입이 달라 실제 이미지에서 NPU 타입 템플릿을 추출하므로, 서버에 등록된 얼굴의 개수에 따라 상당한 시간이 소요될 수 있습니다."]
+            }), "을 하기 전, FaceStation F2만 연결하여 사용하던 환경에 BioStation 3나 BioEntry W3를 추가하여 동기화하면 템플릿 타입이 달라 이미지에서 NPU 타입 템플릿을 추출하므로, 서버에 등록된 얼굴의 개수에 따라 상당한 시간이 소요될 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -173,7 +173,11 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["장치의 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "얼굴 이미지 저장하기"
-            }), " 옵션을 사용하지 않는 상태에서 얼굴을 등록한 경우, BioStar 2에는 템플릿만 동기화되기 때문에 얼굴 템플릿 타입이 다른 장치에 동기화할 수 없게 되므로 얼굴는 BioStar 2에서 등록하는 것을 권장합니다."]
+            }), " 옵션을 사용하지 않는 상태에서 얼굴을 등록한 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에는 템플릿만 동기화되기 때문에 얼굴 템플릿 타입이 다른 장치에 동기화할 수 없게 되므로 얼굴은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에서 등록하는 것을 권장합니다."]
           }), "\n"]
         }), "\n"]
       })
@@ -183,7 +187,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에서 내보낸 사용자 데이터 파일은 실제 이미지 없이 템플릿만 가지고 있으므로 기존 펌웨어를 사용 중인 FaceStation F2 및 BioStation 3에 사용자 데이터 파일을 가져올 수 없습니다."]
+      }), "에서 내보낸 사용자 데이터 파일은 이미지 없이 템플릿만 가지고 있으므로 기존 펌웨어를 사용 중인 FaceStation F2 및 BioStation 3에 사용자 데이터 파일을 가져올 수 없습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "따라서 FaceStation F2 및 BioStation 3에서 데이터 파일 내보내기 시에는 아래의 버전 이상에서만 데이터 파일을 내보낼 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -215,10 +219,6 @@ function _createMdxContent(props) {
           }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.user"
           }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 얼굴을 마이그레이션할 사용자의 가장 왼쪽에 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -255,13 +255,13 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "얼굴 마이그레이션"
-            }), "은 관리자 계정으로 진행할 수 있습니다."]
+            children: ["이 기능은 사용자 아이디가 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "1"
+            }), "인 관리자 계정만 사용할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마이그레이션을 진행되는 동안 현재 페이지를 벗어나지 마세요."
+            children: "마이그레이션을 진행하는 동안 현재 페이지를 벗어나지 마세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
