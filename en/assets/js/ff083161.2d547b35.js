@@ -189,12 +189,6 @@ function _createMdxContent(props) {
             }), "는 64bit 운영체제에서만 설치할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), "는 Windows 7을 지원하지만, Windows 7에 대한 Microsoft의 기술 지원이 종료되었으므로 시스템 설치 시 운영체제 선택에 유의하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "MS SQL Server 보안 통신은 TLS 1.2를 지원합니다."
           }), "\n"]

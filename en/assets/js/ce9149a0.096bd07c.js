@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["700"], {
-8652: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1320"], {
+6479: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_common_features_mdx_530_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_monitoring_mdx_ce9_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-common-features-mdx-530.json
-var site_docs_platform_biostar_x_common_features_mdx_530_namespaceObject = JSON.parse('{"id":"platform/biostar_x/common-features","title":"통합 기능","description":"BioStar X의 페이지 어디에서든 사용할 수 있는 공통 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/common-features.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/common-features","permalink":"/docs/en/platform/biostar_x/common-features","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/common-features.mdx","tags":[],"version":"current","frontMatter":{"id":"common-features","title":"통합 기능","description":"BioStar X의 페이지 어디에서든 사용할 수 있는 공통 기능에 대해 안내합니다.","keywords":["통합 기능"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"모니터링","permalink":"/docs/en/platform/biostar_x/ui-monitoring"},"next":{"title":"열(Column) 레이아웃","permalink":"/docs/en/platform/biostar_x/columnlayout"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-monitoring-mdx-ce9.json
+var site_docs_platform_biostar_x_how_to_guide_monitoring_mdx_ce9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-monitoring","title":"모니터링","description":"BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-monitoring.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-monitoring","permalink":"/docs/en/platform/biostar_x/how-to-guide-monitoring","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-monitoring.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-monitoring","title":"모니터링","description":"BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.","keywords":["활용 안내","사용자"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"열(Column) 레이아웃","permalink":"/docs/en/platform/biostar_x/columnlayout"},"next":{"title":"출입문 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/common-features.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-monitoring.mdx
 
 
 const frontMatter = {
-	id: 'common-features',
-	title: '통합 기능',
-	description: 'BioStar X의 페이지 어디에서든 사용할 수 있는 공통 기능에 대해 안내합니다.',
+	id: 'how-to-guide-monitoring',
+	title: '모니터링',
+	description: 'BioStar X의 핵심 기능 중 하나인 모니터링 페이지에서 활용할 수 있는 기능에 대해 안내합니다.',
 	keywords: [
-		'통합 기능'
+		'활용 안내',
+		'사용자'
 	],
 	isTranslationMissing: true
 };
@@ -43,18 +44,30 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    hr: "hr",
     p: "p",
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {Cmd, Overview} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 페이지 어디에서든 사용할 수 있는 공통 기능에 대해 안내합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+      }), "의 핵심 기능 중 하나인 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.arena"
+      }), " 페이지에서 활용할 수 있는 기능에 대해 안내합니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.arena"
+      }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.arena"
+      }), "을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }
 function MDXContent(props = {}) {
