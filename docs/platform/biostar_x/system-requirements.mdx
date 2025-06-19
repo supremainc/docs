@@ -19,27 +19,20 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 | \> | 항목 | 소규모 조직 | 중간 규모 조직 | 대규모 조직 |
 | -- | -- | -- | -- | -- |
 | 사용 환경 | 장치 수 | 1 - 50 대 | 51 - 100 대 | 101 - 1,000 대 |
-| 시스템 환경(서버) | 운영체제 | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
+| 시스템 환경 | 운영체제 | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
 | ^ | 데이터베이스 | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
 | ^ | CPU | 2.3GHz 8코어 | 2.3GHz 12코어 | 최소 2.3GHz<br/>권장 4.0GHz 16코어 |
 | ^ | RAM | 16GB | 32GB | 최소 64GB<br/>권장 128GB |
 | ^ | SSD | 512GB | 512GB | 1TB |
-| ^ | HDD | \> | \> | <Cmd sid='common.imageLog' product='2' /> 기능을 사용 시 1,000,000개의 이미지 로그 기준 20GB 필요 |
-| 시스템 환경(클라이언트) | CPU | 2.5GHz | 2.5GHz | 최소 2.5GHz |
-| ^ | RAM | 16GB | 32GB | 최소 32GB |
-| ^ | 웹 브라우저 | \> | \> | Google 크롬 100 버전 이상 |
+| ^ | HDD | \> | \> | <Cmd sid='common.imageLog' product='2' /> 기능을 사용 시, 1,000,000개의 이미지 로그 기준 20GB 필요 |
 
 </div>
 
 :::info
 
-* 최적의 성능을 위해 64bit 운영체제를 사용하세요.
-
-* **BioStar X**는 Google 크롬에 최적화되어 있습니다.
+* **BioStar X**는 64bit 운영체제에서만 설치할 수 있습니다.
 
 * **BioStar X**는 Windows 7을 지원하지만, Windows 7에 대한 Microsoft의 기술 지원이 종료되었으므로 시스템 설치 시 운영체제 선택에 유의하세요.
-
-* Windows 8.1을 사용한다면 [KB2919355](https://support.microsoft.com/ko-kr/help/2919355/windows-rt-8-1--windows-8-1--and-windows-server-2012-r2-update-april-2) 업데이트를 설치하세요.
 
 * MS SQL Server 보안 통신은 TLS 1.2를 지원합니다.
 
@@ -47,11 +40,9 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 
 * 대규모 조직에서는 MS SQL Server 데이터베이스를 설치하는 것을 권장합니다.
 
-* <Cmd sid='common.gnb.time_attendance' product='2' /> 메뉴를 사용한다면 [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17)가 필요하므로 환경에 맞게 확인하여 설치하세요.
+* 데이터베이스를 MS SQL Server를 사용하고, **BioStar X T&A**를 사용한다면 [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17)가 필요하므로 사용자의 환경에 적합한 드라이버를 설치하세요.
 
-* Mac OS 부트 캠프의 Windows 가상 환경은 지원되지 않습니다.
-
-* Oracle 데이터베이스는 더 이상 지원되지 않습니다. 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+* Mac 운영체제에서 제공하는 부트 캠프의 Windows 가상 환경은 지원하지 않습니다.
 
 :::
 
@@ -63,9 +54,31 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 
 | \> | 항목 | 사양 |
 | -- | -- | -- |
-| 시스템 환경(서버) | 운영체제 | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
+| 시스템 환경 | 운영체제 | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
 | ^ | CPU | 최소 2.3GHz, 권장 4.0GHz 16코어 |
-| ^ | RAM | 최소 64GB<br/>권장 128GB |
+| ^ | RAM | 최소 64GB, 권장 128GB |
 | ^ | SSD | 1TB |
 
 </div>
+
+
+## 클라이언트 PC
+
+클라이언트 PC는 관리자가 웹 브라우저를 통해 **BioStar X**에 접속하여 시스템을 운영하는 컴퓨터입니다.
+
+<div className='overflow-x'>
+
+| \> | 항목 | 소규모 조직 | 중간 규모 조직 | 대규모 조직 |
+| -- | -- | -- | -- | -- |
+| 시스템 환경 | CPU | 2.5GHz | 2.5GHz | 최소 2.5GHz |
+| ^ | RAM | 16GB | 32GB | 최소 32GB |
+| ^ | GPU | \> | \> | VMS 사용 시, 최소 NVIDIA GeForce RTX 4060 |
+| ^ | 웹 브라우저 | \> | \> | Google 크롬 100 버전 이상 |
+
+</div>
+
+:::info
+
+**BioStar X**는 Google 크롬에 최적화되어 있습니다.
+
+:::
