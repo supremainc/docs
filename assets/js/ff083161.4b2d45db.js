@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/en/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/en/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/en/platform/biostar_x/tutorial"}}')
+var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/platform/biostar_x/tutorial"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'CPU',
 		'RAM'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -45,16 +45,16 @@ const assets = {
 
 
 const toc = [{
-  "value": "메인 서버 PC",
-  "id": "메인-서버-pc",
+  "value": "메인 서버",
+  "id": "메인-서버",
   "level": 2
 }, {
-  "value": "커뮤니케이션 서버 PC",
-  "id": "커뮤니케이션-서버-pc",
+  "value": "커뮤니케이션 서버",
+  "id": "커뮤니케이션-서버",
   "level": 2
 }, {
-  "value": "클라이언트 PC",
-  "id": "클라이언트-pc",
+  "value": "클라이언트",
+  "id": "클라이언트",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -80,14 +80,14 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "는 대규모 엔터프라이즈 환경에서 안정적이고 확장 가능한 통합 보안 관리 솔루션을 제공합니다. 시스템은 메인 서버 PC와 커뮤니케이션 서버 PC로 구성되는 분산 아키텍처를 통해 최대 1,000대 이상의 장치를 효율적으로 관리할 수 있습니다."]
+      }), "는 대규모 엔터프라이즈 환경에서 안정적이고 확장 가능한 통합 보안 관리 솔루션을 제공합니다. 시스템은 메인 서버와 커뮤니케이션 서버로 구성되는 분산 아키텍처를 통해 최대 1,000대 이상의 장치를 효율적으로 관리할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
+      children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "메인-서버-pc",
-      children: "메인 서버 PC"
+      id: "메인-서버",
+      children: "메인 서버"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["메인 서버 PC는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["메인 서버는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 중앙 관리 시스템이 설치되는 컴퓨터입니다. 사용자가 웹 브라우저로 접속하여 시스템을 관리하고, 사용자 정보나 출입 권한 설정 등의 모든 업무를 처리합니다. 또한 시스템 전체의 상태를 모니터링하고, 이벤트 로그나 알람을 관리하는 역할을 담당합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
@@ -229,10 +229,10 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커뮤니케이션-서버-pc",
-      children: "커뮤니케이션 서버 PC"
+      id: "커뮤니케이션-서버",
+      children: "커뮤니케이션 서버"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "커뮤니케이션 서버 PC는 출입통제 장치들과의 통신을 전담하는 컴퓨터입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가로 설치할 수 있습니다."
+      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 컴퓨터입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가로 설치할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -277,10 +277,10 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "클라이언트-pc",
-      children: "클라이언트 PC"
+      id: "클라이언트",
+      children: "클라이언트"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["클라이언트 PC는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["클라이언트는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "에 접속하여 시스템을 운영하는 컴퓨터입니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
