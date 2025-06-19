@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/en/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/en/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/en/platform/biostar_x/tutorial"}}')
+var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/getting-started"},"next":{"title":"튜토리얼","permalink":"/docs/platform/biostar_x/tutorial"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'CPU',
 		'RAM'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -51,6 +51,10 @@ const toc = [{
 }, {
   "value": "커뮤니케이션 서버 PC",
   "id": "커뮤니케이션-서버-pc",
+  "level": 2
+}, {
+  "value": "클라이언트 PC",
+  "id": "클라이언트-pc",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -118,7 +122,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "6",
-              children: "시스템 환경(서버)"
+              children: "시스템 환경"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "운영체제"
             }), (0,jsx_runtime.jsx)(_components.td, {
@@ -170,37 +174,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.imageLog",
                 product: "2"
-              }), " 기능을 사용 시 1,000,000개의 이미지 로그 기준 20GB 필요"]
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              rowSpan: "3",
-              children: "시스템 환경(클라이언트)"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "CPU"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.5GHz"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.5GHz"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 2.5GHz"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "RAM"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16GB"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32GB"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 32GB"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "웹 브라우저"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              colSpan: "3",
-              children: "Google 크롬 100 버전 이상"
+              }), " 기능을 사용 시, 1,000,000개의 이미지 로그 기준 20GB 필요"]
             })]
           })]
         })]
@@ -209,27 +183,16 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "최적의 성능을 위해 64bit 운영체제를 사용하세요."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "는 Google 크롬에 최적화되어 있습니다."]
+            }), "는 64bit 운영체제에서만 설치할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "는 Windows 7을 지원하지만, Windows 7에 대한 Microsoft의 기술 지원이 종료되었으므로 시스템 설치 시 운영체제 선택에 유의하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Windows 8.1을 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://support.microsoft.com/ko-kr/help/2919355/windows-rt-8-1--windows-8-1--and-windows-server-2012-r2-update-april-2",
-              children: "KB2919355"
-            }), " 업데이트를 설치하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -252,24 +215,16 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.gnb.time_attendance",
-              product: "2"
-            }), " 메뉴를 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["데이터베이스를 MS SQL Server를 사용하고, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X T&A"
+            }), "를 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
               children: "Microsoft ODBC Driver 17 for SQL Server"
-            }), "가 필요하므로 환경에 맞게 확인하여 설치하세요."]
+            }), "가 필요하므로 사용자의 환경에 적합한 드라이버를 설치하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Mac OS 부트 캠프의 Windows 가상 환경은 지원되지 않습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Oracle 데이터베이스는 더 이상 지원되지 않습니다. 자세한 내용은 슈프리마 기술 지원팀(", (0,jsx_runtime.jsx)(_components.a, {
-              href: "mailto:CS@suprema.co.kr",
-              children: "CS@suprema.co.kr"
-            }), ")에 문의하세요."]
+            children: "Mac 운영체제에서 제공하는 부트 캠프의 Windows 가상 환경은 지원하지 않습니다."
           }), "\n"]
         }), "\n"]
       })
@@ -294,7 +249,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "4",
-              children: "시스템 환경(서버)"
+              children: "시스템 환경"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "운영체제"
             }), (0,jsx_runtime.jsx)(_components.td, {
@@ -309,8 +264,8 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["최소 64GB", (0,jsx_runtime.jsx)("br", {}), "권장 128GB"]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "최소 64GB, 권장 128GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -320,6 +275,77 @@ function _createMdxContent(props) {
             })]
           })]
         })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "클라이언트-pc",
+      children: "클라이언트 PC"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["클라이언트 PC는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 접속하여 시스템을 운영하는 컴퓨터입니다."]
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "overflow-x",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              colSpan: "2",
+              children: "항목"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "소규모 조직"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "중간 규모 조직"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "대규모 조직"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              rowSpan: "4",
+              children: "시스템 환경"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "CPU"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "2.5GHz"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "2.5GHz"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "최소 2.5GHz"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "RAM"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "16GB"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "32GB"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "최소 32GB"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "GPU"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              colSpan: "3",
+              children: "VMS 사용 시, 최소 NVIDIA GeForce RTX 4060"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "웹 브라우저"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              colSpan: "3",
+              children: "Google 크롬 100 버전 이상"
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "는 Google 크롬에 최적화되어 있습니다."]
       })
     })]
   });
