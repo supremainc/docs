@@ -77,6 +77,7 @@ import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
 import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
+import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
 import IcTslot from '@site/static/img/menus/ico-timeslot-add.svg';
 import IcEraser from '@site/static/img/menus/ico-eraser.svg';
 import IcCalc from '@site/static/img/menus/ico-calendar.svg';
@@ -151,5 +152,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcTslot, IcEraser, IcCalc
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc
 }
