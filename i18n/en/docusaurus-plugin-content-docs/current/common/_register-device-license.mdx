@@ -1,0 +1,109 @@
+## Device License
+
+### Registering
+
+To activate a device license issued by Suprema, the corresponding feature for the license becomes available. Device licenses can be activated on a device using BioStar X and a USB memory. To issue a device license, contact your distributor.
+
+1. Go to the <Cmd>Settings</Cmd> → <IcLicense/> <Cmd>License</Cmd> → <Cmd>Device</Cmd> menu.
+
+<span class='cmd'>Settings</span>
+
+1. In the <Cmd sid='setting.server.license.device' /> section, click the <Cmd sid='user.list.csvImport.browse' /> button.
+
+1. Select the device license file (*\*.lic*) from the path where the device license is stored.
+
+1. After loading the license file, <Cmd sid='setting.server.license.name' />, <Cmd sid='setting.server.license.device.count' />, and <Cmd sid='setting.server.license.device.list' /> appear. For details, refer to [this document](#check-device-license).
+
+1. After checking <Cmd sid='setting.server.license.device.list' />, click the <Cmd sid='setting.server.license.button.activate' product='2' /> button.
+
+If license activation fails, a message appears. In this case, you can try to activate the license again.
+
+:::info
+
+* One device license enables one feature.
+
+* A single device license file can include multiple device licenses. Up to 100 are supported.
+
+* Device license files are encrypted and cannot be modified arbitrarily.
+
+* Device licenses are issued based on the device ID. If the device ID is changed abnormally, warranty service for the license is not provided.
+
+:::
+
+### Device License Information {#check-device-license}
+
+After loading the license file (*\*.lic*), refer to the items below and activate the device license.
+
+#### <Cmd sid='setting.server.license.name' />
+
+You can check the type of license included in the device license file.
+
+* For devices that can use **Camera QR**, refer to the list below.
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB): Firmware version 1.2.0 or higher
+
+  * BioStation 3 (BS3-DB, BS3-APWB): Firmware version 1.1.0 or higher
+
+* For supported OSDP antennas and wireless door locks, refer to the list below.
+
+  * U&Z OSDP Antenna: CX8936
+
+  * U&Z Wireless Door Lock: CX217x(Handle), CX212x(Knob)
+
+  :::info
+
+  * You can issue up to 12 device licenses for the number of wireless door locks you want to connect.
+
+  * The maximum number of wireless door locks that can be connected with device licenses is 12. Even if multiple device licenses are activated, it cannot exceed 12.
+
+  :::
+
+#### <Cmd sid='setting.server.license.device.count' />
+
+You can check the number of devices included in the device license file.
+
+#### <Cmd sid='setting.server.license.device.licenseCount' />
+
+You can check the number of wireless door locks that can be activated with the device license.
+
+:::info
+
+This item is displayed when a wireless door lock device license file is selected.
+
+:::
+
+#### <Cmd sid='setting.server.license.device.list' />
+
+Refer to each item displayed in the device list.
+
+* <Cmd sid='setting.server.license.device.id' />: The unique ID of the device.
+
+* <Cmd sid='setting.server.license.device.name' />: The name of the device.
+
+* <Cmd sid='setting.server.license.device.product' />: The model name of the device.
+
+* <Cmd sid='setting.server.license.device.status' />: You can check the status of the device. Only devices with <Cmd sid='setting.server.license.device.list.normal' /> status can activate the license.
+
+  Devices with the following statuses cannot activate the license:
+
+  - <Cmd sid='setting.server.license.device.list.disconnected' />
+
+  - <Cmd sid='setting.server.license.device.list.notSupported' />
+
+  - <Cmd sid='setting.server.license.device.list.unregistered' />
+
+* <Cmd sid='setting.server.license.status' />: Indicates whether the license is activated. Only devices with <Cmd sid='setting.server.license.device.list.notActivated' /> status can activate the license.
+
+  The following statuses cannot activate the license:
+
+  - <Cmd sid='setting.server.license.device.list.notActivated' />
+
+  - <Cmd sid='setting.server.license.device.list.na' />
+
+* <Cmd sid='setting.server.license.device.activatedCount' />: The connection status of the wireless door locks.
+
+  :::info
+
+  This item is displayed when a wireless door lock device license file is selected.
+
+  :::
