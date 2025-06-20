@@ -100,7 +100,8 @@ const sidebars = {
             // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
-            'platform/biostar_x/migration-face'
+            'platform/biostar_x/migration-face',
+            'platform/biostar_x/columnlayout'
           ]
         },
         {
@@ -231,6 +232,7 @@ const sidebars = {
                 'platform/biostar_x/settings-access-control-ac-status',
               ]
             },
+            'platform/biostar_x/settings-schedule',
           ]
         },
         {
@@ -245,17 +247,6 @@ const sidebars = {
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
             'platform/biostar_x/ui-monitoring'
-          ]
-        },
-        {
-          type: 'category',
-          label: '통합 기능',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/common-features',
-          },
-          items: [
-            'platform/biostar_x/columnlayout'
           ]
         },
         'platform/biostar_x/licensing'
