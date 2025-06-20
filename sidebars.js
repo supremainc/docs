@@ -136,6 +136,17 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '대시보드',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/new-dashboard',
+          },
+          items: [
+            'platform/biostar_x/dashboard'
+          ]
+        },
+        {
+          type: 'category',
           label: '설정',
           link: {
             type: 'doc',

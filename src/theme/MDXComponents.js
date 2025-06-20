@@ -77,6 +77,7 @@ import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
 import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
+import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -148,5 +149,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2
 }
