@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-settings-mdx-714.json
-var site_docs_platform_biostar_x_how_to_guide_settings_mdx_714_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-settings","title":"설정","description":"BioStar X의 설정 페이지에서 설정할 수 있는 다양한 기능을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-settings","permalink":"/docs/en/platform/biostar_x/how-to-guide-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-settings","title":"설정","description":"BioStar X의 설정 페이지에서 설정할 수 있는 다양한 기능을 안내합니다.","keywords":["활용 안내","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"How to Use the Dashboard","permalink":"/docs/en/platform/biostar_x/dashboard"},"next":{"title":"장치 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-devices"}}')
+var site_docs_platform_biostar_x_how_to_guide_settings_mdx_714_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-settings","title":"설정","description":"BioStar X의 설정 페이지에서 설정할 수 있는 다양한 기능을 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-settings","permalink":"/docs/platform/biostar_x/how-to-guide-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-settings","title":"설정","description":"BioStar X의 설정 페이지에서 설정할 수 있는 다양한 기능을 안내합니다.","keywords":["활용 안내","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"대시보드 사용하기","permalink":"/docs/platform/biostar_x/how-to-use-dashboard"},"next":{"title":"장치 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-devices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'활용 안내',
 		'설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

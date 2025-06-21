@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6638"], {
-3334: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9552"], {
+4041: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_new_dashboard_mdx_9dc_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_dashboard_mdx_b9e_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-new-dashboard-mdx-9dc.json
-var site_docs_platform_biostar_x_new_dashboard_mdx_9dc_namespaceObject = JSON.parse('{"id":"platform/biostar_x/new-dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/new-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/new-dashboard","permalink":"/docs/platform/biostar_x/new-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/new-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"new-dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","keywords":["대시보드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-event"},"next":{"title":"대시보드 사용하기","permalink":"/docs/platform/biostar_x/dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-dashboard-mdx-b9e.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_dashboard_mdx_b9e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard","permalink":"/docs/en/platform/biostar_x/dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","keywords":["Dashboard"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"},"next":{"title":"How to Use the Dashboard","permalink":"/docs/en/platform/biostar_x/how-to-use-dashboard"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/new-dashboard.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/dashboard.mdx
 
 
 const frontMatter = {
-	id: 'new-dashboard',
-	title: '대시보드',
-	description: '사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.',
+	id: 'dashboard',
+	title: 'Dashboard',
+	description: 'This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.',
 	keywords: [
-		'대시보드'
+		'Dashboard'
 	],
 	isTranslationMissing: false
 };
@@ -50,7 +50,7 @@ function _createMdxContent(props) {
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다."
+      children: "This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking."
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
