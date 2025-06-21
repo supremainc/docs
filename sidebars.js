@@ -140,7 +140,7 @@ const sidebars = {
           label: '데이터',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/data'
+            id: 'platform/biostar_x/how-to-guide-data'
           },
           items: [
             'platform/biostar_x/data-generate-reports',
