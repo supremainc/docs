@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9992"], {
-4160: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7000"], {
+7654: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_use_dashboard_mdx_139_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_dashboard_mdx_c57_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-how-to-use-dashboard-mdx-139.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_use_dashboard_mdx_139_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-use-dashboard","title":"How to Use the Dashboard","description":"The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-use-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-use-dashboard","permalink":"/docs/en/platform/biostar_x/how-to-use-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-use-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-use-dashboard","title":"How to Use the Dashboard","description":"The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.","keywords":["Dashboard","widget"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Dashboard","permalink":"/docs/en/platform/biostar_x/dashboard"},"next":{"title":"설정","permalink":"/docs/en/platform/biostar_x/how-to-guide-settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-dashboard-mdx-c57.json
+var site_docs_platform_biostar_x_dashboard_mdx_c57_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard","title":"대시보드 사용하기","description":"대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard","permalink":"/docs/platform/biostar_x/dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard","title":"대시보드 사용하기","description":"대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.","keywords":["대시보드","위젯"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"},"next":{"title":"설정","permalink":"/docs/platform/biostar_x/how-to-guide-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-use-dashboard.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/dashboard.mdx
 
 
 const frontMatter = {
-	id: 'how-to-use-dashboard',
-	title: 'How to Use the Dashboard',
-	description: 'The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.',
+	id: 'dashboard',
+	title: '대시보드 사용하기',
+	description: '대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.',
 	keywords: [
-		'Dashboard',
-		'widget'
+		'대시보드',
+		'위젯'
 	],
 	isTranslationMissing: false
 };
@@ -42,48 +42,48 @@ const assets = {
 
 
 const toc = [{
-  "value": "Adding Widgets",
-  "id": "adding-widgets",
+  "value": "위젯 추가하기",
+  "id": "위젯-추가하기",
   "level": 2
 }, {
-  "value": "Widget Types",
-  "id": "widget-types",
+  "value": "위젯 종류",
+  "id": "위젯-종류",
   "level": 3
 }, {
-  "value": "Chart",
-  "id": "chart",
+  "value": "차트",
+  "id": "차트",
   "level": 4
 }, {
-  "value": "Counter",
-  "id": "counter",
+  "value": "카운터",
+  "id": "카운터",
   "level": 4
 }, {
-  "value": "Text",
-  "id": "text",
+  "value": "텍스트",
+  "id": "텍스트",
   "level": 4
 }, {
-  "value": "Real-time Events",
-  "id": "real-time-events",
+  "value": "실시간 이벤트",
+  "id": "실시간-이벤트",
   "level": 4
 }, {
-  "value": "Checkpoint",
-  "id": "checkpoint",
+  "value": "실시간 출입 모니터링",
+  "id": "실시간-출입-모니터링",
   "level": 4
 }, {
-  "value": "System Usage",
-  "id": "system-usage",
+  "value": "시스템 사용 현황",
+  "id": "시스템-사용-현황",
   "level": 4
 }, {
-  "value": "Door Control",
-  "id": "door-control",
+  "value": "출입문 제어",
+  "id": "출입문-제어",
   "level": 4
 }, {
-  "value": "Edit Widget",
-  "id": "edit-widget",
+  "value": "위젯 수정하기",
+  "id": "위젯-수정하기",
   "level": 2
 }, {
-  "value": "Delete Widget",
-  "id": "delete-widget",
+  "value": "위젯 삭제하기",
+  "id": "위젯-삭제하기",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -107,77 +107,77 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets."
+      children: "대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For each user, the ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Dashboard"
-            }), " can be configured for them personally."]
+            children: ["각 사용자마다 개인별로 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "대시보드"
+            }), "를 구성할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Information available on the ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Dashboard"
-            }), " may vary depending on ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "대시보드"
+            }), "에서 확인할 수 있는 정보는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "user.bioStarOperator",
               product: "2"
-            }), "."]
+            }), "에 따라 다를 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "adding-widgets",
-      children: "Adding Widgets"
+      id: "위젯-추가하기",
+      children: "위젯 추가하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Dashboard"
-          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Launcher"
-          }), " page."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "런처"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "대시보드"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.addWidget",
             product: "2"
-          }), "."]
+          }), "를 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["If widgets have already been added, click ", (0,jsx_runtime.jsx)(IcSet2, {}), " to enter ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["이미 위젯이 추가 되어있는 경우에는 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.dashboardSettings",
               product: "2"
-            }), ", and then click ", (0,jsx_runtime.jsx)(Cmd, {
+            }), "으로 진입한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.addWidget",
               product: "2"
-            }), "."]
+            }), "를 클릭하세요."]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select the desired ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["원하는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.widgetTypes",
             product: "2"
-          }), ", then enter or set the required fields, depending on the widget."]
+          }), "을 선택한 다음 위젯에 따라 필수 항목을 입력 또는 설정하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "widget-types",
-      children: "Widget Types"
+      id: "위젯-종류",
+      children: "위젯 종류"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "The default widget size is set differently for each widget and is optimized to look best at the default."
+            children: "각 위젯 별로 위젯 크기 기본값이 다르게 설정되어 있으며 기본값에서 가장 보기 좋게 최적화되어 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "All widgets can be resized by dragging the lower-right corner."
+            children: "모든 위젯은 우측 하단부를 드래그하여 크기를 조절할 수 있습니다."
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/biostarx-adjust-win-size.png",
             caption: true
@@ -185,21 +185,21 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "chart",
-      children: "Chart"
+      id: "차트",
+      children: "차트"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-chart.png",
       caption: true,
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Selecting desired chart data enables the display of the number of events that occurred in a chart."
+      children: "원하는 차트 데이터를 선택하여 발생한 이벤트 수를 차트로 나타낼 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.widgetTypes.chartData",
             product: "2"
-          }), ": From the daily or weekly event list, select the desired chart data."]
+          }), ": 일간, 주간 이벤트 목록 중에서 원하는 차트 데이터를 선택하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -234,7 +234,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.chartType",
             product: "2"
-          }), ": Select the desired type among ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.chartTypes.verticalBar",
             product: "2"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -243,43 +243,43 @@ function _createMdxContent(props) {
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.chartTypes.line",
             product: "2"
-          }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.chartTypes.pie",
             product: "2"
-          }), "."]
+          }), " 중에 원하는 타입을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.chartColorSchemes",
             product: "2"
-          }), ": Select the desired color among 5 color schemes."]
+          }), ": 다섯 가지의 색상 조합 중에 원하는 색상을 선택하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The charts shown when selecting ", (0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.chartColorSchemes",
           product: "2"
-        }), " are random values for preview, not actual values."]
+        }), "을 선택할 때 보여지는 차트의 값은 실제 값이 아닌 미리보기를 위한 임의의 값입니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "counter",
-      children: "Counter"
+      id: "카운터",
+      children: "카운터"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-counter.png",
       caption: true,
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Selecting desired counter data enables the display of the number of events that occurred as a number."
+      children: "원하는 카운터 데이터를 선택하여 발생한 이벤트 수를 숫자로 나타낼 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.widgetTypes.counterData",
             product: "2"
-          }), ": From the daily or weekly event list, select the desired counter data."]
+          }), ": 일간, 주간 이벤트 목록 중에서 원하는 카운터 데이터를 선택하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -311,73 +311,73 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "text",
-      children: "Text"
+      id: "텍스트",
+      children: "텍스트"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-text.png",
       caption: true,
       alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["In the widgets area of ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Dashboard"
-      }), ", you can enter and place desired text. After creation, you can place it in the required location and use it as a title for a widget or as a notice."]
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "대시보드"
+      }), "의 위젯 영역에 사용자가 원하는 텍스트를 입력하여 배치할 수 있습니다. 생성 후 필요한 위치에 배치하여 위젯의 타이틀로 사용하거나 공지사항 등으로 사용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If you select the ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "reportApp.widgetTypes.text.removeBackground",
-          product: "2"
-        }), " option while creating a ", (0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.widgetTypes.text",
           product: "2"
-        }), " widget, transparency will be applied to the background."]
+        }), " 위젯 생성 시 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.widgetTypes.text.removeBackground",
+          product: "2"
+        }), " 옵션을 체크하면 배경에 투명도가 적용됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "real-time-events",
-      children: "Real-time Events"
+      id: "실시간-이벤트",
+      children: "실시간 이벤트"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-real-time-event.png",
       caption: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Shows events occurring in BioStar 2 in real time. You can check events by filtering specific events, users, doors, and devices."
+      children: "BioStar 2에서 발생하는 이벤트를 실시간으로 보여줍니다. 특정 이벤트, 사용자, 출입문, 장치를 필터링해서 이벤트를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.pause",
             product: "2"
-          }), ": To pause the real-time event."]
+          }), ": 실시간 이벤트를 정지할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.play",
             product: "2"
-          }), ": Resume a real-time event that stopped."]
+          }), ": 중지한 실시간 이벤트를 다시 시작할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.clear",
             product: "2"
-          }), ": The entire captured record will be removed."]
+          }), ": 인증 기록을 전체 삭제할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If you navigate to another page and subsequently return to the ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Dashboard"
-        }), ", the list will be cleared, and events will be logged anew."]
+        children: ["다른 페이지로 이동했다가 다시 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "대시보드"
+        }), "로 돌아올 경우 목록이 비워지고 다시 이벤트가 기록됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "checkpoint",
-      children: "Checkpoint"
+      id: "실시간-출입-모니터링",
+      children: "실시간 출입 모니터링"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-checkpoint.png",
       caption: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Select one device and display the profile photo and information (", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["하나의 장치를 선택하여 선택한 장치에 인증을 성공한 사용자의 프로필 사진 및 정보(", (0,jsx_runtime.jsx)(Cmd, {
         sid: "reportApp.user",
         product: "2"
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -386,28 +386,28 @@ function _createMdxContent(props) {
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "reportApp.device",
         product: "2"
-      }), ") of the user who successfully authenticated to the selected device in real time."]
+      }), ")를 실시간으로 보여줍니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.pause",
             product: "2"
-          }), ": To pause the checkpoint."]
+          }), ": 실시간 출입 모니터링을 정지할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.play",
             product: "2"
-          }), ": To resume the checkpoint that paused."]
+          }), ": 중지한 실시간 출입 모니터링을 다시 시작할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.clear",
             product: "2"
-          }), ": The entire captured record will be removed."]
+          }), ": 인증 기록을 전체 삭제할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -416,24 +416,24 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.widgetTypes.checkpoint",
           product: "2"
-        }), " are recorded for up to 5 people."]
+        }), "은 최대 5명까지 기록됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "system-usage",
-      children: "System Usage"
+      id: "시스템-사용-현황",
+      children: "시스템 사용 현황"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-system-usage.png",
       caption: true,
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The various usage statuses of BioStar 2 are displayed in numbers."
+      children: "BioStar 2의 다양한 사용 현황을 숫자로 나타냅니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["나타낼 수 있는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.widgetTypes.systemUsage",
             product: "2"
-          }), " that can be displayed is as follows:"]
+          }), "은 다음과 같습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -480,20 +480,20 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "door-control",
-      children: "Door Control"
+      id: "출입문-제어",
+      children: "출입문 제어"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-door-control.png",
       caption: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Select one door to check and control its status."
+      children: "하나의 출입문을 선택하여 선택한 출입문의 상태를 확인하고 제어할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The following items can be controlled with the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.doorControl.actionsBtn",
             product: "2"
-          }), " buttons:"]
+          }), " 버튼으로 제어할 수 있는 항목은 다음과 같습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -521,48 +521,48 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The name of the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.widgetTypes.doorControl",
           product: "2"
-        }), " widget is automatically assigned to the name of the door and cannot be modified."]
+        }), " 위젯의 이름은 출입문의 이름으로 자동 지정되며 수정할 수 없습니다."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       start: "4",
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["After completing the settings of the widget, click ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["위젯의 설정을 마친 다음 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.apply",
           product: "2"
-        }), ", and the widget will be created in the widget area. Adjust it to the desired size and location, then click ", (0,jsx_runtime.jsx)(Cmd, {
+        }), "을 클릭하면 위젯 표시 영역에 위젯이 생성됩니다. 원하는대로 크기를 조절한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "reportApp.apply",
           product: "2"
-        }), ", and the widget will be added to the ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Dashboard"
-        }), "."]
+        }), "을 클릭하면 위젯이 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "대시보드"
+        }), "에 추가됩니다."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "edit-widget",
-      children: "Edit Widget"
+      id: "위젯-수정하기",
+      children: "위젯 수정하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Dashboard"
-          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Launcher"
-          }), " page."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "런처"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "대시보드"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(IcSet2, {}), " at the top right to enter ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["우측 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), "."]
+          }), "으로 진입하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(IcEdit, {}), " at the top right of the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Widget"
-          }), " you want to edit, then edit the desired part."]
+          children: ["수정하고자 하는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "위젯"
+          }), "의 우측 상단에 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 아이콘을 클릭한 다음 원하는 부분을 수정하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-widget-edit.png",
           className: "none",
@@ -570,20 +570,20 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After making edits, click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["수정을 완료한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.apply",
             product: "2"
-          }), " to save the changes."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After making adjustments to the widgets, select ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.apply",
-            product: "2"
-          }), ", located at the top-right of the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), " screen, to apply and save the changes."]
+          }), " 화면 우측 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), "을 클릭하면 수정한 사항이 반영됩니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -591,56 +591,56 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.widgetTypes",
-              product: "2"
-            }), " cannot be changed in the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.editWidget",
               product: "2"
-            }), "."]
+            }), "에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.widgetTypes",
+              product: "2"
+            }), "은 변경할 수 없습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: ["정해진 항목을 사용하는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.widgetTypes.systemUsage",
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.widgetTypes.checkpoint",
               product: "2"
-            }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.widgetTypes.doorControl",
               product: "2"
-            }), " that use a specific name cannot modify the ", (0,jsx_runtime.jsx)(Cmd, {
+            }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.widgetName",
               product: "2"
-            }), "."]
+            }), "을 수정할 수 없습니다."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "delete-widget",
-      children: "Delete Widget"
+      id: "위젯-삭제하기",
+      children: "위젯 삭제하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Dashboard"
-          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Launcher"
-          }), " page."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "런처"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "대시보드"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(IcSet2, {}), " in the upper right to enter ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["우측 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), "."]
+          }), "으로 진입하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(IcTrash2, {}), " at the top right of the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Widget"
-          }), " you want to delete."]
+          children: ["삭제하고자 하는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "위젯"
+          }), "의 우측 상단에 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 아이콘을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-dashboard-widget-del.png",
           className: "none",
@@ -648,20 +648,20 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check the deletion confirmation pop-up and click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["삭제 확인 팝업창을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.yes",
             product: "2"
-          }), "."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.apply",
-            product: "2"
-          }), " at the top right of the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), " screen to apply the deletion."]
+          }), " 화면 우측 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), "을 클릭하면 수정한 사항이 반영됩니다."]
         }), "\n"]
       }), "\n"]
     })]

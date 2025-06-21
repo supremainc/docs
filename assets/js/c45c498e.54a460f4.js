@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7000"], {
-7654: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4170"], {
+7282: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_dashboard_mdx_c57_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-dashboard-mdx-c57.json
-var site_docs_platform_biostar_x_dashboard_mdx_c57_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard","permalink":"/docs/platform/biostar_x/dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","keywords":["대시보드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-event"},"next":{"title":"대시보드 사용하기","permalink":"/docs/platform/biostar_x/how-to-use-dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-generate-reports-mdx-c45.json
+var site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-generate-reports.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-generate-reports","permalink":"/docs/platform/biostar_x/data-generate-reports","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-generate-reports.mdx","tags":[],"version":"current","frontMatter":{"id":"data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"데이터","permalink":"/docs/platform/biostar_x/how-to-guide-data"},"next":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/dashboard.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-generate-reports.mdx
 
 
 const frontMatter = {
-	id: 'dashboard',
-	title: '대시보드',
-	description: '사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.',
+	id: 'data-generate-reports',
+	title: '리포트 생성하기',
+	description: '원하는 포맷에 맞게 리포트를 생성할 수 있습니다.',
 	keywords: [
-		'대시보드'
+		'keyword1',
+		'keyword2'
 	],
 	isTranslationMissing: false
 };
@@ -43,15 +44,59 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    li: "li",
+    ol: "ol",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {Calloutlists, Cmd, Image} = _components;
+  if (!Calloutlists) _missingMdxReference("Calloutlists", true);
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다."
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+      children: "원하는 포맷에 맞게 리포트를 생성할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
+      children: (0,jsx_runtime.jsxs)(_components.ol, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.savedReports",
+              product: "2"
+            }), ": 생성한 리포트에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.saveReport",
+              product: "2"
+            }), "을 클릭하면 이곳의 하위에 템플릿으로 저장됩니다. 추후 동일한 조건으로 리포트를 생성해야할 때 유용하게 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.user",
+              product: "2"
+            }), ": 사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.event",
+              product: "2"
+            }), ": 원하는 이벤트, 기간, 필터(", (0,jsx_runtime.jsx)(Cmd, {
+              children: "사용자"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "출입문"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "장치"
+            }), ")를 선택하여 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.customReport",
+              product: "2"
+            }), "를 생성할 수 있습니다."]
+          }), "\n"]
+        }), "\n"]
+      })
+    })]
   });
 }
 function MDXContent(props = {}) {

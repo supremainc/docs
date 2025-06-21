@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9552"], {
-4041: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2908"], {
+7558: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_dashboard_mdx_b9e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-dashboard-mdx-b9e.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_dashboard_mdx_b9e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard","permalink":"/docs/en/platform/biostar_x/dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","keywords":["Dashboard"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"},"next":{"title":"How to Use the Dashboard","permalink":"/docs/en/platform/biostar_x/how-to-use-dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-data-mdx-ed0.json
+var site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-data.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-data","permalink":"/docs/en/platform/biostar_x/how-to-guide-data","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-data.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","keywords":["데이터","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"},"next":{"title":"리포트 생성하기","permalink":"/docs/en/platform/biostar_x/data-generate-reports"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/dashboard.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-data.mdx
 
 
 const frontMatter = {
-	id: 'dashboard',
-	title: 'Dashboard',
-	description: 'This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.',
+	id: 'how-to-guide-data',
+	title: '데이터',
+	description: '사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.',
 	keywords: [
-		'Dashboard'
+		'데이터',
+		'keyword2'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -46,11 +47,24 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {DocCardList} = _components;
+  }, {Cmd, DocCardList} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), " 메뉴를 사용하면 BioStar X에 등록된 사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "필요시 원하는 리포트를 일정 주기로 자동 생성할 수 있으며 생성된 리포트는 CSV, PDF로 내보내거나 프린트할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: "런처"
+      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), "를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
