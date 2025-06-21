@@ -140,10 +140,10 @@ const sidebars = {
           label: '대시보드',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/new-dashboard',
+            id: 'platform/biostar_x/dashboard',
           },
           items: [
-            'platform/biostar_x/dashboard'
+            'platform/biostar_x/how-to-use-dashboard'
           ]
         },
         {
@@ -257,7 +257,8 @@ const sidebars = {
             'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
-            'platform/biostar_x/ui-monitoring'
+            'platform/biostar_x/ui-monitoring',
+            'platform/biostar_x/ui-dashboard'
           ]
         },
         'platform/biostar_x/licensing'
