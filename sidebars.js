@@ -153,10 +153,10 @@ const sidebars = {
           label: '대시보드',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/dashboard'
+            id: 'platform/biostar_x/dashboard',
           },
           items: [
-            'platform/biostar_x/how-to-use-dashboard'
+            'platform/biostar_x/dashboard'
           ]
         },
         {
