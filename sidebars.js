@@ -137,6 +137,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '데이터',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/data',
+          },
+          items: [
+            'platform/biostar_x/data-generate-reports',
+            'platform/biostar_x/data-automatic-report-schedule',
+            'platform/biostar_x/data-settings'
+          ]
+        },
+        {
+          type: 'category',
           label: '대시보드',
           link: {
             type: 'doc',
