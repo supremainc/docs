@@ -257,6 +257,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-schedule',
+            'platform/biostar_x/settings-preferences'
           ]
         },
         {
