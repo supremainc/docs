@@ -137,6 +137,30 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '데이터',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-data'
+          },
+          items: [
+            'platform/biostar_x/data-generate-reports',
+            'platform/biostar_x/data-automatic-report-schedule',
+            'platform/biostar_x/data-settings'
+          ]
+        },
+        {
+          type: 'category',
+          label: '대시보드',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-dashboard',
+          },
+          items: [
+            'platform/biostar_x/dashboard'
+          ]
+        },
+        {
+          type: 'category',
           label: '설정',
           link: {
             type: 'doc',
@@ -233,6 +257,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-schedule',
+            'platform/biostar_x/settings-preferences'
           ]
         },
         {
@@ -246,7 +271,8 @@ const sidebars = {
             'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
-            'platform/biostar_x/ui-monitoring'
+            'platform/biostar_x/ui-monitoring',
+            'platform/biostar_x/ui-dashboard'
           ]
         },
         'platform/biostar_x/licensing'
@@ -283,7 +309,7 @@ const sidebars = {
       ]
     }
   ],
-  bioStation3: [
+  biostation3: [
     {
       type: 'category',
       label: 'BioStation 3',
@@ -317,6 +343,43 @@ const sidebars = {
         'device/biostation_3/product-specifications',
         'device/biostation_3/regulatory-information',
         'device/biostation_3/appendices',
+      ],
+    },
+  ],
+  biostation2a: [
+    {
+      type: 'category',
+      label: 'BioStation 2a',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_2a/index',
+      },
+      items: [
+        'device/biostation_2a/safety-instructions',
+        'device/biostation_2a/getting-started',
+        'device/biostation_2a/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_2a/using-device',
+          },
+          items: [
+            'device/biostation_2a/admin-menu',
+            'device/biostation_2a/user',
+            'device/biostation_2a/authentication',
+            'device/biostation_2a/settings',
+            'device/biostation_2a/event-log',
+          ],
+        },
+        'device/biostation_2a/troubleshooting',
+        'device/biostation_2a/product-specifications',
+        'device/biostation_2a/regulatory-information',
+        'device/biostation_2a/appendices',
       ],
     },
   ],

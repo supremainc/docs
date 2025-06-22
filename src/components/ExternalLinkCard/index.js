@@ -103,7 +103,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioStation 2a',
-      url: `#`,
+      url: `/device/biostation_2a`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20231013111341886.png',
       desc: 'Feel the Power of AI',
       height: '90px'
