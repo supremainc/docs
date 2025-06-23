@@ -270,6 +270,8 @@ const sidebars = {
                 'platform/biostar_x/settings-advanced-ac-scheduled-lock',
                 'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
                 'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
+                'platform/biostar_x/settings-advanced-ac-interlock',
+                'platform/biostar_x/settings-advanced-ac-muster'
               ]
             },
             {
