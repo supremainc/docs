@@ -323,18 +323,8 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/settings-system-audit-trail',
-                {
-                  type: 'category',
-                  label: '시스템 백업 및 복원하기',
-                  link: {
-                    type: 'doc',
-                    id: 'platform/biostar_x/settings-system-system-backup-restore'
-                  },
-                  items: [
-                    'platform/biostar_x/settings-system-system-backup',
-                    'platform/biostar_x/settings-system-system-restore'
-                  ]
-                },
+                'platform/biostar_x/settings-system-system-backup',
+                'platform/biostar_x/settings-system-system-restore',
                 'platform/biostar_x/settings-system-security',
                 'platform/biostar_x/settings-system-daylight-saving-time'
               ]
