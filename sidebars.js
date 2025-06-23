@@ -277,6 +277,7 @@ const sidebars = {
             },
             'platform/biostar_x/settings-triger-and-action',
             'platform/biostar_x/settings-alert',
+            'platform/biostar_x/settings-diretory-integration',
             {
               type: 'category',
               label: '라이선스',
