@@ -106,7 +106,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-advanced-ac-occupancy-mdx-124.json
-var site_docs_platform_biostar_x_settings_advanced_ac_occupancy_mdx_124_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-occupancy","title":"재실 인원 제한 구역","description":"재실 인원 제한 구역 설정 방법을 안내합니다. 특정 구역의 최대 입실 인원을 제한하고 재실 현황을 모니터링합니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-occupancy.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-occupancy","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-occupancy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-occupancy.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-occupancy","title":"재실 인원 제한 구역","description":"재실 인원 제한 구역 설정 방법을 안내합니다. 특정 구역의 최대 입실 인원을 제한하고 재실 현황을 모니터링합니다.","keywords":["고급 출입 통제","재실 인원 제한"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"소집 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-muster"},"next":{"title":"라이선스 설정하기","permalink":"/docs/en/platform/biostar_x/settings-license"}}')
+var site_docs_platform_biostar_x_settings_advanced_ac_occupancy_mdx_124_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-occupancy","title":"재실 인원 제한 구역","description":"재실 인원 제한 구역 설정 방법을 안내합니다. 특정 구역의 최대 입실 인원을 제한하고 재실 현황을 모니터링합니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-occupancy.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-occupancy","permalink":"/docs/platform/biostar_x/settings-advanced-ac-occupancy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-occupancy.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-occupancy","title":"재실 인원 제한 구역","description":"재실 인원 제한 구역 설정 방법을 안내합니다. 특정 구역의 최대 입실 인원을 제한하고 재실 현황을 모니터링합니다.","keywords":["고급 출입 통제","재실 인원 제한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"소집 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-muster"},"next":{"title":"작업 조건 및 동작 설정하기","permalink":"/docs/platform/biostar_x/settings-triger-and-action"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -124,7 +124,7 @@ const frontMatter = {
 		'고급 출입 통제',
 		'재실 인원 제한'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

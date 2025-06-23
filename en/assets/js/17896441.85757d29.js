@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-4959: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+4115: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -4874,6 +4874,40 @@ const SvgIcoEdit = _ref => {
   })))));
 };
 /* ESM default export */ const ico_edit = (SvgIcoEdit);
+;// CONCATENATED MODULE: ./static/img/menus/ico-edit2.svg
+var _mask, ico_edit2_path, ico_edit2_path2;
+function ico_edit2_extends() { return ico_edit2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_edit2_extends.apply(null, arguments); }
+
+const SvgIcoEdit2 = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_edit2_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, _mask || (_mask = /*#__PURE__*/react.createElement("mask", {
+    id: "a",
+    fill: "#fff"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M13 10.037a1 1 0 0 1-.298.712l-3.298 3.25V14H2.812A.81.81 0 0 1 2 13.188V2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1z"
+  }))), ico_edit2_path || (ico_edit2_path = /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "m9.404 13.999-.702-.713zm3.298-3.25L12 10.036zm0 0L12 10.036l-3.298 3.25.702.713.702.712 3.298-3.25zM9.404 14v-1H2.812v2h6.592zM2 13.188h1V2H1v11.188zM3 1v1h9V0H3zm10 1h-1v8.037h2V2zm-1-1v1h2a2 2 0 0 0-2-2zM2 2h1V0a2 2 0 0 0-2 2zm.812 12v-1c.104 0 .188.084.188.188H1c0 1 .811 1.812 1.812 1.812zm6.592 0-.243.97c-1.143-.287-.936-1.97.243-1.97zv1c1.18 0 1.387-1.685.243-1.97zm0-.002-.702-.712a1 1 0 0 0 .46 1.683l.242-.97.243-.97a1 1 0 0 1 .459 1.682zm3.298-3.25.702.713A2 2 0 0 0 14 10.037h-2z",
+    mask: "url(#a)"
+  })), ico_edit2_path2 || (ico_edit2_path2 = /*#__PURE__*/react.createElement("path", {
+    fill: "currentColor",
+    d: "M11.166 8.25v.733H8.233v2.933H7.5V8.25zM4 7h3v1H4zM4 5h7v1H4zM4 3h7v1H4z"
+  })));
+};
+/* ESM default export */ const ico_edit2 = (SvgIcoEdit2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-edit-underline.svg
 var ico_edit_underline_g, ico_edit_underline_defs;
 function ico_edit_underline_extends() { return ico_edit_underline_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_edit_underline_extends.apply(null, arguments); }
@@ -5146,6 +5180,7 @@ const SvgIcoCalendar = _ref => {
 
 
 
+
 /* ESM default export */ const theme_MDXComponents = ({
     ...MDXComponents/* default */.Z,
     Cmd: Cmd,
@@ -5235,6 +5270,7 @@ const SvgIcoCalendar = _ref => {
     IcDescend: ico_descend,
     IcSet: ico_setting,
     IcEdit: ico_edit,
+    IcEdit2: ico_edit2,
     IcEditUL: ico_edit_underline,
     IcFw2: ico_move_forward2,
     IcBw2: ico_move_backward2,

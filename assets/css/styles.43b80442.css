@@ -4186,12 +4186,17 @@ CSS variables, meant to be overridden by final theme
   padding-bottom: 1rem;
 }
 
+.fdstep_hOfH h2 {
+  padding-top: 0;
+  font-size: var(--ifm-h3-font-size);
+}
+
 .fdsteps_tUGx .fdstep_hOfH:last-of-type {
   padding-bottom: 0;
 }
 
 .fdstep_hOfH:before {
-  background-color: var(--ifm-color-primary-lightest);
+  background-color: var(--ifm-color-cmd);
   color: var(--color-fd-secondary-foreground);
   content: counter(step);
   counter-increment: step;
