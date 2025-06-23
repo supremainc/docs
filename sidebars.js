@@ -274,7 +274,19 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: '라이선스',
+              label: '서버 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-server',
+              },
+              items: [
+                'platform/biostar_x/settings-server-server',
+                'platform/biostar_x/settings-server-https'
+              ]
+            },
+            {
+              type: 'category',
+              label: '라이선스 활성화하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/settings-license',
