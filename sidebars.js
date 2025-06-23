@@ -275,6 +275,7 @@ const sidebars = {
                 'platform/biostar_x/settings-advanced-ac-occupancy',
               ]
             },
+            'platform/biostar_x/settings-triger-and-action',
             {
               type: 'category',
               label: '라이선스',
