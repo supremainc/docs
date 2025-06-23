@@ -14,13 +14,13 @@ export async function translate(content: string, targetLanguage: string) {
 ## Korean to English Translation Guidelines
 
 ### Avoid These English Expressions:
-- "you can" → Use declarative statements (e.g., "The system allows..." instead of "You can...")
+- "you can" → Prioritize imperative mood ("do this") over "You can" constructions; use "You can" only when presenting options or choices.
 - "want" → Remove if unnecessary in context
 - "display" → Use "appears" instead (e.g., "The message appears" not "displays")
 - "There issue where" → Use factual descriptions (e.g., "The system fails to..." instead of "There is an issue where...")
 - "An issue" → Avoid; use specific descriptions
 - "even" → Avoid unnecessary usage
-- "item" → Avoid; use specific terms
+- "item" → Avoid use specific terms
 
 ### Korean to English Preferred Translations:
 - 얼굴 인식 → Facial Authentication (not Facial Recognition)

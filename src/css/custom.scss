@@ -531,6 +531,12 @@ footer {
       position: relative;
       top: 2px;
     }
+    svg.border {
+      border: 1px solid;
+    }
+    svg.radius {
+      border-radius: 10%;
+    }
   }
   p:has(.jira-link) {
     margin-top: 2rem;
