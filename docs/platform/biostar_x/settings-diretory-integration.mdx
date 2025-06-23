@@ -1,0 +1,274 @@
+---
+id: settings-diretory-integration
+title: 디렉토리 연동 설정하기
+description: Microsoft Entra ID와 **BioStar X**를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.
+---
+
+import UserGroupFilter from '../../common/_usergroupfilter.mdx';
+import UserCustomField from '../../common/_usercustomfield.mdx';
+import SyncIntegration from '../../common/_sync-with-integ.mdx';
+
+**Microsoft Entra ID**(이하 **Entra ID**) 또는 **액티브 디렉토리**(Active Directory)와 **BioStar X**를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다. 
+
+**Entra ID** 또는 **Active Directory**와 연동하면 아래의 편의 기능을 사용할 수 있습니다. 이를 통해 보안과 편의성을 높일 수 있습니다.
+
+* **Entra ID**에서 제공하는 Single Sign-On(SSO) 기능을 통해 **Entra ID** 계정으로 **BioStar X**에 로그인할 수 있습니다.
+
+* **Active Directory**에서 제공하는 Lightweight Directory Access Protocol(LDAP) 인증을 통해 **BioStar X**에 로그인할 수 있습니다.
+
+* **Entra ID** 또는 **Active Directory**에서 구성한 사용자 및 그룹을 **BioStar X**와 동기화할 수 있습니다.
+
+* **Entra ID** 또는 **Active Directory**에서 사용되는 직함과 부서, 그룹 등의 사용자 정보를 **BioStar X**의 사용자 정의 필드와 맵핑할 수 있습니다.
+
+:::info
+
+**Entra ID** 또는 **Active Directory** 설정 기능은 **어드밴스**(Advance) 라이선스를 활성화했을 때 사용할 수 있습니다.
+
+:::
+
+## Entra ID와 연동하기 {#intergrate-with-entraid}
+
+1. **BioStar X**에 관리자 아이디로 로그인하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+
+1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.AdServerNew' product='2' />를 선택하세요.
+
+    <Image src='/img/biostar2-setting-directory-integ-entraid.png' />
+
+1. 다음 안내에 따라 각 항목을 설정하세요.
+
+<Steps>
+<Step>
+
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#EntraidServer}
+
+<Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> 섹션에서 **Entra ID**의 서버 정보를 입력하고 <Cmd sid='settings.activeDirectory.Connect' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostar2-setting-directory-server.png' />
+
+* <Cmd sid='settings.activeDirectory.ClientID' product='2' />: **Entra ID**에서 등록한 애플리케이션의 **클라이언트 아이디**(**Client ID**)를 입력하세요.
+
+* <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />: **Entra ID**에서 등록한 애플리케이션의 **인증서 및 암호**(**Certificates & secrets**)에 추가한 **클라이언트 암호**(**Client secrets**)를 입력하세요.
+
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: **Entra ID**에서 등록한 애플리케이션의 **디렉토리(테넌트) ID**를 입력하세요.
+
+:::info
+
+* **Entra ID**에서 애플리케이션을 등록하는 방법은 [다음 링크](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)를 참고하세요.
+
+* **Entra ID**에서 **인증서 및 암호** 설정 방법은 [다음 링크](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret)를 참고하세요.
+
+* **테넌트 ID**는 **Entra ID**에서 등록한 애플리케이션의 **개요**(**Overview**)에서 확인할 수 있습니다.
+
+:::
+
+</Step>
+
+<Step>
+
+<UserGroupFilter hashid='usergroupfilterEntraid' name='Entra ID' />
+
+</Step>
+
+<Step>
+
+<UserCustomField hashid='userfieldEntraid' name='Entra ID' img01='biostar2-setting-directory-userfield.png' img02='biostar2-setting-directory-userfield-select-other.png' sid='settings.activeDirectory.FieldNameEI' />
+
+:::caution
+
+**Entra ID**와 연동할 때 <Cmd sid='common.userId' product='2' /> 필드는 맵핑할 수 없습니다. <Cmd sid='common.userId' product='2' />는 **BioStar X**에서 자동 생성하여 적용합니다.
+
+:::
+
+</Step>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {#setssoEntraid}
+
+**Entra ID SSO**로 **BioStar X**를 로그인하도록 설정하려면, <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> 항목을 <Cmd sid='device.info.enabled' product='2' />으로 변경하세요.
+
+<Image src='/img/biostar2-setting-directory-login-with-entraid.png' />
+
+<Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> 항목의 리디렉션 주소를 복사(<Image src='/img/menus/ico-copy.png' ico alone />)하고, **Entra ID** 포털의 SSO 리디렉션 설정에 붙여넣으세요. 사용자가 **Entra ID**로 로그인에 성공하면 이 주소로 리디렉션됩니다.
+
+:::info
+
+* **Entra ID**에 애플리케이션을 등록하고, 리디렉션 URI를 추가하는 방법은 다음 링크를 참고하세요.
+
+  * [Microsoft Entra ID에 애플리케이션 등록](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+
+  * [앱에 리디렉션 URI 추가](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
+
+* 리디렉션 주소는 **Entra ID**에서 등록한 애플리케이션의 **개요**(**Overview**)에서 확인할 수 있습니다.
+
+:::
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' />
+
+</Step>
+
+</Steps>
+
+:::note
+
+<Cmd sid='setting.activeDirectory.menu' product='2' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
+
+<Image src='/img/biostar2-setting-directory-btn-apply.png' />
+
+:::
+
+## 액티브 디렉토리(Active Directory)와 연동하기 {#integrate-with-active-directory}
+
+1. **BioStar X**에 관리자 아이디로 로그인하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+
+1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.AdServerOld' product='2' />를 선택하세요.
+
+    <Image src='/img/biostar2-setting-directory-integ-ad.png' />
+
+1. 다음 안내에 따라 각 항목을 설정하세요.
+
+:::info
+
+* Active Directory는 Widows Server 2008 R2 이상의 시스템 환경에서 사용할 수 있습니다.
+
+* Active Directory 서버를 사용하려면 <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> 메뉴에서 <Cmd sid='setting.userDevice.useridType' product='2' /> 항목을 <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />로 설정해야 합니다.
+
+:::
+
+<Steps>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#ADserver}
+
+<Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> 섹션에서 **Active Directory**의 서버 정보를 입력하고 <Cmd sid='settings.activeDirectory.Connect' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostar2-setting-directory-ad-server.png' />
+
+* <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: Windows Active Directory 서버 주소를 입력하세요.
+
+* <Cmd sid='settings.activeDirectory.UserName' product='2' />: Windows Active Directory 로그인 아이디를 입력하세요.
+
+* <Cmd sid='settings.activeDirectory.Password' product='2' />: Windows Active Directory 로그인 비밀번호를 입력하세요.
+
+* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />: Windows Active Directory 기본 도메인 이름을 입력하세요. 기본 도메인 이름은 아래 과정을 통해 확인할 수 있습니다.
+
+  1. **Active Directory 관리 센터**를 실행하세요.
+
+  1. 사용자 데이터가 저장된 노드(Node)에서 마우스 오른쪽 버튼을 클릭하고 **속성**을 선택하세요.
+
+  1. **속성** 창에서 **확장**을 선택하고, **특성 편집기**를 클릭하세요.
+
+  1. **distinguishedName** 값을 확인하세요.
+
+
+* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: Windows Active Directory 서버와 통신할 때 암호화를 사용할 수 있습니다. Active Directory 인증서 서비스를 설치하고 <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />를 설정하려면 [다음 문서](ad-encrypt)를 참고하세요.
+
+  * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />: Windows Active Directory 서버 암호화 키 저장소 비밀번호를 입력하세요. <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> 항목을 <Cmd sid='device.info.enabled' product='2' />으로 설정하면 입력할 수 있습니다.
+
+</Step>
+
+<Step>
+
+<UserGroupFilter hashid='usergroupfilterAD' name='Active Directory' />
+
+</Step>
+
+<Step>
+
+<UserCustomField hashid='userfieldAD' name='Active Directory' img01='biostar2-setting-directory-userfield-ad.png' img02='biostar2-setting-directory-userfield-select-other-ad.png' sid='settings.activeDirectory.FieldNameAD' />
+
+</Step>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {#setssoAD}
+
+Active Directory 서버의 사용자 아이디로 로그인하도록 설정하려면 <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> 항목을 <Cmd sid='device.info.enabled' product='2' />으로 변경하세요. Active Directory 서버의 `sAMAccountName` 필드의 값이 **BioStar X** 로그인 아이디로 맵핑됩니다.
+
+<Image src='/img/biostar2-setting-directory-login-with-ad.png' />
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid='syncdatafromAd' name='Active Directory' />
+
+</Step>
+
+</Steps>
+
+:::note
+
+<Cmd sid='setting.activeDirectory.menu' product='2' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
+
+<Image src='/img/biostar2-setting-directory-btn-apply.png' />
+
+:::
+
+
+## 설정 결과 확인하기 {#checksettings}
+
+**Entra ID** 또는 **Active Directory**와 연동 설정을 완료하고, 화면 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 다음 항목을 참고해 동기화된 설정을 확인할 수 있습니다.
+
+* <Cmd sid='common.user' product='2' /> 메뉴에서 동기화된 사용자 목록을 확인할 수 있습니다.
+
+* **Entra ID** 또는 **Active Directory**로 로그인 설정을 완료한 후, **BioStar X**에 로그인할 때 <Cmd sid='login.entraidLoginBtn' product='2' /> 버튼을 확인할 수 있습니다.
+
+  <Image src='/img/biostar2-setting-directory-entraid-login.png' />
+
+
+## 디렉토리 연동 제외하기 {#exclude-integration}
+
+<Cmd sid='setting.activeDirectory.menu' product='2' /> 기능을 통해 **Entra ID** 또는 **Active Directory**와 연동할 경우, 디렉토리 서비스에 존재하지 않는 사용자는 **BioStar X**에서 삭제될 수 있습니다. 삭제되지 않길 원하는 사용자가 있다면 아래 방법을 통해 연동에서 제외할 수 있습니다.
+
+1. **BioStar X**에 관리자 아이디로 로그인하세요.
+
+1. <Cmd sid='common.user' product='2' /> 메뉴로 이동하세요.
+
+1. <Cmd sid='menu.user.allUserGroups' product='2' /> 목록에서 연동에서 제외할 사용자를 클릭하세요.
+
+1. 선택한 사용자의 상세 정보 화면이 나타나면 <Cmd sid='common.advanced' product='2' /> 섹션에서 <Cmd sid='user.adsync.exclude' product='2' /> 항목의 체크박스를 클릭하세요.
+
+    <Image src='/img/biostar2-user-advance-exclude-sync.png' />
+
+1. <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+선택한 사용자는 <Cmd sid='setting.activeDirectory.menu' product='2' /> 기능을 사용할 때 연동에서 제외됩니다.
+
+
+## 디렉토리 연동 해제하기 {#disableIntegration}
+
+<Cmd sid='settings.activeDirectory.title' product='2' /> 기능을 해제하려면 다음 안내에 따라 진행하세요.
+
+1. **BioStar X**에 관리자 아이디로 로그인하세요.
+
+1. <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+
+1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.notUse' product='2' />을 선택하세요.
+
+    <Image src='/img/biostar2-setting-directory-unset.png' />
+
+1. <Cmd sid='alert.warning' product='2' /> 메시지가 나타나면 <Cmd sid='button.continue' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostar2-setting-directory-unset-warn-message.png' />
+
+1. 화면 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::caution
+
+<Cmd sid='settings.activeDirectory.title' product='2' /> 기능을 <Cmd sid='settings.activeDirectory.notUse' product='2' />으로 설정하면, **BioStar X**에서 **Entra ID** 또는 **Active Directory**와 연동된 모든 설정이 해제됩니다. 연동된 사용자 및 그룹 정보는 삭제되지 않지만, 이후에는 동기화되지 않습니다. 연동을 해제하기 전에 반드시 확인하세요.
+
+:::

@@ -279,6 +279,20 @@ const sidebars = {
             'platform/biostar_x/settings-alert',
             {
               type: 'category',
+              label: '크리덴션 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-credential-manage'
+              },
+              items: [
+                'platform/biostar_x/settings-credential-card-manage',
+                'platform/biostar_x/settings-credential-card-change-data-format'
+              ]
+            },
+            'platform/biostar_x/settings-diretory-integration',
+            'platform/biostar_x/settings-custom-interface',
+            {
+              type: 'category',
               label: '서버 설정하기',
               link: {
                 type: 'doc',
