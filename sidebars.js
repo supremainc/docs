@@ -287,7 +287,8 @@ const sidebars = {
               items: [
                 'platform/biostar_x/settings-credential-card-manage',
                 'platform/biostar_x/settings-credential-card-change-data-format',
-                'platform/biostar_x/settings-credential-card-csn-mobile'
+                'platform/biostar_x/settings-credential-card-csn-mobile',
+                'platform/biostar_x/settings-credential-wiegand-format'
               ]
             },
             'platform/biostar_x/settings-diretory-integration',
