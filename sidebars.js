@@ -253,7 +253,7 @@ const sidebars = {
                 'platform/biostar_x/settings-access-control-manage-access-level',
                 'platform/biostar_x/settings-access-control-manage-access-group',
                 'platform/biostar_x/settings-access-control-manage-floor-level',
-                'platform/biostar_x/settings-access-control-ac-status',
+                'platform/biostar_x/settings-access-control-ac-status'
               ]
             },
             'platform/biostar_x/settings-schedule',
@@ -265,7 +265,36 @@ const sidebars = {
                 id: 'platform/biostar_x/settings-advanced-ac',
               },
               items: [
-                'platform/biostar_x/settings-advanced-ac-apb'
+                'platform/biostar_x/settings-advanced-ac-apb',
+                'platform/biostar_x/settings-advanced-ac-fire-alarm',
+                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
+                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
+                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
+              ]
+            },
+            {
+              type: 'category',
+              label: '시스템 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-system'
+              },
+              items: [
+                'platform/biostar_x/settings-system-audit-trail',
+                {
+                  type: 'category',
+                  label: '시스템 백업 및 복원하기',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_x/settings-system-system-backup-restore'
+                  },
+                  items: [
+                    'platform/biostar_x/settings-system-system-backup',
+                    'platform/biostar_x/settings-system-system-restore'
+                  ]
+                },
+                'platform/biostar_x/settings-system-security',
+                'platform/biostar_x/settings-system-daylight-saving-time'
               ]
             },
             'platform/biostar_x/settings-preferences'
