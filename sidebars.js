@@ -253,21 +253,10 @@ const sidebars = {
                 'platform/biostar_x/settings-access-control-manage-access-level',
                 'platform/biostar_x/settings-access-control-manage-access-group',
                 'platform/biostar_x/settings-access-control-manage-floor-level',
-                'platform/biostar_x/settings-access-control-ac-status',
+                'platform/biostar_x/settings-access-control-ac-status'
               ]
             },
             'platform/biostar_x/settings-schedule',
-            {
-              type: 'category',
-              label: '고급 출입 통제 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-advanced-ac',
-              },
-              items: [
-                'platform/biostar_x/settings-advanced-ac-apb'
-              ]
-            },
             'platform/biostar_x/settings-preferences'
           ]
         },
