@@ -265,7 +265,11 @@ const sidebars = {
                 id: 'platform/biostar_x/settings-advanced-ac',
               },
               items: [
-                'platform/biostar_x/settings-advanced-ac-apb'
+                'platform/biostar_x/settings-advanced-ac-apb',
+                'platform/biostar_x/settings-advanced-ac-fire-alarm',
+                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
+                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
+                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
               ]
             },
             {
