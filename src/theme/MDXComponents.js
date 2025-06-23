@@ -83,6 +83,7 @@ import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
 import IcTslot from '@site/static/img/menus/ico-timeslot-add.svg';
 import IcEraser from '@site/static/img/menus/ico-eraser.svg';
 import IcCalc from '@site/static/img/menus/ico-calendar.svg';
+import IcCopy2 from '@site/static/img/menus/ico-copy2.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -154,5 +155,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2
 }
