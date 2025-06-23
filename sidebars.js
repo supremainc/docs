@@ -259,7 +259,6 @@ const sidebars = {
             'platform/biostar_x/settings-schedule',
             {
               type: 'category',
-<<<<<<< HEAD
               label: '고급 출입 통제 설정하기',
               link: {
                 type: 'doc',
@@ -267,7 +266,10 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/settings-advanced-ac-apb'
-=======
+              ]
+            },
+            {
+              type: 'category',
               label: '시스템 설정하기',
               link: {
                 type: 'doc',
@@ -289,7 +291,6 @@ const sidebars = {
                 },
                 'platform/biostar_x/settings-system-security',
                 'platform/biostar_x/settings-system-daylight-saving-time'
->>>>>>> biostarx-setting-system
               ]
             },
             'platform/biostar_x/settings-preferences'
