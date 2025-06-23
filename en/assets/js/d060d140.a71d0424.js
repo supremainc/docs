@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5937"], {
-808: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["117"], {
+7150: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_preferences_mdx_2b4_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_preferences_mdx_d06_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-preferences-mdx-2b4.json
-var site_docs_platform_biostar_x_settings_preferences_mdx_2b4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-preferences","title":"기본 설정","description":"BioStar X의 언어/표준 시간대, 날짜/시간 형식을 변경할 수 있으며, 경보 알람으로 사용할 사운드 파일을 업로드할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-preferences.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-preferences","permalink":"/docs/platform/biostar_x/settings-preferences","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-preferences.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-preferences","title":"기본 설정","description":"BioStar X의 언어/표준 시간대, 날짜/시간 형식을 변경할 수 있으며, 경보 알람으로 사용할 사운드 파일을 업로드할 수 있습니다.","keywords":["기본 설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"스케줄 설정하기","permalink":"/docs/platform/biostar_x/settings-schedule"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-preferences-mdx-d06.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_preferences_mdx_d06_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-preferences","title":"Preferences","description":"Description","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-preferences.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-preferences","permalink":"/docs/en/platform/biostar_x/settings-preferences","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-preferences.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-preferences","title":"Preferences","description":"Description","keywords":["Preferences"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"안티패스백 구역 설정하기","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-apb"},"next":{"title":"UI 알아보기","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-preferences.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-preferences.mdx
 
 
 const frontMatter = {
 	id: 'settings-preferences',
-	title: '기본 설정',
-	description: 'BioStar X의 언어/표준 시간대, 날짜/시간 형식을 변경할 수 있으며, 경보 알람으로 사용할 사운드 파일을 업로드할 수 있습니다.',
+	title: 'Preferences',
+	description: 'Description',
 	keywords: [
-		'기본 설정'
+		'Preferences'
 	],
 	isTranslationMissing: false
 };
@@ -58,26 +58,26 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 언어/표준 시간대, 날짜/시간 형식을 변경할 수 있으며, 경보 알람으로 사용할 사운드 파일을 업로드할 수 있습니다."
+      children: "You can change language/time zone, date/time format, and upload a sound file to be used as an alert."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click on ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), "을 클릭하세요."]
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.preference",
             product: "2"
-          }), "을 클릭하세요."]
+          }), " in the left sidebar of the screen."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "각 항목을 설정하세요."
+          children: "Edit the necessary fields."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-preferences.png"
         }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
@@ -87,31 +87,31 @@ function _createMdxContent(props) {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "preference.languageTimezone",
                   product: "2"
-                }), ": BioStar X의 언어 정보와 시간대를 설정할 수 있습니다."]
+                }), ": You can configure the BioStar X language and time zone settings."]
               }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       sid: "common.language",
                       product: "2"
-                    }), ": 사용하려는 언어를 선택하세요."]
+                    }), ": Select a language to use."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       sid: "common.timeZone",
                       product: "2"
-                    }), ": 사용하려는 시간대를 선택하세요."]
+                    }), ": Select a time zone to use."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       sid: "common.dst",
                       product: "2"
-                    }), ": BioStar X 서버에 적용할 일광 절약 시간을 선택하세요. 원하는 항목이 없다면 ", (0,jsx_runtime.jsx)(_components.a, {
+                    }), ": Select the daylight saving time to apply to BioStar X server. If no registered daylight saving time, see ", (0,jsx_runtime.jsx)(_components.a, {
                       href: "#",
-                      children: "다음 문서"
-                    }), "를 참고하여 설정하세요."]
+                      children: "this document"
+                    }), "."]
                   }), "\n"]
                 }), "\n"]
               }), "\n"]
@@ -120,21 +120,21 @@ function _createMdxContent(props) {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "preference.dateTimeFormat",
                   product: "2"
-                }), ": BioStar X에서 사용할 날짜와 시간 형식을 설정할 수 있습니다."]
+                }), ": You can configure the date and time format to use in BioStar X."]
               }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       sid: "common.dateFormat",
                       product: "2"
-                    }), ": 날짜 형식을 변경할 수 있습니다."]
+                    }), ": Changes the date format."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
                       sid: "common.timeFormat",
                       product: "2"
-                    }), ": 시간 형식을 변경할 수 있습니다."]
+                    }), ": Changes the time format."]
                   }), "\n"]
                 }), "\n"]
               }), "\n"]
@@ -143,40 +143,40 @@ function _createMdxContent(props) {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "device.info.sound",
                   product: "2"
-                }), ": BioStar X에서 사용할 사운드 파일을 업로드할 수 있습니다."]
+                }), ": You can upload a sound file to use in BioStar X."]
               }), "\n"]
             }), "\n"]
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "button.plusAdd",
                 product: "2"
-              }), "를 클릭하세요."]
+              }), "."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-preferences-sound.png",
               className: "none"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.preference.sound.alert.addSound.browse",
                 product: "2"
-              }), "를 클릭하세요."]
+              }), " to select a file."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["업로드하려는 .wav 파일이나 .mp3 파일을 선택한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "열기"
-              }), "를 클릭하세요."]
+              children: ["Select .wav file or .mp3 file and then click ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Open"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "button.add",
                 product: "2"
-              }), "를 클릭하여 사운드 파일을 업로드하세요."]
+              }), " to upload."]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -184,21 +184,21 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "사운드 파일은 .wav 파일 또는 .mp3 형식만 업로드할 수 있습니다."
+                children: "Sound files must be .wav or .mp3 format."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "업로드할 수 있는 최대 파일 크기는 10MB입니다."
+                children: "A maximum file size is 10MB."
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
-          }), "을 클릭하세요."]
+          }), " to save the settings."]
         }), "\n"]
       }), "\n"]
     })]

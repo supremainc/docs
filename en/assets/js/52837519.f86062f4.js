@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-schedule-mdx-528.json
-var site_docs_platform_biostar_x_settings_schedule_mdx_528_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-schedule","title":"스케줄 설정하기","description":"출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하세요.","source":"@site/docs/platform/biostar_x/settings-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-schedule","permalink":"/docs/platform/biostar_x/settings-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-schedule","title":"스케줄 설정하기","description":"출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하세요.","keywords":["스케줄","출입","휴일"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 권한 상태 확인하기","permalink":"/docs/platform/biostar_x/settings-access-control-ac-status"},"next":{"title":"기본 설정","permalink":"/docs/platform/biostar_x/settings-preferences"}}')
+var site_docs_platform_biostar_x_settings_schedule_mdx_528_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-schedule","title":"스케줄 설정하기","description":"출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하세요.","source":"@site/docs/platform/biostar_x/settings-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-schedule","permalink":"/docs/en/platform/biostar_x/settings-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-schedule","title":"스케줄 설정하기","description":"출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하세요.","keywords":["스케줄","출입","휴일"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"출입 권한 상태 확인하기","permalink":"/docs/en/platform/biostar_x/settings-access-control-ac-status"},"next":{"title":"고급 출입 통제 설정하기","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'출입',
 		'휴일'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
