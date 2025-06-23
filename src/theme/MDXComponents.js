@@ -76,6 +76,7 @@ import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
 import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
+import IcEdit2 from '@site/static/img/menus/ico-edit2.svg';
 import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
 import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
@@ -152,6 +153,6 @@ export default {
     IcMove,
     IcBack,
     IcAdvSearch, IcSearch,
-    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEditUL,
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
     IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc
 }
