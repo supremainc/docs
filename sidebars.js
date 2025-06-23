@@ -274,6 +274,18 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '라이선스',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-license',
+              },
+              items: [
+                'platform/biostar_x/settings-license-biostar-x-license',
+                'platform/biostar_x/settings-license-device-license'
+              ]
+            },
+            {
+              type: 'category',
               label: '시스템 설정하기',
               link: {
                 type: 'doc',
