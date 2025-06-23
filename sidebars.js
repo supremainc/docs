@@ -277,6 +277,17 @@ const sidebars = {
             },
             'platform/biostar_x/settings-triger-and-action',
             'platform/biostar_x/settings-alert',
+            {
+              type: 'category',
+              label: '크리덴션 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-credential-manage'
+              },
+              items: [
+                'platform/biostar_x/settings-credential-card-manage',
+              ]
+            },
             'platform/biostar_x/settings-diretory-integration',
             {
               type: 'category',
