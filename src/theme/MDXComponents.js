@@ -32,6 +32,7 @@ import Calloutlists from '@site/src/components/Calloutlists';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
+import IcMinus from '@site/static/img/menus/ico-minus.svg';
 import IcClose from '@site/static/img/menus/ico-close.svg';
 import IcCamera from '@site/static/img/menus/ico-camera.svg';
 import IcUpload from '@site/static/img/menus/ico-upload.svg';
@@ -124,7 +125,7 @@ export default {
     Faqs, Calloutlists,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
-    IcAdd,
+    IcAdd, IcMinus,
     IcClose,
     IcCamera,
     IcUpload,
