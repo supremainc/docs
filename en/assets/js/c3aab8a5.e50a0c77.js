@@ -62,9 +62,14 @@ const toc = [{
   "value": "스마트 카드 설정",
   "id": "스마트-카드-설정",
   "level": 4
+}, {
+  "value": "레이아웃",
+  "id": "레이아웃",
+  "level": 4
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
@@ -120,7 +125,10 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.cardFormat.addNewSmartCard",
             product: "2"
-          }), " 화면이 나타나면 각 항목을 설정하세요."]
+          }), " 화면이 나타나면 각 항목을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "#smartCardType",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-credentail-smart-format-add.png"
         }), "\n"]
@@ -229,7 +237,7 @@ function _createMdxContent(props) {
             product: "2"
           }), ": 타사에서 발급한 DESFire 카드를 사용할 수 있습니다. DESFire만 설정할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-          type: "info",
+          type: "note",
           children: [(0,jsx_runtime.jsx)(_components.p, {
             children: "이 기능을 사용하려면 아래의 정보를 정확하게 입력하세요."
           }), (0,jsx_runtime.jsxs)(_components.p, {
@@ -287,50 +295,195 @@ function _createMdxContent(props) {
           }), " 옵션을 활성화해야만 입력할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "시작 블록 인덱스 / 블록 인덱스: 각 템플릿이 저장될 시작 블록을 선택하세요. 이 블록은 사용자 정보가 저장될 블록의 인덱스이며, 사용자가 이미 스마트 카드를 사용하고 있다면 저장 가능한 블록을 설정하세요. MIFARE와 iCLASS만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.startBlockIndex",
+            product: "2"
+          }), " / ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.blockIndex",
+            product: "2"
+          }), ": 각 템플릿이 저장될 시작 블록을 선택하세요. 이 블록은 사용자 정보가 저장될 블록의 인덱스이며, 사용자가 이미 스마트 카드를 사용하고 있다면 저장 가능한 블록을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "MIFARE와 iCLASS만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "앱 ID: 애플리케이션 ID를 설정하세요. 파일 ID를 포함하는 일종의 디렉터리 역할을 합니다. DESFire만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.appId",
+            product: "2"
+          }), ": 애플리케이션 아이디를 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.fileId",
+            product: "2"
+          }), "를 포함하는 일종의 디렉터리 역할을 합니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "DESFire만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "파일 ID: 파일 ID를 설정하세요. DESFire만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.fileId",
+            product: "2"
+          }), ": 파일 아이디를 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "DESFire만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "암호화 종류: 암호화 종류를 DES/3DES 또는 AES로 설정할 수 있습니다. DESFire만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.encryptionType",
+            product: "2"
+          }), ": 암호화 종류를 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "DES/3DES"
+          }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "AES"
+          }), "로 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "DESFire만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "ADF 주소 값: 디지털 자격 증명이 저장되는 ADF 주소이며 iCLASS Seos 카드만 확인할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.ADF",
+            product: "2"
+          }), ": 디지털 자격 증명이 저장되는 ADF 주소입니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "iCLASS Seos 카드만 확인할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "바이트 건너뛰기: 카드 번호를 읽어들일 시작점을 설정할 수 있습니다. 커스텀 스마트 카드에서 MIFARE, DESFire, FeliCa만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.skipBytes",
+            product: "2"
+          }), ": 카드 번호를 읽어들일 시작점을 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드에서 MIFARE, DESFire, FeliCa만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "데이터 크기: (설정한 기본 사이트 키와 보조 사이트 키가 카드의 설정값과 동일한 경우) 읽어들일 카드의 데이터 크기를 설정할 수 있습니다. 커스텀 스마트 카드에서 MIFARE, DESFire, FeliCa만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.dataSize",
+            product: "2"
+          }), ": (설정한 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.primaryKey",
+            product: "2"
+          }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.secondaryKey",
+            product: "2"
+          }), "가 카드의 설정값과 동일한 경우) 읽어들일 카드의 데이터 크기를 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드에서 MIFARE, DESFire, FeliCa만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "시스템 코드: FeliCa 카드를 읽기 위한 시스템 코드를 16진수로 최대 4자리까지 입력하세요. 커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.systemCode",
+            product: "2"
+          }), ": FeliCa 카드를 읽기 위한 시스템 코드를 16진수로 최대 4자리까지 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "서비스 코드: FeliCa 카드를 읽기 위한 서비스 코드를 16진수로 최대 4자리까지 입력하세요. 커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.serviceCode",
+            product: "2"
+          }), ": FeliCa 카드를 읽기 위한 서비스 코드를 16진수로 최대 4자리까지 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "ID 필드: 카드에서 특정 영역을 읽을 수 있도록 설정합니다. + 추가를 눌러 읽고자 하는 최대 8개 블록에 대해 설정할 수 있습니다. 커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.idField",
+            product: "2"
+          }), ": 카드에서 특정 영역을 읽을 수 있도록 설정합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.addPlus",
+            product: "2"
+          }), " 버튼을 클릭해 읽고자 하는 최대 8개 블록에 대해 설정할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "블록 번호: 카드를 읽어들일 블록을 설정합니다. (0 ~ 150)"
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.cardFormat.blockNumber",
+              product: "2"
+            }), ": 카드를 읽어들일 블록을 설정합니다. (0 ~ 150)"]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "커스텀 스마트 카드의 FeliCa에서만 설정할 수 있습니다."
+          })
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "레이아웃",
+      children: "레이아웃"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자 정보와 얼굴 및 지문 정보가 기록되는 레이아웃을 수정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.numberOfTemplate",
+            product: "2"
+          }), ": 레이아웃에 포함할 지문 템플릿 수를 설정하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.templateSize",
+            product: "2"
+          }), ": 지문 템플릿이 사용하는 바이트 수를 설정하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.useFace",
+            product: "2"
+          }), ": 얼굴 템플릿 사용 여부를 선택할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.cardFormat.faceTemplateSize",
+            product: "2"
+          }), ": 얼굴 템플릿이 사용하는 바이트 수를 설정하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.cardFormat.useFace",
+          product: "2"
+        }), "은 FaceStation F2, BioStation 3, BioEntry W3 모델에서 사용할 수 있습니다."]
+      })
     })]
   });
 }
