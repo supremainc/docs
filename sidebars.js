@@ -291,6 +291,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-diretory-integration',
+            'platform/biostar_x/settings-custom-interface',
             {
               type: 'category',
               label: '서버 설정하기',
