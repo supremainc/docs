@@ -16,15 +16,15 @@
     "description": "The label for category 튜토리얼 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자": {
-    "message": "Users",
+    "message": "User",
     "description": "The label for category 사용자 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자 등록하기": {
-    "message": "Registering Users",
+    "message": "Register Users",
     "description": "The label for category 사용자 등록하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자 관리하기": {
-    "message": "Managing Users",
+    "message": "Manage Users",
     "description": "The label for category 사용자 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.모니터링": {
@@ -36,7 +36,7 @@
     "description": "The label for category 출입문 모니터링하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.UI 알아보기": {
-    "message": "Exploring the UI",
+    "message": "Explore UI",
     "description": "The label for category UI 알아보기 in sidebar biostarx"
   },
   "sidebar.legal.category.Legal": {
@@ -72,7 +72,7 @@
     "description": "The label for category 출입문 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.엘리베이터 관리하기": {
-    "message": "Manage Elevators",
+    "message": "Managing Elevators",
     "description": "The label for category 엘리베이터 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.운영 권한 관리하기": {
@@ -82,5 +82,49 @@
   "sidebar.biostarx.category.출입 통제 설정하기": {
     "message": "Access Control Settings",
     "description": "The label for category 출입 통제 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.데이터": {
+    "message": "Data",
+    "description": "The label for category 데이터 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.대시보드": {
+    "message": "DASHBOARD",
+    "description": "The label for category 대시보드 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.고급 출입 통제 설정하기": {
+    "message": "Advanced Access Control Settings",
+    "description": "The label for category 고급 출입 통제 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.크리덴션 관리하기": {
+    "message": "Managing Credentials",
+    "description": "The label for category 크리덴션 관리하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.서버 설정하기": {
+    "message": "Server Settings",
+    "description": "The label for category 서버 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.라이선스 활성화하기": {
+    "message": "Activate License",
+    "description": "The label for category 라이선스 활성화하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.시스템 설정하기": {
+    "message": "System Settings",
+    "description": "The label for category 시스템 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostation3.category.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "The label for category BioStation 3 in sidebar biostation3"
+  },
+  "sidebar.biostation3.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category 사용하기 in sidebar biostation3"
+  },
+  "sidebar.biostation2a.category.BioStation 2a": {
+    "message": "BioStation 2a",
+    "description": "The label for category BioStation 2a in sidebar biostation2a"
+  },
+  "sidebar.biostation2a.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category 사용하기 in sidebar biostation2a"
   }
 }
