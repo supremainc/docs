@@ -1,0 +1,87 @@
+---
+id: system-requirements
+title: System Minimum Requirements
+description: Check the system requirements for installing BioStar X and configure the optimal environment for your organization size.
+keywords:
+  - System Minimum Requirements
+  - Operating System
+  - Database
+  - CPU
+  - RAM
+---
+
+**BioStar X** provides a reliable and scalable integrated security management solution for large enterprise environments. The system can efficiently manage more than 1,000 devices through a distributed architecture consisting of a main server and a communication server.
+
+The main server manages the core management features of the system, while the communication server is responsible for device communication, distributing the load and optimizing performance. Additionally, administrators can access the system via a web browser on client PCs and perform all management tasks. Check the system requirements for installing BioStar X and configure the optimal environment for your organization size.
+
+## Main Server {#main-server}
+
+The main server is the computer on which the central management system of **BioStar X** is installed. The user accesses the system through a web browser to manage it and handle all tasks such as setting user information or access permissions. It is also responsible for monitoring the overall status of the system and managing event logs or alarms.
+
+<div className='overflow-x col5--15-10-25'>
+
+| \>                 | Item             | Small          | Medium          | Enterprise                                                                                                                                         |
+| ------------------ | ---------------- | -------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Usage Environment  | Total Devices    | 1 to 50        | 51 to 100       | 101 to 1,000                                                                                                                                       |
+| System Requirement | Operating System | \>             | \>              | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022                                                              |
+| ^                  | Database         | \>             | \>              | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
+| ^                  | CPU              | 2.3 GHz 8-core | 2.3 GHz 12-core | Minimum 2.3 GHz<br/>Recommended 4.0 GHz 16-core                                                                                                    |
+| ^                  | RAM              | 16 GB          | 32 GB           | Minimum 64 GB<br/>Recommended 128 GB                                                                                                               |
+| ^                  | SSD              | 512 GB         | 512 GB          | 1 TB                                                                                                                                               |
+| ^                  | HDD              | \>             | \>              | When using the <Cmd sid='common.imageLog' product='2' /> feature, 200 GB is required for 10 million image logs.                                    |
+
+</div>
+
+:::info
+
+* **BioStar X** can only be installed on a 64bit operating system.
+
+* MS SQL Server communication security supports TLS 1.2.
+
+* If MS SQL Server and **BioStar X** are installed on different PCs, you should install the [Microsoft OLE DB Driver for SQL Server](https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server) on a PC with **BioStar X** installed.
+
+* For enterprise environment, it is recommended to install an MS SQL Server database.
+
+* If you are using an MS SQL Server database and **BioStar X T&A**, you will need to install the [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) appropriate for your environment.
+
+* The Windows virtual environment provided by Boot Camp on macOS is not supported.
+
+:::
+
+## Communication Server {#communication-server}
+
+The communication server is a computer dedicated to communicating with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single communication server can connect up to 1,000 devices, and you can add multiple communication servers as needed.
+
+<div className='overflow-x'>
+
+| \>                 | Item             | Specification                                                                         |
+| ------------------ | ---------------- | ------------------------------------------------------------------------------------- |
+| System Requirement | Operating System | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
+| ^                  | CPU              | Minimum 2.3 GHz, recommended 4.0 GHz 16-core                                          |
+| ^                  | RAM              | Minimum 64 GB, recommended 128 GB                                                     |
+| ^                  | SSD              | 1 TB                                                                                  |
+
+</div>
+
+## Client {#client}
+
+The client is a computer that operates the system via the **BioStar X** accessed by the administrator through a web browser.
+
+<div className='overflow-x'>
+
+| \>                 | Item   | Small   | Medium  | Enterprise                                     |
+| ------------------ | ------ | ------- | ------- | ---------------------------------------------- |
+| System Requirement | CPU    | 2.5 GHz | 2.5 GHz | Minimum 2.5 GHz                                |
+| ^                  | RAM    | 16 GB   | 32 GB   | Minimum 32 GB                                  |
+| ^                  | GPU    | \>      | \>      | Minimum NVIDIA GeForce RTX 4060 when using VMS |
+| ^                  | 웹 브라우저 | \>      | \>      | Google Chrome version 100 or higher            |
+
+</div>
+
+:::info
+
+* **BioStar X** is optimized for Google Chrome.
+
+* The web interface of **BioStar X** does not provide support for mobile browsers.
+
+:::

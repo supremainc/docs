@@ -353,7 +353,8 @@ const sidebars = {
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
             'platform/biostar_x/ui-monitoring',
-            'platform/biostar_x/ui-dashboard'
+            'platform/biostar_x/ui-dashboard',
+            'platform/biostar_x/ui-settings'
           ]
         },
         'platform/biostar_x/licensing'
