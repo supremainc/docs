@@ -723,7 +723,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "zone.occupancy.list.activated",
+            sid: "zone.occupancy.list.activate",
             product: "2"
           }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "zone.occupancy.list.deactivate",

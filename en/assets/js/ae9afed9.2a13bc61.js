@@ -89,7 +89,7 @@ function _createMdxContent(props) {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "필터 설정"
                 }), ": 각 항목별로 조건을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "필터 저장",
+                  sid: "ta.report.condition.saveFilter.button",
                   product: "2"
                 }), "을 클릭하면 설정한 필터가 저장됩니다."]
               }), "\n"]

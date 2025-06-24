@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-advanced-ac-fire-alarm-mdx-1f1.json
-var site_docs_platform_biostar_x_settings_advanced_ac_fire_alarm_mdx_1f1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-fire-alarm","title":"화재 경보 구역","description":"화재 경보 구역 설정 방법을 안내합니다. 화재 경보 구역은 화재가 발생할 때 모든 출입문 또는 엘리베이터가 개방되거나 잠기도록 설정한 구역입니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-fire-alarm.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-fire-alarm","permalink":"/docs/platform/biostar_x/settings-advanced-ac-fire-alarm","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-fire-alarm.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-fire-alarm","title":"화재 경보 구역","description":"화재 경보 구역 설정 방법을 안내합니다. 화재 경보 구역은 화재가 발생할 때 모든 출입문 또는 엘리베이터가 개방되거나 잠기도록 설정한 구역입니다.","keywords":["고급 출입 통제","화재 경보"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"안티패스백 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-apb"},"next":{"title":"스케줄 잠금 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-scheduled-lock"}}')
+var site_docs_platform_biostar_x_settings_advanced_ac_fire_alarm_mdx_1f1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-fire-alarm","title":"화재 경보 구역","description":"화재 경보 구역 설정 방법을 안내합니다. 화재 경보 구역은 화재가 발생할 때 모든 출입문 또는 엘리베이터가 개방되거나 잠기도록 설정한 구역입니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-fire-alarm.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-fire-alarm","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-fire-alarm","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-fire-alarm.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-fire-alarm","title":"화재 경보 구역","description":"화재 경보 구역 설정 방법을 안내합니다. 화재 경보 구역은 화재가 발생할 때 모든 출입문 또는 엘리베이터가 개방되거나 잠기도록 설정한 구역입니다.","keywords":["고급 출입 통제","화재 경보"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"안티패스백 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-apb"},"next":{"title":"스케줄 잠금 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-scheduled-lock"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'고급 출입 통제',
 		'화재 경보'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -196,7 +196,7 @@ function _createMdxContent(props) {
             sid: "zone.deviceInput",
             product: "2"
           }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addPlus",
+            sid: "button.addplus",
             product: "2"
           }), " 버튼을 클릭하고 화재 경보 신호를 발생할 장치를 설정하세요."]
         }), "\n"]

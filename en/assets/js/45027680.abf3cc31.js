@@ -161,7 +161,8 @@ function _usercustomfield_createMdxContent(props) {
         }), "."]
       }), (0,jsx_runtime.jsxs)(_components.p, {
         children: ["To select a field value other than the default, click the field in ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: props.sid
+          sid: props.sid,
+          product: "2"
         }), " and select the desired field value."]
       }), (0,jsx_runtime.jsx)(Image, {
         src: `/img/${props.img02}`

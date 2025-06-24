@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-advanced-ac-intrusion-alarm-mdx-10b.json
-var site_docs_platform_biostar_x_settings_advanced_ac_intrusion_alarm_mdx_10b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-intrusion-alarm","title":"경비 구역","description":"경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-intrusion-alarm.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-intrusion-alarm","permalink":"/docs/platform/biostar_x/settings-advanced-ac-intrusion-alarm","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-intrusion-alarm.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-intrusion-alarm","title":"경비 구역","description":"경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.","keywords":["고급 출입 통제","경비 구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"스케줄 개방 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-scheduled-unlock"},"next":{"title":"인터락 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-interlock"}}')
+var site_docs_platform_biostar_x_settings_advanced_ac_intrusion_alarm_mdx_10b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-advanced-ac-intrusion-alarm","title":"경비 구역","description":"경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.","source":"@site/docs/platform/biostar_x/settings-advanced-ac-intrusion-alarm.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-advanced-ac-intrusion-alarm","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-intrusion-alarm","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-advanced-ac-intrusion-alarm.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-advanced-ac-intrusion-alarm","title":"경비 구역","description":"경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.","keywords":["고급 출입 통제","경비 구역"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"스케줄 개방 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-scheduled-unlock"},"next":{"title":"인터락 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-interlock"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'고급 출입 통제',
 		'경비 구역'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -324,7 +324,7 @@ function _createMdxContent(props) {
       children: "침입감지 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["침입 감지 신호를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "button.addPlus",
+        sid: "button.addplus",
         product: "2"
       }), " 버튼을 클릭하고 아래와 같이 설정하면 BioStation 3 장치의 0번 입력 포트에 연결된 N/O 센서가 100(ms) 동안 신호를 보낸 경우 침입을 감지한 것으로 인식합니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {

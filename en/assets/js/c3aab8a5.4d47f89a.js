@@ -424,7 +424,7 @@ function _createMdxContent(props) {
             sid: "setting.cardFormat.idField",
             product: "2"
           }), ": 카드에서 특정 영역을 읽을 수 있도록 설정합니다. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addPlus",
+            sid: "button.addplus",
             product: "2"
           }), " 버튼을 클릭해 읽고자 하는 최대 8개 블록에 대해 설정할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

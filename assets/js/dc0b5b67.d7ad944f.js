@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-credential-mobile-access-card-mdx-dc0.json
-var site_docs_platform_biostar_x_settings_credential_mobile_access_card_mdx_dc0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-mobile-access-card","title":"모바일 출입 카드 관리하기","description":"Airfob Portal을 연동하여 BioStar X에서 사용자에게 모바일 출입 카드를 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-credential-mobile-access-card.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-mobile-access-card","permalink":"/docs/en/platform/biostar_x/settings-credential-mobile-access-card","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-mobile-access-card.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-mobile-access-card","title":"모바일 출입 카드 관리하기","description":"Airfob Portal을 연동하여 BioStar X에서 사용자에게 모바일 출입 카드를 관리하는 방법을 안내합니다.","keywords":["모바일","출입 카드","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"스마트 카드 형식 설정하기","permalink":"/docs/en/platform/biostar_x/settings-credential-smart-format"},"next":{"title":"Directory Integration Settings","permalink":"/docs/en/platform/biostar_x/settings-diretory-integration"}}')
+var site_docs_platform_biostar_x_settings_credential_mobile_access_card_mdx_dc0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-mobile-access-card","title":"모바일 출입 카드 관리하기","description":"Airfob Portal을 연동하여 BioStar X에서 사용자에게 모바일 출입 카드를 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-credential-mobile-access-card.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-mobile-access-card","permalink":"/docs/platform/biostar_x/settings-credential-mobile-access-card","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-mobile-access-card.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-mobile-access-card","title":"모바일 출입 카드 관리하기","description":"Airfob Portal을 연동하여 BioStar X에서 사용자에게 모바일 출입 카드를 관리하는 방법을 안내합니다.","keywords":["모바일","출입 카드","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"스마트 카드 형식 설정하기","permalink":"/docs/platform/biostar_x/settings-credential-smart-format"},"next":{"title":"디렉토리 연동 설정하기","permalink":"/docs/platform/biostar_x/settings-diretory-integration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -94,7 +94,7 @@ const settings_credential_mobile_access_card_frontMatter = {
 		'출입 카드',
 		'설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const settings_credential_mobile_access_card_contentTitle = undefined;
 
@@ -488,7 +488,7 @@ function settings_credential_mobile_access_card_createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["모바일 출입 카드를 사용할 장치를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "button.addPlus",
+                sid: "button.addplus",
                 product: "2"
               }), " 버튼을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
