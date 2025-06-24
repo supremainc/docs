@@ -88,7 +88,7 @@
     "description": "The label for category 데이터 in sidebar biostarx"
   },
   "sidebar.biostarx.category.대시보드": {
-    "message": "DASHBOARD",
+    "message": "Dashboard",
     "description": "The label for category 대시보드 in sidebar biostarx"
   },
   "sidebar.biostarx.category.고급 출입 통제 설정하기": {

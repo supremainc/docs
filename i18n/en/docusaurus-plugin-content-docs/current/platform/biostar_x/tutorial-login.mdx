@@ -1,0 +1,76 @@
+---
+id: tutorial-login
+title: How to Log in
+description: Access **BioStar X** through a web browser.
+keywords:
+  - Log in
+  - web browser
+---
+
+If you have completed the installation of **BioStar X** through the installation package, please access it via a web browser to check if it is functioning properly. **BioStar X** provides a web-based service that allows access anytime and anywhere.
+
+## Log in from a Web Browser {#log-in-from-a-web-browser}
+
+1. Please launch the web browser.
+
+2. Enter `https://127.0.0.1` in the address bar of your web browser.
+
+   :::info
+
+   * If you installed **BioStar X** on another PC, please enter the IP address of that PC. e.g. `https://192.168.0.1`
+
+   * Do not use 'localhost' as the **BioStar X** access address.
+
+   :::
+
+3. When the login screen appears, log in with the administrator account.
+
+   :::info
+
+   * The admin ID is **admin**. 
+
+   * When you first log in, a **Not Secure** warning will be displayed in the address bar of your web browser. To apply the HTTPS protocol, please refer to [this document](#using-https).
+
+   :::
+
+After logging in, you can view the <Cmd sid='shell.header.launcher' /> screen.
+
+<Image src='/img/biostarx-main-launcher.png' alone />
+
+:::info
+
+* It is recommended to use a browser version of Chrome 100 or higher.
+
+* The external IP address of the PC where **BioStar X** is installed can be checked by visiting [this link](https://whatismyipaddress.com/).
+
+* **BioStar X** uses **port 443** by default. If there is a program using port **443**, please close it and try connecting again. If you cannot close the program, please run **BioStar Setting** to change the port number. For more information, refer to [this document](change-port).
+
+:::
+
+## How to Use HTTPS {#using-https}
+
+To apply the HTTPS protocol to a PC with **BioStar X** installed, you must install a certificate.
+
+1. Click <Cmd sid='https.download' product='2' /> on the login screen.
+
+   <Image src='/img/biostar-login-download-https.png' />
+
+2. Extract the contents of the downloaded file (*cert-register-f305705478.zip*).
+
+3. Run *cert-register.exe*.
+
+4. Enter the IP address of the PC with **BioStar X** installed when the **Enrollment Certification** window appears.
+
+   <Image src='/img/common/biostar-enrollment-certi.png' alone />
+
+5. Check the security warning message and click <Cmd sid='button.yes' className='bold' product='2' />.
+
+Restart the web browser and enter the registered IP address, then the safe indicator will appear in the address bar of the web browser as shown below.
+
+<Image src='/img/biostar-enrollment-result.png' />
+
+:::info
+
+The file for applying the HTTPS protocol can also be downloaded from the <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.https.https' product='2' />.
+
+:::
