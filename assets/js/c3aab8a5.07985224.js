@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-credential-smart-format-mdx-c3a.json
-var site_docs_platform_biostar_x_settings_credential_smart_format_mdx_c3a_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-smart-format","title":"스마트 카드 형식 설정하기","description":"MIFARE, iCLASS, DESFire, iCLASS Seos와 같은 스마트 카드의 레이아웃을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-credential-smart-format.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-smart-format","permalink":"/docs/en/platform/biostar_x/settings-credential-smart-format","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-smart-format.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-smart-format","title":"스마트 카드 형식 설정하기","description":"MIFARE, iCLASS, DESFire, iCLASS Seos와 같은 스마트 카드의 레이아웃을 설정할 수 있습니다.","keywords":["스마트 카드","카드 형식","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Wiegand 카드 형식 설정하기","permalink":"/docs/en/platform/biostar_x/settings-credential-wiegand-format"},"next":{"title":"Directory Integration Settings","permalink":"/docs/en/platform/biostar_x/settings-diretory-integration"}}')
+var site_docs_platform_biostar_x_settings_credential_smart_format_mdx_c3a_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-smart-format","title":"스마트 카드 형식 설정하기","description":"MIFARE, iCLASS, DESFire, iCLASS Seos와 같은 스마트 카드의 레이아웃을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-credential-smart-format.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-smart-format","permalink":"/docs/platform/biostar_x/settings-credential-smart-format","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-smart-format.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-smart-format","title":"스마트 카드 형식 설정하기","description":"MIFARE, iCLASS, DESFire, iCLASS Seos와 같은 스마트 카드의 레이아웃을 설정할 수 있습니다.","keywords":["스마트 카드","카드 형식","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Wiegand 카드 형식 설정하기","permalink":"/docs/platform/biostar_x/settings-credential-wiegand-format"},"next":{"title":"모바일 출입 카드 관리하기","permalink":"/docs/platform/biostar_x/settings-credential-mobile-access-card"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'카드 형식',
 		'설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 

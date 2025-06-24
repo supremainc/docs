@@ -968,9 +968,9 @@ function enroll_credential_createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If a fingerprint has been enrolled, select the desired fingerprint template to register on the card in the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["If a fingerprint has been enrolled, you can register a fingerprint template to your card in the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.card.biometricCredential"
-          }), " field."]
+          }), ". Select the desired fingerprint template."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

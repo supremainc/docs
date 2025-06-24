@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-4284: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+4455: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -5135,6 +5135,31 @@ const SvgIcoCopy2 = _ref => {
   })));
 };
 /* ESM default export */ const ico_copy2 = (SvgIcoCopy2);
+;// CONCATENATED MODULE: ./static/img/menus/ico-refresh.svg
+var ico_refresh_path;
+function ico_refresh_extends() { return ico_refresh_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_refresh_extends.apply(null, arguments); }
+
+const SvgIcoRefresh = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_refresh_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_refresh_path || (ico_refresh_path = /*#__PURE__*/react.createElement("path", {
+    fill: "#000",
+    d: "m14.74 7.67.258-2.618c.029-.299-.286-.502-.572-.366l-.658.311C12.639 3.207 10.567 2 8.208 2 5.29 2 2.831 3.83 2.017 6.34c-.072.203.1.421.328.421h.815c.143 0 .272-.081.314-.203.686-1.845 2.56-3.174 4.732-3.174 1.788 0 3.375.895 4.261 2.237l-.657.312a.367.367 0 0 0-.029.651l2.373 1.357c.244.15.558 0 .587-.272M7.8 15c2.914 0 5.37-2.137 6.184-5.066.071-.237-.1-.49-.329-.49h-.814a.33.33 0 0 0-.314.236c-.685 2.153-2.556 3.705-4.727 3.705-1.785 0-3.37-1.044-4.256-2.612l.657-.364c.271-.158.285-.586.028-.76L1.86 8.066c-.243-.174-.572.016-.6.333l-.257 3.055c-.029.348.285.585.571.427l.657-.364C3.372 13.59 5.443 15 7.8 15"
+  })));
+};
+/* ESM default export */ const ico_refresh = (SvgIcoRefresh);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -5168,6 +5193,7 @@ const SvgIcoCopy2 = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -5321,7 +5347,8 @@ const SvgIcoCopy2 = _ref => {
     IcTslot: ico_timeslot_add,
     IcEraser: ico_eraser,
     IcCalc: ico_calendar,
-    IcCopy2: ico_copy2
+    IcCopy2: ico_copy2,
+    IcRefresh: ico_refresh
 });
 
 
