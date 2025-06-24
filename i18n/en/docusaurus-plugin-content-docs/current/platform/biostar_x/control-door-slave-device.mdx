@@ -1,0 +1,81 @@
+---
+id: control-door-slave-device
+title: Controlling Slave Devices
+description: Describes how to control slave devices connected to doors.
+keywords:
+  - Monitoring
+  - Door
+  - slave device
+---
+
+This document describes how to control slave devices connected to doors. Various features are available, such as locking/unlocking via door relay, checking camera video and detailed information, and managing security status.
+
+* <Cmd sid='arena.tree.door.doorRelay' className='normal' />
+
+* Camera
+
+* <Cmd sid='arena.tree.contextMenu.arm' className='normal' />
+
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. In the <Cmd sid='arena.tree.door.title' /> tab, select a door. Select the connected slave device from the sub-list, and right-click on it. You can select the desired feature from the popup menu.
+
+## Controlling Door Relay {#control-relay}
+
+You can control the relay connected to the door. Right-click on the relay device. You can select the desired feature from the popup menu.
+
+:::info
+
+<Glossary termid='relay'/>
+
+:::
+
+### Relay Unlock {#relay-open}
+
+You can unlock the door through the relay device connected to the door. The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the popup menu and select the desired option.
+
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Unlocks the door once.
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: Opens the door for a certain time. Enter the desired time in seconds.
+
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Unlocks the door regardless of time.
+
+:::tip
+
+The door can be temporarily opened for the convenience of external guests when they visit. After opening the door, be sure to switch to <Cmd sid='arena.tree.contextMenu.normalize' /> mode.
+
+:::
+
+### Relay Normalize {#relay-release}
+
+Change the door to <Cmd sid='arena.tree.contextMenu.normalize' /> status using the relay so that only authorized users can access. Click <Cmd sid='arena.tree.contextMenu.normalize' /> in the popup menu. 
+
+### Relay Lock {#relay-lock}
+
+Change the door to <Cmd sid='arena.tree.contextMenu.lock' /> status using the relay connected to the door will prevent anyone from access. Click <Cmd sid='arena.tree.contextMenu.lock' /> in the popup menu and select the desired option.
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: Changes the door to a locked state for a certain period of time. Enter the desired time in seconds.
+
+* <Cmd sid='arena.tree.contextMenu.lockPermanent' />: Changes the door to a locked state regardless of time.
+
+## Controlling Security Device {#control-arm}
+
+You can temporarily disarm the security status of the door through the security device connected to the door. Click <Cmd sid='arena.tree.contextMenu.disarm' /> in the popup menu.
+
+## Controlling Door Camera Device {#control-camera}
+
+You can control the camera device connected to the door. You can view the camera video in real time or view details.
+
+### Checking Camera Video {#camera-video}
+
+To view the camera video in real-time, click <Cmd>Open Video</Cmd> in the popup menu. You can play the video in the <Cmd sid='shell.header.arena' /> section.
+
+:::info
+
+* This feature requires the door to be connected to a camera in order to be used.
+
+* For more information on how to connect a camera to the door, refer to [this document](#).
+
+:::
+
+### View Camera Details {#camera-detail}
+
+To view the camera details, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Camera details appear on the right side of the screen.

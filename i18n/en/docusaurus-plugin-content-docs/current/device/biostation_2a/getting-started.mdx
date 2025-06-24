@@ -125,59 +125,73 @@ Provides initial procedures for getting started with the device.
 </Callout>
 </Productpart>
 
-* **Microphone**: Transmits the voice of the user when the interphone is connected.
+* **LCD 화면**: 동작을 위한 UI를 제공합니다.
 
-  * Covering or blocking the microphone may interfere with voice transmission.
+* **숫자/메뉴/ESC 버튼**: 
 
-* **Infrared camera**: Capture the infrared face image.
+* **1 ~ 9**: 숫자/문자 입력, 메뉴 선택
 
-* **Visual camera**: Capture an actual face image.
+* <Image src='/img/common/' ico alone />: 메뉴 진입
 
-* **Display**: Provides a UI for operation.
+ESC: 이전 화면으로 이동, 입력 취소
 
-* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+기능 버튼	근태 기능 키로 사용하거나 하위 메뉴를 선택할 때 사용합니다.
 
-* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+방향/OK 버튼	 : 문자 종류 변경, 경비 시작/해제 설정
 
-  * Green: Authentication success.
+ : 문자 종류 변경, 근태 이벤트를 선택하여 근태 등록
 
-  * Red: Authentication failure.
+ : 숫자/문자 삭제, ID를 사용하여 인증
 
-  * Blue: Normal operation.
+ : 기호 삽입, 항목 설정, 작업 코드 선택
 
-  * Blue/Green blinking:
+OK: 항목 선택/설정 저장, 키 메뉴 활성화
 
-    * Fails to receive an IP address when <Cmd>DHCP</Cmd> is enabled.
+LED 상태 표시등	제품의 작동 상태가 표시됩니다.
 
-    * Disconnection with the master device when in <Cmd>Slave</Cmd> mode.
+Green: Authentication success.
 
-  * Red/Purple blinking: Device is locked.
+Red: Authentication failure.
 
-  * Yellow blinking: Waiting for an input.
+Blue: Normal operation.
 
-* **Speaker**: Delivers sound.
+Blue/Green blinking:
 
-* **Ethernet**: Connect the Ethernet cable.
+DHCP를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
 
-* **TTL input (5-pin)**: Connect the TTL input cable.
+슬레이브 모드일 때 마스터 장치와 연결이 끊어진 상태
 
-* **USB expansion port (5-pin)**: Connect other accessory products.
+Red/Purple blinking: Device is locked.
 
-* **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
+노랑색 점멸: 입력 대기 상태
 
-* **Wiegand input (4-pin)**: Connect the Wiegand Input cable.
+지문 인식부	출입을 위해 지문을 인식시키는 부분입니다.
 
-* **RS-485 (4-pin)**: Connect the RS-485 cable.
+RF 카드 및 모바일 출입카드 인식부	출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
 
-* **Relay (3-pin)**: Connect the Relay cable.
+USB (Type-C) 메모리 슬롯	USB 메모리를 연결합니다.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+스피커	소리를 들을 수 있습니다.
 
-* **USB (Type-C) memory slot**: Connects the USB memory.
+Wiegand 입력 (4핀)	Wiegand 입력 케이블을 연결합니다.
+
+Wiegand 출력 (4핀)	Wiegand 출력 케이블을 연결합니다.
+
+RS-485 (4핀)	RS-485 케이블을 연결합니다.
+
+이더넷	이더넷 케이블을 연결합니다.
+
+Input (5핀)	Input 케이블을 연결합니다.
+
+릴레이 (3핀)	릴레이 케이블을 연결합니다.
+
+USB 확장 포트 (5핀)	기타 액세서리 제품을 연결할 수 있습니다.
+
+전원 (2핀)	전원 케이블을 연결합니다.
 
 ## Cables and Connectors
 
-### Power supply
+### Power
 
 <Image src='/img/device/cable-power-bs3.svg' className='none' alone />
 
@@ -219,19 +233,19 @@ Provides initial procedures for getting started with the device.
 
 </div>
 
-### TTL Input
+### Input
 
 <Image src='/img/device/cable-ttl-bs3.svg' className='none' alone />
 
 <div className='overflow-x col3--10-20-70'>
 
-| Pin | Name    | Color  |
-| --- | ------- | ------ |
-| 1   | TTL IN0 | Red    |
-| 2   | TTL IN1 | Yellow |
-| 3   | TTL IN2 | Orange |
-| 4   | TTL GND | Black  |
-| 5   | SH GND  | Gray   |
+| Pin | Name      | Color  |
+| --- | --------- | ------ |
+| 1   | INPUT0    | Red    |
+| 2   | INPUT1    | Yellow |
+| 3   | INPUT2    | Orange |
+| 4   | INPUT GND | Black  |
+| 5   | SH GND    | Gray   |
 
 </div>
 
@@ -268,27 +282,3 @@ Provides initial procedures for getting started with the device.
 import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
 
 <DocumentA />
-
-## Note for QR Code Usage and Device License
-
-### How to scan a QR code
-
-You can issue a QR code to a user and use it as an authentication method. Scan the QR code properly by following the instructions on the screen to increase the recognition rate.
-
-<Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
-
-* Keep 30 ~ 40 cm of distance between the device’s camera and the QR code.
-
-* Position the QR code in the center of the scan screen of the device.
-
-* When authenticating with the QR code downloaded to your smartphone, adjust the brightness of your smartphone so that the device can read the QR code clearly.
-
-* If do not follow the instructions on the screen, it may take a long time to scan the QR code, or it may fail.
-
-### Notes for Device License
-
-* Using the QR Code authentication requires a separate device license. Contact the place of purchase to issue a device license.
-
-* The device license file is an encrypted file and cannot be modified arbitrarily.
-
-* Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
