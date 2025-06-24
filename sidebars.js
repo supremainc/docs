@@ -52,10 +52,10 @@ const sidebars = {
             'platform/biostar_x/tutorial-custom-install',
             'platform/biostar_x/tutorial-login',
             'platform/biostar_x/tutorial-register-license-key',
-            'platform/biostar_x/tutorial-add-device',
             'platform/biostar_x/manage-server',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
+            'platform/biostar_x/initial-setup-guide',
           ]
         },
         {

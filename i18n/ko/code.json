@@ -366,10 +366,10 @@
     "message": "시작"
   },
   "biostar2.install.ok": {
-    "message": "OK"
+    "message": "확인"
   },
   "biostar2.install.agree": {
-    "message": "동의"
+    "message": "동의합니다"
   },
   "biostar2.install.next": {
     "message": "다음"
