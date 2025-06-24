@@ -82,5 +82,49 @@
   "sidebar.biostarx.category.출입 통제 설정하기": {
     "message": "출입 통제 설정하기",
     "description": "The label for category 출입 통제 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.데이터": {
+    "message": "데이터",
+    "description": "The label for category 데이터 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.대시보드": {
+    "message": "대시보드",
+    "description": "The label for category 대시보드 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.고급 출입 통제 설정하기": {
+    "message": "고급 출입 통제 설정하기",
+    "description": "The label for category 고급 출입 통제 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.크리덴션 관리하기": {
+    "message": "크리덴션 관리하기",
+    "description": "The label for category 크리덴션 관리하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.서버 설정하기": {
+    "message": "서버 설정하기",
+    "description": "The label for category 서버 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.라이선스 활성화하기": {
+    "message": "라이선스 활성화하기",
+    "description": "The label for category 라이선스 활성화하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.시스템 설정하기": {
+    "message": "시스템 설정하기",
+    "description": "The label for category 시스템 설정하기 in sidebar biostarx"
+  },
+  "sidebar.biostation3.category.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "The label for category BioStation 3 in sidebar biostation3"
+  },
+  "sidebar.biostation3.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar biostation3"
+  },
+  "sidebar.biostation2a.category.BioStation 2a": {
+    "message": "BioStation 2a",
+    "description": "The label for category BioStation 2a in sidebar biostation2a"
+  },
+  "sidebar.biostation2a.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar biostation2a"
   }
 }
