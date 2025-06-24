@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-getting-started-mdx-b09.json
-var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/en/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/en/platform/biostar_x/overview"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/en/platform/biostar_x/system-requirements"}}')
+var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/platform/biostar_x/overview"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'SQL Server',
 		'데이터베이스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -103,12 +103,6 @@ function _createMdxContent(props) {
     p: "p",
     pre: "pre",
     strong: "strong",
-    table: "table",
-    tbody: "tbody",
-    td: "td",
-    th: "th",
-    thead: "thead",
-    tr: "tr",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -140,122 +134,29 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2.9.2"
-          }), " 버전부터는 32비트 운영체제를 위한 설치 파일을 제공하지 않습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 1"
-          }), "이 설치된 PC에 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "를 설치하지 마세요. 프로그램 성능에 문제가 발생할 수 있습니다."]
+          }), "는 32비트 운영체제를 위한 설치 파일을 제공하지 않습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2.2.1"
-          }), "이나 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.2.2"
-          }), " 버전을 설치한 상태에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2.3.0"
-          }), "을 설치하면 SQLite에 저장된 모든 정보를 새로운 MariaDB로 마이그레이션합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " 최신 버전으로의 업그레이드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.6.0"
-          }), " 버전부터 지원됩니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar 2.6.0"
-          }), " 버전 이하에서 최신 버전으로 업그레이드하려면 다음 차례로 설치하세요."]
-        }), "\n", (0,jsx_runtime.jsx)("div", {
-          className: "overflow-x",
-          children: (0,jsx_runtime.jsxs)(_components.table, {
-            children: [(0,jsx_runtime.jsx)(_components.thead, {
-              children: (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.th, {
-                  children: "현재 버전"
-                }), (0,jsx_runtime.jsx)(_components.th, {
-                  children: "업그레이드 순서"
-                })]
-              })
-            }), (0,jsx_runtime.jsxs)(_components.tbody, {
-              children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.2.1 > 2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-                })]
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.2"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  rowSpan: "3",
-                  children: "2.3 > 2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-                })]
-              }), (0,jsx_runtime.jsx)(_components.tr, {
-                children: (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.2.1"
-                })
-              }), (0,jsx_runtime.jsx)(_components.tr, {
-                children: (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.2.2"
-                })
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.3"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.4 > 2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-                })]
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.4"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.4.1 > 2.5.0 > 2.6.4 > Latest version"
-                })]
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.5"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  rowSpan: "2",
-                  children: "2.6.4 > Latest version"
-                })]
-              }), (0,jsx_runtime.jsx)(_components.tr, {
-                children: (0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.6"
-                })
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  children: "2.6.4 버전 이상"
-                }), (0,jsx_runtime.jsx)(_components.td, {
-                  children: "Latest version"
-                })]
-              })]
-            })]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Windows 8.1을 사용하는 경우 다음 링크를 참고해 KB2919355 업데이트를 설치하세요. ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Windows 8.1을 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://support.microsoft.com/help/2919355/windows-rt-8-1--windows-8-1--and-windows-server-2012-r2-update-april-2",
-            children: "Link 1"
-          })]
+            children: "KB2919355 업데이트"
+          }), "를 설치하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["MS SQL 2012 Express를 사용할 경우 다음 링크를 참고해 서비스 팩 3를 설치하세요. ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["MS SQL 2012 Express를 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.microsoft.com/download/details.aspx?id=49996",
-            children: "Link 2"
-          })]
+            children: "서비스 팩 3"
+          }), "를 설치하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["MS SQL 2014 Express를 사용할 경우 다음 링크를 참고해 서비스 팩 2를 설치하세요. ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["MS SQL 2014 Express를 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=53168",
-            children: "Link 3"
-          })]
+            children: "서비스 팩 2"
+          }), "를 설치하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -263,10 +164,10 @@ function _createMdxContent(props) {
             children: "BioStar X"
           }), "가 서로 다른 PC에 설치되어 있는 경우 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "를 설치한 PC에 Native Client를 설치해야 합니다. ", (0,jsx_runtime.jsx)(_components.a, {
+          }), "를 설치한 PC에 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=50402",
-            children: "Link 4"
-          })]
+            children: "Native Client"
+          }), "를 설치해야 합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -285,11 +186,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " 데이터베이스를 백업하려면 ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "\\Program Files\\BioStar 2(x64)\\util"
+            children: "\\Program Files\\BioStar X\\util"
           }), " 폴더의 ", (0,jsx_runtime.jsx)(_components.em, {
             children: "enckey"
           }), " 파일과 ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "\\Program Files\\BioStar 2(x64)"
+            children: "\\Program Files\\BioStar X"
           }), " 폴더의 ", (0,jsx_runtime.jsx)(_components.em, {
             children: "system.conf"
           }), ", ", (0,jsx_runtime.jsx)(_components.em, {
