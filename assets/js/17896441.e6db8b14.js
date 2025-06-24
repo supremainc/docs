@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-4455: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+6603: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -5160,6 +5160,78 @@ const SvgIcoRefresh = _ref => {
   })));
 };
 /* ESM default export */ const ico_refresh = (SvgIcoRefresh);
+;// CONCATENATED MODULE: ./static/img/menus/ico-info.svg
+var ico_info_g, ico_info_defs;
+function ico_info_extends() { return ico_info_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_info_extends.apply(null, arguments); }
+
+const SvgIcoInfo = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_info_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_info_g || (ico_info_g = /*#__PURE__*/react.createElement("g", {
+    stroke: "#333",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M12.909 3.091a4.8 4.8 0 0 0-2.091-1.12A10 10 0 0 0 8 1.597a10 10 0 0 0-2.817.374c-.78.192-1.5.577-2.092 1.12a4.8 4.8 0 0 0-1.12 2.092A10 10 0 0 0 1.597 8c-.01.952.117 1.9.374 2.818a4.8 4.8 0 0 0 1.12 2.09 4.8 4.8 0 0 0 2.092 1.12c.917.257 1.865.383 2.817.374.952.009 1.9-.117 2.818-.373a4.8 4.8 0 0 0 2.09-1.12 4.8 4.8 0 0 0 1.12-2.091A10.1 10.1 0 0 0 14.403 8c.009-.952-.117-1.9-.373-2.817a4.8 4.8 0 0 0-1.12-2.092Z"
+  }), /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M8.3 6.9v4.6h-.6V6.9zm0-2.4v.6h-.6v-.6z"
+  }))), ico_info_defs || (ico_info_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_info = (SvgIcoInfo);
+;// CONCATENATED MODULE: ./static/img/menus/ico-logout.svg
+var ico_logout_g, ico_logout_defs;
+function ico_logout_extends() { return ico_logout_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_logout_extends.apply(null, arguments); }
+
+const SvgIcoLogout = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_logout_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_logout_g || (ico_logout_g = /*#__PURE__*/react.createElement("g", {
+    stroke: "#333",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M10 2.4H4.16a1.6 1.6 0 0 0-1.12.44 1.58 1.58 0 0 0-.48 1.12v8.08a1.643 1.643 0 0 0 1.6 1.56H10"
+  }), /*#__PURE__*/react.createElement("path", {
+    strokeWidth: 2,
+    d: "M6 8h8m0 0-2.28-2.28M14 8l-2.28 2.28"
+  }))), ico_logout_defs || (ico_logout_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_logout = (SvgIcoLogout);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -5193,6 +5265,8 @@ const SvgIcoRefresh = _ref => {
 
 
 // icon images svg
+
+
 
 
 
@@ -5348,7 +5422,9 @@ const SvgIcoRefresh = _ref => {
     IcEraser: ico_eraser,
     IcCalc: ico_calendar,
     IcCopy2: ico_copy2,
-    IcRefresh: ico_refresh
+    IcRefresh: ico_refresh,
+    IcInfo: ico_info,
+    IcLogout: ico_logout
 });
 
 

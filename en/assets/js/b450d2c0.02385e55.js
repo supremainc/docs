@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9023"], {
-4016: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5463"], {
+192: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,30 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_mdx_b45_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-overview-mdx-743.json
-var site_docs_platform_biostar_x_ui_overview_mdx_743_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/ui-overview.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-overview","permalink":"/docs/platform/biostar_x/ui-overview","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-overview.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-overview","title":"UI 알아보기","description":"BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.","keywords":["UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"기본 설정 관리하기","permalink":"/docs/platform/biostar_x/settings-preferences"},"next":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/platform/biostar_x/ui-common"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-mdx-b45.json
+var site_docs_platform_biostar_x_tutorial_mdx_b45_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial","title":"튜토리얼","description":"BioStar X의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","source":"@site/docs/platform/biostar_x/tutorial.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial","permalink":"/docs/en/platform/biostar_x/tutorial","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial","title":"튜토리얼","description":"BioStar X의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.","keywords":["Tutorial","설치","기본 설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"System Minimum Requirements","permalink":"/docs/en/platform/biostar_x/system-requirements"},"next":{"title":"간편 설치하기","permalink":"/docs/en/platform/biostar_x/tutorial-express-install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-overview.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial.mdx
 
 
 const frontMatter = {
-	id: 'ui-overview',
-	title: 'UI 알아보기',
-	description: 'BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다.',
+	id: 'tutorial',
+	title: '튜토리얼',
+	description: 'BioStar X의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다.',
 	keywords: [
-		'UI'
+		'Tutorial',
+		'설치',
+		'기본 설정'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -44,13 +46,18 @@ const toc = [];
 function _createMdxContent(props) {
   const _components = {
     p: "p",
+    strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {DocCardList} = _components;
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X의 각 페이지의 UI를 알아보고 사용 방법을 안내합니다. BioStar X는 다양한 기능을 제공하며, 각 기능은 사용자 인터페이스(UI)를 통해 쉽게 접근할 수 있습니다. 각 페이지의 사용자 인터페이스를 살펴보면, BioStar X의 기능을 보다 쉽게 이해하고 활용할 수 있습니다. 아래는 BioStar X의 주요 페이지와 그 UI 구성 요소에 대한 설명입니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "의 설치부터 핵심 기능 활용까지 단계별로 안내하는 튜토리얼 모음입니다. 직관적인 설명과 절차를 따라가며 쉽고 빠르게 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "를 설정하고 운영할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }

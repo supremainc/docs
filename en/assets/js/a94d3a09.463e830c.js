@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2617"], {
-532: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2067"], {
+4005: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_dashboard_mdx_a76_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_settings_mdx_a94_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-dashboard-mdx-a76.json
-var site_docs_platform_biostar_x_ui_dashboard_mdx_a76_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-dashboard","title":"대시보드","description":"대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-dashboard","permalink":"/docs/platform/biostar_x/ui-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-dashboard","title":"대시보드","description":"대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["대시보드","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"모니터링","permalink":"/docs/platform/biostar_x/ui-monitoring"},"next":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-settings-mdx-a94.json
+var site_docs_platform_biostar_x_ui_settings_mdx_a94_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-settings","title":"설정","description":"설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-settings","permalink":"/docs/en/platform/biostar_x/ui-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-settings","title":"설정","description":"설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["설정","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Dashboard","permalink":"/docs/en/platform/biostar_x/ui-dashboard"},"next":{"title":"License Policy","permalink":"/docs/en/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-dashboard.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-settings.mdx
 
 
 const frontMatter = {
-	id: 'ui-dashboard',
-	title: '대시보드',
-	description: '대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.',
+	id: 'ui-settings',
+	title: '설정',
+	description: '설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.',
 	keywords: [
-		'대시보드',
+		'설정',
 		'UI'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -44,66 +44,60 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    admonition: "admonition",
     li: "li",
     ol: "ol",
     p: "p",
     strong: "strong",
-    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Calloutlists, Cmd, Image} = _components;
+  }, {Calloutlists, Cmd, IcMoreW, Image} = _components;
   if (!Calloutlists) _missingMdxReference("Calloutlists", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcMoreW) _missingMdxReference("IcMoreW", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        children: "대시보드"
-      }), " 페이지의 사용자 인터페이스(User Interface)를 안내합니다."]
+        sid: "shell.header.setting"
+      }), " 페이지에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "의 다양한 설정을 관리할 수 있습니다. 이 페이지의 UI 구성 요소를 살펴보면 다음과 같습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-dashboard.png",
-      className: "none",
-      caption: true
+      src: "/img/biostarx-ui-settings.png"
     }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "위젯 표시 영역"
-            }), ": 사용자가 추가한 위젯이 표시되는 영역입니다."]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "각 위젯의 크기는 위젯별로 제한된 크기 내에서 자유롭게 조정할 수 있습니다."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "위젯은 비어있는 영역에만 배치할 수 있으며 위젯끼리 겹쳐놓을 수 없습니다."
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "새로고침"
-            }), ": 대시보드 페이지를 새로고침하여 수정한 위젯의 데이터를 업데이트합니다."]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.dashboardSettings",
-                product: "2"
-              }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.autoRefreshInterval",
-                product: "2"
-              }), "에서 새로고침 주기를 설정할 수 있습니다."]
-            }), "\n"]
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "검색 입력 필드에 키워드를 입력해 설정 항목을 검색할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.dashboardSettings",
-              product: "2"
-            }), ": 새 위젯을 추가하거나 추가되어있는 위젯의 데이터와 모양을 설정할 수 있습니다."]
+              sid: "shell.header.setting"
+            }), " 메뉴에서 제공하는 다양한 설정 메뉴를 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "how-to-guide-settings",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "페이지 목록을 탐색할 수 있는 도구입니다. 페이지를 이동하거나 원하는 페이지로 이동할 수 있습니다."
+          }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+            type: "info",
+            children: (0,jsx_runtime.jsx)(_components.p, {
+              children: "설정 메뉴에 따라 지원하지 않을 수 있습니다."
+            })
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하면 추가 기능을 사용할 수 있습니다."]
+          }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+            type: "info",
+            children: (0,jsx_runtime.jsx)(_components.p, {
+              children: "설정 메뉴에 따라 지원하는 기능은 다를 수 있습니다."
+            })
           }), "\n"]
         }), "\n"]
       })

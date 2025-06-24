@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-launcher-mdx-a60.json
-var site_docs_platform_biostar_x_ui_launcher_mdx_a60_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-launcher.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-launcher","permalink":"/docs/platform/biostar_x/ui-launcher","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-launcher.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["런처","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"공통 사용자 인터페이스 이해하기","permalink":"/docs/platform/biostar_x/ui-common"},"next":{"title":"사용자","permalink":"/docs/platform/biostar_x/ui-user"}}')
+var site_docs_platform_biostar_x_ui_launcher_mdx_a60_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-launcher.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-launcher","permalink":"/docs/en/platform/biostar_x/ui-launcher","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-launcher.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-launcher","title":"런처","description":"런처 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["런처","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"공통 UI 이해하기","permalink":"/docs/en/platform/biostar_x/ui-common"},"next":{"title":"사용자","permalink":"/docs/en/platform/biostar_x/ui-user"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'런처',
 		'UI'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
