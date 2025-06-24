@@ -297,6 +297,7 @@ const sidebars = {
             },
             'platform/biostar_x/settings-diretory-integration',
             'platform/biostar_x/settings-card-printer',
+            'platform/biostar_x/settings-visitor',
             'platform/biostar_x/settings-email-setting',
             'platform/biostar_x/settings-custom-interface',
             {
@@ -353,7 +354,8 @@ const sidebars = {
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
             'platform/biostar_x/ui-monitoring',
-            'platform/biostar_x/ui-dashboard'
+            'platform/biostar_x/ui-dashboard',
+            'platform/biostar_x/ui-settings'
           ]
         },
         'platform/biostar_x/licensing'
