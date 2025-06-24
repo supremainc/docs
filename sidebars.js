@@ -290,6 +290,8 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-diretory-integration',
+            'platform/biostar_x/settings-card-printer',
+            'platform/biostar_x/settings-email-setting',
             'platform/biostar_x/settings-custom-interface',
             {
               type: 'category',
