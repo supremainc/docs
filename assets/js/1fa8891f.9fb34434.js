@@ -53,7 +53,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, Start} = _components;
+  }, {Cmd, Image, Start} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -67,36 +68,60 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X Setting"
-          }), "을 클릭하세요."]
+            children: "BioStar X Service Manager"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X Setting"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Service Status"
-          }), " 섹션에서 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["웹브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X Service Manager"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICE"
+          }), " 메뉴를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["모든 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Stop"
-          }), " 버튼을 클릭하세요."]
+          }), " 버튼을 클릭하세요"]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostar-setting-window.png",
+          src: "/img/common/biostarx-tutoria-service-manager-services-stop.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICE SETTINGS"
+          }), " 메뉴를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "BioStar X Core Web Service"
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "HTTPS Port"
-          }), " 입력 필드가 활성화되면 변경할 포트 번호를 입력하세요."]
+          }), " 입력 필드에서 변경할 포트 번호를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostar-setting-change-port.png",
+          src: "/img/common/biostarx-tutoria-service-manager-services-change-port.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Service Status"
-          }), " 섹션에서 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Apply"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["확인 메시지가 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "OK"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICE"
+          }), " 메뉴로 이동하여 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Start"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
@@ -117,8 +142,10 @@ function _createMdxContent(props) {
             }), "을 입력하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BioStar X에 접속해 포트를 변경하는 방법에 대한 자세한 내용은 [다음 문서]를 참고하세요."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에 접속해 포트를 변경하는 방법에 대한 자세한 내용은 [다음 문서]를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })

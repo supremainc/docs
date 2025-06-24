@@ -39,10 +39,12 @@ const assets = {
 
 };
 
+/*모든 서비스를 종료하려면 화면 오른쪽 상단의 <Cmd>Stop All</Cmd> 버튼을 클릭하세요.*/
+/*모든 서비스를 시작하려면 화면 오른쪽 상단의 <Cmd>Start All</Cmd> 버튼을 클릭하세요.*/
 
 
 const toc = [{
-  "value": "BioStar X Setting",
+  "value": "BioStar X Service Manager",
   "id": "biostar-x-setting",
   "level": 2
 }, {
@@ -63,7 +65,8 @@ function _createMdxContent(props) {
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, Start} = _components;
+  }, {Cmd, Image, Start} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -73,26 +76,28 @@ function _createMdxContent(props) {
       }), " 서버의 상태를 관리하는 방법을 안내합니다. 실행 중인 서비스를 종료하거나 다시 시작할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "biostar-x-setting",
-      children: "BioStar X Setting"
+      children: "BioStar X Service Manager"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X Setting"
-      }), "을 클릭하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X Setting"
+        children: "BioStar X Service Manager"
+      }), "를 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X Service Manager"
       }), " 창이 나타납니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/biostar-setting-window.png",
+      src: "/img/common/biostarx-tutoria-service-manager-main.png",
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " 서버의 시간 설정을 변경했다면 Core Web Server 서비스를 종료하고 다시 시작하세요. 다시 시작하지 않으면 ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " 서버의 시간 설정을 변경했다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X Core Service"
+        }), "를 종료하고 다시 시작하세요. 다시 시작하지 않으면 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
         }), "가 동작하지 않을 수 있습니다."]
       })
@@ -102,31 +107,33 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 종료하려면, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Service Status"
-      }), " 섹션에서 개별 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "를 종료하려면, ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "SEVICES"
+      }), " 메뉴에서 개별 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Stop"
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/biostar-setting-stop.png",
+      src: "/img/common/biostarx-tutoria-service-manager-main.png",
       alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "start-the-server",
       children: "서버 시작하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 다시 시작하려면, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Service Status"
-      }), " 섹션에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "를 다시 시작하려면, ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "SEVICES"
+      }), " 메뉴의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Status"
+      }), " 열에서 ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Stopped"
-      }), " 상태인 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 상태인 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Start"
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/biostar-setting-start.png",
+      src: "/img/common/biostarx-tutoria-service-manager-main-restart.png",
       alone: true
-    })]
+    }), "\n"]
   });
 }
 function MDXContent(props = {}) {
