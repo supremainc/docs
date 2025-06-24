@@ -1,0 +1,261 @@
+---
+id: getting-started
+title: Before Start
+description: This guide covers what you need to know before starting BioStar X.
+keywords:
+  - Installation Guide
+  - MariaDB
+  - SQL Server
+  - Database
+---
+
+:::tip
+
+This guide provides important information you should know before starting **BioStar X**. **BioStar X** supports 32-bit and 64-bit operating systems. Check the system requirements of the PC where you want to install **BioStar X**, then install it.
+
+:::
+
+## Pre-installation Notes {#before}
+
+Before installing **BioStar X**, check the following and proceed with the installation.
+
+* Installation files for 32-bit operating systems are not provided from **BioStar 2.9.2**.
+
+* Do not install **BioStar X** on a PC where **BioStar 1** is installed. This may cause performance problems.
+
+* If **BioStar 2.3.0** is installed on top of a **BioStar 2.2.1** or **2.2.2** installation, all information stored in the SQLite database is migrated to a new MariaDB database.
+
+* Upgrading directly from the existing version to the latest version is possible from **BioStar 2.6.0** or higher. To upgrade to the latest version from **BioStar 2.6.0** or below, install in the following order.
+
+  <div className='overflow-x'>
+
+  | Current Version | Upgrade Path                                                     |
+  | --------------- | ---------------------------------------------------------------- |
+  | 2               | 2.2.1 \> 2.3 \> 2.4 \> 2.4.1 \> 2.5.0 \> 2.6.4 \> Latest Version |
+  | 2.2             | 2.3 \> 2.4 \> 2.4.1 \> 2.5.0 \> 2.6.4 \> Latest version          |
+  | 2.2.1           | ^                                                                |
+  | 2.2.2           | ^                                                                |
+  | 2.3             | 2.4 \> 2.4.1 \> 2.5.0 \> 2.6.4 \> Latest version                 |
+  | 2.4             | 2.4.1 \> 2.5.0 \> 2.6.4 \> Latest version                        |
+  | 2.5             | 2.6.4 \> Latest version                                          |
+  | 2.6             | ^                                                                |
+  | 2.6.4 or higher | Latest version                                                   |
+
+  </div>
+
+* If you are using Windows 8.1, please refer to the following link to install the KB2919355 update. Link 1
+
+* If you are using MS SQL 2012 Express, please refer to the following link to install the Service Pack 3. [Link 2](https://www.microsoft.com/download/details.aspx?id=49996)
+
+* If you are using MS SQL 2014 Express, please refer to the following link to install Service Pack 2. [Link 3](https://www.microsoft.com/en-us/download/details.aspx?id=53168)
+
+* If MS SQL Server and **BioStar X** are installed on different PCs, you need to install the Native Client on the PC where **BioStar X** is installed by referring to the following link. [Link 4](https://www.microsoft.com/en-us/download/details.aspx?id=50402)
+
+* If you are using MS SQL Server, set the `Collation` option of the server and each table to CI (Case-insensitive).
+
+* When backing up a database from an older version of **BioStar X**, disable all services before proceeding. Furthermore, if you do not back up and restore the AC database and the TA database together, you will not be able to use the TA database.
+
+* If you want to back up the database of **BioStar X**, be sure to also back up the *enckey* in the *\Program Files\BioStar 2 (x64)\util* folder and the *system.conf* and *setting.conf* file in the *\Program Files\BioStar 2(x64)* folder. Otherwise, the database will be unavailable.
+
+* The default values for the ports used by **BioStar X** are as follows. If another program occupies the same port, **BioStar X** may not work properly.
+
+  :::info
+
+  <Columns>
+  <Column className='text--left'>
+
+  * HTTP Port: 80
+
+  * Web-socket Port: 9002
+
+  * Database Port: 3312
+
+  * T&A HTTPS Port: 3002
+
+  * FastCGI Port: 9000
+
+  * Unified Gateway HTTPS Port: 5002
+
+  </Column>
+
+  <Column className='text--left'>
+
+  * HTTPS Port: 443
+
+  * API Port: 9010
+
+  * T&A HTTP Port: 3000
+
+  * T&A Cloud Port: 52001
+
+  * Unified Gateway HTTP Port: 5000
+
+  * Report HTTP Port: 4213
+
+  </Column>
+  </Columns>
+
+  :::
+
+## Check the Database {#checkdb}
+
+If you are using a user-configured database, please check the items below before installing **BioStar X**.
+
+### MariaDB {#mariadb}
+
+1. Please change the options below under the `[mysql]` section in the *my.cnf* file.
+
+   ```ini title='my.cnf'
+   character-set-server=utf8
+   collation-server=utf8_unicode_ci
+   max_connections = 600
+   ```
+
+2. Please add the options below under the `[mysql]` section in the *my.cnf* file.
+
+   ```ini title='my.cnf'
+   log_bin_trust_function_creators = 1
+   group_concat_max_len = 102400
+   ```
+
+3. Connect to MariaDB with root privileges and execute the command below.
+
+   ```sql title='SQL'
+   GRANT SUPER ON . TO user_id@'localhost' IDENTIFIED BY "password";
+   GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
+   ```
+
+### MS SQL Server {#ms-sql-server}
+
+:::info
+
+* Set the `Collation` options for all databases and tables to be case-insensitive (CI).
+
+* Database names can only contain numbers, English letters (case-sensitive), and special symbols `-` `_`.
+
+:::
+
+#### Setting the port {#port-setting}
+
+* Run **SQL Server Configuration Manager** and set **TCP/IP Protocol** for **Protocols for SQLEXPRESS** to the desired port number.
+
+* Restart the **SQL Server Services** to apply the settings.
+
+#### Creating the user and database {#create-a-user-and-database}
+
+1. Log in with the **sa** account using **SQL Server Authentication** in **SQL Server Management Studio**.
+
+2. Right-click on **Security** and click **New Login**.
+
+3. Enter the desired name in the **Login Name** field and select **SQL Server Authentication**.
+
+4. Enter the desired password in the **Password** and **Confirm password** fields, then uncheck **Enforce password policy**.
+
+5. Click **OK** to save the settings.
+
+6. Right-click on **Database** and click **New Database**.
+
+7. Enter the desired name in the Database Name field.
+
+8. Enter the login name set in step **3** in the **Owner** field.
+
+:::tip
+
+It is recommended to set up the **Database Files** section as shown below.
+
+* **Initial Size (MB)**: 3000
+
+* **Autogrowth/Maxsize**: 10MB, **Unlimited**
+
+:::
+
+:::caution
+
+In environments with many transactions, please backup the logs periodically to ensure that the size of the log files does not increase.
+
+:::
+
+#### Setting the Windows Authentication database {#windows-authentication-database-settings}
+
+<Steps>
+<Step>
+
+##### Presetting {#preliminary-setting}
+
+If you are using **Microsoft Windows Active Directory**, please complete the presets as below before setting up the Windows Authentication database.
+
+1. Log in as an administrator account in **SQL Server Management Studio**.
+
+2. Right-click on **Security** and click **New Login**.
+
+3. Select **Windows Authentication** and then click **Search**.
+
+4. Click on the location in the **Select a user or group** window, select the Active Directory path, and click **OK**.
+
+5. Enter the user name in the **Enter object name to select** field, then click **Check Names** \> **OK**.
+
+6. Click on **Server Roles** in the **Select a page**.
+
+7. Select **sysadmin** and then click **OK**.
+
+8. Click on **User Mapping** in the **Select page**.
+
+9. Select **ac**, **master**, **ta**, **ve** and set the **Default Schema** to **dbo**.
+
+10. Click **OK** to save the settings.
+
+</Step>
+<Step>
+
+##### Settings for using MS SQL with Windows Authentication through Active Directory {#settings-for-using-ms-sql}
+
+1. Run *services.msc*.
+
+2. In the **Properties** \> **Logon** window of the SQL Server database, select **Specify account** and log in as a domain user.
+
+3. Add port 1433 as an exception in the Windows Firewall.
+
+4. Create empty **ac**, **ta**, **ve** databases in SQL Server with **sysadmin** authentication.
+
+5. Set the domain user to use Windows Authentication for SQL Server and assign all permissions except **sysadmin** to the **ac**, **ta**, **ve** databases.
+
+6. Connect all services except the local computer in *services.msc*.
+
+7. Set the domain user as an administrator on the local service computer.
+
+8. Connect to MS SQL ODBC.
+
+</Step>
+<Step>
+
+##### Setting the database {#database-setting}
+
+1. After running the **SQL Server Configuration Manager**, click on **Client Protocol** under **SQL Native Client**.
+
+2. Select **TCP/IP** and check the default port.
+
+3. Click on the **Protocols for SQL EXPRESS** under **SQL Server Network Configuration**.
+
+4. Check if the ODBC port in **TCP/IP** is set to the same value as the default port.
+
+5. Log in as an administrator account in **SQL Server Management Studio**.
+
+6. Click on **Security** \> **Log In**, then double-click **NT AUTHORITY\SYSTEM**.
+
+7. Click on **Server Roles** in the **Select a page**.
+
+8. Select **public** and **sysadmin**, then click **OK**.
+
+9. Click on **User Mapping** in the **Select page**.
+
+10. Select the **ac**, **ta**, **ve** database and click **OK** to save.
+
+</Step>
+
+</Steps>
+
+## Next step {#next-step}
+
+* Find out the [minimum system requirements](system-requirements) to install **BioStar X**. 
+
+* You can quickly find out how to install **BioStar X** in the [following document](tutorial-express-install).

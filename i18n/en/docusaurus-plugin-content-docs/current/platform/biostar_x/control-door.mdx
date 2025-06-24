@@ -1,0 +1,108 @@
+---
+id: control-door
+title: Door Control
+description: Control the door and check the detailed information.
+keywords:
+  - Monitoring
+  - Door
+---
+
+This guide describes how to control doors. You can lock the door for a certain period of time, check the camera connected to the door and clear alarms that have occurred.
+
+* Control the door remotely to manage access. You can set the door to be open or locked for a specific period of time.
+
+* You can monitor access situations in real-time through the camera connected to the door.
+
+* Keep the door locked to enhance security so that only authorized users can enter.
+
+* Use the [Anti Passback](../../reference/glossary#apb) feature to prevent unauthorized access and allows for accurate management of access records.
+
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. Select the door you want to control and right-click. You can select the desired feature from the popup menu.
+
+## Door Open {#door-open}
+
+The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the popup menu and select the desired option.
+
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Unlocks the door once.
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: Opens the door for a certain time. Enter the desired time in seconds.
+
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Unlocks the door regardless of time.
+
+:::tip
+
+The door can be temporarily opened for the convenience of external guests when they visit. After opening the door, be sure to switch to <Cmd sid='arena.tree.contextMenu.normalize' /> mode.
+
+:::
+
+## Door Normalize {#door-unlock}
+
+Changing the door to <Cmd sid='arena.tree.contextMenu.normalize' /> status will allow only authorized users to access. Click <Cmd sid='arena.tree.contextMenu.normalize' /> in the popup menu.
+
+## Door Lock {#door-lock}
+
+Changing the door to <Cmd sid='arena.tree.contextMenu.lock' /> status will prevent anyone from access. Click <Cmd sid='arena.tree.contextMenu.lock' /> in the popup menu and select the desired option.
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />: Changes the door to a locked state for a certain period of time. Enter the desired time in seconds.
+
+* <Cmd sid='arena.tree.contextMenu.lockPermanent' />: Changes the door to a locked state regardless of time.
+
+## Check Door Camera {#door-camera}
+
+You can check the camera connected to the door. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu. The video of the selected camera will be added to the video tile in the <Cmd sid='shell.header.arena' /> section.
+
+<Image src='/img/monitoring-door-control-open-video.png' alt='Open video' />
+
+While a video is selected, you can control the door through the <Cmd sid='arena.map.doorControl' /> tool.
+
+<Image src='/img/monitoring-door-control.png' alt='Door control' />
+
+:::info
+
+* The <Cmd sid='arena.map.doorControl' /> tool requires the door to be connected to a camera in order to be used. The selected camera cannot be used unless it is connected to the door.
+
+* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears. {/* In this case, add a tab to the screen and click <Cmd sid='arena.tree.contextMenu.openVideo' /> again. */}
+
+* For more information on how to connect a camera to the door, refer to [this document](#).
+
+* For more information about video monitoring, refer to [this document](monitoring-video).
+
+:::
+
+## Clear Alarm {#alarm-reset}
+
+You can deactivate the alarm that occurred at the door. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. An alarm message appears at the top right of the screen.
+
+## Clear Anti Pass Back {#apb-reset}
+
+When an anti-passback violation occurs, you can clear the APB alarm. 
+
+1. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the popup menu. 
+
+2. When the <Cmd sid='arena.tree.contextMenu.clearApb' /> window appears, check the list of users who violated the anti-passback.
+
+3. Select a user and click the <Cmd sid='common.apply' /> button.
+
+A completion message appears at the top right of the screen.
+
+:::info
+
+* <Glossary termid='apb'/>
+
+* For more information on how to set up **anti-passback** on the door, refer to [this document](#).
+
+:::
+
+## View Details {#detail-view}
+
+You can check detailed information about the door and the event history. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Detailed information and event history for the door appear on the right side of the screen.
+
+* **Door Detail Information**: You can check the name, location, status, and information of connected sub-devices of the door.
+
+* <Cmd sid='arena.recentEvent' />: You can check the recent event list that occurred at the selected access door.
+
+:::info
+
+For detailed information on each item in the door's details section, refer to [this document](#).
+
+:::

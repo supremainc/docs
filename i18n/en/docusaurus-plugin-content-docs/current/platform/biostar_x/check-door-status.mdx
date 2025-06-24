@@ -1,0 +1,95 @@
+---
+id: check-door-status
+title: Check Door Status
+description: Describes how to check the status of doors and how to respond to various situations.
+keywords:
+  - 모니터링
+  - Door
+---
+
+Accurately determining the status of door and related equipment is key to the security system. This document provides guidance on how to check the status of the device and how to respond in case of errors. This helps administrators quickly grasp the operating status of each device through the indicated icons and detailed descriptions, and respond swiftly in case of issues.
+
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. In the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar, you can check the status of each door and the connected slave devices.
+
+## Checking Door Status {#check-the-door-status}
+
+Check the door status to verify that the door is operating normally. Refer to the following for door status.
+
+<div className='col2--20-80 overflow-x'>
+
+|                Status Icon               | Description                     |
+| :--------------------------------------: | ------------------------------- |
+|   <IcErr width='35px' height='35px' />   | There is a communication server error or the connection is disconnected.   |
+| <IcNotsync width='35px' height='35px' /> | Synchronization error occurred. |
+
+</div>
+
+:::tip
+
+Click a status icon to view detailed information in a tooltip. Clicking the link of the error message displayed in the tooltip will take you to the list of devices connected to the door.
+
+<Image src='/img/monitoring-door-status-tooltip.png' alt='Tooltip message'/>
+
+Right-click on the device and select the <Cmd>Reconnect</Cmd> or <Cmd>Restart</Cmd> option.
+
+<Image src='/img/monitoring-door-status-tooltip-device.png' alt='Device list' />
+
+:::
+
+## Checking Door Open/Lock Status {#open-the-doorlock-confirmation}
+
+Check whether the door is open using the door sensor. Refer to the following for door sensor status.
+
+<div className='col2--20-80 overflow-x'>
+
+|                 Status Icon                | Description         |
+| :----------------------------------------: | ------------------- |
+| <IcDoorClose width='35px' height='35px' /> | The door is closed. |
+|  <IcDoorOpen width='auto' height='40px' /> | The door is open.   |
+
+</div>
+
+## Checking Door Lock Status {#check-the-door-lock}
+
+Check the lock status of the door using the relay status. Refer to the following for the status of the door relay.
+
+<div className='col2--20-80 overflow-x'>
+
+|                  Status Icon                 | Description         |
+| :------------------------------------------: | ------------------- |
+|  <IcRelayLock width='auto' height='35px' />  | The door is closed. |
+| <IcRelayUnlock width='auto' height='40px' /> | The door is open.   |
+
+</div>
+
+## Checking Camera Status {#check-the-camera-status}
+
+Check the camera status to verify that the camera is operating normally. Refer to the following for camera status.
+
+<div className='col2--20-80 overflow-x'>
+
+|   Status Icon  | Description                        |
+| :------------: | ---------------------------------- |
+|   <StatusOK/>  | The camera is connected.           |
+| <StatusFail /> | The camera is off or disconnected. |
+
+</div>
+
+## Checking Security Status {#check-the-security-status}
+
+Check the security status of the door. 
+
+<div className='col2--20-80 overflow-x'>
+
+|               Status Icon              | Description                  |
+| :------------------------------------: | ---------------------------- |
+|   <IcArm width='auto' height='35px'/>  | The security is activated.   |
+| <IcDisarm width='auto' height='35px'/> | The security is deactivated. |
+
+</div>
+
+:::info
+
+The security status is displayed only when the door is set to Intrusion Alarm Zone.
+
+:::
