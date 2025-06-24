@@ -23,10 +23,6 @@
   font-size: var(--ifm-h3-font-size);
 }
 
-.fdstep ul {
-  margin-bottom: 0;
-}
-
 .fdsteps .fdstep:last-of-type {
   padding-bottom: 0;
 }
