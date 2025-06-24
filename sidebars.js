@@ -203,6 +203,7 @@ const sidebars = {
             },
             'platform/biostar_x/settings-device-image-log',
             'platform/biostar_x/settings-device-usb-agent',
+            'platform/biostar_x/settings-device-connection-manager',
             {
               type: 'category',
               label: '출입문 관리하기',
