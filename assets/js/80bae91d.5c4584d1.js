@@ -90,7 +90,10 @@ function _createMdxContent(props) {
           product: "2"
         }), " 버튼을 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "어드밴스"
-        }), " 이상의 라이선스에서만 사용할 수 있습니다."]
+        }), " 이상의 라이선스에서만 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "beforeStart",

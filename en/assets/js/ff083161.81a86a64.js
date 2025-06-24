@@ -46,15 +46,15 @@ const assets = {
 
 const toc = [{
   "value": "메인 서버",
-  "id": "메인-서버",
+  "id": "main-server",
   "level": 2
 }, {
   "value": "커뮤니케이션 서버",
-  "id": "커뮤니케이션-서버",
+  "id": "communication-server",
   "level": 2
 }, {
   "value": "클라이언트",
-  "id": "클라이언트",
+  "id": "client",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -84,7 +84,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "메인-서버",
+      id: "main-server",
       children: "메인 서버"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["메인 서버는 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -223,10 +223,10 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커뮤니케이션-서버",
+      id: "communication-server",
       children: "커뮤니케이션 서버"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 컴퓨터입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가로 설치할 수 있습니다."
+      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 컴퓨터입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -271,7 +271,7 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "클라이언트",
+      id: "client",
       children: "클라이언트"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["클라이언트는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -336,10 +336,20 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), "는 Google 크롬에 최적화되어 있습니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "는 Google 크롬에 최적화되어 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 웹 인터페이스는 모바일 브라우저에 대한 지원을 제공하지 않습니다."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });

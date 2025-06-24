@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-getting-started-mdx-b09.json
-var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/en/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/en/platform/biostar_x/overview"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/en/platform/biostar_x/system-requirements"}}')
+var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기 전에","description":"BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.","keywords":["설치 안내","MariaDB","SQL Server","데이터베이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"개요","permalink":"/docs/platform/biostar_x/overview"},"next":{"title":"시스템 최소 요구 사항","permalink":"/docs/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'SQL Server',
 		'데이터베이스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -135,7 +135,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "는 32비트 운영체제를 위한 설치 파일을 제공하지 않습니다."]
+          }), "는 64bit 운영체제에서만 설치할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -160,24 +160,13 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["MS SQL Server와 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "가 서로 다른 PC에 설치되어 있는 경우 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "를 설치한 PC에 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=50402",
-            children: "Native Client"
-          }), "를 설치해야 합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["MS SQL Server를 사용할 경우 서버 및 각 테이블의 ", (0,jsx_runtime.jsx)(_components.code, {
             children: "Collation"
           }), " 옵션을 CI(Case-insensitive)로 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["기존 버전의 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["이전 버전의 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "에서 데이터베이스를 백업할 때 모든 서비스를 사용 중지한 후 진행하세요. 또한, AC 데이터베이스와 TA 데이터베이스를 함께 백업하고, 복원하지 않으면 TA 데이터베이스를 사용할 수 없습니다."]
         }), "\n"]

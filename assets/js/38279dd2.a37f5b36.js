@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-triger-and-action-mdx-382.json
-var site_docs_platform_biostar_x_settings_triger_and_action_mdx_382_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-triger-and-action","title":"작업 조건 및 동작 설정하기","description":"장치, 출입문, 구역에서 특정 이벤트가 발생했을 때 사용자가 원하는 동작을 장치나 BioStar X가 수행하도록 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-triger-and-action.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-triger-and-action","permalink":"/docs/en/platform/biostar_x/settings-triger-and-action","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-triger-and-action.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-triger-and-action","title":"작업 조건 및 동작 설정하기","description":"장치, 출입문, 구역에서 특정 이벤트가 발생했을 때 사용자가 원하는 동작을 장치나 BioStar X가 수행하도록 설정할 수 있습니다.","keywords":["작업","동작"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"재실 인원 제한 구역","permalink":"/docs/en/platform/biostar_x/settings-advanced-ac-occupancy"},"next":{"title":"경보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-alert"}}')
+var site_docs_platform_biostar_x_settings_triger_and_action_mdx_382_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-triger-and-action","title":"작업 조건 및 동작 설정하기","description":"장치, 출입문, 구역에서 특정 이벤트가 발생했을 때 사용자가 원하는 동작을 장치나 BioStar X가 수행하도록 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-triger-and-action.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-triger-and-action","permalink":"/docs/platform/biostar_x/settings-triger-and-action","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-triger-and-action.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-triger-and-action","title":"작업 조건 및 동작 설정하기","description":"장치, 출입문, 구역에서 특정 이벤트가 발생했을 때 사용자가 원하는 동작을 장치나 BioStar X가 수행하도록 설정할 수 있습니다.","keywords":["작업","동작"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"재실 인원 제한 구역","permalink":"/docs/platform/biostar_x/settings-advanced-ac-occupancy"},"next":{"title":"경보 설정하기","permalink":"/docs/platform/biostar_x/settings-alert"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'작업',
 		'동작'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -223,7 +223,10 @@ function _createMdxContent(props) {
               children: "고급 출입 통제"
             }), " 항목은 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "어드밴스"
-            }), " 이상의 라이선스에서만 사용할 수 있습니다."]
+            }), " 이상의 라이선스에서만 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {

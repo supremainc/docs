@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-manage-door-mdx-b05.json
-var site_docs_platform_biostar_x_settings_manage_door_mdx_b05_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-door","permalink":"/docs/platform/biostar_x/settings-manage-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-door.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","keywords":["출입문","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"USB 에이전트 설정하기","permalink":"/docs/platform/biostar_x/settings-device-usb-agent"},"next":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-manage-door-group"}}')
+var site_docs_platform_biostar_x_settings_manage_door_mdx_b05_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-manage-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-manage-door","permalink":"/docs/en/platform/biostar_x/settings-manage-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-manage-door.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-manage-door","title":"출입문 관리하기","description":"등록한 장치가 설치된 출입문 정보를 설정하고 관리하는 방법을 안내합니다.","keywords":["출입문","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"장치 연결 관리자 설정하기","permalink":"/docs/en/platform/biostar_x/settings-device-connection-manager"},"next":{"title":"출입문 그룹 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-door-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'출입문',
 		'설정'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
