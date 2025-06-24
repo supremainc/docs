@@ -16,27 +16,27 @@
     "description": "The label for category 튜토리얼 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자": {
-    "message": "사용자",
+    "message": "Users",
     "description": "The label for category 사용자 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자 등록하기": {
-    "message": "사용자 등록하기",
+    "message": "Registering Users",
     "description": "The label for category 사용자 등록하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자 관리하기": {
-    "message": "사용자 관리하기",
+    "message": "Managing Users",
     "description": "The label for category 사용자 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.모니터링": {
-    "message": "모니터링",
+    "message": "Monitoring",
     "description": "The label for category 모니터링 in sidebar biostarx"
   },
   "sidebar.biostarx.category.출입문 모니터링하기": {
-    "message": "출입문 모니터링하기",
+    "message": "Monitoring Doors",
     "description": "The label for category 출입문 모니터링하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.UI 알아보기": {
-    "message": "UI 알아보기",
+    "message": "Exploring the UI",
     "description": "The label for category UI 알아보기 in sidebar biostarx"
   },
   "sidebar.legal.category.Legal": {
