@@ -10,17 +10,21 @@
   counter-reset: step;
   border-left: 1px solid var(--ifm-color-color-gray);
   margin-left: 1rem;
-  padding-left: 1.75rem;
+  padding-left: 2rem;
   position: relative;
 }
 
 .fdstep {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .fdstep h2 {
-  padding-top: 0;
+  padding-top: 0.2rem;
   font-size: var(--ifm-h3-font-size);
+}
+
+.fdstep ul {
+  margin-bottom: 0;
 }
 
 .fdsteps .fdstep:last-of-type {
