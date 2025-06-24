@@ -175,7 +175,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "특정 장치를 검색하려면 상단의 입력 필드에 문자열을 입력하세요. 장치 이름, 시리얼 번호로 검색할 수 있습니다."
+            children: "특정 장치를 검색하려면 상단의 입력 필드에 키워드를 입력하세요. 장치 이름, 시리얼 번호로 검색할 수 있습니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

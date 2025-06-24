@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-user-mdx-b4c.json
-var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/en/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/en/platform/biostar_x/ui-launcher"},"next":{"title":"모니터링","permalink":"/docs/en/platform/biostar_x/ui-monitoring"}}')
+var site_docs_platform_biostar_x_ui_user_mdx_b4c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-user.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-user","permalink":"/docs/platform/biostar_x/ui-user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-user.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-user","title":"사용자","description":"사용자 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["사용자","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/ui-monitoring"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자',
 		'UI'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -39,6 +39,9 @@ const assets = {
 
 };
 
+/** <Cmd sid='team.menu.resendMobileAccess' />: 모바일로 출입 권한을 재전송할 수 있습니다. 사용자가 모바일로 출입 권한을 받지 못했거나, 모바일 기기를 변경한 경우에 사용할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
+/** <Cmd sid='team.menu.sendFaceMobileEnrollLink' />: 사용자가 모바일 애플리케이션으로 얼굴을 등록할 수 있는 링크를 이메일로 보낼 수 있습니다. 사용자가 모바일 애플리케이션을 설치한 후 얼굴 등록을 할 수 있도록 안내할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
+/** <Cmd sid='team.menu.resendQR' />: QR 코드를 인증 수단으로 사용하는 사용자에게 QR 코드를 재전송할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
 
 
 const toc = [];
@@ -71,15 +74,6 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.sidebar.user"
-            }), ": 사용자를 추가하고 크리덴셜을 추가할 수 있습니다. 여러 사용자의 크리덴셜을 한 번에 추가 및 관리할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "how-to-guide-user",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "사용자 그룹 또는 출입 그룹을 확인할 수 있습니다."
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -101,7 +95,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 키워드를 입력하면 사용자 그룹 또는 출입 권한 그룹을 검색할 수 있습니다."
+            children: "사용자 그룹 또는 출입 그룹을 트리 구조 형식으로 확인할 수 있습니다. 트리 구조를 펼치거나 접을 수 있으며, 각 그룹을 클릭해 해당 그룹에 속한 사용자를 확인할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -158,27 +152,9 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.menu.resendMobileAccess"
-                }), ": 모바일로 출입 권한을 재전송할 수 있습니다. 사용자가 모바일로 출입 권한을 받지 못했거나, 모바일 기기를 변경한 경우에 사용할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "#",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.menu.sendFaceMobileEnrollLink"
-                }), ": 사용자가 모바일 애플리케이션으로 얼굴을 등록할 수 있는 링크를 이메일로 보낼 수 있습니다. 사용자가 모바일 애플리케이션을 설치한 후 얼굴 등록을 할 수 있도록 안내할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "#",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.menu.resendQR"
-                }), ": QR 코드를 인증 수단으로 사용하는 사용자에게 QR 코드를 재전송할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "#",
+                  sid: "team.menu.transferToDevice"
+                }), ": 등록한 사용자 정보를 장치로 전송하는 기능입니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "transfer-user-info-to-device",
                   children: "다음 문서"
                 }), "를 참고하세요."]
               }), "\n"]
@@ -220,15 +196,6 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "team.user.newUser"
-                }), ": 새로운 사용자를 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "add-user",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "common.batchEdit"
                 }), ": 한 번에 여러 사용자의 정보나 출입 권한을 수정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "edit-user#user-information-collective-modification",
@@ -244,11 +211,20 @@ function _createMdxContent(props) {
                   children: "다음 문서"
                 }), "를 참고하세요."]
               }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "team.user.newUser"
+                }), ": 새로운 사용자를 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "add-user",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       })
-    })]
+    }), "\n", "\n", "\n"]
   });
 }
 function MDXContent(props = {}) {

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-server-server-mdx-d2b.json
-var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","keywords":["서버 설정","사용자 관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/platform/biostar_x/settings-server-https"}}')
+var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/en/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","keywords":["서버 설정","사용자 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/en/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/en/platform/biostar_x/settings-server-https"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'서버 설정',
 		'사용자 관리'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -542,7 +542,15 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "setting.server.custom_field.type.combobox",
               product: "2"
-            }), "로 추가된 커스텀 사용자 필드는 사용자가 추가한 항목을 선택할 수 있습니다. 아래와 그림과 같이 설정하려면 커스텀 사용자 필드를 설정할 때 선택1;선택2;선택3;선택4를 입력하세요."]
+            }), "로 추가된 커스텀 사용자 필드는 사용자가 추가한 항목을 선택할 수 있습니다. 커스텀 사용자 필드를 설정할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "선택1"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "선택2"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "선택3"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "선택4"
+            }), "를 입력하세요."]
           }), "\n"]
         }), "\n"]
       })]
