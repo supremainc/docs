@@ -67,19 +67,26 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/user-group-manage',
+            'platform/biostar_x/add-user',
+            'platform/biostar_x/add-user-basic-info',
             {
               type: 'category',
-              label: '사용자 등록하기',
+              label: '사용자 크리덴셜 등록하기',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_x/add-user'
+                id: 'platform/biostar_x/enroll-credential'
               },
               items: [
-                'platform/biostar_x/add-user-basic-info',
-                'platform/biostar_x/set-permission',
-                'platform/biostar_x/enroll-credential',
+                'platform/biostar_x/enroll-credential-securitylevel',
+                'platform/biostar_x/enroll-credential-fingerprint',
+                'platform/biostar_x/enroll-credential-face',
+                'platform/biostar_x/enroll-credential-card',
+                'platform/biostar_x/enroll-credential-mobile',
+                'platform/biostar_x/enroll-credential-qrbarcode',
+                'platform/biostar_x/enroll-credential-pin',
               ]
             },
+            'platform/biostar_x/set-permission',
             'platform/biostar_x/view-users',
             {
               type: 'category',
