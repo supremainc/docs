@@ -1,0 +1,346 @@
+---
+id: settings-device-details-advanced
+title: Advanced Settings
+description: In the Advanced Settings section, configure Device Management, Display/Sound, Operating Conditions, and Actions.
+keywords: [ Device, advanced ]
+---
+
+This section provides guidance on configuring items in the <Cmd sid='device.info.advanced' product='2' /> settings. You can manage administrator permissions, attendance events, screen and sound settings, operation conditions and actions, image logs, Wiegand, security tampering, and other various advanced features. Apply settings suitable for your environment to effectively manage the device.
+
+:::info
+
+* The available network options may differ depending on the device type.
+
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+
+:::
+
+## Add Administrators {#administrator}
+
+In the <Cmd sid='device.info.administrator' product='2' /> group, you can manage the device's administrators by permission level.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
+
+To add an administrator by permission level, click the <IcAdd /> <Cmd sid='common.add' product='2' /> button. Refer to the permissions for each level below.
+
+<div className='table-fixed'>
+
+| Level | User Information Management | Device Settings |
+| -- | :--: | :--: |
+| <Cmd sid='device.operatorLevel.all' product='2' /> | ✔️ | ✔️ |
+| <Cmd sid='device.operatorLevel.user' product='2' /> | ✔️ | ❌ |
+| <Cmd sid='device.operatorLevel.configuration' product='2' /> | ❌ | ✔️ |
+
+</div>
+
+:::info
+
+* Up to 1,000 administrators can be added. The number of administrators that can be added may vary depending on the device firmware version.
+
+* **Device Settings** allows changes to settings for screen and sound, network, RS-485, etc.
+
+* To delete an administrator, click the <IcTrash2 /> button to the right of the administrator.
+
+* Administrators set for each device do not affect **BioStar X** permissions.
+
+:::
+
+
+## Attendance Management {#attendance-management}
+
+The <Cmd sid='device.info.tna' product='2' /> group allows you to change attendance event names or set attendance modes.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-tna.png' />
+
+* <Cmd sid='device.info.tnaMode' product='2' />: Set how attendance events are registered.
+
+  * <Cmd sid='device.tna.mode.unused' product='2' />: Attendance events cannot be recorded.
+
+  * <Cmd sid='device.tna.mode.byUser' product='2' />: The user can select the desired attendance event when authenticating.
+
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />: Attendance events automatically change according to a set schedule. You can select a schedule to apply to attendance events.
+
+  * <Cmd sid='device.tna.mode.lastChoice' product='2' />: The last used attendance event can continue to be used.
+
+  * <Cmd sid='device.tna.mode.fixed' product='2' />: Only the selected attendance event can be used. Choose the fixed attendance event to use.
+
+* <Cmd sid='device.info.tnaRequired' product='2' />: Set it to require the user to register an attendance event when authenticating.
+
+  :::note
+
+  This option can be used when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.byUser' product='2' />. 
+
+  :::
+
+* <Cmd sid='device.info.tnaEvent' product='2' />: You can modify the names of attendance events or add schedules used when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.bySchedule' product='2' />.
+
+  * <Cmd sid='device.tna.eventKey' product='2' />: This is a list of keys that can be used to register attendance.
+
+  * <Cmd sid='device.tna.label' product='2' />: You can change the name of the attendance event based on <Cmd sid='device.tna.eventKey' product='2' />.
+
+  * <Cmd sid='device.tna.schedule' product='2' />: You can set a schedule for automatic changes when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.bySchedule' product='2' />.
+
+:::info
+
+* Devices without an LCD screen can set attendance modes to <Cmd sid='device.tna.mode.fixed' product='2' /> and <Cmd sid='device.tna.mode.bySchedule' product='2' /> and can register fixed attendance events or attendance events that change according to a pre-set schedule. Supported device types include BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2.
+
+* For more information on setting new schedules, refer to [the following document](settings-schedule).
+
+:::
+
+
+## Screen and Sound Settings {#screen-and-sound-settings}
+
+You can change settings related to the device's screen and sound. Available options may vary depending on the device.
+
+<details>
+
+<summary>BioEntry P2, BioEntry W2, BioLite Net, BioEntry Plus, BioEntry W, Xpass, Xpass S2, XPass D2, XPass 2</summary>
+
+* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+
+* <Cmd sid='device.info.sound' product='2' />: You can turn the sound on or off.
+
+* <Cmd sid='device.info.menuTimeout' product='2' />: Set the time it takes to switch from the menu screen to the idle screen.
+
+* <Cmd sid='device.info.backlightTimeout' product='2' />: Set the time before the screen light automatically turns off.
+
+* <Cmd sid='device.info.msgTimeout' product='2' />: Set the time before messages automatically disappear.
+
+* <Cmd sid='device.info.ledBuzzer' product='2' />: Select and set the event items that will activate the LED or buzzer.
+
+* <Cmd sid='device.info.keypadBackLight' product='2' />: You can turn the keypad backlight on or off. When this option is activated, the light behind the keypad turns on, making it easier to identify keys in dark environments.
+
+:::note
+
+* The <Cmd sid='device.info.language' product='2' />, <Cmd sid='device.info.menuTimeout' product='2' />, <Cmd sid='device.info.backlightTimeout' product='2' />, <Cmd sid='device.info.msgTimeout' product='2' /> options are supported by the BioLite Net model.
+
+* The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on XPass D2 hardware V02M and firmware version 1.7.1 or higher.
+
+:::
+
+</details>
+
+<details>
+
+<summary>BioStation 2, BioStation L2, BioLite N2, FaceLite</summary>
+
+* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+
+* <Cmd sid='device.info.volume' product='2' />: Set the default sound level produced by the device.
+
+* <Cmd sid='device.info.menuTimeout' product='2' />: Set the time it takes to switch from the menu screen to the idle screen.
+
+* <Cmd sid='device.info.theme' product='2' />: Change the style of the home screen of the device.
+
+* <Cmd sid='device.info.backlightTimeout' product='2' />: Set the time before the screen light automatically turns off.
+
+* <Cmd sid='device.info.msgTimeout' product='2' />: Set the time before messages automatically disappear.
+
+* <Cmd sid='device.info.useVoice' product='2' />: You can use voice guidance instead of notification tones.
+
+* <Cmd sid='device.info.background' product='2' />: Set items to be displayed in the device's home screen background.
+
+  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+
+  * <Cmd sid='device.display.background.notice' product='2' />: Administrators can display their input on the home screen.
+
+  * <Cmd sid='device.display.background.slideShow' product='2' />: Users can display up to 10 registered images as a slideshow on the home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+
+  :::note
+
+  * To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+
+  * If you change the type of background wallpaper, clicking the <Cmd sid='button.update' product='2' /> button will not apply it to the device. At the bottom of the screen, click the <Cmd sid='button.apply' product='2' /> button.
+
+  * The options <Cmd sid='device.display.background.notice' product='2' /> and <Cmd sid='device.display.background.slideShow' product='2' /> are supported by the BioStation 2 model.
+
+  :::
+
+* <Cmd sid='device.info.volume' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+
+  :::note
+
+  To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+
+  :::
+
+</details>
+
+<details>
+
+<summary>BioStation 3, BioStation A2, FaceStation 2, FaceStation F2, X-Station 2</summary>
+
+* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+
+* <Cmd sid='device.info.volume' product='2' />: Set the default sound level produced by the device.
+
+* <Cmd sid='device.intercom.speakerVolume' product='2' />: Set the volume of sound output from the device when using the IP intercom feature.
+
+* <Cmd sid='device.intercom.micVolume' product='2' />: Set the volume of sound input into the device when using the IP intercom feature.
+
+* <Cmd sid='device.info.menuTimeout' product='2' />: Set the time it takes to switch from the menu screen to the idle screen.
+
+* <Cmd sid='device.info.backlightTimeout' product='2' />: Set the time before the screen light automatically turns off.
+
+* <Cmd sid='device.info.msgTimeout' product='2' />: Set the time before messages automatically disappear.
+
+* <Cmd sid='device.info.useScreenSaver' product='2' />: Reduces unnecessary power consumption by reducing LCD screen brightness when the device is not in use.
+
+  :::note
+
+  This option is supported by the FaceStation 2, FaceStation F2, X-Station 2, and BioStation 3 models.
+
+  :::
+
+* <Cmd sid='device.info.useVoice' product='2' />: You can use voice guidance instead of notification tones.
+
+* <Cmd sid='device.info.homeScreen' product='2' />: Set items to be displayed in the device's home screen background.
+
+  * <Cmd sid='device.display.background.normal' product='2' />: Displays the default image on the home screen.
+
+  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+
+  * <Cmd sid='device.display.background.notice' product='2' />: Administrators can display their input on the home screen.
+
+  :::note
+
+  * To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+
+  * If you change the type of background wallpaper, clicking the <Cmd sid='button.update' product='2' /> button will not apply it to the device. At the bottom of the screen, click the <Cmd sid='button.apply' product='2' /> button.
+
+  * Setting the home screen as <Cmd sid='device.display.background.logo' product='2' /> and <Cmd sid='device.display.background.slideShow' product='2' /> allows displaying up to 10 images as a slideshow on the home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+
+  :::
+
+* <Cmd sid='device.info.volume' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+
+  :::note
+
+  To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+
+  :::
+
+</details>
+
+
+## Trigger Conditions and Actions Settings {#triggerAction}
+
+In the <Cmd sid='device.info.triggerNAction' product='2' /> group, you can set action conditions and actions based on specific situations. For example, you can configure all alarms to sound when authentication fails or the device becomes unusable if the RS-485 connection is lost.
+
+You can register events by selecting them for action conditions and actions or set conditions and actions according to user preferences. Click the <Cmd sid='device.info.triggerNAction' product='2' /> group and then click the <IcAdd /> <Cmd sid='common.add' product='2' /> button on the right.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-triggernaction.png' />
+
+### <Cmd sid='triggerAction.trigger' product='2' /> {#triggerAction}
+
+You can select predefined events or add custom conditions.
+
+* <Cmd sid='triggerAction.event' product='2' />: Select a predefined event.
+
+* <Cmd sid='triggerAction.input' product='2' />: Set custom conditions by selecting each item within the option.
+
+* <Cmd sid='triggerAction.break_glass' product='2' />: Set custom conditions by selecting each item within the option. You can configure it to only detect inputs without separate actions.
+
+:::info
+
+* When <Cmd sid='triggerAction.trigger' product='2' /> is set to <Cmd sid='triggerAction.event' product='2' />, you can select only one event from the event list.
+
+* When selecting the <Cmd sid='triggerAction.input' product='2' /> or <Cmd sid='triggerAction.break_glass' product='2' /> options to set custom conditions, if your desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' />. For more details on schedule settings, refer to [the following document](settings-schedule).
+
+* If the desired event name is not available when selecting the <Cmd sid='triggerAction.break_glass' product='2' /> option to set custom conditions, click <Cmd sid='triggerAction.addNewBreakGlassEvent' product='2' />. When this event occurs, the event name will be displayed in the event log and real-time log.
+
+* Event names can be entered with a maximum of 64 characters.
+
+:::
+
+### <Cmd sid='triggerAction.action' product='2' /> {#triggeraction}
+
+You can select predefined actions or add custom actions.
+
+:::info
+
+* If you select the <Cmd sid='triggerAction.output' product='2' /> option to set custom actions and your desired signal setting is not available, click <Cmd sid='common.addSignal' product='2' /> to configure it.
+
+* If you selected <Cmd sid='triggerAction.trigger' product='2' /> as <Cmd sid='triggerAction.break_glass' product='2' />, you can set <Cmd sid='triggerAction.action' product='2' /> as <Cmd sid='triggerAction.portNone' product='2' />.
+
+:::
+
+
+## Image Log Settings {#image-log-settings}
+
+In the <Cmd sid='common.imageLog' product='2' /> group, you can set image log events and schedules used by the device.
+
+1. Set the <Cmd sid='common.imageLog' product='2' /> option to <Cmd sid='common.use' product='2' />.
+
+2. Click <Cmd sid='common.configuration' product='2' /> and then click <Cmd sid='button.addplus' product='2' /> to set your desired events and schedules.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-imagelog.png' />
+
+:::info
+
+* This feature is supported by the BioStation A2, FaceStation 2, FaceStation F2, X-Station 2, and BioStation 3 models.
+
+* For more details on the default settings of image logs, refer to [the following document](settings-device-image-log).
+
+:::
+
+
+## Wiegand Settings {#wiegang-settings}
+
+In the <Cmd>Wiegand</Cmd> group, you can configure input and output details related to Wiegand devices.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-wiegand.png' />
+
+* <Cmd sid='device.info.wiegandOutPulseWidth' product='2' />: Set the pulse width for the Wiegand signal.
+
+* <Cmd sid='device.card.wiegand.inOutFormat' product='2' />: Change the Wiegand format designated for the device.
+
+* <Cmd sid='device.card.wiegand.out' product='2' />: Configure the Wiegand signal output mode.
+
+  * <Cmd sid='device.card.wiegand.out.normal' product='2' />: Scan cards using the configured Wiegand format. You can set error codes and select values to be sent if Wiegand card authentication fails.
+  
+  * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Send CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
+
+* <Cmd sid='device.info.wiegandInOut' product='2' />: Select the input and output mode.
+
+* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />: Set the pulse interval for the Wiegand signal.
+
+* <Cmd sid='device.card.wiegand.outputInfo' product='2' />: Select the information that will be output to the device during authentication.
+
+:::info
+
+For more information on Wiegand format settings, refer to [the following document](#).
+
+:::
+
+
+## Security Tamper Settings {#tamper-settings}
+
+If a tamper event occurs on the device, you can set it to delete all user information, logs, and security keys stored on the device. To activate the <Cmd sid='device.info.tamperOn' product='2' /> feature, set it to <Cmd sid='device.info.tamperOn.on' product='2' />.
+
+<Image src='/img/biostarx-setting-device-edit-advanced-tamper.png' />
+
+
+## Analog Intercom Settings {#analog-intercom-settings}
+
+You can set whether to use an analog intercom. To use the intercom connected to the device, click <Cmd sid='device.intercom.title' product='2' /> group and select <Cmd sid='common.use' product='2' />.
+
+:::info
+
+This feature is supported only by the BioStation 2 model.
+
+:::
+
+
+## Camera Settings {#camera-settings}
+
+You can set the camera frequency. Incorrectly setting the frequency in environments with fluorescent lights can cause flickering in images. Set the frequency for the local area in the <Cmd sid='device.info.camera' product='2' /> group.
+
+:::info
+
+* This feature is supported by the FaceStation F2 and BioStation A2 models with firmware version 2.1.4 or higher.
+
+* Camera frequencies vary by geographic location. The USA typically uses 60Hz, while most other regions use 50Hz. For the camera frequency in your area, consult your dealer.
+
+:::

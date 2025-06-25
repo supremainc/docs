@@ -1,0 +1,92 @@
+---
+id: settings-device-details-info
+title: Basic Information Setting
+description: This provides guidance on checking and setting the device name, group, time zone, hardware, and firmware version.
+keywords: [ Device, Information ]
+---
+
+The <Cmd sid='device.info.information' product='2' /> section allows you to set the basic information of the device. You can check the device's name and group, time zone, hardware, and firmware versions. You can change the device's name and group or upgrade the device's firmware.
+
+<Image src='/img/biostarx-setting-device-edit-info.png' />
+
+Below are the default information settings for the device that cannot be modified by the user.
+
+* <Cmd sid='device.info.deviceId' product='2' />: You can check the device ID.
+
+* <Cmd sid='device.info.deviceType' product='2' />: You can check the type of device.
+
+* <Cmd sid='device.info.productName' product='2' />: You can check the model name of the device.
+
+* <Cmd sid='device.info.kernelVersion' product='2' />: You can check the device's kernel version.
+
+* <Cmd sid='device.info.hwVersion' product='2' />: You can check the hardware version of the device.
+
+:::info
+
+If you have made changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if they are not saved.
+
+:::
+
+## Change the Device Name
+
+You can change the default device name. Enter your desired device name in the <Cmd sid='device.info.name' product='2' /> field. The device name can be up to 48 characters long and is used to identify the device in the device list.
+
+## Change the Device Group
+
+You can change the group to which the device belongs. Select the desired device group in the <Cmd sid='device.info.group' product='2' /> field.
+
+:::info
+
+For more information on creating a new device group, changing, or deleting group names, refer to [the following document](settings-manage-device-group).
+
+:::
+
+## Firmware Upgrade
+
+To check the device's firmware version, refer to the <Cmd sid='device.info.firmwareVersion' product='2' /> field. To upgrade the firmware, click the <Cmd sid='button.firmwareUpgrade' product='2' /> button.
+
+:::info
+
+For more information on upgrading the device's firmware, refer to [the following document](settings-device-upgrade-firmware).
+
+:::
+
+## Set the Device's Date and Time
+
+You can set the device's date and time using the options below.
+
+* <Cmd sid='device.info.timeZone' product='2' />: You can select the standard time zone where the device is located.
+
+* <Cmd sid='device.info.timeSync' product='2' />: You can synchronize the device's time information with the **BioStar X** server.
+
+* <Cmd sid='common.dst' product='2' />: You can apply the user's configured daylight saving time to the device. Refer to [the following document](#) to add a new daylight saving time.
+
+* <Cmd sid='device.info.date' product='2' />: You can manually set the device's date and time. After setting both date and time, click the <Cmd sid='device.info.setTime' product='2' /> button.
+
+  :::note
+
+  This feature can be used when the <Cmd sid='device.info.timeSync' product='2' /> option is not selected.
+
+  :::
+
+* <Cmd sid='common.dateFormat' product='2' />: You can select the date format displayed on the device.
+
+* <Cmd sid='device.info.getTime' product='2' />: You can get the time set on the device.
+
+:::caution
+
+The set date and time will be recorded in the event log and in real time. If the device's date and time are incorrect, log records may be inaccurate.
+
+:::
+
+## Unlock the Device
+
+When the device is locked due to operating conditions and actions, click the <Cmd sid='device.info.locked' product='2' /> <Cmd sid='device.info.unlock' product='2' /> button to unlock the device.
+
+## Initialize the Device
+
+To initialize the device settings, select one of the following features in the <Cmd sid='device.info.factoryDefault' product='2' /> field.
+
+* <Cmd sid='device.info.reset' product='2' />: Initializes all settings of the device.
+
+* <Cmd sid='device.info.reset.withoutNetwork' product='2' />: Maintains network settings and initializes other settings.
