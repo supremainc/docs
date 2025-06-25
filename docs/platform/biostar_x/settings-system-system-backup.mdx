@@ -13,70 +13,62 @@ MSSQL 데이터베이스와 BioStar X가 서로 다른 PC에 설치되어 있는
 
 :::
 
-## 일반 백업하기
-
-<Cmd sid="common.backup" product='2' />에 필요한 항목을 설정할 수 있습니다.
-
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.backup" product='2' />을 클릭하세요.
 
 1. 각 항목을 설정하세요.
 
-    <Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
+## 일반 백업하기
 
-    * <Cmd sid="backup.filePath" product='2' />: 백업 파일을 저장할 경로를 설정할 수 있습니다.
+<Cmd sid="common.backup" product='2' />에 필요한 항목을 설정할 수 있습니다.
 
-        :::info
+<Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
 
-        저장 경로는 이미 생성되어있는 디렉토리로 설정해야 합니다.
+* <Cmd sid="backup.filePath" product='2' />: 백업 파일을 저장할 경로를 설정할 수 있습니다.
 
-        :::
+    :::info
 
-    * <Cmd sid="backup.numberFileToKeep" product='2' />: 최대 백업 파일 수를 설정할 수 있습니다.
+    저장 경로는 이미 생성되어있는 디렉토리로 설정해야 합니다.
 
-        :::info
+    :::
 
-        * 최대 백업 수를 초과할 경우 가장 오래된 백업 파일부터 자동으로 삭제됩니다.
+* <Cmd sid="backup.numberFileToKeep" product='2' />: 최대 백업 파일 수를 설정할 수 있습니다.
 
-        * <Cmd sid="backup.numberFileToKeep" product='2' />는 1 ~ 100 사이의 숫자만 입력할 수 있습니다.
+    :::info
 
-        :::
+    * 최대 백업 수를 초과할 경우 가장 오래된 백업 파일부터 자동으로 삭제됩니다.
 
-    * <Cmd sid="backup.backupNow" product='2' />: 수동으로 백업을 시작하려면 <Cmd sid="backup.backupNow" product='2' />를 클릭하세요.
+    * <Cmd sid="backup.numberFileToKeep" product='2' />는 1 ~ 100 사이의 숫자만 입력할 수 있습니다.
 
-1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+    :::
+
+* <Cmd sid="backup.backupNow" product='2' />: 수동으로 백업을 시작하려면 <Cmd sid="backup.backupNow" product='2' />를 클릭하세요.
 
 ## 시스템 자동 백업하기
 
 시스템을 자동으로 백업하도록 설정할 수 있습니다.
 
-1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+<Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid="common.backup" product='2' />을 클릭하세요.
+* <Cmd sid="common.backup.frequency" product='2' />: 자동 백업 빈도를 <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />으로 설정할 수 있습니다.
 
-1. 각 항목을 설정하세요.
+* <Cmd sid="backup.day" product='2' />: <Cmd sid="common.backup.frequency" product='2' />를 <Cmd sid="backup.weekly" product='2' />으로 설정한 경우 자동으로 백업할 요일을 설정할 수 있습니다.
 
-    <Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
+* <Cmd sid="backup.date" product='2' />: <Cmd sid="common.backup.frequency" product='2' />를 <Cmd sid="backup.monthly" product='2' />으로 설정한 경우 자동으로 백업할 날짜를 설정할 수 있습니다.
 
-    * <Cmd sid="common.backup.frequency" product='2' />: 자동 백업 빈도를 <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />으로 설정할 수 있습니다.
+    :::info
 
-    * <Cmd sid="backup.day" product='2' />: <Cmd sid="common.backup.frequency" product='2' />를 <Cmd sid="backup.weekly" product='2' />으로 설정한 경우 자동으로 백업할 요일을 설정할 수 있습니다.
+    29, 30, 31일로 설정 시, 해당 날짜가 없는 달에는 자동 백업이 실행되지 않습니다.
 
-    * <Cmd sid="backup.date" product='2' />: <Cmd sid="common.backup.frequency" product='2' />를 <Cmd sid="backup.monthly" product='2' />으로 설정한 경우 자동으로 백업할 날짜를 설정할 수 있습니다.
+    :::
 
-        :::info
+* <Cmd sid="backup.time" product='2' />: 자동으로 백업할 시간을 설정할 수 있습니다.
 
-        29, 30, 31일로 설정 시, 해당 날짜가 없는 달에는 자동 백업이 실행되지 않습니다.
+    :::info
 
-        :::
+    BioStar X에서 설정한 표준 시간대를 기준으로 합니다.
 
-    * <Cmd sid="backup.time" product='2' />: 자동으로 백업할 시간을 설정할 수 있습니다.
-    
-        :::info
+    :::
 
-        BioStar X에서 설정한 표준 시간대를 기준으로 합니다.
-
-        :::
-
-1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+4. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.

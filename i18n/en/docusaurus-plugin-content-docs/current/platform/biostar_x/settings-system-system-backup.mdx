@@ -1,0 +1,74 @@
+---
+id: settings-system-system-backup
+title: System Backup
+description: The System Backup menu backs up important information such as BioStar X's database, various settings, key values, etc.
+keywords: [System Backup]
+---
+
+The <Cmd sid="common.backup" product='2' /> menu backs up important information such as BioStar X's database, various settings, key values, etc.
+
+:::info
+
+If the MSSQL database and BioStar X are installed on different PCs, BioStar X System Backup and Restore cannot be used.
+
+:::
+
+1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+
+1. In the left sidebar, click the <Cmd sid="common.backup" product='2' />.
+
+1. Set each field as needed.
+
+## General
+
+Set the necessary items for <Cmd sid="common.backup" product='2' />.
+
+<Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
+
+* <Cmd sid="backup.filePath" product='2' />: Set the path to save the backup file.
+
+    :::info
+
+    The save path must be set to a directory that has already been created.
+
+    :::
+
+* <Cmd sid="backup.numberFileToKeep" product='2' />: Set the maximum number of backup files.
+
+    :::info
+
+    * If the maximum number of backups are exceeded, the oldest backup files are automatically deleted.
+
+    * <Cmd sid="backup.numberFileToKeep" product='2' />, only numbers between 1 and 100 are entered.
+
+    :::
+
+* <Cmd sid="backup.backupNow" product='2' />: To back up manually, click <Cmd sid="backup.backupNow" product='2' />.
+
+## Automatic System Backup
+
+Set the system to back up automatically.
+
+<Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
+
+* <Cmd sid="common.backup.frequency" product='2' />: Select the automatic system backup frequency as <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />.
+
+* <Cmd sid="backup.day" product='2' />: When <Cmd sid="common.backup.frequency" product='2' /> is set to <Cmd sid="backup.weekly" product='2' />, set the day of the week to automatically system backup.
+
+* <Cmd sid="backup.date" product='2' />: When <Cmd sid="common.backup.frequency" product='2' /> is set to <Cmd sid="backup.monthly" product='2' />, set the date of the month to automatically system backup.
+
+    :::info
+
+    When set to the 29th, 30th, or 31st, automatic system backup will not run for months without the corresponding date.
+
+    :::
+
+* <Cmd sid="backup.time" product='2' />: Set the time to automatically system backup.
+
+    :::info
+
+    Based on the time zone set in BioStar X.
+
+    :::
+
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
