@@ -54,12 +54,42 @@ export async function translate(content: string, targetLanguage: string) {
 
 ### Credential Types (keep in English):
 - fingerprint, face, visual face, card, QR/Barcode
+
+### Sentence Structure Guidelines:
+**CRITICAL: Always restructure "To [purpose], [action]" sentences to "[Action] to [purpose]" format**
+
+Transform sentences that start with "To" + purpose/goal:
+- "To move to a specific page, enter the page number in the input field" → "Enter the page number in the input field to move to a specific page"
+- "To set the number of items displayed on each page, click the row selection box" → "Click the row selection box to set the number of items displayed on each page"
+- "To configure settings, click the Settings button" → "Click the Settings button to configure settings"
+- "To enable this feature, check the Enable checkbox" → "Check the Enable checkbox to enable this feature"
+- "To access the menu, click the hamburger icon" → "Click the hamburger icon to access the menu"
+
+**Pattern: "To [목적], [행동]" → "[행동] to [목적]"**
+
+### Title Translation Guidelines:
+**CRITICAL: Use imperative verb form (base form) instead of gerund (-ing) form**
+
+Always convert -ing titles to imperative form:
+- "Navigating the List Page" → "Navigate the List Page"
+- "Configuring Device Settings" → "Configure Device Settings" 
+- "Managing User Accounts" → "Manage User Accounts"
+- "Installing the Software" → "Install the Software"
+- "Setting Up the System" → "Set Up the System"
+- "Connecting to the Network" → "Connect to the Network"
+
+**Pattern: "[동작]ing the [대상]" → "[동작] the [대상]"**
 `;
 
   const systemPrompt = targetLanguage === 'en' 
     ? `You are a professional technical translator specializing in Korean-to-English translation for security and access control documentation. 
 
 ${koreanToEnglishGuidelines}
+
+**MANDATORY RULES - APPLY WITHOUT EXCEPTION:**
+1. ALL sentences starting with "To [purpose], [action]" MUST be restructured to "[Action] to [purpose]"
+2. ALL titles with -ing forms MUST be converted to imperative verb forms
+3. Follow ALL guidelines above strictly - no deviations allowed
 
 Translate the Korean content to natural, professional English while strictly following these guidelines. Maintain technical accuracy and use declarative language. Return only the translated content without explanations.`
     : `You are a super translator which can help user to translate input content to ${targetLanguage}, please direct return the translation result, No nonsense.`;
