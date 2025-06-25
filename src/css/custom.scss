@@ -457,6 +457,12 @@ footer {
         height: 1.3em;
         fill: var(--ifm-color-secondary-color);
       }
+      &+ul {
+        margin-top: 0;
+        li:first-of-type {
+          margin-top: 0;
+        }
+      }
     }
   }
   .alert--secondary {
