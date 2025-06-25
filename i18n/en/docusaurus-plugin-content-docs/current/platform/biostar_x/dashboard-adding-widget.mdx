@@ -1,0 +1,134 @@
+---
+id: dashboard-adding-widget
+title: Adding Widgets
+description: Add widgets to the dashboard to view the information you want.
+keywords: [Dashboard, Widget]
+---
+
+Add widgets to the <Cmd>Dashboard</Cmd> to view the information you want.
+
+1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd>Dashboard</Cmd>.
+
+1. Click <Cmd sid='reportApp.addWidget' product='2' />.
+
+    :::info
+
+    If widgets have already been added, click <IcSet2 /> to enter <Cmd sid='reportApp.dashboardSettings' product='2' />, and then click <Cmd sid='reportApp.addWidget' product='2' />.
+
+    :::
+
+1. Select the desired <Cmd sid='reportApp.widgetTypes' product='2' />, then enter or set the required fields, depending on the widget.
+
+## Widget Types
+
+* The default widget size is set differently for each widget and is optimized to look best at the default.
+
+* All widgets can be resized by dragging the lower-right corner.
+
+    <Image src='/img/biostarx-adjust-win-size.png' caption />
+
+### Chart
+
+Selecting desired chart data enables the display of the number of events that occurred in a chart.
+
+<Image src='/img/common/biostarx-chart.png' caption alone />
+
+* <Cmd sid='reportApp.widgetTypes.chartData' product='2' />: From the daily or weekly event list, select the desired chart data.
+
+    * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+
+* <Cmd sid='reportApp.chartType' product='2' />: Select the desired type among <Cmd sid='reportApp.chartTypes.verticalBar' product='2' />, <Cmd sid='reportApp.chartTypes.horizontalBar' product='2' />, <Cmd sid='reportApp.chartTypes.line' product='2' />, and <Cmd sid='reportApp.chartTypes.pie' product='2' />.
+
+* <Cmd sid='reportApp.chartColorSchemes' product='2' />: Select the desired color among 5 color schemes.
+
+    :::info
+
+    The charts shown when selecting <Cmd sid='reportApp.chartColorSchemes' product='2' /> are random values for preview, not actual values.
+
+    :::
+
+### Counter
+
+Selecting desired counter data enables the display of the number of events that occurred as a number.
+
+<Image src='/img/common/biostarx-counter.png' caption alone />
+
+* <Cmd sid='reportApp.widgetTypes.counterData' product='2' />: From the daily or weekly event list, select the desired counter data.
+
+    * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+
+### Text
+
+In the widgets area of <Cmd>Dashboard</Cmd>, you can enter and place desired text. After creation, you can place it in the required location and use it as a title for a widget or as a notice.
+
+<Image src='/img/common/biostarx-text.png' caption alone />
+
+:::info
+
+If you select the <Cmd sid='reportApp.widgetTypes.text.removeBackground' product='2' /> option while creating a <Cmd sid='reportApp.widgetTypes.text' product='2' /> widget, transparency will be applied to the background.
+
+:::
+
+### Real-time Events
+
+Shows events occurring in BioStar 2 in real time. You can check events by filtering specific events, users, doors, and devices.
+
+<Image src='/img/biostarx-real-time-event.png' caption />
+
+* <Cmd sid='reportApp.pause' product='2' />: To pause the real-time event.
+
+* <Cmd sid='reportApp.play' product='2' />: Resume a real-time event that stopped.
+
+* <Cmd sid='reportApp.clear' product='2' />: The entire captured record will be removed.
+
+:::info
+
+If you navigate to another page and subsequently return to the <Cmd>Dashboard</Cmd>, the list will be cleared, and events will be logged anew.
+
+:::
+
+### Checkpoint
+
+Select one device and display the profile photo and information (<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />) of the user who successfully authenticated to the selected device in real time.
+
+<Image src='/img/biostarx-checkpoint.png' caption />
+
+* <Cmd sid='reportApp.pause' product='2' />: To pause the checkpoint.
+
+* <Cmd sid='reportApp.play' product='2' />: To resume the checkpoint that paused.
+
+* <Cmd sid='reportApp.clear' product='2' />: The entire captured record will be removed.
+
+:::info
+
+<Cmd sid='reportApp.widgetTypes.checkpoint' product='2' /> are recorded for up to 5 people.
+
+:::
+
+### System Usage
+
+The various usage statuses of BioStar 2 are displayed in numbers.
+
+<Image src='/img/common/biostarx-system-usage.png' caption alone />
+
+The <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' /> that can be displayed is as follows:
+
+* <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
+
+### Door Control
+
+Select one door to check and control its status.
+
+<Image src='/img/biostarx-door-control.png' caption />
+
+The following items can be controlled with the <Cmd sid='reportApp.doorControl.actionsBtn' product='2' /> buttons:
+
+* <Cmd sid='reportApp.doorControl.actions.open' product='2' />, <Cmd sid='reportApp.doorControl.actions.normalize' product='2' />, <Cmd sid='reportApp.doorControl.actions.lock' product='2' />, <Cmd sid='reportApp.doorControl.actions.unlock' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAlarm' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAPB' product='2' />
+
+:::info
+
+The name of the <Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> widget is automatically assigned to the name of the door and cannot be modified.
+
+:::
+
+4. After completing the settings of the widget, click <Cmd sid='reportApp.apply' product='2' />, and the widget will be created in the widget area. Adjust it to the desired size and location, then click <Cmd sid='reportApp.apply' product='2' />, and the widget will be added to the <Cmd>Dashboard</Cmd>.

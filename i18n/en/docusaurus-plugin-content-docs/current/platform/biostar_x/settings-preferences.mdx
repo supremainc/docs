@@ -1,7 +1,7 @@
 ---
 id: settings-preferences
 title: Preferences
-description: Description
+description: You can change language/time zone, date/time format, and upload a sound file to be used as an alert.
 keywords: [Preferences]
 ---
 
@@ -13,44 +13,54 @@ You can change language/time zone, date/time format, and upload a sound file to 
 
 1. Edit the necessary fields.
 
-    <Image src='/img/biostarx-settings-preferences.png' />
+## Language / Time Zone
 
-    * <Cmd sid='preference.languageTimezone' product='2' />: You can configure the BioStar X language and time zone settings.
+You can configure the BioStar X language and time zone settings.
 
-        * <Cmd sid='common.language' product='2' />: Select a language to use.
+<Image src='/img/biostarx-settings-preference-language-timezone.png' className='none' />
 
-        * <Cmd sid='common.timeZone' product='2' />: Select a time zone to use.
+* <Cmd sid='common.language' product='2' />: Select a language to use.
 
-        * <Cmd sid='common.dst' product='2' />: Select the daylight saving time to apply to BioStar X server. If no registered daylight saving time, see [this document](#).
+* <Cmd sid='common.timeZone' product='2' />: Select a time zone to use.
 
-    * <Cmd sid="preference.dateTimeFormat" product='2' />: You can configure the date and time format to use in BioStar X.
+* <Cmd sid='common.dst' product='2' />: Select the daylight saving time to apply to BioStar X server. If no registered daylight saving time, see [this document](#).
 
-        * <Cmd sid="common.dateFormat" product='2' />: Changes the date format.
+## Date/Time
 
-        * <Cmd sid="common.timeFormat" product='2' />: Changes the time format.
+You can configure the date and time format to use in BioStar X.
 
-    * <Cmd sid="device.info.sound" product='2' />: You can upload a sound file to use in BioStar X.
+<Image src='/img/biostarx-settings-preference-date-time.png' className='none' />
 
-        <Calloutlists>
+* <Cmd sid="common.dateFormat" product='2' />: Changes the date format.
 
-        1. Click <Cmd sid="button.plusAdd" product='2' />.
+* <Cmd sid="common.timeFormat" product='2' />: Changes the time format.
 
-            <Image src='/img/biostarx-settings-preferences-sound.png' className='none' />
+## Sound
 
-        1. Click <Cmd sid="setting.preference.sound.alert.addSound.browse" product='2' /> to select a file.
+You can upload a sound file to use in BioStar X.
 
-        1. Select .wav file or .mp3 file and then click **Open**.
+<Image src='/img/biostarx-settings-preference-sound.png' className='none' />
 
-        1. Click <Cmd sid="button.add" product='2' /> to upload.
+<Calloutlists>
 
-        </Calloutlists>
+1. Click <Cmd sid="button.plusAdd" product='2' />.
 
-        :::info
+    <Image src='/img/biostarx-settings-preference-add-sound.png' className='none' />
 
-        * Sound files must be .wav or .mp3 format.
+1. Click <Cmd sid="setting.preference.sound.alert.addSound.browse" product='2' /> to select a file.
 
-        * A maximum file size is 10MB.
+1. Select .wav file or .mp3 file and then click **Open**.
 
-        :::
+1. Click <Cmd sid="button.add" product='2' /> to upload.
 
-1. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+</Calloutlists>
+
+:::info
+
+* Sound files must be .wav or .mp3 format.
+
+* A maximum file size is 10MB.
+
+:::
+
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
