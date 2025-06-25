@@ -1,31 +1,23 @@
 ---
-id: dashboard
-title: How to Use the Dashboard
+id: dashboard-adding-widget
+title: Adding Widgets
 description: The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.
-keywords: [ Dashboard, widget ]
+keywords: [keyword1, keyword2]
 ---
 
-The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.
-
-:::info
-
-* For each user, the **Dashboard** can be configured for them personally.
-
-* Information available on the **Dashboard** may vary depending on <Cmd sid='user.bioStarOperator' product='2' />.
-
-:::
-
-## Adding Widgets
-
-1. Click on <Cmd>Dashboard</Cmd> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd>Dashboard</Cmd>.
 
 1. Click <Cmd sid='reportApp.addWidget' product='2' />.
 
-    * If widgets have already been added, click <IcSet2 /> to enter <Cmd sid='reportApp.dashboardSettings' product='2' />, and then click <Cmd sid='reportApp.addWidget' product='2' />.
+    :::info
+
+    If widgets have already been added, click <IcSet2 /> to enter <Cmd sid='reportApp.dashboardSettings' product='2' />, and then click <Cmd sid='reportApp.addWidget' product='2' />.
+
+    :::
 
 1. Select the desired <Cmd sid='reportApp.widgetTypes' product='2' />, then enter or set the required fields, depending on the widget.
 
-### Widget Types
+## Widget Types
 
 :::info
 
@@ -37,7 +29,7 @@ The dashboard can be customized to suit individual preferences by allowing each 
 
 :::
 
-#### Chart
+### Chart
 
 <Image src='/img/common/biostarx-chart.png' caption alone />
 
@@ -57,7 +49,7 @@ The charts shown when selecting <Cmd sid='reportApp.chartColorSchemes' product='
 
 :::
 
-#### Counter
+### Counter
 
 <Image src='/img/common/biostarx-counter.png' caption alone />
 
@@ -67,7 +59,7 @@ Selecting desired counter data enables the display of the number of events that 
 
     * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
-#### Text
+### Text
 
 <Image src='/img/common/biostarx-text.png' caption alone />
 
@@ -79,7 +71,7 @@ If you select the <Cmd sid='reportApp.widgetTypes.text.removeBackground' product
 
 :::
 
-#### Real-time Events
+### Real-time Events
 
 <Image src='/img/biostarx-real-time-event.png' caption />
 
@@ -97,7 +89,7 @@ If you navigate to another page and subsequently return to the **Dashboard**, th
 
 :::
 
-#### Checkpoint
+### Checkpoint
 
 <Image src='/img/biostarx-checkpoint.png' caption />
 
@@ -115,7 +107,7 @@ Select one device and display the profile photo and information (<Cmd sid='repor
 
 :::
 
-#### System Usage
+### System Usage
 
 <Image src='/img/common/biostarx-system-usage.png' caption alone />
 
@@ -125,7 +117,7 @@ The various usage statuses of BioStar 2 are displayed in numbers.
 
         * <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
 
-#### Door Control
+### Door Control
 
 <Image src='/img/biostarx-door-control.png' caption />
 
@@ -142,39 +134,3 @@ Select one door to check and control its status.
     :::
 
 4. After completing the settings of the widget, click <Cmd sid='reportApp.apply' product='2' />, and the widget will be created in the widget area. Adjust it to the desired size and location, then click <Cmd sid='reportApp.apply' product='2' />, and the widget will be added to the **Dashboard**.
-
-## Edit Widget
-
-1. Click on <Cmd>Dashboard</Cmd> on the <Cmd sid='shell.header.launcher' /> page.
-
-1. Click <IcSet2 /> at the top right to enter <Cmd sid='reportApp.dashboardSettings' product='2' />.
-
-1. Click <IcEdit /> at the top right of the **Widget** you want to edit, then edit the desired part.
-
-    <Image src='/img/biostarx-widget-edit.png' className='none' caption />
-
-1. After making edits, click <Cmd sid='reportApp.apply' product='2' /> to save the changes.
-
-1. After making adjustments to the widgets, select <Cmd sid='reportApp.apply' product='2' />, located at the top-right of the <Cmd sid='reportApp.dashboardSettings' product='2' /> screen, to apply and save the changes.
-
-:::info
-
-* The <Cmd sid='reportApp.widgetTypes' product='2' /> cannot be changed in the <Cmd sid='reportApp.editWidget' product='2' />.
-
-* <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' />, <Cmd sid='reportApp.widgetTypes.checkpoint' product='2' />, and <Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> that use a specific name cannot modify the <Cmd sid='reportApp.widgetName' product='2' />.
-
-:::
-
-## Delete Widget
-
-1. Click on <Cmd>Dashboard</Cmd> on the <Cmd sid='shell.header.launcher' /> page.
-
-1. Click <IcSet2 /> in the upper right to enter <Cmd sid='reportApp.dashboardSettings' product='2' />.
-
-1. Click <IcTrash2 /> at the top right of the **Widget** you want to delete.
-
-    <Image src='/img/biostarx-dashboard-widget-del.png' className='none' caption />
-
-1. Check the deletion confirmation pop-up and click <Cmd sid='reportApp.yes' product='2' />.
-
-1. Click <Cmd sid='reportApp.apply' product='2' /> at the top right of the <Cmd sid='reportApp.dashboardSettings' product='2' /> screen to apply the deletion.

@@ -1,31 +1,23 @@
 ---
-id: dashboard
-title: 대시보드 사용하기
-description: 대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.
-keywords: [ 대시보드, 위젯 ]
+id: dashboard-adding-widget
+title: 위젯 추가하기
+description: 대시보드에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.
+keywords: [keyword1, keyword2]
 ---
 
-대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.
-
-:::info
-
-* 각 사용자마다 개인별로 **대시보드**를 구성할 수 있습니다.
-
-* **대시보드**에서 확인할 수 있는 정보는 <Cmd sid='user.bioStarOperator' product='2' />에 따라 다를 수 있습니다.
-
-:::
-
-## 위젯 추가하기
-
-1. <Cmd>런처</Cmd> 페이지에서 <Cmd sid='shell.header.launcher' />를 클릭하세요.
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd>대시보드</Cmd>를 클릭하세요.
 
 1. <Cmd sid='reportApp.addWidget' product='2' />를 클릭하세요.
 
-    * 이미 위젯이 추가 되어있는 경우에는 <IcSet2 /> 아이콘을 클릭해 <Cmd sid='reportApp.dashboardSettings' product='2' />으로 진입한 다음 <Cmd sid='reportApp.addWidget' product='2' />를 클릭하세요.
+    :::info
+
+    이미 위젯이 추가 되어있는 경우에는 <IcSet2 /> 아이콘을 클릭해 <Cmd sid='reportApp.dashboardSettings' product='2' />으로 진입한 다음 <Cmd sid='reportApp.addWidget' product='2' />를 클릭하세요.
+
+    :::
 
 1. 원하는 <Cmd sid='reportApp.widgetTypes' product='2' />을 선택한 다음 위젯에 따라 필수 항목을 입력 또는 설정하세요.
 
-### 위젯 종류
+## 위젯 종류
 
 :::info
 
@@ -37,7 +29,7 @@ keywords: [ 대시보드, 위젯 ]
 
 :::
 
-#### 차트
+### 차트
 
 <Image src='/img/common/biostarx-chart.png' caption alone />
 
@@ -57,7 +49,7 @@ keywords: [ 대시보드, 위젯 ]
 
 :::
 
-#### 카운터
+### 카운터
 
 <Image src='/img/common/biostarx-counter.png' caption alone />
 
@@ -67,7 +59,7 @@ keywords: [ 대시보드, 위젯 ]
 
     * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
-#### 텍스트
+### 텍스트
 
 <Image src='/img/common/biostarx-text.png' caption alone />
 
@@ -79,7 +71,7 @@ keywords: [ 대시보드, 위젯 ]
 
 :::
 
-#### 실시간 이벤트
+### 실시간 이벤트
 
 <Image src='/img/biostarx-real-time-event.png' caption />
 
@@ -97,7 +89,7 @@ BioStar 2에서 발생하는 이벤트를 실시간으로 보여줍니다. 특�
 
 :::
 
-#### 실시간 출입 모니터링
+### 실시간 출입 모니터링
 
 <Image src='/img/biostarx-checkpoint.png' caption />
 
@@ -115,7 +107,7 @@ BioStar 2에서 발생하는 이벤트를 실시간으로 보여줍니다. 특�
 
 :::
 
-#### 시스템 사용 현황
+### 시스템 사용 현황
 
 <Image src='/img/common/biostarx-system-usage.png' caption alone />
 
@@ -125,7 +117,7 @@ BioStar 2의 다양한 사용 현황을 숫자로 나타냅니다.
 
         * <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
 
-#### 출입문 제어
+### 출입문 제어
 
 <Image src='/img/biostarx-door-control.png' caption />
 
@@ -142,39 +134,3 @@ BioStar 2의 다양한 사용 현황을 숫자로 나타냅니다.
     :::
 
 4. 위젯의 설정을 마친 다음 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 위젯 표시 영역에 위젯이 생성됩니다. 원하는대로 크기를 조절한 다음 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 위젯이 **대시보드**에 추가됩니다.
-
-## 위젯 수정하기
-
-1. <Cmd>런처</Cmd> 페이지에서 <Cmd sid='shell.header.launcher' />를 클릭하세요.
-
-1. 우측 상단의 <IcSet2 /> 아이콘을 클릭해 <Cmd sid='reportApp.dashboardSettings' product='2' />으로 진입하세요.
-
-1. 수정하고자 하는 **위젯**의 우측 상단에 <IcEdit /> 아이콘을 클릭한 다음 원하는 부분을 수정하세요.
-
-    <Image src='/img/biostarx-widget-edit.png' className='none' caption />
-
-1. 수정을 완료한 다음 <Cmd sid='reportApp.apply' product='2' />을 클릭하세요.
-
-1. <Cmd sid='reportApp.dashboardSettings' product='2' /> 화면 우측 상단의 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 수정한 사항이 반영됩니다.
-
-:::info
-
-* <Cmd sid='reportApp.editWidget' product='2' />에서 <Cmd sid='reportApp.widgetTypes' product='2' />은 변경할 수 없습니다.
-
-* 정해진 항목을 사용하는 <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' />, <Cmd sid='reportApp.widgetTypes.checkpoint' product='2' />, <Cmd sid='reportApp.widgetTypes.doorControl' product='2' />는 <Cmd sid='reportApp.widgetName' product='2' />을 수정할 수 없습니다.
-
-:::
-
-## 위젯 삭제하기
-
-1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.launcher' />를 클릭하세요.
-
-1. 우측 상단의 <IcSet2 /> 아이콘을 클릭해 <Cmd sid='reportApp.dashboardSettings' product='2' />으로 진입하세요.
-
-1. 삭제하고자 하는 **위젯**의 우측 상단에 <IcTrash2 /> 아이콘을 클릭하세요.
-
-    <Image src='/img/biostarx-dashboard-widget-del.png' className='none' caption />
-
-1. 삭제 확인 팝업창을 확인하고 <Cmd sid='reportApp.yes' product='2' />를 클릭하세요.
-
-1. <Cmd sid='reportApp.dashboardSettings' product='2' /> 화면 우측 상단의 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 수정한 사항이 반영됩니다.
