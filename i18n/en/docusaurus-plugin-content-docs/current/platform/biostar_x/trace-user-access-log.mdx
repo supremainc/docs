@@ -1,0 +1,36 @@
+---
+id: trace-user-access-log
+title: Track User Access History
+description: This guide explains how to track and verify user access logs.
+keywords:
+  - User
+  - Access History
+---
+
+Tracking and verifying user access history is crucial for enhancing security and improving operational efficiency. You can prevent security threats and optimize operations through access history. You can identify users who attempt to access restricted areas or unauthorized times. This allows for a quick response to security threats. By identifying abnormal signs such as repeated authentication failures or access from unusual time zones, security threats can be detected early.
+
+You can check the user's access history according to the following steps.
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click on the user whose access history you want to check from the user list.
+
+3. The selected user's profile information will be displayed on the right side of the screen.
+
+<Image src='/img/biostarx-user-info-preview.png' />
+
+You can check the access history of the user in the <Cmd sid='team.event.trace' /> section below the profile screen. The information provided in the <Cmd sid='team.event.trace' /> section is described below.
+
+* <Cmd sid='main.dialog.alarmEvent.acEvent.datetime' />: The date and time of access occurrence.
+
+* <Cmd sid='main.dialog.alarmEvent.acEvent.device' />: The name of the device where access occurred.
+
+* <Cmd sid='arena.eventTable.event' /> : This is a detailed description of access events.
+
+:::info
+
+* You can check real-time access events on the <Cmd sid='shell.header.arena' /> page. For more information, refer to [this document](monitoring-event).
+
+* Past access events can be viewed on the <Cmd sid='shell.header.data' /> page. For more information, refer to [this document](#).
+
+:::

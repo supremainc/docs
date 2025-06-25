@@ -1,0 +1,92 @@
+---
+id: set-permission
+title: Setting User Permissions
+description: This Guide describes how to set user access permissions.
+keywords:
+  - User
+  - Permission
+---
+
+This Guide describes how to set user access permissions. Users can set which spaces they can access and what times they can access them through access permissions. Access permissions can be set when adding or modifying a user.
+
+Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page. You can set access permissions in the two ways below.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+In the <Cmd sid='team.user.permission.title' /> section, the following items can be set. Please refer to the description for each item to set the appropriate user permissions.
+
+<Image src='/img/biostarx-new-user-permission.png' />
+
+## Select Operator Level {#operatorLevel}
+
+Menu access will be limited based on operator level. In the <Cmd sid='team.user.permission.title' /> section, select the operator level in the <Cmd sid='team.user.permission.operatorLevel' /> field. Please refer to the list below for the operator levels that can be assigned to users.
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+## Login Settings with User IP Address {#userIp}
+
+If you register a user IP address, you can log in to the PC only when the IP information matches the one registered to your account. This enhances security. Enter the user's IP address in the <Cmd sid='team.user.permission.userIp' /> field of the <Cmd sid='team.user.permission.title' /> section.
+
+:::info
+
+* The IP address can be entered in the format xxx.xxx.xxx.xxx, and each octet can only be a number in the range 0 to 255.
+
+* If you do not register an IP address, you can log in to your PC regardless of the IP information.
+
+* When using the cloud, access is allowed even if the IP address registered to the user account does not match the PC’s IP address.
+
+:::
+
+## Multi-Factor Authentication Setting {#multiFactorAuth}
+
+Enable <Cmd sid='team.user.permission.multiFactorAuth' /> to allow users to log in with fingerprint authentication in addition to their password.
+
+:::info
+
+* **Multi-Factor Authentication** refers to the method of authenticating users through two or more authentication procedures. You can enhance the security of your account by using multi-factor authentication.
+
+* For more information about the multi-factor authentication settings, refer to [this document](login-with-mfa).
+
+:::
+
+## Select Access Group {#accessGroup}
+
+You can set access groups for users to restrict access by organization and department. In the <Cmd sid='team.user.permission.title' /> section, select the access group from <Cmd sid='team.user.permission.accessGroup' />.
+
+:::info
+
+For more information about adding and managing access groups, refer to [this document](#).
+
+:::
+
+## Select User’s Primary Authentication Method {#privateAuthMode}
+
+You can set the primary authentication method depending on the user. In the <Cmd sid='team.user.permission.title' /> section, select desired authentication method from <Cmd sid='team.user.permission.privateAuthMode' />. You can additionally select your desired authentication method.
+
+:::info
+
+Enable <Cmd sid='team.user.dialog.extendAuthMode' /> option allows you to combine authentication modes, including face and fingerprints. The <Cmd sid='team.user.dialog.extendAuthMode' /> option is supported on the FaceStation F2, BioStation 3, and BioEntry W3.
+
+:::
+
+## Set Device Primary Authentication Method {#excludeDeviceAuthMode}
+
+You can also set the personal authentication configured in the <Cmd sid='team.user.permission.privateAuthMode' /> field as the default on the device. In the <Cmd sid='team.user.permission.title' /> section, click <Cmd sid='team.user.permission.excludeDeviceAuthMode' /> to set it to <Cmd sid='common.use' />.
+
+:::info
+
+Setting the <Cmd sid='team.user.permission.excludeDeviceAuthMode' /> to <Cmd sid='common.notUse' /> allows the use of both the authentication method and personal authentication method set on the device.
+
+:::
+
+<NextStep>
+<NextItem to='enroll-credential'>
+
+Enroll the user credentials and set the access authentication method.
+
+</NextItem>
+</NextStep>
