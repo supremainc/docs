@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-event-log-import-mdx-9b4.json
-var site_docs_platform_biostar_x_settings_event_log_import_mdx_9b4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-event-log-import","title":"이벤트 로그 가져오기","description":"이벤트 로그를 가져오는 방법에 대한 설명입니다.","source":"@site/docs/platform/biostar_x/settings-event-log-import.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-event-log-import","permalink":"/docs/en/platform/biostar_x/settings-event-log-import","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-event-log-import.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-event-log-import","title":"이벤트 로그 가져오기","description":"이벤트 로그를 가져오는 방법에 대한 설명입니다.","keywords":["이벤트","로그","가져오기"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"작업 조건 및 동작 설정하기","permalink":"/docs/en/platform/biostar_x/settings-triger-and-action"},"next":{"title":"경보 설정하기","permalink":"/docs/en/platform/biostar_x/settings-alert"}}')
+var site_docs_platform_biostar_x_settings_event_log_import_mdx_9b4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-event-log-import","title":"이벤트 로그 가져오기","description":"이벤트 로그를 가져오는 방법에 대한 설명입니다.","source":"@site/docs/platform/biostar_x/settings-event-log-import.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-event-log-import","permalink":"/docs/platform/biostar_x/settings-event-log-import","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-event-log-import.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-event-log-import","title":"이벤트 로그 가져오기","description":"이벤트 로그를 가져오는 방법에 대한 설명입니다.","keywords":["이벤트","로그","가져오기"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"작업 조건 및 동작 설정하기","permalink":"/docs/platform/biostar_x/settings-triger-and-action"},"next":{"title":"경보 설정하기","permalink":"/docs/platform/biostar_x/settings-alert"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'로그',
 		'가져오기'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -189,7 +189,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "데이터 파일을 성공적으로 가져오면 화면에 메시지가 나타납니다."
+      children: "데이터 파일을 가져오는데 성공하면 화면에 메시지가 나타납니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {

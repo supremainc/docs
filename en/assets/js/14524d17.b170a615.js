@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2908"], {
-7558: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7085"], {
+1174: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_data_settings_mdx_145_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-data-mdx-ed0.json
-var site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-data.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-data","permalink":"/docs/en/platform/biostar_x/how-to-guide-data","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-data.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","keywords":["데이터","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"},"next":{"title":"리포트 생성하기","permalink":"/docs/en/platform/biostar_x/data-generate-reports"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-data-settings-mdx-145.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_data_settings_mdx_145_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-settings","title":"Settings","description":"Set the save path for reports with an automatic generation schedule.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/data-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-settings","permalink":"/docs/en/platform/biostar_x/data-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"data-settings","title":"Settings","description":"Set the save path for reports with an automatic generation schedule.","keywords":["Report Save","Automatic Generation"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Automatic Report Schedule","permalink":"/docs/en/platform/biostar_x/data-automatic-report-schedule"},"next":{"title":"Dashboard","permalink":"/docs/en/platform/biostar_x/how-to-guide-dashboard"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-data.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/data-settings.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide-data',
-	title: '데이터',
-	description: '사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.',
+	id: 'data-settings',
+	title: 'Settings',
+	description: 'Set the save path for reports with an automatic generation schedule.',
 	keywords: [
-		'데이터',
-		'keyword2'
+		'Report Save',
+		'Automatic Generation'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -44,28 +44,52 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    li: "li",
+    ol: "ol",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, DocCardList} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        children: "데이터"
-      }), " 메뉴를 사용하면 BioStar X에 등록된 사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "필요시 원하는 리포트를 일정 주기로 자동 생성할 수 있으며 생성된 리포트는 CSV, PDF로 내보내거나 프린트할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        children: "런처"
-      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "데이터"
-      }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "데이터"
-      }), "를 선택하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+      children: ["Set the save path for reports with ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "reportApp.mainMenu.schedule",
+        product: "2"
+      }), " configured."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.mainMenu.settings",
+            product: "2"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Enter the path where you want to save the report."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-data-settings.png",
+          className: "none"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.exportReportPath",
+              product: "2"
+            }), ": The report will be saved to the specified path. If you do not enter a path, it will be automatically saved in the \"Documents\\BioStarX\" folder on your PC."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), " to save the settings."]
+        }), "\n"]
+      }), "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {

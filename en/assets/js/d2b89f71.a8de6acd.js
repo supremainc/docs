@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-server-server-mdx-d2b.json
-var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","keywords":["서버 설정","사용자 관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/platform/biostar_x/settings-server-https"}}')
+var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/en/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","keywords":["서버 설정","사용자 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/en/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/en/platform/biostar_x/settings-server-https"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'서버 설정',
 		'사용자 관리'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -47,7 +47,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "사용자 및 장치 관리하기",
-  "id": "사용자-및-장치-관리하기",
+  "id": "user-and-device-management",
   "level": 2
 }, {
   "value": "시스템 로그 단계 설정하기",
@@ -144,7 +144,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-및-장치-관리하기",
+      id: "user-and-device-management",
       children: "사용자 및 장치 관리하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 동기화와 지문 템플릿 형식을 설정할 수 있습니다."

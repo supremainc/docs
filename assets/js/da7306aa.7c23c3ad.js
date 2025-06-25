@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-automatic-report-schedule-mdx-da7.json
-var site_docs_platform_biostar_x_data_automatic_report_schedule_mdx_da7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-automatic-report-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-automatic-report-schedule","permalink":"/docs/en/platform/biostar_x/data-automatic-report-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-automatic-report-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"리포트 생성하기","permalink":"/docs/en/platform/biostar_x/data-generate-reports"},"next":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/en/platform/biostar_x/data-settings"}}')
+var site_docs_platform_biostar_x_data_automatic_report_schedule_mdx_da7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-automatic-report-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-automatic-report-schedule","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-automatic-report-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","keywords":["자동 리포트","스케줄"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리포트 생성하기","permalink":"/docs/platform/biostar_x/data-generate-reports"},"next":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/platform/biostar_x/data-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -28,10 +28,10 @@ const frontMatter = {
 	title: '자동 생성 스케줄 설정하기',
 	description: '유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'자동 리포트',
+		'스케줄'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -183,7 +183,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "적용"
+            sid: "reportApp.apply",
+            product: "2"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n"]

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9707"], {
-8573: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["674"], {
+2281: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_dashboard_mdx_a57_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-how-to-guide-dashboard-mdx-a57.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_dashboard_mdx_a57_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-dashboard","permalink":"/docs/en/platform/biostar_x/how-to-guide-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-dashboard","title":"Dashboard","description":"This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.","keywords":["Dashboard"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/en/platform/biostar_x/data-settings"},"next":{"title":"How to Use the Dashboard","permalink":"/docs/en/platform/biostar_x/dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-settings-mdx-051.json
+var site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-settings","permalink":"/docs/platform/biostar_x/data-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","keywords":["리포트 저장","자동 생성"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule"},"next":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-dashboard.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-settings.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide-dashboard',
-	title: 'Dashboard',
-	description: 'This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking.',
+	id: 'data-settings',
+	title: '리포트 저장 경로 설정하기',
+	description: '자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.',
 	keywords: [
-		'Dashboard'
+		'리포트 저장',
+		'자동 생성'
 	],
 	isTranslationMissing: false
 };
@@ -43,22 +44,52 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    li: "li",
+    ol: "ol",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, DocCardList} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This guide provides information about the dashboard feature, which allows each user to freely configure and arrange widgets to their liking."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Click on ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Dashboard"
-      }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.launcher"
-      }), " page."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "reportApp.mainMenu.schedule",
+        product: "2"
+      }), "을 설정한 리포트의 저장 경로를 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.mainMenu.settings",
+            product: "2"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "리포트를 저장할 경로를 입력하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-data-settings.png",
+          className: "none"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.exportReportPath",
+              product: "2"
+            }), ": 지정한 경로로 리포트가 저장되며, 경로를 입력하지 않으면 사용자 PC의 \"Documents\\BioStarX\" 폴더에 자동으로 저장됩니다."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {

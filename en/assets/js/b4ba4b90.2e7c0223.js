@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8042"], {
-7223: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3905"], {
+1889: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_automatic_report_schedule_mdx_da7_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_data_automatic_report_schedule_mdx_b4b_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-automatic-report-schedule-mdx-da7.json
-var site_docs_platform_biostar_x_data_automatic_report_schedule_mdx_da7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-automatic-report-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-automatic-report-schedule","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-automatic-report-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"data-automatic-report-schedule","title":"자동 생성 스케줄 설정하기","description":"유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리포트 생성하기","permalink":"/docs/platform/biostar_x/data-generate-reports"},"next":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/platform/biostar_x/data-settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-data-automatic-report-schedule-mdx-b4b.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_data_automatic_report_schedule_mdx_b4b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-automatic-report-schedule","title":"Automatic Report Schedule","description":"Set a schedule to automatically generate custom reports created by setting the DYNAMIC period.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/data-automatic-report-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-automatic-report-schedule","permalink":"/docs/en/platform/biostar_x/data-automatic-report-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-automatic-report-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"data-automatic-report-schedule","title":"Automatic Report Schedule","description":"Set a schedule to automatically generate custom reports created by setting the DYNAMIC period.","keywords":["Automatic Report","Schedule"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Generate Report","permalink":"/docs/en/platform/biostar_x/data-generate-reports"},"next":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/data-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-automatic-report-schedule.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/data-automatic-report-schedule.mdx
 
 
 const frontMatter = {
 	id: 'data-automatic-report-schedule',
-	title: '자동 생성 스케줄 설정하기',
-	description: '유동 기간으로 설정하여 생성한 커스텀 리포트를 자동으로 생성하도록 스케줄을 설정할 수 있습니다.',
+	title: 'Automatic Report Schedule',
+	description: 'Set a schedule to automatically generate custom reports created by setting the DYNAMIC period.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'Automatic Report',
+		'Schedule'
 	],
 	isTranslationMissing: false
 };
@@ -56,23 +56,23 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["유동 기간으로 설정하여 생성한 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Set a schedule to automatically generate ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "reportApp.customReport",
         product: "2"
-      }), "를 자동으로 생성하도록 스케줄을 설정할 수 있습니다."]
+      }), " created by setting the DYNAMIC period."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.mainMenu.schedule",
             product: "2"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "스케줄 추가"
-          }), "를 클릭하세요."]
+            children: "Add Schedule"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "각 항목을 설정하세요."
+          children: "Set each field as needed."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-data-automatic-report-schedule.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -81,13 +81,13 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "reportApp.information",
                 product: "2"
-              }), ": 자동 생성 스케줄의 기본 정보를 설정할 수 있습니다."]
+              }), ": Set basic information of Automatic Report Schedule."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "reportApp.scheduleName",
                   product: "2"
-                }), ": 스케줄의 이름을 입력하세요."]
+                }), ": Enter the schedule name."]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -95,28 +95,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "reportApp.reportAndSchedule",
                 product: "2"
-              }), ": 리포트별 자동 생성 스케줄을 설정할 수 있습니다."]
+              }), ": Set the schedule to be automatically generated for each report."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.report",
                     product: "2"
-                  }), ": 자동 생성할 커스텀 리포트를 선택할 수 있습니다. 유동 기간으로 설정된 커스텀 리포트만 나타납니다."]
+                  }), ": Select a custom report to automatically generate. Only custom reports set to DYNAMIC period will appear."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.frequency",
                     product: "2"
-                  }), ": 리포트를 자동 생성할 주기를 설정할 수 있습니다."]
+                  }), ": Set the frequency to automatically generate reports."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.generateTime",
                     product: "2"
-                  }), ": 리포트를 자동 생성할 시간을 설정할 수 있습니다."]
+                  }), ": Set the time to automatically generate reports."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -125,41 +125,41 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "reportApp.reportFormat",
                 product: "2"
-              }), ": 리포트별 형식을 설정할 수 있습니다."]
+              }), ": Set the format for each report."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.outputType",
                     product: "2"
-                  }), ": 리포트의 자동 생성 방식을 설정할 수 있습니다."]
+                  }), ": Set the automatically generate method of reports."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.reportTitle",
                     product: "2"
-                  }), ": 리포트 이름을 모든 페이지에 제목으로 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                  }), ": Select ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.showTitle",
                     product: "2"
-                  }), "를 선택하세요."]
+                  }), " to display the report name as the title on every page."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.header",
                     product: "2"
-                  }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+                  }), ": If ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.showHeader",
                     product: "2"
-                  }), "를 선택하면 리포트 생성 시 헤더를 표시할 수 있습니다. 헤더를 모든 페이지에 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                  }), " is selected, the header is displayed when the report is created. Select ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.onEveryPage",
                     product: "2"
-                  }), "를 선택하세요."]
+                  }), " to display the header on every page."]
                 }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
                   type: "info",
                   children: (0,jsx_runtime.jsx)(_components.p, {
-                    children: "리포트별로 생성되는 헤더는 다를 수 있습니다."
+                    children: "The header may vary depending on the reports."
                   })
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -167,14 +167,14 @@ function _createMdxContent(props) {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.footer",
                     product: "2"
-                  }), ": 페이지 번호 표시 여부를 설정할 수 있습니다."]
+                  }), ": Set whether to display page numbers."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "reportApp.fileFormat",
                     product: "2"
-                  }), ": 리포트를 내보낼 파일 형식을 설정할 수 있습니다."]
+                  }), ": Set the file format for exporting reports."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -182,9 +182,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "적용"
-          }), "을 클릭하세요."]
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), " to save the settings."]
         }), "\n"]
       }), "\n"]
     })]

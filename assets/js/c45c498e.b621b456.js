@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["674"], {
-2281: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4170"], {
+7282: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-settings-mdx-051.json
-var site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-settings","permalink":"/docs/en/platform/biostar_x/data-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/en/platform/biostar_x/data-automatic-report-schedule"},"next":{"title":"Dashboard","permalink":"/docs/en/platform/biostar_x/how-to-guide-dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-generate-reports-mdx-c45.json
+var site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-generate-reports.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-generate-reports","permalink":"/docs/platform/biostar_x/data-generate-reports","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-generate-reports.mdx","tags":[],"version":"current","frontMatter":{"id":"data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","keywords":["리포트","템플릿"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"데이터","permalink":"/docs/platform/biostar_x/how-to-guide-data"},"next":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-settings.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-generate-reports.mdx
 
 
 const frontMatter = {
-	id: 'data-settings',
-	title: '리포트 저장 경로 설정하기',
-	description: '자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.',
+	id: 'data-generate-reports',
+	title: '리포트 생성하기',
+	description: '원하는 포맷에 맞게 리포트를 생성할 수 있습니다.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'리포트',
+		'템플릿'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -47,47 +47,55 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
-    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Calloutlists, Cmd, Image} = _components;
+  if (!Calloutlists) _missingMdxReference("Calloutlists", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "reportApp.mainMenu.schedule",
-        product: "2"
-      }), "을 설정한 리포트의 저장 경로를 설정할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.mainMenu.settings",
-            product: "2"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "리포트를 저장할 경로를 입력하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-data-settings.png",
-          className: "none"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "원하는 포맷에 맞게 리포트를 생성할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
+      children: (0,jsx_runtime.jsxs)(_components.ol, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.exportReportPath",
+              sid: "reportApp.savedReports",
               product: "2"
-            }), ": 지정한 경로로 리포트가 저장되며, 경로를 입력하지 않으면 사용자 PC의 \"Documents\\BioStarX\" 폴더에 자동으로 저장됩니다."]
+            }), ": 생성한 리포트에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.saveReport",
+              product: "2"
+            }), "을 클릭하면 이곳의 하위에 템플릿으로 저장됩니다. 추후 동일한 조건으로 리포트를 생성해야할 때 유용하게 사용할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.user",
+              product: "2"
+            }), ": 사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.event",
+              product: "2"
+            }), ": 원하는 이벤트, 기간, 필터(", (0,jsx_runtime.jsx)(Cmd, {
+              children: "사용자"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "출입문"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "장치"
+            }), ")를 선택하여 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.customReport",
+              product: "2"
+            }), "를 생성할 수 있습니다."]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "적용"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
+      })
     })]
   });
 }

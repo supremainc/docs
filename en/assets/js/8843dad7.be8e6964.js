@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4170"], {
-7282: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1095"], {
+5105: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_data_mdx_884_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-generate-reports-mdx-c45.json
-var site_docs_platform_biostar_x_data_generate_reports_mdx_c45_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-generate-reports.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-generate-reports","permalink":"/docs/en/platform/biostar_x/data-generate-reports","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-generate-reports.mdx","tags":[],"version":"current","frontMatter":{"id":"data-generate-reports","title":"리포트 생성하기","description":"원하는 포맷에 맞게 리포트를 생성할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"데이터","permalink":"/docs/en/platform/biostar_x/how-to-guide-data"},"next":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/en/platform/biostar_x/data-automatic-report-schedule"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-how-to-guide-data-mdx-884.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_data_mdx_884_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-data","title":"Data","description":"Create and save user information or various events in the desired format.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-data.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-data","permalink":"/docs/en/platform/biostar_x/how-to-guide-data","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-data.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-data","title":"Data","description":"Create and save user information or various events in the desired format.","keywords":["Data"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/en/platform/biostar_x/monitoring-event"},"next":{"title":"Generate Report","permalink":"/docs/en/platform/biostar_x/data-generate-reports"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/data-generate-reports.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-data.mdx
 
 
 const frontMatter = {
-	id: 'data-generate-reports',
-	title: '리포트 생성하기',
-	description: '원하는 포맷에 맞게 리포트를 생성할 수 있습니다.',
+	id: 'how-to-guide-data',
+	title: 'Data',
+	description: 'Create and save user information or various events in the desired format.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'Data'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -44,59 +43,28 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    li: "li",
-    ol: "ol",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Calloutlists, Cmd, Image} = _components;
-  if (!Calloutlists) _missingMdxReference("Calloutlists", true);
+  }, {Cmd, DocCardList} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Image) _missingMdxReference("Image", true);
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "원하는 포맷에 맞게 리포트를 생성할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-data.png",
-      className: "none"
-    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
-      children: (0,jsx_runtime.jsxs)(_components.ol, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.savedReports",
-              product: "2"
-            }), ": 생성한 리포트에서 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.saveReport",
-              product: "2"
-            }), "을 클릭하면 이곳의 하위에 템플릿으로 저장됩니다. 추후 동일한 조건으로 리포트를 생성해야할 때 유용하게 사용할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.user",
-              product: "2"
-            }), ": 사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.event",
-              product: "2"
-            }), ": 원하는 이벤트, 기간, 필터(", (0,jsx_runtime.jsx)(Cmd, {
-              children: "사용자"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "출입문"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "장치"
-            }), ")를 선택하여 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.customReport",
-              product: "2"
-            }), "를 생성할 수 있습니다."]
-          }), "\n"]
-        }), "\n"]
-      })
-    })]
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Data"
+      }), " menu, create and save user information or various events in BioStar X in the desired format."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Automatically generate the desired reports periodically, and the generated reports can be exported or printed as CSV or PDF."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Data"
+      }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), " page or select ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Data"
+      }), " from the shortcut list at the top left of the screen."]
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
 function MDXContent(props = {}) {

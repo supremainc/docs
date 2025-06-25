@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3222"], {
-4043: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2908"], {
+7558: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_export_import_user_info_mdx_10b_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-export-import-user-info-mdx-10b.json
-var site_docs_platform_biostar_x_export_import_user_info_mdx_10b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/export-import-user-info","title":"사용자 정보 내보내기/가져오기","description":"사용자 정보를 내보내거나 가져오기를 통해 이전 버전 또는 다른 서버의 사용자 정보를 활용할 수 있습니다.","source":"@site/docs/platform/biostar_x/export-import-user-info.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/export-import-user-info","permalink":"/docs/platform/biostar_x/export-import-user-info","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/export-import-user-info.mdx","tags":[],"version":"current","frontMatter":{"id":"export-import-user-info","title":"사용자 정보 내보내기/가져오기","description":"사용자 정보를 내보내거나 가져오기를 통해 이전 버전 또는 다른 서버의 사용자 정보를 활용할 수 있습니다.","keywords":["사용자 정보","내보내기","가져오기"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 출입 이력 추적하기","permalink":"/docs/platform/biostar_x/trace-user-access-log"},"next":{"title":"출입 그룹 관리하기","permalink":"/docs/platform/biostar_x/view-user-by-access"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-data-mdx-ed0.json
+var site_docs_platform_biostar_x_how_to_guide_data_mdx_ed0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-data.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-data","permalink":"/docs/platform/biostar_x/how-to-guide-data","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-data.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-data","title":"데이터","description":"사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.","keywords":["데이터"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이벤트 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-event"},"next":{"title":"리포트 생성하기","permalink":"/docs/platform/biostar_x/data-generate-reports"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/export-import-user-info.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-data.mdx
 
 
 const frontMatter = {
-	id: 'export-import-user-info',
-	title: '사용자 정보 내보내기/가져오기',
-	description: '사용자 정보를 내보내거나 가져오기를 통해 이전 버전 또는 다른 서버의 사용자 정보를 활용할 수 있습니다.',
+	id: 'how-to-guide-data',
+	title: '데이터',
+	description: '사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다.',
 	keywords: [
-		'사용자 정보',
-		'내보내기',
-		'가져오기'
+		'데이터'
 	],
 	isTranslationMissing: false
 };
@@ -44,7 +42,30 @@ const assets = {
 
 const toc = [];
 function _createMdxContent(props) {
-  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
+  const _components = {
+    p: "p",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  }, {Cmd, DocCardList} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), " 메뉴를 사용하면 BioStar X에 등록된 사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "필요시 원하는 리포트를 일정 주기로 자동 생성할 수 있으며 생성된 리포트는 CSV, PDF로 내보내거나 프린트할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "데이터"
+      }), "를 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
+  });
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
@@ -57,6 +78,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
