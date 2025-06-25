@@ -179,6 +179,28 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
 
 :::
 
+## 서버 매칭 설정하기
+
+서버 매칭을 설정할 수 있습니다. 서버 매칭을 사용하면 사용자 정보를 장치에서 인증하지 않고 BioStar X에서 인증합니다.
+
+서버 매칭은 어드밴스(Advanced) 이상의 라이선스를 활성화했을 때 나타납니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+
+<Image src='/img/biostarx-settings-server-server-matching.png' className='none' />
+
+* <Cmd sid="setting.server.serverMatching.use" product='2' />: 서버 매칭 사용 여부를 설정할 수 있습니다.
+
+* <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' />: 한 번에 매칭할 수 있는 최대 서버 매칭 수를 설정할 수 있습니다.
+
+  :::info
+
+  * <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' />는 PC의 CPU 성능에 따라 달라집니다.
+
+  :::
+
+* <Cmd sid="setting.server.serverMatching.fastMode" product='2' />: 지문 매칭 속도를 조절할 수 있습니다.
+
+* <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: 지문 및 얼굴에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다.
+
 ## 시스템 로그 단계 설정하기
 
 데이터베이스에 저장되는 시스템 로그의 레벨을 설정할 수 있습니다.
@@ -190,6 +212,8 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
 ## 비주얼 페이스 이미지 저장하기
 
 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다.
+
+<Calloutlists>
 
 1. <Cmd sid="settings.expertSettings.title" product='2' />에서 <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' />를 <Cmd sid="common.use" product='2' />으로 활성화하세요.
 
@@ -220,5 +244,7 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
   * 이 기능을 비활성화한 후 <Cmd sid="menu.dataImport" product='2' /> 시 유효하지 않은 비주얼 페이스 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요.
 
   :::
+
+</Calloutlists>
 
 4. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
