@@ -156,7 +156,9 @@ const sidebars = {
             id: 'platform/biostar_x/how-to-guide-dashboard',
           },
           items: [
-            'platform/biostar_x/dashboard'
+            'platform/biostar_x/dashboard-adding-widget',
+            'platform/biostar_x/dashboard-edit-widget',
+            'platform/biostar_x/dashboard-delete-widget'
           ]
         },
         {
