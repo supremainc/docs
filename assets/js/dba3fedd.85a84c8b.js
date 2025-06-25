@@ -52,10 +52,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Column, Columns, Image} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Column) _missingMdxReference("Column", true);
-  if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -90,55 +88,46 @@ function _createMdxContent(props) {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: "트리 구조 메뉴는 아래와 같은 구조로 구성되어 있습니다."
-      }), (0,jsx_runtime.jsxs)(Columns, {
-        children: [(0,jsx_runtime.jsx)(Column, {
-          children: (0,jsx_runtime.jsx)(Image, {
-            src: "/img/biostarx-user-access-explorer-tree-level.png"
-          })
-        }), (0,jsx_runtime.jsxs)(Column, {
-          className: "padding--l10",
-          children: [(0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "All Access Groups"
-            })
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
+      }), (0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "All Access Groups"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Access Group: 출입 그룹"
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Access Group: 출입 그룹"
+                children: "Access Level: 출입 등급"
               }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Access Level: 출입 등급"
-                  }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "Door: 출입문"
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "Schedule: 스케줄"
-                      }), "\n"]
-                    }), "\n"]
+                    children: "Door: 출입문"
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Floor Level: 층 등급"
-                  }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "Floor: 층"
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "Schedule: 스케줄"
-                      }), "\n"]
-                    }), "\n"]
+                    children: "Schedule: 스케줄"
+                  }), "\n"]
+                }), "\n"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Floor Level: 층 등급"
+              }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Floor: 층"
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Schedule: 스케줄"
                   }), "\n"]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
-          })]
-        })]
+          }), "\n"]
+        }), "\n"]
       })]
     })]
   });

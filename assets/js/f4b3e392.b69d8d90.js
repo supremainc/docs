@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-custom-interface-mdx-f4b.json
-var site_docs_platform_biostar_x_settings_custom_interface_mdx_f4b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-custom-interface","title":"퀵 액션 사용하기","description":"설정된 퀵 액션을 메인화면에 추가할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-custom-interface.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-custom-interface","permalink":"/docs/platform/biostar_x/settings-custom-interface","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-custom-interface.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-custom-interface","title":"퀵 액션 사용하기","description":"설정된 퀵 액션을 메인화면에 추가할 수 있습니다.","keywords":["keyword1","keyword2"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이메일 설정하기","permalink":"/docs/platform/biostar_x/settings-email-setting"},"next":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"}}')
+var site_docs_platform_biostar_x_settings_custom_interface_mdx_f4b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-custom-interface","title":"퀵 액션 사용하기","description":"설정된 퀵 액션을 메인화면에 추가할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-custom-interface.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-custom-interface","permalink":"/docs/platform/biostar_x/settings-custom-interface","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-custom-interface.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-custom-interface","title":"퀵 액션 사용하기","description":"설정된 퀵 액션을 메인화면에 추가할 수 있습니다.","keywords":["퀵 액션","커스텀 인터페이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"이메일 설정하기","permalink":"/docs/platform/biostar_x/settings-email-setting"},"next":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -28,8 +28,8 @@ const frontMatter = {
 	title: '퀵 액션 사용하기',
 	description: '설정된 퀵 액션을 메인화면에 추가할 수 있습니다.',
 	keywords: [
-		'keyword1',
-		'keyword2'
+		'퀵 액션',
+		'커스텀 인터페이스'
 	],
 	isTranslationMissing: false
 };

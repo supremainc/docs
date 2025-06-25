@@ -849,7 +849,7 @@ function DocItemLayout(param) {
 
 
 }),
-8921: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+8183: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -5248,6 +5248,41 @@ const SvgIcoLogout = _ref => {
   })))));
 };
 /* ESM default export */ const ico_logout = (SvgIcoLogout);
+;// CONCATENATED MODULE: ./static/img/menus/ico-tip.svg
+var ico_tip_g, ico_tip_defs;
+function ico_tip_extends() { return ico_tip_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_tip_extends.apply(null, arguments); }
+
+const SvgIcoTip = _ref => {
+  let {
+    title,
+    titleId,
+    ...props
+  } = _ref;
+  return /*#__PURE__*/react.createElement("svg", ico_tip_extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react.createElement("title", {
+    id: titleId
+  }, title) : null, ico_tip_g || (ico_tip_g = /*#__PURE__*/react.createElement("g", {
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#06C5A4",
+    d: "M8 15.2A7.2 7.2 0 1 0 8 .8a7.2 7.2 0 0 0 0 14.4"
+  }), /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M7.425 11.79a.55.55 0 0 1-.225-.442.7.7 0 0 1 .016-.144.66.66 0 0 1 .209-.34.97.97 0 0 1 .575-.168c.2-.007.397.053.56.17a.63.63 0 0 1 .224.325.1.1 0 0 1 .016.04v.117a.54.54 0 0 1-.24.442 1 1 0 0 1-.145.118A.9.9 0 0 1 8 12a.85.85 0 0 1-.575-.21m0-1.966A.6.6 0 0 1 7.2 9.36V3.888a.7.7 0 0 1 .224-.51A.95.95 0 0 1 8 3.2a.88.88 0 0 1 .56.178c.12.098.204.232.24.382v5.6a.58.58 0 0 1-.24.467 1 1 0 0 1-.145.124.85.85 0 0 1-.416.096.82.82 0 0 1-.574-.223"
+  }))), ico_tip_defs || (ico_tip_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
+};
+/* ESM default export */ const ico_tip = (SvgIcoTip);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -5282,6 +5317,7 @@ const SvgIcoLogout = _ref => {
 
 
 // icon images svg
+
 
 
 
@@ -5442,7 +5478,8 @@ const SvgIcoLogout = _ref => {
     IcCopy2: ico_copy2,
     IcRefresh: ico_refresh,
     IcInfo: ico_info,
-    IcLogout: ico_logout
+    IcLogout: ico_logout,
+    IcTip: ico_tip
 });
 
 

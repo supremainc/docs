@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-email-setting-mdx-255.json
-var site_docs_platform_biostar_x_settings_email_setting_mdx_255_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-email-setting","title":"이메일 설정하기","description":"사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-email-setting.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-email-setting","permalink":"/docs/en/platform/biostar_x/settings-email-setting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-email-setting.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-email-setting","title":"이메일 설정하기","description":"사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.","keywords":["이메일 설정","비주얼 페이스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"방문자 설정","permalink":"/docs/en/platform/biostar_x/settings-visitor"},"next":{"title":"퀵 액션 사용하기","permalink":"/docs/en/platform/biostar_x/settings-custom-interface"}}')
+var site_docs_platform_biostar_x_settings_email_setting_mdx_255_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-email-setting","title":"이메일 설정하기","description":"사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-email-setting.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-email-setting","permalink":"/docs/platform/biostar_x/settings-email-setting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-email-setting.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-email-setting","title":"이메일 설정하기","description":"사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.","keywords":["이메일 설정","비주얼 페이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"방문자 설정","permalink":"/docs/platform/biostar_x/settings-visitor"},"next":{"title":"퀵 액션 사용하기","permalink":"/docs/platform/biostar_x/settings-custom-interface"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'이메일 설정',
 		'비주얼 페이스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -39,6 +39,9 @@ const assets = {
 
 };
 
+/*
+* 이메일 정보를 설정하기 전에 클라우드를 먼저 활성화하세요. 클라우드를 사용하려면 스탠다드 이상의 라이선스가 필요합니다. 클라우드에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+*/
 
 
 const toc = [{
@@ -76,13 +79,6 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이메일 정보를 설정하기 전에 클라우드를 먼저 활성화하세요. 클라우드를 사용하려면 스탠다드 이상의 라이선스가 필요합니다. 클라우드에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급하려면 반드시 사용자 정보에 이메일 주소가 등록되어 있어야 합니다. 사용자 정보에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "add-user-basic-info",
@@ -160,6 +156,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "이메일-콘텐츠-설정하기",
       children: "이메일 콘텐츠 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "이메일 발송을 위한 SMTP 서버 정보를 입력하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-email-contents.png",
       className: "none"
@@ -259,24 +257,19 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "비주얼-페이스-모바일-등록-설정하기",
       children: "비주얼 페이스 모바일 등록 설정하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["비주얼 페이스 모바일 등록을 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.use",
+        product: "2"
+      }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.notUse",
+        product: "2"
+      }), "으로 설정하면 이메일을 통해 사용자에게 비주얼 페이스 등록 링크를 전송할 수 없습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-email-visual-face.png",
       className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.emailContent.visualFaceInformation",
-            product: "2"
-          }), ": 비주얼 페이스 모바일 등록을 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.use",
-            product: "2"
-          }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.notUse",
-            product: "2"
-          }), "으로 설정하면 이메일을 통해 사용자에게 비주얼 페이스 등록 링크를 전송할 수 없습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.emailContent.title",
@@ -333,24 +326,19 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "qr바코드-발급-설정하기",
       children: "QR/바코드 발급 설정하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["이메일을 통해 사용자에게 QR/바코드를 발급하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.use",
+        product: "2"
+      }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.notUse",
+        product: "2"
+      }), "으로 설정하면 이메일을 통해 사용자에게 QR/바코드를 전송할 수 없습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-email-qr.png",
       className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.emailContent.qrInformation",
-            product: "2"
-          }), ": 이메일을 통해 사용자에게 QR/바코드를 발급하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.use",
-            product: "2"
-          }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.notUse",
-            product: "2"
-          }), "으로 설정하면 이메일을 통해 사용자에게 QR/바코드를 전송할 수 없습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.emailContent.title",

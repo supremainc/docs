@@ -83,29 +83,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["프로필 화면 아래에 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.event.trace"
-      }), " 섹션에서 해당 사용자의 출입 이력을 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.event.trace"
-      }), " 섹션에서 제공하는 정보는 아래를 참고하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "main.dialog.alarmEvent.acEvent.datetime"
-          }), ": 출입이 발생한 날짜와 시간입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "main.dialog.alarmEvent.acEvent.device"
-          }), ": 출입이 발생한 장치의 이름입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.eventTable.event"
-          }), " : 출입 이벤트에 대한 상세 설명입니다."]
-        }), "\n"]
-      }), "\n"]
+      }), " 섹션에서 해당 사용자의 출입 이력을 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -123,7 +101,7 @@ function _createMdxContent(props) {
             children: ["과거의 출입 이벤트는 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "shell.header.data"
             }), " 페이지에서 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+              href: "how-to-guide-data",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
