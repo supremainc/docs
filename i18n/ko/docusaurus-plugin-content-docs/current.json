@@ -126,5 +126,9 @@
   "sidebar.biostation2a.category.사용하기": {
     "message": "사용하기",
     "description": "The label for category 사용하기 in sidebar biostation2a"
+  },
+  "sidebar.biostarx.category.사용자 크리덴셜 등록하기": {
+    "message": "사용자 크리덴셜 등록하기",
+    "description": "The label for category 사용자 크리덴셜 등록하기 in sidebar biostarx"
   }
 }
