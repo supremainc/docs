@@ -78,6 +78,7 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_x/enroll-credential-securitylevel',
+                'platform/biostar_x/enroll-credential-authmode',
                 'platform/biostar_x/enroll-credential-fingerprint',
                 'platform/biostar_x/enroll-credential-face',
                 'platform/biostar_x/enroll-credential-card',
