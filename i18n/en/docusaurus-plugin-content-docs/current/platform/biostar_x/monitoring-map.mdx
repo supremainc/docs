@@ -1,0 +1,141 @@
+---
+id: monitoring-map
+title: Monitoring Map
+description: This guide explains how to monitor and control the real-time status of doors and cameras by zone and floor using the map monitoring feature. Visually manage areas and floor structures integrated with Google Maps, utilizing various features such as access control and camera video playback.
+keywords:
+  - Monitoring
+  - Map
+  - Zone
+  - 층
+---
+
+This guide explains how to monitor and control the real-time status of doors and cameras by zone and floor using the map monitoring feature. Map monitoring allows for easy navigation of areas and floors through a visual interface integrated with Google Maps, enabling various features such as access door control and camera video playback.
+
+To access the <Cmd sid='arena.title' /> page, click <Cmd sid='arena.title' /> in the <Cmd sid='shell.header.launcher' /> or select <Cmd sid='arena.title' /> from the menu at the top left of the screen.
+
+In **BioStar X**, you can configure multiple floors in one area. In one floor, you can set up the door and camera based on the drawing for monitoring. Please refer to the below.
+
+![Area structure](/img/common/monitoring-map-area-tree.png)
+
+As shown in the figure, you can integrate the configured regions with Google Maps to monitor and control doors and cameras by accessing them in order: Area → Floor on the map. This structure can also be seen in the sidebar of the <Cmd sid='arena.title' /> page. 
+
+![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
+
+:::info
+
+For more information about configuring the map, refer to [this document](#).
+
+:::
+
+## Components and Options {#component-and-options}
+
+### Component {#component}
+
+The components displayed on the map or layer can show the area and the camera connected to the area. You can access the floor through the area. You can check the door and camera on the floor.
+
+<div className='col2--20-80'>
+
+|                           Component                           | Description                                                                                                                                                                        |
+| :-----------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      ![구역 아이콘](/img/common/monitoring-map-area-icon.svg)      | **Area**: Click on the area to enter the corresponding Floor.                                                                                                                      |
+|   ![출입문 아이콘](/img/common/monitoring-map-floor-door-icon.svg)  | **Door**: Clicking the door will display a popup menu that allows you to control that door. For more information on the provided features, refer to [this document](control-door). |
+|     ![카메라 아이콘](/img/common/monitoring-map-camera-icon.svg)    | **Camera**: Clicking the camera will play the video of the corresponding area.                                                                                                     |
+| ![카메라 오류 아이콘](/img/common/monitoring-map-err-camera-icon.svg) | **Camera Error**: This message appears when the camera is not connected or powered off.                                                                                            |
+
+</div>
+
+### Options {#options}
+
+The options feature provided in the map or layer is as follows.
+
+<div className='col2--20-80'>
+
+|                                                            Feature                                                           | Description                                                                                                                                                  |
+| :--------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![확대/축소](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![확대/축소](/img/common/monitoring-map-zoom-reduce-horizon.svg) | You can click the buttons located at the top left and bottom right of the map to zoom in/out. You can also use the mouse wheel to zoom in or out of the map. |
+|                                               <IcClose width='30' height='30'/>                                              | To close the map or floor positioned on the video tile, click the button at the top right.                                                                   |
+|                                               <IcMove width='30' height='30'/>                                               | Hover over the map to display an icon, then click and drag it to move the map to a different position within the video tile.                                 |
+
+</div>
+
+:::info
+
+* You can move the position by dragging the mouse while clicking on the map. The default behavior is the same as Google Maps.
+
+* Double-click the map to expand it to full screen. Double-click again or press the <Kbd>ESC</Kbd> key to return to the original size.
+
+:::
+
+## Open Map {#open-map}
+
+If each area set in every zone is linked to Google Maps, you can display the map on the video tile in the <Cmd sid='arena.title' /> section.
+
+1. Select the area to view on the map from the left sidebar.
+
+2. 마우스 오른쪽 버튼을 클릭하세요. 
+
+3. Click <Cmd sid='arena.tree.contextMenu.openMap' /> in the popup menu.
+
+The map of the selected area will be displayed in the video tile of the <Cmd sid='arena.title' /> section.
+
+<Image src='/img/monitoring-map-open-map.png' alt='맵 열기' />
+
+:::info
+
+* You can also open the map by double-clicking the corresponding area in the left sidebar.
+
+* The image is an example screen. The actual screen may differ.
+
+:::
+
+## Enter the Floor {#entry-floor}
+
+Click the area to enter the floor on the map. When the list of floors accessible from the popup menu is displayed, please select the desired floor. You can check the drawings, doors, and cameras on the selected floor.
+
+<Image src='/img/monitoring-map-select-floor.png' alt='층 선택하기' />
+
+* Clicking the door will display a popup menu that allows you to control that door. For more information on the provided features, refer to [this document](control-door).
+
+  <Image src='/img/monitoring-map-floor-control-door.png' alt='출입문 제어' />
+
+* Clicking the camera will play the video of the corresponding area.
+
+  <Image src='/img/monitoring-map-select-floor-play-video.png' alt='카메라 영상 재생' />
+
+:::info
+
+* For more information on how to set the door and camera on the floor, refer to [this document](#).
+
+* Click the <IcBack/> button at the top left to go to the map where the area is displayed.
+
+* For more information about video control methods and the tools displayed in the video, refer to [this document](monitoring-video#control-video).
+
+* The image is an example screen. The actual screen may differ.
+
+:::
+
+## Move to Another Floor {#move-to-another-floor}
+
+To move to a different floor, click on the selection option in the upper left corner of the map and select the floor you want to move to.
+
+<Image src='/img/monitoring-map-select-floor-list-box.png' alt='다른 층 선택하기' />
+
+:::info
+
+Click the <IcBack/> button at the top left to go to the map where the area is displayed.
+
+:::
+
+## Controlling Camera {#control-camera}
+
+* To place and play the camera feed on the video tile, double-click the camera in the <Cmd sid='arena.map.title' /> list on the left sidebar of the screen. Or right-click and select <Cmd sid='arena.tree.contextMenu.openVideo' /> from the popup menu.
+
+* To check detailed information such as the camera's name and location, select the camera from the <Cmd sid='arena.map.title' /> list in the left sidebar and right-click on it. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu.
+
+:::info
+
+* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears.
+
+* For more information about video control methods and the tools displayed in the video, refer to [this document](monitoring-video#control-video).
+
+:::
