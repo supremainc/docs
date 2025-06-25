@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5660"], {
-5944: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9707"], {
+8573: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_dashboard_mdx_02b_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_dashboard_mdx_a57_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-dashboard-mdx-02b.json
-var site_docs_platform_biostar_x_how_to_guide_dashboard_mdx_02b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/how-to-guide-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-dashboard","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-dashboard","title":"대시보드","description":"사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.","keywords":["대시보드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/platform/biostar_x/data-settings"},"next":{"title":"대시보드 사용하기","permalink":"/docs/platform/biostar_x/dashboard"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-how-to-guide-dashboard-mdx-a57.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_dashboard_mdx_a57_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-dashboard","title":"Dashboard","description":"The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-dashboard","permalink":"/docs/en/platform/biostar_x/how-to-guide-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-dashboard","title":"Dashboard","description":"The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.","keywords":["Dashboard","Widget"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/data-settings"},"next":{"title":"Adding Widgets","permalink":"/docs/en/platform/biostar_x/dashboard-adding-widget"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-dashboard.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-dashboard.mdx
 
 
 const frontMatter = {
 	id: 'how-to-guide-dashboard',
-	title: '대시보드',
-	description: '사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다.',
+	title: 'Dashboard',
+	description: 'The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.',
 	keywords: [
-		'대시보드'
+		'Dashboard',
+		'Widget'
 	],
 	isTranslationMissing: false
 };
@@ -43,7 +44,10 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
+    li: "li",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, DocCardList} = _components;
@@ -51,13 +55,27 @@ function _createMdxContent(props) {
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 개인별로 자유롭게 위젯을 설정하고 배치할 수 있는 대시보드 기능에 대해 안내합니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.launcher"
-      }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "대시보드"
-      }), "를 클릭하세요."]
+      children: "The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For each user, the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Dashboard"
+            }), " can be configured for them personally."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Information available on the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Dashboard"
+            }), " may vary depending on ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "user.bioStarOperator",
+              product: "2"
+            }), "."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }

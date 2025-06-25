@@ -42,7 +42,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "일반 설정하기",
+  "value": "기본 정보 설정하기",
   "id": "general",
   "level": 2
 }, {
@@ -100,7 +100,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "general",
-      children: "일반 설정하기"
+      children: "기본 정보 설정하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar X의 기본 정보를 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {

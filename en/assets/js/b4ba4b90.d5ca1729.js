@@ -41,10 +41,23 @@ const assets = {
 
 
 
-const toc = [];
+const toc = [{
+  "value": "Information",
+  "id": "information",
+  "level": 2
+}, {
+  "value": "Report &amp; Schedule",
+  "id": "report--schedule",
+  "level": 2
+}, {
+  "value": "Report Format",
+  "id": "report-format",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
@@ -73,120 +86,120 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Set each field as needed."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-data-automatic-report-schedule.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.information",
-                product: "2"
-              }), ": Set basic information of Automatic Report Schedule."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "reportApp.scheduleName",
-                  product: "2"
-                }), ": Enter the schedule name."]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.reportAndSchedule",
-                product: "2"
-              }), ": Set the schedule to be automatically generated for each report."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.report",
-                    product: "2"
-                  }), ": Select a custom report to automatically generate. Only custom reports set to DYNAMIC period will appear."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.frequency",
-                    product: "2"
-                  }), ": Set the frequency to automatically generate reports."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.generateTime",
-                    product: "2"
-                  }), ": Set the time to automatically generate reports."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.reportFormat",
-                product: "2"
-              }), ": Set the format for each report."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.outputType",
-                    product: "2"
-                  }), ": Set the automatically generate method of reports."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.reportTitle",
-                    product: "2"
-                  }), ": Select ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.showTitle",
-                    product: "2"
-                  }), " to display the report name as the title on every page."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.header",
-                    product: "2"
-                  }), ": If ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.showHeader",
-                    product: "2"
-                  }), " is selected, the header is displayed when the report is created. Select ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.onEveryPage",
-                    product: "2"
-                  }), " to display the header on every page."]
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsx)(_components.p, {
-                    children: "The header may vary depending on the reports."
-                  })
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.footer",
-                    product: "2"
-                  }), ": Set whether to display page numbers."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.fileFormat",
-                    product: "2"
-                  }), ": Set the file format for exporting reports."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "information",
+      children: "Information"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Set basic information of Automatic Report Schedule."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-information.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.scheduleName",
+          product: "2"
+        }), ": Enter the schedule name."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "report--schedule",
+      children: "Report & Schedule"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Set the schedule to be automatically generated for each report."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-report-schedule.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.report",
+            product: "2"
+          }), ": Select a custom report to automatically generate. Only custom reports set to DYNAMIC period will appear."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.apply",
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.frequency",
             product: "2"
-          }), " to save the settings."]
+          }), ": Set the frequency to automatically generate reports."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.generateTime",
+            product: "2"
+          }), ": Set the time to automatically generate reports."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "report-format",
+      children: "Report Format"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Set the format for each report."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-report-format.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.outputType",
+            product: "2"
+          }), ": Set the automatically generate method of reports."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.reportTitle",
+            product: "2"
+          }), ": Select ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.showTitle",
+            product: "2"
+          }), " to display the report name as the title on every page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.header",
+            product: "2"
+          }), ": If ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.showHeader",
+            product: "2"
+          }), " is selected, the header is displayed when the report is created. Select ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.onEveryPage",
+            product: "2"
+          }), " to display the header on every page."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "The header may vary depending on the reports."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.footer",
+            product: "2"
+          }), ": Set whether to display page numbers."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.fileFormat",
+            product: "2"
+          }), ": Set the file format for exporting reports."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      start: "3",
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.apply",
+          product: "2"
+        }), " to save the settings."]
       }), "\n"]
     })]
   });

@@ -356,7 +356,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.export.dataFile.title"
-          }), " 창에서 데이터 파일을 적용할 장치를 선택하세요."]
+          }), " 창에서 데이터 파일을 적용할 장치를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.ok"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

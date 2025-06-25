@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3451"], {
-2594: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5660"], {
+5944: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_settings_mdx_dcf_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_how_to_guide_dashboard_mdx_02b_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-how-to-guide-settings-mdx-dcf.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_how_to_guide_settings_mdx_dcf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-settings","title":"Settings","description":"This guides you through various features that can be configured on the settings page of BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-settings","permalink":"/docs/en/platform/biostar_x/how-to-guide-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-settings","title":"Settings","description":"This guides you through various features that can be configured on the settings page of BioStar X.","keywords":["How to use guide","Settings"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"How to Use the Dashboard","permalink":"/docs/en/platform/biostar_x/dashboard"},"next":{"title":"장치 관리하기","permalink":"/docs/en/platform/biostar_x/settings-manage-devices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-how-to-guide-dashboard-mdx-02b.json
+var site_docs_platform_biostar_x_how_to_guide_dashboard_mdx_02b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/how-to-guide-dashboard","title":"대시보드","description":"대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.","source":"@site/docs/platform/biostar_x/how-to-guide-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/how-to-guide-dashboard","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/how-to-guide-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-guide-dashboard","title":"대시보드","description":"대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.","keywords":["대시보드","위젯"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리포트 저장 경로 설정하기","permalink":"/docs/platform/biostar_x/data-settings"},"next":{"title":"위젯 추가하기","permalink":"/docs/platform/biostar_x/dashboard-adding-widget"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/how-to-guide-settings.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/how-to-guide-dashboard.mdx
 
 
 const frontMatter = {
-	id: 'how-to-guide-settings',
-	title: 'Settings',
-	description: 'This guides you through various features that can be configured on the settings page of BioStar X.',
+	id: 'how-to-guide-dashboard',
+	title: '대시보드',
+	description: '대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다.',
 	keywords: [
-		'How to use guide',
-		'Settings'
+		'대시보드',
+		'위젯'
 	],
 	isTranslationMissing: false
 };
@@ -44,40 +44,39 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
-    hr: "hr",
+    li: "li",
     p: "p",
-    strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Overview} = _components;
+  }, {Cmd, DocCardList} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Overview) _missingMdxReference("Overview", true);
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This guides you through the various features that can be set on the ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.setting"
-      }), " page of ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), ". You can add devices and explore various options for customizing the user environment, such as permissions, language, date and time, and access card management."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.setting"
-      }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.launcher"
-      }), " page or select ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.setting"
-      }), " from the shortcut list at the top left of the screen."]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "대시보드는 사용자 개인별로 원하는 정보를 선택하여 위젯을 추가하고, 자유롭게 위젯을 설정하고 배치하여 입맛에 맞게 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The features that can be configured may differ based on the user's permissions. Some features can only be used by users with administrator permission. For more information about user permission-based accessible menus, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "set-permission#operatorLevel",
-          children: "this document"
-        }), "."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["각 사용자마다 개인별로 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "대시보드"
+            }), "를 구성할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "대시보드"
+            }), "에서 확인할 수 있는 정보는 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "user.bioStarOperator",
+              product: "2"
+            }), "에 따라 다를 수 있습니다."]
+          }), "\n"]
+        }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
 function MDXContent(props = {}) {

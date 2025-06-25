@@ -41,10 +41,23 @@ const assets = {
 
 
 
-const toc = [];
+const toc = [{
+  "value": "정보 설정하기",
+  "id": "정보-설정하기",
+  "level": 2
+}, {
+  "value": "리포트 및 스케줄 설정하기",
+  "id": "리포트-및-스케줄-설정하기",
+  "level": 2
+}, {
+  "value": "리포트 형식 설정하기",
+  "id": "리포트-형식-설정하기",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
@@ -73,120 +86,120 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "각 항목을 설정하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-data-automatic-report-schedule.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.information",
-                product: "2"
-              }), ": 자동 생성 스케줄의 기본 정보를 설정할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "reportApp.scheduleName",
-                  product: "2"
-                }), ": 스케줄의 이름을 입력하세요."]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.reportAndSchedule",
-                product: "2"
-              }), ": 리포트별 자동 생성 스케줄을 설정할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.report",
-                    product: "2"
-                  }), ": 자동 생성할 커스텀 리포트를 선택할 수 있습니다. 유동 기간으로 설정된 커스텀 리포트만 나타납니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.frequency",
-                    product: "2"
-                  }), ": 리포트를 자동 생성할 주기를 설정할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.generateTime",
-                    product: "2"
-                  }), ": 리포트를 자동 생성할 시간을 설정할 수 있습니다."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.reportFormat",
-                product: "2"
-              }), ": 리포트별 형식을 설정할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.outputType",
-                    product: "2"
-                  }), ": 리포트의 자동 생성 방식을 설정할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.reportTitle",
-                    product: "2"
-                  }), ": 리포트 이름을 모든 페이지에 제목으로 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.showTitle",
-                    product: "2"
-                  }), "를 선택하세요."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.header",
-                    product: "2"
-                  }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.showHeader",
-                    product: "2"
-                  }), "를 선택하면 리포트 생성 시 헤더를 표시할 수 있습니다. 헤더를 모든 페이지에 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.onEveryPage",
-                    product: "2"
-                  }), "를 선택하세요."]
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsx)(_components.p, {
-                    children: "리포트별로 생성되는 헤더는 다를 수 있습니다."
-                  })
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.footer",
-                    product: "2"
-                  }), ": 페이지 번호 표시 여부를 설정할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "reportApp.fileFormat",
-                    product: "2"
-                  }), ": 리포트를 내보낼 파일 형식을 설정할 수 있습니다."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "정보-설정하기",
+      children: "정보 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "자동 생성 스케줄의 기본 정보를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-information.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.scheduleName",
+          product: "2"
+        }), ": 스케줄의 이름을 입력하세요."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "리포트-및-스케줄-설정하기",
+      children: "리포트 및 스케줄 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "리포트별 자동 생성 스케줄을 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-report-schedule.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.report",
+            product: "2"
+          }), ": 자동 생성할 커스텀 리포트를 선택할 수 있습니다. 유동 기간으로 설정된 커스텀 리포트만 나타납니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.apply",
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.frequency",
             product: "2"
-          }), "을 클릭하세요."]
+          }), ": 리포트를 자동 생성할 주기를 설정할 수 있습니다."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.generateTime",
+            product: "2"
+          }), ": 리포트를 자동 생성할 시간을 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "리포트-형식-설정하기",
+      children: "리포트 형식 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "리포트별 형식을 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-data-report-format.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.outputType",
+            product: "2"
+          }), ": 리포트의 자동 생성 방식을 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.reportTitle",
+            product: "2"
+          }), ": 리포트 이름을 모든 페이지에 제목으로 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.showTitle",
+            product: "2"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.header",
+            product: "2"
+          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.showHeader",
+            product: "2"
+          }), "를 선택하면 리포트 생성 시 헤더를 표시할 수 있습니다. 헤더를 모든 페이지에 표시하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.onEveryPage",
+            product: "2"
+          }), "를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "리포트별로 생성되는 헤더는 다를 수 있습니다."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.footer",
+            product: "2"
+          }), ": 페이지 번호 표시 여부를 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.fileFormat",
+            product: "2"
+          }), ": 리포트를 내보낼 파일 형식을 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      start: "3",
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.apply",
+          product: "2"
+        }), "을 클릭하세요."]
       }), "\n"]
     })]
   });
