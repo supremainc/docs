@@ -25,7 +25,7 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
 
 * <Cmd sid="common.sessionTimeout" product='2' />: 세션 만료 시간을 설정할 수 있습니다. 로그인한 뒤 설정한 시간 동안 BioStar X 조작이 없다면 자동으로 로그아웃됩니다.
 
-* <Cmd sid="setting.server.logUploadType" product='2' />: 이벤트 로그의 업로드 방법을 선택할 수 있습니다. 서버와 실시간 통신이 어려운 경우 수동으로 설정하세요.
+* <Cmd sid="setting.server.logUploadType" product='2' />: 이벤트 로그의 업로드 방법을 선택할 수 있습니다. 서버와 실시간 통신이 어려운 경우 <Cmd sid="common.manual" product='2' />으로 설정하세요.
 
 * <Cmd sid="setting.server.logRetainDays" product='2' />: 로그 저장 기간은 1 ~ 120까지 설정할 수 있습니다.
 
@@ -135,7 +135,7 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
 
 <details>
 
-<summary><Cmd sid="setting.userDevice.useridType" product='2' />를 변경할 수 있는 장치와 펌웨어 버전은 아래와 같습니다. </summary>
+<summary><Cmd sid="setting.userDevice.useridType" product='2' />를 변경할 수 있는 장치와 펌웨어 버전은 아래와 같습니다.</summary>
 
 * CoreStation 펌웨어 1.0.0 이상
 
@@ -162,6 +162,8 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
 * XPass D2 펌웨어 1.0.0 이상
 
 * XPass 펌웨어 2.4.0 이상
+
+* XPass S2 펌웨어 2.4.0 이상
 
 * X-Station 2 펌웨어 1.0.0 이상
 
@@ -239,7 +241,7 @@ BioStar X의 기본 정보를 설정할 수 있습니다.
   
   * 이 기능을 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다.
 
-  * 등록된 비주얼 페이스가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. <Cmd>비주얼 페이스 마이그레이션</Cmd>에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+  * 등록된 비주얼 페이스가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. <Cmd>얼굴 마이그레이션</Cmd>에 대한 자세한 내용은 [다음 문서](migration-face)를 참고하세요.
 
   * 이 기능을 비활성화한 후 <Cmd sid="menu.dataImport" product='2' /> 시 유효하지 않은 비주얼 페이스 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요.
 
