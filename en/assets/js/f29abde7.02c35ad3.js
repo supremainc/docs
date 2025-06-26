@@ -1,0 +1,507 @@
+"use strict";
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["650"], {
+4473: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  "default": () => (/* binding */ MDXContent),
+  toc: () => (/* binding */ toc),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_email_setting_mdx_f29_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-email-setting-mdx-f29.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_email_setting_mdx_f29_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-email-setting","title":"Email Setting","description":"You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-email-setting.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-email-setting","permalink":"/docs/en/platform/biostar_x/settings-email-setting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-email-setting.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-email-setting","title":"Email Setting","description":"You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.","keywords":["Email Setting","Visual Face"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Visitor","permalink":"/docs/en/platform/biostar_x/settings-visitor"},"next":{"title":"How to Use the Quick Action","permalink":"/docs/en/platform/biostar_x/settings-custom-interface"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(5893);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(65);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-email-setting.mdx
+
+
+const frontMatter = {
+	id: 'settings-email-setting',
+	title: 'Email Setting',
+	description: 'You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.',
+	keywords: [
+		'Email Setting',
+		'Visual Face'
+	],
+	isTranslationMissing: false
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+/*
+
+* Before setting an email contents, activate the Cloud. The Cloud will be available when the Standard or higher license is activated. For more information about Cloud, refer to the [following document](#).
+*/
+
+
+const toc = [{
+  "value": "Email contents settings",
+  "id": "email-contents-settings",
+  "level": 2
+}, {
+  "value": "Visual face mobile enrollment",
+  "id": "visual-face-mobile-enrollment",
+  "level": 2
+}, {
+  "value": "QR/Barcode setting",
+  "id": "qrbarcode-setting",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  }, {Cmd, Image} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Enter user's email address in the user information to use visual face mobile enrollment or Secure QR. For more information about user information, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "add-user-basic-info",
+              children: "following document"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The devices that can use ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Visual Face"
+            }), " are as follows."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+              children: "FaceStation F2, BioStation 3, BioEntry W3"
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The devices that can use ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Use QR/Barcode through Scanner"
+            }), " are as follows."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+              children: "X-Station 2 (XS2-QDPB, XS2-QAPB)"
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The devices that can use ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Use QR/Barcode through Camera"
+            }), " are as follows."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStation 3 (BS3-DB, BS3-APWB) firmware version 1.1.0 or higher"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["Using ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "Use QR/Barcode through Camera"
+                }), " requires a separate device license. For more information about [Device License], refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-license-device-license",
+                  children: "following document"
+                }), "."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["In the left sidebar, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent",
+            product: "2"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Edit the necessary fields."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "email-contents-settings",
+      children: "Email contents settings"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Enter the SMTP server information for sending emails."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-email-contents.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.smtp",
+            product: "2"
+          }), ": Set the SMTP(Simple Mail Transfer Protocol) for sending emails."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-email-smtp-option.png",
+          className: "none"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.triggerAction.smtpServer",
+                product: "2"
+              }), ": Enter the SMTP server name."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "common.description",
+                product: "2"
+              }), ": Enter the description."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.triggerAction.portDefault25",
+                product: "2"
+              }), ": Enter the port number of the SMTP server. Check it on the settings screen of the email service to use as SMTP."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.triggerAction.smtpServerAddr",
+                product: "2"
+              }), ": Enter the SMTP server address. Email Service Provider.com', and you can check it on the settings screen of email to use as an SMTP."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "common.userName",
+                product: "2"
+              }), ": Enter the account of the SMTP service."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "common.password",
+                product: "2"
+              }), ": Enter the password of the SMTP service."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.triggerAction.securityType",
+                product: "2"
+              }), ": Select security type."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.triggerAction.sender",
+                product: "2"
+              }), ": Enter the email address of the sender."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "For more information on SMTP information, contact your system administrator."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "When using the SMTP server as an email account with two-factor authentication and change the password of the account, note the following: Once you set up two-factor authentication, the SMTP password is the same as the app password generated using two-factor authentication, not the password of the email account. At this time, if the password of the email account is changed, the app password is automatically deleted, and the SMTP password is no longer available. When changing the password for the email account, regenerate the app password and then set the SMTP password again."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.smtpTestMail",
+            product: "2"
+          }), ": Enter an email address to receive the test email and click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.smtpSettingTest",
+            product: "2"
+          }), "."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "visual-face-mobile-enrollment",
+      children: "Visual face mobile enrollment"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["To use the visual face mobile enrollment set it as ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.use",
+        product: "2"
+      }), ". If you set it as ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.notUse",
+        product: "2"
+      }), ", it will be unable to send the visual face mobile enrollment link to users."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-email-visual-face.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.title",
+            product: "2"
+          }), ": Enter the title of the email."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.companyName",
+            product: "2"
+          }), ": Enter the company name."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.companyLogo",
+            product: "2"
+          }), ": Upload the company logo image."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Supported image file size is up to 5MB."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.adminContact",
+            product: "2"
+          }), ": Enter the contact information of the person in charge."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "printOption.footer",
+            product: "2"
+          }), ": Enter the content to notify the user who is enrolling the visual face, such as a legal notice. It appears at the bottom of the email."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "Footer can be up to 5,000 characters in length."
+          })
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "qrbarcode-setting",
+      children: "QR/Barcode setting"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["To use the QR/Barcode set it as ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.use",
+        product: "2"
+      }), ". If you set it as ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.notUse",
+        product: "2"
+      }), ", it will be unable to issue the QR/Barcode to users via email."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-email-qr.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.title",
+            product: "2"
+          }), ": Enter the title of the email."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.companyName",
+            product: "2"
+          }), ": Enter the company name."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.companyLogo",
+            product: "2"
+          }), ": Upload the company logo image."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Supported image file size is up to 5MB."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.adminContact",
+            product: "2"
+          }), ": Enter the contact information of the person in charge."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      start: "4",
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "button.apply",
+          product: "2"
+        }), " to save the settings."]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+65: (function (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Z: () => (MDXProvider),
+  a: () => (useMDXComponents)
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7294);
+/**
+ * @import {MDXComponents} from 'mdx/types.js'
+ * @import {Component, ReactElement, ReactNode} from 'react'
+ */
+
+/**
+ * @callback MergeComponents
+ *   Custom merge function.
+ * @param {Readonly<MDXComponents>} currentComponents
+ *   Current components from the context.
+ * @returns {MDXComponents}
+ *   Additional components.
+ *
+ * @typedef Props
+ *   Configuration for `MDXProvider`.
+ * @property {ReactNode | null | undefined} [children]
+ *   Children (optional).
+ * @property {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @property {boolean | null | undefined} [disableParentContext=false]
+ *   Turn off outer component context (default: `false`).
+ */
+
+
+
+/** @type {Readonly<MDXComponents>} */
+const emptyComponents = {}
+
+const MDXContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(emptyComponents)
+
+/**
+ * Get current components from the MDX Context.
+ *
+ * @param {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @returns {MDXComponents}
+ *   Current components.
+ */
+function useMDXComponents(components) {
+  const contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext)
+
+  // Memoize to avoid unnecessary top-level context changes
+  return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(
+    function () {
+      // Custom merge via a function prop
+      if (typeof components === 'function') {
+        return components(contextComponents)
+      }
+
+      return {...contextComponents, ...components}
+    },
+    [contextComponents, components]
+  )
+}
+
+/**
+ * Provider for MDX context.
+ *
+ * @param {Readonly<Props>} properties
+ *   Properties.
+ * @returns {ReactElement}
+ *   Element.
+ * @satisfies {Component}
+ */
+function MDXProvider(properties) {
+  /** @type {Readonly<MDXComponents>} */
+  let allComponents
+
+  if (properties.disableParentContext) {
+    allComponents =
+      typeof properties.components === 'function'
+        ? properties.components(emptyComponents)
+        : properties.components || emptyComponents
+  } else {
+    allComponents = useMDXComponents(properties.components)
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+    MDXContext.Provider,
+    {value: allComponents},
+    properties.children
+  )
+}
+
+
+}),
+
+}]);
