@@ -1,0 +1,137 @@
+---
+id: user-template
+title: Manage User Templates
+description: Utilize user templates to standardize new user enrollment and save time for efficient user management.
+keywords:
+  - User Template
+---
+
+User templates standardize basic information by organization and department, streamlining the new user enrollment process and enhancing management efficiency. You can quickly and accurately apply consistent information and permissions to all new users using templates.
+
+## Create user template {#create-a-user-template}
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='team.sidebar.template' /> in the left sidebar.
+
+3. Click <Cmd sid='team.userTemplate.newTemplate' /> at the top right of the screen.
+
+4. When the template creation window appears, enter the template name, email, department, etc., in <Cmd sid='team.user.information' />.
+
+   <Image src='/img/biostarx-user-new-template.png' />
+
+5. Select the access group in the <Cmd sid='team.user.permission.title' /> section.
+
+6. Click <Cmd sid='common.save' /> to save the template.
+
+Check the new template you added in the template list.
+
+:::info
+
+* Departments are used to distinguish users based on the organizational structure. For more information, refer to the [following](add-user-basic-info).
+
+* Groups are used to apply access permissions to multiple users at once. For more information, refer to the [following](user-group-manage).
+
+* <Cmd sid='team.user.permission.accessGroup' /> defines user permissions for specific access zones and is used to grant access permissions to users in bulk. For more information, refer to [this document](#).
+
+:::
+
+## Add user as a template {#add-user-as-a-template}
+
+Follow these steps to add a new user using the added template.
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <IcDown/> next to <Cmd sid='team.user.dialog.newUser' /> in the top right of the screen.
+
+   <Image src='/img/biostarx-add-user-from-template.png' />
+
+3. Select the desired template.
+
+4. Review the information set in the template and fill in the remaining fields such as user ID, name, and contact.
+
+5. Click <Cmd sid='common.save' />.
+
+Check the new user added using the template in the user list.
+
+:::info
+
+For more information on adding users, refer to the [following](add-user).
+
+:::
+
+## Modify template {#template-modification}
+
+You can modify an existing user template.
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='team.sidebar.template' /> in the left sidebar.
+
+3. Double-click the item you wish to modify from the template list.
+
+4. When the template modification window appears, modify the desired fields.
+
+5. Click <Cmd sid='common.save' /> after completing your modifications.
+
+The changes will be reflected in the template.
+
+## Delete template {#delete-template}
+
+You can delete unnecessary user templates.
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='team.sidebar.template' /> in the left sidebar.
+
+3. Click the checkbox on the far left of the item you want to delete in the template list. You can select more than one template.
+
+4. Click the <Cmd sid='common.delete' /> button at the top right of the screen.
+
+5. When the confirmation message appears, click the <Cmd sid='common.acknowledge' /> button.
+
+The selected template will be deleted from the template list.
+
+:::info
+
+To select all templates in the <Cmd sid='team.userTemplate.title' /> list, click <Cmd sid='common.selectAll' /> at the top left of the screen.
+
+:::
+
+## Select view options {#select-view-options}
+
+You can change the view options of the user template list using the tool button in the top right of the screen.
+
+:::info
+
+You can change the header items of the columns in the user template list. For more information on the <Cmd sid='team.menu.columnLayout' /> feature, refer to the [following](columnlayout).
+
+:::
+
+### Navigate template list page {#template-list-page-moves}
+
+The template list displays a default of 10 templates. You can click the button at the top of the screen to go to another page.
+
+<Image src='/img/biostarx-users-template-list-pagenation.png' />
+
+* <IcFirst />: Move to the first page of the user template list.
+
+* <IcFw />: Move to the previous page of the user template list.
+
+* <IcBw />: Move to the next page of the user template list.
+
+* <IcLast />: Move to the last page of the user template list.
+
+* Go to the desired page, enter the page number in the number input field and press the <Kbd>Enter</Kbd>.
+
+### Change number of users list indications {#change-number-of-users-list-indications}
+
+You can change the number of entries displayed in the template list. Select the desired display count from the list selection box in the top right of the screen. Available options are 10, 25, 50, and 100.
+
+<Image src='/img/biostarx-users-template-list-select-row.png' />
+
+## Search template {#search-template}
+
+You can search for the desired template in the template list. Enter a keyword in the search input field in the top right of the screen and press <Kbd>Enter</Kbd>.
+
+<Image src='/img/biostarx-users-template-list-search.png' />

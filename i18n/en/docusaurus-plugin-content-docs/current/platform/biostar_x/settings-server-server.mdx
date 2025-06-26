@@ -2,16 +2,18 @@
 id: settings-server-server
 title: Server Detailed Settings
 description: You can configure the BioStar X server information, user management, device management and automatic upgrade settings.
-keywords: [Server Setting, User Management]
+keywords:
+  - Server
+  - User Management
 ---
 
 You can configure the BioStar X server information, user management, device management and automatic upgrade settings.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click the <Cmd sid="common.server" product='2' />.
+2. In the left sidebar, click the <Cmd sid="common.server" product='2' />.
 
-1. Set each field as needed.
+3. Edit the necessary fields.
 
 ## General {#general}
 
@@ -29,7 +31,7 @@ You can configure the general information on BioStar X.
 
 * <Cmd sid="setting.server.logRetainDays" product='2' />: Set the log retention period from 1 to 120 days.
 
-## User/Device Management {#user-and-device-management}
+## User and device management {#user-and-device-management}
 
 You can configure the user synchronization and fingerprint template format settings.
 
@@ -49,7 +51,7 @@ You can configure the user synchronization and fingerprint template format setti
 
 * <Cmd sid="setting.server.enrollment_device.title" product='2' />: You can designate certain devices that you frequently use for fingerprint and card enrollment as an enrollment device. Click the <Cmd sid="button.plusAdd" product='2' /> and choose the devices.
 
-* <Cmd sid="setting.server.custom_field.title" product='2' />:  You can add custom user fields for extra user information and these fields appear on the User page. There are three types of custom user fields: <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />, <Cmd sid="setting.server.custom_field.type.textbox" product='2' /> and <Cmd sid="setting.server.custom_field.type.combobox" product='2' />. If you choose the <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> for a custom user field, you can add up to 20 items with 32 characters each, and each item is separated by a semicolon (;).  
+* <Cmd sid="setting.server.custom_field.title" product='2' />:  You can add custom user fields for extra user information and these fields appear on the User page. There are three types of custom user fields: <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />, <Cmd sid="setting.server.custom_field.type.textbox" product='2' /> and <Cmd sid="setting.server.custom_field.type.combobox" product='2' />. If you choose the <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> for a custom user field, you can add up to 20 items with 32 characters each, and each item is separated by a semicolon (;).
 
 * <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' />: If you issue an AoC card which stores user's credentials on the smart card, you can set BioStar X to delete user's data and credential information automatically.
 
@@ -71,7 +73,7 @@ You can configure the user synchronization and fingerprint template format setti
 
   * Scheduled Unlock Authentication Group in the Scheduled Unlock Zone.
 
-  * Arm/Disarm Group in the Intrusion Alarm Zone.
+  * Arm/Disarm Group in the Intrusion Alarm Zone. 
 
 * Even if you select <Cmd sid="setting.server.automaticUserSync" product='2' /> as <Cmd sid="setting.server.syncOption.smartSync" product='2' />, Users set to device administrator will be synchronized regardless of the access group.
 
@@ -129,7 +131,7 @@ You can configure the user synchronization and fingerprint template format setti
 
 </details>
 
-* You can use either <Cmd sid="user.mobileCredentialCard" product='2' /> or <Cmd sid="common.mobileCredential" product='2' />. The firmware does not support <Cmd sid="user.mobileCredentialCard" product='2' /> or <Cmd sid="common.mobileCredential" product='2' /> simultaneously.
+* <Cmd sid="setting.server.serverMatching.use" product='2' />: Activates/Deactivates server matching.
 
 * When <Cmd sid="setting.userDevice.useridType" product='2' /> is changed from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> to <Cmd sid="setting.userDevice.useridType.numeric" product='2' />, all user information registered on BioStar X should be deleted.
 
@@ -137,11 +139,11 @@ You can configure the user synchronization and fingerprint template format setti
 
 <summary>The devices and the firmware versions where the <Cmd sid="setting.userDevice.useridType" product='2' /> can be changed are as follows.</summary>
 
-* CoreStation FW 1.0.0 or later
+* CoreStation firmware version 1.0.0 or higher
 
 * FaceStaion 2 FW 1.0.0 or later
 
-* FaceLite FW 1.0.0 or later
+* FaceLite firmware 1.0.0 or higher
 
 * BioEntry W2 FW 1.1.0 or later
 
@@ -151,27 +153,27 @@ You can configure the user synchronization and fingerprint template format setti
 
 * BioStation 2 FW 1.4.0 or later
 
-* BioLite N2 FW 1.0.0 or later
+* BioLite N2 firmware 1.0.0 or higher
 
-* BioEntry P2 FW 1.0.0 or later
+* BioEntry P2 firmware 1.0.0 or higher
 
 * BioEntry R2 FW 1.0.0 or later
 
-* XPass 2 FW 1.0.0 or later
+* XPass 2 firmware 1.0.0 or higher
 
-* XPass D2 FW 1.0.0 or later
+* XPass D2 firmware version 1.0.0 or higher
 
 * XPass FW 2.4.0 or later
 
-* XPass S2 FW 2.4.0 or later
+* XPass S2 firmware 2.4.0 or higher
 
-* X-Station 2 FW 1.0.0 or later
+* X-Station 2 firmware 1.0.0 or higher
 
-* BioStation 3 FW 1.0.0 or later
+* BioStation 3 firmware 1.0.0 or higher
 
 </details>
 
-* If you change the value in the <Cmd>Order</Cmd> field, the position of the custom field on the User page changes. 
+* If you change the value in the <Cmd>Order</Cmd> field, the position of the custom field on the User page changes.
 
 * For a <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />, a number from 0 to 4294962795 is allowed and characters are not allowed.
 
@@ -181,11 +183,11 @@ You can configure the user synchronization and fingerprint template format setti
 
 :::
 
-## Server Matching
+## Server matching
 
-You can configure server matching. If you use server matching, the user’s fingerprint will be matched from BioStar X, not the device.
+You can set up server matching. If you use server matching, the user’s fingerprint will be matched from BioStar X, not the device.
 
-The Server Matching will appear when the Advance or higher license is activated. For more information about License Policy, refer to the [following document](licensing).
+The Server Matching will appear when the Advance or higher license is activated. For more information on the license policy, refer to [this document](licensing).
 
 <Image src='/img/biostarx-settings-server-server-matching.png' className='none' />
 
@@ -203,7 +205,7 @@ The Server Matching will appear when the Advance or higher license is activated.
 
 * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: You can configure the server matching’s security level for fingerprints and faces. The higher the security level is set, the more the false rejection rate (FRR) can occur.
 
-## System Log Level Settings
+## System log level settings
 
 You can set the level of system logs stored in the database.
 
@@ -219,31 +221,31 @@ Set whether to store both the actual image and the template in the visual face o
 
 1. On the <Cmd sid="settings.expertSettings.title" product='2' /> screen, set <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> to <Cmd sid="common.use" product='2' />.
 
-    <Image src='/img/biostarx-settings-server-expert.png' className='none' />
+   <Image src='/img/biostarx-settings-server-expert.png' className='none' />
 
-    :::caution
+   :::caution
 
-    If there are any changes made in the <Cmd sid="common.server" product='2' /> menu, click <Cmd sid="button.apply" product='2' /> to save the changes before activating <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' />.
+   If there are any changes made in the <Cmd sid="common.server" product='2' /> menu, click <Cmd sid="button.apply" product='2' /> to save the changes before activating <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' />.
 
-    :::
+   :::
 
-1. Click the <Image src='/img/ico-expert-setting.png' ico /> to enter <Cmd sid="settings.expertSettings.detail.title" product='2' /> and set <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> as desired.
+2. Click the <Image src='/img/ico-expert-setting.png' ico /> to enter <Cmd sid="settings.expertSettings.detail.title" product='2' /> and set <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> as desired.
 
-    <Image src='/img/biostarx-settings-server-expert2.png' className='none' />
+   <Image src='/img/biostarx-settings-server-expert2.png' className='none' />
 
-    * <Cmd sid="common.use" product='2' />: This is the default setting. Visual face stores both the actual image and the template.
+   * <Cmd sid="common.use" product='2' />: This is the default setting. Visual face stores both the actual image and the template.
 
-    * <Cmd sid="common.notUse" product='2' />: Only the template is stored without saving the actual image for visual face. If disabling this by setting it to <Cmd sid="common.notUse" product='2' />, carefully read the warning pop-up before proceeding.
+   * <Cmd sid="common.notUse" product='2' />: Only the template is stored without saving the actual image for visual face. If disabling this by setting it to <Cmd sid="common.notUse" product='2' />, carefully read the warning pop-up before proceeding.
 
   :::note
 
   **Caution When Disabling Store Visual Face Image Option**
-  
-  * Disabling this feature will delete all stored visual face images, and future enrolled visual faces will only store the template without the image.
 
-  * If the enrolled visual faces do not have both types of templates, this feature cannot be disabled. For more information about <Cmd>Face Migration</Cmd>, refer to the [following document](migration-face).
+* Disabling this feature will delete all stored visual face images, and future enrolled visual faces will only store the template without the image.
 
-  * If this feature is disabled and <Cmd sid="menu.dataImport" product='2' /> is performed, the data file cannot be imported if it contains invalid visual face templates. To resolve this issue, temporarily enable this feature before importing the data file.
+* If the enrolled visual faces do not have both types of templates, this feature cannot be disabled. For more information about <Cmd>Face Migration</Cmd>, refer to the [following](migration-face).
+
+* If this feature is disabled and <Cmd sid="menu.dataImport" product='2' /> is performed, the data file cannot be imported if it contains invalid visual face templates. To resolve this issue, temporarily enable this feature before importing the data file.
 
   :::
 

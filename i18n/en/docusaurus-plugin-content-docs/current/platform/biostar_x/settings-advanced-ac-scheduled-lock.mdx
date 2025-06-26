@@ -1,0 +1,56 @@
+---
+id: settings-advanced-ac-scheduled-lock
+title: Scheduled Lock Zone
+description: This guide describes how to set scheduled lock zones. Scheduled lock zones provide the feature to lock doors at specific times.
+keywords:
+  - Advanced access control
+  - Scheduled Lock Zone
+---
+
+This guide describes how to set scheduled lock zones. Scheduled lock zones provide the feature to lock doors at specific times. This feature enhances access control and is useful for restricting access during certain periods.
+
+:::info
+
+The scheduled lock zone only supports <Cmd sid='zone.globalZone.local' product='2' /> mode.
+
+:::
+
+## Register scheduled lock zone {#addScheduledLockZone}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Advanced AC</Cmd> on the left sidebar.
+
+3. Click <Cmd sid='button.func.addZone' product='2' />.
+
+4. Select <Cmd sid='zone.scheduledLock' product='2' /> and click <Cmd sid='button.apply' product='2' />.
+
+5. Enter the name of the scheduled lock zone to be added in the <Cmd sid='common.info' product='2' /> section.
+
+6. Set the details of the scheduled locking zone in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to the [following](#setting).
+
+7. Set the action to be performed when a scheduled lock zone violation occurs in the <Cmd sid='common.alarm' product='2' /> section.
+
+8. Set the action to be performed when a scheduled lock zone violation occurs in the <Cmd sid='zone.forcedLock.bypass' product='2' /> section.
+
+9. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+### Setting options guide {#setting}
+
+You can change the scheduled lock zone settings.
+
+* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: You can activate or temporarily deactivate the scheduled lock zone settings.
+
+* <Cmd sid='zone.forcedLock.doorLockType' product='2' />: You can set it to lock only the entrance device or to lock both entrance and exit devices.
+
+* <Cmd sid='zone.pause.doorselected' product='2' />: Select the entrance door to designate it as a scheduled lock zone.
+
+* <Cmd sid='common.schedule' product='2' />: Select a schedule. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
+
+:::info
+
+* In <Cmd sid='zone.globalZone.local' product='2' /> mode, you can select multiple doors to configure a scheduled lock zone.
+
+* For more information about schedule settings, refer to [the following document](settings-schedule).
+
+:::

@@ -140,7 +140,7 @@ async function translateDocs(locale: string) {
     
     // description 번역  
     if (data.description && typeof data.description === 'string') {
-      const { content: translatedDescription } = await translate(data.description, locale);
+      const { content: translatedDescription } = await translate(data.description, locale, true);
       translatedData.description = translatedDescription;
     }
       // keywords 번역 (배열인 경우)

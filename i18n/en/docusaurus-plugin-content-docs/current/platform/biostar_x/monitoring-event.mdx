@@ -1,13 +1,19 @@
 ---
 id: monitoring-event
-title: Monitoring Event
+title: Monitor Event
 description: This guide provides methods for monitoring and managing real-time events through the event monitoring feature. Utilize various functions such as alarm events, warning events, filtering, and status management to efficiently handle events.
-keywords: [ Monitoring, Event Monitoring, real-time event, alarm event, warning event, event filtering ]
+keywords:
+  - Monitoring
+  - Event monitoring
+  - Real-time event
+  - Alarm event
+  - Warning event
+  - Event filtering
 ---
 
 In the <Cmd sid='arena.eventTable.title' /> section at the bottom of the monitoring page, you can check and manage real-time events. Efficient event management is possible through various features such as event status, alarm event handling, filtering, and color coding. Specifically, you can monitor events related to doors, devices, and users in real time and take prompt actions as needed.
 
-## Checking the Event List {#event-list}
+## Checking the event list {#event-list}
 
 In the <Cmd sid='arena.eventTable.title' /> section, you can view events as they occur in real time. Each event includes the following information:
 
@@ -31,7 +37,7 @@ In the <Cmd sid='arena.eventTable.title' /> section, you can view events as they
 
 :::info
 
-* Clicking on an individual event will display detailed information on the right side of the screen. This detailed information includes the time of the event, area, door, device, user group, user, port, and event details.
+* Clicking on an individual event will display detailed information on the right side of the screen. This detailed information includes the time of the event, area, door, device, user group, user, port, and event details. 
 
 * If the event includes video or image information from a camera connected to the door, you can also view video and image logs.
 
@@ -39,7 +45,7 @@ In the <Cmd sid='arena.eventTable.title' /> section, you can view events as they
 
 :::
 
-## Distinguishing Events by Color {#event-color}
+## Distinguishing events by color {#event-color}
 
 Events in the event list can be distinguished by color:
 
@@ -53,12 +59,11 @@ Events in the event list can be distinguished by color:
 
 {/* Differences between Alarm Events and Warning Events */}
 
-
-## Checking Alarm Events {#alarm-event}
+## Checking alarm events {#alarm-event}
 
 Only alarm events can be viewed in the <Cmd sid='arena.eventTable.title' /> section. Click the <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.alarmEvents' /> button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section.
 
-The event list will display only alarm events, which are indicated in red.
+The event list will display only alarm events, which are indicated in red. 
 
 :::info
 
@@ -66,8 +71,7 @@ To view all events, click the <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.all
 
 :::
 
-
-## Checking Related Events {#related-event}
+## Checking related events {#related-event}
 
 You can view only events related to the video or map currently being observed in the <Cmd sid='arena.title' /> section. Click the <IcFilter /> <Cmd sid='arena.eventTable.toolbar.relatedEvents' /> button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section.
 
@@ -75,29 +79,27 @@ The event list will display only related events.
 
 :::info
 
-To view all events, click the <IcFilter /> <Cmd sid='arena.eventTable.toolbar.allEvents' /> button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section.
+To view all events, click <IcFilter /> <Cmd sid='arena.eventTable.toolbar.allEvents' /> in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section.
 
 :::
 
+## Real-time events {#real-time-event}
 
-## Real-time Events {#real-time-event}
+The event list in the <Cmd sid='arena.eventTable.title' /> section allows you to check events as they occur in real time. To stop real-time events, click <IcPause /> <Cmd sid='arena.eventTable.toolbar.pause' /> in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section. Click <IcPlay/> <Cmd sid='arena.eventTable.toolbar.play' /> to resume real-time events.
 
-The event list in the <Cmd sid='arena.eventTable.title' /> section allows you to check events as they occur in real time. To stop real-time events, click the <IcPause /> <Cmd sid='arena.eventTable.toolbar.pause' /> button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section. Click the <IcPlay/> <Cmd sid='arena.eventTable.toolbar.play' /> button to resume real-time events.
+## Filtering events {#filter-event}
 
-
-## Filtering Events {#filter-event}
-
-### Applying Filters {#apply-filter}
+### Applying filters {#apply-filter}
 
 Users can filter the event list according to their desired criteria, allowing for quick identification of relevant events.
 
-1. Click the <IcFilter /> icon on each header column in the <Cmd sid='arena.eventTable.title' /> section.
+1. Click <IcFilter /> on each header column in the <Cmd sid='arena.eventTable.title' /> section.
 
-1. When the filter window appears, select the desired item from the left list.
+2. When the filter window appears, select the desired item from the left list.
 
-1. To deselect an item, click the <span className='text-blue-500'><IcClose /></span> button.
+3. To deselect an item, click <span className='text-blue-500'><IcClose /></span>.
 
-1. Once all settings are complete, click the <Cmd sid='common.apply' /> button.
+4. Once all settings are complete, click <Cmd sid='common.apply' />.
 
 Only events that meet the set conditions will be displayed in the event list.
 
@@ -111,17 +113,17 @@ Only events that meet the set conditions will be displayed in the event list.
 
 :::
 
-### Saving Filters {#save-filter}
+### Saving filters {#save-filter}
 
 You can save the set filter conditions. Saved filters can be retrieved by clicking the tab button.
 
-1. Click the <IcAdd /> button in the upper left corner of the <Cmd sid='arena.eventTable.title' /> section.
+1. Click <IcAdd /> in the upper left corner of the <Cmd sid='arena.eventTable.title' /> section.
 
-1. When a new tab is created, enter your desired name.
+2. When a new tab is created, enter your desired name.
 
-1. After entering the name, press the <Kbd>Enter</Kbd> key or click outside the area.
+3. After entering the name, press <Kbd>Enter</Kbd> or click outside the area.
 
-1. Set the filter conditions.
+4. Set the filter conditions.
 
 :::info
 
@@ -129,24 +131,23 @@ You can save the set filter conditions. Saved filters can be retrieved by clicki
 
 * You can double-click the tab name to change it.
 
-* Clicking the <IcClose /> button on a tab will delete it. Once a tab is deleted, it cannot be recovered.
+* Clicking <IcClose /> on a tab will delete it. Once a tab is deleted, it cannot be recovered.
 
 * Tabs with saved filter conditions are stored in the user account. Saved tabs will not be displayed when logged in with a different user account.
 
-* If an alarm event occurs while no filter tab is selected, the <IcErr /> icon will be displayed.
+* If an alarm event occurs while no filter tab is selected, <IcErr /> will be displayed.
 
 :::
 
-
-### Removing Filters {#remove-filter}
+### Removing filters {#remove-filter}
 
 You can clear the applied filter conditions.
 
-1. Click the <span className='text-blue-500'><IcFilter /></span> icon on the header column where filters were applied in the <Cmd sid='arena.eventTable.title' /> section.
+1. Click <span className='text-blue-500'><IcFilter /></span> on the header column where filters were applied in the <Cmd sid='arena.eventTable.title' /> section.
 
-1. When the filter window appears, click the <span className='text-blue-500'><IcClose /></span> button next to the item you wish to remove from the right list. To clear all filters, click the <Cmd sid='common.removeAll' /> button.
+2. When the filter window appears, click <span className='text-blue-500'><IcClose /></span> next to the item you wish to remove from the right list. To clear all filters, click <Cmd sid='common.removeAll' />.
 
-1. Once all conditions to be cleared are set, click the <Cmd sid='common.apply' /> button.
+3. Once all conditions to be cleared are set, click <Cmd sid='common.apply' />.
 
 :::info
 
@@ -156,13 +157,11 @@ You can clear the applied filter conditions.
 
 :::
 
+## Clearing the event list {#clear-event-list}
 
-## Clearing the Event List {#clear-event-list}
+In the <Cmd sid='arena.eventTable.title' /> section, you can clear events. Click <IcMoreB/> in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section and select <Cmd sid='arena.eventTable.clearEvents' /> from the popup menu. If there are many unnecessary events accumulated in the event list, you can use the <Cmd sid='arena.eventTable.clearEvents' /> feature to clean up.
 
-In the <Cmd sid='arena.eventTable.title' /> section, you can clear events. Click the <IcMoreB/> button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section and select <Cmd sid='arena.eventTable.clearEvents' /> from the popup menu. If there are many unnecessary events accumulated in the event list, you can use the <Cmd sid='arena.eventTable.clearEvents' /> feature to clean up.
-
-
-## Popup Menu Features for Events
+## Popup menu features for events
 
 Right-clicking on individual items in the event list brings up a popup menu. Using the features provided in the popup menu, you can quickly select doors, devices, and cameras related to an event.
 
@@ -202,15 +201,15 @@ Right-clicking on individual items in the event list brings up a popup menu. Usi
 
   :::note
 
-  The displayed information may vary depending on the type of event. For more details on setting event rules, refer to [the following document](#).
+  The displayed information may vary depending on the type of event. For more information about setting event rules, refer to the [following](#).
 
   :::
 
-## Acknowledging Alarms and Recording Actions
+## Acknowledging alarms and recording actions
 
-When an alarm event occurs, a <Cmd sid='common.acknowledge' /> button is displayed in the status column of the event list. Through the <Cmd sid='common.acknowledge' /> button, administrators can record their acknowledgement of the triggered alarm event and any actions taken.
+When an alarm event occurs, <Cmd sid='common.acknowledge' /> is displayed in the status column of the event list. Through <Cmd sid='common.acknowledge' />, administrators can record their acknowledgement of the triggered alarm event and any actions taken.
 
-Click the <Cmd sid='common.acknowledge' /> button for the alarm event. A popup window will appear where you can enter your acknowledgement of the alarm event and any actions taken.
+To select all events, click <Cmd sid='common.selectAll' />. When the alarm event popup window appears, select the alarm event from the left list for which you wish to record an action.
 
 * <Cmd>Memo</Cmd>: You can record actions taken regarding the alarm event, up to 500 characters.
 
@@ -228,20 +227,19 @@ Click the <Cmd sid='common.acknowledge' /> button for the alarm event. A popup w
 
 :::
 
-
-## Viewing Unacknowledged Alarm Events
+## Viewing unacknowledged alarm events
 
 This feature allows you to view unacknowledged alarm events at once and record actions taken. It is especially useful when multiple identical alarm events occur.
 
 1. Click the icon button in the upper right corner of the <Cmd sid='arena.eventTable.title' /> section.
 
-1. When the alarm event popup window appears, select the alarm event from the left list for which you wish to record an action. To select all events, click the <Cmd sid='common.selectAll' /> button.
+2. This will record the actions for the selected events and close the alarm event popup window. Click <Cmd sid='common.selectAll' /> to select all events.
 
-1. Enter actions regarding the alarm event in the <Cmd>Memo</Cmd> input field.
+3. Enter actions regarding the alarm event in the <Cmd>Memo</Cmd> input field.
 
-1. Click the <Cmd sid='common.acknowledge' /> button.
+4. Click <Cmd sid='common.acknowledge' />.
 
-This will record the actions for the selected events and close the alarm event popup window.
+Click <Cmd sid='common.acknowledge' /> for the alarm event. A popup window will appear where you can enter your acknowledgement of the alarm event and any actions taken.
 
 :::tip
 
@@ -251,8 +249,8 @@ If only one alarm event is selected, you can view the detailed information about
 
 :::info
 
-* To click the <Cmd sid='common.acknowledge' /> button, you must select more than one event from the alarm event list.
+* To click <Cmd sid='common.acknowledge' />, you must select more than one event from the alarm event list.
 
-* Clicking the <Cmd>Alarm History</Cmd> button will move to the alarm history feature on the <Cmd sid='shell.header.data' /> page. For more information about the alarm history feature, refer to [the following document](#).
+* Clicking <Cmd>Alarm History</Cmd> will move to the alarm history feature on the <Cmd sid='shell.header.data' /> page. For more information about the alarm history feature, refer to the [following](#).
 
 :::

@@ -2,27 +2,31 @@ import OpenAI from 'openai';
 import { ProxyAgent } from 'proxy-agent';
 import { options } from './config';
 
-export async function translate(content: string, targetLanguage: string) {
+export async function translate(content: string, targetLanguage: string, isDescription: boolean = false) {
   const client = new OpenAI({
     baseURL: options.baseUrl,
     apiKey: options.apiKey,
     organization: options.organization,
     httpAgent: new ProxyAgent(),
   });
-  // 한국어에서 영어 번역용 상세 지침
+  // 한국어에서 영어 번역용 핵심 지침
   const koreanToEnglishGuidelines = `
 ## Korean to English Translation Guidelines
 
-### Avoid These English Expressions:
-- "you can" → Prioritize imperative mood ("do this") over "You can" constructions; use "You can" only when presenting options or choices.
-- "want" → Remove if unnecessary in context
-- "display" → Use "appears" instead (e.g., "The message appears" not "displays")
-- "There issue where" → Use factual descriptions (e.g., "The system fails to..." instead of "There is an issue where...")
-- "An issue" → Avoid; use specific descriptions
-- "even" → Avoid unnecessary usage
-- "item" → Avoid use specific terms
+### Core Translation Rules:
+1. **Sentence Structure**: "To [목적], [행동]" → "[행동] to [목적]"
+   - "To configure settings, click the button" → "Click the button to configure settings"
 
-### Korean to English Preferred Translations:
+2. **Title Format**: Remove -ing form, use imperative
+   - "Configuring Settings" → "Configure Settings"
+
+3. **Description Format**: Use sentence case (only first word + proper nouns capitalized)
+   - "Learn How To Configure Settings" → "Learn how to configure settings"
+
+4. **Preserve Tags**: Never translate HTML tags, JSX components, or Markdown syntax
+   - Keep <Image>, <IcFirst2>, ##, *, etc. exactly as-is
+
+### Key Translations:
 - 얼굴 인식 → Facial Authentication (not Facial Recognition)
 - 가능하게 하다 → enhance (not facilitate)
 - 초기화 → initialize (not reset)
@@ -55,43 +59,26 @@ export async function translate(content: string, targetLanguage: string) {
 ### Credential Types (keep in English):
 - fingerprint, face, visual face, card, QR/Barcode
 
-### Sentence Structure Guidelines:
-**CRITICAL: Always restructure "To [purpose], [action]" sentences to "[Action] to [purpose]" format**
-
-Transform sentences that start with "To" + purpose/goal:
-- "To move to a specific page, enter the page number in the input field" → "Enter the page number in the input field to move to a specific page"
-- "To set the number of items displayed on each page, click the row selection box" → "Click the row selection box to set the number of items displayed on each page"
-- "To configure settings, click the Settings button" → "Click the Settings button to configure settings"
-- "To enable this feature, check the Enable checkbox" → "Check the Enable checkbox to enable this feature"
-- "To access the menu, click the hamburger icon" → "Click the hamburger icon to access the menu"
-
-**Pattern: "To [목적], [행동]" → "[행동] to [목적]"**
-
-### Title Translation Guidelines:
-**CRITICAL: Use imperative verb form (base form) instead of gerund (-ing) form**
-
-Always convert -ing titles to imperative form:
-- "Navigating the List Page" → "Navigate the List Page"
-- "Configuring Device Settings" → "Configure Device Settings" 
-- "Managing User Accounts" → "Manage User Accounts"
-- "Installing the Software" → "Install the Software"
-- "Setting Up the System" → "Set Up the System"
-- "Connecting to the Network" → "Connect to the Network"
-
-**Pattern: "[동작]ing the [대상]" → "[동작] the [대상]"**
+### Avoid These:
+- "you can" (use imperative instead)
+- "display" (use "appears")
+- "some" (use "certain")
+- Title case in descriptions
 `;
 
   const systemPrompt = targetLanguage === 'en' 
-    ? `You are a professional technical translator specializing in Korean-to-English translation for security and access control documentation. 
+    ? `You are a professional Korean-to-English technical translator for security documentation.
 
 ${koreanToEnglishGuidelines}
 
-**MANDATORY RULES - APPLY WITHOUT EXCEPTION:**
-1. ALL sentences starting with "To [purpose], [action]" MUST be restructured to "[Action] to [purpose]"
-2. ALL titles with -ing forms MUST be converted to imperative verb forms
-3. Follow ALL guidelines above strictly - no deviations allowed
+**CRITICAL RULES:**
+1. Restructure "To [목적], [행동]" → "[행동] to [목적]"
+2. Convert -ing titles to imperative form
+3. ${isDescription ? 'Use sentence case for descriptions (only first word + proper nouns capitalized)' : 'Use standard capitalization'}
+4. Never translate HTML tags, JSX components, or Markdown syntax
+5. Use imperative mood instead of "you can"
 
-Translate the Korean content to natural, professional English while strictly following these guidelines. Maintain technical accuracy and use declarative language. Return only the translated content without explanations.`
+Return only the translation without explanations.`
     : `You are a super translator which can help user to translate input content to ${targetLanguage}, please direct return the translation result, No nonsense.`;
 
   const chatCompletion = await client.chat.completions.create({

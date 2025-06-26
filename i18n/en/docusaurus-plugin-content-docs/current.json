@@ -32,7 +32,7 @@
     "description": "The label for category 모니터링 in sidebar biostarx"
   },
   "sidebar.biostarx.category.출입문 모니터링하기": {
-    "message": "Monitoring Doors",
+    "message": "Monitor Doors",
     "description": "The label for category 출입문 모니터링하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.UI 알아보기": {

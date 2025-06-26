@@ -1,0 +1,57 @@
+---
+id: settings-event-log-import
+title: Import Event Logs
+description: Learn how to import event logs.
+keywords:
+  - Event
+  - Log
+  - Import
+---
+
+You can import the device logs to the **BioStar X** server to check events. This feature can be used if the <Cmd sid='setting.server.logUploadType' product='2' /> option is manually set in the <Cmd sid='setting.server' product='2' /> settings.
+
+:::info
+
+For more information about the <Cmd sid='setting.server.logUploadType' product='2' /> option, refer to the [following](settings-server-server#general).
+
+:::
+
+## Import manually
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Event</Cmd> → <Cmd>Event Log Import</Cmd> from the left sidebar.
+
+3. Select the period for importing logs under <Cmd>Update Log from Devices</Cmd>.
+
+   * <Cmd sid='monitoring.updateLog.latest' product='2' />: Import logs from the date after the last saved logs to the **BioStar X** server.
+
+   * <Cmd sid='monitoring.updateLog.all' product='2' />: Import all logs from the device.
+
+   * Set period (<Cmd sid='monitoring.updateLog.from' product='2' /> / <Cmd sid='monitoring.updateLog.to' product='2' />): Choose the start and end dates for the logs to import.
+
+4. Click the <Cmd sid='button.updateLog' product='2' /> button to import the logs.
+
+## Import from external storage
+
+You can load event logs stored on an external storage device (USB) into **BioStar X**.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Event</Cmd> → <Cmd>Event Log Import</Cmd> from the left sidebar.
+
+3. Click the button in the <Cmd sid='menu.dataImport' product='2' /> item.
+
+4. Select the data file (*.tgz*) saved locally.
+
+A message will appear on the screen if the data file is successfully imported.
+
+:::info
+
+* Data exported from devices using an outdated firmware version cannot be imported into **BioStar X**. Always use the latest version of the firmware.
+
+* Only data files exported from FaceStation F2, FaceStation 2, FaceLite, BioStation A2, BioStation 2, X-Station 2, BioStation 3 models can be imported.
+
+* If the imported event logs are not from access points, elevators, or zones set in the **BioStar X** system, some information may appear blank.
+
+:::

@@ -3,7 +3,7 @@ id: add-user-basic-info
 title: Enter Basic User Information
 description: This section describes how to enter basic user information.
 keywords:
-  - 사용자
+  - User
   - User group
 ---
 
@@ -25,42 +25,27 @@ The fields that can be set in the <Cmd sid='team.user.information' /> section ar
 
 <Image src='/img/biostarx-new-user-information.png' />
 
-* **Photo**: Register the user's photo. You can take a photo with the webcam or upload a photo from your PC. When you hover over the profile, the tools available will be displayed.
+* <Cmd sid='common.id' product='2' />: Enter the unique ID to assign to the user.
 
-  <Columns>
-  <Column className='width--20 padding--t1rem'><Image src='/img/common/biostarx-new-user-photo.png' alone /></Column>
-  <Column className='padding--l10'>
+* <Cmd sid='common.name' product='2' />: Enter the user's name.
 
-  * <IcCamera/>: If a webcam is connected to the PC, you can click the button to take and register a photo.
+* <Cmd sid='common.email' product='2' />: Enter the email address.
 
-  * <IcUpload/>: You can upload an image file saved on your PC.
+* <Cmd sid='common.telephone' product='2' />: Enter the phone number.
 
-  * <IcTrash/>: You can delete the currently applied photo.
+* <Cmd sid='common.department' product='2' />: Enter the user's title.
 
-  </Column>
-  </Columns>
+* <Cmd sid='common.title' product='2' />: Enter the department to which the user belongs.
 
-* <Cmd sid='team.user.table.id' />: Enter the unique ID to assign to the user.
+* <Cmd sid='common.group' product='2' />: Select the user's group. For more information about adding and managing user groups, refer to [this document](user-group-manage).
 
-* <Cmd sid='team.user.table.firstName' /> / <Cmd sid='team.user.table.lastName' />: Enter the user's name.
+* <Cmd sid='common.period' product='2' />: Set a period for using the user account. You can either click on the date and time area to enter them manually or click <IcCalc /> to select the desired date and time.
 
-* <Cmd sid='team.user.table.email' />: Enter the email address.
-
-* <Cmd sid='team.user.table.phone' />: Enter the phone number.
-
-* <Cmd sid='team.user.table.department' />: Enter the department to which the user belongs.
-
-* <Cmd sid='team.user.table.title' />: Enter the user's title.
-
-* Select <Cmd sid='team.user.table.group' />: Select the user's group. For more information about adding and managing user groups, refer to [this document](user-group-manage).
-
-* <Cmd sid='team.user.table.period' />: Set a period for using the user account. You can either click on the date and time area to enter them manually or click the calendar icon to select the desired date and time.
-
-* <Cmd sid='team.user.table.status' />: You can temporarily disable the user account.
+* <Cmd sid='common.status' product='2' />: You can temporarily disable the user account.
 
 :::info
 
-* The values that can be set for <Cmd sid='team.user.table.id' /> may vary depending on the <Cmd>User ID Type</Cmd> option in the <Cmd sid='shell.header.setting' /> → <Cmd>Server</Cmd> menu. For more information, refer to [this document](#).
+* The values that can be set for <Cmd sid='team.user.table.id' /> may vary depending on the <Cmd>User ID Type</Cmd> option in the <Cmd sid='shell.header.setting' /> → <Cmd>Server</Cmd> menu. For more information, refer to [this document](settings-server-server#user-and-device-management).
 
   * <Cmd>Number</Cmd>: Enter a number from 1 to 4294967294.
 
@@ -80,19 +65,19 @@ The fields that can be set in the <Cmd sid='team.user.information' /> section ar
 
 * To use Visual Face mobile enrollment or Secure QR, be sure to enter the user's email address.
 
-* For more information about adding the <Cmd sid='team.userTemplate.table.customField' />, refer to [this document](#).
+* For more information about adding the <Cmd sid='team.userTemplate.table.customField' />, refer to [this document](settings-server-server#user-and-device-management).
 
 :::
 
 <NextStep>
-<NextItem to='set-permission'>
-
-Check how to set the user's access permissions in the <Cmd sid='team.user.permission.title' /> section.
-
-</NextItem>
 <NextItem to='enroll-credential'>
 
 Enroll the user credentials and set access authentication method in the <Cmd sid='team.user.credential.title' /> section.
+
+</NextItem>
+<NextItem to='set-permission'>
+
+Check how to set the user's access permissions in the <Cmd sid='team.user.permission.title' /> section.
 
 </NextItem>
 <NextItem to='edit-user'>

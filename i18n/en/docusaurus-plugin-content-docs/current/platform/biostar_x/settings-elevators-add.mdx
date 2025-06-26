@@ -1,0 +1,133 @@
+---
+id: settings-elevators-add
+title: Register Elevator
+description: This guide describes how to register an elevator for floor control.
+keywords:
+  - Elevator
+  - registration
+  - Control floor
+---
+
+This document provides guidance on how to register and set up an elevator. The elevator is used for floor control and forms part of the access control system along with the entrance door. Registering the elevator allows control over access permissions for specific floors.
+
+## Before start {#before-start}
+
+* Set the access level, access group, and floor level for access control before registering the elevator. For more information, refer to [this document](#).
+
+* Register the device before registering the elevator. For more information about device registration, refer to the following.
+
+  * <DocLink docId='platform/biostar_x/settings-adding-devices' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
+
+## Register elevator {#adding-elevator}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Elevator</Cmd> on the left sidebar of the screen.
+
+3. Once the <Cmd sid='elevator.new.title' product='2' /> screen appears, set each section item in order.
+
+   * <Cmd sid='common.information' product='2' />: Set the basic information for the elevator. For more information, refer to the [following](#info).
+
+   * <Cmd sid='common.detail' product='2' />: Set the detailed information for the elevator. For more information, refer to the [following](#details).
+
+   * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to the [following](#option).
+
+   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to the [following](#alarm).
+
+4. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
+
+### Set basic information {#info}
+
+In the <Cmd sid='common.information' product='2' /> section, you can enter or change the elevator's name, group, and description.
+
+* <Cmd sid='common.name' product='2' />: Enter the elevator's name. It is convenient to enter a name that specifies the elevator's location for easier management.
+
+* <Cmd sid='common.group' product='2' />: Select the elevator group.
+
+* <Cmd sid='common.description' product='2' />: Enter a brief description of the elevator.
+
+:::info
+
+* The elevator name can be up to 48 characters long.
+
+* For more information on registering elevator groups, refer to the [following](settings-manage-elevators-group).
+
+:::
+
+### Set detailed information {#details}
+
+In the <Cmd sid='common.detail' product='2' /> section, you can set the elevator's detailed information, such as devices connected to the elevator and floor information.
+
+* <Cmd sid='elevator.list.column.controller' product='2' />: Select the device that will control access permissions for the elevator.
+
+* <Cmd sid='elevator.list.column.reader' product='2' />: Select the device to be used for authentication.
+
+* <Cmd sid='elevator.list.column.module' product='2' />: Select the device that will control the elevator button relay.
+
+* <Cmd sid='elevator.floor.totalFloor' product='2' />: Enter the total number of floors the elevator can access. You can enter up to 192 floors.
+
+* <Cmd sid='user.list.csvImport.autoMapping' product='2' />: Select whether to use automatic mapping. Automatic mapping assigns relay numbers sequentially.
+
+* <Cmd sid='elevator.floor.setting.title' product='2' />: Set the floor names and relay numbers that will control the floors.
+
+:::info
+
+* Only master devices can be selected for the <Cmd sid='elevator.list.column.controller' product='2' /> option.
+
+  BioEntry Plus, BioEntry W, and BioLite Net cannot be set as controllers.
+
+* For the <Cmd sid='elevator.list.column.reader' product='2' /> option, only master devices, slave devices, and Wiegand devices can be selected, with a maximum of 4 selections allowed.
+
+  The OM-120 model cannot be set as a reader.
+
+* For the <Cmd sid='elevator.list.column.module' product='2' /> option, only the OM-120, DM-20, IM-120, and SIO2 models can be selected.
+
+:::
+
+### Set additional options {#option}
+
+In the <Cmd sid='common.option' product='2' /> section, you can set the additional options for the elevator.
+
+* <Cmd sid='elevator.option.relayTime' product='2' />: Set options for the floor button relay.
+
+  * <Cmd sid='door.openTime' product='2' />: Set the time for which the floor button remains active after authentication is complete. After this time, the relay will not signal the floor button.
+
+* <Cmd sid='door.dualAuthentication' product='2' />: You can set it so that two people (a general user and an administrator) must authenticate their credentials to activate the floor button.
+
+  * <Cmd sid='common.device' product='2' />: Select the device to use for dual authentication. To not use dual authentication, select <Cmd sid='common.none' product='2' />.
+
+  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
+
+  * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication.
+
+    * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Two authentications are required regardless of the authentication group.
+
+    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: The general user must authenticate first, followed by an authenticated user included in the set authentication group.
+
+  * <Cmd sid='door.approvalGroup' product='2' />: Set the group to which the administrator belongs. This option can be used when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
+
+  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. If the second authentication is not completed within the set time, the floor button will not be activated.
+
+  :::info
+
+  * To change dual authentication for devices set in restricted areas, modify the settings in the following menu: <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />. <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />
+
+    For more information on <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to the [following](#).
+
+  * For more information about schedule settings, refer to [the following document](settings-schedule).
+
+  :::
+
+* <Cmd sid='device.info.wiegandTamper' product='2' />: Set the port to output the tamper signal.
+
+### Set alarms {#alarm}
+
+In the <Cmd sid='door.alarm' product='2' /> section, you can set actions to be performed when tamper inputs or separate input signals are detected.
+
+* <Cmd sid='triggerAction.trigger' product='2' />: Set the detection of tamper inputs or separate input signals.
+
+* <Cmd sid='triggerAction.action' product='2' />: Set the actions to be performed based on the conditions set. You can activate all elevator floor buttons or output specific signals.

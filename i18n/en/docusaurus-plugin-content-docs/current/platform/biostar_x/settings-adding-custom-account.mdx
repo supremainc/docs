@@ -1,0 +1,83 @@
+---
+id: settings-adding-custom-account
+title: Add Custom Permissions
+description: This guide describes how to add the desired permission level.
+keywords:
+  - Account
+  - Operating permission
+  - Custom permission
+---
+
+This guide describes how to add the desired permission level. Custom permissions are user-customizable features that allow for additional permissions beyond the default operational permissions.
+
+## Add custom permissions
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Account</Cmd> on the left sidebar.
+
+3. Click <Cmd sid='setting.account.addCustomOperator' product='2' />.
+
+4. Enter a name and description for the newly created permission.
+
+5. Fill in or select each of the remaining items.
+
+6. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+:::info
+
+* The types of <Cmd sid='settings.account.menu.setting' product='2' /> settings you can configure may vary depending on the activated license type.
+
+* For more information on <Cmd sid='settings.account.menu.detailSetting' product='2' />, refer to the [following](#detailSetting).
+
+* For more information on <Cmd sid='settings.account.menu.setting' product='2' />, refer to the [following](#menuSetting).
+
+* For more information on <Cmd sid='settings.account.addUser' product='2' />, refer to the [following](#addUser).
+
+:::
+
+### <Cmd sid='settings.account.menu.detailSetting' product='2' /> {#detailSetting}
+
+Set detailed permissions for items. You can select groups to grant edit and view permissions for each menu. Item detailed permissions can be set for <Cmd sid='common.permission.module.userGroup' product='2' />, <Cmd sid='common.permission.module.deviceGroup' product='2' />, <Cmd sid='common.permission.module.doorGroup' product='2' />, <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='common.permission.module.accessGroup' product='2' />, <Cmd sid='common.permission.module.zoneType' product='2' />, <Cmd sid='audit.menu.graphicMap' product='2' />, and can be based on the group information already created in each menu.
+
+:::info
+
+If your desired group is not available, go to the appropriate menu to add a new group. For more information on adding groups, refer to the following documents.
+
+* [User group management](user-group-manage)
+
+* [Device group management](settings-manage-device-group)
+
+* [Door group management](settings-manage-door-group)
+
+* [Elevator group management](settings-manage-elevators-group)
+
+* [Access group management](#)
+
+* [Graphic map group management](#)
+
+:::
+
+### <Cmd sid='settings.account.menu.setting' product='2' /> {#menuSetting}
+
+Set **edit** and **view** permissions for individual menus. Different permissions can be configured for each menu.
+
+* <Cmd sid='common.editRead' product='2' />: Grants permission to add, edit, or delete items in the menu.
+
+* <Cmd sid='common.read' product='2' />: Grants permission to enter the menu and only view the settings.
+
+:::info
+
+Granting **edit** permissions for each menu activates the <Cmd sid='button.add' product='2' /> button. However, for the <Cmd sid='shell.header.dashboard' /> and <Cmd sid='shell.header.setting' /> menus, since there are no additional features, they will be displayed as <Cmd sid='setting.account.menu.canCreate.na' product='2' />. For the <Cmd sid='common.permission.module.ac' product='2' /> menu, the <Cmd sid='settings.account.menu.detailSetting' product='2' /> must have <Cmd sid='common.permission.module.accessGroup' product='2' /> set to <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' /> and **edit** permissions granted in order for the <Cmd sid='button.add' product='2' /> button to be activated.
+
+:::
+
+### <Cmd sid='settings.account.addUser' product='2' /> {#addUser}
+
+You can add or verify user information for granting permissions. Click the <Cmd sid='button.plusAdd' product='2' /> button to add a user.
+
+:::info
+
+Clicking <IcTrash2 /> next to a user in the user list will exclude that user from permissions.
+
+:::
