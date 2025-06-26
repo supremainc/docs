@@ -1,0 +1,62 @@
+---
+id: settings-advanced-ac-fire-alarm
+title: Fire Alarm Zone
+description: This guide describes how to set fire alarm zones. A fire alarm zone is a designated area where all access doors or elevators are set to unlock or lock when a fire occurs.
+keywords:
+  - Advanced access control
+  - Fire alarm
+---
+
+This guide describes how to set fire alarm zones. A fire alarm zone is a designated area where all doors or elevators are set to open or lock when a fire occurs.
+
+## Register fire alarm zone {#addFireAlarmZone}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Advanced AC</Cmd> on the left sidebar.
+
+3. Click <Cmd sid='button.func.addZone' product='2' />.
+
+4. Select <Cmd sid='zone.fireAlarm' product='2' /> and click <Cmd sid='button.apply' product='2' />.
+
+5. Enter the name of the fire alarm zone to be added in the <Cmd sid='common.info' product='2' /> section.
+
+6. Set the details of the fire alarm zone in the <Cmd sid='common.setting' product='2' /> section. For more details, refer to the [following](#setting).
+
+7. Set the actions to be performed when a fire alarm occurs in the <Cmd sid='common.alarm' product='2' /> section.
+
+8. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+### Setting options guide {#setting}
+
+You can modify fire alarm zone settings.
+
+* Set the scope of the zone with <Cmd sid='zone.globalZone' product='2' />.
+
+  * <Cmd sid='zone.globalZone.local' product='2' />: You can set the zone only with the entry device and devices connected via RS-485.
+
+  * <Cmd sid='zone.globalZone.global' product='2' />: You can set the zone with all devices registered to **BioStar X**.
+
+* Enable or temporarily deactivate zone settings with <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />.
+
+* Select the doors to designate as the fire alarm zone with <Cmd sid='zone.pause.doorselected' product='2' />.
+
+* Select the elevators to designate as the fire alarm zone with <Cmd sid='zone.pause.liftselected' product='2' />.
+
+* Click <Cmd sid='button.addplus' product='2' /> and set the devices to trigger fire alarm signals with <Cmd sid='zone.deviceInput' product='2' />.
+
+:::info
+
+* Setting the <Cmd sid='zone.globalZone' product='2' /> option to <Cmd sid='zone.globalZone.local' product='2' /> allows you to designate only one door or elevator as a fire alarm zone.
+
+* Setting the <Cmd sid='zone.globalZone' product='2' /> option to <Cmd sid='zone.globalZone.global' product='2' /> allows you to designate both doors and elevators as fire alarm zones simultaneously.
+
+* For more details on device registration, refer to the following documents.
+
+  * [Enroll Devices](settings-adding-devices)
+
+  * [Enroll Wiegand Devices](settings-adding-wiegand)
+
+  * [Enroll Slave Devices](settings-adding-slave-device)
+
+:::
