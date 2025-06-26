@@ -6,7 +6,7 @@ keywords:
   - Monitoring
   - Map
   - Zone
-  - Floor
+  - Layer
 ---
 
 This guide explains how to monitor and control the real-time status of doors and cameras by zone and floor using the map monitoring feature. Map monitoring allows for easy navigation of areas and floors through a visual interface integrated with Google Maps, enabling various features such as access door control and camera video playback.
@@ -35,11 +35,11 @@ The components displayed on the map or layer can show the area and the camera co
 
 <div className='col2--20-80'>
 
-|                           Component                           | Description                                                                                                                                                                        |
-| :-----------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      ![Area icon](/img/common/monitoring-map-area-icon.svg)      | **Area**: Click on the area to enter the corresponding Floor.                                                                                                                      |
-|   ![Door icon](/img/common/monitoring-map-floor-door-icon.svg)  | **Door**: Clicking the door will display a popup menu that allows you to control that door. For more information on the provided features, refer to [this document](control-door). |
-|     ![Camera icon](/img/common/monitoring-map-camera-icon.svg)    | **Camera**: Clicking the camera will play the video of the corresponding area.                                                                                                     |
+|                               Component                              | Description                                                                                                                                                                        |
+| :------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        ![Area icon](/img/common/monitoring-map-area-icon.svg)        | **Area**: Click on the area to enter the corresponding Floor.                                                                                                                      |
+|     ![Door icon](/img/common/monitoring-map-floor-door-icon.svg)     | **Door**: Clicking the door will display a popup menu that allows you to control that door. For more information on the provided features, refer to [this document](control-door). |
+|      ![Camera icon](/img/common/monitoring-map-camera-icon.svg)      | **Camera**: Clicking the camera will play the video of the corresponding area.                                                                                                     |
 | ![Camera error icon](/img/common/monitoring-map-err-camera-icon.svg) | **Camera Error**: This message appears when the camera is not connected or powered off.                                                                                            |
 
 </div>
@@ -50,11 +50,11 @@ The options feature provided in the map or layer is as follows.
 
 <div className='col2--20-80'>
 
-|                                                            Feature                                                           | Description                                                                                                                                                  |
-| :--------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                  Feature                                                                 | Description                                                                                                                                                  |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![Zoom/Reduce](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![Zoom/Reduce](/img/common/monitoring-map-zoom-reduce-horizon.svg) | You can click the buttons located at the top left and bottom right of the map to zoom in/out. You can also use the mouse wheel to zoom in or out of the map. |
-|                                               <IcClose width='30' height='30'/>                                              | To close the map or floor positioned on the video tile, click the button at the top right.                                                                   |
-|                                               <IcMove width='30' height='30'/>                                               | Hover over the map to display an icon, then click and drag it to move the map to a different position within the video tile.                                 |
+|                                                     <IcClose width='30' height='30'/>                                                    | To close the map or floor positioned on the video tile, click the button at the top right.                                                                   |
+|                                                     <IcMove width='30' height='30'/>                                                     | Hover over the map to display an icon, then click and drag it to move the map to a different position within the video tile.                                 |
 
 </div>
 
@@ -72,7 +72,7 @@ If each area set in every zone is linked to Google Maps, you can display the map
 
 1. Select the area to view on the map from the left sidebar.
 
-2. Right-click the mouse.
+2. Right-click. 
 
 3. Click <Cmd sid='arena.tree.contextMenu.openMap' /> in the popup menu.
 

@@ -7,7 +7,7 @@ keywords:
   - Anti-passback
 ---
 
-The anti-passback zone offers enhanced features compared to anti-passback created based on the access door.
+Anti-passback zones provide enhanced features compared to the anti-passback created based on access points. 
 
 :::info
 
@@ -19,33 +19,33 @@ The anti-passback zone offers enhanced features compared to anti-passback create
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd>Advanced AC</Cmd> on the left sidebar of the screen.
+2. Click <Cmd>Advanced AC</Cmd> on the left sidebar.
 
-1. Click <Cmd sid='button.func.addZone' product='2' />.
+3. Click <Cmd sid='button.func.addZone' product='2' />.
 
-1. Select <Cmd sid='zone.antiPassback' product='2' /> and click <Cmd sid='button.apply' product='2' />.
+4. Select <Cmd sid='zone.antiPassback' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-1. Enter the name of the anti-passback zone to add in the <Cmd sid='common.info' product='2' /> section.
+5. Enter the name of the anti-passback zone to add in the <Cmd sid='common.info' product='2' /> section.
 
-1. Configure the details of the anti-passback zone in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to the [following](#setting).
+6. Configure the details of the anti-passback zone in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to the [following](#setting).
 
-1. Set the actions to perform when an anti-passback violation occurs in the <Cmd sid='common.alarm' product='2' /> section.
+7. Set the actions to perform when an anti-passback violation occurs in the <Cmd sid='common.alarm' product='2' /> section.
 
-1. Select the access group that can always bypass the anti-passback zone in the <Cmd sid='zone.apb.bypass' product='2' /> section. Users in this group can bypass the anti-passback zone.
+8. Select the access group that can always bypass the anti-passback zone in the <Cmd sid='zone.apb.bypass' product='2' /> section. Users in this group can bypass the anti-passback zone.
 
-1. Once all settings are complete, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+9. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ### Setting options guide {#setting}
 
 You can change the settings for the anti-passback zone.
 
-* <Cmd sid='zone.globalZone' product='2' />: Set the scope of the zone.
+* Set the scope of the zone with <Cmd sid='zone.globalZone' product='2' />.
 
-  * <Cmd sid='zone.globalZone.local' product='2' />: You can only set the zone for devices connected to the entry device via RS-485.
+  * <Cmd sid='zone.globalZone.local' product='2' />: You can set the zone only with the entry device and devices connected via RS-485.
 
-  * <Cmd sid='zone.globalZone.global' product='2' />: You can set the zone for all devices registered in **BioStar X**.
+  * <Cmd sid='zone.globalZone.global' product='2' />: You can set the zone with all devices registered to **BioStar X**.
 
-* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: You can enable or temporarily disable zone settings.
+* Enable or temporarily deactivate zone settings with <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />.
 
 * <Cmd sid='zone.apbType' product='2' />: Select the type of anti-passback.
 
@@ -58,31 +58,31 @@ You can change the settings for the anti-passback zone.
 * <Cmd sid='zone.apbUseDoorSensor' product='2' />: Set the scope in which anti-passback rules apply.
 
   * <Cmd sid='common.on' product='2' />: Anti-passback rules apply according to the actual operation of the entry and exit devices.
-  
-  * <Cmd sid='common.off' product='2' />: Rules apply based on user authentication regardless of the door's operation. 
+
+  * <Cmd sid='common.off' product='2' />: Rules apply based on user authentication regardless of the door's operation.
 
   * <Cmd sid='zone.apbUseEachDoorSensorSetting' product='2' />: When using APB based on entry for the corresponding door, the anti-passback rules apply according to the sensor usage option setting.
 
-* <Cmd sid='zone.entryDevices' product='2' />: Select the device to use for entry. You can choose from the list of registered devices.
+* <Cmd sid='zone.entryDevices' product='2' />: Select the device to be used when entering. You can choose from the list of registered devices.
 
-* <Cmd sid='zone.exitDevices' product='2' />: Select the device to use for exit. You can choose from the list of registered devices.
+* <Cmd sid='zone.exitDevices' product='2' />: Select the device to be used when exiting. You can choose from the list of registered devices.
 
 * <Cmd sid='zone.apbFailAction' product='2' />: Set the door action when communication with devices configured with anti-passback in **BioStar X** is interrupted. This feature is available when the <Cmd sid='zone.globalZone' product='2' /> option is set to <Cmd sid='zone.globalZone.global' product='2' />.
 
   * <Cmd sid='zone.apbFailAction.noAction' product='2' />: The door opens when the user is authenticated normally.
-  
+
   * <Cmd sid='zone.apbFailAction.recordLog' product='2' />: An anti-passback violation alarm occurs and the door opens.
-  
+
   * <Cmd sid='zone.apbFailAction.doorLocked' product='2' />: An anti-passback violation alarm occurs and the door does not open.
 
 :::info
 
-For more details on device registration, refer to the following.
+For more information on device enrollment, refer to the following.
 
-* [Add Devices](settings-adding-devices)
+* [Enroll Device](settings-adding-devices)
 
-* [Add Wiegand Devices](settings-adding-wiegand)
+* [Enroll Wiegand Device](settings-adding-wiegand)
 
-* [Add Slave Device](settings-adding-slave-device)
+* [Enroll Slave Device](settings-adding-slave-device)
 
 :::

@@ -2,7 +2,10 @@
 id: settings-device-details-thermal-mask
 title: Thermal and Mask Settings
 description: This provides guidance for setting details on thermal cameras and mask usage.
-keywords: [ device, thermal camera, mask ]
+keywords:
+  - Device
+  - thermal camera
+  - mask
 ---
 
 In the <Cmd sid='device.info.temperMask' product='2' /> or <Cmd sid='device.info.mask' product='2' /> sections, you can set detailed parameters for the thermal camera and mask usage.
@@ -21,7 +24,7 @@ In the <Cmd sid='device.info.temperMask' product='2' /> or <Cmd sid='device.info
 
 * The <Cmd sid='device.mask.useMask' product='2' /> setting feature is supported by FaceStation F2, BioStation 3, and BioEntry W3.
 
-* If a user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
 
 :::
 
@@ -46,7 +49,7 @@ In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use
 * <Cmd sid='device.thermal.useThermalCamera' product='2' />: Set whether to use the thermal camera.
 
   * <Cmd sid='device.thermal.tempCheckModeHard' product='2' />: Users exceeding the threshold temperature are denied authentication, and a threshold exceed event log is recorded.
-  
+
   * <Cmd sid='device.thermal.tempCheckModeSoft' product='2' />: Users exceeding the threshold temperature can still authenticate, but a temperature exceed event log is recorded.
 
 * <Cmd sid='device.thermal.usecentigrade' product='2' />: Set the temperature display unit.
@@ -58,7 +61,7 @@ In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use
 * <Cmd sid='device.thermal.useAuditTemperature' product='2' />: Set whether to save the user's temperature log.
 
   * <Cmd sid='device.info.enabled' product='2' />: Logs both authentication success and the user's temperature value.
-  
+
   * <Cmd sid='device.info.disable' product='2' />: Only logs authentication success.
 
 * <Cmd sid='device.thermal.useTemperatureRejectSound' product='2' />: Set whether to notify authentication failure due to exceeding the threshold temperature.
@@ -87,14 +90,14 @@ In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use
 
 * For optimal performance, it is advised to use the default settings for the sub-options in <Cmd sid='device.thermal.cameraconfig' product='2' />. The default values for each device's options are listed below.
 
-  | Item | FaceStation 2 | FaceStation F2 |
-  | -- | :--: | :--: |
-  | <Cmd sid='device.thermal.distance' product='2' /> | 100 | 100 |
-  | <Cmd sid='device.thermal.emissionRate' product='2' /> | 0.98 | 0.98 |
-  | <Cmd sid='device.thermal.roiX' product='2' /> | 47 | 30 |
-  | <Cmd sid='device.thermal.roiY' product='2' /> | 45 | 25 |
-  | <Cmd sid='device.thermal.roiWidth' product='2' /> | 15 | 50 |
-  | <Cmd sid='device.thermal.roiHeight' product='2' /> | 10 | 55 |
+  | Item                                                  | FaceStation 2 | FaceStation F2 |
+  | ----------------------------------------------------- | :-----------: | :------------: |
+  | <Cmd sid='device.thermal.distance' product='2' />     |      100      |       100      |
+  | <Cmd sid='device.thermal.emissionRate' product='2' /> |      0.98     |      0.98      |
+  | <Cmd sid='device.thermal.roiX' product='2' />         |       47      |       30       |
+  | <Cmd sid='device.thermal.roiY' product='2' />         |       45      |       25       |
+  | <Cmd sid='device.thermal.roiWidth' product='2' />     |       15      |       50       |
+  | <Cmd sid='device.thermal.roiHeight' product='2' />    |       10      |       55       |
 
 :::
 

@@ -2,13 +2,16 @@
 id: settings-email-setting
 title: Email Setting
 description: You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
-keywords: [Email Setting, Visual Face]
+keywords:
+  - Email Setting
+  - Visual Face
 ---
 
 You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
 
 :::info
 {/*
+
 * Before setting an email contents, activate the Cloud. The Cloud will be available when the Standard or higher license is activated. For more information about Cloud, refer to the [following document](#).
 */}
 
@@ -24,21 +27,21 @@ You can set contents such as title, company name, company logo, and contact of e
 
 * The devices that can use **Use QR/Barcode through Camera** are as follows.
 
-  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware 1.2.0 or higher
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher
 
-  * BioStation 3 (BS3-DB, BS3-APWB) firmware 1.1.0 or higher
+  * BioStation 3 (BS3-DB, BS3-APWB) firmware version 1.1.0 or higher
 
   * Using **Use QR/Barcode through Camera** requires a separate device license. For more information about [Device License], refer to the [following document](settings-license-device-license).
 
 :::
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click the <Cmd sid="common.emailContent" product='2' />.
+2. In the left sidebar, click the <Cmd sid="common.emailContent" product='2' />.
 
-1. Set each field as needed.
+3. Edit the necessary fields.
 
-## Email Contents Setting {#email-contents-setting}
+## Email contents settings
 
 Enter the SMTP server information for sending emails.
 
@@ -52,9 +55,9 @@ Enter the SMTP server information for sending emails.
 
   * <Cmd sid="common.description" product='2' />: Enter the description.
 
-  * <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />: Enter the SMTP server address. SMTP server address is the same form as 'smtp. Email Service Provider.com', and you can check it on the settings screen of email to use as an SMTP.
-
   * <Cmd sid="setting.triggerAction.portDefault25" product='2' />: Enter the port number of the SMTP server. Check it on the settings screen of the email service to use as SMTP.
+
+  * <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />: Enter the SMTP server address. Email Service Provider.com', and you can check it on the settings screen of email to use as an SMTP.
 
   * <Cmd sid="common.userName" product='2' />: Enter the account of the SMTP service.
 
@@ -74,7 +77,7 @@ Enter the SMTP server information for sending emails.
 
 * <Cmd sid="common.emailContent.smtpTestMail" product='2' />: Enter an email address to receive the test email and click <Cmd sid="button.smtpSettingTest" product='2' />.
 
-## Visual Face Mobile Enrollment
+## Visual face mobile enrollment
 
 To use the visual face mobile enrollment set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to send the visual face mobile enrollment link to users.
 
@@ -104,7 +107,7 @@ To use the visual face mobile enrollment set it as <Cmd sid="common.use" product
 
   :::
 
-## QR
+## QR/Barcode setting
 
 To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to issue the QR/Barcode to users via email.
 

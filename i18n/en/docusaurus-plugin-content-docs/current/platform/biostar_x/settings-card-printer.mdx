@@ -2,7 +2,9 @@
 id: settings-card-printer
 title: Card Printer
 description: BioStar X and cardPresso can be linked to print a card with a design the user wants from BioStar X.
-keywords: [cardPresso, CARD PRINTER]
+keywords:
+  - cardPresso
+  - CARD PRINTER
 ---
 
 BioStar X and cardPresso can be linked to print a card with a design the user wants from BioStar X.
@@ -13,168 +15,168 @@ To use the card printer feature of BioStar X, install and configure the cardPres
 
 1. Download the latest version of cardPresso to the PC where you want to print cards using cardPreso. Refer to the [following link](https://www.cardpresso.com/downloads-cp) for the download path.
 
-1. Install the program and activate the license issued by cardPresso.
+2. Install the program and activate the license issued by cardPresso.
 
-    * License type: cardPresso XXL edition
+   * License type: cardPresso XXL edition
 
-    * Element IDs supported by BioStar X are as below. Make sure to enter **XML item ID name** as element ID when creating a card template.
+   * Element IDs supported by BioStar X are as below. Make sure to enter **XML item ID name** as element ID when creating a card template.
 
-    <div className='overflow-x'>
+   <div className='overflow-x'>
 
-    | Index | BioStar X User Data | XML item ID name |
-    | :--: | :--: | :--: |
-    | 1 | User ID | ID |
-    | 2 | User Name | NAME |
-    | 3 | Email | EMAIL |
-    | 4 | Department | DEPARTMENT |
-    | 5 | Telephone | TELEPHONE |
-    | 6 | User Group | GROUP |
-    | 7 | Profile Photo | PHOTO |
-    | 8 | Custom Field 1 | CUSTOM1 |
-    | 9 | Custom Field 2 | CUSTOM2 |
-    | 10 | Custom Field 3 | CUSTOM3 |
-    | 11 | Custom Field 4 | CUSTOM4 |
-    | 12 | Custom Field 5 | CUSTOM5 |
-    | 13 | Custom Field 6 | CUSTOM6 |
-    | 14 | Custom Field 7 | CUSTOM7 |
-    | 15 | Custom Field 8 | CUSTOM8 |
-    | 16 | Custom Field 9 | CUSTOM9 |
-    | 17 | Custom Field 10 | CUSTOM10 |
+   | Index | BioStar X User Data | XML item ID name |
+   | :---: | :-----------------: | :--------------: |
+   |   1   |       User ID       |        ID        |
+   |   2   |      User Name      |       NAME       |
+   |   3   |        Email        |       EMAIL      |
+   |   4   |      Department     |    DEPARTMENT    |
+   |   5   |      Telephone      |     TELEPHONE    |
+   |   6   |      User Group     |       GROUP      |
+   |   7   |    Profile Photo    |       PHOTO      |
+   |   8   |    Custom Field 1   |      CUSTOM1     |
+   |   9   |    Custom Field 2   |      CUSTOM2     |
+   |   10  |    Custom Field 3   |      CUSTOM3     |
+   |   11  |    Custom Field 4   |      CUSTOM4     |
+   |   12  |    Custom Field 5   |      CUSTOM5     |
+   |   13  |    Custom Field 6   |      CUSTOM6     |
+   |   14  |    Custom Field 7   |      CUSTOM7     |
+   |   15  |    Custom Field 8   |      CUSTOM8     |
+   |   16  |    Custom Field 9   |      CUSTOM9     |
+   |   17  |   Custom Field 10   |     CUSTOM10     |
 
-    </div>
+   </div>
 
-1. After setting the save path of <Cmd sid="common.cardPrinter.cardTemplate" product='2' /> to be used in the cardPresso Web Print Server, click **Save**.
+3. After setting the save path of <Cmd sid="common.cardPrinter.cardTemplate" product='2' /> to be used in the cardPresso Web Print Server, click **Save**.
 
-    <Image src='/img/biostarx-settings-card-printer-installation.png' />
+   <Image src='/img/biostarx-settings-card-printer-installation.png' />
 
-1. Right-click on the cardPresso icon created on the desktop and run **Create Shortcut**.
+4. Right-click on the cardPresso icon created on the desktop and run **Create Shortcut**.
 
-1. Right-click on the copied shortcut icon and select **Properties**. On the **Shortcut** tab, add a space at the end of the **Target**, add `/PRINTSERVER` and click **OK**. This shortcut will act as a Web Print Server shortcut.
+5. Right-click on the copied shortcut icon and select **Properties**. On the **Shortcut** tab, add a space at the end of the **Target**, add `/PRINTSERVER` and click **OK**. This shortcut will act as a Web Print Server shortcut.
 
-    <Image src='/img/biostarx-settings-card-printer-installation1.png' />
+   <Image src='/img/biostarx-settings-card-printer-installation1.png' />
 
-1. Double-click the modified cardPresso Web Print Server shortcut icon to run it, then set each item.
+6. Double-click the modified cardPresso Web Print Server shortcut icon to run it, then set each item.
 
-    <Image src='/img/biostarx-settings-card-printer-installation2.png' />
+   <Image src='/img/biostarx-settings-card-printer-installation2.png' />
 
-    * **Address**: Enter the IP address of the computer acting as the Web Print Server.
+   * **Address**: Enter the IP address of the computer acting as the Web Print Server.
 
-    * **Port**: Port number on which cardPresso receive print operations.
+   * **Port**: Port number on which cardPresso receive print operations.
 
-    * **Allowed user groups**: Select a user group that has access to the Web Print Server.
+   * **Allowed user groups**: Select a user group that has access to the Web Print Server.
 
-1. Click **Save** when the configuration is complete.
+7. Click **Save** when the configuration is complete.
 
-1. Click <Image src='/img/common/ico-card-printer-play.png' ico alone /> at the bottom right to start the service. If properly set, the icon changes to <Image src='/img/common/ico-card-printer-stop.png' ico alone /> and a **listen OK** message appears.
+8. Click <Image src='/img/common/ico-card-printer-play.png' ico alone /> at the bottom right to start the service. If properly set, the icon changes to <Image src='/img/common/ico-card-printer-stop.png' ico alone /> and a **listen OK** message appears.
 
-    * Do not close the window until card printing is complete.
+   * Do not close the window until card printing is complete.
 
-    <Image src='/img/biostarx-settings-card-printer-installation3.png' />
+   <Image src='/img/biostarx-settings-card-printer-installation3.png' />
 
 ## Connecting cardPresso to BioStar X
 
 To connect cardPresso to BioStar X, set BioStar X as below.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click the <Cmd sid="common.cardPrinter" product='2' />.
+2. In the left sidebar, click <Cmd sid="common.cardPrinter" product='2' />.
 
-1. Activate the <Cmd sid="common.cardPrinter.cardpressoSetting" product='2' /> to <Cmd sid="common.use" product='2' />, then enter each item.
+3. Activate the <Cmd sid="common.cardPrinter.cardpressoSetting" product='2' /> to <Cmd sid="common.use" product='2' />, then enter each item.
 
-    <Image src='/img/biostarx-settings-card-printer.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer.png' className='none' />
 
-    * <Cmd sid="common.cardPrinter.id" product='2' />: Enter your cardPresso login ID.
+   * <Cmd sid="common.cardPrinter.id" product='2' />: Enter your cardPresso login ID.
 
-    * <Cmd sid="common.cardPrinter.password" product='2' />: Enter your cardPresso login password.
+   * <Cmd sid="common.cardPrinter.password" product='2' />: Enter your cardPresso login password.
 
-    * <Cmd sid="common.cardPrinter.ipAddress" product='2' />: Enter the IP address of the PC that runs the cardPresso web print server.
+   * <Cmd sid="common.cardPrinter.ipAddress" product='2' />: Enter the IP address of the PC that runs the cardPresso web print server.
 
-    * <Cmd sid="common.cardPrinter.ipAddressPort" product='2' />: Enter the port number used by cardPresso to receive print operations.
+   * <Cmd sid="common.cardPrinter.ipAddressPort" product='2' />: Enter the port number used by cardPresso to receive print operations.
 
-    * <Cmd sid="common.cardPrinter.printerName" product='2' />: Enter the name of the printer to be used as a card printer. It can be found in the Windows **Control Panel** → **Devices and printers**.
+   * <Cmd sid="common.cardPrinter.printerName" product='2' />: Enter the name of the printer to be used as a card printer. It can be found in the Windows **Control Panel** → **Devices and printers**.
 
-    * <Cmd sid="common.cardPrinter.cardTemplate" product='2' />: Click <Cmd sid="button.plusAdd" product='2' /> to add a <Cmd sid="common.cardPrinter.cardTemplate" product='2' />. For <Cmd sid="setting.server.card_template.configure.th.name" product='2' />, enter the full path including the card template file name and extension.
+   * <Cmd sid="common.cardPrinter.cardTemplate" product='2' />: Click <Cmd sid="button.plusAdd" product='2' /> to add a <Cmd sid="common.cardPrinter.cardTemplate" product='2' />. For <Cmd sid="setting.server.card_template.configure.th.name" product='2' />, enter the full path including the card template file name and extension.
 
-        * The file name of the card template can be entered using alphanumeric, and special characters.
+     * The file name of the card template can be entered using alphanumeric, and special characters.
 
-        * Up to 20 card templates are supported.
+     * Up to 20 card templates are supported.
 
-        * Example path: C:\template\example.card
+     * Example path: C:\template\example.card
 
-    * <Cmd sid="common.cardPrinter.printTestLabel" product='2' />: Test print the card template.
+   * <Cmd sid="common.cardPrinter.printTestLabel" product='2' />: Test print the card template.
 
-1. Click <Cmd sid="button.apply" product='2' /> when the configuration is complete.
+4. Click <Cmd sid="button.apply" product='2' /> when the configuration is complete.
 
-## Test Printing the Card Template
+## Test printing the card template
 
 Test print a card template with Administrator information.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click the <Cmd sid="common.cardPrinter" product='2' />.
+2. In the left sidebar, click <Cmd sid="common.cardPrinter" product='2' />.
 
-1. Select the card template to print, then click <Cmd sid="common.cardPrinter.testPrint" product='2' />.
+3. Select the card template to print, then click <Cmd sid="common.cardPrinter.testPrint" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer1.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer1.png' className='none' />
 
-1. Card template with Administrator information is printed.
+4. Card template with Administrator information is printed.
 
-## Printing a Card Template per User {#printing-card-template-per-user}
+## Printing a card template per user
 
 Print cards with per-user card templates.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.user' />.
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click the <Cmd sid='team.user.dialog.newUser' /> button at the top right of the screen. The <Cmd sid='team.user.dialog.newUser' /> window appears.
+2. Click the <Cmd sid='team.user.dialog.newUser' /> button at the top right of the screen. The <Cmd sid='team.user.dialog.newUser' /> window appears.
 
-1. Enter each item and click <Cmd sid="button.printCard" product='2' />.
+3. Enter each item and click <Cmd sid="button.printCard" product='2' />.
 
-    * Each item can be entered with alphanumeric and special characters.
+   * Each item can be entered with alphanumeric and special characters.
 
-    <Image src='/img/biostarx-settings-card-printer-user.png' />
+   <Image src='/img/biostarx-settings-card-printer-user.png' />
 
-1. Select the card template to print and click <Cmd sid="common.cardPrinter.print" product='2' />.
+4. Select the card template to print and click <Cmd sid="common.cardPrinter.print" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
 
-1. When a pop-up window asking whether to print the card appears, click <Cmd sid="common.cardPrinter.ok" product='2' />.
+5. When a pop-up window asking whether to print the card appears, click <Cmd sid="common.cardPrinter.ok" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
 
-1. New user will be created and a card is printed as a card template with user information.
+6. New user will be created and a card is printed as a card template with user information.
 
-## Add Custom User Field
+## Add custom user field
 
 Print a card with a card template with custom user field added.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd sid='shell.header.setting' />.
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click the <Cmd sid="common.server" product='2' />.
+2. In the left sidebar, click the <Cmd sid="common.server" product='2' />.
 
-1. In the <Cmd sid="setting.server.custom_field.title" product='2' />, click <Cmd sid="button.plusAdd" product='2' /> to enter a <Cmd sid="setting.server.custom_field.configure.th.name" product='2' /> and select a <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />. The order of the <Cmd sid="setting.server.custom_field.title" product='2' /> adds decides the element **ID** of the card template.
+3. In the <Cmd sid="setting.server.custom_field.title" product='2' />, click <Cmd sid="button.plusAdd" product='2' /> to enter a <Cmd sid="setting.server.custom_field.configure.th.name" product='2' /> and select a <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />. The order of the <Cmd sid="setting.server.custom_field.title" product='2' /> adds decides the element **ID** of the card template.
 
-    * Based on the BioStar X element ID, **Order 1** is the same as **CUSTOM1**. For more information about BioStar X element ID, refer to the [following document](#installing-configuring-cardPresso).
+   * Based on the BioStar X element ID, **Order 1** is the same as **CUSTOM1**. For more information about BioStar X element ID, refer to the [following](#installing-configuring-cardPresso).
 
-    <Image src='/img/biostarx-settings-card-printer-custom-user.png' />
+   <Image src='/img/biostarx-settings-card-printer-custom-user.png' />
 
-1. Click <Cmd sid="button.apply" product='2' /> when the configuration is complete.
+4. Click <Cmd sid="button.apply" product='2' /> when the configuration is complete.
 
-1. Open the card template file by clicking **File** → **Open Template** in the cardPresso program. Add a new element and enter the **ID** as the **XML item ID name** in the BioStar X element ID order.
+5. Open the card template file by clicking **File** → **Open Template** in the cardPresso program. Add a new element and enter the **ID** as the **XML item ID name** in the BioStar X element ID order.
 
-    <Image src='/img/biostarx-settings-card-printer-template.png' />
+   <Image src='/img/biostarx-settings-card-printer-template.png' />
 
-1. Click **File** → **Save** when the configuration is complete.
+6. Click **File** → **Save** when the configuration is complete.
 
-1. In the <Cmd sid='shell.header.user' /> menu of BioStar X, select the user to apply the card template. Items added from <Cmd sid="setting.server.custom_field.title" product='2' /> are appears. Enter the items and click <Cmd sid="button.printCard" product='2' />.
+7. In the <Cmd sid='shell.header.user' /> menu of BioStar X, select the user to apply the card template. Items added from <Cmd sid="setting.server.custom_field.title" product='2' /> are appears. Enter each item and click <Cmd sid="button.printCard" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer-custom-user1.png' />
+   <Image src='/img/biostarx-settings-card-printer-custom-user1.png' />
 
-1. Select the card template to print and click <Cmd sid="common.cardPrinter.print" product='2' />.
+8. Select the card template to print and click <Cmd sid="common.cardPrinter.print" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
 
-1. When a pop-up window asking whether to print the card appears, click <Cmd sid="common.cardPrinter.ok" product='2' />.
+9. When a pop-up window asking whether to print the card appears, click <Cmd sid="common.cardPrinter.ok" product='2' />.
 
-    <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
+   <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
 
-1. User information is saved and the card is printed as a card template with custom user fields added.
+10. User information is saved and the card is printed as a card template with custom user fields added.

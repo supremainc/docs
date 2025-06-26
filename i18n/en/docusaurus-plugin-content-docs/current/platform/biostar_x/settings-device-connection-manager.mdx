@@ -2,14 +2,17 @@
 id: settings-device-connection-manager
 title: Device Connection Management Settings
 description: This document provides guidance on connecting and managing a large number of devices through the communication server in BioStar X. You can manage up to 3,000 network devices by distributing them across multiple servers.
-keywords: [ Device Connection Manager, Communication Server, Setting ]
+keywords:
+  - Device Connection Manager
+  - Communication Server
+  - Settings
 ---
 
 **BioStar X**'s <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> is a feature designed to efficiently manage a large number of devices in companies or large buildings. Previously, a single server could connect a maximum of 1,000 devices, but now you can install multiple **communication** servers on several computers to manage up to 3,000 network devices.
 
 :::info
 
-* This feature requires the **Device Manager** license to be activated. For more details on the licensing policy, please refer to [the following document](licensing).
+* This feature requires the **Device Manager** license to be activated. For more information on the license policy, refer to [this document](licensing).
 
 * For specifications and installation of the communication server, refer to the following documents.
 
@@ -19,45 +22,45 @@ keywords: [ Device Connection Manager, Communication Server, Setting ]
 
 :::
 
-## Key Features
+## Key features
 
-- **Server Expansion**: Install communication servers on additional computers besides the main computer to connect more devices.
+* **Server Expansion**: Install communication servers on additional computers besides the main computer to connect more devices.
 
-- **Multiple Server Operation**: Use up to three servers together to support a total of 3,000 devices.
+* **Multiple Server Operation**: Use up to three servers together to support a total of 3,000 devices.
 
-- **Convenient Device Management**: When adding new devices, choose which server to connect to, and you can also move existing devices to another server.
+* **Convenient Device Management**: When adding new devices, choose which server to connect to, and you can also move existing devices to another server.
 
-- **Large Environment Support**: Operate a large number of devices reliably in large business sites or buildings.
+* **Large Environment Support**: Operate a large number of devices reliably in large business sites or buildings.
 
 The communication server is a dedicated service that separates the connection functionality with devices from the integrated server of BioStar X. It focuses solely on reliable communication with devices, enhancing the performance of the overall system.
 
-## Move Devices to Another Server
+## Move devices to another server
 
 You can move devices registered on the main server or other communication servers to another communication server. This feature helps maintain the connection status of the devices while moving them between servers.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. In the left sidebar, click <Cmd>Device</Cmd> → <Cmd>Device Connection Manager</Cmd>.
+2. In the left sidebar, click <Cmd>Device</Cmd> → <Cmd>Device Connection Manager</Cmd>.
 
-1. From the <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> section on the left, select the server where the device you want to move is registered.
+3. From the <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> section on the left, select the server where the device you want to move is registered.
 
-1. Select the device(s) you want to move from the device list. You can select multiple devices.
+4. Select the device(s) you want to move from the device list. You can select multiple devices.
 
-    :::note
+   :::note
 
-    To search for a specific device, enter keywords in the input field at the top. You can search by device name or serial number.
+   To search for a specific device, enter keywords in the input field at the top. You can search by device name or serial number.
 
-    :::
+   :::
 
-1. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> section on the right, select the target server to which you want to move the devices.
+5. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> section on the right, select the target server to which you want to move the devices.
 
-1. To move the devices, click the <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> button.
+6. To move the devices, click the <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> button.
 
-1. In the message window, verify the total number of devices to be moved, the number of TCP/IP connected devices, and the name and IP address of the server to which you are moving.
+7. In the message window, verify the total number of devices to be moved, the number of TCP/IP connected devices, and the name and IP address of the server to which you are moving.
 
-1. Click the <Cmd sid='button.apply' product='2' /> button.
+8. Click the <Cmd sid='button.apply' product='2' /> button.
 
-Once the move is complete, you can check the total number of devices moved, the number of TCP/IP connected devices, and the name and IP address of the moved server in the message window.
+Once the move is complete, you can check the total number of devices moved, the number of TCP/IP connected devices, and the name and IP address of the moved server in the message window. 
 
 If there are devices that failed to move, the message window will show the number of devices that failed to move and the number of TCP/IP connected devices. To view a list of devices that failed to move and the reasons for failure in a CSV file, click the <Cmd sid='button.download' product='2' /> button.
 

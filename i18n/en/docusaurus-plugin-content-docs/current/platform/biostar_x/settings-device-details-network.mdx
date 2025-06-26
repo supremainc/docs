@@ -2,7 +2,14 @@
 id: settings-device-details-network
 title: Network Settings
 description: Guidelines for network settings such as TCP/IP, RS-485, and server communication for the device.
-keywords: [ device, Network, TCP/IP, RS-485, Server Communication, Serial communication, Intelligent Slave ]
+keywords:
+  - Device
+  - Network
+  - TCP/IP
+  - RS-485
+  - Server Communication
+  - Serial communication
+  - Intelligent Slave
 ---
 
 The <Cmd sid='device.info.network' product='2' /> section guides you through the network settings of the registered device. You can configure the device’s TCP/IP, RS-485, and server communication settings.
@@ -13,11 +20,11 @@ The <Cmd sid='device.info.network' product='2' /> section guides you through the
 
 * The available network options may differ depending on the device type.
 
-* If you have made any modifications, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
 
 :::
 
-## TCP/IP Settings
+## TCP/IP settings
 
 In the <Cmd sid='device.info.tcpIpSetting' product='2' /> group, you can set the device's IP address.
 
@@ -35,7 +42,7 @@ To configure the device to use a dynamic IP, select the <Cmd sid='device.info.us
 
 To set a static IP address for the device, deselect the <Cmd sid='device.info.useDhcp' product='2' /> group. You can enter the following network information:
 
-* <Cmd sid='device.info.ipAddress' product='2' />: Enter the device's IP address in the format `xxx.xxx.xxx.xxx`, where each octet is a number between 0 and 255.
+* <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the OSDP address of the device. This should be a number between 0 and 126.
 
 * <Cmd sid='device.info.subnetMask' product='2' />: Enter the device's subnet mask.
 
@@ -79,11 +86,11 @@ To set a static IP address for the device, deselect the <Cmd sid='device.info.us
 
 * BioStation 3 firmware 1.0.0 or higher
 
-* BioEntry W3 firmware 1.0.0 or higher
+* BioEntry W3 firmware version 1.0.0 or higher
 
 </details>
 
-## Wireless LAN Settings
+## Wireless LAN settings
 
 In the <Cmd sid='device.info.wlan' product='2' /> group, you can enable or disable the device's wireless LAN settings. Select or deselect the <Cmd sid='device.info.enable' product='2' /> option. Detailed settings are available in the device's user guide.
 
@@ -101,7 +108,7 @@ Refer to the following devices that support wireless LAN settings:
 
 :::
 
-## Server Communication Settings
+## Server communication settings
 
 In the <Cmd sid='device.info.server' product='2' /> group, you can configure how the device communicates with the **BioStar X** server.
 
@@ -155,11 +162,11 @@ This feature is useful when the IP address of the **BioStar X** server changes. 
 
 * BioStation 3 firmware 1.0.0 or higher
 
-* BioEntry W3 firmware 1.0.0 or higher
+* BioEntry W3 firmware version 1.0.0 or higher
 
 </details>
 
-## Serial Communication Settings
+## Serial communication settings
 
 In the <Cmd sid='device.info.serialSetting' product='2' /> group, you can set the mode, transmission performance, and display authentication results for devices connected via RS-485.
 
@@ -179,7 +186,7 @@ The <Cmd sid='device.info.osdpAuthResult' product='2' /> option is enabled when 
 
 :::
 
-## Intelligent Slave Settings
+## Intelligent slave settings
 
 In the <Cmd sid='device.info.intelligentPD' product='2' /> group, when a user authenticates using a fingerprint in an environment where Suprema devices are connected to third-party controllers, the authentication result is sent as Open Supervised Device Protocol (OSDP) card data to support numerous 1:1 or 1:N matching.
 
@@ -201,22 +208,22 @@ In the <Cmd sid='device.info.intelligentPD' product='2' /> group, when a user au
 
 <summary>View devices and firmware versions that support the <Cmd sid='device.info.intelligentPD' product='2' /> option</summary>
 
-  * BioEntry W2 firmware 1.6.3 or higher
+* BioEntry W2 firmware 1.6.3 or higher
 
-  * BioStation L2 firmware 1.6.1 or higher
+* BioStation L2 firmware 1.6.1 or higher
 
-  * BioEntry P2 firmware 1.4.1 or higher
+* BioEntry P2 firmware 1.4.1 or higher
 
-  * XPass 2 firmware 1.2.3 or higher
+* XPass 2 firmware 1.2.3 or higher
 
-  * X-Station 2 firmware 1.1.0 or higher
+* X-Station 2 firmware 1.1.0 or higher
 
-  * BioLite N2 firmware 1.4.1 or higher
+* BioLite N2 firmware 1.4.1 or higher
 
-  * FaceStation F2 firmware 1.1.2 or higher
+* FaceStation F2 firmware 1.1.2 or higher
 
-  * BioStation 3 firmware 1.0.0 or higher
+* BioStation 3 firmware 1.0.0 or higher
 
-  * BioEntry W3 firmware 1.0.0 or higher
+* BioEntry W3 firmware version 1.0.0 or higher
 
 </details>

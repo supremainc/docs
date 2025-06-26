@@ -3,7 +3,7 @@ id: settings-door-add
 title: Enroll Door
 description: Set the door for access control. Select the entrance/exit device based on the door or set up anti-passback to enhance security, and configure alarms.
 keywords:
-  - Entrance
+  - Door
   - Security
   - Access control
 ---
@@ -12,41 +12,41 @@ This guide describes how to enroll and set up doors. Connect entry and exit devi
 
 ## Before start {#before-start}
 
-* Set access levels, access groups, and floor levels for access control before enrolling doors. For more details, refer to [following](#).
+* Set access levels, access groups, and floor levels for access control before enrolling doors. For more information, refer to [this document](#).
 
-* Enroll devices before registering doors. For details on device enrollment, refer to the following documentation.
+* Enroll devices before registering doors. For more information on device enrollment, refer to the following.
 
-  * [Enroll Devices](settings-adding-devices)
+  * [Enroll Device](settings-adding-devices)
 
-  * [Enroll Wiegand Devices](settings-adding-wiegand)
+  * [Enroll Wiegand Device](settings-adding-wiegand)
 
-  * [Enroll Slave Devices](settings-adding-slave-device)
+  * [Enroll Slave Device](settings-adding-slave-device)
 
 ## Enroll door {#adding-door}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd>Door</Cmd> in the left sidebar.
+2. Click <Cmd>Door</Cmd> on the left sidebar of the screen.
 
-1. Click <Cmd sid='button.func.addDoor' product='2' />.
+3. Click <Cmd sid='button.func.addDoor' product='2' />.
 
-    <Image src='/img/biostarx-setting-door-adding.png' />
+   <Image src='/img/biostarx-setting-door-adding.png' />
 
-1. When the <Cmd sid='door.addNewDoor' product='2' /> screen appears, set each section item in order.
+4. When the <Cmd sid='door.addNewDoor' product='2' /> screen appears, set each section item in order.
 
-    * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more details, refer to [following](#info).
+   * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more information, refer to the [following](#info).
 
-    * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more details, refer to [following](#configdoor).
+   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more details, refer to [following](#configdoor).
 
-    * <Cmd sid='common.option' product='2' />: Set additional options. For more details, refer to [following](#option).
+   * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to the [following](#option).
 
-    * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more details, refer to [following](#antipassback).
+   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more details, refer to [following](#antipassback).
 
-    * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more details, refer to [following](#timed-apb).
+   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more details, refer to [following](#timed-apb).
 
-    * <Cmd sid='door.alarm' product='2' />: Configure alarms to sound or block device usage when anti-passback violations occur. For more details, refer to [following](#alarm).
+   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to the [following](#alarm).
 
-1. Once you have completed all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+5. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
 
 ### Set basic information {#info}
 
@@ -116,7 +116,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
 * <Cmd sid='common.open' product='2' />: Set options for door opening.
 
-  * <Cmd sid='door.openTime' product='2' />: Set the duration the door remains open after authentication is completed. After this time, the door will automatically lock.
+  * <Cmd sid='door.openTime' product='2' />: Set the duration for which the door remains open after authentication is complete. The door will automatically lock after this time.
 
   * <Cmd sid='door.openOnce' product='2' />: The door will lock when the door sensor detects it has closed. If set to <Cmd sid='door.openOnceOn' product='2' />, the option <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> cannot be used.
 
@@ -130,27 +130,27 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
 * <Cmd sid='door.dualAuthentication' product='2' />: Set to require two people (a regular user and an administrator) to authenticate credentials to open the door.
 
-  * <Cmd sid='common.device' product='2' />: Select the device for dual authentication. To not use dual authentication, select <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />.
+  * <Cmd sid='common.device' product='2' />: Select the device to use for dual authentication. <Cmd sid='common.device' product='2' />: Select the device for dual authentication.
 
-  * <Cmd sid='door.schedule' product='2' />: Select a schedule for using dual authentication. If the desired schedule does not exist, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
+  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
 
   * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication.
 
     * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Two authentications are required regardless of the authentication group.
-    
-    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: A regular user authenticates, followed by an authentication from users included in the configured authentication group.
 
-  * <Cmd sid='door.approvalGroup' product='2' />: Set the administrator's group. This option is available when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
+    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: The general user must authenticate first, followed by an authenticated user included in the set authentication group.
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time until the second authentication after the first authentication. If the second authentication is not completed within the set time, the door will not open.
+  * <Cmd sid='door.approvalGroup' product='2' />: Set the group to which the administrator belongs. This option can be used when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
+
+  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time until the second authentication after the first authentication.
 
   :::info
 
-  * To change dual authentication settings for devices set in an occupancy restriction area, modify settings in the following menu: <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />.
+  * To change dual authentication for devices set in restricted areas, modify the settings in the following menu: <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />. <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />
 
-    For more details on <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to [following](#).
+    For more information on <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to the [following](#).
 
-  * For more details on schedule settings, refer to [following](settings-schedule).
+  * For more details on schedule settings, refer to [the following document](settings-schedule).
 
   :::
 

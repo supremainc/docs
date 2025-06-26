@@ -2,12 +2,15 @@
 id: monitoring-device
 title: Monitoring Device
 description: Monitor devices and cameras connected to all areas and doors in real time. Efficient management is possible through various features, including checking the status of devices and cameras, viewing detailed information, and playing camera video.
-keywords: [ Monitoring, Device, Camera ]
+keywords:
+  - Monitoring
+  - Device
+  - Camera
 ---
 
 This document provides guidance on using the device and camera monitoring features. You can check the status of devices and cameras, view detailed information, and play camera video in real-time, among various other features. Additionally, review recent events to efficiently manage the status of devices and cameras.
 
-You can access the <Cmd sid='arena.title' /> page by clicking on <Cmd sid='arena.title' /> from the <Cmd sid='shell.header.launcher' /> page or selecting <Cmd sid='arena.title' /> from the shortcut list in the upper left corner of the screen.
+To access the <Cmd sid='arena.title' /> page, click <Cmd sid='arena.title' /> in the <Cmd sid='shell.header.launcher' /> or select <Cmd sid='arena.title' /> from the menu at the top left of the screen.
 
 ## Checking device and camera status
 
@@ -15,14 +18,13 @@ Click the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. You can
 
 <div className='col2--20-80 overflow-x'>
 
-| Status Icon | Description |
-| :--: | -- |
-| <StatusOK/> | The device or camera is connected. |
-| <StatusFail /> | The device or camera is off or disconnected. |
+|              Status Icon             | Description                                                                                                             |
+| :----------------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
+|              <StatusOK/>             | The device or camera is connected.                                                                                      |
+|            <StatusFail />            | The device or camera is off or disconnected.                                                                            |
 | <IcErr width='35px' height='35px' /> | There is a communication server error or the connection is lost. Click this icon to see detailed messages in a tooltip. |
 
 </div>
-
 
 ## Detailed view
 
@@ -32,19 +34,17 @@ Double-click the device you wish to see detailed information for in the <Cmd sid
 
 You can view the device's ID, group, model name, uptime, IP address, and other details. The <Cmd sid='arena.recentEvent' /> list at the bottom shows recent events in reverse chronological order.
 
-
 ### Camera detailed view
 
-To view detailed information about a camera, select the camera in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar and right-click. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> from the popup menu. 
-
+To view detailed information about a camera, select the camera in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar and right-click. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu.
 
 ## Playing camera video
 
-To place the camera video on a video tile and monitor it in real-time, double-click the camera you want to play video from in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar.
+To place the camera video on a video tile and monitor it in real-time, double-click the camera you want to play video from in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. 
 
 :::info
 
-* The video tiles are added sequentially from the upper left of the screen. An error message will appear if there is no space to add more video on the current screen.
+* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears.
 
 * For detailed information on how to control the video and the tools displayed on the video, refer to the [following](monitoring-video).
 
@@ -54,7 +54,7 @@ To place the camera video on a video tile and monitor it in real-time, double-cl
 
 Adding camera video to video tiles can also be done in the following ways:
 
-* Select the camera to play video from and right-click. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> from the popup menu.
+* Select the camera to play video from and right-click. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu.
 
 * You can also add video by dragging and dropping the camera into the video tile area.
 

@@ -4,7 +4,7 @@ title: Enroll Elevator
 description: This guide describes how to enroll an elevator for floor control.
 keywords:
   - Elevator
-  - Enroll
+  - Enrollment
   - Control floor
 ---
 
@@ -12,7 +12,7 @@ This document provides guidance on how to enroll and set up an elevator. The ele
 
 ## Before start {#before-start}
 
-* Set the access level, access group, and floor level for access control before enrolling the elevator. Refer to the [following](#) for more details.
+* Set the access level, access group, and floor level for access control before enrolling the elevator. For more information, refer to [this document](#).
 
 * Enroll the device before enrolling the elevator. For more information on device enrollment, refer to the following.
 
@@ -26,20 +26,19 @@ This document provides guidance on how to enroll and set up an elevator. The ele
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd>Elevator</Cmd> on the left sidebar.
+2. Click <Cmd>Elevator</Cmd> on the left sidebar of the screen.
 
 3. Once the <Cmd sid='elevator.new.title' product='2' /> screen appears, set each section item in order.
 
-    * <Cmd sid='common.information' product='2' />: Set the basic information for the elevator. 
-    For more information, refer to the [following](#info).
+   * <Cmd sid='common.information' product='2' />: Set the basic information for the elevator. For more information, refer to the [following](#info).
 
-    * <Cmd sid='common.detail' product='2' />: Set the detailed information for the elevator. For more information, refer to the [following](#details).
+   * <Cmd sid='common.detail' product='2' />: Set the detailed information for the elevator. For more information, refer to the [following](#details).
 
-    * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to the [following](#option).
+   * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to the [following](#option).
 
-    * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to the [following](#alarm).
+   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to the [following](#alarm).
 
-4. Once all settings are complete, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+4. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
 
 ### Set basic information {#info}
 
@@ -101,12 +100,12 @@ In the <Cmd sid='common.option' product='2' /> section, you can set the addition
 
   * <Cmd sid='common.device' product='2' />: Select the device to use for dual authentication. To not use dual authentication, select <Cmd sid='common.none' product='2' />.
 
-  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If your desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
+  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
 
-  * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication. 
+  * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication.
 
-    * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Two authentications are required regardless of the authentication group. 
-    
+    * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Two authentications are required regardless of the authentication group.
+
     * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: The general user must authenticate first, followed by an authenticated user included in the set authentication group.
 
   * <Cmd sid='door.approvalGroup' product='2' />: Set the group to which the administrator belongs. This option can be used when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
@@ -115,17 +114,17 @@ In the <Cmd sid='common.option' product='2' /> section, you can set the addition
 
   :::info
 
-  * To change dual authentication for devices set in restricted areas, modify the settings in the following menu: <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />.
+  * To change dual authentication for devices set in restricted areas, modify the settings in the following menu: <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />. <Cmd sid='shell.header.setting' /> → <Cmd>Advanced ACS</Cmd> → <Cmd sid='zone.occupancy.title' product='2' />
 
     For more information on <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to the [following](#).
 
-  * For more information on scheduling settings, refer to the [following](settings-schedule).
+  * For more details on schedule settings, refer to [the following document](settings-schedule).
 
   :::
 
 * <Cmd sid='device.info.wiegandTamper' product='2' />: Set the port to output the tamper signal.
 
-### Set alarm {#alarm}
+### Set alarms {#alarm}
 
 In the <Cmd sid='door.alarm' product='2' /> section, you can set actions to be performed when tamper inputs or separate input signals are detected.
 
