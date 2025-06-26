@@ -7,13 +7,15 @@ keywords: [라이선스]
 
 슈프리마에서 발급한 <Cmd sid="setting.server.license.device" product='2' />를 활성화하면 라이선스에 해당하는 특정 기능을 사용할 수 있습니다.
 
-<Cmd sid="setting.server.license.device" product='2' />를 발급하려면 구입처에 문의하세요.
-
 <Cmd sid="setting.server.license.device" product='2' />는 BioStar X 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다.
 
 :::info
 
-라이선스 에러코드를 확인하려면 [다음 링크](https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html)를 참고하세요.
+* 라이선스 에러코드를 확인하려면 [다음 링크](https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html)를 참고하세요.
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
 
 :::
 
@@ -73,11 +75,11 @@ keywords: [라이선스]
 
       * <Cmd sid="setting.server.license.device.product" product='2' />: 장치의 모델명을 확인할 수 있습니다.
 
-      * <Cmd sid="setting.server.license.device.status" product='2' />: 장치 상태를 확인할 수 있습니다. 정상 상태의 장치만 라이선스를 활성화할 수 있습니다.
+      * <Cmd sid="setting.server.license.device.status" product='2' />: 장치 상태를 확인할 수 있습니다. <Cmd sid="setting.server.license.device.list.normal" product='2' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
 
         * <Cmd sid="setting.server.license.device.list.normal" product='2' />, <Cmd sid="setting.server.license.device.list.disconnected" product='2' />, <Cmd sid="setting.server.license.device.list.notSupported" product='2' />, <Cmd sid="setting.server.license.device.list.unregistered" product='2' />
 
-      * <Cmd sid="setting.server.license.status" product='2' />: 라이선스 활성화 여부를 확인할 수 있습니다. 비활성 상태의 장치만 라이선스를 활성화할 수 있습니다.
+      * <Cmd sid="setting.server.license.status" product='2' />: 라이선스 활성화 여부를 확인할 수 있습니다. <Cmd sid="setting.server.license.device.list.notActivated" product='2' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
 
         * <Cmd sid="setting.server.license.device.list.notActivated" product='2' />, <Cmd sid="setting.server.license.device.list.activated" product='2' />, <Cmd sid="setting.server.license.device.list.na" product='2' />
 
