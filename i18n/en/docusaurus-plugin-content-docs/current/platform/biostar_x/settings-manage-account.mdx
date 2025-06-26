@@ -1,0 +1,83 @@
+---
+id: settings-manage-account
+title: Manage Operation Permissions
+description: This guide describes how to assign operator permissions and add and configure custom permissions to enrolled users.
+keywords:
+  - Account
+  - Operating permission
+  - Custom permission
+---
+
+This guide describes how to assign operator permissions and add and configure custom permissions to enrolled users. Operator permissions control the tasks a user can perform on **Biostar X**. **Custom permissions** allow the setting of additional permissions beyond the default operator permissions.
+
+## Check permission types
+
+Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page. Click <Cmd>Account</Cmd> on the left sidebar. Refer to the provided accounts based on permission levels.
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+## Granting operator permissions to users {#addUserPermission}
+
+Guide on granting operator permissions to general users.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Account</Cmd> on the left sidebar.
+
+3. Click the desired account type from the account list.
+
+4. Click <Cmd sid='button.plusAdd' product='2' /> in the <Cmd sid='settings.account.addUser' product='2' /> option.
+
+5. Select the user to whom you want to grant operator permissions from the user list.
+
+6. After selecting all desired users, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+:::info
+
+* If it’s difficult to find users due to their quantity, click <IcSearch /> to search and select the desired user.
+
+* Operator permissions can also be granted when adding or modifying user information. Please refer to the [following](set-permission) for details.
+
+* If permissions have already been set when adding or modifying user information, they will be included in the <Cmd sid='settings.account.addUser' product='2' /> option.
+
+:::
+
+## Excluding operator permissions
+
+Guide on excluding operator permissions granted to users.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Account</Cmd> on the left sidebar.
+
+3. Click the desired account type from the account list.
+
+4. Click <IcTrash2 /> for the user from whom you wish to exclude permissions in the <Cmd sid='settings.account.addUser' product='2' /> option.
+
+5. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+## Checking operator permission details
+
+Clicking an account in the account list under the <Cmd>Account</Cmd> menu allows you to view detailed operator permissions for that account.
+
+* <Cmd sid='common.name' product='2' />: The name of the selected operator permission.
+
+* <Cmd sid='settings.accountList.columnDesc' product='2' />: A brief description of the permission.
+
+* <Cmd sid='settings.account.menu.detailSetting' product='2' />: Can view the groups granted permissions item by item.
+
+* <Cmd sid='settings.account.menu.setting' product='2' />: Can view the permissions granted to access the menu.
+
+* <Cmd sid='settings.account.addUser' product='2' />: Can view users granted permissions.
+
+  * <Cmd sid='common.editRead' product='2' />: Grants permission to add, edit, or delete items in the menu.
+
+  * <Cmd sid='common.read' product='2' />: Grants permission to enter the menu and only view the settings.
+
+:::info
+
+For methods to grant permissions to specific users, refer to the [following](#addUserPermission).
+
+:::

@@ -1,8 +1,10 @@
 ---
 id: settings-adding-devices
-title: Enroll Device
-description: Guide to enrolling a device in BioStar X.
-keywords: [ '{device name}', add device ]
+title: Register Device
+description: This guide decripte how to enroll a device in BioStar X.
+keywords:
+  - Device
+  - Add device
 ---
 
 This guide explains how to enroll a device in **BioStar X**. Enrolling a device allows **BioStar X** to monitor and manage the status of that device. Ensure the device is properly connected before searching for it. It’s convenient to know the location, ID, IP address, and other details in advance when adding multiple devices at once.
@@ -17,64 +19,64 @@ This guide explains how to enroll a device in **BioStar X**. Enrolling a device 
 
 * If the user ID type on **BioStar X** differs from the device, change the device settings according to **BioStar X**’s user ID configuration.
 
-* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, refer to [the following document](#).
+* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, refer to [this document](#).
 
 * To enroll the device and set details, refer to [the following document](#).
 
 :::
 
-## Before Start {#before-start}
+## Before start {#before-start}
 
 Check the following before enrolling the device.
 
-* Set access levels, access groups, and floor levels for access control. For more information, refer to [the following document](#).
+* Set access levels, access groups, and floor levels for access control. For more information, refer to [this document](#).
 
-## Quick Enrollment {#quickadd-device}
+## Quick enrollment {#quickadd-device}
 
 Devices on the same network as **BioStar X** can be automatically searched and enrolled.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd>Device</Cmd> in the left sidebar.
+2. Click <Cmd>Device</Cmd> on the left sidebar.
 
-1. Click the <Cmd sid='device.searchDevice' product='2' /> button in the device list.
+3. Click <Cmd sid='device.searchDevice' product='2' /> in the device list.
 
-1. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be enrolled will be displayed. If the desired device is not in the list, click the <Cmd sid='button.search' product='2' /> button in the top right corner.
+4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be enrolled will be displayed. If the desired device is not in the list, click <Cmd sid='button.search' product='2' /> in the top right corner.
 
-    <Image src='/img/biostarx-setting-add-device.png' />
+   <Image src='/img/biostarx-setting-add-device.png' />
 
-1. Select the devices to enroll or uncheck those you do not want to enroll.
+5. Select the devices to enroll or uncheck those you do not want to enroll.
 
-1. To change the name of the device to be enrolled, click the <IcEdit /> button in the <Cmd sid='device.info.name' product='2' /> column and make the change.
+6. To change the name of the device to be enrolled, click <IcEdit /> in the <Cmd sid='device.info.name' product='2' /> column and make the change.
 
-    <Image src='/img/biostarx-setting-add-device-rename.png' />
+   <Image src='/img/biostarx-setting-add-device-rename.png' />
 
-1. To specify the group for the device to be enrolled, select it in the <Cmd sid='device.info.group' product='2' /> column.
+7. To specify the group for the device to be enrolled, select it in the <Cmd sid='device.info.group' product='2' /> column.
 
-    <Image src='/img/biostarx-setting-add-device-group.png' />
+   <Image src='/img/biostarx-setting-add-device-group.png' />
 
-1. Once all settings for the selected devices are complete, click the <Cmd sid='button.add' product='2' /> button.
+8. Once all settings for the selected devices are complete, click <Cmd sid='button.add' product='2' />.
 
-The enrolled devices will appear in the device list. Select the added device and click the <Cmd sid='button.syncDevice' product='2' /> button.
+The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.
 
 <Image src='/img/biostarx-setting-device-sync-device.png' />
 
 :::info
 
-Devices for which the IP address is unavailable or needs to be changed can be modified by clicking the <Cmd sid='button.setIp' product='2' /> button. For more information, refer to [the following document](##setipaddress).
+Devices for which the IP address is unavailable or needs to be changed can be modified by clicking <Cmd sid='button.setIp' product='2' />. For more information, refer to the [following](##setipaddress).
 
 :::
 
-### IP Address Setting {#setipaddress}
+### IP address setting {#setipaddress}
 
-You can change the IP address of the device to be enrolled. Click the <Cmd sid='button.setIp' product='2' /> button at the bottom left of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address.
+You can change the IP address of the device to be enrolled. Click <Cmd sid='button.setIp' product='2' /> at the bottom left of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address.
 
 <Image src='/img/biostarx-setting-device-set-ip.png' />
 
 * <Cmd sid='device.info.useDhcp' product='2' />: Select this option to allow the device to automatically obtain an IP address via DHCP. Selecting this option may result in the IP address changing each time the device connects to the network.
 
   :::note
-  
+
   To manually enter the IP address, subnet mask, gateway, etc., deselect this option.
 
   :::
@@ -83,13 +85,13 @@ You can change the IP address of the device to be enrolled. Click the <Cmd sid='
 
 :::info
 
-After completing all IP settings and saving changes, click the <Cmd sid='button.apply' product='2' /> button. To cancel changes, click the <Cmd sid='button.cancel' product='2' /> button.
+After completing all IP settings and saving changes, click <Cmd sid='button.apply' product='2' />. To cancel changes, click <Cmd sid='button.cancel' product='2' />.
 
 :::
 
-### Device Search Options {#devicesearchoptions}
+### Device search options {#devicesearchoptions}
 
-You can set device search options by clicking the <IcSet /> button at the top right of the <Cmd sid='device.searchDevice' product='2' /> window.
+You can set device search options by clicking <IcSet /> at the top right of the <Cmd sid='device.searchDevice' product='2' /> window.
 
 <Image src='/img/biostarx-setting-add-device-option.png' />
 
@@ -97,24 +99,24 @@ You can set device search options by clicking the <IcSet /> button at the top ri
 
 * <Cmd sid='device.timeout' product='2' />: Set the desired time to exclude devices that do not respond for a certain period from the search list. This can be set in seconds, with a default of 3 seconds.
 
-## Advanced Search {#advancedsearch}
+## Advanced search {#advancedsearch}
 
 You can specify the IP address and port number of a specific device to enroll it.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd>Device</Cmd> in the left sidebar.
+2. Click <Cmd>Device</Cmd> on the left sidebar.
 
-1. Click the <Cmd sid='button.func.advancedSearch' product='2' /> button in the device list.
+3. Click <Cmd sid='button.func.advancedSearch' product='2' /> in the device list.
 
-1. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be enrolled.
+4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be enrolled.
 
-    <Image src='/img/biostarx-setting-device-advanced-search.png' />
+   <Image src='/img/biostarx-setting-device-advanced-search.png' />
 
-1. Click the <Cmd sid='button.search' product='2' /> button to display devices matching the entered criteria.
+5. Click <Cmd sid='button.search' product='2' /> to display devices matching the entered criteria.
 
-    <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
+   <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
 
-1. To enroll the device, click the <Cmd sid='button.add' product='2' /> button.
+6. To enroll the device, click <Cmd sid='button.add' product='2' />.
 
-The added devices will appear in the device list. Select the added device and click the <Cmd sid='button.syncDevice' product='2' /> button.
+The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.

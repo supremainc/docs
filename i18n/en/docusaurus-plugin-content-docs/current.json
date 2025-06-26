@@ -72,7 +72,7 @@
     "description": "The label for category 출입문 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.엘리베이터 관리하기": {
-    "message": "Manage Elevators",
+    "message": "Managing Elevators",
     "description": "The label for category 엘리베이터 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.운영 권한 관리하기": {

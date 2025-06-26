@@ -8,9 +8,9 @@ import UserGroupFilter from '../../common/_usergroupfilter.mdx';
 import UserCustomField from '../../common/_usercustomfield.mdx';
 import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
-This document provides guidance on how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with BioStar 2.
+This document provides guidance on how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with BioStar 2. 
 
-Integrating with **Entra ID** or **Active Directory** provides the following convenient features, enhancing both security and usability.
+Integrating with **Entra ID** or **Active Directory** provides the following convenient features, enhancing both security and usability. This enhances both security and convenience.
 
 * You can log in to BioStar 2 using your **Entra ID** account via Single Sign-On (SSO) provided by **Entra ID**.
 
@@ -22,9 +22,7 @@ Integrating with **Entra ID** or **Active Directory** provides the following con
 
 :::info
 
-* The **Entra ID** or **Active Directory** integration setting is available when the **Advance** license is activated.
-
-* The **Entra ID** integration setting is available in **BioStar 2.9.9** or later.
+The **Entra ID** or **Active Directory** integration setting is available when the **Advance** license is activated. For more information on the license policy, refer to [this document](licensing).
 
 :::
 
@@ -32,15 +30,15 @@ Integrating with **Entra ID** or **Active Directory** provides the following con
 
 1. Log in to BioStar 2 with an administrator account.
 
-1. Click <Cmd sid='shell.header.setting' /> in the <Cmd sid='shell.header.launcher' /> page.
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
+3. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
 
-1. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+4. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-    <Image src='/img/biostar2-setting-directory-integ-entraid.png' />
+   <Image src='/img/biostar2-setting-directory-integ-entraid.png' />
 
-1. Set each item as instructed below.
+5. Set each item as instructed below.
 
 <Steps>
 <Step>
@@ -101,9 +99,9 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 
 * For more information on registering an application in **Entra ID** and adding a redirection URI, refer to the following links.
 
-  * [Register an application in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)  
+  * [Register an application in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
 
-  * [How to add a redirect URI to your application](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)  
+  * [How to add a redirect URI to your application](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
 
 * The redirection address can be found in the **Overview** of the registered application in **Entra ID**.
 
@@ -131,20 +129,20 @@ After completing all settings in <Cmd sid='setting.activeDirectory.menu' product
 
 1. Log in to BioStar 2 with an administrator account.
 
-1. Click <Cmd sid='shell.header.setting' /> in the <Cmd sid='shell.header.launcher' /> page.
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
+3. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
 
-1. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+4. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-    <Image src='/img/biostar2-setting-directory-integ-ad.png' />
+   <Image src='/img/biostar2-setting-directory-integ-ad.png' />
 
-1. Set each item as instructed below.
+5. Set each item as instructed below.
 
 :::info
 
 * The Active Directory is available for a system environment with Windows Server 2008 R2 or
-later.
+  later.
 
 * To use the Active Directory server, set the <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> in the <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' />.
 
@@ -170,11 +168,11 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
   1. Run the **Active Directory Administrative Center**.
 
-  1. Right-click on the node where user data is stored, and then click **Property**.
+  2. Right-click on the node where user data is stored, and then click **Property**.
 
-  1. In the **property** window, select **Expand** and then click **Attribute Editor**.
+  3. In the **property** window, select **Expand** and then click **Attribute Editor**.
 
-  1. View the value of **distinguishedName**.
+  4. View the value of **distinguishedName**.
 
 * <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install the Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, refer to the [following](ad-encrypt).
 
@@ -220,7 +218,6 @@ After completing all settings in <Cmd sid='setting.activeDirectory.menu' product
 
 :::
 
-
 ## Check the settings results {#checksettings}
 
 After completing the integration settings with **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Refer to the following to check the synchronized settings.
@@ -231,25 +228,23 @@ After completing the integration settings with **Entra ID** or **Active Director
 
   <Image src='/img/biostar2-setting-directory-entraid-login.png' />
 
-
 ## Exclude the directory integration {#exclude-integration}
 
 When integrating with **Entra ID** or **Active Directory** through the <Cmd sid='setting.activeDirectory.menu' product='2' /> feature, users that do not exist in the directory service may be deleted from BioStar 2. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
 
 1. Log in to BioStar 2 with an administrator account.
 
-1. Go to the <Cmd sid='common.user' product='2' /> menu.
+2. Go to the <Cmd sid='common.user' product='2' /> menu.
 
-1. Click on the user you want to exclude from the integration in the <Cmd sid='menu.user.allUserGroups' product='2' /> list.
+3. Click on the user you want to exclude from the integration in the <Cmd sid='menu.user.allUserGroups' product='2' /> list.
 
-1. When the detail information screen of the selected user appears, click the checkbox of <Cmd sid='user.adsync.exclude' product='2' /> in <Cmd sid='common.advanced' product='2' />.
+4. When the detail information screen of the selected user appears, click the checkbox of <Cmd sid='user.adsync.exclude' product='2' /> in <Cmd sid='common.advanced' product='2' />.
 
-    <Image src='/img/biostar2-user-advance-exclude-sync.png' />
+   <Image src='/img/biostar2-user-advance-exclude-sync.png' />
 
-1. Click <Cmd sid='button.apply' product='2' />.
+5. Click the <Cmd sid='button.apply' product='2' /> button.
 
 The selected user will be excluded from the integration when using the <Cmd sid='setting.activeDirectory.menu' product='2' /> feature.
-
 
 ## Disable the directory integration {#disableIntegration}
 
@@ -257,17 +252,17 @@ To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature,
 
 1. Log in to BioStar 2 with an administrator account.
 
-1. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.activeDirectory.menu' product='2' />.
+2. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.activeDirectory.menu' product='2' />.
 
-1. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+3. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-    <Image src='/img/biostar2-setting-directory-unset.png' />
+   <Image src='/img/biostar2-setting-directory-unset.png' />
 
-1. When the <Cmd sid='alert.warning' product='2' /> message appears, click <Cmd sid='button.continue' product='2' />.
+4. When the <Cmd sid='alert.warning' product='2' /> message appears, click <Cmd sid='button.continue' product='2' />.
 
-    <Image src='/img/biostar2-setting-directory-unset-warn-message.png' />
+   <Image src='/img/biostar2-setting-directory-unset-warn-message.png' />
 
-1. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+5. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::caution
 

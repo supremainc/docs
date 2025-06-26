@@ -2,7 +2,9 @@
 id: settings-device-details-advanced
 title: Advanced Settings
 description: In the Advanced Settings section, configure Device Management, Display/Sound, Operating Conditions, and Actions.
-keywords: [ Device, advanced ]
+keywords:
+  - Device
+  - advanced
 ---
 
 This section provides guidance on configuring items in the <Cmd sid='device.info.advanced' product='2' /> settings. You can manage administrator permissions, attendance events, screen and sound settings, operation conditions and actions, image logs, Wiegand, security tampering, and other various advanced features. Apply settings suitable for your environment to effectively manage the device.
@@ -15,7 +17,7 @@ This section provides guidance on configuring items in the <Cmd sid='device.info
 
 :::
 
-## Add Administrators {#administrator}
+## Add administrators {#administrator}
 
 In the <Cmd sid='device.info.administrator' product='2' /> group, you can manage the device's administrators by permission level.
 
@@ -25,11 +27,11 @@ To add an administrator by permission level, click the <IcAdd /> <Cmd sid='commo
 
 <div className='table-fixed'>
 
-| Level | User Information Management | Device Settings |
-| -- | :--: | :--: |
-| <Cmd sid='device.operatorLevel.all' product='2' /> | ✔️ | ✔️ |
-| <Cmd sid='device.operatorLevel.user' product='2' /> | ✔️ | ❌ |
-| <Cmd sid='device.operatorLevel.configuration' product='2' /> | ❌ | ✔️ |
+| Level                                                        | User Information Management | Device Settings |
+| ------------------------------------------------------------ | :-------------------------: | :-------------: |
+| <Cmd sid='device.operatorLevel.all' product='2' />           |              ✔️             |        ✔️       |
+| <Cmd sid='device.operatorLevel.user' product='2' />          |              ✔️             |        ❌        |
+| <Cmd sid='device.operatorLevel.configuration' product='2' /> |              ❌              |        ✔️       |
 
 </div>
 
@@ -45,8 +47,7 @@ To add an administrator by permission level, click the <IcAdd /> <Cmd sid='commo
 
 :::
 
-
-## Attendance Management {#attendance-management}
+## Attendance management {#attendance-management}
 
 The <Cmd sid='device.info.tna' product='2' /> group allows you to change attendance event names or set attendance modes.
 
@@ -88,8 +89,7 @@ The <Cmd sid='device.info.tna' product='2' /> group allows you to change attenda
 
 :::
 
-
-## Screen and Sound Settings {#screen-and-sound-settings}
+## Screen and sound settings {#screen-and-sound-settings}
 
 You can change settings related to the device's screen and sound. Available options may vary depending on the device.
 
@@ -223,8 +223,7 @@ You can change settings related to the device's screen and sound. Available opti
 
 </details>
 
-
-## Trigger Conditions and Actions Settings {#triggerAction}
+## Trigger conditions and actions settings {#triggerAction}
 
 In the <Cmd sid='device.info.triggerNAction' product='2' /> group, you can set action conditions and actions based on specific situations. For example, you can configure all alarms to sound when authentication fails or the device becomes unusable if the RS-485 connection is lost.
 
@@ -266,8 +265,7 @@ You can select predefined actions or add custom actions.
 
 :::
 
-
-## Image Log Settings {#image-log-settings}
+## Image log settings {#image-log-settings}
 
 In the <Cmd sid='common.imageLog' product='2' /> group, you can set image log events and schedules used by the device.
 
@@ -285,8 +283,7 @@ In the <Cmd sid='common.imageLog' product='2' /> group, you can set image log ev
 
 :::
 
-
-## Wiegand Settings {#wiegang-settings}
+## Wiegand settings {#wiegang-settings}
 
 In the <Cmd>Wiegand</Cmd> group, you can configure input and output details related to Wiegand devices.
 
@@ -299,7 +296,7 @@ In the <Cmd>Wiegand</Cmd> group, you can configure input and output details rela
 * <Cmd sid='device.card.wiegand.out' product='2' />: Configure the Wiegand signal output mode.
 
   * <Cmd sid='device.card.wiegand.out.normal' product='2' />: Scan cards using the configured Wiegand format. You can set error codes and select values to be sent if Wiegand card authentication fails.
-  
+
   * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Send CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
 
 * <Cmd sid='device.info.wiegandInOut' product='2' />: Select the input and output mode.
@@ -314,15 +311,13 @@ For more information on Wiegand format settings, refer to [the following documen
 
 :::
 
-
-## Security Tamper Settings {#tamper-settings}
+## Security tamper settings {#tamper-settings}
 
 If a tamper event occurs on the device, you can set it to delete all user information, logs, and security keys stored on the device. To activate the <Cmd sid='device.info.tamperOn' product='2' /> feature, set it to <Cmd sid='device.info.tamperOn.on' product='2' />.
 
 <Image src='/img/biostarx-setting-device-edit-advanced-tamper.png' />
 
-
-## Analog Intercom Settings {#analog-intercom-settings}
+## Analog intercom settings {#analog-intercom-settings}
 
 You can set whether to use an analog intercom. To use the intercom connected to the device, click <Cmd sid='device.intercom.title' product='2' /> group and select <Cmd sid='common.use' product='2' />.
 
@@ -332,8 +327,7 @@ This feature is supported only by the BioStation 2 model.
 
 :::
 
-
-## Camera Settings {#camera-settings}
+## Camera settings {#camera-settings}
 
 You can set the camera frequency. Incorrectly setting the frequency in environments with fluorescent lights can cause flickering in images. Set the frequency for the local area in the <Cmd sid='device.info.camera' product='2' /> group.
 

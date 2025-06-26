@@ -2,20 +2,22 @@
 id: settings-device-details-auth
 title: Authentication Settings
 description: Instructions for various settings related to user authentication on the device are provided.
-keywords: [ device, Authentication ]
+keywords:
+  - Device
+  - Certifications
 ---
 
 The <Cmd sid='device.info.authentication' product='2' /> section provides various methods for configuring user authentication on the device. You can check the authentication modes and key authentication options that the device supports in a step-by-step manner. Note that changes to settings will be applied to the actual device, and configure the authentication policy according to your environment by referring to the features and precautions of each option.
 
 :::info
 
-* The network options configurable may vary depending on the type of device.
+* The available network options may differ depending on the device type.
 
-* If any changes have been made by the user, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied if they are not saved.
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
 
 :::
 
-## Authentication Method Settings
+## Authentication method settings
 
 You can set the device's authentication mode, permissions, server matching, and authentication timeout.
 
@@ -38,44 +40,44 @@ You can set the device's authentication mode, permissions, server matching, and 
   * <Cmd sid='common.inactive' product='2' />: Deactivates server matching. In this case, authentication is performed using the user information registered on the device.
 
   <details>
-  
+
   <summary>View devices and firmware versions supporting <Cmd sid='common.serverMatching' product='2' /> feature</summary>
 
   * CoreStation firmware version 1.0.0 or higher
 
-  * BioEntry P2 firmware version 1.0.0 or higher
+  * BioEntry P2 firmware 1.0.0 or higher
 
-  * BioEntry W2 firmware version 1.0.0 or higher
+  * BioEntry W2 firmware 1.0.0 or higher
 
-  * BioStation L2 firmware version 1.0.0 or higher
+  * BioStation L2 firmware 1.0.0 or higher
 
-  * BioStation A2 firmware version 1.0.0 or higher
+  * BioStation A2 firmware 1.0.0 or higher
 
-  * BioStation 2 firmware version 1.2.0 or higher
+  * BioStation 2 firmware 1.2.0 or higher
 
-  * BioLite Net firmware version 2.2.0 or higher
+  * BioLite Net firmware 2.2.0 or higher
 
-  * BioEntry Plus firmware version 2.2.0 or higher
+  * BioEntry Plus firmware 2.2.0 or higher
 
-  * BioEntry W firmware version 2.2.0 or higher
+  * BioEntry W firmware 2.2.0 or higher
 
-  * XPass firmware version 2.2.0 or higher
+  * XPass firmware 2.2.0 or higher
 
-  * XPass S2 firmware version 2.2.0 or higher
+  * XPass S2 firmware 2.2.0 or higher
 
-  * BioLite N2 firmware version 1.0.0 or higher
+  * BioLite N2 firmware 1.0.0 or higher
 
   * XPass D2 firmware version 1.0.0 or higher
 
-  * XPass 2 firmware version 1.0.0 or higher
+  * XPass 2 firmware 1.0.0 or higher
 
   * FaceStation 2 firmware version 1.4.0 or higher
 
-  * FaceStation F2 firmware version 1.0.0 or higher
+  * FaceStation F2 firmware 1.0.0 or higher
 
-  * X-Station 2 firmware version 1.0.0 or higher
+  * X-Station 2 firmware 1.0.0 or higher
 
-  * BioStation 3 firmware version 1.0.0 or higher
+  * BioStation 3 firmware 1.0.0 or higher
 
   * BioEntry W3 firmware version 1.0.0 or higher
 
@@ -115,24 +117,23 @@ Set the device's authentication mode in the <Cmd sid='device.info.authentication
 
 1. In the <Cmd sid='device.info.authenticationMode' product='2' /> option, click the <IcAdd/> <Cmd sid='button.add' product='2' /> button.
 
-1. When the <Cmd sid='device.addNewAuthMode' product='2' /> window appears, drag the desired authentication mode to the center area.
+2. When the <Cmd sid='device.addNewAuthMode' product='2' /> window appears, drag the desired authentication mode to the center area.
 
-    <Image src='/img/biostarx-setting-device-edit-auth-mode-adding.png' />
+   <Image src='/img/biostarx-setting-device-edit-auth-mode-adding.png' />
 
-    You can add up to five desired authentication modes.
+   You can add up to five desired authentication modes.
 
-1. Select the desired item in the <Cmd sid='schedule.schedule' product='2' /> option.
+3. Select the desired item in the <Cmd sid='schedule.schedule' product='2' /> option.
 
-1. Once all settings are completed, click the <Cmd sid='button.apply' product='2' /> button.
+4. Once all settings are completed, click the <Cmd sid='button.apply' product='2' /> button.
 
 :::info
 
-If the desired schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> to add a new schedule. For more information on schedule settings, refer to [the following document](settings-schedule).
+If the desired schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> to add a new schedule. For more details on schedule settings, refer to [the following document](settings-schedule).
 
 :::
 
-
-## Fingerprint Authentication Settings
+## Fingerprint authentication settings
 
 In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configure details related to the device's fingerprint authentication.
 
@@ -153,7 +154,7 @@ In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configur
 * <Cmd sid='device.info.sensorMode' product='2' />: Set the operating mode of the fingerprint sensor.
 
   * <Cmd sid='device.sensorMode.autoOn' product='2' />: The fingerprint sensor turns on by recognizing the user's finger.
-  
+
   * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: The fingerprint sensor remains always on.
 
 * <Cmd sid='device.info.advancedEnrollment' product='2' />: Assess the quality of scanned fingerprints to save high-quality fingerprint information. Set to <Cmd sid='common.use' product='2' /> to notify the user if the fingerprint quality is low, helping to scan fingerprints correctly.
@@ -174,8 +175,7 @@ In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configur
 
 :::
 
-
-## Facial Authentication Settings
+## Facial authentication settings
 
 In the <Cmd sid='user.credential.face' product='2' /> group, you can configure details related to the device's facial authentication.
 
@@ -194,16 +194,16 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 * <Cmd sid='device.info.faceQuickEnrollment' product='2' />: Set whether to enable quick face enrollment.
 
   * <Cmd sid='device.info.enable' product='2' />: Configures the face enrollment procedure to one step.
-  
+
   * <Cmd sid='device.info.disabled' product='2' />: Configures the face enrollment procedure to three steps. Set to <Cmd sid='device.info.disabled' product='2' /> for high-quality face template enrollment.
 
 * <Cmd sid='device.info.faceDetectSetting' product='2' />: Configure the environmental settings for recognizing the user's face during authentication.
 
-  - <Cmd sid='device.info.faceMaxRotation' product='2' />: Set the maximum rotation angle permitted for the face.
+  * <Cmd sid='device.info.faceMaxRotation' product='2' />: Set the maximum rotation angle permitted for the face.
 
-  - <Cmd sid='device.info.faceDetectDist' product='2' />: Set the minimum and maximum distances for recognizing the face.
+  * <Cmd sid='device.info.faceDetectDist' product='2' />: Set the minimum and maximum distances for recognizing the face.
 
-  - <Cmd sid='device.info.faceWideSearch' product='2' />: Set to <Cmd sid='common.on' product='2' /> to allow facial recognition across the entire camera view.
+  * <Cmd sid='device.info.faceWideSearch' product='2' />: Set to <Cmd sid='common.on' product='2' /> to allow facial recognition across the entire camera view.
 
 * <Cmd sid='device.info.faceOperationMode' product='2' />: Set the operation mode of the device during facial authentication.
 
@@ -227,8 +227,7 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 
 :::
 
-
-## QR/Barcode Settings
+## QR/Barcode settings
 
 In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configure details for QR/barcode authentication on the device.
 
@@ -246,7 +245,7 @@ In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configur
 
 :::info
 
-* The <Cmd sid='device.info.useVisualBarcode' product='2' /> option requires a separate device license. For more details, refer to [the following document](#).
+* The <Cmd sid='device.info.useVisualBarcode' product='2' /> option requires a separate device license. For more information, refer to [this document](#).
 
 * The devices supporting <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' />, and <Cmd sid='device.authmode.settings.motionSensor' product='2' /> options are as follows.
 
@@ -260,8 +259,7 @@ In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configur
 
 :::
 
-
-## Card Authentication Settings
+## Card authentication settings
 
 In the <Cmd sid='setting.card.cardType' product='2' /> group, you can set the types of cards to be used on the device.
 
@@ -275,7 +273,7 @@ Only card types supported by the device will be displayed in the <Cmd sid='setti
 
 You can select the types of CSN cards and formats and set the byte order.
 
-* <Cmd sid='device.info.byteOrder' product='2' /> 
+* <Cmd sid='device.info.byteOrder' product='2' />
 
   * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
 
@@ -309,7 +307,6 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 
   * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units.
 
-
 ### <Cmd sid='device.card.customSmartCard' product='2' />
 
 Select types of custom smart cards issued by third parties and set the card layout and byte order.
@@ -326,21 +323,21 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 <summary>View devices and firmware versions supporting custom smart cards</summary>
 
-- XPass D2 firmware version 1.7.1 or higher
+* XPass D2 firmware version 1.7.1 or higher
 
-- BioEntry P2 firmware version 1.5.1 or higher
+* BioEntry P2 firmware version 1.5.1 or higher
 
-- BioEntry W2 firmware version 1.8.0 or higher
+* BioEntry W2 firmware version 1.8.0 or higher
 
-- BioStation 2a firmware version 1.1.0 or higher
+* BioStation 2a firmware version 1.1.0 or higher
 
-- X-Station 2 firmware version 1.3.0 or higher
+* X-Station 2 firmware version 1.3.0 or higher
 
-- BioStation 3 firmware version 1.3.0 or higher
+* BioStation 3 firmware version 1.3.0 or higher
 
-- BioEntry W3 firmware version 1.0.0 or higher
+* BioEntry W3 firmware version 1.0.0 or higher
 
-- BioLite N2 firmware version 1.6.2 or higher
+* BioLite N2 firmware version 1.6.2 or higher
 
 </details>
 
@@ -366,8 +363,8 @@ You can specify the recognition method for templates on mobile, as well as the b
 
 <summary>View devices and firmware versions supporting templates on mobile</summary>
 
-- BioStation 3 firmware version 1.2.0 or higher
+* BioStation 3 firmware version 1.2.0 or higher
 
-- BioEntry W3 firmware version 1.0.0 or higher
+* BioEntry W3 firmware version 1.0.0 or higher
 
 </details>
