@@ -72,7 +72,7 @@
     "description": "The label for category 출입문 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.엘리베이터 관리하기": {
-    "message": "Managing Elevators",
+    "message": "Manage Elevators",
     "description": "The label for category 엘리베이터 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.운영 권한 관리하기": {
@@ -96,7 +96,7 @@
     "description": "The label for category 고급 출입 통제 설정하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.크리덴션 관리하기": {
-    "message": "Managing Credentials",
+    "message": "Manage Credentials",
     "description": "The label for category 크리덴션 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.서버 설정하기": {
@@ -126,5 +126,9 @@
   "sidebar.biostation2a.category.사용하기": {
     "message": "How to Use",
     "description": "The label for category 사용하기 in sidebar biostation2a"
+  },
+  "sidebar.biostarx.category.사용자 크리덴셜 등록하기": {
+    "message": "Enroll User's Credential",
+    "description": "The label for category 사용자 크리덴셜 등록하기 in sidebar biostarx"
   }
 }
