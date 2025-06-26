@@ -98,11 +98,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When the dialog box appears, enter the company name (", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the dialog box appears, enter the ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Request by"
-          }), ") and the activation key (", (0,jsx_runtime.jsx)(Cmd, {
+          }), " and the ", (0,jsx_runtime.jsx)(Cmd, {
             children: "License Key"
-          }), ")."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline-popup-filed.png"
         }), "\n"]
@@ -130,9 +130,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If you do not have an activation key, enter only the company name (", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["If you do not have an activation key, enter only the ", (0,jsx_runtime.jsx)(Cmd, {
           children: "Request by"
-        }), ")."]
+        }), "."]
       })
     })]
   });
@@ -199,7 +199,7 @@ function tutorial_register_license_key_createMdxContent(props) {
       }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
         children: "License"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "BioStar X"
+        children: "BioStar X License"
       }), " menu."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["The method for activating the ", (0,jsx_runtime.jsx)(Cmd, {
@@ -211,26 +211,25 @@ function tutorial_register_license_key_createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["For more information about ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.license",
-              provided: "2"
-            }), ", refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              children: "License"
+            }), ", refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-license",
-              children: "following document"
+              children: "the following document"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information about License Policy, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information about License Policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "licensing",
-              children: "following document"
+              children: "the following document"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information about license error codes, refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
               children: "the following link"
-            }), " to check license error codes."]
+            }), "."]
           }), "\n"]
         }), "\n"]
       })

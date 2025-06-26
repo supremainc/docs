@@ -221,8 +221,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.license",
-              provided: "2"
+              children: "License"
             }), " 메뉴에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-license",
               children: "다음 문서"
