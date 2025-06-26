@@ -1,6 +1,6 @@
 ---
 id: settings-door-add
-title: Enroll Door
+title: Register Door
 description: Set the door for access control. Select the entrance/exit device based on the door or set up anti-passback to enhance security, and configure alarms.
 keywords:
   - Door
@@ -8,21 +8,21 @@ keywords:
   - Access control
 ---
 
-This guide describes how to enroll and set up doors. Connect entry and exit devices for each door, and configure security features such as anti-passback and dual authentication to establish a systematic access management environment. Additionally, configure alarms based on the door status to prevent security incidents in advance.
+This guide describes how to register and set up doors. Connect entry and exit devices for each door, and configure security features such as anti-passback and dual authentication to establish a systematic access management environment. Additionally, configure alarms based on the door status to prevent security incidents in advance.
 
 ## Before start {#before-start}
 
-* Set access levels, access groups, and floor levels for access control before enrolling doors. For more information, refer to [this document](#).
+* Set access levels, access groups, and floor levels for access control before registering doors. For more information, refer to [this document](#).
 
-* Enroll devices before registering doors. For more information on device enrollment, refer to the following.
+* Register devices before registering doors. For more information about device registration, refer to the following.
 
-  * [Enroll Device](settings-adding-devices)
+  * <DocLink docId='platform/biostar_x/settings-adding-devices' />
 
-  * [Enroll Wiegand Device](settings-adding-wiegand)
+  * <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
 
-  * [Enroll Slave Device](settings-adding-slave-device)
+  * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
-## Enroll door {#adding-door}
+## Register door {#adding-door}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -36,13 +36,13 @@ This guide describes how to enroll and set up doors. Connect entry and exit devi
 
    * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more information, refer to the [following](#info).
 
-   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more details, refer to [following](#configdoor).
+   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more information, refer to [following](#configdoor).
 
    * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to the [following](#option).
 
-   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more details, refer to [following](#antipassback).
+   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more information, refer to [following](#antipassback).
 
-   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more details, refer to [following](#timed-apb).
+   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more information, refer to [following](#timed-apb).
 
    * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to the [following](#alarm).
 
@@ -64,7 +64,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 * The door name can be up to 48 characters long.
 
-* For more details on enrolling door groups, refer to [following](settings-manage-door-group).
+* For more information about registering door groups, refer to [following](settings-manage-door-group).
 
 :::
 
@@ -74,7 +74,7 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, you can set 
 
 <Image src='/img/biostarx-setting-door-adding-configuration.png' />
 
-* <Cmd sid='door.entryDevice' product='2' />: Select the device to be used for entry. If the device is not listed, enroll the device first.
+* <Cmd sid='door.entryDevice' product='2' />: Select the device to be used for entry. If the device is not listed, register the device first.
 
 * <Cmd sid='common.doorRelay' product='2' />: Choose the relay that will function as the door lock mechanism.
 
@@ -150,7 +150,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
     For more information on <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to the [following](#).
 
-  * For more details on schedule settings, refer to [the following document](settings-schedule).
+  * For more information about schedule settings, refer to [the following document](settings-schedule).
 
   :::
 
