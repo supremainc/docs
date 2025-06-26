@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-license-mdx-9fb.json
-var site_docs_platform_biostar_x_settings_license_mdx_9fb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-license","title":"라이선스 활성화하기","description":"BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-license.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-license","permalink":"/docs/en/platform/biostar_x/settings-license","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-license.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-license","title":"라이선스 활성화하기","description":"BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다.","keywords":["BioStar X 라이선스","장치 라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"HTTPS","permalink":"/docs/en/platform/biostar_x/settings-server-https"},"next":{"title":"BioStar X 라이선스","permalink":"/docs/en/platform/biostar_x/settings-license-biostar-x-license"}}')
+var site_docs_platform_biostar_x_settings_license_mdx_9fb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-license","title":"라이선스 활성화하기","description":"BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-license.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-license","permalink":"/docs/platform/biostar_x/settings-license","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-license.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-license","title":"라이선스 활성화하기","description":"BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다.","keywords":["BioStar X 라이선스","장치 라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/platform/biostar_x/settings-server-https"},"next":{"title":"BioStar X 라이선스","permalink":"/docs/platform/biostar_x/settings-license-biostar-x-license"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'BioStar X 라이선스',
 		'장치 라이선스'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -44,8 +44,6 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
-    admonition: "admonition",
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -54,14 +52,6 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["라이선스 에러코드를 확인하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
-          children: "다음 링크"
-        }), "를 참고하세요."]
-      })
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }

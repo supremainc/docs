@@ -43,6 +43,7 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     li: "li",
     ol: "ol",
@@ -70,6 +71,14 @@ function _createMdxContent(props) {
         sid: "setting.server.license.device",
         product: "2"
       }), "는 BioStar X 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["라이선스 에러코드를 확인하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
+          children: "다음 링크"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -266,13 +275,13 @@ function _createMdxContent(props) {
                     sid: "setting.server.license.device.activatedCount",
                     product: "2"
                   }), ": 무선 도어락의 연결 현황을 확인할 수 있습니다."]
+                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+                  type: "info",
+                  children: (0,jsx_runtime.jsx)(_components.p, {
+                    children: "이 항목은 무선 도어락 장치 라이선스를 불러들였을 때만 값이 표시됩니다."
+                  })
                 }), "\n"]
               }), "\n"]
-            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-              type: "info",
-              children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "이 항목은 무선 도어락 장치 라이선스를 불러들였을 때만 값이 표시됩니다."
-              })
             }), "\n"]
           }), "\n"]
         }), "\n"]

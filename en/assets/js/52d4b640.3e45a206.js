@@ -1,17 +1,17 @@
 "use strict";
 (self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7722"], {
-6909: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+2670: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  "default": () => (/* binding */ MDXContent),
-  toc: () => (/* binding */ toc),
+  frontMatter: () => (/* binding */ tutorial_register_license_key_frontMatter),
+  "default": () => (/* binding */ tutorial_register_license_key_MDXContent),
+  toc: () => (/* binding */ tutorial_register_license_key_toc),
   metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_register_license_key_mdx_52d_namespaceObject),
   assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
+  contentTitle: () => (/* binding */ tutorial_register_license_key_contentTitle)
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-tutorial-register-license-key-mdx-52d.json
@@ -20,32 +20,22 @@ var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tut
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-register-license-key.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_register-license-key.mdx
 
 
-const frontMatter = {
-	id: 'tutorial-register-license-key',
-	title: 'Register License Key',
-	description: 'Activate the BioStar X license to use additional features.',
-	keywords: [
-		'License'
-	],
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
 
-const assets = {
 
-};
 
 
 
 const toc = [{
-  "value": "Registering in Online",
-  "id": "registering-in-an-online-state",
+  "value": "Registering in an Online State",
+  "id": "registering-online",
   "level": 2
 }, {
-  "value": "Registering in Offline",
+  "value": "Registering in an Offline State",
   "id": "registering-offline",
   "level": 2
 }];
@@ -57,58 +47,64 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
-    strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcLicense} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcLicense) _missingMdxReference("IcLicense", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["If you have purchased a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " license, you can register the license key and use more features. Go to ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Settings"
-      }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "License"
-      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "BioStar X"
-      }), " menu."]
+    children: [(0,jsx_runtime.jsx)(_components.h2, {
+      id: "registering-online",
+      children: "Registering in an Online State"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The method for activating the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " license varies depending on the user's network environment. Check your network status and activate your license according to the provided instructions."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "registering-in-an-online-state",
-      children: "Registering in Online"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["To activate the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " license online while connected to the internet, please enter your name and the activation key you received, then click the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["To activate the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X License"
+      }), " in an online state with an internet connection, enter your name and the provided activation key, then click the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
       }), " button."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-tutorial-license-online.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "registering-offline",
-      children: "Registering in Offline"
+      children: "Registering in an Offline State"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["To activate the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " license in a closed network environment or in an offline state with limited internet access, please follow the instructions below."]
+      children: ["To activate the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X License"
+      }), " in an offline state, such as a closed network environment or when internet access is limited, follow the instructions below."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.license.visitor",
-            product: "2"
+            children: "Activation"
           }), " section, click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.button.requestOfflineKey",
             product: "2"
           }), " button."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-tutorial-license-offline.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "When the input window appears, enter the company name and activation key."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.title.activateLicenseOffline",
+            product: "2"
+          }), " window appears, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.button.requestOfflineKey",
+            product: "2"
+          }), " button."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-tutorial-license-offline-popup.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the dialog box appears, enter the company name (", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Request by"
+          }), ") and the activation key (", (0,jsx_runtime.jsx)(Cmd, {
+            children: "License Key"
+          }), ")."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-tutorial-license-offline-popup-filed.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -121,20 +117,22 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Please send it to the regional dealer."
+          children: "Send the file to your local distributor."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["When you receive the license file (", (0,jsx_runtime.jsx)(_components.em, {
         children: "*.lic"
-      }), ") from the regional dealer, click the ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ") from your local distributor, click the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
-      }), " button to upload the license file."]
+      }), " button and upload the license file."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "If you do not have an activation key, just enter the company name."
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["If you do not have an activation key, enter only the company name (", (0,jsx_runtime.jsx)(Cmd, {
+          children: "Request by"
+        }), ")."]
       })
     })]
   });
@@ -152,6 +150,106 @@ function MDXContent(props = {}) {
   }) : _createMdxContent(props);
 }
 function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-register-license-key.mdx
+
+
+const tutorial_register_license_key_frontMatter = {
+	id: 'tutorial-register-license-key',
+	title: 'Register License Key',
+	description: 'Activate the BioStar X license to use additional features.',
+	keywords: [
+		'License'
+	],
+	isTranslationMissing: false
+};
+const tutorial_register_license_key_contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+const tutorial_register_license_key_toc = [...toc];
+function tutorial_register_license_key_createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    li: "li",
+    p: "p",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  }, {Cmd, IcLicense} = _components;
+  if (!Cmd) tutorial_register_license_key_missingMdxReference("Cmd", true);
+  if (!IcLicense) tutorial_register_license_key_missingMdxReference("IcLicense", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["If you have purchased a ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X License"
+      }), ", you can register the license key and use more features."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Go to ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Settings"
+      }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "License"
+      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X"
+      }), " menu."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The method for activating the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X License"
+      }), " varies depending on the user's network environment. Check your network status and activate your license according to the provided instructions."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For more information about ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.license",
+              provided: "2"
+            }), ", refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-license",
+              children: "following document"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For more information about License Policy, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "following document"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
+              children: "the following link"
+            }), " to check license error codes."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {})]
+  });
+}
+function tutorial_register_license_key_MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(tutorial_register_license_key_createMdxContent, {
+      ...props
+    })
+  }) : tutorial_register_license_key_createMdxContent(props);
+}
+function tutorial_register_license_key_missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 

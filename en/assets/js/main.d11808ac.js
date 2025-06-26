@@ -21015,9 +21015,9 @@ var routesChunkNames = __webpack_require__(7138);
         /*require.resolve*/(5713)
     ],
     "52d4b640": [
-        ()=>__webpack_require__.e(/* import() | 52d4b640 */ "7722").then(__webpack_require__.bind(__webpack_require__, 6909)),
+        ()=>__webpack_require__.e(/* import() | 52d4b640 */ "7722").then(__webpack_require__.bind(__webpack_require__, 2670)),
         "@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-register-license-key.mdx",
-        /*require.resolve*/(6909)
+        /*require.resolve*/(2670)
     ],
     "5308dfd1": [
         ()=>Promise.all(/* import() | 5308dfd1 */ [__webpack_require__.e("6212"), __webpack_require__.e("7397")]).then(__webpack_require__.bind(__webpack_require__, 3492)),
@@ -21275,9 +21275,9 @@ var routesChunkNames = __webpack_require__(7138);
         /*require.resolve*/(6770)
     ],
     "9d9fc1f3": [
-        ()=>__webpack_require__.e(/* import() | 9d9fc1f3 */ "493").then(__webpack_require__.bind(__webpack_require__, 9338)),
+        ()=>__webpack_require__.e(/* import() | 9d9fc1f3 */ "493").then(__webpack_require__.bind(__webpack_require__, 7881)),
         "@site/docs/platform/biostar_x/settings-license-biostar-x-license.mdx",
-        /*require.resolve*/(9338)
+        /*require.resolve*/(7881)
     ],
     "9ea077f4": [
         ()=>__webpack_require__.e(/* import() | 9ea077f4 */ "759").then(__webpack_require__.bind(__webpack_require__, 6496)),

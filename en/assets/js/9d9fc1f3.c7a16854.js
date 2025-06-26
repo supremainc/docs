@@ -1,48 +1,38 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4952"], {
-389: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["493"], {
+7881: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  "default": () => (/* binding */ MDXContent),
-  toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_register_license_key_mdx_854_namespaceObject),
+  frontMatter: () => (/* binding */ settings_license_biostar_x_license_frontMatter),
+  "default": () => (/* binding */ settings_license_biostar_x_license_MDXContent),
+  toc: () => (/* binding */ settings_license_biostar_x_license_toc),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_license_biostar_x_license_mdx_9d9_namespaceObject),
   assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
+  contentTitle: () => (/* binding */ settings_license_biostar_x_license_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-register-license-key-mdx-854.json
-var site_docs_platform_biostar_x_tutorial_register_license_key_mdx_854_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","source":"@site/docs/platform/biostar_x/tutorial-register-license-key.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-register-license-key","permalink":"/docs/platform/biostar_x/tutorial-register-license-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-register-license-key.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-register-license-key","title":"라이선스 키 등록하기","description":"BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/tutorial-login"},"next":{"title":"서버 관리하기","permalink":"/docs/platform/biostar_x/manage-server"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-license-biostar-x-license-mdx-9d9.json
+var site_docs_platform_biostar_x_settings_license_biostar_x_license_mdx_9d9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-license-biostar-x-license","title":"BioStar X 라이선스","description":"구매한 BioStar X 라이선스를 활성화할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-license-biostar-x-license.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-license-biostar-x-license","permalink":"/docs/en/platform/biostar_x/settings-license-biostar-x-license","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-license-biostar-x-license.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-license-biostar-x-license","title":"BioStar X 라이선스","description":"구매한 BioStar X 라이선스를 활성화할 수 있습니다.","keywords":["라이선스"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"라이선스 활성화하기","permalink":"/docs/en/platform/biostar_x/settings-license"},"next":{"title":"장치 라이선스","permalink":"/docs/en/platform/biostar_x/settings-license-device-license"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial-register-license-key.mdx
+;// CONCATENATED MODULE: ./docs/common/_register-license-key.mdx
 
 
-const frontMatter = {
-	id: 'tutorial-register-license-key',
-	title: '라이선스 키 등록하기',
-	description: 'BioStar X 라이선스를 활성화하여 추가 기능을 사용하세요.',
-	keywords: [
-		'라이선스'
-	],
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
 
-const assets = {
 
-};
 
 
 
 const toc = [{
   "value": "온라인 상태에서 등록하기",
-  "id": "registering-in-an-online-state",
+  "id": "registering-online",
   "level": 2
 }, {
   "value": "오프라인 상태에서 등록하기",
@@ -51,64 +41,25 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     em: "em",
     h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
-    strong: "strong",
-    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcLicense, Image} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcLicense) _missingMdxReference("IcLicense", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 라이선스를 구매했다면 라이선스 키를 등록하고 더 많은 기능을 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Settings"
-      }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "License"
-      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "BioStar X License"
-      }), " 메뉴로 진입하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자의 네트워크 환경에 따라 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 라이선스를 활성화할 수 있는 방법이 다릅니다. 제공하는 안내에 따라 네트워크 상태를 확인하고 라이선스를 활성화하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "License"
-            }), " 메뉴에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-license",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "licensing",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "registering-in-an-online-state",
+    children: [(0,jsx_runtime.jsx)(_components.h2, {
+      id: "registering-online",
       children: "온라인 상태에서 등록하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["인터넷이 연결된 온라인 상태에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 라이선스를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["인터넷이 연결된 온라인 상태에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X 라이선스"
+      }), "를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
       }), " 버튼을 클릭하세요."]
@@ -118,9 +69,9 @@ function _createMdxContent(props) {
       id: "registering-offline",
       children: "오프라인 상태에서 등록하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 라이선스를 활성화하려면 다음의 안내에 따르세요."]
+      children: ["폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X 라이선스"
+      }), "를 활성화하려면 다음의 안내에 따르세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -199,6 +150,105 @@ function MDXContent(props = {}) {
   }) : _createMdxContent(props);
 }
 function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-license-biostar-x-license.mdx
+
+
+const settings_license_biostar_x_license_frontMatter = {
+	id: 'settings-license-biostar-x-license',
+	title: 'BioStar X 라이선스',
+	description: '구매한 BioStar X 라이선스를 활성화할 수 있습니다.',
+	keywords: [
+		'라이선스'
+	],
+	isTranslationMissing: true
+};
+const settings_license_biostar_x_license_contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+const settings_license_biostar_x_license_toc = [...toc];
+function settings_license_biostar_x_license_createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  }, {Cmd} = _components;
+  if (!Cmd) settings_license_biostar_x_license_missingMdxReference("Cmd", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["구매한 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X 라이선스"
+      }), "를 활성화할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자의 네트워크 환경에 따라 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "BioStar X 라이선스"
+      }), "를 활성화할 수 있는 방법이 다릅니다. 제공하는 안내에 따라 네트워크 상태를 확인하고 라이선스를 활성화하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["라이선스 에러코드를 확인하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
+              children: "다음 링크"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.biostar2",
+            product: "2"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {})]
+  });
+}
+function settings_license_biostar_x_license_MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(settings_license_biostar_x_license_createMdxContent, {
+      ...props
+    })
+  }) : settings_license_biostar_x_license_createMdxContent(props);
+}
+function settings_license_biostar_x_license_missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
