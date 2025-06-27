@@ -1,39 +1,39 @@
 ---
 id: settings-adding-devices
 title: Register Device
-description: This guide decripte how to enroll a device in BioStar X.
+description: This guide decripte how to register a device in BioStar X.
 keywords:
   - Device
   - Add device
 ---
 
-This guide explains how to enroll a device in **BioStar X**. Enrolling a device allows **BioStar X** to monitor and manage the status of that device. Ensure the device is properly connected before searching for it. It’s convenient to know the location, ID, IP address, and other details in advance when adding multiple devices at once.
+This guide explains how to register a device in **BioStar X**. Registering a device allows **BioStar X** to monitor and manage the status of that device. Ensure the device is properly connected before searching for it. It’s convenient to know the location, ID, IP address, and other details in advance when adding multiple devices at once.
 
 :::info
 
-* When enrolling a new device, change the device key value to the server's data encryption key value. All user data on the device will be deleted during the key conversion.
+* When registering a new device, change the device key value to the server's data encryption key value. All user data on the device will be deleted during the key conversion.
 
 * To delete all setting information and user data stored on the device and resend them, click <Cmd sid='device.sync_all' product='2' />. You can find the <Cmd sid='device.sync_all' product='2' /> option by selecting the device from the device list and clicking the <IcMoreW /> button.
 
-* To enroll all devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, right-click the group name and click <Cmd sid='device.menu.addAllWaitingDevices' product='2' />. To enroll devices individually, right-click on the device name and click <Cmd sid='device.menu.addWaitingDevice' product='2' />.
+* To register all devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, right-click the group name and click <Cmd sid='device.menu.addAllWaitingDevices' product='2' />. To register devices individually, right-click on the device name and click <Cmd sid='device.menu.addWaitingDevice' product='2' />.
 
 * If the user ID type on **BioStar X** differs from the device, change the device settings according to **BioStar X**’s user ID configuration.
 
-* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, refer to [this document](#).
+* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, refer to the [following](#).
 
-* To enroll the device and set details, refer to [the following document](#).
+* To register the device and set details, refer to the [following](#).
 
 :::
 
 ## Before start {#before-start}
 
-Check the following before enrolling the device.
+Check the following before registering the device.
 
-* Set access levels, access groups, and floor levels for access control. For more information, refer to [this document](#).
+* Set access levels, access groups, and floor levels for access control. For more information, refer to the [following](#).
 
-## Quick enrollment {#quickadd-device}
+## Quick registration {#quickadd-device}
 
-Devices on the same network as **BioStar X** can be automatically searched and enrolled.
+Devices on the same network as **BioStar X** can be automatically searched and registered.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -41,17 +41,17 @@ Devices on the same network as **BioStar X** can be automatically searched and e
 
 3. Click <Cmd sid='device.searchDevice' product='2' /> in the device list.
 
-4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be enrolled will be displayed. If the desired device is not in the list, click <Cmd sid='button.search' product='2' /> in the top right corner.
+4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be registered will be displayed. If the desired device is not in the list, click <Cmd sid='button.search' product='2' /> in the top right corner.
 
    <Image src='/img/biostarx-setting-add-device.png' />
 
-5. Select the devices to enroll or uncheck those you do not want to enroll.
+5. Select the devices to register or uncheck those you do not want to register.
 
-6. To change the name of the device to be enrolled, click <IcEdit /> in the <Cmd sid='device.info.name' product='2' /> column and make the change.
+6. To change the name of the device to be registered, click <IcEdit /> in the <Cmd sid='device.info.name' product='2' /> column and make the change.
 
    <Image src='/img/biostarx-setting-add-device-rename.png' />
 
-7. To specify the group for the device to be enrolled, select it in the <Cmd sid='device.info.group' product='2' /> column.
+7. To specify the group for the device to be registered, select it in the <Cmd sid='device.info.group' product='2' /> column.
 
    <Image src='/img/biostarx-setting-add-device-group.png' />
 
@@ -69,7 +69,7 @@ Devices for which the IP address is unavailable or needs to be changed can be mo
 
 ### IP address setting {#setipaddress}
 
-You can change the IP address of the device to be enrolled. Click <Cmd sid='button.setIp' product='2' /> at the bottom left of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address.
+You can change the IP address of the device to be registered. Click <Cmd sid='button.setIp' product='2' /> at the bottom left of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address.
 
 <Image src='/img/biostarx-setting-device-set-ip.png' />
 
@@ -101,7 +101,7 @@ You can set device search options by clicking <IcSet /> at the top right of the 
 
 ## Advanced search {#advancedsearch}
 
-You can specify the IP address and port number of a specific device to enroll it.
+You can specify the IP address and port number of a specific device to register it.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -109,7 +109,7 @@ You can specify the IP address and port number of a specific device to enroll it
 
 3. Click <Cmd sid='button.func.advancedSearch' product='2' /> in the device list.
 
-4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be enrolled.
+4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be registered.
 
    <Image src='/img/biostarx-setting-device-advanced-search.png' />
 
@@ -117,6 +117,6 @@ You can specify the IP address and port number of a specific device to enroll it
 
    <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
 
-6. To enroll the device, click <Cmd sid='button.add' product='2' />.
+6. To register the device, click <Cmd sid='button.add' product='2' />.
 
 The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.
