@@ -21,11 +21,11 @@ Before installing **BioStar X**, check the following and proceed with the instal
 
 * **BioStar X** can only be installed on a 64bit operating system.
 
-* If you are using Windows 8.1, please refer to the following link to install the KB2919355 update. Link 1
+* If you are using Windows 8.1, refer to the following link to install the KB2919355 update. Link 1
 
-* If you are using MS SQL 2012 Express, please refer to the following link to install the Service Pack 3. [Link 2](https://www.microsoft.com/download/details.aspx?id=49996)
+* If you are using MS SQL 2012 Express, refer to the following link to install the Service Pack 3. [Link 2](https://www.microsoft.com/download/details.aspx?id=49996)
 
-* If you are using MS SQL 2014 Express, please refer to the following link to install Service Pack 2. [Link 3](https://www.microsoft.com/en-us/download/details.aspx?id=53168)
+* If you are using MS SQL 2014 Express, refer to the following link to install Service Pack 2. [Link 3](https://www.microsoft.com/en-us/download/details.aspx?id=53168)
 
 * If you are using MS SQL Server, set the `Collation` option of the server and each table to CI (Case-insensitive).
 
@@ -40,33 +40,33 @@ Before installing **BioStar X**, check the following and proceed with the instal
   <Columns>
   <Column className='text--left'>
 
-  * HTTP Port: 80
+  * <Cmd sid="port.webServerHttp" product='2' />: 80
 
-  * Web-socket Port: 9002
+  * <Cmd sid="port.webSocket" product='2' />: 9002
 
-  * Database Port: 3312
+  * <Cmd sid="port.mariaDB" product='2' />: 3312
 
-  * T&A HTTPS Port: 3002
+  * <Cmd sid="port.tnaHttps" product='2' />: 3002
 
-  * FastCGI Port: 9000
+  * <Cmd sid="port.webServerFastCgi" product='2' />: 9000
 
-  * Unified Gateway HTTPS Port: 5002
+  * <Cmd sid="port.gatewayHttps" product='2' />: 5002
 
   </Column>
 
   <Column className='text--left'>
 
-  * HTTPS Port: 443
+  * <Cmd sid="port.webServerHttps" product='2' />: 443
 
-  * API Port: 9010
+  * <Cmd sid="port.apiPort" product='2' />: 9010
 
-  * T&A HTTP Port: 3000
+  * <Cmd sid="port.tnaHttp" product='2' />: 3000
 
-  * T&A Cloud Port: 52001
+  * <Cmd sid="port.tnaNgrok" product='2' />: 52001
 
-  * Unified Gateway HTTP Port: 5000
+  * <Cmd sid="port.gatewayHttp" product='2' />: 5000
 
-  * Report HTTP Port: 4213
+  * <Cmd sid="port.reportHttp" product='2' />: 4213
 
   </Column>
   </Columns>
@@ -75,7 +75,7 @@ Before installing **BioStar X**, check the following and proceed with the instal
 
 ## Check the Database {#checkdb}
 
-If you are using a user-configured database, please check the items below before installing **BioStar X**.
+If you are using a user-configured database, check the items below before installing **BioStar X**.
 
 ### MariaDB {#mariadb}
 
@@ -147,7 +147,7 @@ It is recommended to set up the **Database Files** section as shown below.
 
 :::caution
 
-In environments with many transactions, please backup the logs periodically to ensure that the size of the log files does not increase.
+In environments with many transactions, backup the logs periodically to ensure that the size of the log files does not increase.
 
 :::
 
@@ -158,7 +158,7 @@ In environments with many transactions, please backup the logs periodically to e
 
 ##### Presetting {#preliminary-setting}
 
-If you are using **Microsoft Windows Active Directory**, please complete the presets as below before setting up the Windows Authentication database.
+If you are using **Microsoft Windows Active Directory**, complete the presets as below before setting up the Windows Authentication database.
 
 1. Log in as an administrator account in **SQL Server Management Studio**.
 

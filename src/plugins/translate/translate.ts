@@ -17,13 +17,19 @@ export async function translate(content: string, targetLanguage: string, isDescr
 1. **Sentence Structure**: "To [목적], [행동]" → "[행동] to [목적]"
    - "To configure settings, click the button" → "Click the button to configure settings"
 
-2. **Title Format**: Remove -ing form, use imperative
-   - "Configuring Settings" → "Configure Settings"
+2. **Title Format**: 
+   - Frontmatter title: Use title case (capitalize first letter of each word)
+   - Body headings: Use sentence case (only first word + proper nouns capitalized)
+   - Remove -ing form, use imperative
 
 3. **Description Format**: Use sentence case (only first word + proper nouns capitalized)
    - "Learn How To Configure Settings" → "Learn how to configure settings"
 
-4. **Preserve Tags**: Never translate HTML tags, JSX components, or Markdown syntax
+4. **UI Elements**: Simplify button/element references
+   - "Click the Save button" → "Click Save"
+   - "Click the ... button" → "Click ..."
+
+5. **Preserve Tags**: Never translate HTML tags, JSX components, or Markdown syntax
    - Keep <Image>, <IcFirst2>, ##, *, etc. exactly as-is
 
 ### Key Translations:
@@ -56,11 +62,18 @@ export async function translate(content: string, targetLanguage: string, isDescr
 - Korean "옵션 기능" → English "option" (remove "feature")
 - Avoid developer terms: logic, register
 
+### Link Translation Rules:
+- "[다음 문서]()" → "[following]()"
+- "[다음 링크]()" → "[following link]()"
+- "~~에 대한 자세한 내용은 [다음 문서]()를 참고하세요" → "For more information about ~~, refer to the [following]"
+- Use "information on" instead of "information about" for technical procedures
+
 ### Credential Types (keep in English):
 - fingerprint, face, visual face, card, QR/Barcode
 
 ### Avoid These:
 - "you can" (use imperative instead)
+- "please" (use direct imperative, except for system errors or user inconvenience)
 - "display" (use "appears")
 - "some" (use "certain")
 - Title case in descriptions
