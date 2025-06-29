@@ -86,7 +86,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcAdvSearch, IcAscend, IcBw, IcDescend, IcFirst, IcFw, IcLast, IcTip, Image, Kbd} = _components;
+  }, {Cmd, IcAdvSearch, IcAscend, IcBw, IcDescend, IcFirst, IcFw, IcLast, IcTips, Image, Kbd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAdvSearch) _missingMdxReference("IcAdvSearch", true);
   if (!IcAscend) _missingMdxReference("IcAscend", true);
@@ -95,7 +95,7 @@ function _createMdxContent(props) {
   if (!IcFirst) _missingMdxReference("IcFirst", true);
   if (!IcFw) _missingMdxReference("IcFw", true);
   if (!IcLast) _missingMdxReference("IcLast", true);
-  if (!IcTip) _missingMdxReference("IcTip", true);
+  if (!IcTips) _missingMdxReference("IcTips", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Kbd) _missingMdxReference("Kbd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -263,7 +263,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["입력 필드 중 ", (0,jsx_runtime.jsx)(IcTip, {}), " 아이콘이 표시된 항목은 개인 정보 DB 암호화로 인해 전문만 검색할 수 있습니다."]
+            children: ["입력 필드 중 ", (0,jsx_runtime.jsx)(IcTips, {}), " 아이콘이 표시된 항목은 개인 정보 DB 암호화로 인해 전문만 검색할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

@@ -5479,7 +5479,7 @@ const SvgIcoTip = _ref => {
     IcRefresh: ico_refresh,
     IcInfo: ico_info,
     IcLogout: ico_logout,
-    IcTip: ico_tip
+    IcTips: ico_tip
 });
 
 
