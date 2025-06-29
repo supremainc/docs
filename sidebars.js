@@ -52,10 +52,10 @@ const sidebars = {
             'platform/biostar_x/tutorial-custom-install',
             'platform/biostar_x/tutorial-login',
             'platform/biostar_x/tutorial-register-license-key',
-            'platform/biostar_x/tutorial-add-device',
             'platform/biostar_x/manage-server',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
+            'platform/biostar_x/initial-setup-guide',
           ]
         },
         {
@@ -67,19 +67,27 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/user-group-manage',
+            'platform/biostar_x/add-user',
+            'platform/biostar_x/add-user-basic-info',
             {
               type: 'category',
-              label: '사용자 등록하기',
+              label: '사용자 크리덴셜 등록하기',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_x/add-user'
+                id: 'platform/biostar_x/enroll-credential'
               },
               items: [
-                'platform/biostar_x/add-user-basic-info',
-                'platform/biostar_x/set-permission',
-                'platform/biostar_x/enroll-credential',
+                'platform/biostar_x/enroll-credential-securitylevel',
+                'platform/biostar_x/enroll-credential-authmode',
+                'platform/biostar_x/enroll-credential-fingerprint',
+                'platform/biostar_x/enroll-credential-face',
+                'platform/biostar_x/enroll-credential-card',
+                'platform/biostar_x/enroll-credential-mobile',
+                'platform/biostar_x/enroll-credential-qrbarcode',
+                'platform/biostar_x/enroll-credential-pin',
               ]
             },
+            'platform/biostar_x/set-permission',
             'platform/biostar_x/view-users',
             {
               type: 'category',
@@ -100,7 +108,8 @@ const sidebars = {
             // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
-            'platform/biostar_x/migration-face'
+            'platform/biostar_x/migration-face',
+            'platform/biostar_x/columnlayout'
           ]
         },
         {
@@ -132,6 +141,32 @@ const sidebars = {
             'platform/biostar_x/monitoring-device',
             'platform/biostar_x/monitoring-video',
             'platform/biostar_x/monitoring-event'
+          ]
+        },
+        {
+          type: 'category',
+          label: '데이터',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-data'
+          },
+          items: [
+            'platform/biostar_x/data-generate-reports',
+            'platform/biostar_x/data-automatic-report-schedule',
+            'platform/biostar_x/data-settings'
+          ]
+        },
+        {
+          type: 'category',
+          label: '대시보드',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-dashboard',
+          },
+          items: [
+            'platform/biostar_x/dashboard-adding-widget',
+            'platform/biostar_x/dashboard-edit-widget',
+            'platform/biostar_x/dashboard-delete-widget'
           ]
         },
         {
@@ -178,6 +213,7 @@ const sidebars = {
             },
             'platform/biostar_x/settings-device-image-log',
             'platform/biostar_x/settings-device-usb-agent',
+            'platform/biostar_x/settings-device-connection-manager',
             {
               type: 'category',
               label: '출입문 관리하기',
@@ -227,8 +263,93 @@ const sidebars = {
               items: [
                 'platform/biostar_x/settings-access-control-manage-access-level',
                 'platform/biostar_x/settings-access-control-manage-access-group',
+                'platform/biostar_x/settings-access-control-manage-floor-level',
+                'platform/biostar_x/settings-access-control-ac-status'
               ]
             },
+            'platform/biostar_x/settings-schedule',
+            {
+              type: 'category',
+              label: '고급 출입 통제 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-advanced-ac',
+              },
+              items: [
+                'platform/biostar_x/settings-advanced-ac-apb',
+                'platform/biostar_x/settings-advanced-ac-fire-alarm',
+                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
+                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
+                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
+                'platform/biostar_x/settings-advanced-ac-interlock',
+                'platform/biostar_x/settings-advanced-ac-muster',
+                'platform/biostar_x/settings-advanced-ac-occupancy',
+              ]
+            },
+            'platform/biostar_x/settings-triger-and-action',
+            'platform/biostar_x/settings-event-log-import',
+            'platform/biostar_x/settings-alert',
+            {
+              type: 'category',
+              label: '크리덴션 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-credential-manage'
+              },
+              items: [
+                'platform/biostar_x/settings-credential-card-manage',
+                'platform/biostar_x/settings-credential-card-change-data-format',
+                'platform/biostar_x/settings-credential-card-csn-mobile',
+                'platform/biostar_x/settings-credential-wiegand-format',
+                'platform/biostar_x/settings-credential-smart-format',
+                'platform/biostar_x/settings-credential-mobile-access-card',
+              ]
+            },
+            'platform/biostar_x/settings-diretory-integration',
+            'platform/biostar_x/settings-card-printer',
+            'platform/biostar_x/settings-visitor',
+            'platform/biostar_x/settings-email-setting',
+            'platform/biostar_x/settings-custom-interface',
+            {
+              type: 'category',
+              label: '서버 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-server',
+              },
+              items: [
+                'platform/biostar_x/settings-server-server',
+                'platform/biostar_x/settings-server-https'
+              ]
+            },
+            {
+              type: 'category',
+              label: '라이선스 활성화하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-license',
+              },
+              items: [
+                'platform/biostar_x/settings-license-biostar-x-license',
+                'platform/biostar_x/settings-license-device-license'
+              ]
+            },
+            {
+              type: 'category',
+              label: '시스템 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-system'
+              },
+              items: [
+                'platform/biostar_x/settings-system-audit-trail',
+                'platform/biostar_x/settings-system-system-backup',
+                'platform/biostar_x/settings-system-system-restore',
+                'platform/biostar_x/settings-system-security',
+                'platform/biostar_x/settings-system-daylight-saving-time'
+              ]
+            },
+            'platform/biostar_x/settings-preferences'
           ]
         },
         {
@@ -242,18 +363,9 @@ const sidebars = {
             'platform/biostar_x/ui-common',
             'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
-            'platform/biostar_x/ui-monitoring'
-          ]
-        },
-        {
-          type: 'category',
-          label: '통합 기능',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/common-features',
-          },
-          items: [
-            'platform/biostar_x/columnlayout'
+            'platform/biostar_x/ui-monitoring',
+            'platform/biostar_x/ui-dashboard',
+            'platform/biostar_x/ui-settings'
           ]
         },
         'platform/biostar_x/licensing'
@@ -290,7 +402,7 @@ const sidebars = {
       ]
     }
   ],
-  // bioStation3: [
+  // biostation3: [
   //   {
   //     type: 'category',
   //     label: 'BioStation 3',
@@ -324,6 +436,43 @@ const sidebars = {
   //       'device/biostation_3/product-specifications',
   //       'device/biostation_3/regulatory-information',
   //       'device/biostation_3/appendices',
+  //     ],
+  //   },
+  // ],
+  // biostation2a: [
+  //   {
+  //     type: 'category',
+  //     label: 'BioStation 2a',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/biostation_2a/index',
+  //     },
+  //     items: [
+  //       'device/biostation_2a/safety-instructions',
+  //       'device/biostation_2a/getting-started',
+  //       'device/biostation_2a/installation',
+  //       {
+  //         type: 'category',
+  //         label: '사용하기',
+  //         link: {
+  //           type: 'doc',
+  //           id: 'device/biostation_2a/using-device',
+  //         },
+  //         items: [
+  //           'device/biostation_2a/admin-menu',
+  //           'device/biostation_2a/user',
+  //           'device/biostation_2a/authentication',
+  //           'device/biostation_2a/settings',
+  //           'device/biostation_2a/event-log',
+  //         ],
+  //       },
+  //       'device/biostation_2a/troubleshooting',
+  //       'device/biostation_2a/product-specifications',
+  //       'device/biostation_2a/regulatory-information',
+  //       'device/biostation_2a/appendices',
   //     ],
   //   },
   // ],

@@ -1,0 +1,254 @@
+---
+id: settings-server-server
+title: Server Detailed Settings
+description: You can configure the BioStar X server information, user management, device management and automatic upgrade settings.
+keywords:
+  - Server
+  - User Management
+---
+
+You can configure the BioStar X server information, user management, device management and automatic upgrade settings.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click the <Cmd sid="common.server" product='2' />.
+
+3. Edit the necessary fields.
+
+## General {#general}
+
+You can configure the general information on BioStar X.
+
+<Image src='/img/biostarx-settings-server-general.png' className='none' />
+
+* <Cmd sid="setting.server.biostarIPAdress" product='2' />: Set the server IP address. Change the setting to use a specific IP address.
+
+* <Cmd sid="setting.server.biostarPort" product='2' />: Set the server port.
+
+* <Cmd sid="common.sessionTimeout" product='2' />: Set a session timeout period. If there is no activity on BioStar X for the set time after logging in, the session is logged out automatically.
+
+* <Cmd sid="setting.server.logUploadType" product='2' />: Select an event log upload method. If real-time communication with the server is difficult, set this to <Cmd sid="common.manual" product='2' />.
+
+* <Cmd sid="setting.server.logRetainDays" product='2' />: Set the log retention period from 1 to 120 days.
+
+## User and device management {#user-and-device-management}
+
+You can configure the user synchronization and fingerprint template format settings.
+
+<Image src='/img/biostarx-settings-server-management.png' className='none' />
+
+* <Cmd sid="setting.server.automaticUserSync" product='2' />: Change the user information synchronization method.
+
+  * Select <Cmd sid="setting.server.syncOption.allDevices" product='2' /> to have the user information automatically synchronized with the server.
+
+  * When set to <Cmd sid="setting.server.syncOption.deviceSync" product='2' />, user information on the server is synchronized with all devices registered on the server. However, user information modified on the device is not synchronized to the server, and only user information added on the device is synchronized to the server.
+
+  * Select <Cmd sid="setting.server.syncOption.smartSync" product='2' /> to automatically synchronize only the devices belonging to the access group with the changes.
+
+* <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' />: Set the fingerprint template format. Available options include **SUPREMA**, **ISO** and **ANSI378**. If there are still user fingerprint template remaining in the device, selecting a different format is not possible.
+
+* <Cmd sid="setting.userDevice.useridType" product='2' />: Use of <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> or <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> can be set for user ID. When <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> is set for <Cmd sid="setting.userDevice.useridType" product='2' />, BioLite Net, BioEntry Plus and BioEntry W cannot be used. In addition, all users saved in XPass and XPass S2 will be deleted and all settings except for the network will be initialized.
+
+* <Cmd sid="setting.server.enrollment_device.title" product='2' />: You can designate certain devices that you frequently use for fingerprint and card enrollment as an enrollment device. Click the <Cmd sid="button.plusAdd" product='2' /> and choose the devices.
+
+* <Cmd sid="setting.server.custom_field.title" product='2' />:  You can add custom user fields for extra user information and these fields appear on the User page. There are three types of custom user fields: <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />, <Cmd sid="setting.server.custom_field.type.textbox" product='2' /> and <Cmd sid="setting.server.custom_field.type.combobox" product='2' />. If you choose the <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> for a custom user field, you can add up to 20 items with 32 characters each, and each item is separated by a semicolon (;).
+
+* <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' />: If you issue an AoC card which stores user's credentials on the smart card, you can set BioStar X to delete user's data and credential information automatically.
+
+* <Cmd sid="setting.server.eventLogRetainDays" product='2' />: You can set the period for storing the access control event logs.
+
+* <Cmd sid="setting.server.hideCredentialFaces" product='2' />: To protect users' privacy, preview images can be hidden when enrolling face credentials. If you enable this option, a preview will not be provided when enrolling the user's face or visual face.
+
+:::info
+
+* If you select <Cmd sid="setting.server.automaticUserSync" product='2' /> as <Cmd sid="setting.server.syncOption.smartSync" product='2' />, users stored in the device that do not belong to the access group cannot be managed by the server. If you use this option, go to DEVICE menu and click <Cmd sid="device.sync_all" product='2' /> for each device to proceed with the synchronization.
+
+* Even if you select <Cmd sid="setting.server.automaticUserSync" product='2' /> as <Cmd sid="setting.server.syncOption.smartSync" product='2' />, Access groups set up for special purposes, such as the following, will be synchronized regardless of the device's access group.
+
+  * Dual authentication access group set up in the Devices and Elevators.
+
+  * Bypass Group in the Anti-passback Zone.
+
+  * Bypass Group in the Scheduled Lock Zone.
+
+  * Scheduled Unlock Authentication Group in the Scheduled Unlock Zone.
+
+  * Arm/Disarm Group in the Intrusion Alarm Zone. 
+
+* Even if you select <Cmd sid="setting.server.automaticUserSync" product='2' /> as <Cmd sid="setting.server.syncOption.smartSync" product='2' />, Users set to device administrator will be synchronized regardless of the access group.
+
+<details>
+
+<summary>**NFC card** is supported with the below conditions.</summary>
+
+* Mobile device OS: Android 5.0 Lollipop or later, Android 10 or earlier
+
+* BioStar 2 Mobile 2.4.1 or later
+
+* XPass S2: XPS2M-V2 FW 2.4 or later
+
+* BioStation 2: BS2-OMPW, BS2-OIPW FW 1.4 or later, FW 1.8 or earlier
+
+* BioStation A2: BSA2-OMPW, BSA2-OIPW FW 1.3 or later, FW 1.7.1 or earlier
+
+* BioStation L2: BSL2-OM FW 1.2 or later
+
+* BioEntry W2: BEW2-OAP, BEW2-ODP FW 1.1 or later, FW 1.5 or earlier
+
+* FaceStation 2: FS2-D, FS2-AWB FW 1.3.1 or earlier
+
+* BioLite N2: BLN2-ODB, BLN2-OAB, BLN2-PAB FW 1.2 or earlier
+
+* XPass D2: XPD2-MDB, XPD2-GDB, XPD2-GKDB FW 1.3 or earlier
+
+* FaceLite: FL-DB FW 1.1 or earlier
+
+* XPass 2: XP2-MDPB, XP2-GDPB, XP2-GKDPB, XP2-MAPB FW 1.0 or later
+
+* BioEntry P2: BEP2-OD, BEP2-OA FW 1.0 or later
+
+* BioEntry R2: BER2-OD FW v1.1.0 or later
+
+</details>
+
+<details>
+
+<summary>**BLE card** is supported with the below conditions.</summary>
+
+* Mobile device OS: Android 5.0 Lollipop or later, Android 10 or earlier / iOS 9.0 or later
+
+* BioStar 2 Mobile 2.4.1 or later
+
+* FaceStation 2: FS2-AWB FW 1.3.1 or earlier
+
+* BioLite N2: BLN2-ODB, BLN2-OAB, BLN2-PAB FW 1.2 or earlier
+
+* XPass D2: XPD2-MDB, XPD2-GDB, XPD2-GKDB FW 1.3 or earlier
+
+* FaceLite: FL-DB FW 1.1 or earlier
+
+* XPass 2: XP2-MDPB, XP2-GDPB, XP2-GKDPB, XP2-MAPB FW 1.0 or later
+
+</details>
+
+* <Cmd sid="setting.server.serverMatching.use" product='2' />: Activates/Deactivates server matching.
+
+* When <Cmd sid="setting.userDevice.useridType" product='2' /> is changed from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> to <Cmd sid="setting.userDevice.useridType.numeric" product='2' />, all user information registered on BioStar X should be deleted.
+
+<details>
+
+<summary>The devices and the firmware versions where the <Cmd sid="setting.userDevice.useridType" product='2' /> can be changed are as follows.</summary>
+
+* CoreStation firmware version 1.0.0 or higher
+
+* FaceStaion 2 FW 1.0.0 or later
+
+* FaceLite firmware 1.0.0 or higher
+
+* BioEntry W2 FW 1.1.0 or later
+
+* BioStation L2 FW 1.2.0 or later
+
+* BioStation A2 FW 1.3.0 or later
+
+* BioStation 2 FW 1.4.0 or later
+
+* BioLite N2 firmware 1.0.0 or higher
+
+* BioEntry P2 firmware 1.0.0 or higher
+
+* BioEntry R2 FW 1.0.0 or later
+
+* XPass 2 firmware 1.0.0 or higher
+
+* XPass D2 firmware version 1.0.0 or higher
+
+* XPass FW 2.4.0 or later
+
+* XPass S2 firmware 2.4.0 or higher
+
+* X-Station 2 firmware 1.0.0 or higher
+
+* BioStation 3 firmware 1.0.0 or higher
+
+</details>
+
+* If you change the value in the <Cmd>Order</Cmd> field, the position of the custom field on the User page changes.
+
+* For a <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />, a number from 0 to 4294962795 is allowed and characters are not allowed.
+
+* For a <Cmd sid="setting.server.custom_field.type.textbox" product='2' />, up to 32 characters are allowed.
+
+* For a <Cmd sid="setting.server.custom_field.type.combobox" product='2' />, the items that have been set to the field are displayed as item. If you want to configure a combo box field as shown in the screenshot below, you need to enter **Option 1**; **Option 2**; **Option 3**; **Option 4** in the data field.
+
+:::
+
+## Server matching {#servermatching}
+
+You can set up server matching. If you use server matching, the user’s fingerprint will be matched from BioStar X, not the device.
+
+The Server Matching will appear when the Advance or higher license is activated. For more information about the license policy, refer to the [following](licensing).
+
+<Image src='/img/biostarx-settings-server-server-matching.png' className='none' />
+
+* <Cmd sid="setting.server.serverMatching.use" product='2' />: Activates/Deactivates server matching.
+
+* <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' />: You can configure how many matchings can be done simultaneously.
+
+  :::info
+
+  * <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' /> depends on the PC's CPU performance.
+
+  :::
+
+* <Cmd sid="setting.server.serverMatching.fastMode" product='2' />: You can configure the fingerprint matching speed.
+
+* <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: You can configure the server matching’s security level for fingerprints and faces. The higher the security level is set, the more the false rejection rate (FRR) can occur.
+
+## System log level settings {#systemloglevel}
+
+You can set the level of system logs stored in the database.
+
+<Image src='/img/biostarx-settings-server-system-log-level.png' className='none' />
+
+* <Cmd sid="setting.server.logLevel" product='2' />: System logs are managed according to pre-defined categories, and the log level is divided into <Cmd sid="setting.server.logLevel.trace" product='2' />, <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' />. The high level contains all lower level logs. For example, when set to <Cmd sid="setting.server.logLevel.trace" product='2' />, you can store the logs including <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' /> logs.
+
+## Store Visual Face Image {#storevisualfaceimage}
+
+Set whether to store both the actual image and the template in the visual face or to store only the template without storing the actual image.
+
+<Calloutlists>
+
+1. On the <Cmd sid="settings.expertSettings.title" product='2' /> screen, set <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> to <Cmd sid="common.use" product='2' />.
+
+   <Image src='/img/biostarx-settings-server-expert.png' className='none' />
+
+   :::caution
+
+   If there are any changes made in the <Cmd sid="common.server" product='2' /> menu, click <Cmd sid="button.apply" product='2' /> to save the changes before activating <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' />.
+
+   :::
+
+2. Click the <Image src='/img/ico-expert-setting.png' ico /> to enter <Cmd sid="settings.expertSettings.detail.title" product='2' /> and set <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> as desired.
+
+   <Image src='/img/biostarx-settings-server-expert2.png' className='none' />
+
+   * <Cmd sid="common.use" product='2' />: This is the default setting. Visual face stores both the actual image and the template.
+
+   * <Cmd sid="common.notUse" product='2' />: Only the template is stored without saving the actual image for visual face. If disabling this by setting it to <Cmd sid="common.notUse" product='2' />, carefully read the warning pop-up before proceeding.
+
+  :::note
+
+  **Caution When Disabling Store Visual Face Image Option**
+
+* Disabling this feature will delete all stored visual face images, and future enrolled visual faces will only store the template without the image.
+
+* If the enrolled visual faces do not have both types of templates, this feature cannot be disabled. For more information about <Cmd>Face Migration</Cmd>, refer to the [following](migration-face).
+
+* If this feature is disabled and <Cmd sid="menu.dataImport" product='2' /> is performed, the data file cannot be imported if it contains invalid visual face templates. To resolve this issue, temporarily enable this feature before importing the data file.
+
+  :::
+
+</Calloutlists>
+
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.

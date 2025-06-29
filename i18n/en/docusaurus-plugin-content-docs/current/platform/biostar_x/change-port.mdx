@@ -1,0 +1,38 @@
+---
+id: change-port
+title: Change the Port
+description: Guide to change the port when the default port (443) of BioStar X is unavailable.
+keywords:
+  - BioStar X setting
+  - port
+---
+
+This guide explains how to change the port when the default port (443) of **BioStar X** is unavailable.
+
+1. Click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows.
+
+2. When the **BioStar X Service Manager** window appears in the web browser, click the <Cmd>SERVICES</Cmd> menu.
+
+3. Click the <Cmd>Stop</Cmd> button for all services.
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+4. Click <Cmd>SERVICE SETTINGS</Cmd> in the left sidebar.
+
+5. Enter the new port number in the <Cmd>HTTPS Port</Cmd> input field of the <Cmd>BioStar X Core Web Service</Cmd> section.
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-change-port.png' alone />
+
+6. Click <Cmd>Apply</Cmd> in the upper right corner of the screen.
+
+7. When the confirmation message appears, click <Cmd>OK</Cmd>.
+
+8. Navigate to <Cmd>SERVICES</Cmd> and click the **Start** button for all services.
+
+9. Access **BioStar X** through your web browser.
+
+:::info
+
+* If you changed the port number to 450, enter `https://{ip_address}:450` in the address bar.
+
+:::

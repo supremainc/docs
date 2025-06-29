@@ -104,7 +104,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "어두운 모드와 밝은 모드 전환하기 (현재 {mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "어두운 모드",
@@ -338,32 +338,26 @@
     "description": "The title of the tag list page"
   },
   "theme.docs.nextStep": {
-    "message": "다음 단계",
-    "description": "The label for the next step section"
+    "message": "다음 단계"
   },
   "theme.docs.overview.viewContent": {
-    "message": "둘러보기",
-    "description": "The label for the view content button"
+    "message": "둘러보기"
   },
   "theme.docs.glossary.all": {
     "message": "전체",
     "description": "The label for the glossary all button"
   },
   "theme.figureCaption.desc": {
-    "message": "위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.",
-    "description": "The description for the figure caption"
+    "message": "위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다."
   },
   "theme.cover.address": {
-    "message": "<b>(주) 슈프리마</b><br/>13554 경기도 성남시 분당구 정자일로 248 파크뷰타워 17층<br/>영업 문의 1522 4507(1번) korea@suprema.co.kr | 고객지원 1522 4507(2번) cs@suprema.co.kr",
-    "description": "The address of the company"
+    "message": "<b>(주) 슈프리마</b><br/>13554 경기도 성남시 분당구 정자일로 248 파크뷰타워 17층<br/>영업 문의 1522 4507(1번) korea@suprema.co.kr | 고객지원 1522 4507(2번) cs@suprema.co.kr"
   },
   "theme.cover.copyright": {
-    "message": "© 2025 Suprema Inc. 이 문서에 표기된 슈프리마, 제품명, 번호는 슈프리마의 등록 상표입니다. 모든 회사명과 제품명은 해당 회사의 상표이거나 등록 상표입니다. 제품 외관, 제조 상태 및 사양은 사전 통지 없이 변경될 수 있습니다.",
-    "description": "The copyright of the company"
+    "message": "© 2025 Suprema Inc. 이 문서에 표기된 슈프리마, 제품명, 번호는 슈프리마의 등록 상표입니다. 모든 회사명과 제품명은 해당 회사의 상표이거나 등록 상표입니다. 제품 외관, 제조 상태 및 사양은 사전 통지 없이 변경될 수 있습니다."
   },
   "theme.cover.qrCodetext": {
-    "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp",
-    "description": "The QR code text"
+    "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
   "index.search": {
     "message": "검색"
@@ -372,10 +366,10 @@
     "message": "시작"
   },
   "biostar2.install.ok": {
-    "message": "OK"
+    "message": "확인"
   },
   "biostar2.install.agree": {
-    "message": "동의"
+    "message": "동의합니다"
   },
   "biostar2.install.next": {
     "message": "다음"
@@ -726,5 +720,17 @@
   "theme.SearchModal.placeholder": {
     "message": "문서 검색",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "시스템 모드",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

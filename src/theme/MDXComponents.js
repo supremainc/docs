@@ -29,9 +29,11 @@ import { Productpart, Callout, Item } from '@site/src/components/Productpart';
 import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 import Faqs from '@site/src/components/Faqs';
 import Calloutlists from '@site/src/components/Calloutlists';
+import DocLink from '@site/src/components/DocLink';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
+import IcMinus from '@site/static/img/menus/ico-minus.svg';
 import IcClose from '@site/static/img/menus/ico-close.svg';
 import IcCamera from '@site/static/img/menus/ico-camera.svg';
 import IcUpload from '@site/static/img/menus/ico-upload.svg';
@@ -54,6 +56,7 @@ import IcPlay from '@site/static/img/menus/ico-play.svg';
 import IcPause from '@site/static/img/menus/ico-pause.svg';
 import IcAlarm from '@site/static/img/menus/ico-alarm.svg';
 import IcFilter from '@site/static/img/menus/ico-filter.svg';
+import IcFilter2 from '@site/static/img/menus/ico-filter2.svg';
 import IcMove from '@site/static/img/menus/ico-move.svg';
 import IcBack from '@site/static/img/menus/ico-back.svg';
 import IcSvTime from '@site/static/img/menus/ico-serverTime.svg';
@@ -66,11 +69,26 @@ import IcFw from '@site/static/img/menus/ico-move-forward.svg';
 import IcBw from '@site/static/img/menus/ico-move-backward.svg';
 import IcFirst from '@site/static/img/menus/ico-first-page.svg';
 import IcLast from '@site/static/img/menus/ico-last-page.svg';
+import IcFw2 from '@site/static/img/menus/ico-move-forward2.svg';
+import IcBw2 from '@site/static/img/menus/ico-move-backward2.svg';
+import IcFirst2 from '@site/static/img/menus/ico-first-page2.svg';
+import IcLast2 from '@site/static/img/menus/ico-last-page2.svg';
 import IcAscend from '@site/static/img/menus/ico-ascend.svg';
 import IcDescend from '@site/static/img/menus/ico-descend.svg';
 import IcSet from '@site/static/img/menus/ico-setting.svg';
 import IcEdit from '@site/static/img/menus/ico-edit.svg';
+import IcEdit2 from '@site/static/img/menus/ico-edit2.svg';
+import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
+import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
+import IcTslot from '@site/static/img/menus/ico-timeslot-add.svg';
+import IcEraser from '@site/static/img/menus/ico-eraser.svg';
+import IcCalc from '@site/static/img/menus/ico-calendar.svg';
+import IcCopy2 from '@site/static/img/menus/ico-copy2.svg';
+import IcRefresh from '@site/static/img/menus/ico-refresh.svg';
+import IcInfo from '@site/static/img/menus/ico-info.svg';
+import IcLogout from '@site/static/img/menus/ico-logout.svg';
+import IcTip from '@site/static/img/menus/ico-tip.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -111,10 +129,10 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSectioin, SpecSizeWieght, Anno,
-    Faqs, Calloutlists,
+    Faqs, Calloutlists, DocLink,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
-    IcAdd,
+    IcAdd, IcMinus,
     IcClose,
     IcCamera,
     IcUpload,
@@ -137,9 +155,11 @@ export default {
     IcPlay,
     IcPause,
     IcAlarm,
-    IcFilter,
+    IcFilter, IcFilter2,
     IcMove,
     IcBack,
     IcAdvSearch, IcSearch,
-    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit
+    IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, 
+    IcLogout, IcTip
 }

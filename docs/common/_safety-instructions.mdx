@@ -107,6 +107,14 @@
 
 * 고장의 원인이 됩니다.
 
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
+
+**제품을 벽면에 설치할 경우 실리콘 등으로 제품 주위를 밀봉하지 마세요.**
+
+* 고장의 원인이 됩니다.
+
+</Include>
+
 **여러 대의 장치를 설치할 경우 최소 이격 거리를 확인하세요.**
 
 * 다른 장치의 RF 및 BLE 성능에 영향을 주어 장치가 오작동할 수 있습니다.
@@ -121,13 +129,37 @@
 
 * 장치가 오작동할 수 있습니다.
 
+<Include product='secure_io_2'>
+
+**Secure I/O 2, 전기정(전기식 잠금 장치), 출입 통제 장치는 반드시 개별 전원을 사용하세요.**
+
+* 장치가 오작동할 수 있습니다.
+
+</Include>
+
+<Include product='biostation_3,biostation_2a'>
+
 **전원 장치와 PoE 전원을 함께 연결하지 마세요.**
 
 * 장치가 오작동할 수 있습니다.
 
+</Include>
+
+<Xclude product='xpass_2,xpass_d2,biostation_2a'>
+
 **IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다. 완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다.**
 
 * 방수·방진 성능이 저하될 경우 고장의 원인이 됩니다.
+
+</Xclude>
+
+<Include product='xpass_2,xpass_d2,biostation_2a'>
+
+**완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다.**
+
+* 방수·방진 성능이 저하될 경우 고장의 원인이 됩니다.
+
+</Include>
 
 ---
 
@@ -141,13 +173,21 @@
 
 * 고장의 원인이 됩니다.
 
+<Xclude product='corestation_40,corestation_20'>
+
 **암호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요.**
 
 * 불법 침입의 원인이 됩니다.
 
+</Xclude>
+
+<Xclude product='bioentry_w3'>
+
 **제품의 버튼(터치패드)을 무리하게 누르거나 날카로운 도구를 사용해 누르지 마세요.**
 
 * 고장의 원인이 됩니다.
+
+</Xclude>
 
 **제품을 {props.name} 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요.**
 
@@ -161,9 +201,17 @@
 
 * 소독제를 제품에 직접 분사하지 마세요.
 
+<Include product='biostation_2,biostation_2a,biostation_a2'>
+
+**제품은 정전식 방식 버튼을 사용합니다. 비 오는 날씨와 같이 습기가 높거나 제품 표면에 물이 많이 묻은 경우 마른 천으로 닦은 뒤 사용하세요.**
+
+</Include>
+
 **제품을 원래 용도 이외 다른 용도로 사용하지 마세요.**
 
 * 고장의 원인이 됩니다.
+
+<Xclude product='input_module,output_module,door_module,secure_io_2,corestation_20,door_interface'>
 
 :::note
 
@@ -172,3 +220,5 @@
 승인되지 않거나 잘못된 종류의 배터리로 교체하면 폭발의 위험이 있습니다. 배터리는 거주 지역 또는 국제 폐기물 규정에 따라 폐기하세요.
 
 :::
+
+</Xclude>

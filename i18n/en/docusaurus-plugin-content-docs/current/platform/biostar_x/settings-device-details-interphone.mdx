@@ -1,0 +1,92 @@
+---
+id: settings-device-details-interphone
+title: Intercom Settings
+description: This provides guidance on setting detailed items for intercom use.
+keywords:
+  - Device
+  - IP Intercom
+---
+
+In the <Cmd sid='device.info.interphone' product='2' /> section, you can set detailed options for using the intercom.
+
+:::info
+
+* This feature is supported on the BioStation 3, FaceStation 2, and BioStation A2.
+
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+
+:::
+
+## Intercom settings {#ip-interphone-settings}
+
+Set each option to register the device with the Session Initiation Protocol (SIP) server.
+
+<Image src='/img/biostarx-setting-device-edit-ipinterphone.png' />
+
+* <Cmd sid='device.info.interphone' product='2' />: To use the device as an intercom, set to <Cmd sid='device.info.enabled' product='2' />.
+
+* <Cmd sid='device.intercom.ipAddr' product='2' />: Enter the address of the SIP server.
+
+* <Cmd sid='device.intercom.port' product='2' />: Enter the port of the SIP server. The default is 5060.
+
+* <Cmd sid='device.intercom.account.new' product='2' />: Enter the username for the SIP account.
+
+* <Cmd sid='device.intercom.password.new' product='2' />: Enter the password for the SIP account.
+
+* <Cmd sid='device.intercom.authorization.id' product='2' />: Enter the authorization ID for the SIP account.
+
+* <Cmd sid='device.intercom.registration.duration' product='2' />: Enter the registration duration in seconds. The device attempts to register with the SIP server every time the registration duration expires.
+
+* <Cmd sid='device.intercom.doorOpenButton' product='2' />: Specify a button to open the entrance door during a call.
+
+* <Cmd sid='device.intercom.transport' product='2' />: Choose the SIP transport method when configuring the intercom's SIP server settings.
+
+* <Cmd sid='device.intercom.outbound.proxy.server' product='2' />: Set to <Cmd sid='device.info.enabled' product='2' /> if using SIP services via a separate outbound proxy server.
+
+  * <Cmd sid='device.intercom.outbound.proxy.server.ipAddress' product='2' />: Enter the address of the outbound proxy server.
+
+  * <Cmd sid='device.intercom.outbound.proxy.server.port' product='2' />: Enter the port of the outbound proxy server.
+
+* <Cmd sid='device.intercom.resolution' product='2' />: Select the resolution of the video output when using the intercom. The default is <Cmd>360 x 640</Cmd>.
+
+* <Cmd sid='device.intercom.extension.display' product='2' />: Set to <Cmd sid='device.info.disable' product='2' /> to prevent the device from displaying the extension number. Without displaying the extension number, you cannot distinguish the recipient on the calling screen.
+
+* <Cmd sid='device.intercom.extension' product='2' />: You can register up to 128 extension numbers. To add or edit extension numbers, click the <Cmd sid='device.intercom.extension.editBtn' product='2' /> button. For more information, refer to the [following](#edit-extension).
+
+:::info
+
+* The options <Cmd sid='device.intercom.account.new' product='2' /> and <Cmd sid='device.intercom.authorization.id' product='2' /> can only include numbers, English letters (case sensitive), and special characters.
+
+* The <Cmd sid='device.intercom.registration.duration' product='2' /> option can be set between 60 and 600 seconds.
+
+* The <Cmd sid='device.intercom.transport' product='2' /> and <Cmd sid='device.intercom.resolution' product='2' /> options are supported on firmware version 1.3.0 and above of BioStation 3.
+
+* **Session Initiation Protocol** (SIP) is a communication protocol based on internet protocols for various multimedia communications, such as VoIP and video conferencing. The SIP server manages such communications and establishes connections.
+
+:::
+
+## Edit extension numbers {#edit-extension}
+
+Guidance on the features provided in the <Cmd sid='device.intercom.extension.popup.title' product='2' /> window.
+
+* <Cmd sid='device.intercom.extension.popup.sendToTop' product='2' />: Move the selected extension number to the top of the list.
+
+* <Cmd sid='device.intercom.extension.popup.csvImport' product='2' />: Import a CSV file that contains the extension numbers.
+
+* <Cmd sid='device.intercom.extension.popup.csvExport' product='2' />: Export the saved extension numbers to a CSV file.
+
+* <Cmd sid='device.intercom.extension.popup.add' product='2' />: Add an extension number.
+
+* <Cmd sid='device.intercom.extension.popup.delete' product='2' />: Delete an extension number.
+
+* <Cmd sid='device.intercom.list.reorder' product='2' />: Change the order of the extension numbers by dragging them with the mouse.
+
+:::info
+
+* The FaceStation 2 and BioStation A2 models can save up to 16 extension numbers.
+
+* You cannot import a CSV file that contains more extension numbers than the maximum supported.
+
+* Extension numbers can only include numbers, English letters (case sensitive), and special characters.
+
+:::

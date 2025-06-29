@@ -1,0 +1,112 @@
+---
+id: settings-device-details-thermal-mask
+title: Thermal and Mask Settings
+description: This provides guidance for setting details on thermal cameras and mask usage.
+keywords:
+  - Device
+  - thermal camera
+  - mask
+---
+
+In the <Cmd sid='device.info.temperMask' product='2' /> or <Cmd sid='device.info.mask' product='2' /> sections, you can set detailed parameters for the thermal camera and mask usage.
+
+* The thermal camera can be linked to Suprema's facial authentication device to measure the temperature of users passing through the door and restrict access for users exceeding the threshold temperature.
+
+* The system detects masks and restricts access for users not wearing a mask.
+
+:::info
+
+* The <Cmd sid='device.thermal.title' product='2' /> setting feature is supported by FaceStation 2 and FaceStation F2 models. Refer to the thermal cameras supported below.
+
+  * TCM10-FS2
+
+  * TCM10-FSF2
+
+* The <Cmd sid='device.mask.useMask' product='2' /> setting feature is supported by FaceStation F2, BioStation 3, and BioEntry W3.
+
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+
+:::
+
+## Mask Settings {#mask-settings}
+
+In the <Cmd sid='device.mask.title' product='2' /> group, you can set whether to use mask detection.
+
+* <Cmd sid='device.mask.useMask' product='2' />: Select whether to use mask detection.
+
+  * <Cmd sid='device.thermal.maskCheckModeHard' product='2' />: Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded.
+
+  * <Cmd sid='device.thermal.maskCheckModeSoft' product='2' />: Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded.
+
+  * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />: Mask detection is not used.
+
+* <Cmd sid='device.thermal.maskdetectlevel' product='2' />: Select the mask detection sensitivity.
+
+## Thermal Camera Settings {#thermal-camera-settings}
+
+In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use of the thermal camera and its parameters.
+
+* <Cmd sid='device.thermal.useThermalCamera' product='2' />: Set whether to use the thermal camera.
+
+  * <Cmd sid='device.thermal.tempCheckModeHard' product='2' />: Users exceeding the threshold temperature are denied authentication, and a threshold exceed event log is recorded.
+
+  * <Cmd sid='device.thermal.tempCheckModeSoft' product='2' />: Users exceeding the threshold temperature can still authenticate, but a temperature exceed event log is recorded.
+
+* <Cmd sid='device.thermal.usecentigrade' product='2' />: Set the temperature display unit.
+
+* <Cmd sid='device.thermal.temperatureThresholdCelc' product='2' /> / <Cmd sid='device.thermal.temperatureThresholdFahr' product='2' />: Set the minimum and maximum values for the threshold temperature that restricts access.
+
+  Users with a surface temperature below the <Cmd>Low</Cmd> value or above the <Cmd>High</Cmd> value will be restricted from entry according to the <Cmd sid='device.thermal.useThermalCamera' product='2' /> option. You can set the range from 1℃ to 45℃, and the <Cmd>Low</Cmd> value cannot be higher than the <Cmd>High</Cmd> value.
+
+* <Cmd sid='device.thermal.useAuditTemperature' product='2' />: Set whether to save the user's temperature log.
+
+  * <Cmd sid='device.info.enabled' product='2' />: Logs both authentication success and the user's temperature value.
+
+  * <Cmd sid='device.info.disable' product='2' />: Only logs authentication success.
+
+* <Cmd sid='device.thermal.useTemperatureRejectSound' product='2' />: Set whether to notify authentication failure due to exceeding the threshold temperature.
+
+* <Cmd sid='device.thermal.useOverlapThermal' product='2' />: Set whether to display infrared images on the device screen.
+
+* <Cmd sid='device.thermal.cameraconfig' product='2' />: Set detailed options for the thermal camera.
+
+  * <Cmd sid='device.thermal.compensationCalcTemp' product='2' />: Adjust the temperature to measure consistently higher or lower based on the product usage environment. For example, if temperatures are consistently measured 0.1℃ higher, set the temperature compensation value to -0.1℃.
+
+  * <Cmd sid='device.thermal.distance' product='2' />: Set the distance between the user and the thermal camera.
+
+  * <Cmd sid='device.thermal.emissionRate' product='2' />: Set the infrared emissivity.
+
+  * <Cmd sid='device.thermal.useDynamicROI' product='2' />: If other lighting is present in the environment, configure the thermal camera to measure the user's temperature automatically without interference from nearby lights.
+
+  * <Cmd sid='device.thermal.roiX' product='2' /> / <Cmd sid='device.thermal.roiY' product='2' /> / <Cmd sid='device.thermal.roiWidth' product='2' /> / <Cmd sid='device.thermal.roiHeight' product='2' />: If the <Cmd sid='device.thermal.useDynamicROI' product='2' /> option is set to <Cmd sid='device.info.disable' product='2' />, manually set the ROI (Region of Interest). Adjust the ROI location and size to specify the area where the thermal camera will measure temperature.
+
+:::info
+
+* The settings for the <Cmd sid='device.thermal.temperatureThreshold' product='2' /> option's <Cmd>Low</Cmd> and <Cmd>High</Cmd> values are supported from the firmware versions below.
+
+  * FaceStation 2 firmware version 1.4.2 and above
+
+  * FaceStation F2 firmware version 1.0.2 and above
+
+* For optimal performance, it is advised to use the default settings for the sub-options in <Cmd sid='device.thermal.cameraconfig' product='2' />. The default values for each device's options are listed below.
+
+  | Item                                                  | FaceStation 2 | FaceStation F2 |
+  | ----------------------------------------------------- | :-----------: | :------------: |
+  | <Cmd sid='device.thermal.distance' product='2' />     |      100      |       100      |
+  | <Cmd sid='device.thermal.emissionRate' product='2' /> |      0.98     |      0.98      |
+  | <Cmd sid='device.thermal.roiX' product='2' />         |       47      |       30       |
+  | <Cmd sid='device.thermal.roiY' product='2' />         |       45      |       25       |
+  | <Cmd sid='device.thermal.roiWidth' product='2' />     |       15      |       50       |
+  | <Cmd sid='device.thermal.roiHeight' product='2' />    |       10      |       55       |
+
+:::
+
+## Thermal and Mask Verification Methods {#thermal-mask-verification}
+
+In the <Cmd sid='device.thermal.mode' product='2' /> group, you can set the verification method according to the device's use when utilizing mask detection or the thermal camera.
+
+* <Cmd sid='device.thermal.authBeforeMode' product='2' />: Checks the user's mask usage or measures temperature after authentication.
+
+* <Cmd sid='device.thermal.authAfterMode' product='2' />: Checks the user's mask usage or measures temperature before authentication. In this case, users not wearing a mask or exceeding the threshold temperature cannot authenticate.
+
+* <Cmd sid='device.thermal.authTemperatureOnlyMode' product='2' />: The device can only be used to check for mask usage or measure temperature. Users wearing a mask or having a temperature below the threshold can enter regardless of authentication.

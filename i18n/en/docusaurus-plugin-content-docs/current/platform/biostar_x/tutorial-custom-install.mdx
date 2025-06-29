@@ -1,0 +1,42 @@
+---
+id: tutorial-custom-install
+title: Custom Installation
+description: This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.
+keywords:
+  - Custom installation
+---
+
+This guides the user on how to set up a <Cmd code='biostar2.install.customInstall' className='bold'/> to integrate with a database that the user has already installed.
+
+:::info
+
+* The databases that can be used in integration with **BioStar X** are as follows.
+
+  * MariaDB 10.1.10
+
+  * MS SQL Server 2012 SP3
+
+  * MS SQL Server 2014 SP2
+
+  * MS SQL Server 2016 SP1
+
+  * MS SQL Server 2017
+
+  * MS SQL Server 2019
+
+  * MS SQL Server 2022
+
+* MS SQL Server communication security supports TLS 1.2.
+
+* If the database table creation fails when MS SQL Server is set as the Database Type, you can create the table by executing the script in *C:\Program Files\BioStar X\dbscript\mssql* folder.
+
+* When installing with <Cmd code='biostar2.install.customInstall' className='bold'/>, **AC DB name**, **TA DB name**, and **VE DB name** cannot be set the same.
+
+* To use Windows authentication, [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) is required.
+  Please install the driver first.
+
+:::
+
+import InstallStep from '../../common/_biostar-install-steps.mdx';
+
+<InstallStep />

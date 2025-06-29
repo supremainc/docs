@@ -1,0 +1,229 @@
+---
+id: settings-device-details-network
+title: Network Settings
+description: Guidelines for network settings such as TCP/IP, RS-485, and server communication for the device.
+keywords:
+  - Device
+  - Network
+  - TCP/IP
+  - RS-485
+  - Server Communication
+  - Serial communication
+  - Intelligent Slave
+---
+
+The <Cmd sid='device.info.network' product='2' /> section guides you through the network settings of the registered device. You can configure the device’s TCP/IP, RS-485, and server communication settings.
+
+<Image src='/img/biostarx-setting-device-edit-network.png' />
+
+:::info
+
+* The available network options may differ depending on the device type.
+
+* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+
+:::
+
+## TCP/IP settings
+
+In the <Cmd sid='device.info.tcpIpSetting' product='2' /> group, you can set the device's IP address.
+
+:::info
+
+For more information about IP address settings during device registration, refer to the [following](settings-adding-devices#setipaddress).
+
+:::
+
+### Dynamic IP settings
+
+To configure the device to use a dynamic IP, select the <Cmd sid='device.info.useDhcp' product='2' /> group. The device will automatically receive an IP address from the DHCP server, which may change.
+
+### Static IP settings
+
+To set a static IP address for the device, deselect the <Cmd sid='device.info.useDhcp' product='2' /> group. You can enter the following network information:
+
+* <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the OSDP address of the device. This should be a number between 0 and 126.
+
+* <Cmd sid='device.info.subnetMask' product='2' />: Enter the device's subnet mask.
+
+* <Cmd sid='device.info.gateway' product='2' />: Enter the device's gateway address.
+
+* <Cmd sid='device.info.devicePort' product='2' />: Enter the device's port number.
+
+* <Cmd sid='device.info.dnsServerAddress' product='2' />: Enter the device's DNS server address.
+
+<details>
+
+<summary>View devices and firmware versions that can accept DNS server addresses</summary>
+
+* BioStation L2 firmware 1.0.0 or higher
+
+* BioStation A2 firmware 1.0.0 or higher
+
+* BioStation 2 firmware 1.2.0 or higher
+
+* BioLite Net firmware 2.2.0 or higher
+
+* BioEntry Plus firmware 2.2.0 or higher
+
+* BioEntry W firmware 2.2.0 or higher
+
+* XPass firmware 2.2.0 or higher
+
+* XPass S2 firmware 2.2.0 or higher
+
+* FaceStation 2 firmware 1.0.0 or higher
+
+* BioLite N2 firmware 1.0.0 or higher
+
+* FaceLite firmware 1.0.0 or higher
+
+* XPass 2 firmware 1.0.0 or higher
+
+* FaceStation F2 firmware 1.0.0 or higher
+
+* X-Station 2 firmware 1.0.0 or higher
+
+* BioStation 3 firmware 1.0.0 or higher
+
+* BioEntry W3 firmware version 1.0.0 or higher
+
+</details>
+
+## Wireless LAN settings
+
+In the <Cmd sid='device.info.wlan' product='2' /> group, you can enable or disable the device's wireless LAN settings. Select or deselect the <Cmd sid='device.info.enable' product='2' /> option. Detailed settings are available in the device's user guide.
+
+:::info
+
+Refer to the following devices that support wireless LAN settings:
+
+* BioStation 2
+
+* BioStation A2
+
+* FaceStation 2
+
+* [BioStation 3](../../device/biostation_3/settings#wireless)
+
+:::
+
+## Server communication settings
+
+In the <Cmd sid='device.info.server' product='2' /> group, you can configure how the device communicates with the **BioStar X** server.
+
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />: Selecting this option allows you to enter the IP address and port number of the **BioStar X** server the device will connect to.
+
+* <Cmd sid='device.info.serverIP' product='2' />: Enter the IP address or domain name of the **BioStar X** server.
+
+* <Cmd sid='device.info.serverPort' product='2' />: Enter the port number of the **BioStar X** server.
+
+:::tip
+
+This feature is useful when the IP address of the **BioStar X** server changes. By pre-configuring this option on multiple devices before changing the server's IP address, the devices will automatically connect to the updated IP address.
+
+:::
+
+<details>
+
+<summary>View devices and firmware versions that allow entering domain names in <Cmd sid='device.info.serverIP' product='2' /></summary>
+
+* BioStation L2 firmware 1.0.0 or higher
+
+* BioStation A2 firmware 1.0.0 or higher
+
+* BioStation 2 firmware 1.2.0 or higher
+
+* BioEntry W2 firmware 1.0.0 or higher
+
+* BioEntry P2 firmware 1.0.0 or higher
+
+* FaceStation 2 firmware 1.0.0 or higher
+
+* FaceLite firmware 1.0.0 or higher
+
+* FaceStation F2 firmware 1.0.0 or higher
+
+* BioLite N2 firmware 1.0.0 or higher
+
+* BioLite Net firmware 2.2.0 or higher
+
+* BioEntry Plus firmware 2.2.0 or higher
+
+* BioEntry W firmware 2.2.0 or higher
+
+* XPass firmware 2.2.0 or higher
+
+* XPass S2 firmware 2.2.0 or higher
+
+* XPass 2 firmware 1.0.0 or higher
+
+* X-Station 2 firmware 1.0.0 or higher
+
+* BioStation 3 firmware 1.0.0 or higher
+
+* BioEntry W3 firmware version 1.0.0 or higher
+
+</details>
+
+## Serial communication settings
+
+In the <Cmd sid='device.info.serialSetting' product='2' /> group, you can set the mode, transmission performance, and display authentication results for devices connected via RS-485.
+
+* <Cmd sid='device.info.rs485' product='2' />: Set the RS-485 mode.
+
+* <Cmd sid='device.info.baudRate' product='2' />: Set the RS-485 communication performance.
+
+* <Cmd sid='device.info.osdpAuthResult' product='2' />: Choose the authentication result to display on the device’s screen when using the device with a third-party controller.
+
+  * <Cmd sid='device.info.osdpControllerResult' product='2' />: You can display the authentication result from the third-party controller on the device.
+
+  * <Cmd sid='device.info.osdpDeviceResult' product='2' />: You can display the device’s authentication result.
+
+:::info
+
+The <Cmd sid='device.info.osdpAuthResult' product='2' /> option is enabled when the <Cmd sid='device.info.rs485' product='2' /> option is set to <Cmd sid='device.rs485.slave' product='2' /> or <Cmd sid='device.rs485.default' product='2' />.
+
+:::
+
+## Intelligent slave settings
+
+In the <Cmd sid='device.info.intelligentPD' product='2' /> group, when a user authenticates using a fingerprint in an environment where Suprema devices are connected to third-party controllers, the authentication result is sent as Open Supervised Device Protocol (OSDP) card data to support numerous 1:1 or 1:N matching.
+
+* <Cmd sid='device.info.ipdUseFailCode' product='2' />: When using the intelligent slave, if an exception occurs such as authentication failure, enter the exception code in decimal (0~18446744073709551615) or hexadecimal (0~FFFFFFFFFFFFFFFF) format to record an accurate log. Hexadecimal can be input using numbers or letters.
+
+* <Cmd sid='device.info.ipdCardFormat' product='2' />: You can output the card ID or user ID upon successful authentication.
+
+* <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the OSDP address of the device. This should be a number between 0 and 126.
+
+:::info
+
+* You can input data of up to 8 bytes for <Cmd sid='device.info.ipdUseFailCode' product='2' />.
+
+* The <Cmd sid='device.info.intelligentPD' product='2' /> option is enabled when the <Cmd sid='device.info.rs485' product='2' /> option is set to <Cmd sid='device.rs485.default' product='2' />.
+
+:::
+
+<details>
+
+<summary>View devices and firmware versions that support the <Cmd sid='device.info.intelligentPD' product='2' /> option</summary>
+
+* BioEntry W2 firmware 1.6.3 or higher
+
+* BioStation L2 firmware 1.6.1 or higher
+
+* BioEntry P2 firmware 1.4.1 or higher
+
+* XPass 2 firmware 1.2.3 or higher
+
+* X-Station 2 firmware 1.1.0 or higher
+
+* BioLite N2 firmware 1.4.1 or higher
+
+* FaceStation F2 firmware 1.1.2 or higher
+
+* BioStation 3 firmware 1.0.0 or higher
+
+* BioEntry W3 firmware version 1.0.0 or higher
+
+</details>

@@ -1,0 +1,46 @@
+---
+id: settings-device-manage-device-users
+title: Manage Users Enrolled on Device
+description: This document provides guidance on managing users enrolled in the device.
+keywords:
+  - Device
+  - User
+---
+
+You can check the number of users, fingerprints, faces, and cards enrolled on the device. Information about users not registered on **BioStar X** can be compared with registered user information, and you can send or delete this information on the **BioStar X** server.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Device</Cmd> on the left sidebar.
+
+3. Select the device from the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list and right-click.
+
+4. Click <Cmd sid='button.manageUsersInDevice' product='2' /> from the pop-up menu.
+
+   <Image src='/img/biostarx-setting-device-manage-device-users.png' />
+
+When the <Cmd sid='device.menu.manageUsersInDevice' product='2' /> window appears, you can compare the user information registered on the device with the user information registered on **BioStar X**.
+
+<Image src='/img/biostarx-setting-device-manage-device-users-popup.png' />
+
+Refer to the values displayed in the <Cmd sid='common.status' product='2' /> column to choose whether to delete user information from the device or send it to the **BioStar X** server. The values in the <Cmd sid='common.status' product='2' /> column are as follows:
+
+* <Cmd sid='user.syncStatus.same' product='2' />: User with the same information registered on the **BioStar X** server
+
+* <Cmd sid='user.syncStatus.different' product='2' />: User with information different from that registered on the **BioStar X** server
+
+* <Cmd sid='user.syncStatus.same' product='2' />: User not registered on the **BioStar X** server
+
+To delete specific user information from the device, select the user to delete and click the <Cmd sid='button.delete' product='2' /> button. To send user information to the **BioStar X** server, click the <Cmd sid='button.upload' product='2' /> button.
+
+:::info
+
+* The <Cmd sid='button.manageUsersInDevice' product='2' /> feature can only be used with one device selected.
+
+* When clicking the <Cmd sid='button.upload' product='2' /> button, if there is a user on the **BioStar X** server with the same ID, it can be updated with the device’s information.
+
+* Deleted user information is removed only from the device and will be retained on the **BioStar X** server.
+
+* For more information about the device's settings, refer to the [following](settings-device-details).
+
+:::

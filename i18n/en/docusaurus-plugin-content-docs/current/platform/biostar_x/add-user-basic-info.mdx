@@ -1,0 +1,88 @@
+---
+id: add-user-basic-info
+title: Enter Basic User Information
+description: This section describes how to enter basic user information.
+keywords:
+  - User
+  - User group
+---
+
+This section describes how to enter basic user information. The entered user information is used for search and management. Managing user information clearly helps comply with the organization's security and privacy policies.
+
+* By systematically entering basic information such as name, department, title, and group, users can be easily searched, classified, and managed.
+
+* Access permissions can be set in detail according to the user's department, title, and group information.
+
+* It is advantageous for security and auditing because it allows for accurate tracking of activities, access logs, etc. by user.
+
+Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page. You can enter user information in the two ways below.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+The fields that can be set in the <Cmd sid='team.user.information' /> section are as follows. Please enter user information by referring to the description for each field.
+
+<Image src='/img/biostarx-new-user-information.png' />
+
+* <Cmd sid='common.id' product='2' />: Enter the unique ID to assign to the user.
+
+* <Cmd sid='common.name' product='2' />: Enter the user's name.
+
+* <Cmd sid='common.email' product='2' />: Enter the email address.
+
+* <Cmd sid='common.telephone' product='2' />: Enter the phone number.
+
+* <Cmd sid='common.department' product='2' />: Enter the user's title.
+
+* <Cmd sid='common.title' product='2' />: Enter the department to which the user belongs.
+
+* <Cmd sid='common.group' product='2' />: Select the user's group. For more information about adding and managing user groups, refer to the [following](user-group-manage).
+
+* <Cmd sid='common.period' product='2' />: Set a period for using the user account. You can either click on the date and time area to enter them manually or click <IcCalc /> to select the desired date and time.
+
+* <Cmd sid='common.status' product='2' />: You can temporarily disable the user account.
+
+:::info
+
+* The values that can be set for <Cmd sid='team.user.table.id' /> may vary depending on the <Cmd sid="setting.userDevice.useridType" product='2' /> option in the <Cmd sid='shell.header.setting' /> → <Cmd sid="common.server" product='2' /> menu. For more information, refer to the [following](settings-server-server#user-and-device-management).
+
+  * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />: Enter a number from 1 to 4294967294.
+
+  * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />: Enter a combination of letters and numbers.
+
+* Spaces cannot be included with the value of <Cmd sid='team.user.table.id' />.
+
+* The username can be up to 48 characters, including special characters.
+
+  > Special characters: `~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` <code>\\`</code>
+
+* To display the user's photo, department, and title on the mobile access card, you must add a photo and enter the department and title.
+
+* The title and department name can be up to 64 characters, including spaces and underscores.
+
+* If you are using a mobile access card, be sure to enter the user's email address for email delivery and the user's phone number for SMS delivery, depending on the delivery method.
+
+* To use Visual Face mobile enrollment or Secure QR, be sure to enter the user's email address.
+
+* For more information about adding the <Cmd sid='team.userTemplate.table.customField' />, refer to the [following](settings-server-server#user-and-device-management).
+
+:::
+
+<NextStep>
+<NextItem to='enroll-credential'>
+
+Enroll the user credentials and set access authentication method in the <Cmd sid='team.user.credential.title' /> section.
+
+</NextItem>
+<NextItem to='set-permission'>
+
+Check how to set the user's access permissions in the <Cmd sid='team.user.permission.title' /> section.
+
+</NextItem>
+<NextItem to='edit-user'>
+
+Check how to edit user information.
+
+</NextItem>
+</NextStep>

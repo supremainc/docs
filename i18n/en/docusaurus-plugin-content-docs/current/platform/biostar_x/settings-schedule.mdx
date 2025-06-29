@@ -1,0 +1,95 @@
+---
+id: settings-schedule
+title: Schedule Settings
+description: Set entry and holiday schedules to efficiently manage access control and attendance.
+keywords:
+  - Schedule
+  - Access
+  - Holiday
+---
+
+This guide describes how to efficiently operate access control and attendance management by setting up access and holiday schedules. Schedules are an important factor that can be applied to access control, allowing management of user access times and holidays.
+
+## Register schedule {#addSchedule}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Schedule</Cmd> on the left sidebar of the screen.
+
+3. Click the <Cmd sid='button.func.addSchedule' product='2' /> button at the top left of the screen.
+
+4. Enter or set each item on the <Cmd sid='schedule.addNewSchedule' product='2' /> screen.
+
+   <Image src='/img/biostarx-settings-schedule-add.png' />
+
+5. Once all settings are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
+
+:::info
+
+For detailed information about individual items on the <Cmd sid='schedule.addNewSchedule' product='2' /> screen, refer to the [following](#addScheduleOptions).
+
+:::
+
+### New schedule addition options guide {#addScheduleOptions}
+
+Guide to individual items that can be set on the <Cmd sid='schedule.addNewSchedule' product='2' /> screen.
+
+<Image src='/img/biostarx-settings-schedule-add-extend.png' />
+
+* <Cmd sid='common.name' product='2' />: Enter the schedule name.
+
+* <Cmd sid='common.description' product='2' />: Enter a brief description of the schedule.
+
+* <Cmd sid='common.type' product='2' />: Choose a weekly or daily schedule. Selecting <Cmd sid='schedule.daily' product='2' /> will allow you to select <Cmd sid='schedule.cycle' product='2' /> and <Cmd sid='schedule.start_date' product='2' />.
+
+  <Image src='/img/biostarx-settings-schedule-add-type-daily.png' />
+
+* Click the <Cmd sid='shift.timeSegment' product='2' /> in the middle area to set the desired time. Once completed, click the <Cmd sid='button.apply' product='2' /> button.
+
+  <Image src='/img/biostarx-settings-schedule-input-time-slot.png' />
+
+  * You can set up to 5 time slots per day or weekly.
+
+  * To copy the time slots set above, schedule them and click the <IcTslot /> button.
+
+  * Click the <IcEditUL /> button to modify a time slot. Click the <IcEraser /> button to delete a set time slot.
+
+* <Cmd sid='schedule.holidaySchedule' product='2' />: Choose whether to apply holiday schedules. Selecting an item allows for detailed settings.
+
+  * Select the <Cmd sid='common.none' product='2' /> checkbox to choose pre-set holidays.  To add more holidays, click <Cmd sid='button.plusAdd' product='2' /> and set the holidays.
+
+  * **Holiday Time Slots**: Click the time slots to set the time slots to be applied on holidays.
+
+  :::info
+
+  * Click the <IcEditUL /> button to modify a time slot. Click the <IcEraser /> button to delete a set time slot.
+
+  * To delete added holidays, click <IcTrash2 />.
+
+  * For detailed information on adding holiday schedules, refer to the [following](#addHolidaySchedule).
+
+  :::
+
+## Add holiday schedule {#addHolidaySchedule}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd>Schedule</Cmd> on the left sidebar of the screen.
+
+3. Click <Cmd sid='button.func.addHoliday' product='2' /> at the top left of the screen.
+
+4. Enter <Cmd sid='common.name' product='2' /> and <Cmd sid='common.description' product='2' /> on the <Cmd sid='schedule.addNewHoliday' product='2' /> screen.
+
+   <Image src='/img/biostarx-settings-schedule-add-holiday.png' />
+
+5. Click <Cmd sid='button.addplus' product='2' /> in the <Cmd sid='common.detail' product='2' /> section.
+
+6. Click <IcCalc /> to select the date and set the number of repetitions and duration.
+
+7. Click <Cmd sid='button.apply' product='2' /> to register the set holiday schedule.
+
+:::info
+
+To delete a holiday schedule, click <IcTrash2 />.
+
+:::

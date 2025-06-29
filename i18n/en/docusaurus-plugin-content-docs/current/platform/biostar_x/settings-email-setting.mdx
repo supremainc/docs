@@ -1,0 +1,130 @@
+---
+id: settings-email-setting
+title: Email Setting
+description: You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
+keywords:
+  - Email Setting
+  - Visual Face
+---
+
+You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
+
+:::info
+
+{/* * 이메일 정보를 설정하기 전에 클라우드를 먼저 활성화하세요. The Cloud will be available when the Standard or higher license is activated. For more information about Cloud, refer to the [following](#). */}
+
+* Enter user's email address in the user information to use visual face mobile enrollment or Secure QR. For more information about user information, refer to the [following](add-user-basic-info).
+
+* The devices that can use **Visual Face** are as follows.
+
+  * FaceStation F2, BioStation 3, BioEntry W3
+
+* The devices that can use **Use QR/Barcode through Scanner** are as follows.
+
+  * X-Station 2 (XS2-QDPB, XS2-QAPB)
+
+* The devices that can use **Use QR/Barcode through Camera** are as follows.
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher
+
+  * BioStation 3 (BS3-DB, BS3-APWB) firmware version 1.1.0 or higher
+
+  * Using **Use QR/Barcode through Camera** requires a separate device license. For more information about device license, refer to the [following](settings-license-device-license).
+
+:::
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click the <Cmd sid="common.emailContent" product='2' />.
+
+3. Edit the necessary fields.
+
+## Email contents settings {#email-contents-setting}
+
+Enter the SMTP server information for sending emails.
+
+<Image src='/img/biostarx-settings-email-contents.png' className='none' />
+
+* <Cmd sid="common.emailContent.smtp" product='2' />: Set the SMTP(Simple Mail Transfer Protocol) for sending emails.
+
+  <Image src='/img/biostarx-settings-email-smtp-option.png' className='none' />
+
+  * <Cmd sid="setting.triggerAction.smtpServer" product='2' />: Enter the SMTP server name.
+
+  * <Cmd sid="common.description" product='2' />: Enter the description.
+
+  * <Cmd sid="setting.triggerAction.portDefault25" product='2' />: Enter the port number of the SMTP server. Check it on the settings screen of the email service to use as SMTP.
+
+  * <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />: Enter the SMTP server address. Email Service Provider.com', and you can check it on the settings screen of email to use as an SMTP.
+
+  * <Cmd sid="common.userName" product='2' />: Enter the account of the SMTP service.
+
+  * <Cmd sid="common.password" product='2' />: Enter the password of the SMTP service.
+
+  * <Cmd sid="setting.triggerAction.securityType" product='2' />: Select security type.
+
+  * <Cmd sid="setting.triggerAction.sender" product='2' />: Enter the email address of the sender.
+
+  :::info
+
+  * For more information about SMTP information, contact your system administrator.
+
+  * When using the SMTP server as an email account with two-factor authentication and change the password of the account, note the following: Once you set up two-factor authentication, the SMTP password is the same as the app password generated using two-factor authentication, not the password of the email account. At this time, if the password of the email account is changed, the app password is automatically deleted, and the SMTP password is no longer available. When changing the password for the email account, regenerate the app password and then set the SMTP password again.
+
+  :::
+
+* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: Enter an email address to receive the test email and click <Cmd sid="button.smtpSettingTest" product='2' />.
+
+## Visual face mobile enrollment
+
+To use the visual face mobile enrollment set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to send the visual face mobile enrollment link to users.
+
+<Image src='/img/biostarx-settings-email-visual-face.png' className='none' />
+
+* <Cmd sid="common.emailContent.title" product='2' />: Enter the title of the email.
+
+* <Cmd sid="common.emailContent.companyName" product='2' />: Enter the company name.
+
+* <Cmd sid="common.emailContent.companyLogo" product='2' />: Upload the company logo image.
+
+  :::info
+
+  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG.
+
+  * Supported image file size is up to 5MB.
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product='2' />: Enter the contact information of the person in charge.
+
+* <Cmd sid="printOption.footer" product='2' />: Enter the content to notify the user who is enrolling the visual face, such as a legal notice. It appears at the bottom of the email.
+
+  :::info
+
+  Footer can be up to 5,000 characters in length.
+
+  :::
+
+## QR/Barcode setting
+
+To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to issue the QR/Barcode to users via email.
+
+<Image src='/img/biostarx-settings-email-qr.png' className='none' />
+
+* <Cmd sid="common.emailContent.title" product='2' />: Enter the title of the email.
+
+* <Cmd sid="common.emailContent.companyName" product='2' />: Enter the company name.
+
+* <Cmd sid="common.emailContent.companyLogo" product='2' />: Upload the company logo image.
+
+  :::info
+
+  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG.
+
+  * Supported image file size is up to 5MB.
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product='2' />: Enter the contact information of the person in charge.
+
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.

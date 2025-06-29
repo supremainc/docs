@@ -1,0 +1,175 @@
+---
+id: settings-system-security
+title: System Security
+description: Provides various configuration methods to enhance the security of the BioStar X system.
+keywords:
+  - System security
+  - Encryption
+---
+
+Provides various configuration methods to enhance the security of the BioStar X system.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click the <Cmd sid="setting.systemSecurity" product='2' />.
+
+3. Edit the necessary fields.
+
+## Login password
+
+Set the complexity level and change cycle for login passwords.
+
+<Image src='/img/biostarx-settings-system-security-password.png' className='none' />
+
+* <Cmd sid="setting.server.passwordLevel" product='2' />: Set the policy for the password complexity for BioStar X login.
+
+  * <Cmd sid="setting.server.passwordLevelDefault" product='2' />: You can enter up to 32 characters.
+
+  * <Cmd sid="setting.server.passwordLevelMedium" product='2' />: You must combine 8 to 32 alphabetic characters (uppercase or lowercase), and numbers.
+
+  * <Cmd sid="setting.server.passwordLevelStrong" product='2' />: You must combine 10 to 32 alphabetic characters (uppercase and lowercase, at least one alphabetic capital), numbers, and  symbols.
+
+{/*
+    :::info
+
+```
+<Cmd>클라우드</Cmd>를 사용하면 <Cmd sid="setting.server.passwordLevelMedium" product='2' />과 <Cmd sid="setting.server.passwordLevelStrong" product='2' />만 사용할 수 있습니다.
+
+:::
+```
+
+\*/}
+
+* <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' />: You can set the period for which you want to use the password. If the Maximum Password Age is exceeded, a password change request message is displayed at login.
+
+    :::info
+
+  You can set the <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' /> from 1 day to 180 days.
+
+    :::
+
+* <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' />: You can set the Maximum Invalid Attempts and the time limit. If you enter the wrong password more than the set number of times, you will not be able to log in for the time limit.
+
+    :::info
+
+  The default value for <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' /> is <Cmd sid="common.active" product='2' /> (max 100 time(s) / 10 minutes of login limit).
+
+    :::
+
+* <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' />: You can set the Maximum Password Change Limit.
+
+    :::info
+
+  You can set the <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' /> up to 10 times.
+
+    :::
+
+## Advanced security settings
+
+Encrypt communication between BioStar X and devices, and enhance session security.
+
+<Image src='/img/biostarx-settings-system-security-advanced.png' className='none' />
+
+* <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />: When <Cmd sid="common.use" product='2' /> is set for <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />, all sensitive data including credential data and personal information will be stored in the database as encrypted. If this option is set as <Cmd sid="common.notUse" product='2' />, the encrypted data will be decrypted and the user's personal information will be stored in an unencrypted state.
+
+    :::info
+
+  <details>
+      <summary>Items to be encrypted when using <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' /> are as follows.</summary>
+
+  * Profile image
+
+  * User ID
+
+  * Name
+
+  * Phone number
+
+  * User IP
+
+  * Email information for sender ans recipients
+
+  * Login ID
+
+  * Login password
+
+  * Face template
+
+  * Fingerprint template
+
+  * Card ID
+
+  * Smart card layout key
+
+  * Custom information for user and visitor
+
+  * Image log files
+
+  </details>
+
+  * Do not force start the server while <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />. Errors such as failure to log in to BioStar X may occur.
+
+    :::
+
+* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />: You can set the <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />. Click <Cmd sid="setting.server.secure.comm.key_change" product='2' /> and set a new encryption key. If changing the encryption key, the existing data will be re-encrypted.
+
+    :::info
+
+    You can enter the encryption key with 32 characters using letters, numbers, and symbols.
+
+    :::
+
+* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: The communication between BioStar X and a device can be protected using a certificate.<br/>When <Cmd sid="common.use" product='2' /> is set for <Cmd sid="setting.sever.secure.comm.menu" product='2' />, BioStar X creates and sends a certificate to the device. The device can use a secure channel for exchanging data with BioStar X using this certificate. In order to use an external certificate, Root certificate, Public key certificate, and Private key files must be uploaded.<br/>If <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> set to <Cmd sid="common.use" product='2' />, you can set a new data encryption key and administrator password.
+
+    :::info
+
+  <details>
+  <summary>The devices and firmware versions where <Cmd sid="setting.sever.secure.comm.menu" product='2' /> can be set are as follows.</summary>
+
+  * FaceStation 2 FW 1.1.0 or later
+
+  * BioStation A2 FW 1.5.0 or later
+
+  * BioStation 2 FW 1.6.0 or later
+
+  * BioStation L2 FW 1.3.0 or later
+
+  * BioLite N2 firmware 1.0.0 or higher
+
+  * BioEntry P2 FW 1.1.0 or later
+
+  * BioEntry W2 FW 1.2.0 or later
+
+  * FaceLite firmware 1.0.0 or higher
+
+  * XPass 2 firmware 1.0.0 or higher
+
+  * CoreStation FW 1.1.0 or later
+
+  * X-Station 2 firmware 1.0.0 or higher
+
+  * BioStation 3 firmware 1.0.0 or higher 
+
+  </details>
+
+  * BioStar X creates or deletes a certificate according to the setting status of Secure communication with device, and the same certificate as the previous certificate will not be created. For example, if the setting of Secure communication with device is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' />, the created certificate will be deleted automatically. When the setting is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' />, the operation of **Create A certificate** → **Delete A certificate** → **Create B certificate** is carried out.
+
+  * If the device is disconnected from the network physically while using the secure communication of BioStar X, do not turn off the secure communication option. In such a case, the certificate of BioStar X will be deleted, and the device will not be able to connect again. To connect it again, the certificate saved in the device must be deleted or the device must be reset to factory default. For more information, refer to the manual of the device. 
+
+    :::
+
+:::info
+
+The <Cmd sid="setting.server.secure.comm.title" product='2' /> tab is only active when you log in as the initial administrator.
+
+:::
+
+## Session security
+
+Enhance session security.
+
+<Image src='/img/biostarx-settings-system-security-session.png' className='none' />
+
+* <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' />: You can set whether to allow simultaneous connections using the same account. Allow to <Cmd sid="common.inactive" product='2' />, a previously logged in user will be logged out when attempting to connect to the same account simultaneously.
+
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.

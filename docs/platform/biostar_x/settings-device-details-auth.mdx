@@ -128,7 +128,7 @@ keywords: [장치, 인증]
 
 :::info
 
-<Cmd sid='schedule.schedule' product='2' /> 옵션에서 원하는 스케줄이 없다면 <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' />를 클릭하세요. 새 스케줄을 추가할 수 있습니다. 스케줄 설정에 대한 자세한 내용은 [다음 문서](#settings-schedule)를 참고하세요.
+<Cmd sid='schedule.schedule' product='2' /> 옵션에서 원하는 스케줄이 없다면 <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' />를 클릭하세요. 새 스케줄을 추가할 수 있습니다. 스케줄 설정에 대한 자세한 내용은 [다음 문서](settings-schedule)를 참고하세요.
 
 :::
 
@@ -157,7 +157,7 @@ keywords: [장치, 인증]
   
   * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: 지문 센서가 항상 켜져 있습니다.
 
-* <Cmd sid='device.info.advancedEnrollment' product='2' />: 높은 품질의 지문 정보를 저장하기 위해 스캔한 지문의 품질을 검사할 수 있습니다. <Cmd sid='common.useDhcp' product='2' />으로 설정하면 지문 품질이 낮을 경우 사용자에게 알려주어 지문을 올바르게 스캔하도록 도와줍니다.
+* <Cmd sid='device.info.advancedEnrollment' product='2' />: 높은 품질의 지문 정보를 저장하기 위해 스캔한 지문의 품질을 검사할 수 있습니다. <Cmd sid='common.use' product='2' />으로 설정하면 지문 품질이 낮을 경우 사용자에게 알려주어 지문을 올바르게 스캔하도록 도와줍니다.
 
 * <Cmd sid='device.info.fingerprintLFD' product='2' />: [위조 지문](../../reference/glossary#fake_fp) 검사 등급을 설정하세요. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다.
 
@@ -247,7 +247,7 @@ keywords: [장치, 인증]
 
 :::info
 
-* <Cmd sid='device.info.useVisualBarcode' product='2' /> 옵션을 사용하려면 별도의 장치 라이선스가 필요합니다. 자세한 내용은 [다음 문서](#)를 참고하세요.
+* <Cmd sid='device.info.useVisualBarcode' product='2' /> 옵션을 사용하려면 별도의 장치 라이선스가 필요합니다. 자세한 내용은 [다음 문서](settings-license-device-license)를 참고하세요.
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' />, <Cmd sid='device.authmode.settings.motionSensor' product='2' /> 옵션을 지원하는 장치는 아래를 참고하세요.
 
@@ -286,7 +286,7 @@ CSN 카드 및 포맷 종류를 선택하고 바이트 순서를 설정할 수 �
 
   * <Cmd sid='common.general' product='2' />: 카드의 일련 번호(CSN)를 별도의 변환 없이 모두 읽어서 표현합니다.
 
-  * <Cmd sid='common.wiegand' product='2' />: 사용자가 정의한 Wiegand 형식에 따라 카드 일련 번호(CSN)를 변환하여 표현합니다. 새로운 Wiegand 형식을 설정하려면 [다음 문서](#)를 참고하세요.
+  * <Cmd sid='common.wiegand' product='2' />: 사용자가 정의한 Wiegand 형식에 따라 카드 일련 번호(CSN)를 변환하여 표현합니다. 새로운 Wiegand 형식을 설정하려면 [다음 문서](settings-credential-wiegand-format)를 참고하세요.
 
 ### <Cmd sid='device.card.Wiegand' product='2' />
 
@@ -294,7 +294,7 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 
 :::info
 
-새로운 Wiegand 형식을 설정하려면 [다음 문서](#)를 참고하세요.
+새로운 Wiegand 형식을 설정하려면 [다음 문서](settings-credential-wiegand-format)를 참고하세요.
 
 :::
 
@@ -302,7 +302,7 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 
 슈프리마 스마트 카드 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다. 
 
-* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: 슈프리마 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](#)를 참고하세요.
+* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: 슈프리마 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](settings-credential-smart-format)를 참고하세요.
 
 * <Cmd sid='device.info.supremaSmartCardByteOrder' product='2' />
 
@@ -315,7 +315,7 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 
 타사에서 발급한 커스텀 스마트 카드의 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다.
 
-* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: 커스텀 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](#)를 참고하세요.
+* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: 커스텀 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](settings-credential-smart-format)를 참고하세요.
 
 * <Cmd sid='device.info.customSmartCardByteOrder' product='2' />
 

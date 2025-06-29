@@ -1,7 +1,7 @@
 ---
 id: add-user-basic-info
 title: 사용자 기본 정보 입력하기
-description: 사용자의 기본 정보 입력에 대한 자세한 내용은 안내합니다.
+description: 사용자의 기본 정보 입력에 대한 자세한 내용을 안내합니다.
 keywords: [ 사용자, 사용자 그룹 ]
 ---
 
@@ -23,46 +23,31 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <Image src='/img/biostarx-new-user-information.png' />
 
-* **사진**: 사용자의 사진을 등록하세요. 웹캠으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다.
+* <Cmd sid='common.id' product='2' />: 사용자에게 부여할 고유 ID를 입력하세요.
 
-  <Columns>
-  <Column className='width--20 padding--t1rem'><Image src='/img/common/biostarx-new-user-photo.png' alone /></Column>
-  <Column className='padding--l10'>
+* <Cmd sid='common.name' product='2' />: 사용자의 이름을 입력하세요.
 
-  * <IcCamera/>: PC에 웹캠이 연결되어 있다면 버튼을 클릭해 사진을 촬영하고 등록할 수 있습니다.
+* <Cmd sid='common.email' product='2' />: 이메일을 입력하세요.
 
-  * <IcUpload/>: PC에 저장된 이미지 파일을 업로드할 수 있습니다.
+* <Cmd sid='common.telephone' product='2' />: 전화번호를 입력하세요.
 
-  * <IcTrash/>: 현재 적용된 사진을 삭제할 수 있습니다.
+* <Cmd sid='common.department' product='2' />: 사용자가 소속된 부서를 입력하세요.
 
-  </Column>
-  </Columns>
+* <Cmd sid='common.title' product='2' />: 사용자의 직함을 입력하세요.
 
-* <Cmd sid='team.user.table.id' />: 사용자에게 부여할 고유 ID를 입력하세요.
+* <Cmd sid='common.group' product='2' />: 사용자의 그룹을 선택하세요. 사용자 그룹 추가 및 관리에 대한 자세한 내용은 [다음 문서](user-group-manage)를 참고하세요.
 
-* <Cmd sid='team.user.table.firstName' /> / <Cmd sid='team.user.table.lastName' />: 사용자의 이름을 입력하세요.
+* <Cmd sid='common.period' product='2' />: 사용자 계정을 사용할 기간을 설정하세요. 날짜 및 시간 영역을 클릭해 직접 입력하거나 <IcCalc /> 버튼을 클릭해 원하는 날짜와 시간을 선택할 수 있습니다.
 
-* <Cmd sid='team.user.table.email' />: 이메일을 입력하세요.
-
-* <Cmd sid='team.user.table.phone' />: 전화번호를 입력하세요.
-
-* <Cmd sid='team.user.table.department' />: 사용자가 소속된 부서를 입력하세요.
-
-* <Cmd sid='team.user.table.title' />: 사용자의 직함을 입력하세요.
-
-* <Cmd sid='team.user.table.group' />: 사용자의 그룹을 선택하세요. 사용자 그룹 추가 및 관리에 대한 자세한 내용은 [다음 문서](user-group-manage)를 참고하세요.
-
-* <Cmd sid='team.user.table.period' />: 사용자 계정을 사용할 기간을 설정하세요. 날짜 및 시간 영역을 클릭해 직접 입력하거나 달력 아이콘을 클릭해 원하는 날짜와 시간을 선택할 수 있습니다.
-
-* <Cmd sid='team.user.table.status' />: 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다.
+* <Cmd sid='common.status' product='2' />: 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다.
 
 :::info
 
-* <Cmd sid='team.user.table.id' />는 <Cmd sid='shell.header.setting' /> → <Cmd>Server</Cmd> 메뉴의 <Cmd>사용자 ID 종류</Cmd> 옵션에 따라 설정할 수 있는 값이 다를 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.
+* <Cmd sid='team.user.table.id' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid="common.server" product='2' /> 메뉴의 <Cmd sid="setting.userDevice.useridType" product='2' /> 옵션에 따라 설정할 수 있는 값이 다를 수 있습니다. 자세한 내용은 [다음 문서](settings-server-server#user-and-device-management)를 참고하세요.
 
-  * <Cmd>숫자</Cmd>: 1~4294967294 숫자로 입력할 수 있습니다.
+  * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />: 1 ~ 4294967294 숫자로 입력할 수 있습니다.
 
-  * <Cmd>영숫자</Cmd>: 영문자와 숫자를 조합하여 입력할 수 있습니다.
+  * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />: 영문자와 숫자를 조합하여 입력할 수 있습니다.
 
 * <Cmd sid='team.user.table.id' />의 값으로 띄어쓰기를 포함할 수 없습니다.
 
@@ -78,19 +63,19 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 * 비주얼 페이스 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요.
 
-* <Cmd sid='team.userTemplate.table.customField' /> 추가 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+* <Cmd sid='team.userTemplate.table.customField' /> 추가 방법에 대한 자세한 내용은 [다음 문서](settings-server-server#user-and-device-management)를 참고하세요.
 
 :::
 
 <NextStep>
-<NextItem to='set-permission'>
-
-<Cmd sid='team.user.permission.title' /> 섹션에서 사용자의 출입 권한 설정 방법을 확인하세요.
-
-</NextItem>
 <NextItem to='enroll-credential'>
 
 <Cmd sid='team.user.credential.title' /> 섹션에서 사용자 크리덴셜을 등록하고 출입 인증 방식을 설정하세요.
+
+</NextItem>
+<NextItem to='set-permission'>
+
+<Cmd sid='team.user.permission.title' /> 섹션에서 사용자의 출입 권한 설정 방법을 확인하세요.
 
 </NextItem>
 <NextItem to='edit-user'>

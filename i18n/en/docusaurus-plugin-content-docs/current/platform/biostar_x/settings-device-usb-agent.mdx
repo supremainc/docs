@@ -1,0 +1,67 @@
+---
+id: settings-device-usb-agent
+title: USB Agent Settings
+description: This document provides instructions for using the USB fingerprint enrollment device and card enrollment device when accessing BioStar X on the client PC.
+keywords:
+  - USB Agent
+---
+
+When accessing **BioStar X** from a client PC, ensure the USB fingerprint and card enrollment devices are available. To do this, install the USB Device Agent. This document provides guidance on how to install and set up the USB Device Agent.
+
+## Install the USB Device Agent {#install-usb-agent}
+
+To access **BioStar X** from a client PC and use the USB fingerprint and card enrollment devices, the USB Device Agent must be installed.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>.
+
+3. Click the <Cmd sid='button.download' product='2' /> button in the <Cmd sid='settings.usgAgent.lable' product='2' /> section.
+
+4. Run the downloaded file and follow the on-screen instructions to complete the installation.
+
+:::info
+
+If **User Account Control** is enabled in Windows, the USB Agent cannot be auto-launched. Disable User Account Control or run it directly with administrative privileges.
+
+:::
+
+## Set the USB Card Device Byte Order {#usb-card-device-byte-order}
+
+You can set the byte order for the USB card device.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>.
+
+3. Setting the <Cmd sid='settings.usbAgent.byteOrder.title' product='2' /> option in the <Cmd sid='settings.usbAgent.byteOrder' product='2' /> section.
+
+   * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+
+   * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+
+4. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
+
+:::info
+
+The <Cmd sid='settings.usbAgent.byteOrder' product='2' /> option applies only to CSN cards.
+
+:::
+
+## Set the USB Agent Port
+
+You can set the port used by the USB Agent.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the left sidebar, click <Cmd>Device</Cmd> → <Cmd>USB Agent</Cmd>.
+
+3. Enter the port number in the <Cmd sid='settings.usbAgent.port' product='2' /> input field in the <Cmd sid='settings.usbAgent.port.title' product='2' /> section.
+
+4. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
+
+:::info
+
+The port number setting for the USB Agent operates per client program and is used for server communication through that port number.
+
+:::

@@ -1,0 +1,56 @@
+---
+id: settings-advanced-ac-scheduled-lock
+title: 스케줄 잠금 구역
+description: 스케줄 잠금 구역 설정 방법을 안내합니다. 스케줄 잠금 구역은 특정 시간에 출입문을 잠그는 기능을 제공합니다.
+keywords: [고급 출입 통제, 스케줄 잠금]
+---
+
+스케줄 잠금 구역 설정 방법을 안내합니다. 스케줄 잠금 구역은 특정 시간에 출입문을 잠그는 기능을 제공합니다. 이 기능은 출입 통제를 강화하고, 특정 시간대에 출입을 제한하는 데 유용합니다.
+
+:::info
+
+스케줄 잠금 구역은 <Cmd sid='zone.globalZone.local' product='2' /> 모드만 지원합니다.
+
+:::
+
+## 스케줄 잠금 구역 등록 {#addScheduledLockZone}
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd>Advanced AC</Cmd>를 클릭하세요.
+
+1. <Cmd sid='button.func.addZone' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='zone.scheduledLock' product='2' />을 선택하고 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='common.info' product='2' /> 섹션에서 추가할 스케줄 잠금 구역의 이름을 입력하세요.
+
+1. <Cmd sid='common.setting' product='2' /> 섹션에서 스케줄 잠금 구역의 세부 항목을 설정하세요. 자세한 내용은 [다음 문서](#setting)를 참고하세요.
+
+1. <Cmd sid='common.alarm' product='2' /> 섹션에서 스케줄 잠금 구역 위반이 발생했을 때 수행할 동작을 설정하세요.
+
+1. <Cmd sid='zone.forcedLock.bypass' product='2' /> 섹션에서 스케줄 잠금 구역 위반이 발생했을 때 수행할 동작을 설정하세요.
+
+1. 모든 설정을 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+
+### 설정 옵션 안내 {#setting}
+
+스케줄 잠금 구역 설정을 변경할 수 있습니다.
+
+* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: 스케줄 잠금 구역 설정 활성화하거나 일시적으로 비활성화할 수 있습니다.
+
+* <Cmd sid='zone.forcedLock.doorLockType' product='2' />: 입실 장치만 잠그도록 설정하거거나 입실 장치와 퇴실 장치를 모두 잠그도록 설정할 수 있습니다.
+
+* <Cmd sid='zone.pause.doorselected' product='2' />: 스케줄 잠금 구역으로 지정할 출입문을 선택하세요.
+
+* <Cmd sid='common.schedule' product='2' />: 스케줄을 선택하세요. 원하는 스케줄이 없다면 <Cmd sid='button.plusAddSchedule' product='2' />를 클릭해 추가할 수 있습니다.
+
+:::info
+
+* <Cmd sid='zone.globalZone.local' product='2' /> 모드에서 다수의 출입문을 선택하여 스케줄 잠금 구역을 구성할 수 있습니다.
+
+
+* 스케줄 설정에 대한 자세한 내용은 [다음 문서](settings-schedule)를 참고하세요.
+
+:::
