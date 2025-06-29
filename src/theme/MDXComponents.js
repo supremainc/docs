@@ -88,7 +88,7 @@ import IcCopy2 from '@site/static/img/menus/ico-copy2.svg';
 import IcRefresh from '@site/static/img/menus/ico-refresh.svg';
 import IcInfo from '@site/static/img/menus/ico-info.svg';
 import IcLogout from '@site/static/img/menus/ico-logout.svg';
-import IcTip from '@site/static/img/menus/ico-tip.svg';
+import IcTips from '@site/static/img/menus/ico-tip.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -161,5 +161,5 @@ export default {
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
     IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, 
-    IcLogout, IcTip
+    IcLogout, IcTips
 }
