@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2931"], {
-482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7971"], {
+1084: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -17,8 +17,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Installation Guide",
-  "id": "installation-guide",
+  "value": "설치 안내",
+  "id": "설치-안내",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -43,49 +43,49 @@ function _createMdxContent(props) {
   if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "installation-guide",
-      children: "Installation Guide"
+      id: "설치-안내",
+      children: "설치 안내"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Go to the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
             href: "https://download.supremainc.com/",
-            children: "Suprema Download Center"
-          }), ", log in, and download the installation package (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+            children: "슈프리마 다운로드 센터"
+          }), "로 접속해 로그인한 후 설치 패키지(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
             children: "BioStar X Setup.X.Y.Z.BB.exe"
-          }), ")."]
+          }), ")를 다운로드하세요."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Run the downloaded installation file."
+          children: "다운로드한 설치 파일을 실행하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Select the language to use and select the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["사용할 언어를 선택하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.ok",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 선택하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-select-language.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["To continue the installation, select ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["설치를 계속하려면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.agree",
             className: "bold"
-          }), " and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), "를 선택하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-agree.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Enter the administrator account password and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["관리자 계정 암호를 입력하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-input-admin-pw.png"
         }), "\n"]
@@ -96,22 +96,22 @@ function _createMdxContent(props) {
         start: "6",
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Select ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.expressInstall",
               className: "bold"
-            }), " and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            }), "를 선택하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.next",
               className: "bold"
-            }), " button."]
+            }), " 버튼을 클릭하세요."]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
             src: "/img/biostarx-install-select-quick.png"
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Enter the root account password for the database and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: ["데이터베이스의 루트(root) 계정 암호를 입력하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.next",
               className: "bold"
-            }), " button."]
+            }), " 버튼을 클릭하세요."]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
             src: "/img/biostarx-install-input-db-pw.png"
           }), "\n"]
@@ -123,22 +123,22 @@ function _createMdxContent(props) {
         start: "6",
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Select ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.customInstall",
               className: "bold"
-            }), " and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            }), "를 선택하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.next",
               className: "bold"
-            }), " button."]
+            }), " 버튼을 클릭하세요."]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
             src: "/img/biostarx-install-select-custom.png"
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Enter the details of the pre-configured database and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: ["이미 구성된 데이터베이스의 세부 정보를 입력하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               code: "biostar2.install.next",
               className: "bold"
-            }), " button."]
+            }), " 버튼을 클릭하세요."]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
             src: "/img/biostarx-install-input-db-details.png"
           }), "\n"]
@@ -148,79 +148,79 @@ function _createMdxContent(props) {
       start: "8",
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Set the installation path for ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), "를 설치할 경로를 설정하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-set-path.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Set the path to store the encryption key and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["암호화 키를 저장할 경로를 설정하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-set-encrypt-path.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Read the information about the management and responsibility of personal information stored in the database, and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["데이터베이스에 저장되는 개인 정보 관리 권한 및 책임에 대한 안내를 읽고 설치를 계속하려면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button to continue the installation."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-read-covenant.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Set the port for ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " communication and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), "의 통신을 위한 포트를 설정하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-set-port.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Select the components of ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), "의 구성 요소를 선택한 뒤 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " button. If you select ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          }), " 버튼을 클릭하세요. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "USB Device Agent"
-          }), ", the USB Agent and driver for using BioMini, BioMini Plus 2, BioMini Slim 2, and DUALi DE-620 will be installed together."]
+          }), "를 선택하면 BioMini, BioMini Plus 2, BioMini Slim 2, DUALi DE-620을 사용하기 위한 USB Agent와 드라이버를 함께 설치합니다."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-additional.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["When all preparations for installation are complete, click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["모든 설치 준비를 완료했다면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             code: "biostar2.install.btnInstall",
             className: "bold"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-complete.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Select whether to install additional programs and click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "Finish"
-          }), " button."]
+          children: ["부가 프로그램 설치 여부를 선택하고 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "종료"
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-install-additional-fin.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Complete the installation of ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["설치 화면의 안내에 따라 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "USB Device Agent"
-          }), " by following the instructions on the installation screen."]
+          }), " 설치를 완료하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -228,49 +228,49 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["In the downloaded file name, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: ["다운로드한 파일명에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
               children: "X.Y.Z"
-            }), " is the version information and ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            }), "는 버전 정보이며, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
               children: "BB"
-            }), " is the build number."]
+            }), "는 빌드 번호입니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["The administrator account password is used when logging in for the first time after installing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: ["관리자 계정 암호는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "."]
+            }), "를 설치한 다음 처음 로그인할 때 사용합니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The root account password for the database is used as the initial password for AC, TA, and Video DB."
+            children: "데이터베이스의 루트(root) 계정 암호는 AC, TA, Video DB 초기 암호로 사용합니다."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The storage path for the encryption key can be changed. If you modify or move the encryption key file after changing the path, a system error may occur."
+            children: "암호화 키의 저장 경로를 변경할 수 있습니다. 경로를 변경한 이후에 암호화 키 파일을 수정하거나 다른 경로로 이동시키면 시스템 오류가 발생할 수 있습니다."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["When ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " is deleted, the encryption key file is also deleted."]
+            }), "를 삭제하면 암호화 키 파일도 함께 삭제합니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The provided USB Device Agent certificate can only be applied to the local network."
+            children: "제공된 USB Device Agent 인증서는 로컬 네트워크에만 적용할 수 있습니다."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["If another program is using port 443, the BioStar X Setting program runs automatically and allows you to change the port number. For details on changing the port number, refer to the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["다른 프로그램에서 443 포트를 사용하고 있다면 BioStar X Setting 프로그램이 자동으로 실행되어 포트 번호를 변경할 수 있습니다. 포트 번호 변경에 대한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "change-port",
-              children: "following"
-            }), "."]
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["For more information about changing database settings, refer to the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["데이터베이스 설정 변경에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "change-db",
-              children: "following"
-            }), "."]
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
@@ -279,28 +279,28 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Be careful not to lose the administrator or root account password for the database."
+            children: "관리자 또는 데이터베이스의 루트(root) 계정 암호를 분실하지 않도록 주의하세요."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "If you lose the password, version upgrade and DB backup/restore may not be possible."
+            children: "암호를 분실하면 버전 업그레이드 및 DB 백업/복원이 불가능할 수 있습니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(NextStep, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NextItem, {
-        to: "set-permission",
+        to: "tutorial-login",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Check how to log in to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["웹 브라우저를 실행해 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " through your web browser."]
+          }), "로 로그인하는 방법을 확인하세요."]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NextItem, {
         to: "manage-server",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Check the server status of ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " and check how to shut it down or restart it."]
+          }), "의 서버 상태를 확인하고 종료 또는 다시 시작하는 방법을 확인하세요."]
         })
       })]
     })]
@@ -325,7 +325,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-2721: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+5828: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -334,28 +334,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_custom_install_mdx_b13_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-tutorial-custom-install-mdx-b13.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_custom_install_mdx_b13_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"Custom Installation","description":"This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/en/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"Custom Installation","description":"This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.","keywords":["Custom installation"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Express Installation","permalink":"/docs/en/platform/biostar_x/tutorial-express-install"},"next":{"title":"How to Log in","permalink":"/docs/en/platform/biostar_x/tutorial-login"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-custom-install-mdx-dd4.json
+var site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","source":"@site/docs/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","keywords":["사용자 정의 설치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"간편 설치하기","permalink":"/docs/platform/biostar_x/tutorial-express-install"},"next":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/tutorial-login"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_biostar-install-steps.mdx
-var _biostar_install_steps = __webpack_require__(482);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-custom-install.mdx
+// EXTERNAL MODULE: ./docs/common/_biostar-install-steps.mdx
+var _biostar_install_steps = __webpack_require__(1084);
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial-custom-install.mdx
 
 
 const frontMatter = {
 	id: 'tutorial-custom-install',
-	title: 'Custom Installation',
-	description: 'This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.',
+	title: '사용자 정의 설치하기',
+	description: '사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.',
 	keywords: [
-		'Custom installation'
+		'사용자 정의 설치'
 	],
 	isTranslationMissing: false
 };
@@ -384,18 +384,18 @@ function _createMdxContent(props) {
   if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This guides the user on how to set up a ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["사용자가 이미 설치한 데이터베이스와 연동하기 위한 ", (0,jsx_runtime.jsx)(Cmd, {
         code: "biostar2.install.customInstall",
         className: "bold"
-      }), " to integrate with a database that the user has already installed."]
+      }), " 방식을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The databases that can be used in integration with ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " are as follows."]
+            }), "와 연동하여 사용할 수 있는 데이터베이스는 아래와 같습니다."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -429,33 +429,33 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "MS SQL Server communication security supports TLS 1.2."
+            children: "MS SQL Server의 보안 통신은 TLS 1.2를 지원합니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["If the database table creation fails when MS SQL Server is set as the Database Type, you can create the table by executing the script in ", (0,jsx_runtime.jsx)(_components.em, {
+            children: ["MS SQL Server를 데이터베이스로 설정하고, 데이터베이스 테이블 생성에 실패했다면 ", (0,jsx_runtime.jsx)(_components.em, {
               children: "C:\\Program Files\\BioStar X\\dbscript\\mssql"
-            }), " folder."]
+            }), " 경로의 스크립트를 실행하여 테이블을 생성할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["When installing with ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["설치 옵션으로 ", (0,jsx_runtime.jsx)(Cmd, {
               code: "biostar2.install.customInstall",
               className: "bold"
-            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), "를 선택할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "AC DB name"
             }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "TA DB name"
-            }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "VE DB name"
-            }), " cannot be set the same."]
+            }), "은 동일하게 설정할 수 없습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["To use Windows authentication, ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
+            children: ["Windows 인증을 사용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
               children: "Microsoft ODBC Driver 17 for SQL Server"
-            }), " is required.\nPlease install the driver first."]
+            }), "가 필요합니다.\n먼저 해당 드라이버를 설치하세요."]
           }), "\n"]
         }), "\n"]
       })

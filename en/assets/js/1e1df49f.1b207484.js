@@ -139,22 +139,25 @@ function _createMdxContent(props) {
           }), " can only be installed on a 64bit operating system."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "If you are using Windows 8.1, refer to the following link to install the KB2919355 update. Link 1"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["If you are using Windows 8.1, refer to the following link to install the ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "https://support.microsoft.com/help/2919355/windows-rt-8-1--windows-8-1--and-windows-server-2012-r2-update-april-2",
+            children: "KB2919355 update"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If you are using MS SQL 2012 Express, refer to the following link to install the Service Pack 3. ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["If you are using MS SQL 2012 Express, refer to the following link to install the ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.microsoft.com/download/details.aspx?id=49996",
-            children: "Link 2"
-          })]
+            children: "Service Pack 3"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If you are using MS SQL 2014 Express, refer to the following link to install Service Pack 2. ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "https://www.microsoft.com/en-us/download/details.aspx?id=53168",
-            children: "Link 3"
-          })]
+          children: ["If you are using MS SQL 2014 Express, refer to the following link to install ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "https://www.microsoft.com/ko-kr/download/details.aspx?id=53168",
+            children: "Service Pack 2"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -175,13 +178,13 @@ function _createMdxContent(props) {
           }), ", be sure to also back up the ", (0,jsx_runtime.jsx)(_components.em, {
             children: "enckey"
           }), " in the ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "\\Program Files\\BioStar 2 (x64)\\util"
+            children: "\\Program Files\\BioStar X\\util"
           }), " folder and the ", (0,jsx_runtime.jsx)(_components.em, {
             children: "system.conf"
           }), " and ", (0,jsx_runtime.jsx)(_components.em, {
             children: "setting.conf"
           }), " file in the ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "\\Program Files\\BioStar 2(x64)"
+            children: "\\Program Files\\BioStar X"
           }), " folder. Otherwise, the database will be unavailable."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

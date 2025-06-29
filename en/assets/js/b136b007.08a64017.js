@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7839"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2931"], {
 482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -289,7 +289,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(NextStep, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NextItem, {
-        to: "set-permission",
+        to: "tutorial-login",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: ["Check how to log in to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
@@ -325,7 +325,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-5209: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+2721: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -334,28 +334,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_express_install_mdx_a8b_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_custom_install_mdx_b13_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-tutorial-express-install-mdx-a8b.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_express_install_mdx_a8b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-express-install","title":"Express Installation","description":"This guide provides instructions on how to set up BioStar X quickly.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-express-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-express-install","permalink":"/docs/en/platform/biostar_x/tutorial-express-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-express-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-express-install","title":"Express Installation","description":"This guide provides instructions on how to set up BioStar X quickly.","keywords":["Express installation"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Tutorial","permalink":"/docs/en/platform/biostar_x/tutorial"},"next":{"title":"Custom Installation","permalink":"/docs/en/platform/biostar_x/tutorial-custom-install"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-tutorial-custom-install-mdx-b13.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_custom_install_mdx_b13_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"Custom Installation","description":"This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/en/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"Custom Installation","description":"This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.","keywords":["Custom installation"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Express Installation","permalink":"/docs/en/platform/biostar_x/tutorial-express-install"},"next":{"title":"How to Log in","permalink":"/docs/en/platform/biostar_x/tutorial-login"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_biostar-install-steps.mdx
 var _biostar_install_steps = __webpack_require__(482);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-express-install.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-custom-install.mdx
 
 
 const frontMatter = {
-	id: 'tutorial-express-install',
-	title: 'Express Installation',
-	description: 'This guide provides instructions on how to set up BioStar X quickly.',
+	id: 'tutorial-custom-install',
+	title: 'Custom Installation',
+	description: 'This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.',
 	keywords: [
-		'Express installation'
+		'Custom installation'
 	],
 	isTranslationMissing: false
 };
@@ -372,24 +372,93 @@ const toc = [..._biostar_install_steps/* toc */.d$];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    admonition: "admonition",
+    em: "em",
+    li: "li",
     p: "p",
     strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This document guides you on how to install ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " using the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "New Installation"
-      }), " method. To proceed with ", (0,jsx_runtime.jsx)(Cmd, {
-        code: "biostar2.install.customInstall"
-      }), " to connect with the database you have already installed, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "tutorial-custom-install",
-        children: "following"
-      }), "."]
+      children: ["This guides the user on how to set up a ", (0,jsx_runtime.jsx)(Cmd, {
+        code: "biostar2.install.customInstall",
+        className: "bold"
+      }), " to integrate with a database that the user has already installed."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The databases that can be used in integration with ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " are as follows."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MariaDB 10.1.10"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2012 SP3"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2014 SP2"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2016 SP1"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2017"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2019"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "MS SQL Server 2022"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "MS SQL Server communication security supports TLS 1.2."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If the database table creation fails when MS SQL Server is set as the Database Type, you can create the table by executing the script in ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "C:\\Program Files\\BioStar X\\dbscript\\mssql"
+            }), " folder."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["When installing with ", (0,jsx_runtime.jsx)(Cmd, {
+              code: "biostar2.install.customInstall",
+              className: "bold"
+            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "AC DB name"
+            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "TA DB name"
+            }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "VE DB name"
+            }), " cannot be set the same."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["To use Windows authentication, ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
+              children: "Microsoft ODBC Driver 17 for SQL Server"
+            }), " is required.\nPlease install the driver first."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_biostar_install_steps/* default */.ZP, {})]
   });
 }
