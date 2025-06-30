@@ -95,9 +95,9 @@
     "message": "Advanced Access Control Settings",
     "description": "The label for category 고급 출입 통제 설정하기 in sidebar biostarx"
   },
-  "sidebar.biostarx.category.크리덴션 관리하기": {
+  "sidebar.biostarx.category.크리덴셜 관리하기": {
     "message": "Manage Credentials",
-    "description": "The label for category 크리덴션 관리하기 in sidebar biostarx"
+    "description": "The label for category 크리덴셜 관리하기 in sidebar biostarx"
   },
   "sidebar.biostarx.category.서버 설정하기": {
     "message": "Server Settings",
