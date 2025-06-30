@@ -1,0 +1,128 @@
+---
+id: settings-map-manage-floor
+title: Configure Floors
+description: Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.
+keywords:
+  - Map
+  - Floors
+  - Facility
+  - Entrance door
+  - Camera
+  - Layout
+---
+
+Configure floors before setting up zones and facilities. Upload the floor layout as an image and place doors and cameras for visual management. After configuring a floor, check the doors and cameras for that floor on the <Cmd sid='shell.header.arena' /> page.
+
+<Image src='/img/biostarx-settings-map-add-floor-example.png' alone caption />
+
+:::info
+
+* Register doors before configuring floors. For more information on enrolling doors, refer to the [following](settings-door-add).
+
+* For more information on map monitoring, refer to the [following](monitoring-map).
+
+:::
+
+## Add floor {#add-floor}
+
+Upload a floor layout or a 3D bird’s eye view image to add a floor and place doors and cameras.
+
+1. Click <Cmd sid='shell.header.launcher' /> and then click <Cmd sid='shell.header.setting' />.
+
+2. In the left sidebar, click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />.
+
+3. Click <Cmd>+ New Floor</Cmd> in the top right corner of the floor list screen.
+
+4. Enter the name and description of the floor you want to add in the <Cmd sid='setting.floor.page.title' /> screen's <Cmd sid='setting.floor.information.section.title' /> section.
+
+5. Click <Cmd>Floor Plan</Cmd> in the <Cmd sid='setting.floor.configuration.section.title' /> section or drag and drop the image you want to upload.
+
+6. In the <Cmd>Add Floor Plan</Cmd> window, review the uploaded image and complete the settings.
+
+    <Image src='/img/biostarx-settings-map-add-floor-01.png' alone />
+
+    * To rotate the image, click <IcLrot /> or <IcRrot />.
+
+    * To crop the image, click <IcCrop />.
+
+7. After finishing the image settings, click <Cmd>Apply</Cmd>.
+
+8. To add doors to the uploaded image, right-click at the desired location on the image and select <Cmd>Add Door</Cmd>.
+
+    <Image src='/img/biostarx-settings-map-add-floor-02.png' alone />
+
+9. In the <Cmd>Add Door</Cmd> window, select one of the enrolled doors.
+
+    <Image src='/img/biostarx-settings-map-add-floor-03.png' alone />
+
+10. Click <Cmd>Apply</Cmd> to place the door on the image.
+
+    <Image src='/img/biostarx-settings-map-add-floor-04.png' alone />
+
+11. To add a camera to the uploaded image, right-click at the desired location on the image and select <Cmd>Add Camera</Cmd>.
+
+    <Image src='/img/biostarx-settings-map-add-floor-05.png' alone />
+
+12. In the <Cmd>Add Camera</Cmd> window, select one of the enrolled cameras.
+
+13. Click <Cmd>Apply</Cmd> to place the camera on the image.
+
+    <Image src='/img/biostarx-settings-map-add-floor-06.png' alone />
+
+14. Additionally place doors and cameras as needed in the actual floor.
+
+15. After completing all settings and saving the configured floor, click <Cmd sid='common.apply' />.
+
+## Modify floor configuration
+
+You can modify the layout of the floor with added doors and cameras. Modifying the floor layout allows you to change or delete the positions of doors and cameras.
+
+1. Click <Cmd sid='shell.header.launcher' /> and then click <Cmd sid='shell.header.setting' />.
+
+2. In the left sidebar, click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />.
+
+3. Click the floor you want to modify from the list.
+
+After completing all settings and saving the configured floor, click <Cmd sid='common.apply' />.
+
+### Delete door/camera
+
+Click the door or camera you want to delete from the floor image. The <IcFremove /> icon will appear. Click the icon to delete the selected door or camera.
+
+### Set camera shooting range
+
+Right-click the camera on the floor image. The shooting range will be displayed.
+
+<Image src='/img/biostarx-settings-map-floor-camera-setting-01.png' alone />
+
+* To change the shooting range, click and drag in the desired direction while holding the <IcCamrot /> icon.
+
+  <Image src='/img/biostarx-settings-floor-camera-rotation.gif' alone />
+
+* To adjust the shooting range, click and drag the corner edges of the range to the desired size.
+
+  <Image src='/img/biostarx-settings-floor-camera-adjust.gif' alone />
+
+* To delete the shooting range, click the <IcFremove /> icon.
+
+:::caution
+
+The settings made by the user are provided purely for the convenience of security management and do not reflect the actual shooting range of the cameras.
+
+:::
+
+### Delete floor image
+
+To delete a floor image, right-click the floor image and select <Cmd>Delete Floor Plan</Cmd>.
+
+## Delete floor {#delete-floor}
+
+1. Click <Cmd sid='shell.header.launcher' /> and then click <Cmd sid='shell.header.setting' />.
+
+2. In the left sidebar, click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />.
+
+3. Click the checkbox of the floor you want to delete from the list. You can select more than one floor.
+
+4. Click <Cmd sid='common.delete' /> in the top right corner of the screen.
+
+The selected floors will be deleted from the list. The deleted floors cannot be recovered.

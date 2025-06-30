@@ -1,0 +1,94 @@
+---
+id: settings-map-manage-facility
+title: 시설 구성하기
+description: 시설을 구성하고 층을 배치하세요. 층을 순차적으로 배치하여 실제 시설의 구조를 표현할 수 있습니다.
+keywords: [구역, 시설, 층]
+---
+
+시설을 구성하고 층을 배치하세요. 층을 순차적으로 배치하여 실제 시설의 구조를 표현할 수 있습니다. 시설을 구성하면 <Cmd sid='shell.header.arena' /> 페이지에서 지도에 배치된 시설을 선택하고 각 층으로 진입하여 모니터링할 수 있는 기능을 제공합니다.
+
+<Image src='/img/monitoring-map-select-floor.png' alone />
+
+:::info
+
+* 시설을 구성하기 전에 층을 먼저 등록하세요. 층 등록에 대한 자세한 내용은 [다음 문서](settings-map-manage-floor)를 참고하세요.
+
+* 맵 모니터링에 대한 자세한 내용은 [다음 문서](monitoring-map)를 참고하세요.
+
+:::
+
+## 시설 추가
+
+시설에 층을 추가하여 구조를 설계하려면 다음 단계를 따르세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.facility' />을 클릭하세요.
+
+1. 시설 목록 화면 오른쪽 상단의 <Cmd>New Facility</Cmd> 버튼을 클릭하세요.
+
+1. <Cmd>Create New Facility</Cmd> 화면의 <Cmd sid='setting.facility.information.section.title' /> 섹션에서 추가하려는 시설의 이름과 설명을 입력하세요.
+
+1. <Cmd sid='setting.facility.configuration.section.title' />에서 <Cmd sid='common.add' /> 버튼을 클릭하세요.
+
+1. <Cmd>Add Floor</Cmd> 창이 나타나면 추가할 층의 체크박스를 클릭해 층을 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-facility-add-floor.png' alone />
+
+    * 입력 필드에 키워드를 입력해 층을 검색할 수도 있습니다.
+
+    * 모든 층을 선택하려면 <Cmd>Select All</Cmd> 버튼을 클릭하세요.
+
+1. 층을 모두 선택했다면 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+1. 출입문 목록에 추가한 층을 확인하고 순서를 변경하려면 <Cmd>Order</Cmd> 열의 <IcDorder /> 아이콘을 드래그하여 순서를 변경하세요.
+
+1. 시설 구성을 완료하고 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+
+## 시설 수정
+
+### 시설의 층 추가
+
+이미 만들어진 시설에 층을 추가할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.facility' />을 클릭하세요.
+
+1. 시설 목록에서 층을 추가할 시설을 선택하세요.
+
+1. <Cmd sid='setting.facility.configuration.section.title' />에서 <Cmd sid='common.add' /> 버튼을 클릭하세요.
+
+1. <Cmd>Add Floor</Cmd> 창이 나타나면 추가할 층의 체크박스를 클릭해 층을 선택하세요.
+
+1. 층을 모두 선택했다면 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+1. 출입문 목록에 추가한 층을 확인하고 순서를 변경하려면 <Cmd>Order</Cmd> 열의 <IcDorder /> 아이콘을 드래그하여 순서를 변경하세요.
+
+1. 시설 구성을 완료하고 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+### 시설의 층 삭제
+
+이미 만들어진 시설에 층을 삭제할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.facility' />을 클릭하세요.
+
+1. 시설 목록에서 층을 삭제할 시설을 선택하세요.
+
+1. <Cmd sid='setting.facility.configuration.section.title' />에서 삭제할 층의 <IcTrash className='red' /> 버튼을 클릭하세요.
+
+1. 층 삭제를 완료하고 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+
+## 시설 삭제
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.facility' />을 클릭하세요.
+
+1. 시설 목록에서 삭제할 시설의 체크박스를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='common.delete' /> 버튼을 클릭하세요.
