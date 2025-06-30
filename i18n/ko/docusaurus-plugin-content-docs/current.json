@@ -130,5 +130,9 @@
   "sidebar.biostarx.category.사용자 크리덴셜 등록하기": {
     "message": "사용자 크리덴셜 등록하기",
     "description": "The label for category 사용자 크리덴셜 등록하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.맵 관리하기": {
+    "message": "맵 관리하기",
+    "description": "The label for category 맵 관리하기 in sidebar biostarx"
   }
 }
