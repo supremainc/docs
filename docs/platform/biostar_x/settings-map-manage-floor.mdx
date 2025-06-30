@@ -1,0 +1,124 @@
+---
+id: settings-map-manage-floor
+title: 층 구성하기
+description: 맵과 시설을 구성하기 전에 층을 구성하세요. 층 이미지에 출입문과 카메라를 배치해 시각적으로 확인할 수 있습니다.
+keywords: [맵, 층, 시설, 출입문, 카메라, 배치도, 이미지]
+---
+
+맵과 시설을 구성하기 전에 층을 구성하세요. 해당 층의 배치도를 이미지로 업로드하고, 출입문과 카메라를 배치하여 시각적으로 관리할 수 있습니다. 층을 구성하면 <Cmd sid='shell.header.arena' /> 페이지에서 해당 층의 출입문과 카메라를 확인할 수 있습니다.
+
+<Image src='/img/biostarx-settings-map-add-floor-example.png' alone caption />
+
+:::info
+
+* 층을 구성하기 전에 출입문을 먼저 등록하세요. 출입문 등록에 대한 자세한 내용은 [다음 문서](settings-door-add)를 참고하세요.
+
+* 맵 모니터링에 대한 자세한 내용은 [다음 문서](monitoring-map)를 참고하세요.
+
+:::
+
+## 층 추가 {#add-floor}
+
+층의 배치도 또는 3D 조감도 이미지를 업로드하여 층을 추가하고 출입문과 카메라를 배치할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />을 클릭하세요.
+
+1. 층 목록 화면의 오른쪽 상단에 <Cmd>+ New Floor</Cmd> 버튼을 클릭하세요.
+
+1. <Cmd sid='setting.floor.page.title' product='2' /> 화면의 <Cmd sid='setting.floor.information.section.title' /> 섹션에서 추가하려는 층의 이름과 설명을 입력하세요.
+
+1. <Cmd sid='setting.floor.configuration.section.title' /> 섹션의 <Cmd>Floor Plan</Cmd> 버튼을 클릭하거나 업로드할 이미지를 드래그하여 업로드하세요.
+
+1. <Cmd>Add Floor Plan</Cmd> 창에서 업로드한 이미지를 확인하고 설정을 완료하세요.
+
+    <Image src='/img/biostarx-settings-map-add-floor-01.png' alone />
+
+    * 이미지를 회전하려면 <IcLrot /> 또는 <IcRrot /> 버튼을 클릭하세요.
+
+    * 이미지를 자르려면 <IcCrop /> 버튼을 클릭하세요.
+
+1. 이미지 설정을 완료하면 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+1. 설정 섹션에 업로드한 이미지에 출입문을 추가하려면 이미지의 원하는 위치에서 오른쪽 마우스 버튼을 클릭하고 <Cmd>Add Door</Cmd>를 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-add-floor-02.png' alone />
+
+1. <Cmd>Add Door</Cmd> 창이 나타나면 등록된 출입문 중 하나를 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-add-floor-03.png' alone />
+
+1. <Cmd>Apply</Cmd> 버튼을 클릭하면 출입문을 이미지에 배치합니다.
+
+    <Image src='/img/biostarx-settings-map-add-floor-04.png' alone />
+
+1. 업로드한 이미지에 카메라를 추가하려면 이미지의 원하는 위치에서 오른쪽 마우스 버튼을 클릭하고 <Cmd>Add Camera</Cmd>를 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-add-floor-05.png' alone />
+
+1. <Cmd>Add Camera</Cmd> 창이 나타나면 등록된 카메라 중 하나를 선택하세요.
+
+1. <Cmd>Apply</Cmd> 버튼을 클릭하면 카메라를 이미지에 배치합니다.
+
+    <Image src='/img/biostarx-settings-map-add-floor-06.png' alone />
+
+1. 실제 층에 배치된 출입문과 카메라를 추가로 배치하세요.
+
+1. 모든 설정을 완료하고 설정한 층을 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+
+## 층 구성 수정
+
+출입문과 카메라를 추가한 층의 배치도를 수정할 수 있습니다. 층의 배치도를 수정하면 출입문과 카메라의 위치를 변경하거나 삭제할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />을 클릭하세요.
+
+1. 층 목록에서 수정하려는 층을 클릭하세요.
+
+모든 설정을 완료하고 설정한 층을 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+
+### 출입문 삭제
+
+층의 이미지에서 삭제하려는 출입문을 클릭하세요. <IcFremove /> 아이콘이 나타납니다. 아이콘을 클릭하면 선택한 출입문을 삭제할 수 있습니다.
+
+### 카메라 삭제
+
+층의 이미지에서 삭제하려는 카메라를 클릭하세요. <IcFremove /> 아이콘이 나타납니다. 아이콘을 클릭하면 선택한 카메라를 삭제할 수 있습니다.
+
+### 카메라 촬영 반경 설정
+
+층의 이미지에서 마우스 오른쪽 버튼으로 카메라를 클릭하세요. 촬영 반경이 표시됩니다.
+
+<Image src='/img/biostarx-settings-map-floor-camera-setting-01.png' alone />
+
+* 촬영 반경을 변경하려면 <IcCamrot /> 아이콘을 클릭한 상태에서 원하는 방향으로 드래그하세요.
+
+  <Image src='/img/biostarx-settings-floor-camera-rotation.gif' alone />
+
+* 촬영 반경을 조정하려면 반경의 끝 모서리 부분을 클릭한 상태에서 원하는 크기로 드래그하세요.
+
+  <Image src='/img/biostarx-settings-floor-camera-adjust.gif' alone />
+
+* 촬영 반경을 삭제하려면 <IcFremove /> 아이콘을 클릭하세요.
+
+
+### 층 이미지 삭제
+
+층의 이미지를 삭제하려면 층 이미지에서 마우스 오른쪽 버튼을 클릭하고 <Cmd>Delete Floor Plan</Cmd>을 선택하세요.
+
+
+## 층 삭제하기 {#delete-floor}
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.floor' />을 클릭하세요.
+
+1. 층 목록에서 삭제하려는 층의 체크박스를 클릭하세요. 1개 이상의 층을 선택할 수 있습니다.
+
+1. 화면 오른쪽 상단의 <Cmd sid='common.delete' /> 버튼을 클릭하세요.
+
+층 목록에서 선택한 층이 삭제됩니다. 선택한 층은 복구할 수 없습니다.
