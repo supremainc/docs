@@ -285,10 +285,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "../../device/biostation_3/settings#wireless",
-              children: "BioStation 3"
-            })
+            children: "BioStation 3"
           }), "\n"]
         }), "\n"]
       })]

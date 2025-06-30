@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2067"], {
-4005: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7566"], {
+552: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_settings_mdx_a94_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_ui_settings_mdx_9fc_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-settings-mdx-a94.json
-var site_docs_platform_biostar_x_ui_settings_mdx_a94_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-settings","title":"설정","description":"설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-settings","permalink":"/docs/platform/biostar_x/ui-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-settings","title":"설정","description":"설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["설정","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"대시보드","permalink":"/docs/platform/biostar_x/ui-dashboard"},"next":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-ui-settings-mdx-9fc.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_ui_settings_mdx_9fc_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-settings","title":"Settings","description":"This guide describes the user interface of the setting page.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/ui-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-settings","permalink":"/docs/en/platform/biostar_x/ui-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-settings","title":"Settings","description":"This guide describes the user interface of the setting page.","keywords":["Settings","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"DASHBOARD","permalink":"/docs/en/platform/biostar_x/ui-dashboard"},"next":{"title":"License Policy","permalink":"/docs/en/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-settings.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/ui-settings.mdx
 
 
 const frontMatter = {
 	id: 'ui-settings',
-	title: '설정',
-	description: '설정 페이지의 사용자 인터페이스(User Interface)를 안내합니다.',
+	title: 'Settings',
+	description: 'This guide describes the user interface of the setting page.',
 	keywords: [
-		'설정',
+		'Settings',
 		'UI'
 	],
 	isTranslationMissing: false
@@ -59,44 +59,45 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["On the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.setting"
-      }), " 페이지에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " page, manage various settings of ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 다양한 설정을 관리할 수 있습니다. 이 페이지의 UI 구성 요소를 살펴보면 다음과 같습니다."]
+      }), ". The UI components of this page are as follows:"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-ui-settings.png"
+      src: "/img/biostarx-ui-settings.png",
+      className: "none"
     }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 키워드를 입력해 설정 항목을 검색할 수 있습니다."
+            children: "Enter keywords in the search input field to get settings items."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: ["Check various settings menus provided in the ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "shell.header.setting"
-            }), " 메뉴에서 제공하는 다양한 설정 메뉴를 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " menu. For more information, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "how-to-guide-settings",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+              children: "following"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "페이지 목록을 탐색할 수 있는 도구입니다. 페이지를 이동하거나 원하는 페이지로 이동할 수 있습니다."
+            children: "A tool to navigate the page list. Move between pages or go to the desired page."
           }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
             type: "info",
             children: (0,jsx_runtime.jsx)(_components.p, {
-              children: "설정 메뉴에 따라 지원하지 않을 수 있습니다."
+              children: "Support may vary depending on the settings menu."
             })
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하면 추가 기능을 사용할 수 있습니다."]
+            children: ["Click the ", (0,jsx_runtime.jsx)(IcMoreW, {}), " button to access additional options."]
           }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
             type: "info",
             children: (0,jsx_runtime.jsx)(_components.p, {
-              children: "설정 메뉴에 따라 지원하는 기능은 다를 수 있습니다."
+              children: "Supported features may vary depending on the settings menu."
             })
           }), "\n"]
         }), "\n"]
