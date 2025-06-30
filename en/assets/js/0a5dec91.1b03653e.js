@@ -122,9 +122,9 @@ function _createMdxContent(props) {
             }), ", the 1:1 security level cannot be applied because the user is unknown. The 1:1 security level can only be applied when authentication modes using user-specific cards or IDs are set. For more information about ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "user.authMode.privateMode",
               product: "2"
-            }), ", refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            }), ", refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "enroll-credential-authmode",
-              children: "the following document"
+              children: "following"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

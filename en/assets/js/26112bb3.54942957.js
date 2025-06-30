@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-management-mdx-261.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_management_mdx_261_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-management","title":"Manage map","description":"Guide how to set and manage floors, facilities, and areas.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-management.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-management","permalink":"/docs/en/platform/biostar_x/settings-map-management","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-management.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-management","title":"Manage map","description":"Guide how to set and manage floors, facilities, and areas.","keywords":["Map","Floor","facility","Zone"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Alert Settings","permalink":"/docs/en/platform/biostar_x/settings-alert"},"next":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_management_mdx_261_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-management","title":"Manage Map","description":"Guide how to set and manage floors, facilities, and areas.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-management.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-management","permalink":"/docs/en/platform/biostar_x/settings-map-management","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-management.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-management","title":"Manage Map","description":"Guide how to set and manage floors, facilities, and areas.","keywords":["Map","Floor","Facility","Zone"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Alert Settings","permalink":"/docs/en/platform/biostar_x/settings-alert"},"next":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,12 +25,12 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'settings-map-management',
-	title: 'Manage map',
+	title: 'Manage Map',
 	description: 'Guide how to set and manage floors, facilities, and areas.',
 	keywords: [
 		'Map',
 		'Floor',
-		'facility',
+		'Facility',
 		'Zone'
 	],
 	isTranslationMissing: false
@@ -48,7 +48,10 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    li: "li",
     p: "p",
+    strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, DocCardList} = _components;
@@ -61,11 +64,21 @@ function _createMdxContent(props) {
       }), " page."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["For more information about map monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "monitoring-map",
-          children: "following"
-        }), "."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For more information about map monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "monitoring-map",
+              children: "following"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The map settings and map monitoring features is only available with an ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Advanced"
+            }), " or higher license."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });

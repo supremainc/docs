@@ -43,7 +43,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "Email contents settings",
+  "value": "Set up email content",
   "id": "email-contents-setting",
   "level": 2
 }, {
@@ -153,7 +153,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "email-contents-setting",
-      children: "Email contents settings"
+      children: "Set up email content"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Enter the SMTP server information for sending emails."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -236,7 +236,7 @@ function _createMdxContent(props) {
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "When using the SMTP server as an email account with two-factor authentication and change the password of the account, note the following: Once you set up two-factor authentication, the SMTP password is the same as the app password generated using two-factor authentication, not the password of the email account. At this time, if the password of the email account is changed, the app password is automatically deleted, and the SMTP password is no longer available. When changing the password for the email account, regenerate the app password and then set the SMTP password again."
+                children: "When using the SMTP server as an email account with two-factor authentication and change the password of the account, note the following: Once you set up two-factor authentication, the SMTP password is the same as the app password generated using two-factor authentication, not the password of the email account. 2단계 인증을 설정하면 SMTP 암호는 해당 이메일 계정의 비밀번호가 아닌 2단계 인증으로 생성된 앱 비밀번호를 사용합니다. At this time, if the password of the email account is changed, the app password is automatically deleted, and the SMTP password is no longer available. When changing the password for the email account, regenerate the app password and then set the SMTP password again."
               }), "\n"]
             }), "\n"]
           })

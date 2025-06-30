@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-manage-floor-mdx-39f.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_floor_mdx_39f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-floor","title":"Configure Floors","description":"Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-floor.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-floor","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-floor.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-floor","title":"Configure Floors","description":"Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.","keywords":["Map","Floors","Facility","Entrance door","Camera","Layout"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Manage map","permalink":"/docs/en/platform/biostar_x/settings-map-management"},"next":{"title":"Configure facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_floor_mdx_39f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-floor","title":"Configure Floors","description":"Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-floor.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-floor","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-floor.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-floor","title":"Configure Floors","description":"Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.","keywords":["Map","Floor","Facility","Door","Camera","Layout","Images"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Manage Map","permalink":"/docs/en/platform/biostar_x/settings-map-management"},"next":{"title":"Configure facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -29,11 +29,12 @@ const frontMatter = {
 	description: 'Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.',
 	keywords: [
 		'Map',
-		'Floors',
+		'Floor',
 		'Facility',
-		'Entrance door',
+		'Door',
 		'Camera',
-		'Layout'
+		'Layout',
+		'Images'
 	],
 	isTranslationMissing: false
 };
@@ -79,6 +80,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -92,7 +94,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Configure floors before setting up zones and facilities. Upload the floor layout as an image and place doors and cameras for visual management. After configuring a floor, check the doors and cameras for that floor on the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Configure floors before configuring zones and facilities. Upload the floor layout as an image and place doors and cameras for visual management. After configuring a floor, check the doors and cameras for that floor on the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), " page."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -104,17 +106,23 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Register doors before configuring floors. For more information on enrolling doors, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Register doors before configuring floors. For more information about door enrollment, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-door-add",
               children: "following"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information on map monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information about maps monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "monitoring-map",
               children: "following"
             }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The map settings and map monitoring features is only available with an ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Advanced"
+            }), " or higher license."]
           }), "\n"]
         }), "\n"]
       })
@@ -127,10 +135,10 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " and then click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), "."]
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -258,10 +266,10 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " and then click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), "."]
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -284,7 +292,7 @@ function _createMdxContent(props) {
       id: "delete-doorcamera",
       children: "Delete door/camera"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Click the door or camera you want to delete from the floor image. The ", (0,jsx_runtime.jsx)(IcFremove, {}), " icon will appear. Click the icon to delete the selected door or camera."]
+      children: ["Click the door or camera you want to delete from the floor image. The ", (0,jsx_runtime.jsx)(IcFremove, {}), " icon will appear. Click the icon to delete the selected doors or cameras."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "set-camera-shooting-range",
       children: "Set camera shooting range"
@@ -296,27 +304,27 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To change the shooting range, click and drag in the desired direction while holding the ", (0,jsx_runtime.jsx)(IcCamrot, {}), " icon."]
+          children: ["To change the shooting range, click and drag in the desired direction while holding ", (0,jsx_runtime.jsx)(IcCamrot, {}), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-floor-camera-rotation.gif",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "To adjust the shooting range, click and drag the corner edges of the range to the desired size."
+          children: "To adjust the coverage area, hold the edge of the range and drag to resize."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-floor-camera-adjust.gif",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To delete the shooting range, click the ", (0,jsx_runtime.jsx)(IcFremove, {}), " icon."]
+          children: ["To delete the coverage area, click the ", (0,jsx_runtime.jsx)(IcFremove, {}), " icon."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "The settings made by the user are provided purely for the convenience of security management and do not reflect the actual shooting range of the cameras."
+        children: "Settings made by the user are only features provided for the convenience of security management and do not reflect the actual shooting range of the camera."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "delete-floor-image",
@@ -332,10 +340,10 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " and then click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), "."]
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -353,7 +361,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.delete"
-          }), " in the top right corner of the screen."]
+          }), " at the top right of the screen."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

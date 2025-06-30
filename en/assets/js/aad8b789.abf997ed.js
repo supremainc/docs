@@ -101,9 +101,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["In enterprise environments such as large corporations or public institutions, the scalability and stability of security systems are essential. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " supports registration for thousands of users and enables stable operation even when connecting various devices. In fact, Suprema operates ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " reliably at large-scale sites such as the Government Sejong Center in Korea, and Mohammed VI University Hospital in Morocco."]
+      }), " supports registration for thousands of users and enables stable operation even when connecting various devices."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Additionally, it supports intuitive management of complex security operations by providing a customized UI·UX for users. You can directly configure the interface layout of the monitoring screen, allowing you to quickly and effectively check the information you need."
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {

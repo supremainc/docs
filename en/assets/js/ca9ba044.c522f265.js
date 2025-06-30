@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-manage-area-mdx-ca9.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_area_mdx_ca9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-area","title":"Configure area","description":"Configure floors and facilities to manage and verify secured areas through the map.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-area.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-area.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-area","title":"Configure area","description":"Configure floors and facilities to manage and verify secured areas through the map.","keywords":["Map","Area","Flkoor","Facility"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility"},"next":{"title":"Manage Credentials","permalink":"/docs/en/platform/biostar_x/settings-credential-manage"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_area_mdx_ca9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-area","title":"Configure area","description":"Configure floors and facilities to manage. Verify secured areas through the map.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-area.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-area.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-area","title":"Configure area","description":"Configure floors and facilities to manage. Verify secured areas through the map.","keywords":["Map","Area","Layer","Facility"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility"},"next":{"title":"Manage Credentials","permalink":"/docs/en/platform/biostar_x/settings-credential-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,11 +26,11 @@ var lib = __webpack_require__(65);
 const frontMatter = {
 	id: 'settings-map-manage-area',
 	title: 'Configure area',
-	description: 'Configure floors and facilities to manage and verify secured areas through the map.',
+	description: 'Configure floors and facilities to manage. Verify secured areas through the map.',
 	keywords: [
 		'Map',
 		'Area',
-		'Flkoor',
+		'Layer',
 		'Facility'
 	],
 	isTranslationMissing: false
@@ -77,6 +77,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -89,7 +90,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You can configure floors and facilities and manage zones. You can manage and verify the zones you are securing through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Configure floors and facilities to manage. Verify secured areas through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), " page."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -117,6 +118,12 @@ function _createMdxContent(props) {
               href: "monitoring-map",
               children: "following"
             }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The map settings and map monitoring features is only available with an ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Advanced"
+            }), " or higher license."]
           }), "\n"]
         }), "\n"]
       })
@@ -377,9 +384,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.delete"
-          }), " at the top right of the screen."]
+          }), " button at the top right of the screen."]
         }), "\n"]
       }), "\n"]
     })]

@@ -327,7 +327,7 @@ function _createMdxContent(props) {
       id: "advancedsearch",
       children: "Advanced search"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can specify the IP address and port number of a specific device to register it."
+      children: "You can specify the IP address and port number of a specific device to registrer it."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

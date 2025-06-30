@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-manage-facility-mdx-4ea.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_facility_mdx_4ea_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-facility","title":"Configure facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-facility.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-facility.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-facility","title":"Configure facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","keywords":["Zone","Facility","Floor"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"},"next":{"title":"Configure area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_facility_mdx_4ea_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-facility","title":"Configure facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-facility.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-facility.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-facility","title":"Configure facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","keywords":["Area","Facility","Floor"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"},"next":{"title":"Configure area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -28,7 +28,7 @@ const frontMatter = {
 	title: 'Configure facility',
 	description: 'Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.',
 	keywords: [
-		'Zone',
+		'Area',
 		'Facility',
 		'Floor'
 	],
@@ -72,6 +72,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -82,7 +83,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Configure facilities and arrange floors. Arrange floors sequentially to represent the actual structure of the facility. Configuring facilities provides the feature to select facilities placed on the map in the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility. Configuring facilities provides the feature to select facilities placed on the map in the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), " page and enter each floor for monitoring."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -100,10 +101,16 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information about map monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information about monitoring maps, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "monitoring-map",
               children: "following"
             }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The map settings and map monitoring features is only available with an ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Advanced"
+            }), " or higher license."]
           }), "\n"]
         }), "\n"]
       })
@@ -117,7 +124,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
           }), " page."]
         }), "\n"]
@@ -204,7 +211,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
           }), " page."]
         }), "\n"]
@@ -263,7 +270,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
           }), " page."]
         }), "\n"]
@@ -302,7 +309,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
           }), " page."]
         }), "\n"]
@@ -322,7 +329,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.delete"
-          }), " in the top right corner of the screen."]
+          }), " at the top right of the screen."]
         }), "\n"]
       }), "\n"]
     })]
