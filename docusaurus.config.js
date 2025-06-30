@@ -110,12 +110,7 @@ const config = {
         theme: {
           customCss: './src/css/custom.scss',
         },
-        sitemap: {
-          lastmod: 'date',
-          changefreq: 'daily',
-          priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-        },
+        sitemap: false,
         svgr: {
           svgrConfig: {
             /* SVGR config */
