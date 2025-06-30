@@ -22,9 +22,9 @@ export default function LocaleDropdownNavbarItem({
     const baseTo = `pathname://${alternatePageUtils.createUrl({
       locale,
       fullyQualified: false,
-    })}/index.html`;
+    })}`;
     // preserve ?search#hash suffix on locale switches
-    const to = `${baseTo}${search}${hash}${queryString}`;
+    const to = `${baseTo}index.html${search}${hash}${queryString}`;
     return {
       label: localeConfigs[locale].label,
       lang: localeConfigs[locale].htmlLang,
