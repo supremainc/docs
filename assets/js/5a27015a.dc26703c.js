@@ -77,6 +77,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -117,6 +118,12 @@ function _createMdxContent(props) {
               href: "monitoring-map",
               children: "다음 문서"
             }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["맵 설정 및 맵 모니터링 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), " 이상의 라이선스에서만 사용할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })

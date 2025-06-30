@@ -101,9 +101,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["대기업이나 공공기관 등의 엔터프라이즈 환경에서는 보안 시스템의 확장성과 안정성이 필수적입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "는 수천 명 이상의 사용자 등록을 지원하며, 다양한 장치를 연결해도 안정적인 운영이 가능합니다. 실제로 슈프리마는 정부세종청사, 모로코 모하메드 6세 국제 대학병원 등 대규모 사이트에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "를 안정적으로 운영하고 있습니다."]
+      }), "는 수천 명 이상의 사용자 등록을 지원하며, 다양한 장치를 연결해도 안정적인 운영이 가능합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "또한, 사용자 맞춤형 UI·UX를 제공해 복잡한 보안 운영을 더욱 직관적으로 관리할 수 있도록 지원합니다. 모니터링 화면의 인터페이스 레이아웃을 직접 구성할 수 있어, 원하는 정보를 빠르고 효과적으로 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
