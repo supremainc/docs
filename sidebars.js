@@ -109,7 +109,7 @@ const sidebars = {
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
             'platform/biostar_x/migration-face',
-            'platform/biostar_x/columnlayout'
+            // 'platform/biostar_x/columnlayout'
           ]
         },
         {
@@ -289,6 +289,18 @@ const sidebars = {
             'platform/biostar_x/settings-triger-and-action',
             'platform/biostar_x/settings-event-log-import',
             'platform/biostar_x/settings-alert',
+            {
+              type: 'category',
+              label: '맵 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-map-management'
+              },
+              items: [
+                'platform/biostar_x/settings-map-manage-floor',
+                'platform/biostar_x/settings-map-manage-facility',
+              ]
+            },
             {
               type: 'category',
               label: '크리덴션 관리하기',
