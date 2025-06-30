@@ -299,11 +299,12 @@ const sidebars = {
               items: [
                 'platform/biostar_x/settings-map-manage-floor',
                 'platform/biostar_x/settings-map-manage-facility',
+                'platform/biostar_x/settings-map-manage-area'
               ]
             },
             {
               type: 'category',
-              label: '크리덴션 관리하기',
+              label: '크리덴셜 관리하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/settings-credential-manage'

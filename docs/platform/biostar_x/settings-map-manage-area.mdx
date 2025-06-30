@@ -1,0 +1,70 @@
+---
+id: settings-map-manage-area
+title: 구역 구성하기
+description: 층과 시설을 구성하고 구역을 구성할 수 있습니다. 보안 관리하고 있는 구역을 지도를 통해 관리하고 확인할 수 있습니다.
+keywords: [맵, 구역, 층, 시설]
+---
+
+층과 시설을 구성하고 구역을 구성할 수 있습니다. 보안 관리하고 있는 구역을 지도를 통해 관리하고 확인할 수 있습니다. 구역을 구성하면 <Cmd sid='shell.header.arena' /> 페이지에서 해당 구역의 시설과 층으로 진입하여 모니터링할 수 있는 기능을 제공합니다.
+
+<Image src='/img/monitoring-map-open-map.png' />
+
+:::info
+
+* 구역을 구성하기 전에 층과 시설을 먼저 등록하세요. 층과 시설 등록에 대한 자세한 내용은 다음 문서를 참고하세요.
+
+  * <DocLink docId='platform/biostar_x/settings-map-manage-floor' />
+
+  * <DocLink docId='platform/biostar_x/settings-map-manage-facility' />
+
+* 맵 모니터링에 대한 자세한 내용은 [다음 문서](monitoring-map)를 참고하세요.
+
+:::
+
+## 구역 추가 {#add-area}
+
+현재 관리하고 있는 보안 지역의 구역을 지도를 통해 설정하고 관리할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' />을 클릭하세요.
+
+1. 구역 목록 화면 오른쪽 상단의 <Cmd>New Area</Cmd> 버튼을 클릭하세요.
+
+1. <Cmd sid='setting.area.page.title' /> 화면의 <Cmd sid='setting.area.information.section.title' /> 섹셕에서 추가하려는 구역의 이름과 설명을 입력하세요.
+
+1. <Cmd sid='setting.area.configuration.section.title' /> 섹션의 지도에서 추가할 구역의 위치를 설정하세요.
+
+1. 지도에서 마우스 오른쪽 버튼을 클릭하고 <Cmd sid='setting.area.label.setArea' />을 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-area-add-01.png' />
+
+1. 원하는 형태로 구역을 설정하세요. 마우스를 클릭해 시작하고 드래그하여 구역을 설정할 수 있습니다.
+
+    <Image src='/img/biostarx-settings-map-area-drawing.gif' />
+
+1. 설정한 구역에 시설을 추가하려면 마우스 오른쪽 버튼을 클릭하고 <Cmd>Add Facility</Cmd>를 선택하세요.
+
+    <Image src='/img/biostarx-settings-map-area-add-02.png' />
+
+    :::note
+
+    구역을 추가할 때는 적어도 하나의 시설 또는 출입문, 카메라를 설정해야 합니다.
+
+    * 출입문을 추가하려면 마우스 오른쪽 버튼을 클릭하고 <Cmd sid='setting.area.label.addDoor' />를 선택하세요.
+
+    * 카메라를 추가하려면 마우스 오른쪽 버튼을 클릭하고 <Cmd sid='setting.area.label.addCamera' />를 선택하세요.
+
+    :::
+
+1. <Cmd sid='setting.area.label.addFacility' /> 창이 나타나면 추가할 시설을 선택하고 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+1. 구역 설정을 완료하면 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+:::info
+
+* 지도에서 왼쪽 상단의 입력 필드를 통해 원하는 위치를 검색할 수 있습니다. 현재 위치로 돌아가려면 <IcCurP /> 버튼을 클릭하세요.
+
+* 구역을 추가할 때 지도에서는 하나의 다각형을 통해서 구역을 설정할 수 있습니다. 구역을 설정할 때는 반드시 시작점과 끝점을 동일하게 설정해야 합니다. 구역을 설정한 후에는 구역의 모양을 변경할 수 없습니다. 구역을 수정하려면 구역을 삭제하고 다시 추가해야 합니다.
+
+:::

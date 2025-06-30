@@ -95,6 +95,7 @@ import IcCrop from '@site/static/img/menus/ico-crop.svg';
 import IcFremove from '@site/static/img/menus/ico-floor-remove.svg';
 import IcCamrot from '@site/static/img/menus/ico-camera-rotation.svg';
 import IcDorder from '@site/static/img/menus/ico-dorder.svg';
+import IcCurP from '@site/static/img/menus/ico-cur-position.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -166,5 +167,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP
 }
