@@ -1,15 +1,15 @@
 ---
 id: settings-map-manage-area
 title: Configure area
-description: Configure floors and facilities to manage and verify secured areas through the map.
+description: Configure floors and facilities to manage. Verify secured areas through the map.
 keywords:
   - Map
   - Area
-  - Flkoor
+  - Layer
   - Facility
 ---
 
-You can configure floors and facilities and manage zones. You can manage and verify the zones you are securing through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the <Cmd sid='shell.header.arena' /> page.
+Configure floors and facilities to manage. Verify secured areas through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the <Cmd sid='shell.header.arena' /> page.
 
 <Image src='/img/monitoring-map-open-map.png' />
 
@@ -23,6 +23,8 @@ You can configure floors and facilities and manage zones. You can manage and ver
 
 * For more information about map monitoring, refer to the [following](monitoring-map).
 
+* The map settings and map monitoring features is only available with an **Advanced** or higher license.
+
 :::
 
 ## Add zone {#add-area}
@@ -31,45 +33,45 @@ Configure and manage zones of the security areas you are currently managing via 
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
 
-1. Click <Cmd>New Area</Cmd> at the top right of the zone list screen.
+3. Click <Cmd>New Area</Cmd> at the top right of the zone list screen.
 
-1. Enter the name and description of the zone you want to add in the <Cmd sid='setting.area.information.section.title' /> section of the <Cmd sid='setting.area.page.title' /> screen.
+4. Enter the name and description of the zone you want to add in the <Cmd sid='setting.area.information.section.title' /> section of the <Cmd sid='setting.area.page.title' /> screen.
 
-1. Set the location of the zone to add on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
+5. Set the location of the zone to add on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
 
-1. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
+6. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
 
-    <Image src='/img/biostarx-settings-map-area-add-01.png' />
+   <Image src='/img/biostarx-settings-map-area-add-01.png' />
 
-1. Set the zone in your desired shape. Click the mouse to start drawing and drag to set the zone.
+7. Set the zone in your desired shape. Click the mouse to start drawing and drag to set the zone.
 
-    <Image src='/img/biostarx-settings-map-area-drawing.gif' alone />
+   <Image src='/img/biostarx-settings-map-area-drawing.gif' alone />
 
-1. To add facilities to the configured zone, right-click and select <Cmd>Add Facility</Cmd>.
+8. To add facilities to the configured zone, right-click and select <Cmd>Add Facility</Cmd>.
 
-    <Image src='/img/biostarx-settings-map-area-add-02.png' />
+   <Image src='/img/biostarx-settings-map-area-add-02.png' />
 
-    :::note
+   :::note
 
-    When adding a zone, at least one facility, entrance, or camera must be configured.
+   When adding a zone, at least one facility, entrance, or camera must be configured.
 
-    * To add an entrance, right-click and select <Cmd sid='setting.area.label.addDoor' />.
+   * To add an entrance, right-click and select <Cmd sid='setting.area.label.addDoor' />.
 
-    * To add a camera, right-click and select <Cmd sid='setting.area.label.addCamera' />.
+   * To add a camera, right-click and select <Cmd sid='setting.area.label.addCamera' />.
 
-    :::
+   :::
 
-1. When the <Cmd sid='setting.area.label.addFacility' /> window appears, select the facility to add and click <Cmd sid='common.apply' />.
+9. When the <Cmd sid='setting.area.label.addFacility' /> window appears, select the facility to add and click <Cmd sid='common.apply' />.
 
-    :::note
+   :::note
 
-    When adding an entrance or camera, the <Cmd sid='setting.area.label.addDoor' /> or <Cmd sid='setting.area.label.addCamera' /> window will also appear. Select the item to add and click <Cmd sid='common.apply' />.
+   When adding an entrance or camera, the <Cmd sid='setting.area.label.addDoor' /> or <Cmd sid='setting.area.label.addCamera' /> window will also appear. Select the item to add and click <Cmd sid='common.apply' />.
 
-    :::
+   :::
 
-1. Click <Cmd>Apply</Cmd> when you complete the zone configuration.
+10. Click <Cmd>Apply</Cmd> when you complete the zone configuration.
 
 :::info
 
@@ -81,30 +83,29 @@ Configure and manage zones of the security areas you are currently managing via 
 
 :::
 
-
 ## Edit zone {#edit-area}
 
 You can delete and reconfigure existing zones or add or remove facilities, entrances, and cameras.
 
 ### Reset zone
 
-To reset a zone on the map, you must delete the existing zone and re-add it.
+To reset a zone on the map, you must delete the existing zone and re-add it. 
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
 
-1. Select the zone you want to reset from the zone list.
+3. Select the zone you want to reset from the zone list. 
 
-1. Click the existing zone on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
+4. Click the existing zone on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
 
-1. When the zone deletion confirmation message appears, click <Cmd sid='common.delete' />.
+5. When the zone deletion confirmation message appears, click <Cmd sid='common.delete' />.
 
-    <Image src='/img/biostarx-settings-map-area-reset.png' />
+   <Image src='/img/biostarx-settings-map-area-reset.png' />
 
-1. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
+6. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
 
-1. Set the zone in your desired shape and click <Cmd sid='common.apply' /> to save.
+7. Set the zone in your desired shape and click <Cmd sid='common.apply' /> to save.
 
 ### Delete facility/entrance/camera
 
@@ -138,13 +139,12 @@ Settings made by the user are only features provided for the convenience of secu
 
 :::
 
-
 ## Delete zone
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-1. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
 
-1. Check the checkbox of the zone you want to delete from the zone list.
+3. Check the checkbox of the zone you want to delete from the zone list.
 
-1. Click <Cmd sid='common.delete' /> at the top right of the screen.
+4. Click the <Cmd sid='common.delete' /> button at the top right of the screen.
