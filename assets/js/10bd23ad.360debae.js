@@ -169,9 +169,11 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.title"
+            sid: "team.menu.export.csv"
+          }), " ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.import.title"
           }), " 창에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.importStartRow"
+            children: "불러오기 시작 행"
           }), "을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.button.continue"
           }), " 버튼을 클릭하세요."]
@@ -183,7 +185,7 @@ function _createMdxContent(props) {
           children: ["CSV 파일의 사용자 데이터 필드와 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "의 사용자 데이터 필드가 자동으로 매핑되어 나타납니다. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.reMapping"
+            children: "다시 매핑"
           }), "을 클릭하면 이름이 동일한 필드끼리 재매핑됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-import-02.png"

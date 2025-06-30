@@ -169,9 +169,11 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.title"
+            sid: "team.menu.export.csv"
+          }), " ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.import.title"
           }), " window, set the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.importStartRow"
+            children: "Start import at row"
           }), " and click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.button.continue"
           }), " button."]
@@ -183,7 +185,7 @@ function _createMdxContent(props) {
           children: ["User data fields from the CSV file will automatically map to user data fields in ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), ". Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.csv.reMapping"
+            children: "ReMap"
           }), " to remap fields with the same names."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-import-02.png"

@@ -150,8 +150,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.floor.page.title",
-            product: "2"
+            sid: "setting.floor.page.title"
           }), " 화면의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.floor.information.section.title"
           }), " 섹션에서 추가하려는 층의 이름과 설명을 입력하세요."]
