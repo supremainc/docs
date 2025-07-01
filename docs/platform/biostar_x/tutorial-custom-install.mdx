@@ -5,9 +5,9 @@ description: 사용자가 이미 설치한 데이터베이스와 연동하기 �
 keywords: [ 사용자 정의 설치 ]
 ---
 
-사용자가 이미 설치한 데이터베이스와 연동하기 위한 <Cmd code='biostar2.install.customInstall' className='bold'/> 방식을 안내합니다.
+이 문서에서는 <Cmd code='biostar2.install.customInstall' className='bold'/> 방식으로 **BioStar X**를 설치하는 절차를 단계별로 안내합니다. <Cmd code='biostar2.install.customInstall' className='bold'/>는 로컬 서버 또는 원격 서버에 기존에 설치된 데이터베이스(MariaDB, MS SQL Server)와 연동하여 데이터베이스 스키마를 생성합니다. 설치를 시작하기 전에 연동할 데이터베이스와 사용자 계정을 미리 준비하세요.
 
-:::info
+## 시작하기 전에 {#start-before}
 
 * **BioStar X**와 연동하여 사용할 수 있는 데이터베이스는 아래와 같습니다.
 
@@ -34,8 +34,10 @@ keywords: [ 사용자 정의 설치 ]
 * Windows 인증을 사용하려면 [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17)가 필요합니다.
 먼저 해당 드라이버를 설치하세요.
 
-:::
-
 import InstallStep from '../../common/_biostar-install-steps.mdx';
 
 <InstallStep />
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />
