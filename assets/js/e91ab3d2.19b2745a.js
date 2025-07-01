@@ -63,8 +63,8 @@ const toc = [{
   "id": "group-deletion",
   "level": 2
 }, {
-  "value": "그룹 검색",
-  "id": "group-search",
+  "value": "그룹별 사용자 확인하기",
+  "id": "viewgroupuser",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -78,8 +78,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 그룹은 공통 속성과 권한을 공유할 수 있습니다. 사용자가 그룹의 멤버가 되면 해당 그룹의 모든 속성을 자동으로 상속받을 수 있습니다. 사용자는 하나의 사용자 그룹에만 속할 수 있습니다."
@@ -148,8 +149,10 @@ function _createMdxContent(props) {
           children: ["화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.tree.userGroup"
           }), " 탭에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "All Users"
+            sid: "team.user.tree.userGroupRootName"
           }), "를 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostartx-user-group-add.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -171,6 +174,8 @@ function _createMdxContent(props) {
           children: ["화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.tree.userGroup"
           }), " 탭에서 상위 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostartx-user-sub-group-add.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -207,6 +212,8 @@ function _createMdxContent(props) {
           children: ["화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.tree.userGroup"
           }), " 목록에서 이름을 변경할 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostartx-user-group-rename.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -266,47 +273,14 @@ function _createMdxContent(props) {
         sid: "team.tree.userGroup"
       }), " 목록에서 선택한 그룹이 삭제된 것을 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "group-search",
-      children: "그룹 검색"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "많은 사용자 그룹 중에서 특정 그룹을 빠르게 찾으려면 검색 기능을 사용하세요."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.user"
-          }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.tree.userGroup"
-          }), " 목록 최상단의 검색 입력 필드에 그룹의 이름 또는 관련 키워드를 입력하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "입력한 검색어와 일치하는 사용자 그룹이 목록에 표시됩니다."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 입력 필드에 그룹 이름의 일부만 입력해도 검색할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색어는 대소문자를 구분하지 않습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "검색 결과가 없다면 입력한 검색어를 다시 확인하거나 다른 키워드를 사용해 보세요."
-          }), "\n"]
-        }), "\n"]
-      })
+      id: "viewgroupuser",
+      children: "그룹별 사용자 확인하기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자 그룹에 속한 사용자를 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.user"
+      }), " 페이지에서 화면 왼쪽 사이드바에서 원하는 사용자 그룹을 선택하세요. 선택한 사용자 그룹의 사용자가 목록에 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostartx-user-group-select-group-user.png"
     })]
   });
 }
