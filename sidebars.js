@@ -50,6 +50,7 @@ const sidebars = {
           items: [
             'platform/biostar_x/tutorial-express-install',
             'platform/biostar_x/tutorial-custom-install',
+            'platform/biostar_x/migration-x',
             'platform/biostar_x/tutorial-login',
             'platform/biostar_x/tutorial-register-license-key',
             'platform/biostar_x/manage-server',
