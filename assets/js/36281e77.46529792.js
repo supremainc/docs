@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7971"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8504"], {
 1084: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -24,23 +24,18 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     a: "a",
-    admonition: "admonition",
-    code: "code",
     em: "em",
     h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
     strong: "strong",
-    ul: "ul",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image, Include, NextItem, NextStep} = _components;
+  }, {Cmd, Image, Include} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Include) _missingMdxReference("Include", true);
-  if (!NextItem) _missingMdxReference("NextItem", true);
-  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "설치-안내",
@@ -223,7 +218,61 @@ function _createMdxContent(props) {
           }), " 설치를 완료하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+6421: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  ZP: () => (MDXContent),
+  d$: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(65);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    code: "code",
+    li: "li",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
+    ...props.components
+  }, {NextItem, NextStep} = _components;
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
@@ -325,7 +374,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-5828: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+6026: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -334,28 +383,30 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_express_install_mdx_362_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-custom-install-mdx-dd4.json
-var site_docs_platform_biostar_x_tutorial_custom_install_mdx_dd4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","source":"@site/docs/platform/biostar_x/tutorial-custom-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-custom-install","permalink":"/docs/platform/biostar_x/tutorial-custom-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-custom-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-custom-install","title":"사용자 정의 설치하기","description":"사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.","keywords":["사용자 정의 설치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"간편 설치하기","permalink":"/docs/platform/biostar_x/tutorial-express-install"},"next":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/tutorial-login"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-express-install-mdx-362.json
+var site_docs_platform_biostar_x_tutorial_express_install_mdx_362_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-express-install","title":"간편 설치하기","description":"내장된 MariaDB 서버와 데이터베이스를 자동으로 생성하여 BioStar X를 빠르게 설치하는 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/tutorial-express-install.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-express-install","permalink":"/docs/platform/biostar_x/tutorial-express-install","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-express-install.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-express-install","title":"간편 설치하기","description":"내장된 MariaDB 서버와 데이터베이스를 자동으로 생성하여 BioStar X를 빠르게 설치하는 과정을 안내합니다.","keywords":["간편 설치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"튜토리얼","permalink":"/docs/platform/biostar_x/tutorial"},"next":{"title":"사용자 정의 설치하기","permalink":"/docs/platform/biostar_x/tutorial-custom-install"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_biostar-install-steps.mdx
 var _biostar_install_steps = __webpack_require__(1084);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial-custom-install.mdx
+// EXTERNAL MODULE: ./docs/common/_install-note.mdx
+var _install_note = __webpack_require__(6421);
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial-express-install.mdx
 
 
 const frontMatter = {
-	id: 'tutorial-custom-install',
-	title: '사용자 정의 설치하기',
-	description: '사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.',
+	id: 'tutorial-express-install',
+	title: '간편 설치하기',
+	description: '내장된 MariaDB 서버와 데이터베이스를 자동으로 생성하여 BioStar X를 빠르게 설치하는 과정을 안내합니다.',
 	keywords: [
-		'사용자 정의 설치'
+		'간편 설치'
 	],
 	isTranslationMissing: false
 };
@@ -368,98 +419,41 @@ const assets = {
 
 
 
-const toc = [..._biostar_install_steps/* toc */.d$];
+
+const toc = [..._biostar_install_steps/* toc */.d$, ..._install_note/* toc */.d$];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
-    em: "em",
-    li: "li",
     p: "p",
     strong: "strong",
-    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자가 이미 설치한 데이터베이스와 연동하기 위한 ", (0,jsx_runtime.jsx)(Cmd, {
-        code: "biostar2.install.customInstall",
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        code: "biostar2.install.expressInstall",
         className: "bold"
-      }), " 방식을 안내합니다."]
+      }), " 방식으로 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "를 설치하는 절차를 단계별로 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        code: "biostar2.install.expressInstall",
+        className: "bold"
+      }), "는 내장된 MariaDB 서버를 자동으로 설치하고 데이터베이스를 생성하여 별도의 데이터베이스 설정 없이 빠르게 설치를 완료할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), "와 연동하여 사용할 수 있는 데이터베이스는 아래와 같습니다."]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MariaDB 10.1.10"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2012 SP3"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2014 SP2"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2016 SP1"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2017"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2019"
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "MS SQL Server 2022"
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "MS SQL Server의 보안 통신은 TLS 1.2를 지원합니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["MS SQL Server를 데이터베이스로 설정하고, 데이터베이스 테이블 생성에 실패했다면 ", (0,jsx_runtime.jsx)(_components.em, {
-              children: "C:\\Program Files\\BioStar X\\dbscript\\mssql"
-            }), " 경로의 스크립트를 실행하여 테이블을 생성할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["설치 옵션으로 ", (0,jsx_runtime.jsx)(Cmd, {
-              code: "biostar2.install.customInstall",
-              className: "bold"
-            }), "를 선택할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "AC DB name"
-            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "TA DB name"
-            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "VE DB name"
-            }), "은 동일하게 설정할 수 없습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Windows 인증을 사용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
-              children: "Microsoft ODBC Driver 17 for SQL Server"
-            }), "가 필요합니다.\n먼저 해당 드라이버를 설치하세요."]
-          }), "\n"]
-        }), "\n"]
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["이미 설치한 데이터베이스와 연동하기 위해 ", (0,jsx_runtime.jsx)(Cmd, {
+          code: "biostar2.install.customInstall",
+          className: "bold"
+        }), "로 진행하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "tutorial-custom-install",
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_biostar_install_steps/* default */.ZP, {})]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_biostar_install_steps/* default */.ZP, {}), "\n", "\n", (0,jsx_runtime.jsx)(_install_note/* default */.ZP, {})]
   });
 }
 function MDXContent(props = {}) {
