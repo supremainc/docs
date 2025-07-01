@@ -89,7 +89,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["메인 서버는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 중앙 관리 시스템이 설치되는 컴퓨터입니다. 사용자가 웹 브라우저로 접속하여 시스템을 관리하고, 사용자 정보나 출입 권한 설정 등의 모든 업무를 처리합니다. 또한 시스템 전체의 상태를 모니터링하고, 이벤트 로그나 알람을 관리하는 역할을 담당합니다."]
+      }), "의 중앙 관리 시스템이 설치되는 서버입니다. 사용자가 웹 브라우저로 접속하여 시스템을 관리하고, 사용자 정보나 출입 권한 설정 등의 모든 업무를 처리합니다. 또한 시스템 전체의 상태를 모니터링하고, 이벤트 로그나 알람을 관리하는 역할을 담당합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x col5--15-10-25",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -186,7 +186,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "는 64bit 운영체제에서만 설치할 수 있습니다."]
+            }), "는 64비트 운영체제에서만 설치할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -226,7 +226,7 @@ function _createMdxContent(props) {
       id: "communication-server",
       children: "커뮤니케이션 서버"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 컴퓨터입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다."
+      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -276,7 +276,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["클라이언트는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에 접속하여 시스템을 운영하는 컴퓨터입니다."]
+      }), "에 접속하여 시스템을 운영하는 PC입니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {

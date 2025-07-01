@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3773"], {
-6956: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4834"], {
+2621: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_login_mdx_898_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tutorial_login_mdx_417_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-tutorial-login-mdx-898.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_tutorial_login_mdx_898_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-login","title":"How to Log in","description":"Access **BioStar X** through a web browser.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-login.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-login","permalink":"/docs/en/platform/biostar_x/tutorial-login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-login.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-login","title":"How to Log in","description":"Access **BioStar X** through a web browser.","keywords":["Log in","web browser"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"업그레이드하기","permalink":"/docs/en/platform/biostar_x/migration-x"},"next":{"title":"Register License Key","permalink":"/docs/en/platform/biostar_x/tutorial-register-license-key"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tutorial-login-mdx-417.json
+var site_docs_platform_biostar_x_tutorial_login_mdx_417_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar X에 로그인하세요.","source":"@site/docs/platform/biostar_x/tutorial-login.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tutorial-login","permalink":"/docs/platform/biostar_x/tutorial-login","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tutorial-login.mdx","tags":[],"version":"current","frontMatter":{"id":"tutorial-login","title":"로그인하기","description":"웹 브라우저로 접속해 BioStar X에 로그인하세요.","keywords":["로그인","웹 브라우저"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"커뮤니케이션 서버 설치하기","permalink":"/docs/platform/biostar_x/install-communication-server"},"next":{"title":"라이선스 키 등록하기","permalink":"/docs/platform/biostar_x/tutorial-register-license-key"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/tutorial-login.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/tutorial-login.mdx
 
 
 const frontMatter = {
 	id: 'tutorial-login',
-	title: 'How to Log in',
-	description: 'Access **BioStar X** through a web browser.',
+	title: '로그인하기',
+	description: '웹 브라우저로 접속해 BioStar X에 로그인하세요.',
 	keywords: [
-		'Log in',
-		'web browser'
+		'로그인',
+		'웹 브라우저'
 	],
 	isTranslationMissing: false
 };
@@ -42,7 +42,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "Log in from a Web Browser",
+  "value": "웹 브라우저에서 로그인하기",
   "id": "log-in-from-a-web-browser",
   "level": 2
 }];
@@ -64,73 +64,75 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["If you have completed the installation of ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["설치 패키지를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " through the installation package, access it via a web browser to check if it is functioning properly. ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 설치를 모두 완료했다면 웹 브라우저로 접속해 정상 동작하는지 확인하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " provides a web-based service that allows access anytime and anywhere."]
+      }), "는 웹 기반 서비스를 제공하여 언제 어디서든 접속할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "log-in-from-a-web-browser",
-      children: "Log in from a Web Browser"
+      children: "웹 브라우저에서 로그인하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Please launch the web browser."
+          children: "웹 브라우저를 실행하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Enter ", (0,jsx_runtime.jsx)(_components.code, {
+          children: ["웹 브라우저의 주소 입력창에 ", (0,jsx_runtime.jsx)(_components.code, {
             children: "https://127.0.0.1"
-          }), " in the address bar of your web browser."]
+          }), "을 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["If you installed ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), " on another PC, enter the IP address of that PC. e.g. ", (0,jsx_runtime.jsx)(_components.code, {
+                }), "를 다른 PC에 설치했다면 해당 PC의 IP 주소를 입력하세요. 예, ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "https://192.168.0.1"
                 })]
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["Do not use 'localhost' as the ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: ["'localhost'를 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), " access address."]
+                }), " 접속 주소로 사용하지 마세요."]
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "When the login screen appears, log in with the administrator account."
+          children: "로그인 화면이 나타나면 관리자 계정으로 로그인하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-login.png"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["The admin ID is ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: ["관리자 아이디는 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "admin"
-                }), "."]
+                }), "입니다."]
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["When you first log in, a ", (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "Not Secure"
-                }), " warning will be displayed in the address bar of your web browser. To apply the HTTPS protocol, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+                children: ["최초 로그인할 때는 웹 브라우저의 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "안전하지 않음"
+                }), " 경고가 표시됩니다. HTTPS 프로토콜을 적용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "settings-server-https",
-                  children: "following"
-                }), "."]
+                  children: "다음 문서"
+                }), "를 참고하세요."]
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["After logging in, you can view the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["로그인하면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
-      }), " screen."]
+      }), " 화면을 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-main-launcher.png",
       alone: true
@@ -139,31 +141,31 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "It is recommended to use a browser version of Chrome 100 or higher."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The external IP address of the PC where ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), " is installed can be checked by visiting ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://whatismyipaddress.com/",
-              children: "this link"
-            }), "."]
+            children: "Chrome 100 버전 이상의 브라우저를 사용하기를 권장합니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " uses ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "port 443"
-            }), " by default. If there is a program using port ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), "를 설치한 PC의 외부 IP 주소는 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://whatismyipaddress.com/",
+              children: "다음 링크"
+            }), "로 접속해 확인할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "443"
-            }), ", close it and try connecting again. If you cannot close the program, run ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar Setting"
-            }), " to change the port number. For more information, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " 포트를 기본으로 사용합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "443"
+            }), " 포트를 사용하는 프로그램이 있다면 종료하고, 다시 접속을 시도하세요. 해당 프로그램을 종료할 수 없다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Service Manager"
+            }), "를 실행하여 포트 번호를 변경하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "change-port",
-              children: "following"
-            }), "."]
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
