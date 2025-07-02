@@ -378,6 +378,48 @@ footer {
     }
   }
 
+  .enroll-credential-fingerprint::before {
+    content: url(./img/icon_credential_fingerprint.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .enroll-credential-face::before {
+    content: url(./img/icon_credential_face.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .enroll-credential-card::before {
+    content: url(./img/icon_credential_card.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .enroll-credential-mobile::before {
+    content: url(./img/icon_credential_mobile_access.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .enroll-credential-qrbarcode::before {
+    content: url(./img/icon_credential_qr.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .enroll-credential-pin::before {
+    content: url(./img/icon_credential_pin.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
   .theme-code-block {
     margin: .5rem 0;
   }
