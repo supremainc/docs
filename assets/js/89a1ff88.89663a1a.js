@@ -234,7 +234,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "button.scan",
             product: "2"
-          }), ": 얼굴을 스캔하려면 버튼을 클릭하세요. 장치 화면의 지시에 따라 얼굴을 스캔하세요."]
+          }), ": 얼굴을 스캔하려면 추가한 번호를 선택하고 버튼을 클릭하세요. 장치 화면의 지시에 따라 얼굴을 스캔하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -268,7 +268,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "button.delete",
             product: "2"
-          }), ": 선택한 비주얼 페이스를 삭제할 수 있습니다."]
+          }), ": 얼굴 크레덴셜을 삭제할 수 있습니다. 삭제할 번호를 선택하고 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -345,38 +345,56 @@ function _createMdxContent(props) {
           }), "를 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정한 CSV 파일을 선택하세요. ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "export-import-user-info#import-csv",
-            children: "다음 문서"
-          }), "를 참고하여 CSV 파일을 가져오세요."]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "수정한 CSV 파일을 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "user.list.csvImport.title",
+            sid: "team.menu.import.csv"
+          }), " ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.import.title"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.list.csvImport.importStartRow",
             product: "2"
-          }), " 창의 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.next"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에 이미 등록된 사용자 데이터를 유지할 지 CSV 파일의 정보로 덮어쓰기할 지 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.next"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-import-03.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.list.csvImport.visualFaceImageFolder",
             product: "2"
           }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.browse",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-new-user-credential-face-import-csv.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["얼굴 이미지가 저장된 경로를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.upload",
             product: "2"
-          }), "를 클릭하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["CSV 불러오기를 완료하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.visualFaceRegistration.next",
-            product: "2"
-          }), "을 클릭하세요."]
+          children: ["CSV 가져오기를 완료하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.next"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -415,7 +433,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "가져오기"
+            sid: "team.menu.import.title"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.import.face"
           }), "을 선택하세요."]
@@ -423,7 +441,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Visual Face 가져오기"
+            sid: "user.list.visualFaceImport.title"
           }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.button.browse"
           }), " 버튼을 클릭하세요."]
@@ -515,12 +533,12 @@ function _createMdxContent(props) {
       id: "mobile-device",
       children: "모바일 장치로 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자에게 이메일로 비주얼 페이스 등록 링크를 전송할 수 있습니다. 사용자는 모바일 장치에서 해당 링크로 접속하여 비주얼 페이스를 직접 등록할 수 있습니다."
+      children: "사용자에게 이메일로 얼굴 등록 링크를 전송할 수 있습니다. 사용자는 모바일 장치에서 해당 링크로 접속하여 얼굴을 직접 등록할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "시작하기-전에",
       children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["비주얼 페이스 모바일 등록을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+      children: ["얼굴 모바일 등록을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
         href: "settings-email-setting",
         children: "다음 문서"
       }), "를 참고하세요."]
