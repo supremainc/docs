@@ -623,7 +623,7 @@
     "description": "The paragraph for fetching new search results"
   },
   "theme.SearchBar.seeAll": {
-    "message": "{count}개의 결과 확인하기"
+    "message": "추가 검색 결과 확인하기"
   },
   "theme.SearchBar.label": {
     "message": "검색",
