@@ -68,13 +68,13 @@ function OverviewLink({item}) {
 
   const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
   const doc = useDocById(docId);
-
+  const docStyle = docId.replace('platform/biostar_x/', '');
   return (
     <section className={styles.ovItem}>
-      <article className='margin-bottom--lg'>
+      <article className={clsx('margin-bottom--lg')}>
         <Heading as='h2' className={styles.ovHeading}>
           <Link to={item.href}>
-            <span className={styles.Heading}>{item.label}</span>
+            <span className={clsx(styles.Heading, docStyle)}>{item.label}</span>
             {item.type === 'category' ? (
               <>
                 <span className={styles.linkarrow}>→</span>
@@ -85,9 +85,9 @@ function OverviewLink({item}) {
             ) : (
               <span className={styles.linkarrow}>
                 → {translate({
-                  id: 'theme.docs.overview.viewContent',
-                  "message": "둘러보기"
-                })}
+                    id: 'theme.docs.overview.viewContent',
+                    message: "둘러보기"
+                  })}
               </span>
             )}
           </Link>
