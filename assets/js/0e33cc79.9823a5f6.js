@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-install-communication-server-mdx-0e3.json
-var site_docs_platform_biostar_x_install_communication_server_mdx_0e3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/install-communication-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/install-communication-server","permalink":"/docs/en/platform/biostar_x/install-communication-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/install-communication-server.mdx","tags":[],"version":"current","frontMatter":{"id":"install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","keywords":["커뮤니케이션 서버","설치하기"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"업그레이드하기","permalink":"/docs/en/platform/biostar_x/migration-x"},"next":{"title":"How to Log in","permalink":"/docs/en/platform/biostar_x/tutorial-login"}}')
+var site_docs_platform_biostar_x_install_communication_server_mdx_0e3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/install-communication-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/install-communication-server","permalink":"/docs/platform/biostar_x/install-communication-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/install-communication-server.mdx","tags":[],"version":"current","frontMatter":{"id":"install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","keywords":["커뮤니케이션 서버","설치하기"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"업그레이드하기","permalink":"/docs/platform/biostar_x/migration-x"},"next":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/tutorial-login"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'커뮤니케이션 서버',
 		'설치하기'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -156,18 +156,6 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "BioStar X Server (Main)"
-              }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Server Address"
-              })]
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar X Server IP for Communication"
-              })
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "BioStar X Coordinator Service"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "Client Port"
@@ -261,7 +249,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar X 서버와 연결하기 위해 각 항목을 입력하세요. 설정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 서버의 IP 주소를 입력하고, ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 서버와 연결하기 위해 각 항목을 입력하세요. 설정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
           }), " 버튼을 클릭하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {

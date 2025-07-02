@@ -2546,10 +2546,11 @@ function OverviewLink(param) {
     }
     const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
     const doc = (0,docsUtils/* useDocById */.xz)(docId);
+    const docStyle = docId.replace('platform/biostar_x/', '');
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
         className: Overview_styles_module.ovItem,
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
-            className: "margin-bottom--lg",
+            className: (0,clsx/* default */.Z)('margin-bottom--lg'),
             children: [
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                     as: "h2",
@@ -2558,7 +2559,7 @@ function OverviewLink(param) {
                         to: item.href,
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                className: Overview_styles_module.Heading,
+                                className: (0,clsx/* default */.Z)(Overview_styles_module.Heading, docStyle),
                                 children: item.label
                             }),
                             item.type === 'category' ? /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -2578,7 +2579,7 @@ function OverviewLink(param) {
                                     "\u2192 ",
                                     (0,Translate/* translate */.I)({
                                         id: 'theme.docs.overview.viewContent',
-                                        "message": "\uB458\uB7EC\uBCF4\uAE30"
+                                        message: "\uB458\uB7EC\uBCF4\uAE30"
                                     })
                                 ]
                             })

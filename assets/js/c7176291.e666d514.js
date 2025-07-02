@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7147"], {
-6265: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4883"], {
+1294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -28,47 +28,47 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "When enrolling a face, maintain a distance of 60 ~ 100 cm between the device and the face."
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60~100cm로 유지하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not change your face expression."
+        children: "표정이 변하지 않도록 주의하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not wear masks, hats, or eye patches."
+        children: "마스크, 모자, 안대를 착용하지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not enroll a face wearing a mask. It may increase the False Acceptance Rate (FAR) if both faces with and without a mask are enrolled."
+        children: "마스크를 착용한 얼굴을 등록하지 마세요. 마스크를 착용한 얼굴과 착용하지 않은 얼굴을 모두 등록할 경우 오인식률이 높아질 수 있습니다."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not raise head up or lower head."
+        children: "고개를 들거나 숙이지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not wear thick makeup."
+        children: "진한 화장을 하지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not close your eyes."
+        children: "눈을 감지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Make sure that both of your shoulders correctly appear on the screen."
+        children: "화면에 양쪽 어깨가 모두 나타나도록 하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Stand still and enroll your face by staring at the screen."
+        children: "움직이지 말고, 정면으로 서서 얼굴을 등록하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Be careful not to display two faces on the screen. Enroll one person at a time."
+        children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "If you do not follow the instructions on the screen, the face enrollment may take longer or may fail."
+        children: "화면의 지시에 따르지 않을 경우 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
       }), "\n"]
     }), "\n"]
   });
@@ -89,7 +89,7 @@ function MDXContent(props = {}) {
 
 
 }),
-5404: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+8986: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -98,31 +98,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_2_a_user_mdx_e1f_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_biostation_3_user_mdx_c71_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-2-a-user-mdx-e1f.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_2_a_user_mdx_e1f_namespaceObject = JSON.parse('{"id":"device/biostation_2a/user","title":"User","description":"Describes how to register, edit, delete, and manage users.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_2a/user.mdx","sourceDirName":"device/biostation_2a","slug":"/device/biostation_2a/user","permalink":"/docs/en/device/biostation_2a/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_2a/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"User","description":"Describes how to register, edit, delete, and manage users.","keywords":["Enrollment","Edit","Delete","Manage"],"isTranslationMissing":false},"sidebar":"biostation2a","previous":{"title":"Admin Menu","permalink":"/docs/en/device/biostation_2a/admin-menu"},"next":{"title":"Certifications","permalink":"/docs/en/device/biostation_2a/authentication"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-user-mdx-c71.json
+var site_docs_device_biostation_3_user_mdx_c71_namespaceObject = JSON.parse('{"id":"device/biostation_3/user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","source":"@site/docs/device/biostation_3/user.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/user","permalink":"/docs/device/biostation_3/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","keywords":["등록","수정","삭제","관리"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"관리자 메뉴","permalink":"/docs/device/biostation_3/admin-menu"},"next":{"title":"인증","permalink":"/docs/device/biostation_3/authentication"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_enrolling-face-warning.mdx
-var _enrolling_face_warning = __webpack_require__(6265);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_2a/user.mdx
+// EXTERNAL MODULE: ./docs/common/_enrolling-face-warning.mdx
+var _enrolling_face_warning = __webpack_require__(1294);
+;// CONCATENATED MODULE: ./docs/device/biostation_3/user.mdx
 
 
 const frontMatter = {
 	id: 'user',
-	title: 'User',
-	description: 'Describes how to register, edit, delete, and manage users.',
+	title: '사용자',
+	description: '사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.',
 	keywords: [
-		'Enrollment',
-		'Edit',
-		'Delete',
-		'Manage'
+		'등록',
+		'수정',
+		'삭제',
+		'관리'
 	],
 	isTranslationMissing: false
 };
@@ -136,24 +136,24 @@ const assets = {
 
 
 const toc = [{
-  "value": "Registering User Information",
+  "value": "사용자 정보 등록",
   "id": "registering-user-information",
   "level": 2
 }, {
-  "value": "Enrolling User Faces",
+  "value": "사용자 얼굴 등록",
   "id": "enrolling-user-faces",
   "level": 3
 }, ..._enrolling_face_warning/* toc */.d$, {
-  "value": "Modifying User Information",
-  "id": "modifying-user-information",
+  "value": "사용자 정보 편집",
+  "id": "사용자-정보-편집",
   "level": 2
 }, {
-  "value": "Delete All Users",
-  "id": "delete-all-users",
+  "value": "사용자 전체 삭제",
+  "id": "사용자-전체-삭제",
   "level": 2
 }, {
-  "value": "View User Usage",
-  "id": "view-user-usage",
+  "value": "사용자 등록현황 보기",
+  "id": "사용자-등록현황-보기",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -175,30 +175,30 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Describes how to register, edit, delete, and manage users."
+      children: "사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "registering-user-information",
-      children: "Registering User Information"
+      children: "사용자 정보 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The user information including credentials can be registered."
+      children: "얼굴을 포함한 사용자 정보를 등록할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with the Admin level credential."]
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USER"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-info.svg",
+            src: "/img/common/ico-add.svg",
             ico: true,
             alone: true
-          }), ".User usage information appears."]
+          }), "을 선택한 뒤 원하는 항목을 설정하세요.", (0,jsx_runtime.jsx)("br", {}), "사용자 정보 등록은 2단계로 진행되며, 일부 옵션은 인증 수단을 등록한 뒤에 활성화됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-add.png",
           className: "none"
@@ -209,120 +209,120 @@ function _createMdxContent(props) {
                 src: "/img/common/ico-photo.svg",
                 ico: true,
                 alone: true
-              }), ": Register a user photo."]
+              }), ": 사용자 사진을 등록할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Name"
-              }), ": Enter the user name."]
+                children: "이름"
+              }), ": 사용자 이름을 입력할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "ID"
-              }), ": Enter a number between 1 and 4294967295 to register as the user ID. If ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "User ID Type"
-              }), " set to ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Alphanumeric"
-              }), ", a combination of alphanumeric characters and symbols ", (0,jsx_runtime.jsx)(_components.code, {
+              }), ": 1~4294967295 숫자를 입력해 사용자 ID를 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "사용자 ID 종류"
+              }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "영숫자"
+              }), "로 설정한 경우 영숫자와 기호 ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "_"
               }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "-"
-              }), " can be used for the ID. Up to 32 characters can be input."]
+              }), "의 조합을 ID로 사용할 수 있으며, 최대 32자까지 입력할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Face"
-              }), ": Enroll a face for user authentication. Press ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Face"
+                children: "얼굴"
+              }), ": 사용자 인증을 위한 얼굴을 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "얼굴"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Next"
-              }), " and enroll a face according to the instructions on the screen. To add more faces, press ", (0,jsx_runtime.jsx)(Image, {
+                children: "다음"
+              }), "을 누른 뒤 화면의 지시에 따라 얼굴을 등록하세요. 얼굴을 더 등록하려면 ", (0,jsx_runtime.jsx)(Image, {
                 src: "/img/common/ico-add.svg",
                 ico: true,
                 alone: true
-              }), ". Please refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              }), "을 누르세요. 얼굴 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "#enrolling-user-faces",
-                children: "Enrolling User Faces"
-              }), " to learn more about face enrollment."]
+                children: "사용자 얼굴 등록"
+              }), "을 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Card / QR Code"
-              }), ": Enroll a card for user authentication. Press ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Card / QR Code"
+                children: "카드 / QR코드"
+              }), ": 사용자 인증을 위한 카드를 등록할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "카드 / QR코드"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Next"
-              }), " and scan the card that will be assigned to the user. To enroll an additional card, press ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Card / QR Code"
+                children: "다음"
+              }), "을 누른 뒤 사용자에게 할당할 카드를 RF 카드 인증부에 스캔하세요. 카드를 더 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "카드 / QR코드"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
                 src: "/img/common/ico-add.svg",
                 ico: true,
                 alone: true
-              }), "."]
+              }), "을 누르세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 children: "PIN"
-              }), ": Enter the PIN you wish to use. Click ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": 사용하려는 PIN을 입력할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "PIN"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Next"
-              }), " to register the PIN to use. Enter the PIN again for confirmation and press ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "다음"
+              }), "을 누른 뒤 사용하려는 PIN을 입력하세요. 확인을 위해 한 번 더 PIN을 입력한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "OK"
-              }), ". Enter a number between 4 and 16 digits to prevent leaking."]
+              }), "를 누르세요. PIN은 유출 방지를 위해 4~16자리 숫자를 입력하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Operator Level"
-              }), ": Select the level you wish to assign to a user."]
+                children: "사용자 권한"
+              }), ": 사용자에게 할당할 권한을 선택할 수 있습니다."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
               type: "info",
               children: [(0,jsx_runtime.jsx)(_components.p, {
-                children: "Available menus vary according to the set user level."
+                children: "설정된 사용자 권한에 따라 사용할 수 있는 메뉴가 다릅니다."
               }), (0,jsx_runtime.jsxs)(_components.ul, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "None"
-                    }), ": This is the general user level and menus cannot be accessed."]
+                      children: "권한 없음"
+                    }), ": 일반 사용자 등급이며 메뉴를 사용할 수 없습니다."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "Administrator"
-                    }), ": All menus can be accessed."]
+                      children: "전체 관리자"
+                    }), ": 모든 메뉴를 사용할 수 있습니다."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "Configuration"
+                      children: "설정 관리자"
                     }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "AUTHENTICATION"
+                      children: "인증"
                     }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "DISPLAY & SOUND"
+                      children: "화면과 소리"
                     }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "DEVICE"
+                      children: "장치"
                     }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "NETWORK"
-                    }), " and ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "EVENT LOG"
-                    }), " menus can be accessed."]
+                      children: "네트워크"
+                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "이벤트 로그"
+                    }), " 메뉴를 사용할 수 있습니다."]
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      children: "User Management"
+                      children: "사용자 관리자"
                     }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "USER"
-                    }), " and ", (0,jsx_runtime.jsx)(Cmd, {
-                      children: "EVENT LOG"
-                    }), " menus can be accessed."]
+                      children: "사용자"
+                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                      children: "이벤트 로그"
+                    }), " 메뉴를 사용할 수 있습니다."]
                   }), "\n"]
                 }), "\n"]
               })]
@@ -330,217 +330,217 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Period"
-              }), ": Set an expiry date to use the user account."]
+                children: "유효기간"
+              }), ": 사용자 계정을 사용할 기간을 설정할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Extended Private Auth Mode"
-              }), ": Change the authentication method according to the user. You can set extended private auth mode. This mode allows you to combine user authentication methods, including both faces. Otherwise, you can use the device’s basic authentication mode."]
+                children: "확장 개인 인증 모드"
+              }), ": 확장 개인 인증 모드를 설정할 수 있습니다. 확장 개인 인증 모드를 사용하면 사용자에 따른 인증 방식을 얼굴을 포함하여 조합할 수 있습니다. 사용하지 않을 경우 장치의 기본 인증 모드를 사용합니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To complete the registration of user information, press ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Save"
-          }), "."]
+          children: ["사용자 정보 등록을 완료하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "저장"
+          }), "을 누르세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "enrolling-user-faces",
-      children: "Enrolling User Faces"
+      children: "사용자 얼굴 등록"
     }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with the Admin level credential."]
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USER"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-add.svg",
             ico: true,
             alone: true
-          }), "."]
+          }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Face"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "얼굴"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Next"
-          }), "."]
+            children: "다음"
+          }), "을 누르세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Adjust a distance between the face and screen and look straight at the camera of the device."
+          children: "화면에 얼굴이 나타나도록 거리를 조정하고, 장치의 카메라를 정면으로 바라보세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Once your face is captured successfully, press ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "OK"
+          children: ["촬영이 완료되면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "확인"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Save"
-          }), ". To retake a photo, press ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Re-Shot"
-          }), "."]
+            children: "저장"
+          }), "을 누르세요. 얼굴을 다시 촬영하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "재촬영"
+          }), "을 누르세요."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "The visual face data of BioStation 3 are not compatible with face templates of FaceStation 2 or FaceLite."
+                children: "BioStation 3의 얼굴 정보는 FaceStation 2, FaceLite의 얼굴 템플릿과 호환되지 않습니다."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "You can enroll visual face not only directly from BioStation 3 but from the BioStar 2 by uploading photos or importing CSV files. You can also enroll visual face with your smartphone via a link sent from BioStar 2. To learn more about how to enroll visual face for each method, refer to the BioStar 2 Administrator Guide."
+                children: "BioStation 3의 얼굴 정보는 장치에서뿐만 아니라 BioStar 2에서 사진을 업로드하거나 CSV 불러오기를 통해 일괄 등록할 수도 있습니다. 사용자에게 얼굴 등록 링크를 전송하여 사용자 개인의 모바일 장치로도 얼굴을 등록할 수 있습니다. 각각의 등록 방법에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "To use a Visual Face feature correctly, take a picture by following instructions below."
+                children: "얼굴을 등록할 때 다음 사항에 유의하세요."
               }), "\n", (0,jsx_runtime.jsx)(_enrolling_face_warning/* default */.ZP, {}), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "modifying-user-information",
-      children: "Modifying User Information"
+      id: "사용자-정보-편집",
+      children: "사용자 정보 편집"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "User Management or Administrator can modify the registered user information. A card or face can be added, and PIN and level can be modified."
+      children: "사용자 관리자나 전체 관리자가 등록된 사용자 정보를 편집할 수 있습니다. 사용자의 얼굴이나 카드를 추가할 수 있으며, PIN 및 권한을 수정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with the Admin level credential."]
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USER"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-search.svg",
             ico: true,
             alone: true
-          }), "."]
+          }), "을 누르세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select your search terms. You can search for a user by ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "All"
+          children: ["사용할 검색 조건을 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "전체"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "User ID"
+            children: "사용자 ID"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Name"
+            children: "이름"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Face"
-          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Card"
-          }), "."]
+            children: "얼굴"
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "카드"
+          }), "로 사용자를 검색할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select the user to modify."
+          children: "편집하려는 사용자를 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Modify the information by referring to ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.a, {
             href: "#registering-user-information",
-            children: "Registering User Information"
-          }), " and press ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자 정보 등록"
+          }), "을 참고하여 정보를 수정한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "."]
+          }), "를 누르세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["To delete a user, select ", (0,jsx_runtime.jsx)(Image, {
+            children: ["사용자를 삭제하려면 ", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/ico-delete.svg",
               ico: true,
               alone: true
-            }), " and then press ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "OK"
-            }), "."]
+            }), "을 선택한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "확인"
+            }), "을 누르세요."]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "Access Group"
-        }), " can be registered in BioStar 2. For detailed contents regarding registering an access group, refer to the BioStar 2 Administrator Guide."]
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: "출입 그룹"
+        }), "은 BioStar 2에서 등록할 수 있습니다. 출입 그룹 등록에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "delete-all-users",
-      children: "Delete All Users"
+      id: "사용자-전체-삭제",
+      children: "사용자 전체 삭제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can delete all registered users at once."
+      children: "등록된 모든 사용자를 한 번에 삭제할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with the Admin level credential."]
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USER"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-delete.svg",
             ico: true,
             alone: true
-          }), "."]
+          }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Delete All"
-          }), " to delete all registered users and press ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "전체 삭제"
+          }), "를 선택해 체크한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "."]
+          }), "를 누르세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When you press ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "OK"
-          }), ", all registered users will be deleted."]
+          children: ["전체 사용자를 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "확인"
+          }), "을 누르세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "view-user-usage",
-      children: "View User Usage"
+      id: "사용자-등록현황-보기",
+      children: "사용자 등록현황 보기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can see the number of registered users, faces, and cards at a glance."
+      children: "등록된 사용자, 얼굴, 카드 수를 한 눈에 볼 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+          children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with the Admin level credential."]
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "USER"
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "사용자"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-add.svg",
+            src: "/img/common/ico-info.svg",
             ico: true,
             alone: true
-          }), ", and choose a credential you want to enroll.", (0,jsx_runtime.jsx)("br", {}), " User usage information appears."]
+          }), "을 누르세요. 사용자 등록현황을 확인할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-user-usage.png"
         }), "\n"]

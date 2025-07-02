@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6767"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7147"], {
 6265: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -28,7 +28,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "When enrolling a face, maintain a distance of 60 ~ 100 cm between the device and the face."
+        children: "When enrolling a face, maintain a distance of 60-100cm between the device and the face."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -89,7 +89,7 @@ function MDXContent(props = {}) {
 
 
 }),
-5857: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+5404: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -98,20 +98,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_user_mdx_0fe_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_2_a_user_mdx_e1f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-user-mdx-0fe.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_user_mdx_0fe_namespaceObject = JSON.parse('{"id":"device/biostation_3/user","title":"User","description":"Describes how to register, edit, delete, and manage users.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/user.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/user","permalink":"/docs/en/device/biostation_3/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"User","description":"Describes how to register, edit, delete, and manage users.","keywords":["Enrollment","Edit","Delete","Manage"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"Admin Menu","permalink":"/docs/en/device/biostation_3/admin-menu"},"next":{"title":"Certifications","permalink":"/docs/en/device/biostation_3/authentication"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-2-a-user-mdx-e1f.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_2_a_user_mdx_e1f_namespaceObject = JSON.parse('{"id":"device/biostation_2a/user","title":"User","description":"Describes how to register, edit, delete, and manage users.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_2a/user.mdx","sourceDirName":"device/biostation_2a","slug":"/device/biostation_2a/user","permalink":"/docs/en/device/biostation_2a/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_2a/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"User","description":"Describes how to register, edit, delete, and manage users.","keywords":["Enrollment","Edit","Delete","Manage"],"isTranslationMissing":false},"sidebar":"biostation2a","previous":{"title":"Admin Menu","permalink":"/docs/en/device/biostation_2a/admin-menu"},"next":{"title":"Certifications","permalink":"/docs/en/device/biostation_2a/authentication"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_enrolling-face-warning.mdx
 var _enrolling_face_warning = __webpack_require__(6265);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/user.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_2a/user.mdx
 
 
 const frontMatter = {

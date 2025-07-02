@@ -109,7 +109,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.quality",
             product: "2"
-          }), ": 지문 등록 품질을 조절할 수 있습니다. 품질 수준에 미치지 않으면 지문 정보를 등록할 수 없습니다."]
+          }), ": 지문 등록 품질을 조절할 수 있습니다. 설정한 품질 수준에 미치지 않으면 지문 정보를 등록할 수 없습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -132,14 +132,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "button.scan",
             product: "2"
-          }), ": 버튼을 클릭하고 지문 스캐너나 장치 센서에 손가락을 대세요."]
+          }), ": 추가한 지문 번호를 선택하고 버튼을 클릭하세요. 지문 스캐너나 장치 센서에 손가락을 대고 지문을 스캔하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "button.delete",
             product: "2"
-          }), ": 등록한 지문을 삭제할 수 있습니다. 지문을 삭제하려면 해당 지문 번호를 선택하고 버튼을 클릭하세요."]
+          }), ": 등록한 지문을 삭제할 수 있습니다. 삭제할 지문 번호를 선택하고 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -167,7 +167,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "일상에서 출입을 위해 사용하는 지문을 협박 지문으로 사용하지 마세요."
+            children: "일상 출입을 위해 사용하는 지문을 협박 지문으로 사용하지 마세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

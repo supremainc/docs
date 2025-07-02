@@ -28,7 +28,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "When enrolling a face, maintain a distance of 60 ~ 100 cm between the device and the face."
+        children: "When enrolling a face, maintain a distance of 60-100cm between the device and the face."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -197,7 +197,7 @@ function _createMdxContent(props) {
         sid: "common.credential",
         product: "2"
       }), " section, click the ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "button.addVisualFace",
+        sid: "button.addFace",
         product: "2"
       }), " button. When the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "userCredential.enroll.visualFaceEnroll",

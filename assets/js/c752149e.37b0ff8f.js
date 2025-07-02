@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4883"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7046"], {
 1294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -28,7 +28,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60~100cm로 유지하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -89,7 +89,7 @@ function MDXContent(props = {}) {
 
 
 }),
-8986: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+9020: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -98,20 +98,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_user_mdx_c71_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_biostation_2_a_user_mdx_c75_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-user-mdx-c71.json
-var site_docs_device_biostation_3_user_mdx_c71_namespaceObject = JSON.parse('{"id":"device/biostation_3/user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","source":"@site/docs/device/biostation_3/user.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/user","permalink":"/docs/device/biostation_3/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","keywords":["등록","수정","삭제","관리"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"관리자 메뉴","permalink":"/docs/device/biostation_3/admin-menu"},"next":{"title":"인증","permalink":"/docs/device/biostation_3/authentication"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-2-a-user-mdx-c75.json
+var site_docs_device_biostation_2_a_user_mdx_c75_namespaceObject = JSON.parse('{"id":"device/biostation_2a/user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","source":"@site/docs/device/biostation_2a/user.mdx","sourceDirName":"device/biostation_2a","slug":"/device/biostation_2a/user","permalink":"/docs/device/biostation_2a/user","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_2a/user.mdx","tags":[],"version":"current","frontMatter":{"id":"user","title":"사용자","description":"사용자 등록, 수정, 삭제 및 관리 방법을 설명합니다.","keywords":["등록","수정","삭제","관리"],"isTranslationMissing":false},"sidebar":"biostation2a","previous":{"title":"관리자 메뉴","permalink":"/docs/device/biostation_2a/admin-menu"},"next":{"title":"인증","permalink":"/docs/device/biostation_2a/authentication"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_enrolling-face-warning.mdx
 var _enrolling_face_warning = __webpack_require__(1294);
-;// CONCATENATED MODULE: ./docs/device/biostation_3/user.mdx
+;// CONCATENATED MODULE: ./docs/device/biostation_2a/user.mdx
 
 
 const frontMatter = {

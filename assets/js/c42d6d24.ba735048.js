@@ -119,6 +119,8 @@ function _createMdxContent(props) {
             sid: "common.authMode",
             product: "2"
           }), ": 사용할 인증 모드를 드래그 앤 드랍으로 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-new-user-credential-authmod-private-join.png"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {

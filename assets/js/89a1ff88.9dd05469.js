@@ -28,7 +28,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60~100cm로 유지하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -203,7 +203,7 @@ function _createMdxContent(props) {
         sid: "common.credential",
         product: "2"
       }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "button.addVisualFace",
+        sid: "button.addFace",
         product: "2"
       }), " 버튼을 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "userCredential.enroll.visualFaceEnroll",

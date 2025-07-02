@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9399"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6960"], {
 1294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -28,7 +28,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60 ~ 100 cm로 유지하세요."
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60~100cm로 유지하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -177,7 +177,7 @@ function MDXContent(props = {}) {
 
 
 }),
-1651: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+667: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -186,20 +186,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_device_biostation_2_a_getting_started_mdx_8b4_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_biostation_3_getting_started_mdx_b3d_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-2-a-getting-started-mdx-8b4.json
-var site_docs_device_biostation_2_a_getting_started_mdx_8b4_namespaceObject = JSON.parse('{"id":"device/biostation_2a/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/biostation_2a/getting-started.mdx","sourceDirName":"device/biostation_2a","slug":"/device/biostation_2a/getting-started","permalink":"/docs/device/biostation_2a/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_2a/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":false},"sidebar":"biostation2a","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/device/biostation_2a/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/biostation_2a/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-getting-started-mdx-b3d.json
+var site_docs_device_biostation_3_getting_started_mdx_b3d_namespaceObject = JSON.parse('{"id":"device/biostation_3/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/biostation_3/getting-started.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/getting-started","permalink":"/docs/device/biostation_3/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/device/biostation_3/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/biostation_3/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_face-enrollment-authentication-method.mdx
 var _face_enrollment_authentication_method = __webpack_require__(7530);
-;// CONCATENATED MODULE: ./docs/device/biostation_2a/getting-started.mdx
+;// CONCATENATED MODULE: ./docs/device/biostation_3/getting-started.mdx
 
 
 const frontMatter = {
@@ -249,8 +249,8 @@ const toc = [{
   "id": "rs-485",
   "level": 3
 }, {
-  "value": "Input",
-  "id": "input",
+  "value": "TTL 입력",
+  "id": "ttl-입력",
   "level": 3
 }, {
   "value": "Wiegand 입력",
@@ -260,7 +260,19 @@ const toc = [{
   "value": "Wiegand 출력",
   "id": "wiegand-출력",
   "level": 3
-}, ..._face_enrollment_authentication_method/* toc */.d$];
+}, ..._face_enrollment_authentication_method/* toc */.d$, {
+  "value": "QR 코드 및 장치 라이선스에 대한 참고 사항",
+  "id": "qr-코드-및-장치-라이선스에-대한-참고-사항",
+  "level": 2
+}, {
+  "value": "올바른 QR 코드 인증 방법",
+  "id": "올바른-qr-코드-인증-방법",
+  "level": 3
+}, {
+  "value": "장치 라이선스 참고 사항",
+  "id": "장치-라이선스-참고-사항",
+  "level": 3
+}];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
@@ -278,8 +290,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Callout, Image, Item, Productpart, Row, Table, Tbody, Td} = _components;
+  }, {Callout, Cmd, Image, Item, Productpart, Row, Table, Tbody, Td} = _components;
   if (!Callout) _missingMdxReference("Callout", true);
+  if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Item) _missingMdxReference("Item", true);
   if (!Productpart) _missingMdxReference("Productpart", true);
@@ -472,86 +485,144 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "LCD 화면"
+            children: "마이크"
+          }), ": 인터폰 연결 시 사용자의 음성을 전달합니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "마이크를 가리거나 막으면 음성 전달이 원활하지 않을 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "적외선 카메라"
+          }), ": 적외선 이미지를 촬영합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "비주얼 카메라"
+          }), ": 실제 이미지를 촬영합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "디스플레이"
           }), ": 동작을 위한 UI를 제공합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "숫자/메뉴/ESC 버튼"
-          }), ":"]
+            children: "RF 카드 및 모바일 출입카드 인식부"
+          }), ": 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "1 ~ 9"
-          }), ": 숫자/문자 입력, 메뉴 선택"]
+            children: "LED 상태 표시등"
+          }), ": 제품의 작동 상태가 표시됩니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "초록색: 인증 성공"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "빨간색: 인증 실패"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "파란색: 정상 동작 상태"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "파란색/초록색 점멸:"
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    children: "DHCP"
+                  }), "를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태"]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    children: "슬레이브"
+                  }), " 모드일 때 마스터 장치와 연결이 끊어진 상태"]
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "빨간색/보라색 점멸: 장치 잠금 상태"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "노란색 점멸: 입력 대기 상태"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/",
-            ico: true,
-            alone: true
-          }), ": 메뉴 진입"]
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "스피커"
+          }), ": 소리를 들을 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "이더넷"
+          }), ": 이더넷 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "TTL 입력 (5핀)"
+          }), ": TTL 입력 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "USB 확장 포트 (5핀)"
+          }), ": 기타 액세서리 제품을 연결할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Wiegand 출력 (4핀)"
+          }), ": Wiegand 출력 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Wiegand 입력 (4핀)"
+          }), ": Wiegand 입력 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "RS-485 (4핀)"
+          }), ": RS-485 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "릴레이 (3핀)"
+          }), ": 릴레이 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "전원 (2핀)"
+          }), ": 전원 케이블을 연결합니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "USB (Type-C) 메모리 슬롯"
+          }), ": USB 메모리를 연결합니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "ESC: 이전 화면으로 이동, 입력 취소"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "기능 버튼\t근태 기능 키로 사용하거나 하위 메뉴를 선택할 때 사용합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "방향/OK 버튼\t : 문자 종류 변경, 경비 시작/해제 설정"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: ": 문자 종류 변경, 근태 이벤트를 선택하여 근태 등록"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: ": 숫자/문자 삭제, ID를 사용하여 인증"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: ": 기호 삽입, 항목 설정, 작업 코드 선택"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "OK: 항목 선택/설정 저장, 키 메뉴 활성화"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "LED 상태 표시등\t제품의 작동 상태가 표시됩니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "초록색: 인증 성공"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "빨간색: 인증 실패"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "파란색: 정상 동작 상태"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "파란색/초록색 점멸:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "DHCP를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "슬레이브 모드일 때 마스터 장치와 연결이 끊어진 상태"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "빨간색/보라색 점멸: 장치 잠금 상태"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "노랑색 점멸: 입력 대기 상태"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "지문 인식부\t출입을 위해 지문을 인식시키는 부분입니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "RF 카드 및 모바일 출입카드 인식부\t출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "USB (Type-C) 메모리 슬롯\tUSB 메모리를 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "스피커\t소리를 들을 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Wiegand 입력 (4핀)\tWiegand 입력 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Wiegand 출력 (4핀)\tWiegand 출력 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "RS-485 (4핀)\tRS-485 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이더넷\t이더넷 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Input (5핀)\tInput 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "릴레이 (3핀)\t릴레이 케이블을 연결합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "USB 확장 포트 (5핀)\t기타 액세서리 제품을 연결할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "전원 (2핀)\t전원 케이블을 연결합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "케이블-및-커넥터",
       children: "케이블 및 커넥터"
@@ -700,8 +771,8 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "input",
-      children: "Input"
+      id: "ttl-입력",
+      children: "TTL 입력"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/cable-ttl-bs3.svg",
       className: "none",
@@ -724,7 +795,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "1"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "INPUT0"
+              children: "TTL IN0"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "빨간색"
             })]
@@ -732,7 +803,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "2"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "INPUT1"
+              children: "TTL IN1"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "노란색"
             })]
@@ -740,7 +811,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "3"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "INPUT2"
+              children: "TTL IN2"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "주황색"
             })]
@@ -748,7 +819,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "4"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "INPUT GND"
+              children: "TTL GND"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "검은색"
             })]
@@ -875,7 +946,54 @@ function _createMdxContent(props) {
           })]
         })]
       })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_face_enrollment_authentication_method/* default */.ZP, {})]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_face_enrollment_authentication_method/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "qr-코드-및-장치-라이선스에-대한-참고-사항",
+      children: "QR 코드 및 장치 라이선스에 대한 참고 사항"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "올바른-qr-코드-인증-방법",
+      children: "올바른 QR 코드 인증 방법"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자에게 QR 코드를 발급하여 인증 수단으로 사용할 수 있습니다. 인식률을 높이기 위해 화면의 안내에 따라 올바르게 QR 코드를 스캔하세요."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/device/qr-scanning-bs3.svg",
+      className: "none",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치의 카메라와 QR 코드 사이의 거리를 30 ~ 40 cm로 유지하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "QR 코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "모바일 장치에 내려받은 QR 코드로 인증할 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "화면의 지시에 따르지 않을 경우 QR 코드 인식이 오래 걸리거나 실패할 수 있습니다."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "장치-라이선스-참고-사항",
+      children: "장치 라이선스 참고 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "QR 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다."
+        }), "\n"]
+      }), "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {
