@@ -82,7 +82,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.newUser"
-          }), " 창이 나타나면 사용자 정보를 입력하세요."]
+          }), " 화면에서 사용자 정보를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -111,8 +111,8 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["모든 정보를 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.save"
+          children: ["모든 정보를 입력하고 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.acknowledge"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]

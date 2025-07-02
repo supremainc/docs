@@ -121,12 +121,17 @@ function _createMdxContent(props) {
     code: "code",
     li: "li",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcCalc, Image, NextItem, NextStep} = _components;
+  }, {Cmd, Column, Columns, IcCalc, IcCamera, IcUpload, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Column) _missingMdxReference("Column", true);
+  if (!Columns) _missingMdxReference("Columns", true);
   if (!IcCalc) _missingMdxReference("IcCalc", true);
+  if (!IcCamera) _missingMdxReference("IcCamera", true);
+  if (!IcUpload) _missingMdxReference("IcUpload", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
@@ -161,6 +166,38 @@ function _createMdxContent(props) {
       src: "/img/biostarx-new-user-information.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "사진"
+          }), ": 사용자의 사진을 등록하세요. 웹캠으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+          children: [(0,jsx_runtime.jsx)(Column, {
+            className: "width--20 padding--t1rem",
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/common/biostarx-new-user-photo.png",
+              alone: true
+            })
+          }), (0,jsx_runtime.jsxs)(Column, {
+            className: "padding--l10",
+            children: [(0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(IcCamera, {}), ": PC에 웹캠이 연결되어 있다면 버튼을 클릭해 사진을 촬영하고 등록할 수 있습니다."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(IcUpload, {}), ": PC에 저장된 이미지 파일을 업로드할 수 있습니다."]
+                }), "\n"]
+              }), "\n"]
+            }), (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "enroll-credential-face#erollbywebcambyphoto",
+                children: "다음 문서"
+              }), "를 참고하세요."]
+            })]
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.id",

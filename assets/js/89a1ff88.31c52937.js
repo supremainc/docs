@@ -138,7 +138,7 @@ const assets = {
 
 const toc = [..._enrolling_face_warning/* toc */.d$, {
   "value": "장치로 등록",
-  "id": "장치로-등록",
+  "id": "enrolldevice",
   "level": 2
 }, {
   "value": "CSV 파일로 가져와 등록",
@@ -160,6 +160,10 @@ const toc = [..._enrolling_face_warning/* toc */.d$, {
   "value": "얼굴 등록 링크 전송",
   "id": "얼굴-등록-링크-전송",
   "level": 3
+}, {
+  "value": "웹캠 또는 사진 이미지로 등록",
+  "id": "erollbywebcambyphoto",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -175,9 +179,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcMoreW, Image} = _components;
+  }, {Cmd, IcCamera, IcMoreW, IcUpload, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcCamera) _missingMdxReference("IcCamera", true);
   if (!IcMoreW) _missingMdxReference("IcMoreW", true);
+  if (!IcUpload) _missingMdxReference("IcUpload", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -190,7 +196,7 @@ function _createMdxContent(props) {
         })
       }), (0,jsx_runtime.jsx)(_enrolling_face_warning/* default */.ZP, {})]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "장치로-등록",
+      id: "enrolldevice",
       children: "장치로 등록"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -588,6 +594,148 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "얼굴 사진을 업로드하여 얼굴 모바일 등록에 성공하면 등록 성공 메시지가 화면에 나타납니다. 등록에 실패한 경우 등록 실패 메시지와 실패 사유가 표시되며, 사용자는 다른 사진을 이용하여 얼굴 등록을 다시 시도할 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "erollbywebcambyphoto",
+      children: "웹캠 또는 사진 이미지로 등록"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "PC에 연결된 웹캠으로 사진을 촬영하고, 촬영된 사진으로 사용자 프로필 사진을 설정하고 얼굴을 크리덴셜로 등록할 수 있습니다. 또는 업로드한 사진을 얼굴 크리덴셜로 등록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "PC에 웹캡을 연결하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.user"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["새로운 사용자를 추가하려면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.user.newUser"
+          }), " 버튼을 클릭하세요. 기존 사용자의 얼굴을 등록하려면 사용자 목록에서 얼굴을 등록할 사용자를 더블 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 프로필 이미지 영역에 마우스를 오버하면 나타나는 ", (0,jsx_runtime.jsx)(IcCamera, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["PC에 저장한 이미지를 업로드하려면 ", (0,jsx_runtime.jsx)(IcUpload, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-new-user-photo.png",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.header.imageRegistration",
+            product: "2"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.takePhoto",
+            product: "2"
+          }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.uploadPhoto",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "웹캠으로 사진을 촬영하면 사진이 표시되고, PC에서 사진을 업로드하면 업로드한 사진을 표시합니다."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-new-user-credential-face-webcam-take.png",
+          className: "none"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["웹캠으로 촬영한 사진이나 업로드한 사진을 얼굴 크리덴셜로 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.imageRegistration.useVisualFace",
+            product: "2"
+          }), " 옵션의 체크박스를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["얼굴 등록을 완료하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.enroll",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "웹캠을 처음 사용한다면 브라우저의 카메라 사용 권한을 묻는 팝업이 나타납니다. 웹캠을 사용하기 위해서는 브라우저의 카메라 사용 권한을 허용해야합니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "브라우저에 따라 카메라 사용 권한을 허용하는 과정이 다를 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "button.takePhoto",
+              product: "2"
+            }), " 버튼을 클릭하고 사진을 촬영하기까지 몇 초 정도 소요될 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Google 크롬 75 버전 이상을 사용하는 것을 권장합니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사진을 업로드하기 위한 이미지 파일의 크기는 최대 10MB입니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "지원하는 이미지 파일의 형식은 JPG, JPEG, PNG입니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "웹캠으로 얼굴을 촬영할 때 다음 사항에 유의하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "웹캠과 너무 가깝거나 너무 멀지 않게 거리를 유지하세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "움직이지 말고 정면으로 얼굴을 등록하세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "표정이 변하지 않도록 주의하세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "마스크, 모자, 안대를 착용하지 마세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "고개를 들거나 숙이지 마세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "진한 화장을 하지 마세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "눈을 감지 마세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "양쪽 어깨가 모두 나타나도록 하세요."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "두 명의 얼굴이 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 촬영하세요."
+              }), "\n"]
+            }), "\n"]
           }), "\n"]
         }), "\n"]
       })

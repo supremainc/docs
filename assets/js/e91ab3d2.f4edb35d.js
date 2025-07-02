@@ -66,6 +66,10 @@ const toc = [{
   "value": "그룹별 사용자 확인하기",
   "id": "viewgroupuser",
   "level": 2
+}, {
+  "value": "그룹 목록 확장/축소",
+  "id": "그룹-목록-확장축소",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -150,9 +154,9 @@ function _createMdxContent(props) {
             sid: "team.tree.userGroup"
           }), " 탭에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.tree.userGroupRootName"
-          }), "를 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+          }), "을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostartx-user-group-add.png"
+          src: "/img/biostarx-user-group-add.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -175,7 +179,7 @@ function _createMdxContent(props) {
             sid: "team.tree.userGroup"
           }), " 탭에서 상위 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostartx-user-sub-group-add.png"
+          src: "/img/biostarx-user-sub-group-add.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -213,7 +217,7 @@ function _createMdxContent(props) {
             sid: "team.tree.userGroup"
           }), " 목록에서 이름을 변경할 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostartx-user-group-rename.png"
+          src: "/img/biostarx-user-group-rename.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -260,6 +264,8 @@ function _createMdxContent(props) {
           children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.tree.contextMenu.deleteGroup"
           }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-group-remove.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -280,7 +286,22 @@ function _createMdxContent(props) {
         sid: "shell.header.user"
       }), " 페이지에서 화면 왼쪽 사이드바에서 원하는 사용자 그룹을 선택하세요. 선택한 사용자 그룹의 사용자가 목록에 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostartx-user-group-select-group-user.png"
+      src: "/img/biostarx-user-group-select-group-user.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "그룹-목록-확장축소",
+      children: "그룹 목록 확장/축소"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자 그룹 목록을 확장하거나 축소할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.tree.userGroup"
+      }), " 탭에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.user.tree.userGroupRootName"
+      }), "를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.expandAll"
+      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.collapseAll"
+      }), "을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-user-group-expand-collapse.png"
     })]
   });
 }
