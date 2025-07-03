@@ -36,28 +36,34 @@ const sidebars = {
             id: 'platform/biostar_x/overview',
           },
           items: [
-            'platform/biostar_x/getting-started',
+            'platform/biostar_x/before-start',
             'platform/biostar_x/system-requirements',
           ],
         },
         {
           type: 'category',
-          label: '튜토리얼',
+          label: '시작하기',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/tutorial',
+            id: 'platform/biostar_x/getting-started',
           },
           items: [
-            'platform/biostar_x/tutorial-express-install',
-            'platform/biostar_x/tutorial-custom-install',
+            'platform/biostar_x/express-install',
+            'platform/biostar_x/custom-install',
             'platform/biostar_x/migration-x',
             'platform/biostar_x/install-communication-server',
-            'platform/biostar_x/tutorial-login',
-            'platform/biostar_x/tutorial-register-license-key',
+            'platform/biostar_x/login',
+            'platform/biostar_x/register-license-key',
+            'platform/biostar_x/initial-setup-guide',
+          ]
+        },
+        {
+          type: 'category',
+          label: '서버 관리',
+          items: [
             'platform/biostar_x/manage-server',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
-            'platform/biostar_x/initial-setup-guide',
           ]
         },
         {
@@ -232,20 +238,6 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: '엘리베이터 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-manage-elevators'
-              },
-              items: [
-                'platform/biostar_x/settings-manage-elevators-group',
-                'platform/biostar_x/settings-elevators-add',
-                'platform/biostar_x/settings-elevators-edit-info',
-                'platform/biostar_x/settings-elevators-delete'
-              ]
-            },
-            {
-              type: 'category',
               label: '운영 권한 관리하기',
               link: {
                 type: 'doc',
@@ -270,40 +262,9 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-schedule',
-            {
-              type: 'category',
-              label: '고급 출입 통제 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-advanced-ac',
-              },
-              items: [
-                'platform/biostar_x/settings-advanced-ac-apb',
-                'platform/biostar_x/settings-advanced-ac-fire-alarm',
-                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
-                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
-                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
-                'platform/biostar_x/settings-advanced-ac-interlock',
-                'platform/biostar_x/settings-advanced-ac-muster',
-                'platform/biostar_x/settings-advanced-ac-occupancy',
-              ]
-            },
             'platform/biostar_x/settings-triger-and-action',
             'platform/biostar_x/settings-event-log-import',
             'platform/biostar_x/settings-alert',
-            {
-              type: 'category',
-              label: '맵 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-map-management'
-              },
-              items: [
-                'platform/biostar_x/settings-map-manage-floor',
-                'platform/biostar_x/settings-map-manage-facility',
-                'platform/biostar_x/settings-map-manage-area'
-              ]
-            },
             {
               type: 'category',
               label: '크리덴셜 관리하기',
@@ -320,7 +281,6 @@ const sidebars = {
                 'platform/biostar_x/settings-credential-mobile-access-card',
               ]
             },
-            'platform/biostar_x/settings-diretory-integration',
             'platform/biostar_x/settings-card-printer',
             'platform/biostar_x/settings-visitor',
             'platform/biostar_x/settings-email-setting',
@@ -365,6 +325,62 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/settings-preferences'
+          ]
+        },
+        {
+          type: 'category',
+          label: '고급 설정',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/how-to-guide-advanced-settings',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '엘리베이터 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-manage-elevators'
+              },
+              items: [
+                'platform/biostar_x/settings-manage-elevators-group',
+                'platform/biostar_x/settings-elevators-add',
+                'platform/biostar_x/settings-elevators-edit-info',
+                'platform/biostar_x/settings-elevators-delete'
+              ]
+            },
+            {
+              type: 'category',
+              label: '고급 출입 통제 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-advanced-ac',
+              },
+              items: [
+                'platform/biostar_x/settings-advanced-ac-apb',
+                'platform/biostar_x/settings-advanced-ac-fire-alarm',
+                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
+                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
+                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
+                'platform/biostar_x/settings-advanced-ac-interlock',
+                'platform/biostar_x/settings-advanced-ac-muster',
+                'platform/biostar_x/settings-advanced-ac-occupancy',
+              ]
+            },
+            {
+              type: 'category',
+              label: '맵 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-map-management'
+              },
+              items: [
+                'platform/biostar_x/settings-map-manage-floor',
+                'platform/biostar_x/settings-map-manage-facility',
+                'platform/biostar_x/settings-map-manage-area'
+              ]
+            },
+            'platform/biostar_x/settings-diretory-integration'
           ]
         },
         {
