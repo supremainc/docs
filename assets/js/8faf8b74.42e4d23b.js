@@ -73,6 +73,14 @@ const toc = [{
   "value": "고급 검색",
   "id": "advanced-search",
   "level": 3
+}, {
+  "value": "사용자 목록 열(Column) 설정",
+  "id": "user-list-column-settings",
+  "level": 2
+}, {
+  "value": "사용자 목록 인쇄",
+  "id": "print-user-list",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -86,7 +94,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcAdvSearch, IcAscend, IcBw, IcDescend, IcFirst, IcFw, IcLast, IcTips, Image, Kbd} = _components;
+  }, {Cmd, IcAdvSearch, IcAscend, IcBw, IcDescend, IcFirst, IcFw, IcLast, IcMoreW, IcTips, Image, Kbd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAdvSearch) _missingMdxReference("IcAdvSearch", true);
   if (!IcAscend) _missingMdxReference("IcAscend", true);
@@ -95,6 +103,7 @@ function _createMdxContent(props) {
   if (!IcFirst) _missingMdxReference("IcFirst", true);
   if (!IcFw) _missingMdxReference("IcFw", true);
   if (!IcLast) _missingMdxReference("IcLast", true);
+  if (!IcMoreW) _missingMdxReference("IcMoreW", true);
   if (!IcTips) _missingMdxReference("IcTips", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Kbd) _missingMdxReference("Kbd", true);
@@ -273,6 +282,86 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "user-list-column-settings",
+      children: "사용자 목록 열(Column) 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자 목록에서 표시되는 열(Column) 설정을 변경할 수 있습니다. 열 설정을 통해 표시할 열을 선택하거나 열의 순서를 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["사용자 목록 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.columnLayout"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.dialog.columnSetting.title"
+          }), " 창이 나타나면 원하는 열을 선택하거나 선택 해제하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-users-list-column-layout.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "열의 순서를 변경하려면 원하는 열을 클릭한 채로 드래그하여 위치를 변경하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["열 레이아웃 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.dialog.columnSetting.reset"
+        }), " 버튼을 클릭하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "print-user-list",
+      children: "사용자 목록 인쇄"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "현재 보고 있는 사용자 목록을 PDF 또는 SVG 파일로 저장할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["사용자 목록 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.print"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "printOption.dialog.header",
+            product: "2"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "printOption.fileFormat",
+            product: "2"
+          }), " 옵션에서 원하는 포맷을 선택하고 나머지 옵션을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-users-print-list.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.print"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "브라우저를 통해 열리는 PDF 또는 SVG 파일을 인쇄할 수 있습니다."
     })]
   });
 }

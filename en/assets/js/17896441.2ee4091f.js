@@ -4765,7 +4765,7 @@ const SvgIcoLastPage2 = _ref => {
 };
 /* ESM default export */ const ico_last_page2 = (SvgIcoLastPage2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-ascend.svg
-var ico_ascend_path, ico_ascend_path2;
+var ico_ascend_g, ico_ascend_defs;
 function ico_ascend_extends() { return ico_ascend_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_ascend_extends.apply(null, arguments); }
 
 const SvgIcoAscend = _ref => {
@@ -4783,21 +4783,21 @@ const SvgIcoAscend = _ref => {
     "aria-labelledby": titleId
   }, props), title ? /*#__PURE__*/react.createElement("title", {
     id: titleId
-  }, title) : null, ico_ascend_path || (ico_ascend_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M12.667 2H3.333C2.597 2 2 2.597 2 3.333v9.334C2 13.403 2.597 14 3.333 14h9.334c.736 0 1.333-.597 1.333-1.333V3.333C14 2.597 13.403 2 12.667 2"
-  })), ico_ascend_path2 || (ico_ascend_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M10.667 8 8 5.333 5.333 8M8 10.667V5.333"
-  })));
+  }, title) : null, ico_ascend_g || (ico_ascend_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M11 14V7H9l3-4 3 4h-2v7zM9 13H1v1h8zM7 10H1v1h6zM5 7H1v1h4zM3 4H1v1h2z"
+  }))), ico_ascend_defs || (ico_ascend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
 };
 /* ESM default export */ const ico_ascend = (SvgIcoAscend);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-descend.svg
-var ico_descend_path, ico_descend_path2;
+var ico_descend_g, ico_descend_defs;
 function ico_descend_extends() { return ico_descend_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_descend_extends.apply(null, arguments); }
 
 const SvgIcoDescend = _ref => {
@@ -4815,17 +4815,17 @@ const SvgIcoDescend = _ref => {
     "aria-labelledby": titleId
   }, props), title ? /*#__PURE__*/react.createElement("title", {
     id: titleId
-  }, title) : null, ico_descend_path || (ico_descend_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M12.667 2H3.333C2.597 2 2 2.597 2 3.333v9.334C2 13.403 2.597 14 3.333 14h9.334c.736 0 1.333-.597 1.333-1.333V3.333C14 2.597 13.403 2 12.667 2M8 5.333v5.334"
-  })), ico_descend_path2 || (ico_descend_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M5.333 8 8 10.667 10.667 8"
-  })));
+  }, title) : null, ico_descend_g || (ico_descend_g = /*#__PURE__*/react.createElement("g", {
+    fill: "currentColor",
+    clipPath: "url(#a)"
+  }, /*#__PURE__*/react.createElement("path", {
+    d: "M13 3.002v7h2l-3 4-3-4h2v-7zM3 12H1v1h2zM5 9H1v1h4zM7 6H1v1h6zM9 3H1v1h8z"
+  }))), ico_descend_defs || (ico_descend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react.createElement("path", {
+    fill: "#fff",
+    d: "M0 0h16v16H0z"
+  })))));
 };
 /* ESM default export */ const ico_descend = (SvgIcoDescend);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-setting.svg
