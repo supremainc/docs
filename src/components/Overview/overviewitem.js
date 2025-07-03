@@ -68,7 +68,7 @@ function OverviewLink({item}) {
 
   const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
   const doc = useDocById(docId);
-  const docStyle = docId.replace('platform/biostar_x/', '');
+  const docStyle = docId?.replace('platform/biostar_x/', '');
   return (
     <section className={styles.ovItem}>
       <article className={clsx('margin-bottom--lg')}>
