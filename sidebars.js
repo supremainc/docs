@@ -108,7 +108,7 @@ const sidebars = {
                 'platform/biostar_x/edit-user',
                 'platform/biostar_x/delete-user',
                 'platform/biostar_x/transfer-user-info-to-device',
-                'platform/biostar_x/delete-user-info-from-device',
+                // 'platform/biostar_x/delete-user-info-from-device',
                 'platform/biostar_x/trace-user-access-log',
                 'platform/biostar_x/export-import-user-info',
               ]
