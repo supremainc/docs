@@ -8,7 +8,7 @@
   position: relative;
   margin: 25px 0;
 }
-.calloutLists ol li > p {
+.calloutLists ol li > * {
   margin-left: 40px;
 }
 .calloutLists ol li::before {
@@ -38,7 +38,6 @@
 }
 
 .calloutLists ol ul li {
-  margin: 10px 0 10px 31px;
   padding-left: 0;
 }
 .calloutLists ol ul li p {
