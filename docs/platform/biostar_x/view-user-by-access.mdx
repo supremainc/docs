@@ -1,11 +1,19 @@
 ---
 id: view-user-by-access
 title: 출입 그룹 관리하기
-description: 출입 그룹별로 등록된 사용자를 확인하고 추가하는 방법을 안내합니다.
+description: 출입 그룹별로 사용자를 조회하고 출입 권한 구조를 탐색하는 방법을 안내합니다.
 keywords: [ 사용자, 출입 권한 ]
 ---
 
-출입 권한 그룹별로 등록한 사용자를 확인하는 방법을 안내합니다. 사용자의 출입 권한을 확인하고 사용자의 정보를 수정할 수 있습니다.
+출입 그룹을 기준으로 사용자를 조회 및 관리 방법을 안내합니다. <Cmd sid='team.tree.accessExplorer' />를 사용하여 출입 그룹별로 등록된 사용자를 확인하고, 트리 구조를 통해 출입 권한 계층을 탐색할 수 있습니다.
+
+:::info
+
+<Cmd sid='team.tree.accessExplorer' />에서 출입 그룹에 속한 출입문이나 층을 확인하려면 출입 통제 기능을 미리 설정해야 합니다. 자세한 내용은 [다음 문서](settings-access-control)를 참고하세요.
+
+:::
+
+## 출입 그룹별 사용자 확인하기 {#view-user-by-access}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
@@ -13,7 +21,7 @@ keywords: [ 사용자, 출입 권한 ]
 
     <Image src='/img/biostarx-user-access-explorer.png' />
 
-1. <Cmd>All Access Groups</Cmd>에서 원하는 출입 권한 그룹을 클릭하세요.
+1. <Cmd sid='team.user.tree.accessExplorerRootName' />에서 원하는 출입 권한 그룹을 클릭하세요.
 
 선택한 출입 권한 그룹에 속한 사용자를 사용자 목록에서 확인할 수 있습니다.
 
@@ -38,3 +46,9 @@ keywords: [ 사용자, 출입 권한 ]
       * Schedule: 스케줄
 
 :::
+
+## 출입 그룹 목록 확장/축소
+
+출입 그룹 목록을 확장하거나 축소할 수 있습니다. <Cmd sid='team.tree.accessExplorer' /> 탭에서 출입 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='common.tree.contextMenu.expandBelow' /> 또는 <Cmd sid='common.tree.contextMenu.collapseBelow' />를 클릭하세요.
+
+<Image src='/img/biostarx-user-access-explorer-tree-expand-collapse.png' />
