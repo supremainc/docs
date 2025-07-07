@@ -50,7 +50,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "SQL Server 라이선스 요구사항",
-  "id": "sql-server-라이선스-요구사항",
+  "id": "sqlserver-requriements",
   "level": 3
 }, {
   "value": "일반 사용",
@@ -245,7 +245,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "sql-server-라이선스-요구사항",
+      id: "sqlserver-requriements",
       children: "SQL Server 라이선스 요구사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["데이터베이스로 SQL Server를 사용하는 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
