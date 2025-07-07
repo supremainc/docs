@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구 사항","description":"BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구 사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/before-start"},"next":{"title":"시작하기","permalink":"/docs/platform/biostar_x/getting-started"}}')
+var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구사항","description":"BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구사항","description":"BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/before-start"},"next":{"title":"시작하기","permalink":"/docs/platform/biostar_x/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,10 +25,10 @@ var lib = __webpack_require__(65);
 
 const frontMatter = {
 	id: 'system-requirements',
-	title: '시스템 최소 요구 사항',
-	description: 'BioStar X를 설치하기 위한 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.',
+	title: '시스템 최소 요구사항',
+	description: 'BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.',
 	keywords: [
-		'시스템 최소 요구 사항',
+		'시스템 최소 요구사항',
 		'운영체제',
 		'데이터베이스',
 		'CPU',
@@ -54,11 +54,11 @@ const toc = [{
   "level": 3
 }, {
   "value": "일반 사용",
-  "id": "일반-사용",
+  "id": "general",
   "level": 4
 }, {
   "value": "BioStar X API 사용",
-  "id": "biostar-x-api-사용",
+  "id": "useapi",
   "level": 4
 }, {
   "value": "커뮤니케이션 서버",
@@ -96,7 +96,7 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), "는 대규모 엔터프라이즈 환경에서 안정적이고 확장 가능한 통합 보안 관리 솔루션을 제공합니다. 시스템은 메인 서버와 커뮤니케이션 서버로 구성되는 분산 아키텍처를 통해 최대 1,000대 이상의 장치를 효율적으로 관리할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
+      children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -123,7 +123,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "소규모 조직"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "중간 규모 조직"
+              children: "중규모 조직"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "대규모 조직"
             })]
@@ -260,7 +260,7 @@ function _createMdxContent(props) {
         }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "일반-사용",
+      id: "general",
       children: "일반 사용"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
@@ -306,7 +306,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "biostar-x-api-사용",
+      id: "useapi",
       children: "BioStar X API 사용"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
@@ -417,7 +417,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "소규모 조직"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "중간 규모 조직"
+              children: "중규모 조직"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "대규모 조직"
             })]
