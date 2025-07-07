@@ -248,7 +248,7 @@ function _createMdxContent(props) {
       id: "sql-server-라이선스-요구사항",
       children: "SQL Server 라이선스 요구사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["데이터베이스를 SQL Server를 사용하는 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["데이터베이스로 SQL Server를 사용하는 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 각 환경별 권장 라이선스 구성을 참고하여 조직의 규모와 필요에 맞는 라이선스를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
