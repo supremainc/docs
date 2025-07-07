@@ -49,6 +49,18 @@ const toc = [{
   "id": "main-server",
   "level": 2
 }, {
+  "value": "SQL Server 라이선스 요구사항",
+  "id": "sql-server-라이선스-요구사항",
+  "level": 3
+}, {
+  "value": "일반 사용",
+  "id": "일반-사용",
+  "level": 4
+}, {
+  "value": "BioStar X API 사용",
+  "id": "biostar-x-api-사용",
+  "level": 4
+}, {
   "value": "커뮤니케이션 서버",
   "id": "communication-server",
   "level": 2
@@ -62,6 +74,8 @@ function _createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
+    h4: "h4",
     li: "li",
     p: "p",
     strong: "strong",
@@ -83,6 +97,14 @@ function _createMdxContent(props) {
       }), "는 대규모 엔터프라이즈 환경에서 안정적이고 확장 가능한 통합 보안 관리 솔루션을 제공합니다. 시스템은 메인 서버와 커뮤니케이션 서버로 구성되는 분산 아키텍처를 통해 최대 1,000대 이상의 장치를 효율적으로 관리할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["라이선스 구성 및 최적화에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://support.supremainc.com",
+          children: "슈프리마 기술지원팀"
+        }), "으로 문의하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "main-server",
       children: "메인 서버"
@@ -115,9 +137,9 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "1 - 50 대"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "51 - 100 대"
+              children: "50 - 300 대"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "101 - 1,000 대"
+              children: "300 - 1,000 대"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -140,9 +162,9 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3GHz 8코어"
+              children: "2.3GHz 6코어"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3GHz 12코어"
+              children: "2.3GHz 8코어"
             }), (0,jsx_runtime.jsxs)(_components.td, {
               children: ["최소 2.3GHz", (0,jsx_runtime.jsx)("br", {}), "권장 4.0GHz 16코어"]
             })]
@@ -222,6 +244,113 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "sql-server-라이선스-요구사항",
+      children: "SQL Server 라이선스 요구사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["데이터베이스를 SQL Server를 사용하는 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 각 환경별 권장 라이선스 구성을 참고하여 조직의 규모와 필요에 맞는 라이선스를 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["SQL Server 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://www.microsoft.com/sql-server/sql-server-2022-pricing",
+          children: "Microsoft SQL Server 라이선스"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "일반-사용",
+      children: "일반 사용"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "조직"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "장치 수"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "코어 수"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "SQL Server 라이선스"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "소규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "1 - 50 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            rowSpan: "3",
+            children: "SQL Server Standard Edition (Core-based)"
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "중규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "50 - 300 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "대규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "300 - 1,000 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "biostar-x-api-사용",
+      children: "BioStar X API 사용"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "조직"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "장치 수"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "코어 수"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "SQL Server 라이선스"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "소규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "1 - 50 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            rowSpan: "3",
+            children: "SQL Server Standard Edition (Core-based)"
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "중규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "50 - 300 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "대규모 조직"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "300 - 1,000 대"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "TBD"
+          })]
+        })]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "communication-server",
       children: "커뮤니케이션 서버"
