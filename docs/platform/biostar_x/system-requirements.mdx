@@ -9,6 +9,12 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 
 메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구 사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.
 
+:::info
+
+라이선스 구성 및 최적화에 대한 자세한 내용은 [슈프리마 기술지원팀](https://support.supremainc.com)으로 문의하세요.
+
+:::
+
 
 ## 메인 서버 {#main-server}
 
@@ -18,10 +24,10 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 
 | \> | 항목 | 소규모 조직 | 중간 규모 조직 | 대규모 조직 |
 | -- | -- | -- | -- | -- |
-| 사용 환경 | 장치 수 | 1 - 50 대 | 51 - 300 대 | 301 - 1,000 대 |
+| 사용 환경 | 장치 수 | 1 - 50 대 | 50 - 300 대 | 300 - 1,000 대 |
 | 시스템 환경 | 운영체제 | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
 | ^ | 데이터베이스 | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
-| ^ | CPU | 2.3GHz 6코어 | 2.3GHz 8코어 | 최소 2.3GHz<br/>권장 4.0GHz 8코어 |
+| ^ | CPU | 2.3GHz 6코어 | 2.3GHz 8코어 | 최소 2.3GHz<br/>권장 4.0GHz 16코어 |
 | ^ | RAM | 16GB | 32GB | 최소 64GB<br/>권장 128GB |
 | ^ | SSD | 512GB | 512GB | 1TB |
 | ^ | HDD | \> | \> | <Cmd sid='common.imageLog' product='2' /> 기능을 사용 시, 1,000만 개의 이미지 로그 기준 200GB 필요 |
@@ -46,8 +52,29 @@ keywords: [ 시스템 최소 요구 사항, 운영체제, 데이터베이스, CP
 
 ### SQL Server 라이선스 요구사항
 
-**BioStar X**의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 아래 표는 각 환경별 권장 라이선스 구성을 제시합니다.
+데이터베이스를 SQL Server를 사용하는 경우, **BioStar X**의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 각 환경별 권장 라이선스 구성을 참고하여 조직의 규모와 필요에 맞는 라이선스를 선택하세요.
 
+:::info
+
+SQL Server 라이선스에 대한 자세한 내용은 [Microsoft SQL Server 라이선스](https://www.microsoft.com/sql-server/sql-server-2022-pricing)를 참고하세요.
+
+:::
+
+#### 일반 사용
+
+| 조직 | 장치 수 | 코어 수 | SQL Server 라이선스 |
+| -- | -- | -- | -- |
+| 소규모 조직 | 1 - 50 대 | TBD | SQL Server Standard Edition (Core-based) |
+| 중규모 조직 | 50 - 300 대 | TBD | ^ |
+| 대규모 조직 | 300 - 1,000 대 | TBD | ^ |
+
+#### BioStar X API 사용
+
+| 조직 | 장치 수 | 코어 수 | SQL Server 라이선스 |
+| -- | -- | -- | -- |
+| 소규모 조직 | 1 - 50 대 | TBD | SQL Server Standard Edition (Core-based) |
+| 중규모 조직 | 50 - 300 대 | TBD | ^ |
+| 대규모 조직 | 300 - 1,000 대 | TBD | ^ |
 
 
 ## 커뮤니케이션 서버 {#communication-server}
