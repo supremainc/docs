@@ -45,11 +45,15 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
 
     if (product === '2') {
       const locale = localeMap[currentLocale] || localeMap.en;
-      localeText = locale[sid] 
-        ? locale[sid]
-          .replace('<br>', ' ').replace('</br>', '').replace('<br/>', ' ')
-          .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
-        : null;
+      if (sid === 'biostar.login') {
+        localeText = locale[sid].replace('2', 'X');
+      } else {
+        localeText = locale[sid] 
+          ? locale[sid]
+            .replace('<br>', ' ').replace('</br>', '').replace('<br/>', ' ')
+            .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
+          : null;
+      }
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
