@@ -326,10 +326,17 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.ip",
             product: "2"
-          }), ": 사용자가 접속한 IP 주소 (모바일 접속 시 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "auditTrail.ip.mobile",
-            product: "2"
-          }), " 표시)"]
+          }), ": 사용자가 접속한 IP 주소"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["모바일 기기를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에 접속하면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "auditTrail.ip.mobile",
+              product: "2"
+            }), " 문구를 추가 표시합니다."]
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -488,7 +495,7 @@ function _createMdxContent(props) {
           }), " 섹션의 가장 오른쪽에 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "menu.columnSetting",
             product: "2"
-          }), "를 클릭하세요."]
+          }), "을 클릭하세요."]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
