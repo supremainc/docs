@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-system-audit-trail-mdx-ae9.json
-var site_docs_platform_biostar_x_settings_system_audit_trail_mdx_ae9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","keywords":["감사 추적","시스템 변경 이력","audit trail","로그 관리","보안 감사","시스템 모니터링"],"toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 설정하기","permalink":"/docs/platform/biostar_x/settings-system"},"next":{"title":"시스템 백업하기","permalink":"/docs/platform/biostar_x/settings-system-system-backup"}}')
+var site_docs_platform_biostar_x_settings_system_audit_trail_mdx_ae9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","keywords":["감사 추적","시스템 변경 이력","audit trail","로그 관리","보안 감사","시스템 모니터링"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 설정하기","permalink":"/docs/platform/biostar_x/settings-system"},"next":{"title":"시스템 백업하기","permalink":"/docs/platform/biostar_x/settings-system-system-backup"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -35,7 +35,6 @@ const frontMatter = {
 		'보안 감사',
 		'시스템 모니터링'
 	],
-	toc_max_heading_level: 2,
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -74,10 +73,6 @@ const toc = [{
   "value": "필터 설정",
   "id": "필터-설정",
   "level": 2
-}, {
-  "value": "필터 옵션",
-  "id": "필터-옵션",
-  "level": 3
 }, {
   "value": "필터 저장",
   "id": "필터-저장",
@@ -293,14 +288,14 @@ function _createMdxContent(props) {
       children: "감사 추적 목록을 효율적으로 탐색하기 위해 다양한 조건으로 필터링하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-list.png"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "필터-옵션",
-      children: "필터 옵션"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " 섹션에서 다음 옵션들을 설정할 수 있습니다:"]
+      }), " 섹션에서 다음 옵션들을 설정할 수 있습니다. 필터 옵션은 감사 추적 목록의 컬럼 항목과 일치합니다. 단, ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.content",
+        product: "2"
+      }), " 컬럼은 필터링할 수 없습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -368,14 +363,6 @@ function _createMdxContent(props) {
           }), ": 이벤트 발생 시의 상세 내용"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "auditTrail.content",
-          product: "2"
-        }), " 컬럼은 필터링할 수 없습니다."]
-      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "필터-저장",
       children: "필터 저장"
