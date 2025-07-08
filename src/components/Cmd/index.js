@@ -45,7 +45,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
 
     if (product === '2') {
       const locale = localeMap[currentLocale] || localeMap.en;
-      if (sid === 'biostar.login') {
+      if (sid === 'biostar.login' || sid === 'audit.setting.server.server_addr' || sid === 'audit.setting.server.server_port') {
         localeText = locale[sid].replace('2', 'X');
       } else {
         localeText = locale[sid] 
