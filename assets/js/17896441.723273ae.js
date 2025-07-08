@@ -917,7 +917,7 @@ const ReplacementLocaleText = (param)=>{
         // 현재 로케일에 해당하는 locale을 사용, 없으면 기본은 영어
         if (product === '2') {
             const locale = localeMap[currentLocale] || localeMap.en;
-            if (sid === 'biostar.login') {
+            if (sid === 'biostar.login' || sid === 'audit.setting.server.server_addr' || sid === 'audit.setting.server.server_port') {
                 localeText = locale[sid].replace('2', 'X');
             } else {
                 localeText = locale[sid] ? locale[sid].replace('<br>', ' ').replace('</br>', '').replace('<br/>', ' ').replace('\\xB0\\x43', "\u2103").replace('\\xB0\\x46', "\u2109") : null;
