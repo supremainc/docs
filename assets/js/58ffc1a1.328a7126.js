@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-system-system-restore-mdx-58f.json
-var site_docs_platform_biostar_x_settings_system_system_restore_mdx_58f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-system-restore","title":"시스템 복원하기","description":"BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-system-system-restore.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-system-restore","permalink":"/docs/platform/biostar_x/settings-system-system-restore","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-system-restore.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-system-restore","title":"시스템 복원하기","description":"BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다.","keywords":["시스템 복원"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 백업하기","permalink":"/docs/platform/biostar_x/settings-system-system-backup"},"next":{"title":"시스템 보안 설정하기","permalink":"/docs/platform/biostar_x/settings-system-security"}}')
+var site_docs_platform_biostar_x_settings_system_system_restore_mdx_58f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-system-restore","title":"시스템 복원하기","description":"시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-system-system-restore.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-system-restore","permalink":"/docs/platform/biostar_x/settings-system-system-restore","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-system-restore.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-system-restore","title":"시스템 복원하기","description":"시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.","keywords":["시스템 복원","restore","백업 복원","데이터 복구","BioStar X Restore"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 백업하기","permalink":"/docs/platform/biostar_x/settings-system-system-backup"},"next":{"title":"시스템 보안 설정하기","permalink":"/docs/platform/biostar_x/settings-system-security"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,9 +26,13 @@ var lib = __webpack_require__(65);
 const frontMatter = {
 	id: 'settings-system-system-restore',
 	title: '시스템 복원하기',
-	description: 'BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다.',
+	description: '시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.',
 	keywords: [
-		'시스템 복원'
+		'시스템 복원',
+		'restore',
+		'백업 복원',
+		'데이터 복구',
+		'BioStar X Restore'
 	],
 	isTranslationMissing: false
 };
@@ -43,7 +47,10 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
+    code: "code",
+    em: "em",
     li: "li",
     ol: "ol",
     p: "p",
@@ -51,37 +58,52 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, Start} = _components;
+  }, {IcInfo, Image, Start} = _components;
+  if (!IcInfo) _missingMdxReference("IcInfo", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 되돌릴 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-system-system-backup",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "MSSQL 데이터베이스와 BioStar X가 서로 다른 PC에 설치되어 있는 경우 BioStar X 시스템 백업 및 복원을 사용할 수 없습니다."
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["SQL Server 데이터베이스와 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "가 서로 다른 서버에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), " 시스템 백업 및 복원을 사용할 수 없습니다."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X Restore"
           }), "를 실행하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "프로그램 경로: C:\\Program Files\\BioStar X\\biostar-restore.exe"
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["프로그램 경로: ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "C:\\Program Files\\BioStar X\\biostar-restore.exe"
+            })]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Select File"
-          }), "을 클릭해 저장한 백업 파일을 선택한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Restore"
-          }), "를 클릭하면 복원이 시작됩니다."]
+          }), " 버튼을 클릭하고 복원할 백업 파일을 선택하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/setting-system-restore.png",
           className: "none",
@@ -89,19 +111,41 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Starting Biostar services...Done"
-          }), " 문구가 출력되며 복원이 완료됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar X에 재접속하세요."
+          children: ["복원을 시작하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Restore"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Starting Biostar services...Done"
+      }), " 메시지가 나타나면 복원이 완료된 상태입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 접속해 복원된 데이터를 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "백업 시점의 BioStar X 버전과 현재 버전이 다를 경우 복원이 진행되지 않습니다."
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["백업 시점의 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 버전과 현재 버전이 다를 경우 복원을 진행할 수 없습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 버전을 확인하려면 화면 오른쪽 최상단의 ", (0,jsx_runtime.jsx)(IcInfo, {}), " 버튼을 클릭하세요."]
+          }), "\n", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/biostarx-settings-system-restore-check-ver.png"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["백업 시점의 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 버전을 확인하려면 백업 파일의 압축을 해제하고, ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "sysbackup.conf"
+            }), " 파일의 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "biostarVersion"
+            }), " 값을 확인하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });

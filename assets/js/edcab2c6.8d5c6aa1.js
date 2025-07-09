@@ -110,7 +110,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["SQL Server 데이터베이스와 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "가 서로 다른 PC에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), "가 서로 다른 서버에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), " 시스템 백업 및 복원을 사용할 수 없습니다."]
           }), "\n"]

@@ -499,7 +499,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "열 목록에서 숨기려는 항목의 체크박스를 클릭하세요."
+              children: "열 목록에서 숨기고 싶은 항목의 체크박스 선택을 해제하세요."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
