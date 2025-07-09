@@ -421,64 +421,64 @@ function _createMdxContent(props) {
       id: "각-부분의-명칭-및-기능",
       children: "각 부분의 명칭 및 기능"
     }), "\n", (0,jsx_runtime.jsxs)(Productpart, {
-      src: "/img/device/name-function-each-part-bs3.svg",
+      src: "/img/device/name-function-each-part-bs3.png",
       maxHeight: 570,
       maxWidth: 570,
       children: [(0,jsx_runtime.jsxs)(Callout, {
-        width: 160,
+        width: 180,
         position: "left",
         children: [(0,jsx_runtime.jsx)(Item, {
-          top: 33,
+          top: 55,
           children: "마이크"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 136,
+          top: 148,
           children: "디스플레이"
         }), (0,jsx_runtime.jsxs)(Item, {
-          top: 236,
+          top: 240,
           children: ["RF 카드 및 모바일", (0,jsx_runtime.jsx)("br", {}), "출입카드 인식부"]
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 347,
+          top: 345,
           children: "스피커"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 396,
+          top: 380,
           children: "이더넷"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 428,
+          top: 418,
           children: "USB 확장 포트 (5핀)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 468,
+          top: 438,
           children: "RS-485 (4핀)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 491,
+          top: 457,
           children: "릴레이 (3핀)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 524,
+          children: "USB (Type-C) 메모리 슬롯"
         })]
       }), (0,jsx_runtime.jsxs)(Callout, {
-        width: 160,
+        width: 180,
         position: "right",
         children: [(0,jsx_runtime.jsx)(Item, {
-          top: 10,
+          top: 23,
           children: "적외선 카메라"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 47,
+          top: 53,
           children: "비주얼 카메라"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 248,
+          top: 251,
           children: "LED 상태 표시등"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 411,
+          top: 403,
           children: "TTL 입력 (5핀)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 434,
+          top: 425,
           children: "Wiegand 출력 (4핀)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 454,
+          top: 446,
           children: "Wiegand 입력 (4핀)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 477,
+          top: 462,
           children: "전원 (2핀)"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 539,
-          children: "USB (Type-C) 메모리 슬롯"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

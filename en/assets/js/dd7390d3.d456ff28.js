@@ -421,64 +421,64 @@ function _createMdxContent(props) {
       id: "name-and-function-of-each-part",
       children: "Name and Function of Each Part"
     }), "\n", (0,jsx_runtime.jsxs)(Productpart, {
-      src: "/img/device/name-function-each-part-bs3.svg",
+      src: "/img/device/name-function-each-part-bs3.png",
       maxHeight: 570,
       maxWidth: 570,
       children: [(0,jsx_runtime.jsxs)(Callout, {
-        width: 160,
+        width: 180,
         position: "left",
         children: [(0,jsx_runtime.jsx)(Item, {
-          top: 33,
+          top: 55,
           children: "Microphone"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 136,
+          top: 148,
           children: "Display"
         }), (0,jsx_runtime.jsxs)(Item, {
-          top: 236,
+          top: 240,
           children: ["RF card and mobile access", (0,jsx_runtime.jsx)("br", {}), "card authentication unit"]
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 347,
+          top: 345,
           children: "Speaker"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 396,
+          top: 380,
           children: "Ethernet"
         }), (0,jsx_runtime.jsxs)(Item, {
-          top: 428,
+          top: 418,
           children: ["USB expansion port", (0,jsx_runtime.jsx)("br", {}), "(5-pin)"]
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 468,
+          top: 438,
           children: "RS-485 (4-pin)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 491,
+          top: 457,
           children: "Relay (3-pin)"
+        }), (0,jsx_runtime.jsx)(Item, {
+          top: 524,
+          children: "USB (Type-C) memory slot"
         })]
       }), (0,jsx_runtime.jsxs)(Callout, {
-        width: 160,
+        width: 180,
         position: "right",
         children: [(0,jsx_runtime.jsx)(Item, {
-          top: 10,
+          top: 23,
           children: "Infrared camera"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 47,
+          top: 53,
           children: "Visual camera"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 248,
+          top: 251,
           children: "LED indicator"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 411,
+          top: 403,
           children: "TTL input (5-pin)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 434,
+          top: 425,
           children: "Wiegand output (4-pin)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 454,
+          top: 446,
           children: "Wiegand input (4-pin)"
         }), (0,jsx_runtime.jsx)(Item, {
-          top: 477,
+          top: 462,
           children: "Power supply (2-pin)"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 539,
-          children: "USB (Type-C) memory slot"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
