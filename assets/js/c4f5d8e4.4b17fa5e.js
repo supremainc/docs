@@ -259,7 +259,7 @@ const SvgGsdk = _ref => {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgGsdk);
 
 }),
-2116: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+459: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -1016,14 +1016,6 @@ function Home() {
                     className: (0,clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
-                        children: "Developers"
-                    })
-                }),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)(ExternalLinkCard, {}),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                        as: "h2",
                         children: "Biometric Devices"
                     })
                 }),
@@ -1043,7 +1035,15 @@ function Home() {
                         children: "Intelligent Controller"
                     })
                 }),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)(IntenlligentController, {})
+                /*#__PURE__*/ (0,jsx_runtime.jsx)(IntenlligentController, {}),
+                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
+                        as: "h2",
+                        children: "Developers"
+                    })
+                }),
+                /*#__PURE__*/ (0,jsx_runtime.jsx)(ExternalLinkCard, {})
             ]
         })
     });
