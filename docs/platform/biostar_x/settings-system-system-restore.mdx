@@ -1,32 +1,42 @@
 ---
 id: settings-system-system-restore
 title: 시스템 복원하기
-description: BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다.
-keywords: [시스템 복원]
+description: 시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.
+keywords: [시스템 복원, restore, 백업 복원, 데이터 복구, BioStar X Restore]
 ---
 
-BioStar X가 정상적으로 동작하지 않을 경우 BioStar X Restore 프로그램을 이용하여 백업해 둔 파일로 복원 지점을 선택하여 복원할 수 있습니다.
+**BioStar X**에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 되돌릴 수 있습니다.
 
-:::info
+:::caution
 
-MSSQL 데이터베이스와 BioStar X가 서로 다른 PC에 설치되어 있는 경우 BioStar X 시스템 백업 및 복원을 사용할 수 없습니다.
+복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 [다음 문서](settings-system-system-backup)를 참고하세요.
 
 :::
 
-1. <Start/> → **BioStar X** → **BioStar X Restore**를 실행하세요.
+:::info
 
-    * 프로그램 경로: C:\Program Files\BioStar X\biostar-restore.exe
+SQL Server 데이터베이스와 **BioStar X**가 서로 다른 서버에 설치되어 있다면 **BioStar X** 시스템 백업 및 복원을 사용할 수 없습니다.
 
-1. **Select File**을 클릭해 저장한 백업 파일을 선택한 뒤 **Restore**를 클릭하면 복원이 시작됩니다.
+:::
+
+1. Windows에서 <Start/> → **BioStar X** → **BioStar X Restore**를 실행하세요.
+
+    * 프로그램 경로: *C:\Program Files\BioStar X\biostar-restore.exe*
+
+1. **Select File** 버튼을 클릭하고 복원할 백업 파일을 선택하세요.
 
     <Image src='/img/common/setting-system-restore.png' className='none' alone />
 
-1. **Starting Biostar services...Done** 문구가 출력되며 복원이 완료됩니다.
+1. 복원을 시작하려면 **Restore** 버튼을 클릭하세요. 
 
-1. BioStar X에 재접속하세요.
+**Starting Biostar services...Done** 메시지가 나타나면 복원이 완료된 상태입니다. **BioStar X**에 접속해 복원된 데이터를 확인하세요.
 
 :::info
 
-백업 시점의 BioStar X 버전과 현재 버전이 다를 경우 복원이 진행되지 않습니다.
+* 백업 시점의 **BioStar X** 버전과 현재 버전이 다를 경우 복원을 진행할 수 없습니다. **BioStar X**의 버전을 확인하려면 화면 오른쪽 최상단의 <IcInfo /> 버튼을 클릭하세요.
+
+  <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
+
+* 백업 시점의 **BioStar X** 버전을 확인하려면 백업 파일의 압축을 해제하고, *sysbackup.conf* 파일의 `biostarVersion` 값을 확인하세요.
 
 :::
