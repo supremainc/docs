@@ -114,11 +114,7 @@ export default function Home() {
       description={`${siteConfig.tagline}`}>
       <main className={styles.heroLayout}>
         <HomepageHeader />
-        <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Developers</Heading>
-        </div>
-        <ExternalLinkCard />
-        
+
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Biometric Devices</Heading>
         </div>
@@ -133,6 +129,11 @@ export default function Home() {
           <Heading as='h2'>Intelligent Controller</Heading>
         </div>
         <IntenlligentController />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>Developers</Heading>
+        </div>
+        <ExternalLinkCard />
       </main>
     </Layout>
   );
