@@ -11,6 +11,7 @@ import { liteClient as algoliasearch } from 'algoliasearch/lite';
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
 import BioStarLogo from '@site/static/img/logo-biostar-x.svg';
+import Paxton from '@site/static/img/integration/paxton-logo.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -106,6 +107,22 @@ function HomepageHeader() {
   );
 }
 
+function Integration() {
+  return (
+    <div className={clsx('container', styles.grid, styles.integration)}>
+      <div>
+        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div>
+      {/* <div>
+        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div>
+      <div>
+        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div> */}
+    </div>
+  )
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -129,6 +146,11 @@ export default function Home() {
           <Heading as='h2'>Intelligent Controller</Heading>
         </div>
         <IntenlligentController />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>Integrations</Heading>
+        </div>
+        <Integration />
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Developers</Heading>

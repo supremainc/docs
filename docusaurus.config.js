@@ -172,7 +172,7 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: 'Integration',
+            label: 'Integrations',
             position: 'right',
             items: [
               {

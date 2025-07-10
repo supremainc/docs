@@ -61,6 +61,13 @@ a.banner {
   gap: 1rem;
 }
 
+.integration {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  grid-gap: 1rem;
+  padding: 1rem 15px;
+}
+
 @media screen and (max-width: 1160px) {
   .containerRef {
     grid-template-columns: 1fr;
