@@ -177,7 +177,7 @@ const config = {
             items: [
               {
                 type: 'doc',
-                label: 'Paxton Integration',
+                label: 'Paxton',
                 docId: 'integration/paxton_2.0/introduction'
               }
             ]
