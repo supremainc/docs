@@ -507,6 +507,24 @@ const sidebars = {
       ],
     },
   ],
+  dom: [
+    {
+      type: 'category',
+      label: 'Paxton Integration',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        'integration/paxton_2.0/introduction',
+        'integration/paxton_2.0/installation',
+        'integration/paxton_2.0/installing-biostar2',
+        'integration/paxton_2.0/settings',
+        'integration/paxton_2.0/enrollment-helper-client',
+        'integration/paxton_2.0/troubleshooting',
+        'integration/paxton_2.0/appendices',
+      ]
+    }
+  ]
 };
 
 export default sidebars;
