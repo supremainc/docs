@@ -1,0 +1,80 @@
+---
+id: enrollment-helper-client
+title: Enrollment Helper Client
+---
+
+The Enrollment Helper provides an enrollment window for fingerprints and faces on the Net2 Access Control system. If you install the Enrollment Helper, you can enroll fingerprints and faces by opening a window for enrollment directly from the Net2 Access Control system.
+
+:::info
+
+The enrollment helper is automatically installed with the installation of the integration.
+
+:::
+
+## Enroll Credentials with Enrollment Helper
+
+You can enroll fingerprints and faces for both existing and new users.
+
+### Enroll Credentials to Existing User
+
+1. Run **Net2 Access Control**.
+
+1. Click **Users** menu and select the user to enroll fingerprints or faces on the user list.
+
+1. Click **Tokens** and then click **Add Biometric**.
+
+    <Image src='/img/integration/enroll-credential-existing-user3.png' alone />
+
+1. Click **Login** after entering the Username and Password for BioStar 2.
+
+    <Image src='/img/integration/enroll-credential-existing-user4.png' alone />
+
+    :::info
+
+    * A user can login with an account that exists in BioStar 2. A login session is remembered, so you will not have to continuously log in, this uses the session timeout value from BioStar 2.
+
+    * Click <Image src='/img/integration/ico-enroll-credential-existing-user-setting.png' ico /> to change the BioStar 2 Address and port. You can also enter an SMTP password if QR email is used. There is also an option if IR face is being used (FS2/FL devices).
+
+    <Image src='/img/integration/enroll-credential-existing-user4-1.png' alone />
+
+    :::
+
+1. Fingerprints can be enrolled from the first section, faces from the second section. User information will automatically populate below the Suprema logo. There will also be a prompt at bottom if user has existing enrollments.
+
+    <Image src='/img/integration/enroll-credential-existing-user5.png' alone />
+
+1. You can select either a USB device or Network connected device (Devices in BioStar 2) to complete the fingerprint enrollment, you can also select a Quality limit on the received fingerprint, any existing fingerprints will appear in the list before **New**, selecting **New** will enroll a new fingerprint, selecting any of the numbers will remove and re-enroll that fingerprint.
+
+    <Image src='/img/integration/enroll-credential-existing-user6.png' alone />
+
+1. Once scanned, fingerprint view will show a live version of the fingerprint, then turns green if accepted, press confirm to register to the user.
+
+    <Image src='/img/integration/enroll-credential-existing-user7.png' alone />
+
+1. There are two options for the facial enrollment, a device connected to BioStar 2 can be used, or a visual email can be sent. For device enrollment, selecting from list and then **Scan Face** will prompt for a scan. With output displayed in the middle. Pressing **Confirm** will complete the enrollment.
+
+    <Image src='/img/integration/enroll-credential-existing-user8.png' alone />
+
+1. For visual email, this requires email setup previously done in BioStar 2/Settings Editor, if setup correctly, this will prompt **Successfully sent enrollment email**, you can press **Exit** after email has been sent.
+
+    <Image src='/img/integration/enroll-credential-existing-user9.png' alone />
+
+1. Lastly, there is **Send QR Email**, this uses an SMTP client within the enrollment helper itself, so will need a copy of the SMTP password (Mentioned in tip earlier), this also requires an existing token number to be registered to the user in Net2. If successful, QR will prompt as sent, you can then press **Exit**.
+
+    <Image src='/img/integration/enroll-credential-existing-user10.png' alone />
+
+    <Image src='/img/integration/enroll-credential-existing-user10-1.png' alone />
+
+### Enroll Credentials to New User
+
+1. Run **Net2 Access Control**.
+
+1. Click **Users** menu and double-click <Image src='/img/integration/ico-enroll-credentials-new-user.png' ico /> New user.
+
+1. Enter the user information to add and click **Add Biometric**.
+
+    <Image src='/img/integration/enroll-credentials-new-user3.png' alone />
+
+1. The rest of enrollment is similar to above, but because the user is a **New User**, the user will not have an email within BioStar 2, so both email options are disabled, if email is required, first add user in Net2 with Email then wait for sync to BioStar 2.
+
+    <Image src='/img/integration/enroll-credentials-new-user4.png' alone />
