@@ -171,6 +171,18 @@ const config = {
             ]
           },
           {
+            type: 'dropdown',
+            label: 'Integration',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'Paxton Integration',
+                docId: 'integration/paxton_2.0/introduction'
+              }
+            ]
+          },
+          {
             type: 'doc',
             label: 'Reference',
             position: 'right',
