@@ -45,8 +45,8 @@ const toc = [{
   "id": "일광-절약-시간-추가",
   "level": 2
 }, {
-  "value": "일광 절약 시간 편집",
-  "id": "일광-절약-시간-편집",
+  "value": "일광 절약 시간 수정",
+  "id": "일광-절약-시간-수정",
   "level": 2
 }, {
   "value": "일광 절약 시간 삭제",
@@ -134,7 +134,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["추가한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -145,7 +145,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["사용 중인 일광 절약 시간 설정은 편집하거나 삭제할 수 없습니다. 사용 중인 일광 절약 시간 설정은 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["사용 중인 일광 절약 시간 설정은 수정하거나 삭제할 수 없습니다. 사용 중인 일광 절약 시간 설정은 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "shell.header.setting"
             }), " → ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "common.preference",
@@ -162,12 +162,12 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "일광-절약-시간-편집",
-      children: "일광 절약 시간 편집"
+      id: "일광-절약-시간-수정",
+      children: "일광 절약 시간 수정"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["현재 사용 중인 설정은 편집할 수 없습니다. 편집하려면 먼저 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["현재 사용 중인 설정은 수정할 수 없습니다. 수정하려면 먼저 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "shell.header.setting"
         }), " → ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.preference",
@@ -197,7 +197,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["일광 절약 시간 목록 중 편집할 항목의 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하세요."]
+          children: ["일광 절약 시간 목록 중 수정할 항목의 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -217,7 +217,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정한 내용을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["수정한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -267,7 +267,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["삭제한 내용을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["삭제한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
