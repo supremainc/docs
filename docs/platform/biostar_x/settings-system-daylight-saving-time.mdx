@@ -1,26 +1,86 @@
 ---
 id: settings-system-daylight-saving-time
 title: 일광 절약 시간 설정하기
-description: 일광 절약 시간(DST)은 자연 일광을보다 잘 활용하기 위해 시간을 조정하는 기능입니다.
+description: 일광 절약 시간(Daylight Saving Time, DST)을 설정하여 현지 법정 시간에 맞춰 시스템 시간을 자동으로 조정할 수 있습니다.
 keywords: [일광 절약 시간]
 ---
 
-<Cmd sid='common.dst' product='2' />(DST)은 자연 일광을보다 잘 활용하기 위해 시간을 조정하는 기능입니다.
-
-1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
-
-1. 화면 왼쪽 사이드바에서 <Cmd sid='common.dst' product='2' />을 클릭하세요.
-
-1. <Cmd sid="button.plusAdd" product='2' />를 클릭하세요.
-
-1. 각 항목을 설정한 뒤 <Cmd sid="button.add" product='2' />를 클릭하세요.
-
-    <Image src='/img/biostarx-settings-system-daylight-saving-time.png' className='none' />
-
-1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+[일광 절약 시간(Daylight Saving Time, DST)](../../reference/glossary#dst)을 설정하여 현지 법정 시간에 맞춰 시스템 시간을 자동으로 조정할 수 있습니다. 이를 통해 출입 기록의 정확성을 보장하고 다른 시스템과의 시간 동기화 문제를 방지할 수 있습니다.
 
 :::info
 
-이미 사용 중인 일광 절약 시간은 편집하거나 삭제할 수 없습니다.
+아래와 같은 경우에 일광 절약 시간을 설정하세요.
+
+* 일광 절약 시간을 채택한 국가나 지역에서 시스템을 운영하는 경우
+
+* 근태 관리 시스템과 연동하여 정확한 출입 시간을 기록해야 하는 경우
+
+* 여러 시간대에 걸쳐 운영되는 통합 보안 시스템을 관리하는 경우
 
 :::
+
+## 일광 절약 시간 추가
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' />을 클릭하세요.
+
+1. <Cmd sid="button.plusAdd" product='2' /> 버튼을 클릭하세요.
+
+1. 각 항목을 설정하고 <Cmd sid="button.add" product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-system-daylight-saving-time.png' className='none' />
+
+1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 사용 중인 일광 절약 시간 설정은 편집하거나 삭제할 수 없습니다. 사용 중인 일광 절약 시간 설정은 <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> 메뉴에서 확인할 수 있습니다. 
+
+* 추가한 일광 절약 시간 설정을 시스템에 적용하는 자세한 내용은 [다음 문서](settings-preferences#language-timezone)를 참고하세요.
+
+:::
+
+
+## 일광 절약 시간 편집
+
+:::info
+
+현재 사용 중인 설정은 편집할 수 없습니다. 편집하려면 먼저 <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> 메뉴의 <Cmd sid='preference.languageTimezone' product='2' /> 섹션에서 선택을 해제하세요.
+
+:::
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' />을 클릭하세요.
+
+1. 일광 절약 시간 목록 중 편집할 항목의 <IcEdit /> 버튼을 클릭하세요.
+
+1. <Cmd sid='setting.dst.alert.edit.title' product='2' /> 창이 나타나면 원하는 항목을 수정하세요.
+
+    <Image src='/img/biostarx-settings-system-daylight-saving-time-edit.png' />
+
+1. 수정을 완료하면 <Cmd sid='button.edit' product='2' /> 버튼을 클릭하세요.
+
+1. 수정한 내용을 저장하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+일광 절약 시간 설정을 시스템에 적용하는 자세한 내용은 [다음 문서](settings-preferences#language-timezone)를 참고하세요.
+
+:::
+
+
+## 일광 절약 시간 삭제
+
+사용하지 않는 일광 절약 시간 설정을 삭제하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' />을 클릭하세요.
+
+1. 일광 절약 시간 목록 중 삭제할 항목의 <IcTrash2 /> 버튼을 클릭하세요.
+
+1. 확인 메시지가 나타나면 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+1. 삭제한 내용을 저장하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
