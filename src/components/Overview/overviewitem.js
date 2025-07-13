@@ -107,7 +107,7 @@ function OverviewLink({item}) {
         ) : (
           <div className={styles.desc}>
             {doc?.description && (
-              <p dangerouslySetInnerHTML={{__html: doc.description}} />
+              <p dangerouslySetInnerHTML={{__html: doc.description.replace(/Release(\d\d)/g, 'Release $1')}} />
             )}
           </div>
         )}
