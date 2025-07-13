@@ -3136,7 +3136,7 @@ function OverviewLink(param) {
                     className: Overview_styles_module.desc,
                     children: doc?.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
                         dangerouslySetInnerHTML: {
-                            __html: doc.description
+                            __html: doc.description.replace(/Release(\d\d)/g, 'Release $1')
                         }
                     })
                 })
