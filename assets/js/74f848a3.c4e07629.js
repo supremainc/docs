@@ -327,17 +327,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
@@ -368,7 +368,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -404,22 +404,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "Add on"
             })]
           })]
         })]
