@@ -1,0 +1,32 @@
+---
+id: settings
+title: Settings
+---
+
+## Link Devices
+
+The link devices section is used to link BioStar 2 devices to DOM devices, so that an authentication success event will activate the DOM lock, This will require devices to be added within BioStar 2 already, the linking window will then pull the BioStar readers. All you need to do is select the BioStar reader that will be used to authenticate, then the DOM reader you wish to activate. (This will only work with online devices, as the door open command is sent via RFNM to the online device).
+
+<Image src='/img/integration/link-devices.png' alone />
+
+## Binding DOM Locks
+
+This portion of the SettingsEditor will only become visible once the tapkey site has been linked, This also requires readers to be registered via DomPloy or the Dom Service app:
+
+<Image src='/img/integration/binding-dom-locks.png' alone />
+
+**Start Binding DOM Locks** will send the initial binding data down to the device, after pressing this button, Online devices should update automatically, offline devices will need to be synced with the DOM Service app.
+
+Once the secondary binding data has been uploaded back to the DOM Bridge, you can then choose **Finish Binding DOM Locks** to finish the binding, this will add the lock information into tapkey.
+
+There is also a section to rename devices on tapkey (This is what they will appear as on the Dom Key app):
+
+<Image src='/img/integration/binding-dom-locks1.png' alone />
+
+## Creating and Revoking Grants
+
+Grants are now handled automatically by the Tapkey sync process, but there is also the option to manually add and remove grants via the settings editor too, to add grants, you just need to select the specific lock, then select one or multiple users to send the grant out to. To revoke grants, you do not need to select lock (All grants will be revoked), you can just select one or multiple users.
+
+<Image src='/img/integration/creating-reviking-grants.png' alone />
+
+<Image src='/img/integration/creating-reviking-grants1.png' alone />

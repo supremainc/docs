@@ -507,7 +507,7 @@ const sidebars = {
       ],
     },
   ],
-  dom: [
+  paxton: [
     {
       type: 'category',
       label: 'Paxton Integration',
@@ -549,6 +549,23 @@ const sidebars = {
             'integration/paxton_2.0/revision-notes/200',
           ],
         },
+      ],
+    },
+  ],
+  dom: [
+    {
+      type: 'category',
+      label: 'DOM Integration',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        'integration/dom/introduction',
+        'integration/dom/installation',
+        'integration/dom/installing-biostar2',
+        'integration/dom/settings',
+        'integration/dom/domploy',
+        'integration/dom/appendices',
       ],
     },
   ],
