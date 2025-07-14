@@ -103,7 +103,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "에 추가하지 않은 커스텀 사용자 필드 정보가 있다면 CSV 파일을 올바르게 가져올 수 없습니다. 커스텀 사용자 필드를 추가하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#user-and-device-management",
+              href: "settings-server-server#custom-field",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

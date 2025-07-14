@@ -280,7 +280,7 @@ function _createMdxContent(props) {
               sid: "setting.userDevice.useridType",
               product: "2"
             }), " 옵션에 따라 설정할 수 있는 값이 다를 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#user-and-device-management",
+              href: "settings-server-server#userid-type",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -379,7 +379,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "team.userTemplate.table.customField"
             }), " 추가 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#user-and-device-management",
+              href: "settings-server-server#custom-field",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

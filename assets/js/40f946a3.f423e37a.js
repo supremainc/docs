@@ -131,7 +131,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "의 사용자 ID 종류가 영숫자로 설정된 경우 일부 장치를 사용할 수 없거나 제약 사항이 발생할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#user-and-device-management",
+              href: "settings-server-server#userid-type",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

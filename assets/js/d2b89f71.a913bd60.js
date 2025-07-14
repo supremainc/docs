@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-server-server-mdx-d2b.json
-var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.","keywords":["서버 설정","사용자 관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/platform/biostar_x/settings-server-https"}}')
+var site_docs_platform_biostar_x_settings_server_server_mdx_d2b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-server-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-server","permalink":"/docs/platform/biostar_x/settings-server-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-server.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-server","title":"서버 상세 설정하기","description":"BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 안내합니다.","keywords":["서버 설정","사용자 관리","장치 관리","서버 매칭","시스템 로그"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 설정하기","permalink":"/docs/platform/biostar_x/settings-server"},"next":{"title":"HTTPS 인증서 설정하기","permalink":"/docs/platform/biostar_x/settings-server-https"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,10 +26,13 @@ var lib = __webpack_require__(65);
 const frontMatter = {
 	id: 'settings-server-server',
 	title: '서버 상세 설정하기',
-	description: 'BioStar X 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다.',
+	description: 'BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 안내합니다.',
 	keywords: [
 		'서버 설정',
-		'사용자 관리'
+		'사용자 관리',
+		'장치 관리',
+		'서버 매칭',
+		'시스템 로그'
 	],
 	isTranslationMissing: false
 };
@@ -50,23 +53,19 @@ const toc = [{
   "id": "user-and-device-management",
   "level": 2
 }, {
-  "value": "사용자 정보 동기화",
-  "id": "user-sync",
+  "value": "AoC 카드 설정",
+  "id": "aoc-card-setting",
   "level": 3
 }, {
-  "value": "지문 템플릿 형식",
-  "id": "지문-템플릿-형식",
-  "level": 3
-}, {
-  "value": "사용자 아이디 종류",
-  "id": "사용자-아이디-종류",
+  "value": "기타",
+  "id": "other-settings",
   "level": 3
 }, {
   "value": "서버 매칭 설정하기",
   "id": "servermatching",
   "level": 2
 }, {
-  "value": "시스템 로그 단계 설정하기",
+  "value": "시스템 로그 단계 설정",
   "id": "systemloglevel",
   "level": 2
 }, {
@@ -87,16 +86,18 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Details, IcDown, Image} = _components;
+  }, {Cmd, Details, DocLink, IcDown, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
+  if (!DocLink) _missingMdxReference("DocLink", true);
   if (!IcDown) _missingMdxReference("IcDown", true);
+  if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버 정보와 사용자 관리, 장치 관리, 자동 업그레이드에 대한 설정을 변경할 수 있습니다."]
+      }), " 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -228,19 +229,23 @@ function _createMdxContent(props) {
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "user-sync",
-      children: "사용자 정보 동기화"
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.automaticUserSync",
+        product: "2",
+        className: "normal"
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.automaticUserSync",
         product: "2"
-      }), " 옵션에서는 서버와 장치간에 사용자 정보를 동기화하는 방법을 선택할 수 있습니다."]
+      }), " 옵션에서는 서버와 장치 간에 사용자 정보를 동기화하는 방법을 선택할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.syncOption.allDevices",
             product: "2"
-          }), ": 사용자 정보를 서버와 장치간에 자동 동기화됩니다."]
+          }), ": 사용자 정보가 서버와 장치 간에 자동으로 동기화됩니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -319,13 +324,17 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "지문-템플릿-형식",
-      children: "지문 템플릿 형식"
+      id: "fingerprint-template-format",
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.fingerprintTemplateFormat",
+        product: "2",
+        className: "normal"
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.fingerprintTemplateFormat",
         product: "2"
-      }), " 옵션에서는 지문 템플릿 형식을 선택할 수 있습니다. 아래 항목 중 원하는 항목을 선택하세요."]
+      }), " 옵션에서는 지문 템플릿 형식을 선택할 수 있습니다. 다음 항목에서 선택하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -352,8 +361,12 @@ function _createMdxContent(props) {
         children: "장치에 사용자 지문 템플릿이 남아 있다면 다른 형식으로 변경할 수 없습니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-아이디-종류",
-      children: "사용자 아이디 종류"
+      id: "userid-type",
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.userDevice.useridType",
+        product: "2",
+        className: "normal"
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.userDevice.useridType",
@@ -364,76 +377,315 @@ function _createMdxContent(props) {
       }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.userDevice.useridType.alphanumeric",
         product: "2"
-      }), "로 선택할 수 있습니다."]
+      }), "로 선택할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버에 등록된 장치 목록을 확인하고 호환되는 설정값을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(Details, {
+      children: [(0,jsx_runtime.jsxs)("summary", {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.userDevice.useridType",
+          product: "2"
+        }), "를 변경할 수 있는 장치와 펌웨어 버전 보기"]
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "CoreStation 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "FaceStation 2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "FaceLite 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry W2 펌웨어 1.1.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation L2 펌웨어 1.2.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation A2 펌웨어 1.3.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation 2 펌웨어 1.4.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioLite N2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry P2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioEntry R2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "XPass 2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "XPass D2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "XPass 펌웨어 2.4.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "XPass S2 펌웨어 2.4.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "X-Station 2 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStation 3 펌웨어 1.0.0 이상"
+          }), "\n"]
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), " 서버에 등록된 장치 목록을 확인하고 호환되는 설정값을 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.userDevice.useridType.alphanumeric",
-          product: "2"
-        }), "를 선택하면 BioLite Net, BioEntry Plus, BioEntry W 모델에서는 사용할 수 없습니다. 또한, XPass와 XPass S2 모델에 저장된 사용자가 모두 삭제되고, 네트워크를 제외한 모든 설정이 초기화됩니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.userDevice.useridType.alphanumeric",
+              product: "2"
+            }), "를 선택하면 BioLite Net, BioEntry Plus, BioEntry W 모델에서는 사용할 수 없습니다. 또한, XPass와 XPass S2 모델에 저장된 사용자가 모두 삭제되고, 네트워크를 제외한 모든 설정이 초기화됩니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.userDevice.useridType.alphanumeric",
+              product: "2"
+            }), "에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.userDevice.useridType.numeric",
+              product: "2"
+            }), "로 변경하면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에 등록한 모든 사용자 정보를 삭제해야 합니다."]
+          }), "\n"]
+        }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "enrollment-device",
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.enrollment_device.title",
+        product: "2",
+        className: "normal"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["지문이나 얼굴, 카드를 등록할 때 자주 사용하는 장치를 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.enrollment_device.title",
+        product: "2"
+      }), " 옵션에 추가해 편리하게 사용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.enrollment_device.title",
-            product: "2"
-          }), ": 지문이나 카드를 등록할 때 자주 사용하는 장치를 등록용 장치로 설정하여 편리하게 사용할 수 있습니다. 장치를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["장치를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.plusAdd",
             product: "2"
-          }), "를 클릭한 뒤 원하는 장치를 선택하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.custom_field.title",
+            sid: "setting.server.enrollment_device.configure.title",
             product: "2"
-          }), ": 사용자의 부가 정보를 입력할 필드를 추가할 수 있으며, 추가된 필드는 사용자 정보 화면에 나타납니다. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.custom_field.type.numericbox",
-            product: "2"
-          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.custom_field.type.textbox",
-            product: "2"
-          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.custom_field.type.combobox",
-            product: "2"
-          }), "를 선택할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.custom_field.type.combobox",
-            product: "2"
-          }), "를 선택할 경우 최대 20개 세부 항목을 32자로 추가할 수 있으며, 각 항목은 세미 콜론(;) 기호로 구분합니다."]
+          }), " 창이 나타나면 목록에서 원하는 장치의 체크박스를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-server-management-enroll-device.png",
+          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.deleteCredentialAfterAOC",
+          children: ["선택한 장치를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.add",
             product: "2"
-          }), ": 사용자의 크리덴셜을 카드에 저장하는 AoC 카드를 발급할 경우 BioStar X에서 개인 정보와 크리덴셜 정보를 삭제하도록 설정할 수 있습니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.eventLogRetainDays",
+          children: ["추가한 장치 설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
             product: "2"
-          }), ": 출입통제 이벤트 로그를 저장할 기간을 설정할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.hideCredentialFaces",
-            product: "2"
-          }), ": 사용자의 개인 정보 보호를 위해 얼굴 크리덴셜 등록 시 미리 보기 이미지를 숨길 수 있습니다. 이 옵션을 활성화할 경우 사용자의 얼굴 또는 비주얼 페이스 등록 시 미리 보기 화면이 제공되지 않습니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "등록한 장치가 너무 많아 목록에서 찾기 어렵다면 검색 입력 필드에 키워드를 입력해 장치를 검색하세요. 장치 아이디, 장치 이름, 장치 그룹, IP 주소를 입력할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사용자 정보를 등록할 때 지문 또는 얼굴, 카드 크리덴셜을 등록하기 위한 자세한 내용은 다음 문서를 참고하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+                docId: "platform/biostar_x/enroll-credential-fingerprint"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+                docId: "platform/biostar_x/enroll-credential-face"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+                docId: "platform/biostar_x/enroll-credential-card"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+                docId: "platform/biostar_x/enroll-credential-mobile"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "custom-field",
+      children: (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.custom_field.title",
+        product: "2",
+        className: "normal"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.custom_field.title",
+        product: "2"
+      }), " 옵션에서는 사용자의 부가 정보를 입력할 필드를 추가할 수 있습니다. 추가된 필드는 사용자 정보 화면에 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["커스텀 사용자 필드를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.plusAdd",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "커스텀 사용자 필드의 이름을 입력하고 유형에서 원하는 항목을 선택하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-server-management-custome-field.png"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.custom_field.type.numericbox",
+                product: "2"
+              }), ": 0부터 4294962795까지 입력할 수 있으며, 문자를 입력할 수 없습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.custom_field.type.textbox",
+                product: "2"
+              }), ": 최대 32자의 숫자 및 문자를 입력할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.custom_field.type.combobox",
+                product: "2"
+              }), ": 최대 20개 세부 항목을 32자로 추가할 수 있으며, 각 항목은 세미 콜론(;) 기호로 구분합니다. (예, 선택1;선택2;선택3)"]
+            }), "\n", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/biostarx-settings-server-management-custome-field-select.png"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.custom_field.type.fileupload",
+                product: "2"
+              }), ": 파일 업로드를 위한 필드를 추가할 수 있습니다."]
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "note",
+              children: (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "최대 파일 크기는 1MB입니다."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "파일명은 최소 1자~최대 120자까지 가능합니다."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "파일명 제약사항: 파일명은 영숫자, 밑줄(_), 하이픈(-)을 사용하고, 확장자를 구분할 때는 점(.)을 사용합니다."
+                  }), "\n"]
+                }), "\n"]
+              })
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["추가한 커스텀 사용자 필드를 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커스텀 사용자 필드의 순서를 변경하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.server.custom_field.order",
+              product: "2"
+            }), " 열의 숫자를 변경하세요. 추가된 필드의 위치가 변경됩니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커스텀 사용자 필드를 수정한 후에는 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "button.apply",
+              product: "2"
+            }), " 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커스텀 사용자 필드를 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요. 삭제된 필드는 복구할 수 없습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["사용자 정보 등록 및 수정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "how-to-guide-user",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "aoc-card-setting",
+      children: "AoC 카드 설정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자의 크리덴셜을 카드에 저장하는 ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "../../reference/glossary#access_on_card",
+        children: "AoC(Access on Card)"
+      }), "를 발급할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버에서 개인 정보와 크리덴셜 정보를 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.deleteCredentialAfterAOC",
+        product: "2"
+      }), " 옵션을 활성화하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsxs)(Details, {
         children: [(0,jsx_runtime.jsxs)("summary", {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "NFC 모바일 카드"
-          }), "를 사용할 수 있는 조건은 아래와 같습니다."]
+          }), "를 지원하는 장치와 펌웨어 버전 보기"]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -497,7 +749,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsxs)("summary", {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BLE 모바일 카드"
-          }), "를 사용할 수 있는 장치와 조건은 아래와 같습니다."]
+          }), "를 지원하는 장치와 펌웨어 버전 보기"]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -531,148 +783,47 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "user.mobileCredentialCard",
-              product: "2"
-            }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.mobileCredential",
-              product: "2"
-            }), "는 동시에 사용할 수 없습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.userDevice.useridType",
-              product: "2"
-            }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.userDevice.useridType.alphanumeric",
-              product: "2"
-            }), "에서 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.userDevice.useridType.numeric",
-              product: "2"
-            }), "로 변경할 경우 BioStar X에 등록된 모든 사용자 정보를 삭제해야 합니다."]
-          }), "\n"]
-        }), "\n"]
-      }), (0,jsx_runtime.jsxs)(Details, {
-        children: [(0,jsx_runtime.jsxs)("summary", {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.userDevice.useridType",
+            sid: "user.mobileCredentialCard",
             product: "2"
-          }), "를 변경할 수 있는 장치와 펌웨어 버전은 아래와 같습니다."]
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "CoreStation 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "FaceStaion 2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "FaceLite 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioEntry W2 펌웨어 1.1.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStation L2 펌웨어 1.2.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStation A2 펌웨어 1.3.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStation 2 펌웨어 1.4.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioLite N2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioEntry P2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioEntry R2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "XPass 2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "XPass D2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "XPass 펌웨어 2.4.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "XPass S2 펌웨어 2.4.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "X-Station 2 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStation 3 펌웨어 1.0.0 이상"
-            }), "\n"]
-          }), "\n"]
-        })]
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "커스텀 사용자 필드의 순서를 변경하면 추가된 필드의 위치가 변경됩니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.server.custom_field.type.numericbox",
-              product: "2"
-            }), "로 추가된 커스텀 사용자 필드는 0 부터 4294962795까지 입력할 수 있으며, 문자를 입력할 수 없습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.server.custom_field.type.textbox",
-              product: "2"
-            }), "로 추가된 커스텀 사용자 필드는 최대 32 숫자/문자를 입력할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.server.custom_field.type.combobox",
-              product: "2"
-            }), "로 추가된 커스텀 사용자 필드는 사용자가 추가한 항목을 선택할 수 있습니다. 커스텀 사용자 필드를 설정할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "선택1"
-            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "선택2"
-            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "선택3"
-            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "선택4"
-            }), "를 입력하세요."]
-          }), "\n"]
+          }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.mobileCredential",
+            product: "2"
+          }), "는 동시에 사용할 수 없습니다."]
         }), "\n"]
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "other-settings",
+      children: "기타"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.eventLogRetainDays",
+            product: "2"
+          }), ": 출입통제 이벤트 로그를 저장할 기간을 설정하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.hideCredentialFaces",
+            product: "2"
+          }), ": 사용자의 개인 정보 보호를 위해 얼굴 크리덴셜을 등록할 때 미리 보기 이미지를 숨길 수 있습니다. 이 옵션을 활성화하면 사용자의 얼굴 크리덴셜을 등록할 때 미리 보기 화면이 제공되지 않습니다."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "servermatching",
       children: "서버 매칭 설정하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "서버 매칭을 설정할 수 있습니다. 서버 매칭을 사용하면 사용자 정보를 장치에서 인증하지 않고 BioStar X에서 인증합니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["서버 매칭은 어드밴스(Advanced) 이상의 라이선스를 활성화했을 때 나타납니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "licensing",
-        children: "다음 문서"
-      }), "를 참고하세요."]
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.serverMatching",
+        product: "2"
+      }), " 섹션에서는 사용자 정보를 장치에서 인증하지 않고 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에서 인증할 수 있는 ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "../../reference/glossary#server_matching",
+        children: "서버 매칭"
+      }), " 기능을 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-server-server-matching.png",
       className: "none"
@@ -691,14 +842,9 @@ function _createMdxContent(props) {
             product: "2"
           }), ": 한 번에 매칭할 수 있는 최대 서버 매칭 수를 설정할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.server.serverMatching.matchingConcurrencyCount",
-                product: "2"
-              }), "는 PC의 CPU 성능에 따라 달라집니다."]
-            }), "\n"]
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "이 옵션은 PC의 CPU 성능에 따라 달라질 수 있습니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -713,102 +859,119 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.serverMatching.securityLevel",
             product: "2"
-          }), ": 지문 및 얼굴에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다."]
+          }), ": 지문에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.serverMatching",
+          product: "2"
+        }), "은 어드밴스(Advanced) 이상의 라이선스에서 기능 추가 옵션(Feature Add-ons)을 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "systemloglevel",
-      children: "시스템 로그 단계 설정하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "데이터베이스에 저장되는 시스템 로그의 레벨을 설정할 수 있습니다."
+      children: "시스템 로그 단계 설정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevelManagement",
+        product: "2"
+      }), " 섹션에서는 데이터베이스에 저장되는 시스템 로그의 레벨을 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-server-system-log-level.png",
       className: "none"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel",
-          product: "2"
-        }), ": 시스템 로그는 미리 지정된 카테고리에 따라 관리하며 로그의 레벨은 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.trace",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.debug",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.info",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.warning",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.error",
-          product: "2"
-        }), "로 구분합니다. 상위 레벨은 하위 레벨의 로그를 모두 포함합니다. 예를 들면, ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.trace",
-          product: "2"
-        }), "으로 설정할 경우 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.debug",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.info",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.warning",
-          product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.server.logLevel.error",
-          product: "2"
-        }), " 로그를 모두 포함하여 저장할 수 있습니다."]
-      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["시스템 로그는 미리 지정된 카테고리에 따라 관리하며 로그의 레벨은 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.trace",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.debug",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.info",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.warning",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.error",
+        product: "2"
+      }), "로 구분합니다. 상위 레벨은 하위 레벨의 로그를 모두 포함합니다. 예를 들어, 시스템 로그 단계를 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.trace",
+        product: "2"
+      }), "으로 선택하면, 하위 레벨인 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.debug",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.info",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.warning",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.server.logLevel.error",
+        product: "2"
+      }), " 로그를 모두 포함하여 저장합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "storevisualfaceimage",
       children: "비주얼 페이스 이미지 저장하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다."
+      children: "얼굴을 크리덴셜로 등록할 때 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "사용하기 전에"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "settings.expertSettings.enableOptionLabel",
+          product: "2"
+        }), " 옵션을 활성화하기 전에 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.server",
+          product: "2"
+        }), " 메뉴 내에서 변경한 사항이 있다면 먼저 변경 내용을 저장해야 합니다. 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "button.apply",
+          product: "2"
+        }), " 버튼을 클릭하세요."]
+      })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.expertSettings.title",
             product: "2"
-          }), "에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.expertSettings.enableOptionLabel",
             product: "2"
-          }), "를 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.use",
             product: "2"
-          }), "으로 활성화하세요."]
+          }), "으로 설정하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-server-expert.png",
           className: "none"
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "caution",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "settings.expertSettings.enableOptionLabel",
-              product: "2"
-            }), "를 활성화하기 전에 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "common.server",
-              product: "2"
-            }), " 메뉴 내에서 변경한 부분이 있을 경우 먼저 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "button.apply",
-              product: "2"
-            }), "을 클릭하여 변경 내용을 저장하세요."]
-          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/ico-expert-setting.png",
-            ico: true
-          }), "을 클릭하여 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.expertSettings.enableButton",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.expertSettings.detail.title",
             product: "2"
-          }), "으로 진입한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 화면으로 진입하면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.expertSettings.detail.storeVisualFaceImageOptionLabel",
             product: "2"
-          }), "를 원하는 대로 설정하세요."]
+          }), " 옵션을 설정하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-server-expert2.png",
           className: "none"
@@ -818,48 +981,16 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.use",
                 product: "2"
-              }), ": 기본값입니다. 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장합니다."]
+              }), ": 기본값입니다. 얼굴 크리덴셜의 실제 이미지와 템플릿을 모두 저장합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.notUse",
                 product: "2"
-              }), ": 비주얼 페이스에 실제 이미지는 저장하지 않고 템플릿만 저장합니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "common.notUse",
-                product: "2"
-              }), "으로 비활성화하려는 경우 나타나는 경고 팝업을 주의 깊게 읽어본 다음 설정하세요."]
+              }), ": 얼굴 크리덴셜의 실제 이미지는 저장하지 않고 템플릿만 저장합니다. 이 옵션을 선택하면 나타나는 경고 팝업을 주의 깊게 읽어본 다음 설정하세요."]
             }), "\n"]
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-          type: "note",
-          children: [(0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "비주얼 페이스 이미지 저장하기 옵션 비활성화 시 주의사항"
-            })
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "이 기능을 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["등록된 비주얼 페이스가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                  children: "얼굴 마이그레이션"
-                }), "에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "migration-face",
-                  children: "다음 문서"
-                }), "를 참고하세요."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["이 기능을 비활성화한 후 ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "menu.dataImport",
-                  product: "2"
-                }), " 시 유효하지 않은 비주얼 페이스 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요."]
-              }), "\n"]
-            }), "\n"]
-          })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -869,6 +1000,38 @@ function _createMdxContent(props) {
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "caution",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsxs)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.expertSettings.detail.storeVisualFaceImageOptionLabel",
+            product: "2"
+          }), " 옵션 비활성화 시 주의사항"]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이 기능을 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["등록된 비주얼 페이스가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.menu.faceMigration"
+            }), " 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "migration-face",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["이 기능을 비활성화한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "menu.dataImport",
+              product: "2"
+            }), " 시 유효하지 않은 비주얼 페이스 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요."]
+          }), "\n"]
+        }), "\n"]
+      })]
     })]
   });
 }

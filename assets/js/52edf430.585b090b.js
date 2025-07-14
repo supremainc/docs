@@ -126,7 +126,7 @@ function _createMdxContent(props) {
               sid: "setting.server.automaticUserSync",
               product: "2"
             }), " 옵션을 이용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#user-and-device-management",
+              href: "settings-server-server#user-sync",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
