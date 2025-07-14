@@ -44,7 +44,7 @@ const assets = {
 
 const toc = [{
   "value": "시작하기 전에",
-  "id": "before-starting",
+  "id": "before-start",
   "level": 2
 }, {
   "value": "펌웨어 업그레이드",
@@ -82,7 +82,7 @@ function _createMdxContent(props) {
         children: "BioStar X"
       }), "와 연결된 장치는 별도의 연결이나 동작없이 손쉡게 펌웨어를 업그레이드할 수 있습니다. 장치의 펌웨어를 최신 버전으로 유지하면 보안 취약점을 해결하고 새로운 기능을 사용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "before-starting",
+      id: "before-start",
       children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["장치의 펌웨어를 업그레이드하기 전에 새로운 버전의 펌웨어 파일을 먼저 준비하세요. 다운로드한 펌웨어 파일을 아래 경로에 저장하세요. ", (0,jsx_runtime.jsx)(_components.em, {

@@ -108,11 +108,24 @@ const assets = {
 
 
 
-const toc = [..._device_license_info/* toc */.d$];
+const toc = [..._device_license_info/* toc */.d$, {
+  "value": "시작하기 전에",
+  "id": "before-start",
+  "level": 2
+}, {
+  "value": "장치 라이선스 적용",
+  "id": "apply-device-license",
+  "level": 2
+}, {
+  "value": "장치 라이선스 정보",
+  "id": "device-license-info",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
@@ -128,22 +141,44 @@ function _createMdxContent(props) {
       children: ["슈프리마에서 발급한 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.license.device",
         product: "2"
-      }), "를 활성화하면 라이선스에 해당하는 특정 기능을 사용할 수 있습니다."]
+      }), "를 활성화하여 라이선스에 해당하는 특정 기능을 사용하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.license.device",
         product: "2"
-      }), "는 BioStar X 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다."]
+      }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.ul, {
+      children: [(0,jsx_runtime.jsx)(_device_license_info/* default */.ZP, {}), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["라이선스 에러코드를 확인하려면 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
             children: "다음 링크"
           }), "를 참고하세요."]
         }), "\n"]
-      }), (0,jsx_runtime.jsx)(_device_license_info/* default */.ZP, {})]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "before-start",
+      children: "시작하기 전에"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "장치 라이선스를 활성화하기 전에 다음 사항을 확인하세요."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "유효한 장치 라이선스 파일을 준비하세요. 장치 라이선스 파일은 구입처에 문의하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["대상 장치가 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에 등록되어 있는지 확인하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "apply-device-license",
+      children: "장치 라이선스 적용"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -156,6 +191,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.license.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.device",
             product: "2"
           }), "를 클릭하세요."]
@@ -165,7 +202,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.list.csvImport.browse",
             product: "2"
-          }), "를 클릭하여 장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 버튼을 클릭하고 장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["불러온 라이선스에 해당하는 정보가 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.name",
             product: "2"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -174,199 +215,212 @@ function _createMdxContent(props) {
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.device.list",
             product: "2"
-          }), "이 표시됩니다."]
+          }), " 항목에 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-license-device-license.png",
           className: "none"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.server.license.name",
-                product: "2"
-              }), ": 장치 라이선스 파일에 포함된 라이선스의 종류를 확인할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: (0,jsx_runtime.jsx)(_components.strong, {
-                    children: "Camera QR"
-                  })
-                }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-                  type: "info",
-                  children: [(0,jsx_runtime.jsxs)(_components.p, {
-                    children: [(0,jsx_runtime.jsx)(_components.strong, {
-                      children: "Camera QR"
-                    }), "을 사용할 수 있는 장치는 아래와 같습니다."]
-                  }), (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) 펌웨어 1.2.0 이상"
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "BioStation 3 (BS3-DB, BS3-APWB) 펌웨어 1.1.0 이상"
-                      }), "\n"]
-                    }), "\n"]
-                  })]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: (0,jsx_runtime.jsx)(_components.strong, {
-                    children: "무선 도어락"
-                  })
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "지원되는 OSDP 안테나와 무선 도어락은 다음과 같습니다."
-                      }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                            children: "U&Z OSDP 안테나: CX8936"
-                          }), "\n"]
-                        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                            children: "U&Z 무선 도어락: CX217x(Handle), CX212x(Knob)"
-                          }), "\n"]
-                        }), "\n"]
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "연결하려는 무선 도어락 대수만큼 최대 12대까지 장치 라이선스를 발급 받을 수 있습니다."
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                        children: "장치 라이선스로 연결할 수 있는 무선 도어락의 최대 장치 수는 12대입니다. 장치 라이선스 여러개를 활성화하여도 12대를 초과할 수 없습니다."
-                      }), "\n"]
-                    }), "\n"]
-                  })
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.server.license.device.count",
-                product: "2"
-              }), ": 장치 라이선스 파일에 포함된 장치의 수를 확인할 수 있습니다."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.server.license.device.licenseCount",
-                product: "2"
-              }), ": 장치 라이선스로 활성화할 수 있는 무선 도어락의 대수를 확인할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-              type: "info",
-              children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "이 항목은 무선 도어락 장치 라이선스를 불러들였을 때만 값이 표시됩니다."
-              })
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.server.license.device.list",
-                product: "2"
-              }), ": 장치 라이선스 파일에 포함된 장치의 목록을 확인할 수 있습니다."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.id",
-                    product: "2"
-                  }), ": 장치의 고유 ID를 확인할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.name",
-                    product: "2"
-                  }), ": 장치의 이름을 확인할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.product",
-                    product: "2"
-                  }), ": 장치의 모델명을 확인할 수 있습니다."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.status",
-                    product: "2"
-                  }), ": 장치 상태를 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.list.normal",
-                    product: "2"
-                  }), " 상태의 장치만 라이선스를 활성화할 수 있습니다."]
-                }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                  children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                    children: [(0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.normal",
-                      product: "2"
-                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.disconnected",
-                      product: "2"
-                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.notSupported",
-                      product: "2"
-                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.unregistered",
-                      product: "2"
-                    })]
-                  }), "\n"]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.status",
-                    product: "2"
-                  }), ": 라이선스 활성화 여부를 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.list.notActivated",
-                    product: "2"
-                  }), " 상태의 장치만 라이선스를 활성화할 수 있습니다."]
-                }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                  children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                    children: [(0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.notActivated",
-                      product: "2"
-                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.activated",
-                      product: "2"
-                    }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "setting.server.license.device.list.na",
-                      product: "2"
-                    })]
-                  }), "\n"]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "setting.server.license.device.activatedCount",
-                    product: "2"
-                  }), ": 무선 도어락의 연결 현황을 확인할 수 있습니다."]
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsx)(_components.p, {
-                    children: "이 항목은 무선 도어락 장치 라이선스를 불러들였을 때만 값이 표시됩니다."
-                  })
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.device.list",
             product: "2"
-          }), "을 확인한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "을 확인하고, 장치 라이선스를 활성화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.license.button.activate",
             product: "2"
-          }), "를 클릭하여 장치 라이선스를 활성화하세요. 라이선스 활성화에 실패할 경우 활성화 실패 메시지가 표시되며, 라이선스 활성화를 다시 시도할 수 있습니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "라이선스 활성화를 실패하면 오류 메시지가 표시됩니다. 라이선스 활성화를 다시 시도하세요."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "device-license-info",
+      children: "장치 라이선스 정보"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "장치 라이선스 파일을 불러오면 다음 정보가 표시됩니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.name",
+            product: "2"
+          }), ": 장치 라이선스 파일에 포함된 라이선스의 종류를 확인할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Camera QR"
+              })
+            }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+              type: "note",
+              children: [(0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(_components.strong, {
+                  children: "Camera QR"
+                }), "을 사용할 수 있는 장치는 아래와 같습니다."]
+              }), (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) 펌웨어 1.2.0 이상"
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "BioStation 3 (BS3-DB, BS3-APWB) 펌웨어 1.1.0 이상"
+                  }), "\n"]
+                }), "\n"]
+              })]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "무선 도어락"
+              })
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "note",
+              children: (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "지원되는 OSDP 안테나와 무선 도어락은 다음과 같습니다."
+                  }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                        children: "U&Z OSDP 안테나: CX8936"
+                      }), "\n"]
+                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                        children: "U&Z 무선 도어락: CX217x(Handle), CX212x(Knob)"
+                      }), "\n"]
+                    }), "\n"]
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "연결하려는 무선 도어락 대수만큼 최대 12대까지 장치 라이선스를 발급받을 수 있습니다."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "장치 라이선스로 연결할 수 있는 무선 도어락의 최대 장치 수는 12대입니다. 장치 라이선스 여러개를 활성화하여도 12대를 초과할 수 없습니다."
+                  }), "\n"]
+                }), "\n"]
+              })
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.device.count",
+            product: "2"
+          }), ": 장치 라이선스 파일에 포함된 장치의 수를 확인할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.device.licenseCount",
+            product: "2"
+          }), ": 장치 라이선스로 활성화할 수 있는 무선 도어락의 대수를 확인할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.device.list",
+            product: "2"
+          }), ": 장치 라이선스 파일에 포함된 장치의 상세 정보를 확인할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.id",
+                product: "2"
+              }), ": 장치를 식별하는 고유 아이디입니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.name",
+                product: "2"
+              }), ": 장치의 이름입니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.product",
+                product: "2"
+              }), ": 장치의 모델명입니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.status",
+                product: "2"
+              }), ": 장치의 현재 상태입니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.list.normal",
+                product: "2"
+              }), " 상태의 장치만 라이선스를 활성화할 수 있습니다."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.normal",
+                  product: "2"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.disconnected",
+                  product: "2"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.notSupported",
+                  product: "2"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.unregistered",
+                  product: "2"
+                })]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.status",
+                product: "2"
+              }), ": 라이선스 활성화 여부입니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.list.notActivated",
+                product: "2"
+              }), " 상태의 장치만 라이선스를 활성화할 수 있습니다."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.notActivated",
+                  product: "2"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.activated",
+                  product: "2"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.na",
+                  product: "2"
+                })]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.license.device.activatedCount",
+                product: "2"
+              }), ": 무선 도어락의 연결 현황입니다."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.device.licenseCount",
+            product: "2"
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.license.device.activatedCount",
+            product: "2"
+          }), " 항목은 무선 도어락 장치 라이선스를 불러들였을 때만 값이 표시됩니다."]
+        }), "\n"]
+      })
     })]
   });
 }
