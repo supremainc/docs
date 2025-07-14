@@ -12,6 +12,7 @@ import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
 import BioStarLogo from '@site/static/img/logo-biostar-x.svg';
 import Paxton from '@site/static/img/integration/paxton-logo.svg';
+import Dom from '@site/static/img/integration/dom-logo.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -110,13 +111,13 @@ function HomepageHeader() {
 function Integration() {
   return (
     <div className={clsx('container', styles.grid, styles.integration)}>
-      <div>
+      <div className={clsx(styles.paxton, styles.integration__item)}>
         <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div>
+      <div className={styles.integration__item}>
+        <Link to='integration/dom/introduction'><Dom /></Link>
       </div>
       {/* <div>
-        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
-      </div>
-      <div>
         <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
       </div> */}
     </div>
