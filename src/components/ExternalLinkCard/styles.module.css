@@ -8,7 +8,7 @@
 }
 
 .grid.externalLinks {
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
   grid-gap: 1rem;
 }
 
@@ -63,7 +63,7 @@
 
 .grid.product {
   padding-bottom: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
   grid-gap: 1rem;
   padding-left: 15px;
   padding-right: 15px;
