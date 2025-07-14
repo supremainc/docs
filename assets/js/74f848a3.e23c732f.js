@@ -373,12 +373,12 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "✔️"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "💲"
+              children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
