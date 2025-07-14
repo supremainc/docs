@@ -66,6 +66,16 @@ a.banner {
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem;
   padding: 1rem 15px;
+  height: 107px;
+}
+
+.integration__item {
+  height: 75px;
+}
+
+.integration__item.paxton {
+  position: relative;
+  align-content: end;
 }
 
 @media screen and (max-width: 1160px) {
