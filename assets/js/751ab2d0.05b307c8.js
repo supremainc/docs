@@ -96,7 +96,7 @@ function _createMdxContent(props) {
       id: "system-diagram",
       children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/.png",
+      src: "/img/integration/system-diagram-dom.png",
       alone: true
     })]
   });
