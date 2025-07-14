@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1674"], {
-6920: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2948"], {
+8792: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_integration_dom_installation_mdx_c43_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_installation_mdx_34b_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-installation-mdx-c43.json
-var site_docs_integration_dom_installation_mdx_c43_namespaceObject = JSON.parse('{"id":"integration/dom/installation","title":"Installation","description":"System environment","source":"@site/docs/integration/dom/installation.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/installation","permalink":"/docs/integration/dom/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Introduction","permalink":"/docs/integration/dom/introduction"},"next":{"title":"Installing BioStar 2","permalink":"/docs/integration/dom/installing-biostar2"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-installation-mdx-34b.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_installation_mdx_34b_namespaceObject = JSON.parse('{"id":"integration/dom/installation","title":"Installation","description":"System environment","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/installation.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/installation","permalink":"/docs/en/integration/dom/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Introduction","permalink":"/docs/en/integration/dom/introduction"},"next":{"title":"Installing BioStar 2","permalink":"/docs/en/integration/dom/installing-biostar2"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/integration/dom/installation.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/installation.mdx
 
 
 const frontMatter = {
@@ -158,14 +158,15 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "installing-the-suprema-dom-integration",
       children: "Installing the Suprema DOM Integration"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This section describes how to install the Suprema DOM Integration."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "This section describes how to install the Suprema DOM Integration."
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Run the downloaded setup program. (ex. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Suprema DOM Integration.exe"
-          }), ")"]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Run the downloaded setup program. (ex. Suprema DOM Integration.exe)"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -212,7 +213,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The integration will initially be unlicensed, You'll need a licence code (from Suprema) or an offline license file (from Suprema). Enter this and press ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["The integration will initially be unlicensed, you'll need a licence code (from Suprema) or an offline license file (from Suprema). Enter this and press ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "OK"
           }), ", then ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "OK"
@@ -263,7 +264,7 @@ function _createMdxContent(props) {
           src: "/img/integration/installing-suprema-dom-integration8-2.png",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Tapkey will prompt for to allow the integration to login, Click allow on this. If multiple owner accounts are detected, there will also be a selection to choose which site you would like to link to."
+          children: "Tapkey will prompt for to allow the integration to login, click allow on this. If multiple owner accounts are detected, there will also be a selection to choose which site you would like to link to."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/integration/installing-suprema-dom-integration8-3.png",
           alone: true
@@ -274,12 +275,20 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/integration/installing-suprema-dom-integration9.png",
           alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "This is the section where the BioStar 2 login details are kept, the BioStar 2 base will be the connection point of the BioStar 2 API (This can generally stay as 127.0.0.1, as long as BioStar 2 is installed on the same machine). User and Pass will be the username and password used to login to the BioStar 2 UI."
-        }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "DB user and DB pass will be the username and password used to login to the BioStar 2 database, generally, the username will always be root, the password would be what was provided during initial installation."
-        }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar 2 Enckey Location is needed for tapkey events to properly feed through, the default value is above."
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "This is the section where the BioStar 2 login details are kept, the BioStar 2 base will be the connection point of the BioStar 2 API (This can generally stay as 127.0.0.1, as long as BioStar 2 is installed on the same machine). User and Pass will be the username and password used to login to the BioStar 2 UI."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "DB user and DB pass will be the username and password used to login to the BioStar 2 database, generally, the username will always be root, the password would be what was provided during initial installation."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "BioStar 2 Enckey Location is needed for tapkey events to properly feed through, the default value is above."
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     })]

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6622"], {
-7605: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2751"], {
+6892: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,23 +9,23 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_integration_dom_domploy_mdx_378_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_integration_dom_introduction_mdx_751_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-domploy-mdx-378.json
-var site_docs_integration_dom_domploy_mdx_378_namespaceObject = JSON.parse('{"id":"integration/dom/domploy","title":"DOMPloy","description":"DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the https://IPOFDOMBRIDGE webpage. The default user and password are both Master.","source":"@site/docs/integration/dom/domploy.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/domploy","permalink":"/docs/integration/dom/domploy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/domploy.mdx","tags":[],"version":"current","frontMatter":{"id":"domploy","title":"DOMPloy","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Settings","permalink":"/docs/integration/dom/settings"},"next":{"title":"Appendices","permalink":"/docs/integration/dom/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-introduction-mdx-751.json
+var site_docs_integration_dom_introduction_mdx_751_namespaceObject = JSON.parse('{"id":"integration/dom/introduction","title":"Introduction","description":"Target Audience","source":"@site/docs/integration/dom/introduction.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/introduction","permalink":"/docs/integration/dom/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"dom","next":{"title":"Installation","permalink":"/docs/integration/dom/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/integration/dom/domploy.mdx
+;// CONCATENATED MODULE: ./docs/integration/dom/introduction.mdx
 
 
 const frontMatter = {
-	id: 'domploy',
-	title: 'DOMPloy',
+	id: 'introduction',
+	title: 'Introduction',
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -36,48 +36,78 @@ const assets = {
 
 
 
-const toc = [];
+const toc = [{
+  "value": "Target Audience",
+  "id": "target-audience",
+  "level": 2
+}, {
+  "value": "Features",
+  "id": "features",
+  "level": 2
+}, {
+  "value": "System diagram",
+  "id": "system-diagram",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
-    code: "code",
+    h2: "h2",
+    li: "li",
     p: "p",
     strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Image} = _components;
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "https://*IPOFDOMBRIDGE*"
-      }), " webpage. The default user and password are both ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Master"
-      }), "."]
+    children: [(0,jsx_runtime.jsx)(_components.h2, {
+      id: "target-audience",
+      children: "Target Audience"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Once logged in, you will see Online devices and Offline devices, both connection scenarios are supported by the integration, Online devices require an RFNM and will update periodically with the DOMBridge, Offline devices can exist by themselves and are updated by using the DOM Service app connected to the same WiFi network as the DOMBridge."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/domploy.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/domploy1.png",
-      alone: true
+      children: "This document describes the integration between Suprema biometric devices and the DOM wireless locking system."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To add devices via DOMPloy, you will need a USB BLE module and be running the DOMPloy application as an admin."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/domploy2.png",
-      alone: true
+      children: "This document is intended for Certified Installers. The Certified Installers require basic knowledge of the DOM devices and Suprema biometric devices."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "features",
+      children: "Features"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You will then see a list of devices if they are available."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/domploy3.png",
-      alone: true
+      children: "The Suprema DOM Integration is a middleware that allows DOM Wireless locking devices to communicate with BioStar 2, allowing cards and DOM mobile credentials to be synced down to the DOM system and for monitoring logs to be synced up into BioStar 2."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "For DOM Service, you will need to first add an account, this is a local account to the phone that is used to handle the different sites you can log into, once created, you will need to do into the DOM Controllers section to add your DOM Controller (URL, username and password is needed), once added, you will be able to sync that DOM Controller and pull the added devices, as well as add/edit devices."
+      children: "The Suprema DOM Integration provides the following features."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Wireless Locking Devices"
+          }), ": Existing door infrastructure can be replaced very easily."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Easy user management"
+          }), ": All users can be registered via BioStar 2."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "DOM Mobile Key"
+          }), ": Allows the user to use the DOM Key mobile app to unlock devices."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Monitoring Logs"
+          }), ": Monitoring logs (Such as access granted, battery low, disconnection) will appear in BioStar 2."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "system-diagram",
+      children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/domploy4.png",
+      src: "/img/integration/system-diagram-dom.png",
+      className: "none",
       alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This is almost the same behaviour as an RFNM, just that the phone connected to WiFi and Bluetooth handles all the communication instead."
     })]
   });
 }

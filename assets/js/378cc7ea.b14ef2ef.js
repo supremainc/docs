@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["718"], {
-1804: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6622"], {
+7605: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_domploy_mdx_4eb_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_integration_dom_domploy_mdx_378_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-domploy-mdx-4eb.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_domploy_mdx_4eb_namespaceObject = JSON.parse('{"id":"integration/dom/domploy","title":"DOMPloy","description":"DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the https://IPOFDOMBRIDGE webpage. The default user and password are both Master.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/domploy.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/domploy","permalink":"/docs/en/integration/dom/domploy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/domploy.mdx","tags":[],"version":"current","frontMatter":{"id":"domploy","title":"DOMPloy","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Settings","permalink":"/docs/en/integration/dom/settings"},"next":{"title":"Appendices","permalink":"/docs/en/integration/dom/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-domploy-mdx-378.json
+var site_docs_integration_dom_domploy_mdx_378_namespaceObject = JSON.parse('{"id":"integration/dom/domploy","title":"DOMPloy","description":"DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the https://IPOFDOMBRIDGE webpage. The default user and password are both Master.","source":"@site/docs/integration/dom/domploy.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/domploy","permalink":"/docs/integration/dom/domploy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/domploy.mdx","tags":[],"version":"current","frontMatter":{"id":"domploy","title":"DOMPloy","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Settings","permalink":"/docs/integration/dom/settings"},"next":{"title":"Appendices","permalink":"/docs/integration/dom/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/domploy.mdx
+;// CONCATENATED MODULE: ./docs/integration/dom/domploy.mdx
 
 
 const frontMatter = {
@@ -75,6 +75,7 @@ function _createMdxContent(props) {
       children: "For DOM Service, you will need to first add an account, this is a local account to the phone that is used to handle the different sites you can log into, once created, you will need to do into the DOM Controllers section to add your DOM Controller (URL, username and password is needed), once added, you will be able to sync that DOM Controller and pull the added devices, as well as add/edit devices."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/integration/domploy4.png",
+      className: "none",
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "This is almost the same behaviour as an RFNM, just that the phone connected to WiFi and Bluetooth handles all the communication instead."

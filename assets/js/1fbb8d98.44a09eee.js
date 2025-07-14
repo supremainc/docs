@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9577"], {
-4356: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8113"], {
+7586: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,23 +9,23 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_introduction_mdx_680_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_integration_dom_settings_mdx_1fb_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-introduction-mdx-680.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_introduction_mdx_680_namespaceObject = JSON.parse('{"id":"integration/dom/introduction","title":"Introduction","description":"Target Audience","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/introduction.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/introduction","permalink":"/docs/en/integration/dom/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"dom","next":{"title":"Installation","permalink":"/docs/en/integration/dom/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-settings-mdx-1fb.json
+var site_docs_integration_dom_settings_mdx_1fb_namespaceObject = JSON.parse('{"id":"integration/dom/settings","title":"Settings","description":"Link Devices","source":"@site/docs/integration/dom/settings.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/settings","permalink":"/docs/integration/dom/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"Settings","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Installing BioStar 2","permalink":"/docs/integration/dom/installing-biostar2"},"next":{"title":"DOMPloy","permalink":"/docs/integration/dom/domploy"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/introduction.mdx
+;// CONCATENATED MODULE: ./docs/integration/dom/settings.mdx
 
 
 const frontMatter = {
-	id: 'introduction',
-	title: 'Introduction',
+	id: 'settings',
+	title: 'Settings',
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -37,66 +37,67 @@ const assets = {
 
 
 const toc = [{
-  "value": "Target Audience",
-  "id": "target-audience",
+  "value": "Link Devices",
+  "id": "link-devices",
   "level": 2
 }, {
-  "value": "Features",
-  "id": "features",
+  "value": "Binding DOM Locks",
+  "id": "binding-dom-locks",
   "level": 2
 }, {
-  "value": "System diagram",
-  "id": "system-diagram",
+  "value": "Creating and Revoking Grants",
+  "id": "creating-and-revoking-grants",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     h2: "h2",
-    li: "li",
     p: "p",
-    ul: "ul",
+    strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Image} = _components;
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "target-audience",
-      children: "Target Audience"
+      id: "link-devices",
+      children: "Link Devices"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This document describes the integration between Suprema biometric devices and the DOM wireless locking system."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This document is intended for Certified Installers. The Certified Installers require basic knowledge of the DOM devices and Suprema biometric devices."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "features",
-      children: "Features"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The Suprema DOM Integration is a middleware that allows DOM Wireless locking devices to communicate with BioStar 2, allowing cards and DOM mobile credentials to be synced down to the DOM system and for monitoring logs to be synced up into BioStar 2."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The Suprema DOM Integration provides the following features."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Wireless Locking Devices: Existing door infrastructure can be replaced very easily."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Easy user management: All users can be registered via BioStar 2."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "DOM Mobile Key: Allows the user to use the DOM Key mobile app to unlock devices."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Monitoring Logs: Monitoring logs (Such as access granted, battery low, disconnection) will appear in BioStar 2."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "system-diagram",
-      children: "System diagram"
+      children: "The link devices section is used to link BioStar 2 devices to DOM devices, so that an authentication success event will activate the DOM lock, this will require devices to be added within BioStar 2 already, the linking window will then pull the BioStar readers. All you need to do is select the BioStar reader that will be used to authenticate, then the DOM reader you wish to activate. (This will only work with online devices, as the door open command is sent via RFNM to the online device.)"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/system-diagram-dom.png",
+      src: "/img/integration/link-devices.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "binding-dom-locks",
+      children: "Binding DOM Locks"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This portion of the SettingsEditor will only become visible once the tapkey site has been linked, this also requires readers to be registered via DomPloy or the Dom Service app:"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/integration/binding-dom-locks.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Start Binding DOM Locks"
+      }), " will send the initial binding data down to the device, after pressing this button, Online devices should update automatically, offline devices will need to be synced with the DOM Service app."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Once the secondary binding data has been uploaded back to the DOM Bridge, you can then choose ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Finish Binding DOM Locks"
+      }), " to finish the binding, this will add the lock information into tapkey."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "There is also a section to rename devices on tapkey (This is what they will appear as on the Dom Key app):"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/integration/binding-dom-locks1.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "creating-and-revoking-grants",
+      children: "Creating and Revoking Grants"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Grants are now handled automatically by the Tapkey sync process, but there is also the option to manually add and remove grants via the settings editor too, to add grants, you just need to select the specific lock, then select one or multiple users to send the grant out to. To revoke grants, you do not need to select lock (All grants will be revoked), you can just select one or multiple users."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/integration/creating-reviking-grants.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/integration/creating-reviking-grants1.png",
       alone: true
     })]
   });

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7583"], {
-6879: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["718"], {
+1804: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,23 +9,23 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_settings_mdx_93a_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_domploy_mdx_4eb_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-settings-mdx-93a.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_settings_mdx_93a_namespaceObject = JSON.parse('{"id":"integration/dom/settings","title":"Settings","description":"Link Devices","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/settings.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/settings","permalink":"/docs/en/integration/dom/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"Settings","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Installing BioStar 2","permalink":"/docs/en/integration/dom/installing-biostar2"},"next":{"title":"DOMPloy","permalink":"/docs/en/integration/dom/domploy"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-domploy-mdx-4eb.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_domploy_mdx_4eb_namespaceObject = JSON.parse('{"id":"integration/dom/domploy","title":"DOMPloy","description":"DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the https://IPOFDOMBRIDGE webpage. The default user and password are both Master.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/domploy.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/domploy","permalink":"/docs/en/integration/dom/domploy","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/domploy.mdx","tags":[],"version":"current","frontMatter":{"id":"domploy","title":"DOMPloy","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Settings","permalink":"/docs/en/integration/dom/settings"},"next":{"title":"Appendices","permalink":"/docs/en/integration/dom/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/settings.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/domploy.mdx
 
 
 const frontMatter = {
-	id: 'settings',
-	title: 'Settings',
+	id: 'domploy',
+	title: 'DOMPloy',
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -36,22 +36,10 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "Link Devices",
-  "id": "link-devices",
-  "level": 2
-}, {
-  "value": "Binding DOM Locks",
-  "id": "binding-dom-locks",
-  "level": 2
-}, {
-  "value": "Creating and Revoking Grants",
-  "id": "creating-and-revoking-grants",
-  "level": 2
-}];
+const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    h2: "h2",
+    code: "code",
     p: "p",
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
@@ -59,46 +47,38 @@ function _createMdxContent(props) {
   }, {Image} = _components;
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "link-devices",
-      children: "Link Devices"
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["DOMPloy is the utility to setup the DOMBridge and device connections. You can download the DOMPloy utility by browsing to the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "https://*IPOFDOMBRIDGE*"
+      }), " webpage. The default user and password are both ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Master"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The link devices section is used to link BioStar 2 devices to DOM devices, so that an authentication success event will activate the DOM lock, This will require devices to be added within BioStar 2 already, the linking window will then pull the BioStar readers. All you need to do is select the BioStar reader that will be used to authenticate, then the DOM reader you wish to activate. (This will only work with online devices, as the door open command is sent via RFNM to the online device)."
+      children: "Once logged in, you will see Online devices and Offline devices, both connection scenarios are supported by the integration, Online devices require an RFNM and will update periodically with the DOMBridge, Offline devices can exist by themselves and are updated by using the DOM Service app connected to the same WiFi network as the DOMBridge."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/link-devices.png",
+      src: "/img/integration/domploy.png",
       alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "binding-dom-locks",
-      children: "Binding DOM Locks"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/integration/domploy1.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This portion of the SettingsEditor will only become visible once the tapkey site has been linked, This also requires readers to be registered via DomPloy or the Dom Service app:"
+      children: "To add devices via DOMPloy, you will need a USB BLE module and be running the DOMPloy application as an admin."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/binding-dom-locks.png",
+      src: "/img/integration/domploy2.png",
       alone: true
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "Start Binding DOM Locks"
-      }), " will send the initial binding data down to the device, after pressing this button, Online devices should update automatically, offline devices will need to be synced with the DOM Service app."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Once the secondary binding data has been uploaded back to the DOM Bridge, you can then choose ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Finish Binding DOM Locks"
-      }), " to finish the binding, this will add the lock information into tapkey."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "There is also a section to rename devices on tapkey (This is what they will appear as on the Dom Key app):"
+      children: "You will then see a list of devices if they are available."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/binding-dom-locks1.png",
+      src: "/img/integration/domploy3.png",
       alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "creating-and-revoking-grants",
-      children: "Creating and Revoking Grants"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Grants are now handled automatically by the Tapkey sync process, but there is also the option to manually add and remove grants via the settings editor too, to add grants, you just need to select the specific lock, then select one or multiple users to send the grant out to. To revoke grants, you do not need to select lock (All grants will be revoked), you can just select one or multiple users."
+      children: "For DOM Service, you will need to first add an account, this is a local account to the phone that is used to handle the different sites you can log into, once created, you will need to do into the DOM Controllers section to add your DOM Controller (URL, username and password is needed), once added, you will be able to sync that DOM Controller and pull the added devices, as well as add/edit devices."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/creating-reviking-grants.png",
+      src: "/img/integration/domploy4.png",
+      className: "none",
       alone: true
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/creating-reviking-grants1.png",
-      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This is almost the same behaviour as an RFNM, just that the phone connected to WiFi and Bluetooth handles all the communication instead."
     })]
   });
 }

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8113"], {
-7586: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7583"], {
+6879: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_integration_dom_settings_mdx_1fb_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_settings_mdx_93a_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-settings-mdx-1fb.json
-var site_docs_integration_dom_settings_mdx_1fb_namespaceObject = JSON.parse('{"id":"integration/dom/settings","title":"Settings","description":"Link Devices","source":"@site/docs/integration/dom/settings.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/settings","permalink":"/docs/integration/dom/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"Settings","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Installing BioStar 2","permalink":"/docs/integration/dom/installing-biostar2"},"next":{"title":"DOMPloy","permalink":"/docs/integration/dom/domploy"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-settings-mdx-93a.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_settings_mdx_93a_namespaceObject = JSON.parse('{"id":"integration/dom/settings","title":"Settings","description":"Link Devices","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/settings.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/settings","permalink":"/docs/en/integration/dom/settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/settings.mdx","tags":[],"version":"current","frontMatter":{"id":"settings","title":"Settings","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"Installing BioStar 2","permalink":"/docs/en/integration/dom/installing-biostar2"},"next":{"title":"DOMPloy","permalink":"/docs/en/integration/dom/domploy"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/integration/dom/settings.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/settings.mdx
 
 
 const frontMatter = {
@@ -63,7 +63,7 @@ function _createMdxContent(props) {
       id: "link-devices",
       children: "Link Devices"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The link devices section is used to link BioStar 2 devices to DOM devices, so that an authentication success event will activate the DOM lock, This will require devices to be added within BioStar 2 already, the linking window will then pull the BioStar readers. All you need to do is select the BioStar reader that will be used to authenticate, then the DOM reader you wish to activate. (This will only work with online devices, as the door open command is sent via RFNM to the online device)."
+      children: "The link devices section is used to link BioStar 2 devices to DOM devices, so that an authentication success event will activate the DOM lock, this will require devices to be added within BioStar 2 already, the linking window will then pull the BioStar readers. All you need to do is select the BioStar reader that will be used to authenticate, then the DOM reader you wish to activate. (This will only work with online devices, as the door open command is sent via RFNM to the online device.)"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/integration/link-devices.png",
       alone: true
@@ -71,7 +71,7 @@ function _createMdxContent(props) {
       id: "binding-dom-locks",
       children: "Binding DOM Locks"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This portion of the SettingsEditor will only become visible once the tapkey site has been linked, This also requires readers to be registered via DomPloy or the Dom Service app:"
+      children: "This portion of the SettingsEditor will only become visible once the tapkey site has been linked, this also requires readers to be registered via DomPloy or the Dom Service app:"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/integration/binding-dom-locks.png",
       alone: true
