@@ -82,6 +82,17 @@ const sidebars = {
               label: 'Monitoring',
               items: [
                 'platform/biostar_air/event-and-audit-logs',
+                'platform/biostar_air/monitoring-door-status',
+              ]
+            },
+            'platform/biostar_air/managing-roll-call-fire-muster',
+            'platform/biostar_air/configuring-reports',
+            {
+              type: 'category',
+              label: 'Settings',
+              items: [
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/site-settings',
               ]
             }
           ]
