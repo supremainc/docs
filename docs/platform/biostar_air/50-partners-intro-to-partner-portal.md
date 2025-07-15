@@ -1,0 +1,28 @@
+# Accessing and Using the AirFob Partner Portal
+## Feature Overview
+The AirFob Partner Portal is an exclusive platform designed for value-added resellers (VARs) who have signed distribution agreements. It allows resellers to set up new sites for customers and distribute credits efficiently.
+
+## Navigating to the Partner Portal
+The Partner Portal is only available as a web portal. You can access it by visiting:
+
+* [partner.airfobspace.com](https://partner.airfobspace.com)
+
+## Step-by-Step Instructions
+### Signing Up for the Partner Portal
+1. After signing a distribution agreement, you will receive an email invitation to join the Partner Portal.
+2. Click the \*Sign Up\* link in the email.
+3. Review and agree to the \*Terms and Conditions\*.
+4. You will see a sign-up screen with your email pre-filled.
+5. Ensure you use a long-term email address, as it cannot be changed later.
+6. Complete the sign-up process to gain access to the portal.
+
+### Using the Partner Portal
+Once signed in, you can:
+
+* Create new sites for customers.
+* Assign and distribute credits to those sites.
+
+## Common Issues & Considerations
+* The Partner Portal is exclusively for authorized resellers and is not accessible to site administrators or end users.
+* If you do not receive the email invitation, check your spam folder or contact your Partner Portal administrator.
+* Ensure the email used for registration is the correct one, as changes cannot be made after sign-up.

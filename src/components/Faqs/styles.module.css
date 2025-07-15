@@ -63,7 +63,13 @@
 .faq .faqBody {
   background: #eee;
   padding: 1rem .5rem;
-  color: #333
+  color: #333;
+  border-radius: .5rem;
+}
+
+.faq .faqBody > p {
+  padding: 0 8px;
+  margin-bottom: 0px;
 }
 
 .faq .faqBody ul {

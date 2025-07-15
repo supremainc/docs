@@ -14,6 +14,44 @@ import faqsEN from "@site/i18n/en/faqs.json";
  * @param {string|string[]} [props.product] - 필터링할 제품명(들)
  */
 
+export function FaqsItems(data) {
+  // FAQ 구조화 데이터 생성 (Google FAQPage Schema)
+  
+  const faqsData = data.data || [];
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+  // console.log(faqStructuredData);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      {faqsData.map((faq, idx) => (
+        <details className={styles.faq} key={idx}>
+          <summary>
+            <span className={styles.question}>Q.</span>
+            <span dangerouslySetInnerHTML={{__html: faq.question}} />
+          </summary>
+          <div className={styles.faqBody}>
+            <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
+          </div>
+        </details>
+      ))}
+    </>
+  );
+}
+
 export default function Faqs() {
 
   const faqsMap = {
@@ -71,7 +109,7 @@ export default function Faqs() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       {filteredCategories.length === 0 ? (
-        <p>해당 제품에 대한 FAQ가 없습니다.</p>
+        <p>There are no FAQs for this product.</p>
       ) : (
         filteredCategories.map((cat, cidx) => (
           <React.Fragment key={cidx}>

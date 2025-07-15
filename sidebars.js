@@ -14,8 +14,79 @@
 
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
+
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
+  biostar_air: [
+    {
+      type: 'category',
+      label: 'BioStar Air',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_air/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Overview',
+          items: [
+            'platform/biostar_air/what-is-biostar-air',
+            'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Site Management',
+          items: [
+            'platform/biostar_air/getting-started',
+            'platform/biostar_air/biostar-air-login',
+            {
+              type: 'category',
+              label: 'User Management',
+              items: [
+                'platform/biostar_air/managing-users',
+                'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/adding-users-in-bulk',
+                'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+                'platform/biostar_air/user-card-types',
+                'platform/biostar_air/managing-user-groups',
+                'platform/biostar_air/managing-card-templates',
+                'platform/biostar_air/managing-adding-users',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Device Management',
+              items: [
+                'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/configuring-ta',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Door Management',
+              items: [
+                'platform/biostar_air/managing-registered-doors',
+                'platform/biostar_air/managing-door-and-device-groups',
+                'platform/biostar_air/managing-door-schedules',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Elevator Management',
+              items: [
+                'platform/biostar_air/managing-elevator-access',
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',
