@@ -75,11 +75,13 @@ const sidebars = {
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
+            'platform/biostar_air/managing-elevator-access',
+            'platform/biostar_air/managing-door-access',
             {
               type: 'category',
-              label: 'Elevator Management',
+              label: 'Monitoring',
               items: [
-                'platform/biostar_air/managing-elevator-access',
+                'platform/biostar_air/event-and-audit-logs',
               ]
             }
           ]
