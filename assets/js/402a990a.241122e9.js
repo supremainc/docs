@@ -66,7 +66,9 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "disclaimers",
       children: "Disclaimers"
-    }), "\n", "\n", (0,jsx_runtime.jsx)(disclaimers["default"], {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(disclaimers["default"], {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "copyright-notice",
       children: "Copyright Notice"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

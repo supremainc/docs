@@ -164,6 +164,8 @@ function _createMdxContent(props) {
               children: "XPass D2"
             }), "\n"]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)("div", {
+          className: "page-break"
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "USB Fingerprint Scanner"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
