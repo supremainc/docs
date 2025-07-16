@@ -1,4 +1,4 @@
-name: Generate PDF Integrations Paxton 2.0
+name: Generate PDF Integrations Paxton 2.0 Revision Notes
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ permissions:
 
 env:
   PRINCE_VER: 16
-  PDF_NAME: Suprema_Paxton_Integration_2.0_AG
+  PDF_NAME: Suprema_Paxton_Integration_2.0_RevisionNotes
 
 jobs:
   build-n-deploy:
@@ -65,9 +65,9 @@ jobs:
 
     - name: Build PDF
       run: |
-        node generatepdf -u "https://supremainc.github.io/docs/en/cover/paxton" --prince-args="--page-size='a4' --style=./print.css --javascript" -o ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf --dest ./pdf --include-index
-        pdfcpu annot remove -pages 1 ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
-        pdfcpu merge -mode append ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf back-cover-en.pdf
+        node generatepdf -u "https://supremainc.github.io/docs/en/cover/paxton-rv" --prince-args="--page-size='a4' --style=./print.css --javascript" -o ./pdf/${{ env.PDF_NAME_RV }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf --dest ./pdf --include-index
+        pdfcpu annot remove -pages 1 ./pdf/${{ env.PDF_NAME_RV }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
+        pdfcpu merge -mode append ./pdf/${{ env.PDF_NAME_RV }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf back-cover-en.pdf
 
     - name: Create Release
       id: create_release
