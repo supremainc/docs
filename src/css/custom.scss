@@ -1068,10 +1068,13 @@ footer {
   .theme-doc-sidebar-container {
     display: none !important;
   }
+  .theme-announcement-bar {
+    display: none !important;
+  }
   nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
-    display: block;
-    position: absolute;
-    top: -150px;
+    display: none !important;
+    // position: absolute;
+    // top: -150px;
   }
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
