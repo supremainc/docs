@@ -948,6 +948,7 @@ const SvgDomLogo = _ref => {
 
 
 
+
 function HomepageHeader() {
     const { siteConfig } = (0,useDocusaurusContext/* default */.Z)();
     const appId = siteConfig.themeConfig.algolia.appId;
@@ -956,6 +957,9 @@ function HomepageHeader() {
     const searchClient = (0,browser/* liteClient */.C)(appId, apiKey);
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const lang = currentLocale;
+    const bsxDesc = (0,Translate/* translate */.I)({
+        id: 'index.biostarx.description'
+    });
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
         className: (0,dist_clsx/* default */.Z)(index_module.heroBanner),
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -1071,7 +1075,9 @@ function HomepageHeader() {
                                             children: "New BioStar"
                                         }),
                                         /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                            children: "\uCD9C\uC785\uD1B5\uC81C\uC758 \uD55C\uACC4\uB97C \uB118\uB294 \uBCF4\uC548\uC758 \uC0C8\uB85C\uC6B4 \uAE30\uC900, AI \uAE30\uBC18 \uD1B5\uD569 \uBCF4\uC548 \uD50C\uB7AB\uD3FC"
+                                            dangerouslySetInnerHTML: {
+                                                __html: bsxDesc
+                                            }
                                         })
                                     ]
                                 }),

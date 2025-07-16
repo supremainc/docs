@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2751"], {
-6892: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9577"], {
+4356: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_integration_dom_introduction_mdx_751_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_introduction_mdx_680_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-introduction-mdx-751.json
-var site_docs_integration_dom_introduction_mdx_751_namespaceObject = JSON.parse('{"id":"integration/dom/introduction","title":"Introduction","description":"Target Audience","source":"@site/docs/integration/dom/introduction.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/introduction","permalink":"/docs/integration/dom/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"dom","next":{"title":"Installation","permalink":"/docs/integration/dom/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-introduction-mdx-680.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_introduction_mdx_680_namespaceObject = JSON.parse('{"id":"integration/dom/introduction","title":"Introduction","description":"Target Audience","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/introduction.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/introduction","permalink":"/docs/en/integration/dom/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"dom","next":{"title":"Installation","permalink":"/docs/en/integration/dom/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/integration/dom/introduction.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/introduction.mdx
 
 
 const frontMatter = {
@@ -105,8 +105,8 @@ function _createMdxContent(props) {
       id: "system-diagram",
       children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/system-diagram-dom.png",
-      className: "none",
+      src: "/img/integration/system-diagram-dom.svg",
+      className: "none full",
       alone: true
     })]
   });

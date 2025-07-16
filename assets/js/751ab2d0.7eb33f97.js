@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4391"], {
-5908: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2751"], {
+6892: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_integration_paxton_2_0_introduction_mdx_899_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_integration_dom_introduction_mdx_751_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-paxton-2-0-introduction-mdx-899.json
-var site_docs_integration_paxton_2_0_introduction_mdx_899_namespaceObject = JSON.parse('{"id":"integration/paxton_2.0/introduction","title":"Introduction","description":"Target Audience","source":"@site/docs/integration/paxton_2.0/introduction.mdx","sourceDirName":"integration/paxton_2.0","slug":"/integration/paxton_2.0/introduction","permalink":"/docs/integration/paxton_2.0/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/paxton_2.0/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"paxton","next":{"title":"Installation","permalink":"/docs/integration/paxton_2.0/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-dom-introduction-mdx-751.json
+var site_docs_integration_dom_introduction_mdx_751_namespaceObject = JSON.parse('{"id":"integration/dom/introduction","title":"Introduction","description":"Target Audience","source":"@site/docs/integration/dom/introduction.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/introduction","permalink":"/docs/integration/dom/introduction","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/introduction.mdx","tags":[],"version":"current","frontMatter":{"id":"introduction","title":"Introduction","isTranslationMissing":false},"sidebar":"dom","next":{"title":"Installation","permalink":"/docs/integration/dom/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/integration/paxton_2.0/introduction.mdx
+;// CONCATENATED MODULE: ./docs/integration/dom/introduction.mdx
 
 
 const frontMatter = {
@@ -51,7 +51,6 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
-    admonition: "admonition",
     h2: "h2",
     li: "li",
     p: "p",
@@ -66,59 +65,48 @@ function _createMdxContent(props) {
       id: "target-audience",
       children: "Target Audience"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This document describes the integration between Suprema biometric devices and Paxton Net2 Access Control system using the Suprema Paxton Integration 2.0."
+      children: "This document describes the integration between Suprema biometric devices and the DOM wireless locking system."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This document is intended for OEM Clients. The OEM Clients require basic knowledge of the Paxton Net2 and Suprema biometric devices."
+      children: "This document is intended for Certified Installers. The Certified Installers require basic knowledge of the DOM devices and Suprema biometric devices."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "features",
       children: "Features"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Suprema Paxton Integration 2.0 is a middleware that allows the Paxton Net2 Access Control System to communicate with BioStar 2, facilitating the connection to devices, which can then register a variety of credentials to users from Net2. With Suprema Paxton Integration 2.0, you can easily setup and build the Biometric Management System for the Net2 using Suprema biometric devices."
+      children: "The Suprema DOM Integration is a middleware that allows DOM Wireless locking devices to communicate with BioStar 2, allowing cards and DOM mobile credentials to be synced down to the DOM system and for monitoring logs to be synced up into BioStar 2."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Suprema Paxton Integration 2.0 provides the following features."
+      children: "The Suprema DOM Integration provides the following features."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enable biometrics"
-          }), ": Not only the RFID cards and PINs but also fingerprints and face as credentials."]
+            children: "Wireless Locking Devices"
+          }), ": Existing door infrastructure can be replaced very easily."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Easy user management"
-          }), ": No need to register or manage users separately because user data on Net2 Access Control system is synchronized in real time."]
+          }), ": All users can be registered via BioStar 2."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Easy enrollment and management"
-          }), ": Allows to register the user's credentials directly from the device."]
+            children: "DOM Mobile Key"
+          }), ": Allows the user to use the DOM Key mobile app to unlock devices."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enterprise-level configuration"
-          }), ": Allows to connect and manage up to 1,000 Biometric Devices."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enable sync with Airfob"
-          }), ": Allows usage of the Suprema Mobile Credential, with automatic registration."]
+            children: "Monitoring Logs"
+          }), ": Monitoring logs (Such as access granted, battery low, disconnection) will appear in BioStar 2."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "For more details on the functionality of Paxton Net2 access control system, see the user manuals for Net2."
-      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "system-diagram",
       children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/system-diagram-paxton-2.0.png",
-      className: "none",
+      src: "/img/integration/system-diagram-dom.svg",
+      className: "none full",
       alone: true
     })]
   });

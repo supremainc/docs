@@ -117,8 +117,8 @@ function _createMdxContent(props) {
       id: "system-diagram",
       children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/integration/system-diagram-paxton-2.0.png",
-      className: "none",
+      src: "/img/integration/system-diagram-paxton-2.0.svg",
+      className: "none full",
       alone: true
     })]
   });
