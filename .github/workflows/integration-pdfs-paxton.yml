@@ -1,0 +1,92 @@
+name: Generate PDF Integrations Paxton 2.0
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Deployment?"
+        default: "Suprema"
+      version:
+        description: "Version of the release"
+        required: true
+      date:
+        description: "Release date"
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  PRINCE_VER: 16
+  PDF_NAME: Suprema_Paxton_Integration_2.0_AG
+
+jobs:
+  build-n-deploy:
+    name: Generate PDF
+    runs-on: macos-14
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Print Input
+      run: |
+        echo "Input version: ${{ github.event.inputs.version }}"
+        echo "Input date: ${{ github.event.inputs.date }}"
+
+    - name: Install Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Install Prince
+      run: |
+        curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-macos.zip -O
+        tar zxf prince-${{ env.PRINCE_VER }}-macos.zip
+        cd prince-${{ env.PRINCE_VER }}-macos
+        yes "" | sudo ./install.sh
+
+    - name: Install pdfcpu
+      run: brew install pdfcpu
+
+    - name: Install GitHub CLI
+      run: brew install gh
+
+    - name: Delete existing release and tag if exists
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERSION: ${{ github.event.inputs.version }}
+      run: |
+        set -e
+        gh release delete "v$VERSION" -y || true
+        git push origin --delete "v$VERSION" || true
+      continue-on-error: true
+
+    - name: Build PDF
+      run: |
+        node generatepdf -u "https://supremainc.github.io/biostar2-docs/en/cover/paxton" --prince-args="--page-size='a4' --style=./print.css --javascript" -o ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf --dest ./pdf --include-index
+        pdfcpu annot remove -pages 1 ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
+        pdfcpu merge -mode append ./pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf back-cover-en.pdf
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: "v${{ github.event.inputs.version }}" # 생성할 Release의 태그 이름
+        release_name: "v${{ github.event.inputs.version }}"
+        body: "Suprema Release Note v${{ github.event.inputs.version }}"
+        draft: false
+        prerelease: false
+
+    - name: Upload to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: pdf/${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
+        asset_name: ${{ env.PDF_NAME }}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
+        asset_content_type: application/pdf
