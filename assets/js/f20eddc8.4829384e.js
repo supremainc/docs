@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1733"], {
-693: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7453"], {
+771: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,20 +9,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_paxton_2_0_installation_mdx_06c_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_integration_paxton_2_0_installation_mdx_f20_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-paxton-2-0-installation-mdx-06c.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_paxton_2_0_installation_mdx_06c_namespaceObject = JSON.parse('{"id":"integration/paxton_2.0/installation","title":"Installation","description":"System environment","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/paxton_2.0/installation.mdx","sourceDirName":"integration/paxton_2.0","slug":"/integration/paxton_2.0/installation","permalink":"/docs/en/integration/paxton_2.0/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/paxton_2.0/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","isTranslationMissing":false},"sidebar":"paxton","previous":{"title":"Introduction","permalink":"/docs/en/integration/paxton_2.0/introduction"},"next":{"title":"Installing BioStar 2","permalink":"/docs/en/integration/paxton_2.0/installing-biostar2"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-integration-paxton-2-0-installation-mdx-f20.json
+var site_docs_integration_paxton_2_0_installation_mdx_f20_namespaceObject = JSON.parse('{"id":"integration/paxton_2.0/installation","title":"Installation","description":"System environment","source":"@site/docs/integration/paxton_2.0/installation.mdx","sourceDirName":"integration/paxton_2.0","slug":"/integration/paxton_2.0/installation","permalink":"/docs/integration/paxton_2.0/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/paxton_2.0/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","isTranslationMissing":false},"sidebar":"paxton","previous":{"title":"Introduction","permalink":"/docs/integration/paxton_2.0/introduction"},"next":{"title":"Installing BioStar 2","permalink":"/docs/integration/paxton_2.0/installing-biostar2"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./src/components/Specs/index.js + 5 modules
 var Specs = __webpack_require__(9763);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/paxton_2.0/installation.mdx
+;// CONCATENATED MODULE: ./docs/integration/paxton_2.0/installation.mdx
 
 
 const frontMatter = {
@@ -83,7 +83,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Paxton Net2 Access Control V6.02 or later"
+          children: "Paxton Net2 Access Control V6.8 or later"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
