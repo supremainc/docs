@@ -20,6 +20,10 @@
   font-size: 50pt;
   margin-bottom: 0;
 }
+h1.paxton {
+  font-size: 42pt;
+  line-height: 1.1;
+}
 .title h2 {
   font-family: "Montserrat";
   font-weight: 300;

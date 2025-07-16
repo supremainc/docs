@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 export default function Cover() {
     const { i18n: { currentLocale, label }, siteConfig } = useDocusaurusContext();
-    const title = "Suprema Paxton Integration 2.0";
+    const title = "Suprema Paxton<br/>Integration 2.0";
     const subtitle = "ADMINISTRATOR GUIDE";
     const ver = "version 2.3.3";
     const lang = siteConfig.i18n.localeConfigs[currentLocale].label;
@@ -24,7 +24,7 @@ export default function Cover() {
             </Head>
             <div className={styles.coverpage}>
                 <div className={styles.title}>
-                    <h1>{title}</h1>
+                    <h1 className={styles.paxton} dangerouslySetInnerHTML={{ __html: title }} />
                     <h2>{subtitle}</h2>
                     <div className={styles.ver}>{ver}</div>
                     <div className={styles.lang}>{lang}</div>

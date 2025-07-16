@@ -1200,6 +1200,25 @@ footer {
         }
       }
     }
+    .alert--secondary {
+      --ifm-alert-border-color: var(--ifm-color-secondary-color);
+      --ifm-alert-foreground-color: var(--ifm-color-secondary-color);
+    }
+    .alert--info {
+      --ifm-alert-border-color: var(--ifm-color-primary-light);
+      --ifm-alert-foreground-color: var(--ifm-color-primary-light);
+    }
+    .alert--success {
+      --ifm-alert-foreground-color: rgb(0, 148, 0)
+    }
+    .alert--warning {
+      --ifm-alert-border-color: #F7B52C;
+      --ifm-alert-foreground-color: #F7B52C;
+    }
+    .alert--danger {
+      --ifm-alert-border-color: #A32343;
+      --ifm-alert-foreground-color: #A32343;
+    }
     div.container {
       .col {
         display: inline;
