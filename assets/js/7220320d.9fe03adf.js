@@ -5,7 +5,7 @@ __webpack_require__.d(__webpack_exports__, {
   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 });
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"coverpage":"coverpage_s00n","title":"title_Ox8A","ver":"ver_YY1T","lang":"lang_UZLZ","number":"number__Jg4","next":"next_L80O","footer":"footer_XGkm","logo":"logo_jjey"});
+/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"coverpage":"coverpage_s00n","title":"title_Ox8A","paxton":"paxton_MjeW","ver":"ver_YY1T","lang":"lang_UZLZ","number":"number__Jg4","next":"next_L80O","footer":"footer_XGkm","logo":"logo_jjey"});
 
 }),
 2538: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
