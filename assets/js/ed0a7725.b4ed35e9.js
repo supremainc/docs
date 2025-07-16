@@ -53,8 +53,7 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.data",
-        product: "2"
+        sid: "shell.header.data"
       }), " 메뉴를 사용하면 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "에 등록된 사용자들의 정보나 여러가지 이벤트를 원하는 포맷에 맞춰 생성하고 저장할 수 있습니다."]
@@ -64,11 +63,9 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.data",
-        product: "2"
+        sid: "shell.header.data"
       }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.data",
-        product: "2"
+        sid: "shell.header.data"
       }), "를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });

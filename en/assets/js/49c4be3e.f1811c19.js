@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3145"], {
-1097: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8449"], {
+8186: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,25 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_appendices_mdx_e5c_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_paxton_2_0_appendices_mdx_49c_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-dom-appendices-mdx-e5c.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_dom_appendices_mdx_e5c_namespaceObject = JSON.parse('{"id":"integration/dom/appendices","title":"Appendices","description":"Disclaimers","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/dom/appendices.mdx","sourceDirName":"integration/dom","slug":"/integration/dom/appendices","permalink":"/docs/en/integration/dom/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/dom/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","isTranslationMissing":false},"sidebar":"dom","previous":{"title":"DOMPloy","permalink":"/docs/en/integration/dom/domploy"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-integration-paxton-2-0-appendices-mdx-49c.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_integration_paxton_2_0_appendices_mdx_49c_namespaceObject = JSON.parse('{"id":"integration/paxton_2.0/appendices","title":"Appendices","description":"Disclaimers","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/integration/paxton_2.0/appendices.mdx","sourceDirName":"integration/paxton_2.0","slug":"/integration/paxton_2.0/appendices","permalink":"/docs/en/integration/paxton_2.0/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/integration/paxton_2.0/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","pagination_next":null,"isTranslationMissing":false},"sidebar":"paxton","previous":{"title":"Troubleshooting","permalink":"/docs/en/integration/paxton_2.0/troubleshooting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx + 1 modules
 var disclaimers = __webpack_require__(4996);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/dom/appendices.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/integration/paxton_2.0/appendices.mdx
 
 
 const frontMatter = {
 	id: 'appendices',
 	title: 'Appendices',
+	pagination_next: null,
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -65,7 +66,9 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "disclaimers",
       children: "Disclaimers"
-    }), "\n", "\n", (0,jsx_runtime.jsx)(disclaimers["default"], {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(disclaimers["default"], {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "copyright-notice",
       children: "Copyright Notice"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

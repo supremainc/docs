@@ -273,14 +273,14 @@ var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(7026);
+var dist_clsx = __webpack_require__(7026);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
 var useDocusaurusContext = __webpack_require__(2933);
 ;// CONCATENATED MODULE: ./src/components/ExternalLinkCard/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const styles_module = ({"grid":"grid_Emyk","externalLinks":"externalLinks_Tz2q","externalLink":"externalLink_fSga","productLink":"productLink_G9bI","externalLinkitem":"externalLinkitem_hC7Q","externalLinkLogo":"externalLinkLogo_F32N","externalLiinkDesc":"externalLiinkDesc_EL1I","externalLinkTitle":"externalLinkTitle_WKIK","circle":"circle_J6ky","externalLinkDesc":"externalLinkDesc_wBWf","product":"product_n29p","cardItem":"cardItem_IQRN","productImg":"productImg_eWfp","center":"center_MvxT","logo":"logo_qTox","title":"title_grZK","flex":"flex_jYBC","desc":"desc_MGeg"});
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(3012);
+var exports_Link = __webpack_require__(3012);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
 var Heading = __webpack_require__(4403);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
@@ -295,7 +295,7 @@ var Translate = __webpack_require__(6025);
 
 function CardItem(param) {
     let { img, title, url, height, desc } = param;
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(exports_Link/* default */.Z, {
         to: url,
         className: styles_module.productLink,
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -329,7 +329,7 @@ function CardItem(param) {
 }
 function ExternalLinkBanner(param) {
     let { Svg, title, url, desc, height } = param;
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(exports_Link/* default */.Z, {
         to: url,
         target: "_blank",
         className: styles_module.externalLink,
@@ -402,7 +402,7 @@ function ExternalLinkCard(param) {
     ];
     const externalLinks = externalLinksProp || defaultExternalLinks;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: (0,clsx/* default */.Z)('container', styles_module.grid, styles_module.externalLinks),
+        className: (0,dist_clsx/* default */.Z)('container', styles_module.grid, styles_module.externalLinks),
         children: externalLinks.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(ExternalLinkBanner, {
                 ...props
             }, idx))
@@ -516,7 +516,7 @@ function BiometricReader(param) {
     ];
     const productLinks = productLinksProp || defaultProductLinks;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: (0,clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
+        className: (0,dist_clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
         children: productLinks.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(CardItem, {
                 ...props
             }, idx))
@@ -572,7 +572,7 @@ function RfMobileDevices(param) {
     ];
     const productLinks = productLinksProp || defaultProductLinks;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: (0,clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
+        className: (0,dist_clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
         children: productLinks.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(CardItem, {
                 ...props
             }, idx))
@@ -609,7 +609,7 @@ function IntenlligentController(param) {
     ];
     const productLinks = productLinksProp || defaultProductLinks;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: (0,clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
+        className: (0,dist_clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
         children: productLinks.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(CardItem, {
                 ...props
             }, idx))
@@ -692,12 +692,12 @@ function ProductItem(param) {
     const last = title.length - 1;
     const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "");
     // console.log(hit);
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(exports_Link/* default */.Z, {
         to: durl,
         target: "_blank",
         className: Autocomplete_styles_module.aaItemLink,
         children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-            className: (0,clsx/* default */.Z)("aa-ItemContent", Autocomplete_styles_module.itemContent),
+            className: (0,dist_clsx/* default */.Z)("aa-ItemContent", Autocomplete_styles_module.itemContent),
             children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                 className: "aa-ItemTitle",
                 children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -860,16 +860,16 @@ const SvgPaxtonLogo = _ref => {
     titleId,
     ...props
   } = _ref;
-  return /*#__PURE__*/react.createElement("svg", paxton_logo_extends({
+  return /*#__PURE__*/React.createElement("svg", paxton_logo_extends({
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
     viewBox: "0 0 112.274 35.266",
     "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
     id: titleId
-  }, title) : null, /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  }, title) : null, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0h112.274v35.266H0z",
     "data-name": "Rectangle 1",
     style: {
@@ -877,13 +877,13 @@ const SvgPaxtonLogo = _ref => {
       stroke: "#707070"
     },
     transform: "translate(-15398 -18202)"
-  }))), /*#__PURE__*/react.createElement("g", {
+  }))), /*#__PURE__*/React.createElement("g", {
     "data-name": "Mask Group 1",
     style: {
       clipPath: "url(#a)"
     },
     transform: "translate(15398 18202)"
-  }, _image || (_image = /*#__PURE__*/react.createElement("image", {
+  }, _image || (_image = /*#__PURE__*/React.createElement("image", {
     xlinkHref: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAj4AAABaCAYAAAC4yFzJAAAAAXNSR0IArs4c6QAAFTxJREFUeAHtnVFy20YShmNX3sMDbFWQE4R53lQZOoGpl7yaPIGlE4g8QagTmHrNi+kTCK7KPhs5gZGqPQBygt3/l4YyCE4PARAEQPLvqlkA3T09PR+4ms4ANL/7TiICIiACIiACIiACIiACIiACIiACIiACIiACIiACIiACIiACIiACJ0ngVTnr3/7417ys03XrBPI/fvvvsvWoCigCIiACIiACIhAk8L3H+iN0U49eqvYILNoLpUgiIAIiIAIiIAJVCbz2ON5Cl3v0UrVDIEMY7fa0w1JRREAEREAERKAWgZ3CB49gWPTc14oi5zoEFo5xnT7yFQEREAEREAERaIHAzjs+m5h41+crzqPNtY6tEEhQ9Fy1EklBREAEREAEREAEahPY2fEpROAjL0m7BMS0XZ6KJgIiIAIiIAK1CJiFD3Ym1oiU1Iom5xCBFZimIQfZREAEREAEREAEjkvALHzcsLPjDn8x0fnelHZ7LuZ2a6IiIAIiIAJDJRAsfLBDkSHx5VCTP6G87sGSxY9EBERABERABESgRwLBwsfltcBRi3bzm5Sh6Jk3766eIiACIiACIiACbRHYW/i4nQoWP5JmBPS4sBk39RIBERABERCB1gm8qhoRX2//At9xVX/5PRHQ19f1QRABERABERCBARHYu+NTyFUv5xZgVDzVbk9FUHITAREQAREQgS4IVC588MgrQULrLpI6kzGWYJadyVw0DREQAREQARE4CwKVCx83W+36VLvtfBlc70VVYyUvERABERABEeiMQK3Cx+1gaEHff3v0e1z7GclDBERABERABDonUKvwcdktceSOhsRPIEWBSEYSERABERABERCBgRGoXfhgUWfRo0de9o0UG5uNLCIgAiIgAiLQK4HKX2cvZ4mvtz9CF5f1F369RmF4feEMNH0REAEREAERGCyB2js+hZnoXZ8CDHeq3Z5dJtKIgAiIgAiIwGAINC58sLORYBarwcyk/0T4QnPWfxrKQAREQAREQAREwCLwvWWoqOeuzwRtVNH/XN343tOy6uR+/fXfMXzJbIz2gzvi8CTU0VaWHIrUKT/jmKElf/75Hx4lIiACIiACIiACFQg0fsdnExvv+sxxfre5vtDjDLs9qypzd0UP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",
     width: 224.548,
     height: 35.208,
@@ -891,7 +891,7 @@ const SvgPaxtonLogo = _ref => {
     transform: "translate(-15398 -18202)"
   }))));
 };
-/* ESM default export */ const paxton_logo = (SvgPaxtonLogo);
+/* ESM default export */ const paxton_logo = ((/* unused pure expression or super */ null && (SvgPaxtonLogo)));
 ;// CONCATENATED MODULE: ./static/img/integration/dom-logo.svg
 var dom_logo_g, dom_logo_defs;
 function dom_logo_extends() { return dom_logo_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, dom_logo_extends.apply(null, arguments); }
@@ -902,35 +902,35 @@ const SvgDomLogo = _ref => {
     titleId,
     ...props
   } = _ref;
-  return /*#__PURE__*/react.createElement("svg", dom_logo_extends({
+  return /*#__PURE__*/React.createElement("svg", dom_logo_extends({
     xmlns: "http://www.w3.org/2000/svg",
     fill: "none",
     viewBox: "0 0 94 35",
     "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
     id: titleId
-  }, title) : null, dom_logo_g || (dom_logo_g = /*#__PURE__*/react.createElement("g", {
+  }, title) : null, dom_logo_g || (dom_logo_g = /*#__PURE__*/React.createElement("g", {
     clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     fill: "#D51130",
     d: "M0 0h94v35H0z"
-  }), /*#__PURE__*/react.createElement("path", {
+  }), /*#__PURE__*/React.createElement("path", {
     fill: "#fff",
     d: "M33.817 21.599c0 .783-.64 1.335-1.42 1.335 0 0-.32.046-.503 0-.824-.092-1.922-.23-2.105-.276v-9.58c.32-.045 1.556-.275 2.105-.321h.504c.778 0 1.419.552 1.419 1.335zM33.725 9.9h-.32c-.916 0-2.518.323-3.662.553l-2.792.645v13.723c1.098.185 1.74.323 2.838.46 1.602.277 2.06.37 3.57.553h.412a3.125 3.125 0 0 0 3.113-3.131v-9.671c-.046-1.704-1.42-3.132-3.159-3.132M47 21.783c0 1.243-.961 2.256-2.106 2.256-1.144 0-2.105-1.013-2.105-2.256v-7.69c0-1.244.961-2.258 2.105-2.258S47 12.85 47 14.093zm-1.74-12.71h-.732c-2.517 0-4.577 2.072-4.577 4.605v8.473c0 2.533 2.06 4.606 4.577 4.606h.733c2.517 0 4.577-2.073 4.577-4.606v-8.473c0-2.533-2.06-4.606-4.577-4.606"
-  }), /*#__PURE__*/react.createElement("path", {
+  }), /*#__PURE__*/React.createElement("path", {
     fill: "#fff",
     d: "M66.592 26.665c-6.455 2.164-14.007 3.315-21.88 3.315-7.874 0-15.381-1.151-21.881-3.315V9.349c6.5-2.21 14.053-3.362 21.88-3.362 7.874 0 15.38 1.151 21.88 3.316zm1.19-18.882c-6.775-2.395-14.74-3.638-23.07-3.638-8.286 0-16.297 1.243-23.071 3.638l-.641.23V28l.64.23c6.776 2.349 14.786 3.638 23.071 3.638s16.296-1.243 23.07-3.638l.641-.23V8.013"
-  }), /*#__PURE__*/react.createElement("path", {
+  }), /*#__PURE__*/React.createElement("path", {
     fill: "#fff",
     d: "M52.95 26.342V9.625l1.969.23c.458.046.732.092 1.19.184l2.06 5.665 2.518-4.79c.503.139.778.23 1.281.323.366.092.595.138.962.23V24.5c-.412.138-.641.23-1.053.322-.458.139-.733.185-1.19.277V16.21l-2.61 5.526-2.288-5.665v9.856c-.504.092-.778.138-1.282.23-.595.092-.961.138-1.556.184m17.395-17.04h.32c.184 0 .275.047.275.185s-.091.184-.229.184h-.32v-.368zm-.32 1.29h.274v-.645h.32l.275.645h.32l-.274-.69c.092-.047.275-.093.275-.37 0-.46-.32-.506-.641-.506h-.504v1.566zm-.687-.737c0-.69.55-1.243 1.236-1.243.687 0 1.236.552 1.236 1.243s-.55 1.244-1.236 1.244c-.64 0-1.236-.553-1.236-1.244m1.282 1.474a1.45 1.45 0 0 0 1.465-1.474c0-.783-.641-1.473-1.465-1.473a1.48 1.48 0 0 0-1.465 1.473c0 .83.64 1.474 1.465 1.474"
-  }))), dom_logo_defs || (dom_logo_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  }))), dom_logo_defs || (dom_logo_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     fill: "#fff",
     d: "M0 0h94v35H0z"
   })))));
 };
-/* ESM default export */ const dom_logo = (SvgDomLogo);
+/* ESM default export */ const dom_logo = ((/* unused pure expression or super */ null && (SvgDomLogo)));
 ;// CONCATENATED MODULE: ./src/pages/index.js
 
 
@@ -957,9 +957,9 @@ function HomepageHeader() {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const lang = currentLocale;
     return /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
-        className: (0,clsx/* default */.Z)(index_module.heroBanner),
+        className: (0,dist_clsx/* default */.Z)(index_module.heroBanner),
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-            className: (0,clsx/* default */.Z)('container', index_module.containerRef),
+            className: (0,dist_clsx/* default */.Z)('container', index_module.containerRef),
             children: [
                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                     className: index_module.section,
@@ -1053,7 +1053,7 @@ function HomepageHeader() {
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                     className: index_module.section__banner,
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(exports_Link/* default */.Z, {
                         to: "/platform/biostar_x",
                         className: index_module.banner,
                         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -1087,21 +1087,21 @@ function HomepageHeader() {
     });
 }
 function Integration() {
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: (0,clsx/* default */.Z)('container', index_module.grid, index_module.integration),
+    return /*#__PURE__*/ _jsxs("div", {
+        className: clsx('container', styles.grid, styles.integration),
         children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: (0,clsx/* default */.Z)(index_module.paxton, index_module.integration__item),
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+            /*#__PURE__*/ _jsx("div", {
+                className: clsx(styles.paxton, styles.integration__item),
+                children: /*#__PURE__*/ _jsx(Link, {
                     to: "integration/paxton_2.0/introduction",
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(paxton_logo, {})
+                    children: /*#__PURE__*/ _jsx(Paxton, {})
                 })
             }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: index_module.integration__item,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+            /*#__PURE__*/ _jsx("div", {
+                className: styles.integration__item,
+                children: /*#__PURE__*/ _jsx(Link, {
                     to: "integration/dom/introduction",
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(dom_logo, {})
+                    children: /*#__PURE__*/ _jsx(Dom, {})
                 })
             })
         ]
@@ -1117,7 +1117,7 @@ function Home() {
             children: [
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(HomepageHeader, {}),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
+                    className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
                         children: "Biometric Devices"
@@ -1125,7 +1125,7 @@ function Home() {
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(BiometricReader, {}),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
+                    className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
                         children: "RF/Mobile Devices"
@@ -1133,7 +1133,7 @@ function Home() {
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(RfMobileDevices, {}),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
+                    className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
                         children: "Intelligent Controller"
@@ -1141,15 +1141,7 @@ function Home() {
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(IntenlligentController, {}),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                        as: "h2",
-                        children: "Integrations"
-                    })
-                }),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)(Integration, {}),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: (0,clsx/* default */.Z)('container', index_module.headsec),
+                    className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                         as: "h2",
                         children: "Developers"
