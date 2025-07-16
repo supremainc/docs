@@ -93,6 +93,8 @@ const sidebars = {
               items: [
                 'platform/biostar_air/managing-administrators',
                 'platform/biostar_air/site-settings',
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
               ]
             }
           ]
