@@ -362,6 +362,9 @@
   "index.search": {
     "message": "검색"
   },
+  "index.biostarx.description": {
+    "message": "출입통제의 한계를 넘는 보안의 새로운 기준,<br/>AI 기반 통합 보안 플랫폼"
+  },
   "windows.key.start": {
     "message": "시작"
   },

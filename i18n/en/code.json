@@ -362,6 +362,9 @@
   "index.search": {
     "message": "Search"
   },
+  "index.biostarx.description": {
+    "message": "A new standard for security that goes beyond the limits of access control,<br/>AI-based integrated security platform"
+  },
   "windows.key.start": {
     "message": "Start"
   },
