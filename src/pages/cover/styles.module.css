@@ -11,7 +11,7 @@
   height: 3.7795in;
   width: 100%;
   background-color: #a42444;
-  padding: 0 0.785in 0 0.785in;
+  padding: 3% .785in;
   color: #fff;
   align-content: center;
 }
@@ -21,7 +21,7 @@
   font-size: 50pt;
   margin-bottom: 0;
 }
-h1.paxton {
+h1.small {
   font-size: 37pt;
   line-height: 1.1;
 }

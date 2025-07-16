@@ -24,7 +24,7 @@ export default function Cover() {
             </Head>
             <div className={styles.coverpage}>
                 <div className={styles.title}>
-                    <h1>{title}</h1>
+                    <h1 className={styles.small} dangerouslySetInnerHTML={{ __html: title }} />
                     <h2>{subtitle}</h2>
                     <div className={styles.ver}>{ver}</div>
                     <div className={styles.lang}>{lang}</div>
