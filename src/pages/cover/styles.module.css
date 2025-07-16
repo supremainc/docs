@@ -11,8 +11,9 @@
   height: 3.7795in;
   width: 100%;
   background-color: #a42444;
-  padding: 0.5315in 0.785in 0.4633in 0.785in;
+  padding: 0 0.785in 0 0.785in;
   color: #fff;
+  align-content: center;
 }
 .title h1 {
   font-family: "Montserrat";
@@ -21,7 +22,7 @@
   margin-bottom: 0;
 }
 h1.paxton {
-  font-size: 42pt;
+  font-size: 37pt;
   line-height: 1.1;
 }
 .title h2 {
@@ -35,7 +36,6 @@ h1.paxton {
   font-weight: medium;
   font-size: 10pt;
   position: relative;
-  left: 4px;
   margin-top: .2rem;
 }
 .title .lang, .title .number {
