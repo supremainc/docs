@@ -148,10 +148,10 @@ export default function Home() {
         </div>
         <IntenlligentController />
 
-        <div className={clsx('container', styles.headsec)}>
+        {/* <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Integrations</Heading>
         </div>
-        <Integration />
+        <Integration /> */}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Developers</Heading>
