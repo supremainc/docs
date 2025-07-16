@@ -6,6 +6,9 @@ on:
       name:
         description: "Deployment?"
         default: "Suprema"
+      product:
+        description: "Integratioin product"
+        required: true
       version:
         description: "Version of the release"
         required: true
@@ -29,6 +32,7 @@ jobs:
 
     - name: Print Input
       run: |
+        echo "Input product: ${{ github.event.inputs.product }}"
         echo "Input version: ${{ github.event.inputs.version }}"
         echo "Input date: ${{ github.event.inputs.date }}"
 
@@ -56,11 +60,12 @@ jobs:
     - name: Delete existing release and tag if exists
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PRODUCT: ${{ github.event.inputs.product }}
         VERSION: ${{ github.event.inputs.version }}
       run: |
         set -e
-        gh release delete "v$VERSION" -y || true
-        git push origin --delete "v$VERSION" || true
+        gh release delete "$PRODUCT_v$VERSION" -y || true
+        git push origin --delete "$PRODUCT_v$VERSION" || true
       continue-on-error: true
 
     - name: Build PDF
@@ -75,9 +80,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: "v${{ github.event.inputs.version }}" # 생성할 Release의 태그 이름
+        tag_name: "${{ github.event.inputs.product }}_v${{ github.event.inputs.version }}" # 생성할 Release의 태그 이름
         release_name: "v${{ github.event.inputs.version }}"
-        body: "Suprema Release Note v${{ github.event.inputs.version }}"
+        body: "Integration Guide Paxton v${{ github.event.inputs.version }}"
         draft: false
         prerelease: false
 
