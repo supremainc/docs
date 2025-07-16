@@ -64,8 +64,8 @@ jobs:
         VERSION: ${{ github.event.inputs.version }}
       run: |
         set -e
-        gh release delete "$PRODUCT_v$VERSION" -y || true
-        git push origin --delete "$PRODUCT_v$VERSION" || true
+        gh release delete "${{ env.PRODUCT }}_v${{ env.VERSION }}" -y || true
+        git push origin --delete "${{ env.PRODUCT }}_v${{ env.VERSION }}" || true
       continue-on-error: true
 
     - name: Build PDF
