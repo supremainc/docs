@@ -39,7 +39,9 @@
   font-size: 10pt;
   position: relative;
   text-align: right;
+  width: 85%;
 }
+
 .title .lang {
   margin-top: 4.7rem;
 }
