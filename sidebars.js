@@ -104,6 +104,26 @@ const sidebars = {
               ]
             },
           ]
+        },
+        {
+          type: 'category',
+          label: 'Video Management',
+          items: [
+            'platform/biostar_air/ip-camera-support-and-configuration',
+            'platform/biostar_air/video-troubleshooting',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Using Mobile Credentials',
+          items: [
+            'platform/biostar_air/suprema-pass-app-overview',
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/location-services-issues',
+          ]
         }
       ]
     }

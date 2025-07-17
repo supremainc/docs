@@ -44,7 +44,7 @@ export function FaqsItems(data) {
             <span dangerouslySetInnerHTML={{__html: faq.question}} />
           </summary>
           <div className={styles.faqBody}>
-            <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
+            <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
           </div>
         </details>
       ))}
