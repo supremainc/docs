@@ -193,23 +193,6 @@ const config = {
               }
             ]
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Integrations',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'Paxton',
-          //       docId: 'integration/paxton_2.0/introduction'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Dom',
-          //       docId: 'integration/dom/introduction'
-          //     }
-          //   ]
-          // },
           {
             type: 'doc',
             label: 'Reference',
