@@ -15,23 +15,23 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-biostar-air-migration-mdx-35c.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_biostar_air_migration_mdx_35c_namespaceObject = JSON.parse('{"id":"platform/biostar_air/biostar-air-migration","title":"BioStar Air Migration","description":"Guide for migrating from BioStar Air to BioStar Air","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/biostar-air-migration.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/biostar-air-migration","permalink":"/docs/en/platform/biostar_air/biostar-air-migration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/biostar-air-migration.mdx","tags":[],"version":"current","frontMatter":{"id":"biostar-air-migration","title":"BioStar Air Migration","description":"Guide for migrating from BioStar Air to BioStar Air","keywords":["migration","BioStar Air","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Access Control Hardware Compatibility","permalink":"/docs/en/platform/biostar_air/access-control-hardware-compatibility"},"next":{"title":"Getting Started","permalink":"/docs/en/platform/biostar_air/getting-started"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_biostar_air_migration_mdx_35c_namespaceObject = JSON.parse('{"id":"platform/biostar_air/biostar-air-migration","title":"BioStar Air Migration","description":"Learn about the rebranding from Airfob Space to BioStar Air, compare platform features, understand compatibility, and access frequently asked questions about the transition.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/biostar-air-migration.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/biostar-air-migration","permalink":"/docs/en/platform/biostar_air/biostar-air-migration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/biostar-air-migration.mdx","tags":[],"version":"current","frontMatter":{"id":"biostar-air-migration","title":"BioStar Air Migration","description":"Learn about the rebranding from Airfob Space to BioStar Air, compare platform features, understand compatibility, and access frequently asked questions about the transition.","keywords":["migration","Airfob Space","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Access Control Hardware Compatibility","permalink":"/docs/en/platform/biostar_air/access-control-hardware-compatibility"},"next":{"title":"Getting Started","permalink":"/docs/en/platform/biostar_air/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
 ;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/faqs.json
-var faqs_namespaceObject = JSON.parse('[{"question":"Do I need to switch from BioStar Air to BioStar Air?","answer":"No. If you are an existing BioStar Air customer, you can continue using the platform as-is. There is no forced migration at this time."},{"question":"Will my devices or data be affected?","answer":"No. Both platforms share the same backend. Devices, user data, and configurations remain fully compatible across both services."},{"question":"Should I start using Suprema Pass instead of the Suprema Pass app?","answer":"There is no need to migrate existing mobile credential users over to BioStar Air. If you use the <a href=\'app.airfobspace.com\' target=\'_blank\'>app.airfobspace.com</a> URL or BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app. If you use <a href=\'admin.biostarair.com\' target=\'_blank\'>admin.biostarair.com</a> or the BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app."},{"question":"Will support or billing change?","answer":"No immediate changes will occur in your support or billing processes. Over time, however, BioStar Air will become the primary brand used for documentation, support, and feature announcements."},{"question":"Can I switch to BioStar Air if I want to?","answer":"Yes. Since the backend is shared, transitioning is simple, but some branding and feature availability differences may apply. Simply start using <a href=\'admin.biostarair.com\' target=\'_blank\'>admin.biostarair.com</a> and the BioStar Air app to manage your site. Existing administrator login credentials from <a href=\'app.airfobspace.com\' target=\'_blank\'>app.airfobspace.com</a> will work seamlessly."},{"question":"What are the benefits of BioStar Air?","answer":"BioStar Air is the future-facing brand. It will receive ongoing enhancements, such as improved integrations, UI/UX updates, and new features that may not be backported to BioStar Air."},{"question":"Will future features work with BioStar Air?","answer":"Some will, but not all. New features may be exclusive to BioStar Air going forward. For the best experience and support, new deployments should use BioStar Air."}]')
+var faqs_namespaceObject = JSON.parse('[{"question":"Do I need to switch from Airfob Space to BioStar Air?","answer":"No. If you are an existing Airfob Space customer, you can continue using the platform as-is. There is no forced migration at this time."},{"question":"Will my devices or data be affected?","answer":"No. Both platforms share the same backend. Devices, user data, and configurations remain fully compatible across both services."},{"question":"Should I start using Suprema Pass instead of the Airfob Space app?","answer":"There is no need to migrate existing mobile credential users over to BioStar Air. If you use the <a href=\'app.airfobspace.com\' target=\'_blank\'>app.airfobspace.com</a> URL or Airfob Pro app to manage users and issue mobile credentials, those users will receive an invitation that points to the Airfob Space app. If you use <a href=\'admin.biostarair.com\' target=\'_blank\'>admin.biostarair.com</a> or the BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app."},{"question":"Will support or billing change?","answer":"No immediate changes will occur in your support or billing processes. Over time, however, BioStar Air will become the primary brand used for documentation, support, and feature announcements."},{"question":"Can I switch to BioStar Air if I want to?","answer":"Yes. Since the backend is shared, transitioning is simple, but some branding and feature availability differences may apply. Simply start using <a href=\'admin.biostarair.com\' target=\'_blank\'>admin.biostarair.com</a> and the BioStar Air app to manage your site. Existing administrator login credentials from <a href=\'app.airfobspace.com\' target=\'_blank\'>app.airfobspace.com</a> will work seamlessly."},{"question":"What are the benefits of BioStar Air?","answer":"BioStar Air is the future-facing brand. It will receive ongoing enhancements, such as improved integrations, UI/UX updates, and new features that may not be backported to Airfob Space."},{"question":"Will future features work with Airfob Space?","answer":"Some will, but not all. New features may be exclusive to BioStar Air going forward. For the best experience and support, new deployments should use BioStar Air."}]')
 ;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/biostar-air-migration.mdx
 
 
 const frontMatter = {
 	id: 'biostar-air-migration',
 	title: 'BioStar Air Migration',
-	description: 'Guide for migrating from BioStar Air to BioStar Air',
+	description: 'Learn about the rebranding from Airfob Space to BioStar Air, compare platform features, understand compatibility, and access frequently asked questions about the transition.',
 	keywords: [
 		'migration',
-		'BioStar Air',
+		'Airfob Space',
 		'BioStar Air'
 	],
 	isTranslationMissing: false
@@ -87,7 +87,7 @@ function _createMdxContent(props) {
       id: "feature-overview",
       children: "Feature Overview"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air is the rebranded version of BioStar Air, designed to reflect Suprema’s unified cloud access control strategy. Both platforms share the same backend infrastructure and core features. However, new features and improvements will be rolled out under the BioStar Air brand moving forward."
+      children: "BioStar Air is the rebranded version of Airfob Space, designed to reflect Suprema’s unified cloud access control strategy. Both platforms share the same backend infrastructure and core features. However, new features and improvements will be rolled out under the BioStar Air brand moving forward."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "new-vs-existing-customers",
       children: "New vs Existing Customers"
@@ -140,14 +140,14 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               children: "Category"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar Air (Rebranded)"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar Air (Retained for Korea)"
-              })
+            }), (0,jsx_runtime.jsxs)(_components.th, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "BioStar Air"
+              }), "(Rebranded)"]
+            }), (0,jsx_runtime.jsxs)(_components.th, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "BioStar Air"
+              }), "(Retained for Korea)"]
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
