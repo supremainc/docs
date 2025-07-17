@@ -56,6 +56,7 @@ const sidebars = {
                 'platform/biostar_air/managing-user-groups',
                 'platform/biostar_air/managing-card-templates',
                 'platform/biostar_air/managing-adding-users',
+                'platform/biostar_air/linkpass-credentials',
               ]
             },
             {
@@ -64,6 +65,10 @@ const sidebars = {
               items: [
                 'platform/biostar_air/managing-registered-devices',
                 'platform/biostar_air/configuring-ta',
+                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/how-to-upgrade-firmware',
+                'platform/biostar_air/biometric-readers-and-credentials',
               ]
             },
             {
@@ -95,8 +100,9 @@ const sidebars = {
                 'platform/biostar_air/site-settings',
                 'platform/biostar_air/daylight-saving-time',
                 'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/managing-sites-with-phone'
               ]
-            }
+            },
           ]
         }
       ]
