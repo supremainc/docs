@@ -636,68 +636,6 @@ const sidebars = {
       ],
     },
   ],
-  paxton: [
-    {
-      type: 'category',
-      label: 'Paxton Integration',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      items: [
-        'integration/paxton_2.0/introduction',
-        'integration/paxton_2.0/installation',
-        'integration/paxton_2.0/installing-biostar2',
-        'integration/paxton_2.0/installing-paxton-net2',
-        'integration/paxton_2.0/settings',
-        'integration/paxton_2.0/enrollment-helper-client',
-        'integration/paxton_2.0/troubleshooting',
-        'integration/paxton_2.0/appendices',
-        {
-          type: 'html',
-          value: '<hr/>',
-        },
-        {
-          type: 'category',
-          label: 'Revision Notes',
-          link: {
-            type: 'doc',
-            id: 'integration/paxton_2.0/revision-notes/index',
-          },
-          items: [
-            'integration/paxton_2.0/revision-notes/227',
-            'integration/paxton_2.0/revision-notes/226',
-            'integration/paxton_2.0/revision-notes/225',
-            'integration/paxton_2.0/revision-notes/222',
-            'integration/paxton_2.0/revision-notes/220',
-            'integration/paxton_2.0/revision-notes/210',
-            'integration/paxton_2.0/revision-notes/209',
-            'integration/paxton_2.0/revision-notes/208',
-            'integration/paxton_2.0/revision-notes/207',
-            'integration/paxton_2.0/revision-notes/202',
-            'integration/paxton_2.0/revision-notes/201',
-            'integration/paxton_2.0/revision-notes/200',
-          ],
-        },
-      ],
-    },
-  ],
-  dom: [
-    {
-      type: 'category',
-      label: 'DOM Integration',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      items: [
-        'integration/dom/introduction',
-        'integration/dom/installation',
-        'integration/dom/installing-biostar2',
-        'integration/dom/settings',
-        'integration/dom/domploy',
-        'integration/dom/appendices',
-      ],
-    },
-  ],
 };
 
 export default sidebars;
