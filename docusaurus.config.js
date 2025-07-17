@@ -225,7 +225,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico)',

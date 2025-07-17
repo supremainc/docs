@@ -124,6 +124,23 @@ const sidebars = {
             'platform/biostar_air/troubleshooting-suprema-pass-app',
             'platform/biostar_air/location-services-issues',
           ]
+        },
+        {
+          type: 'category',
+          label: 'Partners and Integrations',
+          items: [
+            'platform/biostar_air/intro-to-partner-portal',
+            'platform/biostar_air/biostar-air-partner-portal-detailed-use',
+            'platform/biostar_air/federated-sites',
+            'platform/biostar_air/integration-quickstart',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Hardware',
+          items: [
+            'platform/biostar_air/wiring-and-configuration',
+          ]
         }
       ]
     }
