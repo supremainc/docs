@@ -127,11 +127,13 @@ export default function Faqs() {
                   <span dangerouslySetInnerHTML={{__html: faq.question}} />
                 </summary>
                 <div className={styles.faqBody}>
-                  <ul style={{ marginTop: 8 }}>
-                    {faq.answer.map((a, i) => (
-                      <li key={i} dangerouslySetInnerHTML={{ __html: a }} />
-                    ))}
-                  </ul>
+                  <div>
+                    <ul style={{ marginTop: 8 }}>
+                      {faq.answer.map((a, i) => (
+                        <li key={i} dangerouslySetInnerHTML={{ __html: a }} />
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </details>
             ))}
