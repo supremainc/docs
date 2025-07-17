@@ -1,15 +1,15 @@
 [
   {
-    "question": "Do I need to switch from BioStar Air to BioStar Air?",
-    "answer": "No. If you are an existing BioStar Air customer, you can continue using the platform as-is. There is no forced migration at this time."
+    "question": "Do I need to switch from Airfob Space to BioStar Air?",
+    "answer": "No. If you are an existing Airfob Space customer, you can continue using the platform as-is. There is no forced migration at this time."
   },
   {
     "question": "Will my devices or data be affected?",
     "answer": "No. Both platforms share the same backend. Devices, user data, and configurations remain fully compatible across both services."
   },
   {
-    "question": "Should I start using Suprema Pass instead of the Suprema Pass app?",
-    "answer": "There is no need to migrate existing mobile credential users over to BioStar Air. If you use the <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> URL or BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app. If you use <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> or the BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app."
+    "question": "Should I start using Suprema Pass instead of the Airfob Space app?",
+    "answer": "There is no need to migrate existing mobile credential users over to BioStar Air. If you use the <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> URL or Airfob Pro app to manage users and issue mobile credentials, those users will receive an invitation that points to the Airfob Space app. If you use <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> or the BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app."
   },
   {
     "question": "Will support or billing change?",
@@ -21,10 +21,10 @@
   },
   {
     "question": "What are the benefits of BioStar Air?",
-    "answer": "BioStar Air is the future-facing brand. It will receive ongoing enhancements, such as improved integrations, UI/UX updates, and new features that may not be backported to BioStar Air."
+    "answer": "BioStar Air is the future-facing brand. It will receive ongoing enhancements, such as improved integrations, UI/UX updates, and new features that may not be backported to Airfob Space."
   },
   {
-    "question": "Will future features work with BioStar Air?",
+    "question": "Will future features work with Airfob Space?",
     "answer": "Some will, but not all. New features may be exclusive to BioStar Air going forward. For the best experience and support, new deployments should use BioStar Air."
   }
 ]
