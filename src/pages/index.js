@@ -10,7 +10,10 @@ import '@algolia/autocomplete-theme-classic';
 import { liteClient as algoliasearch } from 'algoliasearch/lite';
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
+import {translate} from '@docusaurus/Translate';
 import BioStarLogo from '@site/static/img/logo-biostar-x.svg';
+import Paxton from '@site/static/img/integration/paxton-logo.svg';
+import Dom from '@site/static/img/integration/dom-logo.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -20,6 +23,9 @@ function HomepageHeader() {
   const searchClient = algoliasearch(appId, apiKey);
   const { i18n: {currentLocale} } = useDocusaurusContext();
   const lang = currentLocale;
+  const bsxDesc = translate({
+    id: 'index.biostarx.description',
+  });
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className={clsx('container', styles.containerRef)}>
@@ -93,7 +99,7 @@ function HomepageHeader() {
               <div>
                 <BioStarLogo width='284' height='78' />
                 <Heading as='h2' className={styles.banner__biostarh2}>New BioStar</Heading>
-                <p>출입통제의 한계를 넘는 보안의 새로운 기준, AI 기반 통합 보안 플랫폼</p>
+                <p dangerouslySetInnerHTML={{__html: bsxDesc}} />
               </div>
               <div className={styles.banner__biostar__img}>
                 {/* <img src={require('@site/static/img/banner/biostarx-banner.png').default} width='284px' height='217px'/> */}
@@ -106,6 +112,22 @@ function HomepageHeader() {
   );
 }
 
+function Integration() {
+  return (
+    <div className={clsx('container', styles.grid, styles.integration)}>
+      <div className={clsx(styles.paxton, styles.integration__item)}>
+        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div>
+      <div className={styles.integration__item}>
+        <Link to='integration/dom/introduction'><Dom /></Link>
+      </div>
+      {/* <div>
+        <Link to='integration/paxton_2.0/introduction'><Paxton /></Link>
+      </div> */}
+    </div>
+  )
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -114,11 +136,7 @@ export default function Home() {
       description={`${siteConfig.tagline}`}>
       <main className={styles.heroLayout}>
         <HomepageHeader />
-        <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Developers</Heading>
-        </div>
-        <ExternalLinkCard />
-        
+
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Biometric Devices</Heading>
         </div>
@@ -133,6 +151,16 @@ export default function Home() {
           <Heading as='h2'>Intelligent Controller</Heading>
         </div>
         <IntenlligentController />
+
+        {/* <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>Integrations</Heading>
+        </div>
+        <Integration /> */}
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>Developers</Heading>
+        </div>
+        <ExternalLinkCard />
       </main>
     </Layout>
   );

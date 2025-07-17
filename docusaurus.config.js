@@ -39,9 +39,12 @@ const config = {
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/',
   future: {
-    v4: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: false,
+    },
     experimental_faster: true
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
@@ -153,10 +156,21 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            label: 'BioStar X',
+            type: 'dropdown',
+            label: 'Platforms',
             position: 'right',
-            docId: 'platform/biostar_x/index'
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
           },
           {
             type: 'dropdown',
@@ -170,6 +184,23 @@ const config = {
               }
             ]
           },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Integrations',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'Paxton',
+          //       docId: 'integration/paxton_2.0/introduction'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Dom',
+          //       docId: 'integration/dom/introduction'
+          //     }
+          //   ]
+          // },
           {
             type: 'doc',
             label: 'Reference',
@@ -208,7 +239,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico)',

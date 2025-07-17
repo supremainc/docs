@@ -19,7 +19,7 @@ const glossaryMap = {
 };
 
 // 어노테이션 렌더링 유틸
-function AnnotationSup({ id }) {
+export function AnnotationSup({ id }) {
   if (!id) return null;
   return (
     <sup id={`${id}_dest`}>

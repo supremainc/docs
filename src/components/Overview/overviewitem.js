@@ -11,6 +11,7 @@ import {translate} from '@docusaurus/Translate';
 import Heading from '@theme/Heading';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
+import { render } from 'sass';
 
 function useCategoryItemsPlural() {
   const {selectMessage} = usePluralForm();
@@ -32,10 +33,16 @@ function MoreIcon() {
   )
 }
 
-function renderSubItems(items, parentLink) {
+function renderSubItems(items, parentLink, renderAll) {
+  let subItems;
+  if (renderAll) {
+    subItems = items;
+  } else {
+    subItems = items.slice(0, 3); // 최대 3개 항목만 렌더링
+  }
   return (
     <ul className={styles.ovSubitems}>
-      {items.slice(0, 3).map((subItem) => { // 최대 3개 항목만 렌더링
+      {subItems.map((subItem) => { // 최대 3개 항목만 렌더링
         const subItemHref = findFirstSidebarItemLink(subItem);
         const isInternal = isInternalUrl(subItemHref);
         return (
@@ -51,14 +58,16 @@ function renderSubItems(items, parentLink) {
           </li>
         );
       })}
-      <Link className={styles.ovMoreitems} to={parentLink}>
-        <MoreIcon /> {useCategoryItemsPlural()(items.length)}
-      </Link>
+      {renderAll === false && (
+        <Link className={styles.ovMoreitems} to={parentLink}>
+          <MoreIcon /> {useCategoryItemsPlural()(items.length)}
+        </Link>
+      )}
     </ul>
   );
 }
 
-function OverviewLink({item}) {
+function OverviewLink({item, renderAll}) {
   const {siteConfig} = useDocusaurusContext();
   const href = findFirstSidebarItemLink(item);
 
@@ -100,14 +109,14 @@ function OverviewLink({item}) {
             )}
             {item.type === 'category' && (
               <>
-                {renderSubItems(item.items, item.href)}
+                {renderSubItems(item.items, item.href, renderAll)}
               </>
             )}
           </div>
         ) : (
           <div className={styles.desc}>
             {doc?.description && (
-              <p dangerouslySetInnerHTML={{__html: doc.description}} />
+              <p dangerouslySetInnerHTML={{__html: doc.description.replace(/Release(\d\d)/g, 'Release $1')}} />
             )}
           </div>
         )}
@@ -116,6 +125,7 @@ function OverviewLink({item}) {
   );
 }
 
-export default function OverviewItem({item}) {
-  return <OverviewLink item={item} />;
+export default function OverviewItem({item, renderAll}) {
+  // console.log('222', renderAll);
+  return <OverviewLink item={item} renderAll={renderAll} />;
 }

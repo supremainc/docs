@@ -14,8 +14,137 @@
 
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
+
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
+  biostar_air: [
+    {
+      type: 'category',
+      label: 'BioStar Air',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_air/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Overview',
+          items: [
+            'platform/biostar_air/what-is-biostar-air',
+            'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Site Management',
+          items: [
+            'platform/biostar_air/getting-started',
+            'platform/biostar_air/biostar-air-login',
+            {
+              type: 'category',
+              label: 'User Management',
+              items: [
+                'platform/biostar_air/managing-users',
+                'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/adding-users-in-bulk',
+                'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+                'platform/biostar_air/user-card-types',
+                'platform/biostar_air/managing-user-groups',
+                'platform/biostar_air/managing-card-templates',
+                'platform/biostar_air/managing-adding-users',
+                'platform/biostar_air/linkpass-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Device Management',
+              items: [
+                'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/configuring-ta',
+                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/how-to-upgrade-firmware',
+                'platform/biostar_air/biometric-readers-and-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Door Management',
+              items: [
+                'platform/biostar_air/managing-registered-doors',
+                'platform/biostar_air/managing-door-and-device-groups',
+                'platform/biostar_air/managing-door-schedules',
+              ]
+            },
+            'platform/biostar_air/managing-elevator-access',
+            'platform/biostar_air/managing-door-access',
+            {
+              type: 'category',
+              label: 'Monitoring',
+              items: [
+                'platform/biostar_air/event-and-audit-logs',
+                'platform/biostar_air/monitoring-door-status',
+              ]
+            },
+            'platform/biostar_air/managing-roll-call-fire-muster',
+            'platform/biostar_air/configuring-reports',
+            {
+              type: 'category',
+              label: 'Settings',
+              items: [
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/site-settings',
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/managing-sites-with-phone'
+              ]
+            },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Video Management',
+          items: [
+            'platform/biostar_air/ip-camera-support-and-configuration',
+            'platform/biostar_air/video-troubleshooting',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Using Mobile Credentials',
+          items: [
+            'platform/biostar_air/suprema-pass-app-overview',
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/location-services-issues',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Partners and Integrations',
+          items: [
+            'platform/biostar_air/intro-to-partner-portal',
+            'platform/biostar_air/biostar-air-partner-portal-detailed-use',
+            'platform/biostar_air/federated-sites',
+            'platform/biostar_air/integration-quickstart',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Hardware',
+          items: [
+            'platform/biostar_air/wiring-and-configuration',
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',
@@ -504,6 +633,68 @@ const sidebars = {
         'device/biostation_2a/product-specifications',
         'device/biostation_2a/regulatory-information',
         'device/biostation_2a/appendices',
+      ],
+    },
+  ],
+  paxton: [
+    {
+      type: 'category',
+      label: 'Paxton Integration',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        'integration/paxton_2.0/introduction',
+        'integration/paxton_2.0/installation',
+        'integration/paxton_2.0/installing-biostar2',
+        'integration/paxton_2.0/installing-paxton-net2',
+        'integration/paxton_2.0/settings',
+        'integration/paxton_2.0/enrollment-helper-client',
+        'integration/paxton_2.0/troubleshooting',
+        'integration/paxton_2.0/appendices',
+        {
+          type: 'html',
+          value: '<hr/>',
+        },
+        {
+          type: 'category',
+          label: 'Revision Notes',
+          link: {
+            type: 'doc',
+            id: 'integration/paxton_2.0/revision-notes/index',
+          },
+          items: [
+            'integration/paxton_2.0/revision-notes/227',
+            'integration/paxton_2.0/revision-notes/226',
+            'integration/paxton_2.0/revision-notes/225',
+            'integration/paxton_2.0/revision-notes/222',
+            'integration/paxton_2.0/revision-notes/220',
+            'integration/paxton_2.0/revision-notes/210',
+            'integration/paxton_2.0/revision-notes/209',
+            'integration/paxton_2.0/revision-notes/208',
+            'integration/paxton_2.0/revision-notes/207',
+            'integration/paxton_2.0/revision-notes/202',
+            'integration/paxton_2.0/revision-notes/201',
+            'integration/paxton_2.0/revision-notes/200',
+          ],
+        },
+      ],
+    },
+  ],
+  dom: [
+    {
+      type: 'category',
+      label: 'DOM Integration',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      items: [
+        'integration/dom/introduction',
+        'integration/dom/installation',
+        'integration/dom/installing-biostar2',
+        'integration/dom/settings',
+        'integration/dom/domploy',
+        'integration/dom/appendices',
       ],
     },
   ],

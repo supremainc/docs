@@ -63,9 +63,27 @@
 .faq .faqBody {
   background: #eee;
   padding: 1rem .5rem;
-  color: #333
+  color: #333;
+  border-radius: .5rem;
+}
+
+.faq .faqBody > * {
+  padding: 0 8px;
+  margin-bottom: 0px;
 }
 
 .faq .faqBody ul {
   margin-bottom: 8px;
+}
+
+.faq .faqBody ol {
+  margin-bottom: 0;
+}
+
+.faq .faqBody ul li:first-of-type, .faq .faqBody ol li:first-of-type {
+  margin-top: 0;
+}
+
+.faq .faqBody ul li:last-of-type, .faq .faqBody ol li:last-of-type {
+  margin-bottom: 0;
 }

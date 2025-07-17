@@ -1,0 +1,80 @@
+---
+id: adding-users-in-bulk
+title: Adding Users in Bulk
+description: Learn how to efficiently add multiple users at once using CSV file upload, configure bulk access levels, and manage profile images in BioStar Air Portal.
+keywords: [user management, BioStar Air, bulk users]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+## Feature Overview {#feature-overview}
+
+BioStar Air allows administrators to add multiple users at once using a CSV file. This is useful for onboarding employees, upgrading a site, or handling temporary access needs efficiently.
+
+<YouTube videoId="gOi2nP0Ag5o" />
+
+<CustomerNote />
+
+## Navigating to Bulk User Upload {#navigating-to-bulk-user-upload}
+
+To add multiple users in bulk:
+
+1. Go to **User Management** in the BioStar Air Portal.
+
+1. Click on **Users** to open the user list interface.
+
+1. Click on the **Download CSV Template** button.
+
+
+## Preparing the CSV File {#preparing-the-csv-file}
+
+After downloading the CSV template, fill in the required details for each user. Key fields include:
+
+* **User Group ID**: Retrieve this from the **User Group** screen in BioStar Air Portal.
+
+* **Access Level ID**: Retrieve this from the **Access Levels** screen. *Full access* is always set as **1**.
+
+* **Email Address**: Required if issuing invitations via email (must be unique).
+
+* **Mobile Phone Number**: Required if issuing invitations via mobile (must be unique).
+
+
+## Uploading the CSV File {#uploading-the-csv-file}
+
+Once the CSV file is ready:
+
+1. Drag and drop the file into the **Upload CSV** window.
+
+1. Review the column data in the preview window to ensure accuracy.
+
+1. Proceed with the upload if the data is correct.
+
+
+## Uploading User Profile Images {#uploading-user-profile-images}
+
+Profile images can be uploaded automatically along with the CSV file. Follow these guidelines:
+
+1. Ensure that each image file name matches the user ID in the CSV file (e.g., *601.jpg* corresponds to user ID **601**).
+
+1. Select all images and drag them into the **Bulk User Images** upload area.
+
+1. If images are not ready at the time of CSV upload, they can be added later using the **Image Upload** button.
+
+:::info
+
+**File Format Requirements:**
+
+* Supported formats: *.jpg*, *.png*
+
+* File size limit: **1MB per image**
+
+:::
+
+
+## Finalizing the Bulk Upload {#finalizing-the-bulk-upload}
+
+Once all user data and images are uploaded, the system will process the entries, and the new users will appear in the user list with their assigned credentials.
+
+## Troubleshooting
+
+If you run into any issues with your CSV upload, we've written a more detailed guide to help you work through common problems. It also includes Excel formulas to help you validate and de-duplicate your data. [CSV Upload Troubleshooting Guide](troubleshooting-adding-users-in-bulk)

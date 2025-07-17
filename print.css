@@ -9,6 +9,10 @@
 
 @page {
   size: A4;
+  margin-top: 0.7in;
+  margin-bottom: 0.7in;
+  margin-left: 0.5in;
+  margin-right: 0.5in;
   prince-shrink-to-fit: none;
   @top-right { content: string(doctitle);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
   @bottom-center { content: counter(page);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
@@ -20,12 +24,12 @@
 }
 
 @media print {
-  .breadcrumbs__item--active.item-2 { -prince-bookmark-level: 1 }
+  /* .breadcrumbs__item--active.item-2 { -prince-bookmark-level: 1 }
   .breadcrumbs__item--active.item-3 { -prince-bookmark-level: 2 }
   .breadcrumbs__item--active.item-4 { -prince-bookmark-level: 3 }
-  .breadcrumbs__item--active.item-5 { -prince-bookmark-level: 4 }
+  .breadcrumbs__item--active.item-5 { -prince-bookmark-level: 4 } */
 
-  h1 { -prince-bookmark-level: none }
+  h1 { -prince-bookmark-level: 1 }
   h2 { -prince-bookmark-level: none }
   h3 { -prince-bookmark-level: none }
   h4 { -prince-bookmark-level: none }

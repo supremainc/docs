@@ -911,6 +911,21 @@ footer {
       }
     }
   }
+  .cols3--20-40-40 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 20%;
+        }
+        &:nth-of-type(2) {
+          width: 40%;
+        }
+        &:nth-of-type(3) {
+          width: 40%;
+        }
+      }
+    }
+  }
   .col5--15-10-25 {
     table {
       td {
@@ -1068,10 +1083,13 @@ footer {
   .theme-doc-sidebar-container {
     display: none !important;
   }
+  .theme-announcement-bar {
+    display: none !important;
+  }
   nav.theme-doc-breadcrumbs, .theme-back-to-top-button {
-    display: block;
-    position: absolute;
-    top: -150px;
+    display: none !important;
+    // position: absolute;
+    // top: -150px;
   }
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
@@ -1110,9 +1128,22 @@ footer {
     }
     details {
       background: none !important;
+      page-break-inside: avoid;
+      border: none !important;
+      margin-top: 2rem;
+      padding: 0 !important;
+      box-shadow: none !important;
       summary {
         display: block;
         position: relative;
+        padding-left: 0;
+      }
+      summary::before {
+        display: none;
+      }
+      div[class*='collapsibleContent'] {
+        border-top: none !important;
+        padding-top: 0 !important;
       }
     }
     .page-break {
@@ -1146,8 +1177,34 @@ footer {
     li::marker {
       font-size: .8rem !important;
     }
-    img {
-      max-width: 65%;
+    .hasimg {
+      margin-top: 1rem !important;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 65% !important;
+      }
+      img.full {
+        max-width: 100% !important;
+      }
+    }
+    ol, ul {
+      li {
+        .hasimg {
+          img {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 65% !important;
+          }
+        }
+      }
+    }
+    ul {
+      li {
+        table {
+          margin-top: .7rem
+        }
+      }
     }
     ol {
       li {

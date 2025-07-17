@@ -1,0 +1,36 @@
+---
+id: video-troubleshooting
+title: Checking if a Camera Supports Recorded Video Playback
+description: Learn how to troubleshoot video playback issues, verify ONVIF Profile G support, check codec compatibility, and resolve SD card formatting problems in BioStar Air.
+keywords: [IP Camera, Recorded Video Playback, BioStar Air]
+---
+
+## Troubleshooting Tips for Video Playback Issues {#troubleshooting-tips-for-video-playback-issues}
+
+If recorded videos do not play after registering the camera in BioStar Air, follow these steps to diagnose and resolve the issue:
+
+### Verify ONVIF Profile G Support {#verify-onvif-profile-g-support}
+
+Check whether the camera supports ONVIF Profile G by searching for the model name on [ONVIF's conformant products page](https://www.onvif.org). ONVIF Profile G is required for recorded video playback.
+
+### Test Video Playback in Camera Settings {#test-video-playback-in-camera-settings}
+
+* Log into the camera’s settings via its web interface.
+
+* Ensure that you can view the live camera feed and recorded videos.
+
+* Be aware that some cameras may restrict simultaneous playback of recorded videos in both the portal and the settings menu. If playback works in the camera settings but not in Airfob Space, try closing the settings interface and testing again.
+
+### Check Video Codec Compatibility {#check-video-codec-compatibility}
+
+Ensure that the recorded video is using the **H.264** codec, as Airfob Space does not support H.265.
+
+### Format the SD Card If Codec Was Changed {#format-the-sd-card-if-codec-was-changed}
+
+If the video codec was changed at any point, the existing recordings may not play correctly. Formatting the SD card may be necessary for the new settings to take effect. This solution has been confirmed to resolve playback issues on some camera models.
+
+### Reference ONVIF's Conformant Products List {#reference-onvifs-conformant-products-list}
+
+If you are unsure whether your camera meets ONVIF standards, visit the [ONVIF website](https://www.onvif.org) to verify compatibility.
+
+By following these steps, you can troubleshoot video playback issues and ensure proper functionality within Airfob Space.
