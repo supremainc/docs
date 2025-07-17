@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
 import useImageDimensions from './useImageDimensions'; 
 
-export default function Image({src, alt, className, alone, caption, ico}) {
+export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     const imagePath = 
         currentLocale === 'ko' || alone ? 
@@ -28,8 +28,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                 alt={alt}
                 className={clsx('ico', className)}
                 onError={onError}
-                width={dimensions.width || undefined}
-                height={dimensions.height || undefined}
+                width={width || dimensions.width || undefined}
+                height={height || dimensions.height || undefined}
             />
         );
     } else {
@@ -43,8 +43,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                             alt={alt}
                             className={clsx('img', className)}
                             onError={onError}
-                            width={dimensions.width || undefined}
-                            height={dimensions.height || undefined}
+                            width={width || dimensions.width || undefined}
+                            height={height || dimensions.height || undefined}
                         />
                         <figcaption>
                             {translate({
@@ -60,8 +60,8 @@ export default function Image({src, alt, className, alone, caption, ico}) {
                             alt={alt}
                             className={className}
                             onError={onError}
-                            width={dimensions.width || undefined}
-                            height={dimensions.height || undefined}
+                            width={width || dimensions.width || undefined}
+                            height={height || dimensions.height || undefined}
                         />
                     </p>
                     }
