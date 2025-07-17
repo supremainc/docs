@@ -1,0 +1,150 @@
+---
+id: managing-registered-doors
+title: Managing Registered Doors
+description: Learn how to manage registered doors, configure entry and exit devices, set up relays, and organize door schedules in BioStar Air.
+keywords: [door management, BioStar Air]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+## Feature Overview {#feature-overview}
+
+Door management in BioStar Air allows administrators to organize access points by assigning entry and exit devices, configuring relays, and setting up schedules. Doors provide structure for managing access and tracking user movements for security, fire muster, and time & attendance (T&A) purposes.
+
+<CustomerNote />
+
+## Navigating to Registered Doors {#navigating-to-registered-doors}
+
+To access the registered doors screen:
+
+1. Go to **Door Management** in the BioStar Air Portal.
+
+1. Click on **Registered Doors** to view the list of doors.
+
+<YouTube videoId="g7fUC-9f0qM" />
+
+
+## Understanding the Door List {#understanding-the-door-list}
+
+The registered doors screen displays key details:
+
+* **Door Name**
+
+* **Entry Device**: The reader assigned for entering.
+
+* **Exit Device**: The reader assigned for exiting.
+
+* **Camera**: Integrated CCTV support (if applicable).
+
+* **Door Group**: The category assigned to the door.
+
+* **Description**: Notes about the door’s location.
+
+
+## Managing Doors {#managing-doors}
+
+When selecting a door, administrators can perform the following actions:
+
+* **Edit**: Modify door settings.
+
+* **Refresh**: Update the status of the door.
+
+* **Delete**: Remove a door from the system.
+
+* **Schedule Settings**: Assign lock/unlock schedules.
+
+* **Manage Groups**: Organize doors into groups.
+
+
+## Editing Door Settings {#editing-door-settings}
+
+To modify door settings:
+
+1. Select a door from the list.
+
+1. Update the **Door Name** and **Description**.
+
+1. Assign devices:  
+
+   * **Entry Device**: The reader used for entry.  
+
+   * **Exit Device**: The reader used for exit.  
+
+   * **Camera**: Attach a CCTV camera for event logging.
+
+1. Specify relay settings:  
+
+   * Select the **Relay Device** that controls the door lock.  
+
+   * Enable **Relay Ignoring Door Sensor** for troubleshooting.
+
+1. Configure additional settings:  
+
+   * Assign an **Exit Button** if one is installed.  
+
+   * Define the **Door Sensor** input.  
+
+   * Set the **Open Time** (default: 3 seconds).
+
+1. Click **Save** to apply changes.
+
+
+## Setting Door Schedules {#setting-door-schoolules}
+
+Doors can be assigned schedules for automated locking and unlocking:
+
+* **Unlock Schedule**: The door remains open during set hours.
+
+* **Lock Schedule**: The door remains locked during set hours.
+
+* **Unlock After First Authentication**: The door unlocks only after the first user authenticates, useful for office and retail settings.
+
+
+## Adding a New Door {#adding-a-new-door}
+
+To create a new door:
+
+1. Click **Add Door**.
+
+1. Enter a **Door Name**.
+
+1. Select an **Entry Device** and **Exit Device**.
+
+1. Assign a **Camera** if available.
+
+1. Click **Save** to finalize the door setup.
+
+
+## Key Issues and Considerations {#key-issues-and-considerations}
+
+### Using Entry and Exit Devices {#using-entry-and-exit-devices}
+
+* It is recommended to use the relay on the **exit device** since this relay will be inside the secure perimeter.
+
+* Entry and exit devices must have **separate network connections**. They cannot be linked via Wiegand or RS-485 in a master-slave arrangement.
+
+### Device Assignment Rules {#device-assignment-rules}
+
+* Each device can only be assigned to **one door**.
+
+* If a device is already registered but does not appear in the list of available devices, check whether it is assigned to another door. If so, remove it from that door before reassigning.
+
+## Managing Doors in the BioStar Air App {#managing-doors-in-the-airfob-pro-app}
+
+Administrators can manage doors directly from the BioStar Air mobile app:
+
+1. Open the **BioStar Air** app.
+
+1. Go to **All Menu** → **Access Points** → **Doors**.
+
+1. View all registered doors and filter by group.
+
+1. Tap a door to edit settings such as:  
+
+   * Entry and exit devices  
+
+   * Relay settings
+
+   * Exit button and door sensor configurations
+
+1. To add a new door, tap the **Plus (+) button** and enter the required details.
