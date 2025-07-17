@@ -1,0 +1,94 @@
+---
+id: configuring-the-sio2-secure-module
+title: Configuring the SIO2 Secure Module
+description: Learn how to configure the SIO2 Secure Module for enhanced security in your access control system.
+keywords: [SIO2, Secure Module, configuration]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+## Overview {#overview}
+
+The **SIO2 Secure Module** enhances security in your access control system by acting as an intermediary between the Suprema or Airfob reader and the relay. It communicates with the reader via an **RS485 cable**, with encrypted communication to prevent security breaches.
+
+<CustomerNote />
+
+:::caution
+
+**Please refer to the wiring diagrams included in the box with your SIO2 Secure Module for accurate setup instructions.** Since installation may vary depending on the environment, professional assistance from your local Suprema installer may be required.
+
+:::
+
+
+## How to Activate SIO2 in the BioStar Air Portal {#how-to-activate-sio2-in-the-biostar-air-portal}
+
+:::note
+
+If you do not change the settings in the BioStar Air portal after installing SIO2, it will not function correctly.
+
+:::
+
+<Steps>
+<Step>
+
+### Register the Reader {#register-the-reader}
+
+* Ensure the reader device, SIO2, and door relay are successfully connected.
+
+* Register the reader device on your site using the **BioStar Air app**.
+
+</Step>
+<Step>
+
+### Check Device Connection {#check-device-connection}
+
+* Access the **BioStar Air portal**.
+
+* Navigate to **Device Management** → **Registered Devices**.
+
+* Ensure the device shows a **green status indicator**, confirming its connection.
+
+</Step>
+<Step>
+
+### Assign SIO2 to a Door {#assign-sio2-to-a-door}
+
+* Go to **Door Management** → **Registered Door**.
+
+* Find the door where the device is connected. (The door is automatically created when the device is registered.)
+
+</Step>
+<Step>
+
+### Enable SIO2 {#enable-sio2}
+
+* In the **Assign Devices** area, a pop-up screen will appear.
+
+* Toggle on **SIO2** to activate it.
+
+</Step>
+<Step>
+
+### Configure Relay and Sensors {#configure-relay-and-sensors}
+
+* For **Door Relay**, select **Relay 0**. (The SIO2 module has only one Door Relay port.)
+
+* For **Door Sensor**, select the input port number on the SIO2 where the Door Sensor is connected.
+
+* If an **Exit Button** is connected, select the corresponding input port on the SIO2.
+
+* If using another type of exit device, select **Exit Devices** instead.
+
+</Step>
+<Step>
+
+### Save the Settings {#save-the-settings}
+
+* Click the **Save** button to apply the configuration.
+
+* The SIO2 Secure Module will now function normally.
+
+</Step>
+</Steps>
+
+Following these steps ensures that your SIO2 Secure Module is properly integrated and enhances the security of your access control system.

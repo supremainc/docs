@@ -28,8 +28,10 @@ import Jira from '@site/src/components/Jira';
 import { Productpart, Callout, Item } from '@site/src/components/Productpart';
 import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 import Faqs from '@site/src/components/Faqs';
+import { FaqsItems } from '@site/src/components/Faqs';
 import Calloutlists from '@site/src/components/Calloutlists';
 import DocLink from '@site/src/components/DocLink';
+import YouTube from 'react-youtube';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -136,7 +138,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSectioin, SpecSizeWieght, Anno,
-    Faqs, Calloutlists, DocLink,
+    Faqs, FaqsItems, Calloutlists, DocLink, YouTube,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
