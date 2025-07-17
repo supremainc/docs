@@ -1,0 +1,407 @@
+---
+id: integration-quickstart
+title: Integration Quickstart
+description: Learn how to set up a BioStar Air demo site, register compatible readers, generate API keys, and start testing integrations with cloud APIs.
+keywords: [integration, quickstart, BioStar Air]
+---
+
+# Getting Started with API Integrations 
+
+This guide walks you through how to set up a BioStar Air demo site, connect and register a BioStar Air-compatible readers to it, and begin testing your integration using our cloud APIs.
+
+If you’ve previously worked with BioStar 2, many concepts will feel familiar—but BioStar Air is fully cloud-native.
+
+
+## Getting Started {#getting-started}
+
+### Pre-Requisites {#pre-requisites}
+
+Ensure the following:
+
+* You have a **BioStar Air compatible device**with factory-loaded firmware:
+
+  * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
+
+  * Devices may be purchased through authorized Suprema dealers
+
+* The device is connected to the internet via Ethernet.
+
+* Your network allows outbound access on:
+
+  * Port 443 (HTTPS)
+  * Port 5671 (MQTT over TLS)
+
+
+## Step 1: Set Up Your Demo Environment & API Key {#step-1-demo-setup}
+
+<Steps>
+<Step>
+
+### Sign Up and Log In {#sign-up-and-log-in}
+
+* Go to: [https://developers.biostarair.com/login](https://developers.biostarair.com/login)
+
+* Click **Sign Up**, fill out the form, and wait for approval.
+
+* Once approved, log in using your credentials.
+
+</Step>
+<Step>
+
+### Create a Demo Application {#create-a-demo-application}
+
+* Navigate to **API** → **Management**.
+
+* Click **\+ Register**.
+
+* Choose **Demo** as the application type.
+
+* Enter a name for your application and click **Register**.
+
+* Click **Download** to retrieve an Excel file containing your demo site login credentials (email and password).
+
+</Step>
+<Step>
+
+### Issue an API Key {#issue-an-api-key}
+
+* Under **Application Management** click into your registered application.
+
+* Scroll to **API Management**.
+
+* Click **Add**.
+
+* Enter a name and confirm. Save the generated key.
+
+</Step>
+<Step>
+
+### Log Into the Demo Portal {#log-into-the-demo-portal}
+
+* Navigate to the [Demo Portal](https://demo.airfobspace.com/login).
+
+* Log in with the email and password from the Excel file.
+
+* Enter the API Key you just created.
+
+</Step>
+</Steps>
+
+
+## Step 2: Register the Reader {#register-the-reader}
+
+Use the Airfob Pro Demo App (Android only):
+
+1. Download the app: [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+
+1. Log in with the credentials from the Excel file.
+
+1. Bring your Android phone near the reader (BLE range), then:
+
+    * Tap **All Menu** → **Devices** → **+** (upper right corner).
+
+    * Locate your device and tap **Register**.
+
+1. The reader will chime, reboot, and appear under Registered Devices.
+
+:::note
+
+Readers can only be registered using the mobile app. Web registration is not supported. API-based registration requires a cryptographic certificate not provided to partners.
+
+:::
+
+
+## Step 3: Manage the Reader
+
+Manage the device using either:
+
+* The **Airfob Pro Demo App**
+
+* The **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
+
+
+## API Base URLs {#api-base-urls}
+
+| Environment | Base URL |
+| --- | --- |
+| Demo | https://demo-afs-api.airfob.com/v1/ |
+| Production - Europe | https://e-afs-api.airfob.com/v1/ |
+| Production - Korea | https://a-afs-api.airfob.com/v1/ (for all non-EU customers) |
+
+
+## Recommended Integration Scope {#recommended-integration-scope}
+
+When possible limit your integration to:
+
+* User lifecycle management (create/update/delete)
+
+* Credential management (mobile, RF card, biometric)
+
+Allow administrators to use the existing BioStar Air web and mobile admin apps for:
+
+* Access levels
+
+* Schedules
+
+* Door and reader settings
+
+* Site settings
+
+## Optional: API Login Flow (Postman or Programmatic) {#optional-api-login-flow}
+
+<Steps>
+<Step>
+
+### Login {#login}
+
+**Endpoint:** login
+
+**Payload:**
+
+```json
+{
+  "username": "your_email",
+  "password": "your_password"
+}
+```
+
+Returns a Bearer Token (JWT).
+
+</Step>
+<Step>
+
+### Get Self Accounts {#get-self-accounts}
+
+**Endpoint:** getSelfAccounts
+
+**Authorization:** Bearer Token
+
+Returns a list of accessible sites/accounts.
+
+</Step>
+<Step>
+
+### Login to an Account {#login-to-account}
+
+**Endpoint:** loginAccount
+
+**Authorization:** Bearer Token
+
+Returns a site-specific token.
+
+</Step>
+</Steps>
+
+
+## How to Get Your Bearer Token (Browser Method) {#how-to-get-your-bearer-token}
+
+### Chrome/Edge (Windows or Mac) {#chrome-edge}
+
+1. Press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+
+1. Go to the **Network** tab.
+
+1. Reload the page.
+
+1. Search for API calls. (e.g., groups, login)
+
+1. Click on the request.
+
+1. Go to the **Headers** tab.
+
+1. Look for `Authorization: Bearer ...` in Request Headers.
+
+1. Right-click and copy the token.
+
+### Safari (Mac) {#safari}
+
+1. Enable **Develop** menu: Safari → Preferences → Advanced → Check **Show Develop menu**
+
+1. Open **Develop** → **Show Web Inspector**.
+
+1. Go to **Network** tab.
+
+1. Reload the page.
+
+1. Filter and inspect an API call.
+
+1. Copy the `Authorization: Bearer` token from the request headers.
+
+
+## User Management API Calls {#user-management-api-calls}
+
+Once logged in, use these endpoints to manage users:
+
+* `getUsers`
+
+* `createUser`
+
+* `updateUser`
+
+* `suspendUsers`
+
+Always include the Bearer Token in the Authorization header.
+
+:::note
+
+To activate a user, you must assign at least one credential type. (e.g., RF Card, Mobile, Linkpass)
+
+:::
+
+
+## Demo vs Production {#demo-vs-production}
+
+* **Demo Sites** are created via the Developer Portal for testing.
+
+* **Production Sites** are created via the Partner Portal and require site ID, user email, and password. Production sites can only be created by authorized dealers or Suprema branch offices.
+
+
+## Important Notes {#important-notes}
+
+* User ID and Account ID are different — do not confuse them.
+
+* Store passwords securely if managing multiple sites.
+
+* Always use the most recent Bearer Token.
+
+* Bearer Tokens copied from the browser can be reused in Postman.
+
+
+## Need Help? {#need-help}
+
+Open a ticket on the Suprema Technical Support Portal: [https://support.supremainc.com](https://support.supremainc.com)
+
+
+## Sample Application {#sample-application}
+
+Need an example? The following is sample code for a Python app that lets you bulk suspend users by uploading a CSV file via the API.
+
+```python title='Python'
+import requests
+import csv
+import getpass
+from pathlib import Path
+
+def select_server():
+    servers = {
+        "1": ("Demo", "https://demo-afs-api.airfob.com/v1"),
+        "2": ("Global", "https://a-afs-api.airfob.com/v1"),
+        "3": ("EU", "https://e-afs-api.airfob.com/v1")
+    }
+
+    print("Please select a server:")
+    for key, (name, _) in servers.items():
+        print(f"{key}: {name}")
+
+    choice = input("Enter server number: ").strip()
+    return servers.get(choice, (None, None))[1]
+
+def login(base_url, username, password):
+    url = f"{base_url}/login"
+    payload = {"username": username, "password": password}
+    response = requests.post(url, json=payload)
+    response.raise_for_status()
+    data = response.json()
+    token = data.get("access_token")
+    if not token:
+        raise ValueError("Login succeeded but no access_token returned.")
+    print("✅ Login successful.")
+    return token
+
+def login_to_account(base_url, token, account_id):
+    url = f"{base_url}/login/{account_id}"
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.post(url, headers=headers)
+    response.raise_for_status()
+    new_token = response.json().get("access_token")
+    if new_token:
+        print(f"✅ Switched to account ID: {account_id}")
+        return new_token
+    return token
+
+def get_accounts(base_url, token):
+    url = f"{base_url}/accounts/self"
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+    accounts = response.json().get("accounts", [])
+    return [{"id": acc["id"], "name": acc["site"]["name"]} for acc in accounts]
+
+def suspend_users_from_csv(base_url, csv_path, token):
+    if not Path(csv_path).exists():
+        print(f"❌ File not found: {csv_path}")
+        return
+
+    headers = {"Authorization": f"Bearer {token}"}
+
+    with open(csv_path, newline='', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+
+        # Normalize headers
+        reader.fieldnames = [field.strip().lower() for field in reader.fieldnames]
+        if 'email' not in reader.fieldnames:
+            print("❌ Missing required 'email' column in CSV.")
+            return
+
+        for row in reader:
+            email = row.get("email")
+            if not email:
+                print("⚠️ Skipping row with missing email.")
+                continue
+
+            # Search user
+            search_url = f"{base_url}/users/search"
+            payload = {"filters": [{"field": "email", "equals": email}]}
+            search_resp = requests.post(search_url, headers=headers, json=payload)
+            if search_resp.status_code != 200:
+                print(f"❌ Failed to search user {email}: {search_resp.text}")
+                continue
+
+            users = search_resp.json().get("users", [])
+            if not users:
+                print(f"❌ No user found with email: {email}")
+                continue
+
+            user_id = users[0]["id"]
+
+            # Suspend user
+            suspend_url = f"{base_url}/users/suspend"
+            suspend_payload = {
+                "ids": [user_id],
+                "certify_by": "none",
+                "use_site_template": True
+            }
+            suspend_resp = requests.post(suspend_url, headers=headers, json=suspend_payload)
+            if suspend_resp.status_code == 200:
+                print(f"✅ Suspended user: {email}")
+            else:
+                print(f"❌ Failed to suspend user {email}: {suspend_resp.text}")
+
+def main():
+    base_url = select_server()
+    if not base_url:
+        print("❌ Invalid selection. Exiting.")
+        return
+
+    print("\n? BioStar Air Login")
+    username = input("Email: ")
+    password = getpass.getpass("Password: ")
+
+    token = login(base_url, username, password)
+    accounts = get_accounts(base_url, token)
+
+    print("\n? Available Sites:")
+    for i, acc in enumerate(accounts):
+        print(f"{i}: {acc['name']} (ID: {acc['id']})")
+
+    selected = int(input("\nSelect site number to log into: "))
+    account_id = accounts[selected]["id"]
+    token = login_to_account(base_url, token, account_id)
+
+    csv_path = input("Enter path to CSV file with user emails: ").strip()
+    suspend_users_from_csv(base_url, csv_path, token)
+
+if __name__ == "__main__":
+    main()
+```
+
