@@ -79,7 +79,7 @@ function _createMdxContent(props) {
       id: "overview",
       children: "Overview"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["BioStar Air (formerly BioStar Air) leverages an edge architecture that connects readers directly to the cloud, eliminating the need for on-site servers, virtual machines (VMs), VPNs, or door controllers. With no IT maintenance required, users simply install a ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["BioStar Air (formerly Airfob Space) leverages an edge architecture that connects readers directly to the cloud, eliminating the need for on-site servers, virtual machines (VMs), VPNs, or door controllers. With no IT maintenance required, users simply install a ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Smart Reader"
       }), ", connect to the cloud, and start managing access. Readers function across multiple sites without requiring the same network or physical location."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -116,7 +116,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "XStation 2"
+            children: "X-Station 2"
           }), " (DPB)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
