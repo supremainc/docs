@@ -12,8 +12,6 @@ import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 import BioStarLogo from '@site/static/img/logo-biostar-x.svg';
-import Paxton from '@site/static/img/integration/paxton-logo.svg';
-import Dom from '@site/static/img/integration/dom-logo.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -151,11 +149,6 @@ export default function Home() {
           <Heading as='h2'>Intelligent Controller</Heading>
         </div>
         <IntenlligentController />
-
-        {/* <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Integrations</Heading>
-        </div>
-        <Integration /> */}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Developers</Heading>
