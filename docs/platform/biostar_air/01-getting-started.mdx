@@ -1,179 +1,183 @@
 ---
 id: getting-started
-title: Getting Started
-description: A comprehensive guide to setting up and managing your BioStar Air Portal.
-keywords: [BioStar Air Portal, setup, guide]
+title: 시작하기
+description: 관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.
+keywords: [BioStar Air Portal, 설정, 가이드]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Feature Overview {#feature-overview}
+## 서비스 개요 {#feature-overview}
 
-BioStar Air Portal provides a unified interface across web and mobile apps, ensuring a consistent user experience. This platform allows administrators to manage access control settings, monitor site usage, and configure users and devices seamlessly.
+BioStar Air 포털은 웹과 모바일 앱 전반에 걸쳐 통합된 인터페이스를 제공하여 일관된 사용자 경험을 제공합니다. 이 플랫폼을 통해 관리자는 출입 통제 설정을 관리하고, 사이트 사용량을 모니터링하고, 사용자와 기기를 원활하게 구성할 수 있습니다.
 
 <CustomerNote />
 
 
-## Navigating to the Feature {#navigating-to-the-feature}
+## 포털 접속하기 {#navigating-to-the-feature}
 
-To access the BioStar Air Portal, open your web browser and go to [admin.biostarair.com](https://admin.biostarair.com). Upon reaching the login page, select either **Global Server** or **EU Server** based on your location.
+BioStar Air 포털에 접속하려면 웹 브라우저를 열고 [admin.biostarair.com](https://admin.biostarair.com)으로 이동하세요. 로그인 페이지가 나타나면 사용자의 현재 위치에 따라 **Global Server** 또는 **EU Server**를 선택하세요.
 
-An admin account is required for login, which must be granted by another administrator.
-
-
-## Dashboard Overview {#dashboard-overview}
-
-Upon logging in, you will see the **BioStar Air dashboard**, which provides key site information:
-
-* **Tag Status** - Displays the number of users who have accessed the site today.
-
-* **Active Users** - Shows the total number of registered and activated users.
-
-* **Devices** - Indicates the number of registered devices on your site.
-
-* **Account Credits** - Displays the remaining balance of your account credits.
-
-Clicking on any of these cards will take you to their respective sections.
-
-Below these sections, you will find:
-
-* **Site Usage** - Allows sorting by device group, frequency (daily, weekly, monthly), or a custom date range.
-
-* **Recent Actions** - Displays activity logs for actions taken by administrators, such as logins, device updates, and user creation.
+로그인하려면 관리자 계정이 필요하며, 다른 관리자로부터 권한을 부여받아야 합니다.
 
 
-## Step-by-Step Guide to Setting Up Your First Site {#step-by-step-guide}
+## 대시보드 살펴보기 {#dashboard-overview}
 
-Setting up a new site follows a logical sequence. The process includes:
+로그인하면 **BioStar Air 대시보드**가 표시되며, 여기에서 주요 사이트 정보를 확인할 수 있습니다:
+
+* **Tag Status**: 오늘 사이트에 접속한 사용자 수를 확인할 수 있습니다.
+
+* **Active Users**: 등록 및 활성화된 사용자의 총 수를 확인할 수 있습니다.
+
+* **Devices**: 등록된 장치 수를 확인할 수 있습니다.
+
+* **Account Credits**: 계정 크레딧의 잔여 잔액을 확인할 수 있습니다.
+
+대시보드의 카드 중 하나를 클릭하면 해당 섹션으로 이동합니다.
+
+이 섹션 아래에는 아래와 같은 정보가 있습니다.
+
+* **Site Usage**: 장치 그룹, 빈도(일일, 주간, 월간) 또는 사용자 지정 날짜 범위별로 정렬할 수 있습니다.
+
+* **Recent Actions**: 로그인, 장치 업데이트, 사용자 생성 등 관리자가 수행한 작업에 대한 활동 로그를 표시합니다.
+
+
+## 첫 번째 사이트 설정 단계별 안내 {#step-by-step-guide}
+
+새 사이트 설정은 논리적인 순서로 진행합니다. 프로세스는 아래와 같습니다.
 
 <Steps>
 <Step>
 
-### Adding Administrators {#adding-administrators}
+### 관리자 추가 {#adding-administrators}
 
-To invite administrators:
+관리자를 초대하세요.
 
-1. Go to **Settings** → **Admin**.
+1. **Settings** → **Admin**으로 이동하세요.
 
-1. Click **Invite**.
+1. **Invite**를 클릭하세요.
 
-1. Enter the admin's email address and assign a role.
+1. 관리자의 이메일 주소를 입력하고 역할을 부여하세요.
 
-Administrators can manage the site, while regular users only use the **Suprema Pass** app for access.
+:::info
+
+관리자는 사이트를 관리할 수 있으며, 일반 사용자는 **Suprema Pass** 앱을 통해서만 접근할 수 있습니다.
+
+:::
 
 <CustomerNote />
 
 </Step>
 <Step>
 
-### Registering Devices {#registering-devices}
+### 장치 등록 {#registering-devices}
 
-To check or add registered devices:
+등록된 장치를 확인하거나 장치를 추가하세요.
 
-1. Go to **Device Management** → **Registered Devices**.
+1. **Device Management** → **Registered Devices**으로 이동하세요.
 
-1. If devices are missing, another admin must register them on-site using the BioStar Air mobile app.
+1. 장치를 등록하지 않았다면, 다른 관리자가 BioStar Air 모바일 앱을 사용하여 현장에서 등록해야 합니다.
 
-1. In this section, you can delete devices, update firmware, and manage device groups.
-
-</Step>
-<Step>
-
-### Creating and Managing Doors {#creating-and-managing-doors}
-
-To add doors and assign devices:
-
-1. Navigate to **Door Management** → **Registered Doors**.
-
-1. If no doors exist, click **Add a Door** and provide a name and description.
-
-1. Assign registered devices to entry and exit points.
-
-Here, you can also edit, delete, schedule access, and manage door groups.
+1. **Device Management** 섹션에서는 장치 삭제, 펌웨어 업데이트 및 장치 그룹을 관리할 수 있습니다.
 
 </Step>
 <Step>
 
-### Categorizing Doors into Groups {#categorizing-doors-into-groups}
+### 출입문 생성 및 관리 {#creating-and-managing-doors}
 
-To organize doors into groups:
+출입문을 추가하고 장치를 할당하세요.
 
-1. Go to **Door Management** → **Door Groups**.
+1. **Door Management** → **Registered Doors**으로 이동하세요.
 
-1. Click **Add a Door Group**.
+1. 출입문이 없으면 **Add a Door**를 클릭하고 이름과 설명을 입력하세요.
 
-1. Assign doors to groups like *Interior, Exterior, or Trap Doors*.
+1. 등록된 장치를 출입 및 퇴실 위치에 할당하세요.
 
-</Step>
-<Step>
-
-### Configuring Access Rights {#configuring-access-rights}
-
-To manage access levels, follow these steps:
-
-#### Setting Up Holiday Groups {#setting-up-holiday-groups}
-
-1. Go to **Access Management** → **Holiday Groups**.
-
-1. Click **Add Holiday Group** and name it (e.g., "US Holidays").
-
-1. Specify holidays when access will be restricted.
-
-#### Creating Schedules {#creating-schedules}
-
-1. Go to **Access Management** → **Schedules**.
-
-1. Click **Add a Schedule** and name it.
-
-1. Select active days and link holiday groups.
-
-#### Defining Access Levels {#defining-access-levels}
-
-1. Go to **Access Management** → **Access Levels**.
-
-1. Click **Add Access Level**, name it, and assign door groups, individual doors, and schedules.
+**Door Management**에서는 출입문을 편집, 삭제, 접근 일정을 설정하고 출입문 그룹을 관리할 수 있습니다.
 
 </Step>
 <Step>
 
-### Creating User Groups and Adding Users {#creating-user-groups-and-adding-users}
+### 출입문을 그룹으로 분류하기 {#categorizing-doors-into-groups}
 
-To create user groups:
+출입문을 그룹으로 분류하세요.
 
-1. Go to **User Management** → **User Groups**.
+1. **Door Management** → **Door Groups**으로 이동하세요.
 
-1. Click **Add User Group** and name it.
+1. **Add a Door Group**를 클릭하세요.
 
-To add users:
+1. **실내**, **실외**, 또는 **Trap Doors**와 같은 그룹에 출입문을 할당하세요.
 
-1. Go to **User Management** → **Users**.
+</Step>
+<Step>
 
-1. Click **Add User** and provide the user’s ID, name, email, and credential type.
+### 출입 권한 설정 {#configuring-access-rights}
 
-1. Assign an access level.
+출입 권한을 관리하려면 다음 단계를 따르세요.
 
-1. Click **Activate Card** to finalize access.
+#### 휴일 그룹 설정 {#setting-up-holiday-groups}
 
-You can manage users in bulk, re-issuing, suspending, or deleting them, as well as exporting data and bulk-uploading profile images.
+1. **Access Management** → **Holiday Groups**으로 이동하세요.
+
+1. **Add Holiday Group**를 클릭하고 이름을 입력하세요 (예: "한국 휴일").
+
+1. 출입을 제한하는 공휴일을 지정하세요.
+
+#### 스케쥴 만들기 {#creating-schedules}
+
+1. **Access Management** → **Schedules**으로 이동하세요.
+
+1. **Add a Schedule**를 클릭하고 이름을 입력하세요.
+
+1. 활성화할 요일을 선택하고 휴일 그룹을 연결하세요.
+
+#### 출입 수준 정의 {#defining-access-levels}
+
+1. **Access Management** → **Access Levels**으로 이동하세요.
+
+1. **Add Access Level**를 클릭하고 이름을 입력한 후, 출입문 그룹, 개별 출입문 및 스케줄을 할당하세요.
+
+</Step>
+<Step>
+
+### 사용자 그룹 만들기 및 사용자 추가 {#creating-user-groups-and-adding-users}
+
+사용자 그룹을 만드세요.
+
+1. **User Management** → **User Groups**으로 이동하세요.
+
+1. **Add User Group**를 클릭하고 이름을 입력하세요.
+
+사용자를 추가하세요.
+
+1. **User Management** → **Users**으로 이동하세요.
+
+1. **Add User**를 클릭하고 사용자의 ID, 이름, 이메일 및 인증 유형을 입력하세요.
+
+1. 접근 수준을 할당하세요.
+
+1. **Activate Card**를 클릭하여 접근을 완료하세요.
+
+사용자를 대량으로 관리하고, 재발급, 정지 또는 삭제할 수 있으며, 데이터를 내보내고 프로필 이미지를 대량으로 업로드할 수도 있습니다.
 
 </Step>
 </Steps>
 
 
-## Final Checklist {#final-checklist}
+## 체크리스트 {#final-checklist}
 
-To summarize, follow these steps in order:
+위 과정을 요약하자면 다음 단계에 따라 진행할 수 있습니다.
 
-1. Add administrators.
+1. 관리자를 추가하세요.
 
-1. Register devices.
+1. 장치를 등록하세요.
 
-1. Create doors and assign devices.
+1. 출입문을 생성하고 장치를 할당하세요.
 
-1. Organize doors into groups.
+1. 출입문을 그룹으로 분류하세요.
 
-1. Set up access rights (holidays, schedules, access levels).
+1. 출입 권한을 설정하세요 (휴일, 일정, 접근 수준).
 
-1. Create user groups and add users.
+1. 사용자 그룹을 만들고 사용자를 추가하세요.
 
-Following these steps ensures a smooth setup of your BioStar Air site. For more details, refer to individual video tutorials on each section.
+이 단계를 따르면 BioStar Air 사이트의 원활하게 설정할 수 있습니다. 제공하는 사용 안내에 대한 개별 비디오 튜토리얼을 참조하여 더 많은 세부정보를 확인하세요.
