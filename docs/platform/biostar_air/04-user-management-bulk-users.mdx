@@ -1,80 +1,89 @@
 ---
 id: adding-users-in-bulk
-title: Adding Users in Bulk
-description: Learn how to efficiently add multiple users at once using CSV file upload, configure bulk access levels, and manage profile images in BioStar Air Portal.
-keywords: [user management, BioStar Air, bulk users]
+title: 일괄 작업으로 사용자 추가하기
+description: BioStar Air Portal에서 CSV 파일 업로드를 사용하여 여러 사용자를 한 번에 효율적으로 추가하는 방법, 대량 출입 레벨을 구성하는 방법, 프로필 이미지를 관리하는 방법을 안내합니다.
+keywords: [사용자 관리, BioStar Air, 대량 사용자]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Feature Overview {#feature-overview}
+## 기능 개요 {#feature-overview}
 
-BioStar Air allows administrators to add multiple users at once using a CSV file. This is useful for onboarding employees, upgrading a site, or handling temporary access needs efficiently.
+BioStar Air는 관리자가 CSV 파일을 사용하여 여러 사용자를 한 번에 추가할 수 있습니다. 이 기능은 직원 온보딩, 사이트 업그레이드 또는 임시 출입 요구 사항을 효율적으로 처리하는 데 유용합니다.
 
 <YouTube videoId="gOi2nP0Ag5o" />
 
 <CustomerNote />
 
-## Navigating to Bulk User Upload {#navigating-to-bulk-user-upload}
+## 사용자 관리로 이동 {#navigating-to-bulk-user-upload}
 
-To add multiple users in bulk:
+여러 사용자를 일괄 추가할 수 있습니다.
 
-1. Go to **User Management** in the BioStar Air Portal.
+1. BioStar Air 포털에서 **User Management**로 이동하세요.
 
-1. Click on **Users** to open the user list interface.
+1. **Users**를 클릭하면 사용자 목록이 나타납니다.
 
-1. Click on the **Download CSV Template** button.
-
-
-## Preparing the CSV File {#preparing-the-csv-file}
-
-After downloading the CSV template, fill in the required details for each user. Key fields include:
-
-* **User Group ID**: Retrieve this from the **User Group** screen in BioStar Air Portal.
-
-* **Access Level ID**: Retrieve this from the **Access Levels** screen. *Full access* is always set as **1**.
-
-* **Email Address**: Required if issuing invitations via email (must be unique).
-
-* **Mobile Phone Number**: Required if issuing invitations via mobile (must be unique).
+1. **Download CSV Template** 버튼을 클릭하세요.
 
 
-## Uploading the CSV File {#uploading-the-csv-file}
+## CSV 파일 준비 {#preparing-the-csv-file}
 
-Once the CSV file is ready:
+CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보를 입력하세요. 주요 필드는 다음과 같습니다.
 
-1. Drag and drop the file into the **Upload CSV** window.
+* **User Group ID**: BioStar Air 포털의 **User Group** 화면에서 이 정보를 가져옵니다.
 
-1. Review the column data in the preview window to ensure accuracy.
+* **Access Level ID**: BioStar Air 포털의 **Access Levels** 화면에서 이 정보를 가져옵니다. *Full access*는 항상 **1**로 설정됩니다.
 
-1. Proceed with the upload if the data is correct.
+* **Email Address**: 이메일을 통해 초대장을 발송하는 경우 필수입니다.
 
-
-## Uploading User Profile Images {#uploading-user-profile-images}
-
-Profile images can be uploaded automatically along with the CSV file. Follow these guidelines:
-
-1. Ensure that each image file name matches the user ID in the CSV file (e.g., *601.jpg* corresponds to user ID **601**).
-
-1. Select all images and drag them into the **Bulk User Images** upload area.
-
-1. If images are not ready at the time of CSV upload, they can be added later using the **Image Upload** button.
+* **Mobile Phone Number**: 모바일을 통해 초대장을 발송하는 경우 필수입니다.
 
 :::info
 
-**File Format Requirements:**
-
-* Supported formats: *.jpg*, *.png*
-
-* File size limit: **1MB per image**
+이메일 주소와 전화 번호는 중복되면 안됩니다. 중복된 값은 업로드 오류가 발생할 수 있습니다.
 
 :::
 
 
-## Finalizing the Bulk Upload {#finalizing-the-bulk-upload}
+## CSV 파일 업로드 {#uploading-the-csv-file}
 
-Once all user data and images are uploaded, the system will process the entries, and the new users will appear in the user list with their assigned credentials.
+CSV 파일을 준비가 완료되면 업로드하세요.
 
-## Troubleshooting
+1. 파일을 **Upload CSV** 창으로 드래그 앤 드롭하세요.
 
-If you run into any issues with your CSV upload, we've written a more detailed guide to help you work through common problems. It also includes Excel formulas to help you validate and de-duplicate your data. [CSV Upload Troubleshooting Guide](troubleshooting-adding-users-in-bulk)
+1. 정확성을 확인하려면 미리보기 창에서 열 데이터를 검토하세요.
+
+1. 데이터에 문제가 없다면 업로드하세요.
+
+
+## 사용자 프로필 이미지 업로드 {#uploading-user-profile-images}
+
+프로필 이미지는 CSV 파일과 함께 자동으로 업로드할 수 있습니다.
+
+1. 각 이미지 파일 이름이 CSV 파일의 사용자 아이디와 일치하는지 확인하세요. 
+
+   > 예, *601.jpg*는 사용자 아이디 **601**에 해당합니다.
+
+1. 모든 이미지를 선택하고 **Bulk User Images** 업로드 영역으로 드래그하세요.
+
+1. 이미지가 CSV 업로드 시점에 준비되지 않았다면 **Image Upload** 버튼을 사용하여 나중에 추가할 수 있습니다.
+
+:::note
+
+**파일 형식 요구사항**
+
+* 지원되는 형식: *.jpg*, *.png*
+
+* 파일 크기 제한: **1MB per image**
+
+:::
+
+
+## 일괄 업로드 마무리 {#finalizing-the-bulk-upload}
+
+모든 사용자 데이터와 이미지를 업로드하면 시스템이 항목을 처리하고 새 사용자가 할당된 크리덴셜과 함께 사용자 목록에 나타납니다.
+
+
+## 문제 해결
+
+CSV 업로드와 관련하여 문제가 발생한다면, 일반적인 문제를 해결하는 데 도움이 되는 보다 자세한 문서를 확인하세요. 이 문서에는 데이터를 검증하고 중복을 제거하는 데 도움이 되는 엑셀 수식도 포함되어 있습니다. [일괄 사용자 추가 문제 해결](troubleshooting-adding-users-in-bulk)
