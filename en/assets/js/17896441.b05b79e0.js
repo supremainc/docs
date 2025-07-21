@@ -3339,7 +3339,7 @@ function Faqs() {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const location = (0,react_router/* useLocation */.TH)();
     const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
-    // console.log(cProd);
+    console.log(cProd);
     // product가 주어지면 해당 제품만 필터링, 아니면 전체 출력
     const productList = Array.isArray(cProd) ? cProd : cProd ? [
         cProd
@@ -3371,6 +3371,7 @@ function Faqs() {
                 })))
     };
     const { navbar: { hideOnScroll } } = (0,useThemeConfig/* useThemeConfig */.L)();
+    console.log(filteredCategories.length);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
