@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9075"], {
-490: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6727"], {
+2204: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,32 +9,32 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_reference_master_admin_mdx_2f0_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_master_admin_mdx_64e_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-master-admin-mdx-2f0.json
-var site_docs_reference_master_admin_mdx_2f0_namespaceObject = JSON.parse('{"id":"reference/master-admin","title":"마스터 관리자 기능 소개 및 설정 방법 안내","description":"마스터 관리자 기능의 소개와 설정 방법을 안내합니다.","source":"@site/docs/reference/master-admin.mdx","sourceDirName":"reference","slug":"/reference/master-admin","permalink":"/docs/en/reference/master-admin","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/master-admin.mdx","tags":[],"version":"current","frontMatter":{"id":"master-admin","title":"마스터 관리자 기능 소개 및 설정 방법 안내","description":"마스터 관리자 기능의 소개와 설정 방법을 안내합니다.","keywords":["마스터 관리자","마스터","Master Admin"],"isTranslationMissing":true},"sidebar":"reference","previous":{"title":"Reference","permalink":"/docs/en/reference/"},"next":{"title":"Glossary","permalink":"/docs/en/reference/glossary"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-master-admin-mdx-64e.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_master_admin_mdx_64e_namespaceObject = JSON.parse('{"id":"reference/master-admin","title":"Introduction to Master Admin Feature and Setup Guide","description":"Introduction and setup guide for the Master Admin feature.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/master-admin.mdx","sourceDirName":"reference","slug":"/reference/master-admin","permalink":"/docs/en/reference/master-admin","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/master-admin.mdx","tags":[],"version":"current","frontMatter":{"id":"master-admin","title":"Introduction to Master Admin Feature and Setup Guide","description":"Introduction and setup guide for the Master Admin feature.","keywords":["Master Admin","Administrator","Master"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Reference","permalink":"/docs/en/reference/"},"next":{"title":"Glossary","permalink":"/docs/en/reference/glossary"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/reference/faqs.json
-var faqs_namespaceObject = JSON.parse('[{"question":"마스터 관리자를 등록하지 않으면 어떻게 되나요?","answer":"마스터 관리자가 등록되지 않은 경우, 장치 설정 저장 시 경고 메시지가 안내되며, 관리자 메뉴 접근에 제한이 발생합니다."},{"question":"기존 장치에서 펌웨어 업그레이드한 장치에서 마스터 관리자 설정이 지원되나요?","answer":"아니요. 기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. 단, 관리자 2단계 인증 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. **관리자 2단계 인증 옵션**은 [다음 문서](#admin-two-step-authentication)를 참고하세요."},{"question":"슬레이브 장치에서도 마스터 관리자를 등록할 수 있나요?","answer":"네. 슬레이브 장치에서도 마스터 관리자를 등록할 수 있습니다."}]')
-;// CONCATENATED MODULE: ./docs/reference/master-admin.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/faqs.json
+var faqs_namespaceObject = JSON.parse('[{"question":"What happens if you do not register a Master Administrator?","answer":"If a Master Administrator is not registered, a warning message appears when saving device settings, and access to the administrator menu is restricted."},{"question":"Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?","answer":"No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the <b>Admin 2-Step Authentication</b> option. For details about the <a href=\'#admin-two-step-authentication\'>Admin 2-Step Authentication</a> option, see the following document."},{"question":"Can you register a Master Administrator on a slave device?","answer":"Yes. You can register a Master Administrator on a slave device."}]')
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/master-admin.mdx
 
 
 const frontMatter = {
 	id: 'master-admin',
-	title: '마스터 관리자 기능 소개 및 설정 방법 안내',
-	description: '마스터 관리자 기능의 소개와 설정 방법을 안내합니다.',
+	title: 'Introduction to Master Admin Feature and Setup Guide',
+	description: 'Introduction and setup guide for the Master Admin feature.',
 	keywords: [
-		'마스터 관리자',
-		'마스터',
-		'Master Admin'
+		'Master Admin',
+		'Administrator',
+		'Master'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -46,56 +46,56 @@ const assets = {
 
 
 const toc = [{
-  "value": "마스터 관리자 기능 설정",
-  "id": "마스터-관리자-기능-설정",
+  "value": "Setting Up the Master Admin Feature",
+  "id": "setting-up-the-master-admin-feature",
   "level": 2
 }, {
-  "value": "마스터 관리자란?",
-  "id": "마스터-관리자란",
+  "value": "What is a Master Admin?",
+  "id": "what-is-a-master-admin",
   "level": 3
 }, {
-  "value": "마스터 관리자 지원 제품 안내",
-  "id": "마스터-관리자-지원-제품-안내",
+  "value": "Supported Products for Master Admin",
+  "id": "supported-products-for-master-admin",
   "level": 3
 }, {
-  "value": "신규 장치와 업그레이드 장치에서 관리자 보안을 향상시키는 방법",
-  "id": "신규-장치와-업그레이드-장치에서-관리자-보안을-향상시키는-방법",
+  "value": "How to Enhance Administrator Security on New and Upgraded Devices",
+  "id": "how-to-enhance-administrator-security-on-new-and-upgraded-devices",
   "level": 2
 }, {
-  "value": "<strong>신규 장치</strong>",
-  "id": "신규-장치",
+  "value": "<strong>New Devices</strong>",
+  "id": "new-devices",
   "level": 3
 }, {
-  "value": "<strong>신규 장치에서 마스터 관리자 등록하기</strong>",
-  "id": "신규-장치에서-마스터-관리자-등록하기",
+  "value": "<strong>Registering Master Admin on a New Device</strong>",
+  "id": "registering-master-admin-on-a-new-device",
   "level": 4
 }, {
-  "value": "<strong>신규 장치에서 마스터 관리자 관리하기</strong>",
-  "id": "신규-장치에서-마스터-관리자-관리하기",
+  "value": "<strong>Managing Master Admin on a New Device</strong>",
+  "id": "managing-master-admin-on-a-new-device",
   "level": 4
 }, {
-  "value": "<strong>업그레이드 장치</strong>",
-  "id": "업그레이드-장치",
+  "value": "<strong>Upgraded Devices</strong>",
+  "id": "upgraded-devices",
   "level": 3
 }, {
-  "value": "<strong>업그레이드 장치에서 관리자 2단계 인증 설정하기</strong>",
+  "value": "<strong>Setting Admin 2-step Authentication on Upgraded Devices</strong>",
   "id": "admin-two-step-authentication",
   "level": 4
 }, {
-  "value": "안내 사항",
-  "id": "안내-사항",
+  "value": "Additional Information",
+  "id": "additional-information",
   "level": 2
 }, {
-  "value": "자주 묻는 질문",
-  "id": "자주-묻는-질문",
+  "value": "Frequently Asked Questions",
+  "id": "frequently-asked-questions",
   "level": 2
 }, {
-  "value": "[미작성] BioStar 2에서 마스터 관리자 설정하기",
-  "id": "미작성-biostar-2에서-마스터-관리자-설정하기",
+  "value": "[TBD] Setting Master Admin via BioStar 2",
+  "id": "tbd-setting-master-admin-via-biostar-2",
   "level": 2
 }, {
-  "value": "[미작성] 마스터 관리자 일괄 편집하기",
-  "id": "미작성-마스터-관리자-일괄-편집하기",
+  "value": "[TBD] Batch Edit Master Admin",
+  "id": "tbd-batch-edit-master-admin",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -122,47 +122,47 @@ function _createMdxContent(props) {
   if (!Th) _missingMdxReference("Th", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "마스터 관리자"
-      }), " 기능은 장치의 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "전체 관리자 권한을 강화"
-      }), "하여, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "장치의 보안을 향상"
-      }), "시키고 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "무단 접근 및 설정 변경을 방지"
-      }), "하기 위한 기능입니다.", (0,jsx_runtime.jsx)("br", {}), "이 기능을 통해, 장치에는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "반드시 마스터 관리자를 등록"
-      }), "해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다."]
+      children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Master Admin"
+      }), " feature is designed to ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "enhance device security"
+      }), " by ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "strengthening overall administrator privileges"
+      }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "preventing unauthorized access and configuration changes"
+      }), ".", (0,jsx_runtime.jsx)("br", {}), "With this feature, you ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "must register a Master Admin"
+      }), " on the device, and only registered Master Admins can access the administrator menu and change device settings."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "마스터 관리자"
-      }), " 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품"
-      }), "에서만 사용할 수 있습니다."]
+      children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Master Admin"
+      }), " feature is available ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "only on Suprema products that support user interface via LCD screen"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "이 기능은 장치의 보안성을 강화하기 위한 필수 정책입니다."
+            children: "This feature is an essential policy to enhance device security."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자는 여러 명 등록할 수 있으며, 공장 초기화 시에만 삭제됩니다."
+            children: "Multiple Master Admins can be registered, and they are deleted only through factory reset."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "마스터-관리자-기능-설정",
-      children: "마스터 관리자 기능 설정"
+      id: "setting-up-the-master-admin-feature",
+      children: "Setting Up the Master Admin Feature"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "마스터-관리자란",
-      children: "마스터 관리자란?"
+      id: "what-is-a-master-admin",
+      children: "What is a Master Admin?"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치에 마스터 관리자를 설정하지 않고 사용하는 경우, 누구나 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다. 마스터 관리자 기능은 이러한 보안 취약점을 해결하기 위해 전체 관리자 설정을 강제하는 기능입니다."
+      children: "If you use the device without setting up a Master Admin, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "마스터-관리자-지원-제품-안내",
-      children: "마스터 관리자 지원 제품 안내"
+      id: "supported-products-for-master-admin",
+      children: "Supported Products for Master Admin"
     }), "\n", (0,jsx_runtime.jsx)(Table, {
       className: "component",
       children: (0,jsx_runtime.jsxs)(Tbody, {
@@ -241,107 +241,111 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "신규-장치와-업그레이드-장치에서-관리자-보안을-향상시키는-방법",
-      children: "신규 장치와 업그레이드 장치에서 관리자 보안을 향상시키는 방법"
+      id: "how-to-enhance-administrator-security-on-new-and-upgraded-devices",
+      children: "How to Enhance Administrator Security on New and Upgraded Devices"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "신규-장치",
+      id: "new-devices",
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "신규 장치"
+        children: "New Devices"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["신규 장치에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "마스터 관리자"
-      }), "를 필수적으로 등록해야하며, 등록하지 않을 경우 장치 사용이 제한됩니다."]
+      children: ["For new devices, registering a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Master Admin"
+      }), " is mandatory. If you do not register a Master Admin, device usage will be restricted."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["신규 장치에서는 최초 부팅 시 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "마스터 관리자"
-            }), " 등록 화면이 나타납니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "마스터 관리자"
-            }), "를 등록하지 않으면 다음 화면으로 이동할 수 없습니다."]
+            children: ["On new devices, the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " registration screen appears upon initial boot. You cannot proceed to the next screen unless you register a Master Admin."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["BioStar 2와 연결하여 장치 전체 관리자를 할당하더라도 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "마스터 관리자"
-            }), "를 등록해야만 모든 기능을 사용할 수 있습니다."]
+            children: ["Even if you assign an overall device administrator via BioStar 2, you must register a ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " to use all device functions."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "신규 장치는 펌웨어 다운그레이드를 할 수 없습니다."
+            children: "Firmware downgrade is not allowed on new devices."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 등록하기"
+          children: "Registering Master Admin on a New Device"
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
-        id: "신규-장치에서-마스터-관리자-등록하기",
+        id: "registering-master-admin-on-a-new-device",
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 등록하기"
+          children: "Registering Master Admin on a New Device"
         })
       }), (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "신규 장치를 최초 부팅하면 마스터 관리자 등록 화면이 나타납니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["When you boot a new device for the first time, the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " registration screen appears."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-1.png",
             caption: true
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["To register a ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), ", you must register at least two types of credentials. Select and enroll your preferred two credential types."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-2.png",
             caption: true
-          }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자에 등록할 수 있는 크리덴셜은 다음과 같습니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Credentials that can be enrolled for ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " are as follows:"]
           }), "\n", (0,jsx_runtime.jsx)(Table, {
             children: (0,jsx_runtime.jsxs)(Tbody, {
               children: [(0,jsx_runtime.jsxs)(Row, {
                 children: [(0,jsx_runtime.jsx)(Th, {
-                  children: "크리덴셜 종류"
+                  children: "Credential Type"
                 }), (0,jsx_runtime.jsx)(Th, {
-                  children: "등록 가능 개수"
+                  children: "Max Quantity"
                 }), (0,jsx_runtime.jsx)(Th, {
-                  children: "세부 조건"
+                  children: "Details"
                 })]
               }), (0,jsx_runtime.jsxs)(Row, {
                 children: [(0,jsx_runtime.jsx)(Td, {
-                  children: "카드"
+                  children: "Card"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "최대 4개"
+                  children: "Up to 4"
                 }), (0,jsx_runtime.jsxs)(Td, {
-                  children: ["CSN, Wiegand 타입만 지원", (0,jsx_runtime.jsx)("br", {}), "동일 타입 내 중복 등록 불가"]
+                  children: ["Supports CSN and Wiegand type only", (0,jsx_runtime.jsx)("br", {}), "No duplicate enrollment within the same type"]
                 })]
               }), (0,jsx_runtime.jsxs)(Row, {
                 children: [(0,jsx_runtime.jsx)(Td, {
-                  children: "얼굴"
+                  children: "Face"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "최대 2개"
+                  children: "Up to 2"
                 }), (0,jsx_runtime.jsxs)(Td, {
-                  children: ["동종 알고리즘 탑재 장치에서만 등록 가능", (0,jsx_runtime.jsx)("br", {}), "IR Face, Visual Face 모델로 구분"]
+                  children: ["Available only on devices with the same algorithm", (0,jsx_runtime.jsx)("br", {}), "Distinguished by IR Face and Visual Face model"]
                 })]
               }), (0,jsx_runtime.jsxs)(Row, {
                 children: [(0,jsx_runtime.jsx)(Td, {
-                  children: "지문"
+                  children: "Fingerprint"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "최대 2개"
+                  children: "Up to 2"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "유효성 검사 기능은 제공하지 않음"
+                  children: "No validity check provided"
                 })]
               }), (0,jsx_runtime.jsxs)(Row, {
                 children: [(0,jsx_runtime.jsx)(Td, {
                   children: "PIN"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "1개"
+                  children: "1"
                 }), (0,jsx_runtime.jsx)(Td, {
-                  children: "최소 8자리 이상"
+                  children: "Minimum 8 digits"
                 })]
               })]
             })
@@ -349,115 +353,107 @@ function _createMdxContent(props) {
             type: "note",
             children: [(0,jsx_runtime.jsx)(_components.p, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "등록 조건"
+                children: "Enrollment Conditions"
               })
             }), (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "최소 두 종류 이상의 크리덴셜을 등록해야 합니다."
+                  children: "At least two different types of credentials must be enrolled."
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "신규 장치와 업그레이드 장치 모두 동일한 조건이 적용됩니다."
+                  children: "The same conditions apply to both new and upgraded devices."
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "장치가 지원하는 모든 크리덴셜을 인증 수단으로 사용할 수 있습니다."
+                  children: "All credentials supported by the device can be used for authentication."
                 }), "\n"]
               }), "\n"]
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["두 종류 이상의 크리덴셜을 등록한 후, ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["After enrolling at least two types of credentials, press the ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Complete"
-            }), " 버튼을 누르면 마스터 관리자 등록이 완료됩니다."]
+            }), " button to finish ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " registration."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-3.png",
             caption: true
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.admonition, {
-        type: "warning",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "마스터 관리자 미등록 시 경고 메시지"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "마스터 관리자 또는 그에 준하는 설정이 되어 있지 않은 경우, 설정 저장 시 경고 팝업 메시지로 안내합니다."
-        }), (0,jsx_runtime.jsx)(Image, {
-          src: "/img/techdochub/no-register-master-admin.png",
-          caption: true
-        })]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 관리하기"
+          children: "Managing Master Admin on a New Device"
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
-        id: "신규-장치에서-마스터-관리자-관리하기",
+        id: "managing-master-admin-on-a-new-device",
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 관리하기"
+          children: "Managing Master Admin on a New Device"
         })
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["신규 장치에서 마스터 관리자 설정은 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "설정 → 장치 → 마스터 관리자"
-        }), " 메뉴에서 변경할 수 있습니다."]
+        children: ["On new devices, you can modify ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Master Admin"
+        }), " settings in the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Settings → Device → Master Admin"
+        }), " menu."]
       }), (0,jsx_runtime.jsx)(Image, {
         src: "/img/techdochub/edit-master-admin-1.png"
       }), (0,jsx_runtime.jsx)(Image, {
-        src: "/img/techdochub/edit-master-admin-2.png",
+        src: "/img/techdochub/setting-master-admin-3.png",
         caption: true
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "업그레이드-장치",
+      id: "upgraded-devices",
       children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "업그레이드 장치"
+        children: "Upgraded Devices"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["펌웨어를 업그레이드한 장치는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "마스터 관리자"
-      }), " 설정을 제공하지 않지만, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "관리자 2단계 인증"
-      }), " 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다."]
+      children: ["Devices upgraded via firmware do not provide ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Master Admin"
+      }), " settings, but you can enhance administrator security by enabling the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Admin 2-step Authentication"
+      }), " option."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "관리자 2단계 인증"
-            }), " 옵션의 기본값은 1단계 인증입니다."]
+            children: ["The default value for ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Admin 2-step Authentication"
+            }), " is single-step authentication."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "장치에 등록된 관리자의 크리덴셜이 두 종류 이상인 경우에만 2단계 인증을 활성화할 수 있습니다."
+            children: "Two-step authentication can be activated only if all registered administrators have at least two types of credentials."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "펌웨어 업그레이드 장치는 펌웨어 다운그레이드를 할 수 있으며, 2단계 인증 정보가 삭제됩니다."
+            children: "Firmware-upgraded devices support firmware downgrade, and the two-step authentication info will be deleted when downgrading."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "업그레이드 장치에서 관리자 2단계 인증 설정하기"
+          children: "Setting Admin 2-step Authentication on Upgraded Devices"
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "admin-two-step-authentication",
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "업그레이드 장치에서 관리자 2단계 인증 설정하기"
+          children: "Setting Admin 2-step Authentication on Upgraded Devices"
         })
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "설정 → 장치 → 관리자 2단계 인증"
-        }), " 메뉴에서 관리자 2단계 인증을 활성화할 수 있습니다."]
+        children: ["You can activate Admin 2-step Authentication in the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Settings → Device → Admin 2-step Authentication"
+        }), " menu."]
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "관리자 2단계 인증"
-        }), " 옵션은 기존에 사용하던 장치에서 펌웨어를 최신 버전으로 업그레이드 한 경우에만 표시됩니다."]
+        children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Admin 2-step Authentication"
+        }), " option appears only on devices upgraded to the latest firmware."]
       }), (0,jsx_runtime.jsx)(Image, {
         src: "/img/techdochub/setting-two-step-authentication.png",
         caption: true
@@ -466,13 +462,13 @@ function _createMdxContent(props) {
         children: (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "관리자 2단계 인증"
-              }), " 옵션은 슬레이브 장치에서는 표시되지 않습니다."]
+              children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Admin 2-step Authentication"
+              }), " option is not shown on slave devices."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다."
+              children: "If not all administrators have at least two types of credentials, activation will fail and an error message will appear."
             }), "\n"]
           }), "\n"]
         })
@@ -480,81 +476,81 @@ function _createMdxContent(props) {
         type: "warning",
         children: (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "관리자 2단계 인증"
-            }), "을 활성화한 후 모든 관리자의 크리덴셜을 2종 미만으로 삭제하면, BioStar 2에 연결할 수 없는 상황에서 관리자 메뉴에 접근할 수 없게 됩니다. 따라서 관리자 크리덴셜을 삭제할 때는 각별한 주의가 필요합니다."]
+            children: ["If you activate ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Admin 2-step Authentication"
+            }), " and then delete credentials so that all administrators have fewer than two types, you will not be able to access the administrator menu if BioStar 2 connection is also unavailable. Therefore, exercise caution when deleting administrator credentials."]
           }), "\n"]
         })
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "안내-사항",
-      children: "안내 사항"
+      id: "additional-information",
+      children: "Additional Information"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "장치 해시키 수동 변경 시"
+            children: "Manual Device Hash Key Change"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "장치 해시키를 수동으로 변경할 경우 마스터 관리자의 PIN이 삭제된다는 경고 메시지가 표시되므로 메시지를 확인한 후 변경하세요."
+            children: "When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding."
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "RS-485 통신구간 얼굴 이미지 전송 제한"
+            children: "RS-485 Biometric Image Transmission Restriction"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "RS-485 통신구간에서는 바이오메트릭 크리덴셜 이미지가 전송되지 않으므로, 슬레이브 장치의 마스터 관리자 얼굴 조회 시 대체 이미지를 표시합니다."
+            children: "Biometric credential images are not transmitted over RS-485 communication. When viewing Master Admin face credentials on slave devices, substitute images are displayed."
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "자주-묻는-질문",
-      children: "자주 묻는 질문"
+      id: "frequently-asked-questions",
+      children: "Frequently Asked Questions"
     }), "\n", "\n", (0,jsx_runtime.jsx)(FaqsItems, {
       data: faqs_namespaceObject
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "미작성-biostar-2에서-마스터-관리자-설정하기",
-      children: "[미작성] BioStar 2에서 마스터 관리자 설정하기"
+      id: "tbd-setting-master-admin-via-biostar-2",
+      children: "[TBD] Setting Master Admin via BioStar 2"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자 기능은 BioStar 2 v2.9.11부터 지원됩니다."
+            children: "The Master Admin feature is supported from BioStar 2 v2.9.11."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "펌웨어를 업그레이드한 기존 장치는 BioStar 2 관리자 설정에 마스터 관리자 메뉴가 나타나지 않습니다."
+            children: "Devices upgraded via firmware do not display the Master Admin menu in BioStar 2 administrator settings."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "미작성-마스터-관리자-일괄-편집하기",
-      children: "[미작성] 마스터 관리자 일괄 편집하기"
+      id: "tbd-batch-edit-master-admin",
+      children: "[TBD] Batch Edit Master Admin"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "관리자 2단계 인증 및 크리덴셜 등록을 일괄 편집할 수 있습니다."
+          children: "You can batch edit Admin 2-step Authentication and credential enrollment."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "일괄 편집 시 등록한 크리덴셜로 덮어쓰여 집니다."
+          children: "Batch editing overwrites with the enrolled credentials."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "얼굴, 지문, 카드, PIN을 등록할 수 있습니다."
+          children: "You can enroll a face, fingerprint, card, and PIN credentials."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "선택된 장치가 크리덴셜을 지원하지 않는 경우, 해당 장치는 편집 실패됩니다."
+          children: "If a selected device does not support a credential type, batch editing will fail for that device."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "신규 장치의 경우에도 최소 2개 조건을 충족해야 하며, 미충족 시 해당 장치만 편집 실패 처리됩니다."
+          children: "New devices must also meet the minimum two-credential condition; if not, batch editing for that device will fail."
         }), "\n"]
       }), "\n"]
     })]

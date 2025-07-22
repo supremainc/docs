@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2143"], {
-5482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8965"], {
+6568: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,25 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_index_mdx_3ef_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-glossary-mdx-6a0.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/en/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","keywords":["Suprema","Glossary"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"마스터 관리자 기능 소개 및 설정 방법 안내","permalink":"/docs/en/reference/master-admin"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-index-mdx-3ef.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_index_mdx_3ef_namespaceObject = JSON.parse('{"id":"reference/index","title":"Reference","description":"This section is a references for Suprema\'s products and services.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/index.mdx","sourceDirName":"reference","slug":"/reference/","permalink":"/docs/en/reference/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/index.mdx","tags":[],"version":"current","frontMatter":{"title":"Reference","description":"This section is a references for Suprema\'s products and services.","keywords":["References"],"isTranslationMissing":false},"sidebar":"reference","next":{"title":"Introduction to Master Admin Feature and Setup Guide","permalink":"/docs/en/reference/master-admin"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/index.mdx
 
 
 const frontMatter = {
-	id: 'glossary',
-	title: 'Glossary',
-	description: 'This document provides a glossary of terms used in Suprema’s products and services.',
+	title: 'Reference',
+	description: 'This section is a references for Suprema\'s products and services.',
 	keywords: [
-		'Suprema',
-		'Glossary'
+		'References'
 	],
 	isTranslationMissing: false
 };
@@ -47,12 +45,12 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {GlossaryAll} = _components;
-  if (!GlossaryAll) _missingMdxReference("GlossaryAll", true);
+  }, {DocCardList} = _components;
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document compiles a glossary of terms used in Suprema’s products and services. The glossary includes not only Suprema’s proprietary technical terms but also terms that are useful for understanding the context."
-    }), "\n", (0,jsx_runtime.jsx)(GlossaryAll, {})]
+      children: "This section is a references for Suprema's products and services. It contains information on technical details, components, and terminology. This section helps developers and the technical support team understand and utilize the product."
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
 function MDXContent(props = {}) {

@@ -21,7 +21,7 @@ var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 ;// CONCATENATED MODULE: ./docs/reference/faqs.json
-var faqs_namespaceObject = JSON.parse('[{"question":"마스터 관리자를 등록하지 않으면 어떻게 되나요?","answer":"마스터 관리자가 등록되지 않은 경우, 장치 설정 저장 시 경고 메시지가 안내되며, 관리자 메뉴 접근에 제한이 발생합니다."},{"question":"기존 장치에서 펌웨어 업그레이드한 장치에서 마스터 관리자 설정이 지원되나요?","answer":"아니요. 기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. 단, 관리자 2단계 인증 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. **관리자 2단계 인증 옵션**은 [다음 문서](#admin-two-step-authentication)를 참고하세요."},{"question":"슬레이브 장치에서도 마스터 관리자를 등록할 수 있나요?","answer":"네. 슬레이브 장치에서도 마스터 관리자를 등록할 수 있습니다."}]')
+var faqs_namespaceObject = JSON.parse('[{"question":"마스터 관리자를 등록하지 않으면 어떻게 되나요?","answer":"마스터 관리자가 등록되지 않은 경우, 장치 설정 저장 시 경고 메시지가 안내되며, 관리자 메뉴 접근에 제한이 발생합니다."},{"question":"기존 장치에서 펌웨어 업그레이드한 장치에서 마스터 관리자 설정이 지원되나요?","answer":"아니요. 기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. 단, 관리자 2단계 인증 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. <b>관리자 2단계 인증 옵션</b>은 < href=\'#admin-two-step-authentication\'>다음 문서</a>를 참고하세요."},{"question":"슬레이브 장치에서도 마스터 관리자를 등록할 수 있나요?","answer":"네. 슬레이브 장치에서도 마스터 관리자를 등록할 수 있습니다."}]')
 ;// CONCATENATED MODULE: ./docs/reference/master-admin.mdx
 
 
@@ -130,7 +130,7 @@ function _createMdxContent(props) {
         children: "장치의 보안을 향상"
       }), "시키고 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "무단 접근 및 설정 변경을 방지"
-      }), "하기 위한 기능입니다.", (0,jsx_runtime.jsx)("br", {}), "이 기능을 통해, 장치에는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "하기 위한 기능입니다.", (0,jsx_runtime.jsx)("br", {}), "이 기능을 통해 장치에는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "반드시 마스터 관리자를 등록"
       }), "해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -287,20 +287,26 @@ function _createMdxContent(props) {
         })
       }), (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "신규 장치를 최초 부팅하면 마스터 관리자 등록 화면이 나타납니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["신규 장치를 최초 부팅하면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "마스터 관리자"
+            }), " 등록 화면이 나타납니다."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-1.png",
             caption: true
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "마스터 관리자"
+            }), "를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-2.png",
             caption: true
-          }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "마스터 관리자에 등록할 수 있는 크리덴셜은 다음과 같습니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "마스터 관리자"
+            }), "에 등록할 수 있는 크리덴셜은 다음과 같습니다."]
           }), "\n", (0,jsx_runtime.jsx)(Table, {
             children: (0,jsx_runtime.jsxs)(Tbody, {
               children: [(0,jsx_runtime.jsxs)(Row, {
@@ -371,24 +377,14 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["두 종류 이상의 크리덴셜을 등록한 후, ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Complete"
-            }), " 버튼을 누르면 마스터 관리자 등록이 완료됩니다."]
+            }), " 버튼을 누르면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "마스터 관리자"
+            }), " 등록이 완료됩니다."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-3.png",
             caption: true
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.admonition, {
-        type: "warning",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "마스터 관리자 미등록 시 경고 메시지"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "마스터 관리자 또는 그에 준하는 설정이 되어 있지 않은 경우, 설정 저장 시 경고 팝업 메시지로 안내합니다."
-        }), (0,jsx_runtime.jsx)(Image, {
-          src: "/img/techdochub/no-register-master-admin.png",
-          caption: true
-        })]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
@@ -401,13 +397,15 @@ function _createMdxContent(props) {
           children: "신규 장치에서 마스터 관리자 관리하기"
         })
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["신규 장치에서 마스터 관리자 설정은 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["신규 장치에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "마스터 관리자"
+        }), " 설정은 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "설정 → 장치 → 마스터 관리자"
         }), " 메뉴에서 변경할 수 있습니다."]
       }), (0,jsx_runtime.jsx)(Image, {
         src: "/img/techdochub/edit-master-admin-1.png"
       }), (0,jsx_runtime.jsx)(Image, {
-        src: "/img/techdochub/edit-master-admin-2.png",
+        src: "/img/techdochub/setting-master-admin-3.png",
         caption: true
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
