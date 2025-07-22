@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What happens if you do not register a Master Administrator?",
+    "answer": "If a Master Administrator is not registered, a warning message appears when saving device settings, and access to the administrator menu is restricted."
+  },
+  {
+    "question": "Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?",
+    "answer": "No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the <b>Admin 2-Step Authentication</b> option. For details about the <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a> option, see the following document."
+  },
+  {
+    "question": "Can you register a Master Administrator on a slave device?",
+    "answer": "Yes. You can register a Master Administrator on a slave device."
+  }
+]
