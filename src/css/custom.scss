@@ -527,7 +527,14 @@ footer {
     --ifm-alert-foreground-color: #A32343;
   }
   /* Alert */
-
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .hasimg {
+      display: inline-block;
+    }
+  }
   p, li {
     em {
       // font-style: normal;
