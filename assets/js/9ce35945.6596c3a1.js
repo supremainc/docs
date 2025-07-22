@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-glossary-mdx-9ce.json
-var site_docs_reference_glossary_mdx_9ce_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","source":"@site/docs/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","keywords":["슈프리마","용어집"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"참조 문서","permalink":"/docs/reference/"}}')
+var site_docs_reference_glossary_mdx_9ce_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","source":"@site/docs/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","keywords":["슈프리마","용어집"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"마스터 관리자 기능 소개 및 설정 방법 안내","permalink":"/docs/reference/master-admin"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-index-mdx-747.json
-var site_docs_reference_index_mdx_747_namespaceObject = JSON.parse('{"id":"reference/index","title":"참조 문서","description":"슈프리마의 제품 및 서비스에 대한 참조 문서입니다.","source":"@site/docs/reference/index.mdx","sourceDirName":"reference","slug":"/reference/","permalink":"/docs/reference/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/index.mdx","tags":[],"version":"current","frontMatter":{"title":"참조 문서","description":"슈프리마의 제품 및 서비스에 대한 참조 문서입니다.","keywords":["참고서"],"isTranslationMissing":false},"sidebar":"reference","next":{"title":"용어집","permalink":"/docs/reference/glossary"}}')
+var site_docs_reference_index_mdx_747_namespaceObject = JSON.parse('{"id":"reference/index","title":"참조 문서","description":"슈프리마의 제품 및 서비스에 대한 참조 문서입니다.","source":"@site/docs/reference/index.mdx","sourceDirName":"reference","slug":"/reference/","permalink":"/docs/reference/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/index.mdx","tags":[],"version":"current","frontMatter":{"title":"참조 문서","description":"슈프리마의 제품 및 서비스에 대한 참조 문서입니다.","keywords":["참고서"],"isTranslationMissing":false},"sidebar":"reference","next":{"title":"마스터 관리자 기능 소개 및 설정 방법 안내","permalink":"/docs/reference/master-admin"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
