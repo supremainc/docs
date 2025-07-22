@@ -558,7 +558,8 @@ const sidebars = {
         id: 'reference/index',
       },
       items: [
-        'reference/glossary'
+        'reference/master-admin',
+        'reference/glossary',
       ]
     }
   ],
