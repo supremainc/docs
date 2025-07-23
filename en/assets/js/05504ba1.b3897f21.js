@@ -260,7 +260,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Go to ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Access Management"
-          }), " > ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Floor Levels"
           }), "."]
         }), "\n"]

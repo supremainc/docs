@@ -42,6 +42,15 @@ const assets = {
 
 };
 
+/*:::warning
+
+**Warning Message When Master Admin Is Not Registered**
+
+If neither a Master Admin nor an equivalent setting is configured, a warning popup message will appear when saving settings.
+
+<Image src='/img/techdochub/no-register-master-admin.png' alone caption />
+
+:::*/
 
 
 
@@ -62,23 +71,23 @@ const toc = [{
   "id": "how-to-enhance-administrator-security-on-new-and-upgraded-devices",
   "level": 2
 }, {
-  "value": "<strong>New Devices</strong>",
+  "value": "New Devices",
   "id": "new-devices",
   "level": 3
 }, {
-  "value": "<strong>Registering Master Admin on a New Device</strong>",
+  "value": "Registering Master Admin on a New Device",
   "id": "registering-master-admin-on-a-new-device",
   "level": 4
 }, {
-  "value": "<strong>Managing Master Admin on a New Device</strong>",
+  "value": "Managing Master Admin on a New Device",
   "id": "managing-master-admin-on-a-new-device",
   "level": 4
 }, {
-  "value": "<strong>Upgraded Devices</strong>",
+  "value": "Upgraded Devices",
   "id": "upgraded-devices",
   "level": 3
 }, {
-  "value": "<strong>Setting Admin 2-step Authentication on Upgraded Devices</strong>",
+  "value": "Setting Admin 2-step Authentication on Upgraded Devices",
   "id": "admin-two-step-authentication",
   "level": 4
 }, {
@@ -147,8 +156,10 @@ function _createMdxContent(props) {
             children: "This feature is an essential policy to enhance device security."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Multiple Master Admins can be registered, and they are deleted only through factory reset."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Multiple Master Admins can be registered, and they are ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "deleted only through factory reset"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
@@ -245,9 +256,7 @@ function _createMdxContent(props) {
       children: "How to Enhance Administrator Security on New and Upgraded Devices"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "new-devices",
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "New Devices"
-      })
+      children: "New Devices"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["For new devices, registering a ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Master Admin"
@@ -269,7 +278,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Firmware downgrade is not allowed on new devices."
+            children: "The new device cannot be downgraded to a lower version."
           }), "\n"]
         }), "\n"]
       })
@@ -280,9 +289,7 @@ function _createMdxContent(props) {
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "registering-master-admin-on-a-new-device",
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Registering Master Admin on a New Device"
-        })
+        children: "Registering Master Admin on a New Device"
       }), (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -291,16 +298,18 @@ function _createMdxContent(props) {
             }), " registration screen appears."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-1.png",
-            caption: true
+            caption: true,
+            width: "300px"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["To register a ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Master Admin"
-            }), ", you must register at least two types of credentials. Select and enroll your preferred two credential types."]
+            }), ", you must enroll at least two types of credentials. Select and enroll your preferred two credential types."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-2.png",
-            caption: true
+            caption: true,
+            width: "300px"
           }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["Credentials that can be enrolled for ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Master Admin"
@@ -380,7 +389,8 @@ function _createMdxContent(props) {
             }), " registration."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/techdochub/setting-master-admin-3.png",
-            caption: true
+            caption: true,
+            width: "300px"
           }), "\n"]
         }), "\n"]
       })]
@@ -391,26 +401,28 @@ function _createMdxContent(props) {
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "managing-master-admin-on-a-new-device",
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Managing Master Admin on a New Device"
-        })
+        children: "Managing Master Admin on a New Device"
       }), (0,jsx_runtime.jsxs)(_components.p, {
         children: ["On new devices, you can modify ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Master Admin"
         }), " settings in the ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Settings → Device → Master Admin"
         }), " menu."]
-      }), (0,jsx_runtime.jsx)(Image, {
-        src: "/img/techdochub/edit-master-admin-1.png"
-      }), (0,jsx_runtime.jsx)(Image, {
-        src: "/img/techdochub/setting-master-admin-3.png",
-        caption: true
+      }), (0,jsx_runtime.jsxs)("div", {
+        className: "grid-container",
+        children: [(0,jsx_runtime.jsx)(Image, {
+          src: "/img/techdochub/edit-master-admin-1.png",
+          caption: true,
+          width: "300px"
+        }), (0,jsx_runtime.jsx)(Image, {
+          src: "/img/techdochub/setting-master-admin-4.png",
+          caption: true,
+          width: "300px"
+        })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "upgraded-devices",
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Upgraded Devices"
-      })
+      children: "Upgraded Devices"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Devices upgraded via firmware do not provide ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Master Admin"
@@ -432,7 +444,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Firmware-upgraded devices support firmware downgrade, and the two-step authentication info will be deleted when downgrading."
+            children: "The firmware upgrade device cannot be downgraded to a lower version after upgrading the firmware."
           }), "\n"]
         }), "\n"]
       })
@@ -443,23 +455,24 @@ function _createMdxContent(props) {
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "admin-two-step-authentication",
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Setting Admin 2-step Authentication on Upgraded Devices"
-        })
+        children: "Setting Admin 2-step Authentication on Upgraded Devices"
       }), (0,jsx_runtime.jsxs)(_components.p, {
         children: ["You can activate Admin 2-step Authentication in the ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Settings → Device → Admin 2-step Authentication"
         }), " menu."]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Admin 2-step Authentication"
-        }), " option appears only on devices upgraded to the latest firmware."]
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Admin 2-step Authentication"
+          }), " option appears only on devices upgraded to the latest firmware."]
+        }), "\n"]
       }), (0,jsx_runtime.jsx)(Image, {
         src: "/img/techdochub/setting-two-step-authentication.png",
-        caption: true
-      }), (0,jsx_runtime.jsx)(_components.admonition, {
+        caption: true,
+        width: "300px"
+      }), (0,jsx_runtime.jsxs)(_components.admonition, {
         type: "info",
-        children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: [(0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -471,7 +484,11 @@ function _createMdxContent(props) {
               children: "If not all administrators have at least two types of credentials, activation will fail and an error message will appear."
             }), "\n"]
           }), "\n"]
-        })
+        }), (0,jsx_runtime.jsx)(Image, {
+          src: "/img/techdochub/error-two-step-authentication.png",
+          caption: true,
+          width: "300px"
+        })]
       }), (0,jsx_runtime.jsx)(_components.admonition, {
         type: "warning",
         children: (0,jsx_runtime.jsxs)(_components.ul, {

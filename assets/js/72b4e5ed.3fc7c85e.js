@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6820"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4721"], {
 4933: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -47,7 +47,7 @@ function MDXContent(props = {}) {
 
 
 }),
-8828: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+2123: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -56,30 +56,30 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_14_elevator_management_managing_elevator_access_in_airfob_pro_mdx_72b_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-how-to-upgrade-firmware-mdx-708.json
-var site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject = JSON.parse('{"id":"platform/biostar_air/how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","source":"@site/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/how-to-upgrade-firmware","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","keywords":["firmware","upgrade","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Configuring the SIO2 Secure Module","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"},"next":{"title":"Biometric Readers and Credentials","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-14-elevator-management-managing-elevator-access-in-airfob-pro-mdx-72b.json
+var site_docs_platform_biostar_air_14_elevator_management_managing_elevator_access_in_airfob_pro_mdx_72b_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-elevator-access","title":"Managing Elevator Access","description":"Learn how to configure elevator access control, set floor permissions, and manage user access levels using Suprema\'s OM120 module in BioStar Air.","source":"@site/docs/platform/biostar_air/14-elevator-management-managing-elevator-access-in-airfob-pro.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-elevator-access","permalink":"/docs/platform/biostar_air/managing-elevator-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/14-elevator-management-managing-elevator-access-in-airfob-pro.mdx","tags":[],"version":"current","sidebarPosition":14,"frontMatter":{"id":"managing-elevator-access","title":"Managing Elevator Access","description":"Learn how to configure elevator access control, set floor permissions, and manage user access levels using Suprema\'s OM120 module in BioStar Air.","keywords":["elevator access","BioStar Air","OM120"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Managing Door Schedules","permalink":"/docs/platform/biostar_air/managing-door-schedules"},"next":{"title":"Managing Door Access","permalink":"/docs/platform/biostar_air/managing-door-access"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_biostarair-customer-notice.mdx
 var _biostarair_customer_notice = __webpack_require__(4933);
-;// CONCATENATED MODULE: ./docs/platform/biostar_air/how-to-upgrade-firmware.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_air/14-elevator-management-managing-elevator-access-in-airfob-pro.mdx
 
 
 const frontMatter = {
-	id: 'how-to-upgrade-firmware',
-	title: 'How to Upgrade Firmware',
-	description: 'Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.',
+	id: 'managing-elevator-access',
+	title: 'Managing Elevator Access',
+	description: 'Learn how to configure elevator access control, set floor permissions, and manage user access levels using Suprema\'s OM120 module in BioStar Air.',
 	keywords: [
-		'firmware',
-		'upgrade',
-		'BioStar Air'
+		'elevator access',
+		'BioStar Air',
+		'OM120'
 	],
 	isTranslationMissing: false
 };
@@ -97,39 +97,29 @@ const toc = [{
   "id": "feature-overview",
   "level": 2
 }, ..._biostarair_customer_notice/* toc */.d$, {
-  "value": "Navigating to the Feature",
-  "id": "navigating-to-the-feature",
+  "value": "Requirements",
+  "id": "requirements",
   "level": 2
 }, {
-  "value": "Step-by-Step Instructions",
-  "id": "step-by-step-instructions",
+  "value": "Setting Up Elevator Control",
+  "id": "setting-up-elevator-control",
   "level": 2
 }, {
-  "value": "Upgrading Firmware in Bulk via Web Portal",
-  "id": "upgrading-firmware-in-bulk-via-web-portal",
-  "level": 3
-}, {
-  "value": "Upgrading Firmware for an Individual Device via Web Portal",
-  "id": "upgrading-firmware-for-an-individual-device-via-web-portal",
-  "level": 3
-}, {
-  "value": "Upgrading Firmware via BioStar Air Mobile App",
-  "id": "upgrading-firmware-via-biostar-air-mobile-app",
-  "level": 3
-}, {
-  "value": "Common Issues &amp; Considerations",
-  "id": "common-issues-considerations",
+  "value": "Naming and Configuring Floors",
+  "id": "naming-and-configuring-floors",
   "level": 2
 }, {
-  "value": "Learn More about Device Management",
-  "id": "learn-more-about-device-management",
+  "value": "Setting Floor Access Levels",
+  "id": "setting-floor-access-levels",
+  "level": 2
+}, {
+  "value": "Key Considerations",
+  "id": "key-considerations",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -137,188 +127,201 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, YouTube} = _components;
-  if (!Image) _missingMdxReference("Image", true);
+  }, {YouTube} = _components;
   if (!YouTube) _missingMdxReference("YouTube", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "feature-overview",
       children: "Feature Overview"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Upgrading the firmware in BioStar Air ensures that your devices run the latest software version with improvements, bug fixes, and new features. The process is simple and can be done via the BioStar Air web portal or the BioStar Air mobile app."
+      children: "BioStar Air supports complete elevator access control using Suprema's OM120 module. This module allows administrators to control floor access by integrating with Suprema or Airfob access control readers. They support up to 144 floors through daisy-chained OM120 devices."
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "navigating-to-the-feature",
-      children: "Navigating to the Feature"
+      id: "requirements",
+      children: "Requirements"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To upgrade the firmware using the web portal:"
+      children: "To enable elevator access control, you must have:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Go to ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "https://admin.biostarair.com",
-            children: "admin.biostarair.com"
-          }), " and log in."]
+          children: ["A Suprema ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "OM120"
+          }), " module (each supports up to 12 floors)."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "A compatible Suprema or Airfob access control reader connected to the OM120."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Proper wiring to the elevator control panel (contact your elevator manufacturer for wiring specifics)."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(YouTube, {
+      videoId: "szCBlVFdrBo"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "setting-up-elevator-control",
+      children: "Setting Up Elevator Control"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "To configure elevator control:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Go to ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Device Management"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select an ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Airfob Edge Reader Ultimate"
+          }), " that has an OM120 module connected."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["If the OM120 module is not detected, click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Search OM120"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select the detected OM120 module(s) and click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "OK"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Navigate to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Management"
-          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
-          }), " in the left-hand sidebar."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "step-by-step-instructions",
-      children: "Step-by-Step Instructions"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-in-bulk-via-web-portal",
-      children: "Upgrading Firmware in Bulk via Web Portal"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Log in to ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "https://admin.biostarair.com",
-            children: "admin.biostarair.com"
+            children: "Elevator Management"
+          }), " and click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Add Elevator"
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Enter an ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Elevator Name"
+          }), " and optional description."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select the controlling ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Airfob Edge Reader"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Choose the registered OM120 module(s) for the elevator."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Set the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Relay Timeout"
+          }), " (determines how long the floor button remains active after authentication)."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Specify the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Number of Floors"
+          }), " the module controls (up to 12 per OM120)."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "naming-and-configuring-floors",
+      children: "Naming and Configuring Floors"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Once an elevator is added, you can configure individual floors:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Assign names to floors (e.g., \"Ground Floor,\" \"Lobby,\" \"Conference Level\")."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Select the relay output that corresponds to each floor's button in the elevator control panel."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Set a schedule for when each floor is accessible (e.g., restrict maintenance floors outside of work hours)."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Save"
+          }), " to finalize the elevator setup."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "setting-floor-access-levels",
+      children: "Setting Floor Access Levels"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Floor access levels define which users or groups can access specific floors."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Go to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Management"
+            children: "Access Management"
           }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
+            children: "Floor Levels"
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Find the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Firmware"
-          }), " column (second from the left) to check the current version of each device."]
+          children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Add Floor Level"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Enter a ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Name"
+          }), " (e.g., \"Security,\" \"Cleaning Crew\")."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Sort devices by firmware version using the arrow buttons next to the column heading."
+          children: "Assign specific floors to this access level."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select devices running an outdated firmware version (anything below ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.8.1"
-          }), " as of March 2025) by checking the box on the left side."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click the gear icon in the toolbar at the top of the screen."
+          children: ["Apply an ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Access Schedule"
+          }), " (e.g., allow cleaning staff access only after hours)."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Hover over the icon to confirm it says ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Update Firmware"
-          }), ", then click it."]
+          children: ["Optionally, add ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Holiday Groups"
+          }), " to restrict access on specific days."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select the latest firmware version ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.8.1"
-          }), " (as of March 2025) and confirm the update."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw-list.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-for-an-individual-device-via-web-portal",
-      children: "Upgrading Firmware for an Individual Device via Web Portal"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["In the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
-          }), " list, click on the device name."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["In the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Edit Device"
-          }), " screen, scroll down to the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Info"
-          }), " section."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Firmware Update"
-          }), " button (one of the four green buttons)."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select the latest firmware version ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.8.1"
-          }), " (as of March 2025) and confirm the update."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw-edit-device.png"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-via-biostar-air-mobile-app",
-      children: "Upgrading Firmware via BioStar Air Mobile App"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The process for upgrading firmware using the BioStar Air app on iOS or Android is similar to the web portal:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Open the BioStar Air app and log in."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Go to the device list and check the firmware version of your devices."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select devices running an outdated version and choose the firmware update option."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select the latest version ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.8.1"
-          }), " (as of March 2025) and confirm the update."]
+          children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Save"
+          }), " to apply the settings."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "common-issues-considerations",
-      children: "Common Issues & Considerations"
+      id: "key-considerations",
+      children: "Key Considerations"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Devices must be online"
-          }), " to receive the firmware update. Check the device status in the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Product"
-          }), " column. A green dot next to the device image indicates it is online."]
+            children: "Wiring Requirements"
+          }), ": The OM120 module must be correctly wired to the elevator control panel. Contact your elevator manufacturer for wiring specifications."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["During the firmware update, devices will ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "temporarily go offline"
-          }), " but should reconnect within ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "three to five minutes"
-          }), "."]
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Daisy-Chaining Modules"
+          }), ": Up to 12 OM120 modules can be linked to a single Airfob Edge Reader, supporting a maximum of 144 floors."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To avoid disruptions, it is recommended to perform firmware updates ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "outside peak business hours"
-          }), "."]
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Schedules & Overrides"
+          }), ": Floor access schedules take priority, but holiday settings can override normal access rules."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "learn-more-about-device-management",
-      children: "Learn More about Device Management"
-    }), "\n", (0,jsx_runtime.jsx)(YouTube, {
-      videoId: "lpMPkMyjr-c"
     })]
   });
 }

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8880"], {
-1453: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6820"], {
+4933: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -47,7 +47,7 @@ function MDXContent(props = {}) {
 
 
 }),
-7486: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+8828: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -56,20 +56,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_how_to_upgrade_firmware_mdx_42e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-how-to-upgrade-firmware-mdx-42e.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_how_to_upgrade_firmware_mdx_42e_namespaceObject = JSON.parse('{"id":"platform/biostar_air/how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/how-to-upgrade-firmware.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/how-to-upgrade-firmware","permalink":"/docs/en/platform/biostar_air/how-to-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","keywords":["firmware","upgrade","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Configuring the SIO2 Secure Module","permalink":"/docs/en/platform/biostar_air/configuring-the-sio2-secure-module"},"next":{"title":"Biometric Readers and Credentials","permalink":"/docs/en/platform/biostar_air/biometric-readers-and-credentials"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-how-to-upgrade-firmware-mdx-708.json
+var site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject = JSON.parse('{"id":"platform/biostar_air/how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","source":"@site/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/how-to-upgrade-firmware","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-upgrade-firmware","title":"How to Upgrade Firmware","description":"Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.","keywords":["firmware","upgrade","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Configuring the SIO2 Secure Module","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"},"next":{"title":"Biometric Readers and Credentials","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx
-var _biostarair_customer_notice = __webpack_require__(1453);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/how-to-upgrade-firmware.mdx
+// EXTERNAL MODULE: ./docs/common/_biostarair-customer-notice.mdx
+var _biostarair_customer_notice = __webpack_require__(4933);
+;// CONCATENATED MODULE: ./docs/platform/biostar_air/how-to-upgrade-firmware.mdx
 
 
 const frontMatter = {
@@ -261,7 +261,8 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw-edit-device.png"
+      src: "/img/air/air-device-management-upgrade-fw-edit-device.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "upgrading-firmware-via-biostar-air-mobile-app",
       children: "Upgrading Firmware via BioStar Air Mobile App"
