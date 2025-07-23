@@ -63,7 +63,7 @@ export default function Faqs() {
   
   const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4]
 
-  console.log(cProd);
+  // console.log(cProd);
   
   // product가 주어지면 해당 제품만 필터링, 아니면 전체 출력
   const productList = Array.isArray(cProd) ? cProd : cProd ? [cProd] : null;
@@ -101,7 +101,7 @@ export default function Faqs() {
   const {
     navbar: {hideOnScroll},
   } = useThemeConfig();
-  console.log(filteredCategories.length);
+  // console.log(filteredCategories.length);
   return (
     <>
       <script
