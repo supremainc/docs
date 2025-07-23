@@ -1,76 +1,76 @@
 ---
 id: daylight-saving-time
-title: Daylight Saving Time (DST) Configuration
-description: Learn how to configure automatic and manual DST settings, enable DST for devices, and manage time zone adjustments across multiple locations in BioStar Air.
-keywords: [daylight saving time, DST, time zone]
+title: 일광 절약 시간(DST) 설정하기
+description: BioStar Air에서 자동 및 수동 DST 설정 구성 방법, 장치에 대한 DST 활성화 방법, 여러 위치에서 표준 시간대 조정 관리 방법을 안내합니다.
+keywords: [일광 절약 시간, DST, 시간대]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Feature Overview {#feature-overview}
+## 기능 개요 {#feature-overview}
 
-Daylight Saving Time (DST) allows you to configure how time adjustments occur for a site. This is especially important when managing sites with readers in multiple time zones, ensuring consistent and accurate time tracking.
+일광 절약 시간(Daylight Saving Time, DST)을 설정을 사용해 사이트의 시간 조정 방식을 구성할 수 있습니다. 이는 특히 여러 시간대에 걸쳐 방문자가 있는 사이트를 관리할 때 일관되고 정확한 시간 추적을 보장하는 데 중요합니다.
 
 <CustomerNote />
 
-## Navigating to the Feature {#navigating-to-the-feature}
+## 일광 절약 시간 설정으로 이동 {#navigating-to-the-feature}
 
-To access the DST settings:
+일광 절약 시간 설정으로 이동하세요.
 
-* Go to **Settings**.
+* **Settings**으로 이동하세요.
 
-* Click on **DST**.
+* **DST**를 클릭하세요.
 
-* You will be directed to the **Daylight Saving Time** page, where you can view and edit existing DST configurations.
+* **Daylight Saving Time** 페이지로 이동하게 되며, 기존 DST 구성을 보고 편집할 수 있습니다.
 
 <YouTube videoId="e51UOKLECz8" />
 
 
-## Step-by-Step Instructions {#step-by-step-instructions}
+## 단계별 사용 안내 {#step-by-step-instructions}
 
-### Editing an Existing DST Configuration {#editing-an-existing-dst-configuration}
+### 기존 DST 구성 편집 {#editing-an-existing-dst-configuration}
 
-1. On the **Daylight Saving Time** page, locate the DST configuration you want to edit.
+1. **Daylight Saving Time** 페이지에서 편집할 DST 구성을 찾으세요.
 
-1. Click on the existing DST setting to modify its parameters.
+1. 기존 DST 설정을 클릭하고 매개변수를 수정하세요.
 
-### Adding a New DST Configuration {#adding-a-new-dst-configuration}
+### 새 DST 구성 추가 {#adding-a-new-dst-configuration}
 
-1. Click the **Add DST** button in the top right corner of the screen.
+1. 화면 오른쪽 상단의 **Add DST** 버튼을 클릭하세요.
 
-1. Select the appropriate time zone from the drop-down menu.
+1. 드롭다운 메뉴에서 적절한 시간대를 선택하세요.
 
-1. Choose whether to enable **Automatic DST** (recommended) or configure it manually.
+1. **Automatic DST**(권장)를 활성화할지 수동으로 구성할지 선택하세요.
 
-1. If using **Automatic DST**, simply toggle on the switch.
+1. **Automatic DST**를 사용하려면 토글 버튼을 클릭하세요.
 
-1. If configuring manually, specify the appropriate start and end day or week for that time zone.
+1. 수동으로 구성하려면 해당 시간대에 대한 적절한 시작일 및 종료일 또는 주를 지정하세요.
 
-### Enabling DST for Devices {#enabling-dst-for-devices}
+### 장치에 대한 DST 활성화 {#enabling-dst-for-devices}
 
-Each device must also have DST enabled to ensure accurate time adjustments:
+각 장치에서도 정확한 시간 조정을 보장하기 위해 DST를 활성화해야 합니다.
 
-1. Go to **Device Management**.
+1. **Device Management**로 이동하세요.
 
-1. Click on **Registered Devices**.
+1. **Registered Devices**를 클릭하세요.
 
-1. Select a device from the list.
+1. 목록에서 장치를 선택하세요.
 
-1. Locate the **Time Zone** section.
+1. **Time Zone** 섹션을 찾으세요.
 
-1. Toggle on **Use DST** to enable daylight saving time for the device.
+1. **Use DST**를 활성화하고 장치에 대한 일광 절약 시간을 활성화합니다.
 
 :::note
 
-For time zones that observe DST, this setting is typically enabled by default.
+DST를 적용하는 시간대에서 이 설정은 기본 활성화됩니다.
 
 :::
 
 
-## Common Issues & Considerations {#common-issues-and-considerations}
+## 공통 이슈 및 고려사항 {#common-issues-and-considerations}
 
-In **Event Logs**:
+**Event Logs**를 확인할 때 아래 사항을 참고하세요.
 
-* If device time is set, event log timestamps will be coordinated with the DST time for each individual device.
+* 장치 시간이 설정되어 있다면 이벤트 로그 타임스탬프는 각 개별 장치의 DST 시간에 맞춰 조정됩니다.
 
-* If site time is set, timestamps will be adjusted according to the site's DST configuration rather than per device.
+* 사이트 시간이 설정되어 있다면 타임스탬프는 장치별이 아닌 사이트의 DST 구성에 따라 조정됩니다.
