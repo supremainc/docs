@@ -1,121 +1,120 @@
 ---
 id: suprema-pass-app-advanced-features
-title: Advanced Features
-description: Learn how to configure Bluetooth and NFC authentication modes, set up two-factor authentication with PIN or biometric options, review access logs, and access support features in the Suprema Pass app.
-keywords: [advanced features, Suprema Pass app, two-factor authentication, access logs, support options]
+title: 고급 기능
+description: Suprema Pass 앱에서 Bluetooth 및 NFC 인증 모드 구성 방법, PIN 또는 생체 인식 옵션으로 2단계 인증 설정 방법, 액세스 로그 검토 방법, 지원 기능 사용 방법을 안내합니다.
+keywords: [고급 기능, Suprema Pass 앱, 2단계 인증, 액세스 로그, 지원 옵션]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Feature Overview {#feature-overview}
+## 기능 개요 {#feature-overview}
 
-The Suprema Pass app includes advanced settings and security options to enhance user experience and access control functionality. Users can configure authentication methods, enable two-factor authentication, review access logs, report issues, and access support resources.
+Suprema Pass 앱은 사용자 경험과 출입 통제 기능을 향상시키기 위한 고급 설정 및 보안 옵션을 포함합니다. 사용자는 인증 방법 구성, 2단계 인증 활성화, 액세스 로그 검토, 문제 보고 및 지원 기능을 사용할 수 있습니다.
 
 <CustomerNote />
 
 
-## Accessing Advanced Settings {#accessing-advanced-settings}
+## 고급 설정으로 이동 {#accessing-advanced-settings}
 
-To open hidden settings and additional menus:
+숨겨진 설정 및 추가 메뉴를 실행하세요.
 
-* Tap the **≡** (hamburger) icon at the top of the main screen.
+* 화면 상단의 **≡** (햄버거) 아이콘을 탭하세요.
 
-* Navigate to the specific setting you wish to modify.
+* 수정을 원하는 설정으로 이동하세요.
 
 
-## Contact Method {#contact-method}
+## 통신 방법 {#contact-method}
 
-The app allows users to select their preferred method for communicating with access control devices:
+앱은 사용자가 출입 통제 장치와 통신하는 데 선호하는 방법을 선택할 수 있습니다.
 
-### Bluetooth {#bluetooth}
+### 블루투스 {#bluetooth}
 
-Users can choose between two Bluetooth authentication modes:
+사용자는 두 가지 블루투스 인증 모드 중에서 선택할 수 있습니다.
 
-* **Only While App is On-Screen**: The mobile card is authenticated only when the app screen is open. This conserves battery but requires manually opening the app before accessing a door.
+* **Only While App is On-Screen**: 앱 화면이 열려 있을 때만 모바일 카드로 인증합니다. 이 모드는 배터리를 절약하지만 출입문에 접근하기 전에 수동으로 앱을 실행해야 합니다.
 
-* **Background Mode**: The mobile card works even when the phone screen is off, as long as the app is running in the background. This mode is more convenient but consumes more battery. If the app is closed, it must be reopened to resume background functionality.
+* **Background Mode**: 앱이 백그라운드에서 실행 중인 경우 휴대폰 화면이 꺼져 있어도 모바일 카드로 인증할 수 있습니다. 이 모드는 더 편리하지만 배터리를 더 소모합니다. 앱이 종료되면 백그라운드 기능을 재개하기 위해 앱을 다시 실행해야 합니다.
 
-Android users with NFC-compatible devices can use NFC in addition to Bluetooth.
+NFC 호환 장치를 사용하는 안드로이드 사용자는 블루투스와 함께 NFC를 사용할 수 있습니다.
 
 ### NFC {#nfc}
 
-NFC authentication is available for **Android devices only**. Users can enable NFC alone or in combination with Bluetooth for faster access.
+NFC 인증은 **안드로이드 기기에서만** 사용할 수 있습니다. 사용자는 더 빠른 출입을 위해 NFC를 단독으로 사용하거나 블루투스와 함께 사용할 수 있습니다.
 
 
-## Two-Factor Authentication (2FA) {#two-factor-authentication}
+## 이중 인증(2FA) {#two-factor-authentication}
 
-For added security, users can enable two-factor authentication using a **PIN, pattern, or biometric authentication** (face or fingerprint). This feature requires the app screen to be open during authentication, making it incompatible with background mode.
+추가 보안을 위해 사용자는 **PIN, 패턴 또는 생체 인식 인증**(얼굴 또는 지문)을 사용하여 이중 인증을 활성화할 수 있습니다. 이 기능은 인증 중에 앱 화면이 열려 있어야 하므로 백그라운드 모드와 호환되지 않습니다.
 
 :::note
 
-**Important Consideration**
+**중요 고려 사항**
 
-If you forget your PIN or pattern, you will need to **reinstall the app and re-download your mobile cards**.
+PIN 또는 패턴을 잊어버렸다면 **앱을 재설치하고 모바일 카드를 다시 다운로드해야** 합니다.
 
 :::
 
-### Setting Up Two-Factor Authentication (iOS Users) {#setting-up-two-factor-authentication-ios}
+### iOS 사용자 {#setting-up-two-factor-authentication-ios}
 
-1. Set the Bluetooth connection method to **Only while App is on Screen**.
+1. 블루투스 연결 방법을 **Only while App is on Screen**으로 설정하세요.
 
-1. Tap **Two-Factor Authentication**.
+1. **Two-Factor Authentication**을 탭하세요.
 
-1. Select **Register PIN**.
+1. **Register PIN**을 선택하세요.
 
-1. Enter a 6-digit PIN and confirm it.
+1. 6자리 PIN을 입력하고 확인하세요.
 
-1. Wait for the success notification and tap **OK**.
+1. 성공 알림을 기다린 후 **OK**를 탭하세요.
 
-1. Enable biometric authentication if available and follow the setup instructions.
+1. 생체 인식 인증을 사용할 수 있다면 활성화하고 설정 지침을 따르세요.
 
-### Setting Up Two-Factor Authentication (Android Users) {#setting-up-two-factor-authentication-android}
+### 안드로이드 사용자 {#setting-up-two-factor-authentication-android}
 
-1. Set the connection method to **Only while App is on Screen** or **NFC only**.
+1. 블루투스 연결 방법을 **Only while App is on Screen** 또는 **NFC only**로 설정하세요.
 
-1. Tap **Two-Factor Authentication**.
+1. **Two-Factor Authentication**을 탭하세요.
 
-1. Select **Register PIN** or **Register Pattern**.
+1. **Register PIN** 또는 **Register Pattern**을 선택하세요.
 
-1. Enter and confirm your chosen PIN or pattern.
+1. 선택한 PIN 또는 패턴을 입력하고 확인하세요.
 
-1. Wait for the success notification and tap **OK**.
+1. 성공 알림을 기다린 후 **OK**를 탭하세요.
 
-1. Enable biometric authentication if available and follow the setup instructions.
+1. 생체 인식 인증을 사용할 수 있다면 활성화하고 설정 지침을 따르세요.
 
+## 출입 로그 {#access-logs}
 
-## Access Logs {#access-logs}
+출입 로그 기능을 사용하면 사용자의 출입 시도를 추적하고 출입 관련 문제를 해결할 수 있습니다.
 
-The access log feature allows users to track entry attempts and troubleshoot access issues.
+1. 메뉴에서 **Access Log**를 탭하세요.
 
-1. Tap **Access Log** from the menu.
+1. 사이트, 날짜 및 시간을 선택하세요.
 
-1. Select the site, date, and time.
-
-1. Press **Search** to view logs, including successful and failed access attempts.
-
-
-## Support Center {#support-center}
-
-For additional help, users can access the **Support Center** to:
-
-* Search for detailed documentation.
-
-* Submit a support ticket to the MOCA Systems team.
+1. 성공 및 실패한 출입 시도를 포함한 로그를 확인하려면 **Search**를 누르세요.
 
 
-## Bug Report {#bug-report}
+## 지원 센터 {#support-center}
 
-If an error occurs, users may be requested to send a bug report to developers for technical analysis.
+추가 지원이 필요한 사용자는 **지원 센터**로 진입하여 다음을 수행할 수 있습니다.
+
+* 자세한 문서를 검색하세요.
+
+* 모카(MOCA) 시스템 팀에 지원 티켓을 제출하세요.
 
 
-## Additional Information {#additional-information}
+## 버그 보고 {#bug-report}
 
-Further app details are available under:
+오류가 발생하면 사용자는 기술 분석을 위해 개발자에게 버그 보고서를 제출하라는 요청을 받을 수 있습니다.
+
+
+## 추가 정보 {#additional-information}
+
+앱에 대한 추가 세부 정보는 다음에서 확인할 수 있습니다.
 
 * **App Details**
 
 * **App License**
 
-* **Terms & Conditions**
+* **Terms of Service**
 
 * **Privacy Policy**
