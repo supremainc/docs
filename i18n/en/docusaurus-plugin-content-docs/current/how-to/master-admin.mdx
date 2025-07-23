@@ -1,7 +1,7 @@
 ---
 id: master-admin
 title: Introduction to Master Admin Feature and Setup Guide
-description: Introduction and setup guide for the Master Admin feature.
+description: Provides a guide to configuring the Master Admin, which enhances device security by strengthening administrator permissions.
 keywords: [ Master Admin, Administrator, Master ]
 ---
 
@@ -29,32 +29,24 @@ If you use the device without setting up a Master Admin, anyone can access the a
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/techdochub/BioStation 3-Front.png' className='none' alone width='110px'/></Td>
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
 
-<Td><Image src='/img/techdochub/BioStation 2a-front.png' className='none' alone width='150px' /></Td>
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
 
-<Td><Image src='/img/techdochub/BioLite N2-Front.png' className='none' alone width='100px' /></Td>
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
 
-<Td><Image src='/img/techdochub/X-Station 2-DPB-APB-Front.png' className='none' alone width='100px' /></Td>
-
-<Td><Image src='/img/techdochub/X-Station 2-ODPB-OAPB-Front.png' className='none' alone width='100px' /></Td>
-
-<Td><Image src='/img/techdochub/X-Station 2-QDPB-QAPB-Front.png' className='none' alone width='90px' /></Td>
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>**BioStation 3**<br/>[BS3-DB]<br/>[BS3-APWB]</Td>
+<Td>**BioStation 3**<br/>Firmware v1.4.0 or later</Td>
 
-<Td>**BioStation 2a**<br/>[BS2A-ODPB]<br/>[BS2A-OAPWB]</Td>
+<Td>**BioStation 2a**<br/>Firmware v1.2.0 or later</Td>
 
-<Td>**BioLite N2**<br/>[BLN2-ODB]<br/>[BLN2-OAB]<br/>[BLN2-PAB]</Td>
+<Td>**BioLite N2**<br/>Firmware v1.7.0 or later</Td>
 
-<Td>**X-Station 2**<br/>[XS2-DPB]<br/>[XS2-APB]</Td>
-
-<Td>**X-Station 2**<br/>[XS2-ODPB]<br/>[XS2-OAPB]</Td>
-
-<Td>**X-Station 2**<br/>[XS2-QDPB]<br/>[XS2-QAPB]</Td>
+<Td>**X-Station 2**<br/>Firmware v1.4.0 or later</Td>
 
 </Row>
 </Tbody>
@@ -83,11 +75,11 @@ For new devices, registering a **Master Admin** is mandatory. If you do not regi
 
 1. When you boot a new device for the first time, the **Master Admin** registration screen appears.
 
-    <Image src='/img/techdochub/setting-master-admin-1.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
 1. To register a **Master Admin**, you must enroll at least two types of credentials. Select and enroll your preferred two credential types.
 
-    <Image src='/img/techdochub/setting-master-admin-2.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
     Credentials that can be enrolled for **Master Admin** are as follows:
 
@@ -106,12 +98,12 @@ For new devices, registering a **Master Admin** is mandatory. If you do not regi
       <Row>
         <Td>Face</Td>
         <Td>Up to 2</Td>
-        <Td>Available only on devices with the same algorithm<br/>Distinguished by IR Face and Visual Face model</Td>
+        <Td>Available only on devices with the same algorithm</Td>
       </Row>
       <Row>
         <Td>Fingerprint</Td>
         <Td>Up to 2</Td>
-        <Td>No validity check provided</Td>
+        <Td>-</Td>
       </Row>
       <Row>
         <Td>PIN</Td>
@@ -135,7 +127,7 @@ For new devices, registering a **Master Admin** is mandatory. If you do not regi
 
 1. After enrolling at least two types of credentials, press the **Complete** button to finish **Master Admin** registration.
 
-    <Image src='/img/techdochub/setting-master-admin-3.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
 {/* :::warning
 
@@ -143,7 +135,7 @@ For new devices, registering a **Master Admin** is mandatory. If you do not regi
 
 If neither a Master Admin nor an equivalent setting is configured, a warning popup message will appear when saving settings.
 
-<Image src='/img/techdochub/no-register-master-admin.png' alone caption />
+<Image src='/img/how-to/no-register-master-admin.png' alone caption />
 
 ::: */}
 
@@ -158,15 +150,15 @@ On new devices, you can modify **Master Admin** settings in the **Settings → D
 
 <div className='grid-container'>
 
-<Image src='/img/techdochub/edit-master-admin-1.png' caption width='300px' />
+<Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
 
-<Image src='/img/techdochub/setting-master-admin-4.png' caption width='300px' />
+<Image src='/img/how-to/setting-master-admin-4.png' caption width='300px' />
 
 </div>
 
 </details>
 
-### Upgraded Devices
+### Upgraded Devices {#admin-two-step-authentication}
 
 Devices upgraded via firmware do not provide **Master Admin** settings, but you can enhance administrator security by enabling the **Admin 2-step Authentication** option.
 
@@ -183,21 +175,19 @@ Devices upgraded via firmware do not provide **Master Admin** settings, but you 
 <details>
 <summary>**Setting Admin 2-step Authentication on Upgraded Devices**</summary>
 
-#### Setting Admin 2-step Authentication on Upgraded Devices{#admin-two-step-authentication}
+#### Setting Admin 2-step Authentication on Upgraded Devices
 
 You can activate Admin 2-step Authentication in the **Settings → Device → Admin 2-step Authentication** menu.
 
 * The **Admin 2-step Authentication** option appears only on devices upgraded to the latest firmware.
 
-<Image src='/img/techdochub/setting-two-step-authentication.png' caption width='300px' />
+<Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
 
 :::info
 
-* The **Admin 2-step Authentication** option is not shown on slave devices.
+* If not all administrators have at least two types of credentials, activation will fail and an error message will appear.<br/>Enroll at least two types of credentials for all administrators, and then try again.
 
-* If not all administrators have at least two types of credentials, activation will fail and an error message will appear.
-
-<Image src='/img/techdochub/error-two-step-authentication.png' caption width='300px' />
+<Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
 :::
 
@@ -217,7 +207,7 @@ You can activate Admin 2-step Authentication in the **Settings → Device → Ad
 
 * **RS-485 Biometric Image Transmission Restriction**
 
-  * Biometric credential images are not transmitted over RS-485 communication. When viewing Master Admin face credentials on slave devices, substitute images are displayed.
+  * Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
 
 ## Frequently Asked Questions
 
@@ -225,7 +215,7 @@ import FaqData from './faqs.json';
 
 <FaqsItems data={FaqData} />
 
-## [TBD] Setting Master Admin via BioStar 2
+{/* ## [TBD] Setting Master Admin via BioStar 2
 
 :::info
 
@@ -245,4 +235,4 @@ import FaqData from './faqs.json';
 
 * If a selected device does not support a credential type, batch editing will fail for that device.
 
-* New devices must also meet the minimum two-credential condition; if not, batch editing for that device will fail.
+* New devices must also meet the minimum two-credential condition; if not, batch editing for that device will fail. */}

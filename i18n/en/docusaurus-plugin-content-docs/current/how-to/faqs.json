@@ -1,7 +1,7 @@
 [
   {
     "question": "What happens if you do not register a Master Administrator?",
-    "answer": "If a Master Administrator is not registered, a warning message appears when saving device settings, and access to the administrator menu is restricted."
+    "answer": "A new device without a registered Master Admin cannot perform authentication or change settings. However, you can connect the new device to BioStar to register a Master Admin."
   },
   {
     "question": "Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?",

@@ -1,7 +1,7 @@
 ---
 id: master-admin
 title: 마스터 관리자 기능 소개 및 설정 방법 안내
-description: 마스터 관리자 기능의 소개와 설정 방법을 안내합니다.
+description: 관리자 권한을 강화하여 장치의 보안을 향상 시킬수 있는 마스터 관리자 설정 가이드를 제공합니다.
 keywords: [ 마스터 관리자, 마스터, Master Admin ]
 ---
 
@@ -29,28 +29,24 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/techdochub/BioStation 3-Front.png' className='none' alone width='110px'/></Td>
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
 
-<Td><Image src='/img/techdochub/BioStation 2a-front.png' className='none' alone width='150px' /></Td>
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
 
-<Td><Image src='/img/techdochub/BioLite N2-Front.png' className='none' alone width='100px' /></Td>
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
 
-<Td><Image src='/img/techdochub/X-Station 2-Front.png' className='none' alone width='100px' /></Td>
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>**BioStation 3**<br/>[BS3-DB]<br/>[BS3-APWB]</Td>
+<Td>**BioStation 3**<br/>펌웨어 1.4.0 버전 이상</Td>
 
-<Td>**BioStation 2a**<br/>[BS2A-ODPB]<br/>[BS2A-OAPWB]</Td>
+<Td>**BioStation 2a**<br/>펌웨어 1.2.0 버전 이상</Td>
 
-<Td>**BioLite N2**<br/>[BLN2-ODB]<br/>[BLN2-OAB]<br/>[BLN2-PAB]</Td>
+<Td>**BioLite N2**<br/>펌웨어 1.7.0 버전 이상</Td>
 
-<Td>**X-Station 2**<br/>[XS2-DPB]<br/>[XS2-APB]</Td>
-
-<Td>**X-Station 2**<br/>[XS2-ODPB]<br/>[XS2-OAPB]</Td>
-
-<Td>**X-Station 2**<br/>[XS2-QDPB]<br/>[XS2-QAPB]</Td>
+<Td>**X-Station 2**<br/>펌웨어 1.4.0 버전 이상</Td>
 
 </Row>
 </Tbody>
@@ -79,11 +75,11 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 1. 신규 장치를 최초 부팅하면 **마스터 관리자** 등록 화면이 나타납니다.
 
-    <Image src='/img/techdochub/setting-master-admin-1.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
 1. **마스터 관리자**를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요.
 
-    <Image src='/img/techdochub/setting-master-admin-2.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
     **마스터 관리자**에 등록할 수 있는 크리덴셜은 다음과 같습니다.
 
@@ -102,12 +98,12 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
       <Row>
         <Td>얼굴</Td>
         <Td>최대 2개</Td>
-        <Td>동종 알고리즘 탑재 장치에서만 등록 가능<br/>IR Face, Visual Face 모델로 구분</Td>
+        <Td>동종 알고리즘 탑재 장치에서만 등록 가능</Td>
       </Row>
       <Row>
         <Td>지문</Td>
         <Td>최대 2개</Td>
-        <Td>유효성 검사 기능은 제공하지 않음</Td>
+        <Td>-</Td>
       </Row>
       <Row>
         <Td>PIN</Td>
@@ -131,7 +127,7 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 1. 두 종류 이상의 크리덴셜을 등록한 후, **완료** 버튼을 누르면 **마스터 관리자** 등록이 완료됩니다.
 
-    <Image src='/img/techdochub/setting-master-admin-3.png' caption width='300px' />
+    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
 {/* :::warning
 
@@ -139,7 +135,7 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 마스터 관리자 또는 그에 준하는 설정이 되어 있지 않은 경우, 설정 저장 시 경고 팝업 메시지로 안내합니다.
 
-<Image src='/img/techdochub/no-register-master-admin.png' alone caption />
+<Image src='/img/how-to/no-register-master-admin.png' alone caption />
 
 ::: */}
 
@@ -154,15 +150,15 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 <div className='grid-container'>
 
-<Image src='/img/techdochub/edit-master-admin-1.png' caption width='300px' />
+<Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
 
-<Image src='/img/techdochub/setting-master-admin-4.png' caption width='300px' />
+<Image src='/img/how-to/setting-master-admin-4.png' caption width='300px' />
 
 </div>
 
 </details>
 
-### 업그레이드 장치
+### 업그레이드 장치 {#admin-two-step-authentication}
 
 펌웨어를 업그레이드한 장치는 **마스터 관리자** 설정을 제공하지 않지만, **관리자 2단계 인증** 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
 
@@ -179,21 +175,19 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 <details>
 <summary>**업그레이드 장치에서 관리자 2단계 인증 설정하기**</summary>
 
-#### 업그레이드 장치에서 관리자 2단계 인증 설정하기 {#admin-two-step-authentication}
+#### 업그레이드 장치에서 관리자 2단계 인증 설정하기
 
 **설정 → 장치 → 관리자 2단계 인증** 메뉴에서 관리자 2단계 인증을 활성화할 수 있습니다.
 
 * **관리자 2단계 인증** 옵션은 기존에 사용하던 장치에서 펌웨어를 최신 버전으로 업그레이드 한 경우에만 표시됩니다.
 
-<Image src='/img/techdochub/setting-two-step-authentication.png' caption width='300px' />
+<Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
 
 :::info
 
-* **관리자 2단계 인증** 옵션은 슬레이브 장치에서는 표시되지 않습니다.
+* 모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다.<br/>모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
 
-* 모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다.
-
-<Image src='/img/techdochub/error-two-step-authentication.png' caption width='300px' />
+<Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
 :::
 
@@ -213,7 +207,7 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 * **RS-485 통신구간 얼굴 이미지 전송 제한**
 
-  * RS-485 통신구간에서는 바이오메트릭 크리덴셜 이미지가 전송되지 않으므로, 슬레이브 장치의 마스터 관리자 얼굴 조회 시 대체 이미지를 표시합니다.
+  * RS-485 통신구간에서는 바이오메트릭 크리덴셜 이미지가 전송되지 않으므로, 슬레이브 장치에서 등록된 마스터 관리자 얼굴 조회 시 대체 이미지를 표시합니다.
 
 
 ## 자주 묻는 질문
@@ -223,7 +217,7 @@ import FaqData from './faqs.json';
 <FaqsItems data={FaqData} />
 
 
-## [TBD] BioStar 2에서 마스터 관리자 설정하기
+{/* ## [TBD] BioStar 2에서 마스터 관리자 설정하기
 
 :::info
 
@@ -243,4 +237,4 @@ import FaqData from './faqs.json';
 
 * 선택된 장치가 크리덴셜을 지원하지 않는 경우, 해당 장치는 편집 실패됩니다.
 
-* 신규 장치의 경우에도 최소 2개 조건을 충족해야 하며, 미충족 시 해당 장치만 편집 실패 처리됩니다.
+* 신규 장치의 경우에도 최소 2개 조건을 충족해야 하며, 미충족 시 해당 장치만 편집 실패 처리됩니다. */}

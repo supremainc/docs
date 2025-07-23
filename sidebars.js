@@ -558,7 +558,6 @@ const sidebars = {
         id: 'reference/index',
       },
       items: [
-        'reference/master-admin',
         'reference/glossary',
       ]
     }
@@ -575,7 +574,7 @@ const sidebars = {
         id: 'how-to/index',
       },
       items: [
-        'reference/master-admin',
+        'how-to/master-admin',
       ]
     }
   ],
