@@ -13,10 +13,9 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 * 이 기능은 장치의 보안성을 강화하기 위한 필수 정책입니다.
 
-* 마스터 관리자는 여러 명 등록할 수 있으며, 공장 초기화 시에만 삭제됩니다.
+* 마스터 관리자는 여러 명 등록할 수 있으며, **공장 초기화 시에만 삭제됩니다**.
 
 :::
-
 
 ## 마스터 관리자 기능 설정
 
@@ -63,7 +62,7 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 ## 신규 장치와 업그레이드 장치에서 관리자 보안을 향상시키는 방법
 
-### **신규 장치**
+### 신규 장치
 
 신규 장치에서는 **마스터 관리자**를 필수적으로 등록해야하며, 등록하지 않을 경우 장치 사용이 제한됩니다.
 
@@ -80,15 +79,15 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 <details>
 <summary>**신규 장치에서 마스터 관리자 등록하기**</summary>
 
-#### **신규 장치에서 마스터 관리자 등록하기**
+#### 신규 장치에서 마스터 관리자 등록하기
 
 1. 신규 장치를 최초 부팅하면 **마스터 관리자** 등록 화면이 나타납니다.
 
-    <Image src='/img/techdochub/setting-master-admin-1.png' caption />
+    <Image src='/img/techdochub/setting-master-admin-1.png' caption width='300px' />
 
 1. **마스터 관리자**를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요.
 
-    <Image src='/img/techdochub/setting-master-admin-2.png' caption />
+    <Image src='/img/techdochub/setting-master-admin-2.png' caption width='300px' />
 
     **마스터 관리자**에 등록할 수 있는 크리덴셜은 다음과 같습니다.
 
@@ -134,11 +133,11 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
     :::
 
-1. 두 종류 이상의 크리덴셜을 등록한 후, **Complete** 버튼을 누르면 **마스터 관리자** 등록이 완료됩니다.
+1. 두 종류 이상의 크리덴셜을 등록한 후, **완료** 버튼을 누르면 **마스터 관리자** 등록이 완료됩니다.
 
-    <Image src='/img/techdochub/setting-master-admin-3.png' caption />
+    <Image src='/img/techdochub/setting-master-admin-3.png' caption width='300px' />
 
-<!-- :::warning
+{/* :::warning
 
 **마스터 관리자 미등록 시 경고 메시지**
 
@@ -146,52 +145,59 @@ keywords: [ 마스터 관리자, 마스터, Master Admin ]
 
 <Image src='/img/techdochub/no-register-master-admin.png' alone caption />
 
-::: -->
+::: */}
 
 </details>
 
 <details>
 <summary>**신규 장치에서 마스터 관리자 관리하기**</summary>
 
-#### **신규 장치에서 마스터 관리자 관리하기**
+#### 신규 장치에서 마스터 관리자 관리하기
 
 신규 장치에서 **마스터 관리자** 설정은 **설정 → 장치 → 마스터 관리자** 메뉴에서 변경할 수 있습니다.
 
-<Image src='/img/techdochub/edit-master-admin-1.png' /> <Image src='/img/techdochub/setting-master-admin-3.png' caption />
+<div className='grid-container'>
+
+<Image src='/img/techdochub/edit-master-admin-1.png' caption width='300px' />
+
+<Image src='/img/techdochub/setting-master-admin-4.png' caption width='300px' />
+
+</div>
 
 </details>
 
-
-### **업그레이드 장치**
+### 업그레이드 장치
 
 펌웨어를 업그레이드한 장치는 **마스터 관리자** 설정을 제공하지 않지만, **관리자 2단계 인증** 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
 
 :::info
 
-* **관리자 2단계 인증** 옵션의 기본값은 1단계 인증입니다.
+* **관리자 2단계 인증** 옵션을 활성화하지 않은 상태에서는 1단계 인증이 기본값입니다.
 
 * 장치에 등록된 관리자의 크리덴셜이 두 종류 이상인 경우에만 2단계 인증을 활성화할 수 있습니다.
 
-* 펌웨어 업그레이드 장치는 펌웨어 다운그레이드를 할 수 있으며, 2단계 인증 정보가 삭제됩니다.
+* 업그레이드 장치는 펌웨어 다운그레이드를 할 수 없습니다.
 
 :::
 
 <details>
 <summary>**업그레이드 장치에서 관리자 2단계 인증 설정하기**</summary>
 
-#### **업그레이드 장치에서 관리자 2단계 인증 설정하기** {#admin-two-step-authentication}
+#### 업그레이드 장치에서 관리자 2단계 인증 설정하기 {#admin-two-step-authentication}
 
 **설정 → 장치 → 관리자 2단계 인증** 메뉴에서 관리자 2단계 인증을 활성화할 수 있습니다.
 
-**관리자 2단계 인증** 옵션은 기존에 사용하던 장치에서 펌웨어를 최신 버전으로 업그레이드 한 경우에만 표시됩니다.
+* **관리자 2단계 인증** 옵션은 기존에 사용하던 장치에서 펌웨어를 최신 버전으로 업그레이드 한 경우에만 표시됩니다.
 
-<Image src='/img/techdochub/setting-two-step-authentication.png' caption />
+<Image src='/img/techdochub/setting-two-step-authentication.png' caption width='300px' />
 
 :::info
 
 * **관리자 2단계 인증** 옵션은 슬레이브 장치에서는 표시되지 않습니다.
 
 * 모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다.
+
+<Image src='/img/techdochub/error-two-step-authentication.png' caption width='300px' />
 
 :::
 
@@ -221,7 +227,7 @@ import FaqData from './faqs.json';
 <FaqsItems data={FaqData} />
 
 
-## [미작성] BioStar 2에서 마스터 관리자 설정하기
+## [TBD] BioStar 2에서 마스터 관리자 설정하기
 
 :::info
 
@@ -231,7 +237,7 @@ import FaqData from './faqs.json';
 
 :::
 
-## [미작성] 마스터 관리자 일괄 편집하기
+## [TBD] 마스터 관리자 일괄 편집하기
 
 * 관리자 2단계 인증 및 크리덴셜 등록을 일괄 편집할 수 있습니다.
 
