@@ -192,6 +192,12 @@ const config = {
           },
           {
             type: 'doc',
+            label: 'How-to Articles',
+            position: 'right',
+            docId: 'how-to/index'
+          },
+          {
+            type: 'doc',
             label: 'Legal',
             position: 'right',
             docId: 'legal/disclaimers'
