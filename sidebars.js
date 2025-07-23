@@ -563,6 +563,22 @@ const sidebars = {
       ]
     }
   ],
+  howto: [
+    {
+      type: 'category',
+      label: 'How-to Articles',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'how-to/index',
+      },
+      items: [
+        'reference/master-admin',
+      ]
+    }
+  ],
   biostation3: [
     {
       type: 'category',
