@@ -1,75 +1,75 @@
 ---
 id: user-card-types
-title: User Card Types
-description: Comprehensive guide to user card types including mobile cards, QR codes, RF cards for regular users and web-based credentials for temporary users in BioStar Air.
-keywords: [user management, BioStar Air, user card types]
+title: 사용자 카드 유형
+description: BioStar Air의 모바일 카드, QR 코드, 일반 사용자를 위한 RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 유형에 대해 안내합니다.
+keywords: [사용자 관리, BioStar Air, 사용자 카드 유형]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Feature Overview {#feature-overview}
+## 기능 개요 {#feature-overview}
 
-Starting from BioStar Air version 2.6, two distinct user types have been introduced to improve user management:
+BioStar Air 2.6 버전부터 사용자 관리를 개선하기 위해 두 가지 사용자 유형이 도입했습니다.
 
-* **Regular Users**: Long-term users with permanent mobile credentials.
+* **Regular Users**: 모바일 크리덴션을 가진 장기 사용자입니다.
 
-* **Temporary Users**: Guests who receive temporary web-based credentials.
+* **Temporary Users**: 임시 웹 기반 크리덴셜을 받는 임시 사용자입니다.
 
 <YouTube videoId="xTxIzG-30S0" />
 
 <CustomerNote />
 
 
-## Regular User Card Types {#regular-user-card-typs}
+## 일반 사용자 카드 유형 {#regular-user-card-typs}
 
-Regular users can be issued the following credentials:
+일반 사용자는 아래와 같은 크리덴셜을 발급받을 수 있습니다.
 
-### Mobile Card {#mobile-card}
+### 모바일 카드 {#mobile-card}
 
-* A unique **Card ID** is automatically assigned but can be manually set.
+* 고유한 **Card ID**가 자동 할당되지만 수동 설정할 수도 있습니다.
 
-* If using **Airfob Tag** or **Airfob Patch**, the mobile card number can be used as a card serial number to integrate with an existing access control system.
+* **Airfob Tag** 또는 **Airfob Patch**를 사용한다면, 모바일 카드 번호를 카드 일련 번호로 사용하여 기존 출입 통제 시스템과 통합할 수 있습니다.
 
-* For compatibility with previous systems, the mobile card ID can match the RF card number from an older site.
+* 이전 시스템과의 호환성을 위해 모바일 카드 아이디는 이전 사이트의 RF 카드 번호와 일치할 수 있습니다.
 
-### QR Code {#qr-code}
+### QR 코드 {#qr-code}
 
-* Regular users can access a **QR code** within their mobile card.
+* 일반 사용자는 모바일 카드의 **QR 코드**를 사용할 수 있습니다.
 
-* The QR code is accessible by pressing a button on the mobile card interface.
+* QR 코드는 모바일 카드 인터페이스의 버튼을 눌러 사용할 수 있습니다.
 
-### RF Card {#rf-card}
+### RF 카드 {#rf-card}
 
-* An RF card number is automatically generated but can be manually assigned.
+* RF 카드 번호는 자동 생성되지만 수동으로 할당할 수도 있습니다.
 
-* For existing RF cards with a **CSN** (Card Serial Number), the CSN can be entered manually.
+* 기존 RF 카드에 **CSN** (카드 일련 번호)이 있다면, CSN을 수동으로 입력할 수 있습니다.
 
 
-## Temporary User Card Types {#temporary-user-card-typs}
+## 임시 사용자 카드 유형 {#temporary-user-card-typs}
 
-Temporary users do not receive mobile cards. Instead, they are issued **web-based credentials** that do not require an app download. The available options are:
+임시 사용자는 모바일 카드를 받지 않습니다. 대신, 앱 다운로드가 필요 없는 **웹 기반 크리덴셜**을 발급할 수 있습니다. 사용할 수 있는 옵션은 아래와 같습니다.
 
-### Web QR Code {#web-qr-code}
+### 웹 QR 코드 {#web-qr-code}
 
-* Delivered via email or text message.
+* 이메일 또는 문자 메시지를 통해 전달합니다.
 
-* Accessible through a web browser.
+* 웹 브라우저를 통해 접근할 수 있습니다.
 
-* Uses a **dynamic QR code** that updates every five minutes for enhanced security.
+* 보안을 강화하기 위해 5분마다 업데이트되는 **동적 QR 코드**(Dynamic QR Code)를 사용합니다.
 
 ### Link Pass {#link-pass}
 
-* Allows door access by clicking a button in a web browser.
+* 웹 브라우저에서 버튼을 클릭하면 출입을 허용합니다.
 
-* Delivered via email or text message.
+* 이메일 또는 문자 메시지를 통해 전달됩니다.
 
 
-## Managing Access Levels {#managing-access-levels}
+## 출입 레벨 관리 {#managing-access-levels}
 
-Regardless of whether a user is regular or temporary, **access levels** must be set to control where their credentials grant access.
+일반 사용자이든 임시 사용자이든 관계없이 **출입 레벨**을 설정해 크리덴셜이 허용되는 위치를 제어해야 합니다.
 
 :::info
 
-For temporary users, carefully assign limited access levels to ensure they do not receive credentials with unrestricted access.
+임시 사용자라면, 제한된 출입 레벨을 신중하게 할당하여 무제한 출입 권한이 부여된 자격 증명을 받지 않도록 해야 합니다.
 
 :::

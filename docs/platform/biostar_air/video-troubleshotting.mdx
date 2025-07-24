@@ -1,36 +1,38 @@
 ---
 id: video-troubleshooting
-title: Checking if a Camera Supports Recorded Video Playback
-description: Learn how to troubleshoot video playback issues, verify ONVIF Profile G support, check codec compatibility, and resolve SD card formatting problems in BioStar Air.
-keywords: [IP Camera, Recorded Video Playback, BioStar Air]
+title: 비디오 재생 관련 문제 해결
+description: BioStar Air에서 비디오 재생 문제 해결 및 ONVIF Profile G 지원 여부, 코덱 호환성, SD 카드 포맷 문제 해결 방법을 안내합니다.
+keywords: [IP 카메라, 녹화된 비디오 재생, BioStar Air]
 ---
 
-## Troubleshooting Tips for Video Playback Issues {#troubleshooting-tips-for-video-playback-issues}
+# 카메라가 녹화된 비디오 재생을 지원하는지 확인하기
 
-If recorded videos do not play after registering the camera in BioStar Air, follow these steps to diagnose and resolve the issue:
+## 비디오 재생 문제에 대한 문제 해결 팁 {#troubleshooting-tips-for-video-playback-issues}
 
-### Verify ONVIF Profile G Support {#verify-onvif-profile-g-support}
+BioStar Air에 카메라를 등록한 후 녹화된 비디오가 재생되지 않으면 다음 단계에 따라 문제를 진단하고 해결하세요.
 
-Check whether the camera supports ONVIF Profile G by searching for the model name on [ONVIF's conformant products page](https://www.onvif.org). ONVIF Profile G is required for recorded video playback.
+### ONVIF Profilee G 지원 확인 {#verify-onvif-profile-g-support}
 
-### Test Video Playback in Camera Settings {#test-video-playback-in-camera-settings}
+[ONVIF 호환 제품 페이지](https://www.onvif.org)에서 모델명을 검색하여 카메라가 ONVIF Profile G를 지원하는지 확인하세요. 녹화된 비디오를 재생하려면 ONVIF Profile G가 필요합니다.
 
-* Log into the camera’s settings via its web interface.
+### 카메라 설정에서 영상 재생 테스트 {#test-video-playback-in-camera-settings}
 
-* Ensure that you can view the live camera feed and recorded videos.
+* 웹 인터페이스를 통해 카메라 설정에 로그인하세요.
 
-* Be aware that some cameras may restrict simultaneous playback of recorded videos in both the portal and the settings menu. If playback works in the camera settings but not in Airfob Space, try closing the settings interface and testing again.
+* 라이브 카메라 영상 및 녹화된 영상을 볼 수 있는지 확인하세요.
 
-### Check Video Codec Compatibility {#check-video-codec-compatibility}
+* 일부 카메라는 포털과 설정 메뉴에서 녹화된 영상의 동시 재생을 제한할 수 있습니다. 카메라 설정에서는 재생이 되는데 BioStar Air에서는 재생되지 않는다면 설정 화면을 닫고 다시 테스트해 보세요.
 
-Ensure that the recorded video is using the **H.264** codec, as Airfob Space does not support H.265.
+### 비디오 코덱 호환성 확인 {#check-video-codec-compatibility}
 
-### Format the SD Card If Codec Was Changed {#format-the-sd-card-if-codec-was-changed}
+녹화된 비디오가 **H.264** 코덱을 사용하고 있는지 확인하세요. BioStar Air는 H.265 코덱을 지원하지 않습니다.
 
-If the video codec was changed at any point, the existing recordings may not play correctly. Formatting the SD card may be necessary for the new settings to take effect. This solution has been confirmed to resolve playback issues on some camera models.
+### 코덱이 변경된 경우 SD 카드 포맷 {#format-the-sd-card-if-codec-was-changed}
 
-### Reference ONVIF's Conformant Products List {#reference-onvifs-conformant-products-list}
+비디오 코덱이 변경된 경우 기존 녹화가 제대로 재생되지 않을 수 있습니다. 새로운 설정이 적용되려면 SD 카드를 포맷해야 할 수 있습니다. 이 솔루션은 일부 카메라 모델에서 재생 문제를 해결하는 것으로 확인되었습니다.
 
-If you are unsure whether your camera meets ONVIF standards, visit the [ONVIF website](https://www.onvif.org) to verify compatibility.
+### ONVIF 준수 제품 목록 참조 {#reference-onvifs-conformant-products-list}
 
-By following these steps, you can troubleshoot video playback issues and ensure proper functionality within Airfob Space.
+카메라가 ONVIF 표준을 충족하는지 확실하지 않은 경우 [ONVIF](https://www.onvif.org)를 방문하여 호환성을 확인하세요.
+
+이 단계를 따르면 비디오 재생 문제를 해결하고 BioStar Air에서 제대로 작동하는지 확인할 수 있습니다.

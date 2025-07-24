@@ -1,162 +1,163 @@
 ---
 id: integration-quickstart
-title: Integration Quickstart
-description: Learn how to set up a BioStar Air demo site, register compatible readers, generate API keys, and start testing integrations with cloud APIs.
-keywords: [integration, quickstart, BioStar Air]
+title: API 통합 시작하기
+description: BioStar Air 데모 사이트 설정, 호환 리더기 등록, API 키 생성, 클라우드 API와의 통합 테스트 방법을 알아보세요.
+keywords: [API 통합, 빠른 시작, BioStar Air]
 ---
 
-# Getting Started with API Integrations 
+## 개요 {#overview}
 
-This guide walks you through how to set up a BioStar Air demo site, connect and register a BioStar Air-compatible readers to it, and begin testing your integration using our cloud APIs.
+이 문서에서는 BioStar Air 데모 사이트 설정, 호환 BioStar Air 리더기 연결 및 등록, 클라우드 API를 사용한 통합 테스트 방법을 안내합니다.
 
-If you’ve previously worked with BioStar 2, many concepts will feel familiar—but BioStar Air is fully cloud-native.
+이전에 BioStar 2에서 작업한 적이 있다면 많은 개념이 친숙하게 느껴질 것입니다. 그러나 BioStar Air는 완전히 클라우드 기반입니다.
 
 
-## Getting Started {#getting-started}
+## 시작하기 {#getting-started}
 
-### Pre-Requisites {#pre-requisites}
+### 사전 요구 사항 {#pre-requisites}
 
-Ensure the following:
+아래 사항을 확인하세요.
 
-* You have a **BioStar Air compatible device**with factory-loaded firmware:
+* 공장 초기화된 펌웨어를 설치한 **BioStar Air 호환 장치**를 준비하세요.
 
   * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
 
-  * Devices may be purchased through authorized Suprema dealers
+  * 장치는 공인 슈프리마 대리점을 통해 구매할 수 있습니다.
 
-* The device is connected to the internet via Ethernet.
+* 장치는 이더넷을 통해 인터넷에 연결됩니다.
 
-* Your network allows outbound access on:
+* 네트워크에서 아웃바운드 액세스를 허용하세요.
 
   * Port 443 (HTTPS)
+
   * Port 5671 (MQTT over TLS)
 
 
-## Step 1: Set Up Your Demo Environment & API Key {#step-1-demo-setup}
+## Step 1: 데모 환경과 API 키 설정 {#step-1-demo-setup}
 
 <Steps>
 <Step>
 
-### Sign Up and Log In {#sign-up-and-log-in}
+### 회원 가입 및 로그인 {#sign-up-and-log-in}
 
-* Go to: [https://developers.biostarair.com/login](https://developers.biostarair.com/login)
+* [BioStar Air Developer](https://developers.biostarair.com/login)로 이동하세요.
 
-* Click **Sign Up**, fill out the form, and wait for approval.
+* **회원 가입**을 클릭하고 양식을 작성한 후 승인을 기다리세요.
 
-* Once approved, log in using your credentials.
-
-</Step>
-<Step>
-
-### Create a Demo Application {#create-a-demo-application}
-
-* Navigate to **API** → **Management**.
-
-* Click **\+ Register**.
-
-* Choose **Demo** as the application type.
-
-* Enter a name for your application and click **Register**.
-
-* Click **Download** to retrieve an Excel file containing your demo site login credentials (email and password).
+* 승인이 완료되면 크리덴셜을 사용해 로그인하세요.
 
 </Step>
 <Step>
 
-### Issue an API Key {#issue-an-api-key}
+### 데모 애플리케이션 생성 {#create-a-demo-application}
 
-* Under **Application Management** click into your registered application.
+* **API** → **Management**로 이동하세요.
 
-* Scroll to **API Management**.
+* **\+ Register**를 클릭하세요.
 
-* Click **Add**.
+* **Demo**를 애플리케이션 유형으로 선택하세요.
 
-* Enter a name and confirm. Save the generated key.
+* 애플리케이션 이름을 입력하고 **Register**를 클릭하세요.
+
+* 데모 사이트 로그인 크리덴셜(이메일 및 비밀번호)이 포함된 엑셀 파일을 다운로드하려면 **Download**를 클릭하세요.
 
 </Step>
 <Step>
 
-### Log Into the Demo Portal {#log-into-the-demo-portal}
+### API 키 발급 {#issue-an-api-key}
 
-* Navigate to the [Demo Portal](https://demo.airfobspace.com/login).
+* **Application Management**에서 등록한 애플리케이션을 클릭하세요.
 
-* Log in with the email and password from the Excel file.
+* **API Management**로 스크롤하세요.
 
-* Enter the API Key you just created.
+* **Add**를 클릭하세요.
+
+* 이름을 입력하고 확인하세요. 생성된 키를 저장하세요.
+
+</Step>
+<Step>
+
+### 데모 포털 로그인 {#log-into-the-demo-portal}
+
+* [Demo Portal](https://demo.airfobspace.com/login)로 이동하세요.
+
+* 엑셀 파일의 이메일 및 비밀번호로 로그인하세요.
+
+* 방금 생성한 API 키를 입력하세요.
 
 </Step>
 </Steps>
 
 
-## Step 2: Register the Reader {#register-the-reader}
+## Step 2: 리더 등록 {#register-the-reader}
 
-Use the Airfob Pro Demo App (Android only):
+BioStar Air Demo App (안드로이드 전용)을 사용하세요:
 
-1. Download the app: [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+1. 앱을 다운로드하세요. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
-1. Log in with the credentials from the Excel file.
+1. 엑셀 파일의 크리덴셜로 로그인하세요.
 
-1. Bring your Android phone near the reader (BLE range), then:
+1. 안드로이드 모바일 기기를 리더기 근처(BLE 범위)로 가져가세요.
 
-    * Tap **All Menu** → **Devices** → **+** (upper right corner).
+    * **All Menu** → **Devices** → **+** (오른쪽 상단 모서리)를 탭하세요.
 
-    * Locate your device and tap **Register**.
+    * 장치를 찾고 **Register**를 탭하세요.
 
-1. The reader will chime, reboot, and appear under Registered Devices.
+1. 리더기에서 소리가 나고 재부팅되며 등록된 장치 목록에 나타납니다.
 
 :::note
 
-Readers can only be registered using the mobile app. Web registration is not supported. API-based registration requires a cryptographic certificate not provided to partners.
+리더기는 모바일 앱을 통해서만 등록할 수 있습니다. 웹 포털에서는 등록할 수 없습니다. API 기반 등록에는 파트너에게 제공되지 않는 암호화 인증서가 필요합니다.
 
 :::
 
 
-## Step 3: Manage the Reader
+## Step 3: 리더기 관리
 
-Manage the device using either:
+장치를 관리하려면 다음 중 하나를 사용하세요.
 
-* The **Airfob Pro Demo App**
+* **Airfob Pro Demo App**
 
-* The **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
+* **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
 
 ## API Base URLs {#api-base-urls}
 
-| Environment | Base URL |
+| 환경 | Base URL |
 | --- | --- |
 | Demo | https://demo-afs-api.airfob.com/v1/ |
 | Production - Europe | https://e-afs-api.airfob.com/v1/ |
-| Production - Korea | https://a-afs-api.airfob.com/v1/ (for all non-EU customers) |
+| Production - Korea | https://a-afs-api.airfob.com/v1/ (EU가 아닌 모든 고객 전용) |
 
 
-## Recommended Integration Scope {#recommended-integration-scope}
+## 권장 API 통합 범위 {#recommended-integration-scope}
 
-When possible limit your integration to:
+API 통합은 가능한 한 아래의 범위로 제한하세요.
 
-* User lifecycle management (create/update/delete)
+* 사용자 생애 주기 관리 (생성/업데이트/삭제)
 
-* Credential management (mobile, RF card, biometric)
+* 자격 증명 관리 (모바일, RF 카드, 생체 인식)
 
-Allow administrators to use the existing BioStar Air web and mobile admin apps for:
+관리자가 기존 BioStar Air 웹 및 모바일 관리 앱을 사용할 수 있도록 허용합니다.
 
-* Access levels
+* 액세스 수준
 
-* Schedules
+* 일정
 
-* Door and reader settings
+* 출입문 및 리더기 설정
 
-* Site settings
+* 사이트 설정
 
-## Optional: API Login Flow (Postman or Programmatic) {#optional-api-login-flow}
+## Optional: API 로그인 절차 (Postman 또는 Programmatic) {#optional-api-login-flow}
 
 <Steps>
 <Step>
 
-### Login {#login}
+### 로그인 {#login}
 
-**Endpoint:** login
+**Endpoint**: 로그인
 
-**Payload:**
+**Payload**:
 
 ```json
 {
@@ -165,72 +166,74 @@ Allow administrators to use the existing BioStar Air web and mobile admin apps f
 }
 ```
 
-Returns a Bearer Token (JWT).
+Bearer 토큰(JWT)을 반환합니다.
 
 </Step>
 <Step>
 
 ### Get Self Accounts {#get-self-accounts}
 
-**Endpoint:** getSelfAccounts
+**Endpoint**: getSelfAccounts
 
-**Authorization:** Bearer Token
+**Authorization**: Bearer Token
 
-Returns a list of accessible sites/accounts.
+접근 가능한 사이트 및 계정 목록을 반환합니다.
 
 </Step>
 <Step>
 
-### Login to an Account {#login-to-account}
+### 계정에 로그인 {#login-to-account}
 
-**Endpoint:** loginAccount
+**Endpoint**: loginAccount
 
-**Authorization:** Bearer Token
+**Authorization**: Bearer Token
 
-Returns a site-specific token.
+특정 사이트 토큰을 반환합니다.
 
 </Step>
 </Steps>
 
 
-## How to Get Your Bearer Token (Browser Method) {#how-to-get-your-bearer-token}
+## 웹 브라우저에서 Bearer 토큰 얻는 방법 {#how-to-get-your-bearer-token}
 
-### Chrome/Edge (Windows or Mac) {#chrome-edge}
+### Chrome/Edge (Windows 또는 Mac) {#chrome-edge}
 
-1. Press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+1. 웹 브라우저에서 <Kbd>F12</Kbd> 또는 <Kbd>Ctrl/Cmd + Shift + I</Kbd>를 누르세요.
 
-1. Go to the **Network** tab.
+1. **Network** 탭으로 이동하세요.
 
-1. Reload the page.
+1. 페이지를 새로 고침하세요.
 
-1. Search for API calls. (e.g., groups, login)
+1. API 호출을 검색하세요. 
 
-1. Click on the request.
+    > 예, groups, login
 
-1. Go to the **Headers** tab.
+1. 요청을 클릭하세요.
 
-1. Look for `Authorization: Bearer ...` in Request Headers.
+1. **Headers** 탭으로 이동하세요.
 
-1. Right-click and copy the token.
+1. 요청 헤더에서 `Authorization: Bearer ...`를 찾으세요.
+
+1. 오른쪽 마우스를 클릭하고 토큰을 복사하세요.
 
 ### Safari (Mac) {#safari}
 
-1. Enable **Develop** menu: Safari → Preferences → Advanced → Check **Show Develop menu**
+1. **개발자** 메뉴를 확성화하세요. Safari → Preferences → Advanced → **Show Develop menu**를 체크하세요.
 
-1. Open **Develop** → **Show Web Inspector**.
+1. **Develop** → **Show Web Inspector**으로 이동하세요.
 
-1. Go to **Network** tab.
+1. **Network** 탭으로 이동하세요.
 
-1. Reload the page.
+1. 페이지를 새로 고침하세요.
 
-1. Filter and inspect an API call.
+1. API 호출을 필터링하고 검사하세요.
 
-1. Copy the `Authorization: Bearer` token from the request headers.
+1. 요청 헤더에서 `Authorization: Bearer` 토큰을 복사하세요.
 
 
-## User Management API Calls {#user-management-api-calls}
+## 사용자 관리 API 호출 {#user-management-api-calls}
 
-Once logged in, use these endpoints to manage users:
+로그인 후 다음 엔드포인트를 사용하여 사용자를 관리하세요.
 
 * `getUsers`
 
@@ -240,41 +243,43 @@ Once logged in, use these endpoints to manage users:
 
 * `suspendUsers`
 
-Always include the Bearer Token in the Authorization header.
+항상 Authorization 헤더에 Bearer 토큰을 포함하세요.
 
 :::note
 
-To activate a user, you must assign at least one credential type. (e.g., RF Card, Mobile, Linkpass)
+사용자를 활성화하려면 최소한 하나의 크리덴셜 유형을 할당해야 합니다. 
+
+> 예, RF 카드, 모바일, LinkPass
 
 :::
 
 
 ## Demo vs Production {#demo-vs-production}
 
-* **Demo Sites** are created via the Developer Portal for testing.
+* **Demo Sites**는 테스트를 위해 개발자 포털을 통해 생성됩니다.
 
-* **Production Sites** are created via the Partner Portal and require site ID, user email, and password. Production sites can only be created by authorized dealers or Suprema branch offices.
-
-
-## Important Notes {#important-notes}
-
-* User ID and Account ID are different — do not confuse them.
-
-* Store passwords securely if managing multiple sites.
-
-* Always use the most recent Bearer Token.
-
-* Bearer Tokens copied from the browser can be reused in Postman.
+* **Production Sites**는 파트너 포털을 통해 생성되며 사이트 ID, 사용자 이메일 및 비밀번호가 필요합니다. Production 사이트는 승인된 판매자 또는 슈프리마 지사만 생성할 수 있습니다.
 
 
-## Need Help? {#need-help}
+## 주요 참고사항 {#important-notes}
 
-Open a ticket on the Suprema Technical Support Portal: [https://support.supremainc.com](https://support.supremainc.com)
+* 사용자 ID와 계정 ID는 다릅니다. 혼동하지 마세요.
+
+* 여러 사이트를 관리한다면 비밀번호를 안전하게 저장하세요.
+
+* 항상 최신 Bearer 토큰을 사용하세요.
+
+* 브라우저에서 복사한 Bearer 토큰은 Postman에서 재사용할 수 있습니다.
 
 
-## Sample Application {#sample-application}
+## 도움이 필요하세요? {#need-help}
 
-Need an example? The following is sample code for a Python app that lets you bulk suspend users by uploading a CSV file via the API.
+슈프리마 기술 지원 포털에서 티켓을 여세요. [https://support.supremainc.com](https://support.supremainc.com)
+
+
+## 애플리케이션 예제 {#sample-application}
+
+다음은 API를 통해 CSV 파일을 업로드하고 사용자를 일괄 중단할 수 있는 Python 앱의 샘플 코드입니다.
 
 ```python title='Python'
 import requests

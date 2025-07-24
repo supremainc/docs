@@ -1,94 +1,100 @@
 ---
 id: configuring-the-sio2-secure-module
-title: Configuring the SIO2 Secure Module
-description: Learn how to configure the SIO2 Secure Module for enhanced security in your access control system.
-keywords: [SIO2, Secure Module, configuration]
+title: SIO2 보안 모듈 구성하기
+description: 출입 통제 시스템의 보안을 강화하기 위해 SIO2 보안 모듈을 구성하는 방법을 안내합니다.
+keywords: [SIO2, 보안 모듈, 구성]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## Overview {#overview}
+## 개요 {#overview}
 
-The **SIO2 Secure Module** enhances security in your access control system by acting as an intermediary between the Suprema or Airfob reader and the relay. It communicates with the reader via an **RS485 cable**, with encrypted communication to prevent security breaches.
+**SIO2 보안 모듈**은 슈프리마 또는 Airfob 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. **RS485 케이블**을 통해 리더기와 통신하며, 암호화된 통신을 통해 보안 위반을 방지합니다.
 
 <CustomerNote />
 
 :::caution
 
-**Please refer to the wiring diagrams included in the box with your SIO2 Secure Module for accurate setup instructions.** Since installation may vary depending on the environment, professional assistance from your local Suprema installer may be required.
+**SIO2 보안 모듈**의 정확한 설치 지침은 박스에 포함된 배선 다이어그램을 참고하세요. 환경에 따라 설치 방식이 다를 수 있으므로 지역 슈프리마 대리점의 전문적인 지원을 요청하세요.
 
 :::
 
 
-## How to Activate SIO2 in the BioStar Air Portal {#how-to-activate-sio2-in-the-biostar-air-portal}
+## BioStar Air 포털에서 SIO2 활성화 {#how-to-activate-sio2-in-the-biostar-air-portal}
 
 :::note
 
-If you do not change the settings in the BioStar Air portal after installing SIO2, it will not function correctly.
+SIO2를 설치하고 BioStar Air 포털에서 설정을 변경하지 않으면 작동하지 않을 수 있습니다.
 
 :::
 
 <Steps>
 <Step>
 
-### Register the Reader {#register-the-reader}
+### 리더기 등록 {#register-the-reader}
 
-* Ensure the reader device, SIO2, and door relay are successfully connected.
+* 리더기, SIO2 및 도어 릴레이가 성공적으로 연결되었는지 확인하세요.
 
-* Register the reader device on your site using the **BioStar Air app**.
-
-</Step>
-<Step>
-
-### Check Device Connection {#check-device-connection}
-
-* Access the **BioStar Air portal**.
-
-* Navigate to **Device Management** → **Registered Devices**.
-
-* Ensure the device shows a **green status indicator**, confirming its connection.
+* **BioStar Air 앱**을 통해 사이트에 리더기를 등록하세요.
 
 </Step>
 <Step>
 
-### Assign SIO2 to a Door {#assign-sio2-to-a-door}
+### 장치 연결 확인 {#check-device-connection}
 
-* Go to **Door Management** → **Registered Door**.
+* **BioStar Air 포털**에 접속하세요.
 
-* Find the door where the device is connected. (The door is automatically created when the device is registered.)
+* **Device Management** → **Registered Devices**로 이동하세요.
 
-</Step>
-<Step>
-
-### Enable SIO2 {#enable-sio2}
-
-* In the **Assign Devices** area, a pop-up screen will appear.
-
-* Toggle on **SIO2** to activate it.
+* 장치에 **녹색 상태**가 표시되어 연결이 완료되었는지 확인하세요.
 
 </Step>
 <Step>
 
-### Configure Relay and Sensors {#configure-relay-and-sensors}
+### SIO2를 출입문에 할당 {#assign-sio2-to-a-door}
 
-* For **Door Relay**, select **Relay 0**. (The SIO2 module has only one Door Relay port.)
+* **Door Management** → **Registered Door**로 이동하세요.
 
-* For **Door Sensor**, select the input port number on the SIO2 where the Door Sensor is connected.
-
-* If an **Exit Button** is connected, select the corresponding input port on the SIO2.
-
-* If using another type of exit device, select **Exit Devices** instead.
+* 장치가 연결된 출입문을 찾으세요. 장치가 등록되면 출입문을 자동 생성합니다.
 
 </Step>
 <Step>
 
-### Save the Settings {#save-the-settings}
+### SIO2 활성화 {#enable-sio2}
 
-* Click the **Save** button to apply the configuration.
+* **Assign Devices** 영역에서 팝업 화면이 나타납니다.
 
-* The SIO2 Secure Module will now function normally.
+* **SIO2**를 활성화하하세요.
+
+</Step>
+<Step>
+
+### 릴레이 및 센서 구성 {#configure-relay-and-sensors}
+
+* **Door Relay**의 경우 **Relay 0**을 선택하세요.
+
+  :::note
+
+  SIO2 모듈에는 하나의 Door Relay 포트만 있습니다.
+
+  :::
+
+* **Door Sensor**의 경우 Door Sensor가 연결된 SIO2의 입력 포트 번호를 선택하세요.
+
+* **Exit Button**이 연결되어 있다면 SIO2의 해당 입력 포트를 선택하세요.
+
+* 다른 유형의 출구 장치를 사용한다면 **Exit Devices**를 선택하세요.
+
+</Step>
+<Step>
+
+### 설정 저장 {#save-the-settings}
+
+* 설정을 적용하려면 **Save** 버튼을 클릭하세요.
+
+* 이제 SIO2 보안 모듈이 정상 작동합니다.
 
 </Step>
 </Steps>
 
-Following these steps ensures that your SIO2 Secure Module is properly integrated and enhances the security of your access control system.
+이 단계를 따르면 SIO2 보안 모듈을 정상 통합시키고 출입 통제 시스템의 보안을 강화할 수 있습니다.

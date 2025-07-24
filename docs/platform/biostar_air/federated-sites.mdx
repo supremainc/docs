@@ -1,108 +1,108 @@
 ---
 id: federated-sites
-title: Federated Sites
-description: Learn how to set up and manage federated sites in BioStar Air for multi-tenant buildings and multi-branch organizations with centralized control.
+title: Federated 사이트
+description: 중앙 집중식 제어를 통해 다중 테넌트 빌딩과 다중 지점 조직을 위한 BioStar Air에서 Federated 사이트를 설정하고 관리하는 방법을 알아보세요.
 keywords: [federated, sites, BioStar Air]
 ---
 
 ## Overview {#overview}
 
-BioStar Air provides the capability to create **federated sites**, allowing a primary site to manage multiple sub-sites seamlessly. This feature is ideal for multi-tenant buildings or multi-branch organizations, offering centralized control with distributed access management.
+BioStar Air는 **federated sites**를 생성하여 주 사이트에서 여러 하위 사이트를 원활하게 관리할 수 있는 기능을 제공합니다. 이 기능은 다중 테넌트 건물이나 여러 지점을 운영하는 조직에 적합하며, 분산형 출입 관리를 통해 중앙 집중식 제어 기능을 제공합니다.
 
 
-## What Are Federated Sites? {#what-are-federated-sites}
+## Federated 사이트란? {#what-are-federated-sites}
 
-Federated sites enable a hierarchical structure where a **primary site** oversees one or more **sub-sites**. Administrators on the primary site, known as **Federated Admins**, can access and manage sub-sites directly through the Airfob Pro interface.
-
-
-## Why Use Federated Sites? {#why-use-federated-sites}
-
-Federated sites are beneficial in the following scenarios:
-
-### Multi-Tenant Buildings {#multi-tenant-buildings}
-
-For example, in a commercial building with different companies occupying each floor, you can establish:
-
-* A **master account** for the building.
-
-* **Sub-accounts** for each tenant company.
-
-This setup ensures only authorized employees access specific floors while simplifying management for the building administrator.
-
-### Multi-Branch Organizations {#multi-branch-organizations}
-
-For companies with offices in multiple locations, you can set up:
-
-* A **master account** to manage global settings.
-
-* **Sub-accounts** for each branch.
-
-For instance, a business with 10 offices worldwide can use a federated structure to streamline administration.
+Federated 사이트는 **기본 사이트**가 하나 이상의 **하위 사이트**를 관리하는 계층적 구조를 지원합니다. **Federated 관리자**라고 하는 기본 사이트의 관리자는 BioStar Air 화면을 통해 하위 사이트에 직접 액세스하고 관리할 수 있습니다.
 
 
-## How to Set Up Federated Sites {#how-to-set-up-federated-sites}
+## Federated 사이트를 이용하는 이유? {#why-use-federated-sites}
+
+Federated 사이트는 다음 제공하는 시나리오에서 유용합니다.
+
+### 멀티 테넌트 빌딩 {#multi-tenant-buildings}
+
+예를 들어, 각 층에 서로 다른 회사가 입주해 있는 상업용 건물에서는 아래와 같은 구성을 할 수 있습니다.
+
+* 건물에 대한 **마스터 계정**.
+
+* 각 임차인 회사에 대한 **하위 계정**.
+
+이 구성을 통해 특정 층에 대한 접근을 허가받은 직원만 가능하게 하여 건물 관리자의 관리를 단순화할 수 있습니다.
+
+### 멀티 브랜치 조직 {#multi-branch-organizations}
+
+여러 위치에 사무실이 있는 회사는 아래와 같이 구성할 수 있습니다.
+
+* **마스터 계정**을 통해 전역(Global) 설정을 관리하세요.
+
+* 각 지점에 대한 **하위 계정**을 생성하세요.
+
+예를 들어, 전 세계에 10개의 사무실이 있는 기업은 연합 구조를 사용하여 관리를 간소화할 수 있습니다.
+
+
+## Federated 사이트 설정 방법 {#how-to-set-up-federated-sites}
 
 <Steps>
 <Step>
 
-### Access the Partner Portal {#access-the-partner-portal}
+### 파트너 포털 접속 {#access-the-partner-portal}
 
-* The Airfob Partner Portal is exclusively available to partners and installers.
+* BioStar Air 파트너 포털은 오직 파트너와 설치 업체만 사용할 수 있습니다.
 
-* End customers must contact their installer to configure this feature.
-
-</Step>
-<Step>
-
-### Create the Primary Site
-
-1. Log in to the **Partner Portal**.
-
-1. Click **Create Site** and select **Federation Site** under the **Site Profile**.
-
-    * This step **must** be done when setting up a site for the first time.
-
-    * Regular sites cannot be changed into federated sites later.
-
-1. Add **Federated Admins** on the same screen.
-
-    * **Federated Admins** (added in the Partner Portal) have access to the primary site and all sub-sites.
-
-    * **Regular Admins** (added in Airfob Pro) only manage individual sites.
+* 최종 고객은 이 기능을 구성하기 위해 설치 업체에 문의하세요.
 
 </Step>
 <Step>
 
-### Add Sub-Sites
+### 기본 사이트 생성
 
-1. Once the primary site is set up as a federated site, the **Site List** will display an option to create sub-sites.
+1. **파트너 포털**에 로그인하세요.
 
-1. Click **Create Sub-Site** and configure it as you would any other site.
+1. **Create Site**을 클릭하고 **Site Profile**에서 **Federation Site**를 선택합니다.
+
+    * 이 단계는 사이트를 처음 설정할 때 **반드시** 수행해야 합니다.
+
+    * 일반 사이트는 나중에 Federated 사이트로 변경할 수 없습니다.
+
+1. 동일한 화면에서 **Federated Admins**를 추가하세요.
+
+    * 파트너 포털에서 추가한 **Federated Admins**는 기본 사이트와 모든 하위 사이트에 진입할 수 있습니다.
+
+    * BioStar Air에서 추가한 **Regular Admins**는 개별 사이트만 관리할 수 있습니다.
+
+</Step>
+<Step>
+
+### 하위 사이트 추가
+
+1. 기본 사이트가 Federated 사이트로 설정되면 **Site List**에 하위 사이트를 생성할 수 있는 옵션이 표시됩니다.
+
+1. **Create Subsite**을 클릭하고 다른 사이트와 마찬가지로 구성하세요.
 
 </Step>
 </Steps>
 
 
-## Important Considerations {#important-considerations}
+## 중요 고려사항 {#important-considerations}
 
-### User and Reader Management {#user-and-reader-management}
+### 사용자 및 리더기 관리 {#user-and-reader-management}
 
-* Users and readers must be added separately to each sub-site.
+* 사용자 및 리더기는 각 하위 사이트에 별도로 추가해야 합니다.
 
-* Readers can only be registered to one site at a time—either the primary site or a sub-site.
+* 리더기는 한 번에 하나의 사이트에만 등록할 수 있습니다. 기본 사이트 또는 하위 사이트 중 하나를 선택하세요.
 
-### Primary Site Usage {#primary-site-usage}
+### 기본 사이트 사용 {#primary-site-usage}
 
-* Some customers use the primary site solely as an access point for managing sub-sites, without registering users or readers to the primary site.
+* 일부 고객은 기본 사이트를 하위 사이트 관리를 위한 액세스 포인트로만 사용하며, 기본 사이트에 사용자나 리더기를 등록하지 않습니다.
 
-* **Example 1**: A company with three branch offices sets up a primary site with no devices and creates sub-sites for each branch.
+* **예시 1**: 세 개의 지사 사무실이 있는 회사는 장치가 없는 기본 사이트를 설정하고 각 지사에 대한 하위 사이트를 생성합니다.
 
-* **Example 2**: A company with a headquarters and three branches registers users and readers at the headquarters (primary site) and sets up sub-sites for the branches.
+* **예시 2**: 본사와 세 개의 지사가 있는 회사는 본사(기본 사이트)에서 사용자와 리더기를 등록하고 지사에 대한 하위 사이트를 설정합니다.
 
-### Billing {#billing}
+### 청구 {#billing}
 
-* Billing is calculated based on the number of registered devices (readers) per site.
+* 청구는 사이트당 등록된 장치(리더기)의 수를 기준으로 계산됩니다.
 
-* There is no additional cost for creating a primary site without registered devices.
+* 등록된 장치가 없는 기본 사이트를 생성하는 데 추가 비용은 없습니다.
 
-By utilizing the Federated Sites feature in Airfob Space, administrators can effectively manage access for complex environments, ensuring a secure, scalable, and streamlined experience for all stakeholders.
+BioStar Air의 Federated 사이트 기능을 활용함으로써 관리자는 복잡한 환경에 대한 출입을 효과적으로 관리하고 모든 이해 관계자에게 안전하고 확장 가능하며 간소화된 경험을 보장할 수 있습니다.
