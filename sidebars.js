@@ -189,6 +189,10 @@ const sidebars = {
         {
           type: 'category',
           label: '서버 관리',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/server-management',
+          },
           items: [
             'platform/biostar_x/manage-server',
             'platform/biostar_x/change-port',
