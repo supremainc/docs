@@ -1,30 +1,30 @@
 [
   {
-    "question": "Do I need to switch from BioStar Air to BioStar Air?",
-    "answer": "No. If you are an existing BioStar Air customer, you can continue using the platform as-is. There is no forced migration at this time."
+    "question": "Airfob Space에서 BioStar Air로 전환해야 하나요?",
+    "answer": "아니요. 기존 Airfob Space 고객은 플랫폼을 그대로 사용할 수 있습니다. 현재 강제 마이그레이션은 없습니다."
   },
   {
-    "question": "Will my devices or data be affected?",
-    "answer": "No. Both platforms share the same backend. Devices, user data, and configurations remain fully compatible across both services."
+    "question": "내 장치나 데이터에 영향을 미치나요?",
+    "answer": "아니요. 두 플랫폼은 동일한 백엔드를 공유합니다. 장치, 사용자 데이터 및 구성은 두 서비스 간에 완전히 호환됩니다."
   },
   {
-    "question": "Should I start using Suprema Pass instead of the Suprema Pass app?",
-    "answer": "There is no need to migrate existing mobile credential users over to BioStar Air. If you use the <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> URL or BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app. If you use <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> or the BioStar Air app to manage users and issue mobile credentials, those users will receive an invitation that points to the Suprema Pass app."
+    "question": "Suprema Pass를 Airfob Space 앱 대신 사용해야 하나요?",
+    "answer": "기존 모바일 인증 사용자를 BioStar Air로 마이그레이션할 필요는 없습니다. <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> URL 또는 Airfob Pro 앱을 사용하여 사용자를 관리하고 모바일 인증을 발급하는 경우 해당 사용자는 Airfob Space 앱을 사용하기 위한 초대장을 받게 됩니다. <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> 또는 BioStar Air 앱을 사용하여 사용자를 관리하고 모바일 인증을 발급하는 경우 해당 사용자는 Suprema Pass 앱을 사용하기 위한 초대장을 받게 됩니다."
   },
   {
-    "question": "Will support or billing change?",
-    "answer": "No immediate changes will occur in your support or billing processes. Over time, however, BioStar Air will become the primary brand used for documentation, support, and feature announcements."
+    "question": "고객 지원 또는 요금이 변경되나요?",
+    "answer": "고객 지원이나 요금 프로세스에 즉각적인 변경은 발생하지 않습니다. 그러나 시간이 지남에 따라 BioStar Air는 문서화, 고객 지원 및 기능 발표를 위한 주요 브랜드가 될 것입니다."
   },
   {
-    "question": "Can I switch to BioStar Air if I want to?",
-    "answer": "Yes. Since the backend is shared, transitioning is simple, but some branding and feature availability differences may apply. Simply start using <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> and the BioStar Air app to manage your site. Existing administrator login credentials from <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> will work seamlessly."
+    "question": "원하는 경우 BioStar Air로 전환할 수 있나요?",
+    "answer": "예. 백엔드가 공유되므로 전환은 간단하지만 일부 브랜딩 및 기능 제공 여부에 차이가 있을 수 있습니다. <a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> 및 BioStar Air 앱을 사용하여 사이트 관리를 시작하세요. <a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a>의 기존 관리자 로그인 정보를 그대로 사용할 수 있습니다."
   },
   {
-    "question": "What are the benefits of BioStar Air?",
-    "answer": "BioStar Air is the future-facing brand. It will receive ongoing enhancements, such as improved integrations, UI/UX updates, and new features that may not be backported to BioStar Air."
+    "question": "BioStar Air의 이점은 무엇인가요?",
+    "answer": "BioStar Air는 미래 지향적인 브랜드입니다. 향후 개선 사항, 통합 향상, UI/UX 업데이트 그리고 Airfob Space로 다시 전환하지 않을 수 있는 새로운 기능을 지속적으로 개선시켜 나갈 것입니다."
   },
   {
-    "question": "Will future features work with BioStar Air?",
-    "answer": "Some will, but not all. New features may be exclusive to BioStar Air going forward. For the best experience and support, new deployments should use BioStar Air."
+    "question": "향후 기능은 Airfob Space와 호환되나요?",
+    "answer": "일부는 호환되지만 모두는 아닙니다. 새로운 기능은 앞으로 BioStar Air에만 독점적일 수 있습니다. 최상의 경험과 지원을 위해 새로운 배포는 BioStar Air를 사용해야 합니다."
   }
 ]

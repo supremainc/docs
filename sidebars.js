@@ -80,8 +80,8 @@ const sidebars = {
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
-            'platform/biostar_air/managing-elevator-access',
             'platform/biostar_air/managing-door-access',
+            'platform/biostar_air/managing-elevator-access',
             {
               type: 'category',
               label: 'Monitoring',

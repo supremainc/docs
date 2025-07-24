@@ -1,11 +1,11 @@
 ---
 id: integration-quickstart
-title: Integration Quickstart
+title: Getting Started with API Integrations
 description: Learn how to set up a BioStar Air demo site, register compatible readers, generate API keys, and start testing integrations with cloud APIs.
 keywords: [integration, quickstart, BioStar Air]
 ---
 
-# Getting Started with API Integrations 
+## Overview {#overview}
 
 This guide walks you through how to set up a BioStar Air demo site, connect and register a BioStar Air-compatible readers to it, and begin testing your integration using our cloud APIs.
 
@@ -90,7 +90,7 @@ Ensure the following:
 
 ## Step 2: Register the Reader {#register-the-reader}
 
-Use the Airfob Pro Demo App (Android only):
+Use the BioStar Air Demo App (Android only):
 
 1. Download the app: [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
@@ -154,9 +154,9 @@ Allow administrators to use the existing BioStar Air web and mobile admin apps f
 
 ### Login {#login}
 
-**Endpoint:** login
+**Endpoint**: login
 
-**Payload:**
+**Payload**:
 
 ```json
 {
@@ -172,9 +172,9 @@ Returns a Bearer Token (JWT).
 
 ### Get Self Accounts {#get-self-accounts}
 
-**Endpoint:** getSelfAccounts
+**Endpoint**: getSelfAccounts
 
-**Authorization:** Bearer Token
+**Authorization**: Bearer Token
 
 Returns a list of accessible sites/accounts.
 
@@ -183,9 +183,9 @@ Returns a list of accessible sites/accounts.
 
 ### Login to an Account {#login-to-account}
 
-**Endpoint:** loginAccount
+**Endpoint**: loginAccount
 
-**Authorization:** Bearer Token
+**Authorization**: Bearer Token
 
 Returns a site-specific token.
 

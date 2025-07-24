@@ -134,5 +134,65 @@
   "sidebar.biostarx.category.맵 관리하기": {
     "message": "맵 관리하기",
     "description": "The label for category 맵 관리하기 in sidebar biostarx"
+  },
+  "sidebar.biostar_air.category.BioStar Air": {
+    "message": "BioStar Air",
+    "description": "The label for category BioStar Air in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Overview": {
+    "message": "개요",
+    "description": "The label for category Overview in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Site Management": {
+    "message": "사이트 관리",
+    "description": "The label for category Site Management in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.User Management": {
+    "message": "사용자 관리",
+    "description": "The label for category User Management in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Device Management": {
+    "message": "장치 관리",
+    "description": "The label for category Device Management in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Door Management": {
+    "message": "출입문 관리",
+    "description": "The label for category Door Management in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Monitoring": {
+    "message": "모니터링",
+    "description": "The label for category Monitoring in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Settings": {
+    "message": "설정",
+    "description": "The label for category Settings in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Video Management": {
+    "message": "비디오 관리",
+    "description": "The label for category Video Management in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Using Mobile Credentials": {
+    "message": "모바일 크리덴셜 사용하기",
+    "description": "The label for category Using Mobile Credentials in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Partners and Integrations": {
+    "message": "파트너 및 통합",
+    "description": "The label for category Partners and Integrations in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Hardware": {
+    "message": "하드웨어",
+    "description": "The label for category Hardware in sidebar biostar_air"
+  },
+  "sidebar.biostarx.category.시작하기": {
+    "message": "시작하기",
+    "description": "The label for category 시작하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.서버 관리": {
+    "message": "서버 관리",
+    "description": "The label for category 서버 관리 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.고급 설정": {
+    "message": "고급 설정",
+    "description": "The label for category 고급 설정 in sidebar biostarx"
   }
 }
