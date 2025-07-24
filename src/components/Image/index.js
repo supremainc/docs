@@ -2,8 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
 import clsx from 'clsx';
-import { translate } from '@docusaurus/Translate';
-import useImageDimensions from './useImageDimensions'; 
+import { translate } from '@docusaurus/Translate'; 
 
 export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
@@ -14,7 +13,6 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
 
-    const dimensions = useImageDimensions(imagePath);
     // Handle image loading errors
     function onError(e) {
         e.target.src = errTarget;
@@ -28,8 +26,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                 alt={alt}
                 className={clsx('ico', className)}
                 onError={onError}
-                width={width || dimensions.width || undefined}
-                height={height || dimensions.height || undefined}
+                width={width || undefined}
+                height={height || undefined}
             />
         );
     } else {
@@ -43,8 +41,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                             alt={alt}
                             className={clsx('img', className)}
                             onError={onError}
-                            width={width || dimensions.width || undefined}
-                            height={height || dimensions.height || undefined}
+                            width={width || undefined}
+                            height={height || undefined}
                         />
                         <figcaption>
                             {translate({
@@ -60,8 +58,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                             alt={alt}
                             className={className}
                             onError={onError}
-                            width={width || dimensions.width || undefined}
-                            height={height || dimensions.height || undefined}
+                            width={width || undefined}
+                            height={height || undefined}
                         />
                     </p>
                     }
