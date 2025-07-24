@@ -1,0 +1,124 @@
+---
+id: service-settings
+title: 서비스 설정
+description: BioStar X Service Manager의 Service Settings에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다.
+keywords: [Service Settings, Service Manager, BioStar X]
+---
+
+<Cmd>BioStar X Service Manager</Cmd>의 <Cmd>Service Settings</Cmd> 메뉴에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다. 각 서비스는 독립적으로 설정되며, 네트워크 포트와 버전 정보를 확인할 수 있습니다.
+
+<Cmd>Service Settings</Cmd>는 아래의 주요 서비스로 구성됩니다.
+
+* <Cmd>BioStar X Core Web Service</Cmd>: 웹 인터페이스 서비스
+
+* <Cmd>BioStar X Core Service</Cmd>: 시스템 핵심 기능 및 API 통신 서비스  
+
+* <Cmd>Unified Gateway Service</Cmd>: 역방향 프록시 기반 통합 게이트웨이 서비스
+
+* <Cmd>BioStar X Coordinator Service</Cmd>: 분산 시스템 구성 정보 관리 및 서비스 간 동기화
+
+* <Cmd>BioStar X Server (Main)</Cmd>: 메인 서버 서비스
+
+* <Cmd>BioStar X Cache Service</Cmd>: 데이터 캐싱 및 시스템 성능 향상
+
+
+## 설정 변경이 필요한 상황 {#when-to-change}
+
+다음과 같은 상황에서 서비스 설정을 변경해야 할 수 있습니다.
+
+* **포트 충돌 해결**: 다른 애플리케이션이 동일한 포트를 사용하여 충돌이 발생할 때
+
+* **보안 정책 준수**: 조직의 네트워크 보안 정책에 따라 특정 포트 범위만 허용될 때
+
+* **방화벽 설정**: 기업 방화벽에서 허용하는 포트로 변경해야 할 때
+
+* **서버 환경 변경**: 서버 IP 주소 변경이나 네트워크 구성 변경 시
+
+* **성능 최적화**: 트래픽 분산이나 로드 밸런싱을 위한 포트 분리가 필요할 때
+
+
+## 설정 변경 방법 {#how-to-change}
+
+1. <Cmd>BioStar X Service Manager</Cmd>에서 <Cmd>SERVICE SETTINGS</Cmd> 메뉴를 클릭하세요.
+
+1. 변경하려는 서비스 섹션으로 이동하세요.
+
+1. 필요한 포트 번호나 주소를 수정하세요.
+
+1. 변경사항을 적용하려면 화면 오른쪽 상단의 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+:::note
+
+서비스 설정을 변경한 후 변경 사항을 적용하려면 관련 서비스를 재시작하세요.
+
+:::
+
+:::caution
+
+포트 번호 변경 시 다른 서비스나 애플리케이션과 충돌이 발생하지 않도록 주의하세요.
+
+:::
+
+## 서비스 구성 {#service-composition}
+
+### BioStar X Core Web Service {#biostar-x-core-web-service}
+
+웹 기반 사용자 인터페이스를 담당하는 서비스입니다.
+
+* <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트
+
+* <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트
+
+* <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트
+
+### BioStar X Core Service {#biostar-x-core-service}
+
+시스템의 핵심 기능과 외부 API 통신을 처리하는 메인 서비스입니다.
+
+* <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트
+
+* <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트
+
+* <Cmd>API Port</Cmd>: REST API 통신 포트
+
+### Unified Gateway Service {#unified-gateway-service}
+
+역방향 프록시(Reverse Proxy) 방식을 통해 BioStar X 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
+
+* <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트
+
+### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+
+분산 시스템의 구성 정보 관리, 서비스 상태 모니터링 및 서비스 간 동기화를 담당하는 서비스입니다.
+
+* <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트
+
+### BioStar X Server (Main) {#biostar-x-server-(main)}
+
+시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다.
+
+* <Cmd>Server Address</Cmd>: 메인 서버의 IP 주소
+
+* <Cmd>SSL Server Port</Cmd>: SSL 보안 암호화 통신 포트
+
+* <Cmd>Server Port</Cmd>: 일반 서버 통신 포트
+
+* <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트
+
+### BioStar X Cache Service {#biostar-x-cache-service}
+
+자주 사용되는 데이터를 메모리에 저장하여 시스템의 데이터 처리 속도와 성능을 향상시키는 서비스입니다.
+
+* <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트
+
+* <Cmd>Discovery Port</Cmd>: 분산 캐시 노드 자동 발견을 위한 포트
+
+* <Cmd>Communication Port</Cmd>: 캐시 노드 간 내부 통신 포트
+
+<NextSteps>
+<NextItem to='change-port'>
+
+BioStar X의 기본 포트(443)를 변경하는 방법을 단계별로 알아보세요.
+
+</NextItem>
+</NextSteps>
