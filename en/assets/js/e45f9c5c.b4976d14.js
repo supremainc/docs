@@ -124,7 +124,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["To view the detailed information of an individual user, click on the desired user in the user list. User profile information will be displayed on the right side of the screen. Click the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " button on the user's profile information to navigate to the page where you can edit the user's detailed information."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-users-list-view-profile.png"

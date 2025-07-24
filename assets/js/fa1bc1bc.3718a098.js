@@ -96,7 +96,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["사용자를 더블 클릭하거나 화면 오른쪽에 사용자의 프로필 정보가 표시되면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

@@ -3603,7 +3603,7 @@ const SvgIcoCamera = _ref => {
     strokeWidth: 1.5,
     d: "M10.875 3h-3.75L5.25 5.25H3a1.5 1.5 0 0 0-1.5 1.5v6.75A1.5 1.5 0 0 0 3 15h12a1.5 1.5 0 0 0 1.5-1.5V6.75a1.5 1.5 0 0 0-1.5-1.5h-2.25z"
   })), ico_camera_path2 || (ico_camera_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
+    stroke: "currentColor",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: 1.5,

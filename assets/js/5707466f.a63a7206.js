@@ -81,7 +81,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.newUser"
+            sid: "user.addNewUser",
+            product: "2"
           }), " 화면에서 사용자 정보를 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

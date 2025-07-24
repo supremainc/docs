@@ -172,7 +172,7 @@ function _createMdxContent(props) {
           }), " from the user list."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Alternatively, click a user and then click the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " button in the profile screen that appears on the right side of the screen."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

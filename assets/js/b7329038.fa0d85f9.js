@@ -173,7 +173,7 @@ function _createMdxContent(props) {
           }), "을 설정하려는 사용자를 더블 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["또는 사용자를 선택하고 오른쪽 화면에 표시되는 프로필에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

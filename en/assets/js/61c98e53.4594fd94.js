@@ -43,7 +43,7 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "Existing User"
         }), ": Double-click a user in the user list. Alternatively, click a user and then click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-          children: "See More"
+          sid: "team.user.preview.button.seeMore"
         }), " button in the profile screen that appears on the right side of the screen. A window for editing user information appears."]
       }), "\n"]
     }), "\n"]

@@ -43,7 +43,7 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "기존 사용자"
         }), ":  사용자 목록에서 사용자를 더블 클릭하세요. 또는, 사용자를 클릭하면 화면 오른쪽에 표시되는 프로필 화면에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-          children: "See More"
+          sid: "team.user.preview.button.seeMore"
         }), " 버튼을 클릭하세요. 사용자 정보를 수정할 수 있는 창이 나타납니다."]
       }), "\n"]
     }), "\n"]

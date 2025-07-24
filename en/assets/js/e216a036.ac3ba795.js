@@ -96,7 +96,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["If the user's profile information is displayed on the right side of the screen, click the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " button."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

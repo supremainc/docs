@@ -259,7 +259,7 @@ const SvgGsdk = _ref => {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgGsdk);
 
 }),
-459: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+2116: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -413,6 +413,12 @@ function BiometricReader(param) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const defaultProductLinks = [
         {
+            title: 'BioStation 3',
+            url: `/device/biostation_3`,
+            img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
+            desc: 'The New Door Access Experience'
+        },
+        {
             title: 'BioEntry W3',
             url: '#',
             img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
@@ -420,12 +426,6 @@ function BiometricReader(param) {
                 id: "externalLinks.BioEntryW3.desc",
                 message: "Simple, Durable, Secure<br/>AI \uAE30\uBC18 \uC5BC\uAD74\uC778\uC99D \uB514\uBC14\uC774\uC2A4"
             })}`
-        },
-        {
-            title: 'BioStation 3',
-            url: `/device/biostation_3`,
-            img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
-            desc: 'The New Door Access Experience'
         },
         {
             title: 'BioStation 2a',

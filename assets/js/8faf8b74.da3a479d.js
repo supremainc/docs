@@ -133,7 +133,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["개별 사용자의 상세 정보를 확인하려면 사용자 목록에서 원하는 사용자를 클릭하세요. 사용자의 프로필 정보가 화면 오른쪽에 표시됩니다. 사용자 프로필 정보에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "See More"
+            sid: "team.user.preview.button.seeMore"
           }), " 버튼을 클릭하면 사용자의 상세 정보를 수정할 수 있는 페이지로 이동합니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-users-list-view-profile.png"
