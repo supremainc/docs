@@ -87,6 +87,12 @@ export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'BioStation 3',
+      url: `/device/biostation_3`,
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
+      desc: 'The New Door Access Experience'
+    },
+    {
       title: 'BioEntry W3',
       url: '#',
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
@@ -94,12 +100,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioEntryW3.desc",
         message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
       })}`
-    },
-    {
-      title: 'BioStation 3',
-      url: `/device/biostation_3`,
-      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
-      desc: 'The New Door Access Experience'
     },
     {
       title: 'BioStation 2a',
