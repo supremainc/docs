@@ -83,10 +83,6 @@ const toc = [{
   "value": "데이터베이스 설정",
   "id": "database-setting",
   "level": 5
-}, {
-  "value": "다음 단계",
-  "id": "next-step",
-  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -106,10 +102,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Column, Columns, Step, Steps} = _components;
+  }, {Cmd, Column, Columns, NextItem, NextStep, Step, Steps} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -741,29 +739,25 @@ function _createMdxContent(props) {
           }), "\n"]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "next-step",
-      children: "다음 단계"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
+      children: [(0,jsx_runtime.jsx)(NextItem, {
+        to: "system-requirements",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "를 설치하기 위한 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "system-requirements",
-            children: "시스템의 최소 사양"
-          }), "을 알아보세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "를 빠르게 설치하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "express-install",
-            children: "다음 문서"
-          }), "에서 확인할 수 있습니다."]
-        }), "\n"]
-      }), "\n"]
+          }), "를 설치하기 위한 시스템의 최소 사양을 알아보세요."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "express-install",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "처음 설치하는 사용자를 위한 간편 설치 방법을 안내합니다."
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "custom-install",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다."
+        })
+      })]
     })]
   });
 }

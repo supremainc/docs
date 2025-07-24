@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3097"], {
-9033: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8643"], {
+9751: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_manage_server_mdx_425_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_manage_server_mdx_eba_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-manage-server-mdx-425.json
-var site_docs_platform_biostar_x_manage_server_mdx_425_namespaceObject = JSON.parse('{"id":"platform/biostar_x/manage-server","title":"서버 관리하기","description":"BioStar X Service Manager를 사용하여 BioStar X 서버의 서비스를 시작하고 종료하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/manage-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/manage-server","permalink":"/docs/platform/biostar_x/manage-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/manage-server.mdx","tags":[],"version":"current","frontMatter":{"id":"manage-server","title":"서버 관리하기","description":"BioStar X Service Manager를 사용하여 BioStar X 서버의 서비스를 시작하고 종료하는 방법을 안내합니다.","keywords":["BioStar X Setting","서버 관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"초기 설정 가이드","permalink":"/docs/platform/biostar_x/initial-setup-guide"},"next":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-manage-server-mdx-eba.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_manage_server_mdx_eba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/manage-server","title":"Manage Server","description":"This guide explains how to manage the status of the BioStar X server.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/manage-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/manage-server","permalink":"/docs/en/platform/biostar_x/manage-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/manage-server.mdx","tags":[],"version":"current","frontMatter":{"id":"manage-server","title":"Manage Server","description":"This guide explains how to manage the status of the BioStar X server.","keywords":["BioStar X setting","Manage server"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 관리","permalink":"/docs/en/platform/biostar_x/server-management"},"next":{"title":"서비스 설정","permalink":"/docs/en/platform/biostar_x/service-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/manage-server.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/manage-server.mdx
 
 
 const frontMatter = {
 	id: 'manage-server',
-	title: '서버 관리하기',
-	description: 'BioStar X Service Manager를 사용하여 BioStar X 서버의 서비스를 시작하고 종료하는 방법을 안내합니다.',
+	title: 'Manage Server',
+	description: 'This guide explains how to manage the status of the BioStar X server.',
 	keywords: [
-		'BioStar X Setting',
-		'서버 관리'
+		'BioStar X setting',
+		'Manage server'
 	],
 	isTranslationMissing: false
 };
@@ -44,15 +44,15 @@ const assets = {
 
 
 const toc = [{
-  "value": "BioStar X Service Manager",
+  "value": "Manage BioStar X service",
   "id": "biostar-x-setting",
   "level": 2
 }, {
-  "value": "서비스 종료하기",
+  "value": "End service",
   "id": "end-service",
   "level": 3
 }, {
-  "value": "서버 시작하기",
+  "value": "Start the server",
   "id": "start-the-server",
   "level": 3
 }];
@@ -71,65 +71,65 @@ function _createMdxContent(props) {
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X Service Manager"
-      }), "를 사용하여 BioStar X 서버의 서비스를 관리하는 방법을 확인하세요. 개별 서비스를 시작하거나 종료할 수 있습니다."]
+      children: ["This guide provides instructions on how to manage the status of the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " server. You can stop or restart the running services."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "biostar-x-setting",
-      children: "BioStar X Service Manager"
+      children: "Manage BioStar X service"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["Provides a tool to manage the status of the ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버의 상태를 관리할 수 있는 도구를 제공합니다. Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " server. Click ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "를 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ". The ", (0,jsx_runtime.jsx)(Cmd, {
         children: "BioStar X Service Manager"
-      }), " 창이 나타납니다."]
+      }), " window appears."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-tutoria-service-manager-main.png",
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: ["If you do not restart, ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " 서버의 시간 설정을 변경했다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " may not operate properly. If you have changed the time settings of the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), " server, stop and restart the ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X Core Service"
-        }), "를 종료하고 다시 시작하세요. 다시 시작하지 않으면 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), "가 동작하지 않을 수 있습니다."]
+        }), "."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "end-service",
-      children: "서비스 종료하기"
+      children: "End service"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["To shut down ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 종료하려면, ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "SERVICES"
-      }), " 메뉴에서 개별 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ", click the ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Stop"
-      }), " 버튼을 클릭하세요."]
+      }), " button for individual services in the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "SERVICES"
+      }), " menu."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-tutoria-service-manager-main.png",
       alone: true
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "start-the-server",
-      children: "서버 시작하기"
+      children: "Start the server"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["To restart ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 다시 시작하려면, ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "SERVICES"
-      }), " 메뉴의 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Status"
-      }), " 열에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Stopped"
-      }), " 상태인 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ", click ", (0,jsx_runtime.jsx)(Cmd, {
         children: "Start"
-      }), " 버튼을 클릭하세요."]
+      }), " for the service in the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "SERVICES"
+      }), " menu with a ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Stopped"
+      }), " status in the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Status"
+      }), " column."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-tutoria-service-manager-main-restart.png",
       alone: true

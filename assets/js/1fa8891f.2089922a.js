@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9564"], {
-708: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1107"], {
+9363: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_change_port_mdx_b19_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-change-port-mdx-b19.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_change_port_mdx_b19_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"Change the Port","description":"Guide to change the port when the default port (443) of BioStar X is unavailable.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/en/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"Change the Port","description":"Guide to change the port when the default port (443) of BioStar X is unavailable.","keywords":["BioStar X setting","port"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Manage Server","permalink":"/docs/en/platform/biostar_x/manage-server"},"next":{"title":"Change the Database","permalink":"/docs/en/platform/biostar_x/change-db"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-port-mdx-1fa.json
+var site_docs_platform_biostar_x_change_port_mdx_1fa_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"포트 변경하기","description":"BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"포트 변경하기","description":"BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.","keywords":["BioStar X Setting","포트"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서비스 설정","permalink":"/docs/platform/biostar_x/service-settings"},"next":{"title":"데이터베이스 변경하기","permalink":"/docs/platform/biostar_x/change-db"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/change-port.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/change-port.mdx
 
 
 const frontMatter = {
 	id: 'change-port',
-	title: 'Change the Port',
-	description: 'Guide to change the port when the default port (443) of BioStar X is unavailable.',
+	title: '포트 변경하기',
+	description: 'BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.',
 	keywords: [
-		'BioStar X setting',
-		'port'
+		'BioStar X Setting',
+		'포트'
 	],
 	isTranslationMissing: false
 };
@@ -59,86 +59,86 @@ function _createMdxContent(props) {
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This guide explains how to change the port when the default port (443) of ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " is unavailable."]
+      }), "의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " on Windows."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["웹브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " window appears in the web browser, click the ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "SERVICES"
-          }), " menu."]
+          }), " 메뉴를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["모든 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Stop"
-          }), " button for all services."]
+          }), " 버튼을 클릭하세요"]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-tutoria-service-manager-services-stop.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "SERVICE SETTINGS"
-          }), " in the left sidebar."]
+          }), " 메뉴를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Enter the new port number in the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "HTTPS Port"
-          }), " input field of the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Core Web Service"
-          }), " section."]
+          }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "HTTPS Port"
+          }), " 입력 필드에서 변경할 포트 번호를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-tutoria-service-manager-services-change-port.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Apply"
-          }), " in the upper right corner of the screen."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When the confirmation message appears, click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["확인 메시지가 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "OK"
-          }), "."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Navigate to ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "SERVICES"
-          }), " and click the ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 메뉴로 이동하여 모든 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Start"
-          }), " button for all services."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Access ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " through your web browser."]
+          }), "로 접속하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["If you changed the port number to 450, enter ", (0,jsx_runtime.jsx)(_components.code, {
+          children: ["포트 번호를 450으로 변경했다면 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.code, {
             children: "https://{ip_address}:450"
-          }), " in the address bar."]
+          }), "을 입력하세요."]
         }), "\n"]
       })
     })]

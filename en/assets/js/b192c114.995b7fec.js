@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1387"], {
-4907: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9564"], {
+708: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_change_port_mdx_b19_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-db-mdx-137.json
-var site_docs_platform_biostar_x_change_db_mdx_137_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-db","title":"데이터베이스 변경하기","description":"데이터베이스 설정을 변경할 수 있습니다.","source":"@site/docs/platform/biostar_x/change-db.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-db","permalink":"/docs/platform/biostar_x/change-db","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-db.mdx","tags":[],"version":"current","frontMatter":{"id":"change-db","title":"데이터베이스 변경하기","description":"데이터베이스 설정을 변경할 수 있습니다.","keywords":["데이터베이스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"},"next":{"title":"사용자","permalink":"/docs/platform/biostar_x/how-to-guide-user"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-change-port-mdx-b19.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_change_port_mdx_b19_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-port","title":"Change the Port","description":"Guide to change the port when the default port (443) of BioStar X is unavailable.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/change-port.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-port","permalink":"/docs/en/platform/biostar_x/change-port","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-port.mdx","tags":[],"version":"current","frontMatter":{"id":"change-port","title":"Change the Port","description":"Guide to change the port when the default port (443) of BioStar X is unavailable.","keywords":["BioStar X setting","port"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서비스 설정","permalink":"/docs/en/platform/biostar_x/service-settings"},"next":{"title":"Change the Database","permalink":"/docs/en/platform/biostar_x/change-db"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/change-db.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/change-port.mdx
 
 
 const frontMatter = {
-	id: 'change-db',
-	title: '데이터베이스 변경하기',
-	description: '데이터베이스 설정을 변경할 수 있습니다.',
+	id: 'change-port',
+	title: 'Change the Port',
+	description: 'Guide to change the port when the default port (443) of BioStar X is unavailable.',
 	keywords: [
-		'데이터베이스'
+		'BioStar X setting',
+		'port'
 	],
 	isTranslationMissing: false
 };
@@ -43,6 +44,8 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
+    code: "code",
     li: "li",
     ol: "ol",
     p: "p",
@@ -55,111 +58,89 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "데이터베이스의 설정을 변경할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["This guide explains how to change the port when the default port (443) of ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " is unavailable."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), "를 클릭하세요."]
+          }), " on Windows."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["웹브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["When the ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " window appears in the web browser, click the ", (0,jsx_runtime.jsx)(Cmd, {
             children: "SERVICES"
-          }), " 메뉴를 클릭하세요."]
+          }), " menu."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["모든 서비스의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Stop"
-          }), " 버튼을 클릭하세요"]
+          }), " button for all services."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-tutoria-service-manager-services-stop.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "DATABASE"
-          }), " 메뉴를 클릭하세요."]
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICE SETTINGS"
+          }), " in the left sidebar."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Enter the new port number in the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "HTTPS Port"
+          }), " input field of the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "BioStar X Core Web Service"
+          }), " section."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-tutoria-service-manager-database.png",
+          src: "/img/common/biostarx-tutoria-service-manager-services-change-port.png",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "데이터베이스 목록에서 설정을 변경할 데이터베이스를 선택하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Database Server Configuration"
-          }), " 섹션에서 다음 설정을 변경할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-tutoria-service-manager-database-configuration.png",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Name"
-              }), ": 데이터베이스 이름을 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Description"
-              }), ": 데이터베이스 설명을 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "DB Type"
-              }), ": 데이터베이스 유형을 선택하세요. (Maria, MS SQL)"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Host"
-              }), ": 데이터베이스 서버의 호스트 이름 또는 IP 주소를 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "Port"
-              }), ": 데이터베이스 서버의 포트 번호를 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                children: "AC"
-              }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "TA"
-              }), " / ", (0,jsx_runtime.jsx)(Cmd, {
-                children: "Video"
-              }), ": AC, TA, Video 데이터베이스의 이름, 사용자, 비밀번호를 입력하세요."]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["데이터베이스가 정상 연결되었는지 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Test Connection"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Apply"
-          }), " 버튼을 클릭하세요."]
+          }), " in the upper right corner of the screen."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the confirmation message appears, click ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "OK"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Navigate to ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICES"
+          }), " and click the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Start"
+          }), " button for all services."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Access ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " through your web browser."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["If you changed the port number to 450, enter ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "https://{ip_address}:450"
+          }), " in the address bar."]
+        }), "\n"]
+      })
     })]
   });
 }
