@@ -28,114 +28,97 @@ function pluginPostBuildImageDimensions(context, options) {
       
       let processedFiles = 0;
       let processedImages = 0;
-      // console.log(outDir);
-      // Process each HTML file
-      for (const routePath of routesPaths) {
-        // For non-default locales, routePath includes locale prefix (e.g., /en/platform/...)
-        // but outDir already points to build/en, so we need to remove the locale prefix
-        let cleanRoutePath = routePath;
-        if (currentLocale !== defaultLocale) {
-          const localePrefix = `/${currentLocale}`;
-          if (routePath.startsWith(localePrefix)) {
-            cleanRoutePath = routePath.replace(localePrefix, '') || '/';
+      
+      // Find all HTML files in the build directory instead of relying on routesPaths
+      function findHtmlFiles(dir) {
+        const htmlFiles = [];
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            // Recursively find HTML files in subdirectories
+            htmlFiles.push(...findHtmlFiles(fullPath));
+          } else if (item.endsWith('.html')) {
+            htmlFiles.push(fullPath);
           }
         }
         
-        let htmlFilePath = path.join(outDir, cleanRoutePath, 'index.html');
-        if (fs.existsSync(htmlFilePath)) {
-          try {
-            const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
-            const dom = new JSDOM(htmlContent);
-            const document = dom.window.document;
-            
-            // Find img elements in content areas without width/height
-            const images = document.querySelectorAll('figure img:not([width]):not([height]), p.hasimg img:not([width]):not([height])');
-            let modified = false;
-            
-            // Debug: show first few images found for English
-            // if (currentLocale === 'en' && images.length > 0 && processedFiles < 3) {
-            //   console.log(`[postBuild] Processing ${routePath} - Found ${images.length} images`);
-            // }
-            
-            for (const img of images) {
-              const src = img.getAttribute('src');
-              if (!src || src.startsWith('data:') || src.startsWith('http')) {
-                continue; // Skip data URLs and external images
-              }
-              
-              // Debug: show image src for English
-              // if (currentLocale === 'en' && processedFiles < 3) {
-              //   console.log(`[postBuild] Processing image src: ${src}`);
-              // }
-              
-              // Convert relative path to absolute file path in build directory
-              let imagePath;
-              if (src.startsWith('/')) {
-                // Handle different build structures for multilingual sites
-                if (currentLocale !== defaultLocale) {
-                  // Non-default locale build: outDir = build/{locale}, src = /{locale}/img/{locale}/...
-                  // For English: src = /en/img/en/image.png → build/en/img/en/image.png
-                  imagePath = path.join(outDir, '..', src.replace(/^\//, ''));
-                } else {
-                  // Default locale build: outDir = build, src = /img/...
-                  // For Korean: src = /img/image.png → build/img/image.png
-                  imagePath = path.join(outDir, src.replace(/^\//, ''));
-                }
-              } else {
-                // Relative path - resolve relative to HTML file location
-                imagePath = path.resolve(path.dirname(htmlFilePath), src);
-              }
-              
-              // Debug: show image path for English
-              // if (currentLocale === 'en' && processedFiles < 3) {
-              //   console.log(`[postBuild] Looking for image at: ${imagePath}`);
-              //   console.log(`[postBuild] File exists: ${fs.existsSync(imagePath)}`);
-              // }
-              
-              if (fs.existsSync(imagePath)) {
-                try {
-                  const buffer = fs.readFileSync(imagePath);
-                  const dimensions = imageSize(buffer);
-                  
-                  if (dimensions.width && dimensions.height) {
-                    img.setAttribute('width', dimensions.width.toString());
-                    img.setAttribute('height', dimensions.height.toString());
-                    modified = true;
-                    processedImages++;
-                    
-                    // Debug: show successful dimension extraction
-                    // if (currentLocale === 'en' && processedFiles < 3) {
-                    //   console.log(`[postBuild] ✅ Successfully added dimensions: ${dimensions.width}x${dimensions.height} for ${src}`);
-                    //   console.log(`[postBuild] 📁 Image file path: ${imagePath}`);
-                    // }
-                  } else {
-                    // if (currentLocale === 'en' && processedFiles < 3) {
-                    //   console.warn(`[postBuild] ⚠️  Could not extract dimensions from ${src} (width: ${dimensions.width}, height: ${dimensions.height})`);
-                    // }
-                  }
-                } catch (error) {
-                  console.warn(`[postBuild] ❌ Could not get dimensions for ${src}:`, error.message);
-                  // if (currentLocale === 'en' && processedFiles < 3) {
-                  //   console.warn(`[postBuild] 📁 Failed image path: ${imagePath}`);
-                  // }
-                }
-              } else {
-                // if (currentLocale === 'en' && processedFiles < 3) {
-                //   console.warn(`[postBuild] 🚫 Image not found: ${imagePath} for src: ${src}`);
-                // }
-              }
+        return htmlFiles;
+      }
+      
+      const htmlFiles = findHtmlFiles(outDir);
+      console.log(`[postBuild] Found ${htmlFiles.length} HTML files to process`);
+      
+      // Process each HTML file
+      for (const htmlFilePath of htmlFiles) {
+        try {
+          const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
+          const dom = new JSDOM(htmlContent);
+          const document = dom.window.document;
+          
+          // Find img elements in content areas without width/height
+          const images = document.querySelectorAll('figure img:not([width]):not([height]), p.hasimg img:not([width]):not([height])');
+          let modified = false;
+          
+          for (const img of images) {
+            const src = img.getAttribute('src');
+            if (!src || src.startsWith('data:') || src.startsWith('http')) {
+              continue; // Skip data URLs and external images
             }
             
-            // Write back modified HTML if any changes were made
-            if (modified) {
-              const modifiedHtml = dom.serialize();
-              fs.writeFileSync(htmlFilePath, modifiedHtml, 'utf8');
-              processedFiles++;
+            // Convert relative path to absolute file path in build directory
+            let imagePath;
+            if (src.startsWith('/')) {
+              // Remove /docs prefix from src path as it's already handled by baseUrl
+              let cleanSrc = src;
+              if (src.startsWith('/docs/')) {
+                cleanSrc = src.replace('/docs/', '/');
+              }
+              
+              // Handle different build structures for multilingual sites
+              if (currentLocale !== defaultLocale) {
+                // Non-default locale build: outDir = build/{locale}, src = /img/...
+                // For English: src = /img/device/image.png → build/en/img/device/image.png
+                imagePath = path.join(outDir, cleanSrc.replace(/^\//, ''));
+              } else {
+                // Default locale build: outDir = build, src = /img/...
+                // For Korean: src = /img/image.png → build/img/image.png
+                imagePath = path.join(outDir, cleanSrc.replace(/^\//, ''));
+              }
+            } else {
+              // Relative path - resolve relative to HTML file location
+              imagePath = path.resolve(path.dirname(htmlFilePath), src);
             }
             
-          } catch (error) {
-            console.warn(`[postBuild] Error processing ${htmlFilePath}:`, error.message);
+            if (fs.existsSync(imagePath)) {
+              try {
+                const buffer = fs.readFileSync(imagePath);
+                const dimensions = imageSize(buffer);
+                
+                if (dimensions.width && dimensions.height) {
+                  img.setAttribute('width', dimensions.width.toString());
+                  img.setAttribute('height', dimensions.height.toString());
+                  modified = true;
+                  processedImages++;
+                }
+              } catch (error) {
+                console.warn(`[postBuild] ❌ Could not get dimensions for ${src}:`, error.message);
+              }
+            }
           }
+          
+          // Write back modified HTML if any changes were made
+          if (modified) {
+            const modifiedHtml = dom.serialize();
+            fs.writeFileSync(htmlFilePath, modifiedHtml, 'utf8');
+            processedFiles++;
+          }
+          
+        } catch (error) {
+          console.warn(`[postBuild] Error processing ${htmlFilePath}:`, error.message);
         }
       }
       
