@@ -1271,8 +1271,12 @@ function Image(param) {
             alt: alt,
             className: (0,clsx/* default */.Z)('ico', className),
             onError: onError,
-            width: width || undefined,
-            height: height || undefined
+            ...width && {
+                width
+            },
+            ...height && {
+                height
+            }
         });
     } else {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
@@ -1284,8 +1288,12 @@ function Image(param) {
                         alt: alt,
                         className: (0,clsx/* default */.Z)('img', className),
                         onError: onError,
-                        width: width || undefined,
-                        height: height || undefined
+                        ...width && {
+                            width
+                        },
+                        ...height && {
+                            height
+                        }
                     }),
                     /*#__PURE__*/ (0,jsx_runtime.jsx)("figcaption", {
                         children: (0,Translate/* translate */.I)({
@@ -1302,8 +1310,12 @@ function Image(param) {
                     alt: alt,
                     className: className,
                     onError: onError,
-                    width: width || undefined,
-                    height: height || undefined
+                    ...width && {
+                        width
+                    },
+                    ...height && {
+                        height
+                    }
                 })
             })
         });
