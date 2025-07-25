@@ -26,8 +26,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                 alt={alt}
                 className={clsx('ico', className)}
                 onError={onError}
-                width={width || undefined}
-                height={height || undefined}
+                {...(width && { width })}
+                {...(height && { height })}
             />
         );
     } else {
@@ -41,8 +41,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                             alt={alt}
                             className={clsx('img', className)}
                             onError={onError}
-                            width={width || undefined}
-                            height={height || undefined}
+                            {...(width && { width })}
+                            {...(height && { height })}
                         />
                         <figcaption>
                             {translate({
@@ -58,8 +58,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                             alt={alt}
                             className={className}
                             onError={onError}
-                            width={width || undefined}
-                            height={height || undefined}
+                            {...(width && { width })}
+                            {...(height && { height })}
                         />
                     </p>
                     }
