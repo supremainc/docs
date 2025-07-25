@@ -71,17 +71,24 @@ function pluginPostBuildImageDimensions(context, options) {
             
             // Convert relative path to absolute file path in build directory
             let imagePath;
+            let cleanSrc = src; // cleanSrc를 상위 스코프에서 선언
+            
             if (src.startsWith('/')) {
               // Remove /docs prefix from src path as it's already handled by baseUrl
-              let cleanSrc = src;
               if (src.startsWith('/docs/')) {
                 cleanSrc = src.replace('/docs/', '/');
               }
               
               // Handle different build structures for multilingual sites
               if (currentLocale !== defaultLocale) {
-                // Non-default locale build: outDir = build/{locale}, src = /img/...
-                // For English: src = /img/device/image.png → build/en/img/device/image.png
+                // Non-default locale build: outDir = build/{locale}, src = /{locale}/img/...
+                // For English: src = /en/img/en/device/image.png, outDir = build/en
+                // Result should be: build/en/img/en/device/image.png
+                // Remove the leading locale from cleanSrc to avoid duplication
+                const localePrefix = `/${currentLocale}`;
+                if (cleanSrc.startsWith(localePrefix)) {
+                  cleanSrc = cleanSrc.substring(localePrefix.length);
+                }
                 imagePath = path.join(outDir, cleanSrc.replace(/^\//, ''));
               } else {
                 // Default locale build: outDir = build, src = /img/...
@@ -106,6 +113,27 @@ function pluginPostBuildImageDimensions(context, options) {
                 }
               } catch (error) {
                 console.warn(`[postBuild] ❌ Could not get dimensions for ${src}:`, error.message);
+              }
+            } else if (currentLocale !== defaultLocale) {
+              // For non-default locales, try fallback to base img path without locale prefix
+              // Example: /en/img/en/image.png → /img/image.png
+              const fallbackSrc = cleanSrc.replace(`/${currentLocale}`, '');
+              const fallbackPath = path.join(outDir, fallbackSrc.replace(/^\//, ''));
+              
+              if (fs.existsSync(fallbackPath)) {
+                try {
+                  const buffer = fs.readFileSync(fallbackPath);
+                  const dimensions = imageSize(buffer);
+                  
+                  if (dimensions.width && dimensions.height) {
+                    img.setAttribute('width', dimensions.width.toString());
+                    img.setAttribute('height', dimensions.height.toString());
+                    modified = true;
+                    processedImages++;
+                  }
+                } catch (error) {
+                  console.warn(`[postBuild] ❌ Could not get dimensions for ${src}:`, error.message);
+                }
               }
             }
           }
