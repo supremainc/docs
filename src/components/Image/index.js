@@ -18,16 +18,24 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         e.target.src = errTarget;
     }
 
+    // 서버 사이드 렌더링과 클라이언트 렌더링 일치를 위해
+    // width/height 속성을 항상 포함하되, 값이 없으면 undefined로 설정
+    const imageProps = {
+        loading: "lazy",
+        src: imagePath,
+        alt: alt,
+        onError: onError,
+        // postBuild 플러그인에서 추가한 속성과 일치시키기 위해
+        // props가 없어도 undefined로 설정하여 속성 자체는 렌더링
+        width: width || undefined,
+        height: height || undefined
+    };
+
     if (ico) {
         return (
             <img
-                loading="lazy"
-                src={imagePath}
-                alt={alt}
+                {...imageProps}
                 className={clsx('ico', className)}
-                onError={onError}
-                {...(width && { width })}
-                {...(height && { height })}
             />
         );
     } else {
@@ -36,13 +44,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                 {caption ? 
                     <figure>
                         <img
-                            loading="lazy"
-                            src={imagePath}
-                            alt={alt}
+                            {...imageProps}
                             className={clsx('img', className)}
-                            onError={onError}
-                            {...(width && { width })}
-                            {...(height && { height })}
                         />
                         <figcaption>
                             {translate({
@@ -53,13 +56,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                     </figure>
                     :<p className='hasimg'>
                         <img
-                            loading="lazy"
-                            src={imagePath}
-                            alt={alt}
+                            {...imageProps}
                             className={className}
-                            onError={onError}
-                            {...(width && { width })}
-                            {...(height && { height })}
                         />
                     </p>
                     }
