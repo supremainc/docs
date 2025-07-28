@@ -48,7 +48,7 @@ function pluginPostBuildImageDimensions(context, options) {
             const dom = new JSDOM(htmlContent);
             const document = dom.window.document;
             
-            // Find img elements in content areas without width AND height (both missing)
+            // Find img elements in content areas without width/height
             const images = document.querySelectorAll('figure img:not([width]):not([height]), p.hasimg img:not([width]):not([height])');
             let modified = false;
             

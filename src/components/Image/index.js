@@ -2,14 +2,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
 import clsx from 'clsx';
-import { translate } from '@docusaurus/Translate';
-import { useEffect, useState, useRef } from 'react';
+import { translate } from '@docusaurus/Translate'; 
 
 export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
-    const [imgDimensions, setImgDimensions] = useState({ width: width, height: height });
-    const imgRef = useRef(null);
-    
     const imagePath = 
         currentLocale === 'ko' || alone ? 
             useBaseUrl(src) : 
@@ -17,47 +13,22 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
 
-    // 클라이언트 사이드에서 이미지 로드 후 크기 설정
-    useEffect(() => {
-        if (!width || !height) {
-            const img = imgRef.current;
-            if (img && img.complete && img.naturalWidth > 0) {
-                // 이미지가 이미 로드된 경우
-                setImgDimensions({
-                    width: img.naturalWidth,
-                    height: img.naturalHeight
-                });
-            }
-        }
-    }, [width, height, imagePath]);
-
-    // Handle image loading and set dimensions
-    function onLoad(e) {
-        if (!width || !height) {
-            setImgDimensions({
-                width: e.target.naturalWidth,
-                height: e.target.naturalHeight
-            });
-        }
-    }
-
     // Handle image loading errors
     function onError(e) {
         e.target.src = errTarget;
     }
 
     // 서버 사이드 렌더링과 클라이언트 렌더링 일치를 위해
-    // width/height 속성이 있을 때만 포함하고, 없으면 속성 자체를 제거
+    // width/height 속성을 항상 포함하되, 값이 없으면 undefined로 설정
     const imageProps = {
         loading: "lazy",
         src: imagePath,
         alt: alt,
-        ref: imgRef,
-        onLoad: onLoad,
         onError: onError,
-        // width, height가 실제 값이 있을 때만 속성 추가
-        ...(imgDimensions.width && { width: imgDimensions.width }),
-        ...(imgDimensions.height && { height: imgDimensions.height })
+        // postBuild 플러그인에서 추가한 속성과 일치시키기 위해
+        // props가 없어도 undefined로 설정하여 속성 자체는 렌더링
+        width: width || undefined,
+        height: height || undefined
     };
 
     if (ico) {
