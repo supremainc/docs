@@ -37,7 +37,7 @@ function Cover() {
     const lang = siteConfig.i18n.localeConfigs[currentLocale].label;
     const langLabel = currentLocale.toUpperCase();
     const num = `${langLabel} 102.00.BSX`;
-    const next = (0,_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */.ZP)('/platform/biostar_x/index');
+    const next = (0,_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */.ZP)('/platform/biostar_x');
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_theme_Layout__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */.Z, {
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_docusaurus_Head__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */.Z, {
