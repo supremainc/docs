@@ -1,4 +1,4 @@
-name: Generate PDF release notes
+name: Generate PDF-BioStarX Administrator Guide
 
 on:
   workflow_dispatch:
