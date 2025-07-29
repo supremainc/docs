@@ -13,8 +13,8 @@ export default function Cover() {
     const ver = "v1.0.0";
     const lang = siteConfig.i18n.localeConfigs[currentLocale].label;
     const langLabel = currentLocale.toUpperCase();
-    const num = `${langLabel} 001`;
-    const next = useBaseUrl('/platform/biostar_x/toc');
+    const num = `${langLabel} 102.00.BSX`;
+    const next = useBaseUrl('/platform/biostar_x/index');
 
     return (
         <Layout>
