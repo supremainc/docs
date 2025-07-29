@@ -14,7 +14,7 @@ export default function Cover() {
     const lang = siteConfig.i18n.localeConfigs[currentLocale].label;
     const langLabel = currentLocale.toUpperCase();
     const num = `${langLabel} 001`;
-    const next = useBaseUrl('/platform/biostar_x/toc');
+    const next = useBaseUrl('/platform/biostar_x/index');
 
     return (
         <Layout>
