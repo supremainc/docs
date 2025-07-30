@@ -23,6 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Generate image sizes
+        run: node sizeOfimages
       - name: Build website
         run: yarn build --no-minify
         
