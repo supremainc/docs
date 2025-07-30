@@ -357,6 +357,17 @@ function _createMdxContent(props) {
               }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
+        }), (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "인터페이스 메트릭"
+            }), "로 입력할 수 있는 값은 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "1"
+            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "9999"
+            }), "까지입니다. 값이 낮을수록 우선순위가 높습니다."]
+          })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
