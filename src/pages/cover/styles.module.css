@@ -37,6 +37,7 @@ h1.small {
   font-size: 10pt;
   position: relative;
   margin-top: .2rem;
+  left: 4px;
 }
 .title .lang, .title .number {
   font-weight: medium;
