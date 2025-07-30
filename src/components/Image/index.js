@@ -56,9 +56,15 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         ref: imgRef,
         onLoad: onLoad,
         onError: onError,
-        // width, height가 실제 값이 있을 때만 속성 추가
-        ...(imgDimensions.width && { width: imgDimensions.width }),
-        ...(imgDimensions.height && { height: imgDimensions.height })
+        // props로 width 또는 height가 전달되었을 때, 
+        // 하나만 전달된 경우 다른 하나는 auto로 설정
+        ...(width || height ? {
+            width: width || 'auto',
+            height: height || 'auto'
+        } : {
+            ...(imgDimensions.width && { width: imgDimensions.width }),
+            ...(imgDimensions.height && { height: imgDimensions.height })
+        })
     };
 
     if (ico) {
