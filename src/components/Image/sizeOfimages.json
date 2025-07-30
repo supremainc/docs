@@ -2627,6 +2627,34 @@
     "width": 737,
     "height": 305
   },
+  "/img/en/how-to/edit-master-admin-1.png": {
+    "width": 721,
+    "height": 1281
+  },
+  "/img/en/how-to/error-two-step-authentication.png": {
+    "width": 721,
+    "height": 613
+  },
+  "/img/en/how-to/setting-master-admin-1.png": {
+    "width": 721,
+    "height": 1280
+  },
+  "/img/en/how-to/setting-master-admin-2.png": {
+    "width": 721,
+    "height": 1280
+  },
+  "/img/en/how-to/setting-master-admin-3.png": {
+    "width": 722,
+    "height": 1281
+  },
+  "/img/en/how-to/setting-master-admin-4.png": {
+    "width": 722,
+    "height": 1281
+  },
+  "/img/en/how-to/setting-two-step-authentication.png": {
+    "width": 721,
+    "height": 1281
+  },
   "/img/en/ico-audit-trail-rows-page.png": {
     "width": 90,
     "height": 28
@@ -2746,6 +2774,66 @@
   "/img/hero.png": {
     "width": 1920,
     "height": 460
+  },
+  "/img/how-to/BioLite N2-Front.png": {
+    "width": 1299,
+    "height": 3034
+  },
+  "/img/how-to/BioStation 2a-front.png": {
+    "width": 1500,
+    "height": 1383
+  },
+  "/img/how-to/BioStation 3-Front.png": {
+    "width": 1000,
+    "height": 1812
+  },
+  "/img/how-to/edit-master-admin-1.png": {
+    "width": 721,
+    "height": 1281
+  },
+  "/img/how-to/error-two-step-authentication.png": {
+    "width": 721,
+    "height": 619
+  },
+  "/img/how-to/no-register-master-admin.png": {
+    "width": 366,
+    "height": 167
+  },
+  "/img/how-to/setting-master-admin-1.png": {
+    "width": 721,
+    "height": 1280
+  },
+  "/img/how-to/setting-master-admin-2.png": {
+    "width": 721,
+    "height": 1280
+  },
+  "/img/how-to/setting-master-admin-3.png": {
+    "width": 721,
+    "height": 1281
+  },
+  "/img/how-to/setting-master-admin-4.png": {
+    "width": 721,
+    "height": 1281
+  },
+  "/img/how-to/setting-two-step-authentication.png": {
+    "width": 721,
+    "height": 1281
+  },
+  "/img/how-to/X-Station 2-DPB-APB-Front.png": {
+    "width": 1022,
+    "height": 1761
+  },
+  "/img/how-to/X-Station 2-Front.png": {
+    "width": 2283,
+    "height": 2272
+  },
+  "/img/how-to/X-Station 2-ODPB-OAPB-Front.png": {
+    "width": 801,
+    "height": 1761
+  },
+  "/img/how-to/X-Station 2-QDPB-QAPB-Front.png": {
+    "width": 889,
+    "height": 2072
   },
   "/img/ico-audit-trail-rows-page.png": {
     "width": 74,
