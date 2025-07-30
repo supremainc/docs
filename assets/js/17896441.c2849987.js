@@ -1258,11 +1258,9 @@ var sizeOfimages_namespaceObject = JSON.parse('{"/docs/img/air/air-device-manage
 
 
 
-
 function Image(param) {
     let { src, alt, className, alone, caption, ico, width, height } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
-    const imgRef = (0,react.useRef)(null);
     const imagePath = currentLocale === 'ko' || alone ? (0,useBaseUrl/* default */.ZP)(src) : (0,useBaseUrl/* default */.ZP)(src.replace('/img/', `/img/${currentLocale}/`));
     const errTarget = (0,useBaseUrl/* default */.ZP)('/img/default-placeholder-image.webp');
     // console.log('Image path:', imagePath, imageSize[imagePath]);
@@ -1278,7 +1276,6 @@ function Image(param) {
         decoding: "async",
         src: imagePath,
         alt: alt,
-        ref: imgRef,
         onError: onError,
         // props로 width 또는 height가 전달되었을 때, 
         // 하나만 전달된 경우 다른 하나는 auto로 설정
@@ -2451,9 +2448,8 @@ var isInternalUrl = __webpack_require__(3150);
 var Heading = __webpack_require__(4403);
 ;// CONCATENATED MODULE: ./src/components/Overview/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const Overview_styles_module = ({"overviewItems":"overviewItems_zrdh","ovHeading":"ovHeading_JZ3p","linkarrow":"linkarrow_tKYj","subItemslength":"subItemslength_j4iP","griddesc":"griddesc_YdRa","ovSubitems":"ovSubitems_FjOq","ovSubitem":"ovSubitem_xwiF","desc":"desc_MAOP"});
+/* ESM default export */ const Overview_styles_module = ({"overviewItems":"overviewItems_zrdh","ovMoreitems":"ovMoreitems_kxSP","ovHeading":"ovHeading_JZ3p","linkarrow":"linkarrow_tKYj","subItemslength":"subItemslength_j4iP","griddesc":"griddesc_YdRa","ovSubitems":"ovSubitems_FjOq","ovSubitem":"ovSubitem_xwiF","desc":"desc_MAOP"});
 ;// CONCATENATED MODULE: ./src/components/Overview/overviewitem.js
-
 
 
 
