@@ -8,7 +8,6 @@ import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
-    const [imgSize, setImgSize] = useState({ width: 'auto', height: 'auto' });
     const imgRef = useRef(null);
     
     const imagePath = 
@@ -17,16 +16,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
-
-    useEffect(() => {
-        function fetchImageSize() {
-            setImgSize({
-                width: imageSize[imagePath]?.width || 'auto',
-                height: imageSize[imagePath]?.height || 'auto'
-            })
-        }
-        fetchImageSize();
-    }, [imagePath]);
+    // console.log('Image path:', imagePath, imageSize[imagePath]);
+    
 
     // Handle image loading errors
     function onError(e) {
@@ -48,8 +39,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             width: width || 'auto',
             height: height || 'auto'
         } : {
-            width: imgSize.width,
-            height: imgSize.height
+            width: imageSize[imagePath]?.width || 'auto',
+            height: imageSize[imagePath]?.height || 'auto'
         }),
     };
 
@@ -86,5 +77,4 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             </MDXContents>
         );
     }
-
 }

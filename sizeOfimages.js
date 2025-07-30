@@ -2,6 +2,21 @@ const fs = require("fs").promises;
 const path = require("path");
 const { imageSizeFromFile } = require('image-size/fromFile')
 
+// docusaurus.config.js에서 baseUrl 가져오기
+async function getBaseUrl() {
+    try {
+        const configPath = './docusaurus.config.js';
+        const configContent = await fs.readFile(configPath, 'utf-8');
+        
+        // baseUrl 값을 정규식으로 추출
+        const baseUrlMatch = configContent.match(/baseUrl:\s*['"`]([^'"`]+)['"`]/);
+        return baseUrlMatch ? baseUrlMatch[1] : '/';
+    } catch (err) {
+        console.warn('Could not read docusaurus.config.js, using default baseUrl "/"');
+        return '/';
+    }
+}
+
 const directoryPath = './static/img';
 
 // 재귀적으로 디렉토리를 탐색하고 파일 목록을 가져오는 함수
@@ -38,21 +53,26 @@ function isImageFile(filePath) {
 const imageInfo = {};
 
 // 파일 정보를 수집하는 콜백 함수
-function collectFileInfo(file, dimensions) {
-    const fileName = file.replace(/\\/g, '/').replace('static/img/', '/img/');
+function collectFileInfo(file, dimensions, baseUrl) {
+    const fileName = file.replace(/\\/g, '/').replace('static', baseUrl.replace(/\/$/, ''));
     imageInfo[fileName] = { width: dimensions.width, height: dimensions.height };
 }
 
 // 디렉토리와 그 하위 디렉토리의 이미지 파일 정보를 수집
-readFilesInDirectory(directoryPath, collectFileInfo)
-    .then(() => {
-        // 최종 결과를 JSON 파일로 저장
-        const jsonOutput = JSON.stringify(imageInfo, null, 2);
-        return fs.writeFile("./src/components/Image/sizeOfimages.json", jsonOutput, 'utf-8');
-    })
-    .then(() => {
-        console.log("Complete");
-    })
-    .catch((err) => {
-        console.error('Error:', err);
+async function processImages() {
+    const baseUrl = await getBaseUrl();
+    console.log(`Using baseUrl: ${baseUrl}`);
+    
+    await readFilesInDirectory(directoryPath, (file, dimensions) => {
+        collectFileInfo(file, dimensions, baseUrl);
     });
+    
+    // 최종 결과를 JSON 파일로 저장
+    const jsonOutput = JSON.stringify(imageInfo, null, 2);
+    await fs.writeFile("./src/components/Image/sizeOfimages.json", jsonOutput, 'utf-8');
+    console.log("Complete");
+}
+
+processImages().catch((err) => {
+    console.error('Error:', err);
+});
