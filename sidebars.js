@@ -177,6 +177,7 @@ const sidebars = {
             id: 'platform/biostar_x/getting-started',
           },
           items: [
+            'platform/biostar_x/check-ethernet',
             'platform/biostar_x/express-install',
             'platform/biostar_x/custom-install',
             'platform/biostar_x/migration-x',
