@@ -66,10 +66,10 @@ jobs:
       run: |
         node generatepdf -u "https://supremainc.github.io/docs/cover/biostarx" --prince-args="--page-size='a4' --style=./print.css --javascript" -o ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.date }}.pdf --dest ./pdf --include-index
         pdfcpu annot remove -pages 1 ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.date }}.pdf
-        pdfcpu merge -mode append ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.date }}.pdf back-cover.pdf
+        pdfcpu merge -mode append -bookmarks=false ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.date }}.pdf back-cover.pdf
         node generatepdf -u "https://supremainc.github.io/docs/en/cover/biostarx" --prince-args="--page-size='a4' --style=./print.css --javascript" -o ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf --dest ./pdf --include-index
         pdfcpu annot remove -pages 1 ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf
-        pdfcpu merge -mode append ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf back-cover-en.pdf
+        pdfcpu merge -mode append -bookmarks=false ./pdf/BioStarX_Administrator_Guide_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.date }}.pdf back-cover-en.pdf
     
     - name: Create Release
       id: create_release

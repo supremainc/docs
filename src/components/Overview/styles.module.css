@@ -7,6 +7,10 @@
   border-bottom: none;
 }
 
+.ovMoreitems {
+  font-size: 1rem;
+}
+
 .ovHeading {
   margin-bottom: 1rem;
   padding-top: 0 !important;
@@ -52,4 +56,16 @@
   .griddesc {
     display: block;
   }
+}
+
+@media print {
+  .ovHeading a {
+    color: var(--ifm-color-content) !important;
+  }
+  .ovSubitems a {
+    color: var(--ifm-color-content) !important;
+  }
+  .ovMoreitems {
+  font-size: .7rem;
+}
 }
