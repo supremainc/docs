@@ -563,7 +563,23 @@ const sidebars = {
         id: 'reference/index',
       },
       items: [
-        'reference/glossary'
+        'reference/glossary',
+      ]
+    }
+  ],
+  howto: [
+    {
+      type: 'category',
+      label: 'How-to Articles',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'how-to/index',
+      },
+      items: [
+        'how-to/master-admin',
       ]
     }
   ],

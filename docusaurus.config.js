@@ -187,6 +187,12 @@ const config = {
           },
           {
             type: 'doc',
+            label: 'How-to Articles',
+            position: 'right',
+            docId: 'how-to/index'
+          },
+          {
+            type: 'doc',
             label: 'Reference',
             position: 'right',
             docId: 'reference/index'
