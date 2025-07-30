@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3821"], {
-2168: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3628"], {
+8104: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_getting_started_mdx_1e1_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-getting-started-mdx-b09.json
-var site_docs_platform_biostar_x_getting_started_mdx_b09_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"시작하기","description":"BioStar X의 설치, 업그레이드, 초기 설정에 필요한 기본 절차를 단계별로 안내하는 가이드 문서 모음입니다.","source":"@site/docs/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"BioStar X의 설치, 업그레이드, 초기 설정에 필요한 기본 절차를 단계별로 안내하는 가이드 문서 모음입니다.","keywords":["Tutorial","설치","기본 설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 최소 요구사항","permalink":"/docs/platform/biostar_x/system-requirements"},"next":{"title":"간편 설치하기","permalink":"/docs/platform/biostar_x/express-install"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-getting-started-mdx-1e1.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_getting_started_mdx_1e1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/getting-started","title":"Getting Started","description":"BioStar X step-by-step tutorial collection, guiding you from installation to core feature utilization.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/getting-started.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/getting-started","permalink":"/docs/en/platform/biostar_x/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"BioStar X step-by-step tutorial collection, guiding you from installation to core feature utilization.","keywords":["Install","Initial Settings"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"System Minimum Requirements","permalink":"/docs/en/platform/biostar_x/system-requirements"},"next":{"title":"네트워크 우선순위 확인하기","permalink":"/docs/en/platform/biostar_x/check-ethernet"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/getting-started.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/getting-started.mdx
 
 
 const frontMatter = {
 	id: 'getting-started',
-	title: '시작하기',
-	description: 'BioStar X의 설치, 업그레이드, 초기 설정에 필요한 기본 절차를 단계별로 안내하는 가이드 문서 모음입니다.',
+	title: 'Getting Started',
+	description: 'BioStar X step-by-step tutorial collection, guiding you from installation to core feature utilization.',
 	keywords: [
-		'Tutorial',
-		'설치',
-		'기본 설정'
+		'Install',
+		'Initial Settings'
 	],
 	isTranslationMissing: false
 };
@@ -55,9 +54,9 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 처음 사용하는 사용자를 위한 필수 설정 가이드입니다. 설치 방법 선택부터 라이선스 등록까지 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " step-by-step tutorial collection, guiding you from installation to core feature utilization. You can easily and quickly set up and operate ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "를 성공적으로 구축하고 운영하는 데 필요한 핵심 절차를 단계별로 안내합니다."]
+      }), " by following the intuitive descriptions and procedures."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
