@@ -3,12 +3,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
 import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
-import { useEffect, useState, useRef } from 'react';
 import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
-    const imgRef = useRef(null);
     
     const imagePath = 
         currentLocale === 'ko' || alone ? 
@@ -31,7 +29,6 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         decoding: "async",
         src: imagePath,
         alt: alt,
-        ref: imgRef,
         onError: onError,
         // props로 width 또는 height가 전달되었을 때, 
         // 하나만 전달된 경우 다른 하나는 auto로 설정
