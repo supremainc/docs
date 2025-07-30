@@ -50,6 +50,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     // width/height 속성이 있을 때만 포함하고, 없으면 속성 자체를 제거
     const imageProps = {
         loading: "lazy",
+        decoding: "async",
         src: imagePath,
         alt: alt,
         ref: imgRef,
