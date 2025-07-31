@@ -230,6 +230,7 @@ const sidebars = {
               ]
             },
             'platform/biostar_x/set-permission',
+            'platform/biostar_x/set-user-advanced',
             'platform/biostar_x/view-users',
             {
               type: 'category',

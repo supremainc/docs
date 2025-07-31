@@ -1,0 +1,39 @@
+---
+id: set-user-advanced
+title: 사용자 고급 설정하기
+description: 사용자 출입 시 장치에 표시할 메시지를 설정하는 방법 및 디렉토리 연동 제외 기능을 안내합니다.
+keywords: [ 사용자, 고급 설정 ]
+---
+
+사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다. 이 기능은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다.
+
+<Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> 페이지로 이동해, 아래 두 가지 방식으로 출입 권한을 설정할 수 있습니다.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+<Cmd sid='common.advanced' product='2' /> 섹션에서 설정할 수 있는 항목은 아래와 같습니다.
+
+<Image src='/img/biostarx-user-advanced.png' />
+
+
+* <Cmd sid='common.privateMessage' product='2' />: 사용자 출입 시 장치에 표시할 메시지를 입력할 수 있습니다. 메시지는 최대 128자까지 입력할 수 있습니다.
+
+* <Cmd sid='user.adsync.exclude' product='2' />: 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다.
+
+:::info
+
+* <Cmd sid='user.adsync.exclude' product='2' /> 옵션은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+
+* 디렉토리 연동 설정에 대한 자세한 내용은 [다음 문서](settings-diretory-integration)를 참고하세요.
+
+:::
+
+<NextStep>
+<NextItem to='edit-user'>
+
+사용자 정보를 수정하는 방법을 확인하세요.
+
+</NextItem>
+</NextStep>

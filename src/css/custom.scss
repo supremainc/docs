@@ -330,6 +330,16 @@ footer {
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
+  h1, h2, h3, h4, h5, h6 {
+    span.cmd {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    span.cmd.normal {
+      font-weight: inherit;
+      color: inherit;
+    }
+  }
   h1 { font-size: var(--ifm-h1-font-size); }
   h2 { 
     --ifm-h2-font-size: 1.8rem;
@@ -353,9 +363,6 @@ footer {
     --ifm-h4-font-size: 1.3rem;
     font-size: var(--ifm-h4-font-size);
     font-weight: 500;
-    .cmd {
-      font-size: inherit;
-    }
   }
   h5 { 
     --ifm-h5-font-size: 1.1rem;
