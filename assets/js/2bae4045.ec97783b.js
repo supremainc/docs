@@ -221,7 +221,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"PIN 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-pin"},"next":{"title":"사용자 탐색하기","permalink":"/docs/platform/biostar_x/view-users"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"PIN 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-pin"},"next":{"title":"사용자 고급 설정하기","permalink":"/docs/platform/biostar_x/set-user-advanced"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -385,13 +385,21 @@ function _createMdxContent(props) {
           children: "다음 문서"
         }), "를 참고하세요."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
-      children: (0,jsx_runtime.jsx)(NextItem, {
+    }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
+      children: [(0,jsx_runtime.jsx)(NextItem, {
+        to: "set-user-advanced",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.advanced",
+            product: "2"
+          }), " 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
         to: "edit-user",
         children: (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자 정보를 수정하는 방법을 확인하세요."
         })
-      })
+      })]
     })]
   });
 }

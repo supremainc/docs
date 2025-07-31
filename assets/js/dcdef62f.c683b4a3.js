@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3395"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3957"], {
 3449: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -68,7 +68,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-4945: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+3631: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -77,28 +77,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_set_user_advanced_mdx_dcd_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-enroll-credential-mdx-df1.json
-var site_docs_platform_biostar_x_enroll_credential_mdx_df1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential","permalink":"/docs/platform/biostar_x/enroll-credential","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential","title":"사용자 크리덴셜 등록하기","description":"지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.","keywords":["크리덴셜"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 기본 정보 입력하기","permalink":"/docs/platform/biostar_x/add-user-basic-info"},"next":{"title":"보안 수준 설정하기","permalink":"/docs/platform/biostar_x/enroll-credential-securitylevel"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-user-advanced-mdx-dcd.json
+var site_docs_platform_biostar_x_set_user_advanced_mdx_dcd_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-user-advanced","title":"사용자 고급 설정하기","description":"사용자 출입 시 장치에 표시할 메시지를 설정하는 방법 및 디렉토리 연동 제외 기능을 안내합니다.","source":"@site/docs/platform/biostar_x/set-user-advanced.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-user-advanced","permalink":"/docs/platform/biostar_x/set-user-advanced","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-user-advanced.mdx","tags":[],"version":"current","frontMatter":{"id":"set-user-advanced","title":"사용자 고급 설정하기","description":"사용자 출입 시 장치에 표시할 메시지를 설정하는 방법 및 디렉토리 연동 제외 기능을 안내합니다.","keywords":["사용자","고급 설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"사용자 권한 설정하기","permalink":"/docs/platform/biostar_x/set-permission"},"next":{"title":"사용자 탐색하기","permalink":"/docs/platform/biostar_x/view-users"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 // EXTERNAL MODULE: ./docs/common/_enter-user-page.mdx
 var _enter_user_page = __webpack_require__(3449);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/enroll-credential.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/set-user-advanced.mdx
 
 
 const frontMatter = {
-	id: 'enroll-credential',
-	title: '사용자 크리덴셜 등록하기',
-	description: '지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다.',
+	id: 'set-user-advanced',
+	title: '사용자 고급 설정하기',
+	description: '사용자 출입 시 장치에 표시할 메시지를 설정하는 방법 및 디렉토리 연동 제외 기능을 안내합니다.',
 	keywords: [
-		'크리덴셜'
+		'사용자',
+		'고급 설정'
 	],
 	isTranslationMissing: false
 };
@@ -111,68 +112,85 @@ const assets = {
 
 
 
-const toc = [..._enter_user_page/* toc */.d$, {
-  "value": "크리덴셜 등록하기",
-  "id": "enroll-credential",
-  "level": 2
-}];
+const toc = [..._enter_user_page/* toc */.d$];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
-    h2: "h2",
+    li: "li",
     p: "p",
+    strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Glossary, Image, NextItem, NextStep, Overview} = _components;
+  }, {Cmd, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!Glossary) _missingMdxReference("Glossary", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
-  if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 크리덴셜을 등록하는 방법을 안내합니다. 사용자의 지문 및 얼굴, 카드 정보, 비밀번호 등을 크리덴셜로 등록할 수 있습니다. 크리덴셜은 사용자를 새로 등록하거나 수정할 때 추가 또는 변경할 수 있습니다."
+      children: "사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다. 이 기능은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.user"
-      }), " 페이지로 이동해, 아래 두 가지 방식으로 크리덴셜을 등록하거나 추가, 변경할 수 있습니다."]
+      }), " 페이지로 이동해, 아래 두 가지 방식으로 출입 권한을 설정할 수 있습니다."]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_enter_user_page/* default */.ZP, {}), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.credential.title"
-      }), " 섹션에서 설정할 수 있는 항목은 아래와 같습니다. 각 항목에 대한 설명을 참고하여 적절한 사용자 권한을 설정하세요."]
+        sid: "common.advanced",
+        product: "2"
+      }), " 섹션에서 설정할 수 있는 항목은 아래와 같습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-new-user-credential.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "team.user.credential.securityLevel.title"
-        }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
-      }), (0,jsx_runtime.jsx)(Glossary, {
-        termid: "credential"
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "enroll-credential",
-      children: "크리덴셜 등록하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 크리덴셜을 등록하는 방법은 아래와 같습니다. 크리덴셜은 지문, 얼굴, 카드, 비밀번호 등 다양한 형태로 등록할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(Overview, {}), "\n", (0,jsx_runtime.jsxs)(NextStep, {
-      children: [(0,jsx_runtime.jsx)(NextItem, {
-        to: "set-permission",
-        children: (0,jsx_runtime.jsxs)(_components.p, {
+      src: "/img/biostarx-user-advanced.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.permission.title"
-          }), " 섹션에서 사용자의 출입 권한 설정 방법을 확인하세요."]
-        })
-      }), (0,jsx_runtime.jsx)(NextItem, {
+            sid: "common.privateMessage",
+            product: "2"
+          }), ": 사용자 출입 시 장치에 표시할 메시지를 입력할 수 있습니다. 메시지는 최대 128자까지 입력할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.adsync.exclude",
+            product: "2"
+          }), ": 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "user.adsync.exclude",
+              product: "2"
+            }), " 옵션은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["디렉토리 연동 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-diretory-integration",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
         to: "edit-user",
         children: (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자 정보를 수정하는 방법을 확인하세요."
         })
-      })]
+      })
     })]
   });
 }

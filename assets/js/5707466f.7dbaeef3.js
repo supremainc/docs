@@ -108,7 +108,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.advanced",
             product: "2"
-          }), " 섹션에서 사용자와 관련한 개인 메시지를 입력하세요."]
+          }), " 섹션에서 사용자가 출입 시 장치에 표시할 메시지를 입력할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -142,6 +142,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.permission.title"
           }), " 섹션에서 사용자의 출입 권한 설정 방법을 확인하세요."]
+        })
+      }), (0,jsx_runtime.jsx)(NextItem, {
+        to: "set-user-advanced",
+        children: (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.advanced",
+            product: "2"
+          }), " 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
         })
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
