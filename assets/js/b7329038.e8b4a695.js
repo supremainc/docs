@@ -60,6 +60,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    blockquote: "blockquote",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -201,6 +202,15 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "다중 인증 설정을 완료합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "비밀번호는 연속되는 문자, 키보드 문자 혹은 숫자를 입력할 수 없습니다."
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "예, abcd, qwerty, 0123456"
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multi-factor-authentication-batch-set",
       children: "다중 인증 일괄 설정"

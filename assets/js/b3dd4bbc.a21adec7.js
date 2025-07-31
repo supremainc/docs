@@ -184,7 +184,7 @@ function enroll_credential_mobile_createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
@@ -248,7 +248,7 @@ function enroll_credential_mobile_createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
@@ -368,7 +368,7 @@ function enroll_credential_mobile_createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]

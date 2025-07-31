@@ -133,6 +133,8 @@ function _createMdxContent(props) {
             sid: "button.scan",
             product: "2"
           }), ": 추가한 지문 번호를 선택하고 버튼을 클릭하세요. 지문 스캐너나 장치 센서에 손가락을 대고 지문을 스캔하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-new-user-credential-finger-nth.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

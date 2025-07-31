@@ -118,9 +118,12 @@ const toc = [..._enter_user_page/* toc */.d$, {
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
+    li: "li",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, Glossary, Image, NextItem, NextStep, Overview} = _components;
@@ -145,15 +148,25 @@ function _createMdxContent(props) {
       }), " 섹션에서 설정할 수 있는 항목은 아래와 같습니다. 각 항목에 대한 설명을 참고하여 적절한 사용자 권한을 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-new-user-credential.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "team.user.credential.securityLevel.title"
-        }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
-      }), (0,jsx_runtime.jsx)(Glossary, {
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["크리덴셜을 등록하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "team.user.credential.securityLevel.title"
+      }), " 항목에서 적절한 보안 등급을 설정하세요. 보안 등급이 높을수록 인증률이 낮거나 본인 거부율(FRR)이 높을 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsx)(Glossary, {
         termid: "credential"
-      })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["모바일 출입 카드는 에어팝 포털과 연동해야 사용할 수 있습니다. 에어팝 포털 연동 및 모바일 출입 카드 사용에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-credential-mobile-access-card",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "enroll-credential",
       children: "크리덴셜 등록하기"

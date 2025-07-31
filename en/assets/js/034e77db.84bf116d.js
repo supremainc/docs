@@ -112,7 +112,7 @@ function _createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " section, click the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " button."]
         }), "\n"]
@@ -197,7 +197,7 @@ function _createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " section, click the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " button."]
         }), "\n"]
@@ -336,7 +336,7 @@ function _createMdxContent(props) {
             sid: "common.credential",
             product: "2"
           }), " section, click the ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addMobile",
+            sid: "common.mobileCredential",
             product: "2"
           }), " button."]
         }), "\n"]

@@ -374,17 +374,26 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "비주얼 페이스 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요."
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "team.userTemplate.table.customField"
-            }), " 추가 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-server#custom-field",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
         }), "\n"]
       })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "tip",
+      children: [(0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "에서 제공하는 기본 입력 필드 외에 추가 사용자 정보를 입력하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.userTemplate.table.customField"
+        }), " 기능을 사용해 맞춤형 필드를 추가할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.userTemplate.table.customField"
+        }), "는 조직의 요구 사항에 맞게 사용자 정보를 확장할 수 있는 유용한 기능입니다."]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.userTemplate.table.customField"
+        }), " 추가 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-server-server#custom-field",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })]
     }), "\n", (0,jsx_runtime.jsxs)(NextStep, {
       children: [(0,jsx_runtime.jsx)(NextItem, {
         to: "enroll-credential",
