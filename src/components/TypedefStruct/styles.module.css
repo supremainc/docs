@@ -110,7 +110,7 @@
 .hierarchyContainer {
   background: var(--ifm-color-emphasis-50);
   border-radius: 6px;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 
 .hierarchyLevel {
@@ -525,6 +525,7 @@
 
 .constantsTable tbody td:nth-of-type(2) {
   width: 30%;
+  text-align: center;
 }
 
 .constantsTable tbody td:nth-of-type(3) {
@@ -540,7 +541,6 @@
   font-weight: 600;
   color: var(--ifm-color-primary);
   background: var(--ifm-code-background);
-  padding: 0.3rem 0.5rem !important;
   border-radius: 3px;
   white-space: nowrap;
 }
@@ -548,7 +548,6 @@
 .constantNote {
   font-size: 0.85rem;
   color: var(--ifm-color-content-secondary);
-  font-style: italic;
 }
 
 .notesList {

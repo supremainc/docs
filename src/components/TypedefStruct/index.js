@@ -113,7 +113,7 @@ const TypedefStruct = ({
       )}
 
       {/* 메모리 레이아웃 */}
-      {fields.length > 0 && (
+      {/* {fields.length > 0 && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
             <h4>메모리 레이아웃</h4>
@@ -133,7 +133,7 @@ const TypedefStruct = ({
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* 필드 상세 */}
       {fields.length > 0 && (

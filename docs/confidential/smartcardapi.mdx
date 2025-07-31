@@ -486,7 +486,7 @@ classDiagram
       offset: 4,
       description: "카드 유형의 코드 값입니다.",
       constants: [
-        { value: "0x00", description: "알려지지 않은 카드" },
+        { value: "0x00", description: "알려지지 않음" },
         { value: "0x01", description: "CSN 카드" },
         { value: "0x02", description: "Secure 카드" },
         { value: "0x03", description: "Access 카드" },
@@ -737,3 +737,46 @@ classDiagram
     { name: "BS2SmartCardData", type: "struct", description: "스마트카드 데이터 구조체" }
   ]}
 />
+
+
+## CRC 계산 및 검증
+
+스마트카드 데이터의 무결성을 보장하기 위해 헤더와 카드 데이터에 각각 CRC-16 CCITT 체크섬(`hdrCRC`, `cardCRC`)을 사용합니다.
+
+### hdrCRC, cardCRC란?
+
+- `hdrCRC`: `BS2SmartCardHeader`의 `cardCRC`부터 `reserved`까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0x0000)로 계산한 값입니다.
+- `cardCRC`: `cardType`부터 `BS2SmartCardData.accessOnData`까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT로 계산한 값입니다.
+
+### CRC 계산 방법
+
+SDK에서는 **BS2_ComputeCRC16CCITT** 함수를 제공합니다. 아래는 사용 예시입니다.
+
+```c
+// 헤더 체크섬 계산 (hdrCRC)
+uint16_t hdrCRC = BS2_ComputeCRC16CCITT((uint8_t*)&header.cardCRC, sizeof(BS2SmartCardHeader) - 2);
+
+// 카드 데이터 체크섬 계산 (cardCRC)
+uint16_t cardCRC = BS2_ComputeCRC16CCITT((uint8_t*)&header.cardType, cardDataLength);
+```
+
+:::note
+
+`cardDataLength`는 `cardType` \~ `accessOnData`까지의 실제 길이로 설정해야 합니다.
+
+:::
+
+
+### 검증 방법
+
+카드 데이터 읽기 시, 저장된 hdrCRC와 cardCRC 값을 각각 위와 동일한 방식으로 재계산하여 일치하는지 비교하세요.
+
+> CRC-16 CCITT는 0x1021 다항식, 초기값 0x0000, 입력 데이터는 바이트 단위 Little Endian입니다.
+
+:::info
+
+* CRC 계산 범위가 정확히 일치해야 하며, 구조체 패딩이나 정렬에 주의하세요.
+
+* BS2_ComputeCRC16CCITT 함수는 BioStar 2 SDK에서 제공됩니다.
+
+:::
