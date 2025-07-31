@@ -18,6 +18,8 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.18.1",
     "@algolia/autocomplete-theme-classic": "^1.18.1",
+    "@azure/msal-browser": "^4.18.0",
+    "@azure/msal-react": "^3.0.16",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/faster": "^3.8.1",
     "@docusaurus/logger": "^3.8.1",
@@ -58,6 +60,7 @@
     "fs-extra": "^11.2.0",
     "gray-matter": "^4.0.3",
     "hanspell": "^0.9.7",
+    "image-size": "^2.0.2",
     "jiti": "^2.2.1",
     "md5": "^2.3.0",
     "node-fetch": "^3.3.2",
@@ -68,8 +71,7 @@
     "string_decoder": "^1.3.0",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
-    "xml2js": "^0.6.2",
-    "image-size": "^2.0.2"
+    "xml2js": "^0.6.2"
   },
   "browserslist": {
     "production": [
