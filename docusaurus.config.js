@@ -72,6 +72,7 @@ const config = {
   },
   themes: [
     '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-mermaid'
   ],
   presets: [
     [
@@ -114,6 +115,7 @@ const config = {
     [ 'docusaurus-plugin-image-zoom', {}]
   ],
   markdown: {
+    mermaid: true,
     parseFrontMatter: async (params) => {
       // Reuse the default parser
       const result = await params.defaultParseFrontMatter(params);
