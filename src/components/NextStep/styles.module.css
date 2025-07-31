@@ -11,23 +11,28 @@
 }
 
 .nextStepContent {
+  position: relative;
   display: block;
   border: 1px solid var(--ifm-color-border);
   border-bottom: 1px solid var(--ifm-color-border) !important;
-  padding: 1rem;
+  padding: 1rem 3.5rem 1rem 1rem;
   align-items: center;
   text-decoration: none !important;
 }
 
-.nextStepContent p::after {
+.nextStepContent::after {
+  position: absolute;
+  right: 1rem;
   content: "→";
-  float: right;
   border: 1px solid var(--ifm-color-border);
   border-radius: 100%;
   width: 28px;
   height: 28px;
   text-align: center;
   color: var(--ifm-color-border);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 
 .nextStepContent + .nextStepContent {
