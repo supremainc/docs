@@ -21,7 +21,7 @@ var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(65);
 ;// CONCATENATED MODULE: ./docs/how-to/faqs.json
-var faqs_namespaceObject = JSON.parse('[{"question":"마스터 관리자를 등록하지 않으면 어떻게 되나요?","answer":"마스터 관리자가 등록되지 않은 신규 장치는 인증 또는 설정 변경이 불가능합니다. 단, 장치를 BioStar에 연결하여 마스터 관리자를 등록할 수 있습니다."},{"question":"기존 장치에서 펌웨어 업그레이드한 장치에서 마스터 관리자 설정이 지원되나요?","answer":"아니요. 기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. 단, 관리자 2단계 인증 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. 자세한 내용은 <a href=\'#admin-two-step-authentication\'>관리자 2단계 인증 옵션</a>를 참조하세요."},{"question":"슬레이브 장치에서도 마스터 관리자를 등록할 수 있나요?","answer":"네. 슬레이브 장치에서도 마스터 관리자를 등록할 수 있습니다."}]')
+var faqs_namespaceObject = JSON.parse('[{"question":"마스터 관리자를 등록하지 않으면 어떻게 되나요?","answer":"마스터 관리자가 등록되지 않은 신규 장치는 인증 또는 설정 변경이 불가능합니다. 단, 장치를 BioStar에 연결하여 마스터 관리자를 등록할 수 있습니다."},{"question":"기존 장치에서 펌웨어 업그레이드한 장치에서 마스터 관리자 설정이 지원되나요?","answer":"아니요. 기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. 단, 관리자 2단계 인증 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. 자세한 내용은 <a href=\'#admin-two-step-authentication\'>관리자 2단계 인증 옵션</a>을 참조하세요."},{"question":"슬레이브 장치에서도 마스터 관리자를 등록할 수 있나요?","answer":"네. 슬레이브 장치에서도 마스터 관리자를 등록할 수 있습니다."}]')
 ;// CONCATENATED MODULE: ./docs/how-to/master-admin.mdx
 
 

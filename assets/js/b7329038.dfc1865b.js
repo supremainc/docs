@@ -205,7 +205,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "비밀번호는 연속되는 문자, 키보드 문자 혹은 숫자를 입력할 수 없습니다."
+        children: "비밀번호는 연속되는 문자, 키보드 문자 또는 숫자를 입력할 수 없습니다."
       }), (0,jsx_runtime.jsxs)(_components.blockquote, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "예, abcd, qwerty, 0123456"

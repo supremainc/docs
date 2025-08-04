@@ -75,9 +75,11 @@ function _createMdxContent(props) {
     tr: "tr",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcArm, IcDisarm, IcDoorClose, IcDoorOpen, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image, StatusFail, StatusOK} = _components;
+  }, {Cmd, IcArm, IcCamFail, IcCamOk, IcDisarm, IcDoorClose, IcDoorOpen, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcArm) _missingMdxReference("IcArm", true);
+  if (!IcCamFail) _missingMdxReference("IcCamFail", true);
+  if (!IcCamOk) _missingMdxReference("IcCamOk", true);
   if (!IcDisarm) _missingMdxReference("IcDisarm", true);
   if (!IcDoorClose) _missingMdxReference("IcDoorClose", true);
   if (!IcDoorOpen) _missingMdxReference("IcDoorOpen", true);
@@ -86,8 +88,6 @@ function _createMdxContent(props) {
   if (!IcRelayLock) _missingMdxReference("IcRelayLock", true);
   if (!IcRelayUnlock) _missingMdxReference("IcRelayUnlock", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!StatusFail) _missingMdxReference("StatusFail", true);
-  if (!StatusOK) _missingMdxReference("StatusOK", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입문 및 관련 장비의 상태를 정확하게 파악하는 것은 보안 시스템의 핵심입니다. 이 문서에서는 장치의 상태를 확인하는 방법과 오류 발생 시 대처 방안을 안내합니다. 안내된 아이콘과 상세 설명을 통해 관리자들이 각각 장치의 작동 상태를 한눈에 파악하고, 문제 발생 시 신속하게 대응할 수 있도록 돕습니다."
@@ -284,7 +284,10 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: (0,jsx_runtime.jsx)(StatusOK, {})
+              children: (0,jsx_runtime.jsx)(IcCamOk, {
+                width: "auto",
+                height: "35px"
+              })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "카메라가 연결된 상태입니다."
             })]
@@ -293,7 +296,10 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: (0,jsx_runtime.jsx)(StatusFail, {})
+              children: (0,jsx_runtime.jsx)(IcCamFail, {
+                width: "auto",
+                height: "35px"
+              })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "카메라가 꺼져 있거나 연결이 해제된 상태입니다."
             })]
