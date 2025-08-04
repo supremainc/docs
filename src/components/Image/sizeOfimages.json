@@ -275,6 +275,10 @@
     "width": 499,
     "height": 392
   },
+  "/img/biostarx-install-select-ip.png": {
+    "width": 499,
+    "height": 392
+  },
   "/img/biostarx-install-select-language.png": {
     "width": 299,
     "height": 172
@@ -374,6 +378,10 @@
   "/img/biostarx-new-user-credential-face.png": {
     "width": 600,
     "height": 473
+  },
+  "/img/biostarx-new-user-credential-finger-nth.png": {
+    "width": 600,
+    "height": 201
   },
   "/img/biostarx-new-user-credential-finger.png": {
     "width": 600,
@@ -1071,6 +1079,10 @@
     "width": 400,
     "height": 476
   },
+  "/img/biostarx-user-advanced.png": {
+    "width": 800,
+    "height": 172
+  },
   "/img/biostarx-user-group-add.png": {
     "width": 400,
     "height": 242
@@ -1679,6 +1691,10 @@
     "width": 499,
     "height": 392
   },
+  "/img/en/biostarx-install-select-ip.png": {
+    "width": 499,
+    "height": 392
+  },
   "/img/en/biostarx-install-select-language.png": {
     "width": 299,
     "height": 172
@@ -1778,6 +1794,10 @@
   "/img/en/biostarx-new-user-credential-face.png": {
     "width": 600,
     "height": 473
+  },
+  "/img/en/biostarx-new-user-credential-finger-nth.png": {
+    "width": 600,
+    "height": 199
   },
   "/img/en/biostarx-new-user-credential-finger.png": {
     "width": 600,
@@ -2395,6 +2415,10 @@
     "width": 400,
     "height": 476
   },
+  "/img/en/biostarx-user-advanced.png": {
+    "width": 800,
+    "height": 184
+  },
   "/img/en/biostarx-user-group-add.png": {
     "width": 400,
     "height": 242
@@ -2676,12 +2700,12 @@
     "height": 415
   },
   "/img/en/monitoring-door-status-tooltip-device.png": {
-    "width": 240,
-    "height": 109
+    "width": 430,
+    "height": 236
   },
   "/img/en/monitoring-door-status-tooltip.png": {
-    "width": 384,
-    "height": 64
+    "width": 430,
+    "height": 174
   },
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
@@ -2856,12 +2880,12 @@
     "height": 364
   },
   "/img/monitoring-door-status-tooltip-device.png": {
-    "width": 300,
-    "height": 63
+    "width": 400,
+    "height": 236
   },
   "/img/monitoring-door-status-tooltip.png": {
     "width": 400,
-    "height": 73
+    "height": 183
   },
   "/img/monitoring-map-floor-control-door.png": {
     "width": 800,
