@@ -98,6 +98,8 @@ import IcFremove from '@site/static/img/menus/ico-floor-remove.svg';
 import IcCamrot from '@site/static/img/menus/ico-camera-rotation.svg';
 import IcDorder from '@site/static/img/menus/ico-dorder.svg';
 import IcCurP from '@site/static/img/menus/ico-cur-position.svg';
+import IcCamFail from '@site/static/img/menus/ico-camera-fail.svg';
+import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -169,5 +171,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk
 }
