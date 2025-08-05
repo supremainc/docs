@@ -614,18 +614,14 @@ SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이�
 [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php)에서는 **BS2_ComputeCRC16CCITT** 함수를 제공합니다. 아래는 사용 예시입니다.
 
 ```csharp
-// 카드 데이터 체크섬 계산 (cardCRC)
+// Calculate card data checksum (cardCRC)
 uint16_t cardCRC = 0xFFFF;
-int result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, 
-                                   sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), 
-                                   &cardCRC);
+int result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);
 
-// 헤더 체크섬 계산 (hdrCRC)
-card.header.cardCRC = cardCRC;  // cardCRC 값을 먼저 설정
+// Calculate header checksum (hdrCRC)
+card.header.cardCRC = cardCRC;  // Set the cardCRC value first
 uint16_t hdrCRC = 0xFFFF;
-result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, 
-                               sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), 
-                               &hdrCRC);
+result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);
 ```
 
 :::note
@@ -648,28 +644,24 @@ result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC,
 1. 저장된 CRC 값과 계산된 CRC 값 비교
 
 ```csharp
-// CRC 검증 예시
-BS2SmartCardData readCard;  // 카드에서 읽은 데이터
+// CRC validation example
+BS2SmartCardData readCard;  // Data read from card
 
-// 1. cardCRC 검증
+// 1. cardCRC validation
 uint16_t calculatedCardCRC = 0xFFFF;
-BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, 
-                      sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), 
-                      &calculatedCardCRC);
+BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);
 
 if (readCard.header.cardCRC != calculatedCardCRC) {
-    // 카드 데이터 손상
+    // Card data corruption
     return ERROR_CARD_DATA_CORRUPTED;
 }
 
-// 2. hdrCRC 검증  
+// 2. hdrCRC validation
 uint16_t calculatedHdrCRC = 0xFFFF;
-BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, 
-                      sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), 
-                      &calculatedHdrCRC);
+BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);
 
 if (readCard.header.hdrCRC != calculatedHdrCRC) {
-    // 헤더 데이터 손상
+    // Header data corruption
     return ERROR_HEADER_DATA_CORRUPTED;
 }
 ```
