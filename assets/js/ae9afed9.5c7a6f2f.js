@@ -613,9 +613,6 @@ function _createMdxContent(props) {
               sid: "audit.user.faces",
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.user.visual_faces",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.cards",
               product: "2"
             })]
@@ -712,11 +709,9 @@ function _createMdxContent(props) {
               sid: "audit.user.delete.absence",
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.user.migration_visualface",
-              product: "2"
+              sid: "team.menu.faceMigration"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.user.visualface_import",
-              product: "2"
+              sid: "user.list.visualFaceImport.title"
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
