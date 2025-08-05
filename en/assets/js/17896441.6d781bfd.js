@@ -445,6 +445,7 @@ function DocItemContent(param) {
     let { children } = param;
     const { frontMatter } = (0,doc/* useDoc */.k)();
     const syntheticTitle = useSyntheticTitle();
+    const headingClassName = frontMatter.heading_className || null;
     const location = (0,react_router/* useLocation */.TH)();
     (0,react.useEffect)(()=>{
         if (location.hash) {
@@ -469,6 +470,7 @@ function DocItemContent(param) {
             syntheticTitle && /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
                 children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                     as: "h1",
+                    className: headingClassName,
                     children: syntheticTitle
                 })
             }),

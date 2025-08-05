@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-mdx-cc0.json
-var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"Smartcard API","description":"BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/en/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"Smartcard API","toc_max_heading_level":3,"isTranslationMissing":true}}')
+var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"Smartcard API","description":"BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"Smartcard API","toc_max_heading_level":3,"heading_className":"confidential","isTranslationMissing":false}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -428,7 +428,8 @@ const frontMatter = {
 	id: 'smartcardapi',
 	title: 'Smartcard API',
 	toc_max_heading_level: 3,
-	isTranslationMissing: true
+	heading_className: 'confidential',
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
