@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
+import CodeBlock from '@theme/CodeBlock';
+import Heading from '@theme/Heading';
+import Admonition from '@theme/Admonition';
 
 const TypedefStruct = ({ 
   name, 
@@ -12,20 +15,19 @@ const TypedefStruct = ({
   usedBy = [],
   size,
   category,
-  version,
   hierarchy = [],
   linkPrefix = "#"
 }) => {
   const renderHierarchy = (items, level = 0) => {
     return (
-      <div className={`${styles.hierarchyLevel} ${level > 0 ? styles.nestedLevel : ''}`}>
+      <div className={`${styles.hierarchyLevel} ${level > 0 ? styles.nestedLevel : styles.nestedLeveltop}`}>
         {items.map((item, index) => (
-          <div key={index} className={styles.hierarchyItem}>
-            <div className={styles.hierarchyNode}>
+          <ul key={index} className={styles.hierarchyItem}>
+            <li className={styles.hierarchyNode}>
               <div className={styles.nodeHeader}>
-                <span className={styles.hierarchyName}>{item.name}</span>
+                <span className={styles.hierarchyName}><a href={`#${item.name.toLowerCase()}`}>{item.name}</a></span>
                 {item.type && <span className={styles.hierarchyType}>{item.type}</span>}
-                {item.size && <span className={styles.hierarchySize}>{item.size} bytes</span>}
+                {item.size && <span className={styles.hierarchySize}>{item.size} {item.size > 1 ? "bytes" : "byte"}</span>}
               </div>
               {item.description && <div className={styles.hierarchyDesc}>{item.description}</div>}
               
@@ -43,7 +45,7 @@ const TypedefStruct = ({
                   ))}
                 </div>
               )}
-            </div>
+            </li>
             
             {/* 연결선과 하위 계층 */}
             {item.children && item.children.length > 0 && (
@@ -51,7 +53,7 @@ const TypedefStruct = ({
                 {renderHierarchy(item.children, level + 1)}
               </div>
             )}
-          </div>
+          </ul>
         ))}
       </div>
     );
@@ -73,29 +75,36 @@ const TypedefStruct = ({
       {/* 구조체 헤더 */}
       <div className={styles.header}>
         <div className={styles.titleRow}>
-          <h4 className={styles.structName} id={name.toLowerCase()}>
-            {name}
-          </h4>
+          <Heading as='h3' id={name.toLowerCase()}>{name}</Heading>
           <div className={styles.metadata}>
             {category && <span className={styles.category}>{category}</span>}
-            {size && <span className={styles.size}>{size} bytes</span>}
-            {version && <span className={styles.version}>v{version}</span>}
+            {size && <span className={styles.size}>{size} {size > 1 ? "bytes" : "byte"}</span>}
           </div>
         </div>
         {description && <p className={styles.description}>{description}</p>}
+        {/* 참고사항 */}
+        {/* {notes.length > 0 && (
+          <div className={styles.section}>
+            <Admonition type="info">
+              <ul>
+                {notes.map((note, index) => (
+                  <li key={index}>
+                    <p dangerouslySetInnerHTML={{ __html: note }} />
+                  </li>
+                ))}
+              </ul>
+            </Admonition>
+          </div>
+        )} */}
       </div>
 
       {/* 구조체 정의 */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h4>구조체 정의</h4>
+          <Heading as='h4'>구조체 정의</Heading>
         </div>
         {code && (
-          <div className={styles.codeBlock}>
-            <pre>
-              <code>{code}</code>
-            </pre>
-          </div>
+          <CodeBlock language='c'>{code}</CodeBlock>
         )}
       </div>
 
@@ -103,8 +112,7 @@ const TypedefStruct = ({
       {hierarchy.length > 0 && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h4>구조 계층</h4>
-            <span className={styles.sectionSubtitle}>데이터 구조의 논리적 관계</span>
+            <Heading as='h4'>구조 계층</Heading>
           </div>
           <div className={styles.hierarchyContainer}>
             {renderHierarchy(hierarchy)}
@@ -112,65 +120,40 @@ const TypedefStruct = ({
         </div>
       )}
 
-      {/* 메모리 레이아웃 */}
-      {/* {fields.length > 0 && (
-        <div className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <h4>메모리 레이아웃</h4>
-            <span className={styles.sectionSubtitle}>{fields.length}개 필드</span>
-          </div>
-          <div className={styles.memoryBlocks}>
-            {fields.map((field, index) => (
-              <div key={index} className={styles.memoryBlock}>
-                <div className={styles.memoryBlockHeader}>
-                  <span className={styles.memoryOffset}>+{field.offset || (index * 4)}</span>
-                  <span className={styles.memoryFieldName}>{field.name}</span>
-                  <span className={styles.memoryType}>{field.type}</span>
-                  {field.size && <span className={styles.memorySize}>{field.size}B</span>}
-                </div>
-                {field.description && <div className={styles.memoryDesc}>{field.description}</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      )} */}
-
       {/* 필드 상세 */}
       {fields.length > 0 && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h4>필드 상세</h4>
+            <Heading as='h4'>필드 상세</Heading>
           </div>
           <div className={styles.fieldsList}>
             {fields.map((field, index) => (
               <div key={index} className={styles.field}>
                 <div className={styles.fieldHeader}>
                   <span className={styles.fieldNumber}>{index + 1}</span>
-                  <span className={styles.fieldName}>{field.name}</span>
+                  <span className={styles.fieldName} id={field.name.toLowerCase()}>{field.name}</span>
                   <span className={styles.fieldType}>{field.type}</span>
-                  {field.size && <span className={styles.fieldSize}>{field.size}B</span>}
+                  {field.size && <span className={styles.fieldSize}>{field.size} {field.size > 1 ? "bytes" : "byte"}</span>}
                   {field.range && <span className={styles.fieldRange}>{field.range}</span>}
                 </div>
-                <p className={styles.fieldDescription}>{field.description}</p>
-                
+                <p className={styles.fieldDescription} dangerouslySetInnerHTML={{ __html: field.description }} />
+
                 {/* 필드별 상수 테이블 */}
                 {field.constants && field.constants.length > 0 && (
                   <div className={styles.fieldConstants}>
-                    <h6>가능한 값</h6>
+                    <Heading as='h6'>가능한 값</Heading>
                     <table className={styles.constantsTable}>
                       <thead>
                         <tr>
                           <th>값</th>
                           <th>설명</th>
-                          <th>사용된 형식</th>
                         </tr>
                       </thead>
                       <tbody>
                         {field.constants.map((constant, constIndex) => (
                           <tr key={constIndex}>
                             <td className={styles.constantValue}>{constant.value}</td>
-                            <td>{constant.description}</td>
-                            <td className={styles.constantNote}>{constant.note && constant.note}</td>
+                            <td><p dangerouslySetInnerHTML={{ __html: constant.description }} /></td>
                           </tr>
                         ))}
                       </tbody>
@@ -199,15 +182,15 @@ const TypedefStruct = ({
       {constants.length > 0 && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h4>상수 정의</h4>
+            <Heading as='h4'>상수 정의</Heading>
             <span className={styles.sectionSubtitle}>{constants.length}개 상수</span>
           </div>
-          <table className={styles.constantsTable}>
+          <table className={styles.variantsTable}>
             <thead>
               <tr>
                 <th>값</th>
                 <th>설명</th>
-                {constants[0].note && <th>비고</th>}
+                <th>비고</th>
               </tr>
             </thead>
             <tbody>
@@ -215,7 +198,7 @@ const TypedefStruct = ({
                 <tr key={index}>
                   <td className={styles.constantValue}>{constant.value}</td>
                   <td>{constant.description}</td>
-                  {constant.note && <td className={styles.constantNote}>{constant.note}</td>}
+                  <td>{constant.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -227,12 +210,12 @@ const TypedefStruct = ({
       {(dependencies.length > 0 || usedBy.length > 0) && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h4>의존성 관계</h4>
+            <Heading as='h4'>의존성 관계</Heading>
           </div>
           
           {dependencies.length > 0 && (
             <div className={styles.dependencyGroup}>
-              <h5>이 구조체가 의존하는 타입</h5>
+              <Heading as='h5'>이 구조체가 의존하는 타입</Heading>
               <div className={styles.dependencyList}>
                 {dependencies.map((dep, index) => (
                   <div key={index} className={styles.dependency}>
@@ -249,7 +232,7 @@ const TypedefStruct = ({
 
           {usedBy.length > 0 && (
             <div className={styles.dependencyGroup}>
-              <h5>이 구조체를 사용하는 타입</h5>
+              <Heading as='h5'>이 구조체를 사용하는 타입</Heading>
               <div className={styles.dependencyList}>
                 {usedBy.map((use, index) => (
                   <div key={index} className={styles.dependency}>
@@ -263,22 +246,6 @@ const TypedefStruct = ({
               </div>
             </div>
           )}
-        </div>
-      )}
-
-      {/* 참고사항 */}
-      {notes.length > 0 && (
-        <div className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <h4>참고사항</h4>
-          </div>
-          <ul className={styles.notesList}>
-            {notes.map((note, index) => (
-              <li key={index} className={styles.note}>
-                <div dangerouslySetInnerHTML={{ __html: note }} />
-              </li>
-            ))}
-          </ul>
         </div>
       )}
     </div>

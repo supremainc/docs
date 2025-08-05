@@ -1,39 +1,27 @@
 .typedefContainer {
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  background: var(--ifm-background-color);
   overflow: hidden;
   margin: 1.5rem 0;
 }
 
-.header {
-  padding: 1.5rem;
-  background: var(--ifm-color-emphasis-50);
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-}
-
 .titleRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
-.structName {
-  color: var(--ifm-color-primary);
-  font-family: var(--ifm-font-family-monospace);
-  font-size: 1.5rem;
-  margin: 0;
-  font-weight: 600;
+.titleRow h3 {
+  position: relative;
+  display: inline-block;
 }
 
 .metadata {
-  display: flex;
-  gap: 0.5rem;
+  display: inline-block;
+  position: relative;
+  top: -0.25rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.metadata span {
+  margin-left: 0.5rem;
 }
 
 .category,
@@ -70,8 +58,8 @@
 
 /* 섹션 스타일 */
 .section {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  margin: 1.5rem 0;
+  /* border-bottom: 1px solid var(--ifm-color-emphasis-100); */
 }
 
 .section:last-child {
@@ -82,15 +70,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.sectionHeader h4,
-.sectionHeader h5 {
-  color: var(--ifm-color-primary);
-  font-size: 1.2rem;
-  margin: 0;
-  font-weight: 600;
 }
 
 .sectionHeader h5 {
@@ -118,26 +97,71 @@
 }
 
 .nestedLevel {
-  margin-left: 2rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--ifm-color-primary-light);
+
 }
 
-.hierarchyItem {
+ul.hierarchyItem {
   margin-bottom: 1rem;
   position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  --item-gap: 3.5rem;
+}
+
+.nestedLeveltop > ul.hierarchyItem > li:first-of-type::before {
+  border: none;
+}
+
+ul.hierarchyItem ul {
+  list-style-type: none;
+  padding-left: var(--item-gap);
+}
+
+ul.hierarchyItem ul::before {
+  content: '';
+  position: absolute;
+  left: 1.58rem;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-left: 2px solid var(--ifm-color-primary);
+}
+
+ul.hierarchyItem ul:last-of-type::before {
+  border-left: none;
+}
+
+ul.hierarchyItem ul li::before {
+  margin-left: unset !important;
+}
+
+ul.hierarchyItem ul + ul::before {
+  /* border-left: none; */
 }
 
 .hierarchyItem:last-child {
   margin-bottom: 0;
 }
 
-.hierarchyNode {
-  background: var(--ifm-background-color);
+li.hierarchyNode {
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
   padding: 1rem;
   position: relative;
+  display: block;
+}
+
+li.hierarchyNode::before {
+  content: '' !important;
+  position: absolute !important;
+  display: block;
+  left: -2rem;
+  color: var(--ifm-color-border);
+  border-left: 2px solid var(--ifm-color-primary);
+  border-bottom: 2px solid var(--ifm-color-primary);
+  width: 1.9rem;
+  height: 50%;
+  top: -17px;
 }
 
 .nodeHeader {
@@ -216,7 +240,7 @@
   margin-top: 1rem;
 }
 
-.nestedLevel .hierarchyItem::before {
+/* .nestedLevel .hierarchyItem::before {
   content: '';
   position: absolute;
   left: -1.5rem;
@@ -224,10 +248,6 @@
   width: 1rem;
   height: 2px;
   background: var(--ifm-color-primary-light);
-}
-
-/* .nestedLevel .hierarchyItem:first-child::before {
-  display: none;
 } */
 
 /* 구조체 링크 스타일 */
@@ -338,28 +358,31 @@
 
 .field {
   border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 6px;
+  /* border-radius: 6px; */
   padding: 1rem;
   background: var(--ifm-color-emphasis-50);
 }
 
+.field + .field {
+  border-top: none;
+}
+
 .fieldHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  display: block;
   margin-bottom: 0.75rem;
-  flex-wrap: wrap;
 }
 
 .fieldNumber {
+  display: inline-block;
   color: var(--ifm-color-primary);
   font-weight: 600;
   background: var(--ifm-color-primary-contrast-background);
   padding: 0.3rem 0.5rem;
   border-radius: 50%;
-  min-width: 2rem;
+  width: 2rem;
   text-align: center;
   font-size: 0.85rem;
+  margin-right: .5rem;
 }
 
 .fieldName {
@@ -370,6 +393,7 @@
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-size: 0.9rem;
+  margin-right: .5rem;
 }
 
 .fieldType {
@@ -379,6 +403,7 @@
   background: var(--ifm-color-info-contrast-background);
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
+  margin-right: .5rem;
 }
 
 .fieldSize {
@@ -387,6 +412,7 @@
   background: var(--ifm-color-emphasis-200);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
+  word-break: normal;
 }
 
 .fieldRange {
@@ -395,6 +421,7 @@
   background: var(--ifm-color-warning-contrast-background);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
+  margin-left: .5rem;
 }
 
 .fieldDescription {
@@ -407,7 +434,7 @@
   margin-top: 1rem;
   background: var(--ifm-background-color);
   border-radius: 4px;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .fieldConstants h6 {
@@ -496,14 +523,14 @@
   min-width: 150px;
 }
 
-.constantsTable {
+.constantsTable, .variantsTable {
   width: 100%;
   border-collapse: collapse;
   margin: 0.5rem 0;
   font-size: 0.9rem;
 }
 
-.constantsTable thead th {
+.constantsTable thead th, .variantsTable thead th {
   background: var(--ifm-color-emphasis-100);
   color: var(--ifm-color-content);
   font-weight: 600;
@@ -512,7 +539,7 @@
   border: 1px solid var(--ifm-color-emphasis-300);
 }
 
-.constantsTable tbody td {
+.constantsTable tbody td, .variantsTable tbody td {
   padding: 0.75rem;
   border: 1px solid var(--ifm-color-emphasis-300);
   vertical-align: top;
@@ -524,12 +551,16 @@
 }
 
 .constantsTable tbody td:nth-of-type(2) {
-  width: 30%;
-  text-align: center;
+  width: 80%;
+  /* text-align: center; */
 }
 
-.constantsTable tbody td:nth-of-type(3) {
-  width: 50%;
+.variantsTable tbody td:first-of-type {
+  width: 40%;
+}
+
+.variantsTable tbody td {
+  width: 30%;
 }
 
 .constantsTable tbody tr:nth-child(even) {
@@ -598,5 +629,12 @@
   .constantsTable thead th,
   .constantsTable tbody td {
     padding: 0.5rem;
+  }
+}
+
+
+@media print {
+  .hierarchyName a, a.reference, a.structLink {
+    color: var(--ifm-color-primary) !important;
   }
 }

@@ -255,7 +255,7 @@ const config = {
         },
         searchPagePath: 'search',
       }
-    }),
+    })
 };
 
 export default config;
