@@ -144,7 +144,7 @@ ul.hierarchyItem ul + ul::before {
 }
 
 li.hierarchyNode {
-  border: 1px solid var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-color-ol-gray);
   border-radius: 8px;
   padding: 1rem;
   position: relative;
