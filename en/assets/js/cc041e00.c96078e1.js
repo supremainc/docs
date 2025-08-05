@@ -468,12 +468,12 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
-    blockquote: "blockquote",
     code: "code",
     h2: "h2",
     h3: "h3",
     li: "li",
     mermaid: "mermaid",
+    ol: "ol",
     p: "p",
     pre: "pre",
     strong: "strong",
@@ -1151,7 +1151,7 @@ function _createMdxContent(props) {
           children: "cardCRC"
         }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
           children: "reserved"
-        }), "까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0x0000)로 계산한 값입니다."]
+        }), "까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.code, {
           children: "cardCRC"
@@ -1159,7 +1159,7 @@ function _createMdxContent(props) {
           children: "cardType"
         }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
           children: "BS2SmartCardData.accessOnData"
-        }), "까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT로 계산한 값입니다."]
+        }), "까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "crc-계산-방법",
@@ -1171,41 +1171,108 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-c",
-        children: "// 헤더 체크섬 계산 (hdrCRC)\nuint16_t hdrCRC = BS2_ComputeCRC16CCITT((uint8_t*)&header.cardCRC, sizeof(BS2SmartCardHeader) - 2);\n\n// 카드 데이터 체크섬 계산 (cardCRC)\nuint16_t cardCRC = BS2_ComputeCRC16CCITT((uint8_t*)&header.cardType, cardDataLength);\n"
+        children: "// 카드 데이터 체크섬 계산 (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, \n                                   sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), \n                                   &cardCRC);\n\n// 헤더 체크섬 계산 (hdrCRC)\ncard.header.cardCRC = cardCRC;  // cardCRC 값을 먼저 설정\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, \n                               sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), \n                               &hdrCRC);\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "cardDataLength"
-        }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "cardType"
-        }), " ~ ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "accessOnData"
-        }), "까지의 실제 길이로 설정해야 합니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardType"
+            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "accessOnData"
+            }), "까지 계산합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "reserved"
+            }), "까지 계산합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["반드시 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), "를 계산해야 합니다."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "검증-방법",
       children: "검증 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "카드 데이터 읽기 시, 저장된 hdrCRC와 cardCRC 값을 각각 위와 동일한 방식으로 재계산하여 일치하는지 비교하세요."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-        children: "CRC-16 CCITT는 0x1021 다항식, 초기값 0x0000, 입력 데이터는 바이트 단위 Little Endian입니다."
+      children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "카드에서 읽은 데이터로 CRC 재계산"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "저장된 CRC 값과 계산된 CRC 값 비교"
+        }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-c",
+        children: "// CRC 검증 예시\nBS2SmartCardData readCard;  // 카드에서 읽은 데이터\n\n// 1. cardCRC 검증\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, \n                      sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), \n                      &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // 카드 데이터 손상\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC 검증  \nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, \n                      sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), \n                      &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // 헤더 데이터 손상\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "CRC 계산 시 주의사항"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "CRC 계산 범위가 정확히 일치해야 하며, 구조체 패딩이나 정렬에 주의하세요."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "계산 순서"
+            }), ": 반드시 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), "를 계산해야 합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "BS2_ComputeCRC16CCITT 함수는 BioStar 2 SDK에서 제공됩니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "구조체 정렬"
+            }), ": CRC 계산 범위가 정확히 일치해야 하며, 구조체 패딩이나 정렬에 주의하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "초기값"
+            }), ": CRC-16 CCITT는 0x1021 다항식, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "초기값 0xFFFF"
+            }), "를 사용합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "SDK 함수"
+            }), ": ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "BS2_ComputeCRC16CCITT"
+            }), " 함수는 BioStar 2 SDK에서 제공됩니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "데이터 순서"
+            }), ": 입력 데이터는 바이트 단위 Little Endian으로 처리됩니다."]
           }), "\n"]
         }), "\n"]
-      })
+      })]
     })]
   });
 }
