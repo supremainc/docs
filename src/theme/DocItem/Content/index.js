@@ -29,6 +29,7 @@ function useSyntheticTitle() {
 export default function DocItemContent({children}) {
   const { frontMatter } = useDoc();
   const syntheticTitle = useSyntheticTitle();
+  const headingClassName = frontMatter.heading_className || null;
   const location = useLocation();
 
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function DocItemContent({children}) {
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
         <header>
-          <Heading as="h1">{syntheticTitle}</Heading>
+          <Heading as="h1" className={headingClassName}>{syntheticTitle}</Heading>
         </header>
       )}
       {frontMatter.isTranslationMissing && (
