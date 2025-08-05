@@ -330,6 +330,20 @@ footer {
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
+  header h1 {
+    &.confidential::after {
+      content: "Confidential";
+      display: inline-block;
+      position: relative;
+      color: red;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      padding: .3rem;
+      border: 1px solid;
+      top: -.3rem;
+    }
+  }
   h1, h2, h3, h4, h5, h6 {
     span.cmd {
       font-size: inherit;
