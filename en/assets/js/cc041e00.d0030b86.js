@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-mdx-cc0.json
-var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"Smartcard API","description":"BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"Smartcard API","toc_max_heading_level":3,"isTranslationMissing":false}}')
+var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"Smartcard API","description":"BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/en/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"Smartcard API","toc_max_heading_level":3,"isTranslationMissing":true}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -428,7 +428,7 @@ const frontMatter = {
 	id: 'smartcardapi',
 	title: 'Smartcard API',
 	toc_max_heading_level: 3,
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -449,19 +449,19 @@ const toc = [{
   "level": 2
 }, {
   "value": "CRC 계산 및 검증",
-  "id": "crc-계산-및-검증",
+  "id": "crc",
   "level": 2
 }, {
   "value": "hdrCRC, cardCRC란?",
-  "id": "hdrcrc-cardcrc란",
+  "id": "hdrcrc-cardcrc",
   "level": 3
 }, {
   "value": "CRC 계산 방법",
-  "id": "crc-계산-방법",
+  "id": "crc-calculation",
   "level": 3
 }, {
   "value": "검증 방법",
-  "id": "검증-방법",
+  "id": "crc-validation",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -1130,7 +1130,7 @@ function _createMdxContent(props) {
         description: "SmartCard 데이터 구조체"
       }]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "crc-계산-및-검증",
+      id: "crc",
       children: "CRC 계산 및 검증"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이터에 각각 CRC-16 CCITT 체크섬(", (0,jsx_runtime.jsx)(_components.code, {
@@ -1139,7 +1139,7 @@ function _createMdxContent(props) {
         children: "cardCRC"
       }), ")을 사용합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "hdrcrc-cardcrc란",
+      id: "hdrcrc-cardcrc",
       children: "hdrCRC, cardCRC란?"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -1162,16 +1162,19 @@ function _createMdxContent(props) {
         }), "까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "crc-계산-방법",
+      id: "crc-calculation",
       children: "CRC 계산 방법"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["SDK에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.a, {
+        href: "https://kb.supremainc.com/bs2sdk/doku.php",
+        children: "BioStar 2 SDK"
+      }), "에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BS2_ComputeCRC16CCITT"
       }), " 함수를 제공합니다. 아래는 사용 예시입니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-c",
-        children: "// 카드 데이터 체크섬 계산 (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, \n                                   sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), \n                                   &cardCRC);\n\n// 헤더 체크섬 계산 (hdrCRC)\ncard.header.cardCRC = cardCRC;  // cardCRC 값을 먼저 설정\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, \n                               sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), \n                               &hdrCRC);\n"
+        className: "language-csharp",
+        children: "// Calculate card data checksum (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);\n\n// Calculate header checksum (hdrCRC)\ncard.header.cardCRC = cardCRC;  // Set the cardCRC value first\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
@@ -1207,7 +1210,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "검증-방법",
+      id: "crc-validation",
       children: "검증 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요:"
@@ -1223,8 +1226,8 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-c",
-        children: "// CRC 검증 예시\nBS2SmartCardData readCard;  // 카드에서 읽은 데이터\n\n// 1. cardCRC 검증\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, \n                      sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), \n                      &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // 카드 데이터 손상\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC 검증  \nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, \n                      sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), \n                      &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // 헤더 데이터 손상\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
+        className: "language-csharp",
+        children: "// CRC validation example\nBS2SmartCardData readCard;  // Data read from card\n\n// 1. cardCRC validation\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // Card data corruption\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC validation\nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // Header data corruption\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
@@ -1263,7 +1266,10 @@ function _createMdxContent(props) {
               children: "SDK 함수"
             }), ": ", (0,jsx_runtime.jsx)(_components.code, {
               children: "BS2_ComputeCRC16CCITT"
-            }), " 함수는 BioStar 2 SDK에서 제공됩니다."]
+            }), " 함수는 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://kb.supremainc.com/bs2sdk/doku.php",
+              children: "BioStar 2 SDK"
+            }), "에서 제공됩니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
