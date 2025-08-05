@@ -104,7 +104,7 @@ const TypedefStruct = ({
           <Heading as='h4'>구조체 정의</Heading>
         </div>
         {code && (
-          <CodeBlock language='c'>{code}</CodeBlock>
+          <CodeBlock language='csharp'>{code}</CodeBlock>
         )}
       </div>
 
