@@ -2700,12 +2700,12 @@
     "height": 415
   },
   "/img/en/monitoring-door-status-tooltip-device.png": {
-    "width": 240,
-    "height": 109
+    "width": 430,
+    "height": 236
   },
   "/img/en/monitoring-door-status-tooltip.png": {
-    "width": 384,
-    "height": 64
+    "width": 430,
+    "height": 174
   },
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
@@ -2880,12 +2880,12 @@
     "height": 364
   },
   "/img/monitoring-door-status-tooltip-device.png": {
-    "width": 300,
-    "height": 63
+    "width": 400,
+    "height": 236
   },
   "/img/monitoring-door-status-tooltip.png": {
     "width": 400,
-    "height": 73
+    "height": 183
   },
   "/img/monitoring-map-floor-control-door.png": {
     "width": 800,
