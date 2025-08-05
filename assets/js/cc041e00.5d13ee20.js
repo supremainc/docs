@@ -157,7 +157,7 @@ const TypedefStruct_TypedefStruct = (param)=>{
                         })
                     }),
                     code && /*#__PURE__*/ (0,jsx_runtime.jsx)((CodeBlock_default()), {
-                        language: "c",
+                        language: "csharp",
                         children: code
                     })
                 ]
