@@ -1213,7 +1213,7 @@ function _createMdxContent(props) {
       id: "crc-validation",
       children: "검증 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요:"
+      children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
