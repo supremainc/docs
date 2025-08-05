@@ -1249,7 +1249,7 @@ function Head(param) {
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
 var useBaseUrl = __webpack_require__(4757);
 ;// CONCATENATED MODULE: ./src/components/Image/sizeOfimages.json
-var sizeOfimages_namespaceObject = JSON.parse('{"/docs/img/air/air-device-management-upgrade-fw-edit-device.png":{"width":840,"height":886},"/docs/img/air/air-device-management-upgrade-fw-list.png":{"width":526,"height":445},"/docs/img/air/air-device-management-upgrade-fw.png":{"width":1593,"height":510},"/docs/img/air/air-hardware-edit-device-qr-reader.jpg":{"width":2085,"height":1805},"/docs/img/air/air-hardware-qr-reader-barcode.png":{"width":532,"height":384},"/docs/img/air/air-hardware-qr-reader-diagram.png":{"width":2021,"height":2108},"/docs/img/air/air-main-cover-image.png":{"width":1920,"height":1080},"/docs/img/banner/biostar2_6_banner.jpg":{"width":1920,"height":400},"/docs/img/banner/biostar2_6_banner_deco1.png":{"width":665,"height":551},"/docs/img/banner/biostar2_6_banner_deco2.png":{"width":544,"height":451},"/docs/img/biostar-298-deleted-csn-mobile-card-1.png":{"width":340,"height":206},"/docs/img/biostar-298-deleted-csn-mobile-card.png":{"width":1189,"height":244},"/docs/img/biostar-custom-dashboard.png":{"width":1045,"height":501},"/docs/img/biostar-deleted-csn-mobile-card-2.png":{"width":1000,"height":201},"/docs/img/biostar-enrollment-result.png":{"width":400,"height":46},"/docs/img/biostar-login-download-https.png":{"width":600,"height":510},"/docs/img/biostar2-setting-directory-ad-server.png":{"width":1500,"height":379},"/docs/img/biostar2-setting-directory-btn-apply.png":{"width":1200,"height":288},"/docs/img/biostar2-setting-directory-entraid-login.png":{"width":400,"height":452},"/docs/img/biostar2-setting-directory-integ-ad.png":{"width":1500,"height":324},"/docs/img/biostar2-setting-directory-integ-entraid.png":{"width":1500,"height":330},"/docs/img/biostar2-setting-directory-login-with-ad.png":{"width":1500,"height":167},"/docs/img/biostar2-setting-directory-login-with-entraid.png":{"width":1500,"height":220},"/docs/img/biostar2-setting-directory-server.png":{"width":1500,"height":273},"/docs/img/biostar2-setting-directory-sync-auto.png":{"width":1500,"height":326},"/docs/img/biostar2-setting-directory-sync-manual.png":{"width":1500,"height":276},"/docs/img/biostar2-setting-directory-sync-warn-message.png":{"width":400,"height":190},"/docs/img/biostar2-setting-directory-unset-warn-message.png":{"width":400,"height":173},"/docs/img/biostar2-setting-directory-unset.png":{"width":1500,"height":253},"/docs/img/biostar2-setting-directory-userfield-ad.png":{"width":1500,"height":558},"/docs/img/biostar2-setting-directory-userfield-select-other-ad.png":{"width":800,"height":356},"/docs/img/biostar2-setting-directory-userfield-select-other.png":{"width":800,"height":552},"/docs/img/biostar2-setting-directory-userfield.png":{"width":1500,"height":795},"/docs/img/biostar2-setting-directory-usergroup-filter.png":{"width":1500,"height":897},"/docs/img/biostar2-user-advance-exclude-sync.png":{"width":1500,"height":405},"/docs/img/biostarx-add-user-from-template.png":{"width":300,"height":210},"/docs/img/biostarx-adjust-win-size.png":{"width":200,"height":167},"/docs/img/biostarx-batch-edit-user-mfa-use.png":{"width":801,"height":201},"/docs/img/biostarx-checkpoint.png":{"width":800,"height":327},"/docs/img/biostarx-common-ui-column-layout.png":{"width":350,"height":583},"/docs/img/biostarx-dashboard-widget-del.png":{"width":354,"height":254},"/docs/img/biostarx-dashboard.png":{"width":1059,"height":474},"/docs/img/biostarx-data-information.png":{"width":970,"height":111},"/docs/img/biostarx-data-report-format.png":{"width":970,"height":308},"/docs/img/biostarx-data-report-schedule.png":{"width":970,"height":155},"/docs/img/biostarx-data-settings.png":{"width":1143,"height":111},"/docs/img/biostarx-data.png":{"width":477,"height":959},"/docs/img/biostarx-door-control.png":{"width":400,"height":206},"/docs/img/biostarx-edit-user-batch-edit.png":{"width":800,"height":538},"/docs/img/biostarx-edit-user-mfa-use.png":{"width":800,"height":266},"/docs/img/biostarx-header-shortcut-link.png":{"width":300,"height":402},"/docs/img/biostarx-header.png":{"width":1500,"height":597},"/docs/img/biostarx-install-2-to-x-agree.png":{"width":499,"height":392},"/docs/img/biostarx-install-additional-fin.png":{"width":499,"height":392},"/docs/img/biostarx-install-additional.png":{"width":499,"height":392},"/docs/img/biostarx-install-agree.png":{"width":499,"height":392},"/docs/img/biostarx-install-check-control-network-connections.png":{"width":1200,"height":370},"/docs/img/biostarx-install-check-ethernet-properties.png":{"width":400,"height":522},"/docs/img/biostarx-install-check-ethernet-status.png":{"width":400,"height":486},"/docs/img/biostarx-install-check-protocol-properties.png":{"width":465,"height":518},"/docs/img/biostarx-install-check-set-metrics.png":{"width":465,"height":555},"/docs/img/biostarx-install-check-start-network-search.png":{"width":800,"height":328},"/docs/img/biostarx-install-comm-server-complete.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-install-step.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-port-settings.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-private-policy.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-select-component.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-set-path.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-settings.png":{"width":500,"height":392},"/docs/img/biostarx-install-complete.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-admin-pw.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-db-details.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-db-pw.png":{"width":499,"height":392},"/docs/img/biostarx-install-read-covenant.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-custom.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-ip.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-language.png":{"width":299,"height":172},"/docs/img/biostarx-install-select-quick.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-encrypt-path.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-path.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-port-confirm.png":{"width":388,"height":152},"/docs/img/biostarx-install-set-port.png":{"width":499,"height":392},"/docs/img/biostarx-launcher.png":{"width":1500,"height":749},"/docs/img/biostarx-login.png":{"width":800,"height":556},"/docs/img/biostarx-main-launcher.png":{"width":1920,"height":959},"/docs/img/biostarx-new-user-credential-authmod-default.png":{"width":1069,"height":297},"/docs/img/biostarx-new-user-credential-authmod-note-image.png":{"width":800,"height":137},"/docs/img/biostarx-new-user-credential-authmod-private-add.png":{"width":800,"height":586},"/docs/img/biostarx-new-user-credential-authmod-private-join.png":{"width":800,"height":332},"/docs/img/biostarx-new-user-credential-authmod-private.png":{"width":1069,"height":375},"/docs/img/biostarx-new-user-credential-biostarqr.png":{"width":476,"height":345},"/docs/img/biostarx-new-user-credential-card-assign-info.png":{"width":800,"height":571},"/docs/img/biostarx-new-user-credential-card-csn.png":{"width":600,"height":364},"/docs/img/biostarx-new-user-credential-card-readcard.png":{"width":600,"height":573},"/docs/img/biostarx-new-user-credential-card-smartcard.png":{"width":600,"height":514},"/docs/img/biostarx-new-user-credential-card-wiegand.png":{"width":600,"height":406},"/docs/img/biostarx-new-user-credential-face-import-csv.png":{"width":600,"height":419},"/docs/img/biostarx-new-user-credential-face-import.png":{"width":600,"height":550},"/docs/img/biostarx-new-user-credential-face-mobile-app.png":{"width":970,"height":301},"/docs/img/biostarx-new-user-credential-face-webcam-take.png":{"width":822,"height":470},"/docs/img/biostarx-new-user-credential-face.png":{"width":600,"height":473},"/docs/img/biostarx-new-user-credential-finger-nth.png":{"width":600,"height":201},"/docs/img/biostarx-new-user-credential-finger.png":{"width":600,"height":559},"/docs/img/biostarx-new-user-credential-mobile-csn-assign.png":{"width":640,"height":538},"/docs/img/biostarx-new-user-credential-mobile-csn.png":{"width":600,"height":568},"/docs/img/biostarx-new-user-credential-mobile-tom.png":{"width":640,"height":590},"/docs/img/biostarx-new-user-credential-passcode.png":{"width":600,"height":293},"/docs/img/biostarx-new-user-credential-qrbarcode.png":{"width":499,"height":341},"/docs/img/biostarx-new-user-credential-securitylevle.png":{"width":1069,"height":291},"/docs/img/biostarx-new-user-credential.png":{"width":1069,"height":305},"/docs/img/biostarx-new-user-information.png":{"width":1201,"height":458},"/docs/img/biostarx-new-user-permission.png":{"width":801,"height":269},"/docs/img/biostarx-real-time-event.png":{"width":800,"height":309},"/docs/img/biostarx-setting-add-device-group.png":{"width":800,"height":179},"/docs/img/biostarx-setting-add-device-option.png":{"width":801,"height":512},"/docs/img/biostarx-setting-add-device-rename.png":{"width":800,"height":85},"/docs/img/biostarx-setting-add-device.png":{"width":800,"height":464},"/docs/img/biostarx-setting-device-adding-slave-device.png":{"width":300,"height":257},"/docs/img/biostarx-setting-device-adding-slave-list.png":{"width":600,"height":242},"/docs/img/biostarx-setting-device-adding-wiegand-list.png":{"width":600,"height":246},"/docs/img/biostarx-setting-device-adding-wiegand-ok.png":{"width":300,"height":226},"/docs/img/biostarx-setting-device-adding-wiegand.png":{"width":300,"height":280},"/docs/img/biostarx-setting-device-advanced-search-result.png":{"width":600,"height":194},"/docs/img/biostarx-setting-device-advanced-search.png":{"width":600,"height":261},"/docs/img/biostarx-setting-device-batch-edit.png":{"width":793,"height":809},"/docs/img/biostarx-setting-device-edit-advanced-administrator.png":{"width":1200,"height":429},"/docs/img/biostarx-setting-device-edit-advanced-imagelog.png":{"width":1200,"height":767},"/docs/img/biostarx-setting-device-edit-advanced-tamper.png":{"width":600,"height":52},"/docs/img/biostarx-setting-device-edit-advanced-tna.png":{"width":1200,"height":349},"/docs/img/biostarx-setting-device-edit-advanced-triggernaction.png":{"width":1240,"height":668},"/docs/img/biostarx-setting-device-edit-advanced-wiegand.png":{"width":1200,"height":162},"/docs/img/biostarx-setting-device-edit-auth-mode-adding.png":{"width":600,"height":475},"/docs/img/biostarx-setting-device-edit-auth-mode.png":{"width":1500,"height":358},"/docs/img/biostarx-setting-device-edit-info.png":{"width":1500,"height":539},"/docs/img/biostarx-setting-device-edit-ipinterphone.png":{"width":1200,"height":755},"/docs/img/biostarx-setting-device-edit-network.png":{"width":1500,"height":793},"/docs/img/biostarx-setting-device-edit-rtsp.png":{"width":1334,"height":196},"/docs/img/biostarx-setting-device-functions.png":{"width":300,"height":256},"/docs/img/biostarx-setting-device-imagelog-add.png":{"width":1460,"height":285},"/docs/img/biostarx-setting-device-imagelog-example.png":{"width":1500,"height":707},"/docs/img/biostarx-setting-device-imagelog-remove.png":{"width":1063,"height":158},"/docs/img/biostarx-setting-device-imagelog-select-event.png":{"width":1063,"height":385},"/docs/img/biostarx-setting-device-imagelog-select-schedule.png":{"width":1063,"height":158},"/docs/img/biostarx-setting-device-info-upgrade-firmware.png":{"width":1500,"height":598},"/docs/img/biostarx-setting-device-manage-device-users-popup.png":{"width":600,"height":470},"/docs/img/biostarx-setting-device-manage-device-users.png":{"width":300,"height":267},"/docs/img/biostarx-setting-device-set-ip.png":{"width":600,"height":456},"/docs/img/biostarx-setting-device-sync-device.png":{"width":1500,"height":438},"/docs/img/biostarx-setting-device-upgrade-firmware-popup.png":{"width":600,"height":275},"/docs/img/biostarx-setting-device-upgrade-firmware.png":{"width":1500,"height":445},"/docs/img/biostarx-setting-door-add-group-naming.png":{"width":220,"height":268},"/docs/img/biostarx-setting-door-add-group.png":{"width":400,"height":288},"/docs/img/biostarx-setting-door-adding-aditional-option.png":{"width":1200,"height":353},"/docs/img/biostarx-setting-door-adding-configuration.png":{"width":1200,"height":286},"/docs/img/biostarx-setting-door-adding-info.png":{"width":1200,"height":139},"/docs/img/biostarx-setting-door-adding.png":{"width":400,"height":288},"/docs/img/biostarx-setting-door-edit-batch.png":{"width":400,"height":201},"/docs/img/biostarx-setting-door-rename-group.png":{"width":400,"height":385},"/docs/img/biostarx-setting-door-to-group-info-select.png":{"width":980,"height":151},"/docs/img/biostarx-setting-door-to-group-list.png":{"width":1200,"height":254},"/docs/img/biostarx-setting-door-to-group-result.png":{"width":220,"height":275},"/docs/img/biostarx-setting-door-to-group.png":{"width":220,"height":288},"/docs/img/biostarx-settings-access-control-status-column-setting.png":{"width":400,"height":571},"/docs/img/biostarx-settings-access-control-status-filter.png":{"width":711,"height":386},"/docs/img/biostarx-settings-access-control-status-pagenation.png":{"width":400,"height":62},"/docs/img/biostarx-settings-access-control-status.png":{"width":1500,"height":353},"/docs/img/biostarx-settings-add-access-floor-level.png":{"width":1200,"height":662},"/docs/img/biostarx-settings-add-access-group.png":{"width":1200,"height":681},"/docs/img/biostarx-settings-add-access-level.png":{"width":1200,"height":662},"/docs/img/biostarx-settings-advanced-ac-intusion-add-device.png":{"width":400,"height":381},"/docs/img/biostarx-settings-advanced-ac-intusion-add-signal.png":{"width":400,"height":453},"/docs/img/biostarx-settings-advanced-ac-intusion-detect-settings.png":{"width":400,"height":451},"/docs/img/biostarx-settings-alert-edit-message.png":{"width":400,"height":334},"/docs/img/biostarx-settings-alert.png":{"width":1500,"height":510},"/docs/img/biostarx-settings-card-printer-custom-user.png":{"width":946,"height":168},"/docs/img/biostarx-settings-card-printer-custom-user1.png":{"width":1172,"height":517},"/docs/img/biostarx-settings-card-printer-installation.png":{"width":944,"height":531},"/docs/img/biostarx-settings-card-printer-installation1.png":{"width":419,"height":596},"/docs/img/biostarx-settings-card-printer-installation2.png":{"width":493,"height":453},"/docs/img/biostarx-settings-card-printer-installation3.png":{"width":493,"height":453},"/docs/img/biostarx-settings-card-printer-template.png":{"width":1000,"height":545},"/docs/img/biostarx-settings-card-printer-user.png":{"width":1161,"height":517},"/docs/img/biostarx-settings-card-printer-user1.png":{"width":570,"height":209},"/docs/img/biostarx-settings-card-printer-user2.png":{"width":340,"height":207},"/docs/img/biostarx-settings-card-printer.png":{"width":1024,"height":337},"/docs/img/biostarx-settings-card-printer1.png":{"width":1024,"height":337},"/docs/img/biostarx-settings-credentail-card-change-data-format.png":{"width":400,"height":224},"/docs/img/biostarx-settings-credentail-card.png":{"width":1500,"height":281},"/docs/img/biostarx-settings-credentail-mobile-access-connection.png":{"width":1200,"height":252},"/docs/img/biostarx-settings-credentail-mobile-access-register-device-popup.png":{"width":800,"height":415},"/docs/img/biostarx-settings-credentail-mobile-access-register-device.png":{"width":1200,"height":119},"/docs/img/biostarx-settings-credentail-mobile-access.png":{"width":1200,"height":252},"/docs/img/biostarx-settings-credentail-smart-format-add.png":{"width":1200,"height":746},"/docs/img/biostarx-settings-credentail-smart-format-info.png":{"width":1200,"height":537},"/docs/img/biostarx-settings-credentail-smart-format-type.png":{"width":1200,"height":106},"/docs/img/biostarx-settings-credential-wiegand-format.png":{"width":1200,"height":475},"/docs/img/biostarx-settings-email-contents.png":{"width":894,"height":161},"/docs/img/biostarx-settings-email-qr.png":{"width":1103,"height":276},"/docs/img/biostarx-settings-email-smtp-option.png":{"width":490,"height":521},"/docs/img/biostarx-settings-email-visual-face.png":{"width":1103,"height":400},"/docs/img/biostarx-settings-floor-camera-adjust.gif":{"width":308,"height":326},"/docs/img/biostarx-settings-floor-camera-rotation.gif":{"width":308,"height":326},"/docs/img/biostarx-settings-license-device-license.png":{"width":1201,"height":255},"/docs/img/biostarx-settings-license-license.png":{"width":1502,"height":732},"/docs/img/biostarx-settings-map-add-floor-01.png":{"width":1200,"height":674},"/docs/img/biostarx-settings-map-add-floor-02.png":{"width":800,"height":595},"/docs/img/biostarx-settings-map-add-floor-03.png":{"width":800,"height":600},"/docs/img/biostarx-settings-map-add-floor-04.png":{"width":350,"height":305},"/docs/img/biostarx-settings-map-add-floor-05.png":{"width":800,"height":660},"/docs/img/biostarx-settings-map-add-floor-06.png":{"width":350,"height":339},"/docs/img/biostarx-settings-map-add-floor-example.png":{"width":800,"height":537},"/docs/img/biostarx-settings-map-area-add-01.png":{"width":800,"height":636},"/docs/img/biostarx-settings-map-area-add-02.png":{"width":403,"height":242},"/docs/img/biostarx-settings-map-area-camera-adjust.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-camera-rot.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-camera-setting.png":{"width":400,"height":265},"/docs/img/biostarx-settings-map-area-drawing.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-reset.png":{"width":400,"height":242},"/docs/img/biostarx-settings-map-facility-add-floor.png":{"width":400,"height":251},"/docs/img/biostarx-settings-map-floor-camera-setting-01.png":{"width":350,"height":346},"/docs/img/biostarx-settings-preference-add-sound.png":{"width":735,"height":338},"/docs/img/biostarx-settings-preference-date-time.png":{"width":1069,"height":116},"/docs/img/biostarx-settings-preference-language-timezone.png":{"width":1069,"height":196},"/docs/img/biostarx-settings-preference-sound.png":{"width":1069,"height":199},"/docs/img/biostarx-settings-schedule-add-extend.png":{"width":1200,"height":823},"/docs/img/biostarx-settings-schedule-add-holiday.png":{"width":1162,"height":478},"/docs/img/biostarx-settings-schedule-add-type-daily.png":{"width":760,"height":82},"/docs/img/biostarx-settings-schedule-add.png":{"width":1200,"height":664},"/docs/img/biostarx-settings-schedule-input-time-slot.png":{"width":500,"height":501},"/docs/img/biostarx-settings-server-expert.png":{"width":1043,"height":117},"/docs/img/biostarx-settings-server-expert2.png":{"width":1054,"height":116},"/docs/img/biostarx-settings-server-general.png":{"width":1262,"height":196},"/docs/img/biostarx-settings-server-https.png":{"width":805,"height":178},"/docs/img/biostarx-settings-server-management-custome-field-select.png":{"width":600,"height":215},"/docs/img/biostarx-settings-server-management-custome-field.png":{"width":800,"height":133},"/docs/img/biostarx-settings-server-management-enroll-device.png":{"width":800,"height":415},"/docs/img/biostarx-settings-server-management.png":{"width":1262,"height":524},"/docs/img/biostarx-settings-server-server-matching.png":{"width":1309,"height":279},"/docs/img/biostarx-settings-server-system-log-level.png":{"width":1262,"height":176},"/docs/img/biostarx-settings-system-audit-trail-add-filter.png":{"width":1500,"height":330},"/docs/img/biostarx-settings-system-audit-trail-column-setting.png":{"width":400,"height":574},"/docs/img/biostarx-settings-system-audit-trail-list.png":{"width":1201,"height":272},"/docs/img/biostarx-settings-system-audit-trail.png":{"width":1500,"height":402},"/docs/img/biostarx-settings-system-daylight-saving-time-edit.png":{"width":735,"height":254},"/docs/img/biostarx-settings-system-daylight-saving-time.png":{"width":735,"height":285},"/docs/img/biostarx-settings-system-restore-check-ver.png":{"width":800,"height":359},"/docs/img/biostarx-settings-system-security-advanced-with-device.png":{"width":1200,"height":245},"/docs/img/biostarx-settings-system-security-advanced.png":{"width":1480,"height":196},"/docs/img/biostarx-settings-system-security-password.png":{"width":1480,"height":244},"/docs/img/biostarx-settings-system-security-session.png":{"width":1480,"height":118},"/docs/img/biostarx-settings-system-system-backup-automatic.png":{"width":1235,"height":158},"/docs/img/biostarx-settings-system-system-backup-general.png":{"width":1235,"height":226},"/docs/img/biostarx-settings-trigger-and-action-add.png":{"width":1500,"height":535},"/docs/img/biostarx-settings-visitor-custom-visitor-field.png":{"width":1510,"height":184},"/docs/img/biostarx-settings-visitor-site-settings.png":{"width":1510,"height":281},"/docs/img/biostarx-settings-visitor-terms-visitor-settings.png":{"width":1054,"height":725},"/docs/img/biostarx-settings-visitor-visit-pc-select.png":{"width":1107,"height":116},"/docs/img/biostarx-settings-visitor-visit-pc-settings.png":{"width":1510,"height":431},"/docs/img/biostarx-tutorial-license-offline-popup-filed.png":{"width":540,"height":383},"/docs/img/biostarx-tutorial-license-offline-popup.png":{"width":527,"height":145},"/docs/img/biostarx-tutorial-license-offline.png":{"width":878,"height":158},"/docs/img/biostarx-tutorial-license-online.png":{"width":878,"height":158},"/docs/img/biostarx-ui-monitoring.png":{"width":1500,"height":737},"/docs/img/biostarx-ui-settings.png":{"width":1500,"height":695},"/docs/img/biostarx-ui-user-template.png":{"width":1500,"height":385},"/docs/img/biostarx-ui-user.png":{"width":1500,"height":737},"/docs/img/biostarx-upgrade-complete.png":{"width":499,"height":392},"/docs/img/biostarx-upgrade-select-install-type.png":{"width":499,"height":392},"/docs/img/biostarx-upgrade-set-port.png":{"width":499,"height":392},"/docs/img/biostarx-user-access-explorer-assign-pop.png":{"width":800,"height":354},"/docs/img/biostarx-user-access-explorer-assign.png":{"width":400,"height":216},"/docs/img/biostarx-user-access-explorer-tree-desc.png":{"width":400,"height":297},"/docs/img/biostarx-user-access-explorer-tree-expand-collapse.png":{"width":400,"height":247},"/docs/img/biostarx-user-access-explorer-tree-level.png":{"width":400,"height":204},"/docs/img/biostarx-user-access-explorer-view.png":{"width":616,"height":193},"/docs/img/biostarx-user-access-explorer.png":{"width":400,"height":476},"/docs/img/biostarx-user-advanced.png":{"width":800,"height":172},"/docs/img/biostarx-user-group-add.png":{"width":400,"height":242},"/docs/img/biostarx-user-group-expand-collapse.png":{"width":400,"height":269},"/docs/img/biostarx-user-group-remove.png":{"width":400,"height":330},"/docs/img/biostarx-user-group-rename.png":{"width":400,"height":331},"/docs/img/biostarx-user-group-select-group-user.png":{"width":800,"height":370},"/docs/img/biostarx-user-import-01.png":{"width":560,"height":219},"/docs/img/biostarx-user-import-02.png":{"width":560,"height":547},"/docs/img/biostarx-user-import-03.png":{"width":537,"height":113},"/docs/img/biostarx-user-new-template.png":{"width":800,"height":483},"/docs/img/biostarx-user-sub-group-add.png":{"width":400,"height":272},"/docs/img/biostarx-user-transfer-to-devices.png":{"width":800,"height":784},"/docs/img/biostarx-users-advanced-search.png":{"width":1500,"height":616},"/docs/img/biostarx-users-list-column-layout.png":{"width":600,"height":687},"/docs/img/biostarx-users-list-order.png":{"width":1500,"height":357},"/docs/img/biostarx-users-list-pagenation.png":{"width":623,"height":49},"/docs/img/biostarx-users-list-select-row.png":{"width":800,"height":167},"/docs/img/biostarx-users-list-view-profile.png":{"width":1500,"height":885},"/docs/img/biostarx-users-list.png":{"width":1500,"height":452},"/docs/img/biostarx-users-print-list.png":{"width":650,"height":424},"/docs/img/biostarx-users-search-result.png":{"width":1500,"height":292},"/docs/img/biostarx-users-template-list-pagenation.png":{"width":600,"height":62},"/docs/img/biostarx-users-template-list-search.png":{"width":1513,"height":581},"/docs/img/biostarx-users-template-list-select-row.png":{"width":600,"height":120},"/docs/img/biostarx-widget-edit.png":{"width":600,"height":292},"/docs/img/common/biostarx-chart.png":{"width":600,"height":258},"/docs/img/common/biostarx-counter.png":{"width":400,"height":314},"/docs/img/common/biostarx-enroll-fingerprint-caution.png":{"width":400,"height":98},"/docs/img/common/biostarx-enroll-fingerprint-count.png":{"width":400,"height":66},"/docs/img/common/biostarx-install-check-network-cmd.png":{"width":800,"height":296},"/docs/img/common/biostarx-new-user-photo.png":{"width":200,"height":237},"/docs/img/common/biostarx-settings-server-enrollment-certification.png":{"width":368,"height":135},"/docs/img/common/biostarx-system-usage.png":{"width":408,"height":430},"/docs/img/common/biostarx-text.png":{"width":517,"height":210},"/docs/img/common/biostarx-tutoria-service-manager-database-configuration.png":{"width":960,"height":552},"/docs/img/common/biostarx-tutoria-service-manager-database.png":{"width":1200,"height":312},"/docs/img/common/biostarx-tutoria-service-manager-main-restart.png":{"width":1200,"height":495},"/docs/img/common/biostarx-tutoria-service-manager-main.png":{"width":1200,"height":495},"/docs/img/common/biostarx-tutoria-service-manager-services-change-port.png":{"width":1200,"height":429},"/docs/img/common/biostarx-tutoria-service-manager-services-stop.png":{"width":1200,"height":495},"/docs/img/common/ico-audit-trail-first-page.png":{"width":28,"height":22},"/docs/img/common/ico-audit-trail-last-page.png":{"width":28,"height":22},"/docs/img/common/ico-audit-trail-nav-page.png":{"width":60,"height":22},"/docs/img/common/ico-audit-trail-next-page.png":{"width":25,"height":22},"/docs/img/common/ico-audit-trail-previous-page.png":{"width":25,"height":22},"/docs/img/common/ico-authmode-card.png":{"width":220,"height":118},"/docs/img/common/ico-authmode-face.png":{"width":120,"height":120},"/docs/img/common/ico-authmode-id.png":{"width":120,"height":120},"/docs/img/common/ico-authmode-pin.png":{"width":120,"height":120},"/docs/img/common/ico-card-printer-play.png":{"width":20,"height":20},"/docs/img/common/ico-card-printer-stop.png":{"width":20,"height":20},"/docs/img/common/ico-eventlog.png":{"width":160,"height":160},"/docs/img/common/login-dashboard.png":{"width":1500,"height":745},"/docs/img/common/monitoring-map-area-tree-example.png":{"width":400,"height":395},"/docs/img/common/monitoring-map-area-tree.png":{"width":1500,"height":817},"/docs/img/common/monitoring-video-extend.gif":{"width":1520,"height":862},"/docs/img/common/setting-system-restore.png":{"width":635,"height":375},"/docs/img/default-placeholder-image.webp":{"width":1200,"height":800},"/docs/img/device/biostation2a-main.png":{"width":1000,"height":452},"/docs/img/device/biostation3-main.png":{"width":1000,"height":452},"/docs/img/device/device-auth-option-qr.png":{"width":250,"height":163},"/docs/img/device/device-auth-option.png":{"width":250,"height":70},"/docs/img/device/device-auth-result-display-option.png":{"width":250,"height":113},"/docs/img/device/device-auth.png":{"width":250,"height":444},"/docs/img/device/device-auth2.png":{"width":250,"height":258},"/docs/img/device/device-authmode.png":{"width":250,"height":267},"/docs/img/device/device-datetime.png":{"width":250,"height":444},"/docs/img/device/device-displaysound.png":{"width":250,"height":444},"/docs/img/device/device-dst.png":{"width":250,"height":444},"/docs/img/device/device-eventlog.png":{"width":250,"height":265},"/docs/img/device/device-eventlog1.png":{"width":250,"height":444},"/docs/img/device/device-info.png":{"width":250,"height":444},"/docs/img/device/device-license.png":{"width":250,"height":444},"/docs/img/device/device-license1.png":{"width":250,"height":444},"/docs/img/device/device-memory.png":{"width":250,"height":444},"/docs/img/device/device-menu.png":{"width":250,"height":444},"/docs/img/device/device-network-ethernet.png":{"width":250,"height":332},"/docs/img/device/device-network-intercom.png":{"width":250,"height":309},"/docs/img/device/device-network-osdp.png":{"width":250,"height":158},"/docs/img/device/device-network-relay.png":{"width":250,"height":220},"/docs/img/device/device-network-server.png":{"width":250,"height":218},"/docs/img/device/device-network-wifi.png":{"width":250,"height":444},"/docs/img/device/device-pin.png":{"width":250,"height":67},"/docs/img/device/device-rtsp.png":{"width":250,"height":311},"/docs/img/device/device-usb.png":{"width":250,"height":174},"/docs/img/device/device-user-add.png":{"width":546,"height":444},"/docs/img/device/device-user-usage.png":{"width":250,"height":444},"/docs/img/device/installation-automatic-door-bs3.png":{"width":754,"height":491},"/docs/img/device/installation-network-direct-connection-bs3.png":{"width":585,"height":272},"/docs/img/device/installation-network-hub-connection-bs3.png":{"width":774,"height":321},"/docs/img/device/installation-power-connection-bs3.png":{"width":656,"height":433},"/docs/img/device/installation-relay-fail-safe-lock-bs3.png":{"width":681,"height":390},"/docs/img/device/installation-relay-fail-secure-lock-bs3.png":{"width":667,"height":384},"/docs/img/device/installation-sio2-connection-bs3.png":{"width":791,"height":520},"/docs/img/device/installation-standalone-connection-bs3.png":{"width":774,"height":715},"/docs/img/device/installation-ttl-input-connection-bs3.png":{"width":657,"height":422},"/docs/img/device/installation-wiegand-in-connection-bs3.png":{"width":737,"height":311},"/docs/img/device/installation-wiegand-out-connection-bs3.png":{"width":737,"height":312},"/docs/img/device/name-function-each-part-bs3.png":{"width":760,"height":760},"/docs/img/en/biostar-298-deleted-csn-mobile-card-1.png":{"width":340,"height":211},"/docs/img/en/biostar-298-deleted-csn-mobile-card.png":{"width":1189,"height":243},"/docs/img/en/biostar-deleted-csn-mobile-card-2.png":{"width":1000,"height":202},"/docs/img/en/biostar-enrollment-result.png":{"width":400,"height":50},"/docs/img/en/biostar-login-download-https.png":{"width":600,"height":510},"/docs/img/en/biostar2-setting-directory-ad-server.png":{"width":1500,"height":379},"/docs/img/en/biostar2-setting-directory-btn-apply.png":{"width":1203,"height":285},"/docs/img/en/biostar2-setting-directory-entraid-login.png":{"width":400,"height":452},"/docs/img/en/biostar2-setting-directory-integ-ad.png":{"width":1500,"height":324},"/docs/img/en/biostar2-setting-directory-integ-entraid.png":{"width":1500,"height":330},"/docs/img/en/biostar2-setting-directory-login-with-ad.png":{"width":1500,"height":167},"/docs/img/en/biostar2-setting-directory-login-with-entraid.png":{"width":1500,"height":220},"/docs/img/en/biostar2-setting-directory-server.png":{"width":1500,"height":273},"/docs/img/en/biostar2-setting-directory-sync-auto.png":{"width":1500,"height":323},"/docs/img/en/biostar2-setting-directory-sync-manual.png":{"width":1500,"height":276},"/docs/img/en/biostar2-setting-directory-sync-warn-message.png":{"width":400,"height":217},"/docs/img/en/biostar2-setting-directory-unset-warn-message.png":{"width":400,"height":176},"/docs/img/en/biostar2-setting-directory-unset.png":{"width":1500,"height":253},"/docs/img/en/biostar2-setting-directory-userfield-ad.png":{"width":1500,"height":558},"/docs/img/en/biostar2-setting-directory-userfield-select-other-ad.png":{"width":800,"height":356},"/docs/img/en/biostar2-setting-directory-userfield-select-other.png":{"width":800,"height":552},"/docs/img/en/biostar2-setting-directory-userfield.png":{"width":1500,"height":795},"/docs/img/en/biostar2-setting-directory-usergroup-filter.png":{"width":1500,"height":897},"/docs/img/en/biostar2-user-advance-exclude-sync.png":{"width":1500,"height":405},"/docs/img/en/biostarx-adjust-win-size.png":{"width":200,"height":156},"/docs/img/en/biostarx-batch-edit-user-mfa-use.png":{"width":801,"height":201},"/docs/img/en/biostarx-checkpoint.png":{"width":800,"height":327},"/docs/img/en/biostarx-dashboard-widget-del.png":{"width":354,"height":254},"/docs/img/en/biostarx-dashboard.png":{"width":1059,"height":474},"/docs/img/en/biostarx-data-information.png":{"width":970,"height":111},"/docs/img/en/biostarx-data-report-format.png":{"width":970,"height":308},"/docs/img/en/biostarx-data-report-schedule.png":{"width":970,"height":155},"/docs/img/en/biostarx-data-settings.png":{"width":894,"height":111},"/docs/img/en/biostarx-data.png":{"width":472,"height":958},"/docs/img/en/biostarx-door-control.png":{"width":400,"height":206},"/docs/img/en/biostarx-edit-user-batch-edit.png":{"width":800,"height":538},"/docs/img/en/biostarx-edit-user-mfa-use.png":{"width":800,"height":266},"/docs/img/en/biostarx-header.png":{"width":1500,"height":572},"/docs/img/en/biostarx-install-2-to-x-agree.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-additional-fin.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-additional.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-agree.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-check-control-network-connections.png":{"width":1200,"height":410},"/docs/img/en/biostarx-install-check-ethernet-properties.png":{"width":400,"height":516},"/docs/img/en/biostarx-install-check-ethernet-status.png":{"width":400,"height":496},"/docs/img/en/biostarx-install-check-protocol-properties.png":{"width":465,"height":529},"/docs/img/en/biostarx-install-check-set-metrics.png":{"width":465,"height":568},"/docs/img/en/biostarx-install-check-start-network-search.png":{"width":800,"height":328},"/docs/img/en/biostarx-install-comm-server-complete.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-install-step.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-port-settings.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-private-policy.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-select-component.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-set-path.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-settings.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-complete.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-admin-pw.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-db-details.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-db-pw.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-read-covenant.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-custom.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-ip.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-language.png":{"width":299,"height":172},"/docs/img/en/biostarx-install-select-quick.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-encrypt-path.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-path.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-port-confirm.png":{"width":412,"height":152},"/docs/img/en/biostarx-install-set-port.png":{"width":499,"height":392},"/docs/img/en/biostarx-launcher.png":{"width":1500,"height":749},"/docs/img/en/biostarx-login.png":{"width":800,"height":551},"/docs/img/en/biostarx-main-launcher.png":{"width":1920,"height":959},"/docs/img/en/biostarx-new-user-credential-authmod-default.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-credential-authmod-note-image.png":{"width":800,"height":137},"/docs/img/en/biostarx-new-user-credential-authmod-private-add.png":{"width":800,"height":586},"/docs/img/en/biostarx-new-user-credential-authmod-private-join.png":{"width":800,"height":331},"/docs/img/en/biostarx-new-user-credential-authmod-private.png":{"width":1082,"height":374},"/docs/img/en/biostarx-new-user-credential-biostarqr.png":{"width":476,"height":345},"/docs/img/en/biostarx-new-user-credential-card-assign-info.png":{"width":800,"height":571},"/docs/img/en/biostarx-new-user-credential-card-csn.png":{"width":600,"height":364},"/docs/img/en/biostarx-new-user-credential-card-readcard.png":{"width":600,"height":573},"/docs/img/en/biostarx-new-user-credential-card-smartcard.png":{"width":600,"height":514},"/docs/img/en/biostarx-new-user-credential-card-wiegand.png":{"width":600,"height":406},"/docs/img/en/biostarx-new-user-credential-face-import-csv.png":{"width":600,"height":419},"/docs/img/en/biostarx-new-user-credential-face-import.png":{"width":600,"height":556},"/docs/img/en/biostarx-new-user-credential-face-mobile-app.png":{"width":970,"height":301},"/docs/img/en/biostarx-new-user-credential-face-webcam-take.png":{"width":822,"height":470},"/docs/img/en/biostarx-new-user-credential-face.png":{"width":600,"height":473},"/docs/img/en/biostarx-new-user-credential-finger-nth.png":{"width":600,"height":199},"/docs/img/en/biostarx-new-user-credential-finger.png":{"width":600,"height":559},"/docs/img/en/biostarx-new-user-credential-mobile-csn-assign.png":{"width":640,"height":538},"/docs/img/en/biostarx-new-user-credential-mobile-csn.png":{"width":575,"height":547},"/docs/img/en/biostarx-new-user-credential-mobile-tom.png":{"width":640,"height":590},"/docs/img/en/biostarx-new-user-credential-qrbarcode.png":{"width":553,"height":341},"/docs/img/en/biostarx-new-user-credential-securitylevle.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-credential.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-information.png":{"width":1201,"height":458},"/docs/img/en/biostarx-new-user-permission.png":{"width":801,"height":269},"/docs/img/en/biostarx-real-time-event.png":{"width":800,"height":310},"/docs/img/en/biostarx-setting-add-device-group.png":{"width":926,"height":225},"/docs/img/en/biostarx-setting-add-device-option.png":{"width":990,"height":643},"/docs/img/en/biostarx-setting-add-device-rename.png":{"width":926,"height":89},"/docs/img/en/biostarx-setting-add-device.png":{"width":990,"height":568},"/docs/img/en/biostarx-setting-device-adding-slave-device.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-adding-slave-list.png":{"width":710,"height":285},"/docs/img/en/biostarx-setting-device-adding-wiegand-list.png":{"width":670,"height":273},"/docs/img/en/biostarx-setting-device-adding-wiegand-ok.png":{"width":300,"height":188},"/docs/img/en/biostarx-setting-device-adding-wiegand.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-advanced-search-result.png":{"width":790,"height":253},"/docs/img/en/biostarx-setting-device-advanced-search.png":{"width":550,"height":236},"/docs/img/en/biostarx-setting-device-batch-edit.png":{"width":793,"height":809},"/docs/img/en/biostarx-setting-device-edit-advanced-administrator.png":{"width":1000,"height":500},"/docs/img/en/biostarx-setting-device-edit-advanced-imagelog.png":{"width":1011,"height":797},"/docs/img/en/biostarx-setting-device-edit-advanced-tamper.png":{"width":856,"height":60},"/docs/img/en/biostarx-setting-device-edit-advanced-tna.png":{"width":1002,"height":408},"/docs/img/en/biostarx-setting-device-edit-advanced-triggernaction.png":{"width":1116,"height":600},"/docs/img/en/biostarx-setting-device-edit-advanced-wiegand.png":{"width":1140,"height":179},"/docs/img/en/biostarx-setting-device-edit-auth-mode-adding.png":{"width":600,"height":474},"/docs/img/en/biostarx-setting-device-edit-auth-mode.png":{"width":1304,"height":327},"/docs/img/en/biostarx-setting-device-edit-info.png":{"width":1670,"height":498},"/docs/img/en/biostarx-setting-device-edit-ipinterphone.png":{"width":1227,"height":816},"/docs/img/en/biostarx-setting-device-edit-network.png":{"width":1670,"height":756},"/docs/img/en/biostarx-setting-device-edit-rtsp.png":{"width":1340,"height":183},"/docs/img/en/biostarx-setting-device-functions.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-imagelog-add.png":{"width":1380,"height":244},"/docs/img/en/biostarx-setting-device-imagelog-example.png":{"width":1500,"height":707},"/docs/img/en/biostarx-setting-device-imagelog-remove.png":{"width":1063,"height":177},"/docs/img/en/biostarx-setting-device-imagelog-select-event.png":{"width":1063,"height":368},"/docs/img/en/biostarx-setting-device-imagelog-select-schedule.png":{"width":1063,"height":155},"/docs/img/en/biostarx-setting-device-info-upgrade-firmware.png":{"width":1683,"height":586},"/docs/img/en/biostarx-setting-device-manage-device-users-popup.png":{"width":750,"height":586},"/docs/img/en/biostarx-setting-device-manage-device-users.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-set-ip.png":{"width":672,"height":509},"/docs/img/en/biostarx-setting-device-sync-device.png":{"width":1469,"height":236},"/docs/img/en/biostarx-setting-device-upgrade-firmware-popup.png":{"width":590,"height":268},"/docs/img/en/biostarx-setting-device-upgrade-firmware.png":{"width":1469,"height":236},"/docs/img/en/biostarx-setting-door-add-group-naming.png":{"width":240,"height":257},"/docs/img/en/biostarx-setting-door-add-group.png":{"width":453,"height":280},"/docs/img/en/biostarx-setting-door-adding-aditional-option.png":{"width":1216,"height":428},"/docs/img/en/biostarx-setting-door-adding-configuration.png":{"width":1216,"height":328},"/docs/img/en/biostarx-setting-door-adding-info.png":{"width":1215,"height":166},"/docs/img/en/biostarx-setting-door-adding.png":{"width":393,"height":264},"/docs/img/en/biostarx-setting-door-edit-batch.png":{"width":400,"height":201},"/docs/img/en/biostarx-setting-door-rename-group.png":{"width":439,"height":389},"/docs/img/en/biostarx-setting-door-to-group-info-select.png":{"width":980,"height":165},"/docs/img/en/biostarx-setting-door-to-group-list.png":{"width":1361,"height":264},"/docs/img/en/biostarx-setting-door-to-group-result.png":{"width":240,"height":254},"/docs/img/en/biostarx-setting-door-to-group.png":{"width":240,"height":276},"/docs/img/en/biostarx-settings-access-control-status-column-setting.png":{"width":390,"height":575},"/docs/img/en/biostarx-settings-access-control-status-filter.png":{"width":647,"height":389},"/docs/img/en/biostarx-settings-access-control-status-pagenation.png":{"width":434,"height":62},"/docs/img/en/biostarx-settings-access-control-status.png":{"width":1348,"height":357},"/docs/img/en/biostarx-settings-add-access-floor-level.png":{"width":1200,"height":722},"/docs/img/en/biostarx-settings-add-access-group.png":{"width":1200,"height":743},"/docs/img/en/biostarx-settings-add-access-level.png":{"width":1231,"height":793},"/docs/img/en/biostarx-settings-advanced-ac-intusion-add-device.png":{"width":401,"height":382},"/docs/img/en/biostarx-settings-advanced-ac-intusion-add-signal.png":{"width":401,"height":453},"/docs/img/en/biostarx-settings-advanced-ac-intusion-detect-settings.png":{"width":399,"height":451},"/docs/img/en/biostarx-settings-alert-edit-message.png":{"width":398,"height":333},"/docs/img/en/biostarx-settings-alert.png":{"width":1500,"height":694},"/docs/img/en/biostarx-settings-card-printer-custom-user.png":{"width":950,"height":170},"/docs/img/en/biostarx-settings-card-printer-custom-user1.png":{"width":1161,"height":517},"/docs/img/en/biostarx-settings-card-printer-installation.png":{"width":944,"height":557},"/docs/img/en/biostarx-settings-card-printer-installation1.png":{"width":419,"height":580},"/docs/img/en/biostarx-settings-card-printer-installation2.png":{"width":493,"height":458},"/docs/img/en/biostarx-settings-card-printer-installation3.png":{"width":493,"height":458},"/docs/img/en/biostarx-settings-card-printer-template.png":{"width":1000,"height":545},"/docs/img/en/biostarx-settings-card-printer-user.png":{"width":1161,"height":515},"/docs/img/en/biostarx-settings-card-printer-user1.png":{"width":570,"height":208},"/docs/img/en/biostarx-settings-card-printer-user2.png":{"width":340,"height":206},"/docs/img/en/biostarx-settings-card-printer.png":{"width":1024,"height":337},"/docs/img/en/biostarx-settings-card-printer1.png":{"width":1024,"height":337},"/docs/img/en/biostarx-settings-credentail-card-change-data-format.png":{"width":380,"height":223},"/docs/img/en/biostarx-settings-credentail-card.png":{"width":1488,"height":255},"/docs/img/en/biostarx-settings-credentail-mobile-access-connection.png":{"width":1200,"height":241},"/docs/img/en/biostarx-settings-credentail-mobile-access-register-device-popup.png":{"width":800,"height":415},"/docs/img/en/biostarx-settings-credentail-mobile-access-register-device.png":{"width":1234,"height":124},"/docs/img/en/biostarx-settings-credentail-mobile-access.png":{"width":1200,"height":241},"/docs/img/en/biostarx-settings-credentail-smart-format-add.png":{"width":1198,"height":751},"/docs/img/en/biostarx-settings-credentail-smart-format-info.png":{"width":1202,"height":557},"/docs/img/en/biostarx-settings-credentail-smart-format-type.png":{"width":1200,"height":108},"/docs/img/en/biostarx-settings-credential-wiegand-format.png":{"width":1200,"height":488},"/docs/img/en/biostarx-settings-email-contents.png":{"width":894,"height":161},"/docs/img/en/biostarx-settings-email-qr.png":{"width":1103,"height":276},"/docs/img/en/biostarx-settings-email-smtp-option.png":{"width":490,"height":521},"/docs/img/en/biostarx-settings-email-visual-face.png":{"width":1103,"height":400},"/docs/img/en/biostarx-settings-license-device-license.png":{"width":1201,"height":255},"/docs/img/en/biostarx-settings-license-license.png":{"width":1502,"height":732},"/docs/img/en/biostarx-settings-map-area-add-01.png":{"width":800,"height":636},"/docs/img/en/biostarx-settings-map-area-add-02.png":{"width":403,"height":242},"/docs/img/en/biostarx-settings-map-area-camera-setting.png":{"width":400,"height":265},"/docs/img/en/biostarx-settings-map-area-reset.png":{"width":400,"height":242},"/docs/img/en/biostarx-settings-preference-add-sound.png":{"width":735,"height":338},"/docs/img/en/biostarx-settings-preference-date-time.png":{"width":1069,"height":116},"/docs/img/en/biostarx-settings-preference-language-timezone.png":{"width":1069,"height":196},"/docs/img/en/biostarx-settings-preference-sound.png":{"width":1069,"height":199},"/docs/img/en/biostarx-settings-schedule-add-extend.png":{"width":1200,"height":799},"/docs/img/en/biostarx-settings-schedule-add-holiday.png":{"width":1157,"height":451},"/docs/img/en/biostarx-settings-schedule-add-type-daily.png":{"width":748,"height":78},"/docs/img/en/biostarx-settings-schedule-add.png":{"width":1246,"height":664},"/docs/img/en/biostarx-settings-schedule-input-time-slot.png":{"width":500,"height":500},"/docs/img/en/biostarx-settings-server-expert.png":{"width":1043,"height":117},"/docs/img/en/biostarx-settings-server-expert2.png":{"width":1054,"height":116},"/docs/img/en/biostarx-settings-server-general.png":{"width":1262,"height":196},"/docs/img/en/biostarx-settings-server-https.png":{"width":805,"height":196},"/docs/img/en/biostarx-settings-server-management-custome-field-select.png":{"width":600,"height":215},"/docs/img/en/biostarx-settings-server-management-custome-field.png":{"width":800,"height":135},"/docs/img/en/biostarx-settings-server-management-enroll-device.png":{"width":800,"height":415},"/docs/img/en/biostarx-settings-server-management.png":{"width":1262,"height":524},"/docs/img/en/biostarx-settings-server-server-matching.png":{"width":1309,"height":279},"/docs/img/en/biostarx-settings-server-system-log-level.png":{"width":1262,"height":176},"/docs/img/en/biostarx-settings-system-audit-trail-column-setting.png":{"width":400,"height":588},"/docs/img/en/biostarx-settings-system-audit-trail-list.png":{"width":1201,"height":267},"/docs/img/en/biostarx-settings-system-audit-trail.png":{"width":1500,"height":402},"/docs/img/en/biostarx-settings-system-daylight-saving-time-edit.png":{"width":738,"height":254},"/docs/img/en/biostarx-settings-system-daylight-saving-time.png":{"width":735,"height":285},"/docs/img/en/biostarx-settings-system-restore-check-ver.png":{"width":800,"height":359},"/docs/img/en/biostarx-settings-system-security-advanced-with-device.png":{"width":1200,"height":254},"/docs/img/en/biostarx-settings-system-security-advanced.png":{"width":1480,"height":196},"/docs/img/en/biostarx-settings-system-security-password.png":{"width":1480,"height":244},"/docs/img/en/biostarx-settings-system-security-session.png":{"width":1480,"height":118},"/docs/img/en/biostarx-settings-system-system-backup-automatic.png":{"width":1235,"height":158},"/docs/img/en/biostarx-settings-system-system-backup-general.png":{"width":1235,"height":226},"/docs/img/en/biostarx-settings-trigger-and-action-add.png":{"width":1500,"height":714},"/docs/img/en/biostarx-settings-visitor-custom-visitor-field.png":{"width":1510,"height":184},"/docs/img/en/biostarx-settings-visitor-site-settings.png":{"width":1510,"height":281},"/docs/img/en/biostarx-settings-visitor-terms-visitor-settings.png":{"width":1054,"height":725},"/docs/img/en/biostarx-settings-visitor-visit-pc-select.png":{"width":1107,"height":116},"/docs/img/en/biostarx-settings-visitor-visit-pc-settings.png":{"width":1510,"height":431},"/docs/img/en/biostarx-tutorial-license-offline-popup-filed.png":{"width":540,"height":400},"/docs/img/en/biostarx-tutorial-license-offline-popup.png":{"width":521,"height":141},"/docs/img/en/biostarx-tutorial-license-offline.png":{"width":874,"height":153},"/docs/img/en/biostarx-tutorial-license-online.png":{"width":874,"height":153},"/docs/img/en/biostarx-ui-monitoring.png":{"width":1500,"height":737},"/docs/img/en/biostarx-ui-settings.png":{"width":1500,"height":695},"/docs/img/en/biostarx-ui-user-template.png":{"width":1500,"height":385},"/docs/img/en/biostarx-ui-user.png":{"width":1500,"height":737},"/docs/img/en/biostarx-upgrade-complete.png":{"width":499,"height":392},"/docs/img/en/biostarx-upgrade-select-install-type.png":{"width":499,"height":392},"/docs/img/en/biostarx-upgrade-set-port.png":{"width":499,"height":392},"/docs/img/en/biostarx-user-access-explorer-tree-desc.png":{"width":400,"height":297},"/docs/img/en/biostarx-user-access-explorer-tree-expand-collapse.png":{"width":400,"height":247},"/docs/img/en/biostarx-user-access-explorer.png":{"width":400,"height":476},"/docs/img/en/biostarx-user-advanced.png":{"width":800,"height":184},"/docs/img/en/biostarx-user-group-add.png":{"width":400,"height":242},"/docs/img/en/biostarx-user-group-expand-collapse.png":{"width":400,"height":269},"/docs/img/en/biostarx-user-group-remove.png":{"width":400,"height":330},"/docs/img/en/biostarx-user-group-rename.png":{"width":400,"height":331},"/docs/img/en/biostarx-user-group-select-group-user.png":{"width":800,"height":370},"/docs/img/en/biostarx-user-import-01.png":{"width":560,"height":219},"/docs/img/en/biostarx-user-import-02.png":{"width":560,"height":547},"/docs/img/en/biostarx-user-import-03.png":{"width":539,"height":112},"/docs/img/en/biostarx-user-sub-group-add.png":{"width":400,"height":272},"/docs/img/en/biostarx-user-transfer-to-devices.png":{"width":800,"height":784},"/docs/img/en/biostarx-users-advanced-search.png":{"width":1500,"height":616},"/docs/img/en/biostarx-users-list-column-layout.png":{"width":600,"height":687},"/docs/img/en/biostarx-users-list-order.png":{"width":1500,"height":357},"/docs/img/en/biostarx-users-list-pagenation.png":{"width":623,"height":49},"/docs/img/en/biostarx-users-list-select-row.png":{"width":800,"height":167},"/docs/img/en/biostarx-users-list-view-profile.png":{"width":1500,"height":885},"/docs/img/en/biostarx-users-list.png":{"width":1500,"height":440},"/docs/img/en/biostarx-users-print-list.png":{"width":650,"height":424},"/docs/img/en/biostarx-users-search-result.png":{"width":1500,"height":292},"/docs/img/en/biostarx-widget-edit.png":{"width":600,"height":292},"/docs/img/en/device/device-auth-option-qr.png":{"width":250,"height":159},"/docs/img/en/device/device-auth-option.png":{"width":250,"height":68},"/docs/img/en/device/device-auth-result-display-option.png":{"width":250,"height":113},"/docs/img/en/device/device-auth.png":{"width":250,"height":444},"/docs/img/en/device/device-auth2.png":{"width":250,"height":444},"/docs/img/en/device/device-authmode.png":{"width":250,"height":444},"/docs/img/en/device/device-datetime.png":{"width":250,"height":444},"/docs/img/en/device/device-displaysound.png":{"width":250,"height":444},"/docs/img/en/device/device-dst.png":{"width":250,"height":444},"/docs/img/en/device/device-eventlog.png":{"width":250,"height":265},"/docs/img/en/device/device-eventlog1.png":{"width":250,"height":444},"/docs/img/en/device/device-info.png":{"width":250,"height":444},"/docs/img/en/device/device-license.png":{"width":250,"height":444},"/docs/img/en/device/device-license1.png":{"width":250,"height":444},"/docs/img/en/device/device-memory.png":{"width":250,"height":444},"/docs/img/en/device/device-menu.png":{"width":250,"height":444},"/docs/img/en/device/device-network-ethernet.png":{"width":250,"height":444},"/docs/img/en/device/device-network-intercom.png":{"width":250,"height":309},"/docs/img/en/device/device-network-osdp.png":{"width":250,"height":158},"/docs/img/en/device/device-network-relay.png":{"width":250,"height":444},"/docs/img/en/device/device-network-server.png":{"width":250,"height":444},"/docs/img/en/device/device-network-wifi.png":{"width":250,"height":444},"/docs/img/en/device/device-pin.png":{"width":250,"height":67},"/docs/img/en/device/device-rtsp.png":{"width":250,"height":311},"/docs/img/en/device/device-usb.png":{"width":250,"height":444},"/docs/img/en/device/device-user-add.png":{"width":546,"height":444},"/docs/img/en/device/device-user-usage.png":{"width":250,"height":444},"/docs/img/en/device/installation-automatic-door-bs3.png":{"width":754,"height":483},"/docs/img/en/device/installation-network-direct-connection-bs3.png":{"width":585,"height":267},"/docs/img/en/device/installation-network-hub-connection-bs3.png":{"width":774,"height":316},"/docs/img/en/device/installation-power-connection-bs3.png":{"width":656,"height":424},"/docs/img/en/device/installation-relay-fail-safe-lock-bs3.png":{"width":681,"height":387},"/docs/img/en/device/installation-relay-fail-secure-lock-bs3.png":{"width":667,"height":387},"/docs/img/en/device/installation-sio2-connection-bs3.png":{"width":791,"height":496},"/docs/img/en/device/installation-standalone-connection-bs3.png":{"width":774,"height":718},"/docs/img/en/device/installation-ttl-input-connection-bs3.png":{"width":657,"height":418},"/docs/img/en/device/installation-wiegand-in-connection-bs3.png":{"width":737,"height":308},"/docs/img/en/device/installation-wiegand-out-connection-bs3.png":{"width":737,"height":305},"/docs/img/en/how-to/edit-master-admin-1.png":{"width":721,"height":1281},"/docs/img/en/how-to/error-two-step-authentication.png":{"width":721,"height":613},"/docs/img/en/how-to/setting-master-admin-1.png":{"width":721,"height":1280},"/docs/img/en/how-to/setting-master-admin-2.png":{"width":721,"height":1280},"/docs/img/en/how-to/setting-master-admin-3.png":{"width":722,"height":1281},"/docs/img/en/how-to/setting-master-admin-4.png":{"width":722,"height":1281},"/docs/img/en/how-to/setting-two-step-authentication.png":{"width":721,"height":1281},"/docs/img/en/ico-audit-trail-rows-page.png":{"width":90,"height":28},"/docs/img/en/ico-expert-setting.png":{"width":130,"height":28},"/docs/img/en/monitoring-door-control-open-video-drag-drop.png":{"width":1500,"height":486},"/docs/img/en/monitoring-door-control-open-video.png":{"width":1500,"height":449},"/docs/img/en/monitoring-door-control.png":{"width":1676,"height":415},"/docs/img/en/monitoring-door-status-tooltip-device.png":{"width":430,"height":236},"/docs/img/en/monitoring-door-status-tooltip.png":{"width":430,"height":174},"/docs/img/en/monitoring-map-floor-control-door.png":{"width":800,"height":450},"/docs/img/en/monitoring-map-open-map.png":{"width":1426,"height":681},"/docs/img/en/monitoring-map-select-floor-list-box.png":{"width":800,"height":451},"/docs/img/en/monitoring-map-select-floor-play-video.png":{"width":800,"height":450},"/docs/img/en/monitoring-map-select-floor.png":{"width":1100,"height":361},"/docs/img/en/monitoring-video-adjust-size-01.png":{"width":900,"height":249},"/docs/img/en/monitoring-video-adjust-size-02.png":{"width":900,"height":512},"/docs/img/en/monitoring-video-adjust-size-03.png":{"width":1500,"height":583},"/docs/img/en/monitoring-video-alarm.png":{"width":1500,"height":824},"/docs/img/en/monitoring-video-close.png":{"width":400,"height":231},"/docs/img/en/monitoring-video-fullscreen.png":{"width":400,"height":231},"/docs/img/en/monitoring-video-move-position.png":{"width":900,"height":279},"/docs/img/en/monitoring-video-player.png":{"width":800,"height":466},"/docs/img/en/settings-custom-interface-add-quick-action.png":{"width":550,"height":356},"/docs/img/en/settings-custom-interface-confirm.png":{"width":340,"height":206},"/docs/img/en/settings-custom-interface-main-quick-action.png":{"width":277,"height":136},"/docs/img/en/settings-custom-interface-quick-action-layout.png":{"width":1262,"height":298},"/docs/img/foot_sns_02.png":{"width":35,"height":35},"/docs/img/foot_sns_04.png":{"width":35,"height":35},"/docs/img/foot_sns_05.png":{"width":35,"height":35},"/docs/img/foot_sns_06.png":{"width":35,"height":35},"/docs/img/foot_sns_instagram.png":{"width":35,"height":35},"/docs/img/hero.png":{"width":1920,"height":460},"/docs/img/how-to/BioLite N2-Front.png":{"width":1299,"height":3034},"/docs/img/how-to/BioStation 2a-front.png":{"width":1500,"height":1383},"/docs/img/how-to/BioStation 3-Front.png":{"width":1000,"height":1812},"/docs/img/how-to/X-Station 2-DPB-APB-Front.png":{"width":1022,"height":1761},"/docs/img/how-to/X-Station 2-Front.png":{"width":2283,"height":2272},"/docs/img/how-to/X-Station 2-ODPB-OAPB-Front.png":{"width":801,"height":1761},"/docs/img/how-to/X-Station 2-QDPB-QAPB-Front.png":{"width":889,"height":2072},"/docs/img/how-to/edit-master-admin-1.png":{"width":721,"height":1281},"/docs/img/how-to/error-two-step-authentication.png":{"width":721,"height":619},"/docs/img/how-to/no-register-master-admin.png":{"width":366,"height":167},"/docs/img/how-to/setting-master-admin-1.png":{"width":721,"height":1280},"/docs/img/how-to/setting-master-admin-2.png":{"width":721,"height":1280},"/docs/img/how-to/setting-master-admin-3.png":{"width":721,"height":1281},"/docs/img/how-to/setting-master-admin-4.png":{"width":721,"height":1281},"/docs/img/how-to/setting-two-step-authentication.png":{"width":721,"height":1281},"/docs/img/ico-audit-trail-rows-page.png":{"width":74,"height":28},"/docs/img/ico-expert-setting.png":{"width":130,"height":28},"/docs/img/monitoring-door-control-open-video-drag-drop.png":{"width":1500,"height":391},"/docs/img/monitoring-door-control-open-video.png":{"width":1500,"height":445},"/docs/img/monitoring-door-control.png":{"width":1500,"height":364},"/docs/img/monitoring-door-status-tooltip-device.png":{"width":400,"height":236},"/docs/img/monitoring-door-status-tooltip.png":{"width":400,"height":183},"/docs/img/monitoring-map-floor-control-door.png":{"width":800,"height":450},"/docs/img/monitoring-map-open-map.png":{"width":1500,"height":608},"/docs/img/monitoring-map-select-floor-list-box.png":{"width":800,"height":451},"/docs/img/monitoring-map-select-floor-play-video.png":{"width":800,"height":450},"/docs/img/monitoring-map-select-floor.png":{"width":1100,"height":361},"/docs/img/monitoring-video-adjust-size-01.png":{"width":900,"height":249},"/docs/img/monitoring-video-adjust-size-02.png":{"width":900,"height":512},"/docs/img/monitoring-video-adjust-size-03.png":{"width":1500,"height":583},"/docs/img/monitoring-video-alarm.png":{"width":1500,"height":824},"/docs/img/monitoring-video-close.png":{"width":400,"height":231},"/docs/img/monitoring-video-fullscreen.png":{"width":400,"height":231},"/docs/img/monitoring-video-move-position.png":{"width":900,"height":279},"/docs/img/monitoring-video-player.png":{"width":800,"height":466},"/docs/img/settings-custom-interface-add-quick-action.png":{"width":550,"height":356},"/docs/img/settings-custom-interface-confirm.png":{"width":340,"height":206},"/docs/img/settings-custom-interface-main-quick-action.png":{"width":277,"height":136},"/docs/img/settings-custom-interface-quick-action-layout.png":{"width":1267,"height":300},"/docs/img/sns_img02.jpg":{"width":2335,"height":1520}}')
+var sizeOfimages_namespaceObject = JSON.parse('{"/docs/img/air/air-device-management-upgrade-fw-edit-device.png":{"width":840,"height":886},"/docs/img/air/air-device-management-upgrade-fw-list.png":{"width":526,"height":445},"/docs/img/air/air-device-management-upgrade-fw.png":{"width":1593,"height":510},"/docs/img/air/air-hardware-edit-device-qr-reader.jpg":{"width":2085,"height":1805},"/docs/img/air/air-hardware-qr-reader-barcode.png":{"width":532,"height":384},"/docs/img/air/air-hardware-qr-reader-diagram.png":{"width":2021,"height":2108},"/docs/img/air/air-main-cover-image.png":{"width":1920,"height":1080},"/docs/img/banner/biostar2_6_banner.jpg":{"width":1920,"height":400},"/docs/img/banner/biostar2_6_banner_deco1.png":{"width":665,"height":551},"/docs/img/banner/biostar2_6_banner_deco2.png":{"width":544,"height":451},"/docs/img/biostar-298-deleted-csn-mobile-card-1.png":{"width":340,"height":206},"/docs/img/biostar-298-deleted-csn-mobile-card.png":{"width":1189,"height":244},"/docs/img/biostar-custom-dashboard.png":{"width":1045,"height":501},"/docs/img/biostar-deleted-csn-mobile-card-2.png":{"width":1000,"height":201},"/docs/img/biostar-enrollment-result.png":{"width":400,"height":46},"/docs/img/biostar-login-download-https.png":{"width":600,"height":510},"/docs/img/biostar2-setting-directory-ad-server.png":{"width":1500,"height":379},"/docs/img/biostar2-setting-directory-btn-apply.png":{"width":1200,"height":288},"/docs/img/biostar2-setting-directory-entraid-login.png":{"width":400,"height":452},"/docs/img/biostar2-setting-directory-integ-ad.png":{"width":1500,"height":324},"/docs/img/biostar2-setting-directory-integ-entraid.png":{"width":1500,"height":330},"/docs/img/biostar2-setting-directory-login-with-ad.png":{"width":1500,"height":167},"/docs/img/biostar2-setting-directory-login-with-entraid.png":{"width":1500,"height":220},"/docs/img/biostar2-setting-directory-server.png":{"width":1500,"height":273},"/docs/img/biostar2-setting-directory-sync-auto.png":{"width":1500,"height":326},"/docs/img/biostar2-setting-directory-sync-manual.png":{"width":1500,"height":276},"/docs/img/biostar2-setting-directory-sync-warn-message.png":{"width":400,"height":190},"/docs/img/biostar2-setting-directory-unset-warn-message.png":{"width":400,"height":173},"/docs/img/biostar2-setting-directory-unset.png":{"width":1500,"height":253},"/docs/img/biostar2-setting-directory-userfield-ad.png":{"width":1500,"height":558},"/docs/img/biostar2-setting-directory-userfield-select-other-ad.png":{"width":800,"height":356},"/docs/img/biostar2-setting-directory-userfield-select-other.png":{"width":800,"height":552},"/docs/img/biostar2-setting-directory-userfield.png":{"width":1500,"height":795},"/docs/img/biostar2-setting-directory-usergroup-filter.png":{"width":1500,"height":897},"/docs/img/biostar2-user-advance-exclude-sync.png":{"width":1500,"height":405},"/docs/img/biostarx-add-user-from-template.png":{"width":300,"height":210},"/docs/img/biostarx-adjust-win-size.png":{"width":200,"height":167},"/docs/img/biostarx-batch-edit-user-mfa-use.png":{"width":801,"height":201},"/docs/img/biostarx-checkpoint.png":{"width":800,"height":327},"/docs/img/biostarx-common-ui-column-layout.png":{"width":350,"height":583},"/docs/img/biostarx-dashboard-widget-del.png":{"width":354,"height":254},"/docs/img/biostarx-dashboard.png":{"width":1059,"height":474},"/docs/img/biostarx-data-information.png":{"width":970,"height":111},"/docs/img/biostarx-data-report-format.png":{"width":970,"height":308},"/docs/img/biostarx-data-report-schedule.png":{"width":970,"height":155},"/docs/img/biostarx-data-settings.png":{"width":1143,"height":111},"/docs/img/biostarx-data.png":{"width":477,"height":959},"/docs/img/biostarx-door-control.png":{"width":400,"height":206},"/docs/img/biostarx-edit-user-batch-edit.png":{"width":800,"height":538},"/docs/img/biostarx-edit-user-mfa-use.png":{"width":800,"height":266},"/docs/img/biostarx-header-shortcut-link.png":{"width":300,"height":402},"/docs/img/biostarx-header.png":{"width":1500,"height":597},"/docs/img/biostarx-install-2-to-x-agree.png":{"width":499,"height":392},"/docs/img/biostarx-install-additional-fin.png":{"width":499,"height":392},"/docs/img/biostarx-install-additional.png":{"width":499,"height":392},"/docs/img/biostarx-install-agree.png":{"width":499,"height":392},"/docs/img/biostarx-install-check-control-network-connections.png":{"width":1200,"height":370},"/docs/img/biostarx-install-check-ethernet-properties.png":{"width":400,"height":522},"/docs/img/biostarx-install-check-ethernet-status.png":{"width":400,"height":486},"/docs/img/biostarx-install-check-protocol-properties.png":{"width":465,"height":518},"/docs/img/biostarx-install-check-set-metrics.png":{"width":465,"height":555},"/docs/img/biostarx-install-check-start-network-search.png":{"width":800,"height":328},"/docs/img/biostarx-install-comm-server-complete.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-install-step.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-port-settings.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-private-policy.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-select-component.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-set-path.png":{"width":500,"height":392},"/docs/img/biostarx-install-comm-server-settings.png":{"width":500,"height":392},"/docs/img/biostarx-install-complete.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-admin-pw.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-db-details.png":{"width":499,"height":392},"/docs/img/biostarx-install-input-db-pw.png":{"width":499,"height":392},"/docs/img/biostarx-install-read-covenant.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-custom.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-ip.png":{"width":499,"height":392},"/docs/img/biostarx-install-select-language.png":{"width":299,"height":172},"/docs/img/biostarx-install-select-quick.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-encrypt-path.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-path.png":{"width":499,"height":392},"/docs/img/biostarx-install-set-port-confirm.png":{"width":388,"height":152},"/docs/img/biostarx-install-set-port.png":{"width":499,"height":392},"/docs/img/biostarx-launcher.png":{"width":1500,"height":749},"/docs/img/biostarx-login.png":{"width":800,"height":556},"/docs/img/biostarx-main-launcher.png":{"width":1920,"height":959},"/docs/img/biostarx-new-user-credential-authmod-default.png":{"width":1069,"height":297},"/docs/img/biostarx-new-user-credential-authmod-note-image.png":{"width":800,"height":137},"/docs/img/biostarx-new-user-credential-authmod-private-add.png":{"width":800,"height":586},"/docs/img/biostarx-new-user-credential-authmod-private-join.png":{"width":800,"height":332},"/docs/img/biostarx-new-user-credential-authmod-private.png":{"width":1069,"height":375},"/docs/img/biostarx-new-user-credential-biostarqr.png":{"width":476,"height":345},"/docs/img/biostarx-new-user-credential-card-assign-info.png":{"width":800,"height":571},"/docs/img/biostarx-new-user-credential-card-csn.png":{"width":600,"height":364},"/docs/img/biostarx-new-user-credential-card-readcard.png":{"width":600,"height":573},"/docs/img/biostarx-new-user-credential-card-smartcard.png":{"width":600,"height":514},"/docs/img/biostarx-new-user-credential-card-wiegand.png":{"width":600,"height":406},"/docs/img/biostarx-new-user-credential-face-import-csv.png":{"width":600,"height":419},"/docs/img/biostarx-new-user-credential-face-import.png":{"width":600,"height":550},"/docs/img/biostarx-new-user-credential-face-mobile-app.png":{"width":970,"height":301},"/docs/img/biostarx-new-user-credential-face-webcam-take.png":{"width":822,"height":470},"/docs/img/biostarx-new-user-credential-face.png":{"width":600,"height":473},"/docs/img/biostarx-new-user-credential-finger-nth.png":{"width":600,"height":201},"/docs/img/biostarx-new-user-credential-finger.png":{"width":600,"height":559},"/docs/img/biostarx-new-user-credential-mobile-csn-assign.png":{"width":640,"height":538},"/docs/img/biostarx-new-user-credential-mobile-csn.png":{"width":600,"height":568},"/docs/img/biostarx-new-user-credential-mobile-tom.png":{"width":640,"height":590},"/docs/img/biostarx-new-user-credential-passcode.png":{"width":600,"height":293},"/docs/img/biostarx-new-user-credential-qrbarcode.png":{"width":499,"height":341},"/docs/img/biostarx-new-user-credential-securitylevle.png":{"width":1069,"height":291},"/docs/img/biostarx-new-user-credential.png":{"width":1069,"height":305},"/docs/img/biostarx-new-user-information.png":{"width":1201,"height":458},"/docs/img/biostarx-new-user-permission.png":{"width":801,"height":269},"/docs/img/biostarx-real-time-event.png":{"width":800,"height":309},"/docs/img/biostarx-setting-add-device-group.png":{"width":800,"height":179},"/docs/img/biostarx-setting-add-device-option.png":{"width":801,"height":512},"/docs/img/biostarx-setting-add-device-rename.png":{"width":800,"height":85},"/docs/img/biostarx-setting-add-device.png":{"width":800,"height":464},"/docs/img/biostarx-setting-device-adding-slave-device.png":{"width":300,"height":257},"/docs/img/biostarx-setting-device-adding-slave-list.png":{"width":600,"height":242},"/docs/img/biostarx-setting-device-adding-wiegand-list.png":{"width":600,"height":246},"/docs/img/biostarx-setting-device-adding-wiegand-ok.png":{"width":300,"height":226},"/docs/img/biostarx-setting-device-adding-wiegand.png":{"width":300,"height":280},"/docs/img/biostarx-setting-device-advanced-search-result.png":{"width":600,"height":194},"/docs/img/biostarx-setting-device-advanced-search.png":{"width":600,"height":261},"/docs/img/biostarx-setting-device-batch-edit.png":{"width":793,"height":809},"/docs/img/biostarx-setting-device-edit-advanced-administrator.png":{"width":1200,"height":429},"/docs/img/biostarx-setting-device-edit-advanced-imagelog.png":{"width":1200,"height":767},"/docs/img/biostarx-setting-device-edit-advanced-tamper.png":{"width":600,"height":52},"/docs/img/biostarx-setting-device-edit-advanced-tna.png":{"width":1200,"height":349},"/docs/img/biostarx-setting-device-edit-advanced-triggernaction.png":{"width":1240,"height":668},"/docs/img/biostarx-setting-device-edit-advanced-wiegand.png":{"width":1200,"height":162},"/docs/img/biostarx-setting-device-edit-auth-mode-adding.png":{"width":600,"height":475},"/docs/img/biostarx-setting-device-edit-auth-mode.png":{"width":1500,"height":358},"/docs/img/biostarx-setting-device-edit-info.png":{"width":1500,"height":539},"/docs/img/biostarx-setting-device-edit-ipinterphone.png":{"width":1200,"height":755},"/docs/img/biostarx-setting-device-edit-network.png":{"width":1500,"height":793},"/docs/img/biostarx-setting-device-edit-rtsp.png":{"width":1334,"height":196},"/docs/img/biostarx-setting-device-functions.png":{"width":300,"height":256},"/docs/img/biostarx-setting-device-imagelog-add.png":{"width":1460,"height":285},"/docs/img/biostarx-setting-device-imagelog-example.png":{"width":1500,"height":707},"/docs/img/biostarx-setting-device-imagelog-remove.png":{"width":1063,"height":158},"/docs/img/biostarx-setting-device-imagelog-select-event.png":{"width":1063,"height":385},"/docs/img/biostarx-setting-device-imagelog-select-schedule.png":{"width":1063,"height":158},"/docs/img/biostarx-setting-device-info-upgrade-firmware.png":{"width":1500,"height":598},"/docs/img/biostarx-setting-device-manage-device-users-popup.png":{"width":600,"height":470},"/docs/img/biostarx-setting-device-manage-device-users.png":{"width":300,"height":267},"/docs/img/biostarx-setting-device-set-ip.png":{"width":600,"height":456},"/docs/img/biostarx-setting-device-sync-device.png":{"width":1500,"height":438},"/docs/img/biostarx-setting-device-upgrade-firmware-popup.png":{"width":600,"height":275},"/docs/img/biostarx-setting-device-upgrade-firmware.png":{"width":1500,"height":445},"/docs/img/biostarx-setting-door-add-group-naming.png":{"width":220,"height":268},"/docs/img/biostarx-setting-door-add-group.png":{"width":400,"height":288},"/docs/img/biostarx-setting-door-adding-aditional-option.png":{"width":1200,"height":353},"/docs/img/biostarx-setting-door-adding-configuration.png":{"width":1200,"height":286},"/docs/img/biostarx-setting-door-adding-info.png":{"width":1200,"height":139},"/docs/img/biostarx-setting-door-adding.png":{"width":400,"height":288},"/docs/img/biostarx-setting-door-edit-batch.png":{"width":400,"height":201},"/docs/img/biostarx-setting-door-rename-group.png":{"width":400,"height":385},"/docs/img/biostarx-setting-door-to-group-info-select.png":{"width":980,"height":151},"/docs/img/biostarx-setting-door-to-group-list.png":{"width":1200,"height":254},"/docs/img/biostarx-setting-door-to-group-result.png":{"width":220,"height":275},"/docs/img/biostarx-setting-door-to-group.png":{"width":220,"height":288},"/docs/img/biostarx-settings-access-control-status-column-setting.png":{"width":400,"height":571},"/docs/img/biostarx-settings-access-control-status-filter.png":{"width":711,"height":386},"/docs/img/biostarx-settings-access-control-status-pagenation.png":{"width":400,"height":62},"/docs/img/biostarx-settings-access-control-status.png":{"width":1500,"height":353},"/docs/img/biostarx-settings-add-access-floor-level.png":{"width":1200,"height":662},"/docs/img/biostarx-settings-add-access-group.png":{"width":1200,"height":681},"/docs/img/biostarx-settings-add-access-level.png":{"width":1200,"height":662},"/docs/img/biostarx-settings-advanced-ac-intusion-add-device.png":{"width":400,"height":381},"/docs/img/biostarx-settings-advanced-ac-intusion-add-signal.png":{"width":400,"height":453},"/docs/img/biostarx-settings-advanced-ac-intusion-detect-settings.png":{"width":400,"height":451},"/docs/img/biostarx-settings-alert-edit-message.png":{"width":400,"height":334},"/docs/img/biostarx-settings-alert.png":{"width":1500,"height":510},"/docs/img/biostarx-settings-card-printer-custom-user.png":{"width":946,"height":168},"/docs/img/biostarx-settings-card-printer-custom-user1.png":{"width":1172,"height":517},"/docs/img/biostarx-settings-card-printer-installation.png":{"width":944,"height":531},"/docs/img/biostarx-settings-card-printer-installation1.png":{"width":419,"height":596},"/docs/img/biostarx-settings-card-printer-installation2.png":{"width":493,"height":453},"/docs/img/biostarx-settings-card-printer-installation3.png":{"width":493,"height":453},"/docs/img/biostarx-settings-card-printer-template.png":{"width":1000,"height":545},"/docs/img/biostarx-settings-card-printer-user.png":{"width":1161,"height":517},"/docs/img/biostarx-settings-card-printer-user1.png":{"width":570,"height":209},"/docs/img/biostarx-settings-card-printer-user2.png":{"width":340,"height":207},"/docs/img/biostarx-settings-card-printer.png":{"width":1024,"height":337},"/docs/img/biostarx-settings-card-printer1.png":{"width":1024,"height":337},"/docs/img/biostarx-settings-credentail-card-change-data-format.png":{"width":400,"height":224},"/docs/img/biostarx-settings-credentail-card.png":{"width":1500,"height":281},"/docs/img/biostarx-settings-credentail-mobile-access-connection.png":{"width":1200,"height":252},"/docs/img/biostarx-settings-credentail-mobile-access-register-device-popup.png":{"width":800,"height":415},"/docs/img/biostarx-settings-credentail-mobile-access-register-device.png":{"width":1200,"height":119},"/docs/img/biostarx-settings-credentail-mobile-access.png":{"width":1200,"height":252},"/docs/img/biostarx-settings-credentail-smart-format-add.png":{"width":1200,"height":746},"/docs/img/biostarx-settings-credentail-smart-format-info.png":{"width":1200,"height":537},"/docs/img/biostarx-settings-credentail-smart-format-type.png":{"width":1200,"height":106},"/docs/img/biostarx-settings-credential-wiegand-format.png":{"width":1200,"height":475},"/docs/img/biostarx-settings-email-contents.png":{"width":894,"height":161},"/docs/img/biostarx-settings-email-qr.png":{"width":1103,"height":276},"/docs/img/biostarx-settings-email-smtp-option.png":{"width":490,"height":521},"/docs/img/biostarx-settings-email-visual-face.png":{"width":1103,"height":400},"/docs/img/biostarx-settings-floor-camera-adjust.gif":{"width":308,"height":326},"/docs/img/biostarx-settings-floor-camera-rotation.gif":{"width":308,"height":326},"/docs/img/biostarx-settings-license-device-license.png":{"width":1201,"height":255},"/docs/img/biostarx-settings-license-license.png":{"width":1502,"height":732},"/docs/img/biostarx-settings-map-add-floor-01.png":{"width":1200,"height":674},"/docs/img/biostarx-settings-map-add-floor-02.png":{"width":800,"height":595},"/docs/img/biostarx-settings-map-add-floor-03.png":{"width":800,"height":600},"/docs/img/biostarx-settings-map-add-floor-04.png":{"width":350,"height":305},"/docs/img/biostarx-settings-map-add-floor-05.png":{"width":800,"height":660},"/docs/img/biostarx-settings-map-add-floor-06.png":{"width":350,"height":339},"/docs/img/biostarx-settings-map-add-floor-example.png":{"width":800,"height":537},"/docs/img/biostarx-settings-map-area-add-01.png":{"width":800,"height":636},"/docs/img/biostarx-settings-map-area-add-02.png":{"width":403,"height":242},"/docs/img/biostarx-settings-map-area-camera-adjust.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-camera-rot.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-camera-setting.png":{"width":400,"height":265},"/docs/img/biostarx-settings-map-area-drawing.gif":{"width":428,"height":352},"/docs/img/biostarx-settings-map-area-reset.png":{"width":400,"height":242},"/docs/img/biostarx-settings-map-facility-add-floor.png":{"width":400,"height":251},"/docs/img/biostarx-settings-map-floor-camera-setting-01.png":{"width":350,"height":346},"/docs/img/biostarx-settings-preference-add-sound.png":{"width":735,"height":338},"/docs/img/biostarx-settings-preference-date-time.png":{"width":1069,"height":116},"/docs/img/biostarx-settings-preference-language-timezone.png":{"width":1069,"height":196},"/docs/img/biostarx-settings-preference-sound.png":{"width":1069,"height":199},"/docs/img/biostarx-settings-schedule-add-extend.png":{"width":1200,"height":823},"/docs/img/biostarx-settings-schedule-add-holiday.png":{"width":1162,"height":478},"/docs/img/biostarx-settings-schedule-add-type-daily.png":{"width":760,"height":82},"/docs/img/biostarx-settings-schedule-add.png":{"width":1200,"height":664},"/docs/img/biostarx-settings-schedule-input-time-slot.png":{"width":500,"height":501},"/docs/img/biostarx-settings-server-expert.png":{"width":1043,"height":117},"/docs/img/biostarx-settings-server-expert2.png":{"width":1054,"height":116},"/docs/img/biostarx-settings-server-general.png":{"width":1262,"height":196},"/docs/img/biostarx-settings-server-https.png":{"width":805,"height":178},"/docs/img/biostarx-settings-server-management-custome-field-select.png":{"width":600,"height":215},"/docs/img/biostarx-settings-server-management-custome-field.png":{"width":800,"height":133},"/docs/img/biostarx-settings-server-management-enroll-device.png":{"width":800,"height":415},"/docs/img/biostarx-settings-server-management.png":{"width":1262,"height":524},"/docs/img/biostarx-settings-server-server-matching.png":{"width":1309,"height":279},"/docs/img/biostarx-settings-server-system-log-level.png":{"width":1262,"height":176},"/docs/img/biostarx-settings-system-audit-trail-add-filter.png":{"width":1500,"height":330},"/docs/img/biostarx-settings-system-audit-trail-column-setting.png":{"width":400,"height":574},"/docs/img/biostarx-settings-system-audit-trail-list.png":{"width":1201,"height":272},"/docs/img/biostarx-settings-system-audit-trail.png":{"width":1500,"height":402},"/docs/img/biostarx-settings-system-daylight-saving-time-edit.png":{"width":735,"height":254},"/docs/img/biostarx-settings-system-daylight-saving-time.png":{"width":735,"height":285},"/docs/img/biostarx-settings-system-restore-check-ver.png":{"width":800,"height":359},"/docs/img/biostarx-settings-system-security-advanced-with-device.png":{"width":1200,"height":245},"/docs/img/biostarx-settings-system-security-advanced.png":{"width":1480,"height":196},"/docs/img/biostarx-settings-system-security-password.png":{"width":1480,"height":244},"/docs/img/biostarx-settings-system-security-session.png":{"width":1480,"height":118},"/docs/img/biostarx-settings-system-system-backup-automatic.png":{"width":1235,"height":158},"/docs/img/biostarx-settings-system-system-backup-general.png":{"width":1235,"height":226},"/docs/img/biostarx-settings-trigger-and-action-add.png":{"width":1500,"height":535},"/docs/img/biostarx-settings-visitor-custom-visitor-field.png":{"width":1510,"height":184},"/docs/img/biostarx-settings-visitor-site-settings.png":{"width":1510,"height":281},"/docs/img/biostarx-settings-visitor-terms-visitor-settings.png":{"width":1054,"height":725},"/docs/img/biostarx-settings-visitor-visit-pc-select.png":{"width":1107,"height":116},"/docs/img/biostarx-settings-visitor-visit-pc-settings.png":{"width":1510,"height":431},"/docs/img/biostarx-tutorial-license-offline-popup-filed.png":{"width":540,"height":383},"/docs/img/biostarx-tutorial-license-offline-popup.png":{"width":527,"height":145},"/docs/img/biostarx-tutorial-license-offline.png":{"width":878,"height":158},"/docs/img/biostarx-tutorial-license-online.png":{"width":878,"height":158},"/docs/img/biostarx-ui-monitoring.png":{"width":1500,"height":737},"/docs/img/biostarx-ui-settings.png":{"width":1500,"height":695},"/docs/img/biostarx-ui-user-template.png":{"width":1500,"height":385},"/docs/img/biostarx-ui-user.png":{"width":1500,"height":737},"/docs/img/biostarx-upgrade-complete.png":{"width":499,"height":392},"/docs/img/biostarx-upgrade-select-install-type.png":{"width":499,"height":392},"/docs/img/biostarx-upgrade-set-port.png":{"width":499,"height":392},"/docs/img/biostarx-user-access-explorer-assign-pop.png":{"width":800,"height":354},"/docs/img/biostarx-user-access-explorer-assign.png":{"width":400,"height":216},"/docs/img/biostarx-user-access-explorer-tree-desc.png":{"width":400,"height":297},"/docs/img/biostarx-user-access-explorer-tree-expand-collapse.png":{"width":400,"height":247},"/docs/img/biostarx-user-access-explorer-tree-level.png":{"width":400,"height":204},"/docs/img/biostarx-user-access-explorer-view.png":{"width":616,"height":193},"/docs/img/biostarx-user-access-explorer.png":{"width":400,"height":476},"/docs/img/biostarx-user-advanced.png":{"width":800,"height":172},"/docs/img/biostarx-user-group-add.png":{"width":400,"height":242},"/docs/img/biostarx-user-group-expand-collapse.png":{"width":400,"height":269},"/docs/img/biostarx-user-group-remove.png":{"width":400,"height":330},"/docs/img/biostarx-user-group-rename.png":{"width":400,"height":331},"/docs/img/biostarx-user-group-select-group-user.png":{"width":800,"height":370},"/docs/img/biostarx-user-import-01.png":{"width":560,"height":219},"/docs/img/biostarx-user-import-02.png":{"width":560,"height":547},"/docs/img/biostarx-user-import-03.png":{"width":537,"height":113},"/docs/img/biostarx-user-new-template.png":{"width":800,"height":483},"/docs/img/biostarx-user-sub-group-add.png":{"width":400,"height":272},"/docs/img/biostarx-user-transfer-to-devices.png":{"width":800,"height":784},"/docs/img/biostarx-users-advanced-search.png":{"width":1500,"height":616},"/docs/img/biostarx-users-list-column-layout.png":{"width":600,"height":687},"/docs/img/biostarx-users-list-order.png":{"width":1500,"height":357},"/docs/img/biostarx-users-list-pagenation.png":{"width":623,"height":49},"/docs/img/biostarx-users-list-select-row.png":{"width":800,"height":167},"/docs/img/biostarx-users-list-view-profile.png":{"width":1500,"height":885},"/docs/img/biostarx-users-list.png":{"width":1500,"height":452},"/docs/img/biostarx-users-print-list.png":{"width":650,"height":424},"/docs/img/biostarx-users-search-result.png":{"width":1500,"height":292},"/docs/img/biostarx-users-template-list-pagenation.png":{"width":600,"height":62},"/docs/img/biostarx-users-template-list-search.png":{"width":1513,"height":581},"/docs/img/biostarx-users-template-list-select-row.png":{"width":600,"height":120},"/docs/img/biostarx-widget-edit.png":{"width":600,"height":292},"/docs/img/common/biostarx-chart.png":{"width":600,"height":258},"/docs/img/common/biostarx-counter.png":{"width":400,"height":314},"/docs/img/common/biostarx-enroll-fingerprint-caution.png":{"width":400,"height":98},"/docs/img/common/biostarx-enroll-fingerprint-count.png":{"width":400,"height":66},"/docs/img/common/biostarx-install-check-network-cmd.png":{"width":800,"height":296},"/docs/img/common/biostarx-new-user-photo.png":{"width":200,"height":237},"/docs/img/common/biostarx-settings-server-enrollment-certification.png":{"width":368,"height":135},"/docs/img/common/biostarx-system-usage.png":{"width":408,"height":430},"/docs/img/common/biostarx-text.png":{"width":517,"height":210},"/docs/img/common/biostarx-tutoria-service-manager-database-configuration.png":{"width":960,"height":552},"/docs/img/common/biostarx-tutoria-service-manager-database.png":{"width":1200,"height":312},"/docs/img/common/biostarx-tutoria-service-manager-main-restart.png":{"width":1200,"height":495},"/docs/img/common/biostarx-tutoria-service-manager-main.png":{"width":1200,"height":495},"/docs/img/common/biostarx-tutoria-service-manager-services-change-port.png":{"width":1200,"height":429},"/docs/img/common/biostarx-tutoria-service-manager-services-stop.png":{"width":1200,"height":495},"/docs/img/common/ico-audit-trail-first-page.png":{"width":28,"height":22},"/docs/img/common/ico-audit-trail-last-page.png":{"width":28,"height":22},"/docs/img/common/ico-audit-trail-nav-page.png":{"width":60,"height":22},"/docs/img/common/ico-audit-trail-next-page.png":{"width":25,"height":22},"/docs/img/common/ico-audit-trail-previous-page.png":{"width":25,"height":22},"/docs/img/common/ico-authmode-card.png":{"width":220,"height":118},"/docs/img/common/ico-authmode-face.png":{"width":120,"height":120},"/docs/img/common/ico-authmode-id.png":{"width":120,"height":120},"/docs/img/common/ico-authmode-pin.png":{"width":120,"height":120},"/docs/img/common/ico-card-printer-play.png":{"width":20,"height":20},"/docs/img/common/ico-card-printer-stop.png":{"width":20,"height":20},"/docs/img/common/ico-eventlog.png":{"width":160,"height":160},"/docs/img/common/login-dashboard.png":{"width":1500,"height":745},"/docs/img/common/monitoring-map-area-tree-example.png":{"width":400,"height":395},"/docs/img/common/monitoring-map-area-tree.png":{"width":1500,"height":817},"/docs/img/common/monitoring-video-extend.gif":{"width":1520,"height":862},"/docs/img/common/setting-system-restore.png":{"width":635,"height":375},"/docs/img/default-placeholder-image.webp":{"width":1200,"height":800},"/docs/img/device/biostation2a-main.png":{"width":1000,"height":452},"/docs/img/device/biostation3-main.png":{"width":1000,"height":452},"/docs/img/device/device-auth-option-qr.png":{"width":250,"height":163},"/docs/img/device/device-auth-option.png":{"width":250,"height":70},"/docs/img/device/device-auth-result-display-option.png":{"width":250,"height":113},"/docs/img/device/device-auth.png":{"width":250,"height":444},"/docs/img/device/device-auth2.png":{"width":250,"height":258},"/docs/img/device/device-authmode.png":{"width":250,"height":267},"/docs/img/device/device-datetime.png":{"width":250,"height":444},"/docs/img/device/device-displaysound.png":{"width":250,"height":444},"/docs/img/device/device-dst.png":{"width":250,"height":444},"/docs/img/device/device-eventlog.png":{"width":250,"height":265},"/docs/img/device/device-eventlog1.png":{"width":250,"height":444},"/docs/img/device/device-info.png":{"width":250,"height":444},"/docs/img/device/device-license.png":{"width":250,"height":444},"/docs/img/device/device-license1.png":{"width":250,"height":444},"/docs/img/device/device-memory.png":{"width":250,"height":444},"/docs/img/device/device-menu.png":{"width":250,"height":444},"/docs/img/device/device-network-ethernet.png":{"width":250,"height":332},"/docs/img/device/device-network-intercom.png":{"width":250,"height":309},"/docs/img/device/device-network-osdp.png":{"width":250,"height":158},"/docs/img/device/device-network-relay.png":{"width":250,"height":220},"/docs/img/device/device-network-server.png":{"width":250,"height":218},"/docs/img/device/device-network-wifi.png":{"width":250,"height":444},"/docs/img/device/device-pin.png":{"width":250,"height":67},"/docs/img/device/device-rtsp.png":{"width":250,"height":311},"/docs/img/device/device-usb.png":{"width":250,"height":174},"/docs/img/device/device-user-add.png":{"width":546,"height":444},"/docs/img/device/device-user-usage.png":{"width":250,"height":444},"/docs/img/device/installation-automatic-door-bs3.png":{"width":754,"height":491},"/docs/img/device/installation-network-direct-connection-bs3.png":{"width":585,"height":272},"/docs/img/device/installation-network-hub-connection-bs3.png":{"width":774,"height":321},"/docs/img/device/installation-power-connection-bs3.png":{"width":656,"height":433},"/docs/img/device/installation-relay-fail-safe-lock-bs3.png":{"width":681,"height":390},"/docs/img/device/installation-relay-fail-secure-lock-bs3.png":{"width":667,"height":384},"/docs/img/device/installation-sio2-connection-bs3.png":{"width":791,"height":520},"/docs/img/device/installation-standalone-connection-bs3.png":{"width":774,"height":715},"/docs/img/device/installation-ttl-input-connection-bs3.png":{"width":657,"height":422},"/docs/img/device/installation-wiegand-in-connection-bs3.png":{"width":737,"height":311},"/docs/img/device/installation-wiegand-out-connection-bs3.png":{"width":737,"height":312},"/docs/img/device/name-function-each-part-bs3.png":{"width":760,"height":760},"/docs/img/en/biostar-298-deleted-csn-mobile-card-1.png":{"width":340,"height":211},"/docs/img/en/biostar-298-deleted-csn-mobile-card.png":{"width":1189,"height":243},"/docs/img/en/biostar-deleted-csn-mobile-card-2.png":{"width":1000,"height":202},"/docs/img/en/biostar-enrollment-result.png":{"width":400,"height":50},"/docs/img/en/biostar-login-download-https.png":{"width":600,"height":510},"/docs/img/en/biostar2-setting-directory-ad-server.png":{"width":1500,"height":379},"/docs/img/en/biostar2-setting-directory-btn-apply.png":{"width":1203,"height":285},"/docs/img/en/biostar2-setting-directory-entraid-login.png":{"width":400,"height":452},"/docs/img/en/biostar2-setting-directory-integ-ad.png":{"width":1500,"height":324},"/docs/img/en/biostar2-setting-directory-integ-entraid.png":{"width":1500,"height":330},"/docs/img/en/biostar2-setting-directory-login-with-ad.png":{"width":1500,"height":167},"/docs/img/en/biostar2-setting-directory-login-with-entraid.png":{"width":1500,"height":220},"/docs/img/en/biostar2-setting-directory-server.png":{"width":1500,"height":273},"/docs/img/en/biostar2-setting-directory-sync-auto.png":{"width":1500,"height":323},"/docs/img/en/biostar2-setting-directory-sync-manual.png":{"width":1500,"height":276},"/docs/img/en/biostar2-setting-directory-sync-warn-message.png":{"width":400,"height":217},"/docs/img/en/biostar2-setting-directory-unset-warn-message.png":{"width":400,"height":176},"/docs/img/en/biostar2-setting-directory-unset.png":{"width":1500,"height":253},"/docs/img/en/biostar2-setting-directory-userfield-ad.png":{"width":1500,"height":558},"/docs/img/en/biostar2-setting-directory-userfield-select-other-ad.png":{"width":800,"height":356},"/docs/img/en/biostar2-setting-directory-userfield-select-other.png":{"width":800,"height":552},"/docs/img/en/biostar2-setting-directory-userfield.png":{"width":1500,"height":795},"/docs/img/en/biostar2-setting-directory-usergroup-filter.png":{"width":1500,"height":897},"/docs/img/en/biostar2-user-advance-exclude-sync.png":{"width":1500,"height":405},"/docs/img/en/biostarx-adjust-win-size.png":{"width":200,"height":156},"/docs/img/en/biostarx-batch-edit-user-mfa-use.png":{"width":801,"height":201},"/docs/img/en/biostarx-checkpoint.png":{"width":800,"height":327},"/docs/img/en/biostarx-dashboard-widget-del.png":{"width":354,"height":254},"/docs/img/en/biostarx-dashboard.png":{"width":1059,"height":474},"/docs/img/en/biostarx-data-information.png":{"width":970,"height":111},"/docs/img/en/biostarx-data-report-format.png":{"width":970,"height":308},"/docs/img/en/biostarx-data-report-schedule.png":{"width":970,"height":155},"/docs/img/en/biostarx-data-settings.png":{"width":894,"height":111},"/docs/img/en/biostarx-data.png":{"width":472,"height":958},"/docs/img/en/biostarx-door-control.png":{"width":400,"height":206},"/docs/img/en/biostarx-edit-user-batch-edit.png":{"width":800,"height":538},"/docs/img/en/biostarx-edit-user-mfa-use.png":{"width":800,"height":266},"/docs/img/en/biostarx-header.png":{"width":1500,"height":572},"/docs/img/en/biostarx-install-2-to-x-agree.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-additional-fin.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-additional.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-agree.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-check-control-network-connections.png":{"width":1200,"height":410},"/docs/img/en/biostarx-install-check-ethernet-properties.png":{"width":400,"height":516},"/docs/img/en/biostarx-install-check-ethernet-status.png":{"width":400,"height":496},"/docs/img/en/biostarx-install-check-protocol-properties.png":{"width":465,"height":529},"/docs/img/en/biostarx-install-check-set-metrics.png":{"width":465,"height":568},"/docs/img/en/biostarx-install-check-start-network-search.png":{"width":800,"height":328},"/docs/img/en/biostarx-install-comm-server-complete.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-install-step.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-port-settings.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-private-policy.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-select-component.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-set-path.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-comm-server-settings.png":{"width":500,"height":392},"/docs/img/en/biostarx-install-complete.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-admin-pw.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-db-details.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-input-db-pw.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-read-covenant.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-custom.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-ip.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-select-language.png":{"width":299,"height":172},"/docs/img/en/biostarx-install-select-quick.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-encrypt-path.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-path.png":{"width":499,"height":392},"/docs/img/en/biostarx-install-set-port-confirm.png":{"width":412,"height":152},"/docs/img/en/biostarx-install-set-port.png":{"width":499,"height":392},"/docs/img/en/biostarx-launcher.png":{"width":1500,"height":749},"/docs/img/en/biostarx-login.png":{"width":800,"height":551},"/docs/img/en/biostarx-main-launcher.png":{"width":1920,"height":959},"/docs/img/en/biostarx-new-user-credential-authmod-default.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-credential-authmod-note-image.png":{"width":800,"height":137},"/docs/img/en/biostarx-new-user-credential-authmod-private-add.png":{"width":800,"height":586},"/docs/img/en/biostarx-new-user-credential-authmod-private-join.png":{"width":800,"height":331},"/docs/img/en/biostarx-new-user-credential-authmod-private.png":{"width":1082,"height":374},"/docs/img/en/biostarx-new-user-credential-biostarqr.png":{"width":476,"height":345},"/docs/img/en/biostarx-new-user-credential-card-assign-info.png":{"width":800,"height":571},"/docs/img/en/biostarx-new-user-credential-card-csn.png":{"width":600,"height":364},"/docs/img/en/biostarx-new-user-credential-card-readcard.png":{"width":600,"height":573},"/docs/img/en/biostarx-new-user-credential-card-smartcard.png":{"width":600,"height":514},"/docs/img/en/biostarx-new-user-credential-card-wiegand.png":{"width":600,"height":406},"/docs/img/en/biostarx-new-user-credential-face-import-csv.png":{"width":600,"height":419},"/docs/img/en/biostarx-new-user-credential-face-import.png":{"width":600,"height":556},"/docs/img/en/biostarx-new-user-credential-face-mobile-app.png":{"width":970,"height":301},"/docs/img/en/biostarx-new-user-credential-face-webcam-take.png":{"width":822,"height":470},"/docs/img/en/biostarx-new-user-credential-face.png":{"width":600,"height":473},"/docs/img/en/biostarx-new-user-credential-finger-nth.png":{"width":600,"height":199},"/docs/img/en/biostarx-new-user-credential-finger.png":{"width":600,"height":559},"/docs/img/en/biostarx-new-user-credential-mobile-csn-assign.png":{"width":640,"height":538},"/docs/img/en/biostarx-new-user-credential-mobile-csn.png":{"width":575,"height":547},"/docs/img/en/biostarx-new-user-credential-mobile-tom.png":{"width":640,"height":590},"/docs/img/en/biostarx-new-user-credential-qrbarcode.png":{"width":553,"height":341},"/docs/img/en/biostarx-new-user-credential-securitylevle.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-credential.png":{"width":1082,"height":273},"/docs/img/en/biostarx-new-user-information.png":{"width":1201,"height":458},"/docs/img/en/biostarx-new-user-permission.png":{"width":801,"height":269},"/docs/img/en/biostarx-real-time-event.png":{"width":800,"height":310},"/docs/img/en/biostarx-setting-add-device-group.png":{"width":926,"height":225},"/docs/img/en/biostarx-setting-add-device-option.png":{"width":990,"height":643},"/docs/img/en/biostarx-setting-add-device-rename.png":{"width":926,"height":89},"/docs/img/en/biostarx-setting-add-device.png":{"width":990,"height":568},"/docs/img/en/biostarx-setting-device-adding-slave-device.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-adding-slave-list.png":{"width":710,"height":285},"/docs/img/en/biostarx-setting-device-adding-wiegand-list.png":{"width":670,"height":273},"/docs/img/en/biostarx-setting-device-adding-wiegand-ok.png":{"width":300,"height":188},"/docs/img/en/biostarx-setting-device-adding-wiegand.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-advanced-search-result.png":{"width":790,"height":253},"/docs/img/en/biostarx-setting-device-advanced-search.png":{"width":550,"height":236},"/docs/img/en/biostarx-setting-device-batch-edit.png":{"width":793,"height":809},"/docs/img/en/biostarx-setting-device-edit-advanced-administrator.png":{"width":1000,"height":500},"/docs/img/en/biostarx-setting-device-edit-advanced-imagelog.png":{"width":1011,"height":797},"/docs/img/en/biostarx-setting-device-edit-advanced-tamper.png":{"width":856,"height":60},"/docs/img/en/biostarx-setting-device-edit-advanced-tna.png":{"width":1002,"height":408},"/docs/img/en/biostarx-setting-device-edit-advanced-triggernaction.png":{"width":1116,"height":600},"/docs/img/en/biostarx-setting-device-edit-advanced-wiegand.png":{"width":1140,"height":179},"/docs/img/en/biostarx-setting-device-edit-auth-mode-adding.png":{"width":600,"height":474},"/docs/img/en/biostarx-setting-device-edit-auth-mode.png":{"width":1304,"height":327},"/docs/img/en/biostarx-setting-device-edit-info.png":{"width":1670,"height":498},"/docs/img/en/biostarx-setting-device-edit-ipinterphone.png":{"width":1227,"height":816},"/docs/img/en/biostarx-setting-device-edit-network.png":{"width":1670,"height":756},"/docs/img/en/biostarx-setting-device-edit-rtsp.png":{"width":1340,"height":183},"/docs/img/en/biostarx-setting-device-functions.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-imagelog-add.png":{"width":1380,"height":244},"/docs/img/en/biostarx-setting-device-imagelog-example.png":{"width":1500,"height":707},"/docs/img/en/biostarx-setting-device-imagelog-remove.png":{"width":1063,"height":177},"/docs/img/en/biostarx-setting-device-imagelog-select-event.png":{"width":1063,"height":368},"/docs/img/en/biostarx-setting-device-imagelog-select-schedule.png":{"width":1063,"height":155},"/docs/img/en/biostarx-setting-device-info-upgrade-firmware.png":{"width":1683,"height":586},"/docs/img/en/biostarx-setting-device-manage-device-users-popup.png":{"width":750,"height":586},"/docs/img/en/biostarx-setting-device-manage-device-users.png":{"width":307,"height":283},"/docs/img/en/biostarx-setting-device-set-ip.png":{"width":672,"height":509},"/docs/img/en/biostarx-setting-device-sync-device.png":{"width":1469,"height":236},"/docs/img/en/biostarx-setting-device-upgrade-firmware-popup.png":{"width":590,"height":268},"/docs/img/en/biostarx-setting-device-upgrade-firmware.png":{"width":1469,"height":236},"/docs/img/en/biostarx-setting-door-add-group-naming.png":{"width":240,"height":257},"/docs/img/en/biostarx-setting-door-add-group.png":{"width":453,"height":280},"/docs/img/en/biostarx-setting-door-adding-aditional-option.png":{"width":1216,"height":428},"/docs/img/en/biostarx-setting-door-adding-configuration.png":{"width":1216,"height":328},"/docs/img/en/biostarx-setting-door-adding-info.png":{"width":1215,"height":166},"/docs/img/en/biostarx-setting-door-adding.png":{"width":393,"height":264},"/docs/img/en/biostarx-setting-door-edit-batch.png":{"width":400,"height":201},"/docs/img/en/biostarx-setting-door-rename-group.png":{"width":439,"height":389},"/docs/img/en/biostarx-setting-door-to-group-info-select.png":{"width":980,"height":165},"/docs/img/en/biostarx-setting-door-to-group-list.png":{"width":1361,"height":264},"/docs/img/en/biostarx-setting-door-to-group-result.png":{"width":240,"height":254},"/docs/img/en/biostarx-setting-door-to-group.png":{"width":240,"height":276},"/docs/img/en/biostarx-settings-access-control-status-column-setting.png":{"width":390,"height":575},"/docs/img/en/biostarx-settings-access-control-status-filter.png":{"width":647,"height":389},"/docs/img/en/biostarx-settings-access-control-status-pagenation.png":{"width":434,"height":62},"/docs/img/en/biostarx-settings-access-control-status.png":{"width":1348,"height":357},"/docs/img/en/biostarx-settings-add-access-floor-level.png":{"width":1200,"height":722},"/docs/img/en/biostarx-settings-add-access-group.png":{"width":1200,"height":743},"/docs/img/en/biostarx-settings-add-access-level.png":{"width":1231,"height":793},"/docs/img/en/biostarx-settings-advanced-ac-intusion-add-device.png":{"width":401,"height":382},"/docs/img/en/biostarx-settings-advanced-ac-intusion-add-signal.png":{"width":401,"height":453},"/docs/img/en/biostarx-settings-advanced-ac-intusion-detect-settings.png":{"width":399,"height":451},"/docs/img/en/biostarx-settings-alert-edit-message.png":{"width":398,"height":333},"/docs/img/en/biostarx-settings-alert.png":{"width":1500,"height":694},"/docs/img/en/biostarx-settings-card-printer-custom-user.png":{"width":950,"height":170},"/docs/img/en/biostarx-settings-card-printer-custom-user1.png":{"width":1161,"height":517},"/docs/img/en/biostarx-settings-card-printer-installation.png":{"width":944,"height":557},"/docs/img/en/biostarx-settings-card-printer-installation1.png":{"width":419,"height":580},"/docs/img/en/biostarx-settings-card-printer-installation2.png":{"width":493,"height":458},"/docs/img/en/biostarx-settings-card-printer-installation3.png":{"width":493,"height":458},"/docs/img/en/biostarx-settings-card-printer-template.png":{"width":1000,"height":545},"/docs/img/en/biostarx-settings-card-printer-user.png":{"width":1161,"height":515},"/docs/img/en/biostarx-settings-card-printer-user1.png":{"width":570,"height":208},"/docs/img/en/biostarx-settings-card-printer-user2.png":{"width":340,"height":206},"/docs/img/en/biostarx-settings-card-printer.png":{"width":1024,"height":337},"/docs/img/en/biostarx-settings-card-printer1.png":{"width":1024,"height":337},"/docs/img/en/biostarx-settings-credentail-card-change-data-format.png":{"width":380,"height":223},"/docs/img/en/biostarx-settings-credentail-card.png":{"width":1488,"height":255},"/docs/img/en/biostarx-settings-credentail-mobile-access-connection.png":{"width":1200,"height":241},"/docs/img/en/biostarx-settings-credentail-mobile-access-register-device-popup.png":{"width":800,"height":415},"/docs/img/en/biostarx-settings-credentail-mobile-access-register-device.png":{"width":1234,"height":124},"/docs/img/en/biostarx-settings-credentail-mobile-access.png":{"width":1200,"height":241},"/docs/img/en/biostarx-settings-credentail-smart-format-add.png":{"width":1198,"height":751},"/docs/img/en/biostarx-settings-credentail-smart-format-info.png":{"width":1202,"height":557},"/docs/img/en/biostarx-settings-credentail-smart-format-type.png":{"width":1200,"height":108},"/docs/img/en/biostarx-settings-credential-wiegand-format.png":{"width":1200,"height":488},"/docs/img/en/biostarx-settings-email-contents.png":{"width":894,"height":161},"/docs/img/en/biostarx-settings-email-qr.png":{"width":1103,"height":276},"/docs/img/en/biostarx-settings-email-smtp-option.png":{"width":490,"height":521},"/docs/img/en/biostarx-settings-email-visual-face.png":{"width":1103,"height":400},"/docs/img/en/biostarx-settings-license-device-license.png":{"width":1201,"height":255},"/docs/img/en/biostarx-settings-license-license.png":{"width":1502,"height":732},"/docs/img/en/biostarx-settings-map-area-add-01.png":{"width":800,"height":636},"/docs/img/en/biostarx-settings-map-area-add-02.png":{"width":403,"height":242},"/docs/img/en/biostarx-settings-map-area-camera-setting.png":{"width":400,"height":265},"/docs/img/en/biostarx-settings-map-area-reset.png":{"width":400,"height":242},"/docs/img/en/biostarx-settings-preference-add-sound.png":{"width":735,"height":338},"/docs/img/en/biostarx-settings-preference-date-time.png":{"width":1069,"height":116},"/docs/img/en/biostarx-settings-preference-language-timezone.png":{"width":1069,"height":196},"/docs/img/en/biostarx-settings-preference-sound.png":{"width":1069,"height":199},"/docs/img/en/biostarx-settings-schedule-add-extend.png":{"width":1200,"height":799},"/docs/img/en/biostarx-settings-schedule-add-holiday.png":{"width":1157,"height":451},"/docs/img/en/biostarx-settings-schedule-add-type-daily.png":{"width":748,"height":78},"/docs/img/en/biostarx-settings-schedule-add.png":{"width":1246,"height":664},"/docs/img/en/biostarx-settings-schedule-input-time-slot.png":{"width":500,"height":500},"/docs/img/en/biostarx-settings-server-expert.png":{"width":1043,"height":117},"/docs/img/en/biostarx-settings-server-expert2.png":{"width":1054,"height":116},"/docs/img/en/biostarx-settings-server-general.png":{"width":1262,"height":196},"/docs/img/en/biostarx-settings-server-https.png":{"width":805,"height":196},"/docs/img/en/biostarx-settings-server-management-custome-field-select.png":{"width":600,"height":215},"/docs/img/en/biostarx-settings-server-management-custome-field.png":{"width":800,"height":135},"/docs/img/en/biostarx-settings-server-management-enroll-device.png":{"width":800,"height":415},"/docs/img/en/biostarx-settings-server-management.png":{"width":1262,"height":524},"/docs/img/en/biostarx-settings-server-server-matching.png":{"width":1309,"height":279},"/docs/img/en/biostarx-settings-server-system-log-level.png":{"width":1262,"height":176},"/docs/img/en/biostarx-settings-system-audit-trail-column-setting.png":{"width":400,"height":588},"/docs/img/en/biostarx-settings-system-audit-trail-list.png":{"width":1201,"height":267},"/docs/img/en/biostarx-settings-system-audit-trail.png":{"width":1500,"height":402},"/docs/img/en/biostarx-settings-system-daylight-saving-time-edit.png":{"width":738,"height":254},"/docs/img/en/biostarx-settings-system-daylight-saving-time.png":{"width":735,"height":285},"/docs/img/en/biostarx-settings-system-restore-check-ver.png":{"width":800,"height":359},"/docs/img/en/biostarx-settings-system-security-advanced-with-device.png":{"width":1200,"height":254},"/docs/img/en/biostarx-settings-system-security-advanced.png":{"width":1480,"height":196},"/docs/img/en/biostarx-settings-system-security-password.png":{"width":1480,"height":244},"/docs/img/en/biostarx-settings-system-security-session.png":{"width":1480,"height":118},"/docs/img/en/biostarx-settings-system-system-backup-automatic.png":{"width":1235,"height":158},"/docs/img/en/biostarx-settings-system-system-backup-general.png":{"width":1235,"height":226},"/docs/img/en/biostarx-settings-trigger-and-action-add.png":{"width":1500,"height":714},"/docs/img/en/biostarx-settings-visitor-custom-visitor-field.png":{"width":1510,"height":184},"/docs/img/en/biostarx-settings-visitor-site-settings.png":{"width":1510,"height":281},"/docs/img/en/biostarx-settings-visitor-terms-visitor-settings.png":{"width":1054,"height":725},"/docs/img/en/biostarx-settings-visitor-visit-pc-select.png":{"width":1107,"height":116},"/docs/img/en/biostarx-settings-visitor-visit-pc-settings.png":{"width":1510,"height":431},"/docs/img/en/biostarx-tutorial-license-offline-popup-filed.png":{"width":540,"height":400},"/docs/img/en/biostarx-tutorial-license-offline-popup.png":{"width":521,"height":141},"/docs/img/en/biostarx-tutorial-license-offline.png":{"width":874,"height":153},"/docs/img/en/biostarx-tutorial-license-online.png":{"width":874,"height":153},"/docs/img/en/biostarx-ui-monitoring.png":{"width":1500,"height":737},"/docs/img/en/biostarx-ui-settings.png":{"width":1500,"height":695},"/docs/img/en/biostarx-ui-user-template.png":{"width":1500,"height":385},"/docs/img/en/biostarx-ui-user.png":{"width":1500,"height":737},"/docs/img/en/biostarx-upgrade-complete.png":{"width":499,"height":392},"/docs/img/en/biostarx-upgrade-select-install-type.png":{"width":499,"height":392},"/docs/img/en/biostarx-upgrade-set-port.png":{"width":499,"height":392},"/docs/img/en/biostarx-user-access-explorer-tree-desc.png":{"width":400,"height":297},"/docs/img/en/biostarx-user-access-explorer-tree-expand-collapse.png":{"width":400,"height":247},"/docs/img/en/biostarx-user-access-explorer.png":{"width":400,"height":476},"/docs/img/en/biostarx-user-advanced.png":{"width":800,"height":184},"/docs/img/en/biostarx-user-group-add.png":{"width":400,"height":242},"/docs/img/en/biostarx-user-group-expand-collapse.png":{"width":400,"height":269},"/docs/img/en/biostarx-user-group-remove.png":{"width":400,"height":330},"/docs/img/en/biostarx-user-group-rename.png":{"width":400,"height":331},"/docs/img/en/biostarx-user-group-select-group-user.png":{"width":800,"height":370},"/docs/img/en/biostarx-user-import-01.png":{"width":560,"height":219},"/docs/img/en/biostarx-user-import-02.png":{"width":560,"height":547},"/docs/img/en/biostarx-user-import-03.png":{"width":539,"height":112},"/docs/img/en/biostarx-user-sub-group-add.png":{"width":400,"height":272},"/docs/img/en/biostarx-user-transfer-to-devices.png":{"width":800,"height":784},"/docs/img/en/biostarx-users-advanced-search.png":{"width":1500,"height":616},"/docs/img/en/biostarx-users-list-column-layout.png":{"width":600,"height":687},"/docs/img/en/biostarx-users-list-order.png":{"width":1500,"height":357},"/docs/img/en/biostarx-users-list-pagenation.png":{"width":623,"height":49},"/docs/img/en/biostarx-users-list-select-row.png":{"width":800,"height":167},"/docs/img/en/biostarx-users-list-view-profile.png":{"width":1500,"height":885},"/docs/img/en/biostarx-users-list.png":{"width":1500,"height":440},"/docs/img/en/biostarx-users-print-list.png":{"width":650,"height":424},"/docs/img/en/biostarx-users-search-result.png":{"width":1500,"height":292},"/docs/img/en/biostarx-widget-edit.png":{"width":600,"height":292},"/docs/img/en/device/device-auth-option-qr.png":{"width":250,"height":159},"/docs/img/en/device/device-auth-option.png":{"width":250,"height":68},"/docs/img/en/device/device-auth-result-display-option.png":{"width":250,"height":113},"/docs/img/en/device/device-auth.png":{"width":250,"height":444},"/docs/img/en/device/device-auth2.png":{"width":250,"height":444},"/docs/img/en/device/device-authmode.png":{"width":250,"height":444},"/docs/img/en/device/device-datetime.png":{"width":250,"height":444},"/docs/img/en/device/device-displaysound.png":{"width":250,"height":444},"/docs/img/en/device/device-dst.png":{"width":250,"height":444},"/docs/img/en/device/device-eventlog.png":{"width":250,"height":265},"/docs/img/en/device/device-eventlog1.png":{"width":250,"height":444},"/docs/img/en/device/device-info.png":{"width":250,"height":444},"/docs/img/en/device/device-license.png":{"width":250,"height":444},"/docs/img/en/device/device-license1.png":{"width":250,"height":444},"/docs/img/en/device/device-memory.png":{"width":250,"height":444},"/docs/img/en/device/device-menu.png":{"width":250,"height":444},"/docs/img/en/device/device-network-ethernet.png":{"width":250,"height":444},"/docs/img/en/device/device-network-intercom.png":{"width":250,"height":309},"/docs/img/en/device/device-network-osdp.png":{"width":250,"height":158},"/docs/img/en/device/device-network-relay.png":{"width":250,"height":444},"/docs/img/en/device/device-network-server.png":{"width":250,"height":444},"/docs/img/en/device/device-network-wifi.png":{"width":250,"height":444},"/docs/img/en/device/device-pin.png":{"width":250,"height":67},"/docs/img/en/device/device-rtsp.png":{"width":250,"height":311},"/docs/img/en/device/device-usb.png":{"width":250,"height":444},"/docs/img/en/device/device-user-add.png":{"width":546,"height":444},"/docs/img/en/device/device-user-usage.png":{"width":250,"height":444},"/docs/img/en/device/installation-automatic-door-bs3.png":{"width":754,"height":483},"/docs/img/en/device/installation-network-direct-connection-bs3.png":{"width":585,"height":267},"/docs/img/en/device/installation-network-hub-connection-bs3.png":{"width":774,"height":316},"/docs/img/en/device/installation-power-connection-bs3.png":{"width":656,"height":424},"/docs/img/en/device/installation-relay-fail-safe-lock-bs3.png":{"width":681,"height":387},"/docs/img/en/device/installation-relay-fail-secure-lock-bs3.png":{"width":667,"height":387},"/docs/img/en/device/installation-sio2-connection-bs3.png":{"width":791,"height":496},"/docs/img/en/device/installation-standalone-connection-bs3.png":{"width":774,"height":718},"/docs/img/en/device/installation-ttl-input-connection-bs3.png":{"width":657,"height":418},"/docs/img/en/device/installation-wiegand-in-connection-bs3.png":{"width":737,"height":308},"/docs/img/en/device/installation-wiegand-out-connection-bs3.png":{"width":737,"height":305},"/docs/img/en/how-to/edit-master-admin-1.png":{"width":720,"height":1280},"/docs/img/en/how-to/error-two-step-authentication.png":{"width":721,"height":613},"/docs/img/en/how-to/setting-master-admin-1.png":{"width":721,"height":1280},"/docs/img/en/how-to/setting-master-admin-2.png":{"width":721,"height":1280},"/docs/img/en/how-to/setting-master-admin-3.png":{"width":722,"height":1281},"/docs/img/en/how-to/setting-master-admin-4.png":{"width":722,"height":1281},"/docs/img/en/how-to/setting-two-step-authentication.png":{"width":720,"height":1280},"/docs/img/en/ico-audit-trail-rows-page.png":{"width":90,"height":28},"/docs/img/en/ico-expert-setting.png":{"width":130,"height":28},"/docs/img/en/monitoring-door-control-open-video-drag-drop.png":{"width":1500,"height":486},"/docs/img/en/monitoring-door-control-open-video.png":{"width":1500,"height":449},"/docs/img/en/monitoring-door-control.png":{"width":1676,"height":415},"/docs/img/en/monitoring-door-status-tooltip-device.png":{"width":430,"height":236},"/docs/img/en/monitoring-door-status-tooltip.png":{"width":430,"height":174},"/docs/img/en/monitoring-map-floor-control-door.png":{"width":800,"height":450},"/docs/img/en/monitoring-map-open-map.png":{"width":1426,"height":681},"/docs/img/en/monitoring-map-select-floor-list-box.png":{"width":800,"height":451},"/docs/img/en/monitoring-map-select-floor-play-video.png":{"width":800,"height":450},"/docs/img/en/monitoring-map-select-floor.png":{"width":1100,"height":361},"/docs/img/en/monitoring-video-adjust-size-01.png":{"width":900,"height":249},"/docs/img/en/monitoring-video-adjust-size-02.png":{"width":900,"height":512},"/docs/img/en/monitoring-video-adjust-size-03.png":{"width":1500,"height":583},"/docs/img/en/monitoring-video-alarm.png":{"width":1500,"height":824},"/docs/img/en/monitoring-video-close.png":{"width":400,"height":231},"/docs/img/en/monitoring-video-fullscreen.png":{"width":400,"height":231},"/docs/img/en/monitoring-video-move-position.png":{"width":900,"height":279},"/docs/img/en/monitoring-video-player.png":{"width":800,"height":466},"/docs/img/en/settings-custom-interface-add-quick-action.png":{"width":550,"height":356},"/docs/img/en/settings-custom-interface-confirm.png":{"width":340,"height":206},"/docs/img/en/settings-custom-interface-main-quick-action.png":{"width":277,"height":136},"/docs/img/en/settings-custom-interface-quick-action-layout.png":{"width":1262,"height":298},"/docs/img/foot_sns_02.png":{"width":35,"height":35},"/docs/img/foot_sns_04.png":{"width":35,"height":35},"/docs/img/foot_sns_05.png":{"width":35,"height":35},"/docs/img/foot_sns_06.png":{"width":35,"height":35},"/docs/img/foot_sns_instagram.png":{"width":35,"height":35},"/docs/img/hero.png":{"width":1920,"height":460},"/docs/img/how-to/BioLite N2-Front.png":{"width":1299,"height":3034},"/docs/img/how-to/BioStation 2a-front.png":{"width":1500,"height":1383},"/docs/img/how-to/BioStation 3-Front.png":{"width":1000,"height":1812},"/docs/img/how-to/X-Station 2-DPB-APB-Front.png":{"width":1022,"height":1761},"/docs/img/how-to/X-Station 2-Front.png":{"width":2283,"height":2272},"/docs/img/how-to/X-Station 2-ODPB-OAPB-Front.png":{"width":801,"height":1761},"/docs/img/how-to/X-Station 2-QDPB-QAPB-Front.png":{"width":889,"height":2072},"/docs/img/how-to/edit-master-admin-1.png":{"width":720,"height":1280},"/docs/img/how-to/error-two-step-authentication.png":{"width":721,"height":619},"/docs/img/how-to/no-register-master-admin.png":{"width":366,"height":167},"/docs/img/how-to/setting-master-admin-1.png":{"width":721,"height":1280},"/docs/img/how-to/setting-master-admin-2.png":{"width":721,"height":1280},"/docs/img/how-to/setting-master-admin-3.png":{"width":721,"height":1281},"/docs/img/how-to/setting-master-admin-4.png":{"width":721,"height":1281},"/docs/img/how-to/setting-two-step-authentication.png":{"width":720,"height":1280},"/docs/img/ico-audit-trail-rows-page.png":{"width":74,"height":28},"/docs/img/ico-expert-setting.png":{"width":130,"height":28},"/docs/img/monitoring-door-control-open-video-drag-drop.png":{"width":1500,"height":391},"/docs/img/monitoring-door-control-open-video.png":{"width":1500,"height":445},"/docs/img/monitoring-door-control.png":{"width":1500,"height":364},"/docs/img/monitoring-door-status-tooltip-device.png":{"width":400,"height":236},"/docs/img/monitoring-door-status-tooltip.png":{"width":400,"height":183},"/docs/img/monitoring-map-floor-control-door.png":{"width":800,"height":450},"/docs/img/monitoring-map-open-map.png":{"width":1500,"height":608},"/docs/img/monitoring-map-select-floor-list-box.png":{"width":800,"height":451},"/docs/img/monitoring-map-select-floor-play-video.png":{"width":800,"height":450},"/docs/img/monitoring-map-select-floor.png":{"width":1100,"height":361},"/docs/img/monitoring-video-adjust-size-01.png":{"width":900,"height":249},"/docs/img/monitoring-video-adjust-size-02.png":{"width":900,"height":512},"/docs/img/monitoring-video-adjust-size-03.png":{"width":1500,"height":583},"/docs/img/monitoring-video-alarm.png":{"width":1500,"height":824},"/docs/img/monitoring-video-close.png":{"width":400,"height":231},"/docs/img/monitoring-video-fullscreen.png":{"width":400,"height":231},"/docs/img/monitoring-video-move-position.png":{"width":900,"height":279},"/docs/img/monitoring-video-player.png":{"width":800,"height":466},"/docs/img/settings-custom-interface-add-quick-action.png":{"width":550,"height":356},"/docs/img/settings-custom-interface-confirm.png":{"width":340,"height":206},"/docs/img/settings-custom-interface-main-quick-action.png":{"width":277,"height":136},"/docs/img/settings-custom-interface-quick-action-layout.png":{"width":1267,"height":300},"/docs/img/sns_img02.jpg":{"width":2335,"height":1520}}')
 ;// CONCATENATED MODULE: ./src/components/Image/index.js
 
 
@@ -1644,28 +1644,25 @@ function Td(param) {
 ;// CONCATENATED MODULE: ./src/components/Winkey/win-logo.svg
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 
-const SvgWinLogo = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    xmlSpace: "preserve",
-    width: 30,
-    height: 30,
-    viewBox: "0 0 452.986 452.986",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, /*#__PURE__*/react.createElement("path", {
-    d: "M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z",
-    style: {
-      fill: "currentColor"
-    }
-  }));
-};
+const SvgWinLogo = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  xmlSpace: "preserve",
+  width: 30,
+  height: 30,
+  viewBox: "0 0 452.986 452.986",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, /*#__PURE__*/react.createElement("path", {
+  d: "M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z",
+  style: {
+    fill: "currentColor"
+  }
+}));
 /* ESM default export */ const win_logo = (SvgWinLogo);
 ;// CONCATENATED MODULE: ./src/components/Winkey/index.js
 
@@ -1801,561 +1798,501 @@ function GlossaryAll() {
 var _path, _path2;
 function num_1_extends() { return num_1_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_1_extends.apply(null, arguments); }
 
-const SvgNum1 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_1_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 25 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.5 25.03c6.904 0 12.5-5.596 12.5-12.5S19.404.03 12.5.03 0 5.626 0 12.53s5.596 12.5 12.5 12.5"
-  })), _path2 || (_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M13.51 18.95h-1.89v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85z"
-  })));
-};
+const SvgNum1 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_1_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 25,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 25 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, _path || (_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.5 25.03c6.904 0 12.5-5.596 12.5-12.5S19.404.03 12.5.03 0 5.626 0 12.53s5.596 12.5 12.5 12.5"
+})), _path2 || (_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M13.51 18.95h-1.89v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85z"
+})));
 /* ESM default export */ const num_1 = (SvgNum1);
 ;// CONCATENATED MODULE: ./src/components/Num/num-2.svg
 var num_2_path, num_2_path2;
 function num_2_extends() { return num_2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_2_extends.apply(null, arguments); }
 
-const SvgNum2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_2_path || (num_2_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.58 25.03c6.904 0 12.5-5.596 12.5-12.5S19.484.03 12.58.03.08 5.626.08 12.53s5.596 12.5 12.5 12.5"
-  })), num_2_path2 || (num_2_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M16.91 19.04H8.27v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L8.35 7.6c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25z"
-  })));
-};
+const SvgNum2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_2_path || (num_2_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.58 25.03c6.904 0 12.5-5.596 12.5-12.5S19.484.03 12.58.03.08 5.626.08 12.53s5.596 12.5 12.5 12.5"
+})), num_2_path2 || (num_2_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M16.91 19.04H8.27v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L8.35 7.6c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25z"
+})));
 /* ESM default export */ const num_2 = (SvgNum2);
 ;// CONCATENATED MODULE: ./src/components/Num/num-3.svg
 var num_3_path, num_3_path2;
 function num_3_extends() { return num_3_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_3_extends.apply(null, arguments); }
 
-const SvgNum3 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_3_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_3_path || (num_3_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.67 25.03c6.904 0 12.5-5.596 12.5-12.5S19.574.03 12.67.03.17 5.626.17 12.53s5.596 12.5 12.5 12.5"
-  })), num_3_path2 || (num_3_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M16.59 9.1c0 .88-.25 1.57-.74 2.09s-1.14.86-1.94 1.03v.07c1.02.12 1.79.44 2.3.97.52.53.77 1.21.77 2.05 0 .74-.18 1.41-.53 1.99s-.9 1.04-1.64 1.37-1.68.5-2.83.5c-.68 0-1.32-.05-1.91-.16s-1.15-.29-1.67-.54v-1.73c.54.28 1.12.49 1.75.63.62.14 1.21.22 1.76.22 1.1 0 1.89-.21 2.37-.62.47-.41.71-.99.71-1.74s-.29-1.25-.86-1.58c-.58-.33-1.44-.5-2.59-.5h-1.17v-1.57h1.19c1.09 0 1.88-.2 2.38-.61s.74-.94.74-1.6c0-.58-.19-1.02-.57-1.34s-.92-.48-1.63-.48c-.66 0-1.23.11-1.72.32s-.94.45-1.36.73l-.94-1.31c.48-.36 1.06-.67 1.73-.93q1.005-.39 2.34-.39 1.995 0 3.03.87c.69.58 1.04 1.34 1.04 2.28z"
-  })));
-};
+const SvgNum3 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_3_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_3_path || (num_3_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.67 25.03c6.904 0 12.5-5.596 12.5-12.5S19.574.03 12.67.03.17 5.626.17 12.53s5.596 12.5 12.5 12.5"
+})), num_3_path2 || (num_3_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M16.59 9.1c0 .88-.25 1.57-.74 2.09s-1.14.86-1.94 1.03v.07c1.02.12 1.79.44 2.3.97.52.53.77 1.21.77 2.05 0 .74-.18 1.41-.53 1.99s-.9 1.04-1.64 1.37-1.68.5-2.83.5c-.68 0-1.32-.05-1.91-.16s-1.15-.29-1.67-.54v-1.73c.54.28 1.12.49 1.75.63.62.14 1.21.22 1.76.22 1.1 0 1.89-.21 2.37-.62.47-.41.71-.99.71-1.74s-.29-1.25-.86-1.58c-.58-.33-1.44-.5-2.59-.5h-1.17v-1.57h1.19c1.09 0 1.88-.2 2.38-.61s.74-.94.74-1.6c0-.58-.19-1.02-.57-1.34s-.92-.48-1.63-.48c-.66 0-1.23.11-1.72.32s-.94.45-1.36.73l-.94-1.31c.48-.36 1.06-.67 1.73-.93q1.005-.39 2.34-.39 1.995 0 3.03.87c.69.58 1.04 1.34 1.04 2.28z"
+})));
 /* ESM default export */ const num_3 = (SvgNum3);
 ;// CONCATENATED MODULE: ./src/components/Num/num-4.svg
 var num_4_path, num_4_path2;
 function num_4_extends() { return num_4_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_4_extends.apply(null, arguments); }
 
-const SvgNum4 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_4_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_4_path || (num_4_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.75 25.03c6.904 0 12.5-5.596 12.5-12.5S19.654.03 12.75.03.25 5.626.25 12.53s5.596 12.5 12.5 12.5"
-  })), num_4_path2 || (num_4_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M17.56 16.14h-1.78v2.84h-1.85v-2.84H7.97v-1.51l5.92-8.55h1.89v8.44h1.78zm-3.64-1.62v-3.49c0-.56 0-1.09.03-1.59.02-.5.04-.92.06-1.25h-.07c-.1.24-.22.49-.36.74s-.28.47-.41.67l-3.4 4.93h4.16z"
-  })));
-};
+const SvgNum4 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_4_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_4_path || (num_4_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.75 25.03c6.904 0 12.5-5.596 12.5-12.5S19.654.03 12.75.03.25 5.626.25 12.53s5.596 12.5 12.5 12.5"
+})), num_4_path2 || (num_4_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M17.56 16.14h-1.78v2.84h-1.85v-2.84H7.97v-1.51l5.92-8.55h1.89v8.44h1.78zm-3.64-1.62v-3.49c0-.56 0-1.09.03-1.59.02-.5.04-.92.06-1.25h-.07c-.1.24-.22.49-.36.74s-.28.47-.41.67l-3.4 4.93h4.16z"
+})));
 /* ESM default export */ const num_4 = (SvgNum4);
 ;// CONCATENATED MODULE: ./src/components/Num/num-5.svg
 var num_5_path, num_5_path2;
 function num_5_extends() { return num_5_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_5_extends.apply(null, arguments); }
 
-const SvgNum5 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_5_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_5_path || (num_5_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.83 25.03c6.904 0 12.5-5.596 12.5-12.5S19.734.03 12.83.03.33 5.626.33 12.53s5.596 12.5 12.5 12.5"
-  })), num_5_path2 || (num_5_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M12.76 10.89c1.27 0 2.3.33 3.08.99s1.17 1.6 1.17 2.83c0 1.36-.43 2.42-1.28 3.19s-2.06 1.15-3.62 1.15c-.67 0-1.3-.06-1.88-.18s-1.08-.29-1.49-.52V16.6c.43.25.96.46 1.58.61.62.16 1.21.23 1.77.23.9 0 1.62-.21 2.16-.62s.81-1.06.81-1.93c0-.78-.24-1.38-.73-1.79s-1.25-.62-2.29-.62c-.34 0-.71.03-1.12.09s-.75.12-1 .18l-.88-.52.49-6.21h6.61v1.69h-4.95l-.29 3.37c.2-.04.46-.07.77-.12.31-.04.68-.06 1.1-.06z"
-  })));
-};
+const SvgNum5 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_5_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_5_path || (num_5_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.83 25.03c6.904 0 12.5-5.596 12.5-12.5S19.734.03 12.83.03.33 5.626.33 12.53s5.596 12.5 12.5 12.5"
+})), num_5_path2 || (num_5_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M12.76 10.89c1.27 0 2.3.33 3.08.99s1.17 1.6 1.17 2.83c0 1.36-.43 2.42-1.28 3.19s-2.06 1.15-3.62 1.15c-.67 0-1.3-.06-1.88-.18s-1.08-.29-1.49-.52V16.6c.43.25.96.46 1.58.61.62.16 1.21.23 1.77.23.9 0 1.62-.21 2.16-.62s.81-1.06.81-1.93c0-.78-.24-1.38-.73-1.79s-1.25-.62-2.29-.62c-.34 0-.71.03-1.12.09s-.75.12-1 .18l-.88-.52.49-6.21h6.61v1.69h-4.95l-.29 3.37c.2-.04.46-.07.77-.12.31-.04.68-.06 1.1-.06z"
+})));
 /* ESM default export */ const num_5 = (SvgNum5);
 ;// CONCATENATED MODULE: ./src/components/Num/num-6.svg
 var num_6_path, num_6_path2;
 function num_6_extends() { return num_6_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_6_extends.apply(null, arguments); }
 
-const SvgNum6 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_6_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_6_path || (num_6_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.92 25.03c6.904 0 12.5-5.596 12.5-12.5S19.824.03 12.92.03.42 5.626.42 12.53s5.596 12.5 12.5 12.5"
-  })), num_6_path2 || (num_6_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M8.65 13.48c0-.74.05-1.48.15-2.2q.15-1.08.54-2.04c.26-.64.61-1.21 1.07-1.71s1.03-.89 1.74-1.17 1.55-.42 2.55-.42c.25 0 .54 0 .86.03q.48.03.78.12v1.6c-.23-.07-.48-.13-.75-.16-.27-.04-.54-.05-.8-.05-.83 0-1.51.13-2.05.38s-.97.6-1.28 1.04-.54.96-.68 1.55q-.21.885-.27 1.89h.11c.26-.42.64-.78 1.12-1.07s1.1-.44 1.85-.44c1.12 0 2.01.34 2.69 1.04s1.02 1.67 1.02 2.92c0 1.34-.38 2.41-1.12 3.19-.75.78-1.77 1.17-3.05 1.17-.83 0-1.58-.2-2.26-.61s-1.21-1.03-1.61-1.86-.59-1.89-.59-3.18zm4.45 4.07c.68 0 1.24-.23 1.67-.68s.65-1.15.65-2.1q0-1.14-.57-1.8c-.38-.44-.95-.67-1.7-.67-.52 0-.97.11-1.35.32-.38.22-.68.49-.9.83s-.32.68-.32 1.03c0 .48.1.96.29 1.43s.47.86.85 1.17c.37.31.83.46 1.39.46z"
-  })));
-};
+const SvgNum6 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_6_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_6_path || (num_6_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.92 25.03c6.904 0 12.5-5.596 12.5-12.5S19.824.03 12.92.03.42 5.626.42 12.53s5.596 12.5 12.5 12.5"
+})), num_6_path2 || (num_6_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M8.65 13.48c0-.74.05-1.48.15-2.2q.15-1.08.54-2.04c.26-.64.61-1.21 1.07-1.71s1.03-.89 1.74-1.17 1.55-.42 2.55-.42c.25 0 .54 0 .86.03q.48.03.78.12v1.6c-.23-.07-.48-.13-.75-.16-.27-.04-.54-.05-.8-.05-.83 0-1.51.13-2.05.38s-.97.6-1.28 1.04-.54.96-.68 1.55q-.21.885-.27 1.89h.11c.26-.42.64-.78 1.12-1.07s1.1-.44 1.85-.44c1.12 0 2.01.34 2.69 1.04s1.02 1.67 1.02 2.92c0 1.34-.38 2.41-1.12 3.19-.75.78-1.77 1.17-3.05 1.17-.83 0-1.58-.2-2.26-.61s-1.21-1.03-1.61-1.86-.59-1.89-.59-3.18zm4.45 4.07c.68 0 1.24-.23 1.67-.68s.65-1.15.65-2.1q0-1.14-.57-1.8c-.38-.44-.95-.67-1.7-.67-.52 0-.97.11-1.35.32-.38.22-.68.49-.9.83s-.32.68-.32 1.03c0 .48.1.96.29 1.43s.47.86.85 1.17c.37.31.83.46 1.39.46z"
+})));
 /* ESM default export */ const num_6 = (SvgNum6);
 ;// CONCATENATED MODULE: ./src/components/Num/num-7.svg
 var num_7_path, num_7_path2;
 function num_7_extends() { return num_7_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_7_extends.apply(null, arguments); }
 
-const SvgNum7 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_7_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_7_path || (num_7_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13 25.03c6.904 0 12.5-5.596 12.5-12.5S19.904.03 13 .03.5 5.626.5 12.53s5.596 12.5 12.5 12.5"
-  })), num_7_path2 || (num_7_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "m10.25 18.95 5.13-11.16H8.63V6.1h8.8v1.37l-5.11 11.48z"
-  })));
-};
+const SvgNum7 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_7_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_7_path || (num_7_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13 25.03c6.904 0 12.5-5.596 12.5-12.5S19.904.03 13 .03.5 5.626.5 12.53s5.596 12.5 12.5 12.5"
+})), num_7_path2 || (num_7_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "m10.25 18.95 5.13-11.16H8.63V6.1h8.8v1.37l-5.11 11.48z"
+})));
 /* ESM default export */ const num_7 = (SvgNum7);
 ;// CONCATENATED MODULE: ./src/components/Num/num-8.svg
 var num_8_path, num_8_path2;
 function num_8_extends() { return num_8_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_8_extends.apply(null, arguments); }
 
-const SvgNum8 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_8_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_8_path || (num_8_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.09 25.03c6.904 0 12.5-5.596 12.5-12.5S19.994.03 13.09.03.59 5.626.59 12.53s5.596 12.5 12.5 12.5"
-  })), num_8_path2 || (num_8_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M13.07 5.92c.76 0 1.43.12 2.02.35s1.05.58 1.39 1.04.51 1.03.51 1.7c0 .77-.23 1.4-.7 1.89s-1.03.91-1.69 1.24c.5.25.97.54 1.39.86.43.32.77.69 1.03 1.12q.39.645.39 1.5 0 1.08-.54 1.86c-.36.52-.86.93-1.5 1.21s-1.39.43-2.26.43c-1.39 0-2.47-.3-3.22-.91-.76-.61-1.13-1.46-1.13-2.55 0-.58.12-1.08.36-1.52s.56-.81.95-1.12c.4-.31.83-.58 1.3-.79-.62-.36-1.15-.79-1.57-1.31-.42-.51-.63-1.15-.63-1.93 0-.66.17-1.22.52-1.68s.82-.81 1.4-1.04c.59-.23 1.25-.35 1.98-.35m-2.48 9.72c0 .58.2 1.06.61 1.44s1.03.58 1.87.58 1.44-.19 1.86-.57.64-.87.64-1.47-.23-1.07-.7-1.46c-.47-.38-1.05-.73-1.75-1.03l-.27-.11c-.73.31-1.29.67-1.68 1.09-.39.41-.58.92-.58 1.52zm2.46-8.22c-.6 0-1.09.15-1.48.44-.38.29-.58.71-.58 1.25 0 .6.21 1.07.62 1.4s.92.63 1.5.89c.55-.24 1.03-.53 1.42-.88.4-.35.59-.82.59-1.4 0-.54-.19-.96-.58-1.25-.38-.29-.89-.44-1.51-.44z"
-  })));
-};
+const SvgNum8 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_8_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_8_path || (num_8_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.09 25.03c6.904 0 12.5-5.596 12.5-12.5S19.994.03 13.09.03.59 5.626.59 12.53s5.596 12.5 12.5 12.5"
+})), num_8_path2 || (num_8_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M13.07 5.92c.76 0 1.43.12 2.02.35s1.05.58 1.39 1.04.51 1.03.51 1.7c0 .77-.23 1.4-.7 1.89s-1.03.91-1.69 1.24c.5.25.97.54 1.39.86.43.32.77.69 1.03 1.12q.39.645.39 1.5 0 1.08-.54 1.86c-.36.52-.86.93-1.5 1.21s-1.39.43-2.26.43c-1.39 0-2.47-.3-3.22-.91-.76-.61-1.13-1.46-1.13-2.55 0-.58.12-1.08.36-1.52s.56-.81.95-1.12c.4-.31.83-.58 1.3-.79-.62-.36-1.15-.79-1.57-1.31-.42-.51-.63-1.15-.63-1.93 0-.66.17-1.22.52-1.68s.82-.81 1.4-1.04c.59-.23 1.25-.35 1.98-.35m-2.48 9.72c0 .58.2 1.06.61 1.44s1.03.58 1.87.58 1.44-.19 1.86-.57.64-.87.64-1.47-.23-1.07-.7-1.46c-.47-.38-1.05-.73-1.75-1.03l-.27-.11c-.73.31-1.29.67-1.68 1.09-.39.41-.58.92-.58 1.52zm2.46-8.22c-.6 0-1.09.15-1.48.44-.38.29-.58.71-.58 1.25 0 .6.21 1.07.62 1.4s.92.63 1.5.89c.55-.24 1.03-.53 1.42-.88.4-.35.59-.82.59-1.4 0-.54-.19-.96-.58-1.25-.38-.29-.89-.44-1.51-.44z"
+})));
 /* ESM default export */ const num_8 = (SvgNum8);
 ;// CONCATENATED MODULE: ./src/components/Num/num-9.svg
 var num_9_path, num_9_path2;
 function num_9_extends() { return num_9_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_9_extends.apply(null, arguments); }
 
-const SvgNum9 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_9_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_9_path || (num_9_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.17 25.03c6.904 0 12.5-5.596 12.5-12.5S20.074.03 13.17.03.67 5.626.67 12.53s5.596 12.5 12.5 12.5"
-  })), num_9_path2 || (num_9_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M17.47 11.59q0 1.095-.15 2.19c-.1.73-.28 1.41-.54 2.05s-.62 1.21-1.07 1.71c-.46.5-1.04.89-1.75 1.17s-1.56.42-2.56.42c-.24 0-.52-.01-.85-.04-.33-.02-.6-.07-.8-.13v-1.6c.23.07.48.13.77.16.28.04.55.05.82.05.83 0 1.51-.12 2.05-.37s.97-.59 1.28-1.04c.31-.44.54-.96.68-1.54s.23-1.21.25-1.88h-.11c-.26.41-.63.76-1.1 1.05s-1.1.44-1.89.44c-1.1 0-1.99-.34-2.66-1.03s-1.01-1.66-1.01-2.91c0-1.36.38-2.42 1.13-3.2S11.73 5.92 13 5.92c.83 0 1.58.2 2.26.61s1.21 1.03 1.61 1.86.59 1.89.59 3.18zm-4.44-4.08c-.68 0-1.24.23-1.67.68s-.65 1.15-.65 2.09c0 .77.19 1.37.56 1.82.37.44.94.67 1.69.67.53 0 .99-.11 1.38-.32.39-.22.69-.49.9-.83s.32-.68.32-1.04c0-.48-.09-.95-.28-1.42a2.86 2.86 0 0 0-.85-1.17c-.38-.31-.84-.47-1.4-.47z"
-  })));
-};
+const SvgNum9 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_9_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_9_path || (num_9_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.17 25.03c6.904 0 12.5-5.596 12.5-12.5S20.074.03 13.17.03.67 5.626.67 12.53s5.596 12.5 12.5 12.5"
+})), num_9_path2 || (num_9_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M17.47 11.59q0 1.095-.15 2.19c-.1.73-.28 1.41-.54 2.05s-.62 1.21-1.07 1.71c-.46.5-1.04.89-1.75 1.17s-1.56.42-2.56.42c-.24 0-.52-.01-.85-.04-.33-.02-.6-.07-.8-.13v-1.6c.23.07.48.13.77.16.28.04.55.05.82.05.83 0 1.51-.12 2.05-.37s.97-.59 1.28-1.04c.31-.44.54-.96.68-1.54s.23-1.21.25-1.88h-.11c-.26.41-.63.76-1.1 1.05s-1.1.44-1.89.44c-1.1 0-1.99-.34-2.66-1.03s-1.01-1.66-1.01-2.91c0-1.36.38-2.42 1.13-3.2S11.73 5.92 13 5.92c.83 0 1.58.2 2.26.61s1.21 1.03 1.61 1.86.59 1.89.59 3.18zm-4.44-4.08c-.68 0-1.24.23-1.67.68s-.65 1.15-.65 2.09c0 .77.19 1.37.56 1.82.37.44.94.67 1.69.67.53 0 .99-.11 1.38-.32.39-.22.69-.49.9-.83s.32-.68.32-1.04c0-.48-.09-.95-.28-1.42a2.86 2.86 0 0 0-.85-1.17c-.38-.31-.84-.47-1.4-.47z"
+})));
 /* ESM default export */ const num_9 = (SvgNum9);
 ;// CONCATENATED MODULE: ./src/components/Num/num-10.svg
 var num_10_path, num_10_path2;
 function num_10_extends() { return num_10_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_10_extends.apply(null, arguments); }
 
-const SvgNum10 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_10_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_10_path || (num_10_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.25 25.02c6.904 0 12.5-5.596 12.5-12.5S20.154.02 13.25.02.75 5.616.75 12.52s5.596 12.5 12.5 12.5"
-  })), num_10_path2 || (num_10_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.84 18.96H7.95v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13L4.58 9l3.67-2.88h1.58v12.85zM21.92 12.52c0 1.39-.14 2.58-.43 3.56s-.75 1.74-1.39 2.27-1.49.79-2.53.79c-1.48 0-2.56-.58-3.27-1.76-.7-1.17-1.05-2.79-1.05-4.87 0-1.39.14-2.58.42-3.56s.74-1.74 1.38-2.26q.96-.78 2.52-.78c1.46 0 2.56.58 3.28 1.74s1.08 2.78 1.08 4.87zm-6.76 0c0 1.68.18 2.94.54 3.77s.98 1.25 1.87 1.25 1.5-.41 1.87-1.24.56-2.09.56-3.78-.19-2.92-.56-3.75-1-1.25-1.87-1.25-1.51.42-1.87 1.25q-.54 1.245-.54 3.75"
-  })));
-};
+const SvgNum10 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_10_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_10_path || (num_10_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.25 25.02c6.904 0 12.5-5.596 12.5-12.5S20.154.02 13.25.02.75 5.616.75 12.52s5.596 12.5 12.5 12.5"
+})), num_10_path2 || (num_10_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.84 18.96H7.95v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13L4.58 9l3.67-2.88h1.58v12.85zM21.92 12.52c0 1.39-.14 2.58-.43 3.56s-.75 1.74-1.39 2.27-1.49.79-2.53.79c-1.48 0-2.56-.58-3.27-1.76-.7-1.17-1.05-2.79-1.05-4.87 0-1.39.14-2.58.42-3.56s.74-1.74 1.38-2.26q.96-.78 2.52-.78c1.46 0 2.56.58 3.28 1.74s1.08 2.78 1.08 4.87zm-6.76 0c0 1.68.18 2.94.54 3.77s.98 1.25 1.87 1.25 1.5-.41 1.87-1.24.56-2.09.56-3.78-.19-2.92-.56-3.75-1-1.25-1.87-1.25-1.51.42-1.87 1.25q-.54 1.245-.54 3.75"
+})));
 /* ESM default export */ const num_10 = (SvgNum10);
 ;// CONCATENATED MODULE: ./src/components/Num/num-11.svg
 var num_11_path, num_11_path2;
 function num_11_extends() { return num_11_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_11_extends.apply(null, arguments); }
 
-const SvgNum11 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_11_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 25 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_11_path || (num_11_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.5 25.03c6.904 0 12.5-5.596 12.5-12.5S19.404.03 12.5.03 0 5.626 0 12.53s5.596 12.5 12.5 12.5"
-  })), num_11_path2 || (num_11_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M10.48 18.95H8.59v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM19.77 18.95h-1.89v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85z"
-  })));
-};
+const SvgNum11 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_11_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 25,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 25 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_11_path || (num_11_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.5 25.03c6.904 0 12.5-5.596 12.5-12.5S19.404.03 12.5.03 0 5.626 0 12.53s5.596 12.5 12.5 12.5"
+})), num_11_path2 || (num_11_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M10.48 18.95H8.59v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM19.77 18.95h-1.89v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85z"
+})));
 /* ESM default export */ const num_11 = (SvgNum11);
 ;// CONCATENATED MODULE: ./src/components/Num/num-12.svg
 var num_12_path, num_12_path2;
 function num_12_extends() { return num_12_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_12_extends.apply(null, arguments); }
 
-const SvgNum12 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_12_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_12_path || (num_12_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.58 25.03c6.904 0 12.5-5.596 12.5-12.5S19.484.03 12.58.03.08 5.626.08 12.53s5.596 12.5 12.5 12.5"
-  })), num_12_path2 || (num_12_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.18 19.04H7.29v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22L7.59 6.2h1.58v12.85zM21.24 19.04H12.6v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L12.68 7.6c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25z"
-  })));
-};
+const SvgNum12 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_12_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_12_path || (num_12_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.58 25.03c6.904 0 12.5-5.596 12.5-12.5S19.484.03 12.58.03.08 5.626.08 12.53s5.596 12.5 12.5 12.5"
+})), num_12_path2 || (num_12_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.18 19.04H7.29v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07a7 7 0 0 1-.49.47c-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22L7.59 6.2h1.58v12.85zM21.24 19.04H12.6v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L12.68 7.6c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25z"
+})));
 /* ESM default export */ const num_12 = (SvgNum12);
 ;// CONCATENATED MODULE: ./src/components/Num/num-13.svg
 var num_13_path, num_13_path2;
 function num_13_extends() { return num_13_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_13_extends.apply(null, arguments); }
 
-const SvgNum13 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_13_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_13_path || (num_13_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.66 25.07c6.904 0 12.5-5.596 12.5-12.5S19.564.07 12.66.07.16 5.666.16 12.57s5.596 12.5 12.5 12.5"
-  })), num_13_path2 || (num_13_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.31 19H7.42v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88H9.3v12.85zM20.88 9.12c0 .88-.25 1.57-.74 2.09s-1.14.86-1.94 1.03v.07c1.02.12 1.79.44 2.3.97.52.53.77 1.21.77 2.05 0 .74-.18 1.41-.53 1.99s-.9 1.04-1.64 1.37-1.68.5-2.83.5c-.68 0-1.32-.05-1.91-.16s-1.15-.29-1.67-.54v-1.73c.54.28 1.12.49 1.75.63.62.14 1.21.22 1.76.22 1.1 0 1.89-.21 2.37-.62.47-.41.71-.99.71-1.74s-.29-1.25-.86-1.58c-.58-.33-1.44-.5-2.59-.5h-1.17V11.6h1.19c1.09 0 1.88-.2 2.38-.61s.74-.94.74-1.6c0-.58-.19-1.02-.57-1.34s-.92-.48-1.63-.48c-.66 0-1.23.11-1.72.32s-.94.45-1.36.73l-.94-1.31c.48-.36 1.06-.67 1.73-.93q1.005-.39 2.34-.39 1.995 0 3.03.87c.69.58 1.04 1.34 1.04 2.28z"
-  })));
-};
+const SvgNum13 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_13_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_13_path || (num_13_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.66 25.07c6.904 0 12.5-5.596 12.5-12.5S19.564.07 12.66.07.16 5.666.16 12.57s5.596 12.5 12.5 12.5"
+})), num_13_path2 || (num_13_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.31 19H7.42v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88H9.3v12.85zM20.88 9.12c0 .88-.25 1.57-.74 2.09s-1.14.86-1.94 1.03v.07c1.02.12 1.79.44 2.3.97.52.53.77 1.21.77 2.05 0 .74-.18 1.41-.53 1.99s-.9 1.04-1.64 1.37-1.68.5-2.83.5c-.68 0-1.32-.05-1.91-.16s-1.15-.29-1.67-.54v-1.73c.54.28 1.12.49 1.75.63.62.14 1.21.22 1.76.22 1.1 0 1.89-.21 2.37-.62.47-.41.71-.99.71-1.74s-.29-1.25-.86-1.58c-.58-.33-1.44-.5-2.59-.5h-1.17V11.6h1.19c1.09 0 1.88-.2 2.38-.61s.74-.94.74-1.6c0-.58-.19-1.02-.57-1.34s-.92-.48-1.63-.48c-.66 0-1.23.11-1.72.32s-.94.45-1.36.73l-.94-1.31c.48-.36 1.06-.67 1.73-.93q1.005-.39 2.34-.39 1.995 0 3.03.87c.69.58 1.04 1.34 1.04 2.28z"
+})));
 /* ESM default export */ const num_13 = (SvgNum13);
 ;// CONCATENATED MODULE: ./src/components/Num/num-14.svg
 var num_14_path, num_14_path2;
 function num_14_extends() { return num_14_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_14_extends.apply(null, arguments); }
 
-const SvgNum14 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_14_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_14_path || (num_14_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.75 25.04c6.904 0 12.5-5.596 12.5-12.5S19.654.04 12.75.04.25 5.636.25 12.54s5.596 12.5 12.5 12.5"
-  })), num_14_path2 || (num_14_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.1 18.99H7.21v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58V19zM21.65 16.15h-1.78v2.84h-1.85v-2.84h-5.96v-1.51l5.92-8.55h1.89v8.44h1.78zm-3.63-1.62v-3.49c0-.56 0-1.09.03-1.59.02-.5.04-.92.06-1.25h-.07c-.1.24-.22.49-.36.74s-.28.47-.41.67l-3.4 4.93h4.16z"
-  })));
-};
+const SvgNum14 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_14_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_14_path || (num_14_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.75 25.04c6.904 0 12.5-5.596 12.5-12.5S19.654.04 12.75.04.25 5.636.25 12.54s5.596 12.5 12.5 12.5"
+})), num_14_path2 || (num_14_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.1 18.99H7.21v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58V19zM21.65 16.15h-1.78v2.84h-1.85v-2.84h-5.96v-1.51l5.92-8.55h1.89v8.44h1.78zm-3.63-1.62v-3.49c0-.56 0-1.09.03-1.59.02-.5.04-.92.06-1.25h-.07c-.1.24-.22.49-.36.74s-.28.47-.41.67l-3.4 4.93h4.16z"
+})));
 /* ESM default export */ const num_14 = (SvgNum14);
 ;// CONCATENATED MODULE: ./src/components/Num/num-15.svg
 var num_15_path, num_15_path2;
 function num_15_extends() { return num_15_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_15_extends.apply(null, arguments); }
 
-const SvgNum15 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_15_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_15_path || (num_15_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.83 25.07c6.904 0 12.5-5.596 12.5-12.5S19.734.07 12.83.07.33 5.666.33 12.57s5.596 12.5 12.5 12.5"
-  })), num_15_path2 || (num_15_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.5 18.91H7.61v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM17.17 10.94c1.27 0 2.3.33 3.08.99s1.17 1.6 1.17 2.83c0 1.36-.43 2.42-1.28 3.19s-2.06 1.15-3.62 1.15c-.67 0-1.3-.06-1.88-.18s-1.08-.29-1.49-.52v-1.75c.43.25.96.46 1.58.61.62.16 1.21.23 1.77.23.9 0 1.62-.21 2.16-.62s.81-1.06.81-1.93c0-.78-.24-1.38-.73-1.79s-1.25-.62-2.29-.62c-.34 0-.71.03-1.12.09s-.75.12-1 .18l-.88-.52.49-6.21h6.61v1.69H15.6l-.29 3.37c.2-.04.46-.07.77-.12.31-.04.68-.06 1.1-.06z"
-  })));
-};
+const SvgNum15 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_15_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_15_path || (num_15_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.83 25.07c6.904 0 12.5-5.596 12.5-12.5S19.734.07 12.83.07.33 5.666.33 12.57s5.596 12.5 12.5 12.5"
+})), num_15_path2 || (num_15_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.5 18.91H7.61v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM17.17 10.94c1.27 0 2.3.33 3.08.99s1.17 1.6 1.17 2.83c0 1.36-.43 2.42-1.28 3.19s-2.06 1.15-3.62 1.15c-.67 0-1.3-.06-1.88-.18s-1.08-.29-1.49-.52v-1.75c.43.25.96.46 1.58.61.62.16 1.21.23 1.77.23.9 0 1.62-.21 2.16-.62s.81-1.06.81-1.93c0-.78-.24-1.38-.73-1.79s-1.25-.62-2.29-.62c-.34 0-.71.03-1.12.09s-.75.12-1 .18l-.88-.52.49-6.21h6.61v1.69H15.6l-.29 3.37c.2-.04.46-.07.77-.12.31-.04.68-.06 1.1-.06z"
+})));
 /* ESM default export */ const num_15 = (SvgNum15);
 ;// CONCATENATED MODULE: ./src/components/Num/num-16.svg
 var num_16_path, num_16_path2;
 function num_16_extends() { return num_16_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_16_extends.apply(null, arguments); }
 
-const SvgNum16 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_16_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_16_path || (num_16_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M12.92 25.08c6.904 0 12.5-5.596 12.5-12.5S19.824.08 12.92.08.42 5.676.42 12.58s5.596 12.5 12.5 12.5"
-  })), num_16_path2 || (num_16_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.48 19H7.59v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM12.96 13.52c0-.74.05-1.48.15-2.2q.15-1.08.54-2.04c.26-.64.61-1.21 1.07-1.71s1.03-.89 1.74-1.17q1.05-.42 2.55-.42c.25 0 .54 0 .86.03q.48.03.78.12v1.6c-.23-.07-.48-.13-.75-.16-.27-.04-.54-.05-.8-.05-.83 0-1.51.13-2.05.38s-.97.6-1.28 1.04-.54.96-.68 1.55q-.21.885-.27 1.89h.11c.26-.42.64-.78 1.12-1.07s1.1-.44 1.85-.44c1.12 0 2.01.35 2.69 1.04s1.02 1.67 1.02 2.93c0 1.34-.38 2.41-1.12 3.19-.75.78-1.77 1.17-3.05 1.17-.83 0-1.58-.2-2.26-.61s-1.21-1.03-1.61-1.86-.59-1.89-.59-3.18zm4.45 4.07c.68 0 1.24-.22 1.67-.67s.65-1.15.65-2.1q0-1.14-.57-1.8c-.38-.44-.95-.67-1.7-.67-.52 0-.97.11-1.35.32-.38.22-.68.49-.9.83s-.32.68-.32 1.03c0 .48.1.96.29 1.43s.47.86.85 1.17c.37.31.83.46 1.39.46z"
-  })));
-};
+const SvgNum16 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_16_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_16_path || (num_16_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M12.92 25.08c6.904 0 12.5-5.596 12.5-12.5S19.824.08 12.92.08.42 5.676.42 12.58s5.596 12.5 12.5 12.5"
+})), num_16_path2 || (num_16_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.48 19H7.59v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM12.96 13.52c0-.74.05-1.48.15-2.2q.15-1.08.54-2.04c.26-.64.61-1.21 1.07-1.71s1.03-.89 1.74-1.17q1.05-.42 2.55-.42c.25 0 .54 0 .86.03q.48.03.78.12v1.6c-.23-.07-.48-.13-.75-.16-.27-.04-.54-.05-.8-.05-.83 0-1.51.13-2.05.38s-.97.6-1.28 1.04-.54.96-.68 1.55q-.21.885-.27 1.89h.11c.26-.42.64-.78 1.12-1.07s1.1-.44 1.85-.44c1.12 0 2.01.35 2.69 1.04s1.02 1.67 1.02 2.93c0 1.34-.38 2.41-1.12 3.19-.75.78-1.77 1.17-3.05 1.17-.83 0-1.58-.2-2.26-.61s-1.21-1.03-1.61-1.86-.59-1.89-.59-3.18zm4.45 4.07c.68 0 1.24-.22 1.67-.67s.65-1.15.65-2.1q0-1.14-.57-1.8c-.38-.44-.95-.67-1.7-.67-.52 0-.97.11-1.35.32-.38.22-.68.49-.9.83s-.32.68-.32 1.03c0 .48.1.96.29 1.43s.47.86.85 1.17c.37.31.83.46 1.39.46z"
+})));
 /* ESM default export */ const num_16 = (SvgNum16);
 ;// CONCATENATED MODULE: ./src/components/Num/num-17.svg
 var num_17_path, num_17_path2;
 function num_17_extends() { return num_17_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_17_extends.apply(null, arguments); }
 
-const SvgNum17 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_17_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_17_path || (num_17_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13 25.03c6.904 0 12.5-5.596 12.5-12.5S19.904.03 13 .03.5 5.626.5 12.53s5.596 12.5 12.5 12.5"
-  })), num_17_path2 || (num_17_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.58 18.95H7.69v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM14.5 18.95l5.13-11.16h-6.75V6.1h8.8v1.37l-5.11 11.48z"
-  })));
-};
+const SvgNum17 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_17_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_17_path || (num_17_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13 25.03c6.904 0 12.5-5.596 12.5-12.5S19.904.03 13 .03.5 5.626.5 12.53s5.596 12.5 12.5 12.5"
+})), num_17_path2 || (num_17_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.58 18.95H7.69v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM14.5 18.95l5.13-11.16h-6.75V6.1h8.8v1.37l-5.11 11.48z"
+})));
 /* ESM default export */ const num_17 = (SvgNum17);
 ;// CONCATENATED MODULE: ./src/components/Num/num-18.svg
 var num_18_path, num_18_path2;
 function num_18_extends() { return num_18_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_18_extends.apply(null, arguments); }
 
-const SvgNum18 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_18_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_18_path || (num_18_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.08 25.09c6.903 0 12.5-5.596 12.5-12.5S19.984.09 13.08.09.58 5.686.58 12.59s5.596 12.5 12.5 12.5"
-  })), num_18_path2 || (num_18_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.68 19.01H7.79v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM17.41 5.98c.76 0 1.43.12 2.02.35s1.05.58 1.39 1.04.51 1.03.51 1.7c0 .77-.23 1.4-.7 1.89s-1.03.91-1.69 1.24c.5.25.97.54 1.39.86.43.32.77.69 1.03 1.12q.39.645.39 1.5 0 1.08-.54 1.86c-.36.52-.86.93-1.5 1.21s-1.39.43-2.26.43c-1.39 0-2.47-.3-3.22-.91-.76-.61-1.13-1.46-1.13-2.55 0-.58.12-1.08.36-1.52s.56-.81.95-1.12c.4-.31.83-.58 1.3-.79-.62-.36-1.15-.79-1.57-1.31-.42-.51-.63-1.15-.63-1.93 0-.66.17-1.22.52-1.68s.82-.81 1.4-1.04c.59-.23 1.25-.35 1.98-.35m-2.49 9.72c0 .58.2 1.06.61 1.44s1.03.58 1.87.58 1.44-.19 1.86-.57.64-.87.64-1.47-.23-1.07-.7-1.46c-.47-.38-1.05-.73-1.75-1.03l-.27-.11c-.73.31-1.29.67-1.68 1.09-.39.41-.58.92-.58 1.52zm2.47-8.23c-.6 0-1.09.15-1.48.44-.38.29-.58.71-.58 1.25 0 .6.21 1.07.62 1.4s.92.63 1.5.89c.55-.24 1.03-.53 1.42-.88.4-.35.59-.82.59-1.4 0-.54-.19-.96-.58-1.25-.38-.29-.89-.44-1.51-.44z"
-  })));
-};
+const SvgNum18 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_18_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_18_path || (num_18_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.08 25.09c6.903 0 12.5-5.596 12.5-12.5S19.984.09 13.08.09.58 5.686.58 12.59s5.596 12.5 12.5 12.5"
+})), num_18_path2 || (num_18_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.68 19.01H7.79v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM17.41 5.98c.76 0 1.43.12 2.02.35s1.05.58 1.39 1.04.51 1.03.51 1.7c0 .77-.23 1.4-.7 1.89s-1.03.91-1.69 1.24c.5.25.97.54 1.39.86.43.32.77.69 1.03 1.12q.39.645.39 1.5 0 1.08-.54 1.86c-.36.52-.86.93-1.5 1.21s-1.39.43-2.26.43c-1.39 0-2.47-.3-3.22-.91-.76-.61-1.13-1.46-1.13-2.55 0-.58.12-1.08.36-1.52s.56-.81.95-1.12c.4-.31.83-.58 1.3-.79-.62-.36-1.15-.79-1.57-1.31-.42-.51-.63-1.15-.63-1.93 0-.66.17-1.22.52-1.68s.82-.81 1.4-1.04c.59-.23 1.25-.35 1.98-.35m-2.49 9.72c0 .58.2 1.06.61 1.44s1.03.58 1.87.58 1.44-.19 1.86-.57.64-.87.64-1.47-.23-1.07-.7-1.46c-.47-.38-1.05-.73-1.75-1.03l-.27-.11c-.73.31-1.29.67-1.68 1.09-.39.41-.58.92-.58 1.52zm2.47-8.23c-.6 0-1.09.15-1.48.44-.38.29-.58.71-.58 1.25 0 .6.21 1.07.62 1.4s.92.63 1.5.89c.55-.24 1.03-.53 1.42-.88.4-.35.59-.82.59-1.4 0-.54-.19-.96-.58-1.25-.38-.29-.89-.44-1.51-.44z"
+})));
 /* ESM default export */ const num_18 = (SvgNum18);
 ;// CONCATENATED MODULE: ./src/components/Num/num-19.svg
 var num_19_path, num_19_path2;
 function num_19_extends() { return num_19_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_19_extends.apply(null, arguments); }
 
-const SvgNum19 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_19_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 26 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_19_path || (num_19_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.17 25c6.904 0 12.5-5.596 12.5-12.5S20.074 0 13.17 0 .67 5.596.67 12.5 6.266 25 13.17 25"
-  })), num_19_path2 || (num_19_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M9.77 18.92H7.88v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM21.82 11.56q0 1.095-.15 2.19c-.1.73-.28 1.41-.54 2.05s-.62 1.21-1.07 1.71-1.04.89-1.75 1.17-1.56.42-2.56.42c-.24 0-.52-.01-.85-.04s-.6-.07-.8-.13v-1.6c.23.07.48.13.77.16.28.04.55.05.82.05.83 0 1.51-.12 2.05-.37s.97-.59 1.28-1.04c.31-.44.54-.96.68-1.54s.23-1.21.25-1.88h-.11c-.26.41-.63.76-1.1 1.05s-1.1.44-1.89.44c-1.1 0-1.99-.34-2.66-1.04-.67-.69-1.01-1.66-1.01-2.91 0-1.36.38-2.42 1.13-3.2.76-.78 1.77-1.17 3.04-1.17.83 0 1.58.21 2.26.61.68.41 1.21 1.03 1.61 1.86s.59 1.89.59 3.18zm-4.45-4.09c-.68 0-1.24.23-1.67.68-.43.46-.65 1.15-.65 2.09 0 .77.19 1.37.56 1.82.37.44.94.67 1.69.67.53 0 .99-.11 1.38-.32.39-.22.69-.49.9-.83.21-.33.32-.68.32-1.04 0-.48-.09-.95-.28-1.42a2.86 2.86 0 0 0-.85-1.17c-.38-.31-.84-.47-1.4-.47z"
-  })));
-};
+const SvgNum19 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_19_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 25,
+  fill: "none",
+  viewBox: "0 0 26 25",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_19_path || (num_19_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.17 25c6.904 0 12.5-5.596 12.5-12.5S20.074 0 13.17 0 .67 5.596.67 12.5 6.266 25 13.17 25"
+})), num_19_path2 || (num_19_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M9.77 18.92H7.88v-8.53c0-.46 0-.87.02-1.23.01-.37.03-.72.05-1.07-.16.17-.32.32-.49.47-.17.14-.36.31-.58.49l-1.4 1.13-.97-1.22 3.67-2.88h1.58v12.85zM21.82 11.56q0 1.095-.15 2.19c-.1.73-.28 1.41-.54 2.05s-.62 1.21-1.07 1.71-1.04.89-1.75 1.17-1.56.42-2.56.42c-.24 0-.52-.01-.85-.04s-.6-.07-.8-.13v-1.6c.23.07.48.13.77.16.28.04.55.05.82.05.83 0 1.51-.12 2.05-.37s.97-.59 1.28-1.04c.31-.44.54-.96.68-1.54s.23-1.21.25-1.88h-.11c-.26.41-.63.76-1.1 1.05s-1.1.44-1.89.44c-1.1 0-1.99-.34-2.66-1.04-.67-.69-1.01-1.66-1.01-2.91 0-1.36.38-2.42 1.13-3.2.76-.78 1.77-1.17 3.04-1.17.83 0 1.58.21 2.26.61.68.41 1.21 1.03 1.61 1.86s.59 1.89.59 3.18zm-4.45-4.09c-.68 0-1.24.23-1.67.68-.43.46-.65 1.15-.65 2.09 0 .77.19 1.37.56 1.82.37.44.94.67 1.69.67.53 0 .99-.11 1.38-.32.39-.22.69-.49.9-.83.21-.33.32-.68.32-1.04 0-.48-.09-.95-.28-1.42a2.86 2.86 0 0 0-.85-1.17c-.38-.31-.84-.47-1.4-.47z"
+})));
 /* ESM default export */ const num_19 = (SvgNum19);
 ;// CONCATENATED MODULE: ./src/components/Num/num-20.svg
 var num_20_path, num_20_path2;
 function num_20_extends() { return num_20_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, num_20_extends.apply(null, arguments); }
 
-const SvgNum20 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", num_20_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 26,
-    height: 26,
-    fill: "none",
-    viewBox: "0 0 26 26",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, num_20_path || (num_20_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#A42444",
-    d: "M13.25 25.07c6.904 0 12.5-5.596 12.5-12.5S20.154.07 13.25.07.75 5.666.75 12.57s5.596 12.5 12.5 12.5"
-  })), num_20_path2 || (num_20_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M12.41 19H3.77v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L3.85 7.56c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25zM22.73 12.56c0 1.39-.14 2.58-.43 3.56s-.75 1.74-1.39 2.27-1.49.79-2.53.79c-1.48 0-2.56-.58-3.27-1.75s-1.05-2.79-1.05-4.87c0-1.39.14-2.58.42-3.56s.74-1.74 1.38-2.26q.96-.78 2.52-.78c1.46 0 2.56.58 3.28 1.74s1.08 2.78 1.08 4.87zm-6.77 0c0 1.68.18 2.94.54 3.77s.98 1.25 1.87 1.25 1.5-.41 1.87-1.24.56-2.09.56-3.78-.19-2.92-.56-3.75-1-1.25-1.87-1.25-1.51.42-1.87 1.25q-.54 1.245-.54 3.75"
-  })));
-};
+const SvgNum20 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", num_20_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 26,
+  height: 26,
+  fill: "none",
+  viewBox: "0 0 26 26",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, num_20_path || (num_20_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#A42444",
+  d: "M13.25 25.07c6.904 0 12.5-5.596 12.5-12.5S20.154.07 13.25.07.75 5.666.75 12.57s5.596 12.5 12.5 12.5"
+})), num_20_path2 || (num_20_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M12.41 19H3.77v-1.48l3.31-3.37c.65-.66 1.19-1.23 1.62-1.72s.76-.95.97-1.4c.22-.45.32-.94.32-1.47 0-.65-.19-1.14-.57-1.48s-.88-.5-1.5-.5c-.59 0-1.12.11-1.58.32-.47.22-.95.53-1.46.94L3.85 7.56c.52-.43 1.1-.81 1.76-1.12.66-.32 1.45-.48 2.36-.48 1.21 0 2.17.31 2.88.94.71.62 1.06 1.46 1.06 2.5 0 .68-.14 1.32-.41 1.91-.28.59-.67 1.17-1.17 1.75s-1.1 1.19-1.78 1.84l-2.39 2.32v.09h6.25zM22.73 12.56c0 1.39-.14 2.58-.43 3.56s-.75 1.74-1.39 2.27-1.49.79-2.53.79c-1.48 0-2.56-.58-3.27-1.75s-1.05-2.79-1.05-4.87c0-1.39.14-2.58.42-3.56s.74-1.74 1.38-2.26q.96-.78 2.52-.78c1.46 0 2.56.58 3.28 1.74s1.08 2.78 1.08 4.87zm-6.77 0c0 1.68.18 2.94.54 3.77s.98 1.25 1.87 1.25 1.5-.41 1.87-1.24.56-2.09.56-3.78-.19-2.92-.56-3.75-1-1.25-1.87-1.25-1.51.42-1.87 1.25q-.54 1.245-.54 3.75"
+})));
 /* ESM default export */ const num_20 = (SvgNum20);
 ;// CONCATENATED MODULE: ./src/components/Num/styles.module.css
 // extracted by css-extract-rspack-plugin
@@ -2762,119 +2699,107 @@ function Item(param) {
 var ico_w_path, ico_w_path2;
 function ico_w_extends() { return ico_w_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_w_extends.apply(null, arguments); }
 
-const SvgIcoW = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_w_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_w_path || (ico_w_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), ico_w_path2 || (ico_w_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M8.042 19 4.758 7.364h2.267l2.096 8.55h.108l2.239-8.55h2.063l2.244 8.557h.102l2.097-8.557h2.267L16.957 19h-2.08l-2.33-8.165h-.09L10.12 19z"
-  })));
-};
+const SvgIcoW = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_w_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 25,
+  height: 25,
+  fill: "none",
+  viewBox: "0 0 25 25",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_w_path || (ico_w_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  stroke: "#fff",
+  strokeWidth: 0.5,
+  d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+})), ico_w_path2 || (ico_w_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M8.042 19 4.758 7.364h2.267l2.096 8.55h.108l2.239-8.55h2.063l2.244 8.557h.102l2.097-8.557h2.267L16.957 19h-2.08l-2.33-8.165h-.09L10.12 19z"
+})));
 /* ESM default export */ const ico_w = (SvgIcoW);
 ;// CONCATENATED MODULE: ./static/img/common/ico-h.svg
 var ico_h_path, ico_h_path2;
 function ico_h_extends() { return ico_h_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_h_extends.apply(null, arguments); }
 
-const SvgIcoH = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_h_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_h_path || (ico_h_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), ico_h_path2 || (ico_h_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M8.195 18V6.364h2.108v4.926h5.392V6.364h2.113V18h-2.113v-4.943h-5.392V18z"
-  })));
-};
+const SvgIcoH = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_h_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 25,
+  height: 25,
+  fill: "none",
+  viewBox: "0 0 25 25",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_h_path || (ico_h_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  stroke: "#fff",
+  strokeWidth: 0.5,
+  d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+})), ico_h_path2 || (ico_h_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M8.195 18V6.364h2.108v4.926h5.392V6.364h2.113V18h-2.113v-4.943h-5.392V18z"
+})));
 /* ESM default export */ const ico_h = (SvgIcoH);
 ;// CONCATENATED MODULE: ./static/img/common/ico-d.svg
 var ico_d_path, ico_d_path2;
 function ico_d_extends() { return ico_d_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_d_extends.apply(null, arguments); }
 
-const SvgIcoD = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_d_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 25,
-    height: 25,
-    fill: "none",
-    viewBox: "0 0 25 25",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_d_path || (ico_d_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
-  })), ico_d_path2 || (ico_d_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M12.294 18H8.351V6.364h4.023q1.732 0 2.977.699a4.67 4.67 0 0 1 1.92 1.994q.67 1.3.67 3.114 0 1.817-.675 3.125a4.67 4.67 0 0 1-1.938 2.005q-1.26.699-3.034.699m-1.835-1.824h1.733q1.215 0 2.028-.443.813-.45 1.222-1.335.409-.892.409-2.227 0-1.336-.41-2.216-.408-.887-1.21-1.324-.795-.444-1.977-.444H10.46z"
-  })));
-};
+const SvgIcoD = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_d_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 25,
+  height: 25,
+  fill: "none",
+  viewBox: "0 0 25 25",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_d_path || (ico_d_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  stroke: "#fff",
+  strokeWidth: 0.5,
+  d: "M12.5.25c6.765 0 12.25 5.485 12.25 12.25S19.265 24.75 12.5 24.75.25 19.265.25 12.5 5.735.25 12.5.25Z"
+})), ico_d_path2 || (ico_d_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M12.294 18H8.351V6.364h4.023q1.732 0 2.977.699a4.67 4.67 0 0 1 1.92 1.994q.67 1.3.67 3.114 0 1.817-.675 3.125a4.67 4.67 0 0 1-1.938 2.005q-1.26.699-3.034.699m-1.835-1.824h1.733q1.215 0 2.028-.443.813-.45 1.222-1.335.409-.892.409-2.227 0-1.336-.41-2.216-.408-.887-1.21-1.324-.795-.444-1.977-.444H10.46z"
+})));
 /* ESM default export */ const ico_d = (SvgIcoD);
 ;// CONCATENATED MODULE: ./static/img/menus/spec-credential-face.svg
 var spec_credential_face_path;
 function spec_credential_face_extends() { return spec_credential_face_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, spec_credential_face_extends.apply(null, arguments); }
 
-const SvgSpecCredentialFace = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", spec_credential_face_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 100,
-    height: 100,
-    fill: "none",
-    viewBox: "0 0 100 100",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, spec_credential_face_path || (spec_credential_face_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 8.333,
-    d: "M12.5 29.167v-8.334a8.333 8.333 0 0 1 8.333-8.333h8.334M70.833 12.5h8.334a8.333 8.333 0 0 1 8.333 8.333v8.334M87.5 70.833v8.334a8.333 8.333 0 0 1-8.333 8.333h-8.334M29.167 87.5h-8.334a8.333 8.333 0 0 1-8.333-8.333v-8.334M33.333 58.333s6.25 8.334 16.667 8.334 16.667-8.334 16.667-8.334M37.5 37.5h.042M62.5 37.5h.042"
-  })));
-};
+const SvgSpecCredentialFace = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", spec_credential_face_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 100,
+  height: 100,
+  fill: "none",
+  viewBox: "0 0 100 100",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, spec_credential_face_path || (spec_credential_face_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 8.333,
+  d: "M12.5 29.167v-8.334a8.333 8.333 0 0 1 8.333-8.333h8.334M70.833 12.5h8.334a8.333 8.333 0 0 1 8.333 8.333v8.334M87.5 70.833v8.334a8.333 8.333 0 0 1-8.333 8.333h-8.334M29.167 87.5h-8.334a8.333 8.333 0 0 1-8.333-8.333v-8.334M33.333 58.333s6.25 8.334 16.667 8.334 16.667-8.334 16.667-8.334M37.5 37.5h.042M62.5 37.5h.042"
+})));
 /* ESM default export */ const spec_credential_face = (SvgSpecCredentialFace);
 ;// CONCATENATED MODULE: ./src/components/Specs/index.js
 
@@ -3441,2218 +3366,2017 @@ var YouTube_esm = __webpack_require__(3913);
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
 
-const SvgIcoLicense = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_license_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_license_path || (ico_license_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M10 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V4.667z"
-  })), ico_license_path2 || (ico_license_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M6.667 12a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667M10.667 6.667l-3 3M10 7.333l.667.667"
-  })));
-};
+const SvgIcoLicense = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_license_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_license_path || (ico_license_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M10 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V4.667z"
+})), ico_license_path2 || (ico_license_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M6.667 12a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667M10.667 6.667l-3 3M10 7.333l.667.667"
+})));
 /* ESM default export */ const ico_license = (SvgIcoLicense);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-add.svg
 var ico_add_path;
 function ico_add_extends() { return ico_add_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_add_extends.apply(null, arguments); }
 
-const SvgIcoAdd = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_add_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_add_path || (ico_add_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M3.333 8h9.334M8 3.333v9.334"
-  })));
-};
+const SvgIcoAdd = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_add_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_add_path || (ico_add_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M3.333 8h9.334M8 3.333v9.334"
+})));
 /* ESM default export */ const ico_add = (SvgIcoAdd);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-minus.svg
 var ico_minus_path;
 function ico_minus_extends() { return ico_minus_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_minus_extends.apply(null, arguments); }
 
-const SvgIcoMinus = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_minus_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_minus_path || (ico_minus_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M3.333 8h9.334"
-  })));
-};
+const SvgIcoMinus = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_minus_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_minus_path || (ico_minus_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M3.333 8h9.334"
+})));
 /* ESM default export */ const ico_minus = (SvgIcoMinus);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-close.svg
 var ico_close_path;
 function ico_close_extends() { return ico_close_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_close_extends.apply(null, arguments); }
 
-const SvgIcoClose = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_close_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_close_path || (ico_close_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m12 4-8 8M4 4l8 8"
-  })));
-};
+const SvgIcoClose = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_close_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_close_path || (ico_close_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m12 4-8 8M4 4l8 8"
+})));
 /* ESM default export */ const ico_close = (SvgIcoClose);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera.svg
 var ico_camera_path, ico_camera_path2;
 function ico_camera_extends() { return ico_camera_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_camera_extends.apply(null, arguments); }
 
-const SvgIcoCamera = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_camera_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 18,
-    height: 18,
-    fill: "none",
-    viewBox: "0 0 18 18",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_camera_path || (ico_camera_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.5,
-    d: "M10.875 3h-3.75L5.25 5.25H3a1.5 1.5 0 0 0-1.5 1.5v6.75A1.5 1.5 0 0 0 3 15h12a1.5 1.5 0 0 0 1.5-1.5V6.75a1.5 1.5 0 0 0-1.5-1.5h-2.25z"
-  })), ico_camera_path2 || (ico_camera_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.5,
-    d: "M9 12a2.25 2.25 0 1 0 0-4.5A2.25 2.25 0 0 0 9 12"
-  })));
-};
+const SvgIcoCamera = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_camera_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 18,
+  height: 18,
+  fill: "none",
+  viewBox: "0 0 18 18",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_camera_path || (ico_camera_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.5,
+  d: "M10.875 3h-3.75L5.25 5.25H3a1.5 1.5 0 0 0-1.5 1.5v6.75A1.5 1.5 0 0 0 3 15h12a1.5 1.5 0 0 0 1.5-1.5V6.75a1.5 1.5 0 0 0-1.5-1.5h-2.25z"
+})), ico_camera_path2 || (ico_camera_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.5,
+  d: "M9 12a2.25 2.25 0 1 0 0-4.5A2.25 2.25 0 0 0 9 12"
+})));
 /* ESM default export */ const ico_camera = (SvgIcoCamera);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-upload.svg
 var ico_upload_path;
 function ico_upload_extends() { return ico_upload_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_upload_extends.apply(null, arguments); }
 
-const SvgIcoUpload = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_upload_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_upload_path || (ico_upload_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M14 10v2.667A1.334 1.334 0 0 1 12.667 14H3.333A1.334 1.334 0 0 1 2 12.667V10M11.333 5.333 8 2 4.667 5.333M8 2v8"
-  })));
-};
+const SvgIcoUpload = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_upload_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_upload_path || (ico_upload_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M14 10v2.667A1.334 1.334 0 0 1 12.667 14H3.333A1.334 1.334 0 0 1 2 12.667V10M11.333 5.333 8 2 4.667 5.333M8 2v8"
+})));
 /* ESM default export */ const ico_upload = (SvgIcoUpload);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-trash.svg
 var ico_trash_path;
 function ico_trash_extends() { return ico_trash_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_trash_extends.apply(null, arguments); }
 
-const SvgIcoTrash = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_trash_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_trash_path || (ico_trash_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M2 4h12M12.667 4v9.333c0 .667-.667 1.334-1.334 1.334H4.667c-.667 0-1.334-.667-1.334-1.334V4M5.333 4V2.667C5.333 2 6 1.333 6.667 1.333h2.666c.667 0 1.334.667 1.334 1.334V4M6.667 7.333v4M9.333 7.333v4"
-  })));
-};
+const SvgIcoTrash = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_trash_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_trash_path || (ico_trash_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M2 4h12M12.667 4v9.333c0 .667-.667 1.334-1.334 1.334H4.667c-.667 0-1.334-.667-1.334-1.334V4M5.333 4V2.667C5.333 2 6 1.333 6.667 1.333h2.666c.667 0 1.334.667 1.334 1.334V4M6.667 7.333v4M9.333 7.333v4"
+})));
 /* ESM default export */ const ico_trash = (SvgIcoTrash);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-down-arrow.svg
 var ico_down_arrow_path;
 function ico_down_arrow_extends() { return ico_down_arrow_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_down_arrow_extends.apply(null, arguments); }
 
-const SvgIcoDownArrow = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_down_arrow_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_down_arrow_path || (ico_down_arrow_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m4 6 4 4 4-4"
-  })));
-};
+const SvgIcoDownArrow = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_down_arrow_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_down_arrow_path || (ico_down_arrow_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m4 6 4 4 4-4"
+})));
 /* ESM default export */ const ico_down_arrow = (SvgIcoDownArrow);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-more-black.svg
 var ico_more_black_path, ico_more_black_path2, _path3;
 function ico_more_black_extends() { return ico_more_black_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_more_black_extends.apply(null, arguments); }
 
-const SvgIcoMoreBlack = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_more_black_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 21,
-    height: 18,
-    fill: "none",
-    viewBox: "0 0 21 18",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_more_black_path || (ico_more_black_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#1A1A2E",
-    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
-  })), ico_more_black_path2 || (ico_more_black_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 0.5,
-    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
-  })), _path3 || (_path3 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#fff",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.33,
-    d: "M10.45 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M15.12 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M5.79 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
-  })));
-};
+const SvgIcoMoreBlack = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_more_black_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 21,
+  height: 18,
+  fill: "none",
+  viewBox: "0 0 21 18",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_more_black_path || (ico_more_black_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#1A1A2E",
+  d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
+})), ico_more_black_path2 || (ico_more_black_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 0.5,
+  d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
+})), _path3 || (_path3 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#fff",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.33,
+  d: "M10.45 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M15.12 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M5.79 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
+})));
 /* ESM default export */ const ico_more_black = (SvgIcoMoreBlack);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-more-white.svg
 var ico_more_white_path, ico_more_white_path2, ico_more_white_path3;
 function ico_more_white_extends() { return ico_more_white_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_more_white_extends.apply(null, arguments); }
 
-const SvgIcoMoreWhite = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_more_white_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 21,
-    height: 18,
-    fill: "none",
-    viewBox: "0 0 21 18",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_more_white_path || (ico_more_white_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
-  })), ico_more_white_path2 || (ico_more_white_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 0.5,
-    d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
-  })), ico_more_white_path3 || (ico_more_white_path3 = /*#__PURE__*/react.createElement("path", {
-    stroke: "#000",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.33,
-    d: "M10.45 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M15.12 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M5.79 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
-  })));
-};
+const SvgIcoMoreWhite = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_more_white_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 21,
+  height: 18,
+  fill: "none",
+  viewBox: "0 0 21 18",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_more_white_path || (ico_more_white_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
+})), ico_more_white_path2 || (ico_more_white_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 0.5,
+  d: "M18.49 1H2.42A1.42 1.42 0 0 0 1 2.42v13.1c0 .784.636 1.42 1.42 1.42h16.07a1.42 1.42 0 0 0 1.42-1.42V2.42A1.42 1.42 0 0 0 18.49 1"
+})), ico_more_white_path3 || (ico_more_white_path3 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.33,
+  d: "M10.45 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M15.12 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34M5.79 9.64a.67.67 0 1 0 0-1.34.67.67 0 0 0 0 1.34"
+})));
 /* ESM default export */ const ico_more_white = (SvgIcoMoreWhite);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-err.svg
 var _g, _defs;
 function ico_err_extends() { return ico_err_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_err_extends.apply(null, arguments); }
 
-const SvgIcoErr = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_err_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, _g || (_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#FF6F00",
-    d: "M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M7.2 4.8a.87.87 0 0 1 .225-.592A.85.85 0 0 1 8 4a.8.8 0 0 1 .56.208.84.84 0 0 1 .24.448V8.16a.72.72 0 0 1-.24.544 1 1 0 0 1-.144.144.796.796 0 0 1-.992-.144.74.74 0 0 1-.224-.544zM8 9.92a.8.8 0 0 1 .56.208.8.8 0 0 1 .225.4.2.2 0 0 1 .016.048v.144a.72.72 0 0 1-.24.544 1 1 0 0 1-.144.144.796.796 0 0 1-.992-.144.74.74 0 0 1-.224-.544q0-.089.016-.176A.726.726 0 0 1 8 9.92"
-  }))), _defs || (_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoErr = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_err_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, _g || (_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#FF6F00",
+  d: "M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M7.2 4.8a.87.87 0 0 1 .225-.592A.85.85 0 0 1 8 4a.8.8 0 0 1 .56.208.84.84 0 0 1 .24.448V8.16a.72.72 0 0 1-.24.544 1 1 0 0 1-.144.144.796.796 0 0 1-.992-.144.74.74 0 0 1-.224-.544zM8 9.92a.8.8 0 0 1 .56.208.8.8 0 0 1 .225.4.2.2 0 0 1 .016.048v.144a.72.72 0 0 1-.24.544 1 1 0 0 1-.144.144.796.796 0 0 1-.992-.144.74.74 0 0 1-.224-.544q0-.089.016-.176A.726.726 0 0 1 8 9.92"
+}))), _defs || (_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_err = (SvgIcoErr);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-notsync.svg
 var ico_notsync_g, ico_notsync_defs;
 function ico_notsync_extends() { return ico_notsync_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_notsync_extends.apply(null, arguments); }
 
-const SvgIcoNotsync = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_notsync_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_notsync_g || (ico_notsync_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.667,
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "m14 5.333-1.507-1.506A6.5 6.5 0 0 0 8 2c-.667 0-1.313.107-1.913.313M5.333 10.667H2V14M2 8c0-1.66.667-3.16 1.76-4.24"
-  }), /*#__PURE__*/react.createElement("path", {
-    d: "m2 10.667 1.507 1.506A6.5 6.5 0 0 0 8 14a5.93 5.93 0 0 0 4.24-1.76M14 8c0 .667-.107 1.313-.313 1.913M14 2v3.333h-3.333M14.667 14.667 1.333 1.333"
-  }))), ico_notsync_defs || (ico_notsync_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoNotsync = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_notsync_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_notsync_g || (ico_notsync_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.667,
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "m14 5.333-1.507-1.506A6.5 6.5 0 0 0 8 2c-.667 0-1.313.107-1.913.313M5.333 10.667H2V14M2 8c0-1.66.667-3.16 1.76-4.24"
+}), /*#__PURE__*/react.createElement("path", {
+  d: "m2 10.667 1.507 1.506A6.5 6.5 0 0 0 8 14a5.93 5.93 0 0 0 4.24-1.76M14 8c0 .667-.107 1.313-.313 1.913M14 2v3.333h-3.333M14.667 14.667 1.333 1.333"
+}))), ico_notsync_defs || (ico_notsync_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_notsync = (SvgIcoNotsync);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-close.svg
 var ico_door_close_g, ico_door_close_defs;
 function ico_door_close_extends() { return ico_door_close_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_door_close_extends.apply(null, arguments); }
 
-const SvgIcoDoorClose = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_door_close_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_door_close_g || (ico_door_close_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#D9D9D9",
-    d: "M2 1h12v14H2z"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M11.594 6.835v2.33m-9.583 4.66V2.175a1 1 0 0 1 .3-.873c.115-.113.257-.199.413-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874"
-  }))), ico_door_close_defs || (ico_door_close_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoDoorClose = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_door_close_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_door_close_g || (ico_door_close_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#D9D9D9",
+  d: "M2 1h12v14H2z"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M11.594 6.835v2.33m-9.583 4.66V2.175a1 1 0 0 1 .3-.873c.115-.113.257-.199.413-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874"
+}))), ico_door_close_defs || (ico_door_close_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_door_close = (SvgIcoDoorClose);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-open.svg
 var ico_door_open_g, ico_door_open_defs;
 function ico_door_open_extends() { return ico_door_open_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_door_open_extends.apply(null, arguments); }
 
-const SvgIcoDoorOpen = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_door_open_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_door_open_g || (ico_door_open_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#D9D9D9",
-    d: "M3 1h10v12H3z"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#D9D9D9",
-    d: "m3 1 8 2v12l-7.5-2z"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "#A9A9A9",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "m4.007 1.009 5.89 1.673q1.597.324 1.597 1.323v8.989M4.007 1.009h7.986a.882.882 0 0 1 .998.999v9.987a.884.884 0 0 1-.998.999h-.5M4.008 1.009a.882.882 0 0 0-.998.999v9.837a1.11 1.11 0 0 0 .998 1.149l6.489 1.997a.882.882 0 0 0 .998-.999v-.998M9.497 8v1.997"
-  }))), ico_door_open_defs || (ico_door_open_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoDoorOpen = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_door_open_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_door_open_g || (ico_door_open_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#D9D9D9",
+  d: "M3 1h10v12H3z"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#D9D9D9",
+  d: "m3 1 8 2v12l-7.5-2z"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "#A9A9A9",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "m4.007 1.009 5.89 1.673q1.597.324 1.597 1.323v8.989M4.007 1.009h7.986a.882.882 0 0 1 .998.999v9.987a.884.884 0 0 1-.998.999h-.5M4.008 1.009a.882.882 0 0 0-.998.999v9.837a1.11 1.11 0 0 0 .998 1.149l6.489 1.997a.882.882 0 0 0 .998-.999v-.998M9.497 8v1.997"
+}))), ico_door_open_defs || (ico_door_open_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_door_open = (SvgIcoDoorOpen);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-relay-lock.svg
 var ico_relay_lock_g, ico_relay_lock_defs;
 function ico_relay_lock_extends() { return ico_relay_lock_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_relay_lock_extends.apply(null, arguments); }
 
-const SvgIcoRelayLock = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_relay_lock_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_relay_lock_g || (ico_relay_lock_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M4.75 7.248v-1.75a3.436 3.436 0 0 1 3.498-3.497 3.33 3.33 0 0 1 2.448 1.005 3.4 3.4 0 0 1 1.05 2.493v1.75M3 12.844V8.472q0-.874 1.05-.874h8.395q1.05 0 1.05.875v4.372q0 .875-1.05.875H4.05Q3 13.72 3 12.845"
-  }))), ico_relay_lock_defs || (ico_relay_lock_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoRelayLock = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_relay_lock_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_relay_lock_g || (ico_relay_lock_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M4.75 7.248v-1.75a3.436 3.436 0 0 1 3.498-3.497 3.33 3.33 0 0 1 2.448 1.005 3.4 3.4 0 0 1 1.05 2.493v1.75M3 12.844V8.472q0-.874 1.05-.874h8.395q1.05 0 1.05.875v4.372q0 .875-1.05.875H4.05Q3 13.72 3 12.845"
+}))), ico_relay_lock_defs || (ico_relay_lock_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_relay_lock = (SvgIcoRelayLock);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-relay-unlock.svg
 var ico_relay_unlock_g, ico_relay_unlock_defs;
 function ico_relay_unlock_extends() { return ico_relay_unlock_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_relay_unlock_extends.apply(null, arguments); }
 
-const SvgIcoRelayUnlock = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_relay_unlock_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_relay_unlock_g || (ico_relay_unlock_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M11.2 5.6V4.48a3.11 3.11 0 0 0-.96-2.28A3.05 3.05 0 0 0 8 1.28a3.143 3.143 0 0 0-3.2 3.2V8m0 0h7.04q.96 0 .96.8v4q0 .8-.96.8H4.16q-.96 0-.96-.8v-4q0-.8.96-.8z"
-  }))), ico_relay_unlock_defs || (ico_relay_unlock_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoRelayUnlock = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_relay_unlock_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_relay_unlock_g || (ico_relay_unlock_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M11.2 5.6V4.48a3.11 3.11 0 0 0-.96-2.28A3.05 3.05 0 0 0 8 1.28a3.143 3.143 0 0 0-3.2 3.2V8m0 0h7.04q.96 0 .96.8v4q0 .8-.96.8H4.16q-.96 0-.96-.8v-4q0-.8.96-.8z"
+}))), ico_relay_unlock_defs || (ico_relay_unlock_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_relay_unlock = (SvgIcoRelayUnlock);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-arms.svg
 var ico_arms_g, ico_arms_defs;
 function ico_arms_extends() { return ico_arms_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_arms_extends.apply(null, arguments); }
 
-const SvgIcoArms = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_arms_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_arms_g || (ico_arms_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8m0 3.2Q3.2 12.8 3.2 8V3.68L8 3.2l4.8.42V8q0 4.8-4.8 5.6"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#AAA",
-    d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24v2.8Z"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8"
-  }))), ico_arms_defs || (ico_arms_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoArms = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_arms_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_arms_g || (ico_arms_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8m0 3.2Q3.2 12.8 3.2 8V3.68L8 3.2l4.8.42V8q0 4.8-4.8 5.6"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#AAA",
+  d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24v2.8Z"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8"
+}))), ico_arms_defs || (ico_arms_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_arms = (SvgIcoArms);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-disarms.svg
 var ico_disarms_g, ico_disarms_defs;
 function ico_disarms_extends() { return ico_disarms_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_disarms_extends.apply(null, arguments); }
 
-const SvgIcoDisarms = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_disarms_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_disarms_g || (ico_disarms_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8m0 3.2Q3.2 12.8 3.2 8V3.68L8 3.2l4.8.42V8q0 4.8-4.8 5.6"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#A9A9A9",
-    d: "M11.503 12.78 2.986 4.263A1.001 1.001 0 0 1 4.4 2.848l8.517 8.517a1.001 1.001 0 0 1-1.414 1.415"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M4.117 3.131a.6.6 0 1 0-.848.849l8.517 8.517a.6.6 0 0 0 .848-.849zm.566-.565 8.517 8.517a1.4 1.4 0 0 1 0 1.98 1.4 1.4 0 0 1-1.98 0L2.703 4.544a1.4 1.4 0 0 1 0-1.98 1.4 1.4 0 0 1 1.98 0"
-  }))), ico_disarms_defs || (ico_disarms_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoDisarms = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_disarms_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_disarms_g || (ico_disarms_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M8 7.6h-.08a.83.83 0 0 1-.48-.24.69.69 0 0 1-.24-.56.9.9 0 0 1 .24-.6.88.88 0 0 1 1.12 0c.15.164.236.377.24.6a.69.69 0 0 1-.24.56.77.77 0 0 1-.56.24m0 0v2.8m0 3.2Q3.2 12.8 3.2 8V3.68L8 3.2l4.8.42V8q0 4.8-4.8 5.6"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#A9A9A9",
+  d: "M11.503 12.78 2.986 4.263A1.001 1.001 0 0 1 4.4 2.848l8.517 8.517a1.001 1.001 0 0 1-1.414 1.415"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M4.117 3.131a.6.6 0 1 0-.848.849l8.517 8.517a.6.6 0 0 0 .848-.849zm.566-.565 8.517 8.517a1.4 1.4 0 0 1 0 1.98 1.4 1.4 0 0 1-1.98 0L2.703 4.544a1.4 1.4 0 0 1 0-1.98 1.4 1.4 0 0 1 1.98 0"
+}))), ico_disarms_defs || (ico_disarms_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_disarms = (SvgIcoDisarms);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-disable.svg
 var ico_disable_g, ico_disable_defs;
 function ico_disable_extends() { return ico_disable_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_disable_extends.apply(null, arguments); }
 
-const SvgIcoDisable = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_disable_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_disable_g || (ico_disable_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "#AAA",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M8 14.667A6.667 6.667 0 1 0 8 1.333a6.667 6.667 0 0 0 0 13.334M3.267 3.267l9.466 9.466"
-  }))), ico_disable_defs || (ico_disable_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoDisable = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_disable_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_disable_g || (ico_disable_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "#AAA",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M8 14.667A6.667 6.667 0 1 0 8 1.333a6.667 6.667 0 0 0 0 13.334M3.267 3.267l9.466 9.466"
+}))), ico_disable_defs || (ico_disable_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_disable = (SvgIcoDisable);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-fullscreen.svg
 var ico_fullscreen_path, ico_fullscreen_path2;
 function ico_fullscreen_extends() { return ico_fullscreen_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_fullscreen_extends.apply(null, arguments); }
 
-const SvgIcoFullscreen = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_fullscreen_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_fullscreen_path || (ico_fullscreen_path = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M2.615 10.154H1.538v2.8a1.42 1.42 0 0 0 1.616 1.508h2.692v-1.077H3.154a.474.474 0 0 1-.539-.485zm.539-7.539h2.692V1.538H3.154a1.428 1.428 0 0 0-1.616 1.616v2.692h1.077V3.154a.476.476 0 0 1 .539-.539m11.308 7.539h-1.077v2.8a.444.444 0 0 1-.485.43h-2.746v1.078h2.8a1.437 1.437 0 0 0 1.508-1.508zm-4.308-7.539h2.8a.467.467 0 0 1 .43.539v2.692h1.078V3.154a1.423 1.423 0 0 0-1.508-1.616h-2.8z"
-  })), ico_fullscreen_path2 || (ico_fullscreen_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    fillOpacity: 0.25,
-    d: "M12.954 14.462q1.422-.086 1.507-1.508v-2.8h-1.076v2.8q-.038.409-.485.43h-2.746v1.077zm-7.108 0v-1.077H3.154q-.5.001-.539-.485v-2.746H1.538v2.8q.07 1.506 1.616 1.507zm8.615-8.616V3.154q0-1.546-1.507-1.616h-2.8v1.077h2.8q.432.054.43.539v2.692zm-11.846 0V3.154q0-.54.539-.539h2.692V1.538H3.154q-1.616 0-1.616 1.616v2.692zM12.97 15H9.615v-2.154h3.231v-3.23H15v3.37c-.074 1.225-.789 1.94-2.014 2.013zm-6.585 0H3.154c-1.31-.001-2.094-.738-2.153-2.021L1 12.954V9.615h2.154v3.231h3.23zM15 6.385h-2.154V3.154h-3.23V1h3.363c1.283.06 2.02.844 2.021 2.153zm-11.846 0H1V3.154C1 1.785 1.785 1 3.154 1h3.23v2.154h-3.23z"
-  })));
-};
+const SvgIcoFullscreen = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_fullscreen_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_fullscreen_path || (ico_fullscreen_path = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M2.615 10.154H1.538v2.8a1.42 1.42 0 0 0 1.616 1.508h2.692v-1.077H3.154a.474.474 0 0 1-.539-.485zm.539-7.539h2.692V1.538H3.154a1.428 1.428 0 0 0-1.616 1.616v2.692h1.077V3.154a.476.476 0 0 1 .539-.539m11.308 7.539h-1.077v2.8a.444.444 0 0 1-.485.43h-2.746v1.078h2.8a1.437 1.437 0 0 0 1.508-1.508zm-4.308-7.539h2.8a.467.467 0 0 1 .43.539v2.692h1.078V3.154a1.423 1.423 0 0 0-1.508-1.616h-2.8z"
+})), ico_fullscreen_path2 || (ico_fullscreen_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  fillOpacity: 0.25,
+  d: "M12.954 14.462q1.422-.086 1.507-1.508v-2.8h-1.076v2.8q-.038.409-.485.43h-2.746v1.077zm-7.108 0v-1.077H3.154q-.5.001-.539-.485v-2.746H1.538v2.8q.07 1.506 1.616 1.507zm8.615-8.616V3.154q0-1.546-1.507-1.616h-2.8v1.077h2.8q.432.054.43.539v2.692zm-11.846 0V3.154q0-.54.539-.539h2.692V1.538H3.154q-1.616 0-1.616 1.616v2.692zM12.97 15H9.615v-2.154h3.231v-3.23H15v3.37c-.074 1.225-.789 1.94-2.014 2.013zm-6.585 0H3.154c-1.31-.001-2.094-.738-2.153-2.021L1 12.954V9.615h2.154v3.231h3.23zM15 6.385h-2.154V3.154h-3.23V1h3.363c1.283.06 2.02.844 2.021 2.153zm-11.846 0H1V3.154C1 1.785 1.785 1 3.154 1h3.23v2.154h-3.23z"
+})));
 /* ESM default export */ const ico_fullscreen = (SvgIcoFullscreen);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-restorescreen.svg
 var ico_restorescreen_g, ico_restorescreen_defs;
 function ico_restorescreen_extends() { return ico_restorescreen_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_restorescreen_extends.apply(null, arguments); }
 
-const SvgIcoRestorescreen = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_restorescreen_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_restorescreen_g || (ico_restorescreen_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M11.23 1.539h-1.076v2.8a1.422 1.422 0 0 0 1.615 1.507h2.693V4.77h-2.693a.475.475 0 0 1-.538-.484zm.54 9.692h2.692v-1.077h-2.693a1.428 1.428 0 0 0-1.615 1.615v2.693h1.077v-2.693a.476.476 0 0 1 .538-.538M5.845 1.539H4.77v2.8a.444.444 0 0 1-.484.43H1.539v1.077h2.8A1.44 1.44 0 0 0 5.846 4.34zM1.54 11.23h2.8a.467.467 0 0 1 .43.538v2.693h1.077v-2.693a1.422 1.422 0 0 0-1.507-1.615h-2.8z"
-  }), /*#__PURE__*/react.createElement("path", {
-    fillOpacity: 0.25,
-    d: "M4.77 1.538v2.8q-.038.409-.485.431H1.538v1.077h2.8q1.425-.084 1.508-1.508v-2.8zm5.384 0v2.8q.07 1.507 1.615 1.508h2.692V4.77H11.77q-.5.002-.538-.484V1.538zm-8.616 8.616v1.077h2.8q.433.052.431.538v2.692h1.077V11.77q0-1.545-1.508-1.615zm10.231 0q-1.615 0-1.615 1.615v2.692h1.077V11.77q0-.538.538-.538h2.692v-1.077zM4.231 1h2.154l-.001 3.37C6.31 5.596 5.596 6.31 4.37 6.384H1V4.232h3.23zm5.384 0h2.154v3.23H15v2.155h-3.23c-1.31-.002-2.094-.738-2.153-2.022V1M1 9.615h3.363c1.284.06 2.02.845 2.022 2.154v3.23H4.23v-3.23H1zm10.77 0H15v2.154h-3.23V15H9.614v-3.23c0-1.369.785-2.154 2.154-2.154"
-  }))), ico_restorescreen_defs || (ico_restorescreen_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoRestorescreen = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_restorescreen_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_restorescreen_g || (ico_restorescreen_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M11.23 1.539h-1.076v2.8a1.422 1.422 0 0 0 1.615 1.507h2.693V4.77h-2.693a.475.475 0 0 1-.538-.484zm.54 9.692h2.692v-1.077h-2.693a1.428 1.428 0 0 0-1.615 1.615v2.693h1.077v-2.693a.476.476 0 0 1 .538-.538M5.845 1.539H4.77v2.8a.444.444 0 0 1-.484.43H1.539v1.077h2.8A1.44 1.44 0 0 0 5.846 4.34zM1.54 11.23h2.8a.467.467 0 0 1 .43.538v2.693h1.077v-2.693a1.422 1.422 0 0 0-1.507-1.615h-2.8z"
+}), /*#__PURE__*/react.createElement("path", {
+  fillOpacity: 0.25,
+  d: "M4.77 1.538v2.8q-.038.409-.485.431H1.538v1.077h2.8q1.425-.084 1.508-1.508v-2.8zm5.384 0v2.8q.07 1.507 1.615 1.508h2.692V4.77H11.77q-.5.002-.538-.484V1.538zm-8.616 8.616v1.077h2.8q.433.052.431.538v2.692h1.077V11.77q0-1.545-1.508-1.615zm10.231 0q-1.615 0-1.615 1.615v2.692h1.077V11.77q0-.538.538-.538h2.692v-1.077zM4.231 1h2.154l-.001 3.37C6.31 5.596 5.596 6.31 4.37 6.384H1V4.232h3.23zm5.384 0h2.154v3.23H15v2.155h-3.23c-1.31-.002-2.094-.738-2.153-2.022V1M1 9.615h3.363c1.284.06 2.02.845 2.022 2.154v3.23H4.23v-3.23H1zm10.77 0H15v2.154h-3.23V15H9.614v-3.23c0-1.369.785-2.154 2.154-2.154"
+}))), ico_restorescreen_defs || (ico_restorescreen_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_restorescreen = (SvgIcoRestorescreen);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-play.svg
 var ico_play_g, ico_play_defs;
 function ico_play_extends() { return ico_play_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_play_extends.apply(null, arguments); }
 
-const SvgIcoPlay = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_play_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_play_g || (ico_play_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M13.026 8.638a.4.4 0 0 0 .252-.318.47.47 0 0 0 0-.447.6.6 0 0 0-.252-.319L3.615 2.071a.72.72 0 0 0-.822.134.93.93 0 0 0-.126.447v10.713a.62.62 0 0 0 .126.383.66.66 0 0 0 .379.255.6.6 0 0 0 .443-.134z"
-  }), /*#__PURE__*/react.createElement("path", {
-    fillOpacity: 0.25,
-    d: "M3.245 14a.6.6 0 0 0 .369-.132l9.411-5.229q.202-.075.253-.319.111-.19 0-.446a.6.6 0 0 0-.253-.319L3.614 2.071a.8.8 0 0 0-.442-.064.8.8 0 0 0-.38.192.93.93 0 0 0-.126.446v10.713a.62.62 0 0 0 .127.383q.165.21.379.255a1 1 0 0 0 .073.004m0 .667q-.078 0-.158-.01l-.052-.009a1.32 1.32 0 0 1-.765-.494 1.27 1.27 0 0 1-.27-.778V2.63c.006-.266.078-.522.213-.76l.054-.096.083-.074q.3-.267.69-.346l.046-.008c.278-.036.55.004.802.117l.031.014 9.485 5.53q.378.26.501.64c.127.313.126.63 0 .91a1.06 1.06 0 0 1-.59.684L3.97 14.432a1.27 1.27 0 0 1-.726.235"
-  }))), ico_play_defs || (ico_play_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoPlay = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_play_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_play_g || (ico_play_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M13.026 8.638a.4.4 0 0 0 .252-.318.47.47 0 0 0 0-.447.6.6 0 0 0-.252-.319L3.615 2.071a.72.72 0 0 0-.822.134.93.93 0 0 0-.126.447v10.713a.62.62 0 0 0 .126.383.66.66 0 0 0 .379.255.6.6 0 0 0 .443-.134z"
+}), /*#__PURE__*/react.createElement("path", {
+  fillOpacity: 0.25,
+  d: "M3.245 14a.6.6 0 0 0 .369-.132l9.411-5.229q.202-.075.253-.319.111-.19 0-.446a.6.6 0 0 0-.253-.319L3.614 2.071a.8.8 0 0 0-.442-.064.8.8 0 0 0-.38.192.93.93 0 0 0-.126.446v10.713a.62.62 0 0 0 .127.383q.165.21.379.255a1 1 0 0 0 .073.004m0 .667q-.078 0-.158-.01l-.052-.009a1.32 1.32 0 0 1-.765-.494 1.27 1.27 0 0 1-.27-.778V2.63c.006-.266.078-.522.213-.76l.054-.096.083-.074q.3-.267.69-.346l.046-.008c.278-.036.55.004.802.117l.031.014 9.485 5.53q.378.26.501.64c.127.313.126.63 0 .91a1.06 1.06 0 0 1-.59.684L3.97 14.432a1.27 1.27 0 0 1-.726.235"
+}))), ico_play_defs || (ico_play_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_play = (SvgIcoPlay);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-pause.svg
 var ico_pause_g, ico_pause_defs;
 function ico_pause_extends() { return ico_pause_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_pause_extends.apply(null, arguments); }
 
-const SvgIcoPause = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_pause_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_pause_g || (ico_pause_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M9.666 13.555A.555.555 0 0 1 9.111 13V3a.555.555 0 0 1 .555-.555h2.223a.555.555 0 0 1 .555.555v10a.555.555 0 0 1-.556.555zm-5.555 0A.555.555 0 0 1 3.556 13V3a.555.555 0 0 1 .555-.555h2.222A.556.556 0 0 1 6.89 3v10a.555.555 0 0 1-.556.555z"
-  }), /*#__PURE__*/react.createElement("path", {
-    fillOpacity: 0.25,
-    d: "M11.889 13.555a.556.556 0 0 0 .556-.555V3a.556.556 0 0 0-.556-.555H9.667A.556.556 0 0 0 9.11 3V13c0 .306.249.555.556.555zm-5.556 0A.556.556 0 0 0 6.889 13V3a.556.556 0 0 0-.556-.555H4.11A.555.555 0 0 0 3.556 3V13c0 .306.248.555.555.555zm5.556.556H9.667A1.11 1.11 0 0 1 8.555 13V3c0-.612.499-1.11 1.112-1.11h2.222C12.5 1.89 13 2.387 13 3v10c0 .612-.499 1.11-1.111 1.11m-5.556 0H4.11c-.612 0-1.11-.499-1.11-1.111V3c0-.612.498-1.11 1.11-1.11h2.222c.613 0 1.111.498 1.111 1.11v10c0 .612-.498 1.11-1.111 1.11"
-  }))), ico_pause_defs || (ico_pause_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoPause = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_pause_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_pause_g || (ico_pause_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M9.666 13.555A.555.555 0 0 1 9.111 13V3a.555.555 0 0 1 .555-.555h2.223a.555.555 0 0 1 .555.555v10a.555.555 0 0 1-.556.555zm-5.555 0A.555.555 0 0 1 3.556 13V3a.555.555 0 0 1 .555-.555h2.222A.556.556 0 0 1 6.89 3v10a.555.555 0 0 1-.556.555z"
+}), /*#__PURE__*/react.createElement("path", {
+  fillOpacity: 0.25,
+  d: "M11.889 13.555a.556.556 0 0 0 .556-.555V3a.556.556 0 0 0-.556-.555H9.667A.556.556 0 0 0 9.11 3V13c0 .306.249.555.556.555zm-5.556 0A.556.556 0 0 0 6.889 13V3a.556.556 0 0 0-.556-.555H4.11A.555.555 0 0 0 3.556 3V13c0 .306.248.555.555.555zm5.556.556H9.667A1.11 1.11 0 0 1 8.555 13V3c0-.612.499-1.11 1.112-1.11h2.222C12.5 1.89 13 2.387 13 3v10c0 .612-.499 1.11-1.111 1.11m-5.556 0H4.11c-.612 0-1.11-.499-1.11-1.111V3c0-.612.498-1.11 1.11-1.11h2.222c.613 0 1.111.498 1.111 1.11v10c0 .612-.498 1.11-1.111 1.11"
+}))), ico_pause_defs || (ico_pause_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_pause = (SvgIcoPause);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-alarm.svg
 var ico_alarm_g, ico_alarm_defs;
 function ico_alarm_extends() { return ico_alarm_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_alarm_extends.apply(null, arguments); }
 
-const SvgIcoAlarm = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_alarm_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_alarm_g || (ico_alarm_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M4.667 12V8a3.333 3.333 0 1 1 6.666 0v4M3.333 14a.667.667 0 0 0 .667.667h8a.667.667 0 0 0 .667-.667v-.667A1.334 1.334 0 0 0 11.333 12H4.667a1.334 1.334 0 0 0-1.334 1.333zM14 8h.667M12.333 3 12 3.333M1.333 8H2M8 1.333V2M3.286 3.286l.471.471M8 8v4"
-  }))), ico_alarm_defs || (ico_alarm_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoAlarm = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_alarm_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_alarm_g || (ico_alarm_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M4.667 12V8a3.333 3.333 0 1 1 6.666 0v4M3.333 14a.667.667 0 0 0 .667.667h8a.667.667 0 0 0 .667-.667v-.667A1.334 1.334 0 0 0 11.333 12H4.667a1.334 1.334 0 0 0-1.334 1.333zM14 8h.667M12.333 3 12 3.333M1.333 8H2M8 1.333V2M3.286 3.286l.471.471M8 8v4"
+}))), ico_alarm_defs || (ico_alarm_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_alarm = (SvgIcoAlarm);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-filter.svg
 var ico_filter_path;
 function ico_filter_extends() { return ico_filter_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_filter_extends.apply(null, arguments); }
 
-const SvgIcoFilter = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_filter_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_filter_path || (ico_filter_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M6.667 13.333a.67.67 0 0 0 .368.597l1.334.667A.667.667 0 0 0 9.333 14V9.333c0-.33.123-.649.345-.894l4.815-5.326A.667.667 0 0 0 14 2H2a.667.667 0 0 0-.495 1.113L6.322 8.44c.222.245.345.564.345.894z"
-  })));
-};
+const SvgIcoFilter = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_filter_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_filter_path || (ico_filter_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M6.667 13.333a.67.67 0 0 0 .368.597l1.334.667A.667.667 0 0 0 9.333 14V9.333c0-.33.123-.649.345-.894l4.815-5.326A.667.667 0 0 0 14 2H2a.667.667 0 0 0-.495 1.113L6.322 8.44c.222.245.345.564.345.894z"
+})));
 /* ESM default export */ const ico_filter = (SvgIcoFilter);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-filter2.svg
 var ico_filter2_path;
 function ico_filter2_extends() { return ico_filter2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_filter2_extends.apply(null, arguments); }
 
-const SvgIcoFilter2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_filter2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_filter2_path || (ico_filter2_path = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M6.667 13.333a.67.67 0 0 0 .368.597l1.334.667A.667.667 0 0 0 9.333 14V9.333c0-.33.123-.649.345-.894l4.815-5.326A.667.667 0 0 0 14 2H2a.667.667 0 0 0-.495 1.113L6.322 8.44c.222.245.345.564.345.894z"
-  })));
-};
+const SvgIcoFilter2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_filter2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_filter2_path || (ico_filter2_path = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M6.667 13.333a.67.67 0 0 0 .368.597l1.334.667A.667.667 0 0 0 9.333 14V9.333c0-.33.123-.649.345-.894l4.815-5.326A.667.667 0 0 0 14 2H2a.667.667 0 0 0-.495 1.113L6.322 8.44c.222.245.345.564.345.894z"
+})));
 /* ESM default export */ const ico_filter2 = (SvgIcoFilter2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move.svg
 var ico_move_g, ico_move_defs;
 function ico_move_extends() { return ico_move_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_extends.apply(null, arguments); }
 
-const SvgIcoMove = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_move_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_move_g || (ico_move_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("circle", {
-    cx: 8,
-    cy: 8,
-    r: 8,
-    fill: "#005DFF"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#000",
-    d: "M8.873 4.509h1.454L8 1.6 5.673 4.509h1.454v2.618H4.51V5.702L1.659 8l-.059.029 2.909 2.327V8.873h2.618v2.618H5.673L8 14.4l2.327-2.909H8.873V8.873h2.618v1.454L14.4 8l-2.909-2.327v1.454H8.873z"
-  }))), ico_move_defs || (ico_move_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoMove = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_move_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_move_g || (ico_move_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("circle", {
+  cx: 8,
+  cy: 8,
+  r: 8,
+  fill: "#005DFF"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "M8.873 4.509h1.454L8 1.6 5.673 4.509h1.454v2.618H4.51V5.702L1.659 8l-.059.029 2.909 2.327V8.873h2.618v2.618H5.673L8 14.4l2.327-2.909H8.873V8.873h2.618v1.454L14.4 8l-2.909-2.327v1.454H8.873z"
+}))), ico_move_defs || (ico_move_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_move = (SvgIcoMove);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-back.svg
 var ico_back_path, ico_back_path2;
 function ico_back_extends() { return ico_back_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_back_extends.apply(null, arguments); }
 
-const SvgIcoBack = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_back_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_back_path || (ico_back_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    d: "M6.036 11.571 2.5 8.036 6.036 4.5"
-  })), ico_back_path2 || (ico_back_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeWidth: 2,
-    d: "M4 8h9"
-  })));
-};
+const SvgIcoBack = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_back_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_back_path || (ico_back_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  d: "M6.036 11.571 2.5 8.036 6.036 4.5"
+})), ico_back_path2 || (ico_back_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeWidth: 2,
+  d: "M4 8h9"
+})));
 /* ESM default export */ const ico_back = (SvgIcoBack);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-serverTime.svg
 var ico_serverTime_g, ico_serverTime_defs;
 function ico_serverTime_extends() { return ico_serverTime_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_serverTime_extends.apply(null, arguments); }
 
-const SvgIcoServerTime = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_serverTime_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_serverTime_g || (ico_serverTime_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Z"
-  }), /*#__PURE__*/react.createElement("path", {
-    strokeLinecap: "round",
-    d: "M8 4.571V8l2.525 2.525"
-  }))), ico_serverTime_defs || (ico_serverTime_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoServerTime = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_serverTime_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_serverTime_g || (ico_serverTime_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Z"
+}), /*#__PURE__*/react.createElement("path", {
+  strokeLinecap: "round",
+  d: "M8 4.571V8l2.525 2.525"
+}))), ico_serverTime_defs || (ico_serverTime_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_serverTime = (SvgIcoServerTime);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-account.svg
 var ico_account_g, ico_account_defs;
 function ico_account_extends() { return ico_account_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_account_extends.apply(null, arguments); }
 
-const SvgIcoAccount = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_account_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_account_g || (ico_account_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M2 13.88c1.05-.59 2.164-1.06 3.32-1.4a.9.9 0 0 0 .56-.8V11m0 0a9 9 0 0 1-.4-.52 5.2 5.2 0 0 1-.84-1.56H4.6a.51.51 0 0 1-.52-.32 1.47 1.47 0 0 1-.4-.84 1.3 1.3 0 0 1 .24-.88.59.59 0 0 1 .44-.36l.04-.04a4.66 4.66 0 0 1 1-3.36A3.53 3.53 0 0 1 8.04 2a3.44 3.44 0 0 1 2.56 1.12 4.66 4.66 0 0 1 1 3.36l.04.04a.59.59 0 0 1 .44.36c.184.256.269.568.24.88-.039.317-.179.612-.4.84a.51.51 0 0 1-.52.32h-.04a5.2 5.2 0 0 1-.84 1.56q-.2.28-.4.52m-4.24 0a2.9 2.9 0 0 0 4.24 0m0 0v.68a.9.9 0 0 0 .56.8c1.156.34 2.27.81 3.32 1.4"
-  }))), ico_account_defs || (ico_account_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoAccount = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_account_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_account_g || (ico_account_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M2 13.88c1.05-.59 2.164-1.06 3.32-1.4a.9.9 0 0 0 .56-.8V11m0 0a9 9 0 0 1-.4-.52 5.2 5.2 0 0 1-.84-1.56H4.6a.51.51 0 0 1-.52-.32 1.47 1.47 0 0 1-.4-.84 1.3 1.3 0 0 1 .24-.88.59.59 0 0 1 .44-.36l.04-.04a4.66 4.66 0 0 1 1-3.36A3.53 3.53 0 0 1 8.04 2a3.44 3.44 0 0 1 2.56 1.12 4.66 4.66 0 0 1 1 3.36l.04.04a.59.59 0 0 1 .44.36c.184.256.269.568.24.88-.039.317-.179.612-.4.84a.51.51 0 0 1-.52.32h-.04a5.2 5.2 0 0 1-.84 1.56q-.2.28-.4.52m-4.24 0a2.9 2.9 0 0 0 4.24 0m0 0v.68a.9.9 0 0 0 .56.8c1.156.34 2.27.81 3.32 1.4"
+}))), ico_account_defs || (ico_account_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_account = (SvgIcoAccount);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-help.svg
 var ico_help_g, ico_help_defs;
 function ico_help_extends() { return ico_help_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_help_extends.apply(null, arguments); }
 
-const SvgIcoHelp = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_help_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_help_g || (ico_help_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M10.153 13.6q3.386-.115 3.5-3.5V5.9q-.114-3.385-3.5-3.5h-4.2q-3.385.114-3.5 3.5v2.73q.017.624.164 1.19.144.566.42 1.073L2.08 13.6l2.567-.887a4.8 4.8 0 0 0 1.586.724 5.3 5.3 0 0 0 1.19.163zm-8.073.8a.8.8 0 0 1-.754-1.067l.844-2.387a5.5 5.5 0 0 1-.328-.928 6 6 0 0 1-.189-1.388V5.873C1.7 4.54 2.092 3.495 2.82 2.767c.729-.73 1.774-1.121 3.106-1.167h4.254c1.333.046 2.378.438 3.107 1.167.728.728 1.12 1.773 1.166 3.106v4.254c-.045 1.332-.438 2.378-1.166 3.106-.729.729-1.774 1.121-3.107 1.166l-.027.001h-2.75a6 6 0 0 1-1.369-.189 5.6 5.6 0 0 1-1.492-.615l-2.2.76a.8.8 0 0 1-.262.044"
-  }), /*#__PURE__*/react.createElement("path", {
-    d: "M8.994 5.615a.84.84 0 0 1 .124 1.18q-.123.123-.682.62a3 3 0 0 0-.807.869 2.5 2.5 0 0 0-.187.996v.48h1.242q-.014-.462.062-.917c.142-.227.333-.418.56-.56q.586-.505 1.056-1.12c.157-.262.243-.562.248-.869a1.88 1.88 0 0 0-.683-1.427 2.66 2.66 0 0 0-1.862-.62 2.57 2.57 0 0 0-1.8.62 2.17 2.17 0 0 0-.745 1.49l1.242.124c.096-.324.266-.622.496-.869.243-.205.552-.315.87-.31a1.17 1.17 0 0 1 .866.313M8.808 10.4H7.442v1.366h1.366z"
-  }))), ico_help_defs || (ico_help_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoHelp = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_help_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_help_g || (ico_help_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M10.153 13.6q3.386-.115 3.5-3.5V5.9q-.114-3.385-3.5-3.5h-4.2q-3.385.114-3.5 3.5v2.73q.017.624.164 1.19.144.566.42 1.073L2.08 13.6l2.567-.887a4.8 4.8 0 0 0 1.586.724 5.3 5.3 0 0 0 1.19.163zm-8.073.8a.8.8 0 0 1-.754-1.067l.844-2.387a5.5 5.5 0 0 1-.328-.928 6 6 0 0 1-.189-1.388V5.873C1.7 4.54 2.092 3.495 2.82 2.767c.729-.73 1.774-1.121 3.106-1.167h4.254c1.333.046 2.378.438 3.107 1.167.728.728 1.12 1.773 1.166 3.106v4.254c-.045 1.332-.438 2.378-1.166 3.106-.729.729-1.774 1.121-3.107 1.166l-.027.001h-2.75a6 6 0 0 1-1.369-.189 5.6 5.6 0 0 1-1.492-.615l-2.2.76a.8.8 0 0 1-.262.044"
+}), /*#__PURE__*/react.createElement("path", {
+  d: "M8.994 5.615a.84.84 0 0 1 .124 1.18q-.123.123-.682.62a3 3 0 0 0-.807.869 2.5 2.5 0 0 0-.187.996v.48h1.242q-.014-.462.062-.917c.142-.227.333-.418.56-.56q.586-.505 1.056-1.12c.157-.262.243-.562.248-.869a1.88 1.88 0 0 0-.683-1.427 2.66 2.66 0 0 0-1.862-.62 2.57 2.57 0 0 0-1.8.62 2.17 2.17 0 0 0-.745 1.49l1.242.124c.096-.324.266-.622.496-.869.243-.205.552-.315.87-.31a1.17 1.17 0 0 1 .866.313M8.808 10.4H7.442v1.366h1.366z"
+}))), ico_help_defs || (ico_help_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_help = (SvgIcoHelp);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-aibtn.svg
 var ico_aibtn_g, ico_aibtn_defs;
 function ico_aibtn_extends() { return ico_aibtn_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_aibtn_extends.apply(null, arguments); }
 
-const SvgIcoAibtn = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_aibtn_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_aibtn_g || (ico_aibtn_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#BAFF51",
-    d: "M6.8 6.618v-.019a.2.2 0 0 0-.02-.073.07.07 0 0 0-.054-.019 2.2 2.2 0 0 1-.66-.165 2 2 0 0 1-.367-.183 1.78 1.78 0 0 1-.77-.898 1 1 0 0 0-.055-.128 7 7 0 0 1-.164-.64.2.2 0 0 0-.037-.074.2.2 0 0 0-.074-.02.3.3 0 0 0-.073.019.1.1 0 0 0-.019.073q-.083.325-.201.64a1 1 0 0 1-.037.128c-.147.38-.42.698-.773.9a2.16 2.16 0 0 1-1.008.348.1.1 0 0 0-.074.019.2.2 0 0 0-.018.073v.019a.14.14 0 0 0 .018.055.2.2 0 0 0 .074.037c.36.018.707.131 1.008.33.347.208.617.523.77.898q.147.42.24.788a.07.07 0 0 0 .019.055.3.3 0 0 0 .073.018.2.2 0 0 0 .074-.018.2.2 0 0 0 .037-.055q.083-.402.22-.788a1.88 1.88 0 0 1 .77-.899 2 2 0 0 1 .367-.183c.21-.084.433-.133.66-.146a.2.2 0 0 0 .055-.037.14.14 0 0 0 .018-.055"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#51CFFF",
-    d: "M16 4.829v-.03a.3.3 0 0 0-.031-.12.12.12 0 0 0-.09-.03 3.7 3.7 0 0 1-1.08-.27 3 3 0 0 1-.6-.3 2.9 2.9 0 0 1-1.263-1.47 2 2 0 0 0-.09-.21 11 11 0 0 1-.267-1.05.3.3 0 0 0-.06-.12.3.3 0 0 0-.12-.03.5.5 0 0 0-.12.03.17.17 0 0 0-.03.12q-.135.535-.33 1.05a2 2 0 0 1-.06.21 2.9 2.9 0 0 1-1.26 1.47c-.494.325-1.06.52-1.65.57a.17.17 0 0 0-.12.03.3.3 0 0 0-.03.12v.03a.2.2 0 0 0 .03.09.3.3 0 0 0 .12.06c.589.03 1.158.216 1.65.54.567.342 1.01.857 1.26 1.47q.24.69.39 1.29a.12.12 0 0 0 .031.09.5.5 0 0 0 .12.03.3.3 0 0 0 .12-.03.4.4 0 0 0 .06-.09q.135-.658.36-1.29a3.08 3.08 0 0 1 1.26-1.47q.284-.18.6-.3c.344-.137.709-.218 1.08-.24a.4.4 0 0 0 .089-.06.2.2 0 0 0 .03-.09"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    d: "M14.8 8.366v4.32A1.225 1.225 0 0 1 13.4 14H2.6c-.934 0-1.4-.378-1.4-1.312V4.213a1.29 1.29 0 0 1 1.4-1.4L8.37 2.8"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#FF71BA",
-    d: "M10.8 10.02V10a.2.2 0 0 0-.02-.08.08.08 0 0 0-.06-.02 2.4 2.4 0 0 1-.72-.18 2 2 0 0 1-.4-.2 1.94 1.94 0 0 1-.84-.98 1 1 0 0 0-.064-.14 7 7 0 0 1-.18-.7.2.2 0 0 0-.04-.08.2.2 0 0 0-.08-.02.3.3 0 0 0-.08.02.12.12 0 0 0-.02.08q-.09.355-.217.7-.015.071-.04.14c-.16.413-.456.759-.84.98a2.36 2.36 0 0 1-1.1.38.12.12 0 0 0-.08.02A.2.2 0 0 0 6 10v.02q.005.032.02.06.036.028.08.04a2.2 2.2 0 0 1 1.1.36c.378.228.673.571.84.98q.16.46.26.86a.08.08 0 0 0 .02.06.3.3 0 0 0 .08.02.2.2 0 0 0 .08-.02.2.2 0 0 0 .04-.06q.09-.439.24-.86a2.05 2.05 0 0 1 .84-.98q.19-.121.4-.2a2.3 2.3 0 0 1 .72-.16.2.2 0 0 0 .057-.04.2.2 0 0 0 .023-.06"
-  }))), ico_aibtn_defs || (ico_aibtn_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoAibtn = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_aibtn_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_aibtn_g || (ico_aibtn_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#BAFF51",
+  d: "M6.8 6.618v-.019a.2.2 0 0 0-.02-.073.07.07 0 0 0-.054-.019 2.2 2.2 0 0 1-.66-.165 2 2 0 0 1-.367-.183 1.78 1.78 0 0 1-.77-.898 1 1 0 0 0-.055-.128 7 7 0 0 1-.164-.64.2.2 0 0 0-.037-.074.2.2 0 0 0-.074-.02.3.3 0 0 0-.073.019.1.1 0 0 0-.019.073q-.083.325-.201.64a1 1 0 0 1-.037.128c-.147.38-.42.698-.773.9a2.16 2.16 0 0 1-1.008.348.1.1 0 0 0-.074.019.2.2 0 0 0-.018.073v.019a.14.14 0 0 0 .018.055.2.2 0 0 0 .074.037c.36.018.707.131 1.008.33.347.208.617.523.77.898q.147.42.24.788a.07.07 0 0 0 .019.055.3.3 0 0 0 .073.018.2.2 0 0 0 .074-.018.2.2 0 0 0 .037-.055q.083-.402.22-.788a1.88 1.88 0 0 1 .77-.899 2 2 0 0 1 .367-.183c.21-.084.433-.133.66-.146a.2.2 0 0 0 .055-.037.14.14 0 0 0 .018-.055"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#51CFFF",
+  d: "M16 4.829v-.03a.3.3 0 0 0-.031-.12.12.12 0 0 0-.09-.03 3.7 3.7 0 0 1-1.08-.27 3 3 0 0 1-.6-.3 2.9 2.9 0 0 1-1.263-1.47 2 2 0 0 0-.09-.21 11 11 0 0 1-.267-1.05.3.3 0 0 0-.06-.12.3.3 0 0 0-.12-.03.5.5 0 0 0-.12.03.17.17 0 0 0-.03.12q-.135.535-.33 1.05a2 2 0 0 1-.06.21 2.9 2.9 0 0 1-1.26 1.47c-.494.325-1.06.52-1.65.57a.17.17 0 0 0-.12.03.3.3 0 0 0-.03.12v.03a.2.2 0 0 0 .03.09.3.3 0 0 0 .12.06c.589.03 1.158.216 1.65.54.567.342 1.01.857 1.26 1.47q.24.69.39 1.29a.12.12 0 0 0 .031.09.5.5 0 0 0 .12.03.3.3 0 0 0 .12-.03.4.4 0 0 0 .06-.09q.135-.658.36-1.29a3.08 3.08 0 0 1 1.26-1.47q.284-.18.6-.3c.344-.137.709-.218 1.08-.24a.4.4 0 0 0 .089-.06.2.2 0 0 0 .03-.09"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  d: "M14.8 8.366v4.32A1.225 1.225 0 0 1 13.4 14H2.6c-.934 0-1.4-.378-1.4-1.312V4.213a1.29 1.29 0 0 1 1.4-1.4L8.37 2.8"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#FF71BA",
+  d: "M10.8 10.02V10a.2.2 0 0 0-.02-.08.08.08 0 0 0-.06-.02 2.4 2.4 0 0 1-.72-.18 2 2 0 0 1-.4-.2 1.94 1.94 0 0 1-.84-.98 1 1 0 0 0-.064-.14 7 7 0 0 1-.18-.7.2.2 0 0 0-.04-.08.2.2 0 0 0-.08-.02.3.3 0 0 0-.08.02.12.12 0 0 0-.02.08q-.09.355-.217.7-.015.071-.04.14c-.16.413-.456.759-.84.98a2.36 2.36 0 0 1-1.1.38.12.12 0 0 0-.08.02A.2.2 0 0 0 6 10v.02q.005.032.02.06.036.028.08.04a2.2 2.2 0 0 1 1.1.36c.378.228.673.571.84.98q.16.46.26.86a.08.08 0 0 0 .02.06.3.3 0 0 0 .08.02.2.2 0 0 0 .08-.02.2.2 0 0 0 .04-.06q.09-.439.24-.86a2.05 2.05 0 0 1 .84-.98q.19-.121.4-.2a2.3 2.3 0 0 1 .72-.16.2.2 0 0 0 .057-.04.2.2 0 0 0 .023-.06"
+}))), ico_aibtn_defs || (ico_aibtn_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_aibtn = (SvgIcoAibtn);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-adv-search.svg
 var ico_adv_search_path;
 function ico_adv_search_extends() { return ico_adv_search_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_adv_search_extends.apply(null, arguments); }
 
-const SvgIcoAdvSearch = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_adv_search_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_adv_search_path || (ico_adv_search_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M14 2.667H9.333M6.667 2.667H2M14 8H8M5.333 8H2M14 13.333h-3.333M8 13.333H2M9.333 1.333V4M5.333 6.667v2.666M10.667 12v2.667"
-  })));
-};
+const SvgIcoAdvSearch = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_adv_search_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_adv_search_path || (ico_adv_search_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M14 2.667H9.333M6.667 2.667H2M14 8H8M5.333 8H2M14 13.333h-3.333M8 13.333H2M9.333 1.333V4M5.333 6.667v2.666M10.667 12v2.667"
+})));
 /* ESM default export */ const ico_adv_search = (SvgIcoAdvSearch);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-search.svg
 var ico_search_path;
 function ico_search_extends() { return ico_search_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_search_extends.apply(null, arguments); }
 
-const SvgIcoSearch = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_search_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_search_path || (ico_search_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m14 14-2.893-2.893M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667"
-  })));
-};
+const SvgIcoSearch = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_search_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_search_path || (ico_search_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m14 14-2.893-2.893M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667"
+})));
 /* ESM default export */ const ico_search = (SvgIcoSearch);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move-forward.svg
 var ico_move_forward_path;
 function ico_move_forward_extends() { return ico_move_forward_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_forward_extends.apply(null, arguments); }
 
-const SvgIcoMoveForward = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_move_forward_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_move_forward_path || (ico_move_forward_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M10 12 6 8l4-4"
-  })));
-};
+const SvgIcoMoveForward = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_move_forward_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_move_forward_path || (ico_move_forward_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M10 12 6 8l4-4"
+})));
 /* ESM default export */ const ico_move_forward = (SvgIcoMoveForward);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move-backward.svg
 var ico_move_backward_path;
 function ico_move_backward_extends() { return ico_move_backward_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_backward_extends.apply(null, arguments); }
 
-const SvgIcoMoveBackward = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_move_backward_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_move_backward_path || (ico_move_backward_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m6 12 4-4-4-4"
-  })));
-};
+const SvgIcoMoveBackward = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_move_backward_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_move_backward_path || (ico_move_backward_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m6 12 4-4-4-4"
+})));
 /* ESM default export */ const ico_move_backward = (SvgIcoMoveBackward);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-first-page.svg
 var ico_first_page_path;
 function ico_first_page_extends() { return ico_first_page_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_first_page_extends.apply(null, arguments); }
 
-const SvgIcoFirstPage = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_first_page_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_first_page_path || (ico_first_page_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m11.333 12-4-4 4-4M4.667 4v8"
-  })));
-};
+const SvgIcoFirstPage = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_first_page_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_first_page_path || (ico_first_page_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m11.333 12-4-4 4-4M4.667 4v8"
+})));
 /* ESM default export */ const ico_first_page = (SvgIcoFirstPage);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-last-page.svg
 var ico_last_page_path;
 function ico_last_page_extends() { return ico_last_page_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_last_page_extends.apply(null, arguments); }
 
-const SvgIcoLastPage = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_last_page_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_last_page_path || (ico_last_page_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "m4.667 12 4-4-4-4M11.333 4v8"
-  })));
-};
+const SvgIcoLastPage = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_last_page_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_last_page_path || (ico_last_page_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "m4.667 12 4-4-4-4M11.333 4v8"
+})));
 /* ESM default export */ const ico_last_page = (SvgIcoLastPage);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move-forward2.svg
 var ico_move_forward2_g, ico_move_forward2_defs;
 function ico_move_forward2_extends() { return ico_move_forward2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_forward2_extends.apply(null, arguments); }
 
-const SvgIcoMoveForward2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_move_forward2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_move_forward2_g || (ico_move_forward2_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m3 8 9.75-6.062v12.124z"
-  }))), ico_move_forward2_defs || (ico_move_forward2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoMoveForward2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_move_forward2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_move_forward2_g || (ico_move_forward2_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m3 8 9.75-6.062v12.124z"
+}))), ico_move_forward2_defs || (ico_move_forward2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_move_forward2 = (SvgIcoMoveForward2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-move-backward2.svg
 var ico_move_backward2_g, ico_move_backward2_defs;
 function ico_move_backward2_extends() { return ico_move_backward2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_move_backward2_extends.apply(null, arguments); }
 
-const SvgIcoMoveBackward2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_move_backward2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_move_backward2_g || (ico_move_backward2_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m13 8-9.75 6.062V1.938z"
-  }))), ico_move_backward2_defs || (ico_move_backward2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoMoveBackward2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_move_backward2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_move_backward2_g || (ico_move_backward2_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m13 8-9.75 6.062V1.938z"
+}))), ico_move_backward2_defs || (ico_move_backward2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_move_backward2 = (SvgIcoMoveBackward2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-first-page2.svg
 var ico_first_page2_g, ico_first_page2_defs;
 function ico_first_page2_extends() { return ico_first_page2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_first_page2_extends.apply(null, arguments); }
 
-const SvgIcoFirstPage2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_first_page2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_first_page2_g || (ico_first_page2_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    d: "M3.5 2v12"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m3 8 9.75-6.062v12.124z"
-  }))), ico_first_page2_defs || (ico_first_page2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoFirstPage2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_first_page2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_first_page2_g || (ico_first_page2_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  d: "M3.5 2v12"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m3 8 9.75-6.062v12.124z"
+}))), ico_first_page2_defs || (ico_first_page2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_first_page2 = (SvgIcoFirstPage2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-last-page2.svg
 var ico_last_page2_g, ico_last_page2_defs;
 function ico_last_page2_extends() { return ico_last_page2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_last_page2_extends.apply(null, arguments); }
 
-const SvgIcoLastPage2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_last_page2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_last_page2_g || (ico_last_page2_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    d: "M12.5 14V2"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m13 8-9.75 6.062V1.938z"
-  }))), ico_last_page2_defs || (ico_last_page2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoLastPage2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_last_page2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_last_page2_g || (ico_last_page2_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  d: "M12.5 14V2"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m13 8-9.75 6.062V1.938z"
+}))), ico_last_page2_defs || (ico_last_page2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_last_page2 = (SvgIcoLastPage2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-ascend.svg
 var ico_ascend_g, ico_ascend_defs;
 function ico_ascend_extends() { return ico_ascend_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_ascend_extends.apply(null, arguments); }
 
-const SvgIcoAscend = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_ascend_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_ascend_g || (ico_ascend_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M11 14V7H9l3-4 3 4h-2v7zM9 13H1v1h8zM7 10H1v1h6zM5 7H1v1h4zM3 4H1v1h2z"
-  }))), ico_ascend_defs || (ico_ascend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoAscend = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_ascend_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_ascend_g || (ico_ascend_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M11 14V7H9l3-4 3 4h-2v7zM9 13H1v1h8zM7 10H1v1h6zM5 7H1v1h4zM3 4H1v1h2z"
+}))), ico_ascend_defs || (ico_ascend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_ascend = (SvgIcoAscend);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-descend.svg
 var ico_descend_g, ico_descend_defs;
 function ico_descend_extends() { return ico_descend_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_descend_extends.apply(null, arguments); }
 
-const SvgIcoDescend = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_descend_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_descend_g || (ico_descend_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M13 3.002v7h2l-3 4-3-4h2v-7zM3 12H1v1h2zM5 9H1v1h4zM7 6H1v1h6zM9 3H1v1h8z"
-  }))), ico_descend_defs || (ico_descend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoDescend = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_descend_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_descend_g || (ico_descend_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M13 3.002v7h2l-3 4-3-4h2v-7zM3 12H1v1h2zM5 9H1v1h4zM7 6H1v1h6zM9 3H1v1h8z"
+}))), ico_descend_defs || (ico_descend_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_descend = (SvgIcoDescend);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-setting.svg
 var ico_setting_g, ico_setting_defs;
 function ico_setting_extends() { return ico_setting_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_setting_extends.apply(null, arguments); }
 
-const SvgIcoSetting = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_setting_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_setting_g || (ico_setting_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M8.536.464q1.005 0 1.005 1.005v1.727c.705.22 1.35.596 1.89 1.1l1.502-.868q.88-.503 1.381.377l.502.867q.503.867-.377 1.369l-1.488.866q.108.541.107 1.093c0 .365-.035.73-.107 1.087l1.488.86q.88.503.377 1.382l-.502.866q-.502.867-1.381.365l-1.477-.854a7 7 0 0 1-.672.54c-.385.25-.804.442-1.244.571v1.715q0 1.005-1.005 1.005H7.531q-1.005 0-1.006-1.005v-1.72c-.44-.13-.86-.326-1.243-.579a6 6 0 0 1-.653-.527l-1.495.867q-.879.501-1.381-.364l-.503-.867q-.502-.88.377-1.382l1.495-.866a5.3 5.3 0 0 1 0-2.187l-1.495-.866q-.879-.503-.377-1.37l.503-.866q.502-.88 1.38-.377l1.514.88a4.74 4.74 0 0 1 1.878-1.113V1.47Q6.527.464 7.531.464zm-.543 5.16a2.376 2.376 0 1 0 0 4.752 2.376 2.376 0 0 0 0-4.752"
-  }))), ico_setting_defs || (ico_setting_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoSetting = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_setting_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_setting_g || (ico_setting_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M8.536.464q1.005 0 1.005 1.005v1.727c.705.22 1.35.596 1.89 1.1l1.502-.868q.88-.503 1.381.377l.502.867q.503.867-.377 1.369l-1.488.866q.108.541.107 1.093c0 .365-.035.73-.107 1.087l1.488.86q.88.503.377 1.382l-.502.866q-.502.867-1.381.365l-1.477-.854a7 7 0 0 1-.672.54c-.385.25-.804.442-1.244.571v1.715q0 1.005-1.005 1.005H7.531q-1.005 0-1.006-1.005v-1.72c-.44-.13-.86-.326-1.243-.579a6 6 0 0 1-.653-.527l-1.495.867q-.879.501-1.381-.364l-.503-.867q-.502-.88.377-1.382l1.495-.866a5.3 5.3 0 0 1 0-2.187l-1.495-.866q-.879-.503-.377-1.37l.503-.866q.502-.88 1.38-.377l1.514.88a4.74 4.74 0 0 1 1.878-1.113V1.47Q6.527.464 7.531.464zm-.543 5.16a2.376 2.376 0 1 0 0 4.752 2.376 2.376 0 0 0 0-4.752"
+}))), ico_setting_defs || (ico_setting_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_setting = (SvgIcoSetting);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-edit.svg
 var ico_edit_g, ico_edit_defs;
 function ico_edit_extends() { return ico_edit_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_edit_extends.apply(null, arguments); }
 
-const SvgIcoEdit = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_edit_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_edit_g || (ico_edit_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m3.375 12.597 2.444-.223-2.222-2.222zm-.89.888.556-3.889L10.82 1.82l3.333 3.333-7.778 7.777z"
-  }))), ico_edit_defs || (ico_edit_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoEdit = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_edit_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_edit_g || (ico_edit_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m3.375 12.597 2.444-.223-2.222-2.222zm-.89.888.556-3.889L10.82 1.82l3.333 3.333-7.778 7.777z"
+}))), ico_edit_defs || (ico_edit_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_edit = (SvgIcoEdit);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-edit2.svg
 var _mask, ico_edit2_path, ico_edit2_path2;
 function ico_edit2_extends() { return ico_edit2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_edit2_extends.apply(null, arguments); }
 
-const SvgIcoEdit2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_edit2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, _mask || (_mask = /*#__PURE__*/react.createElement("mask", {
-    id: "a",
-    fill: "#fff"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M13 10.037a1 1 0 0 1-.298.712l-3.298 3.25V14H2.812A.81.81 0 0 1 2 13.188V2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1z"
-  }))), ico_edit2_path || (ico_edit2_path = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m9.404 13.999-.702-.713zm3.298-3.25L12 10.036zm0 0L12 10.036l-3.298 3.25.702.713.702.712 3.298-3.25zM9.404 14v-1H2.812v2h6.592zM2 13.188h1V2H1v11.188zM3 1v1h9V0H3zm10 1h-1v8.037h2V2zm-1-1v1h2a2 2 0 0 0-2-2zM2 2h1V0a2 2 0 0 0-2 2zm.812 12v-1c.104 0 .188.084.188.188H1c0 1 .811 1.812 1.812 1.812zm6.592 0-.243.97c-1.143-.287-.936-1.97.243-1.97zv1c1.18 0 1.387-1.685.243-1.97zm0-.002-.702-.712a1 1 0 0 0 .46 1.683l.242-.97.243-.97a1 1 0 0 1 .459 1.682zm3.298-3.25.702.713A2 2 0 0 0 14 10.037h-2z",
-    mask: "url(#a)"
-  })), ico_edit2_path2 || (ico_edit2_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M11.166 8.25v.733H8.233v2.933H7.5V8.25zM4 7h3v1H4zM4 5h7v1H4zM4 3h7v1H4z"
-  })));
-};
+const SvgIcoEdit2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_edit2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, _mask || (_mask = /*#__PURE__*/react.createElement("mask", {
+  id: "a",
+  fill: "#fff"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M13 10.037a1 1 0 0 1-.298.712l-3.298 3.25V14H2.812A.81.81 0 0 1 2 13.188V2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1z"
+}))), ico_edit2_path || (ico_edit2_path = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m9.404 13.999-.702-.713zm3.298-3.25L12 10.036zm0 0L12 10.036l-3.298 3.25.702.713.702.712 3.298-3.25zM9.404 14v-1H2.812v2h6.592zM2 13.188h1V2H1v11.188zM3 1v1h9V0H3zm10 1h-1v8.037h2V2zm-1-1v1h2a2 2 0 0 0-2-2zM2 2h1V0a2 2 0 0 0-2 2zm.812 12v-1c.104 0 .188.084.188.188H1c0 1 .811 1.812 1.812 1.812zm6.592 0-.243.97c-1.143-.287-.936-1.97.243-1.97zv1c1.18 0 1.387-1.685.243-1.97zm0-.002-.702-.712a1 1 0 0 0 .46 1.683l.242-.97.243-.97a1 1 0 0 1 .459 1.682zm3.298-3.25.702.713A2 2 0 0 0 14 10.037h-2z",
+  mask: "url(#a)"
+})), ico_edit2_path2 || (ico_edit2_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M11.166 8.25v.733H8.233v2.933H7.5V8.25zM4 7h3v1H4zM4 5h7v1H4zM4 3h7v1H4z"
+})));
 /* ESM default export */ const ico_edit2 = (SvgIcoEdit2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-edit-underline.svg
 var ico_edit_underline_g, ico_edit_underline_defs;
 function ico_edit_underline_extends() { return ico_edit_underline_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_edit_underline_extends.apply(null, arguments); }
 
-const SvgIcoEditUnderline = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_edit_underline_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_edit_underline_g || (ico_edit_underline_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "m3.793 11.97 2.368-.075-2.294-2.294zm-.815.814.316-3.756L11.322 1l3.441 3.44-8.029 8.028z"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeWidth: 1.5,
-    d: "M3 13.25h11"
-  }))), ico_edit_underline_defs || (ico_edit_underline_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoEditUnderline = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_edit_underline_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_edit_underline_g || (ico_edit_underline_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "m3.793 11.97 2.368-.075-2.294-2.294zm-.815.814.316-3.756L11.322 1l3.441 3.44-8.029 8.028z"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeWidth: 1.5,
+  d: "M3 13.25h11"
+}))), ico_edit_underline_defs || (ico_edit_underline_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_edit_underline = (SvgIcoEditUnderline);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-trash2.svg
 var ico_trash2_g, ico_trash2_defs;
 function ico_trash2_extends() { return ico_trash2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_trash2_extends.apply(null, arguments); }
 
-const SvgIcoTrash2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_trash2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_trash2_g || (ico_trash2_g = /*#__PURE__*/react.createElement("g", {
-    fill: "currentColor",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M3 2h10v2H3zM7 1h2v1H7zM3 5h10l-2 10H5z"
-  }))), ico_trash2_defs || (ico_trash2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoTrash2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_trash2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_trash2_g || (ico_trash2_g = /*#__PURE__*/react.createElement("g", {
+  fill: "currentColor",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M3 2h10v2H3zM7 1h2v1H7zM3 5h10l-2 10H5z"
+}))), ico_trash2_defs || (ico_trash2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_trash2 = (SvgIcoTrash2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-setting2.svg
 var ico_setting2_g, ico_setting2_defs;
 function ico_setting2_extends() { return ico_setting2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_setting2_extends.apply(null, arguments); }
 
-const SvgIcoSetting2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_setting2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_setting2_g || (ico_setting2_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#000",
-    d: "M14.27 6.06h-1.94c-.09-.31-.21-.6-.36-.88l1.37-1.37c.31-.31.31-.82 0-1.13l-.95-.95a.803.803 0 0 0-1.13 0L9.88 3.11c-.28-.15-.57-.27-.88-.36V.8c0-.44-.36-.8-.8-.8H6.86c-.44 0-.8.36-.8.8v1.95c-.31.09-.6.21-.88.36L3.81 1.74a.803.803 0 0 0-1.13 0l-.95.95c-.31.31-.31.82 0 1.13L3.1 5.19c-.15.28-.27.57-.36.88H.8c-.44 0-.8.36-.8.8v1.34c0 .44.36.8.8.8h1.94c.09.31.21.6.36.88l-1.37 1.37c-.31.31-.31.82 0 1.13l.95.95c.31.31.82.31 1.13 0l1.37-1.37c.28.15.57.27.88.36v1.95c0 .44.36.8.8.8H8.2c.44 0 .8-.36.8-.8v-1.95c.31-.09.6-.21.88-.36l1.38 1.38c.31.31.82.31 1.13 0l.95-.95c.31-.31.31-.82 0-1.13L11.97 9.9c.15-.28.27-.57.36-.88h1.94c.44 0 .8-.36.8-.8V6.88c0-.44-.36-.8-.8-.8zM7.54 9.91a2.38 2.38 0 0 1-2.38-2.38c0-1.32 1.06-2.38 2.38-2.38a2.38 2.38 0 0 1 2.38 2.38c0 1.32-1.06 2.38-2.38 2.38"
-  }))), ico_setting2_defs || (ico_setting2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h15.07v15.07H0z"
-  })))));
-};
+const SvgIcoSetting2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_setting2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_setting2_g || (ico_setting2_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "M14.27 6.06h-1.94c-.09-.31-.21-.6-.36-.88l1.37-1.37c.31-.31.31-.82 0-1.13l-.95-.95a.803.803 0 0 0-1.13 0L9.88 3.11c-.28-.15-.57-.27-.88-.36V.8c0-.44-.36-.8-.8-.8H6.86c-.44 0-.8.36-.8.8v1.95c-.31.09-.6.21-.88.36L3.81 1.74a.803.803 0 0 0-1.13 0l-.95.95c-.31.31-.31.82 0 1.13L3.1 5.19c-.15.28-.27.57-.36.88H.8c-.44 0-.8.36-.8.8v1.34c0 .44.36.8.8.8h1.94c.09.31.21.6.36.88l-1.37 1.37c-.31.31-.31.82 0 1.13l.95.95c.31.31.82.31 1.13 0l1.37-1.37c.28.15.57.27.88.36v1.95c0 .44.36.8.8.8H8.2c.44 0 .8-.36.8-.8v-1.95c.31-.09.6-.21.88-.36l1.38 1.38c.31.31.82.31 1.13 0l.95-.95c.31-.31.31-.82 0-1.13L11.97 9.9c.15-.28.27-.57.36-.88h1.94c.44 0 .8-.36.8-.8V6.88c0-.44-.36-.8-.8-.8zM7.54 9.91a2.38 2.38 0 0 1-2.38-2.38c0-1.32 1.06-2.38 2.38-2.38a2.38 2.38 0 0 1 2.38 2.38c0 1.32-1.06 2.38-2.38 2.38"
+}))), ico_setting2_defs || (ico_setting2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h15.07v15.07H0z"
+})))));
 /* ESM default export */ const ico_setting2 = (SvgIcoSetting2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-timeslot-add.svg
 var ico_timeslot_add_path, ico_timeslot_add_path2, ico_timeslot_add_path3;
 function ico_timeslot_add_extends() { return ico_timeslot_add_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_timeslot_add_extends.apply(null, arguments); }
 
-const SvgIcoTimeslotAdd = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_timeslot_add_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_timeslot_add_path || (ico_timeslot_add_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#6E6E6E",
-    d: "M12 4h-2V3H3v7h1v2H1V1h11z"
-  })), ico_timeslot_add_path2 || (ico_timeslot_add_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#6E6E6E",
-    d: "M10 9h2v1h-2v2H9v-2H7V9h2V7h1z"
-  })), ico_timeslot_add_path3 || (ico_timeslot_add_path3 = /*#__PURE__*/react.createElement("path", {
-    fill: "#6E6E6E",
-    d: "M15 15H4V4h11zM6 6v7h7V6z"
-  })));
-};
+const SvgIcoTimeslotAdd = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_timeslot_add_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_timeslot_add_path || (ico_timeslot_add_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#6E6E6E",
+  d: "M12 4h-2V3H3v7h1v2H1V1h11z"
+})), ico_timeslot_add_path2 || (ico_timeslot_add_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#6E6E6E",
+  d: "M10 9h2v1h-2v2H9v-2H7V9h2V7h1z"
+})), ico_timeslot_add_path3 || (ico_timeslot_add_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "#6E6E6E",
+  d: "M15 15H4V4h11zM6 6v7h7V6z"
+})));
 /* ESM default export */ const ico_timeslot_add = (SvgIcoTimeslotAdd);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-eraser.svg
 var ico_eraser_path, ico_eraser_path2;
 function ico_eraser_extends() { return ico_eraser_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_eraser_extends.apply(null, arguments); }
 
-const SvgIcoEraser = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_eraser_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_eraser_path || (ico_eraser_path = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M15 5.49 5.979 15 1 10.277l9.022-9.51zM2.32 10.15l3.671 3.482 2.238-2.36L4.557 7.79z"
-  })), ico_eraser_path2 || (ico_eraser_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M1 13h14v2H1z"
-  })));
-};
+const SvgIcoEraser = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_eraser_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_eraser_path || (ico_eraser_path = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M15 5.49 5.979 15 1 10.277l9.022-9.51zM2.32 10.15l3.671 3.482 2.238-2.36L4.557 7.79z"
+})), ico_eraser_path2 || (ico_eraser_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M1 13h14v2H1z"
+})));
 /* ESM default export */ const ico_eraser = (SvgIcoEraser);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-calendar.svg
 var ico_calendar_path, ico_calendar_path2;
 function ico_calendar_extends() { return ico_calendar_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_calendar_extends.apply(null, arguments); }
 
-const SvgIcoCalendar = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_calendar_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_calendar_path || (ico_calendar_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    d: "M3.49 4.203h3.32V2.66H9.3v1.543h3.321V2.66h2.49V15H1V2.66h2.49zm0 9.248h2.49v-1.66H3.49zm3.32 0H9.3v-1.66H6.81zm3.32-1.66v1.66h2.491v-1.66zm-6.64-1.66h2.49V8.47H3.49zm3.32 0H9.3V8.47H6.81zm3.32 0h2.491V8.47h-2.49zM3.49 6.81h2.49V5.15H3.49zm3.32 0H9.3V5.15H6.81zm3.32 0h2.491V5.15h-2.49z"
-  })), ico_calendar_path2 || (ico_calendar_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    d: "M4 1h2v3H4zM10 1h2v3h-2z"
-  })));
-};
+const SvgIcoCalendar = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_calendar_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_calendar_path || (ico_calendar_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  d: "M3.49 4.203h3.32V2.66H9.3v1.543h3.321V2.66h2.49V15H1V2.66h2.49zm0 9.248h2.49v-1.66H3.49zm3.32 0H9.3v-1.66H6.81zm3.32-1.66v1.66h2.491v-1.66zm-6.64-1.66h2.49V8.47H3.49zm3.32 0H9.3V8.47H6.81zm3.32 0h2.491V8.47h-2.49zM3.49 6.81h2.49V5.15H3.49zm3.32 0H9.3V5.15H6.81zm3.32 0h2.491V5.15h-2.49z"
+})), ico_calendar_path2 || (ico_calendar_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  d: "M4 1h2v3H4zM10 1h2v3h-2z"
+})));
 /* ESM default export */ const ico_calendar = (SvgIcoCalendar);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-copy2.svg
 var ico_copy2_path, ico_copy2_path2, ico_copy2_path3, _path4, _path5, _path6;
 function ico_copy2_extends() { return ico_copy2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_copy2_extends.apply(null, arguments); }
 
-const SvgIcoCopy2 = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_copy2_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_copy2_path || (ico_copy2_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    d: "M1.035 3h10v12h-10z"
-  })), ico_copy2_path2 || (ico_copy2_path2 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M2.035 4h8v10h-8z"
-  })), ico_copy2_path3 || (ico_copy2_path3 = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    d: "M4.035 1h6l2 2 2 2v8h-10z"
-  })), _path4 || (_path4 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M5.035 2h8v10h-8z"
-  })), _path5 || (_path5 = /*#__PURE__*/react.createElement("path", {
-    fill: "#333",
-    d: "M9.035 6V1h1l4 4v1z"
-  })), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "m12.535 5-2.5-2.5V5z"
-  })));
-};
+const SvgIcoCopy2 = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_copy2_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_copy2_path || (ico_copy2_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  d: "M1.035 3h10v12h-10z"
+})), ico_copy2_path2 || (ico_copy2_path2 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M2.035 4h8v10h-8z"
+})), ico_copy2_path3 || (ico_copy2_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  d: "M4.035 1h6l2 2 2 2v8h-10z"
+})), _path4 || (_path4 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M5.035 2h8v10h-8z"
+})), _path5 || (_path5 = /*#__PURE__*/react.createElement("path", {
+  fill: "#333",
+  d: "M9.035 6V1h1l4 4v1z"
+})), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "m12.535 5-2.5-2.5V5z"
+})));
 /* ESM default export */ const ico_copy2 = (SvgIcoCopy2);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-refresh.svg
 var ico_refresh_path;
 function ico_refresh_extends() { return ico_refresh_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_refresh_extends.apply(null, arguments); }
 
-const SvgIcoRefresh = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_refresh_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_refresh_path || (ico_refresh_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#000",
-    d: "m14.74 7.67.258-2.618c.029-.299-.286-.502-.572-.366l-.658.311C12.639 3.207 10.567 2 8.208 2 5.29 2 2.831 3.83 2.017 6.34c-.072.203.1.421.328.421h.815c.143 0 .272-.081.314-.203.686-1.845 2.56-3.174 4.732-3.174 1.788 0 3.375.895 4.261 2.237l-.657.312a.367.367 0 0 0-.029.651l2.373 1.357c.244.15.558 0 .587-.272M7.8 15c2.914 0 5.37-2.137 6.184-5.066.071-.237-.1-.49-.329-.49h-.814a.33.33 0 0 0-.314.236c-.685 2.153-2.556 3.705-4.727 3.705-1.785 0-3.37-1.044-4.256-2.612l.657-.364c.271-.158.285-.586.028-.76L1.86 8.066c-.243-.174-.572.016-.6.333l-.257 3.055c-.029.348.285.585.571.427l.657-.364C3.372 13.59 5.443 15 7.8 15"
-  })));
-};
+const SvgIcoRefresh = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_refresh_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_refresh_path || (ico_refresh_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "m14.74 7.67.258-2.618c.029-.299-.286-.502-.572-.366l-.658.311C12.639 3.207 10.567 2 8.208 2 5.29 2 2.831 3.83 2.017 6.34c-.072.203.1.421.328.421h.815c.143 0 .272-.081.314-.203.686-1.845 2.56-3.174 4.732-3.174 1.788 0 3.375.895 4.261 2.237l-.657.312a.367.367 0 0 0-.029.651l2.373 1.357c.244.15.558 0 .587-.272M7.8 15c2.914 0 5.37-2.137 6.184-5.066.071-.237-.1-.49-.329-.49h-.814a.33.33 0 0 0-.314.236c-.685 2.153-2.556 3.705-4.727 3.705-1.785 0-3.37-1.044-4.256-2.612l.657-.364c.271-.158.285-.586.028-.76L1.86 8.066c-.243-.174-.572.016-.6.333l-.257 3.055c-.029.348.285.585.571.427l.657-.364C3.372 13.59 5.443 15 7.8 15"
+})));
 /* ESM default export */ const ico_refresh = (SvgIcoRefresh);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-info.svg
 var ico_info_g, ico_info_defs;
 function ico_info_extends() { return ico_info_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_info_extends.apply(null, arguments); }
 
-const SvgIcoInfo = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_info_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_info_g || (ico_info_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "#333",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M12.909 3.091a4.8 4.8 0 0 0-2.091-1.12A10 10 0 0 0 8 1.597a10 10 0 0 0-2.817.374c-.78.192-1.5.577-2.092 1.12a4.8 4.8 0 0 0-1.12 2.092A10 10 0 0 0 1.597 8c-.01.952.117 1.9.374 2.818a4.8 4.8 0 0 0 1.12 2.09 4.8 4.8 0 0 0 2.092 1.12c.917.257 1.865.383 2.817.374.952.009 1.9-.117 2.818-.373a4.8 4.8 0 0 0 2.09-1.12 4.8 4.8 0 0 0 1.12-2.091A10.1 10.1 0 0 0 14.403 8c.009-.952-.117-1.9-.373-2.817a4.8 4.8 0 0 0-1.12-2.092Z"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M8.3 6.9v4.6h-.6V6.9zm0-2.4v.6h-.6v-.6z"
-  }))), ico_info_defs || (ico_info_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoInfo = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_info_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_info_g || (ico_info_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "#333",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M12.909 3.091a4.8 4.8 0 0 0-2.091-1.12A10 10 0 0 0 8 1.597a10 10 0 0 0-2.817.374c-.78.192-1.5.577-2.092 1.12a4.8 4.8 0 0 0-1.12 2.092A10 10 0 0 0 1.597 8c-.01.952.117 1.9.374 2.818a4.8 4.8 0 0 0 1.12 2.09 4.8 4.8 0 0 0 2.092 1.12c.917.257 1.865.383 2.817.374.952.009 1.9-.117 2.818-.373a4.8 4.8 0 0 0 2.09-1.12 4.8 4.8 0 0 0 1.12-2.091A10.1 10.1 0 0 0 14.403 8c.009-.952-.117-1.9-.373-2.817a4.8 4.8 0 0 0-1.12-2.092Z"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M8.3 6.9v4.6h-.6V6.9zm0-2.4v.6h-.6v-.6z"
+}))), ico_info_defs || (ico_info_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_info = (SvgIcoInfo);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-logout.svg
 var ico_logout_g, ico_logout_defs;
 function ico_logout_extends() { return ico_logout_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_logout_extends.apply(null, arguments); }
 
-const SvgIcoLogout = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_logout_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_logout_g || (ico_logout_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "#333",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M10 2.4H4.16a1.6 1.6 0 0 0-1.12.44 1.58 1.58 0 0 0-.48 1.12v8.08a1.643 1.643 0 0 0 1.6 1.56H10"
-  }), /*#__PURE__*/react.createElement("path", {
-    strokeWidth: 2,
-    d: "M6 8h8m0 0-2.28-2.28M14 8l-2.28 2.28"
-  }))), ico_logout_defs || (ico_logout_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoLogout = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_logout_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_logout_g || (ico_logout_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "#333",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M10 2.4H4.16a1.6 1.6 0 0 0-1.12.44 1.58 1.58 0 0 0-.48 1.12v8.08a1.643 1.643 0 0 0 1.6 1.56H10"
+}), /*#__PURE__*/react.createElement("path", {
+  strokeWidth: 2,
+  d: "M6 8h8m0 0-2.28-2.28M14 8l-2.28 2.28"
+}))), ico_logout_defs || (ico_logout_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_logout = (SvgIcoLogout);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-tip.svg
 var ico_tip_g, ico_tip_defs;
 function ico_tip_extends() { return ico_tip_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_tip_extends.apply(null, arguments); }
 
-const SvgIcoTip = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_tip_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_tip_g || (ico_tip_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#06C5A4",
-    d: "M8 15.2A7.2 7.2 0 1 0 8 .8a7.2 7.2 0 0 0 0 14.4"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M7.425 11.79a.55.55 0 0 1-.225-.442.7.7 0 0 1 .016-.144.66.66 0 0 1 .209-.34.97.97 0 0 1 .575-.168c.2-.007.397.053.56.17a.63.63 0 0 1 .224.325.1.1 0 0 1 .016.04v.117a.54.54 0 0 1-.24.442 1 1 0 0 1-.145.118A.9.9 0 0 1 8 12a.85.85 0 0 1-.575-.21m0-1.966A.6.6 0 0 1 7.2 9.36V3.888a.7.7 0 0 1 .224-.51A.95.95 0 0 1 8 3.2a.88.88 0 0 1 .56.178c.12.098.204.232.24.382v5.6a.58.58 0 0 1-.24.467 1 1 0 0 1-.145.124.85.85 0 0 1-.416.096.82.82 0 0 1-.574-.223"
-  }))), ico_tip_defs || (ico_tip_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoTip = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_tip_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_tip_g || (ico_tip_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#06C5A4",
+  d: "M8 15.2A7.2 7.2 0 1 0 8 .8a7.2 7.2 0 0 0 0 14.4"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M7.425 11.79a.55.55 0 0 1-.225-.442.7.7 0 0 1 .016-.144.66.66 0 0 1 .209-.34.97.97 0 0 1 .575-.168c.2-.007.397.053.56.17a.63.63 0 0 1 .224.325.1.1 0 0 1 .016.04v.117a.54.54 0 0 1-.24.442 1 1 0 0 1-.145.118A.9.9 0 0 1 8 12a.85.85 0 0 1-.575-.21m0-1.966A.6.6 0 0 1 7.2 9.36V3.888a.7.7 0 0 1 .224-.51A.95.95 0 0 1 8 3.2a.88.88 0 0 1 .56.178c.12.098.204.232.24.382v5.6a.58.58 0 0 1-.24.467 1 1 0 0 1-.145.124.85.85 0 0 1-.416.096.82.82 0 0 1-.574-.223"
+}))), ico_tip_defs || (ico_tip_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_tip = (SvgIcoTip);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-left-rotation.svg
 var ico_left_rotation_path, ico_left_rotation_path2;
 function ico_left_rotation_extends() { return ico_left_rotation_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_left_rotation_extends.apply(null, arguments); }
 
-const SvgIcoLeftRotation = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_left_rotation_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_left_rotation_path || (ico_left_rotation_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    d: "M2 8a6 6 0 1 0 6-6 6.5 6.5 0 0 0-4.493 1.827L2 5.333"
-  })), ico_left_rotation_path2 || (ico_left_rotation_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    d: "M2 2v3.333h3.333"
-  })));
-};
+const SvgIcoLeftRotation = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_left_rotation_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_left_rotation_path || (ico_left_rotation_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  d: "M2 8a6 6 0 1 0 6-6 6.5 6.5 0 0 0-4.493 1.827L2 5.333"
+})), ico_left_rotation_path2 || (ico_left_rotation_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  d: "M2 2v3.333h3.333"
+})));
 /* ESM default export */ const ico_left_rotation = (SvgIcoLeftRotation);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-right-rotation.svg
 var ico_right_rotation_path, ico_right_rotation_path2;
 function ico_right_rotation_extends() { return ico_right_rotation_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_right_rotation_extends.apply(null, arguments); }
 
-const SvgIcoRightRotation = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_right_rotation_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_right_rotation_path || (ico_right_rotation_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    d: "M14 8a6 6 0 1 1-6-6c1.68 0 3.287.667 4.493 1.827L14 5.333"
-  })), ico_right_rotation_path2 || (ico_right_rotation_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    d: "M14 2v3.333h-3.333"
-  })));
-};
+const SvgIcoRightRotation = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_right_rotation_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_right_rotation_path || (ico_right_rotation_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  d: "M14 8a6 6 0 1 1-6-6c1.68 0 3.287.667 4.493 1.827L14 5.333"
+})), ico_right_rotation_path2 || (ico_right_rotation_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  d: "M14 2v3.333h-3.333"
+})));
 /* ESM default export */ const ico_right_rotation = (SvgIcoRightRotation);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-crop.svg
 var ico_crop_g, ico_crop_defs;
 function ico_crop_extends() { return ico_crop_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_crop_extends.apply(null, arguments); }
 
-const SvgIcoCrop = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_crop_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_crop_g || (ico_crop_g = /*#__PURE__*/react.createElement("g", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 2,
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    d: "M4 1.333v9.334A1.333 1.333 0 0 0 5.333 12h9.334"
-  }), /*#__PURE__*/react.createElement("path", {
-    d: "M12 14.667V5.333A1.333 1.333 0 0 0 10.667 4H1.333"
-  }))), ico_crop_defs || (ico_crop_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoCrop = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_crop_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_crop_g || (ico_crop_g = /*#__PURE__*/react.createElement("g", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 2,
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  d: "M4 1.333v9.334A1.333 1.333 0 0 0 5.333 12h9.334"
+}), /*#__PURE__*/react.createElement("path", {
+  d: "M12 14.667V5.333A1.333 1.333 0 0 0 10.667 4H1.333"
+}))), ico_crop_defs || (ico_crop_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_crop = (SvgIcoCrop);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-floor-remove.svg
 var ico_floor_remove_g, ico_floor_remove_defs;
 function ico_floor_remove_extends() { return ico_floor_remove_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_floor_remove_extends.apply(null, arguments); }
 
-const SvgIcoFloorRemove = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_floor_remove_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_floor_remove_g || (ico_floor_remove_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("circle", {
-    cx: 8,
-    cy: 8,
-    r: 7.5,
-    fill: "red",
-    stroke: "#000"
-  }), /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M4.536 4.464a1 1 0 0 1 1.414 0L8.07 6.586l2.121-2.122a1 1 0 1 1 1.415 1.415L9.485 8l2.122 2.121a1 1 0 0 1-1.415 1.415l-2.12-2.122-2.122 2.122a1 1 0 1 1-1.414-1.415L6.656 8l-2.12-2.121a1 1 0 0 1 0-1.415"
-  }))), ico_floor_remove_defs || (ico_floor_remove_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoFloorRemove = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_floor_remove_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_floor_remove_g || (ico_floor_remove_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("circle", {
+  cx: 8,
+  cy: 8,
+  r: 7.5,
+  fill: "red",
+  stroke: "#000"
+}), /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M4.536 4.464a1 1 0 0 1 1.414 0L8.07 6.586l2.121-2.122a1 1 0 1 1 1.415 1.415L9.485 8l2.122 2.121a1 1 0 0 1-1.415 1.415l-2.12-2.122-2.122 2.122a1 1 0 1 1-1.414-1.415L6.656 8l-2.12-2.121a1 1 0 0 1 0-1.415"
+}))), ico_floor_remove_defs || (ico_floor_remove_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_floor_remove = (SvgIcoFloorRemove);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera-rotation.svg
 var ico_camera_rotation_g, ico_camera_rotation_defs;
 function ico_camera_rotation_extends() { return ico_camera_rotation_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_camera_rotation_extends.apply(null, arguments); }
 
-const SvgIcoCameraRotation = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_camera_rotation_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_camera_rotation_g || (ico_camera_rotation_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("circle", {
-    cx: 8,
-    cy: 8,
-    r: 8,
-    fill: "#2563EB"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "#fff",
-    strokeWidth: 1.042,
-    d: "M3 4v3h3M13 12V9h-3"
-  }), /*#__PURE__*/react.createElement("path", {
-    stroke: "#fff",
-    strokeWidth: 1.042,
-    d: "M12 6.571a3.86 3.86 0 0 0-1.157-1.597 4.3 4.3 0 0 0-1.844-.879 4.5 4.5 0 0 0-2.072.057 4.23 4.23 0 0 0-1.784.979L3 7M4 9.429a3.86 3.86 0 0 0 1.157 1.596c.525.434 1.159.736 1.844.88a4.5 4.5 0 0 0 2.072-.057 4.23 4.23 0 0 0 1.784-.979L13 9"
-  }))), ico_camera_rotation_defs || (ico_camera_rotation_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoCameraRotation = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_camera_rotation_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_camera_rotation_g || (ico_camera_rotation_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("circle", {
+  cx: 8,
+  cy: 8,
+  r: 8,
+  fill: "#2563EB"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "#fff",
+  strokeWidth: 1.042,
+  d: "M3 4v3h3M13 12V9h-3"
+}), /*#__PURE__*/react.createElement("path", {
+  stroke: "#fff",
+  strokeWidth: 1.042,
+  d: "M12 6.571a3.86 3.86 0 0 0-1.157-1.597 4.3 4.3 0 0 0-1.844-.879 4.5 4.5 0 0 0-2.072.057 4.23 4.23 0 0 0-1.784.979L3 7M4 9.429a3.86 3.86 0 0 0 1.157 1.596c.525.434 1.159.736 1.844.88a4.5 4.5 0 0 0 2.072-.057 4.23 4.23 0 0 0 1.784-.979L13 9"
+}))), ico_camera_rotation_defs || (ico_camera_rotation_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_camera_rotation = (SvgIcoCameraRotation);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-dorder.svg
 var ico_dorder_path;
 function ico_dorder_extends() { return ico_dorder_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_dorder_extends.apply(null, arguments); }
 
-const SvgIcoDorder = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_dorder_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_dorder_path || (ico_dorder_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentcolor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: 1.333,
-    d: "M6 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M6 4a.667.667 0 1 0 0-1.333A.667.667 0 0 0 6 4M6 13.333A.667.667 0 1 0 6 12a.667.667 0 0 0 0 1.333M10 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M10 4a.667.667 0 1 0 0-1.333A.667.667 0 0 0 10 4M10 13.333A.667.667 0 1 0 10 12a.667.667 0 0 0 0 1.333"
-  })));
-};
+const SvgIcoDorder = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_dorder_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_dorder_path || (ico_dorder_path = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentcolor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.333,
+  d: "M6 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M6 4a.667.667 0 1 0 0-1.333A.667.667 0 0 0 6 4M6 13.333A.667.667 0 1 0 6 12a.667.667 0 0 0 0 1.333M10 8.667a.667.667 0 1 0 0-1.334.667.667 0 0 0 0 1.334M10 4a.667.667 0 1 0 0-1.333A.667.667 0 0 0 10 4M10 13.333A.667.667 0 1 0 10 12a.667.667 0 0 0 0 1.333"
+})));
 /* ESM default export */ const ico_dorder = (SvgIcoDorder);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-cur-position.svg
 var ico_cur_position_g, ico_cur_position_defs;
 function ico_cur_position_extends() { return ico_cur_position_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_cur_position_extends.apply(null, arguments); }
 
-const SvgIcoCurPosition = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_cur_position_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 16,
-    height: 16,
-    fill: "none",
-    viewBox: "0 0 16 16",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_cur_position_g || (ico_cur_position_g = /*#__PURE__*/react.createElement("g", {
-    clipPath: "url(#a)"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#000",
-    d: "M8 5.333a2.666 2.666 0 1 0 0 5.334 2.666 2.666 0 1 0 0-5.334m5.96 2A5.996 5.996 0 0 0 8.667 2.04v-.707c0-.366-.3-.666-.667-.666s-.667.3-.667.666v.707A5.996 5.996 0 0 0 2.04 7.333h-.707c-.366 0-.666.3-.666.667s.3.667.666.667h.707a5.996 5.996 0 0 0 5.293 5.293v.707c0 .366.3.666.667.666s.667-.3.667-.666v-.707a5.996 5.996 0 0 0 5.293-5.293h.707c.366 0 .666-.3.666-.667s-.3-.667-.666-.667zM8 12.667A4.663 4.663 0 0 1 3.333 8 4.663 4.663 0 0 1 8 3.333 4.663 4.663 0 0 1 12.667 8 4.663 4.663 0 0 1 8 12.667"
-  }))), ico_cur_position_defs || (ico_cur_position_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-    id: "a"
-  }, /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M0 0h16v16H0z"
-  })))));
-};
+const SvgIcoCurPosition = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_cur_position_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_cur_position_g || (ico_cur_position_g = /*#__PURE__*/react.createElement("g", {
+  clipPath: "url(#a)"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "M8 5.333a2.666 2.666 0 1 0 0 5.334 2.666 2.666 0 1 0 0-5.334m5.96 2A5.996 5.996 0 0 0 8.667 2.04v-.707c0-.366-.3-.666-.667-.666s-.667.3-.667.666v.707A5.996 5.996 0 0 0 2.04 7.333h-.707c-.366 0-.666.3-.666.667s.3.667.666.667h.707a5.996 5.996 0 0 0 5.293 5.293v.707c0 .366.3.666.667.666s.667-.3.667-.666v-.707a5.996 5.996 0 0 0 5.293-5.293h.707c.366 0 .666-.3.666-.667s-.3-.667-.666-.667zM8 12.667A4.663 4.663 0 0 1 3.333 8 4.663 4.663 0 0 1 8 3.333 4.663 4.663 0 0 1 12.667 8 4.663 4.663 0 0 1 8 12.667"
+}))), ico_cur_position_defs || (ico_cur_position_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
+  id: "a"
+}, /*#__PURE__*/react.createElement("path", {
+  fill: "#fff",
+  d: "M0 0h16v16H0z"
+})))));
 /* ESM default export */ const ico_cur_position = (SvgIcoCurPosition);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera-fail.svg
 var ico_camera_fail_path, ico_camera_fail_path2, ico_camera_fail_path3, ico_camera_fail_path4;
 function ico_camera_fail_extends() { return ico_camera_fail_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_camera_fail_extends.apply(null, arguments); }
 
-const SvgIcoCameraFail = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_camera_fail_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 23,
-    height: 21,
-    fill: "none",
-    viewBox: "0 0 23 21",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_camera_fail_path || (ico_camera_fail_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#3974FF",
-    d: "M7 8.915v-1.5a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.884.884 0 0 1-1 1H8a.884.884 0 0 1-1-1v-1.5l-4 2v-7zv3Z"
-  })), ico_camera_fail_path2 || (ico_camera_fail_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M7 8.915v-1.5a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.884.884 0 0 1-1 1H8a.884.884 0 0 1-1-1v-1.5m0-3-4-2v7l4-2m0-3v3"
-  })), ico_camera_fail_path3 || (ico_camera_fail_path3 = /*#__PURE__*/react.createElement("path", {
-    fill: "red",
-    d: "M13.39 10.168a1.25 1.25 0 0 1-.001-1.768l1.5-1.5-1.329-1.33a1.25 1.25 0 0 1 0-1.767 1.25 1.25 0 0 1 1.768 0l1.328 1.329 1.329-1.329a1.25 1.25 0 0 1 1.768 0c.488.488.487 1.28 0 1.768L18.424 6.9l1.5 1.5c.488.487.488 1.28 0 1.768a1.25 1.25 0 0 1-1.767 0l-1.5-1.5-1.5 1.5a1.25 1.25 0 0 1-1.768 0"
-  })), ico_camera_fail_path4 || (ico_camera_fail_path4 = /*#__PURE__*/react.createElement("path", {
-    fill: "currentColor",
-    d: "M13.743 9.814a.75.75 0 0 0 1.06 0l1.854-1.854 1.854 1.854a.75.75 0 0 0 1.06-1.06L17.717 6.9 19.4 5.218a.75.75 0 1 0-1.06-1.061l-1.683 1.682-1.682-1.682a.75.75 0 0 0-1.06 1.06L15.596 6.9l-1.854 1.854a.75.75 0 0 0 0 1.06m-.707.707a1.75 1.75 0 0 1 0-2.475l1.146-1.147-.975-.975a1.75 1.75 0 0 1 0-2.474 1.75 1.75 0 0 1 2.474 0l.975.975.975-.975a1.753 1.753 0 0 1 2.476 0 1.75 1.75 0 0 1 0 2.475l-.976.975 1.147 1.147a1.75 1.75 0 0 1 0 2.474 1.75 1.75 0 0 1-2.474 0l-1.147-1.147-1.147 1.147a1.75 1.75 0 0 1-2.474 0"
-  })));
-};
+const SvgIcoCameraFail = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_camera_fail_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 23,
+  height: 21,
+  fill: "none",
+  viewBox: "0 0 23 21",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_camera_fail_path || (ico_camera_fail_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#3974FF",
+  d: "M7 8.915v-1.5a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.884.884 0 0 1-1 1H8a.884.884 0 0 1-1-1v-1.5l-4 2v-7zv3Z"
+})), ico_camera_fail_path2 || (ico_camera_fail_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M7 8.915v-1.5a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.884.884 0 0 1-1 1H8a.884.884 0 0 1-1-1v-1.5m0-3-4-2v7l4-2m0-3v3"
+})), ico_camera_fail_path3 || (ico_camera_fail_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "red",
+  d: "M13.39 10.168a1.25 1.25 0 0 1-.001-1.768l1.5-1.5-1.329-1.33a1.25 1.25 0 0 1 0-1.767 1.25 1.25 0 0 1 1.768 0l1.328 1.329 1.329-1.329a1.25 1.25 0 0 1 1.768 0c.488.488.487 1.28 0 1.768L18.424 6.9l1.5 1.5c.488.487.488 1.28 0 1.768a1.25 1.25 0 0 1-1.767 0l-1.5-1.5-1.5 1.5a1.25 1.25 0 0 1-1.768 0"
+})), ico_camera_fail_path4 || (ico_camera_fail_path4 = /*#__PURE__*/react.createElement("path", {
+  fill: "currentColor",
+  d: "M13.743 9.814a.75.75 0 0 0 1.06 0l1.854-1.854 1.854 1.854a.75.75 0 0 0 1.06-1.06L17.717 6.9 19.4 5.218a.75.75 0 1 0-1.06-1.061l-1.683 1.682-1.682-1.682a.75.75 0 0 0-1.06 1.06L15.596 6.9l-1.854 1.854a.75.75 0 0 0 0 1.06m-.707.707a1.75 1.75 0 0 1 0-2.475l1.146-1.147-.975-.975a1.75 1.75 0 0 1 0-2.474 1.75 1.75 0 0 1 2.474 0l.975.975.975-.975a1.753 1.753 0 0 1 2.476 0 1.75 1.75 0 0 1 0 2.475l-.976.975 1.147 1.147a1.75 1.75 0 0 1 0 2.474 1.75 1.75 0 0 1-2.474 0l-1.147-1.147-1.147 1.147a1.75 1.75 0 0 1-2.474 0"
+})));
 /* ESM default export */ const ico_camera_fail = (SvgIcoCameraFail);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera-ok.svg
 var ico_camera_ok_path, ico_camera_ok_path2, ico_camera_ok_path3, ico_camera_ok_path4;
 function ico_camera_ok_extends() { return ico_camera_ok_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_camera_ok_extends.apply(null, arguments); }
 
-const SvgIcoCameraOk = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", ico_camera_ok_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 23,
-    height: 20,
-    fill: "none",
-    viewBox: "0 0 23 20",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, ico_camera_ok_path || (ico_camera_ok_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#3974FF",
-    d: "M7 8.5V7a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.883.883 0 0 1-1 1H8a.885.885 0 0 1-1-1v-1.5l-4 2v-7zv3Z"
-  })), ico_camera_ok_path2 || (ico_camera_ok_path2 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M7 8.5V7a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.883.883 0 0 1-1 1H8a.885.885 0 0 1-1-1v-1.5m0-3-4-2v7l4-2m0-3v3"
-  })), ico_camera_ok_path3 || (ico_camera_ok_path3 = /*#__PURE__*/react.createElement("path", {
-    fill: "#1CFF59",
-    d: "M17 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-  })), ico_camera_ok_path4 || (ico_camera_ok_path4 = /*#__PURE__*/react.createElement("path", {
-    stroke: "currentColor",
-    d: "M17 9.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"
-  })));
-};
+const SvgIcoCameraOk = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_camera_ok_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 23,
+  height: 20,
+  fill: "none",
+  viewBox: "0 0 23 20",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_camera_ok_path || (ico_camera_ok_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#3974FF",
+  d: "M7 8.5V7a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.883.883 0 0 1-1 1H8a.885.885 0 0 1-1-1v-1.5l-4 2v-7zv3Z"
+})), ico_camera_ok_path2 || (ico_camera_ok_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M7 8.5V7a.884.884 0 0 1 1-1h8a.884.884 0 0 1 1 1v6a.883.883 0 0 1-1 1H8a.885.885 0 0 1-1-1v-1.5m0-3-4-2v7l4-2m0-3v3"
+})), ico_camera_ok_path3 || (ico_camera_ok_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "#1CFF59",
+  d: "M17 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+})), ico_camera_ok_path4 || (ico_camera_ok_path4 = /*#__PURE__*/react.createElement("path", {
+  stroke: "currentColor",
+  d: "M17 9.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"
+})));
 /* ESM default export */ const ico_camera_ok = (SvgIcoCameraOk);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
