@@ -74,6 +74,7 @@ const config = {
   },
   themes: [
     '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-mermaid'
   ],
   presets: [
     [
@@ -116,6 +117,7 @@ const config = {
     [ 'docusaurus-plugin-image-zoom', {}]
   ],
   markdown: {
+    mermaid: true,
     parseFrontMatter: async (params) => {
       // Reuse the default parser
       const result = await params.defaultParseFrontMatter(params);
@@ -237,7 +239,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'c' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico)',
@@ -262,7 +264,7 @@ const config = {
         },
         searchPagePath: 'search',
       }
-    }),
+    })
 };
 
 export default config;
