@@ -332,7 +332,7 @@ footer {
   counter-reset: count;
   header h1 {
     &.confidential::after {
-      content: "Confidential";
+      content: "CONFIDENTIAL";
       display: inline-block;
       position: relative;
       color: var(--ifm-color-cmd);
@@ -341,6 +341,7 @@ footer {
       margin-left: 1rem;
       padding: .3rem;
       border: 1px solid;
+      border-radius: 6px;
       top: -.3rem;
     }
   }
