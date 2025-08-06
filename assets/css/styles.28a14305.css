@@ -6409,6 +6409,72 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 .calloutLists_Z4iK ol ul li::before {
   content: none;
 }
+.treeviewContainer_w8C9 {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin-bottom: 1.5rem;;
+}
+
+.treeNode_pvhz {
+    margin: 0;
+}
+
+.treeItem_AhPX {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.treeToggle_aNhz {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    color: #a0aec0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.treeSpacer__wFc {
+    width: 24px;
+    display: inline-block;
+}
+
+.treeIcon_Dv51 {
+    margin-right: 8px;
+    height: 23px;
+}
+
+.treeLabel_bbc2 {
+    line-height: 1.4;
+}
+
+.level0_fQKU .treeLabel_bbc2 {
+    font-weight: 600;
+    /* color: #e2e8f0; */
+}
+
+.level1_RaDm .treeLabel_bbc2 {
+    /* color: #cbd5e0; */
+}
+
+.level2_rOYF .treeLabel_bbc2 {
+    /* color: #a0aec0; */
+}
+
+.level3_Jupf .treeLabel_bbc2 {
+    /* color: #718096; */
+}
+
+.treeChildren_K67c {
+    margin-left: 0;
+}
+
 .breadcrumbHomeIcon_xK9p {
   position: relative;
   top: 1px;

@@ -46,8 +46,8 @@ const toc = [{
   "id": "view-user-by-access",
   "level": 2
 }, {
-  "value": "출입 그룹 목록 확장/축소",
-  "id": "출입-그룹-목록-확장축소",
+  "value": "트리 구조 알아보기",
+  "id": "learn-tree-view",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -62,9 +62,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, IcAdd, IcMinus, Image, Treeview} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAdd) _missingMdxReference("IcAdd", true);
+  if (!IcMinus) _missingMdxReference("IcMinus", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Treeview) _missingMdxReference("Treeview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입 그룹을 기준으로 사용자를 조회 및 관리 방법을 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
@@ -109,64 +112,63 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "선택한 출입 권한 그룹에 속한 사용자를 사용자 목록에서 확인할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "트리 구조 메뉴는 아래와 같은 구조로 구성되어 있습니다."
-      }), (0,jsx_runtime.jsx)(_components.p, {
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "All Access Groups"
-        })
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Access Group: 출입 그룹"
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Access Level: 출입 등급"
-              }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Door: 출입문"
-                  }), "\n"]
-                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Schedule: 스케줄"
-                  }), "\n"]
-                }), "\n"]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Floor Level: 층 등급"
-              }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Floor: 층"
-                  }), "\n"]
-                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Schedule: 스케줄"
-                  }), "\n"]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })]
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["출입 그룹 하위의 출입 등급 또는 층 등급을 확장하거나 축소하려면 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 또는 ", (0,jsx_runtime.jsx)(IcMinus, {}), " 버튼을 클릭하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "출입-그룹-목록-확장축소",
-      children: "출입 그룹 목록 확장/축소"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입 그룹 목록을 확장하거나 축소할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.tree.accessExplorer"
-      }), " 탭에서 출입 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.tree.contextMenu.expandBelow"
-      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.tree.contextMenu.collapseBelow"
-      }), "를 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-user-access-explorer-tree-expand-collapse.png"
+      id: "learn-tree-view",
+      children: "트리 구조 알아보기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "트리 구조 메뉴는 아래와 같은 구조로 구성되어 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Treeview, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["출입 그룹은 출입 등급, 층 등급, 사용자 그룹, 사용자를 포함하는 상위 계층입니다. 출입 그룹을 통해 출입 권한을 관리할 수 있습니다. 출입 그룹 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-access-control-manage-access-group",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["출입 등급은 사용자가 출입할 수 있는 시간을 설정하고, 이 시간 동안 출입문에 출입할 수 있는 권한을 부여합니다. 출입 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-access-control-manage-access-level",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["층 등급을 통해 사용자가 엘리베이터를 이용해 출입할 수 있는 층을 관리할 수 있습니다. 층 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-access-control-manage-floor-level",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["스케줄은 출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하는 기능입니다. 스케줄 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-schedule",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["엘리베이터를 등록하고 엘리베이터를 통해 출입할 수 있는 층을 관리할 수 있습니다. 엘리베이터 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-elevators-add",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["엘리베이터 등록 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     })]
   });
 }
