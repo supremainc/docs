@@ -62,8 +62,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image, NextItem, NextStep} = _components;
+  }, {Cmd, IcEdit, IcTrash2, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcEdit) _missingMdxReference("IcEdit", true);
+  if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
@@ -102,10 +104,22 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자 정보를 수정할 수 있는 창이 나타납니다."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-edit-user-screen.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "원하는 항목을 수정하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["원하는 항목을 수정하고 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["크리덴셜 항목을 수정하려면 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하고, 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-edit-user-credentials.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["수정 사항을 저장하려면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.save"
           }), " 버튼을 클릭하세요."]
         }), "\n"]

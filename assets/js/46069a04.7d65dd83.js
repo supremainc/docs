@@ -52,8 +52,9 @@ function _createMdxContent(props) {
     strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -77,6 +78,8 @@ function _createMdxContent(props) {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.delete"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-remove-users.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
