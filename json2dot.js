@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const {convert} = require('convert-json-to-dot/convert');
 
-const object = path.join(__dirname, 'src/components/Cmd/x/x.json');
-const output = path.join(__dirname, 'src/components/Cmd/x/ko.json');
+// const object = path.join(__dirname, 'src/components/Cmd/x/x.json');
+const object = path.join('C:\\Program Files\\BioStar X\\nginx\\html\\locales\\en\\', 'bs2.json');
+const output = path.join(__dirname, 'src/components/Cmd/en.json');
 
 fs.readFile(object, 'utf-8', (err, data) => {
     if (!err) {
