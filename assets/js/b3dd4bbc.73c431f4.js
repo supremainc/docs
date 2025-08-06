@@ -117,6 +117,10 @@ const assets = {
 
 
 const enroll_credential_mobile_toc = [{
+  "value": "CSN 모바일",
+  "id": "csnmobilecard",
+  "level": 2
+}, {
   "value": "카드 할당",
   "id": "카드-할당",
   "level": 3
@@ -168,10 +172,7 @@ function enroll_credential_mobile_createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "csnmobilecard",
-      children: (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.csn",
-        className: "normal"
-      })
+      children: "CSN 모바일"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자에게 CSN 모바일 출입 카드를 발급할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {

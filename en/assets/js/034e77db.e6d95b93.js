@@ -45,6 +45,10 @@ const assets = {
 
 
 const toc = [{
+  "value": "CSN mobile",
+  "id": "csnmobilecard",
+  "level": 2
+}, {
   "value": "Card assignment",
   "id": "card-assignment",
   "level": 3
@@ -96,10 +100,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "csnmobilecard",
-      children: (0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.csn",
-        className: "normal"
-      })
+      children: "CSN mobile"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You can issue CSN mobile access cards to users."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
