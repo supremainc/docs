@@ -1,0 +1,65 @@
+.treeviewContainer {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin-bottom: 1.5rem;;
+}
+
+.treeNode {
+    margin: 0;
+}
+
+.treeItem {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.treeToggle {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    color: #a0aec0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.treeSpacer {
+    width: 24px;
+    display: inline-block;
+}
+
+.treeIcon {
+    margin-right: 8px;
+    height: 23px;
+}
+
+.treeLabel {
+    line-height: 1.4;
+}
+
+.level0 .treeLabel {
+    font-weight: 600;
+    /* color: #e2e8f0; */
+}
+
+.level1 .treeLabel {
+    /* color: #cbd5e0; */
+}
+
+.level2 .treeLabel {
+    /* color: #a0aec0; */
+}
+
+.level3 .treeLabel {
+    /* color: #718096; */
+}
+
+.treeChildren {
+    margin-left: 0;
+}

@@ -31,6 +31,7 @@ import Faqs from '@site/src/components/Faqs';
 import { FaqsItems } from '@site/src/components/Faqs';
 import Calloutlists from '@site/src/components/Calloutlists';
 import DocLink from '@site/src/components/DocLink';
+import Treeview from '@site/src/components/Treeview';
 import YouTube from 'react-youtube';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
@@ -140,7 +141,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSectioin, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, YouTube,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
