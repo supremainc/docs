@@ -473,7 +473,6 @@ function _createMdxContent(props) {
     h2: "h2",
     h3: "h3",
     li: "li",
-    mermaid: "mermaid",
     ol: "ol",
     p: "p",
     pre: "pre",
@@ -481,7 +480,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  };
+  }, {Image} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다."
@@ -521,8 +521,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "구조체-관계도",
       children: "구조체 관계도"
-    }), "\n", (0,jsx_runtime.jsx)(_components.mermaid, {
-      value: "classDiagram\n    %% 최상위 구조체\n    class BS2Card {\n        <<struct>>\n        +uint8_t isSmartCard\n        +union card_data\n    }\n    \n    %% 스마트카드 데이터 구조체\n    class BS2SmartCardData {\n        <<struct>>\n        +BS2SmartCardHeader header\n        +uint8_t[32] cardID\n        +BS2SmartCardCredentials credentials\n        +BS2AccessOnCardData accessOnData\n    }\n    \n    %% 스마트카드 헤더\n    class BS2SmartCardHeader {\n        <<struct>>\n        +uint16_t hdrCRC\n        +uint16_t cardCRC\n        +BS2_CARD_TYPE cardType\n        +uint8_t numOfTemplate\n        +uint16_t templateSize\n        +uint16_t issueCount\n        +uint8_t duressMask\n        +uint8_t cardAuthMode\n        +uint8_t useAlphanumericID\n        +uint8_t cardAuthModeEx\n        +uint8_t numOfFaceTemplate\n        +uint8_t[1] reserved\n    }\n    \n    %% 인증 정보 구조체\n    class BS2SmartCardCredentials {\n        <<struct>>\n        +uint8_t[32] pin\n        +uint8_t[1536] templateData\n    }\n    \n    %% 출입 권한 구조체\n    class BS2AccessOnCardData {\n        <<struct>>\n        +uint16_t[16] accessGroupID\n        +BS2_DATETIME startTime\n        +BS2_DATETIME endTime\n    }\n    \n    %% 타입 정의\n    class BS2_CARD_TYPE {\n        <<enumeration>>\n        UNKNOWN = 0x00\n        CSN = 0x01\n        SECURE = 0x02\n        ACCESS = 0x03\n        WIEGAND = 0x0A\n        CONFIG = 0x0B\n    }\n    \n    class BS2_DATETIME {\n        <<typedef>>\n        uint32_t timestamp\n    }\n    \n    %% 구조체 간 포함 관계 (Composition)\n    BS2Card *-- BS2SmartCardData : union member\n    BS2SmartCardData *-- BS2SmartCardHeader : contains\n    BS2SmartCardData *-- BS2SmartCardCredentials : contains\n    BS2SmartCardData *-- BS2AccessOnCardData : contains\n    \n    %% 타입 의존성 (Dependency)\n    BS2SmartCardHeader ..> BS2_CARD_TYPE : uses\n    BS2AccessOnCardData ..> BS2_DATETIME : uses\n      \n    %% 클래스 스타일 정의\n    classDef coreStruct fill:#e3f2fd,stroke:#1976d2,stroke-width:3px\n    classDef smartStruct fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px\n    classDef subStruct fill:#e8f5e8,stroke:#388e3c,stroke-width:2px\n    classDef typeStruct fill:#fff3e0,stroke:#f57c00,stroke-width:1px"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/smartcardapi-structure.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "구조체",
       children: "구조체"
@@ -1294,6 +1294,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
