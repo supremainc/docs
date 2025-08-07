@@ -99,6 +99,12 @@ function _createMdxContent(props) {
                   children: "BioStar X"
                 }), " 접속 주소로 사용하지 마세요."]
               }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(_components.strong, {
+                  children: "BioStar X"
+                }), "는 통합 게이트웨이(Unified Gateway)를 통해 모든 요청을 통합 처리합니다. 따라서 웹 접속 및 API 호출은 통합 게이트웨이 포트(기본 443)를 통해 이루어집니다."]
+              }), "\n"]
             }), "\n"]
           })
         }), "\n"]

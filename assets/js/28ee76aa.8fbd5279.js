@@ -64,9 +64,10 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcMoreW} = _components;
+  }, {Cmd, IcMoreW, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcMoreW) _missingMdxReference("IcMoreW", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 장치에 PIN을 입력하여 출입할 수 있도록 PIN을 등록하는 방법을 안내합니다. 개별 사용자에게 PIN을 등록하거나 CSV 가져오기를 통해 다수의 사용자에게 PIN을 일괄 등록할 수 있습니다."
@@ -83,6 +84,8 @@ function _createMdxContent(props) {
             sid: "user.pin",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-new-user-credential-pin.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
