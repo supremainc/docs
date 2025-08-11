@@ -16,7 +16,7 @@ const msalInstance = !isDev ? new PublicClientApplication(msalConfig) : null;
 // Only in production environment
 if (!isDev && msalInstance && !msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
     // Account selection logic is app dependent. Adjust as needed for different use cases.
-    msalInstance.setActiveAccount(msalInstance.getActiveAccount()[0]);
+    msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
 }
 
 // Listen for sign-in event and set active account
