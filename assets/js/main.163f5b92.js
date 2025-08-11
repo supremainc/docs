@@ -44158,11 +44158,19 @@ const withMsal = (Component) => {
  * Configuration object to be passed to MSAL instance on creation. 
  * For a full list of MSAL.js configuration parameters, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
- */ const msalConfig = {
+ */ // 안전한 환경 변수 접근을 위한 함수
+const getEnvVar = function(key) {
+    let fallback = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : '';
+    if (typeof process !== 'undefined' && process.env) {
+        return process.env[key] || fallback;
+    }
+    return fallback;
+};
+const msalConfig = {
     auth: {
-        clientId: process.env.REACT_APP_AZURE_CLIENT_ID,
-        authority: `https://login.microsoftonline.com/${process.env.REACT_APP_AZURE_TENANT_ID}`,
-        redirectUri: process.env.REACT_APP_REDIRECT_URI,
+        clientId: getEnvVar('REACT_APP_AZURE_CLIENT_ID', ''),
+        authority: `https://login.microsoftonline.com/${getEnvVar('REACT_APP_AZURE_TENANT_ID', '')}`,
+        redirectUri: getEnvVar('REACT_APP_REDIRECT_URI', 'https://supremainc.github.io/docs'),
         postLogoutRedirectUri: '/'
     },
     cache: {
@@ -44214,8 +44222,9 @@ var Translate = __webpack_require__(96025);
 const isDev = "production" === 'development';
 /**
  * MSAL should be instantiated outside of the component tree to prevent it from being re-instantiated on re-renders.
- * Only instantiate in production environment for security reasons.
- */ const msalInstance = !isDev ? new PublicClientApplication(msalConfig) : null;
+ * Only instantiate in production environment and when Azure config is available.
+ */ const hasValidAzureConfig = msalConfig.auth.clientId && msalConfig.auth.authority.includes('login.microsoftonline.com');
+const msalInstance = !isDev && hasValidAzureConfig ? new PublicClientApplication(msalConfig) : null;
 // Default to using the first account if no account is active on page load
 // Only in production environment
 if (!isDev && msalInstance && !msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
@@ -44235,8 +44244,8 @@ if (!isDev && msalInstance) {
 // Default implementation, that you can customize
 function Root(param) {
     let { children } = param;
-    // Don't show authentication in development environment for security reasons
-    if (isDev) {
+    // Don't show authentication in development environment or when Azure config is invalid
+    if (isDev || !hasValidAzureConfig) {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: children
         });
