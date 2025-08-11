@@ -44220,7 +44220,7 @@ const isDev = "production" === 'development';
 // Only in production environment
 if (!isDev && msalInstance && !msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
     // Account selection logic is app dependent. Adjust as needed for different use cases.
-    msalInstance.setActiveAccount(msalInstance.getActiveAccount()[0]);
+    msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
 }
 // Listen for sign-in event and set active account
 // Only in production environment
@@ -44236,7 +44236,7 @@ if (!isDev && msalInstance) {
 function Root(param) {
     let { children } = param;
     // Don't show authentication in development environment for security reasons
-    if (!isDev) {
+    if (isDev) {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: children
         });
