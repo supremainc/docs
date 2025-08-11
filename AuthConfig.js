@@ -6,11 +6,19 @@ import { LogLevel } from "@azure/msal-browser";
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
  */
 
+// 안전한 환경 변수 접근을 위한 함수
+const getEnvVar = (key, fallback = '') => {
+    if (typeof process !== 'undefined' && process.env) {
+        return process.env[key] || fallback;
+    }
+    return fallback;
+};
+
 export const msalConfig = {
     auth: {
-        clientId: process.env.REACT_APP_AZURE_CLIENT_ID,
-        authority: `https://login.microsoftonline.com/${process.env.REACT_APP_AZURE_TENANT_ID}`,
-        redirectUri: process.env.REACT_APP_REDIRECT_URI,
+        clientId: getEnvVar('REACT_APP_AZURE_CLIENT_ID', ''),
+        authority: `https://login.microsoftonline.com/${getEnvVar('REACT_APP_AZURE_TENANT_ID', '')}`,
+        redirectUri: getEnvVar('REACT_APP_REDIRECT_URI', 'https://supremainc.github.io/docs'),
         postLogoutRedirectUri: '/',
     },
     cache: {

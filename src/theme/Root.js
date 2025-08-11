@@ -8,9 +8,10 @@ const isDev = process.env.NODE_ENV === 'development';
 
 /**
  * MSAL should be instantiated outside of the component tree to prevent it from being re-instantiated on re-renders.
- * Only instantiate in production environment for security reasons.
+ * Only instantiate in production environment and when Azure config is available.
  */
-const msalInstance = !isDev ? new PublicClientApplication(msalConfig) : null;
+const hasValidAzureConfig = msalConfig.auth.clientId && msalConfig.auth.authority.includes('login.microsoftonline.com');
+const msalInstance = !isDev && hasValidAzureConfig ? new PublicClientApplication(msalConfig) : null;
 
 // Default to using the first account if no account is active on page load
 // Only in production environment
@@ -32,8 +33,8 @@ if (!isDev && msalInstance) {
 
 // Default implementation, that you can customize
 export default function Root({children}) {
-    // Don't show authentication in development environment for security reasons
-    if (isDev) {
+    // Don't show authentication in development environment or when Azure config is invalid
+    if (isDev || !hasValidAzureConfig) {
         return <>{children}</>;
     }
 
