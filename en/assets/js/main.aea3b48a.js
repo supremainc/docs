@@ -44158,30 +44158,21 @@ const withMsal = (Component) => {
  * Configuration object to be passed to MSAL instance on creation. 
  * For a full list of MSAL.js configuration parameters, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
- */ // 안전한 환경 변수 접근을 위한 함수
-const getEnvVar = function(key) {
-    let fallback = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : '';
-    // Docusaurus에서는 빌드 시점에 환경 변수가 정적으로 대체됩니다
-    try {
-        if (typeof process !== 'undefined' && process.env && process.env[key]) {
-            return process.env[key];
-        }
-    } catch (error) {
-        console.warn(`Failed to access environment variable ${key}:`, error);
-    }
-    return fallback;
-};
+ */ // 빌드 시점에 환경 변수를 직접 주입
+const AZURE_CLIENT_ID = process.env.REACT_APP_AZURE_CLIENT_ID || '';
+const AZURE_TENANT_ID = process.env.REACT_APP_AZURE_TENANT_ID || '';
+const AuthConfig_REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'https://supremainc.github.io/docs';
 // 디버깅을 위한 로그
 console.log('AuthConfig.js Environment Variables:', {
-    REACT_APP_AZURE_CLIENT_ID: typeof process !== 'undefined' ? process.env?.REACT_APP_AZURE_CLIENT_ID : 'process undefined',
-    REACT_APP_AZURE_TENANT_ID: typeof process !== 'undefined' ? process.env?.REACT_APP_AZURE_TENANT_ID : 'process undefined',
-    REACT_APP_REDIRECT_URI: typeof process !== 'undefined' ? process.env?.REACT_APP_REDIRECT_URI : 'process undefined'
+    REACT_APP_AZURE_CLIENT_ID: AZURE_CLIENT_ID ? '***' : 'undefined',
+    REACT_APP_AZURE_TENANT_ID: AZURE_TENANT_ID ? '***' : 'undefined',
+    REACT_APP_REDIRECT_URI: AuthConfig_REDIRECT_URI || 'undefined'
 });
 const msalConfig = {
     auth: {
-        clientId: getEnvVar('REACT_APP_AZURE_CLIENT_ID', ''),
-        authority: `https://login.microsoftonline.com/${getEnvVar('REACT_APP_AZURE_TENANT_ID', '')}`,
-        redirectUri: getEnvVar('REACT_APP_REDIRECT_URI', 'https://supremainc.github.io/docs'),
+        clientId: AZURE_CLIENT_ID,
+        authority: `https://login.microsoftonline.com/${AZURE_TENANT_ID}`,
+        redirectUri: AuthConfig_REDIRECT_URI,
         postLogoutRedirectUri: '/'
     },
     cache: {
