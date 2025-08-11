@@ -327,6 +327,11 @@ footer {
 }
 // layout 스타일
 
+// Tabulator 스타일
+.tabulator-cell {
+  white-space: normal !important;
+}
+
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
