@@ -24,6 +24,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
+        env:
+          # GitHub Secrets에서 Azure 인증 정보 주입
+          REACT_APP_AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          REACT_APP_AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          REACT_APP_REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
         run: yarn build --no-minify
         
 
