@@ -8,9 +8,9 @@ import { LogLevel } from "@azure/msal-browser";
 
 export const msalConfig = {
     auth: {
-        clientId: "e06f5dd7-c947-4500-8bc8-51c36d79afdb",
-        authority: "https://login.microsoftonline.com/8b11ed2d-835b-4172-8af6-e92203d1832c",
-        redirectUri: "http://localhost:3000/docs",
+        clientId: "b6f96dc8-bf6f-40b7-9b85-fc996090bc67",
+        authority: "https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",
+        redirectUri: "https://supremainc.github.io/docs",
         postLogoutRedirectUri: '/',
     },
     cache: {

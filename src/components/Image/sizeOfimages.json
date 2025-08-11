@@ -223,6 +223,30 @@
     "width": 499,
     "height": 392
   },
+  "/docs/img/biostarx-install-check-control-network-connections.png": {
+    "width": 1200,
+    "height": 370
+  },
+  "/docs/img/biostarx-install-check-ethernet-properties.png": {
+    "width": 400,
+    "height": 522
+  },
+  "/docs/img/biostarx-install-check-ethernet-status.png": {
+    "width": 400,
+    "height": 486
+  },
+  "/docs/img/biostarx-install-check-protocol-properties.png": {
+    "width": 465,
+    "height": 518
+  },
+  "/docs/img/biostarx-install-check-set-metrics.png": {
+    "width": 465,
+    "height": 555
+  },
+  "/docs/img/biostarx-install-check-start-network-search.png": {
+    "width": 800,
+    "height": 328
+  },
   "/docs/img/biostarx-install-comm-server-complete.png": {
     "width": 500,
     "height": 392
@@ -272,6 +296,10 @@
     "height": 392
   },
   "/docs/img/biostarx-install-select-custom.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/docs/img/biostarx-install-select-ip.png": {
     "width": 499,
     "height": 392
   },
@@ -374,6 +402,10 @@
   "/docs/img/biostarx-new-user-credential-face.png": {
     "width": 600,
     "height": 473
+  },
+  "/docs/img/biostarx-new-user-credential-finger-nth.png": {
+    "width": 600,
+    "height": 201
   },
   "/docs/img/biostarx-new-user-credential-finger.png": {
     "width": 600,
@@ -1071,6 +1103,10 @@
     "width": 400,
     "height": 476
   },
+  "/docs/img/biostarx-user-advanced.png": {
+    "width": 800,
+    "height": 172
+  },
   "/docs/img/biostarx-user-group-add.png": {
     "width": 400,
     "height": 242
@@ -1182,6 +1218,10 @@
   "/docs/img/common/biostarx-enroll-fingerprint-count.png": {
     "width": 400,
     "height": 66
+  },
+  "/docs/img/common/biostarx-install-check-network-cmd.png": {
+    "width": 800,
+    "height": 296
   },
   "/docs/img/common/biostarx-new-user-photo.png": {
     "width": 200,
@@ -1627,6 +1667,30 @@
     "width": 499,
     "height": 392
   },
+  "/docs/img/en/biostarx-install-check-control-network-connections.png": {
+    "width": 1200,
+    "height": 410
+  },
+  "/docs/img/en/biostarx-install-check-ethernet-properties.png": {
+    "width": 400,
+    "height": 516
+  },
+  "/docs/img/en/biostarx-install-check-ethernet-status.png": {
+    "width": 400,
+    "height": 496
+  },
+  "/docs/img/en/biostarx-install-check-protocol-properties.png": {
+    "width": 465,
+    "height": 529
+  },
+  "/docs/img/en/biostarx-install-check-set-metrics.png": {
+    "width": 465,
+    "height": 568
+  },
+  "/docs/img/en/biostarx-install-check-start-network-search.png": {
+    "width": 800,
+    "height": 328
+  },
   "/docs/img/en/biostarx-install-comm-server-complete.png": {
     "width": 500,
     "height": 392
@@ -1676,6 +1740,10 @@
     "height": 392
   },
   "/docs/img/en/biostarx-install-select-custom.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/docs/img/en/biostarx-install-select-ip.png": {
     "width": 499,
     "height": 392
   },
@@ -1778,6 +1846,10 @@
   "/docs/img/en/biostarx-new-user-credential-face.png": {
     "width": 600,
     "height": 473
+  },
+  "/docs/img/en/biostarx-new-user-credential-finger-nth.png": {
+    "width": 600,
+    "height": 199
   },
   "/docs/img/en/biostarx-new-user-credential-finger.png": {
     "width": 600,
@@ -2394,6 +2466,10 @@
   "/docs/img/en/biostarx-user-access-explorer.png": {
     "width": 400,
     "height": 476
+  },
+  "/docs/img/en/biostarx-user-advanced.png": {
+    "width": 800,
+    "height": 184
   },
   "/docs/img/en/biostarx-user-group-add.png": {
     "width": 400,

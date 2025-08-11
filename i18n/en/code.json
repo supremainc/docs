@@ -735,5 +735,9 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.mslogin.buttonText": {
+    "message": "🔑 Log in with Microsoft account",
+    "description": "The text for the login button"
   }
 }
