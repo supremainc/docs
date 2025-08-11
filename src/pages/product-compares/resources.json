@@ -27,7 +27,7 @@
     "fake-fingerprint-detection": "위조 지문 검출",
     "fake-face-detection": "위조 얼굴 검출",
     "face-detection": "얼굴 검출",
-    "intercom": "인터콤",
+    "intercom": "인터폰",
     "poe": "PoE",
     "mullion-type": "멀리온 타입",
     "gang-box-type": "갱 박스 타입",
@@ -92,7 +92,20 @@
     "3chinput": "3채널 입력",
     "relay": "릴레이",
     "1relay": "1 릴레이",
-    "2relay": "2 릴레이"
+    "2relay": "2 릴레이",
+    "ieee8023af": "IEEE 802.3af 호환",
+    "sdcard": "SD 카드",
+    "microSD": "microSD 카드 (최대 32 GB)",
+    "electric": "전기 규격",
+    "power": "전원",
+    "p12ve1a": "전압: 12 Vdc, 전류: 최대 1 A",
+    "p12ve8a": "전압: 12 Vdc, 전류: 최대 0.8 A",
+    "p12ve8a24v4a": "전압: 12 Vdc, 전류: 최대 0.8 A / 전압: 24 Vdc , 전류: 최대 0.4 A",
+    "p12ve8a24v5a": "전압: 12 Vdc, 전류: 최대 0.8 A / 전압: 24 Vdc , 전류: 최대 0.5 A",
+    "p12ve5a": "전압: 12 Vdc, 전류: 최대 0.5 A",
+    "p12ve4a": "전압: 12 Vdc, 전류: 최대 0.4 A",
+    "p12ve3a": "전압: 12 Vdc, 전류: 최대 0.3 A",
+    "p12ve2a": "전압: 12 Vdc, 전류: 최대 0.2 A"
   },
   "en": {
     "main_function": "Main Function",
@@ -186,6 +199,19 @@
     "3chinput": "3ch inputs",
     "relay": "Relay",
     "1relay": "1 Relay",
-    "2relay": "2 Relay"
+    "2relay": "2 Relay",
+    "ieee8023af": "IEEE 802.3af compliant",
+    "sdcard": "SD card",
+    "microSD": "microSD card (Supports up to 32 GB)",
+    "electric": "Electrical",
+    "power": "Power",
+    "p12ve1a": "Voltage: 12 Vdc, Current: Max. 1 A",
+    "p12ve8a": "Voltage: 12 Vdc, Current: Max. 0.8 A",
+    "p12ve8a24v4a": "Voltage: 12, Vdc Current: Max. 0.8 A / Voltage: 24 Vdc, Current: Max. 0.4 A",
+    "p12ve8a24v5a": "Voltage: 12 Vdc, Current: Max. 0.8 A / Voltage: 24 Vdc, Current: Max. 0.5 A",
+    "p12ve5a": "Voltage: 12 Vdc, Current: Max. 0.5 A",
+    "p12ve4a": "Voltage: 12 Vdc, Current: Max. 0.4 A",
+    "p12ve3a": "Voltage: 12 Vdc, Current: Max. 0.3 A",
+    "p12ve2a": "Voltage: 12 Vdc, Current: Max. 0.2 A"
   }
 }
