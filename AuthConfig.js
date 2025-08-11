@@ -8,11 +8,23 @@ import { LogLevel } from "@azure/msal-browser";
 
 // 안전한 환경 변수 접근을 위한 함수
 const getEnvVar = (key, fallback = '') => {
-    if (typeof process !== 'undefined' && process.env) {
-        return process.env[key] || fallback;
+    // Docusaurus에서는 빌드 시점에 환경 변수가 정적으로 대체됩니다
+    try {
+        if (typeof process !== 'undefined' && process.env && process.env[key]) {
+            return process.env[key];
+        }
+    } catch (error) {
+        console.warn(`Failed to access environment variable ${key}:`, error);
     }
     return fallback;
 };
+
+// 디버깅을 위한 로그
+console.log('AuthConfig.js Environment Variables:', {
+    REACT_APP_AZURE_CLIENT_ID: typeof process !== 'undefined' ? process.env?.REACT_APP_AZURE_CLIENT_ID : 'process undefined',
+    REACT_APP_AZURE_TENANT_ID: typeof process !== 'undefined' ? process.env?.REACT_APP_AZURE_TENANT_ID : 'process undefined',
+    REACT_APP_REDIRECT_URI: typeof process !== 'undefined' ? process.env?.REACT_APP_REDIRECT_URI : 'process undefined'
+});
 
 export const msalConfig = {
     auth: {
