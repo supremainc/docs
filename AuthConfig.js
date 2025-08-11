@@ -6,23 +6,11 @@ import { LogLevel } from "@azure/msal-browser";
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
  */
 
-// 빌드 시점에 환경 변수를 직접 주입
-const AZURE_CLIENT_ID = process.env.REACT_APP_AZURE_CLIENT_ID || '';
-const AZURE_TENANT_ID = process.env.REACT_APP_AZURE_TENANT_ID || '';
-const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'https://supremainc.github.io/docs';
-
-// 디버깅을 위한 로그
-console.log('AuthConfig.js Environment Variables:', {
-    REACT_APP_AZURE_CLIENT_ID: AZURE_CLIENT_ID ? '***' : 'undefined',
-    REACT_APP_AZURE_TENANT_ID: AZURE_TENANT_ID ? '***' : 'undefined',
-    REACT_APP_REDIRECT_URI: REDIRECT_URI || 'undefined'
-});
-
 export const msalConfig = {
     auth: {
-        clientId: AZURE_CLIENT_ID,
-        authority: `https://login.microsoftonline.com/${AZURE_TENANT_ID}`,
-        redirectUri: REDIRECT_URI,
+        clientId: "b6f96dc8-bf6f-40b7-9b85-fc996090bc67",
+        authority: "https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",
+        redirectUri: "https://supremainc.github.io/docs",
         postLogoutRedirectUri: '/',
     },
     cache: {
