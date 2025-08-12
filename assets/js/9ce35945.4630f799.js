@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2143"], {
-5482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3807"], {
+24308: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_reference_glossary_mdx_9ce_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-glossary-mdx-6a0.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/en/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","keywords":["Suprema","Glossary"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Reference","permalink":"/docs/en/reference/"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-glossary-mdx-9ce.json
+var site_docs_reference_glossary_mdx_9ce_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","source":"@site/docs/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"용어집","description":"이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.","keywords":["슈프리마","용어집"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"참조 문서","permalink":"/docs/reference/"},"next":{"title":"기능 비교","permalink":"/docs/reference/compares/fingerprint-devices-funcs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx
+;// CONCATENATED MODULE: ./docs/reference/glossary.mdx
 
 
 const frontMatter = {
 	id: 'glossary',
-	title: 'Glossary',
-	description: 'This document provides a glossary of terms used in Suprema’s products and services.',
+	title: '용어집',
+	description: '이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다.',
 	keywords: [
-		'Suprema',
-		'Glossary'
+		'슈프리마',
+		'용어집'
 	],
 	isTranslationMissing: false
 };
@@ -51,7 +51,7 @@ function _createMdxContent(props) {
   if (!GlossaryAll) _missingMdxReference("GlossaryAll", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document compiles a glossary of terms used in Suprema’s products and services. The glossary includes not only Suprema’s proprietary technical terms but also terms that are useful for understanding the context."
+      children: "이 문서는 슈프리마의 제품 및 서비스에 사용되는 용어를 정리한 문서입니다. 용어집은 슈프리마의 고유 기술 용어 뿐만 아니라 맥락을 이해하는데 유용한 용어도 포함합니다."
     }), "\n", (0,jsx_runtime.jsx)(GlossaryAll, {})]
   });
 }
