@@ -193,11 +193,19 @@
   },
   "/docs/img/biostarx-edit-user-batch-edit.png": {
     "width": 800,
-    "height": 538
+    "height": 504
+  },
+  "/docs/img/biostarx-edit-user-credentials.png": {
+    "width": 800,
+    "height": 217
   },
   "/docs/img/biostarx-edit-user-mfa-use.png": {
     "width": 800,
     "height": 266
+  },
+  "/docs/img/biostarx-edit-user-screen.png": {
+    "width": 1200,
+    "height": 986
   },
   "/docs/img/biostarx-header-shortcut-link.png": {
     "width": 300,
@@ -427,6 +435,10 @@
     "width": 600,
     "height": 293
   },
+  "/docs/img/biostarx-new-user-credential-pin.png": {
+    "width": 500,
+    "height": 206
+  },
   "/docs/img/biostarx-new-user-credential-qrbarcode.png": {
     "width": 499,
     "height": 341
@@ -450,6 +462,10 @@
   "/docs/img/biostarx-real-time-event.png": {
     "width": 800,
     "height": 309
+  },
+  "/docs/img/biostarx-remove-users.png": {
+    "width": 1200,
+    "height": 334
   },
   "/docs/img/biostarx-setting-add-device-group.png": {
     "width": 800,
@@ -1101,7 +1117,7 @@
   },
   "/docs/img/biostarx-user-access-explorer.png": {
     "width": 400,
-    "height": 476
+    "height": 338
   },
   "/docs/img/biostarx-user-advanced.png": {
     "width": 800,
@@ -1133,7 +1149,7 @@
   },
   "/docs/img/biostarx-user-import-02.png": {
     "width": 560,
-    "height": 547
+    "height": 790
   },
   "/docs/img/biostarx-user-import-03.png": {
     "width": 537,
@@ -1330,6 +1346,10 @@
   "/docs/img/common/setting-system-restore.png": {
     "width": 635,
     "height": 375
+  },
+  "/docs/img/common/smartcardapi-structure.png": {
+    "width": 2072,
+    "height": 1192
   },
   "/docs/img/default-placeholder-image.webp": {
     "width": 1200,
@@ -1641,11 +1661,19 @@
   },
   "/docs/img/en/biostarx-edit-user-batch-edit.png": {
     "width": 800,
-    "height": 538
+    "height": 518
+  },
+  "/docs/img/en/biostarx-edit-user-credentials.png": {
+    "width": 800,
+    "height": 223
   },
   "/docs/img/en/biostarx-edit-user-mfa-use.png": {
     "width": 800,
     "height": 266
+  },
+  "/docs/img/en/biostarx-edit-user-screen.png": {
+    "width": 1200,
+    "height": 986
   },
   "/docs/img/en/biostarx-header.png": {
     "width": 1500,
@@ -1867,6 +1895,10 @@
     "width": 640,
     "height": 590
   },
+  "/docs/img/en/biostarx-new-user-credential-pin.png": {
+    "width": 500,
+    "height": 206
+  },
   "/docs/img/en/biostarx-new-user-credential-qrbarcode.png": {
     "width": 553,
     "height": 341
@@ -1890,6 +1922,10 @@
   "/docs/img/en/biostarx-real-time-event.png": {
     "width": 800,
     "height": 310
+  },
+  "/docs/img/en/biostarx-remove-users.png": {
+    "width": 1200,
+    "height": 334
   },
   "/docs/img/en/biostarx-setting-add-device-group.png": {
     "width": 926,
@@ -2465,7 +2501,7 @@
   },
   "/docs/img/en/biostarx-user-access-explorer.png": {
     "width": 400,
-    "height": 476
+    "height": 333
   },
   "/docs/img/en/biostarx-user-advanced.png": {
     "width": 800,
@@ -2497,7 +2533,7 @@
   },
   "/docs/img/en/biostarx-user-import-02.png": {
     "width": 560,
-    "height": 547
+    "height": 790
   },
   "/docs/img/en/biostarx-user-import-03.png": {
     "width": 539,
