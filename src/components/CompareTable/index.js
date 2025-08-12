@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useCallback, useMemo } from "react";
 import { TabulatorFull as Tabulator } from "tabulator-tables";
 import  "tabulator-tables/dist/css/tabulator.min.css";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from '@site/src/pages/product-compares/styles.module.css';
-import Locale from '@site/src/pages/product-compares/resources.json';
+import styles from './styles.module.css';
+import Locale from './resources.json';
 
 // 공통 상수 정의
 const COMMON_COLUMN_PROPS = {
@@ -55,8 +55,41 @@ export function RenderTableSpecs({ data }) {
   const tableRef = useRef(null);
   const tabulatorInstance = useRef(null);
 
-  // 컬럼 정의를 메모이제이션
+  // 중첩된 구조의 데이터를 평면화된 형태로 변환
+  const transformedData = useMemo(() => {
+    if (!data || data.length === 0) {
+      return [];
+    }
+    
+    // 각 데이터 항목을 평면화
+    const flattenedData = data.map(item => {
+      const { category, function: functionName, models } = item;
+      
+      const rowData = {
+        category,
+        function: functionName
+      };
+      
+      // 각 모델의 모든 변형을 해당 필드에 매핑
+      Object.entries(models).forEach(([modelName, modelVariants]) => {
+        Object.entries(modelVariants).forEach(([variant, value]) => {
+          const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
+          rowData[fieldName] = value;
+        });
+      });
+      
+      return rowData;
+    });
+    
+    return flattenedData;
+  }, [data]);
+
+  // 컬럼 정의를 원본 JSON 구조 기반으로 동적 생성
   const columns = useMemo(() => {
+    if (!data || data.length === 0) {
+      return [];
+    }
+
     const createColumn = (title, field) => ({
       title,
       field,
@@ -71,60 +104,34 @@ export function RenderTableSpecs({ data }) {
       columns
     });
 
-    return [
+    // 첫 번째 데이터 항목에서 모델 구조를 가져옴
+    const firstItem = data[0];
+    const { models } = firstItem;
+
+    // 컬럼 구성
+    const columns = [
       { 
         title: getLocale("product_specs"), 
         field: "function", 
         ...FROZEN_COLUMN_PROPS,
         formatter: customFormatter
-      },
-      createColumnGroup("BioStation A2", [
-        createColumn("BSA2-OEPW", "BSA2OEPW"),
-        createColumn("BSA2-OHPW", "BSA2OHPW"),
-        createColumn("BSA2-OIPW", "BSA2OIPW"),
-        createColumn("BSA2-OMPW", "BSA2OMPW")
-      ]),
-      createColumnGroup("BioStation 2", [
-        createColumn("BS2-OEPW", "BS2OEPW"),
-        createColumn("BS2-OHPW", "BS2OHPW"),
-        createColumn("BS2-OIPW", "BS2OIPW"),
-        createColumn("BS2-OMPW", "BS2OMPW")
-      ]),
-      createColumnGroup("BioStation 2A", [
-        createColumn("BS2A-ODPB", "BS2AODPB"),
-        createColumn("BS2A-OAPWB", "BS2AOAPWB")
-      ]),
-      createColumnGroup("BioStation L2", [
-        createColumn("BSL2-OE", "BSL2OE"),
-        createColumn("BSL2-OM", "BSL2OM")
-      ]),
-      createColumnGroup("BioLite N2", [
-        createColumn("BSL2-OE", "BLN2ODB"),
-        createColumn("BLN2-ODB", "BLN2OAB"),
-        createColumn("BLN2-PAB", "BLN2PAB")
-      ]),
-      createColumnGroup("BioEntry W2", [
-        createColumn("BEW2-OHP", "BEW2OHP"),
-        createColumn("BEW2-ODP", "BEW2ODP"),
-        createColumn("BEW2-OAP", "BEW2OAP"),
-        createColumn("BEW2-OHPB", "BEW2OHPB"),
-        createColumn("BEW2-ODPB", "BEW2ODPB"),
-        createColumn("BEW2-OAPB", "BEW2OAPB")
-      ]),
-      createColumnGroup("BioEntry P2", [
-        createColumn("BEP2-OD", "BEP2OD"),
-        createColumn("BEP2-OA", "BEP2OA")
-      ]),
-      createColumnGroup("X-Station 2 Finger", [
-        createColumn("XS2-ODPB", "XS2ODPB"),
-        createColumn("XS2-OAPB", "XS2OAPB")
-      ]),
-      createColumnGroup("BioLite Net", [
-        createColumn("BLR-OC", "BLROC"),
-        createColumn("BLN-OC", "BLNOC")
-      ])
+      }
     ];
-  }, [getLocale, customFormatter]);
+
+    // 각 제품(모델)별로 컬럼 그룹 생성
+    Object.entries(models).forEach(([productName, variants]) => {
+      const productColumns = Object.keys(variants).map(variant => {
+        const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
+        return createColumn(variant, fieldName);
+      });
+      
+      if (productColumns.length > 0) {
+        columns.push(createColumnGroup(productName, productColumns));
+      }
+    });
+
+    return columns;
+  }, [data, getLocale, customFormatter]);
 
   const groupHeader = useCallback((value, count) => {
     return getLocale(value.toLowerCase()) + " (" + count + ")";
@@ -135,7 +142,7 @@ export function RenderTableSpecs({ data }) {
       tabulatorInstance.current = new Tabulator(tableRef.current, {
         height: "calc(100vh - 350px)",
         autoResize: false,
-        data: data,
+        data: transformedData,
         layout: "fitDataFill",
         groupBy: "category",
         groupHeader,
@@ -149,7 +156,7 @@ export function RenderTableSpecs({ data }) {
         tabulatorInstance.current = null;
       }
     };
-  }, [data, columns, groupHeader]);
+  }, [transformedData, columns, groupHeader]);
 
   return (
     <div ref={tableRef} className={styles.tableContainer}></div>
@@ -162,8 +169,10 @@ export function RenderTableFuncs({ data }) {
   const tableRef = useRef(null);
   const tabulatorInstance = useRef(null);
 
-  // 단순한 컬럼 정의를 메모이제이션
+  // 데이터에서 동적으로 컬럼 정의를 생성
   const columns = useMemo(() => {
+    if (!data || data.length === 0) return [];
+
     const createColumn = (title, field) => ({
       title,
       field,
@@ -171,6 +180,12 @@ export function RenderTableFuncs({ data }) {
       ...COMMON_COLUMN_PROPS,
       formatter: customFormatter
     });
+
+    // 첫 번째 데이터 항목에서 제품 컬럼들을 추출
+    const firstItem = data[0];
+    const productColumns = Object.keys(firstItem).filter(
+      key => key !== 'category' && key !== 'function'
+    );
 
     return [
       { 
@@ -182,17 +197,9 @@ export function RenderTableFuncs({ data }) {
           return getLocale(value) || value;
         }
       },
-      createColumn("BioStation A2", "BSA2"),
-      createColumn("BioStation 2", "BS2"),
-      createColumn("BioStation 2a", "BS2a"),
-      createColumn("BioStation L2", "BSL2"),
-      createColumn("BioLite N2", "BLN2"),
-      createColumn("BioEntry W2", "BEW2"),
-      createColumn("BioEntry P2", "BEP2"),
-      createColumn("X-Station 2 Finger", "XS2F"),
-      createColumn("BioLite Net", "BLNet")
+      ...productColumns.map(product => createColumn(product, product))
     ];
-  }, [getLocale, customFormatter]);
+  }, [data, getLocale, customFormatter]);
 
   const groupHeader = useCallback((value, count) => {
     return getLocale(value.toLowerCase()) + " (" + count + ")";

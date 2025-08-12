@@ -577,6 +577,13 @@ const sidebars = {
                 'reference/compares/fingerprint-devices-funcs',
                 'reference/compares/fingerprint-devices-specs'
               ]
+            },
+            {
+              type: 'category',
+              label: '얼굴 인증 장치',
+              items: [
+                'reference/compares/face-devices-funcs',
+              ]
             }
           ]
         },
