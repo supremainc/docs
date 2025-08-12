@@ -837,7 +837,7 @@
     "BLNOC": "60 x 185 x 40"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "ethernet",
     "BSA2OEPW": "ethernet-spec",
     "BSA2OHPW": "ethernet-spec",
@@ -868,7 +868,7 @@
     "BLNOC": "ethernet-spec"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "wifi",
     "BSA2OEPW": "Built-in, IEEE 802.11 b/g",
     "BSA2OHPW": "Built-in, IEEE 802.11 b/g",
@@ -899,7 +899,7 @@
     "BLNOC": false
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "networkprotocol",
     "BSA2OEPW": "TCP, UDP",
     "BSA2OHPW": "TCP, UDP",
@@ -930,7 +930,7 @@
     "BLNOC": "TCP, UDP"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "rs485",
     "BSA2OEPW": "1chmasterslave",
     "BSA2OHPW": "1chmasterslave",
@@ -961,7 +961,7 @@
     "BLNOC": "1chmasterslave"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "rs485-protocol",
     "BSA2OEPW": "osdpv2",
     "BSA2OHPW": "osdpv2",
@@ -992,7 +992,7 @@
     "BLNOC": "osdpv2"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "wiegand",
     "BSA2OEPW": "1chin1chout",
     "BSA2OHPW": "1chin1chout",
@@ -1023,7 +1023,7 @@
     "BLNOC": "1chin1choutopt2"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "Input",
     "BSA2OEPW": "2chinput",
     "BSA2OHPW": "2chinput",
@@ -1054,7 +1054,7 @@
     "BLNOC": "2chinput"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "relay",
     "BSA2OEPW": "2relay",
     "BSA2OHPW": "2relay",
@@ -1085,7 +1085,7 @@
     "BLNOC": "1relay"
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "poe",
     "BSA2OEPW": "ieee8023af",
     "BSA2OHPW": "ieee8023af",
@@ -1116,7 +1116,7 @@
     "BLNOC": false
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "intercom",
     "BSA2OEPW": true,
     "BSA2OHPW": true,
@@ -1147,7 +1147,7 @@
     "BLNOC": false
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "USB",
     "BSA2OEPW": true,
     "BSA2OHPW": true,
@@ -1178,7 +1178,7 @@
     "BLNOC": false
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "sdcard",
     "BSA2OEPW": "microSD card (최대 32 GB)",
     "BSA2OHPW": "microSD card (최대 32 GB)",
@@ -1209,7 +1209,7 @@
     "BLNOC": false
   },
   {
-    "category": "Interface",
+    "category": "interface",
     "function": "tamper",
     "BSA2OEPW": true,
     "BSA2OHPW": true,
