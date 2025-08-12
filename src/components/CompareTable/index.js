@@ -1,12 +1,9 @@
 import React, { useRef, useEffect, useCallback, useMemo } from "react";
 import { TabulatorFull as Tabulator } from "tabulator-tables";
 import  "tabulator-tables/dist/css/tabulator.min.css";
-import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from '../styles.module.css';
-import fData from './supported-functions.json';
-import sData from './fingerprint-specs.json';
-import Locale from '../resources.json';
+import styles from '@site/src/pages/product-compares/styles.module.css';
+import Locale from '@site/src/pages/product-compares/resources.json';
 
 // 공통 상수 정의
 const COMMON_COLUMN_PROPS = {
@@ -14,7 +11,6 @@ const COMMON_COLUMN_PROPS = {
   headerHozAlign: "center", 
   headerVertical: false,
   headerSort: false,
-  width: 120
 };
 
 const FROZEN_COLUMN_PROPS = {
@@ -22,7 +18,7 @@ const FROZEN_COLUMN_PROPS = {
   headerHozAlign: "center",
   headerVertical: false,
   headerSort: false,
-  width: 180,
+  width: 150,
   frozen: true
 };
 
@@ -53,7 +49,7 @@ function useCustomLocaleFormatter() {
   }, [getLocale]);
 }
 
-function RenderTableSpecs({ data }) {
+export function RenderTableSpecs({ data }) {
   const getLocale = useLocale();
   const customFormatter = useCustomLocaleFormatter();
   const tableRef = useRef(null);
@@ -65,6 +61,7 @@ function RenderTableSpecs({ data }) {
       title,
       field,
       ...COMMON_COLUMN_PROPS,
+      width: 120,
       formatter: customFormatter
     });
 
@@ -159,7 +156,7 @@ function RenderTableSpecs({ data }) {
   );
 }
 
-function RenderTableFuncs({ data }) {
+export function RenderTableFuncs({ data }) {
   const getLocale = useLocale();
   const customFormatter = useCustomLocaleFormatter();
   const tableRef = useRef(null);
@@ -203,10 +200,10 @@ function RenderTableFuncs({ data }) {
   useEffect(() => {
     if (tableRef.current && !tabulatorInstance.current) {
       tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "100%",
-        autoResize: false,
+        height: "calc(100vh - 350px)",
         data: data,
-        layout: "fitDataTable",
+        layout:"fitColumns",
+        resizableColumnFit:true,
         groupBy: "category",
         groupHeader,
         columns
@@ -222,28 +219,4 @@ function RenderTableFuncs({ data }) {
   }, [data, columns, groupHeader]);
 
   return <div ref={tableRef} className={styles.tableContainer}></div>;
-}
-
-export default function ProductCompares() {
-  const { siteConfig } = useDocusaurusContext();
-  const getLocale = useLocale();
-  return (
-    <Layout
-      title={`${siteConfig.title} - 제품 비교: 지문 인식 장치`}
-      description="Suprema 제품 비교 페이지입니다. 다양한 Suprema 제품의 기능을 비교할 수 있습니다."
-    >
-      <div className={styles.container}>
-        <h1 className={styles.title}>{getLocale("fingerprint_title")}</h1>
-        <h2 className={styles.subtitle}>{getLocale("main_function_compare")}</h2>
-        <p>{getLocale("main_function_compare_note")}</p>
-        <div className={styles.tableContainerBlock}>
-          <RenderTableFuncs data={fData} />
-        </div>
-        <h2 className={styles.subtitle}>{getLocale("product_specs_compare")}</h2>
-        <div className={styles.tableContainerBlock}>
-          <RenderTableSpecs data={sData} />
-        </div>
-      </div>
-    </Layout>
-  );
 }

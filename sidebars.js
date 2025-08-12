@@ -566,6 +566,14 @@ const sidebars = {
       },
       items: [
         'reference/glossary',
+        {
+          type: 'category',
+          label: '지문 인식 장치',
+          items: [
+            'reference/compares/fingerprint-devices-funcs',
+            'reference/compares/fingerprint-devices-specs'
+          ]
+        }
       ]
     }
   ],

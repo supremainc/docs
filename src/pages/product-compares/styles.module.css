@@ -10,6 +10,10 @@
   margin: .5rem 0 2rem 0;
 }
 
+.subtitle {
+  margin-top: 2.5rem;
+}
+
 
 
 @media print {
