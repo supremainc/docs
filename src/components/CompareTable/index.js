@@ -133,7 +133,7 @@ export function RenderTableSpecs({ data }) {
   useEffect(() => {
     if (tableRef.current && !tabulatorInstance.current) {
       tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "100%",
+        height: "calc(100vh - 350px)",
         autoResize: false,
         data: data,
         layout: "fitDataFill",
@@ -167,6 +167,7 @@ export function RenderTableFuncs({ data }) {
     const createColumn = (title, field) => ({
       title,
       field,
+      width: 150,
       ...COMMON_COLUMN_PROPS,
       formatter: customFormatter
     });
@@ -202,7 +203,7 @@ export function RenderTableFuncs({ data }) {
       tabulatorInstance.current = new Tabulator(tableRef.current, {
         height: "calc(100vh - 350px)",
         data: data,
-        layout:"fitColumns",
+        layout:"fitDataFill",
         resizableColumnFit:true,
         groupBy: "category",
         groupHeader,

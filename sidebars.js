@@ -566,13 +566,19 @@ const sidebars = {
       items: [
         'reference/glossary',
         {
-          type: 'category',
-          label: '지문 인식 장치',
+          type: "category",
+          label: "제품 기능 및 사양 비교",
           items: [
-            'reference/compares/fingerprint-devices-funcs',
-            'reference/compares/fingerprint-devices-specs'
+            {
+              type: 'category',
+              label: '지문 인식 장치',
+              items: [
+                'reference/compares/fingerprint-devices-funcs',
+                'reference/compares/fingerprint-devices-specs'
+              ]
+            }
           ]
-        }
+        },
       ]
     }
   ],
