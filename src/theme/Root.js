@@ -33,7 +33,7 @@ if (!isDev && msalInstance) {
 // Default implementation, that you can customize
 export default function Root({children}) {
     // Don't show authentication in development environment for security reasons
-    if (!isDev) {
+    if (isDev) {
         return <>{children}</>;
     }
 
