@@ -489,7 +489,7 @@ function RenderTable(param) {
                         formatter: CustomLocale
                     },
                     {
-                        title: "BioStation L2a",
+                        title: "BioStation L2",
                         field: "BSL2",
                         hozAlign: "center",
                         headerHozAlign: "center",
