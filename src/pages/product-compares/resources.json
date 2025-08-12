@@ -1,7 +1,11 @@
 {
   "ko": {
+    "fingerprint_title": "지문 인식 장치 비교",
     "main_function": "주요 기능",
+    "main_function_compare": "주요 기능 비교",
+    "main_function_compare_note": "🔶: 제품 세부 모델에 따라 지원 여부가 다를 수 있습니다.",
     "product_specs": "제품 사양",
+    "product_specs_compare": "제품 사양 비교",
     "credential": "크리덴셜",
     "face": "얼굴",
     "fingerprint": "지문",
@@ -108,8 +112,12 @@
     "p12ve2a": "전압: 12 Vdc, 전류: 최대 0.2 A"
   },
   "en": {
+    "fingerprint_title": "Compare Fingerprint Recognition Devices",
     "main_function": "Main Function",
-    "product_specs": "Product Specifications",
+    "main_function_compare": "Compare main functions",
+    "main_function_compare_note": "🔶: Support may vary depending on the specific product model.",
+    "product_specs": "Product specifications",
+    "product_specs_compare": "Compare product specifications",
     "credential": "Credential",
     "face": "Face",
     "fingerprint": "Fingerprint",
