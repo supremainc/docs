@@ -194,7 +194,7 @@ function RenderTable({ data }) {
           { title: "BioStation A2", field: "BSA2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
           { title: "BioStation 2", field: "BS2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
           { title: "BioStation 2a", field: "BS2a", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
-          { title: "BioStation L2a", field: "BSL2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
+          { title: "BioStation L2", field: "BSL2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
           { title: "BioLite N2", field: "BLN2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
           { title: "BioEntry W2", field: "BEW2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
           { title: "BioEntry P2", field: "BEP2", hozAlign: "center", headerHozAlign: "center", headerVertical:false, headerSort: false, formatter: CustomLocale },
