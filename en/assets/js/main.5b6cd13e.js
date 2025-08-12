@@ -44246,7 +44246,7 @@ if (!isDev && msalInstance) {
 function Root(param) {
     let { children } = param;
     // Don't show authentication in development environment for security reasons
-    if (!isDev) {
+    if (isDev) {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: children
         });
