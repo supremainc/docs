@@ -21475,7 +21475,7 @@ var routesChunkNames = __webpack_require__(37138);
         /*require.resolve*/(12082)
     ],
     "17896441": [
-        ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("6212"), __webpack_require__.e("1047"), __webpack_require__.e("9340"), __webpack_require__.e("7048")]).then(__webpack_require__.bind(__webpack_require__, 52963)),
+        ()=>Promise.all(/* import() | 17896441 */ [__webpack_require__.e("6212"), __webpack_require__.e("9340"), __webpack_require__.e("7048")]).then(__webpack_require__.bind(__webpack_require__, 52963)),
         "@theme/DocItem",
         /*require.resolve*/(52963)
     ],
@@ -22380,7 +22380,7 @@ var routesChunkNames = __webpack_require__(37138);
         /*require.resolve*/(62210)
     ],
     "cc041e00": [
-        ()=>Promise.all(/* import() | cc041e00 */ [__webpack_require__.e("6212"), __webpack_require__.e("1047"), __webpack_require__.e("1046")]).then(__webpack_require__.bind(__webpack_require__, 50138)),
+        ()=>Promise.all(/* import() | cc041e00 */ [__webpack_require__.e("6212"), __webpack_require__.e("1046")]).then(__webpack_require__.bind(__webpack_require__, 50138)),
         "@site/docs/confidential/smartcardapi.mdx",
         /*require.resolve*/(50138)
     ],
@@ -53086,7 +53086,7 @@ __webpack_require__.d(__webpack_exports__, {
       ]
     },
     "zoom": {
-      "selector": ".markdown :not(em, div) > img:not(.ico)",
+      "selector": ".markdown :not(em, div) > img:not(.ico):not(.useMap)",
       "background": {
         "light": "rgb(255, 255, 255)",
         "dark": "rgb(50, 50, 50)"

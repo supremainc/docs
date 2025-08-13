@@ -1261,7 +1261,7 @@ var sizeOfimages_namespaceObject = JSON.parse('{"/docs/img/air/air-device-manage
 
 
 function Image(param) {
-    let { src, alt, className, alone, caption, ico, width, height } = param;
+    let { src, alt, className, alone, caption, ico, width, height, usemap } = param;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
     const imagePath = currentLocale === 'ko' || alone ? (0,useBaseUrl/* default */.ZP)(src) : (0,useBaseUrl/* default */.ZP)(src.replace('/img/', `/img/${currentLocale}/`));
     const errTarget = (0,useBaseUrl/* default */.ZP)('/img/default-placeholder-image.webp');
@@ -1287,7 +1287,8 @@ function Image(param) {
         } : {
             width: sizeOfimages_namespaceObject[imagePath]?.width || 'auto',
             height: sizeOfimages_namespaceObject[imagePath]?.height || 'auto'
-        }
+        },
+        usemap: usemap
     };
     if (ico) {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)("img", {
