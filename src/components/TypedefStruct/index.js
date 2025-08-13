@@ -25,7 +25,7 @@ const TypedefStruct = ({
           <ul key={index} className={styles.hierarchyItem}>
             <li className={styles.hierarchyNode}>
               <div className={styles.nodeHeader}>
-                <span className={styles.hierarchyName}><a href={`#${item.name.toLowerCase()}`}>{item.name}</a></span>
+                <span className={styles.hierarchyName}>{item.name}</span>
                 {item.type && <span className={styles.hierarchyType}>{item.type}</span>}
                 {item.size && <span className={styles.hierarchySize}>{item.size} {item.size > 1 ? "bytes" : "byte"}</span>}
               </div>
