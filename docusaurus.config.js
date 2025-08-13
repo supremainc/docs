@@ -242,7 +242,7 @@ const config = {
         additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c' ]
       },
       zoom: {
-        selector: '.markdown :not(em, div) > img:not(.ico)',
+        selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',
         background: {
           light: 'rgb(255, 255, 255)',
           dark: 'rgb(50, 50, 50)'
