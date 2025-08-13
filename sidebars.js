@@ -584,6 +584,14 @@ const sidebars = {
                 'reference/compares/face-devices-funcs',
                 'reference/compares/face-devices-specs',
               ]
+            },
+            {
+              type: 'category',
+              label: 'RFID 장치',
+              items: [
+                'reference/compares/rfid-devices-funcs',
+                // 'reference/compares/rfid-devices-specs',
+              ]
             }
           ]
         },
