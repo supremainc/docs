@@ -356,7 +356,7 @@ SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이�
 
 [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php)에서는 **BS2_ComputeCRC16CCITT** 함수를 제공합니다. 아래는 사용 예시입니다.
 
-```csharp
+```csharp title='Calculate checksum'
 // Calculate card data checksum (cardCRC)
 uint16_t cardCRC = 0xFFFF;
 int result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);
@@ -386,7 +386,7 @@ result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCa
 
 1. 저장된 CRC 값과 계산된 CRC 값 비교
 
-```csharp
+```csharp title='CRC Validation'
 // CRC validation example
 BS2SmartCardData readCard;  // Data read from card
 
