@@ -571,7 +571,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: '지문 인식 장치',
+              label: '지문 인증 장치',
               items: [
                 'reference/compares/fingerprint-devices-funcs',
                 'reference/compares/fingerprint-devices-specs'
@@ -582,6 +582,7 @@ const sidebars = {
               label: '얼굴 인증 장치',
               items: [
                 'reference/compares/face-devices-funcs',
+                'reference/compares/face-devices-specs',
               ]
             }
           ]
