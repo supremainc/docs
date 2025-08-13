@@ -29,8 +29,29 @@ const TypedefStruct = ({
                 {item.type && <span className={styles.hierarchyType}>{item.type}</span>}
                 {item.size && <span className={styles.hierarchySize}>{item.size} {item.size > 1 ? "bytes" : "byte"}</span>}
               </div>
-              {item.description && <div className={styles.hierarchyDesc}>{item.description}</div>}
-              
+              {item.description && <p className={styles.hierarchyDesc} dangerouslySetInnerHTML={{ __html: item.description }} />}
+              {/* 필드별 상수 테이블 */}
+              {item.constants && item.constants.length > 0 && (
+                <div className={styles.fieldConstants}>
+                  <Heading as='h6'>가능한 값</Heading>
+                  <table className={styles.constantsTable}>
+                    <thead>
+                      <tr>
+                        <th>값</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {item.constants.map((constant, constIndex) => (
+                        <tr key={constIndex}>
+                          <td className={styles.constantValue}>{constant.value}</td>
+                          <td><p dangerouslySetInnerHTML={{ __html: constant.description }} /></td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
               {item.references && item.references.length > 0 && (
                 <div className={styles.references}>
                   <span className={styles.referencesLabel}>참조:</span>
@@ -99,14 +120,14 @@ const TypedefStruct = ({
       </div>
 
       {/* 구조체 정의 */}
-      <div className={styles.section}>
+      {/* <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <Heading as='h4'>구조체 정의</Heading>
         </div>
         {code && (
           <CodeBlock language='csharp'>{code}</CodeBlock>
         )}
-      </div>
+      </div> */}
 
       {/* 구조 계층 */}
       {hierarchy.length > 0 && (

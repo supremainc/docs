@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
 import imageSize from './sizeOfimages.json';
 
-export default function Image({src, alt, className, alone, caption, ico, width, height}) {
+export default function Image({src, alt, className, alone, caption, ico, width, height, usemap}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     
     const imagePath = 
@@ -39,6 +39,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             width: imageSize[imagePath]?.width || 'auto',
             height: imageSize[imagePath]?.height || 'auto'
         }),
+        usemap: usemap
     };
 
     if (ico) {
