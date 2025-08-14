@@ -18,7 +18,7 @@ const shouldEnableAuth = () => {
     if (isAlgoliaCrawler()) return false;
     
     // Disable auth if DISABLE_AUTH environment variable is set
-    if (process.env.REACT_APP_DISABLE_AUTH === 'true') return false;
+    // if (process.env.REACT_APP_DISABLE_AUTH === 'true') return false;
     
     return true;
 };
