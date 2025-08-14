@@ -33,7 +33,7 @@ if (!isDev && authEnabled && msalInstance) {
 // Default implementation, that you can customize
 export default function Root({children}) {
     // Don't show authentication in development environment or when auth is disabled
-    if (isDev || !authEnabled) {
+    if (isDev || authEnabled) {
         return <>{children}</>;
     }
 
