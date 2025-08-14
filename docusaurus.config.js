@@ -114,7 +114,13 @@ const config = {
   ],
   plugins: [
     [ 'docusaurus-plugin-sass', {} ],
-    [ 'docusaurus-plugin-image-zoom', {}]
+    [ 'docusaurus-plugin-image-zoom', {}],
+    [
+      '@docusaurus/plugin-google-tag-manager',
+      {
+        containerId: 'GTM-5B4VPXL2',
+      },
+    ],
   ],
   markdown: {
     mermaid: true,
