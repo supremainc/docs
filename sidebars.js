@@ -600,6 +600,14 @@ const sidebars = {
                 'reference/compares/finger-rfid-devices-funcs',
                 'reference/compares/finger-rfid-devices-specs',
               ]
+            },
+            {
+              type: 'category',
+              label: '지능형 컨트롤러 및 주변 장치',
+              items: [
+                'reference/compares/controller-devices-funcs',
+                'reference/compares/controller-devices-specs',
+              ]
             }
           ]
         },
