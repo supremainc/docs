@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7473"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7435"], {
 1453: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
