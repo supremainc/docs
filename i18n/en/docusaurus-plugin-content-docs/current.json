@@ -194,5 +194,33 @@
   "sidebar.biostarx.category.고급 설정": {
     "message": "Advanced Settings",
     "description": "The label for category 고급 설정 in sidebar biostarx"
+  },
+  "sidebar.reference.category.제품 기능 및 사양 비교": {
+    "message": "Compare Product Features and Specifications",
+    "description": "The label for category 제품 기능 및 사양 비교 in sidebar reference"
+  },
+  "sidebar.reference.category.지문 인증 장치": {
+    "message": "Fingerprint Authentication Devices",
+    "description": "The label for category 지문 인증 장치 in sidebar reference"
+  },
+  "sidebar.reference.category.얼굴 인증 장치": {
+    "message": "Face Authentication Devices",
+    "description": "The label for category 얼굴 인증 장치 in sidebar reference"
+  },
+  "sidebar.reference.category.RFID 장치": {
+    "message": "RFID Devices",
+    "description": "The label for category RFID 장치 in sidebar reference"
+  },
+  "sidebar.reference.category.지문 및 RFID 리더": {
+    "message": "Fingerprint and RFID Readers",
+    "description": "The label for category 지문 및 RFID 리더 in sidebar reference"
+  },
+  "sidebar.reference.category.지능형 컨트롤러 및 주변 장치": {
+    "message": "Intelligent Controllers and Peripherals",
+    "description": "The label for category 지능형 컨트롤러 및 주변 장치 in sidebar reference"
+  },
+  "sidebar.howto.category.How-to Articles": {
+    "message": "How-to Articles",
+    "description": "The label for category How-to Articles in sidebar howto"
   }
 }
