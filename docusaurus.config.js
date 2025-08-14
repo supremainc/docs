@@ -116,9 +116,10 @@ const config = {
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
     [
-      '@docusaurus/plugin-google-tag-manager',
+      '@docusaurus/plugin-google-gtag',
       {
-        containerId: 'GTM-5B4VPXL2',
+        trackingID: 'G-98B2Y5C3H6',
+        anonymizeIP: true,
       },
     ],
   ],
