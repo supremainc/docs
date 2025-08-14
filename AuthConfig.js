@@ -6,7 +6,7 @@ import { LogLevel } from "@azure/msal-browser";
 const isAlgoliaCrawler = () => {
     if (typeof window === 'undefined') return false;
     const userAgent = window.navigator.userAgent.toLowerCase();
-    return userAgent.includes('algolia') || userAgent.includes('crawler');
+    return userAgent.includes('algolia') || userAgent.includes('crawler') || userAgent.includes('supremaincio');
 };
 
 /**
