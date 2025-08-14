@@ -590,7 +590,7 @@ const sidebars = {
               label: 'RFID 장치',
               items: [
                 'reference/compares/rfid-devices-funcs',
-                // 'reference/compares/rfid-devices-specs',
+                'reference/compares/rfid-devices-specs',
               ]
             }
           ]
