@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { PublicClientApplication, EventType } from '@azure/msal-browser';
 import { MsalProvider, AuthenticatedTemplate, useMsal, UnauthenticatedTemplate } from "@azure/msal-react";
-import { msalConfig } from '@site/AuthConfig';
+import { msalConfig, authEnabled } from '@site/AuthConfig';
 import { translate } from '@docusaurus/Translate';
 
 const isDev = process.env.NODE_ENV === 'development';
 
 /**
  * MSAL should be instantiated outside of the component tree to prevent it from being re-instantiated on re-renders.
- * Only instantiate in production environment for security reasons.
+ * Only instantiate in production environment and when authentication is enabled.
  */
-const msalInstance = !isDev ? new PublicClientApplication(msalConfig) : null;
+const msalInstance = (!isDev && authEnabled && msalConfig) ? new PublicClientApplication(msalConfig) : null;
 
 // Default to using the first account if no account is active on page load
-// Only in production environment
-if (!isDev && msalInstance && !msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
+// Only in production environment and when authentication is enabled
+if (!isDev && authEnabled && msalInstance && !msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
     // Account selection logic is app dependent. Adjust as needed for different use cases.
     msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
 }
 
 // Listen for sign-in event and set active account
-// Only in production environment
-if (!isDev && msalInstance) {
+// Only in production environment and when authentication is enabled
+if (!isDev && authEnabled && msalInstance) {
     msalInstance.addEventCallback((event) => {
         if (event.eventType === EventType.LOGIN_SUCCESS && event.payload.account) {
             const account = event.payload.account;
@@ -32,8 +32,8 @@ if (!isDev && msalInstance) {
 
 // Default implementation, that you can customize
 export default function Root({children}) {
-    // Don't show authentication in development environment for security reasons
-    if (isDev) {
+    // Don't show authentication in development environment or when auth is disabled
+    if (isDev || authEnabled) {
         return <>{children}</>;
     }
 
