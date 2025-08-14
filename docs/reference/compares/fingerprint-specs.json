@@ -1075,49 +1075,49 @@
     "function": "operating-temperature",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": "-20 °C ~ 50 °C",
-        "BSA2-OHPW": "-20 °C ~ 50 °C",
-        "BSA2-OIPW": "-20 °C ~ 50 °C",
-        "BSA2-OMPW": "-20 °C ~ 50 °C"
+        "BSA2-OEPW": "-20℃ ~ 50℃",
+        "BSA2-OHPW": "-20℃ ~ 50℃",
+        "BSA2-OIPW": "-20℃ ~ 50℃",
+        "BSA2-OMPW": "-20℃ ~ 50℃"
       },
       "BioStation 2": {
-        "BS2-OEPW": "-20 °C ~ 50 °C",
-        "BS2-OHPW": "-20 °C ~ 50 °C",
-        "BS2-OIPW": "-20 °C ~ 50 °C",
-        "BS2-OMPW": "-20 °C ~ 50 °C"
+        "BS2-OEPW": "-20℃ ~ 50℃",
+        "BS2-OHPW": "-20℃ ~ 50℃",
+        "BS2-OIPW": "-20℃ ~ 50℃",
+        "BS2-OMPW": "-20℃ ~ 50℃"
       },
       "BioStation 2a": {
-        "BS2A-ODPB": "-20 °C ~ 60 °C",
-        "BS2A-OAPWB": "-20 °C ~ 60 °C"
+        "BS2A-ODPB": "-20℃ ~ 60℃",
+        "BS2A-OAPWB": "-20℃ ~ 60℃"
       },
       "BioStation L2": {
-        "BSL2-OE": "-20 °C ~ 50 °C",
-        "BSL2-OM": "-20 °C ~ 50 °C"
+        "BSL2-OE": "-20℃ ~ 50℃",
+        "BSL2-OM": "-20℃ ~ 50℃"
       },
       "BioLite N2": {
-        "BLN2-ODB": "-20 °C ~ 50 °C",
-        "BLN2-OAB": "-20 °C ~ 50 °C",
-        "BLN2-PAB": "-10 °C ~ 50 °C"
+        "BLN2-ODB": "-20℃ ~ 50℃",
+        "BLN2-OAB": "-20℃ ~ 50℃",
+        "BLN2-PAB": "-10℃ ~ 50℃"
       },
       "BioEntry W2": {
-        "BEW2-OHP": "-20 °C ~ 50 °C",
-        "BEW2-ODP": "-20 °C ~ 50 °C",
-        "BEW2-OAP": "-20 °C ~ 50 °C",
-        "BEW2-OHPB": "-20 °C ~ 50 °C",
-        "BEW2-ODPB": "-20 °C ~ 50 °C",
-        "BEW2-OAPB": "-20 °C ~ 50 °C"
+        "BEW2-OHP": "-20℃ ~ 50℃",
+        "BEW2-ODP": "-20℃ ~ 50℃",
+        "BEW2-OAP": "-20℃ ~ 50℃",
+        "BEW2-OHPB": "-20℃ ~ 50℃",
+        "BEW2-ODPB": "-20℃ ~ 50℃",
+        "BEW2-OAPB": "-20℃ ~ 50℃"
       },
       "BioEntry P2": {
-        "BEP2-OD": "-20 °C ~ 50 °C",
-        "BEP2-OA": "-20 °C ~ 50 °C"
+        "BEP2-OD": "-20℃ ~ 50℃",
+        "BEP2-OA": "-20℃ ~ 50℃"
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": "-20 °C ~ 50 °C",
-        "XS2-OAPB": "-20 °C ~ 50 °C"
+        "XS2-ODPB": "-20℃ ~ 50℃",
+        "XS2-OAPB": "-20℃ ~ 50℃"
       },
       "BioLite Net": {
-        "BLR-OC": "-20 °C ~ 50 °C",
-        "BLN-OC": "-20 °C ~ 50 °C"
+        "BLR-OC": "-20℃ ~ 50℃",
+        "BLN-OC": "-20℃ ~ 50℃"
       }
     }
   },
@@ -1126,49 +1126,49 @@
     "function": "storage-temperature",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": "-40 °C ~ 70 °C",
-        "BSA2-OHPW": "-40 °C ~ 70 °C",
-        "BSA2-OIPW": "-40 °C ~ 70 °C",
-        "BSA2-OMPW": "-40 °C ~ 70 °C"
+        "BSA2-OEPW": "-40℃ ~ 70℃",
+        "BSA2-OHPW": "-40℃ ~ 70℃",
+        "BSA2-OIPW": "-40℃ ~ 70℃",
+        "BSA2-OMPW": "-40℃ ~ 70℃"
       },
       "BioStation 2": {
-        "BS2-OEPW": "-40 °C ~ 70 °C",
-        "BS2-OHPW": "-40 °C ~ 70 °C",
-        "BS2-OIPW": "-40 °C ~ 70 °C",
-        "BS2-OMPW": "-40 °C ~ 70 °C"
+        "BS2-OEPW": "-40℃ ~ 70℃",
+        "BS2-OHPW": "-40℃ ~ 70℃",
+        "BS2-OIPW": "-40℃ ~ 70℃",
+        "BS2-OMPW": "-40℃ ~ 70℃"
       },
       "BioStation 2a": {
-        "BS2A-ODPB": "-40 °C ~ 70 °C",
-        "BS2A-OAPWB": "-40 °C ~ 70 °C"
+        "BS2A-ODPB": "-40℃ ~ 70℃",
+        "BS2A-OAPWB": "-40℃ ~ 70℃"
       },
       "BioStation L2": {
-        "BSL2-OE": "-40 °C ~ 70 °C",
-        "BSL2-OM": "-40 °C ~ 70 °C"
+        "BSL2-OE": "-40℃ ~ 70℃",
+        "BSL2-OM": "-40℃ ~ 70℃"
       },
       "BioLite N2": {
-        "BLN2-ODB": "-40 °C ~ 70 °C",
-        "BLN2-OAB": "-40 °C ~ 70 °C",
-        "BLN2-PAB": "-20 °C ~ 60 °C"
+        "BLN2-ODB": "-40℃ ~ 70℃",
+        "BLN2-OAB": "-40℃ ~ 70℃",
+        "BLN2-PAB": "-20℃ ~ 60℃"
       },
       "BioEntry W2": {
-        "BEW2-OHP": "-40 °C ~ 70 °C",
-        "BEW2-ODP": "-40 °C ~ 70 °C",
-        "BEW2-OAP": "-40 °C ~ 70 °C",
-        "BEW2-OHPB": "-40 °C ~ 70 °C",
-        "BEW2-ODPB": "-40 °C ~ 70 °C",
-        "BEW2-OAPB": "-40 °C ~ 70 °C"
+        "BEW2-OHP": "-40℃ ~ 70℃",
+        "BEW2-ODP": "-40℃ ~ 70℃",
+        "BEW2-OAP": "-40℃ ~ 70℃",
+        "BEW2-OHPB": "-40℃ ~ 70℃",
+        "BEW2-ODPB": "-40℃ ~ 70℃",
+        "BEW2-OAPB": "-40℃ ~ 70℃"
       },
       "BioEntry P2": {
-        "BEP2-OD": "-40 °C ~ 70 °C",
-        "BEP2-OA": "-40 °C ~ 70 °C"
+        "BEP2-OD": "-40℃ ~ 70℃",
+        "BEP2-OA": "-40℃ ~ 70℃"
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": "-40 °C ~ 70 °C",
-        "XS2-OAPB": "-40 °C ~ 70 °C"
+        "XS2-ODPB": "-40℃ ~ 70℃",
+        "XS2-OAPB": "-40℃ ~ 70℃"
       },
       "BioLite Net": {
-        "BLR-OC": "-40 °C ~ 70 °C",
-        "BLN-OC": "-40 °C ~ 70 °C"
+        "BLR-OC": "-40℃ ~ 70℃",
+        "BLN-OC": "-40℃ ~ 70℃"
       }
     }
   },

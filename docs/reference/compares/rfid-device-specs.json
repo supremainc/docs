@@ -593,29 +593,29 @@
     "function": "operating-temperature",
     "models": {
       "Xpass": {
-        "XPE-PoE": "-20 °C ~ 50 °C",
-        "XPM-PoE": "-20 °C ~ 50 °C",
-        "XPH-PoE": "-20 °C ~ 50 °C"
+        "XPE-PoE": "-20℃ ~ 50℃",
+        "XPM-PoE": "-20℃ ~ 50℃",
+        "XPH-PoE": "-20℃ ~ 50℃"
       },
       "Xpass S2": {
-        "XPS2M": "-35 °C ~ 65 °C"
+        "XPS2M": "-35℃ ~ 65℃"
       },
       "X-Station": {
-        "XSE": "-20 °C ~ 50 °C",
-        "XSM": "-20 °C ~ 50 °C"
+        "XSE": "-20℃ ~ 50℃",
+        "XSM": "-20℃ ~ 50℃"
       },
       "XPass 2": {
-        "XP2-MDPB": "-35 °C ~ 65 °C",
-        "XP2-MAPB": "-35 °C ~ 65 °C",
-        "XP2-MAPB-H": "-35 °C ~ 65 °C",
-        "XP2-GDPB": "-35 °C ~ 65 °C",
-        "XP2-GKDPB": "-35 °C ~ 65 °C"
+        "XP2-MDPB": "-35℃ ~ 65℃",
+        "XP2-MAPB": "-35℃ ~ 65℃",
+        "XP2-MAPB-H": "-35℃ ~ 65℃",
+        "XP2-GDPB": "-35℃ ~ 65℃",
+        "XP2-GKDPB": "-35℃ ~ 65℃"
       },
       "X-Station 2": {
-        "XS2-QDPB": "-20 °C ~ 50 °C",
-        "XS2-QAPB": "-20 °C ~ 50 °C",
-        "XS2-DPB": "-20 °C ~ 50 °C",
-        "XS2-APB": "-20 °C ~ 50 °C"
+        "XS2-QDPB": "-20℃ ~ 50℃",
+        "XS2-QAPB": "-20℃ ~ 50℃",
+        "XS2-DPB": "-20℃ ~ 50℃",
+        "XS2-APB": "-20℃ ~ 50℃"
       }
     }
   },
@@ -624,29 +624,29 @@
     "function": "storage-temperature",
     "models": {
       "Xpass": {
-        "XPE-PoE": "-40 °C ~ 70 °C",
-        "XPM-PoE": "-40 °C ~ 70 °C",
-        "XPH-PoE": "-40 °C ~ 70 °C"
+        "XPE-PoE": "-40℃ ~ 70℃",
+        "XPM-PoE": "-40℃ ~ 70℃",
+        "XPH-PoE": "-40℃ ~ 70℃"
       },
       "Xpass S2": {
-        "XPS2M": "-40 °C ~ 70 °C"
+        "XPS2M": "-40℃ ~ 70℃"
       },
       "X-Station": {
-        "XSE": "-40 °C ~ 70 °C",
-        "XSM": "-40 °C ~ 70 °C"
+        "XSE": "-40℃ ~ 70℃",
+        "XSM": "-40℃ ~ 70℃"
       },
       "XPass 2": {
-        "XP2-MDPB": "-40 °C ~ 70 °C",
-        "XP2-MAPB": "-40 °C ~ 70 °C",
-        "XP2-MAPB-H": "-40 °C ~ 70 °C",
-        "XP2-GDPB": "-40 °C ~ 70 °C",
-        "XP2-GKDPB": "-40 °C ~ 70 °C"
+        "XP2-MDPB": "-40℃ ~ 70℃",
+        "XP2-MAPB": "-40℃ ~ 70℃",
+        "XP2-MAPB-H": "-40℃ ~ 70℃",
+        "XP2-GDPB": "-40℃ ~ 70℃",
+        "XP2-GKDPB": "-40℃ ~ 70℃"
       },
       "X-Station 2": {
-        "XS2-QDPB": "-40 °C ~ 70 °C",
-        "XS2-QAPB": "-40 °C ~ 70 °C",
-        "XS2-DPB": "-40 °C ~ 70 °C",
-        "XS2-APB": "-40 °C ~ 70 °C"
+        "XS2-QDPB": "-40℃ ~ 70℃",
+        "XS2-QAPB": "-40℃ ~ 70℃",
+        "XS2-DPB": "-40℃ ~ 70℃",
+        "XS2-APB": "-40℃ ~ 70℃"
       }
     }
   },

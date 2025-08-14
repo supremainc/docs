@@ -1,0 +1,506 @@
+[
+  {
+    "category": "rfid",
+    "function": "rfoption",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "XPD2-GDB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "XPD2-GKDB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "mobile",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "NFC"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "NFC, BLE",
+        "XPD2-GDB": "NFC, BLE",
+        "XPD2-GKDB": "NFC, BLE"
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "sckeypad",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "qr",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "protectlevel",
+    "function": "wd",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": "IP65, IP67",
+        "XPD2-GDB": "IP65, IP67",
+        "XPD2-GKDB": "IP65, IP67"
+      }
+    }
+  },
+  {
+    "category": "protectlevel",
+    "function": "breakprevent",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": "IK08",
+        "XPD2-GDB": "IK08",
+        "XPD2-GKDB": "IK08"
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "template",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "SUPREMA / ISO 19794-2 / ANSI 378"
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "detection",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "minex"
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "fake-fingerprint-detection",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "CPU",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "1.0 GHz"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "80 MHz",
+        "XPD2-GDB": "80 MHz",
+        "XPD2-GKDB": "80 MHz"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "Memory",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "32 MB Flash + 32 MB RAM"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "512 KB Flash + 160 KB RAM",
+        "XPD2-GDB": "512 KB Flash + 160 KB RAM",
+        "XPD2-GKDB": "512 KB Flash + 160 KB RAM"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "cryptochip",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": true
+      },
+      "XPass D2": {
+        "XPD2-MDB": true,
+        "XPD2-GDB": true,
+        "XPD2-GKDB": true
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "display",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "resolution",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "LED",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "multiColor"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "multiColor",
+        "XPD2-GDB": "multiColor",
+        "XPD2-GKDB": "multiColor"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "sound",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "multiToneBuzzer"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "multiToneBuzzer",
+        "XPD2-GDB": "multiToneBuzzer",
+        "XPD2-GKDB": "multiToneBuzzer"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-temperature",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "-20℃ ~ 50℃"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "-35℃ ~ 65℃",
+        "XPD2-GDB": "-35℃ ~ 65℃",
+        "XPD2-GKDB": "-35℃ ~ 65℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-temperature",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "-40℃ ~ 70℃"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "-40℃ ~ 70℃",
+        "XPD2-GDB": "-40℃ ~ 70℃",
+        "XPD2-GKDB": "-40℃ ~ 70℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-humidity",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "operating-humidity-spec"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "operating-humidity-spec95",
+        "XPD2-GDB": "operating-humidity-spec95",
+        "XPD2-GKDB": "operating-humidity-spec95"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-humidity",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "storage-humidity-spec"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "storage-humidity-spec95",
+        "XPD2-GDB": "storage-humidity-spec95",
+        "XPD2-GKDB": "storage-humidity-spec95"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "weight",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "d158b39"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "d117b30",
+        "XPD2-GDB": "d140b52",
+        "XPD2-GKDB": "d145b52"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "dimension",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "50.1 x 164 x 38"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "48 x 144.7 x 27",
+        "XPD2-GDB": "80 x 130 x 25",
+        "XPD2-GKDB": "80 x 130 x 25"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "ethernet",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "wifi",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "networkprotocol",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "1chslave"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "1chslave",
+        "XPD2-GDB": "1chslave",
+        "XPD2-GKDB": "1chslave"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485-protocol",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "osdpv2"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "osdpv2",
+        "XPD2-GDB": "osdpv2",
+        "XPD2-GKDB": "osdpv2"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "wiegand",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": "1ch",
+        "XPD2-GDB": "1ch",
+        "XPD2-GKDB": "1ch"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "Input",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "relay",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "poe",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "intercom",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "USB",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "sdcard",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": false
+      },
+      "XPass D2": {
+        "XPD2-MDB": false,
+        "XPD2-GDB": false,
+        "XPD2-GKDB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "tamper",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": true
+      },
+      "XPass D2": {
+        "XPD2-MDB": true,
+        "XPD2-GDB": true,
+        "XPD2-GKDB": true
+      }
+    }
+  },
+  {
+    "category": "electric",
+    "function": "power",
+    "models": {
+      "BioEntry R2": {
+        "BER2-OD": "p12ve2a"
+      },
+      "XPass D2": {
+        "XPD2-MDB": "p12ve3a",
+        "XPD2-GDB": "p12ve3a",
+        "XPD2-GKDB": "p12ve3a"
+      }
+    }
+  }
+]

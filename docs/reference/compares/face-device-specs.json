@@ -602,24 +602,24 @@
     "function": "operating-temperature",
     "models": {
       "FaceStation 2": {
-        "FS2-D": "-20 °C ~ 50 °C",
-        "FS2-AWB": "-20 °C ~ 50 °C"
+        "FS2-D": "-20℃ ~ 50℃",
+        "FS2-AWB": "-20℃ ~ 50℃"
       },
       "FaceLite": {
-        "FL-DB": "-20 °C ~ 50 °C"
+        "FL-DB": "-20℃ ~ 50℃"
       },
       "FaceStation F2": {
-        "FSF2-DB": "-20 °C ~ 50 °C",
-        "FSF2-AB": "-20 °C ~ 50 °C",
-        "FSF2-ODB": "-20 °C ~ 50 °C"
+        "FSF2-DB": "-20℃ ~ 50℃",
+        "FSF2-AB": "-20℃ ~ 50℃",
+        "FSF2-ODB": "-20℃ ~ 50℃"
       },
       "BioStation 3": {
-        "BS3-DB": "-20 °C ~ 50 °C",
-        "BS3-APWB": "-20 °C ~ 50 °C"
+        "BS3-DB": "-20℃ ~ 50℃",
+        "BS3-APWB": "-20℃ ~ 50℃"
       },
       "BioEntry W3": {
-        "BEW3-DB": "-20 °C ~ 50 °C",
-        "BEW3-APB": "-20 °C ~ 50 °C"
+        "BEW3-DB": "-20℃ ~ 50℃",
+        "BEW3-APB": "-20℃ ~ 50℃"
       }
     }
   },
@@ -628,24 +628,24 @@
     "function": "storage-temperature",
     "models": {
       "FaceStation 2": {
-        "FS2-D": "-40 °C ~ 70 °C",
-        "FS2-AWB": "-40 °C ~ 70 °C"
+        "FS2-D": "-40℃ ~ 70℃",
+        "FS2-AWB": "-40℃ ~ 70℃"
       },
       "FaceLite": {
-        "FL-DB": "-40 °C ~ 70 °C"
+        "FL-DB": "-40℃ ~ 70℃"
       },
       "FaceStation F2": {
-        "FSF2-DB": "-40 °C ~ 70 °C",
-        "FSF2-AB": "-40 °C ~ 70 °C",
-        "FSF2-ODB": "-40 °C ~ 70 °C"
+        "FSF2-DB": "-40℃ ~ 70℃",
+        "FSF2-AB": "-40℃ ~ 70℃",
+        "FSF2-ODB": "-40℃ ~ 70℃"
       },
       "BioStation 3": {
-        "BS3-DB": "-40 °C ~ 70 °C",
-        "BS3-APWB": "-40 °C ~ 70 °C"
+        "BS3-DB": "-40℃ ~ 70℃",
+        "BS3-APWB": "-40℃ ~ 70℃"
       },
       "BioEntry W3": {
-        "BEW3-DB": "-40 °C ~ 70 °C",
-        "BEW3-APB": "-40 °C ~ 70 °C"
+        "BEW3-DB": "-40℃ ~ 70℃",
+        "BEW3-APB": "-40℃ ~ 70℃"
       }
     }
   },

@@ -94,7 +94,8 @@ export function RenderTableSpecs({ data }) {
       title,
       field,
       ...COMMON_COLUMN_PROPS,
-      width: 120,
+      // width: 120,
+      minWidth: 120,
       formatter: customFormatter
     });
 
@@ -112,7 +113,7 @@ export function RenderTableSpecs({ data }) {
     const columns = [
       { 
         title: getLocale("product_specs"), 
-        field: "function", 
+        field: "function",
         ...FROZEN_COLUMN_PROPS,
         formatter: customFormatter
       }
@@ -143,7 +144,7 @@ export function RenderTableSpecs({ data }) {
         height: "calc(100vh - 350px)",
         autoResize: false,
         data: transformedData,
-        layout: "fitDataFill",
+        layout: "fitColumns",
         groupBy: "category",
         groupHeader,
         columns
@@ -163,7 +164,7 @@ export function RenderTableSpecs({ data }) {
   );
 }
 
-export function RenderTableFuncs({ data }) {
+export function RenderTableFuncs({ data, width }) {
   const getLocale = useLocale();
   const customFormatter = useCustomLocaleFormatter();
   const tableRef = useRef(null);
@@ -176,7 +177,8 @@ export function RenderTableFuncs({ data }) {
     const createColumn = (title, field) => ({
       title,
       field,
-      width: 150,
+      width: width || null, // 기본 너비를 120으로 설정, props로 전달된 경우 사용
+      minWidth: 150,
       ...COMMON_COLUMN_PROPS,
       formatter: customFormatter
     });
@@ -210,7 +212,7 @@ export function RenderTableFuncs({ data }) {
       tabulatorInstance.current = new Tabulator(tableRef.current, {
         height: "calc(100vh - 350px)",
         data: data,
-        layout:"fitDataFill",
+        layout:"fitColumns",
         resizableColumnFit:true,
         groupBy: "category",
         groupHeader,

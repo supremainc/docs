@@ -592,6 +592,14 @@ const sidebars = {
                 'reference/compares/rfid-devices-funcs',
                 'reference/compares/rfid-devices-specs',
               ]
+            },
+            {
+              type: 'category',
+              label: '지문 및 RFID 리더',
+              items: [
+                'reference/compares/finger-rfid-devices-funcs',
+                'reference/compares/finger-rfid-devices-specs',
+              ]
             }
           ]
         },
