@@ -1,0 +1,814 @@
+[
+  {
+    "category": "storage",
+    "function": "maxUser",
+    "models": {
+      "CoreStation": {
+        "CS-40": "500,000"
+      },
+      "CoreStation 20": {
+        "CS-20": "500,000",
+        "CS-20P": "500,000"
+      },
+      "Door Module": {
+        "DM-20": "ㅡ"
+      },
+      "Door Interface": {
+        "DI-24": "ㅡ"
+      },
+      "Input Module": {
+        "IM-120": "ㅡ"
+      },
+      "Output Module": {
+        "OM-120": "ㅡ"
+      },
+      "Secure Module": {
+        "SIO2": "ㅡ"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxCred1onN",
+    "models": {
+      "CoreStation": {
+        "CS-40": "face4finger100"
+      },
+      "CoreStation 20": {
+        "CS-20": "ㅡ",
+        "CS-20P": "ㅡ"
+      },
+      "Door Module": {
+        "DM-20": "ㅡ"
+      },
+      "Door Interface": {
+        "DI-24": "ㅡ"
+      },
+      "Input Module": {
+        "IM-120": "ㅡ"
+      },
+      "Output Module": {
+        "OM-120": "ㅡ"
+      },
+      "Secure Module": {
+        "SIO2": "ㅡ"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxCred1on1",
+    "models": {
+      "CoreStation": {
+        "CS-40": "face30card500pin500finger500"
+      },
+      "CoreStation 20": {
+        "CS-20": "card500pin500",
+        "CS-20P": "card500pin500"
+      },
+      "Door Module": {
+        "DM-20": "ㅡ"
+      },
+      "Door Interface": {
+        "DI-24": "ㅡ"
+      },
+      "Input Module": {
+        "IM-120": "ㅡ"
+      },
+      "Output Module": {
+        "OM-120": "ㅡ"
+      },
+      "Secure Module": {
+        "SIO2": "ㅡ"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxTextLog",
+    "models": {
+      "CoreStation": {
+        "CS-40": "5,000,000"
+      },
+      "CoreStation 20": {
+        "CS-20": "5,000,000",
+        "CS-20P": "5,000,000"
+      },
+      "Door Module": {
+        "DM-20": "ㅡ"
+      },
+      "Door Interface": {
+        "DI-24": "400"
+      },
+      "Input Module": {
+        "IM-120": "port10"
+      },
+      "Output Module": {
+        "OM-120": "ㅡ"
+      },
+      "Secure Module": {
+        "SIO2": "ㅡ"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxImageLog",
+    "models": {
+      "CoreStation": {
+        "CS-40": "ㅡ"
+      },
+      "CoreStation 20": {
+        "CS-20": "ㅡ",
+        "CS-20P": "ㅡ"
+      },
+      "Door Module": {
+        "DM-20": "ㅡ"
+      },
+      "Door Interface": {
+        "DI-24": "ㅡ"
+      },
+      "Input Module": {
+        "IM-120": "ㅡ"
+      },
+      "Output Module": {
+        "OM-120": "ㅡ"
+      },
+      "Secure Module": {
+        "SIO2": "ㅡ"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "CPU",
+    "models": {
+      "CoreStation": {
+        "CS-40": "1.4 GHz Quad Core"
+      },
+      "CoreStation 20": {
+        "CS-20": "1.2 GHz Single Core",
+        "CS-20P": "1.2 GHz Single Core"
+      },
+      "Door Module": {
+        "DM-20": "Cortex M3 72 MHz"
+      },
+      "Door Interface": {
+        "DI-24": "1.2 GHz Single Core"
+      },
+      "Input Module": {
+        "IM-120": "Cortex M3 72 MHz"
+      },
+      "Output Module": {
+        "OM-120": "Cortex M3 72 MHz"
+      },
+      "Secure Module": {
+        "SIO2": "Cortex M3 72 MHz"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "Memory",
+    "models": {
+      "CoreStation": {
+        "CS-40": "8 GB Flash + 1 GB RAM"
+      },
+      "CoreStation 20": {
+        "CS-20": "4 GB Flash + 256 MB RAM",
+        "CS-20P": "4 GB Flash + 256 MB RAM"
+      },
+      "Door Module": {
+        "DM-20": "128 KB Flash + 20 KB SRAM"
+      },
+      "Door Interface": {
+        "DI-24": "4 GB Flash + 256 MB RAM"
+      },
+      "Input Module": {
+        "IM-120": "512 KB Flash + 64 KB SRAM"
+      },
+      "Output Module": {
+        "OM-120": "128 KB Flash + 20 KB SRAM"
+      },
+      "Secure Module": {
+        "SIO2": "128 KB Flash + 20 KB RAM"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "cryptochip",
+    "models": {
+      "CoreStation": {
+        "CS-40": true
+      },
+      "CoreStation 20": {
+        "CS-20": true,
+        "CS-20P": true
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": true
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "LED",
+    "models": {
+      "CoreStation": {
+        "CS-40": "multiColor"
+      },
+      "CoreStation 20": {
+        "CS-20": "pRedsMulti",
+        "CS-20P": "pRedsMulti"
+      },
+      "Door Module": {
+        "DM-20": "multiColor"
+      },
+      "Door Interface": {
+        "DI-24": "pRedsMulti"
+      },
+      "Input Module": {
+        "IM-120": "multiColor"
+      },
+      "Output Module": {
+        "OM-120": "multiColor"
+      },
+      "Secure Module": {
+        "SIO2": "multiColor"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-temperature",
+    "models": {
+      "CoreStation": {
+        "CS-40": "0℃ ~ 50℃"
+      },
+      "CoreStation 20": {
+        "CS-20": "0℃ ~ 50℃",
+        "CS-20P": "0℃ ~ 50℃"
+      },
+      "Door Module": {
+        "DM-20": "-20℃ ~ 60℃"
+      },
+      "Door Interface": {
+        "DI-24": "0℃ ~ 50℃"
+      },
+      "Input Module": {
+        "IM-120": "-20℃ ~ 60℃"
+      },
+      "Output Module": {
+        "OM-120": "-20℃ ~ 60℃"
+      },
+      "Secure Module": {
+        "SIO2": "-20℃ ~ 50℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-temperature",
+    "models": {
+      "CoreStation": {
+        "CS-40": "-40℃ ~ 70℃"
+      },
+      "CoreStation 20": {
+        "CS-20": "-40℃ ~ 70℃",
+        "CS-20P": "-40℃ ~ 70℃"
+      },
+      "Door Module": {
+        "DM-20": "-40℃ ~ 70℃"
+      },
+      "Door Interface": {
+        "DI-24": "-40℃ ~ 70℃"
+      },
+      "Input Module": {
+        "IM-120": "-40℃ ~ 70℃"
+      },
+      "Output Module": {
+        "OM-120": "-40℃ ~ 70℃"
+      },
+      "Secure Module": {
+        "SIO2": "-40℃ ~ 70℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-humidity",
+    "models": {
+      "CoreStation": {
+        "CS-40": "operating-humidity-spec"
+      },
+      "CoreStation 20": {
+        "CS-20": "operating-humidity-spec",
+        "CS-20P": "operating-humidity-spec"
+      },
+      "Door Module": {
+        "DM-20": "operating-humidity-spec"
+      },
+      "Door Interface": {
+        "DI-24": "operating-humidity-spec"
+      },
+      "Input Module": {
+        "IM-120": "operating-humidity-spec95"
+      },
+      "Output Module": {
+        "OM-120": "operating-humidity-spec95"
+      },
+      "Secure Module": {
+        "SIO2": "operating-humidity-spec"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-humidity",
+    "models": {
+      "CoreStation": {
+        "CS-40": "storage-humidity-spec95"
+      },
+      "CoreStation 20": {
+        "CS-20": "storage-humidity-spec95",
+        "CS-20P": "storage-humidity-spec95"
+      },
+      "Door Module": {
+        "DM-20": "storage-humidity-spec"
+      },
+      "Door Interface": {
+        "DI-24": "storage-humidity-spec95"
+      },
+      "Input Module": {
+        "IM-120": "storage-humidity-spec95"
+      },
+      "Output Module": {
+        "OM-120": "storage-humidity-spec95"
+      },
+      "Secure Module": {
+        "SIO2": "storage-humidity-spec"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "weight",
+    "models": {
+      "CoreStation": {
+        "CS-40": "415g"
+      },
+      "CoreStation 20": {
+        "CS-20": "285g",
+        "CS-20P": "300g"
+      },
+      "Door Module": {
+        "DM-20": "220g"
+      },
+      "Door Interface": {
+        "DI-24": "279g"
+      },
+      "Input Module": {
+        "IM-120": "203g"
+      },
+      "Output Module": {
+        "OM-120": "300g"
+      },
+      "Secure Module": {
+        "SIO2": "37g"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "dimension",
+    "models": {
+      "CoreStation": {
+        "CS-40": "150 x 214 x 21"
+      },
+      "CoreStation 20": {
+        "CS-20": "100 x 190 x 33.9",
+        "CS-20P": "100 x 190 x 33.9"
+      },
+      "Door Module": {
+        "DM-20": "130 x 90.5 x 35.8"
+      },
+      "Door Interface": {
+        "DI-24": "100 x 190 x 33.9"
+      },
+      "Input Module": {
+        "IM-120": "90 x 190 x 21"
+      },
+      "Output Module": {
+        "OM-120": "90 x 190 x 21"
+      },
+      "Secure Module": {
+        "SIO2": "36 x 65 x 18"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "ethernet",
+    "models": {
+      "CoreStation": {
+        "CS-40": "ethernet-spec"
+      },
+      "CoreStation 20": {
+        "CS-20": "ethernet-spec",
+        "CS-20P": "ethernet-spec"
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": false
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "networkprotocol",
+    "models": {
+      "CoreStation": {
+        "CS-40": "TCP, UDP"
+      },
+      "CoreStation 20": {
+        "CS-20": "TCP, UDP",
+        "CS-20P": "TCP, UDP"
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": false
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485",
+    "models": {
+      "CoreStation": {
+        "CS-40": "5chrs485"
+      },
+      "CoreStation 20": {
+        "CS-20": "3chrs485",
+        "CS-20P": "3chrs485"
+      },
+      "Door Module": {
+        "DM-20": "1ch"
+      },
+      "Door Interface": {
+        "DI-24": "3chrs485"
+      },
+      "Input Module": {
+        "IM-120": "1ch"
+      },
+      "Output Module": {
+        "OM-120": "1ch"
+      },
+      "Secure Module": {
+        "SIO2": "1ch"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485-protocol",
+    "models": {
+      "CoreStation": {
+        "CS-40": "osdpv2"
+      },
+      "CoreStation 20": {
+        "CS-20": "osdpv2",
+        "CS-20P": "osdpv2"
+      },
+      "Door Module": {
+        "DM-20": "osdpv2"
+      },
+      "Door Interface": {
+        "DI-24": "osdpv2"
+      },
+      "Input Module": {
+        "IM-120": "osdpv2"
+      },
+      "Output Module": {
+        "OM-120": "osdpv2"
+      },
+      "Secure Module": {
+        "SIO2": "osdpv2"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "wiegand",
+    "models": {
+      "CoreStation": {
+        "CS-40": "4chwiegand"
+      },
+      "CoreStation 20": {
+        "CS-20": "2chwiegand",
+        "CS-20P": "2chwiegand"
+      },
+      "Door Module": {
+        "DM-20": "2chwiegand"
+      },
+      "Door Interface": {
+        "DI-24": "2chwiegand"
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "Input",
+    "models": {
+      "CoreStation": {
+        "CS-40": "8chAsterisk"
+      },
+      "CoreStation 20": {
+        "CS-20": "6chAsterisk",
+        "CS-20P": "6chAsterisk"
+      },
+      "Door Module": {
+        "DM-20": "4chwiegand"
+      },
+      "Door Interface": {
+        "DI-24": "6chAsterisk"
+      },
+      "Input Module": {
+        "IM-120": "12chAsterisk"
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": "2chwiegand"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "Output",
+    "models": {
+      "CoreStation": {
+        "CS-40": "8chinoutput"
+      },
+      "CoreStation 20": {
+        "CS-20": "6chinoutput",
+        "CS-20P": "6chinoutput"
+      },
+      "Door Module": {
+        "DM-20": "6chinoutput"
+      },
+      "Door Interface": {
+        "DI-24": "6chinoutput"
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "SupervisedInput",
+    "models": {
+      "CoreStation": {
+        "CS-40": "8chAsterisk"
+      },
+      "CoreStation 20": {
+        "CS-20": "6chAsterisk",
+        "CS-20P": "6chAsterisk"
+      },
+      "Door Module": {
+        "DM-20": "4chwiegand"
+      },
+      "Door Interface": {
+        "DI-24": "6chAsterisk"
+      },
+      "Input Module": {
+        "IM-120": "12chAsterisk"
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "relay",
+    "models": {
+      "CoreStation": {
+        "CS-40": "4relay"
+      },
+      "CoreStation 20": {
+        "CS-20": "4relay",
+        "CS-20P": "4relay"
+      },
+      "Door Module": {
+        "DM-20": "4relay"
+      },
+      "Door Interface": {
+        "DI-24": "4relay"
+      },
+      "Input Module": {
+        "IM-120": "2relay"
+      },
+      "Output Module": {
+        "OM-120": "12relay"
+      },
+      "Secure Module": {
+        "SIO2": "1relay"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "AUXInput",
+    "models": {
+      "CoreStation": {
+        "CS-40": "2chAcpowerfailTamper"
+      },
+      "CoreStation 20": {
+        "CS-20": "3chAcpowerfailTamperFire",
+        "CS-20P": "3chAcpowerfailTamperFire"
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": "3chAcpowerfailTamperFire"
+      },
+      "Input Module": {
+        "IM-120": "2chAcpowerfail"
+      },
+      "Output Module": {
+        "OM-120": "2chDry"
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "tamper",
+    "models": {
+      "CoreStation": {
+        "CS-40": true
+      },
+      "CoreStation 20": {
+        "CS-20": true,
+        "CS-20P": true
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": true
+      },
+      "Input Module": {
+        "IM-120": true
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "poePlus",
+    "models": {
+      "CoreStation": {
+        "CS-40": false
+      },
+      "CoreStation 20": {
+        "CS-20": false,
+        "CS-20P": true
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": false
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "SAMSlot",
+    "models": {
+      "CoreStation": {
+        "CS-40": false
+      },
+      "CoreStation 20": {
+        "CS-20": false,
+        "CS-20P": true
+      },
+      "Door Module": {
+        "DM-20": false
+      },
+      "Door Interface": {
+        "DI-24": false
+      },
+      "Input Module": {
+        "IM-120": false
+      },
+      "Output Module": {
+        "OM-120": false
+      },
+      "Secure Module": {
+        "SIO2": false
+      }
+    }
+  },
+  {
+    "category": "electric",
+    "function": "power",
+    "models": {
+      "CoreStation": {
+        "CS-40": "p12ve_3a"
+      },
+      "CoreStation 20": {
+        "CS-20": "p12ve2_8a24v1_4a",
+        "CS-20P": "p12ve2_8a24v1_4a"
+      },
+      "Door Module": {
+        "DM-20": "p12ve_3_1a"
+      },
+      "Door Interface": {
+        "DI-24": "p12ve2_8a24v1_4a"
+      },
+      "Input Module": {
+        "IM-120": "p12v0_2a24v0_1a"
+      },
+      "Output Module": {
+        "OM-120": "p12ve6a"
+      },
+      "Secure Module": {
+        "SIO2": "p12ve5a"
+      }
+    }
+  }
+]
