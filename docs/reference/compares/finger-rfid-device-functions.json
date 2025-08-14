@@ -1,0 +1,158 @@
+[
+  {
+    "category": "credential",
+    "function": "face",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "credential",
+    "function": "fingerprint",
+    "BioEntry R2": true,
+    "XPass D2": false
+  },
+  {
+    "category": "credential",
+    "function": "rfidcard",
+    "BioEntry R2": true,
+    "XPass D2": true
+  },
+  {
+    "category": "credential",
+    "function": "mobile",
+    "BioEntry R2": true,
+    "XPass D2": true
+  },
+  {
+    "category": "credential",
+    "function": "pin",
+    "BioEntry R2": false,
+    "XPass D2": "🔶"
+  },
+  {
+    "category": "credential",
+    "function": "sckeypad",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "credential",
+    "function": "qr",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "basic",
+    "function": "wd",
+    "BioEntry R2": false,
+    "XPass D2": true
+  },
+  {
+    "category": "basic",
+    "function": "breakprevent",
+    "BioEntry R2": false,
+    "XPass D2": true
+  },
+  {
+    "category": "basic",
+    "function": "credential-auth",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "basic",
+    "function": "display",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "basic",
+    "function": "keypad",
+    "BioEntry R2": false,
+    "XPass D2": "🔶"
+  },
+  {
+    "category": "basic",
+    "function": "tcp-ip",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "basic",
+    "function": "wifi",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "basic",
+    "function": "rs485",
+    "BioEntry R2": true,
+    "XPass D2": true
+  },
+  {
+    "category": "basic",
+    "function": "wiegand",
+    "BioEntry R2": false,
+    "XPass D2": true
+  },
+  {
+    "category": "basic",
+    "function": "tamper",
+    "BioEntry R2": true,
+    "XPass D2": true
+  },
+  {
+    "category": "advanced",
+    "function": "image-log",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "fake-fingerprint-detection",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "fake-face-detection",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "face-detection",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "intercom",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "poe",
+    "BioEntry R2": false,
+    "XPass D2": false
+  },
+  {
+    "category": "advanced",
+    "function": "mullion-type",
+    "BioEntry R2": true,
+    "XPass D2": true
+  },
+  {
+    "category": "advanced",
+    "function": "gang-box-type",
+    "BioEntry R2": false,
+    "XPass D2": true
+  },
+  {
+    "category": "advanced",
+    "function": "multi-card-reading",
+    "BioEntry R2": true,
+    "XPass D2": true
+  }
+]
