@@ -1,0 +1,236 @@
+[
+  {
+    "category": "credential",
+    "function": "face",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "credential",
+    "function": "fingerprint",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "credential",
+    "function": "rfidcard",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "credential",
+    "function": "mobile",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "credential",
+    "function": "pin",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": "🔶",
+    "X-Station 2": true
+  },
+  {
+    "category": "credential",
+    "function": "sckeypad",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": true
+  },
+  {
+    "category": "credential",
+    "function": "qr",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "wd",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "breakprevent",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": false
+  },
+  {
+    "category": "basic",
+    "function": "credential-auth",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "display",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": false,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "keypad",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": "🔶",
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "tcp-ip",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "wifi",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "basic",
+    "function": "rs485",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "wiegand",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "basic",
+    "function": "tamper",
+    "Xpass": true,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "advanced",
+    "function": "image-log",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": false,
+    "X-Station 2": true
+  },
+  {
+    "category": "advanced",
+    "function": "fake-fingerprint-detection",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "advanced",
+    "function": "fake-face-detection",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "advanced",
+    "function": "face-detection",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": false,
+    "X-Station 2": true
+  },
+  {
+    "category": "advanced",
+    "function": "intercom",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": true,
+    "XPass 2": false,
+    "X-Station 2": false
+  },
+  {
+    "category": "advanced",
+    "function": "poe",
+    "Xpass": true,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "advanced",
+    "function": "mullion-type",
+    "Xpass": true,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": false
+  },
+  {
+    "category": "advanced",
+    "function": "gang-box-type",
+    "Xpass": false,
+    "XPass S2": true,
+    "X-Station": true,
+    "XPass 2": true,
+    "X-Station 2": true
+  },
+  {
+    "category": "advanced",
+    "function": "multi-card-reading",
+    "Xpass": false,
+    "XPass S2": false,
+    "X-Station": false,
+    "XPass 2": true,
+    "X-Station 2": true
+  }
+]

@@ -1,0 +1,1120 @@
+[
+  {
+    "category": "rfid",
+    "function": "rfoption",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "FS2-AWB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
+      },
+      "FaceLite": {
+        "FL-DB": "125kHz EM & 13.56Mhz MIFARE, MIFARE Plus, DESFire EV1/EV2, FeliCa"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "FSF2-AB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+        "FSF2-ODB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"
+      },
+      "BioStation 3": {
+        "BS3-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "BS3-APWB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+        "BEW3-APB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "mobile",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "NFC",
+        "FS2-AWB": "NFC, BLE"
+      },
+      "FaceLite": {
+        "FL-DB": "NFC, BLE"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "NFC, BLE",
+        "FSF2-AB": "NFC, BLE",
+        "FSF2-ODB": "NFC, BLE"
+      },
+      "BioStation 3": {
+        "BS3-DB": "NFC, BLE",
+        "BS3-APWB": "NFC, BLE"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "NFC, BLE",
+        "BEW3-APB": "NFC, BLE"
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "scramble_keypad",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": true,
+        "BS3-APWB": true
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "rfid",
+    "function": "qr",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": "supportExcept",
+        "BS3-APWB": "supportExcept"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "protectlevel",
+    "function": "wd",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "IP65",
+        "FSF2-AB": "IP65",
+        "FSF2-ODB": "IP65"
+      },
+      "BioStation 3": {
+        "BS3-DB": "IP65",
+        "BS3-APWB": "IP65"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "IP67",
+        "BEW3-APB": "IP67"
+      }
+    }
+  },
+  {
+    "category": "protectlevel",
+    "function": "breakprevent",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": "IK06",
+        "BS3-APWB": "IK06"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "IK08",
+        "BEW3-APB": "IK08"
+      }
+    }
+  },
+  {
+    "category": "face",
+    "function": "template",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "SUPREMA",
+        "FS2-AWB": "SUPREMA"
+      },
+      "FaceLite": {
+        "FL-DB": "SUPREMA"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "SUPREMA",
+        "FSF2-AB": "SUPREMA",
+        "FSF2-ODB": "SUPREMA"
+      },
+      "BioStation 3": {
+        "BS3-DB": "SUPREMA",
+        "BS3-APWB": "SUPREMA"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "SUPREMA",
+        "BEW3-APB": "SUPREMA"
+      }
+    }
+  },
+  {
+    "category": "face",
+    "function": "detection",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "SUPREMA",
+        "FS2-AWB": "SUPREMA"
+      },
+      "FaceLite": {
+        "FL-DB": "SUPREMA"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "SUPREMA",
+        "FSF2-AB": "SUPREMA",
+        "FSF2-ODB": "SUPREMA"
+      },
+      "BioStation 3": {
+        "BS3-DB": "SUPREMA",
+        "BS3-APWB": "SUPREMA"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "SUPREMA",
+        "BEW3-APB": "SUPREMA"
+      }
+    }
+  },
+  {
+    "category": "face",
+    "function": "fake-face-detection",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": true,
+        "FS2-AWB": true
+      },
+      "FaceLite": {
+        "FL-DB": true
+      },
+      "FaceStation F2": {
+        "FSF2-DB": true,
+        "FSF2-AB": true,
+        "FSF2-ODB": true
+      },
+      "BioStation 3": {
+        "BS3-DB": true,
+        "BS3-APWB": true
+      },
+      "BioEntry W3": {
+        "BEW3-DB": true,
+        "BEW3-APB": true
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "template",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": "SUPREMA / ISO 19794-2 / ANSI 378"
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": false
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "detection",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": "minex"
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": false
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "fingerprint",
+    "function": "fake-fingerprint-detection",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": "supportSW"
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": false
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxUser",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "30,000",
+        "FS2-AWB": "30,000"
+      },
+      "FaceLite": {
+        "FL-DB": "30,000"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "100,000",
+        "FSF2-AB": "100,000",
+        "FSF2-ODB": "100,000"
+      },
+      "BioStation 3": {
+        "BS3-DB": "100,000",
+        "BS3-APWB": "100,000"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "100,000",
+        "BEW3-APB": "100,000"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxCred1onN",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "face4finger10",
+        "FS2-AWB": "face4finger10"
+      },
+      "FaceLite": {
+        "FL-DB": "face4finger30"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "face50finger100",
+        "FSF2-AB": "face50finger100",
+        "FSF2-ODB": "face50finger100none"
+      },
+      "BioStation 3": {
+        "BS3-DB": "face50finger100",
+        "BS3-APWB": "face50finger100"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "face30card100",
+        "BEW3-APB": "face30card100"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxCred1on1",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "face30card30pin30finger100",
+        "FS2-AWB": "face30card30pin30finger100"
+      },
+      "FaceLite": {
+        "FL-DB": "face30card30pin30finger30"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "face100card100pin100finger100",
+        "FSF2-AB": "face100card100pin100finger100",
+        "FSF2-ODB": "face100card100pin100finger100none"
+      },
+      "BioStation 3": {
+        "BS3-DB": "face100card100pin100finger100",
+        "BS3-APWB": "face100card100pin100finger100"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "face30card100",
+        "BEW3-APB": "face30card100"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxTextLog",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "5,000,000",
+        "FS2-AWB": "5,000,000"
+      },
+      "FaceLite": {
+        "FL-DB": "5,000,000"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "5,000,000",
+        "FSF2-AB": "5,000,000",
+        "FSF2-ODB": "5,000,000"
+      },
+      "BioStation 3": {
+        "BS3-DB": "5,000,000",
+        "BS3-APWB": "5,000,000"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1,000,000",
+        "BEW3-APB": "1,000,000"
+      }
+    }
+  },
+  {
+    "category": "storage",
+    "function": "maxImageLog",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "50,000",
+        "FS2-AWB": "50,000"
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "50,000",
+        "FSF2-AB": "50,000",
+        "FSF2-ODB": "50,000"
+      },
+      "BioStation 3": {
+        "BS3-DB": "50,000",
+        "BS3-APWB": "50,000"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "10,000",
+        "BEW3-APB": "10,000"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "cpu",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "1.4 GHz Quad Core",
+        "FS2-AWB": "1.4 GHz Quad Core"
+      },
+      "FaceLite": {
+        "FL-DB": "1.2 GHz Quad Core"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "1.8 GHz Dual Core + 1.4 GHz Quad Core",
+        "FSF2-AB": "1.8 GHz Dual Core + 1.4 GHz Quad Core",
+        "FSF2-ODB": "1.8 GHz Dual Core + 1.4 GHz Quad Core"
+      },
+      "BioStation 3": {
+        "BS3-DB": "1.5 GHz Quad Core",
+        "BS3-APWB": "1.5 GHz Quad Core"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1.5 GHz Quad Core",
+        "BEW3-APB": "1.5 GHz Quad Core"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "memory",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "8 GB Flash + 1 GB RAM",
+        "FS2-AWB": "8 GB Flash + 1 GB RAM"
+      },
+      "FaceLite": {
+        "FL-DB": "8 GB Flash + 1 GB RAM"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "16 GB Flash + 2 GB RAM",
+        "FSF2-AB": "16 GB Flash + 2 GB RAM",
+        "FSF2-ODB": "16 GB Flash + 2 GB RAM"
+      },
+      "BioStation 3": {
+        "BS3-DB": "32 GB Flash + 4 GB RAM",
+        "BS3-APWB": "32 GB Flash + 4 GB RAM"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "16 GB Flash + 2 GB RAM",
+        "BEW3-APB": "16 GB Flash + 2 GB RAM"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "cryptochip",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": true,
+        "FS2-AWB": true
+      },
+      "FaceLite": {
+        "FL-DB": true
+      },
+      "FaceStation F2": {
+        "FSF2-DB": true,
+        "FSF2-AB": true,
+        "FSF2-ODB": true
+      },
+      "BioStation 3": {
+        "BS3-DB": true,
+        "BS3-APWB": true
+      },
+      "BioEntry W3": {
+        "BEW3-DB": true,
+        "BEW3-APB": true
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "display",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "4\" color TFT touch",
+        "FS2-AWB": "4\" color TFT touch"
+      },
+      "FaceLite": {
+        "FL-DB": "2\" color TFT LCD"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "7\" IPS color LCD",
+        "FSF2-AB": "7\" IPS color LCD",
+        "FSF2-ODB": "7\" IPS color LCD"
+      },
+      "BioStation 3": {
+        "BS3-DB": "5.5\" IPS color LCD",
+        "BS3-APWB": "5.5\" IPS color LCD"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1.3\" PMOLED",
+        "BEW3-APB": "1.3\" PMOLED"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "resolution",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "800 x 400 pixels",
+        "FS2-AWB": "800 x 400 pixels"
+      },
+      "FaceLite": {
+        "FL-DB": "320 x 240 pixels"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "800 x 1280 pixels",
+        "FSF2-AB": "800 x 1280 pixels",
+        "FSF2-ODB": "800 x 1280 pixels"
+      },
+      "BioStation 3": {
+        "BS3-DB": "720 x 1280 pixels",
+        "BS3-APWB": "720 x 1280 pixels"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "sound",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "echoCancle",
+        "FS2-AWB": "echoCancle"
+      },
+      "FaceLite": {
+        "FL-DB": "24 bit/Voice DSP"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "16 bit",
+        "FSF2-AB": "16 bit",
+        "FSF2-ODB": "16 bit"
+      },
+      "BioStation 3": {
+        "BS3-DB": "16 bit",
+        "BS3-APWB": "16 bit"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "16 bit",
+        "BEW3-APB": "16 bit"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-temperature",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "-20℃ ~ 50℃",
+        "FS2-AWB": "-20℃ ~ 50℃"
+      },
+      "FaceLite": {
+        "FL-DB": "-20℃ ~ 50℃"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "-20℃ ~ 50℃",
+        "FSF2-AB": "-20℃ ~ 50℃",
+        "FSF2-ODB": "-20℃ ~ 50℃"
+      },
+      "BioStation 3": {
+        "BS3-DB": "-20℃ ~ 50℃",
+        "BS3-APWB": "-20℃ ~ 50℃"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "-20℃ ~ 50℃",
+        "BEW3-APB": "-20℃ ~ 50℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-temperature",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "-40℃ ~ 70℃",
+        "FS2-AWB": "-40℃ ~ 70℃"
+      },
+      "FaceLite": {
+        "FL-DB": "-40℃ ~ 70℃"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "-40℃ ~ 70℃",
+        "FSF2-AB": "-40℃ ~ 70℃",
+        "FSF2-ODB": "-40℃ ~ 70℃"
+      },
+      "BioStation 3": {
+        "BS3-DB": "-40℃ ~ 70℃",
+        "BS3-APWB": "-40℃ ~ 70℃"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "-40℃ ~ 70℃",
+        "BEW3-APB": "-40℃ ~ 70℃"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "operating-humidity",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "operating-humidity-spec",
+        "FS2-AWB": "operating-humidity-spec"
+      },
+      "FaceLite": {
+        "FL-DB": "operating-humidity-spec"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "operating-humidity-spec",
+        "FSF2-AB": "operating-humidity-spec",
+        "FSF2-ODB": "operating-humidity-spec"
+      },
+      "BioStation 3": {
+        "BS3-DB": "operating-humidity-spec",
+        "BS3-APWB": "operating-humidity-spec"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "operating-humidity-spec",
+        "BEW3-APB": "operating-humidity-spec"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "storage-humidity",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "storage-humidity-spec",
+        "FS2-AWB": "storage-humidity-spec"
+      },
+      "FaceLite": {
+        "FL-DB": "storage-humidity-spec"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "storage-humidity-spec",
+        "FSF2-AB": "storage-humidity-spec",
+        "FSF2-ODB": "storage-humidity-spec"
+      },
+      "BioStation 3": {
+        "BS3-DB": "storage-humidity-spec",
+        "BS3-APWB": "storage-humidity-spec"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "storage-humidity-spec",
+        "BEW3-APB": "storage-humidity-spec"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "weight",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "d555b74",
+        "FS2-AWB": "d555b74"
+      },
+      "FaceLite": {
+        "FL-DB": "d296b41"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "d585b181",
+        "FSF2-AB": "d585b181",
+        "FSF2-ODB": "d670b205"
+      },
+      "BioStation 3": {
+        "BS3-DB": "d370b90",
+        "BS3-APWB": "d370b90"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "d283b36",
+        "BEW3-APB": "d291b36"
+      }
+    }
+  },
+  {
+    "category": "general",
+    "function": "dimension",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "140.9 x 197.5 x 86.2",
+        "FS2-AWB": "140.9 x 197.5 x 86.2"
+      },
+      "FaceLite": {
+        "FL-DB": "80 x 170 x 76"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "119.8 x 233 x 23.5",
+        "FSF2-AB": "119.8 x 233 x 23.5",
+        "FSF2-ODB": "119.8 x 268.3 x 49.6 (Bottom) / 23.5 (Top)"
+      },
+      "BioStation 3": {
+        "BS3-DB": "82.5 x 171 x 23.4",
+        "BS3-APWB": "82.5 x 171 x 23.4"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "50 x 160 x 34.15",
+        "BEW3-APB": "50 x 160 x 34.15"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "ethernet",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "ethernet-spec1000",
+        "FS2-AWB": "ethernet-spec1000"
+      },
+      "FaceLite": {
+        "FL-DB": "ethernet-spec"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "ethernet-spec",
+        "FSF2-AB": "ethernet-spec",
+        "FSF2-ODB": "ethernet-spec"
+      },
+      "BioStation 3": {
+        "BS3-DB": "ethernet-spec1000",
+        "BS3-APWB": "ethernet-spec1000"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "ethernet-spec",
+        "BEW3-APB": "ethernet-spec"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "wifi",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": "Built-in, IEEE 802.11 b/g"
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": "802.11 b/ g/ n 2.4 GHz"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "networkprotocol",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "TCP, UDP",
+        "FS2-AWB": "TCP, UDP"
+      },
+      "FaceLite": {
+        "FL-DB": "TCP, UDP"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "TCP, UDP",
+        "FSF2-AB": "TCP, UDP",
+        "FSF2-ODB": "TCP, UDP"
+      },
+      "BioStation 3": {
+        "BS3-DB": "TCP, UDP",
+        "BS3-APWB": "TCP, UDP"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "TCP, UDP",
+        "BEW3-APB": "TCP, UDP"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "1chmasterslave",
+        "FS2-AWB": "1chmasterslave"
+      },
+      "FaceLite": {
+        "FL-DB": "1chmasterslave"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "1chmasterslave",
+        "FSF2-AB": "1chmasterslave",
+        "FSF2-ODB": "1chmasterslave"
+      },
+      "BioStation 3": {
+        "BS3-DB": "1chmasterslave",
+        "BS3-APWB": "1chmasterslave"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1chmasterslave",
+        "BEW3-APB": "1chmasterslave"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "rs485-protocol",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "osdpv2",
+        "FS2-AWB": "osdpv2"
+      },
+      "FaceLite": {
+        "FL-DB": "osdpv2"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "osdpv2",
+        "FSF2-AB": "osdpv2",
+        "FSF2-ODB": "osdpv2"
+      },
+      "BioStation 3": {
+        "BS3-DB": "osdpv2",
+        "BS3-APWB": "osdpv2"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "osdpv2",
+        "BEW3-APB": "osdpv2"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "wiegand",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "1chin1chout",
+        "FS2-AWB": "1chin1chout"
+      },
+      "FaceLite": {
+        "FL-DB": "1chin1choutopt1"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "1chin1choutopt1",
+        "FSF2-AB": "1chin1choutopt1",
+        "FSF2-ODB": "1chin1choutopt1"
+      },
+      "BioStation 3": {
+        "BS3-DB": "1chin1chout",
+        "BS3-APWB": "1chin1chout"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1chin1chout",
+        "BEW3-APB": "1chin1chout"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "Input",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "2chinput",
+        "FS2-AWB": "2chinput"
+      },
+      "FaceLite": {
+        "FL-DB": "2chinput"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "2chinput",
+        "FSF2-AB": "2chinput",
+        "FSF2-ODB": "2chinput"
+      },
+      "BioStation 3": {
+        "BS3-DB": "3chinput",
+        "BS3-APWB": "3chinput"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "3chinput",
+        "BEW3-APB": "3chinput"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "relay",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "1relay",
+        "FS2-AWB": "1relay"
+      },
+      "FaceLite": {
+        "FL-DB": "1relay"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "1relay",
+        "FSF2-AB": "1relay",
+        "FSF2-ODB": "1relay"
+      },
+      "BioStation 3": {
+        "BS3-DB": "1relay",
+        "BS3-APWB": "1relay"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "1relay",
+        "BEW3-APB": "1relay"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "poe",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": "ieee8023af"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": "ieee8023af"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "intercom",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": true,
+        "FS2-AWB": true
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": true,
+        "BS3-APWB": true
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "USB",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "USB 2.0 (Host)",
+        "FS2-AWB": "USB 2.0 (Host)"
+      },
+      "FaceLite": {
+        "FL-DB": "USB 2.0 (Host)"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "USB 2.0 (Host)",
+        "FSF2-AB": "USB 2.0 (Host)",
+        "FSF2-ODB": "USB 2.0 (Host)"
+      },
+      "BioStation 3": {
+        "BS3-DB": "USB 2.0 (Host)",
+        "BS3-APWB": "USB 2.0 (Host)"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "usb2firmwareup",
+        "BEW3-APB": "usb2firmwareup"
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "sdcard",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": false,
+        "FS2-AWB": false
+      },
+      "FaceLite": {
+        "FL-DB": false
+      },
+      "FaceStation F2": {
+        "FSF2-DB": false,
+        "FSF2-AB": false,
+        "FSF2-ODB": false
+      },
+      "BioStation 3": {
+        "BS3-DB": false,
+        "BS3-APWB": false
+      },
+      "BioEntry W3": {
+        "BEW3-DB": false,
+        "BEW3-APB": false
+      }
+    }
+  },
+  {
+    "category": "interface",
+    "function": "tamper",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": true,
+        "FS2-AWB": true
+      },
+      "FaceLite": {
+        "FL-DB": true
+      },
+      "FaceStation F2": {
+        "FSF2-DB": true,
+        "FSF2-AB": true,
+        "FSF2-ODB": true
+      },
+      "BioStation 3": {
+        "BS3-DB": true,
+        "BS3-APWB": true
+      },
+      "BioEntry W3": {
+        "BEW3-DB": true,
+        "BEW3-APB": true
+      }
+    }
+  },
+  {
+    "category": "power",
+    "function": "power_supply",
+    "models": {
+      "FaceStation 2": {
+        "FS2-D": "p24v1_2a",
+        "FS2-AWB": "p24v1_2a"
+      },
+      "FaceLite": {
+        "FL-DB": "p24v1_2a"
+      },
+      "FaceStation F2": {
+        "FSF2-DB": "p12v2_1a24v1a",
+        "FSF2-AB": "p12v2_1a24v1a",
+        "FSF2-ODB": "p12v2_1a24v1a"
+      },
+      "BioStation 3": {
+        "BS3-DB": "p12v1a24v0_7a",
+        "BS3-APWB": "p12v1a24v0_7a"
+      },
+      "BioEntry W3": {
+        "BEW3-DB": "p12v1a24v0_6a",
+        "BEW3-APB": "p12v1a24v0_6a"
+      }
+    }
+  }
+]

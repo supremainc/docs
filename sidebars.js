@@ -565,6 +565,52 @@ const sidebars = {
       },
       items: [
         'reference/glossary',
+        {
+          type: "category",
+          label: "제품 기능 및 사양 비교",
+          items: [
+            {
+              type: 'category',
+              label: '지문 인증 장치',
+              items: [
+                'reference/compares/fingerprint-devices-funcs',
+                'reference/compares/fingerprint-devices-specs'
+              ]
+            },
+            {
+              type: 'category',
+              label: '얼굴 인증 장치',
+              items: [
+                'reference/compares/face-devices-funcs',
+                'reference/compares/face-devices-specs',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'RFID 장치',
+              items: [
+                'reference/compares/rfid-devices-funcs',
+                'reference/compares/rfid-devices-specs',
+              ]
+            },
+            {
+              type: 'category',
+              label: '지문 및 RFID 리더',
+              items: [
+                'reference/compares/finger-rfid-devices-funcs',
+                'reference/compares/finger-rfid-devices-specs',
+              ]
+            },
+            {
+              type: 'category',
+              label: '지능형 컨트롤러 및 주변 장치',
+              items: [
+                'reference/compares/controller-devices-funcs',
+                'reference/compares/controller-devices-specs',
+              ]
+            }
+          ]
+        },
       ]
     }
   ],

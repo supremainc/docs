@@ -1,0 +1,27 @@
+.container {
+  padding: 2rem;
+}
+
+.tableContainerBlock {
+  display: block;
+}
+
+.tableContainer {
+  margin: .5rem 0 2rem 0;
+}
+
+.subtitle {
+  margin-top: 2.5rem;
+}
+
+
+
+@media print {
+  @page {
+    size: A3 landscape;
+    margin: .2in;
+  }
+  .tableContainer {
+    break-inside: avoid;
+  }
+}
