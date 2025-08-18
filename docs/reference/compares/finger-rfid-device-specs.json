@@ -130,7 +130,7 @@
     "function": "CPU",
     "models": {
       "BioEntry R2": {
-        "BER2-OD": "1.0 GHz"
+        "BER2-OD": "1 GHz"
       },
       "XPass D2": {
         "XPD2-MDB": "80 MHz",

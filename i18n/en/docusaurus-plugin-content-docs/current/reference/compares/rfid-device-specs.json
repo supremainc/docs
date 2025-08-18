@@ -3,17 +3,17 @@
     "category": "rfid",
     "function": "rfoption",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "125kHz EM",
         "XPM-PoE": "13.56MHz MIFARE, DESFire/EV1 (CSN)",
         "XPH-PoE": "125kHz HID Prox"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN), FeliCa"
       },
       "X-Station": {
         "XSE": "125kHz EM",
-        "XSM": "13.56MHz MIFARE MIFARE Plus, DESFire/EV1 (CSN)"
+        "XSM": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN)"
       },
       "XPass 2": {
         "XP2-MDPB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
@@ -34,12 +34,12 @@
     "category": "rfid",
     "function": "mobile",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -65,12 +65,12 @@
     "category": "rfid",
     "function": "sckeypad",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -96,12 +96,12 @@
     "category": "rfid",
     "function": "qr",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -127,12 +127,12 @@
     "category": "protectlevel",
     "function": "wd",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "IP65",
         "XPM-PoE": "IP65",
         "XPH-PoE": "IP65"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "IP65"
       },
       "X-Station": {
@@ -158,12 +158,12 @@
     "category": "protectlevel",
     "function": "breakprevent",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -189,17 +189,17 @@
     "category": "storage",
     "function": "maxUser",
     "models": {
-      "Xpass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
+      "XPass": {
+        "XPE-PoE": "40,000",
+        "XPM-PoE": "40,000",
+        "XPH-PoE": "40,000"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "50,000"
       },
       "X-Station": {
-        "XSE": "ㅡ",
-        "XSM": "ㅡ"
+        "XSE": "200,000",
+        "XSM": "200,000"
       },
       "XPass 2": {
         "XP2-MDPB": "200,000",
@@ -220,12 +220,12 @@
     "category": "storage",
     "function": "maxCred1onN",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "ㅡ",
         "XPM-PoE": "ㅡ",
         "XPH-PoE": "ㅡ"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "ㅡ"
       },
       "X-Station": {
@@ -251,12 +251,12 @@
     "category": "storage",
     "function": "maxCred1on1",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "ㅡ",
         "XPM-PoE": "ㅡ",
         "XPH-PoE": "ㅡ"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "ㅡ"
       },
       "X-Station": {
@@ -282,12 +282,12 @@
     "category": "storage",
     "function": "maxCard",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "50,000"
       },
       "X-Station": {
@@ -313,17 +313,17 @@
     "category": "storage",
     "function": "maxTextLog",
     "models": {
-      "Xpass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
+      "XPass": {
+        "XPE-PoE": "50,000",
+        "XPM-PoE": "50,000",
+        "XPH-PoE": "50,000"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "100,000"
       },
       "X-Station": {
-        "XSE": "ㅡ",
-        "XSM": "ㅡ"
+        "XSE": "1,000,000",
+        "XSM": "1,000,000"
       },
       "XPass 2": {
         "XP2-MDPB": "1,000,000",
@@ -344,17 +344,17 @@
     "category": "storage",
     "function": "maxImageLog",
     "models": {
-      "Xpass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
+      "XPass": {
+        "XPE-PoE": false,
+        "XPM-PoE": false,
+        "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
-        "XSE": "ㅡ",
-        "XSM": "ㅡ"
+        "XSE": "5,000",
+        "XSM": "5,000"
       },
       "XPass 2": {
         "XP2-MDPB": false,
@@ -375,12 +375,12 @@
     "category": "general",
     "function": "CPU",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "533 MHz DSP",
         "XPM-PoE": "533 MHz DSP",
         "XPH-PoE": "533 MHz DSP"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "533 MHz DSP"
       },
       "X-Station": {
@@ -406,12 +406,12 @@
     "category": "general",
     "function": "Memory",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "16 MB RAM + 8 MB Flash",
         "XPM-PoE": "16 MB RAM + 8 MB Flash",
         "XPH-PoE": "16 MB RAM + 8 MB Flash"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "16 MB RAM + 16 MB Flash"
       },
       "X-Station": {
@@ -437,12 +437,12 @@
     "category": "general",
     "function": "cryptochip",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "ㅡ",
         "XPM-PoE": "ㅡ",
         "XPH-PoE": "ㅡ"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": true
       },
       "X-Station": {
@@ -468,12 +468,12 @@
     "category": "general",
     "function": "display",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -499,12 +499,12 @@
     "category": "general",
     "function": "resolution",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -530,12 +530,12 @@
     "category": "general",
     "function": "LED",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "multiColor",
         "XPM-PoE": "multiColor",
         "XPH-PoE": "multiColor"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "multiColor"
       },
       "X-Station": {
@@ -561,12 +561,12 @@
     "category": "general",
     "function": "sound",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "multiToneBuzzer",
         "XPM-PoE": "multiToneBuzzer",
         "XPH-PoE": "multiToneBuzzer"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "multiToneBuzzer"
       },
       "X-Station": {
@@ -592,12 +592,12 @@
     "category": "general",
     "function": "operating-temperature",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "-20℃ ~ 50℃",
         "XPM-PoE": "-20℃ ~ 50℃",
         "XPH-PoE": "-20℃ ~ 50℃"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "-35℃ ~ 65℃"
       },
       "X-Station": {
@@ -623,12 +623,12 @@
     "category": "general",
     "function": "storage-temperature",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "-40℃ ~ 70℃",
         "XPM-PoE": "-40℃ ~ 70℃",
         "XPH-PoE": "-40℃ ~ 70℃"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "-40℃ ~ 70℃"
       },
       "X-Station": {
@@ -654,12 +654,12 @@
     "category": "general",
     "function": "operating-humidity",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "operating-humidity-spec",
         "XPM-PoE": "operating-humidity-spec",
         "XPH-PoE": "operating-humidity-spec"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "operating-humidity-spec"
       },
       "X-Station": {
@@ -685,12 +685,12 @@
     "category": "general",
     "function": "storage-humidity",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "storage-humidity-spec",
         "XPM-PoE": "storage-humidity-spec",
         "XPH-PoE": "storage-humidity-spec"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "storage-humidity-spec"
       },
       "X-Station": {
@@ -716,12 +716,12 @@
     "category": "general",
     "function": "weight",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "d142b27",
         "XPM-PoE": "d142b27",
         "XPH-PoE": "d142b27"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "d107b43"
       },
       "X-Station": {
@@ -747,12 +747,12 @@
     "category": "general",
     "function": "dimension",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "45 x 130 x 27",
         "XPM-PoE": "45 x 130 x 27",
         "XPH-PoE": "45 x 130 x 27"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "80 x 120 x 11.4"
       },
       "X-Station": {
@@ -778,12 +778,12 @@
     "category": "interface",
     "function": "ethernet",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "ethernet-spec",
         "XPM-PoE": "ethernet-spec",
         "XPH-PoE": "ethernet-spec"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "ethernet-spec"
       },
       "X-Station": {
@@ -809,12 +809,12 @@
     "category": "interface",
     "function": "wifi",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -840,12 +840,12 @@
     "category": "interface",
     "function": "networkprotocol",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "TCP, UDP",
         "XPM-PoE": "TCP, UDP",
         "XPH-PoE": "TCP, UDP"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "TCP, UDP"
       },
       "X-Station": {
@@ -871,12 +871,12 @@
     "category": "interface",
     "function": "rs485",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "1chmasterslave",
         "XPM-PoE": "1chmasterslave",
         "XPH-PoE": "1chmasterslave"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "1chmasterslave"
       },
       "X-Station": {
@@ -902,12 +902,12 @@
     "category": "interface",
     "function": "rs485-protocol",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "osdpv2",
         "XPM-PoE": "osdpv2",
         "XPH-PoE": "osdpv2"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "osdpv2"
       },
       "X-Station": {
@@ -933,12 +933,12 @@
     "category": "interface",
     "function": "wiegand",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "1chin1choutopt1",
         "XPM-PoE": "1chin1choutopt1",
         "XPH-PoE": "1chin1choutopt1"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "1chin1choutopt1"
       },
       "X-Station": {
@@ -964,12 +964,12 @@
     "category": "interface",
     "function": "Input",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "2chinput",
         "XPM-PoE": "2chinput",
         "XPH-PoE": "2chinput"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "2chinput"
       },
       "X-Station": {
@@ -995,12 +995,12 @@
     "category": "interface",
     "function": "relay",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "1relay",
         "XPM-PoE": "1relay",
         "XPH-PoE": "1relay"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "1relay"
       },
       "X-Station": {
@@ -1026,12 +1026,12 @@
     "category": "interface",
     "function": "poe",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "optional",
         "XPM-PoE": "optional",
         "XPH-PoE": "optional"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -1057,12 +1057,12 @@
     "category": "interface",
     "function": "intercom",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -1088,12 +1088,12 @@
     "category": "interface",
     "function": "USB",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -1119,12 +1119,12 @@
     "category": "interface",
     "function": "sdcard",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": false,
         "XPM-PoE": false,
         "XPH-PoE": false
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": false
       },
       "X-Station": {
@@ -1150,12 +1150,12 @@
     "category": "interface",
     "function": "tamper",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": true,
         "XPM-PoE": true,
         "XPH-PoE": true
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": true
       },
       "X-Station": {
@@ -1181,12 +1181,12 @@
     "category": "electric",
     "function": "power",
     "models": {
-      "Xpass": {
+      "XPass": {
         "XPE-PoE": "p12ve3a",
         "XPM-PoE": "p12ve3a",
         "XPH-PoE": "p12ve3a"
       },
-      "Xpass S2": {
+      "XPass S2": {
         "XPS2M": "p12ve4a"
       },
       "X-Station": {
