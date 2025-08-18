@@ -53,7 +53,7 @@
   },
   {
     "category": "rfid",
-    "function": "scramble_keypad",
+    "function": "sckeypad",
     "models": {
       "FaceStation 2": {
         "FS2-D": false,
@@ -443,7 +443,7 @@
   },
   {
     "category": "general",
-    "function": "cpu",
+    "function": "CPU",
     "models": {
       "FaceStation 2": {
         "FS2-D": "1.4 GHz Quad Core",
@@ -469,7 +469,7 @@
   },
   {
     "category": "general",
-    "function": "memory",
+    "function": "Memory",
     "models": {
       "FaceStation 2": {
         "FS2-D": "8 GB Flash + 1 GB RAM",
@@ -550,20 +550,20 @@
     "function": "resolution",
     "models": {
       "FaceStation 2": {
-        "FS2-D": "800 x 400 pixels",
-        "FS2-AWB": "800 x 400 pixels"
+        "FS2-D": "800 x 400 픽셀",
+        "FS2-AWB": "800 x 400 픽셀"
       },
       "FaceLite": {
-        "FL-DB": "320 x 240 pixels"
+        "FL-DB": "320 x 240 픽셀"
       },
       "FaceStation F2": {
-        "FSF2-DB": "800 x 1280 pixels",
-        "FSF2-AB": "800 x 1280 pixels",
-        "FSF2-ODB": "800 x 1280 pixels"
+        "FSF2-DB": "800 x 1280 픽셀",
+        "FSF2-AB": "800 x 1280 픽셀",
+        "FSF2-ODB": "800 x 1280 픽셀"
       },
       "BioStation 3": {
-        "BS3-DB": "720 x 1280 pixels",
-        "BS3-APWB": "720 x 1280 pixels"
+        "BS3-DB": "720 x 1280 픽셀",
+        "BS3-APWB": "720 x 1280 픽셀"
       },
       "BioEntry W3": {
         "BEW3-DB": false,
@@ -719,7 +719,7 @@
       },
       "BioStation 3": {
         "BS3-DB": "d370b90",
-        "BS3-APWB": "d370b90"
+        "BS3-APWB": "d380b90"
       },
       "BioEntry W3": {
         "BEW3-DB": "d283b36",
@@ -741,7 +741,7 @@
       "FaceStation F2": {
         "FSF2-DB": "119.8 x 233 x 23.5",
         "FSF2-AB": "119.8 x 233 x 23.5",
-        "FSF2-ODB": "119.8 x 268.3 x 49.6 (Bottom) / 23.5 (Top)"
+        "FSF2-ODB": "119.8 x 268.3 x 49.6 (하단) / 23.5 (상단)"
       },
       "BioStation 3": {
         "BS3-DB": "82.5 x 171 x 23.4",
@@ -979,7 +979,7 @@
       },
       "BioStation 3": {
         "BS3-DB": false,
-        "BS3-APWB": "ieee8023af"
+        "BS3-APWB": "ieee8023at"
       },
       "BioEntry W3": {
         "BEW3-DB": false,
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "power",
-    "function": "power_supply",
+    "category": "electric",
+    "function": "power",
     "models": {
       "FaceStation 2": {
         "FS2-D": "p24v1_2a",

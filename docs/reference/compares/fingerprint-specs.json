@@ -718,16 +718,16 @@
     "function": "CPU",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": "1.0 GHz Quad Core",
-        "BSA2-OHPW": "1.0 GHz Quad Core",
-        "BSA2-OIPW": "1.0 GHz Quad Core",
-        "BSA2-OMPW": "1.0 GHz Quad Core"
+        "BSA2-OEPW": "1 GHz Quad Core",
+        "BSA2-OHPW": "1 GHz Quad Core",
+        "BSA2-OIPW": "1 GHz Quad Core",
+        "BSA2-OMPW": "1 GHz Quad Core"
       },
       "BioStation 2": {
-        "BS2-OEPW": "1.0 GHz",
-        "BS2-OHPW": "1.0 GHz",
-        "BS2-OIPW": "1.0 GHz",
-        "BS2-OMPW": "1.0 GHz"
+        "BS2-OEPW": "1 GHz",
+        "BS2-OHPW": "1 GHz",
+        "BS2-OIPW": "1 GHz",
+        "BS2-OMPW": "1 GHz"
       },
       "BioStation 2a": {
         "BS2A-ODPB": "1.5 GHz Quad Core",
@@ -751,8 +751,8 @@
         "BEW2-OAPB": "1.2 GHz Quad Core"
       },
       "BioEntry P2": {
-        "BEP2-OD": "1.0 GHz ",
-        "BEP2-OA": "1.0 GHz "
+        "BEP2-OD": "1 GHz ",
+        "BEP2-OA": "1 GHz "
       },
       "X-Station 2 Finger": {
         "XS2-ODPB": "1.5 GHz Quad Core",
@@ -922,29 +922,29 @@
     "function": "resolution",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": "480 x 854 pixels",
-        "BSA2-OHPW": "480 x 854 pixels",
-        "BSA2-OIPW": "480 x 854 pixels",
-        "BSA2-OMPW": "480 x 854 pixels"
+        "BSA2-OEPW": "480 x 854 픽셀",
+        "BSA2-OHPW": "480 x 854 픽셀",
+        "BSA2-OIPW": "480 x 854 픽셀",
+        "BSA2-OMPW": "480 x 854 픽셀"
       },
       "BioStation 2": {
-        "BS2-OEPW": "320 x 240 pixels",
-        "BS2-OHPW": "320 x 240 pixels",
-        "BS2-OIPW": "320 x 240 pixels",
-        "BS2-OMPW": "320 x 240 pixels"
+        "BS2-OEPW": "320 x 240 픽셀",
+        "BS2-OHPW": "320 x 240 픽셀",
+        "BS2-OIPW": "320 x 240 픽셀",
+        "BS2-OMPW": "320 x 240 픽셀"
       },
       "BioStation 2a": {
-        "BS2A-ODPB": "320 x 240 pixels",
-        "BS2A-OAPWB": "320 x 240 pixels"
+        "BS2A-ODPB": "320 x 240 픽셀",
+        "BS2A-OAPWB": "320 x 240 픽셀"
       },
       "BioStation L2": {
-        "BSL2-OE": "220 x 176 pixels",
-        "BSL2-OM": "220 x 176 pixels"
+        "BSL2-OE": "220 x 176 픽셀",
+        "BSL2-OM": "220 x 176 픽셀"
       },
       "BioLite N2": {
-        "BLN2-ODB": "160 x 128 pixels",
-        "BLN2-OAB": "160 x 128 pixels",
-        "BLN2-PAB": "160 x 128 pixels"
+        "BLN2-ODB": "160 x 128 픽셀",
+        "BLN2-OAB": "160 x 128 픽셀",
+        "BLN2-PAB": "160 x 128 픽셀"
       },
       "BioEntry W2": {
         "BEW2-OHP": false,
@@ -959,12 +959,12 @@
         "BEP2-OA": false
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": "480 x 800 pixels",
-        "XS2-OAPB": "480 x 800 pixels"
+        "XS2-ODPB": "480 x 800 픽셀",
+        "XS2-OAPB": "480 x 800 픽셀"
       },
       "BioLite Net": {
-        "BLR-OC": "128 x 64 pixels",
-        "BLN-OC": "128 x 64 pixels"
+        "BLR-OC": "128 x 64 픽셀",
+        "BLN-OC": "128 x 64 픽셀"
       }
     }
   },
@@ -1336,39 +1336,39 @@
         "BSA2-OMPW": "155 x 155 x 40"
       },
       "BioStation 2": {
-        "BS2-OEPW": "142 x 144 x 45 (Bottom) / 38 (Top)",
-        "BS2-OHPW": "142 x 144 x 45 (Bottom) / 38 (Top)",
-        "BS2-OIPW": "142 x 144 x 45 (Bottom) / 38 (Top)",
-        "BS2-OMPW": "142 x 144 x 45 (Bottom) / 38 (Top)"
+        "BS2-OEPW": "142 x 144 x 45 (하단) / 38 (상단)",
+        "BS2-OHPW": "142 x 144 x 45 (하단) / 38 (상단)",
+        "BS2-OIPW": "142 x 144 x 45 (하단) / 38 (상단)",
+        "BS2-OMPW": "142 x 144 x 45 (하단) / 38 (상단)"
       },
       "BioStation 2a": {
-        "BS2A-ODPB": "142 x 144 x 45 (Bottom) / 37.8 (Top) (mm)",
-        "BS2A-OAPWB": "142 x 144 x 45 (Bottom) / 37.8 (Top) (mm)"
+        "BS2A-ODPB": "142 x 144 x 45 (하단) / 37.8 (상단)",
+        "BS2A-OAPWB": "142 x 144 x 45 (하단) / 37.8 (상단)"
       },
       "BioStation L2": {
-        "BSL2-OE": "70.9 x 200.9 x 44.3 (Bottom) / 34.2 (Top)",
-        "BSL2-OM": "70.9 x 200.9 x 44.3 (Bottom) / 34.2 (Top)"
+        "BSL2-OE": "70.9 x 200.9 x 44.3 (하단) / 34.2 (상단)",
+        "BSL2-OM": "70.9 x 200.9 x 44.3 (하단) / 34.2 (상단)"
       },
       "BioLite N2": {
-        "BLN2-ODB": "58 x 190 x 44 (Bottom) / 34.6 (Top)",
-        "BLN2-OAB": "58 x 190 x 44 (Bottom) / 34.6 (Top)",
-        "BLN2-PAB": "58 x 190 x 44 (Bottom) / 34.6 (Top)"
+        "BLN2-ODB": "58 x 190 x 44 (하단) / 34.6 (상단)",
+        "BLN2-OAB": "58 x 190 x 44 (하단) / 34.6 (상단)",
+        "BLN2-PAB": "58 x 190 x 44 (하단) / 34.6 (상단)"
       },
       "BioEntry W2": {
-        "BEW2-OHP": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)",
-        "BEW2-ODP": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)",
-        "BEW2-OAP": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)",
-        "BEW2-OHPB": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)",
-        "BEW2-ODPB": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)",
-        "BEW2-OAPB": "50 x 172 x 43.4 (Bottom) / 38.1 (Top)"
+        "BEW2-OHP": "50 x 172 x 43.4 (하단) / 38.1 (상단)",
+        "BEW2-ODP": "50 x 172 x 43.4 (하단) / 38.1 (상단)",
+        "BEW2-OAP": "50 x 172 x 43.4 (하단) / 38.1 (상단)",
+        "BEW2-OHPB": "50 x 172 x 43.4 (하단) / 38.1 (상단)",
+        "BEW2-ODPB": "50 x 172 x 43.4 (하단) / 38.1 (상단)",
+        "BEW2-OAPB": "50 x 172 x 43.4 (하단) / 38.1 (상단)"
       },
       "BioEntry P2": {
         "BEP2-OD": "50.1 x 164 x 38",
         "BEP2-OA": "50.1 x 164 x 38"
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": "82 x 208.5 x 53 (Bottom) / 25.9 (Top)",
-        "XS2-OAPB": "82 x 208.5 x 53 (Bottom) / 25.9 (Top)"
+        "XS2-ODPB": "82 x 208.5 x 53 (하단) / 25.9 (상단)",
+        "XS2-OAPB": "82 x 208.5 x 53 (하단) / 25.9 (상단)"
       },
       "BioLite Net": {
         "BLR-OC": "60 x 185 x 40",
@@ -1891,20 +1891,20 @@
     "function": "USB",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": true,
-        "BSA2-OHPW": true,
-        "BSA2-OIPW": true,
-        "BSA2-OMPW": true
+        "BSA2-OEPW": "USB 2.0 (Host)",
+        "BSA2-OHPW": "USB 2.0 (Host)",
+        "BSA2-OIPW": "USB 2.0 (Host)",
+        "BSA2-OMPW": "USB 2.0 (Host)"
       },
       "BioStation 2": {
-        "BS2-OEPW": true,
-        "BS2-OHPW": true,
-        "BS2-OIPW": true,
-        "BS2-OMPW": true
+        "BS2-OEPW": "USB 2.0 (Host)",
+        "BS2-OHPW": "USB 2.0 (Host)",
+        "BS2-OIPW": "USB 2.0 (Host)",
+        "BS2-OMPW": "USB 2.0 (Host)"
       },
       "BioStation 2a": {
-        "BS2A-ODPB": true,
-        "BS2A-OAPWB": true
+        "BS2A-ODPB": "USB 2.0 (Host)",
+        "BS2A-OAPWB": "USB 2.0 (Host)"
       },
       "BioStation L2": {
         "BSL2-OE": false,
@@ -1928,8 +1928,8 @@
         "BEP2-OA": false
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": true,
-        "XS2-OAPB": true
+        "XS2-ODPB": "USB 2.0 (Host)",
+        "XS2-OAPB": "USB 2.0 (Host)"
       },
       "BioLite Net": {
         "BLR-OC": false,
