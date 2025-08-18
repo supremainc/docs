@@ -388,7 +388,7 @@ function _createMdxContent(props) {
       children: "You can change settings related to the device's screen and sound. Available options may vary depending on the device."
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
-        children: "BioEntry P2, BioEntry W2, BioLite Net, BioEntry Plus, BioEntry W, Xpass, Xpass S2, XPass D2, XPass 2"
+        children: "BioEntry P2, BioEntry W2, BioLite Net, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2"
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
