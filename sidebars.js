@@ -569,6 +569,10 @@ const sidebars = {
         {
           type: "category",
           label: "제품 기능 및 사양 비교",
+          link: {
+            type: 'doc',
+            id: 'reference/compares/index',
+          },
           items: [
             {
               type: 'category',
