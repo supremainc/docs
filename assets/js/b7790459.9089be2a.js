@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2143"], {
-5482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5185"], {
+60884: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_reference_compares_index_mdx_b77_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-glossary-mdx-6a0.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_glossary_mdx_6a0_namespaceObject = JSON.parse('{"id":"reference/glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx","sourceDirName":"reference","slug":"/reference/glossary","permalink":"/docs/en/reference/glossary","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/glossary.mdx","tags":[],"version":"current","frontMatter":{"id":"glossary","title":"Glossary","description":"This document provides a glossary of terms used in Suprema’s products and services.","keywords":["Suprema","Glossary"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Reference","permalink":"/docs/en/reference/"},"next":{"title":"Compare Features","permalink":"/docs/en/reference/compares/fingerprint-devices-funcs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-compares-index-mdx-b77.json
+var site_docs_reference_compares_index_mdx_b77_namespaceObject = JSON.parse('{"id":"reference/compares/index","title":"제품 기능 및 사양 비교","description":"슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교하세요.","source":"@site/docs/reference/compares/index.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/","permalink":"/docs/reference/compares/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/index.mdx","tags":[],"version":"current","frontMatter":{"title":"제품 기능 및 사양 비교","description":"슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교하세요.","keywords":["제품","기능","사양","비교"],"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"용어집","permalink":"/docs/reference/glossary"},"next":{"title":"기능 비교","permalink":"/docs/reference/compares/fingerprint-devices-funcs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/glossary.mdx
+;// CONCATENATED MODULE: ./docs/reference/compares/index.mdx
 
 
 const frontMatter = {
-	id: 'glossary',
-	title: 'Glossary',
-	description: 'This document provides a glossary of terms used in Suprema’s products and services.',
+	title: '제품 기능 및 사양 비교',
+	description: '슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교하세요.',
 	keywords: [
-		'Suprema',
-		'Glossary'
+		'제품',
+		'기능',
+		'사양',
+		'비교'
 	],
 	isTranslationMissing: false
 };
@@ -47,12 +48,12 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {GlossaryAll} = _components;
-  if (!GlossaryAll) _missingMdxReference("GlossaryAll", true);
+  }, {DocCardList} = _components;
+  if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document compiles a glossary of terms used in Suprema’s products and services. The glossary includes not only Suprema’s proprietary technical terms but also terms that are useful for understanding the context."
-    }), "\n", (0,jsx_runtime.jsx)(GlossaryAll, {})]
+      children: "슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교할 수 있도록 도와주는 문서입니다. 이 문서에서는 다양한 제품의 기능 및 사양을 한눈에 비교할 수 있습니다. 각 제품의 특징을 이해하고, 필요에 맞는 최적의 제품을 선택하는 데 도움이 될 것입니다."
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
 function MDXContent(props = {}) {

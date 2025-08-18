@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["154"], {
-51558: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8334"], {
+46482: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,31 +9,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_reference_compares_fingerprint_devices_funcs_mdx_4fc_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_fingerprint_devices_funcs_mdx_d06_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-compares-fingerprint-devices-funcs-mdx-4fc.json
-var site_docs_reference_compares_fingerprint_devices_funcs_mdx_4fc_namespaceObject = JSON.parse('{"id":"reference/compares/fingerprint-devices-funcs","title":"기능 비교","description":"🔶: 제품 세부 모델에 따라 지원 여부가 다를 수 있습니다.","source":"@site/docs/reference/compares/fingerprint-devices-funcs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/fingerprint-devices-funcs","permalink":"/docs/reference/compares/fingerprint-devices-funcs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/fingerprint-devices-funcs.mdx","tags":[],"version":"current","frontMatter":{"id":"fingerprint-devices-funcs","title":"기능 비교","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"용어집","permalink":"/docs/reference/glossary"},"next":{"title":"사양 비교","permalink":"/docs/reference/compares/fingerprint-devices-specs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-compares-fingerprint-devices-funcs-mdx-d06.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_fingerprint_devices_funcs_mdx_d06_namespaceObject = JSON.parse('{"id":"reference/compares/fingerprint-devices-funcs","title":"Compare Features","description":"🔶: Support may vary depending on the product model.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/compares/fingerprint-devices-funcs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/fingerprint-devices-funcs","permalink":"/docs/en/reference/compares/fingerprint-devices-funcs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/fingerprint-devices-funcs.mdx","tags":[],"version":"current","frontMatter":{"id":"fingerprint-devices-funcs","title":"Compare Features","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"제품 기능 및 사양 비교","permalink":"/docs/en/reference/compares/"},"next":{"title":"Compare Specifications","permalink":"/docs/en/reference/compares/fingerprint-devices-specs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./docs/reference/compares/fingerprint-functions.json
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/compares/fingerprint-functions.json
 var fingerprint_functions_namespaceObject = JSON.parse('[{"category":"credential","function":"face","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"credential","function":"fingerprint","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"rfidcard","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"mobile","BioStation A2":"🔶","BioStation 2":"🔶","BioStation 2a":true,"BioStation L2":"🔶","BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"credential","function":"pin","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"sckeypad","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"credential","function":"qr","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"basic","function":"wd","BioStation A2":false,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"breakprevent","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"basic","function":"credential-auth","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"display","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"keypad","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"tcp-ip","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"wifi","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"basic","function":"rs485","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"wiegand","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"tamper","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"advanced","function":"image-log","BioStation A2":true,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"fake-fingerprint-detection","BioStation A2":true,"BioStation 2":false,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"fake-face-detection","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"face-detection","BioStation A2":true,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"intercom","BioStation A2":true,"BioStation 2":true,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"poe","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"mullion-type","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":false,"BioLite Net":true},{"category":"advanced","function":"gang-box-type","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"multi-card-reading","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":false}]')
 // EXTERNAL MODULE: ./src/components/CompareTable/index.js + 2 modules
 var CompareTable = __webpack_require__(20173);
-;// CONCATENATED MODULE: ./docs/reference/compares/fingerprint-devices-funcs.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/compares/fingerprint-devices-funcs.mdx
 
 
 const frontMatter = {
 	id: 'fingerprint-devices-funcs',
-	title: '기능 비교',
+	title: 'Compare Features',
 	hide_table_of_contents: true,
 	isTranslationMissing: false
 };
-const contentTitle = '지문 인증 장치 기능 비교';
+const contentTitle = 'Compare Fingerprint Authentication Device Features';
 
 const assets = {
 
@@ -56,13 +56,13 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "지문-인증-장치-기능-비교",
-        children: "지문 인증 장치 기능 비교"
+        id: "compare-fingerprint-authentication-device-features",
+        children: "Compare Fingerprint Authentication Device Features"
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "🔶: 제품 세부 모델에 따라 지원 여부가 다를 수 있습니다."
+        children: "🔶: Support may vary depending on the product model."
       })
     }), "\n", (0,jsx_runtime.jsx)(CompareTable/* RenderTableFuncs */.h, {
       data: fingerprint_functions_namespaceObject,
