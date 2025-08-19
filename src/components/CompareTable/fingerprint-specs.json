@@ -1942,10 +1942,10 @@
     "function": "sdcard",
     "models": {
       "BioStation A2": {
-        "BSA2-OEPW": "microSD card (최대 32 GB)",
-        "BSA2-OHPW": "microSD card (최대 32 GB)",
-        "BSA2-OIPW": "microSD card (최대 32 GB)",
-        "BSA2-OMPW": "microSD card (최대 32 GB)"
+        "BSA2-OEPW": "microSD",
+        "BSA2-OHPW": "microSD",
+        "BSA2-OIPW": "microSD",
+        "BSA2-OMPW": "microSD"
       },
       "BioStation 2": {
         "BS2-OEPW": false,

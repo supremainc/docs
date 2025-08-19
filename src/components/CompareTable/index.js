@@ -39,7 +39,14 @@ function useCustomLocaleFormatter() {
   
   return useCallback((cell) => {
     const value = cell.getValue();
-    if (value === true) {
+    // value가 before/after 오브젝트일 때 분기
+    if (typeof value === "object" && value !== null && "before" in value && "after" in value) {
+      const before = value.before;
+      const after = value.after;
+      const beforeText = before === true ? "✔️" : before === false ? "❌" : getLocale(before);
+      const afterText = after === true ? "✔️" : after === false ? "❌" : getLocale(after);
+      return `<span class="before">${beforeText}</span><span class="after">${afterText}</span>`;
+    } else if (value === true) {
       return "✔️";
     } else if (value === false) {
       return "❌";
