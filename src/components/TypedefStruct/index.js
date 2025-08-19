@@ -25,11 +25,21 @@ const TypedefStruct = ({
           <ul key={index} className={styles.hierarchyItem}>
             <li className={styles.hierarchyNode}>
               <div className={styles.nodeHeader}>
-                <span className={styles.hierarchyName}>{item.name}</span>
+                <span className={styles.hierarchyName} id={item.name.toLowerCase()}>{item.name}</span>
                 {item.type && <span className={styles.hierarchyType}>{item.type}</span>}
                 {item.size && <span className={styles.hierarchySize}>{item.size} {item.size > 1 ? "bytes" : "byte"}</span>}
               </div>
               {item.description && <p className={styles.hierarchyDesc} dangerouslySetInnerHTML={{ __html: item.description }} />}
+              {/* 참고사항 */}
+              {item.notes && (
+                <ul className={styles.hierarchyNotes}>
+                  {item.notes.map((note, index) => (
+                    <li key={index} >
+                      <p className={styles.hierarchyDesc} dangerouslySetInnerHTML={{ __html: note }} />
+                    </li>
+                  ))}
+                </ul>
+              )}
               {/* 필드별 상수 테이블 */}
               {item.constants && item.constants.length > 0 && (
                 <div className={styles.fieldConstants}>

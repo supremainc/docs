@@ -54,7 +54,7 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
       children: [
         {
           name: "체크섬 영역",
-          description: "데이터 무결성 검증",
+          description: "체크섬 영역은 카드 데이터의 무결성을 검증하는 데 사용합니다. 자세한 내용은 <a href='#crc'>다음 문서</a>를 참고하세요.",
           children: [
             { name: "hdrCRC", type: "uint16_t", size: 2, description: "카드 헤더 체크섬 값입니다. (cardCRC - reserved)" },
             { name: "cardCRC", type: "uint16_t", size: 2, description: "카드 데이터 체크섬 값입니다. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)" }
@@ -66,17 +66,27 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
           children: [
             { name: "cardType", type: "BS2_CARD_TYPE", size: 1, description: "카드 유형의 코드 값입니다.",
               constants: [
-              { value: "0x00", description: "알려지지 않음" },
-              { value: "0x01", description: "CSN 카드" },
-              { value: "0x02", description: "Secure 카드" },
-              { value: "0x03", description: "Access 카드" },
-              { value: "0x0A", description: "Wiegand 카드" },
-              { value: "0x0B", description: "Config 카드" }
+              { value: "0x02", description: "Secure Credential Card (SCC)" },
+              { value: "0x03", description: "Access on Card (AOC)" }
             ]},
-            { name: "numOfTemplate", type: "uint8_t", size: 1, description: "지문 템플릿의 개수입니다. AOC 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장됩니다. 지문과 얼굴이 함께 저장되지 않습니다. 따라서 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFacetemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다." },
-            { name: "templateSize", type: "uint16_t", size: 2, description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다." },
+            { 
+              name: "numOfTemplate", 
+              type: "uint8_t", 
+              size: 1, 
+              description: "지문 템플릿의 개수입니다. Access on Card (AOC) 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFaceTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+              notes: ["최대 4개의 지문 템플릿을 지원합니다. 지문 템플릿 데이터 영역에 대한 자세한 내용은 <a href='#bs2smartcardcredentials'>다음 문서</a>를 참고하세요."],
+            },
+            { name: "templateSize", 
+              type: "uint16_t", 
+              size: 2, 
+              description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
+              notes: [
+                "300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.",
+                "Mifare 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."
+              ]
+            },
             {
-              name: "issueCount", type: "uint16_t", size: 2, description: "스마트 카드 발급 회차입니다."
+              name: "issueCount", type: "uint16_t", size: 2, description: "스마트 카드 발급 회차입니다. 카드 ID와 발급 회차를 조합하여 블랙리스트를 관리하므로 발급 회차를 정확히 관리해야 합니다. 카드 재발급 시 발급 회차를 1씩 증가시켜야 합니다."
             },
             {
               name: "duressMask",
@@ -84,7 +94,10 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
               size: 1,
               description: "협박 지문 유무 마스크 값입니다."
             },
-            { name: "numOfFaceTemplate", type: "uint8_t", size: 1, description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴이 선택적으로 저장됩니다. 지문과 얼굴이 함께 저장되지 않습니다. 따라서 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다." },
+            { name: "numOfFaceTemplate", type: "uint8_t", size: 1, description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+            notes: [
+              "최대 1개의 얼굴 템플릿을 지원합니다."
+            ] },
             {
               name: "reserved",
               type: "uint8_t[1]",
@@ -97,7 +110,10 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
           name: "인증 설정",
           description: "카드 인증 모드 및 옵션",
           children: [
-            { name: "cardAuthMode", type: "uint8_t", size: 1, description: "<b>IR Face</b> 기반 카드 인증 모드 설정값입니다. <b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용합니다.", 
+            { name: "cardAuthMode", type: "uint8_t", size: 1, description: "<b>IR Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.", 
+            notes: [
+              "<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."
+            ],
             constants: [
               { value: "2", description: "카드 인증만 사용" },
               { value: "3", description: "카드와 지문 인증 사용" },
@@ -110,7 +126,12 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
             { name: "cardAuthModeEx", 
               type: "uint8_t", 
               size: 1, 
-              description: "<b>IR Face</b> 기반은 cardAuthMode를 사용합니다.<br/><span class='badge'>v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다.",
+              description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+              notes: [
+                "슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.",
+                "<b>IR Face</b> 기반은 <code>cardAuthMode</code>를 사용하세요.",
+                "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."
+              ],
               constants: [
                 { value: "21", description: "카드" },
                 { value: "22", description: "카드 + 얼굴" },
@@ -161,7 +182,7 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
           name: "pin",
           type: "uint8_t[BS2_PIN_HASH_SIZE]",
           size: 32,
-          description: "PIN 코드 해시값입니다."
+          description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다."
         },
         {
           name: "templateData",
@@ -216,8 +237,8 @@ BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 AP
           name: "시간 제한",
           description: "출입 가능 시간 범위입니다.",
           children: [
-            { name: "startTime", type: "BS2_DATETIME", size: 4, description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다." },
-            { name: "endTime", type: "BS2_DATETIME", size: 4, description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다." }
+            { name: "startTime", type: "BS2_DATETIME", size: 4, description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다." },
+            { name: "endTime", type: "BS2_DATETIME", size: 4, description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다." }
           ]
         }
       ]
