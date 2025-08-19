@@ -1673,12 +1673,12 @@
         "BEP2-OA": "1chin1choutopt1"
       },
       "X-Station 2 Finger": {
-        "XS2-ODPB": "1chin1choutopt2",
-        "XS2-OAPB": "1chin1choutopt2"
+        "XS2-ODPB": "1chin1choutopt1",
+        "XS2-OAPB": "1chin1choutopt1"
       },
       "BioLite Net": {
-        "BLR-OC": "1chin1choutopt2",
-        "BLN-OC": "1chin1choutopt2"
+        "BLR-OC": "1chin1choutopt1",
+        "BLN-OC": "1chin1choutopt1"
       }
     }
   },
