@@ -274,7 +274,7 @@
     "cred2t500": "Fingerprint: 500,000 / Card: 500,000",
     "cred10" : "Fingerprint: 10,000 / Card: 10,000 / PIN: 10,000",
     "cred2t10": "Fingerprint: 10,000 / Card: 10,000",
-    "cred5": "Fingerprint: 5,000 / Card: 5,000 /<br/>PIN: 5,000",
+    "cred5": "Fingerprint: 5,000 / Card: 5,000 / PIN: 5,000",
     "face4finger10": "Face: 4,000 / Fingerprint: 10,000*",
     "face30card500pin500finger500": "Face: 30,000 / Card: 500,000 / PIN: 500,000 / Fingerprint: 500,000*",
     "face4finger100": "Face: 4,000 / Fingerprint: 100,000*",
