@@ -17,10 +17,6 @@
 
 
 @media print {
-  @page {
-    size: A3 landscape;
-    margin: .2in;
-  }
   .tableContainer {
     break-inside: avoid;
   }
