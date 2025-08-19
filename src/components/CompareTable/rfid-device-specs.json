@@ -218,94 +218,32 @@
   },
   {
     "category": "storage",
-    "function": "maxCred1onN",
-    "models": {
-      "XPass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
-      },
-      "XPass S2": {
-        "XPS2M": "ㅡ"
-      },
-      "X-Station": {
-        "XSE": "ㅡ",
-        "XSM": "ㅡ"
-      },
-      "XPass 2": {
-        "XP2-MDPB": "ㅡ",
-        "XP2-MAPB": "ㅡ",
-        "XP2-MAPB-H": "ㅡ",
-        "XP2-GDPB": "ㅡ",
-        "XP2-GKDPB": "ㅡ"
-      },
-      "X-Station 2": {
-        "XS2-QDPB": "ㅡ",
-        "XS2-QAPB": "ㅡ",
-        "XS2-DPB": "ㅡ",
-        "XS2-APB": "ㅡ"
-      }
-    }
-  },
-  {
-    "category": "storage",
     "function": "maxCred1on1",
     "models": {
       "XPass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
+        "XPE-PoE": "card40",
+        "XPM-PoE": "card40",
+        "XPH-PoE": "card40"
       },
       "XPass S2": {
-        "XPS2M": "ㅡ"
+        "XPS2M": "card50"
       },
       "X-Station": {
-        "XSE": "ㅡ",
-        "XSM": "ㅡ"
+        "XSE": "card200pin200",
+        "XSM": "card200pin200"
       },
       "XPass 2": {
-        "XP2-MDPB": "ㅡ",
-        "XP2-MAPB": "ㅡ",
-        "XP2-MAPB-H": "ㅡ",
-        "XP2-GDPB": "ㅡ",
-        "XP2-GKDPB": "ㅡ"
+        "XP2-MDPB": "card200",
+        "XP2-MAPB": "card200",
+        "XP2-MAPB-H": "card200",
+        "XP2-GDPB": "card200",
+        "XP2-GKDPB": "card200"
       },
       "X-Station 2": {
         "XS2-QDPB": "card500pin500",
         "XS2-QAPB": "card500pin500",
         "XS2-DPB": "card500pin500",
         "XS2-APB": "card500pin500"
-      }
-    }
-  },
-  {
-    "category": "storage",
-    "function": "maxCard",
-    "models": {
-      "XPass": {
-        "XPE-PoE": false,
-        "XPM-PoE": false,
-        "XPH-PoE": false
-      },
-      "XPass S2": {
-        "XPS2M": "50,000"
-      },
-      "X-Station": {
-        "XSE": false,
-        "XSM": false
-      },
-      "XPass 2": {
-        "XP2-MDPB": "200,000",
-        "XP2-MAPB": "200,000",
-        "XP2-MAPB-H": "200,000",
-        "XP2-GDPB": "200,000",
-        "XP2-GKDPB": "200,000"
-      },
-      "X-Station 2": {
-        "XS2-QDPB": "500,000",
-        "XS2-QAPB": "500,000",
-        "XS2-DPB": "500,000",
-        "XS2-APB": "500,000"
       }
     }
   },
@@ -438,9 +376,9 @@
     "function": "cryptochip",
     "models": {
       "XPass": {
-        "XPE-PoE": "ㅡ",
-        "XPM-PoE": "ㅡ",
-        "XPH-PoE": "ㅡ"
+        "XPE-PoE": true,
+        "XPM-PoE": true,
+        "XPH-PoE": true
       },
       "XPass S2": {
         "XPS2M": true
@@ -519,10 +457,10 @@
         "XP2-GKDPB": false
       },
       "X-Station 2": {
-        "XS2-QDPB": "480 x 800 pixels",
-        "XS2-QAPB": "480 x 800 pixels",
-        "XS2-DPB": "480 x 800 pixels",
-        "XS2-APB": "480 x 800 pixels"
+        "XS2-QDPB": "480x800",
+        "XS2-QAPB": "480x800",
+        "XS2-DPB": "480x800",
+        "XS2-APB": "480x800"
       }
     }
   },

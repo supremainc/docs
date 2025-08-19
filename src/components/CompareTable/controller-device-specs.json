@@ -729,14 +729,14 @@
   },
   {
     "category": "interface",
-    "function": "poePlus",
+    "function": "poe",
     "models": {
       "CoreStation": {
         "CS-40": false
       },
       "CoreStation 20": {
         "CS-20": false,
-        "CS-20P": true
+        "CS-20P": "ieee8023at"
       },
       "Door Module": {
         "DM-20": false
