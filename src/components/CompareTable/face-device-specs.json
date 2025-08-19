@@ -550,20 +550,20 @@
     "function": "resolution",
     "models": {
       "FaceStation 2": {
-        "FS2-D": "800 x 400 픽셀",
-        "FS2-AWB": "800 x 400 픽셀"
+        "FS2-D": "800x400",
+        "FS2-AWB": "800x400"
       },
       "FaceLite": {
-        "FL-DB": "320 x 240 픽셀"
+        "FL-DB": "320x240"
       },
       "FaceStation F2": {
-        "FSF2-DB": "800 x 1280 픽셀",
-        "FSF2-AB": "800 x 1280 픽셀",
-        "FSF2-ODB": "800 x 1280 픽셀"
+        "FSF2-DB": "800x1280",
+        "FSF2-AB": "800x1280",
+        "FSF2-ODB": "800x1280"
       },
       "BioStation 3": {
-        "BS3-DB": "720 x 1280 픽셀",
-        "BS3-APWB": "720 x 1280 픽셀"
+        "BS3-DB": "720x1280",
+        "BS3-APWB": "720x1280"
       },
       "BioEntry W3": {
         "BEW3-DB": false,
@@ -741,7 +741,7 @@
       "FaceStation F2": {
         "FSF2-DB": "119.8 x 233 x 23.5",
         "FSF2-AB": "119.8 x 233 x 23.5",
-        "FSF2-ODB": "119.8 x 268.3 x 49.6 (하단) / 23.5 (상단)"
+        "FSF2-ODB": "dim-fsf2odb"
       },
       "BioStation 3": {
         "BS3-DB": "82.5 x 171 x 23.4",

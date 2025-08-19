@@ -18,7 +18,7 @@ const FROZEN_COLUMN_PROPS = {
   headerHozAlign: "center",
   headerVertical: false,
   headerSort: false,
-  width: 150,
+  width: 180,
   frozen: true
 };
 
