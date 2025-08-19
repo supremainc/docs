@@ -363,7 +363,7 @@
     "ethernet-spec": "10/100 Mbps, auto MDI/MDI-X",
     "ethernet-spec1000": "10/100/1000 Mbps, auto MDI/MDI-X",
     "networkprotocol": "Network Protocol",
-    "1chmasterslave": "1ch Host or Slave (Selectable)",
+    "1chmasterslave": "1ch Master/Slave (Selectable)",
     "1chslave": "1ch Slave",
     "osdpv2": "OSDP V2 compliant",
     "1chin1chout": "1ch Input, 1ch Output",
