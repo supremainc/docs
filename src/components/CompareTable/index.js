@@ -146,6 +146,7 @@ export function RenderTableSpecs({ data }) {
         data: transformedData,
         layout: "fitColumns",
         groupBy: "category",
+        groupToggleElement: "header",
         groupHeader,
         columns
       });
@@ -215,6 +216,7 @@ export function RenderTableFuncs({ data, width }) {
         layout:"fitColumns",
         resizableColumnFit:true,
         groupBy: "category",
+        groupToggleElement: "header",
         groupHeader,
         columns
       });
