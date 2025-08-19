@@ -237,7 +237,7 @@
         "XP2-MAPB": "card200",
         "XP2-MAPB-H": "card200",
         "XP2-GDPB": "card200",
-        "XP2-GKDPB": "card200"
+        "XP2-GKDPB": "card200pin200"
       },
       "X-Station 2": {
         "XS2-QDPB": "card500pin500",
