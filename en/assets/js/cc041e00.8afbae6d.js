@@ -364,27 +364,27 @@ function _createMdxContent(props) {
           name: "templateData",
           type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
           size: 1536,
-          description: "지문 템플릿 데이터 영역으로 최대 4개의 지문 템플릿을 저장할 수 있습니다.",
+          description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
           children: [{
             name: "Template 1",
             type: "uint8_t[384]",
             size: 384,
-            description: "첫 번째 지문 템플릿"
+            description: "첫 번째 템플릿"
           }, {
             name: "Template 2",
             type: "uint8_t[384]",
             size: 384,
-            description: "두 번째 지문 템플릿"
+            description: "두 번째 템플릿"
           }, {
             name: "Template 3",
             type: "uint8_t[384]",
             size: 384,
-            description: "세 번째 지문 템플릿"
+            description: "세 번째 템플릿"
           }, {
             name: "Template 4",
             type: "uint8_t[384]",
             size: 384,
-            description: "네 번째 지문 템플릿"
+            description: "네 번째 템플릿"
           }]
         }]
       }],
