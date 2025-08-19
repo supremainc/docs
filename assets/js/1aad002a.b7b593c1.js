@@ -252,6 +252,7 @@ function RenderTableSpecs(param) {
                 data: transformedData,
                 layout: "fitColumns",
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });
@@ -322,6 +323,7 @@ function RenderTableFuncs(param) {
                 layout: "fitColumns",
                 resizableColumnFit: true,
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });

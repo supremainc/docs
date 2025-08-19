@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8661"], {
-43307: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6500"], {
+45121: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,31 +9,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_finger_rfid_devices_funcs_mdx_385_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_reference_compares_controller_devices_funcs_mdx_3bb_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-compares-finger-rfid-devices-funcs-mdx-385.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_finger_rfid_devices_funcs_mdx_385_namespaceObject = JSON.parse('{"id":"reference/compares/finger-rfid-devices-funcs","title":"Compare Features","description":"🔶: Support may vary depending on the product model.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/compares/finger-rfid-devices-funcs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/finger-rfid-devices-funcs","permalink":"/docs/en/reference/compares/finger-rfid-devices-funcs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/finger-rfid-devices-funcs.mdx","tags":[],"version":"current","frontMatter":{"id":"finger-rfid-devices-funcs","title":"Compare Features","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Compare Specifications","permalink":"/docs/en/reference/compares/rfid-devices-specs"},"next":{"title":"Compare Specifications","permalink":"/docs/en/reference/compares/finger-rfid-devices-specs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-compares-controller-devices-funcs-mdx-3bb.json
+var site_docs_reference_compares_controller_devices_funcs_mdx_3bb_namespaceObject = JSON.parse('{"id":"reference/compares/controller-devices-funcs","title":"기능 비교","description":"","source":"@site/docs/reference/compares/controller-devices-funcs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/controller-devices-funcs","permalink":"/docs/reference/compares/controller-devices-funcs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/controller-devices-funcs.mdx","tags":[],"version":"current","frontMatter":{"id":"controller-devices-funcs","title":"기능 비교","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"사양 비교","permalink":"/docs/reference/compares/finger-rfid-devices-specs"},"next":{"title":"사양 비교","permalink":"/docs/reference/compares/controller-devices-specs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./src/components/CompareTable/finger-rfid-device-functions.json
-var finger_rfid_device_functions_namespaceObject = JSON.parse('[{"category":"credential","function":"face","BioEntry R2":false,"XPass D2":false},{"category":"credential","function":"fingerprint","BioEntry R2":true,"XPass D2":false},{"category":"credential","function":"rfidcard","BioEntry R2":true,"XPass D2":true},{"category":"credential","function":"mobile","BioEntry R2":true,"XPass D2":true},{"category":"credential","function":"pin","BioEntry R2":false,"XPass D2":"🔶"},{"category":"credential","function":"sckeypad","BioEntry R2":false,"XPass D2":false},{"category":"credential","function":"qr","BioEntry R2":false,"XPass D2":false},{"category":"basic","function":"wd","BioEntry R2":false,"XPass D2":true},{"category":"basic","function":"breakprevent","BioEntry R2":false,"XPass D2":true},{"category":"basic","function":"credential-auth","BioEntry R2":false,"XPass D2":false},{"category":"basic","function":"display","BioEntry R2":false,"XPass D2":false},{"category":"basic","function":"keypad","BioEntry R2":false,"XPass D2":"🔶"},{"category":"basic","function":"tcp-ip","BioEntry R2":false,"XPass D2":false},{"category":"basic","function":"wifi","BioEntry R2":false,"XPass D2":false},{"category":"basic","function":"rs485","BioEntry R2":true,"XPass D2":true},{"category":"basic","function":"wiegand","BioEntry R2":false,"XPass D2":true},{"category":"basic","function":"tamper","BioEntry R2":true,"XPass D2":true},{"category":"advanced","function":"image-log","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"fake-fingerprint-detection","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"fake-face-detection","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"face-detection","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"intercom","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"poe","BioEntry R2":false,"XPass D2":false},{"category":"advanced","function":"mullion-type","BioEntry R2":true,"XPass D2":true},{"category":"advanced","function":"gang-box-type","BioEntry R2":false,"XPass D2":true},{"category":"advanced","function":"multi-card-reading","BioEntry R2":true,"XPass D2":true}]')
+;// CONCATENATED MODULE: ./src/components/CompareTable/controller-device-functions.json
+var controller_device_functions_namespaceObject = JSON.parse('[{"category":"basic","function":"credential-auth","CoreStation":true,"CoreStation 20":true,"Door Module":false,"Door Interface":false,"Input Module":false,"Output Module":false,"Secure Module":false},{"category":"basic","function":"tcp-ip","CoreStation":true,"CoreStation 20":true,"Door Module":false,"Door Interface":false,"Input Module":false,"Output Module":false,"Secure Module":false},{"category":"basic","function":"rs485","CoreStation":true,"CoreStation 20":true,"Door Module":true,"Door Interface":true,"Input Module":true,"Output Module":true,"Secure Module":true},{"category":"basic","function":"wiegand","CoreStation":true,"CoreStation 20":true,"Door Module":true,"Door Interface":true,"Input Module":false,"Output Module":false,"Secure Module":false},{"category":"basic","function":"tamper","CoreStation":true,"CoreStation 20":true,"Door Module":false,"Door Interface":true,"Input Module":true,"Output Module":false,"Secure Module":false}]')
 // EXTERNAL MODULE: ./src/components/CompareTable/index.js + 2 modules
 var CompareTable = __webpack_require__(20173);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/compares/finger-rfid-devices-funcs.mdx
+;// CONCATENATED MODULE: ./docs/reference/compares/controller-devices-funcs.mdx
 
 
 const frontMatter = {
-	id: 'finger-rfid-devices-funcs',
-	title: 'Compare Features',
+	id: 'controller-devices-funcs',
+	title: '기능 비교',
 	hide_table_of_contents: true,
 	isTranslationMissing: false
 };
-const contentTitle = 'Compare Fingerprint & RFID Reader Features';
+const contentTitle = '지능형 컨트롤러 및 주변 장치 기능 비교';
 
 const assets = {
 
@@ -46,26 +46,19 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    admonition: "admonition",
     h1: "h1",
     header: "header",
-    p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "compare-fingerprint--rfid-reader-features",
-        children: "Compare Fingerprint & RFID Reader Features"
+        id: "지능형-컨트롤러-및-주변-장치-기능-비교",
+        children: "지능형 컨트롤러 및 주변 장치 기능 비교"
       })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "🔶: Support may vary depending on the product model."
-      })
-    }), "\n", (0,jsx_runtime.jsx)(CompareTable/* RenderTableFuncs */.h, {
-      data: finger_rfid_device_functions_namespaceObject
+    }), "\n", "\n", (0,jsx_runtime.jsx)(CompareTable/* RenderTableFuncs */.h, {
+      data: controller_device_functions_namespaceObject
     })]
   });
 }
@@ -250,6 +243,7 @@ function RenderTableSpecs(param) {
                 data: transformedData,
                 layout: "fitColumns",
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });
@@ -320,6 +314,7 @@ function RenderTableFuncs(param) {
                 layout: "fitColumns",
                 resizableColumnFit: true,
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });

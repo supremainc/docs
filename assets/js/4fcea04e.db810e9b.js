@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9725"], {
-33760: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["154"], {
+72583: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,31 +9,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_finger_rfid_devices_specs_mdx_90f_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_reference_compares_fingerprint_devices_funcs_mdx_4fc_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-compares-finger-rfid-devices-specs-mdx-90f.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_compares_finger_rfid_devices_specs_mdx_90f_namespaceObject = JSON.parse('{"id":"reference/compares/finger-rfid-devices-specs","title":"Compare Specifications","description":"","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/compares/finger-rfid-devices-specs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/finger-rfid-devices-specs","permalink":"/docs/en/reference/compares/finger-rfid-devices-specs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/finger-rfid-devices-specs.mdx","tags":[],"version":"current","frontMatter":{"id":"finger-rfid-devices-specs","title":"Compare Specifications","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Compare Features","permalink":"/docs/en/reference/compares/finger-rfid-devices-funcs"},"next":{"title":"Compare Features","permalink":"/docs/en/reference/compares/controller-devices-funcs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-compares-fingerprint-devices-funcs-mdx-4fc.json
+var site_docs_reference_compares_fingerprint_devices_funcs_mdx_4fc_namespaceObject = JSON.parse('{"id":"reference/compares/fingerprint-devices-funcs","title":"기능 비교","description":"🔶: 제품 세부 모델에 따라 지원 여부가 다를 수 있습니다.","source":"@site/docs/reference/compares/fingerprint-devices-funcs.mdx","sourceDirName":"reference/compares","slug":"/reference/compares/fingerprint-devices-funcs","permalink":"/docs/reference/compares/fingerprint-devices-funcs","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/compares/fingerprint-devices-funcs.mdx","tags":[],"version":"current","frontMatter":{"id":"fingerprint-devices-funcs","title":"기능 비교","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"제품 기능 및 사양 비교","permalink":"/docs/reference/compares/"},"next":{"title":"사양 비교","permalink":"/docs/reference/compares/fingerprint-devices-specs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./src/components/CompareTable/finger-rfid-device-specs.json
-var finger_rfid_device_specs_namespaceObject = JSON.parse('[{"category":"rfid","function":"rfoption","models":{"BioEntry R2":{"BER2-OD":"125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"},"XPass D2":{"XPD2-MDB":"125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa","XPD2-GDB":"125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa","XPD2-GKDB":"125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"}}},{"category":"rfid","function":"mobile","models":{"BioEntry R2":{"BER2-OD":"NFC"},"XPass D2":{"XPD2-MDB":"NFC, BLE","XPD2-GDB":"NFC, BLE","XPD2-GKDB":"NFC, BLE"}}},{"category":"rfid","function":"sckeypad","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"rfid","function":"qr","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"protectlevel","function":"wd","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":"IP65, IP67","XPD2-GDB":"IP65, IP67","XPD2-GKDB":"IP65, IP67"}}},{"category":"protectlevel","function":"breakprevent","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":"IK08","XPD2-GDB":"IK08","XPD2-GKDB":"IK08"}}},{"category":"fingerprint","function":"template","models":{"BioEntry R2":{"BER2-OD":"SUPREMA / ISO 19794-2 / ANSI 378"},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"fingerprint","function":"detection","models":{"BioEntry R2":{"BER2-OD":"minex"},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"fingerprint","function":"fake-fingerprint-detection","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"general","function":"CPU","models":{"BioEntry R2":{"BER2-OD":"1 GHz"},"XPass D2":{"XPD2-MDB":"80 MHz","XPD2-GDB":"80 MHz","XPD2-GKDB":"80 MHz"}}},{"category":"general","function":"Memory","models":{"BioEntry R2":{"BER2-OD":"32 MB Flash + 32 MB RAM"},"XPass D2":{"XPD2-MDB":"512 KB Flash + 160 KB RAM","XPD2-GDB":"512 KB Flash + 160 KB RAM","XPD2-GKDB":"512 KB Flash + 160 KB RAM"}}},{"category":"general","function":"cryptochip","models":{"BioEntry R2":{"BER2-OD":true},"XPass D2":{"XPD2-MDB":true,"XPD2-GDB":true,"XPD2-GKDB":true}}},{"category":"general","function":"display","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"general","function":"resolution","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"general","function":"LED","models":{"BioEntry R2":{"BER2-OD":"multiColor"},"XPass D2":{"XPD2-MDB":"multiColor","XPD2-GDB":"multiColor","XPD2-GKDB":"multiColor"}}},{"category":"general","function":"sound","models":{"BioEntry R2":{"BER2-OD":"multiToneBuzzer"},"XPass D2":{"XPD2-MDB":"multiToneBuzzer","XPD2-GDB":"multiToneBuzzer","XPD2-GKDB":"multiToneBuzzer"}}},{"category":"general","function":"operating-temperature","models":{"BioEntry R2":{"BER2-OD":"-20℃ ~ 50℃"},"XPass D2":{"XPD2-MDB":"-35℃ ~ 65℃","XPD2-GDB":"-35℃ ~ 65℃","XPD2-GKDB":"-35℃ ~ 65℃"}}},{"category":"general","function":"storage-temperature","models":{"BioEntry R2":{"BER2-OD":"-40℃ ~ 70℃"},"XPass D2":{"XPD2-MDB":"-40℃ ~ 70℃","XPD2-GDB":"-40℃ ~ 70℃","XPD2-GKDB":"-40℃ ~ 70℃"}}},{"category":"general","function":"operating-humidity","models":{"BioEntry R2":{"BER2-OD":"operating-humidity-spec"},"XPass D2":{"XPD2-MDB":"operating-humidity-spec95","XPD2-GDB":"operating-humidity-spec95","XPD2-GKDB":"operating-humidity-spec95"}}},{"category":"general","function":"storage-humidity","models":{"BioEntry R2":{"BER2-OD":"storage-humidity-spec"},"XPass D2":{"XPD2-MDB":"storage-humidity-spec95","XPD2-GDB":"storage-humidity-spec95","XPD2-GKDB":"storage-humidity-spec95"}}},{"category":"general","function":"weight","models":{"BioEntry R2":{"BER2-OD":"d158b39"},"XPass D2":{"XPD2-MDB":"d117b30","XPD2-GDB":"d140b52","XPD2-GKDB":"d145b52"}}},{"category":"general","function":"dimension","models":{"BioEntry R2":{"BER2-OD":"50.1 x 164 x 38"},"XPass D2":{"XPD2-MDB":"48 x 144.7 x 27","XPD2-GDB":"80 x 130 x 25","XPD2-GKDB":"80 x 130 x 25"}}},{"category":"interface","function":"ethernet","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"wifi","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"networkprotocol","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"rs485","models":{"BioEntry R2":{"BER2-OD":"1chslave"},"XPass D2":{"XPD2-MDB":"1chslave","XPD2-GDB":"1chslave","XPD2-GKDB":"1chslave"}}},{"category":"interface","function":"rs485-protocol","models":{"BioEntry R2":{"BER2-OD":"osdpv2"},"XPass D2":{"XPD2-MDB":"osdpv2","XPD2-GDB":"osdpv2","XPD2-GKDB":"osdpv2"}}},{"category":"interface","function":"wiegand","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":"1ch","XPD2-GDB":"1ch","XPD2-GKDB":"1ch"}}},{"category":"interface","function":"Input","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"relay","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"poe","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"intercom","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"USB","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"sdcard","models":{"BioEntry R2":{"BER2-OD":false},"XPass D2":{"XPD2-MDB":false,"XPD2-GDB":false,"XPD2-GKDB":false}}},{"category":"interface","function":"tamper","models":{"BioEntry R2":{"BER2-OD":true},"XPass D2":{"XPD2-MDB":true,"XPD2-GDB":true,"XPD2-GKDB":true}}},{"category":"electric","function":"power","models":{"BioEntry R2":{"BER2-OD":"p12ve2a"},"XPass D2":{"XPD2-MDB":"p12ve3a","XPD2-GDB":"p12ve3a","XPD2-GKDB":"p12ve3a"}}}]')
+;// CONCATENATED MODULE: ./src/components/CompareTable/fingerprint-functions.json
+var fingerprint_functions_namespaceObject = JSON.parse('[{"category":"credential","function":"face","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"credential","function":"fingerprint","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"rfidcard","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"mobile","BioStation A2":"🔶","BioStation 2":"🔶","BioStation 2a":true,"BioStation L2":"🔶","BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"credential","function":"pin","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"credential","function":"sckeypad","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"credential","function":"qr","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"basic","function":"wd","BioStation A2":false,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"breakprevent","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"basic","function":"credential-auth","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"display","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"keypad","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"tcp-ip","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"wifi","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"basic","function":"rs485","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"wiegand","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"basic","function":"tamper","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":true},{"category":"advanced","function":"image-log","BioStation A2":true,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"fake-fingerprint-detection","BioStation A2":true,"BioStation 2":false,"BioStation 2a":true,"BioStation L2":true,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"fake-face-detection","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"face-detection","BioStation A2":true,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"intercom","BioStation A2":true,"BioStation 2":true,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"poe","BioStation A2":true,"BioStation 2":true,"BioStation 2a":true,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":true,"BioEntry P2":false,"X-Station 2 Finger":true,"BioLite Net":false},{"category":"advanced","function":"mullion-type","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":false,"BioLite Net":true},{"category":"advanced","function":"gang-box-type","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":false,"BioEntry W2":false,"BioEntry P2":false,"X-Station 2 Finger":false,"BioLite Net":false},{"category":"advanced","function":"multi-card-reading","BioStation A2":false,"BioStation 2":false,"BioStation 2a":false,"BioStation L2":false,"BioLite N2":true,"BioEntry W2":true,"BioEntry P2":true,"X-Station 2 Finger":true,"BioLite Net":false}]')
 // EXTERNAL MODULE: ./src/components/CompareTable/index.js + 2 modules
 var CompareTable = __webpack_require__(20173);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/compares/finger-rfid-devices-specs.mdx
+;// CONCATENATED MODULE: ./docs/reference/compares/fingerprint-devices-funcs.mdx
 
 
 const frontMatter = {
-	id: 'finger-rfid-devices-specs',
-	title: 'Compare Specifications',
+	id: 'fingerprint-devices-funcs',
+	title: '기능 비교',
 	hide_table_of_contents: true,
 	isTranslationMissing: false
 };
-const contentTitle = 'Compare Fingerprint & RFID Reader Specifications';
+const contentTitle = '지문 인증 장치 기능 비교';
 
 const assets = {
 
@@ -46,19 +46,27 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
     h1: "h1",
     header: "header",
+    p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "compare-fingerprint--rfid-reader-specifications",
-        children: "Compare Fingerprint & RFID Reader Specifications"
+        id: "지문-인증-장치-기능-비교",
+        children: "지문 인증 장치 기능 비교"
       })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(CompareTable/* RenderTableSpecs */.f, {
-      data: finger_rfid_device_specs_namespaceObject
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "🔶: 제품 세부 모델에 따라 지원 여부가 다를 수 있습니다."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(CompareTable/* RenderTableFuncs */.h, {
+      data: fingerprint_functions_namespaceObject,
+      width: 150
     })]
   });
 }
@@ -243,6 +251,7 @@ function RenderTableSpecs(param) {
                 data: transformedData,
                 layout: "fitColumns",
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });
@@ -313,6 +322,7 @@ function RenderTableFuncs(param) {
                 layout: "fitColumns",
                 resizableColumnFit: true,
                 groupBy: "category",
+                groupToggleElement: "header",
                 groupHeader,
                 columns
             });
