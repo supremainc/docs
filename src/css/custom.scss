@@ -723,7 +723,7 @@ footer {
         }
         ul {
           li {
-            margin-right: 0 !important;
+            margin-right: 0;
             p {
               padding-right: calc(0.5rem + 138px);
             }
@@ -1302,7 +1302,7 @@ footer {
         display: inline;
         flex: none !important;
         width: 50%;
-        > a.padding--lg {
+        &> a.padding--lg {
           padding: 20px !important;
         }
       }
