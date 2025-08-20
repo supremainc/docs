@@ -109,8 +109,12 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "sip",
       children: "SIP"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "**세션 시작 프로토콜(Session Initiation Protocol, SIP)**은 IP 네트워크를 통해 실시간 음성 및 비디오 통화를 시작, 유지 및 종료하는 데 널리 사용되는 통신 프로토콜입니다. 이 경우 SIP는 BioStation 3가 인터폰 엔드포인트로 작동하여 호환되는 SIP 서비스를 통해 전화를 걸고 받을 수 있도록 합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "세션 시작 프로토콜"
+      }), "(", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Session Initiation Protocol, SIP"
+      }), ")은 IP 네트워크를 통해 실시간 음성 및 비디오 통화를 시작, 유지 및 종료하는 데 널리 사용되는 통신 프로토콜입니다. 이 경우 SIP는 BioStation 3가 인터폰 엔드포인트로 작동하여 호환되는 SIP 서비스를 통해 전화를 걸고 받을 수 있도록 합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "전화-받기",
       children: "전화 받기"

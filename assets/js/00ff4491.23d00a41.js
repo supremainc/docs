@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2431"], {
-1453: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3554"], {
+84933: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -27,7 +27,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
     type: "note",
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Customers who began using BioStar Air access control before May 2025 may still be using the Airfob Space app, which has since been rebranded as the Suprema Pass app. Both apps offer identical functionality and are fully compatible. There is no need for existing users to switch — mobile credentials work seamlessly across both."
+      children: "2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다."
     })
   });
 }
@@ -47,7 +47,7 @@ function MDXContent(props = {}) {
 
 
 }),
-24624: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+63009: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -56,31 +56,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_02_user_management_managing_users_mdx_dd7_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_02_user_management_managing_users_mdx_00f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-02-user-management-managing-users-mdx-dd7.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_02_user_management_managing_users_mdx_dd7_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-users","title":"Managing Users","description":"Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/02-user-management-managing-users.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-users","permalink":"/docs/en/platform/biostar_air/managing-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/02-user-management-managing-users.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"managing-users","title":"Managing Users","description":"Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.","keywords":["user management","BioStar Air","user groups","access levels"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"BioStar Air Login","permalink":"/docs/en/platform/biostar_air/biostar-air-login"},"next":{"title":"Adding Individual Users","permalink":"/docs/en/platform/biostar_air/adding-individual-users"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-02-user-management-managing-users-mdx-00f.json
+var site_docs_platform_biostar_air_02_user_management_managing_users_mdx_00f_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-users","title":"사용자 관리하기","description":"BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증명(모바일 카드, RFID, 얼굴 인식, PIN, 웹 카드)을 추가 및 구성, 액세스 등급 설정, 사용자 그룹 관리, 유효 기간 구성 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/02-user-management-managing-users.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-users","permalink":"/docs/platform/biostar_air/managing-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/02-user-management-managing-users.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"managing-users","title":"사용자 관리하기","description":"BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증명(모바일 카드, RFID, 얼굴 인식, PIN, 웹 카드)을 추가 및 구성, 액세스 등급 설정, 사용자 그룹 관리, 유효 기간 구성 방법을 안내합니다.","keywords":["사용자 관리","BioStar Air","사용자 그룹","출입 권한"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"BioStar Air 로그인","permalink":"/docs/platform/biostar_air/biostar-air-login"},"next":{"title":"개별 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-individual-users"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx
-var _biostarair_customer_notice = __webpack_require__(1453);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/02-user-management-managing-users.mdx
+// EXTERNAL MODULE: ./docs/common/_biostarair-customer-notice.mdx
+var _biostarair_customer_notice = __webpack_require__(84933);
+;// CONCATENATED MODULE: ./docs/platform/biostar_air/02-user-management-managing-users.mdx
 
 
 const frontMatter = {
 	id: 'managing-users',
-	title: 'Managing Users',
-	description: 'Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.',
+	title: '사용자 관리하기',
+	description: 'BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증명(모바일 카드, RFID, 얼굴 인식, PIN, 웹 카드)을 추가 및 구성, 액세스 등급 설정, 사용자 그룹 관리, 유효 기간 구성 방법을 안내합니다.',
 	keywords: [
-		'user management',
+		'사용자 관리',
 		'BioStar Air',
-		'user groups',
-		'access levels'
+		'사용자 그룹',
+		'출입 권한'
 	],
 	isTranslationMissing: false
 };
@@ -94,73 +94,74 @@ const assets = {
 
 
 const toc = [{
-  "value": "Feature Overview",
+  "value": "기능 개요",
   "id": "feature-overview",
   "level": 2
 }, ..._biostarair_customer_notice/* toc */.d$, {
-  "value": "Navigating to User Management",
+  "value": "사용자 관리로 이동",
   "id": "navigating-to-user-management",
   "level": 2
 }, {
-  "value": "User Information Overview",
+  "value": "사용자 정보 개요",
   "id": "user-information-overview",
   "level": 2
 }, {
-  "value": "Managing Users",
+  "value": "사용자 관리",
   "id": "managing-users",
   "level": 2
 }, {
-  "value": "Performing Bulk Actions",
+  "value": "일괄 작업 실행하기",
   "id": "performing-bulk-actions",
   "level": 3
 }, {
-  "value": "Managing User Groups",
+  "value": "사용자 그룹 관리",
   "id": "managing-user-groups",
   "level": 3
 }, {
-  "value": "Setting Access Levels",
+  "value": "출입 등급 설정하기",
   "id": "setting-access-levels",
   "level": 3
 }, {
-  "value": "Customizing User Templates",
+  "value": "사용자 템플릿 사용자화",
   "id": "customizing-user-templates",
   "level": 3
 }, {
-  "value": "Exporting and Uploading Data",
+  "value": "데이터 내보내기 또는 업로드",
   "id": "exporting-and-uploading-data",
   "level": 3
 }, {
-  "value": "Filtering Users",
+  "value": "사용자 필터링",
   "id": "filtering-users",
   "level": 3
 }, {
-  "value": "Viewing and Editing Individual User Profiles",
+  "value": "개별 사용자의 프로필 보기 및 수정",
   "id": "viewing-and-editing-individual-user-profiles",
   "level": 2
 }, {
-  "value": "Adding Credentials",
-  "id": "adding-credentials",
+  "value": "크리덴셜 추가",
+  "id": "크리덴셜-추가",
   "level": 2
 }, {
-  "value": "Credential Types",
-  "id": "credential-types",
+  "value": "크리덴셜 유형",
+  "id": "크리덴셜-유형",
   "level": 3
 }, {
-  "value": "Access Details",
-  "id": "access-details",
+  "value": "출입 상세",
+  "id": "출입-상세",
   "level": 2
 }, {
-  "value": "Credential Validity Period",
-  "id": "credential-validity-period",
+  "value": "크리덴셜 유효 기간 설정",
+  "id": "크리덴셜-유효-기간-설정",
   "level": 3
 }, {
-  "value": "Access Levels",
-  "id": "access-levels",
+  "value": "출입 등급",
+  "id": "출입-등급",
   "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
+    blockquote: "blockquote",
     em: "em",
     h2: "h2",
     h3: "h3",
@@ -178,390 +179,396 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "feature-overview",
-      children: "Feature Overview"
+      children: "기능 개요"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "User management in BioStar Air allows administrators to oversee and configure users who access sites using the Suprema Pass app or other access credentials. Users are assigned unique credentials that grant them access to designated locations."
+      children: "BioStar Air의 사용자 관리를 통해 관리자는 Suprema Pass 앱 또는 기타 출입 크리덴션을 사용하여 사이트에 출입하는 사용자를 관리하고 설정할 수 있습니다. 사용자에게는 지정된 위치에 대한 출입 권한을 부여하는 고유한 크리덴셜을 할당할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "navigating-to-user-management",
-      children: "Navigating to User Management"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To manage users:"
+      children: "사용자 관리로 이동"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "사용자 관리"
+      }), " 페이지로 이동하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Go to ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["BioStar Air 포털에서 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "User Management"
-          }), " in the BioStar Air Portal."]
+          }), "로 이동하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Users"
-          }), " to view the list of registered users."]
+          }), "를 클릭하고 등록된 사용자 목록을 확인하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(YouTube, {
       videoId: "uhFyrQI-N5U"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "user-information-overview",
-      children: "User Information Overview"
+      children: "사용자 정보 개요"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "In the user list, you can view essential details for each user, including:"
+      children: "사용자 목록에서 각 사용자에 대한 필수 세부정보를 볼 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "User Type"
-          }), ": Regular or Temporary (introduced in BioStar Air 2.6)."]
+          }), ": Regular 또는 Temporary로 구분합니다. (BioStar Air 2.6 버전에서 도입)."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Name"
-          }), ": The full name of the user."]
+          }), ": 사용자의 이름입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Unique ID"
-          }), ": The identification number assigned to each user."]
+          }), ": 각 사용자에게 할당된 고유 식별 번호입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Card Type"
-          }), ": The type of credential issued to the user."]
+          }), ": 사용자에게 발급된 크리덴셜의 유형입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Validity"
-          }), ": The expiration status of the issued credential."]
+          }), ": 발급된 크리덴셜의 만료 상태입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Status"
-          }), ": Whether the user is ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "activated"
-          }), " or ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "deactivated"
-          }), "."]
+          }), ": 사용자가 ", (0,jsx_runtime.jsx)(_components.em, {
+            children: "활성화"
+          }), " 또는 ", (0,jsx_runtime.jsx)(_components.em, {
+            children: "비활성화"
+          }), " 상태인지 여부입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "User Group"
-          }), ": The group to which the user belongs."]
+          }), ": 사용자가 속한 그룹입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Access Levels"
-          }), ": The access permissions assigned to the user."]
+          }), ": 사용자에게 할당된 액세스 권한입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "managing-users",
-      children: "Managing Users"
+      children: "사용자 관리"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "performing-bulk-actions",
-      children: "Performing Bulk Actions"
+      children: "일괄 작업 실행하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To perform actions on multiple users at once:"
+      children: "여러 사용자에게 일괄 작업을 실행할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select users by clicking on their checkboxes."
+          children: "사용자 목록에서 사용자의 체크박스를 클릭해 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Choose from the available bulk actions:"
+          children: "사용할 수 있는 일괄 작업을 선택하세요."
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Activate"
-              }), ": Enable selected users."]
+              }), ": 선택한 사용자를 활성화합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Reissue"
-              }), ": Send a new email with updated credentials."]
+              }), ": 업데이트된 크리덴셜이 포함된 새 이메일을 보냅니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Suspend"
-              }), ": Temporarily disable users."]
+              }), ": 사용자를 일시적으로 비활성화합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Delete"
-              }), ": Remove users permanently."]
+              }), ": 사용자를 영구적으로 삭제합니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "managing-user-groups",
-      children: "Managing User Groups"
+      children: "사용자 그룹 관리"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To assign users to a group:"
+      children: "사용자를 그룹에 할당할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select the users you want to modify."
+          children: "사용자 목록에서 그룹에 할당할 사용자를 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "User Group"
-          }), " icon."]
+          }), " 아이콘을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select the desired group and confirm the changes."
+          children: "원하는 그룹을 선택하고 변경 사항을 확인하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "setting-access-levels",
-      children: "Setting Access Levels"
+      children: "출입 등급 설정하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To configure access levels for multiple users:"
+      children: "여러 사용자의 출입 등급을 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Select the users you want to modify."
+          children: "사용자 목록에서 출입 등급을 구성할 사용자를 선택하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Access Level"
-          }), " icon."]
+          }), " 아이콘을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Choose the appropriate access level and confirm."
+          children: "적절한 출입 등급을 선택하고 확인하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "customizing-user-templates",
-      children: "Customizing User Templates"
+      children: "사용자 템플릿 사용자화"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To create or modify user fields:"
+      children: "사용자 필드를 생성하거나 수정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click on ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "User Template"
-          }), "."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Add or edit fields that will appear on each user’s profile card."
+          children: "각 사용자의 프로필 카드에 표시될 필드를 추가하거나 수정하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "exporting-and-uploading-data",
-      children: "Exporting and Uploading Data"
+      children: "데이터 내보내기 또는 업로드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To export selected users, click on the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["선택한 사용자를 내보내려면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Export"
-          }), " icon."]
+          }), " 아이콘을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To bulk upload profile pictures, click on ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["프로필 사진을 일괄 업로드하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Image Upload"
-          }), "."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "filtering-users",
-      children: "Filtering Users"
+      children: "사용자 필터링"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To filter users based on specific criteria:"
+      children: "특정 기준에 따라 사용자를 필터링할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Use filters such as ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Card Type"
-          }), " (e.g., RFID card), ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " (예: RFID 카드), ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "User Status"
-          }), ", or ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), ", 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "User Group"
-          }), "."]
+          }), "과 같은 필터를 사용하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "OK"
-          }), " to apply the filter."]
+          }), "를 클릭하여 필터를 적용하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To remove filters, click ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["필터를 제거하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Clear Filters"
-          }), " and confirm."]
+          }), "를 클릭하고 확인하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "viewing-and-editing-individual-user-profiles",
-      children: "Viewing and Editing Individual User Profiles"
+      children: "개별 사용자의 프로필 보기 및 수정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To access a user’s detailed profile:"
+      children: "사용자의 세부 프로필에 액세스하려면:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click on the user’s name in the user list."
+          children: "사용자 목록에서 사용자의 이름을 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "View and modify user information, including their assigned card and credentials."
+          children: "사용자의 정보를 보고 수정하세요. 여기에는 할당된 카드 및 자격 증명이 포함됩니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Perform actions such as:"
+          children: "다음과 같은 작업을 수행하세요:"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Activate"
-              }), ": Enable the user."]
+              }), ": 사용자를 활성화합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Reissue"
-              }), ": Send updated credentials."]
+              }), ": 업데이트된 자격 증명을 보냅니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Suspend"
-              }), ": Temporarily block access."]
+              }), ": 사용자의 액세스를 일시적으로 차단합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Delete"
-              }), ": Remove the user permanently."]
+              }), ": 사용자를 영구적으로 제거합니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You can also edit any user information by clicking the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["사용자 정보를 수정하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Edit"
-      }), " button."]
+      }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "adding-credentials",
-      children: "Adding Credentials"
+      id: "크리덴셜-추가",
+      children: "크리덴셜 추가"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Under ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Credential Details"
-      }), ", administrators can decide which types of credentials to assign to users. Each credential type includes a toggle switch to enable or disable it."]
+      }), "에서 관리자는 사용자에게 할당할 크리덴셜 유형을 결정할 수 있습니다. 각 크리덴셜 유형에는 활성화 또는 비활성화할 수 있는 토글 스위치가 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["First, select if the user is ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["먼저 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Regular"
-      }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "인지 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Temporary"
-      }), ":"]
+      }), "인지 선택하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Regular users"
-          }), " can have any supported credential type."]
+            children: "Regular"
+          }), " 사용자는 모든 지원되는 크리덴셜 유형을 가질 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Temporary users"
-          }), " can only receive ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Temporary"
+          }), " 사용자는 Dynamic QR 코드 및 LinkPass를 포함한 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Web Card"
-          }), " credentials, which include Dynamic QR codes and LinkPass."]
+          }), " 크리덴셜만 받을 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "credential-types",
-      children: "Credential Types"
+      id: "크리덴셜-유형",
+      children: "크리덴셜 유형"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Mobile Card"
-          }), ": Suprema Pass mobile credential. Admins can edit the Card ID number."]
+          }), ": Suprema Pass 모바일 크리덴셜입니다. 관리자는 카드 ID 번호를 편집할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "RF Card"
-          }), ": Add up to 8 RFID cards per user. Configure card type (CSN / Wiegand), Card ID number, and Card Name to simplify managing multiple cards. You can also scan a physical RFID card using a connected reader by clicking ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), ": 사용자당 최대 8개의 RFID 카드를 추가할 수 있습니다. 카드 유형(CSN / Wiegand), 카드 ID 번호 및 카드 이름을 구성하여 여러 카드를 쉽게 관리할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Scan with Reader"
-          }), " and selecting the reader."]
+          }), "를 클릭하고 리더기를 선택하세요. 연결된 리더기를 사용하여 실물 RFID 카드를 스캔할 수도 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Web Card"
-          }), ": LinkPass or Dynamic QR."]
+          }), ": LinkPass 또는 Dynamic QR입니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Dynamic QR only appears if QR is enabled under Site Settings."
+            children: "Dynamic QR은 사이트 설정에서 QR이 활성화된 경우에만 나타납니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Face"
-          }), ": Add up to two face profile images. Options include uploading an existing image, enrolling via a reader, or sending a link via email for self-enrollment using a phone's selfie camera."]
+          }), ": 얼굴 프로필 이미지를 최대 2개까지 추가할 수 있습니다. 기존 이미지를 업로드하거나 리더를 통해 등록할 수 있습니다. 또는 이메일로 링크를 보내서 사용자가 모바일 기기의 카메라를 사용해 직접 등록하는 방법도 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "PIN"
-          }), ": Set a 4–16 digit PIN for use as part of two-factor authentication (2FA)."]
+          }), ": 4~16자리 PIN을 설정하여 2단계 인증(2FA)의 일부로 사용할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "access-details",
-      children: "Access Details"
+      id: "출입-상세",
+      children: "출입 상세"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "credential-validity-period",
-      children: "Credential Validity Period"
+      id: "크리덴셜-유효-기간-설정",
+      children: "크리덴셜 유효 기간 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set a start date (", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "required"
-      }), ") and an optional end date for the user’s credentials.\nAfter setting a start date, use shortcut buttons for common end dates: ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "+1D"
-      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "+3D"
-      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "+1W"
-      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "+1Y"
-      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Manual"
-      }), ", or ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Infinite"
-      }), "*."]
+      children: ["시작 날짜(", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "필수"
+      }), ")와 종료 날짜(선택 사항)를 설정하세요. 시작 날짜를 설정한 후에는 일반적인 종료 날짜에 대한 단축 버튼을 사용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "+1D"
+        }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "+3D"
+        }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "+1W"
+        }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "+1Y"
+        }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Manual"
+        }), ", 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Infinite"
+        })]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "access-levels",
-      children: "Access Levels"
+      id: "출입-등급",
+      children: "출입 등급"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Access levels can be assigned permanently (expire with the credential) or temporarily (expire earlier than the credential)."
+      children: "출입 등급은 영구 할당(크리덴셜과 함께 만료)하거나 일시적으로 할당(크리덴셜 보다 일찍 만료)할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(NextStep, {
       children: (0,jsx_runtime.jsx)(NextItem, {
         to: "adding-individual-users",
         children: (0,jsx_runtime.jsx)(_components.p, {
-          children: "In the next guide, we will cover how to add a new user in BioStar Air."
+          children: "BioStar Air에 새로운 사용자를 추가하는 방법은 다음 문서를 참고하세요."
         })
       })
     })]

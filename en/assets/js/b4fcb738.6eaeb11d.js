@@ -111,8 +111,10 @@ function _createMdxContent(props) {
       children: "About SIP"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Session Initiation Protocol (SIP)"
-      }), " is a communication protocol widely used for initiating, maintaining, and terminating real-time voice and video calls over IP networks. In this case, SIP enables the BioStation 3 to act as an intercom endpoint, making and receiving calls through a compatible SIP service."]
+        children: "Session Initiation Protocol"
+      }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "SIP"
+      }), ") is a communication protocol widely used for initiating, maintaining, and terminating real-time voice and video calls over IP networks. In this case, SIP enables the BioStation 3 to act as an intercom endpoint, making and receiving calls through a compatible SIP service."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "receiving-calls",
       children: "Receiving Calls"
