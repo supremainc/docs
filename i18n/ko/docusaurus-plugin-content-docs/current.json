@@ -222,5 +222,17 @@
   "sidebar.howto.category.How-to Articles": {
     "message": "How-to Articles",
     "description": "The label for category How-to Articles in sidebar howto"
+  },
+  "sidebar.biostar_air.category.Reports": {
+    "message": "보고서",
+    "description": "The label for category 보고서 in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Advanced Features": {
+    "message": "고급 기능",
+    "description": "The label for category 고급 기능 in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Release Notes": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostar_air"
   }
 }

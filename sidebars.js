@@ -35,6 +35,7 @@ const sidebars = {
           items: [
             'platform/biostar_air/what-is-biostar-air',
             'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/security-overview',
             'platform/biostar_air/biostar-air-migration',
           ]
         },
@@ -80,8 +81,6 @@ const sidebars = {
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
-            'platform/biostar_air/managing-door-access',
-            'platform/biostar_air/managing-elevator-access',
             {
               type: 'category',
               label: 'Monitoring',
@@ -90,8 +89,14 @@ const sidebars = {
                 'platform/biostar_air/monitoring-door-status',
               ]
             },
-            'platform/biostar_air/managing-roll-call-fire-muster',
-            'platform/biostar_air/configuring-reports',
+            {
+              type: 'category',
+              label: 'Reports',
+              items: [
+                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/reports-time-attendance-reports',
+              ]
+            },
             {
               type: 'category',
               label: 'Settings',
@@ -100,7 +105,18 @@ const sidebars = {
                 'platform/biostar_air/site-settings',
                 'platform/biostar_air/daylight-saving-time',
                 'platform/biostar_air/customizing-email-templates',
-                'platform/biostar_air/managing-sites-with-phone'
+                'platform/biostar_air/managing-sites-with-phone',
+                'platform/biostar_air/custom-wiegand-card-formats'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Advanced Features',
+              items: [
+                'platform/biostar_air/managing-door-access',
+                'platform/biostar_air/managing-elevator-access',
+                'platform/biostar_air/managing-roll-call-fire-muster',
+                'platform/biostar_air/sip-intercom-for-biostation3'
               ]
             },
           ]
@@ -140,6 +156,17 @@ const sidebars = {
           label: 'Hardware',
           items: [
             'platform/biostar_air/wiring-and-configuration',
+          ]
+        },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'Release Notes',
+          items: [
+            'platform/biostar_air/release-notes/v2_10'
           ]
         }
       ]

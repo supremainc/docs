@@ -1,7 +1,7 @@
 ---
 id: managing-users
 title: Managing Users
-description: Learn how to manage users, configure access permissions, and perform bulk operations in the BioStar Air Portal for comprehensive user administration.
+description: Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.
 keywords: [user management, BioStar Air, user groups, access levels]
 ---
 
@@ -9,7 +9,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ## Feature Overview {#feature-overview}
 
-User management in BioStar Air allows administrators to oversee and configure users who access sites using the Suprema Pass app. Users are assigned unique credentials that grant them access to designated locations.
+User management in BioStar Air allows administrators to oversee and configure users who access sites using the Suprema Pass app or other access credentials. Users are assigned unique credentials that grant them access to designated locations.
 
 <CustomerNote />
 
@@ -127,6 +127,47 @@ To access a user’s detailed profile:
    * **Delete**: Remove the user permanently.
 
 You can also edit any user information by clicking the **Edit** button.
+
+
+## Adding Credentials
+
+Under **Credential Details**, administrators can decide which types of credentials to assign to users. Each credential type includes a toggle switch to enable or disable it.
+
+First, select if the user is **Regular** or **Temporary**:
+
+* **Regular users** can have any supported credential type.
+
+* **Temporary users** can only receive **Web Card** credentials, which include Dynamic QR codes and LinkPass.
+
+### Credential Types
+
+* **Mobile Card**: Suprema Pass mobile credential. Admins can edit the Card ID number.
+
+* **RF Card**: Add up to 8 RFID cards per user. Configure card type (CSN / Wiegand), Card ID number, and Card Name to simplify managing multiple cards. You can also scan a physical RFID card using a connected reader by clicking **Scan with Reader** and selecting the reader.
+
+* **Web Card**: LinkPass or Dynamic QR. 
+
+  :::note
+
+  Dynamic QR only appears if QR is enabled under Site Settings.
+
+  :::
+
+* **Face**: Add up to two face profile images. Options include uploading an existing image, enrolling via a reader, or sending a link via email for self-enrollment using a phone's selfie camera.
+
+* **PIN**: Set a 4–16 digit PIN for use as part of two-factor authentication (2FA).
+
+
+## Access Details
+
+### Credential Validity Period
+
+Set a start date (**required**) and an optional end date for the user’s credentials.
+After setting a start date, use shortcut buttons for common end dates: **+1D**, **+3D**, **+1W**, **+1Y**, **Manual**, or **Infinite***.
+
+### Access Levels
+
+Access levels can be assigned permanently (expire with the credential) or temporarily (expire earlier than the credential).
 
 
 <NextStep>

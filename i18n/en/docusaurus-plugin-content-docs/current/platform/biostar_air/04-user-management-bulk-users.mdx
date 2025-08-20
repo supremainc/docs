@@ -38,6 +38,48 @@ After downloading the CSV template, fill in the required details for each user. 
 
 * **Mobile Phone Number**: Required if issuing invitations via mobile (must be unique).
 
+:::info
+
+Email addresses and mobile phone numbers must not be duplicated. Duplicate values may result in upload errors.
+
+:::
+
+### Custom Wiegand Format Support
+
+* **Fully configurable Wiegand formats**, including facility codes, segments, and parity bits.
+
+* Supports HID Corporate 1000, iClass SE, and SEOS formats.
+
+* **CSV Upload Template**:
+
+  * Each defined format (custom or default) appears as a separate column.
+
+  * **Examples**:
+
+    * With facility code: *1234567-100-'Main Office Card'* (CardID-FacilityCode-'CardName')
+
+    * With multiple segments: *12-3456-78-'Lab Entry Card'*
+
+  * Use `/` to separate multiple entries in a single field.
+
+  * Single quotes `'` are allowed around the card name. Double quotes `"` will cause an error and should be avoided.
+
+    > ✅ 'CardName' | ❌ "CardName"
+
+### Multiple Card Support
+
+* Assign up to 8 cards per user (CSN or Wiegand).
+
+* CSV Upload Format:
+
+  * Single card: Enter CSN.
+
+  * Multiple cards: Separate CSNs with `/`.
+
+  * Card naming format: *CSN-'Card Name'*
+
+    > Example: *1234567-'Main Entry'* / *7654321-'Back Door'*
+
 
 ## Uploading the CSV File {#uploading-the-csv-file}
 
@@ -48,6 +90,10 @@ Once the CSV file is ready:
 1. Review the column data in the preview window to ensure accuracy.
 
 1. Proceed with the upload if the data is correct.
+
+### CSV Import Validation
+
+Improved CSV upload process with **line-by-line error feedback** for easier troubleshooting.
 
 
 ## Uploading User Profile Images {#uploading-user-profile-images}
@@ -77,4 +123,4 @@ Once all user data and images are uploaded, the system will process the entries,
 
 ## Troubleshooting
 
-If you run into any issues with your CSV upload, we've written a more detailed guide to help you work through common problems. It also includes Excel formulas to help you validate and de-duplicate your data. [Troubleshooting Adding Users in Bulk](troubleshooting-adding-users-in-bulk)
+If you run into any issues with your CSV upload, we've written a more detailed guide to help you work through common problems. It also includes Excel formulas to help you validate and de-duplicate your data. <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' />
