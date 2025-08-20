@@ -12,3 +12,9 @@ export function StatusFail() {
         <div className={clsx(styles.status, styles.fail)}></div>
     )
 }
+
+export function StatusUpdating() {
+    return (
+        <div className={clsx(styles.status, styles.updating)}></div>
+    )
+}

@@ -9,7 +9,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ## Feature Overview {#feature-overview}
 
-Administrators can add individual users to BioStar Air, assigning them credentials and access levels for seamless site entry. Users can receive mobile or web-based credentials depending on their type.
+Administrators can add individual users to BioStar Air, assigning them credentials and access levels for seamless site entry. Users can receive mobile, RFID, or web-based credentials depending on their type.
 
 <CustomerNote />
 
@@ -44,8 +44,6 @@ When adding a new user, fill in the following details:
 
 ### Uploading a Profile Picture {#uploading-a-profile-picture}
 
-To add a profile picture:
-
 1. Click **Upload** and select a picture file.
 
 1. Adjust the image using the available tools.
@@ -57,25 +55,28 @@ To add a profile picture:
 
 Since BioStar Air version 2.6, users can be categorized as:
 
-* **Regular Users**: Permanent employees who can receive mobile cards (BioStar Air / Suprema Pass credentials, QR codes, or RFID cards).
+* **Regular Users**: Can receive any supported credential type, including mobile cards, QR codes, RFID cards, facial authentication, and PINs.
 
-* **Temporary Users**: Visitors who can only receive web cards, such as Web QR Pass or Web Link Pass.
+* **Temporary Users**: Can only receive **Web Card** credentials, which include Dynamic QR codes and LinkPass.
 
 Regular users can be automatically assigned full access levels, whereas temporary users require manual access level selection.
 
 
 ## Assigning Credentials {#assigning-credentials}
 
-After choosing a user type, select a credential type:
+Under **Credential Details**, administrators can decide which types of credentials to assign to the user. Each credential type includes a toggle switch to enable or disable it.
 
-* **Mobile Card**: The default and preferred credential for regular users.
+### Credential Types
 
-* **QR Code**: Allows users to scan a QR code for access.
+* **Mobile Card**: Suprema Pass mobile credential. Admins can edit the Card ID number.
 
-* **RFID Card**: Configurable for RFID-based access.
+* **RF Card**: Add up to 8 RFID cards per user. Configure card type (CSN / Wiegand), Card ID number, and Card Name to simplify managing multiple cards. You can also scan a physical RFID card using a connected reader by clicking **Scan with Reader** and selecting the reader.
 
-* **Web QR Pass / Web Link Pass**: Available only for temporary users.
+* **Web Card**: LinkPass or Dynamic QR. (Note: Dynamic QR only appears if QR is enabled under Site Settings.)
 
+* **Face**: Add up to two face profile images. Options include uploading an existing image, enrolling via a reader, or sending a link via email for self-enrollment using a phone's selfie camera.
+
+* **PIN**: Set a 4–16 digit PIN for use as part of two-factor authentication (2FA).
 
 ## Setting Access Levels and Validity {#setting-access-levels-and-validity}
 
@@ -85,17 +86,21 @@ After selecting a credential, configure the user’s access permissions:
 
 1. Select the **Floor Levels** assigned to the user.
 
-1. Set the **Validity Period**:
+1. Set the **Credential Validity Period**:
 
-   * **One-day to one-year validity**
+   * Set a start date (required) and optional end date.
 
-   * **No expiration date**
-
-   * **Custom start and expiration date**
+   * After setting a start date, use shortcut buttons for common end dates: **+1D**, **+3D**, **+1W**, **+1Y**, **Manual**, or **Infinite**.
 
 :::info
 
-The **Device Manager** option is only available for X-Station-2 users, allowing access to the **Admin** menu.
+Access levels can be assigned permanently (expire with the credential) or temporarily (expire earlier than the credential).
+
+:::
+
+:::tip
+
+The **Device Manager** option is only available for X-Station 2 users, allowing access to the Admin menu.
 
 :::
 

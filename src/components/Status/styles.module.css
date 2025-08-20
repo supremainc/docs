@@ -6,6 +6,10 @@
   background-color: #ff4f01;
 }
 
+.updating {
+  background-color: orange;
+}
+
 .status {
   border-radius: 9999px;
   width: .75rem;
