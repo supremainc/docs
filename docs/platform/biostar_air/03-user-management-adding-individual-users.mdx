@@ -1,7 +1,7 @@
 ---
 id: adding-individual-users
 title: 개별 사용자 추가하기
-description: BioStar Air에 개별 사용자를 추가하는 방법, 사용자 정보를 구성하는 방법, 자격 증명과 액세스 수준을 지정하는 방법, 일반 및 임시 사용자 유형을 관리하는 방법을 안내합니다.
+description: BioStar Air에 개별 사용자를 추가하는 방법, 사용자 정보를 구성하는 방법, 자격 증명과 액세스 등급을 지정하는 방법, 일반 및 임시 사용자 유형을 관리하는 방법을 안내합니다.
 keywords: [user management, BioStar Air, adding users]
 ---
 
@@ -9,7 +9,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ## 서비스 개요 {#feature-overview}
 
-관리자는 개별 사용자를 BioStar Air에 추가하고, 자격 증명과 액세스 수준을 지정하여 원활한 사이트 출입을 관리할 수 있습니다. 사용자는 유형에 따라 모바일 또는 웹 기반 인증을 받을 수 있습니다.
+관리자는 개별 사용자를 BioStar Air에 추가하고, 자격 증명과 액세스 등급을 지정하여 원활한 사이트 출입을 관리할 수 있습니다. 사용자는 유형에 따라 모바일 또는 RFID, 웹 기반 인증을 받을 수 있습니다.
 
 <CustomerNote />
 
@@ -44,8 +44,6 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ### 프로필 이미지 업로드 {#uploading-a-profile-picture}
 
-프로필 이미지를 추가하세요.
-
 1. **Upload**를 클릭하고 이미지 파일을 선택하세요.
 
 1. 사용 가능한 도구를 사용하여 이미지를 조정하세요.
@@ -57,45 +55,59 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 BioStar Air 버전 2.6부터 사용자는 다음과 같이 분류할 수 있습니다:
 
-* **Regular Users**: 모바일 카드를 받을 수 있는 정규직 직원 (BioStar Air / Suprema Pass 인증, QR 코드 또는 RFID 카드).
+* **Regular Users**: 모바일 카드, QR 코드, RFID 카드, 얼굴 인증, PIN 등 지원되는 모든 크리덴셜 유형을 받을 수 있습니다.
 
-* **Temporary Users**: 웹 카드를 받을 수 있는 방문자 (Web QR Pass 또는 Web Link Pass).
+* **Temporary Users**: Dynamic QR 코드와 LinkPass를 포함한 **Web Card** 크리덴셜만 받을 수 있습니다.
 
-정규직 사용자는 자동으로 전체 액세스 수준이 할당될 수 있는 반면, 임시 사용자는 수동으로 액세스 수준을 선택해야 합니다.
+정규직 사용자는 자동으로 전체 액세스 등급이 할당될 수 있는 반면, 임시 사용자는 수동으로 액세스 등급을 선택해야 합니다.
 
 
 ## 인증 할당 {#assigning-credentials}
 
-사용자 유형을 선택한 다음, 인증 유형을 선택하세요:
+**Credential Details**에서 관리자는 사용자에게 할당할 크리덴셜 유형을 결정할 수 있습니다. 각 크리덴셜 유형에는 활성화 또는 비활성화할 수 있는 토글 스위치가 있습니다.
 
-* **Mobile Card**: 정규직 사용자를 위한 기본 및 선호 인증 수단입니다.
+### 크리덴셜 유형
 
-* **QR Code**: 사용자가 QR 코드를 스캔하여 액세스할 수 있도록 합니다.
+* **Mobile Card**: Suprema Pass 모바일 크리덴셜입니다. 관리자는 카드 ID 번호를 편집할 수 있습니다.
 
-* **RFID Card**: RFID 기반 액세스를 위해 구성할 수 있습니다.
+* **RF Card**: 사용자당 최대 8개의 RFID 카드를 추가할 수 있습니다. 카드 유형(CSN / Wiegand), 카드 ID 번호 및 카드 이름을 구성하여 여러 카드를 쉽게 관리할 수 있습니다. **Scan with Reader**를 클릭하고 리더기를 선택하세요. 연결된 리더기를 사용하여 실물 RFID 카드를 스캔할 수도 있습니다.
 
-* **Web QR Pass / Web Link Pass**: 임시 사용자만 사용할 수 있습니다.
+* **Web Card**: LinkPass 또는 Dynamic QR입니다. 
+
+  :::note
+
+  Dynamic QR은 사이트 설정에서 QR이 활성화된 경우에만 나타납니다.
+
+  :::
+
+* **Face**: 얼굴 프로필 이미지를 최대 2개까지 추가할 수 있습니다. 기존 이미지를 업로드하거나 리더를 통해 등록할 수 있습니다. 또는 이메일로 링크를 보내서 사용자가 모바일 기기의 카메라를 사용해 직접 등록하는 방법도 있습니다.
+
+* **PIN**: 4\~16자리 PIN을 설정하여 2단계 인증(2FA)의 일부로 사용할 수 있습니다.
 
 
-## 액세스 수준 및 유효성 설정 {#setting-access-levels-and-validity}
+## 액세스 등급 및 유효성 설정 {#setting-access-levels-and-validity}
 
 인증을 선택한 후, 사용자의 액세스 권한을 구성하세요.
 
-1. **Access Level** (전체 액세스 또는 미리 정의된 수준)을 선택하세요.
+1. **Access Level** (전체 액세스 또는 미리 정의된 등급)을 선택하세요.
 
 1. 사용자가 할당된 **Floor Levels**를 선택하세요.
 
-1. **Validity Period**를 설정하세요.
+1. **Credential Validity Period**를 설정하세요.
 
-   * **One-day to one-year validity**
+   * 시작 날짜(필수)와 종료 날짜(선택 사항)를 설정하세요.
 
-   * **No expiration date**
-
-   * **Custom start and expiration date**
+   * 시작 날짜를 설정한 후에는 일반적인 종료 날짜에 대한 단축 버튼을 사용할 수 있습니다. 
 
 :::info
 
-**Device Manager** 옵션은 X-Station 2 사용자만 사용할 수 있으며, **Admin** 메뉴를 사용할 수 있습니다.
+출입 등급은 영구 할당(크리덴셜과 함께 만료)하거나 일시적으로 할당(크리덴셜 보다 일찍 만료)할 수 있습니다.
+
+:::
+
+:::tip
+
+**Device Manager** 옵션은 X-Station 2 사용자만 사용할 수 있으며, 관리자 메뉴를 사용할 수 있습니다.
 
 :::
 

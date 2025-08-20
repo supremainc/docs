@@ -1,6 +1,6 @@
 ---
 id: user-card-types
-title: User Card Types
+title: User Card and Credential Types
 description: Comprehensive guide to user card types including mobile cards, QR codes, RF cards for regular users and web-based credentials for temporary users in BioStar Air.
 keywords: [user management, BioStar Air, user card types]
 ---
@@ -11,7 +11,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 Starting from BioStar Air version 2.6, two distinct user types have been introduced to improve user management:
 
-* **Regular Users**: Long-term users with permanent mobile credentials.
+* **Regular Users**: Long-term users with permanent credentials, including mobile, RFID, facial authentication, and PIN options.
 
 * **Temporary Users**: Guests who receive temporary web-based credentials.
 
@@ -40,14 +40,28 @@ Regular users can be issued the following credentials:
 
 ### RF Card {#rf-card}
 
-* An RF card number is automatically generated but can be manually assigned.
+* Add up to 8 RFID cards per user.
+
+* Configure the **Card Type** (CSN or Wiegand), **Card ID number**, and **Card Name** to simplify management when multiple cards are assigned.
+
+* You can scan an existing RFID card using a connected Suprema reader by clicking **Scan with Reader** and selecting the reader.
 
 * For existing RF cards with a **CSN** (Card Serial Number), the CSN can be entered manually.
+
+### Face {#face}
+
+* Add up to two face profile images for a user.
+
+* Enroll via a connected reader, upload an existing image, or send a link by email for self-enrollment using the phone's selfie camera.
+
+### PIN {#pin}
+
+Set a 4–16 digit PIN to use as part of two-factor authentication (2FA).
 
 
 ## Temporary User Card Types {#temporary-user-card-typs}
 
-Temporary users do not receive mobile cards. Instead, they are issued **web-based credentials** that do not require an app download. The available options are:
+Temporary users do not receive mobile or RFID cards. Instead, they are issued **web-based credentials** that do not require an app download. The available options are:
 
 ### Web QR Code {#web-qr-code}
 

@@ -222,5 +222,17 @@
   "sidebar.howto.category.How-to Articles": {
     "message": "How-to Articles",
     "description": "The label for category How-to Articles in sidebar howto"
+  },
+  "sidebar.biostar_air.category.Reports": {
+    "message": "Reports",
+    "description": "The label for category Reports in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Advanced Features": {
+    "message": "Advanced Features",
+    "description": "The label for category Advanced Features in sidebar biostar_air"
+  },
+  "sidebar.biostar_air.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category Release Notes in sidebar biostar_air"
   }
 }

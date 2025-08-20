@@ -403,6 +403,11 @@ footer {
   }
   h6 { font-size: var(--ifm-h6-font-size); }
 
+  hr + h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   dl {
     dt {
       font-weight: 600;
@@ -918,6 +923,13 @@ footer {
     }
     ul {
       margin-bottom: 0;
+    }
+  }
+  .featureList {
+    table {
+      td:first-of-type {
+        font-weight: 600;
+      }
     }
   }
   .table--licensing {

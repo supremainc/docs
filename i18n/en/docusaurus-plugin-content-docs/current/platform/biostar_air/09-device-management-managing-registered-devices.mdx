@@ -5,187 +5,347 @@ description: Learn how to manage, update, and configure compatible Suprema reade
 keywords: [device management, BioStar Air, registered devices]
 ---
 
-## Feature Overview {#feature-overview}
+## Overview {#overview}
 
-The BioStar Air portal and app allow administrators to manage, update, and configure compatible Suprema readers. Devices must be connected to the internet for certain functionalities such as remote access, biometrics, QR code authentication, and firmware updates.
+The BioStar Air portal and mobile app let administrators manage, update, and configure compatible Suprema readers.
 
 <YouTube videoId="lpMPkMyjr-c" />
 
-:::note
+Some functions — such as **remote access**, **biometric authentication**, **QR code access**, and **firmware updates** — require an active internet connection.
 
-**Important Notes about Registering and Deleting Devices**
+:::caution
 
-Registering and deleting devices must be done from the BioStar Air smartphone app for iOS or Android, not from the BioStar Air web portal. This is critical to ensuring proper operation and avoiding errors.
+**Important**: Starting with BioStar Air 2.10 (and the BioStation 3), many new device configuration features were added. Not all devices support every feature, so menu options may vary depending on your hardware.
 
 :::
+
+## Registering & Deleting Devices
+
+Registering and deleting **must** be done from the **BioStar Air smartphone app** (iOS or Android) — not from the web portal. Doing this on the web can cause operational errors.
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 <CustomerNote />
 
-## Understanding Device Connection Status {#understanding-device-connection-status}
+## Device Connection Status {#device-connection-status}
 
-On the device management screen, devices display different status indicators:
+In the **Device List**, the status icon tells you the device’s connectivity:
 
-* **Green Dot**: The device is online and connected via Ethernet.
+* <StatusOK/> **Green Dot**: Online via Ethernet
 
-* **Red Dot**: The device is offline and not connected to the internet.
+* <StatusFail/> **Red Dot**: Offline
 
-* **No Dot**: The device status is unknown or has not been updated.
+* <StatusUpdating/> **Orange Dot**: Firmware update in progress
 
-Devices with a green dot support remote functions like door unlocking, QR authentication, and firmware updates.
+* ⚪ **No Dot**: Device without a network connection (e.g., Airfob Patch)
 
+* ⚠️ **Caution Icon**: Biometric device needs to sync with the server
 
-## Viewing and Managing Device Information {#viewing-and-managing-device-information}
+**Green Dot** devices can be controlled remotely, accept QR authentication, and be updated.
 
-Each registered device displays key details:
 
-* **Product Type**: Automatically retrieved from the database.
+## Viewing Device Info {#viewing-device-information}
 
-* **Device Nickname**: Customizable field for easy identification.
+Columns in the **Device List** include:
 
-* **Device ID**: Unique identifier assigned to the device.
+* **Product Type**: Auto-detected from Suprema's database
 
-* **Device Group**: Shows the group a device belongs to.
+* **Device Nickname**: Custom label for easy recognition
 
-* **Battery Status**: Displayed for battery-powered devices like Airfob Patch.
+* **Device ID**: Unique identifier for that device
 
-* **Firmware Version**: Indicates the current firmware installed.
+* **Device Group**: Which group(s) it belongs to
 
-* **Time Zone**: Adjustable per device.
+* **Battery Status**: Only for battery-powered devices
 
+* **Firmware Version**: Current firmware build
 
-## Performing Device Actions {#performing-device-actions}
+* **Time Zone**: Set individually per device
 
-Administrators can perform various actions on devices:
 
-* **Refresh**: Update device status.
+## Bulk Device Actions {#bulk-device-actions}
 
-* **Delete**: Remove a device (recommended via the BioStar Air app).
+From the **Device List** toolbar, you can:
 
-* **Update Firmware**: Select and apply available firmware updates.
+* **Refresh**: Update the device list & status
 
-* **Manage Device Groups**: Assign devices to groups for easier management.
+* **Delete**: Remove devices (always do in the app)
 
+* **Manage Device Groups**: Assign devices to groups
 
-## Editing Device Settings {#editing-device-settings}
+* **Byte Order**: Switch between MSB / LSB
 
-To modify device settings:
+* **Sync with Server**: Sync biometric templates from device to server
 
-1. Click on the desired device.
+* **Load Device Settings**: Import settings from devices originally set up in standalone mode
 
-1. Modify fields such as:
 
-   * **Device Nickname**
+## Editing an Individual Device {#editing-individual-device}
 
-   * **Time Zone**
+1. Select the device.
 
-   * **Daylight Savings Time**
+1. Edit fields like **Nickname**, **Time Zone**, or **DST**.
 
-1. Click **Save** to apply changes.
+1. Click **Save**.
 
 
-## Enabling and Configuring Device Features {#enabling-and-configuring-device-features}
+## Configuring Device Features
 
-Devices support several features that can be enabled or disabled:
+### Device Details
 
-* **NFC & RF Card Support**: Toggle to allow or restrict card-based authentication.
+Shows basic info: **model**, **serial number**, and **firmware version**.
 
-* **Hands-Free Mode**: Extends Bluetooth range for touchless access.
+**Actions**:
 
-* **QR Reader Support**: Enable if a QR reader is connected via RS485 cable.
+* Firmware update
 
-* **Beep Settings**: Customize authentication sounds.
+* Reboot device
 
+* Factory reset
 
-## Advanced Device Actions {#advanced-device-actions}
+**Settings**:
 
-Administrators can perform advanced actions, including:
+* **Nickname**: How it appears in lists/logs
 
-* **Firmware Update**: Apply updates to individual or multiple devices.
+* **Time Zone & DST**: Keeps logs consistent when site and device clocks differ
 
-* **Reboot Device**: Restart the device.
+* **Hands‑Free Mode**: Extends BLE range
 
-* **Factory Reset**: Restore the device to default settings.
+* **QR Reader**: Tells the device an RS‑485 QR reader is connected (**disables SIO2**)
 
-* **Reset (Keep Network Settings)**: Reset the device but retain network configurations.
+* **Beep Setting**: Controls the success chime (not on all devices)
 
+### Card Settings
 
-## Configuring Network Settings {#configuring-network-settings}
+:::caution
 
-By default, devices use DHCP for IP assignment. Administrators can manually configure:
+On XPass 2 and X-Station 2, card settings appear under **Details** and support is limited. A firmware update later in 2025 will improve this.
 
-* **Static IP Address**
+:::
 
-* **Gateway**
+#### NFC / RF Card
 
-* **DNS Server**
+* **Toggle** card authentication on/off
 
-* **Subnet Mask**
+* **Supported types**: MIFARE, DESFire, Felica, EM4100 (BioStation 3 & BioEntry W3; more devices by end of 2025), iCLASS, SEOS, HID Prox (device‑dependent)
 
+* **Byte Order**: MSB or LSB
 
-## Managing Time & Attendance (T&A) Settings {#managing-time-and-attendance-(t-and-a)-settings}
+* **Data Reading Method**: CSN (default) or Wiegand format
 
-Devices can be used for T&A tracking with the following options:
+  BioStar Air includes 5 built‑in formats; add more under **Settings** → **Card Format**
 
-* **Disabled**: No T&A tracking.
+#### Proprietary Cards
 
-* **By Schedule**: T&A logging based on assigned schedules.
+Enable for iCLASS SE/SEOS and HID Prox (device‑dependent)
 
-* **Fixed**: A device permanently assigned to a clock-in or clock-out function.
+### Network
 
-* **Mobile**: Users must select a T&A code before authentication.
+Default: **DHCP**.
 
+Manual configuration allows:
 
-## Adjusting Bluetooth Sensitivity {#adjusting-bluetooth-sensitivity}
+* Static IP
 
-Administrators can fine-tune Bluetooth signal strength to optimize reader performance:
+* Gateway
 
-* **Decrease Sensitivity**: Reduce unwanted activations in high-traffic areas.
+* DNS
 
-* **Increase Sensitivity**: Improve detection in areas with high signal interference.
+* Subnet mask
+
+:::note
+
+WLAN settings may appear, but they are not enabled at this time.
+
+:::
+
+### Authentication
+
+* **Authentication Mode**: Single or multi‑factor (Face, RFID, ID, PIN)
+
+* **Display User Name / ID**: Full, Initial, Hidden (screen devices only)
+
+* **Authorization Timeout**: Time before returning to default screen (biometric devices only)
+
+:::note
+
+Appears only on devices with PIN, Face, or Fingerprint support.
+
+:::
+
+### Face Authentication
+
+* Fake detection: Normal → Most Secure
+
+* Duplicate enrollment check (on‑device only)
+
+* Motion sensitivity (wake threshold)
+
+* Head pose angle (degrees off‑center allowed)
+
+* Wide search (allow partially visible faces)
+
+* Detection distance (cm)
+
+* Enrollment time (how long enrollment mode stays active)
+
+:::note
+
+Biometric devices only.
+
+:::
+
+#### Mask Detection
+
+* **Level**: Strict → Most Strict
+
+* **If Fails**: Deny or allow with logging
+
+* **Sequence**: After Access / Before Access / Without Access
+
+:::note
+
+"Before" vs "After" mainly matters when using non‑face credentials.
+
+:::
+
+### Time & Attendance (T&A)
+
+When enabled, **T&A events** are recorded in **Event Logs** and used in the **Hours on Site** report.
+
+* **Disabled**: No T&A
+
+* **User Selects**: On‑screen T&A keys (screen devices only)
+
+* **By Schedule**: Codes vary by time of day
+
+* **Last Choice**: Defaults to last used code
+
+* **Fixed**: Always uses one code
+
+* **Mobile**: Code selected in Suprema Pass app when presenting mobile credential
+
+### Display & Sound
+
+:::note
+
+Full menu only on biometric station devices. On other devices, basic options (like Beep Settings) may be found elsewhere.
+
+:::
+
+#### Display
+
+* **Screensaver**: Moving clock
+
+* **Backlight**: Always on or dim after inactivity
+
+* **Language**: Select language
+
+* **Home Screen Logo/Notice**: Up to 10 images or a text notice
+
+   :::note
+
+   **Important**: After clicking **+ Update** and saving, the images/notice will no longer appear in the edit screen — but will still display on the device.
+
+   :::
+
+#### Sound
+
+* **Voice Instruction**: Speaks "Access Granted" instead of beeps (select devices only)
+
+* **Device Volume**: Adjusts the overall volume
+
+* **Intercom Speaker/Mic Volume**: BioStation 3 only
+
+### Wiegand Output
+
+For integration with external systems (e.g., alarm panels).
+
+* Output Mode: Normal / Bypass
+
+* Fail codes
+
+* Output info
+
+* Pulse settings
+
+* Mobile consecutive tag (requires Suprema Pass v2.9.0+)
+
+* Consecutive tag limit
+
+### Intercom (BioStation 3)
+
+* SIP transport
+
+* SIP address / port / registration duration
+
+* Username / password / auth ID
+
+* Outbound proxy
+
+* Extensions
+
+* Video resolution
+
+* DTMF door opening
+
+### Secure Tamper
+
+Deletes **all users**, **logs**, and **encryption keys** if triggered.
+
+### RTSP Streaming (BioStation 3)
+
+* Address
+
+* Port
+
+* Credentials
+
+* Resolution
+
+### Bluetooth Sensitivity
+
+RSSI adjustment determines how close you must be for automatic door unlock.
+
+* **Decrease**: Avoid unintended activations
+
+* **Increase**: Improve detection where interference is high
 
 
 ## Managing Devices in the BioStar Air App {#managing-devices-in-the-airfob-pro-app}
 
-To manage devices using the mobile app:
+1. Open the app
 
-1. Open the **BioStar Air** app.
+1. **All Menu** → **Devices**
 
-1. Go to the **All Menu** and select **Devices**.
+1. Filter by group as needed
 
-1. View and filter devices by group.
-
-1. Hold down on a device to select multiple devices for batch actions.
+1. Long‑press to select multiple devices for batch actions
 
 
-## Registering a New Device {#registering-a-new-device}
+## Register a New Device {#registering-a-new-device}
 
-To add a device via the BioStar Air app:
+1. Log in as an (administrator)
 
-1. Ensure you are logged in with an **administrator account**.
+1. Make sure the device is online
 
-1. Ensure the device is **connected to the internet**.
+1. Tap **+**
 
-1. In the **Devices** menu, tap the **Plus (+) button**.
+1. Select and **Register**
 
-1. Select the device that appears and tap **Register**.
+1. (Optional) Create a door
 
-1. Optionally, create a new door with this device.
-
-1. Click **OK** to confirm registration.
+1. **OK** to confirm
 
 
 ## Removing a Device {#removing-a-device}
 
-To delete a device:
+1. Select device
 
-1. In the BioStar Air app, select the device.
+1. Long‑press to mark for deletion
 
-1. Hold down on the device to mark it for deletion.
+1. **⋮** → **Delete**
 
-1. Tap the **Three-Dot Menu** and select **Delete**.
+1. Choose whether to delete the linked door
 
-1. Choose whether to delete the associated door as well.
-
-1. Tap **Confirm** to finalize removal.
+1. **Confirm**
