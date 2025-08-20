@@ -550,8 +550,8 @@
     "function": "resolution",
     "models": {
       "FaceStation 2": {
-        "FS2-D": "800x400",
-        "FS2-AWB": "800x400"
+        "FS2-D": "800x480",
+        "FS2-AWB": "800x480"
       },
       "FaceLite": {
         "FL-DB": "320x240"
