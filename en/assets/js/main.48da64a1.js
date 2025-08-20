@@ -44195,15 +44195,21 @@ const withMsal = (Component) => {
  * Check if the current request is from Algolia Crawler
  */ const isAlgoliaCrawler = ()=>{
     if (typeof window === 'undefined') return false;
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    return userAgent.includes('algolia') || userAgent.includes('crawler') || userAgent.includes('supremaincio');
+    const userAgent = window.navigator.userAgent;
+    // Official Algolia Crawler user agent pattern: "Algolia Crawler/xx.xx.xx"
+    // Reference: https://support.algolia.com/hc/en-us/articles/17223760387857-What-is-the-user-agent-of-the-Crawler
+    return userAgent.includes('Algolia Crawler');
 };
 /**
  * Check if authentication should be enabled
  * Disable auth for Algolia Crawler and in certain environments
  */ const shouldEnableAuth = ()=>{
-    // Disable auth for Algolia Crawler
-    if (isAlgoliaCrawler()) return false;
+    // Check for Algolia Crawler
+    const isCrawler = isAlgoliaCrawler();
+    if (isCrawler) {
+        console.log('Algolia Crawler detected - Authentication disabled');
+        return false;
+    }
     // Disable auth if DISABLE_AUTH environment variable is set
     // if (process.env.REACT_APP_DISABLE_AUTH === 'true') return false;
     return true;
@@ -44293,7 +44299,7 @@ if (!isDev && authEnabled && msalInstance) {
 function Root(param) {
     let { children } = param;
     // Don't show authentication in development environment or when auth is disabled
-    if (isDev || authEnabled) {
+    if (isDev || !authEnabled) {
         return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: children
         });
