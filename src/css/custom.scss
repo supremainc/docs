@@ -331,6 +331,14 @@ footer {
 .tabulator-cell {
   white-space: normal !important;
 }
+// Tabulator 스타일
+
+// Zoom 스타일
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 201;
+}
+// Zoom 스타일
 
 // markdown 콘텐츠 스타일 
 .markdown {

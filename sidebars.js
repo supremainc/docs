@@ -634,6 +634,23 @@ const sidebars = {
       ]
     }
   ],
+  bioentryw3: [
+    {
+      type: 'category',
+      label: 'BioEntry W3',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w3/index',
+      },
+      items: [
+        'device/bioentry_w3/safety-instructions',
+        'device/bioentry_w3/getting-started'
+      ]
+    }
+  ],
   biostation3: [
     {
       type: 'category',
