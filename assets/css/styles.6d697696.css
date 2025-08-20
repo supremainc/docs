@@ -5227,10 +5227,6 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
 
 
 @media print {
-  @page {
-    size: A3 landscape;
-    margin: .2in;
-  }
   .tableContainer_BeFC {
     page-break-inside: avoid;
     break-inside: avoid;
