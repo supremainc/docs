@@ -5,8 +5,11 @@ import { LogLevel } from "@azure/msal-browser";
  */
 const isAlgoliaCrawler = () => {
     if (typeof window === 'undefined') return false;
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    return userAgent.includes('algolia') || userAgent.includes('crawler') || userAgent.includes('supremaincio');
+    const userAgent = window.navigator.userAgent;
+    
+    // Official Algolia Crawler user agent pattern: "Algolia Crawler/xx.xx.xx"
+    // Reference: https://support.algolia.com/hc/en-us/articles/17223760387857-What-is-the-user-agent-of-the-Crawler
+    return userAgent.includes('Algolia Crawler');
 };
 
 /**
@@ -14,8 +17,13 @@ const isAlgoliaCrawler = () => {
  * Disable auth for Algolia Crawler and in certain environments
  */
 const shouldEnableAuth = () => {
-    // Disable auth for Algolia Crawler
-    if (isAlgoliaCrawler()) return false;
+    // Check for Algolia Crawler
+    const isCrawler = isAlgoliaCrawler();
+    
+    if (isCrawler) {
+        console.log('Algolia Crawler detected - Authentication disabled');
+        return false;
+    }
     
     // Disable auth if DISABLE_AUTH environment variable is set
     // if (process.env.REACT_APP_DISABLE_AUTH === 'true') return false;
