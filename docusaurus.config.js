@@ -113,6 +113,7 @@ const config = {
     ]
   ],
   plugins: [
+    [ './src/plugins/whatap-browser', {} ],
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
     [
