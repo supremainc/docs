@@ -48,9 +48,16 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       if (sid === 'biostar.login' || sid === 'audit.setting.server.server_addr' || sid === 'audit.setting.server.server_port') {
         localeText = locale[sid].replace('2', 'X');
       } else {
-        localeText = locale[sid] 
-          ? locale[sid]
-            .replace('<br>', ' ').replace('</br>', '').replace('<br/>', ' ')
+        localeText = locale[sid] ? locale[sid]
+            .replace(' <br/><br/> ', ' ')
+            .replace(' <br/><br/>', ' ')
+            .replace('<br/><br/> ', ' ')
+            .replace(' </br> ', ' ')
+            .replace(' <br>', ' ')
+            .replace('<br> ', ' ')
+            .replace('<br/>', ' ')
+            .replace(' <br> ', ' ')
+            .replace('&sol;', '/')
             .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
           : null;
       }
