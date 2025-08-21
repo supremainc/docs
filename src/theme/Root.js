@@ -7,6 +7,19 @@ import { translate } from '@docusaurus/Translate';
 const isDev = process.env.NODE_ENV === 'development';
 
 /**
+ * Check if the current request is from Algolia Crawler
+ */
+const isAlgoliaCrawler = () => {
+    if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
+    
+    const userAgent = window.navigator.userAgent;
+    
+    // Official Algolia Crawler user agent pattern: "Algolia Crawler/xx.xx.xx"
+    // Reference: https://support.algolia.com/hc/en-us/articles/17223760387857-What-is-the-user-agent-of-the-Crawler
+    return userAgent.includes('Algolia Crawler');
+};
+
+/**
  * MSAL should be instantiated outside of the component tree to prevent it from being re-instantiated on re-renders.
  * Only instantiate in production environment and when authentication is enabled.
  */
@@ -32,6 +45,14 @@ if (!isDev && authEnabled && msalInstance) {
 
 // Default implementation, that you can customize
 export default function Root({children}) {
+    // Check for Algolia Crawler first
+    const isCrawler = isAlgoliaCrawler();
+    
+    if (isCrawler) {
+        console.log('Algolia Crawler detected in Root.js - bypassing authentication');
+        return <>{children}</>;
+    }
+    
     // Don't show authentication in development environment or when auth is disabled
     if (isDev || !authEnabled) {
         return <>{children}</>;
