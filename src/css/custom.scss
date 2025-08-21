@@ -331,14 +331,14 @@ footer {
 .markdown {
   counter-reset: count;
   header h1 {
-    &.confidential::after {
+    &.confidential::before {
       content: "CONFIDENTIAL";
       display: inline-block;
       position: relative;
       color: var(--ifm-color-cmd);
       font-weight: 600;
       font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-right: 1rem;
       padding: .3rem;
       border: 1px solid;
       border-radius: 6px;
