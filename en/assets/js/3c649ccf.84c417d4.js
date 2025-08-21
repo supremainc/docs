@@ -76,8 +76,8 @@ If neither a Master Admin nor an equivalent setting is configured, a warning pop
 
 
 const toc = [{
-  "value": "Setting Up the Master Admin Feature",
-  "id": "setting-up-the-master-admin-feature",
+  "value": "Setting Up the Master Admin",
+  "id": "setting-up-the-master-admin",
   "level": 2
 }, {
   "value": "What is a Master Admin?",
@@ -88,8 +88,8 @@ const toc = [{
   "id": "supported-products-for-master-admin",
   "level": 3
 }, {
-  "value": "How to Enhance Administrator Security on New and Upgraded Devices",
-  "id": "how-to-enhance-administrator-security-on-new-and-upgraded-devices",
+  "value": "How to Enhance Administrator Security on New Devices or Existing Devices with Upgraded Firmware",
+  "id": "how-to-enhance-administrator-security-on-new-devices-or-existing-devices-with-upgraded-firmware",
   "level": 2
 }, {
   "value": "New Devices",
@@ -154,7 +154,7 @@ function _createMdxContent(props) {
         children: "preventing unauthorized access and configuration changes"
       }), ".", (0,jsx_runtime.jsx)("br", {}), "With this feature, you ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "must register a Master Admin"
-      }), " on the device, and only registered Master Admins can access the administrator menu and change device settings."]
+      }), " on the new device, and only registered Master Admins can access the administrator menu and change device settings."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Master Admin"
@@ -177,13 +177,13 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "setting-up-the-master-admin-feature",
-      children: "Setting Up the Master Admin Feature"
+      id: "setting-up-the-master-admin",
+      children: "Setting Up the Master Admin"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "what-is-a-master-admin",
       children: "What is a Master Admin?"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "If you use the device without setting up a Master Admin, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator."
+      children: "If you use the device without setting up a administrator, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "supported-products-for-master-admin",
       children: "Supported Products for Master Admin"
@@ -243,15 +243,15 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "how-to-enhance-administrator-security-on-new-and-upgraded-devices",
-      children: "How to Enhance Administrator Security on New and Upgraded Devices"
+      id: "how-to-enhance-administrator-security-on-new-devices-or-existing-devices-with-upgraded-firmware",
+      children: "How to Enhance Administrator Security on New Devices or Existing Devices with Upgraded Firmware"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "new-devices",
       children: "New Devices"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["For new devices, registering a ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Master Admin"
-      }), " is mandatory. If you do not register a Master Admin, device usage will be restricted."]
+      }), " is mandatory from the beginning. If you do not register a Master Admin, device usage will be restricted."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -362,7 +362,7 @@ function _createMdxContent(props) {
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "The same conditions apply to both new and upgraded devices."
+                  children: "The same conditions apply to both new and firmware upgraded devices."
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

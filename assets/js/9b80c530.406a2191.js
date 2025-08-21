@@ -51,33 +51,12 @@ const assets = {
 <Image src='/img/how-to/no-register-master-admin.png' alone caption />
 
 :::*/
-/*## [TBD] BioStar 2에서 마스터 관리자 설정하기
-
-:::info
-
-* 마스터 관리자 기능은 BioStar 2 v2.9.11부터 지원됩니다.
-
-* 펌웨어를 업그레이드한 기존 장치는 BioStar 2 관리자 설정에 마스터 관리자 메뉴가 나타나지 않습니다.
-
-:::
-
-## [TBD] 마스터 관리자 일괄 편집하기
-
-* 관리자 2단계 인증 및 크리덴셜 등록을 일괄 편집할 수 있습니다.
-
-* 일괄 편집 시 등록한 크리덴셜로 덮어쓰여 집니다.
-
-* 얼굴, 지문, 카드, PIN을 등록할 수 있습니다.
-
-* 선택된 장치가 크리덴셜을 지원하지 않는 경우, 해당 장치는 편집 실패됩니다.
-
-* 신규 장치의 경우에도 최소 2개 조건을 충족해야 하며, 미충족 시 해당 장치만 편집 실패 처리됩니다.*/
 
 
 
 const toc = [{
-  "value": "마스터 관리자 기능 설정",
-  "id": "마스터-관리자-기능-설정",
+  "value": "마스터 관리자 설정",
+  "id": "마스터-관리자-설정",
   "level": 2
 }, {
   "value": "마스터 관리자란?",
@@ -88,20 +67,20 @@ const toc = [{
   "id": "마스터-관리자-지원-제품-안내",
   "level": 3
 }, {
-  "value": "신규 장치와 업그레이드 장치에서 관리자 보안을 향상시키는 방법",
-  "id": "신규-장치와-업그레이드-장치에서-관리자-보안을-향상시키는-방법",
+  "value": "새 장치 또는 펌웨어를 업그레이드한 기존 장치에서 관리자 보안을 향상시키는 방법",
+  "id": "새-장치-또는-펌웨어를-업그레이드한-기존-장치에서-관리자-보안을-향상시키는-방법",
   "level": 2
 }, {
-  "value": "신규 장치",
-  "id": "신규-장치",
+  "value": "새 장치",
+  "id": "새-장치",
   "level": 3
 }, {
-  "value": "신규 장치에서 마스터 관리자 등록하기",
-  "id": "신규-장치에서-마스터-관리자-등록하기",
+  "value": "새 장치에서 마스터 관리자 등록하기",
+  "id": "새-장치에서-마스터-관리자-등록하기",
   "level": 4
 }, {
-  "value": "신규 장치에서 마스터 관리자 관리하기",
-  "id": "신규-장치에서-마스터-관리자-관리하기",
+  "value": "새 장치에서 마스터 관리자 관리하기",
+  "id": "새-장치에서-마스터-관리자-관리하기",
   "level": 4
 }, {
   "value": "업그레이드 장치",
@@ -152,7 +131,7 @@ function _createMdxContent(props) {
         children: "장치의 보안을 향상"
       }), "시키고 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "무단 접근 및 설정 변경을 방지"
-      }), "하기 위한 기능입니다.", (0,jsx_runtime.jsx)("br", {}), "이 기능을 통해 장치에는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "하기 위한 기능입니다.", (0,jsx_runtime.jsx)("br", {}), "새 장치에는 이 기능을 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "반드시 마스터 관리자를 등록"
       }), "해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -177,13 +156,13 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "마스터-관리자-기능-설정",
-      children: "마스터 관리자 기능 설정"
+      id: "마스터-관리자-설정",
+      children: "마스터 관리자 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "마스터-관리자란",
       children: "마스터 관리자란?"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치에 마스터 관리자를 설정하지 않고 사용하는 경우, 누구나 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다. 마스터 관리자 기능은 이러한 보안 취약점을 해결하기 위해 전체 관리자 설정을 강제하는 기능입니다."
+      children: "장치에 관리자를 설정하지 않고 사용하는 경우, 누구나 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다. 마스터 관리자 기능은 이러한 보안 취약점을 해결하기 위해 전체 관리자 설정을 강제하는 기능입니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "마스터-관리자-지원-제품-안내",
       children: "마스터 관리자 지원 제품 안내"
@@ -243,13 +222,13 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "신규-장치와-업그레이드-장치에서-관리자-보안을-향상시키는-방법",
-      children: "신규 장치와 업그레이드 장치에서 관리자 보안을 향상시키는 방법"
+      id: "새-장치-또는-펌웨어를-업그레이드한-기존-장치에서-관리자-보안을-향상시키는-방법",
+      children: "새 장치 또는 펌웨어를 업그레이드한 기존 장치에서 관리자 보안을 향상시키는 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "신규-장치",
-      children: "신규 장치"
+      id: "새-장치",
+      children: "새 장치"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["신규 장치에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["새 장치에서는 처음부터 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "마스터 관리자"
       }), "를 필수적으로 등록해야하며, 등록하지 않을 경우 장치 사용이 제한됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -257,7 +236,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["신규 장치에서는 최초 부팅 시 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["새 장치에서는 최초 부팅 시 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "마스터 관리자"
             }), " 등록 화면이 나타납니다. ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "마스터 관리자"
@@ -271,22 +250,22 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "신규 장치는 펌웨어 다운그레이드를 할 수 없습니다."
+            children: "새 장치는 펌웨어 다운그레이드를 할 수 없습니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 등록하기"
+          children: "새 장치에서 마스터 관리자 등록하기"
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
-        id: "신규-장치에서-마스터-관리자-등록하기",
-        children: "신규 장치에서 마스터 관리자 등록하기"
+        id: "새-장치에서-마스터-관리자-등록하기",
+        children: "새 장치에서 마스터 관리자 등록하기"
       }), (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["신규 장치를 최초 부팅하면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["새 장치를 최초 부팅하면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "마스터 관리자"
             }), " 등록 화면이 나타납니다."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -364,7 +343,7 @@ function _createMdxContent(props) {
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                  children: "신규 장치와 업그레이드 장치 모두 동일한 조건이 적용됩니다."
+                  children: "새 장치와 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다."
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -390,13 +369,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "신규 장치에서 마스터 관리자 관리하기"
+          children: "새 장치에서 마스터 관리자 관리하기"
         })
       }), (0,jsx_runtime.jsx)(_components.h4, {
-        id: "신규-장치에서-마스터-관리자-관리하기",
-        children: "신규 장치에서 마스터 관리자 관리하기"
+        id: "새-장치에서-마스터-관리자-관리하기",
+        children: "새 장치에서 마스터 관리자 관리하기"
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["신규 장치에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["새 장치에서 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "마스터 관리자"
         }), " 설정은 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "설정 → 장치 → 마스터 관리자"
@@ -514,7 +493,7 @@ function _createMdxContent(props) {
       children: "자주 묻는 질문"
     }), "\n", "\n", (0,jsx_runtime.jsx)(FaqsItems, {
       data: faqs_namespaceObject
-    }), "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {
