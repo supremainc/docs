@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-mdx-cc0.json
-var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"Smartcard API","description":"BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/en/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"Smartcard API","toc_max_heading_level":3,"heading_className":"confidential","isTranslationMissing":true}}')
+var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/en/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"heading_className":"confidential","isTranslationMissing":true}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -27,7 +27,7 @@ var TypedefStruct = __webpack_require__(38757);
 
 const frontMatter = {
 	id: 'smartcardapi',
-	title: 'Smartcard API',
+	title: '슈프리마 스마트 카드 발급 안내',
 	toc_max_heading_level: 3,
 	heading_className: 'confidential',
 	isTranslationMissing: true
@@ -85,40 +85,63 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar의 스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "주요 함수"
-      })
+      children: "이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://kb.supremainc.com/bs2sdk/doku.php?id=ko:bs2_scancard",
-              children: "BS2_ScanCard"
-            })
-          }), ": 장치에서 카드를 스캔하고 카드 데이터를 분석합니다."]
+            children: "카드 데이터 구조"
+          }), ": SCC(Secure Credential Card)와 AOC(Access on Card) 제작에 필요한 데이터 구조"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://kb.supremainc.com/bs2sdk/doku.php?id=ko:bs2_writecard",
-              children: "BS2_WriteCard"
-            })
-          }), ": SmartCard에 데이터를 저장합니다."]
+            children: "구조체 명세"
+          }), ": 카드 제작 시 준수해야 하는 필드별 상세 요구사항"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://kb.supremainc.com/bs2sdk/doku.php?id=ko:bs2_erasecard",
-              children: "BS2_EraseCard"
-            })
-          }), ": SmartCard를 포맷합니다."]
+            children: "데이터 무결성"
+          }), ": CRC 검증을 통한 카드 데이터 품질 보장 방법"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "구현 참조"
+          }), ": 각 구조체 간의 관계와 올바른 데이터 설정 방법"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "이 문서에 따라 제작된 스마트 카드는 슈프리마의 모든 BioStar 호환 장치에서 정상 동작합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "스마트 카드를 발급하기 전에 아래 사항을 확인하세요."
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "SDK 요구 사항"
+            }), ": ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://kb.supremainc.com/bs2sdk",
+              children: "BioStar 2 Device SDK"
+            })]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "호환 장치"
+            }), ": BioStar 지원 모든 슈프리마 장치"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "카드 유형"
+            }), ": SCC(Secure Credential Card), AOC(Access on Card)"]
+          }), "\n"]
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "구조체-관계도",
       children: "구조체 관계도"
@@ -245,7 +268,7 @@ function _createMdxContent(props) {
             name: "cardAuthMode",
             type: "uint8_t",
             size: 1,
-            description: "<b>IR Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+            description: "개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
             notes: ["<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."],
             constants: [{
               value: "2",
@@ -274,7 +297,7 @@ function _createMdxContent(props) {
             type: "uint8_t",
             size: 1,
             description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
-            notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "<b>IR Face</b> 기반은 <code>cardAuthMode</code>를 사용하세요.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
+            notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
             constants: [{
               value: "21",
               description: "카드"
@@ -288,9 +311,6 @@ function _createMdxContent(props) {
               value: "24",
               description: "카드 + PIN"
             }, {
-              value: "25",
-              description: "카드 + 얼굴 또는 지문"
-            }, {
               value: "26",
               description: "카드 + 얼굴 또는 PIN"
             }, {
@@ -300,26 +320,14 @@ function _createMdxContent(props) {
               value: "28",
               description: "카드 + 얼굴 또는 지문 또는 PIN"
             }, {
-              value: "29",
-              description: "카드 + 얼굴 + 지문"
-            }, {
               value: "30",
               description: "카드 + 얼굴 + PIN"
-            }, {
-              value: "31",
-              description: "카드 + 지문 + 얼굴"
             }, {
               value: "32",
               description: "카드 + 지문 + PIN"
             }, {
               value: "33",
               description: "카드 + 얼굴 또는 지문 + PIN"
-            }, {
-              value: "34",
-              description: "카드 + 얼굴 + 지문 또는 PIN"
-            }, {
-              value: "35",
-              description: "카드 + 지문 + 얼굴 또는 PIN"
             }, {
               value: "254",
               description: "사용할 수 없음"
