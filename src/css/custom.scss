@@ -469,6 +469,9 @@ footer {
   }
 
   section {
+    ul {
+      margin-bottom: var(--ifm-list-paragraph-margin);
+    }
     &.row {
       a.padding--lg {
         padding: 20px !important;
@@ -509,6 +512,10 @@ footer {
         margin-top: 0;
       }
     }
+  }
+
+  .overflow-x {
+    margin-top: var(--ifm-list-paragraph-margin);
   }
 
   /* Alert */
@@ -647,6 +654,7 @@ footer {
       padding-bottom: .8rem;
     }
   }
+  
   ul ul, ul ol, ol ol, ol ul {
     margin: 1rem 0;
   }

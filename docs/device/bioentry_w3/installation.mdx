@@ -1,0 +1,126 @@
+---
+id: installation
+title: 설치하기
+description: BioEntry W3 장치 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [설치, BioEntry W3, 장치]
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+1. 제품을 장착할 위치를 정하세요.
+
+    <Image src='/img/device/installation-recommended-bs3.svg' className='none' alone />
+
+    <InstallationBracketNotes height={137} />
+
+1. BioEntry W3를 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/bew3-bracket-fix.png' className='none' alone />
+
+    :::info
+
+    * BioEntry W3를 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/bew3-installation_distance1.png' className='none' />
+
+    <div className='overflow-x'>
+
+    | 벽 | 두께거리 |
+    | :--: | :--: |
+    | 100 mm | 270 mm |
+    | 120 mm | 250 mm |
+    | 150 mm | 170 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/bew3-installation_distance.png' className='none' />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 고정된 브래킷 위에 BioEntry W3를 장착하세요.
+
+    <Image src='/img/device/bew3-device-fix.png' className='none' alone />
+
+1. BioEntry W3의 제품 고정용 나사를 돌려 BioEntry W3와 브래킷을 조립하세요.
+
+    <Image src='/img/device/bew3-device-fix-bottom.png' className='none' alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+
+## 전원 연결
+
+<Image src='/img/device/bew3-power-connetion.png' />
+
+import InstallPowerCautionNotes from '../../common/_installation-power-caution-notes.mdx';
+
+<InstallPowerCautionNotes />
+
+
+## 네트워크 연결
+
+### TCP/IP
+
+LAN 연결 (허브와 연결)
+
+일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다.
+
+<Image src='/img/device/installation-network-hub-connection-bew3.png' className='none' />
+
+### LAN 연결 (PC와 직접 연결)
+
+장치는 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
+
+<Image src='/img/device/installation-network-direct-connection-bew3.png' className='none' alone />
+
+
+## Input 연결
+
+<Image src='/img/device/installation-input-connection-bew3.png' className='none' />
+
+
+## 릴레이 연결
+
+### Fail Safe Lock
+
+Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다.
+
+<Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' className='none' />
+
+:::caution
+
+* 출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요.
+
+* 장치와 출입문 잠금 장치는 별도의 전원을 사용하세요.
+
+* 슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다.
+
+:::
+
+:::info
+
+다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요.
+
+:::
