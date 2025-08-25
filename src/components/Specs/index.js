@@ -102,23 +102,25 @@ export function SpecSectioin({data}) {
                           <p><strong>
                             {translate({id: subitem.label_id})}
                           </strong></p>
-                          <ul>
-                            {Object.values(subitem.items).map((subsubitem) => (
-                              <li key={subsubitem.label_id || subsubitem.label}>
-                                {translate({id: subsubitem.label_id})}
-                                {subsubitem.annotation_label && <AnnotationSup id={subsubitem.annotation_label} />}
-                                : {
-                                  typeof subsubitem.value === 'boolean' ? (
-                                    <SupportedType supported={subsubitem.value} annot={subsubitem.annotation_value} />
-                                  ) : typeof subsubitem.value === 'string' ? (
-                                    <Description contents={subsubitem.value} />
-                                  ) : typeof subsubitem.value === 'object' ? (
-                                    <Description contents={subsubitem.value[currentLocale]} />
-                                  ) : null
-                                }
-                              </li>
-                            ))}
-                          </ul>
+                          {subitem.items && (
+                            <ul>
+                              {Object.values(subitem.items).map((subsubitem) => (
+                                <li key={subsubitem.label_id || subsubitem.label}>
+                                  {translate({id: subsubitem.label_id})}
+                                  {subsubitem.annotation_label && <AnnotationSup id={subsubitem.annotation_label} />}
+                                  : {
+                                    typeof subsubitem.value === 'boolean' ? (
+                                      <SupportedType supported={subsubitem.value} annot={subsubitem.annotation_value} />
+                                    ) : typeof subsubitem.value === 'string' ? (
+                                      <Description contents={subsubitem.value} />
+                                    ) : typeof subsubitem.value === 'object' ? (
+                                      <Description contents={subsubitem.value[currentLocale]} />
+                                    ) : null
+                                  }
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       </React.Fragment>
                     ))
@@ -229,23 +231,27 @@ export function SpecSizeWieght({data}) {
               {translate({id: item.label_id})}
             </div>
             <div className={styles.techspecsBody}>
-              <div className={clsx(styles.column, styles.small_c5, styles.modelimg)}>
-                <img src={useBaseUrl(item.product_img)} />
-              </div>
+              {item.product_img && (
+                <div className={clsx(styles.column, styles.small_c5, styles.modelimg)}>
+                  <img src={useBaseUrl(item.product_img)} />
+                </div>
+              )}
               <div className={clsx(styles.column, styles.small_c5, styles.desc)}>
                 <ul>
-                  <li>
-                    {translate({id: 'specs.size_weight.size'})}:&nbsp;
-                    <span className={styles.size}>
-                      <DimenW /> {item.size.width}mm
-                      × <DimenH /> {item.size.height}mm
-                      {item.size.depth && (
-                        <>
-                          &nbsp;x <DimenD /> {item.size.depth}mm
-                        </>
-                      )}
-                    </span>
-                  </li>
+                  {item.size && (
+                    <li>
+                      {translate({id: 'specs.size_weight.size'})}:&nbsp;
+                      <span className={styles.size}>
+                        <DimenW /> {item.size.width}mm
+                        × <DimenH /> {item.size.height}mm
+                        {item.size.depth && (
+                          <>
+                            &nbsp;x <DimenD /> {item.size.depth}mm
+                          </>
+                        )}
+                      </span>
+                    </li>
+                  )}
                   <li>
                     {translate({id: 'specs.size_weight.weight'})}:&nbsp;
                     {typeof item.weight === 'string' && (

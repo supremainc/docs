@@ -6,6 +6,11 @@ keywords: [설치, BioEntry W3, 장치]
 ---
 
 import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+import InstallationRelayCautionNotes from '../../common/_installation-relay-caution.mdx';
+import DaioDirectionInfo from "../../common/_installation-daiod-direction-info.mdx";
+import IntelligentDesc from '../../common/_installation-intelligent-secure-relay-caution.mdx';
+import ConnectionInfo from '../../common/_installation-connection-master-slave-info.mdx';
+import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
 
 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
 
@@ -109,18 +114,141 @@ Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연�
 
 <Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' className='none' />
 
+<InstallationRelayCautionNotes />
+
+<DaioDirectionInfo />
+
+### Fail Secure Lock
+
+Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연결하세요. Fail Secure Lock은 평상 시 릴레이 회로에 전류가 흐르지 않으며, 릴레이가 동작하여 전류가 흐르면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 잠깁니다.
+
+<Image src='/img/device/installation-relay-fail-secure-lock-bew3.png' className='none' />
+
+<InstallationRelayCautionNotes />
+
+<DaioDirectionInfo />
+
+### 자동문 연결
+
+<Image src='/img/device/installation-automatic-door-bew3.png' className='none' />
+
+
+## 독립형 연결
+
+별도의 I/O 장치를 연결하지 않고 장치를 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다.
+
+<Image src='/img/device/installation-standalone-connection-bew3.png' className='none' />
+
 :::caution
 
-* 출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요.
+<IntelligentDesc />
 
-* 장치와 출입문 잠금 장치는 별도의 전원을 사용하세요.
+:::
 
-* 슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다.
+<ConnectionInfo />
+
+## Secure I/O 2 연결
+
+장치에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 장치와 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 장치의 전원이 차단되더라도 보안을 유지할 수 있습니다.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+<Image src='/img/device/installation-sio2-connection-bew3.png' className='none' />
+
+<ConnectionInfo />
+
+
+## Wiegand 연결
+
+Wiegand 입력 장치로 사용
+
+<Image src='/img/device/installation-wiegand-in-connection-bew3.png' className='none' />
+
+Wiegand 출력 장치로 사용
+
+<Image src='/img/device/installation-wiegand-out-connection-bew3.png' className='none' />
+
+
+## 네트워크 설정 초기화
+
+1. 전원을 켜세요.
+
+1. 장치가 자동으로 재부팅될 때까지 초기화 버튼을 누르세요.
+
+1. 초기화된 네트워크 정보를 이용해 장치를 연결하세요.
+
+    * **TCP/IP 주소**: DHCP 주소 할당 (DHCP 주소 할당을 실패하면 169.254.x.x로 설정됩니다.)
+
+    * **서버 모드**: 사용 해제
+
+    * **RS-485**: 기본값, 115200 bps
+
+1. TCP/IP나 RS-485 정보를 변경하세요.
+
+1. 전원을 끄고 켠 뒤 네트워크 정보가 올바르게 설정되었는지 확인하세요.
+
+
+## 공장 초기화
+
+1. 장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다.
+
+1. 전원을 켜세요.
+
+1. 초기화 버튼을 빠르게 세 번 누르세요.
+
+1. 장치의 LED가 초록색으로 깜박거릴 때 초기화 버튼을 한 번 더 누르세요.
+
+:::info
+
+장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다.
+
+:::
+
+
+## 펌웨어 업그레이드
+
+장치에 USB 메모리를 연결하여 펌웨어를 업그레이드할 수 있습니다.
+
+1. USB 메모리에 업그레이드할 펌웨어 파일을 저장하세요.
+
+    :::info
+
+    USB 메모리에는 펌웨어 파일을 하나만 저장하여 업그레이드하는 것을 권장합니다.
+
+    :::
+
+1. 장치에 USB 메모리를 연결하세요.
+
+1. '관리자 인증이 필요합니다' 메시지가 나타나면 관리자 권한 인증 수단으로 인증하세요.
+
+    :::info
+
+    BioStar 2에서 장치에 관리자를 등록하세요. 장치에 관리자가 등록되어 있지 않을 경우 펌웨어 업그레이드를 진행할 수 없습니다. 관리자 등록 방법에 대한 자세한 내용은 BioStar 2 관리자 설명서를 참고하세요.
+
+    :::
+
+1. 관리자 인증에 성공하면 펌웨어 파일이 장치로 전송됩니다.
+
+1. 펌웨어 파일 전송이 완료되면 USB 메모리 제거 메시지가 화면에 나타납니다. USB 메모리를 제거하세요.
+
+    :::info
+
+    USB 메모리를 제거하지 않으면 장치 재시작 후 펌웨어 업그레이드가 다시 실행됩니다.
+
+    :::
+
+1. 펌웨어 업그레이드 진행 후 장치가 자동으로 재시작됩니다.
+
+:::caution
+
+펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요. 고장의 원인이 됩니다.
 
 :::
 
 :::info
 
-다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요.
+<SupportedMemoryInfo />
 
 :::

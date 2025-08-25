@@ -648,7 +648,10 @@ const sidebars = {
       items: [
         'device/bioentry_w3/safety-instructions',
         'device/bioentry_w3/getting-started',
-        'device/bioentry_w3/installation'
+        'device/bioentry_w3/installation',
+        'device/bioentry_w3/product-specifications',
+        'device/bioentry_w3/regulatory-information',
+        'device/bioentry_w3/appendices'
       ]
     }
   ],
