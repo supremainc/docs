@@ -201,6 +201,11 @@ const config = {
                 type: 'doc',
                 label: 'BioStation 3',
                 docId: 'device/biostation_3/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioEntry W3',
+                docId: 'device/bioentry_w3/index'
               }
             ]
           },

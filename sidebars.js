@@ -662,6 +662,27 @@ const sidebars = {
       ]
     }
   ],
+  bioentryw3: [
+    {
+      type: 'category',
+      label: 'BioEntry W3',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w3/index',
+      },
+      items: [
+        'device/bioentry_w3/safety-instructions',
+        'device/bioentry_w3/getting-started',
+        'device/bioentry_w3/installation',
+        'device/bioentry_w3/product-specifications',
+        'device/bioentry_w3/regulatory-information',
+        'device/bioentry_w3/appendices'
+      ]
+    }
+  ],
   biostation3: [
     {
       type: 'category',

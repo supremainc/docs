@@ -446,6 +446,9 @@
   "specs.general.lcd_type": {
     "message": "Display"
   },
+  "specs.general.led_type": {
+    "message": "LED"
+  },
   "specs.general.lcd_resolution": {
     "message": "Display Resolution"
   },
@@ -511,6 +514,9 @@
   },
   "specs.interface.wiegand": {
     "message": "Wiegand"
+  },
+  "specs.interface.input": {
+    "message": "Input"
   },
   "specs.interface.ttl_input": {
     "message": "TTL Input"
