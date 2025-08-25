@@ -22,13 +22,13 @@ import SupportedMemoryInfo from '../../common/_installation-supported-memory-dev
 
     <InstallationBracketNotes height={137} />
 
-1. BioEntry W3를 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+1. 제품을 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
 
     <Image src='/img/device/bew3-bracket-fix.png' className='none' alone />
 
     :::info
 
-    * BioEntry W3를 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
 
     * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
 
@@ -39,7 +39,7 @@ import SupportedMemoryInfo from '../../common/_installation-supported-memory-dev
 
     <div className='overflow-x'>
 
-    | 벽 | 두께거리 |
+    | 벽 두께 | 거리 |
     | :--: | :--: |
     | 100 mm | 270 mm |
     | 120 mm | 250 mm |
@@ -51,7 +51,7 @@ import SupportedMemoryInfo from '../../common/_installation-supported-memory-dev
 
     <Column className='text--center'>
     
-    <Image src='/img/device/bew3-installation_distance.png' className='none' />
+    <Image src='/img/device/bew3-installation_distance.png' className='none' alone />
 
     </Column>
     </Columns>
@@ -60,11 +60,11 @@ import SupportedMemoryInfo from '../../common/_installation-supported-memory-dev
 
     :::
 
-1. 고정된 브래킷 위에 BioEntry W3를 장착하세요.
+1. 고정된 브래킷 위에 제품을 장착하세요.
 
     <Image src='/img/device/bew3-device-fix.png' className='none' alone />
 
-1. BioEntry W3의 제품 고정용 나사를 돌려 BioEntry W3와 브래킷을 조립하세요.
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
 
     <Image src='/img/device/bew3-device-fix-bottom.png' className='none' alone />
 
@@ -88,15 +88,15 @@ import InstallPowerCautionNotes from '../../common/_installation-power-caution-n
 
 ### TCP/IP
 
-LAN 연결 (허브와 연결)
+#### LAN 연결 (허브와 연결)
 
 일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다.
 
 <Image src='/img/device/installation-network-hub-connection-bew3.png' className='none' />
 
-### LAN 연결 (PC와 직접 연결)
+#### LAN 연결 (PC와 직접 연결)
 
-장치는 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
+제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
 
 <Image src='/img/device/installation-network-direct-connection-bew3.png' className='none' alone />
 
@@ -135,7 +135,7 @@ Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연
 
 ## 독립형 연결
 
-별도의 I/O 장치를 연결하지 않고 장치를 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다.
+별도의 I/O 장치를 연결하지 않고 제품을 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다.
 
 <Image src='/img/device/installation-standalone-connection-bew3.png' className='none' />
 
@@ -149,7 +149,7 @@ Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연
 
 ## Secure I/O 2 연결
 
-장치에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 장치와 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 장치의 전원이 차단되더라도 보안을 유지할 수 있습니다.
+제품에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 제품과 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 제품의 전원이 차단되더라도 보안을 유지할 수 있습니다.
 
 * RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
 
@@ -171,7 +171,7 @@ Wiegand 출력 장치로 사용
 <Image src='/img/device/installation-wiegand-out-connection-bew3.png' className='none' />
 
 
-## 네트워크 설정 초기화
+## 네트워크 설정 초기화 {#reset-network-settings}
 
 1. 전원을 켜세요.
 
@@ -190,9 +190,9 @@ Wiegand 출력 장치로 사용
 1. 전원을 끄고 켠 뒤 네트워크 정보가 올바르게 설정되었는지 확인하세요.
 
 
-## 공장 초기화
+## 공장 초기화 {#factory-reset}
 
-1. 장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다.
+장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다.
 
 1. 전원을 켜세요.
 
