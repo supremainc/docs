@@ -94,7 +94,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioEntry W3',
-      url: '#',
+      url: `/device/bioentry_w3`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
       desc: `${translate({
         id: "externalLinks.BioEntryW3.desc",

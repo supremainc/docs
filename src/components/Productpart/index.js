@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export function Productpart({ src, maxHeight, maxWidth, children }) {
   return (
-    <div className='overflow-x'>
+    <div className={styles.overflowX}>
       <div className={styles.product_parts}>
         <img src={useBaseUrl(src)} className='none' style={{maxHeight: maxHeight, maxWidth: maxWidth}} />
         { children }

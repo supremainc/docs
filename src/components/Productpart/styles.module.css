@@ -1,6 +1,12 @@
 .product_parts {
   position: relative;
   width: fit-content;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.overflowX {
+  overflow-x: auto;
 }
 
 .product_parts img {
