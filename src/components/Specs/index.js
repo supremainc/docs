@@ -225,7 +225,7 @@ export function SpecSizeWieght({data}) {
         {translate({id: `${data.label_id}`})}
       </Head>
 
-      <div className={styles.techspec}>
+      <div className={clsx(styles.techspec, styles.dimensions)}>
         {Object.values(specs).map((item, index) => (
           <div className={clsx(styles.techspecSection, styles.noborder)} key={item.label_id || index}>
             <div className={styles.techspecsRowheader}>
