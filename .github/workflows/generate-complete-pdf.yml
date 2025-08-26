@@ -187,12 +187,10 @@ jobs:
         
         # PDF 병합: 프론트커버 + 메인문서 + 백커버
         pdfcpu merge \
-          -mode append \
-          -bookmarks=false \
+          "./pdf/$FINAL_PDF_NAME" \
           "./pdf/front-cover.pdf" \
           "./pdf/${MAIN_PDF_NAME}" \
-          "$BACK_COVER" \
-          "./pdf/$FINAL_PDF_NAME"
+          "$BACK_COVER"
         
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
         echo "✅ PDF 병합 완료: ./pdf/${FINAL_PDF_NAME}"
