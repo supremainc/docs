@@ -119,7 +119,10 @@ jobs:
         # HTML을 PDF로 변환
         prince "./pdf/front-cover.html" -o "./pdf/front-cover.pdf"
         
-        echo "✅ 프론트 커버 완료: ./pdf/front-cover.pdf"
+        # 프론트 커버 PDF에서 주석 제거
+        pdfcpu annot remove "./pdf/front-cover.pdf"
+        
+        echo "✅ 프론트 커버 완료 (주석 제거됨): ./pdf/front-cover.pdf"
 
     - name: Generate main document PDF
       run: |
