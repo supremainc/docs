@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3092"], {
-96265: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3036"], {
+1294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -28,47 +28,47 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
     children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "When enrolling a face, maintain a distance of 60-100cm between the device and the face."
+        children: "얼굴을 등록할 때 장치와 얼굴의 거리를 60~100cm로 유지하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not change your face expression."
+        children: "표정이 변하지 않도록 주의하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not wear masks, hats, or eye patches."
+        children: "마스크, 모자, 안대를 착용하지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not enroll a face wearing a mask. It may increase the False Acceptance Rate (FAR) if both faces with and without a mask are enrolled."
+        children: "마스크를 착용한 얼굴을 등록하지 마세요. 마스크를 착용한 얼굴과 착용하지 않은 얼굴을 모두 등록할 경우 오인식률이 높아질 수 있습니다."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not raise head up or lower head."
+        children: "고개를 들거나 숙이지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not wear thick makeup."
+        children: "진한 화장을 하지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Do not close your eyes."
+        children: "눈을 감지 마세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Make sure that both of your shoulders correctly appear on the screen."
+        children: "화면에 양쪽 어깨가 모두 나타나도록 하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Stand still and enroll your face by staring at the screen."
+        children: "움직이지 말고, 정면으로 서서 얼굴을 등록하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Be careful not to display two faces on the screen. Enroll one person at a time."
+        children: "두 명의 얼굴이 화면에 동시에 나타나지 않도록 주의하세요. 한 번에 한 사람씩 등록하세요."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "If you do not follow the instructions on the screen, the face enrollment may take longer or may fail."
+        children: "화면의 지시에 따르지 않을 경우 얼굴 등록이 오래 걸리거나 실패할 수 있습니다."
       }), "\n"]
     }), "\n"]
   });
@@ -89,14 +89,14 @@ function MDXContent(props = {}) {
 
 
 }),
-27145: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+87530: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
 });
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85893);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50065);
-/* ESM import */var _enrolling_face_warning_mdx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(96265);
+/* ESM import */var _enrolling_face_warning_mdx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1294);
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -108,15 +108,15 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Correct Face Enrollment and Authentication Method",
-  "id": "correct-face-enrollment-and-authentication-method",
+  "value": "올바른 얼굴 등록 및 인증 방법",
+  "id": "올바른-얼굴-등록-및-인증-방법",
   "level": 2
 }, {
-  "value": "Cautions for enrolling a faces",
+  "value": "얼굴 등록 시 주의 사항",
   "id": "cautions-enrolling-faces",
   "level": 3
 }, ..._enrolling_face_warning_mdx__WEBPACK_IMPORTED_MODULE_1__/* .toc */.d$, {
-  "value": "Cautions for authenticating a face",
+  "value": "얼굴 인증 시 주의 사항",
   "id": "cautions-authenticating-face",
   "level": 3
 }];
@@ -132,30 +132,30 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "correct-face-enrollment-and-authentication-method",
-      children: "Correct Face Enrollment and Authentication Method"
+      id: "올바른-얼굴-등록-및-인증-방법",
+      children: "올바른 얼굴 등록 및 인증 방법"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "cautions-enrolling-faces",
-      children: "Cautions for enrolling a faces"
+      children: "얼굴 등록 시 주의 사항"
     }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_enrolling_face_warning_mdx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.ZP, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "cautions-authenticating-face",
-      children: "Cautions for authenticating a face"
+      children: "얼굴 인증 시 주의 사항"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Ensure that the face appears in the center of the device’s screen. When the guideline is displayed, follow the instructions shown on the screen to authenticate the face."
+          children: "장치의 화면 중앙에 얼굴이 나타나도록 하세요. 위치 가이드가 표시될 경우 화면의 안내에 따라 얼굴을 인증하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "If a part of the face is covered with a hat, a mask, an eye patch, or sunglasses authentication may fail. Do not cover the face; allow the device to recognize both the eyebrows and the face."
+          children: "모자, 마스크, 선글라스, 안대 등으로 얼굴의 일부를 가릴 경우 인증에 실패할 수 있습니다. 눈썹과 얼굴을 모두 장치가 인식할 수 있도록 얼굴을 가리지 마세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Authenticate your face at a distance of 60 ~ 100 cm from the device."
+          children: "장치와의 거리가 60 ~ 100 cm 떨어진 위치에서 인증하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Make sure that both of your shoulders correctly appear on the screen. Authentication may fail if your shoulders are not at the same height. Stand still, and then authenticate your face."
+          children: "장치의 화면에 양쪽 어깨가 모두 나타나도록 하세요. 좌우 어깨의 대칭이 맞지 않을 경우 인증에 실패할 수 있습니다. 움직이지 말고, 정면으로 서서 얼굴을 인증하세요."
         }), "\n"]
       }), "\n"]
     })]
@@ -177,7 +177,7 @@ function MDXContent(props = {}) {
 
 
 }),
-58280: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+16303: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -186,32 +186,32 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_getting_started_mdx_4dd_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_bioentry_w_3_getting_started_mdx_037_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-3-getting-started-mdx-4dd.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_getting_started_mdx_4dd_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/getting-started.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/getting-started","permalink":"/docs/en/device/bioentry_w3/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/bioentry_w3/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/bioentry_w3/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-bioentry-w-3-getting-started-mdx-037.json
+var site_docs_device_bioentry_w_3_getting_started_mdx_037_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/bioentry_w3/getting-started.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/getting-started","permalink":"/docs/device/bioentry_w3/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/device/bioentry_w3/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/bioentry_w3/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_face-enrollment-authentication-method.mdx
-var _face_enrollment_authentication_method = __webpack_require__(27145);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/getting-started.mdx
+// EXTERNAL MODULE: ./docs/common/_face-enrollment-authentication-method.mdx
+var _face_enrollment_authentication_method = __webpack_require__(87530);
+;// CONCATENATED MODULE: ./docs/device/bioentry_w3/getting-started.mdx
 
 
 const frontMatter = {
 	id: 'getting-started',
-	title: 'Getting Started',
-	description: 'Provides initial procedures for getting started with the device.',
+	title: '시작하기',
+	description: '장치 사용을 위한 초기 절차를 안내합니다.',
 	keywords: [
-		'Components',
-		'Name',
-		'Feature',
-		'Cable',
-		'Connector'
+		'구성품',
+		'명칭',
+		'기능',
+		'케이블',
+		'커넥터'
 	],
 	isTranslationMissing: false
 };
@@ -225,16 +225,16 @@ const assets = {
 
 
 const toc = [{
-  "value": "Components",
-  "id": "components",
+  "value": "구성품",
+  "id": "구성품",
   "level": 2
 }, {
-  "value": "Name and Function of Each Part",
-  "id": "name-and-function-of-each-part",
+  "value": "각 부분의 명칭 및 기능",
+  "id": "각-부분의-명칭-및-기능",
   "level": 2
 }, {
-  "value": "Cables and Connectors",
-  "id": "cables-and-connectors",
+  "value": "케이블 및 커넥터",
+  "id": "케이블-및-커넥터",
   "level": 3
 }, ..._face_enrollment_authentication_method/* toc */.d$];
 function _createMdxContent(props) {
@@ -255,24 +255,21 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Callout, Cmd, Column, Columns, Image, Item, Productpart, Row, Table, Tbody, Td} = _components;
-  if (!Callout) _missingMdxReference("Callout", true);
+  }, {Cmd, Column, Columns, Image, Row, Table, Tbody, Td} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Item) _missingMdxReference("Item", true);
-  if (!Productpart) _missingMdxReference("Productpart", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
   if (!Tbody) _missingMdxReference("Tbody", true);
   if (!Td) _missingMdxReference("Td", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Provides initial procedures for getting started with the device."
+      children: "장치 사용을 위한 초기 절차를 안내합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "components",
-      children: "Components"
+      id: "구성품",
+      children: "구성품"
     }), "\n", (0,jsx_runtime.jsx)(Table, {
       className: "component",
       children: (0,jsx_runtime.jsxs)(Tbody, {
@@ -282,12 +279,14 @@ function _createMdxContent(props) {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/bew3-component-device.svg",
               className: "none",
+              height: 140,
               alone: true
             })
           }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/bew3-component-bracket.svg",
               className: "none",
+              height: 140,
               alone: true
             })
           }), (0,jsx_runtime.jsx)(Td, {
@@ -306,11 +305,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Td, {
             children: "BioEntry W3"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Wall Bracket"
+            children: "벽걸이용 브래킷"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Quick Guide"
+            children: "퀵 가이드"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Open Source Software Guide"
+            children: "오픈소스라이선스 가이드"
           })]
         })]
       })
@@ -357,15 +356,15 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "Fixing Screw x2"
+            children: "고정용 나사 x2"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Bracket Fixing Screw (Star Shaped)"
+            children: "브래킷 고정용 나사 (별 모양)"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Shrink Tube"
+            children: "수축 튜브"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Diode"
+            children: "다이오드"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "120 Ω Resistor x2"
+            children: "120 Ω 저항 x2"
           })]
         })]
       })
@@ -374,185 +373,144 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Components may vary according to the installation environment."
+            children: "구성품은 설치 환경에 따라 달라질 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security."
+            children: "브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more details regarding the product, visit the Suprema website (", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["제품 사용에 대한 내용은 슈프리마 웹 사이트(", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://www.supremainc.com",
               children: "www.supremainc.com"
-            }), ") and refer to the user guide."]
+            }), ")에 접속하여 사용자 가이드를 확인하세요."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "name-and-function-of-each-part",
-      children: "Name and Function of Each Part"
-    }), "\n", (0,jsx_runtime.jsxs)(Productpart, {
-      src: "/img/device/name-function-each-part-bew3.png",
-      maxHeight: 570,
-      maxWidth: 1152,
-      children: [(0,jsx_runtime.jsxs)(Callout, {
-        width: 280,
-        position: "left",
-        children: [(0,jsx_runtime.jsx)(Item, {
-          top: 37,
-          children: "Visual Camera"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 62,
-          children: "Infrared Camera"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 122,
-          children: "Display"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 260,
-          children: "RF card and mobile access card authentication unit"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 418,
-          children: "LED Indicator"
-        })]
-      }), (0,jsx_runtime.jsxs)(Callout, {
-        width: 469,
-        position: "right",
-        children: [(0,jsx_runtime.jsx)(Item, {
-          top: 225,
-          children: "Cable Connector"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 310,
-          children: "Speaker"
-        }), (0,jsx_runtime.jsx)(Item, {
-          top: 378,
-          children: "Reset Button"
-        })]
-      }), (0,jsx_runtime.jsx)(Callout, {
-        width: 280,
-        position: "right",
-        children: (0,jsx_runtime.jsx)(Item, {
-          top: 400,
-          children: "USB (Type-C) Memory Slot"
-        })
-      })]
+      id: "각-부분의-명칭-및-기능",
+      children: "각 부분의 명칭 및 기능"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/device/bew3-product-part.png",
+      className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Visual camera"
-          }), ": Capture an actual face image."]
+            children: "비주얼 카메라"
+          }), ": 실제 이미지를 촬영합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Infrared camera"
-          }), ": Capture the infrared face image."]
+            children: "적외선 카메라"
+          }), ": 적외선 이미지를 촬영합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Display"
-          }), ": Provides a UI for operation."]
+            children: "디스플레이"
+          }), ": 동작을 위한 UI를 제공합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "RF card and mobile access card authentication unit"
-          }), ": Part to scan a RFID card or mobile access card for entrance."]
+            children: "RF 카드 및 모바일 출입카드 인식부"
+          }), ": 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "LED indicator"
-          }), ": Indicates the operational status of the device with the color of the LED."]
+            children: "LED 상태 표시등"
+          }), ": 제품의 작동 상태가 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Green: Authentication success."
+              children: "초록색: 인증 성공"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Red: Authentication failure."
+              children: "빨간색: 인증 실패"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Blue: Normal operation."
+              children: "파란색: 정상 동작 상태"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Blue/Green blinking:"
+              children: "파란색/초록색 점멸:"
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Fails to receive an IP address when ", (0,jsx_runtime.jsx)(Cmd, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
                     children: "DHCP"
-                  }), " is enabled."]
+                  }), "를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Disconnection with the master device when in ", (0,jsx_runtime.jsx)(Cmd, {
-                    children: "Slave"
-                  }), " mode."]
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    children: "슬레이브"
+                  }), " 모드일 때 마스터 장치와 연결이 끊어진 상태"]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Red/Purple blinking: Device is locked."
+              children: "빨간색/보라색 점멸: 장치 잠금 상태"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Yellow blinking: Waiting for an input."
+              children: "노란색 점멸: 입력 대기 상태"
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Cable Connector"
+            children: "케이블"
           })
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Power cable / Ethernet connector / RS-485 cable / Wiegand input or output cable / Input cable / Relay output cable"
+          children: "전원 / 이더넷 / RS-485 / Wiegand 입출력 / Input / 릴레이"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Speaker"
-          }), ": Delivers sound."]
+            children: "스피커"
+          }), ": 소리를 들을 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Reset Button"
+            children: "초기화 버튼"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Resets the network configuration. For details, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              children: ["네트워크 설정을 초기화합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "installation#reset-network-settings",
-                children: "Resetting Network Setting"
-              }), "."]
+                children: "네트워크 설정 초기화"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Deletes all data and certificate on the device and reset the settings. For details, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              children: ["장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "installation#factory-reset",
-                children: "Restoring the Factory Defaults"
-              }), "."]
+                children: "공장 초기화"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "USB (Type-C) memory slot"
-          }), ": Connects the USB memory."]
+            children: "USB (Type-C) 메모리 슬롯"
+          }), ": USB 메모리를 연결합니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "cables-and-connectors",
-      children: "Cables and Connectors"
+      id: "케이블-및-커넥터",
+      children: "케이블 및 커넥터"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsx)(Column, {
         children: (0,jsx_runtime.jsx)(Image, {
@@ -570,17 +528,17 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Pin"
+                children: "핀"
               }), (0,jsx_runtime.jsx)(_components.th, {
                 style: {
                   textAlign: "center"
                 },
-                children: "Name"
+                children: "명칭"
               }), (0,jsx_runtime.jsx)(_components.th, {
                 style: {
                   textAlign: "center"
                 },
-                children: "Color"
+                children: "색상"
               })]
             })
           }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -599,7 +557,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Orange"
+                children: "주황색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -616,7 +574,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Brown"
+                children: "갈색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -633,7 +591,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Purple"
+                children: "보라색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -650,7 +608,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "White"
+                children: "흰색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -667,7 +625,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Orange"
+                children: "주황색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -684,7 +642,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Black"
+                children: "검은색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -701,7 +659,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Yellow"
+                children: "노란색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -718,7 +676,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Yellow (Black stripe)"
+                children: "노란색 (검은 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -735,7 +693,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Blue (White stripe)"
+                children: "파란색 (흰 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -752,7 +710,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Yellow"
+                children: "노란색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -769,7 +727,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Blue"
+                children: "파란색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -786,7 +744,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Black (White stripe)"
+                children: "검은색 (흰 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -803,7 +761,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Red"
+                children: "빨간색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -820,7 +778,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Brown"
+                children: "갈색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -837,7 +795,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Blue"
+                children: "파란색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -854,7 +812,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Green"
+                children: "초록색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -871,7 +829,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Red"
+                children: "빨간색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -888,7 +846,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Black"
+                children: "검은색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -905,7 +863,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Gray (White stripe)"
+                children: "회색 (흰 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -922,7 +880,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Orange (White stripe)"
+                children: "주황색 (흰 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -939,7 +897,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Green (White stripe)"
+                children: "초록색 (흰 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -956,7 +914,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Black"
+                children: "검은색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -973,7 +931,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "White (Black stripe)"
+                children: "흰색 (검은 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -990,7 +948,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Green (Black stripe)"
+                children: "초록색 (검은 띠)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1007,7 +965,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "White"
+                children: "흰색"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1024,7 +982,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "Green"
+                children: "초록색"
               })]
             })]
           })]
@@ -1033,7 +991,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "There are several conductors of size of AWG 26 and they shall be covered by a common jacket or the equivalent when field wiring; and the lead shall not be spliced to a conductor larger than 18 AWG (0.82 mm2)."
+        children: "AWG 26 크기의 도체는 여러 가지가 있으며, 배선할 때 일반적인 피복이나 동등한 재질로 보호되어야 합니다. 또한, 리드선이 18 AWG (0.82 mm2) 보다 큰 도체에 접촉하지 않도록 주의하세요."
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_face_enrollment_authentication_method/* default */.ZP, {})]
   });

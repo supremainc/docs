@@ -797,7 +797,9 @@ function installation_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_installation_intelligent_secure_relay_caution_MDXContent, {})
-    }), "\n", (0,jsx_runtime.jsx)(_installation_connection_master_slave_info_MDXContent, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_installation_connection_master_slave_info_MDXContent, {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "connecting-to-secure-io-2",
       children: "Connecting to Secure I/O 2"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

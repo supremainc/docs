@@ -4760,6 +4760,33 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
     width: 100%;
   }
 }
+
+@media print {
+  .techspecSection_PLuv {
+    padding: .7rem 0;
+  }
+  .techspecsRowheader_Q5m7 {
+    font-size: .9rem;
+  }
+  .techspecsBody_jT1t {
+    font-size: .75rem;
+    align-content: center;
+  }
+  .techspecsBody_jT1t ul li {
+    line-height: 1.8;
+  }
+  .modelimg_j1pk img {
+    margin: 0 !important;
+  }
+  .techspecsBody_jT1t .column_KT_5.small_c5_GAWh:first-of-type {
+    float: left;
+    width: 30%;
+  }
+  .techspecsBody_jT1t .column_KT_5.small_c5_GAWh:last-of-type {
+    float: right;
+    width: 70%;
+  }
+}
 .faq_GMal {
   border-top: 2px solid var(--ifm-color-color-ol-gray);
   border-bottom: 1px solid var(--ifm-color-color-ol-gray);
@@ -5311,6 +5338,19 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
   height: 11.693in;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.coverpage_s00n.loaded_cjDc {
+  opacity: 1;
+}
+
+/* PDF 출력 시에는 항상 보이게 함 */
+@media print {
+  .coverpage_s00n {
+    opacity: 1 !important;
+  }
 }
 .title_Ox8A {
   position: absolute;
