@@ -742,7 +742,7 @@ function installation_createMdxContent(props) {
       id: "lan-connection-connecting-to-a-hub",
       children: "LAN connection (connecting to a hub)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can connect the product to a hub using a general type CAT-5 cable."
+      children: "You can connect the device to a hub using a general type CAT-5 cable."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-network-hub-connection-bew3.png",
       className: "none"
@@ -750,7 +750,7 @@ function installation_createMdxContent(props) {
       id: "lan-connection-connecting-to-a-pc-directly",
       children: "LAN connection (connecting to a PC directly)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The product has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
+      children: "The device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-network-direct-connection-bew3.png",
       className: "none",

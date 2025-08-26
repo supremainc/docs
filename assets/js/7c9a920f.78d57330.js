@@ -128,7 +128,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "전원 연결 시 장치와 전원 장치 간의 거리에 주의하세요. 장치와 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 장치와 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 장치는 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요."
+          children: "전원 연결 시 제품과 전원 장치 간의 거리에 주의하세요. 제품과 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 제품이 오작동할 수 있으므로 주의하세요. 제품과 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 이 제품은 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요."
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Table, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Thead, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Row, {
