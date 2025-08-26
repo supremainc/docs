@@ -4,6 +4,19 @@
   height: 11.693in;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.coverpage.loaded {
+  opacity: 1;
+}
+
+/* PDF 출력 시에는 항상 보이게 함 */
+@media print {
+  .coverpage {
+    opacity: 1 !important;
+  }
 }
 .title {
   position: absolute;
