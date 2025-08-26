@@ -24,6 +24,9 @@ const argv = yargs(hideBin(process.argv))
   .option('list-only', { type: 'boolean', description: 'Fetch list without generating PDF' })
   .option('pdf-only', { type: 'boolean', description: 'Generate PDF without fetching list' })
   .option('cookie', { type: 'string', description: 'Specify cookie for requests' })
+  .option('enable-js', { type: 'boolean', description: 'Enable JavaScript execution for dynamic content' })
+  .option('wait-script', { type: 'string', description: 'Path to JavaScript file for waiting dynamic content' })
+  .option('http-timeout', { type: 'number', description: 'HTTP timeout in seconds' })
   .strict()
   .argv;
 
@@ -59,9 +62,15 @@ async function generatePdf(list, filename, cookie) {
 
   const args = argv['prince-args'] || '';
   const cookieArg = cookie ? `--cookie "${cookie}"` : '';
+  
+  // 실제 PrinceXML 옵션들
+  const jsOptions = argv['enable-js'] ? '--javascript' : '';
+  const scriptOption = argv['wait-script'] ? `--script=${argv['wait-script']}` : '';
+  const httpTimeout = argv['http-timeout'] ? `--http-timeout=${argv['http-timeout']}` : '';
+  
   const princeCmd = argv['prince-docker']
-    ? `docker run --rm -i -v ${baseDir}:/config sparanoid/prince --no-warn-css --style=/config/print.css ${cookieArg} --input-list=/config/${list} -o /config/${filename} ${args}`
-    : `prince --no-warn-css ${cookieArg} --input-list=${list} -o ${filename} ${args}`;
+    ? `docker run --rm -i -v ${baseDir}:/config sparanoid/prince --no-warn-css --style=/config/print.css ${cookieArg} ${jsOptions} ${scriptOption} ${httpTimeout} --input-list=/config/${list} -o /config/${filename} ${args}`
+    : `prince --no-warn-css ${cookieArg} ${jsOptions} ${scriptOption} ${httpTimeout} --input-list=${list} -o ${filename} ${args}`;
 
   console.log(`Executing command: ${princeCmd}`);
 
