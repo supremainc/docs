@@ -190,6 +190,7 @@ jobs:
         
         # PDF 병합: 프론트커버 + 메인문서 + 백커버
         pdfcpu merge \
+          -bookmarks=false \
           "./pdf/$FINAL_PDF_NAME" \
           "./pdf/front-cover.pdf" \
           "./pdf/${MAIN_PDF_NAME}" \
