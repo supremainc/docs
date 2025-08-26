@@ -137,6 +137,12 @@
   .techspecsRowheader {
     font-size: .9rem;
   }
+  .techspec.dimensions .techspecsRowheader {
+    width: 10%;
+  }
+  .techspec.dimensions .techspecsBody {
+    width: 90%;
+  }
   .techspecsBody {
     font-size: .75rem;
     align-content: center;
@@ -146,13 +152,15 @@
   }
   .modelimg img {
     margin: 0 !important;
+    max-width: unset !important;
+    height: 240px !important;
   }
   .techspecsBody .column.small_c5:first-of-type {
     float: left;
-    width: 30%;
+    width: 35%;
   }
   .techspecsBody .column.small_c5:last-of-type {
     float: right;
-    width: 70%;
+    width: 65%;
   }
 }
