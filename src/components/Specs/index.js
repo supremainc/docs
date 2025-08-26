@@ -220,6 +220,7 @@ export function SpecSizeWieght({data}) {
   const specs = data.items
   return (
     <>
+      <div className='page-break' />
       <Head level={2} hashid={data.label_id}>
         {translate({id: `${data.label_id}`})}
       </Head>
