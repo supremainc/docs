@@ -8,9 +8,9 @@ on:
         required: true
         default: "BioStation 3"
       document_type:
-        description: "문서 유형 (예: 설치 가이드, 사용자 가이드, 관리자 가이드)"
+        description: "문서 유형 (예: IG, UG, AG)"
         required: true
-        default: "설치 가이드"
+        default: "IG"
       version:
         description: "문서 버전"
         required: true
