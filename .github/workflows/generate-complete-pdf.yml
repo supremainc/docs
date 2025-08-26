@@ -34,7 +34,7 @@ on:
       release_date:
         description: "릴리스 날짜 (YYMMDD 형식)"
         required: true
-        default: "250826"
+        default: "YYMMDD"
 
 permissions:
   contents: write
