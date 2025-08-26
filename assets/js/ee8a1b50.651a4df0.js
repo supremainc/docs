@@ -712,7 +712,7 @@ function installation_createMdxContent(props) {
                 })
               })]
             }), (0,jsx_runtime.jsx)(Column, {
-              className: "text--center",
+              className: "padding--l20",
               children: (0,jsx_runtime.jsx)(Image, {
                 src: "/img/device/bew3-installation_distance.png",
                 className: "none",

@@ -282,12 +282,14 @@ function _createMdxContent(props) {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/bew3-component-device.svg",
               className: "none",
+              height: 140,
               alone: true
             })
           }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/bew3-component-bracket.svg",
               className: "none",
+              height: 140,
               alone: true
             })
           }), (0,jsx_runtime.jsx)(Td, {
