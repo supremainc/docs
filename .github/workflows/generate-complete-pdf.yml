@@ -1,0 +1,293 @@
+name: Generate PDF Document with Cover
+
+on:
+  workflow_dispatch:
+    inputs:
+      product_name:
+        description: "제품명 (예: BioStation 3, BioStar 2)"
+        required: true
+        default: "BioStation 3"
+      document_type:
+        description: "문서 유형 (예: 설치 가이드, 사용자 가이드, 관리자 가이드)"
+        required: true
+        default: "설치 가이드"
+      version:
+        description: "문서 버전"
+        required: true
+        default: "1.0.0"
+      language:
+        description: "언어 (한국어/English)"
+        required: true
+        default: "한국어"
+        type: choice
+        options:
+          - "한국어"
+          - "English"
+      document_number:
+        description: "문서 번호 (예: KO 101.00.853)"
+        required: true
+        default: "KO 101.00.853"
+      target_url:
+        description: "PDF로 변환할 웹사이트 URL"
+        required: true
+        default: "https://supremainc.github.io/docs/device/biostation_3"
+      release_date:
+        description: "릴리스 날짜 (YYMMDD 형식)"
+        required: true
+        default: "250826"
+
+permissions:
+  contents: write
+
+env:
+  PRINCE_VER: 16
+
+jobs:
+  generate-pdf:
+    name: Generate Complete PDF Document
+    runs-on: macos-14
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Print workflow inputs
+      run: |
+        echo "=== 워크플로우 입력값 ==="
+        echo "제품명: ${{ github.event.inputs.product_name }}"
+        echo "문서 유형: ${{ github.event.inputs.document_type }}"
+        echo "버전: ${{ github.event.inputs.version }}"
+        echo "언어: ${{ github.event.inputs.language }}"
+        echo "문서 번호: ${{ github.event.inputs.document_number }}"
+        echo "대상 URL: ${{ github.event.inputs.target_url }}"
+        echo "릴리스 날짜: ${{ github.event.inputs.release_date }}"
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Install Prince XML
+      run: |
+        curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-macos.zip -O
+        tar zxf prince-${{ env.PRINCE_VER }}-macos.zip
+        cd prince-${{ env.PRINCE_VER }}-macos
+        yes "" | sudo ./install.sh
+
+    - name: Install pdfcpu
+      run: brew install pdfcpu
+
+    - name: Install GitHub CLI
+      run: brew install gh
+
+    - name: Create PDF output directory
+      run: mkdir -p ./pdf
+
+    - name: Generate front cover PDF
+      run: |
+        echo "📄 프론트 커버 생성 중..."
+        
+        # 언어별 문서 번호 및 커버 설정
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+          COVER_TITLE="${{ github.event.inputs.product_name }}"
+          COVER_SUBTITLE="${{ github.event.inputs.document_type }}"
+          COVER_VERSION="Version ${{ github.event.inputs.version }}"
+          COVER_LANG="English"
+          BACK_COVER="back-cover-en.pdf"
+        else
+          LANG_CODE="KO"
+          COVER_TITLE="${{ github.event.inputs.product_name }}"
+          COVER_SUBTITLE="${{ github.event.inputs.document_type }}"
+          COVER_VERSION="버전 ${{ github.event.inputs.version }}"
+          COVER_LANG="한국어"
+          BACK_COVER="back-cover.pdf"
+        fi
+        
+        # 프론트 커버 생성
+        node generate-cover-local.js \
+          --title="$COVER_TITLE" \
+          --subtitle="$COVER_SUBTITLE" \
+          --version="$COVER_VERSION" \
+          --lang="$COVER_LANG" \
+          --number="${{ github.event.inputs.document_number }}" \
+          --output="./pdf/front-cover.html"
+        
+        # HTML을 PDF로 변환
+        prince "./pdf/front-cover.html" -o "./pdf/front-cover.pdf"
+        
+        echo "✅ 프론트 커버 완료: ./pdf/front-cover.pdf"
+
+    - name: Generate main document PDF
+      run: |
+        echo "📖 메인 문서 PDF 생성 중..."
+        
+        # 언어별 파일명 설정
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        # 파일명 생성 (공백을 언더스코어로 변경)
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
+        
+        # Prince XML로 웹페이지를 PDF로 변환
+        node generatepdf \
+          -u "${{ github.event.inputs.target_url }}" \
+          --prince-args="--page-size='a4' --style=./print.css --javascript" \
+          -o "./pdf/${MAIN_PDF_NAME}" \
+          --dest ./pdf \
+          --include-index
+        
+        echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
+        echo "✅ 메인 문서 완료: ./pdf/${MAIN_PDF_NAME}"
+
+    - name: Remove annotations from main PDF
+      run: |
+        echo "🔧 PDF 주석 제거 중..."
+        
+        # 파일명 재생성
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
+        
+        pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}"
+        echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
+        echo "✅ 주석 제거 완료"
+
+    - name: Merge all PDFs
+      run: |
+        echo "📑 PDF 파일 병합 중..."
+        
+        # 파일명 재생성
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+          BACK_COVER="back-cover-en.pdf"
+        else
+          LANG_CODE="KO"
+          BACK_COVER="back-cover.pdf"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        # PDF 병합: 프론트커버 + 메인문서 + 백커버
+        pdfcpu merge \
+          -mode append \
+          -bookmarks=false \
+          "./pdf/front-cover.pdf" \
+          "./pdf/${MAIN_PDF_NAME}" \
+          "$BACK_COVER" \
+          "./pdf/$FINAL_PDF_NAME"
+        
+        echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
+        echo "✅ PDF 병합 완료: ./pdf/${FINAL_PDF_NAME}"
+
+    - name: Delete existing release if exists
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+        
+        # 기존 릴리스 및 태그 삭제 (존재하는 경우)
+        gh release delete "$TAG_NAME" -y || echo "릴리스가 존재하지 않음"
+        git push origin --delete "$TAG_NAME" || echo "태그가 존재하지 않음"
+      continue-on-error: true
+
+    - name: Set release variables
+      run: |
+        # 모든 변수를 다시 설정
+        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+        echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
+
+    - name: Create GitHub Release
+      id: create_release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }}"
+        
+        # 릴리스 노트 작성
+        cat > release_notes.md << EOF
+        # ${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }}
+
+        **버전:** ${{ github.event.inputs.version }}
+        **언어:** ${{ github.event.inputs.language }}
+        **문서 번호:** ${{ github.event.inputs.document_number }}
+        **릴리스 날짜:** ${{ github.event.inputs.release_date }}
+        **소스 URL:** ${{ github.event.inputs.target_url }}
+
+        이 릴리스에는 프론트 커버, 메인 문서, 백 커버가 통합된 완전한 PDF 문서가 포함되어 있습니다.
+        EOF
+        
+        gh release create "$TAG_NAME" \
+          --title "$RELEASE_TITLE" \
+          --notes-file release_notes.md
+
+    - name: Upload PDF to Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        gh release upload "$TAG_NAME" "./pdf/$FINAL_PDF_NAME"
+
+    - name: Show completion summary
+      run: |
+        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        echo "🎉 PDF 생성 및 릴리스 완료!"
+        echo "=========================="
+        echo "📁 생성된 파일:"
+        ls -la ./pdf/
+        echo "=========================="
+        echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${TAG_NAME}"
+        echo "📄 최종 파일: ${FINAL_PDF_NAME}"
