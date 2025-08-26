@@ -29,7 +29,6 @@ img {
 }
 
 @page:first {
-  margin: 0 !important;
   @bottom-center { content: normal !important;}
 }
 
