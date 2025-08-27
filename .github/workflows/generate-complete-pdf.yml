@@ -302,25 +302,20 @@ jobs:
           echo "⚠️ 경고: PDF 파일 크기가 작습니다 (${FILE_SIZE}). 내용을 확인해주세요."
         fi
         
-        # 릴리스 노트 작성 (더 상세한 정보 포함)
+        # Release Notes
         cat > release_notes.md << EOF
         # ${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }}
 
-        **버전:** ${{ github.event.inputs.version }}
-        **문서 번호:** ${{ github.event.inputs.document_number }}
-        **릴리스 날짜:** ${{ github.event.inputs.release_date }}
-        **언어:** ${LANG_DISPLAY}
-        **소스 URL:** ${{ github.event.inputs.target_url }}
-        **파일 크기:** ${FILE_SIZE}
-        **생성 일시:** $(date '+%Y-%m-%d %H:%M:%S UTC')
+        **Version:** ${{ github.event.inputs.version }}
+        **Document number:** ${{ github.event.inputs.document_number }}
+        **Release date:** ${{ github.event.inputs.release_date }}
+        **Language:** ${LANG_DISPLAY}
+        **Source URL:** ${{ github.event.inputs.target_url }}
+        **File size:** ${FILE_SIZE}
+        **Create date:** $(date '+%Y-%m-%d %H:%M:%S UTC')
 
-        ## 📥 다운로드
+        ## 📥 Download
         - [${FINAL_PDF_NAME}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME})
-
-        ## 🔧 기술 정보
-        - PDF 뷰어 설정: 책갈피 패널 표시, 한 페이지 레이아웃
-        - 북마크: 보존됨
-        - 페이지 크기: A4
         EOF
         
         echo "📌 태그명: ${RELEASE_NAME}"
