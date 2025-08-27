@@ -198,6 +198,37 @@ jobs:
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
         echo "✅ PDF 병합 완료 (북마크 보존): ./pdf/${FINAL_PDF_NAME}"
 
+    - name: Configure PDF viewer preferences
+      run: |
+        echo "⚙️ PDF 뷰어 설정 적용 중..."
+        
+        # 파일명 재생성
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        # 뷰어 기본 설정 적용
+        echo "📖 책갈피 패널 표시 설정..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines
+        
+        echo "📄 한 페이지 레이아웃 설정..."
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage
+        
+        echo "🔍 페이지에 맞추기 및 기타 뷰어 설정..."
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}'
+        
+        echo "✅ PDF 뷰어 설정 완료:"
+        echo "  📖 페이지 모드: UseOutlines (책갈피 패널 표시)"
+        echo "  📄 페이지 레이아웃: SinglePage (한 페이지)"
+        echo "  🔍 창 크기: FitWindow (페이지에 맞추기)"
+        echo "  🎯 창 위치: CenterWindow (화면 중앙)"
+
     - name: Check and prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
