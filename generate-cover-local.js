@@ -152,6 +152,7 @@ function generateCoverHTML(params) {
             font-size: 26pt;
             margin-bottom: 0;
             line-height: 1.2;
+            left: 4px;
         }
         
         .title .ver {
