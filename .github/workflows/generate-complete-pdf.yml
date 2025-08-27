@@ -120,18 +120,71 @@ jobs:
       if: steps.tools-cache.outputs.cache-hit != 'true'
       run: |
         echo "📦 기타 도구 설치 중..."
-        # 병렬로 설치하여 시간 단축
-        brew install pdfcpu pdftk-java gh
+        
+        # Homebrew 업데이트 (캐시 문제 방지)
+        echo "🔄 Homebrew 업데이트 중..."
+        brew update
+        
+        # 순차적으로 설치하여 충돌 방지
+        echo "📦 pdfcpu 설치 중..."
+        brew install pdfcpu
+        echo "✅ pdfcpu 설치 완료"
+        
+        echo "📦 pdftk-java 설치 중..."
+        brew install pdftk-java
+        echo "✅ pdftk-java 설치 완료"
+        
+        echo "📦 GitHub CLI 설치 중..."
+        brew install gh
+        echo "✅ GitHub CLI 설치 완료"
+        
         echo "✅ 모든 도구 설치 완료"
 
     - name: Verify tools installation
       run: |
         echo "🔧 도구 설치 확인 중..."
-        prince --version || echo "Prince XML 확인 필요"
-        pdfcpu version || echo "pdfcpu 확인 필요"  
-        pdftk --version || echo "PDFtk 확인 필요"
-        gh --version || echo "GitHub CLI 확인 필요"
-        echo "✅ 도구 확인 완료"
+        
+        # Prince XML 확인
+        echo "🔍 Prince XML 확인..."
+        if command -v prince >/dev/null 2>&1; then
+          prince --version
+          echo "✅ Prince XML 사용 가능"
+        else
+          echo "❌ Prince XML을 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        # pdfcpu 확인
+        echo "🔍 pdfcpu 확인..."
+        if command -v pdfcpu >/dev/null 2>&1; then
+          pdfcpu version
+          echo "✅ pdfcpu 사용 가능"
+        else
+          echo "❌ pdfcpu를 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        # pdftk 확인
+        echo "🔍 PDFtk 확인..."
+        if command -v pdftk >/dev/null 2>&1; then
+          pdftk --version
+          echo "✅ PDFtk 사용 가능"
+        else
+          echo "❌ PDFtk를 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        # GitHub CLI 확인
+        echo "🔍 GitHub CLI 확인..."
+        if command -v gh >/dev/null 2>&1; then
+          gh --version
+          echo "✅ GitHub CLI 사용 가능"
+        else
+          echo "❌ GitHub CLI를 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        echo "✅ 모든 도구 확인 완료"
 
     - name: Setup environment variables
       run: |
