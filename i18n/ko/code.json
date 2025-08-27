@@ -506,6 +506,9 @@
   "specs.interface.wifi": {
     "message": "Wi-Fi"
   },
+  "specs.interface.network_protocol": {
+    "message": "네트워크 프로토콜"
+  },
   "specs.interface.rs485": {
     "message": "RS-485"
   },

@@ -383,6 +383,60 @@ When the device is configured as a slave device, the RTSP function may not be av
 
 :::
 
+### Master Admin
+
+Change the authentication methods for the Master Admin.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>SETTINGS</Cmd> → <Cmd>DEVICE</Cmd> → <Cmd>Master Admin</Cmd>.
+
+1. Select the desired authentication methods.
+
+   <div className='grid-container'>
+
+   <Image src='/img/how-to/edit-master-admin-1.png' width='300px' />
+
+   <Image src='/img/how-to/setting-master-admin-4.png' width='300px' />
+
+   </div>
+
+:::info
+
+* At least two different types of credentials must be enrolled.
+
+* This feature is available only on new devices with firmware version v1.4.0 or higher.
+
+:::
+
+### Admin 2-step Authentication {#admin-2-step-authentication}
+
+Devices upgraded via firmware do not provide <Cmd>Master Admin</Cmd> settings, but you can enhance administrator security by enabling the <Cmd>Admin 2-step Authentication</Cmd> option.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
+
+1. Select <Cmd>SETTINGS</Cmd> → <Cmd>DEVICE</Cmd> → <Cmd>Admin 2-step Authentication</Cmd>.
+
+   <Image src='/img/how-to/setting-two-step-authentication.png' width='300px' />
+
+:::info
+
+* <Cmd>Admin 2-step Authentication</Cmd> is available after upgrading the firmware to v1.4.0 or higher. Once upgraded to v1.4.0 or higher, you cannot downgrade to a lower version.
+
+* The default value for <Cmd>Admin 2-step Authentication</Cmd> is single-step authentication.
+
+* If not all administrators have at least two types of credentials, activation will fail and an error message will appear. Enroll at least two types of credentials for all administrators, and then try again.
+
+   <Image src='/img/how-to/error-two-step-authentication.png' className='none' width='300px' />
+
+:::
+
+:::caution
+
+If you activate <Cmd>Admin 2-step Authentication</Cmd> and then delete credentials so that all administrators have fewer than two types, you will not be able to access the administrator menu if BioStar 2 connection is also unavailable. Therefore, exercise caution when deleting administrator credentials.
+
+:::
+
 ### Restart Device
 
 The user can restart the device.
