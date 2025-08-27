@@ -4768,23 +4768,34 @@ See https://twitter.com/JoshWComeau/status/1332015868725891076
   .techspecsRowheader_Q5m7 {
     font-size: .9rem;
   }
+  .techspec_Rtka.dimensions_Dadc .techspecsRowheader_Q5m7 {
+    width: 10%;
+  }
+  .techspec_Rtka.dimensions_Dadc .techspecsBody_jT1t {
+    width: 90%;
+  }
   .techspecsBody_jT1t {
     font-size: .75rem;
     align-content: center;
+  }
+  .techspecsRowheader_Q5m7 sup, .techspecsBody_jT1t sup {
+    font-size: .5rem;
   }
   .techspecsBody_jT1t ul li {
     line-height: 1.8;
   }
   .modelimg_j1pk img {
     margin: 0 !important;
+    max-width: unset !important;
+    height: 240px !important;
   }
   .techspecsBody_jT1t .column_KT_5.small_c5_GAWh:first-of-type {
     float: left;
-    width: 30%;
+    width: 35%;
   }
   .techspecsBody_jT1t .column_KT_5.small_c5_GAWh:last-of-type {
     float: right;
-    width: 70%;
+    width: 65%;
   }
 }
 .faq_GMal {
@@ -6546,7 +6557,7 @@ html[lang='en-US'] .desc_MGeg {
     linear-gradient(to left top, var(--main-black-0) 20%, var(--main-black) 90%),
     linear-gradient(180deg, var(--main-black-0) 10%, var(--main-black) 55%),
     /* radial-gradient(100.25% 103.79% at 35.53% 36.93%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 57.72%, rgba(0, 0, 0, 0.00) 100%), */
-    url(/docs/en/assets/images/biostarx-bg-f43f4d972a35e993940e5690704e49a4.png)
+    url(/docs/assets/images/biostarx-bg-f43f4d972a35e993940e5690704e49a4.png)
     ;
   background-repeat: no-repeat;
   background-position: top center;
@@ -6592,7 +6603,7 @@ a.banner_d9gt {
 }
 .banner__biostar__img_WPsw {
   text-align: right;
-  background: url(/docs/en/assets/images/biostarx-banner-a16322505a95185c89ee2f6fd06db2fb.png) no-repeat center center/cover;
+  background: url(/docs/assets/images/biostarx-banner-a16322505a95185c89ee2f6fd06db2fb.png) no-repeat center center/cover;
 }
 
 .containerRef_P_fM {

@@ -2702,7 +2702,7 @@ function Item(param) {
 
 ;// CONCATENATED MODULE: ./src/components/Specs/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const Specs_styles_module = ({"techspec":"techspec_Rtka","techspecSection":"techspecSection_PLuv","noborder":"noborder_rJg0","techspecsRowheader":"techspecsRowheader_Q5m7","techspecsBody":"techspecsBody_jT1t","row":"row_rqYq","modelimg":"modelimg_j1pk","desc":"desc_XPla","small_c5":"small_c5_GAWh","size":"size_IQVK","column":"column_KT_5","small_l1":"small_l1_KuJa","small_l2":"small_l2_JaBV"});
+/* ESM default export */ const Specs_styles_module = ({"techspec":"techspec_Rtka","techspecSection":"techspecSection_PLuv","noborder":"noborder_rJg0","techspecsRowheader":"techspecsRowheader_Q5m7","techspecsBody":"techspecsBody_jT1t","row":"row_rqYq","modelimg":"modelimg_j1pk","desc":"desc_XPla","small_c5":"small_c5_GAWh","size":"size_IQVK","column":"column_KT_5","small_l1":"small_l1_KuJa","small_l2":"small_l2_JaBV","dimensions":"dimensions_Dadc"});
 ;// CONCATENATED MODULE: ./static/img/common/ico-w.svg
 var ico_w_path, ico_w_path2;
 function ico_w_extends() { return ico_w_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_w_extends.apply(null, arguments); }
@@ -3078,7 +3078,7 @@ function SpecSizeWieght(param) {
                 })
             }),
             /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: Specs_styles_module.techspec,
+                className: (0,clsx/* default */.Z)(Specs_styles_module.techspec, Specs_styles_module.dimensions),
                 children: Object.values(specs).map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                         className: (0,clsx/* default */.Z)(Specs_styles_module.techspecSection, Specs_styles_module.noborder),
                         children: [
