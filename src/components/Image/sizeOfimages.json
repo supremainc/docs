@@ -1,4 +1,12 @@
 {
+  "/img/air/air-custom-wiegand-card-format-01.png": {
+    "width": 1269,
+    "height": 886
+  },
+  "/img/air/air-custom-wiegand-card-format-02.png": {
+    "width": 1267,
+    "height": 877
+  },
   "/img/air/air-device-management-upgrade-fw-edit-device.png": {
     "width": 840,
     "height": 886
@@ -23,9 +31,33 @@
     "width": 2021,
     "height": 2108
   },
+  "/img/air/air-intercom-configuration-account-setting.png": {
+    "width": 1175,
+    "height": 473
+  },
+  "/img/air/air-intercom-configuration-edit-device.png": {
+    "width": 1175,
+    "height": 887
+  },
   "/img/air/air-main-cover-image.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/air/air-reports-download.png": {
+    "width": 805,
+    "height": 572
+  },
+  "/img/air/air-reports-settings.png": {
+    "width": 807,
+    "height": 570
+  },
+  "/img/air/air-sitemanagement-configuring-log-reports.png": {
+    "width": 803,
+    "height": 646
+  },
+  "/img/air/air-sitemanagement-configuring-user-reports.png": {
+    "width": 806,
+    "height": 566
   },
   "/img/banner/biostar2_6_banner.jpg": {
     "width": 1920,
@@ -193,11 +225,19 @@
   },
   "/img/biostarx-edit-user-batch-edit.png": {
     "width": 800,
-    "height": 538
+    "height": 504
+  },
+  "/img/biostarx-edit-user-credentials.png": {
+    "width": 800,
+    "height": 217
   },
   "/img/biostarx-edit-user-mfa-use.png": {
     "width": 800,
     "height": 266
+  },
+  "/img/biostarx-edit-user-screen.png": {
+    "width": 1200,
+    "height": 986
   },
   "/img/biostarx-header-shortcut-link.png": {
     "width": 300,
@@ -403,6 +443,10 @@
     "width": 600,
     "height": 293
   },
+  "/img/biostarx-new-user-credential-pin.png": {
+    "width": 500,
+    "height": 206
+  },
   "/img/biostarx-new-user-credential-qrbarcode.png": {
     "width": 499,
     "height": 341
@@ -426,6 +470,10 @@
   "/img/biostarx-real-time-event.png": {
     "width": 800,
     "height": 309
+  },
+  "/img/biostarx-remove-users.png": {
+    "width": 1200,
+    "height": 334
   },
   "/img/biostarx-setting-add-device-group.png": {
     "width": 800,
@@ -1077,7 +1125,7 @@
   },
   "/img/biostarx-user-access-explorer.png": {
     "width": 400,
-    "height": 476
+    "height": 338
   },
   "/img/biostarx-user-advanced.png": {
     "width": 800,
@@ -1109,7 +1157,7 @@
   },
   "/img/biostarx-user-import-02.png": {
     "width": 560,
-    "height": 547
+    "height": 790
   },
   "/img/biostarx-user-import-03.png": {
     "width": 537,
@@ -1307,6 +1355,42 @@
     "width": 1200,
     "height": 800
   },
+  "/img/device/bew3-bracket-fix.png": {
+    "width": 182,
+    "height": 350
+  },
+  "/img/device/bew3-cables-layout.png": {
+    "width": 500,
+    "height": 808
+  },
+  "/img/device/bew3-device-fix-bottom.png": {
+    "width": 189,
+    "height": 128
+  },
+  "/img/device/bew3-device-fix.png": {
+    "width": 354,
+    "height": 350
+  },
+  "/img/device/bew3-installation_distance.png": {
+    "width": 450,
+    "height": 302
+  },
+  "/img/device/bew3-installation_distance1.png": {
+    "width": 300,
+    "height": 138
+  },
+  "/img/device/bew3-power-connetion.png": {
+    "width": 648,
+    "height": 480
+  },
+  "/img/device/bew3-product-part.png": {
+    "width": 1136,
+    "height": 583
+  },
+  "/img/device/bioentry-w3-main.jpg": {
+    "width": 1150,
+    "height": 606
+  },
   "/img/device/biostation2a-main.png": {
     "width": 1000,
     "height": 452
@@ -1407,6 +1491,10 @@
     "width": 250,
     "height": 67
   },
+  "/img/device/device-regulatory-licenses.png": {
+    "width": 250,
+    "height": 444
+  },
   "/img/device/device-rtsp.png": {
     "width": 250,
     "height": 311
@@ -1423,13 +1511,29 @@
     "width": 250,
     "height": 444
   },
+  "/img/device/installation-automatic-door-bew3.png": {
+    "width": 910,
+    "height": 693
+  },
   "/img/device/installation-automatic-door-bs3.png": {
     "width": 754,
     "height": 491
   },
+  "/img/device/installation-input-connection-bew3.png": {
+    "width": 832,
+    "height": 559
+  },
+  "/img/device/installation-network-direct-connection-bew3.png": {
+    "width": 857,
+    "height": 438
+  },
   "/img/device/installation-network-direct-connection-bs3.png": {
     "width": 585,
     "height": 272
+  },
+  "/img/device/installation-network-hub-connection-bew3.png": {
+    "width": 1033,
+    "height": 507
   },
   "/img/device/installation-network-hub-connection-bs3.png": {
     "width": 774,
@@ -1439,33 +1543,61 @@
     "width": 656,
     "height": 433
   },
+  "/img/device/installation-relay-fail-safe-lock-bew3.png": {
+    "width": 801,
+    "height": 445
+  },
   "/img/device/installation-relay-fail-safe-lock-bs3.png": {
     "width": 681,
     "height": 390
+  },
+  "/img/device/installation-relay-fail-secure-lock-bew3.png": {
+    "width": 806,
+    "height": 442
   },
   "/img/device/installation-relay-fail-secure-lock-bs3.png": {
     "width": 667,
     "height": 384
   },
+  "/img/device/installation-sio2-connection-bew3.png": {
+    "width": 1072,
+    "height": 1061
+  },
   "/img/device/installation-sio2-connection-bs3.png": {
     "width": 791,
     "height": 520
   },
+  "/img/device/installation-standalone-connection-bew3.png": {
+    "width": 1175,
+    "height": 827
+  },
   "/img/device/installation-standalone-connection-bs3.png": {
-    "width": 774,
-    "height": 715
+    "width": 896,
+    "height": 839
   },
   "/img/device/installation-ttl-input-connection-bs3.png": {
-    "width": 657,
-    "height": 422
+    "width": 985,
+    "height": 621
+  },
+  "/img/device/installation-wiegand-in-connection-bew3.png": {
+    "width": 649,
+    "height": 450
   },
   "/img/device/installation-wiegand-in-connection-bs3.png": {
     "width": 737,
     "height": 311
   },
+  "/img/device/installation-wiegand-out-connection-bew3.png": {
+    "width": 649,
+    "height": 445
+  },
   "/img/device/installation-wiegand-out-connection-bs3.png": {
     "width": 737,
     "height": 312
+  },
+  "/img/device/name-function-each-part-bew3.png": {
+    "width": 1152,
+    "height": 490
   },
   "/img/device/name-function-each-part-bs3.png": {
     "width": 760,
@@ -1613,11 +1745,19 @@
   },
   "/img/en/biostarx-edit-user-batch-edit.png": {
     "width": 800,
-    "height": 538
+    "height": 518
+  },
+  "/img/en/biostarx-edit-user-credentials.png": {
+    "width": 800,
+    "height": 223
   },
   "/img/en/biostarx-edit-user-mfa-use.png": {
     "width": 800,
     "height": 266
+  },
+  "/img/en/biostarx-edit-user-screen.png": {
+    "width": 1200,
+    "height": 986
   },
   "/img/en/biostarx-header.png": {
     "width": 1500,
@@ -1815,6 +1955,10 @@
     "width": 640,
     "height": 590
   },
+  "/img/en/biostarx-new-user-credential-pin.png": {
+    "width": 500,
+    "height": 206
+  },
   "/img/en/biostarx-new-user-credential-qrbarcode.png": {
     "width": 553,
     "height": 341
@@ -1838,6 +1982,10 @@
   "/img/en/biostarx-real-time-event.png": {
     "width": 800,
     "height": 310
+  },
+  "/img/en/biostarx-remove-users.png": {
+    "width": 1200,
+    "height": 334
   },
   "/img/en/biostarx-setting-add-device-group.png": {
     "width": 926,
@@ -2413,7 +2561,7 @@
   },
   "/img/en/biostarx-user-access-explorer.png": {
     "width": 400,
-    "height": 476
+    "height": 333
   },
   "/img/en/biostarx-user-advanced.png": {
     "width": 800,
@@ -2445,7 +2593,7 @@
   },
   "/img/en/biostarx-user-import-02.png": {
     "width": 560,
-    "height": 547
+    "height": 790
   },
   "/img/en/biostarx-user-import-03.png": {
     "width": 539,
@@ -2498,6 +2646,22 @@
   "/img/en/biostarx-widget-edit.png": {
     "width": 600,
     "height": 292
+  },
+  "/img/en/device/bew3-installation_distance.png": {
+    "width": 450,
+    "height": 302
+  },
+  "/img/en/device/bew3-installation_distance1.png": {
+    "width": 300,
+    "height": 138
+  },
+  "/img/en/device/bew3-power-connetion.png": {
+    "width": 648,
+    "height": 480
+  },
+  "/img/en/device/bew3-product-part.png": {
+    "width": 1130,
+    "height": 581
   },
   "/img/en/device/device-auth-option-qr.png": {
     "width": 250,
@@ -2591,6 +2755,10 @@
     "width": 250,
     "height": 67
   },
+  "/img/en/device/device-regulatory-licenses.png": {
+    "width": 250,
+    "height": 444
+  },
   "/img/en/device/device-rtsp.png": {
     "width": 250,
     "height": 311
@@ -2607,13 +2775,25 @@
     "width": 250,
     "height": 444
   },
+  "/img/en/device/installation-automatic-door-bew3.png": {
+    "width": 899,
+    "height": 689
+  },
   "/img/en/device/installation-automatic-door-bs3.png": {
     "width": 754,
     "height": 483
   },
+  "/img/en/device/installation-input-connection-bew3.png": {
+    "width": 832,
+    "height": 559
+  },
   "/img/en/device/installation-network-direct-connection-bs3.png": {
     "width": 585,
     "height": 267
+  },
+  "/img/en/device/installation-network-hub-connection-bew3.png": {
+    "width": 1033,
+    "height": 507
   },
   "/img/en/device/installation-network-hub-connection-bs3.png": {
     "width": 774,
@@ -2623,29 +2803,53 @@
     "width": 656,
     "height": 424
   },
+  "/img/en/device/installation-relay-fail-safe-lock-bew3.png": {
+    "width": 802,
+    "height": 444
+  },
   "/img/en/device/installation-relay-fail-safe-lock-bs3.png": {
     "width": 681,
     "height": 387
+  },
+  "/img/en/device/installation-relay-fail-secure-lock-bew3.png": {
+    "width": 802,
+    "height": 446
   },
   "/img/en/device/installation-relay-fail-secure-lock-bs3.png": {
     "width": 667,
     "height": 387
   },
+  "/img/en/device/installation-sio2-connection-bew3.png": {
+    "width": 1141,
+    "height": 1053
+  },
   "/img/en/device/installation-sio2-connection-bs3.png": {
     "width": 791,
     "height": 496
   },
+  "/img/en/device/installation-standalone-connection-bew3.png": {
+    "width": 1171,
+    "height": 822
+  },
   "/img/en/device/installation-standalone-connection-bs3.png": {
-    "width": 774,
-    "height": 718
+    "width": 911,
+    "height": 850
   },
   "/img/en/device/installation-ttl-input-connection-bs3.png": {
-    "width": 657,
-    "height": 418
+    "width": 990,
+    "height": 620
+  },
+  "/img/en/device/installation-wiegand-in-connection-bew3.png": {
+    "width": 646,
+    "height": 444
   },
   "/img/en/device/installation-wiegand-in-connection-bs3.png": {
     "width": 737,
     "height": 308
+  },
+  "/img/en/device/installation-wiegand-out-connection-bew3.png": {
+    "width": 646,
+    "height": 446
   },
   "/img/en/device/installation-wiegand-out-connection-bs3.png": {
     "width": 737,
