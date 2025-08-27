@@ -147,7 +147,7 @@
     font-size: .75rem;
     align-content: center;
   }
-  .techspecsBody sup {
+  .techspecsRowheader sup, .techspecsBody sup {
     font-size: .5rem;
   }
   .techspecsBody ul li {

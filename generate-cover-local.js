@@ -3,7 +3,7 @@ const path = require('path');
 
 /**
  * 로컬 커버 페이지 HTML 생성기
- * 명령줄 예시: node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
+ * 명령줄 예시: node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="1.08" --lang="한국어" --number="KO 101.00.853"
  */
 
 // 명령줄 인수 파싱
@@ -72,16 +72,19 @@ function generateCoverHTML(params) {
     const {
         title = "BioStation 3",
         subtitle = "IG", 
-        version = "버전 1.08",
+        version = "1.08",
         lang = "한국어",
         number = "KO 101.00.BS3"
     } = params;
 
-    // 언어 감지 (문서 번호나 lang 파라미터로 판단)
-    const isKorean = number.startsWith('KO') || lang === "한국어";
+    // 언어 감지 (lang 파라미터를 우선으로, 그 다음 문서 번호로 판단)
+    const isKorean = lang === "한국어" || (lang !== "English" && number.startsWith('KO'));
     
     // subtitle이 코드(IG, UG, AG)인지 확인하고 적절한 제목으로 변환
     const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean);
+    
+    // 버전에 언어별 접두사 추가
+    const processedVersion = isKorean ? `버전 ${version}` : `Version ${version}`;
 
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
@@ -208,7 +211,7 @@ function generateCoverHTML(params) {
         <div class="title">
             <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
             <div class="subtitle">${processedSubtitle}</div>
-            <div class="ver">${version}</div>
+            <div class="ver">${processedVersion}</div>
             <div class="lang">${lang}</div>
             <div class="number">${number}</div>
         </div>
@@ -227,11 +230,11 @@ function main() {
     if (args.help || Object.keys(args).length === 0) {
         console.log(`
 사용법:
-  node generate-cover-local.js --title="제품명" --subtitle="문서 제목" --version="버전" --lang="언어" --number="문서 번호" [--output="파일경로"]
+  node generate-cover-local.js --title="제품명" --subtitle="문서 제목" --version="1.0.0" --lang="언어" --number="문서 번호" [--output="파일경로"]
 
 예시:
-  node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
-  node generate-cover-local.js --title="BioStation 3" --subtitle="UG" --version="Version 1.08" --lang="English" --number="EN 101.00.853"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="1.08" --lang="한국어" --number="KO 101.00.853"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="UG" --version="1.08" --lang="English" --number="EN 101.00.853"
 
 옵션:
   --title     제품명 (기본값: "BioStation 3")
@@ -240,7 +243,7 @@ function main() {
               - UG: 사용자 가이드 (한국어) / USER GUIDE (영어)
               - AG: 관리자 가이드 (한국어) / ADMINISTRATOR GUIDE (영어)
               - 또는 직접 제목 입력 (기본값: "IG")
-  --version   버전 정보 (기본값: "버전 1.08")
+  --version   버전 번호 (예: "1.08") - 언어에 따라 자동으로 "버전 1.08" 또는 "Version 1.08"로 표시됩니다 (기본값: "1.08")
   --lang      언어 (기본값: "한국어")
   --number    문서 번호 (기본값: "KO 101.00.853")
   --output    출력 파일 경로 (기본값: "./cover.html")
@@ -262,15 +265,19 @@ function main() {
     console.log(`📄 PDF 생성 명령어: prince "${outputPath}" -o "${outputPath.replace('.html', '.pdf')}"`);
     
     // 사용된 파라미터 출력을 위해 동일한 로직 적용
-    const isKorean = (args.number || 'KO 101.00.853').startsWith('KO') || (args.lang || '한국어') === "한국어";
+    const lang = args.lang || '한국어';
+    const number = args.number || 'KO 101.00.853';
+    const version = args.version || '1.08';
+    const isKorean = lang === "한국어" || (lang !== "English" && number.startsWith('KO'));
     const processedSubtitle = getLocalizedSubtitle(args.subtitle || 'IG', isKorean);
+    const processedVersion = isKorean ? `버전 ${version}` : `Version ${version}`;
     
     console.log('\n📋 사용된 파라미터:');
     console.log(`  제품명: ${args.title || 'BioStation 3'}`);
     console.log(`  문서 제목: ${processedSubtitle} (입력값: ${args.subtitle || 'IG'})`);
-    console.log(`  버전: ${args.version || '버전 1.08'}`);
-    console.log(`  언어: ${args.lang || '한국어'}`);
-    console.log(`  문서 번호: ${args.number || 'KO 101.00.853'}`);
+    console.log(`  버전: ${processedVersion} (입력값: ${version})`);
+    console.log(`  언어: ${lang}`);
+    console.log(`  문서 번호: ${number}`);
 }
 
 if (require.main === module) {
