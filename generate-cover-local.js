@@ -143,7 +143,7 @@ function generateCoverHTML(params) {
             line-height: 1.1;
         }
         
-        .title h2 {
+        .title .subtitle {
             font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
             font-weight: 300;
             font-size: 26pt;
@@ -207,7 +207,7 @@ function generateCoverHTML(params) {
     <div class="coverpage">
         <div class="title">
             <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
-            <h2>${processedSubtitle}</h2>
+            <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${version}</div>
             <div class="lang">${lang}</div>
             <div class="number">${number}</div>
