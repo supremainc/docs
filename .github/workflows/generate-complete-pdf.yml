@@ -24,13 +24,13 @@ on:
           - "한국어"
           - "English"
       document_number:
-        description: "문서 번호 (예: KO 101.00.853)"
+        description: "문서 번호 (예: KO 101.00.BS3)"
         required: true
-        default: "KO 101.00.853"
+        default: "KO 101.00.BS3"
       target_url:
         description: "PDF로 변환할 웹사이트 URL"
         required: true
-        default: "https://supremainc.github.io/docs/device/biostation_3"
+        default: "https://docs.supremainc.com/device/biostation_3"
       release_date:
         description: "릴리스 날짜 (YYMMDD 형식)"
         required: true
