@@ -148,7 +148,7 @@ function generateCoverHTML(params) {
         
         .title .subtitle {
             font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-            font-weight: 300;
+            font-weight: 200;
             font-size: 26pt;
             margin-bottom: 0;
             line-height: 1.2;
