@@ -246,19 +246,23 @@ jobs:
         echo "📎 PDFtk로 PDF 병합 중 (북마크 보존)..."
         pdftk "./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "${BACK_COVER}" cat output "./pdf/${FINAL_PDF_NAME}"
         
-        # 뷰어 설정을 병렬로 적용
+        # 병합된 파일 존재 확인
+        if [ ! -f "./pdf/${FINAL_PDF_NAME}" ]; then
+          echo "❌ 오류: PDF 병합 실패 - 파일이 생성되지 않았습니다"
+          exit 1
+        fi
+        
+        # 뷰어 설정을 순차적으로 적용 (파일 충돌 방지)
         echo "⚙️ PDF 뷰어 설정 적용 중..."
-        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines &
-        PAGEMODE_PID=$!
         
-        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage &
-        LAYOUT_PID=$!
+        echo "📖 책갈피 패널 표시 설정..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines
         
-        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}' &
-        PREF_PID=$!
+        echo "📄 한 페이지 레이아웃 설정..."
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage
         
-        # 모든 설정 완료 대기
-        wait $PAGEMODE_PID $LAYOUT_PID $PREF_PID
+        echo "🔍 뷰어 환경설정 적용..."
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}'
         
         echo "✅ PDF 병합 및 뷰어 설정 완료:"
         echo "  📎 파일: ./pdf/${FINAL_PDF_NAME}"
