@@ -107,8 +107,11 @@ jobs:
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
         
-        # 릴리스명 설정
-        RELEASE_NAME="${{ github.event.inputs.product_name }}-${{ github.event.inputs.document_type }}-${{ github.event.inputs.language }}-${{ github.event.inputs.version }}"
+        # GitHub 태그명용 안전한 릴리스명 설정 (공백, 한글 등을 안전한 문자로 변경)
+        RELEASE_NAME="${PRODUCT_SAFE}-${DOC_TYPE_SAFE}-${LANG_CODE}-${{ github.event.inputs.version }}"
+        
+        # 사용자 친화적인 릴리스 제목 (공백과 한글 포함 가능)
+        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} (${{ github.event.inputs.language }}) v${{ github.event.inputs.version }}"
         
         # PDF 파일명들 설정
         MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
@@ -122,12 +125,14 @@ jobs:
         echo "PRODUCT_SAFE=${PRODUCT_SAFE}" >> $GITHUB_ENV
         echo "DOC_TYPE_SAFE=${DOC_TYPE_SAFE}" >> $GITHUB_ENV
         echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+        echo "RELEASE_TITLE=${RELEASE_TITLE}" >> $GITHUB_ENV
         echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
         
         echo "✅ 환경변수 설정 완료:"
         echo "  🌐 언어: ${LANG_DISPLAY} (${LANG_CODE})"
-        echo "  🏷️ 릴리스명: ${RELEASE_NAME}"
+        echo "  🏷️ 태그명: ${RELEASE_NAME}"
+        echo "  📝 릴리스 제목: ${RELEASE_TITLE}"
         echo "  📄 최종 PDF: ${FINAL_PDF_NAME}"
 
     - name: Create PDF output directory
@@ -265,11 +270,12 @@ jobs:
         - [${FINAL_PDF_NAME}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME})
         EOF
         
-        echo "📌 릴리스명: ${RELEASE_NAME}"
+        echo "📌 태그명: ${RELEASE_NAME}"
+        echo "📝 릴리스 제목: ${RELEASE_TITLE}"
         
-        # 새로운 태그와 릴리스 생성
+        # 새로운 태그와 릴리스 생성 (태그명은 URL-safe, 제목은 사용자 친화적)
         gh release create "${RELEASE_NAME}" \
-          --title "${RELEASE_NAME}" \
+          --title "${RELEASE_TITLE}" \
           --notes-file release_notes.md \
           "./pdf/${FINAL_PDF_NAME}"
         
@@ -283,7 +289,8 @@ jobs:
         ls -la ./pdf/ | grep -E '\.(pdf|html)$' || echo "PDF 파일 없음"
         echo "=========================="
         echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${RELEASE_NAME}"
-        echo "📝 릴리스명: ${RELEASE_NAME}"
+        echo "📝 릴리스 제목: ${RELEASE_TITLE}"
+        echo "🏷️ 태그명: ${RELEASE_NAME}"
         echo "📄 업로드된 파일: ${FINAL_PDF_NAME}"
         echo "🌐 언어: ${{ github.event.inputs.language }}"
         echo "📊 파일 크기:"
