@@ -24,13 +24,13 @@ on:
           - "한국어"
           - "English"
       document_number:
-        description: "문서 번호 (예: KO 101.00.853)"
+        description: "문서 번호 (예: KO 101.00.BS3)"
         required: true
-        default: "KO 101.00.853"
+        default: "KO 101.00.BS3"
       target_url:
         description: "PDF로 변환할 웹사이트 URL"
         required: true
-        default: "https://supremainc.github.io/docs/device/biostation_3"
+        default: "https://docs.supremainc.com/device/biostation_3"
       release_date:
         description: "릴리스 날짜 (YYMMDD 형식)"
         required: true
@@ -79,6 +79,9 @@ jobs:
 
     - name: Install pdfcpu
       run: brew install pdfcpu
+
+    - name: Install PDFtk
+      run: brew install pdftk-java
 
     - name: Install GitHub CLI
       run: brew install gh
@@ -172,7 +175,7 @@ jobs:
 
     - name: Merge all PDFs
       run: |
-        echo "📑 PDF 파일 병합 중..."
+        echo "📑 PDF 파일 병합 중 (북마크 보존)..."
         
         # 파일명 재생성
         if [ "${{ github.event.inputs.language }}" = "English" ]; then
@@ -188,17 +191,12 @@ jobs:
         MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
         FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
         
-        # PDF 병합: 프론트커버 + 메인문서 + 백커버
-        pdfcpu merge \
-          -mode=append \
-          -bookmarks=false \
-          "./pdf/$FINAL_PDF_NAME" \
-          "./pdf/front-cover.pdf" \
-          "./pdf/${MAIN_PDF_NAME}" \
-          "$BACK_COVER"
+        # PDFtk를 사용하여 북마크를 보존하면서 병합
+        echo "📎 PDFtk로 PDF 병합 중 (북마크 보존)..."
+        pdftk "./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "$BACK_COVER" cat output "./pdf/${FINAL_PDF_NAME}"
         
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
-        echo "✅ PDF 병합 완료: ./pdf/${FINAL_PDF_NAME}"
+        echo "✅ PDF 병합 완료 (북마크 보존): ./pdf/${FINAL_PDF_NAME}"
 
     - name: Delete existing release if exists
       env:

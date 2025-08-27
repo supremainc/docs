@@ -3,7 +3,7 @@ const path = require('path');
 
 /**
  * 로컬 커버 페이지 HTML 생성기
- * 명령줄 예시: node generate-cover-local.js --title="BioStation 3" --subtitle="설치 가이드" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
+ * 명령줄 예시: node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
  */
 
 // 명령줄 인수 파싱
@@ -41,21 +41,53 @@ function getSupremaLogoSVG() {
     </svg>`;
 }
 
+// subtitle 값에 따른 언어별 제목 매핑
+function getLocalizedSubtitle(subtitleCode, isKorean = true) {
+    const subtitleMap = {
+        'IG': {
+            ko: '설치 가이드',
+            en: 'INSTALLATION GUIDE'
+        },
+        'UG': {
+            ko: '사용자 가이드',
+            en: 'USER GUIDE'
+        },
+        'AG': {
+            ko: '관리자 가이드',
+            en: 'ADMINISTRATOR GUIDE'
+        }
+    };
+
+    const mapping = subtitleMap[subtitleCode];
+    if (!mapping) {
+        // 코드가 없으면 원본 값을 그대로 반환
+        return subtitleCode;
+    }
+
+    return isKorean ? mapping.ko : mapping.en;
+}
+
 // HTML 템플릿 생성
 function generateCoverHTML(params) {
     const {
         title = "BioStation 3",
-        subtitle = "설치 가이드", 
+        subtitle = "IG", 
         version = "버전 1.08",
         lang = "한국어",
-        number = "KO 101.00.853"
+        number = "KO 101.00.BS3"
     } = params;
+
+    // 언어 감지 (문서 번호나 lang 파라미터로 판단)
+    const isKorean = number.startsWith('KO') || lang === "한국어";
+    
+    // subtitle이 코드(IG, UG, AG)인지 확인하고 적절한 제목으로 변환
+    const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean);
 
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
 
     return `<!DOCTYPE html>
-<html lang="ko">
+<html lang="${isKorean ? 'ko' : 'en'}">
 <head>
     <meta charset="utf-8">
     <title>커버 - ${title}</title>
@@ -111,7 +143,7 @@ function generateCoverHTML(params) {
             line-height: 1.1;
         }
         
-        .title h2 {
+        .title .subtitle {
             font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
             font-weight: 300;
             font-size: 26pt;
@@ -175,7 +207,7 @@ function generateCoverHTML(params) {
     <div class="coverpage">
         <div class="title">
             <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
-            <h2>${subtitle}</h2>
+            <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${version}</div>
             <div class="lang">${lang}</div>
             <div class="number">${number}</div>
@@ -198,11 +230,16 @@ function main() {
   node generate-cover-local.js --title="제품명" --subtitle="문서 제목" --version="버전" --lang="언어" --number="문서 번호" [--output="파일경로"]
 
 예시:
-  node generate-cover-local.js --title="BioStation 3" --subtitle="설치 가이드" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="UG" --version="Version 1.08" --lang="English" --number="EN 101.00.853"
 
 옵션:
   --title     제품명 (기본값: "BioStation 3")
-  --subtitle  문서 제목 (기본값: "설치 가이드")
+  --subtitle  문서 제목 코드 또는 직접 입력 
+              - IG: 설치 가이드 (한국어) / INSTALLATION GUIDE (영어)
+              - UG: 사용자 가이드 (한국어) / USER GUIDE (영어)
+              - AG: 관리자 가이드 (한국어) / ADMINISTRATOR GUIDE (영어)
+              - 또는 직접 제목 입력 (기본값: "IG")
   --version   버전 정보 (기본값: "버전 1.08")
   --lang      언어 (기본값: "한국어")
   --number    문서 번호 (기본값: "KO 101.00.853")
@@ -224,10 +261,13 @@ function main() {
     console.log(`✅ 커버 HTML 생성 완료: ${outputPath}`);
     console.log(`📄 PDF 생성 명령어: prince "${outputPath}" -o "${outputPath.replace('.html', '.pdf')}"`);
     
-    // 사용된 파라미터 출력
+    // 사용된 파라미터 출력을 위해 동일한 로직 적용
+    const isKorean = (args.number || 'KO 101.00.853').startsWith('KO') || (args.lang || '한국어') === "한국어";
+    const processedSubtitle = getLocalizedSubtitle(args.subtitle || 'IG', isKorean);
+    
     console.log('\n📋 사용된 파라미터:');
     console.log(`  제품명: ${args.title || 'BioStation 3'}`);
-    console.log(`  문서 제목: ${args.subtitle || '설치 가이드'}`);
+    console.log(`  문서 제목: ${processedSubtitle} (입력값: ${args.subtitle || 'IG'})`);
     console.log(`  버전: ${args.version || '버전 1.08'}`);
     console.log(`  언어: ${args.lang || '한국어'}`);
     console.log(`  문서 번호: ${args.number || 'KO 101.00.853'}`);
