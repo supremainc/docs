@@ -7,6 +7,16 @@
   -prince-shrink-to-fit: none;
 }
 
+/* 동적 콘텐츠 로딩 스타일 */
+.loading, .spinner, [data-loading] {
+  display: none !important;
+}
+
+/* 이미지 로딩 대기 */
+img {
+  -prince-image-loading: auto;
+}
+
 @page {
   size: A4;
   margin-top: 0.7in;
@@ -19,7 +29,6 @@
 }
 
 @page:first {
-  margin: 0 !important;
   @bottom-center { content: normal !important;}
 }
 

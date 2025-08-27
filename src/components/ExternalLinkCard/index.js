@@ -94,7 +94,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioEntry W3',
-      url: '#',
+      url: `/device/bioentry_w3`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
       desc: `${translate({
         id: "externalLinks.BioEntryW3.desc",
@@ -149,7 +149,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
-      title: 'Bioentry W2',
+      title: 'BioEntry W2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
       desc: `${translate({
@@ -159,7 +159,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
-      title: 'Bioentry P2',
+      title: 'BioEntry P2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
       desc: `${translate({
@@ -169,7 +169,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
-      title: 'Bioentry R2',
+      title: 'BioEntry R2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
@@ -203,7 +203,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
-      title: 'X Station 2',
+      title: 'X-Station 2',
       url: '#',
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
       desc: `${translate({

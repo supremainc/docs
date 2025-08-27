@@ -58,11 +58,12 @@
   background: #fff;
   text-align: center;
   padding: .5rem;
+  padding-right: 2rem;
 }
 
-.techspecsBody .desc {
+/* .techspecsBody .desc {
   padding-left: 2rem;
-}
+} */
 
 .techspecsBody .desc ul li svg {
   top: 6px;
@@ -126,5 +127,43 @@
   .techspecsBody {
     float: none;
     width: 100%;
+  }
+}
+
+@media print {
+  .techspecSection {
+    padding: .7rem 0;
+  }
+  .techspecsRowheader {
+    font-size: .9rem;
+  }
+  .techspec.dimensions .techspecsRowheader {
+    width: 10%;
+  }
+  .techspec.dimensions .techspecsBody {
+    width: 90%;
+  }
+  .techspecsBody {
+    font-size: .75rem;
+    align-content: center;
+  }
+  .techspecsBody sup {
+    font-size: .5rem;
+  }
+  .techspecsBody ul li {
+    line-height: 1.8;
+  }
+  .modelimg img {
+    margin: 0 !important;
+    max-width: unset !important;
+    height: 240px !important;
+  }
+  .techspecsBody .column.small_c5:first-of-type {
+    float: left;
+    width: 35%;
+  }
+  .techspecsBody .column.small_c5:last-of-type {
+    float: right;
+    width: 65%;
   }
 }

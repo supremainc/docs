@@ -1,0 +1,180 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/bew3-component-device.svg' className='none' height={140} alone /></Td>
+
+<Td><Image src='/img/device/bew3-component-bracket.svg' className='none' height={140} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry W3</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td>
+<Image src='/img/device/component-resistor.svg' className='none' alone />
+<Image src='/img/device/component-resistor.svg' className='none' alone />
+</Td>
+
+</Row>
+<Row className='center'>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>브래킷 고정용 나사 (별 모양)</Td>
+
+<Td>수축 튜브</Td>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항 x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+* 구성품은 설치 환경에 따라 달라질 수 있습니다.
+
+* 브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+* 제품 사용에 대한 내용은 슈프리마 웹 사이트([www.supremainc.com](https://www.supremainc.com))에 접속하여 사용자 가이드를 확인하세요.
+
+:::
+
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/bew3-product-part.png' className='none' />
+
+* **비주얼 카메라**: 실제 이미지를 촬영합니다.
+
+* **적외선 카메라**: 적외선 이미지를 촬영합니다.
+
+* **디스플레이**: 동작을 위한 UI를 제공합니다.
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 파란색: 정상 동작 상태
+
+  * 파란색/초록색 점멸:
+
+      * <Cmd>DHCP</Cmd>를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+      * <Cmd>슬레이브</Cmd> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+  * 빨간색/보라색 점멸: 장치 잠금 상태
+
+  * 노란색 점멸: 입력 대기 상태
+
+* **케이블**
+
+  전원 / 이더넷 / RS-485 / Wiegand 입출력 / Input / 릴레이
+
+* **스피커**: 소리를 들을 수 있습니다.
+
+* **초기화 버튼**
+
+  * 네트워크 설정을 초기화합니다. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings)를 참고하세요.
+
+  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
+
+
+### 케이블 및 커넥터
+
+<Columns>
+<Column>
+
+<Image src='/img/device/bew3-cables-layout.png' alone width={500} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | INPUT2 | 주황색 |
+| 2 | INPUT1 | 갈색 |
+| 3 | INPUT0 | 보라색 |
+| 4 | ETX+ | 흰색 |
+| 5 | ETX- | 주황색 |
+| 6 | ERX+ | 검은색 |
+| 7 | ERX- | 노란색 |
+| 8 | RS485_0 TRXN | 노란색 (검은 띠) |
+| 9 | RS485_0 TRXP | 파란색 (흰 띠) |
+| 10 | RS485_1 TRXN | 노란색 |
+| 11 | RS485_1 TRXP | 파란색 |
+| 12 | PWR GND | 검은색 (흰 띠) |
+| 13 | PWR +VDC | 빨간색 |
+| 14 | VB2 | 갈색 |
+| 15 | VB2 | 파란색 |
+| 16 | VB1 | 초록색 |
+| 17 | VB1 | 빨간색 |
+| 18 | GND | 검은색 |
+| 19 | RELAY NO | 회색 (흰 띠) |
+| 20 | RELAY NC | 주황색 (흰 띠) |
+| 21 | RELAY COM | 초록색 (흰 띠) |
+| 22 | GND | 검은색 |
+| 23 | WGD OUT1 | 흰색 (검은 띠) |
+| 24 | WGD OUT0 | 초록색 (검은 띠) |
+| 25 | WGD IN1 | 흰색 |
+| 26 | WGD IN0 | 초록색 |
+
+</Column>
+</Columns>
+
+:::info
+
+AWG 26 크기의 도체는 여러 가지가 있으며, 배선할 때 일반적인 피복이나 동등한 재질로 보호되어야 합니다. 또한, 리드선이 18 AWG (0.82 mm2) 보다 큰 도체에 접촉하지 않도록 주의하세요.
+
+:::
+
+
+import FaceEnrollCaution from '../../common/_face-enrollment-authentication-method.mdx'
+
+<FaceEnrollCaution />

@@ -1,0 +1,260 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords: [Installation, BioEntry W3, Device]
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+import InstallationRelayCautionNotes from '../../common/_installation-relay-caution.mdx';
+import DaioDirectionInfo from "../../common/_installation-daiod-direction-info.mdx";
+import IntelligentDesc from '../../common/_installation-intelligent-secure-relay-caution.mdx';
+import ConnectionInfo from '../../common/_installation-connection-master-slave-info.mdx';
+import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the Bracket and the Product
+
+1. Determine the correct position to install the product.
+
+    <Image src='/img/device/installation-recommended-bs3.svg' className='none' alone />
+
+    <InstallationBracketNotes height={137} />
+
+1. Fix the bracket firmly using fixing screws through the bracket to the position where the product will be installed.
+
+    <Image src='/img/device/bew3-bracket-fix.png' className='none' alone />
+
+    :::info
+
+    * If installing the product on a concrete wall, drill holes, insert PVC anchors, and fix them with fixing screws.
+
+    * To avoid RF interference, a minimum separation distance must be maintained.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/bew3-installation_distance1.png' className='none' />
+
+    <div className='overflow-x'>
+
+    | Wall thickness | Distance |
+    | :--: | :--: |
+    | 100 mm | 270 mm |
+    | 120 mm | 250 mm |
+    | 150 mm | 170 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/bew3-installation_distance.png' className='none' alone />
+
+    </Column>
+    </Columns>
+
+    * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
+
+    :::
+
+1. Install the product onto the fixed bracket.
+
+    <Image src='/img/device/bew3-device-fix.png' className='none' alone />
+
+1. Connect the product to the bracket by rotating the product fixing screw of the product.
+
+    <Image src='/img/device/bew3-device-fix-bottom.png' className='none' alone />
+
+    :::info
+
+    When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+    :::
+
+
+## Power Supply Connection
+
+<Image src='/img/device/bew3-power-connetion.png' />
+
+import InstallPowerCautionNotes from '../../common/_installation-power-caution-notes.mdx';
+
+<InstallPowerCautionNotes />
+
+<div className='page-break' />
+
+## Network Connection
+
+### TCP/IP
+
+#### LAN connection (connecting to a hub)
+
+You can connect the device to a hub using a general type CAT-5 cable.
+
+<Image src='/img/device/installation-network-hub-connection-bew3.png' className='none' />
+
+#### LAN connection (connecting to a PC directly)
+
+The device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable.
+
+<Image src='/img/device/installation-network-direct-connection-bew3.png' className='none' alone />
+
+
+## Input Connection
+
+<Image src='/img/device/installation-input-connection-bew3.png' className='none' />
+
+
+## Relay Connection
+
+### Fail Safe Lock
+
+In order to use the Fail Safe Lock, connect N/C relay as shown in the figure below. There is normally a current flowing through the relay for the Fail Safe Lock. When the relay is activated, blocking the current flow, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will open.
+
+<Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' className='none' />
+
+<InstallationRelayCautionNotes />
+
+<DaioDirectionInfo />
+
+### Fail Secure Lock
+
+In order to use the Fail Secure Lock, connect N/O relay as shown in the figure below There is normally no current flowing through the relay for the Fail Secure Lock. When the current flow is activated by the relay, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will lock.
+
+<Image src='/img/device/installation-relay-fail-secure-lock-bew3.png' className='none' />
+
+<InstallationRelayCautionNotes />
+
+<DaioDirectionInfo />
+
+### Automatic Door Connection
+
+<Image src='/img/device/installation-automatic-door-bew3.png' className='none' />
+
+<div className='page-break' />
+
+## Connecting as a Standalone
+
+The product can be connected to the door lock, door button, and door sensor directly without connecting a separate I/O device. 
+
+<Image src='/img/device/installation-standalone-connection-bew3.png' className='none' />
+
+:::caution
+
+<IntelligentDesc />
+
+:::
+
+<ConnectionInfo />
+
+<div className='page-break' />
+
+## Connecting to Secure I/O 2
+
+Secure I/O 2 is an I/O device, can be connected to the product with the RS-485 cable. Security can be maintained even if the connection between the product and Secure I/O 2 has been lost or the power supply to the product has been shut off due to external factors.
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection.
+
+<Image src='/img/device/installation-sio2-connection-bew3.png' className='none' />
+
+<ConnectionInfo />
+
+
+## Wiegand Connection
+
+Used as a Wiegand input device
+
+<Image src='/img/device/installation-wiegand-in-connection-bew3.png' className='none' />
+
+<div className='page-break' />
+
+Used as a Wiegand output device
+
+<Image src='/img/device/installation-wiegand-out-connection-bew3.png' className='none' />
+
+
+## Resetting Network Settings {#reset-network-settings}
+
+1. Turn the power on.
+
+1. Press the network reset button on the rear of device until the device restart automatically.
+
+1. Connect the device with default values.
+
+    * **TCP/IP address**: DHCP address assignment (If DHCP address assignment is failed, 169.254.x.x will be set.)
+
+    * **Server mode**: Disabled
+
+    * **RS-485**: Default, 115200 bps
+
+1. Change the TCP/IP address or RS-485 information.
+
+1. Turn the power off later on and then check the network setting is properly.
+
+
+## Restoring the Factory Defaults {#factory-reset}
+
+This will delete all data and root certificate on the device and reset the settings.
+
+1. Turn the power on.
+
+1. Press the reset button three times quickly.
+
+1. When the green LED is blinking, press the reset button again.
+
+:::info
+
+If there is no root certificate on the device, you cannot restore the factory defaults.
+
+:::
+
+
+## Upgrading Firmware
+
+Upgrade the firmware by connecting a USB memory to the device.
+
+1. Save the firmware upgrade file to USB memory.
+
+    :::info
+
+    It is recommended to save only one firmware file on the USB memory before the firmware upgrade.
+
+    :::
+
+1. Connect the USB memory to the device.
+
+1. When the "Admin Auth Required" message appears, authenticate using an Admin level credential.
+
+    :::info
+
+    Register an administrator on the device in BioStar 2. If there is no administrator on the device, the firmware upgrade cannot proceed. For more information on administrator registration, please refer to the BioStar 2 Administrator Guide.
+
+    :::
+
+1. The firmware file will be transferred to the device after successful administrator authentication.
+
+1. When the firmware file transfer is complete, a message to remove the USB memory will appear on the screen. Remove the USB memory.
+
+    :::info
+
+    If the USB memory is not removed, the firmware upgrade will restart after the device restarts.
+
+    :::
+
+1. After the firmware upgrade is complete, the device will automatically restart.
+
+:::caution
+
+Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
+
+:::
+
+:::info
+
+<SupportedMemoryInfo />
+
+:::

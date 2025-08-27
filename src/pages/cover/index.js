@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
@@ -9,6 +9,8 @@ import {useLocation} from '@docusaurus/router';
 export default function Cover() {
     const {search} = useLocation();
     const params = Object.fromEntries(new URLSearchParams(search));
+    const [isLoaded, setIsLoaded] = useState(false);
+    
     const {
         title = "Suprema",
         sub: subtitle = "...",
@@ -28,18 +30,28 @@ export default function Cover() {
         `;
         document.head.appendChild(style);
 
+        // URL 파라미터가 로드된 후 표시
+        setTimeout(() => {
+            setIsLoaded(true);
+            // PrinceXML이 인식할 수 있는 로딩 완료 표시
+            document.body.setAttribute('data-loaded', 'true');
+            document.body.classList.add('content-loaded');
+        }, 100);
+
         // 컴포넌트 언마운트 시 스타일 제거
         return () => {
-            document.head.removeChild(style);
+            if (document.head.contains(style)) {
+                document.head.removeChild(style);
+            }
         };
-    }, []);
+    }, [params]);
     
     return (
         <Layout>
             <Head>
                 <meta name="robots" content="noindex, nofollow"/>
             </Head>
-            <div className={styles.coverpage}>
+            <div className={clsx(styles.coverpage, { [styles.loaded]: isLoaded })}>
                 <div className={styles.title}>
                     <h1>{title}</h1>
                     <h2>{subtitle}</h2>

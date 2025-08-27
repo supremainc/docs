@@ -1,0 +1,185 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/bew3-component-device.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/bew3-component-bracket.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry W3</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td>
+<Image src='/img/device/component-resistor.svg' className='none' alone />
+<Image src='/img/device/component-resistor.svg' className='none' alone />
+</Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Fixing Screw x2</Td>
+
+<Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+<Td>Shrink Tube</Td>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+* Components may vary according to the installation environment.
+
+* When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+* For more details regarding the product, visit the Suprema website ([www.supremainc.com](https://www.supremainc.com)) and refer to the user guide.
+
+:::
+
+
+## Name and Function of Each Part
+
+<Image src='/img/device/bew3-product-part.png' className='none' />
+
+* **Visual camera**: Capture an actual face image.
+
+* **Infrared camera**: Capture the infrared face image.
+
+* **Display**: Provides a UI for operation.
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue: Normal operation.
+
+  * Blue/Green blinking:
+
+    * Fails to receive an IP address when <Cmd>DHCP</Cmd> is enabled.
+
+    * Disconnection with the master device when in <Cmd>Slave</Cmd> mode.
+
+  * Red/Purple blinking: Device is locked.
+
+  * Yellow blinking: Waiting for an input.
+
+* **Cable Connector**
+
+  Power cable / Ethernet connector / RS-485 cable / Wiegand input or output cable / Input cable / Relay output cable
+
+* **Speaker**: Delivers sound.
+
+* **Reset Button**
+
+  * Resets the network configuration. For details, refer to the [Resetting Network Setting](installation#reset-network-settings).
+
+  * Deletes all data and certificate on the device and reset the settings. For details, refer to the [Restoring the Factory Defaults](installation#factory-reset).
+
+* **USB (Type-C) memory slot**: Connects the USB memory.
+
+
+### Cables and Connectors
+
+<Columns>
+<Column>
+
+<Image src='/img/device/bew3-cables-layout.png' alone width={500} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin | Name | Color |
+| :--: | :--: | :--: |
+| 1 | INPUT2 | Orange |
+| 2 | INPUT1 | Brown |
+| 3 | INPUT0 | Purple |
+| 4 | ETX+ | White |
+| 5 | ETX- | Orange |
+| 6 | ERX+ | Black |
+| 7 | ERX- | Yellow |
+| 8 | RS485_0 TRXN | Yellow (Black stripe) |
+| 9 | RS485_0 TRXP | Blue (White stripe) |
+| 10 | RS485_1 TRXN | Yellow |
+| 11 | RS485_1 TRXP | Blue |
+| 12 | PWR GND | Black (White stripe) |
+| 13 | PWR +VDC | Red |
+| 14 | VB2 | Brown |
+| 15 | VB2 | Blue |
+| 16 | VB1 | Green |
+| 17 | VB1 | Red |
+| 18 | GND | Black |
+| 19 | RELAY NO | Gray (White stripe) |
+| 20 | RELAY NC | Orange (White stripe) |
+| 21 | RELAY COM | Green (White stripe) |
+| 22 | GND | Black |
+| 23 | WGD OUT1 | White (Black stripe) |
+| 24 | WGD OUT0 | Green (Black stripe) |
+| 25 | WGD IN1 | White |
+| 26 | WGD IN0 | Green |
+
+</Column>
+</Columns>
+
+:::info
+
+There are several conductors of size of AWG 26 and they shall be covered by a common jacket or the equivalent when field wiring; and the lead shall not be spliced to a conductor larger than 18 AWG (0.82 mm2).
+
+:::
+
+
+import FaceEnrollCaution from '../../common/_face-enrollment-authentication-method.mdx'
+
+<FaceEnrollCaution />

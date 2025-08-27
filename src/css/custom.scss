@@ -344,6 +344,14 @@ footer {
     // color: var(--ifm-color-primary);
   }
 }
+// Tabulator 스타일
+
+// Zoom 스타일
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 201;
+}
+// Zoom 스타일
 
 // markdown 콘텐츠 스타일 
 .markdown {
@@ -479,6 +487,9 @@ footer {
   }
 
   section {
+    ul {
+      margin-bottom: var(--ifm-list-paragraph-margin);
+    }
     &.row {
       a.padding--lg {
         padding: 20px !important;
@@ -519,6 +530,10 @@ footer {
         margin-top: 0;
       }
     }
+  }
+
+  .overflow-x {
+    margin-top: var(--ifm-list-paragraph-margin);
   }
 
   /* Alert */
@@ -657,6 +672,7 @@ footer {
       padding-bottom: .8rem;
     }
   }
+  
   ul ul, ul ol, ol ol, ol ul {
     margin: 1rem 0;
   }
