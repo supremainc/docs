@@ -8,9 +8,9 @@ on:
         required: true
         default: "BioStation 3"
       document_type:
-        description: "문서 유형 (예: 설치 가이드, 사용자 가이드, 관리자 가이드)"
+        description: "문서 유형 (예: IG, UG, AG)"
         required: true
-        default: "설치 가이드"
+        default: "IG"
       version:
         description: "문서 버전"
         required: true
@@ -34,7 +34,7 @@ on:
       release_date:
         description: "릴리스 날짜 (YYMMDD 형식)"
         required: true
-        default: "250826"
+        default: "YYMMDD"
 
 permissions:
   contents: write
@@ -190,6 +190,7 @@ jobs:
         
         # PDF 병합: 프론트커버 + 메인문서 + 백커버
         pdfcpu merge \
+          -mode=append \
           -bookmarks=false \
           "./pdf/$FINAL_PDF_NAME" \
           "./pdf/front-cover.pdf" \
@@ -246,8 +247,6 @@ jobs:
         **문서 번호:** ${{ github.event.inputs.document_number }}
         **릴리스 날짜:** ${{ github.event.inputs.release_date }}
         **소스 URL:** ${{ github.event.inputs.target_url }}
-
-        이 릴리스에는 프론트 커버, 메인 문서, 백 커버가 통합된 완전한 PDF 문서가 포함되어 있습니다.
         EOF
         
         gh release create "$TAG_NAME" \
