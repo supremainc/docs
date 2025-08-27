@@ -147,6 +147,9 @@
     font-size: .75rem;
     align-content: center;
   }
+  .techspecsBody sup {
+    font-size: .5rem;
+  }
   .techspecsBody ul li {
     line-height: 1.8;
   }
