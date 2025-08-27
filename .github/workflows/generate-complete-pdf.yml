@@ -51,6 +51,30 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Validate inputs
+      run: |
+        echo "🔍 입력값 검증 중..."
+        
+        # URL 유효성 검사
+        if ! curl -sSf --head "${{ github.event.inputs.target_url }}" > /dev/null; then
+          echo "❌ 오류: 대상 URL에 접근할 수 없습니다: ${{ github.event.inputs.target_url }}"
+          exit 1
+        fi
+        
+        # 날짜 형식 검증 (YYMMDD)
+        if ! echo "${{ github.event.inputs.release_date }}" | grep -qE '^[0-9]{6}$'; then
+          echo "❌ 오류: 릴리스 날짜는 YYMMDD 형식이어야 합니다: ${{ github.event.inputs.release_date }}"
+          exit 1
+        fi
+        
+        # 버전 형식 검증 (semantic version)
+        if ! echo "${{ github.event.inputs.version }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+'; then
+          echo "❌ 오류: 버전은 x.y.z 형식이어야 합니다: ${{ github.event.inputs.version }}"
+          exit 1
+        fi
+        
+        echo "✅ 모든 입력값이 유효합니다"
+
     - name: Print workflow inputs
       run: |
         echo "=== 워크플로우 입력값 ==="
@@ -66,25 +90,48 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
+        cache: 'yarn'
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
 
+    - name: Setup tools cache
+      id: tools-cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          /usr/local/bin/prince
+          /opt/homebrew/bin/pdfcpu
+          /opt/homebrew/bin/pdftk
+          /opt/homebrew/bin/gh
+        key: tools-${{ runner.os }}-${{ env.PRINCE_VER }}
+
     - name: Install Prince XML
+      if: steps.tools-cache.outputs.cache-hit != 'true'
       run: |
+        echo "📦 Prince XML 설치 중..."
         curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-macos.zip -O
         tar zxf prince-${{ env.PRINCE_VER }}-macos.zip
         cd prince-${{ env.PRINCE_VER }}-macos
         yes "" | sudo ./install.sh
+        echo "✅ Prince XML 설치 완료"
 
-    - name: Install pdfcpu
-      run: brew install pdfcpu
+    - name: Install other tools
+      if: steps.tools-cache.outputs.cache-hit != 'true'
+      run: |
+        echo "📦 기타 도구 설치 중..."
+        # 병렬로 설치하여 시간 단축
+        brew install pdfcpu pdftk-java gh
+        echo "✅ 모든 도구 설치 완료"
 
-    - name: Install PDFtk
-      run: brew install pdftk-java
-
-    - name: Install GitHub CLI
-      run: brew install gh
+    - name: Verify tools installation
+      run: |
+        echo "🔧 도구 설치 확인 중..."
+        prince --version || echo "Prince XML 확인 필요"
+        pdfcpu version || echo "pdfcpu 확인 필요"  
+        pdftk --version || echo "PDFtk 확인 필요"
+        gh --version || echo "GitHub CLI 확인 필요"
+        echo "✅ 도구 확인 완료"
 
     - name: Setup environment variables
       run: |
@@ -138,11 +185,12 @@ jobs:
     - name: Create PDF output directory
       run: mkdir -p ./pdf
 
-    - name: Generate front cover PDF
+    - name: Generate and process PDFs
       run: |
-        echo "📄 프론트 커버 생성 중..."
+        echo "📄 PDF 생성 및 처리 시작..."
         
-        # 프론트 커버 생성 (환경변수 사용)
+        # 프론트 커버 생성
+        echo "📄 프론트 커버 생성 중..."
         node generate-cover-local.js \
           --title="${{ github.event.inputs.product_name }}" \
           --subtitle="${{ github.event.inputs.document_type }}" \
@@ -151,19 +199,11 @@ jobs:
           --number="${{ github.event.inputs.document_number }}" \
           --output="./pdf/front-cover.html"
         
-        # HTML을 PDF로 변환
+        # 프론트 커버 HTML을 PDF로 변환
         prince "./pdf/front-cover.html" -o "./pdf/front-cover.pdf"
         
-        # 프론트 커버 PDF에서 주석 제거
-        pdfcpu annot remove "./pdf/front-cover.pdf"
-        
-        echo "✅ 프론트 커버 완료 (주석 제거됨): ./pdf/front-cover.pdf"
-
-    - name: Generate main document PDF
-      run: |
+        # 메인 문서 PDF 생성
         echo "📖 메인 문서 PDF 생성 중..."
-        
-        # Prince XML로 웹페이지를 PDF로 변환 (환경변수 사용)
         node generatepdf \
           -u "${{ github.event.inputs.target_url }}" \
           --prince-args="--page-size='a4' --style=./print.css --javascript" \
@@ -171,24 +211,26 @@ jobs:
           --dest ./pdf \
           --include-index
         
-        echo "✅ 메인 문서 완료: ./pdf/${MAIN_PDF_NAME}"
-
-    - name: Remove annotations from main PDF
-      run: |
+        # 병렬로 주석 제거 (백그라운드에서 실행)
         echo "🔧 PDF 주석 제거 중..."
+        pdfcpu annot remove "./pdf/front-cover.pdf" &
+        FRONT_PID=$!
         
-        # 파일 존재 확인 후 주석 제거
         if [ -f "./pdf/${MAIN_PDF_NAME}" ]; then
-          pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}"
-          echo "✅ 주석 제거 완료: ${MAIN_PDF_NAME}"
+          pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}" &
+          MAIN_PID=$!
         else
-          echo "❌ 오류: PDF 파일을 찾을 수 없습니다: ${MAIN_PDF_NAME}"
+          echo "❌ 오류: 메인 PDF 파일을 찾을 수 없습니다: ${MAIN_PDF_NAME}"
           exit 1
         fi
+        
+        # 주석 제거 완료 대기
+        wait $FRONT_PID $MAIN_PID
+        echo "✅ 모든 PDF 주석 제거 완료"
 
-    - name: Merge all PDFs
+    - name: Merge PDFs and configure viewer settings
       run: |
-        echo "📑 PDF 파일 병합 중 (북마크 보존)..."
+        echo "📑 PDF 파일 병합 및 뷰어 설정 중..."
         
         # 필요한 파일들 존재 확인
         REQUIRED_FILES=("./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "${BACK_COVER}")
@@ -204,43 +246,49 @@ jobs:
         echo "📎 PDFtk로 PDF 병합 중 (북마크 보존)..."
         pdftk "./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "${BACK_COVER}" cat output "./pdf/${FINAL_PDF_NAME}"
         
-        echo "✅ PDF 병합 완료 (북마크 보존): ./pdf/${FINAL_PDF_NAME}"
-
-    - name: Configure PDF viewer preferences
-      run: |
+        # 뷰어 설정을 병렬로 적용
         echo "⚙️ PDF 뷰어 설정 적용 중..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines &
+        PAGEMODE_PID=$!
         
-        # 최종 PDF 파일 존재 확인
-        if [ ! -f "./pdf/${FINAL_PDF_NAME}" ]; then
-          echo "❌ 오류: 최종 PDF 파일을 찾을 수 없습니다: ${FINAL_PDF_NAME}"
-          exit 1
-        fi
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage &
+        LAYOUT_PID=$!
         
-        # 뷰어 기본 설정 적용
-        echo "📖 책갈피 패널 표시 설정..."
-        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}' &
+        PREF_PID=$!
         
-        echo "📄 한 페이지 레이아웃 설정..."
-        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage
+        # 모든 설정 완료 대기
+        wait $PAGEMODE_PID $LAYOUT_PID $PREF_PID
         
-        echo "🔍 페이지에 맞추기 및 기타 뷰어 설정..."
-        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}'
-        
-        echo "✅ PDF 뷰어 설정 완료:"
-        echo "  📖 페이지 모드: UseOutlines (책갈피 패널 표시)"
-        echo "  📄 페이지 레이아웃: SinglePage (한 페이지)"
-        echo "  🔍 창 크기: FitWindow (페이지에 맞추기)"
-        echo "  🎯 창 위치: CenterWindow (화면 중앙)"
+        echo "✅ PDF 병합 및 뷰어 설정 완료:"
+        echo "  📎 파일: ./pdf/${FINAL_PDF_NAME}"
+        echo "  📖 페이지 모드: UseOutlines (책갈피 패널)"
+        echo "  📄 레이아웃: SinglePage"
+        echo "  🔍 뷰어 설정: FitWindow, CenterWindow"
 
     - name: Check and prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "🗑️ 기존 릴리스 및 태그 삭제 시도: ${RELEASE_NAME}"
+        echo "🗑️ 기존 릴리스 및 태그 정리 중: ${RELEASE_NAME}"
         
-        # 기존 릴리스 및 태그 삭제 (실패해도 계속 진행)
-        gh release delete "${RELEASE_NAME}" -y 2>/dev/null || echo "기존 릴리스 없음 또는 삭제 실패"
-        git push origin --delete "${RELEASE_NAME}" 2>/dev/null || echo "기존 태그 없음 또는 삭제 실패"
+        # 기존 릴리스 삭제 시도 (최대 3회 재시도)
+        for i in {1..3}; do
+          if gh release delete "${RELEASE_NAME}" -y 2>/dev/null; then
+            echo "✅ 기존 릴리스 삭제 완료 (시도 $i/3)"
+            break
+          else
+            if [ $i -eq 3 ]; then
+              echo "ℹ️ 기존 릴리스 없음 또는 삭제 실패 (최종)"
+            else
+              echo "⏳ 릴리스 삭제 재시도 중... ($i/3)"
+              sleep 2
+            fi
+          fi
+        done
+        
+        # 기존 태그 삭제 시도
+        git push origin --delete "${RELEASE_NAME}" 2>/dev/null || echo "ℹ️ 기존 태그 없음 또는 삭제 실패"
         
         echo "✅ 릴리스 준비 완료"
 
@@ -250,13 +298,22 @@ jobs:
       run: |
         echo "🆕 새로운 릴리스 생성 및 PDF 업로드 중..."
         
-        # 최종 PDF 파일 존재 확인
+        # 최종 PDF 파일 존재 및 크기 확인
         if [ ! -f "./pdf/${FINAL_PDF_NAME}" ]; then
           echo "❌ 오류: 업로드할 PDF 파일을 찾을 수 없습니다: ${FINAL_PDF_NAME}"
           exit 1
         fi
         
-        # 릴리스 노트 작성
+        FILE_SIZE=$(ls -lh "./pdf/${FINAL_PDF_NAME}" | awk '{print $5}')
+        echo "📊 PDF 파일 크기: ${FILE_SIZE}"
+        
+        # 파일 크기가 너무 작으면 경고 (1MB 미만)
+        FILE_SIZE_BYTES=$(stat -c%s "./pdf/${FINAL_PDF_NAME}" 2>/dev/null || stat -f%z "./pdf/${FINAL_PDF_NAME}")
+        if [ "${FILE_SIZE_BYTES}" -lt 1048576 ]; then
+          echo "⚠️ 경고: PDF 파일 크기가 작습니다 (${FILE_SIZE}). 내용을 확인해주세요."
+        fi
+        
+        # 릴리스 노트 작성 (더 상세한 정보 포함)
         cat > release_notes.md << EOF
         # ${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }}
 
@@ -265,21 +322,39 @@ jobs:
         **릴리스 날짜:** ${{ github.event.inputs.release_date }}
         **언어:** ${LANG_DISPLAY}
         **소스 URL:** ${{ github.event.inputs.target_url }}
-        
+        **파일 크기:** ${FILE_SIZE}
+        **생성 일시:** $(date '+%Y-%m-%d %H:%M:%S UTC')
+
         ## 📥 다운로드
         - [${FINAL_PDF_NAME}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME})
+
+        ## 🔧 기술 정보
+        - PDF 뷰어 설정: 책갈피 패널 표시, 한 페이지 레이아웃
+        - 북마크: 보존됨
+        - 페이지 크기: A4
         EOF
         
         echo "📌 태그명: ${RELEASE_NAME}"
         echo "📝 릴리스 제목: ${RELEASE_TITLE}"
         
-        # 새로운 태그와 릴리스 생성 (태그명은 URL-safe, 제목은 사용자 친화적)
-        gh release create "${RELEASE_NAME}" \
-          --title "${RELEASE_TITLE}" \
-          --notes-file release_notes.md \
-          "./pdf/${FINAL_PDF_NAME}"
-        
-        echo "✅ 릴리스 생성 및 PDF 업로드 완료"
+        # 릴리스 생성 재시도 로직
+        for i in {1..3}; do
+          if gh release create "${RELEASE_NAME}" \
+            --title "${RELEASE_TITLE}" \
+            --notes-file release_notes.md \
+            "./pdf/${FINAL_PDF_NAME}"; then
+            echo "✅ 릴리스 생성 및 PDF 업로드 완료 (시도 $i/3)"
+            break
+          else
+            if [ $i -eq 3 ]; then
+              echo "❌ 릴리스 생성 실패 (최종 시도)"
+              exit 1
+            else
+              echo "⏳ 릴리스 생성 재시도 중... ($i/3)"
+              sleep 5
+            fi
+          fi
+        done
 
     - name: Show completion summary
       run: |
