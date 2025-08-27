@@ -86,6 +86,50 @@ jobs:
     - name: Install GitHub CLI
       run: brew install gh
 
+    - name: Setup environment variables
+      run: |
+        echo "📊 환경변수 설정 중..."
+        
+        # 언어 코드 설정
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+          LANG_DISPLAY="English"
+          BACK_COVER="back-cover-en.pdf"
+          COVER_VERSION="Version ${{ github.event.inputs.version }}"
+        else
+          LANG_CODE="KO"
+          LANG_DISPLAY="한국어"
+          BACK_COVER="back-cover.pdf"
+          COVER_VERSION="버전 ${{ github.event.inputs.version }}"
+        fi
+        
+        # 파일명용 안전한 문자열 생성
+        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
+        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
+        
+        # 릴리스명 설정
+        RELEASE_NAME="${{ github.event.inputs.product_name }}-${{ github.event.inputs.document_type }}-${{ github.event.inputs.language }}-${{ github.event.inputs.version }}"
+        
+        # PDF 파일명들 설정
+        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
+        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        
+        # 환경변수로 저장
+        echo "LANG_CODE=${LANG_CODE}" >> $GITHUB_ENV
+        echo "LANG_DISPLAY=${LANG_DISPLAY}" >> $GITHUB_ENV
+        echo "BACK_COVER=${BACK_COVER}" >> $GITHUB_ENV
+        echo "COVER_VERSION=${COVER_VERSION}" >> $GITHUB_ENV
+        echo "PRODUCT_SAFE=${PRODUCT_SAFE}" >> $GITHUB_ENV
+        echo "DOC_TYPE_SAFE=${DOC_TYPE_SAFE}" >> $GITHUB_ENV
+        echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+        echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
+        echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
+        
+        echo "✅ 환경변수 설정 완료:"
+        echo "  🌐 언어: ${LANG_DISPLAY} (${LANG_CODE})"
+        echo "  🏷️ 릴리스명: ${RELEASE_NAME}"
+        echo "  📄 최종 PDF: ${FINAL_PDF_NAME}"
+
     - name: Create PDF output directory
       run: mkdir -p ./pdf
 
@@ -93,29 +137,12 @@ jobs:
       run: |
         echo "📄 프론트 커버 생성 중..."
         
-        # 언어별 문서 번호 및 커버 설정
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-          COVER_TITLE="${{ github.event.inputs.product_name }}"
-          COVER_SUBTITLE="${{ github.event.inputs.document_type }}"
-          COVER_VERSION="Version ${{ github.event.inputs.version }}"
-          COVER_LANG="English"
-          BACK_COVER="back-cover-en.pdf"
-        else
-          LANG_CODE="KO"
-          COVER_TITLE="${{ github.event.inputs.product_name }}"
-          COVER_SUBTITLE="${{ github.event.inputs.document_type }}"
-          COVER_VERSION="버전 ${{ github.event.inputs.version }}"
-          COVER_LANG="한국어"
-          BACK_COVER="back-cover.pdf"
-        fi
-        
-        # 프론트 커버 생성
+        # 프론트 커버 생성 (환경변수 사용)
         node generate-cover-local.js \
-          --title="$COVER_TITLE" \
-          --subtitle="$COVER_SUBTITLE" \
+          --title="${{ github.event.inputs.product_name }}" \
+          --subtitle="${{ github.event.inputs.document_type }}" \
           --version="${{ github.event.inputs.version }}" \
-          --lang="$COVER_LANG" \
+          --lang="${LANG_DISPLAY}" \
           --number="${{ github.event.inputs.document_number }}" \
           --output="./pdf/front-cover.html"
         
@@ -131,19 +158,7 @@ jobs:
       run: |
         echo "📖 메인 문서 PDF 생성 중..."
         
-        # 언어별 파일명 설정
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-        else
-          LANG_CODE="KO"
-        fi
-        
-        # 파일명 생성 (공백을 언더스코어로 변경)
-        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
-        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
-        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
-        
-        # Prince XML로 웹페이지를 PDF로 변환
+        # Prince XML로 웹페이지를 PDF로 변환 (환경변수 사용)
         node generatepdf \
           -u "${{ github.event.inputs.target_url }}" \
           --prince-args="--page-size='a4' --style=./print.css --javascript" \
@@ -151,128 +166,90 @@ jobs:
           --dest ./pdf \
           --include-index
         
-        echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
         echo "✅ 메인 문서 완료: ./pdf/${MAIN_PDF_NAME}"
 
     - name: Remove annotations from main PDF
       run: |
         echo "🔧 PDF 주석 제거 중..."
         
-        # 파일명 재생성
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
+        # 파일 존재 확인 후 주석 제거
+        if [ -f "./pdf/${MAIN_PDF_NAME}" ]; then
+          pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}"
+          echo "✅ 주석 제거 완료: ${MAIN_PDF_NAME}"
         else
-          LANG_CODE="KO"
+          echo "❌ 오류: PDF 파일을 찾을 수 없습니다: ${MAIN_PDF_NAME}"
+          exit 1
         fi
-        
-        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
-        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
-        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
-        
-        pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}"
-        echo "MAIN_PDF_NAME=${MAIN_PDF_NAME}" >> $GITHUB_ENV
-        echo "✅ 주석 제거 완료"
 
     - name: Merge all PDFs
       run: |
         echo "📑 PDF 파일 병합 중 (북마크 보존)..."
         
-        # 파일명 재생성
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-          BACK_COVER="back-cover-en.pdf"
-        else
-          LANG_CODE="KO"
-          BACK_COVER="back-cover.pdf"
-        fi
+        # 필요한 파일들 존재 확인
+        REQUIRED_FILES=("./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "${BACK_COVER}")
         
-        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
-        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
-        MAIN_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}.pdf"
-        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
+        for file in "${REQUIRED_FILES[@]}"; do
+          if [ ! -f "$file" ]; then
+            echo "❌ 오류: 필요한 파일을 찾을 수 없습니다: $file"
+            exit 1
+          fi
+        done
         
         # PDFtk를 사용하여 북마크를 보존하면서 병합
         echo "📎 PDFtk로 PDF 병합 중 (북마크 보존)..."
-        pdftk "./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "$BACK_COVER" cat output "./pdf/${FINAL_PDF_NAME}"
+        pdftk "./pdf/front-cover.pdf" "./pdf/${MAIN_PDF_NAME}" "${BACK_COVER}" cat output "./pdf/${FINAL_PDF_NAME}"
         
-        echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
         echo "✅ PDF 병합 완료 (북마크 보존): ./pdf/${FINAL_PDF_NAME}"
+
+    - name: Configure PDF viewer preferences
+      run: |
+        echo "⚙️ PDF 뷰어 설정 적용 중..."
+        
+        # 최종 PDF 파일 존재 확인
+        if [ ! -f "./pdf/${FINAL_PDF_NAME}" ]; then
+          echo "❌ 오류: 최종 PDF 파일을 찾을 수 없습니다: ${FINAL_PDF_NAME}"
+          exit 1
+        fi
+        
+        # 뷰어 기본 설정 적용
+        echo "📖 책갈피 패널 표시 설정..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME}" UseOutlines
+        
+        echo "📄 한 페이지 레이아웃 설정..."
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME}" SinglePage
+        
+        echo "🔍 페이지에 맞추기 및 기타 뷰어 설정..."
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME}" '{"FitWindow": true, "CenterWindow": true}'
+        
+        echo "✅ PDF 뷰어 설정 완료:"
+        echo "  📖 페이지 모드: UseOutlines (책갈피 패널 표시)"
+        echo "  📄 페이지 레이아웃: SinglePage (한 페이지)"
+        echo "  🔍 창 크기: FitWindow (페이지에 맞추기)"
+        echo "  🎯 창 위치: CenterWindow (화면 중앙)"
 
     - name: Check and prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # 언어 코드 설정
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-          LANG_DISPLAY="English"
-        else
-          LANG_CODE="KO"
-          LANG_DISPLAY="한국어"
-        fi
+        echo "🗑️ 기존 릴리스 및 태그 삭제 시도: ${RELEASE_NAME}"
         
-        # 태그명을 워크플로우 입력값 그대로 사용
-        TAG_NAME="v${{ github.event.inputs.version }}"
-        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }} (${LANG_DISPLAY})"
+        # 기존 릴리스 및 태그 삭제 (실패해도 계속 진행)
+        gh release delete "${RELEASE_NAME}" -y 2>/dev/null || echo "기존 릴리스 없음 또는 삭제 실패"
+        git push origin --delete "${RELEASE_NAME}" 2>/dev/null || echo "기존 태그 없음 또는 삭제 실패"
         
-        echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
-        echo "RELEASE_TITLE=${RELEASE_TITLE}" >> $GITHUB_ENV
-        echo "LANG_CODE=${LANG_CODE}" >> $GITHUB_ENV
-        echo "LANG_DISPLAY=${LANG_DISPLAY}" >> $GITHUB_ENV
-        
-        # 기존 태그가 있는지 확인
-        if git rev-parse --verify "refs/tags/${TAG_NAME}" >/dev/null 2>&1; then
-          echo "📌 기존 태그가 발견되었습니다: $TAG_NAME"
-          echo "TAG_EXISTS=true" >> $GITHUB_ENV
-        else
-          echo "🆕 새로운 태그를 생성합니다: $TAG_NAME"
-          echo "TAG_EXISTS=false" >> $GITHUB_ENV
-        fi
-        
-        # 동일한 제목의 릴리스가 있는지 확인 후 삭제
-        if gh release view "$TAG_NAME" &>/dev/null; then
-          EXISTING_TITLE=$(gh release view "$TAG_NAME" --json name --jq '.name')
-          if [ "$EXISTING_TITLE" = "$RELEASE_TITLE" ]; then
-            echo "�️ 동일한 제목의 릴리스를 삭제합니다: $RELEASE_TITLE"
-            gh release delete "$TAG_NAME" -y
-            # 태그는 유지하되 릴리스만 삭제
-            echo "RELEASE_EXISTS=false" >> $GITHUB_ENV
-          else
-            echo "📝 다른 제목의 릴리스가 존재합니다. 기존: $EXISTING_TITLE, 새로운: $RELEASE_TITLE"
-            gh release delete "$TAG_NAME" -y
-            echo "RELEASE_EXISTS=false" >> $GITHUB_ENV
-          fi
-        else
-          echo "🆕 새로운 릴리스를 생성합니다"
-          echo "RELEASE_EXISTS=false" >> $GITHUB_ENV
-        fi
-      continue-on-error: true
+        echo "✅ 릴리스 준비 완료"
 
-    - name: Set release variables
-      run: |
-        # 모든 변수를 다시 설정 (이미 환경변수에 설정되어 있음)
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-        else
-          LANG_CODE="KO"
-        fi
-        
-        TAG_NAME="v${{ github.event.inputs.version }}"
-        
-        PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
-        DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
-        FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
-        
-        echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
-
-    - name: Create or update GitHub Release
-      id: create_release
+    - name: Create GitHub Release and Upload PDF
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # 환경변수에서 값 가져오기
-        TAG_NAME="${TAG_NAME}"
-        RELEASE_TITLE="${RELEASE_TITLE}"
+        echo "🆕 새로운 릴리스 생성 및 PDF 업로드 중..."
+        
+        # 최종 PDF 파일 존재 확인
+        if [ ! -f "./pdf/${FINAL_PDF_NAME}" ]; then
+          echo "❌ 오류: 업로드할 PDF 파일을 찾을 수 없습니다: ${FINAL_PDF_NAME}"
+          exit 1
+        fi
         
         # 릴리스 노트 작성
         cat > release_notes.md << EOF
@@ -283,53 +260,35 @@ jobs:
         **릴리스 날짜:** ${{ github.event.inputs.release_date }}
         **언어:** ${LANG_DISPLAY}
         **소스 URL:** ${{ github.event.inputs.target_url }}
+        
+        ## 📥 다운로드
+        - [${FINAL_PDF_NAME}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME})
         EOF
         
-        # 항상 새로운 릴리스 생성 (기존 릴리스는 이미 삭제됨)
-        echo "🆕 새로운 릴리스 생성 중..."
-        echo "📌 태그: $TAG_NAME"
-        echo "📝 제목: $RELEASE_TITLE"
+        echo "📌 릴리스명: ${RELEASE_NAME}"
         
-        if [ "$TAG_EXISTS" = "true" ]; then
-          # 기존 태그 사용
-          gh release create "$TAG_NAME" \
-            --title "$RELEASE_TITLE" \
-            --notes-file release_notes.md \
-            --target main
-        else
-          # 새로운 태그와 릴리스 생성
-          gh release create "$TAG_NAME" \
-            --title "$RELEASE_TITLE" \
-            --notes-file release_notes.md
-        fi
-
-    - name: Upload PDF to Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        # 환경변수에서 값 가져오기
-        TAG_NAME="${TAG_NAME}"
-        FINAL_PDF_NAME="${FINAL_PDF_NAME}"
+        # 새로운 태그와 릴리스 생성
+        gh release create "${RELEASE_NAME}" \
+          --title "${RELEASE_NAME}" \
+          --notes-file release_notes.md \
+          "./pdf/${FINAL_PDF_NAME}"
         
-        echo "📎 PDF 파일을 릴리스에 업로드 중..."
-        echo "📌 태그: $TAG_NAME"
-        echo "📄 파일: $FINAL_PDF_NAME"
-        
-        gh release upload "$TAG_NAME" "./pdf/$FINAL_PDF_NAME" --clobber
+        echo "✅ 릴리스 생성 및 PDF 업로드 완료"
 
     - name: Show completion summary
       run: |
-        # 환경변수에서 값 가져오기
-        TAG_NAME="${TAG_NAME}"
-        RELEASE_TITLE="${RELEASE_TITLE}"
-        FINAL_PDF_NAME="${FINAL_PDF_NAME}"
-        
         echo "🎉 PDF 생성 및 릴리스 완료!"
         echo "=========================="
         echo "📁 생성된 파일:"
-        ls -la ./pdf/
+        ls -la ./pdf/ | grep -E '\.(pdf|html)$' || echo "PDF 파일 없음"
         echo "=========================="
-        echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${TAG_NAME}"
-        echo "📝 릴리스 제목: ${RELEASE_TITLE}"
+        echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${RELEASE_NAME}"
+        echo "📝 릴리스명: ${RELEASE_NAME}"
         echo "📄 업로드된 파일: ${FINAL_PDF_NAME}"
         echo "🌐 언어: ${{ github.event.inputs.language }}"
+        echo "📊 파일 크기:"
+        if [ -f "./pdf/${FINAL_PDF_NAME}" ]; then
+          ls -lh "./pdf/${FINAL_PDF_NAME}" | awk '{print "  " $5 " - " $9}'
+        else
+          echo "  파일 크기 확인 불가"
+        fi
