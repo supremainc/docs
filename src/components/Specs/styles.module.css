@@ -133,6 +133,7 @@
 @media print {
   .techspecSection {
     padding: .7rem 0;
+    border-bottom: .25pt solid var(--ifm-color-border);
   }
   .techspecsRowheader {
     font-size: .9rem;

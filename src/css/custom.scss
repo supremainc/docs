@@ -1184,8 +1184,14 @@ footer {
     h5 { font-size: 1.1rem; }
     h6 { font-size: 1rem; }
     hr {
-      border: 1px solid var(--ifm-color-cmd);
-      margin-top: 0;
+      border: none;
+      border: .25pt solid var(--ifm-color-cmd);
+      height: 0;
+      margin-top: 0
+    }
+    ul + hr, section + hr {
+      margin-top: 30px;
+      border: .25pt solid var(--ifm-color-border);
     }
     .tabs-container {
       ul.tabs {
@@ -1235,6 +1241,7 @@ footer {
     a {
       color: var(--ifm-color-cmd) !important;
       text-decoration: none !important;
+      border-bottom: .25pt solid;
     }
     p, dt, dd, li {
       font-size: .8rem !important;

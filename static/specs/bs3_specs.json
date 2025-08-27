@@ -116,7 +116,9 @@
           "label_id": "specs.general.lcd_resolution",
           "value": {
             "ko": "720 x 1280 픽셀",
-            "en": "720 x 1280 pixels"
+            "en": "720 x 1280 pixels",
+            "es": "720 x 1280 píxeles",
+            "jp": "720 x 1280 画素"
           }
         },
         "sound": {
@@ -155,7 +157,9 @@
           "label_id": "specs.general.camera",
           "value": {
             "ko": [ "적외선: 2M 픽셀", "비주얼: 2M 픽셀" ],
-            "en": [ "IR: 2M pixels", "Visual: 2M pixels" ]
+            "en": [ "IR: 2M pixels", "Visual: 2M pixels" ],
+            "es": [ "IR: 2M píxeles", "Visual: 2M píxeles" ],
+            "jp": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
           }
         },
         "ip_rating": {
@@ -245,6 +249,13 @@
             }
           }
         },
+        "network_protocol": {
+          "label": "네트워크 프로토콜",
+          "label_id": "specs.interface.network_protocol",
+          "value": [
+            "TCP, UDP"
+          ]
+        },
         "rs485": {
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
@@ -270,7 +281,7 @@
           }
         },
         "ttl_input": {
-          "label": "TTL 입력",
+          "label": "Input",
           "label_id": "specs.interface.ttl_input",
           "value": {
             "ko": "입력 3채널",
