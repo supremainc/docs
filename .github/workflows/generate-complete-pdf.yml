@@ -198,23 +198,22 @@ jobs:
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
         echo "✅ PDF 병합 완료 (북마크 보존): ./pdf/${FINAL_PDF_NAME}"
 
-    - name: Delete existing release if exists
+    - name: Check and prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # 언어 코드 설정
-        if [ "${{ github.event.inputs.language }}" = "English" ]; then
-          LANG_CODE="EN"
-        else
-          LANG_CODE="KO"
-        fi
-        
-        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
+        # 태그명을 워크플로우 입력값 그대로 사용
+        TAG_NAME="v${{ github.event.inputs.version }}"
         echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
         
-        # 기존 릴리스 및 태그 삭제 (존재하는 경우)
-        gh release delete "$TAG_NAME" -y || echo "릴리스가 존재하지 않음"
-        git push origin --delete "$TAG_NAME" || echo "태그가 존재하지 않음"
+        # 기존 릴리스가 있는지 확인
+        if gh release view "$TAG_NAME" &>/dev/null; then
+          echo "📌 기존 릴리스가 발견되었습니다: $TAG_NAME"
+          echo "RELEASE_EXISTS=true" >> $GITHUB_ENV
+        else
+          echo "🆕 새로운 릴리스를 생성합니다: $TAG_NAME"
+          echo "RELEASE_EXISTS=false" >> $GITHUB_ENV
+        fi
       continue-on-error: true
 
     - name: Set release variables
@@ -226,7 +225,7 @@ jobs:
           LANG_CODE="KO"
         fi
         
-        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
+        TAG_NAME="v${{ github.event.inputs.version }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
@@ -235,7 +234,7 @@ jobs:
         echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
         echo "FINAL_PDF_NAME=${FINAL_PDF_NAME}" >> $GITHUB_ENV
 
-    - name: Create GitHub Release
+    - name: Create or update GitHub Release
       id: create_release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -249,23 +248,32 @@ jobs:
           LANG_DISPLAY="한국어"
         fi
         
-        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
-        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }} (${LANG_DISPLAY})"
+        TAG_NAME="v${{ github.event.inputs.version }}"
+        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }}"
         
         # 릴리스 노트 작성
         cat > release_notes.md << EOF
         # ${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }}
 
         **버전:** ${{ github.event.inputs.version }}
-        **언어:** ${{ github.event.inputs.language }}
         **문서 번호:** ${{ github.event.inputs.document_number }}
         **릴리스 날짜:** ${{ github.event.inputs.release_date }}
         **소스 URL:** ${{ github.event.inputs.target_url }}
+
+        ## 지원 언어
+        - 한국어
+        - English
         EOF
         
-        gh release create "$TAG_NAME" \
-          --title "$RELEASE_TITLE" \
-          --notes-file release_notes.md
+        # 기존 릴리스가 없는 경우에만 새로 생성
+        if [ "$RELEASE_EXISTS" = "false" ]; then
+          echo "🆕 새로운 릴리스 생성 중..."
+          gh release create "$TAG_NAME" \
+            --title "$RELEASE_TITLE" \
+            --notes-file release_notes.md
+        else
+          echo "📌 기존 릴리스 사용: $TAG_NAME"
+        fi
 
     - name: Upload PDF to Release
       env:
@@ -278,13 +286,14 @@ jobs:
           LANG_CODE="KO"
         fi
         
-        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
+        TAG_NAME="v${{ github.event.inputs.version }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
         FINAL_PDF_NAME="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_${LANG_CODE}_${{ github.event.inputs.release_date }}_Final.pdf"
         
-        gh release upload "$TAG_NAME" "./pdf/$FINAL_PDF_NAME"
+        echo "📎 PDF 파일을 릴리스에 업로드 중..."
+        gh release upload "$TAG_NAME" "./pdf/$FINAL_PDF_NAME" --clobber
 
     - name: Show completion summary
       run: |
@@ -295,7 +304,7 @@ jobs:
           LANG_CODE="KO"
         fi
         
-        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
+        TAG_NAME="v${{ github.event.inputs.version }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
@@ -307,4 +316,5 @@ jobs:
         ls -la ./pdf/
         echo "=========================="
         echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${TAG_NAME}"
-        echo "📄 최종 파일: ${FINAL_PDF_NAME}"
+        echo "📄 업로드된 파일: ${FINAL_PDF_NAME}"
+        echo "🌐 언어: ${{ github.event.inputs.language }}"
