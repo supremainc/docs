@@ -74,7 +74,7 @@ function generateCoverHTML(params) {
         subtitle = "IG", 
         version = "1.08",
         lang = "한국어",
-        number = "KO 101.00.BS3"
+        number = "101.00.BS3"
     } = params;
 
     // 언어 감지 (lang 파라미터를 우선으로, 그 다음 문서 번호로 판단)
@@ -85,6 +85,7 @@ function generateCoverHTML(params) {
     
     // 버전에 언어별 접두사 추가
     const processedVersion = isKorean ? `버전 ${version}` : `Version ${version}`;
+    const processedNumber = isKorean ? `KO ${number}` : `EN ${number}`;
 
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
@@ -214,7 +215,7 @@ function generateCoverHTML(params) {
             <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${processedVersion}</div>
             <div class="lang">${lang}</div>
-            <div class="number">${number}</div>
+            <div class="number">${processedNumber}</div>
         </div>
         <div class="footer">
             <img src="${logoDataUri}" class="logo" alt="Suprema Logo" />
@@ -234,8 +235,8 @@ function main() {
   node generate-cover-local.js --title="제품명" --subtitle="문서 제목" --version="1.0.0" --lang="언어" --number="문서 번호" [--output="파일경로"]
 
 예시:
-  node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="1.08" --lang="한국어" --number="KO 101.00.853"
-  node generate-cover-local.js --title="BioStation 3" --subtitle="UG" --version="1.08" --lang="English" --number="EN 101.00.853"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="IG" --version="1.08" --lang="한국어" --number="101.00.BS3"
+  node generate-cover-local.js --title="BioStation 3" --subtitle="UG" --version="1.08" --lang="English" --number="101.00.BS3"
 
 옵션:
   --title     제품명 (기본값: "BioStation 3")
@@ -246,7 +247,7 @@ function main() {
               - 또는 직접 제목 입력 (기본값: "IG")
   --version   버전 번호 (예: "1.08") - 언어에 따라 자동으로 "버전 1.08" 또는 "Version 1.08"로 표시됩니다 (기본값: "1.08")
   --lang      언어 (기본값: "한국어")
-  --number    문서 번호 (기본값: "KO 101.00.853")
+  --number    문서 번호 (기본값: "101.00.BS3")
   --output    출력 파일 경로 (기본값: "./cover.html")
         `);
         return;
