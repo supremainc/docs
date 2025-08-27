@@ -24,9 +24,9 @@ on:
           - "한국어"
           - "English"
       document_number:
-        description: "문서 번호 (예: KO 101.00.BS3)"
+        description: "문서 번호 (예: 101.00.BS3)"
         required: true
-        default: "KO 101.00.BS3"
+        default: "101.00.BS3"
       target_url:
         description: "PDF로 변환할 웹사이트 URL"
         required: true
