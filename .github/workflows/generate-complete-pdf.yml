@@ -202,7 +202,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
+        # 언어 코드 설정
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+        else
+          LANG_CODE="KO"
+        fi
+        
+        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
         echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
         
         # 기존 릴리스 및 태그 삭제 (존재하는 경우)
@@ -213,13 +220,13 @@ jobs:
     - name: Set release variables
       run: |
         # 모든 변수를 다시 설정
-        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
-        
         if [ "${{ github.event.inputs.language }}" = "English" ]; then
           LANG_CODE="EN"
         else
           LANG_CODE="KO"
         fi
+        
+        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
@@ -233,8 +240,17 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
-        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }}"
+        # 언어 코드 설정
+        if [ "${{ github.event.inputs.language }}" = "English" ]; then
+          LANG_CODE="EN"
+          LANG_DISPLAY="English"
+        else
+          LANG_CODE="KO"
+          LANG_DISPLAY="한국어"
+        fi
+        
+        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
+        RELEASE_TITLE="${{ github.event.inputs.product_name }} ${{ github.event.inputs.document_type }} v${{ github.event.inputs.version }} (${LANG_DISPLAY})"
         
         # 릴리스 노트 작성
         cat > release_notes.md << EOF
@@ -255,13 +271,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
-        
+        # 언어 코드 설정
         if [ "${{ github.event.inputs.language }}" = "English" ]; then
           LANG_CODE="EN"
         else
           LANG_CODE="KO"
         fi
+        
+        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
@@ -271,13 +288,14 @@ jobs:
 
     - name: Show completion summary
       run: |
-        TAG_NAME="v${{ github.event.inputs.version }}-${{ github.event.inputs.release_date }}"
-        
+        # 언어 코드 설정
         if [ "${{ github.event.inputs.language }}" = "English" ]; then
           LANG_CODE="EN"
         else
           LANG_CODE="KO"
         fi
+        
+        TAG_NAME="v${{ github.event.inputs.version }}-${LANG_CODE}-${{ github.event.inputs.release_date }}"
         
         PRODUCT_SAFE=$(echo "${{ github.event.inputs.product_name }}" | sed 's/ /_/g')
         DOC_TYPE_SAFE=$(echo "${{ github.event.inputs.document_type }}" | sed 's/ /_/g')
