@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2184"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1841"], {
 81017: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -358,7 +358,7 @@ function _createMdxContent(props) {
       product: "corestation_40,corestation_20,bioentry_w3",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "암호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요"
+          children: "비밀번호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요"
         }), "."]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
@@ -451,7 +451,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-29251: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+74187: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -460,20 +460,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_safety_instructions_mdx_bdf_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_bioentry_w_3_safety_instructions_mdx_267_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-safety-instructions-mdx-bdf.json
-var site_docs_device_biostation_3_safety_instructions_mdx_bdf_namespaceObject = JSON.parse('{"id":"device/biostation_3/safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","source":"@site/docs/device/biostation_3/safety-instructions.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/safety-instructions","permalink":"/docs/device/biostation_3/safety-instructions","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/safety-instructions.mdx","tags":[],"version":"current","frontMatter":{"id":"safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","keywords":["준수 사항","주의사항"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"BioStation 3","permalink":"/docs/device/biostation_3/"},"next":{"title":"시작하기","permalink":"/docs/device/biostation_3/getting-started"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-bioentry-w-3-safety-instructions-mdx-267.json
+var site_docs_device_bioentry_w_3_safety_instructions_mdx_267_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","source":"@site/docs/device/bioentry_w3/safety-instructions.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/safety-instructions","permalink":"/docs/device/bioentry_w3/safety-instructions","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/safety-instructions.mdx","tags":[],"version":"current","frontMatter":{"id":"safety-instructions","title":"안전을 위한 주의사항","description":"장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.","keywords":["준수 사항","주의사항"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"BioEntry W3","permalink":"/docs/device/bioentry_w3/"},"next":{"title":"시작하기","permalink":"/docs/device/bioentry_w3/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
 // EXTERNAL MODULE: ./docs/common/_safety-instructions.mdx
 var _safety_instructions = __webpack_require__(81017);
-;// CONCATENATED MODULE: ./docs/device/biostation_3/safety-instructions.mdx
+;// CONCATENATED MODULE: ./docs/device/bioentry_w3/safety-instructions.mdx
 
 
 const frontMatter = {

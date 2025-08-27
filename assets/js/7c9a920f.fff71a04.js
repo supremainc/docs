@@ -283,8 +283,8 @@ const toc = [{
   "id": "lan-연결-pc와-직접-연결",
   "level": 4
 }, {
-  "value": "TTL 입력 연결",
-  "id": "ttl-입력-연결",
+  "value": "Input 연결",
+  "id": "input-연결",
   "level": 2
 }, {
   "value": "릴레이 연결",
@@ -529,8 +529,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "ttl-입력-연결",
-      children: "TTL 입력 연결"
+      id: "input-연결",
+      children: "Input 연결"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-ttl-input-connection-bs3.png",
       className: "none"

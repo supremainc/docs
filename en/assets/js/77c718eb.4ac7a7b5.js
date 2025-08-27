@@ -72,8 +72,8 @@ const toc = [{
   "id": "lan-connection-connecting-to-a-pc-directly",
   "level": 4
 }, {
-  "value": "TTL Input Connection",
-  "id": "ttl-input-connection",
+  "value": "Input Connection",
+  "id": "input-connection",
   "level": 2
 }, {
   "value": "Relay Connection",
@@ -417,8 +417,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "ttl-input-connection",
-      children: "TTL Input Connection"
+      id: "input-connection",
+      children: "Input Connection"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-ttl-input-connection-bs3.png",
       className: "none"

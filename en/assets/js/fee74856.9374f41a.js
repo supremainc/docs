@@ -52,6 +52,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, Image} = _components;
@@ -85,14 +86,24 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If the administrator has not been designated, the ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "DASHBOARD"
-        }), " screen will be displayed when you press ", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/ico-menu.svg",
-          ico: true,
-          alone: true
-        }), "."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If the administrator has not been designated, the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "DASHBOARD"
+            }), " screen will be displayed when you press ", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/common/ico-menu.svg",
+              ico: true,
+              alone: true
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "WiFi MAC"
+            }), " is only available on the BS3-APWB model."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });

@@ -180,6 +180,14 @@ const toc = [{
   "id": "rtsp",
   "level": 3
 }, {
+  "value": "Master Admin",
+  "id": "master-admin",
+  "level": 3
+}, {
+  "value": "Admin 2-step Authentication",
+  "id": "admin-2-step-authentication",
+  "level": 3
+}, {
   "value": "Restart Device",
   "id": "restart-device",
   "level": 3
@@ -1311,6 +1319,121 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "When the device is configured as a slave device, the RTSP function may not be available."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "master-admin",
+      children: "Master Admin"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Change the authentication methods for the Master Admin."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "DEVICE"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Master Admin"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Select the desired authentication methods."
+        }), "\n", (0,jsx_runtime.jsxs)("div", {
+          className: "grid-container",
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/edit-master-admin-1.png",
+            width: "300px"
+          }), (0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/setting-master-admin-4.png",
+            width: "300px"
+          })]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "At least two different types of credentials must be enrolled."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "This feature is available only on new devices with firmware version v1.4.0 or higher."
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "admin-2-step-authentication",
+      children: "Admin 2-step Authentication"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Devices upgraded via firmware do not provide ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Master Admin"
+      }), " settings, but you can enhance administrator security by enabling the ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Admin 2-step Authentication"
+      }), " option."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SETTINGS"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "DEVICE"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Admin 2-step Authentication"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/how-to/setting-two-step-authentication.png",
+          width: "300px"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Admin 2-step Authentication"
+            }), " is available after upgrading the firmware to v1.4.0 or higher. Once upgraded to v1.4.0 or higher, you cannot downgrade to a lower version."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["The default value for ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Admin 2-step Authentication"
+            }), " is single-step authentication."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "If not all administrators have at least two types of credentials, activation will fail and an error message will appear. Enroll at least two types of credentials for all administrators, and then try again."
+          }), "\n", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/error-two-step-authentication.png",
+            className: "none",
+            width: "300px"
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["If you activate ", (0,jsx_runtime.jsx)(Cmd, {
+          children: "Admin 2-step Authentication"
+        }), " and then delete credentials so that all administrators have fewer than two types, you will not be able to access the administrator menu if BioStar 2 connection is also unavailable. Therefore, exercise caution when deleting administrator credentials."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "restart-device",

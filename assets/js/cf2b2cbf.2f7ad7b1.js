@@ -52,6 +52,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Cmd, Image} = _components;
@@ -85,14 +86,24 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["관리자가 지정되어 있지 않을 경우 ", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/ico-menu.svg",
-          ico: true,
-          alone: true
-        }), "을 누르면 ", (0,jsx_runtime.jsx)(Cmd, {
-          children: "대시보드"
-        }), " 화면이 나타납니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["관리자가 지정되어 있지 않을 경우 ", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/common/ico-menu.svg",
+              ico: true,
+              alone: true
+            }), "을 누르면 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "대시보드"
+            }), " 화면이 나타납니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "무선 MAC"
+            }), " 항목은 BS3-APWB 모델에서만 확인할 수 있습니다."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });

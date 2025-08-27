@@ -180,6 +180,14 @@ const toc = [{
   "id": "rtsp",
   "level": 3
 }, {
+  "value": "마스터 관리자",
+  "id": "마스터-관리자",
+  "level": 3
+}, {
+  "value": "관리자 2단계 인증",
+  "id": "admin-2-step-authentication",
+  "level": 3
+}, {
   "value": "장치 다시 시작",
   "id": "장치-다시-시작",
   "level": 3
@@ -1311,6 +1319,121 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "장치를 슬레이브 장치로 구성한 경우 RTSP 기능을 사용할 수 없습니다."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "마스터-관리자",
+      children: "마스터 관리자"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "마스터 관리자의 인증 수단을 변경할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "설정"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "장치"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "마스터 관리자"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "원하는 인증 수단을 설정하세요."
+        }), "\n", (0,jsx_runtime.jsxs)("div", {
+          className: "grid-container",
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/edit-master-admin-1.png",
+            width: "300px"
+          }), (0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/setting-master-admin-4.png",
+            width: "300px"
+          })]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "최소 두 종류 이상의 크리덴셜을 등록해야 합니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이 기능은 펌웨어 v1.4.0 이상의 신규 장치에서만 사용할 수 있습니다."
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "admin-2-step-authentication",
+      children: "관리자 2단계 인증"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["펌웨어를 업그레이드한 장치는 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "마스터 관리자"
+      }), " 설정을 제공하지 않지만, ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "관리자 2단계 인증"
+      }), " 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), "을 누른 뒤 관리자 권한 인증 수단으로 인증하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "설정"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "장치"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "관리자 2단계 인증"
+          }), "을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/how-to/setting-two-step-authentication.png",
+          width: "300px"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "관리자 2단계 인증"
+            }), "은 펌웨어를 v1.4.0 이상으로 업그레이드한 뒤 사용할 수 있으며, 펌웨어를 v1.4.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "관리자 2단계 인증"
+            }), " 옵션을 활성화하지 않은 상태에서는 1단계 인증이 기본값입니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요."
+          }), "\n", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/how-to/error-two-step-authentication.png",
+            className: "none",
+            width: "300px"
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: "관리자 2단계 인증"
+        }), "을 활성화한 후 모든 관리자의 크리덴셜을 2종 미만으로 삭제하면, BioStar 2에 연결할 수 없는 상황에서 관리자 메뉴에 접근할 수 없게 됩니다. 따라서 관리자 크리덴셜을 삭제할 때는 각별한 주의가 필요합니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "장치-다시-시작",
