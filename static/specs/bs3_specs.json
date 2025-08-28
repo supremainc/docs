@@ -252,9 +252,7 @@
         "network_protocol": {
           "label": "네트워크 프로토콜",
           "label_id": "specs.interface.network_protocol",
-          "value": [
-            "TCP, UDP"
-          ]
+          "value": "TCP, UDP"
         },
         "rs485": {
           "label": "RS-485",
@@ -280,9 +278,9 @@
             "en": "1 ch Input, 1 ch Output"
           }
         },
-        "ttl_input": {
+        "input": {
           "label": "Input",
-          "label_id": "specs.interface.ttl_input",
+          "label_id": "specs.interface.input",
           "value": {
             "ko": "입력 3채널",
             "en": "3 ch Inputs"
