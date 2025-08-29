@@ -67,12 +67,6 @@ jobs:
           exit 1
         fi
         
-        # 버전 형식 검증 (semantic version)
-        if ! echo "${{ github.event.inputs.version }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+'; then
-          echo "❌ 오류: 버전은 x.y.z 형식이어야 합니다: ${{ github.event.inputs.version }}"
-          exit 1
-        fi
-        
         echo "✅ 모든 입력값이 유효합니다"
 
     - name: Print workflow inputs

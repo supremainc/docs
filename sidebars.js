@@ -720,6 +720,7 @@ const sidebars = {
       ],
     },
   ],
+  /*
   biostation2a: [
     {
       type: 'category',
@@ -757,6 +758,7 @@ const sidebars = {
       ],
     },
   ],
+  */
 };
 
 export default sidebars;
