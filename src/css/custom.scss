@@ -1099,6 +1099,9 @@ footer {
   .alert {
     --ifm-alert-background-color: #354e5c;
   }
+  h2 .ico, img.ico {
+    filter: invert(1);
+  }
 }
 
 @media screen and (max-width: 1160px) {
