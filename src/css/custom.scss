@@ -1099,7 +1099,9 @@ footer {
   .alert {
     --ifm-alert-background-color: #354e5c;
   }
-  h2 .ico, img.ico {
+  img.ico[src*="ico-menu.svg"],
+  img.ico[src*="ico-search.svg"],
+  img.ico[src*="ico-delete.svg"] {
     filter: invert(1);
   }
 }
