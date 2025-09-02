@@ -916,6 +916,8 @@ footer {
         text-align: center;
         p.hasimg img {
           margin: 0 auto;
+          width: revert-layer;
+          height: revert-layer;
         }
       }
       tr.white td {
