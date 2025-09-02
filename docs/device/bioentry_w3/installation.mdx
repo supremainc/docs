@@ -6,11 +6,6 @@ keywords: [설치, BioEntry W3, 장치]
 ---
 
 import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
-import InstallationRelayCautionNotes from '../../common/_installation-relay-caution.mdx';
-import DaioDirectionInfo from "../../common/_installation-daiod-direction-info.mdx";
-import IntelligentDesc from '../../common/_installation-intelligent-secure-relay-caution.mdx';
-import ConnectionInfo from '../../common/_installation-connection-master-slave-info.mdx';
-import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
 
 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
 
@@ -75,106 +70,54 @@ import SupportedMemoryInfo from '../../common/_installation-supported-memory-dev
     :::
 
 
-## 전원 연결
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
 
-<Image src='/img/device/bew3-power-connetion.png' />
-
-import InstallPowerCautionNotes from '../../common/_installation-power-caution-notes.mdx';
-
-<InstallPowerCautionNotes />
+<PowerConnection />
 
 <div className='page-break' />
 
-## 네트워크 연결
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
 
-### TCP/IP
+<NetworkConnection />
 
-#### LAN 연결 (허브와 연결)
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
 
-일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다.
+<InputConnection />
 
-<Image src='/img/device/installation-network-hub-connection-bew3.png' className='none' />
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
-#### LAN 연결 (PC와 직접 연결)
-
-이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
-
-<Image src='/img/device/installation-network-direct-connection-bew3.png' className='none' alone />
-
-
-## Input 연결
-
-<Image src='/img/device/installation-input-connection-bew3.png' className='none' />
-
-
-## 릴레이 연결
-
-### Fail Safe Lock
-
-Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다.
-
-<Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' className='none' />
-
-<InstallationRelayCautionNotes />
-
-<DaioDirectionInfo />
-
-### Fail Secure Lock
-
-Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연결하세요. Fail Secure Lock은 평상 시 릴레이 회로에 전류가 흐르지 않으며, 릴레이가 동작하여 전류가 흐르면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 잠깁니다.
-
-<Image src='/img/device/installation-relay-fail-secure-lock-bew3.png' className='none' />
-
-<InstallationRelayCautionNotes />
-
-<DaioDirectionInfo />
-
-### 자동문 연결
-
-<Image src='/img/device/installation-automatic-door-bew3.png' className='none' />
+<RelayConnectioin />
 
 <div className='page-break' />
 
-## 독립형 연결
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
-별도의 I/O 장치를 연결하지 않고 제품을 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다.
+<StandaloneConnection />
 
-<Image src='/img/device/installation-standalone-connection-bew3.png' className='none' />
-
-:::caution
-
-<IntelligentDesc />
-
-:::
-
-<ConnectionInfo />
+{/* 공통 노트 */}
+<CommonNotes />
 
 <div className='page-break' />
 
-## Secure I/O 2 연결
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 
-제품에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 제품과 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 제품의 전원이 차단되더라도 보안을 유지할 수 있습니다.
+<SecureIOConnection />
 
-* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
-
-* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
-
-<Image src='/img/device/installation-sio2-connection-bew3.png' className='none' />
-
-<ConnectionInfo />
+{/* 공통 노트 */}
+<CommonNotes />
 
 
-## Wiegand 연결
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
-Wiegand 입력 장치로 사용
-
-<Image src='/img/device/installation-wiegand-in-connection-bew3.png' className='none' />
-
-<div className='page-break' />
-
-Wiegand 출력 장치로 사용
-
-<Image src='/img/device/installation-wiegand-out-connection-bew3.png' className='none' />
+<WiegandConnection />
 
 
 ## 네트워크 설정 초기화 {#reset-network-settings}
@@ -252,6 +195,8 @@ Wiegand 출력 장치로 사용
 펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요. 고장의 원인이 됩니다.
 
 :::
+
+import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
 
 :::info
 
