@@ -186,6 +186,11 @@ const config = {
                 type: 'doc',
                 label: 'BioEntry W3',
                 docId: 'device/bioentry_w3/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation F2',
+                docId: 'device/facestation_f2/index'
               }
             ]
           },

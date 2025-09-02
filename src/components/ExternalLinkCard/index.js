@@ -110,7 +110,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'FaceStation F2',
-      url: '#',
+      url: '/device/facestation_f2',
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",

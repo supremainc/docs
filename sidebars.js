@@ -661,6 +661,24 @@ const sidebars = {
       ]
     }
   ],
+  facestation3: [
+    {
+      type: 'category',
+      label: 'FaceStation F2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_f2/index',
+      },
+      items: [
+        'device/facestation_f2/safety-instructions',
+        'device/facestation_f2/getting-started',
+        'device/facestation_f2/troubleshooting',
+      ]
+    }
+  ],
   bioentryw3: [
     {
       type: 'category',
