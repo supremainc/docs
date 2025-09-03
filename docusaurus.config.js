@@ -189,6 +189,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'BioStation 2a',
+                docId: 'device/biostation_2a/index'
+              },
+              {
+                type: 'doc',
                 label: 'FaceStation F2',
                 docId: 'device/facestation_f2/index'
               }
