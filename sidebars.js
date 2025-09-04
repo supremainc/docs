@@ -686,6 +686,7 @@ const sidebars = {
           items: [
             'device/facestation_f2/admin-menu',
             'device/facestation_f2/user',
+            'device/facestation_f2/authentication',
           ]
         },
         'device/facestation_f2/troubleshooting',
