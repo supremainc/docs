@@ -400,7 +400,7 @@ footer {
     font-size: var(--ifm-h3-font-size);
     font-weight: 500;
   }
-  h4 { 
+  h4, .deviceonly { 
     --ifm-h4-font-size: 1.3rem;
     font-size: var(--ifm-h4-font-size);
     font-weight: 500;
@@ -864,6 +864,7 @@ footer {
 
   ul, ol {
     padding-left: 28px;
+    margin-bottom: var(--ifm-list-paragraph-margin);
   }
 
   pre * {

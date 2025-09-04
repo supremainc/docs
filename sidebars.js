@@ -675,6 +675,19 @@ const sidebars = {
       items: [
         'device/facestation_f2/safety-instructions',
         'device/facestation_f2/getting-started',
+        'device/facestation_f2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_f2/using-device',
+          },
+          items: [
+            'device/facestation_f2/admin-menu',
+            'device/facestation_f2/user',
+          ]
+        },
         'device/facestation_f2/troubleshooting',
       ]
     }

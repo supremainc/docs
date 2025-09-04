@@ -241,16 +241,18 @@ export function SpecSizeWieght({data}) {
                 <ul>
                   {item.size && (
                     <li>
-                      {translate({id: 'specs.size_weight.size'})}:&nbsp;
-                      <span className={styles.size}>
-                        <DimenW /> {item.size.width}mm
-                        × <DimenH /> {item.size.height}mm
-                        {item.size.depth && (
-                          <>
-                            &nbsp;x <DimenD /> {item.size.depth}mm
-                          </>
-                        )}
-                      </span>
+                      {translate({id: 'specs.size_weight.size'})}:
+                      <ul>
+                        <li>
+                          <span className={styles.size}><DimenW /> {item.size.width}mm</span>
+                        </li>
+                        <li>
+                          <span className={styles.size}><DimenH /> {item.size.height}mm</span>
+                        </li>
+                        <li>
+                          <span className={styles.size}><DimenD /> {item.size.depth}mm</span>
+                        </li>
+                      </ul>
                     </li>
                   )}
                   <li>
