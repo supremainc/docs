@@ -414,38 +414,6 @@
           ]
         }
       }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bs3-device-dimension.svg",
-          "size": {
-            "width": "82.5",
-            "height": "171",
-            "depth": "23.4"
-          },
-          "weight": [
-            "BS3-DB: 370g",
-            "BS3-APWB: 380g"
-          ]
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bs3-bracket-front-dimension.svg",
-          "size": {
-            "width": "72.9",
-            "height": "164"
-          },
-          "weight": "90g",
-          "weight_include": true
-        }
-      }
     }
   }
 }
