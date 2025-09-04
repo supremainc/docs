@@ -1,10 +1,11 @@
 ---
-id: smartcardapi-re
+id: smartcardapi
 title: 슈프리마 스마트 카드 발급 안내
 toc_max_heading_level: 3
 ---
 
 import TypedefStruct from '@site/src/components/TypedefStruct';
+import ResponsiveImageMap from '@site/src/components/ResponsiveImageMap';
 
 이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.
 
@@ -31,14 +32,40 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
 
 ## 구조체 관계도
 
-<map id="imgmap2025813133616" name="imgmap2025813133616">
-<area shape="rect" title="BS2Card" coords="22,217,190,319" href="#bs2card" />
-<area shape="rect" title="BS2SmartCardData" coords="271,281,539,424" href="#bs2smartcarddata" />
-<area shape="rect" title="BS2SmartCardHeader" coords="621,36,888,337" href="#bs2smartcardheader" />
-<area shape="rect" title="BS2SmartCardCredentials" coords="621,363,888,482" href="#bs2smartcardcredentials" />
-<area shape="rect" title="BS2AcessOnCardData" coords="621,508,888,640" href="#bs2accessoncarddata" />
-</map>
-<Image src='/img/common/smartcardapi-structure.png' className='useMap' usemap="#imgmap2025813133616" />
+<ResponsiveImageMap 
+  src="/img/common/smartcardapi-structure.png"
+  alt="SmartCard API 구조체 관계도"
+  className="useMap"
+  mapName="imgmap2025813133616"
+  originalWidth={2072}
+  originalHeight={1192}
+  areas={[
+    {
+      shape: "rect", 
+      title: "BS2SmartCardData",
+      coords: "489,507,971,765",
+      href: "#bs2smartcarddata"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardHeader", 
+      coords: "1115,34,1597,609",
+      href: "#bs2smartcardheader"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardCredentials",
+      coords: "1115,655,1597,868", 
+      href: "#bs2smartcardcredentials"
+    },
+    {
+      shape: "rect",
+      title: "BS2AccessOnCardData",
+      coords: "1115,914,1597,1154",
+      href: "#bs2accessoncarddata"
+    }
+  ]}
+/>
 
 :::note
 
