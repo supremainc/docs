@@ -379,35 +379,6 @@
           ]
         }
       }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bs2a-device-dimension.svg",
-          "size": {
-            "width": "142",
-            "height": "144",
-            "depth": "45 (Bottom) / 37.8 (Top)"
-          },
-          "weight": "429g"
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bs2a-bracket-front-dimension.svg",
-          "size": {
-            "width": "132.1",
-            "height": "137.9"
-          },
-          "weight": "142g",
-          "weight_include": true
-        }
-      }
     }
   }
 }
