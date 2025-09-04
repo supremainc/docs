@@ -123,6 +123,7 @@ export default function ResponsiveImageMap({
         alt={alt}
         className={className}
         usemap={`#${mapName}`}
+        alone
       />
     </div>
   );
