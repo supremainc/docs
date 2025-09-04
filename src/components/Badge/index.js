@@ -1,5 +1,5 @@
-export default function Badge({ children }) {
+export default function Badge({ children, only }) {
     return (
-        <span className='badge'>{children}</span>
+        <span className={`badge ${only ? 'only' : ''}`}>{children}</span>
     )
 }

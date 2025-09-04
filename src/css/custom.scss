@@ -849,6 +849,10 @@ footer {
     border-radius: 20px;
   }
 
+  span.only {
+    background-color: var(--ifm-color-cmd);
+  }
+
   span.cmd.bold, span.bold {
     font-weight: bold;
     color: var(--ifm-color-color-gray);
