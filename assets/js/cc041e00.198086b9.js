@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5433"], {
-18109: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1046"], {
+54689: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_confidential_smartcardapi_re_mdx_b24_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-re-mdx-b24.json
-var site_docs_confidential_smartcardapi_re_mdx_b24_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/confidential/smartcardapi-re.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi-re","permalink":"/docs/confidential/smartcardapi-re","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi-re.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"heading_className":"confidential","isTranslationMissing":false}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-mdx-cc0.json
+var site_docs_confidential_smartcardapi_mdx_cc0_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/confidential/smartcardapi.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi","permalink":"/docs/confidential/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"isTranslationMissing":false}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
 // EXTERNAL MODULE: ./src/components/TypedefStruct/index.js + 1 modules
 var TypedefStruct = __webpack_require__(38757);
-;// CONCATENATED MODULE: ./docs/confidential/smartcardapi-re.mdx
+;// CONCATENATED MODULE: ./docs/confidential/smartcardapi.mdx
 
 
 const frontMatter = {
-	id: 'smartcardapi-re',
+	id: 'smartcardapi',
 	title: '슈프리마 스마트 카드 발급 안내',
 	toc_max_heading_level: 3,
-	heading_className: 'confidential',
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -46,8 +45,8 @@ const toc = [{
   "id": "구조체-관계도",
   "level": 2
 }, {
-  "value": "구조 계층",
-  "id": "구조-계층",
+  "value": "구조체",
+  "id": "구조체",
   "level": 2
 }, {
   "value": "CRC 계산 및 검증",
@@ -177,8 +176,315 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "page-break"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구조-계층",
-      children: "구조 계층"
+      id: "구조체",
+      children: "구조체"
+    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct/* default */.Z, {
+      name: "BS2SmartCardHeader",
+      description: "SmartCard 헤더 정보를 담는 구조체입니다.",
+      category: "Smart Card",
+      size: "16",
+      hierarchy: [{
+        name: "BS2SmartCardHeader",
+        type: "struct",
+        size: 16,
+        description: "SmartCard 헤더 구조체",
+        children: [{
+          name: "체크섬 영역",
+          description: "체크섬 영역은 카드 데이터의 무결성을 검증하는 데 사용합니다. 자세한 내용은 <a href='#crc'>다음 문서</a>를 참고하세요.",
+          children: [{
+            name: "hdrCRC",
+            type: "uint16_t",
+            size: 2,
+            description: "카드 헤더 체크섬 값입니다. (cardCRC - reserved)"
+          }, {
+            name: "cardCRC",
+            type: "uint16_t",
+            size: 2,
+            description: "카드 데이터 체크섬 값입니다. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
+          }]
+        }, {
+          name: "카드 메타데이터",
+          description: "카드 유형 및 템플릿 정보",
+          children: [{
+            name: "cardType",
+            type: "BS2_CARD_TYPE",
+            size: 1,
+            description: "카드 유형의 코드 값입니다.",
+            constants: [{
+              value: "0x02",
+              description: "Secure Credential Card (SCC)"
+            }, {
+              value: "0x03",
+              description: "Access on Card (AOC)"
+            }]
+          }, {
+            name: "numOfTemplate",
+            type: "uint8_t",
+            size: 1,
+            description: "지문 템플릿의 개수입니다. Access on Card (AOC) 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFaceTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+            notes: ["최대 4개의 지문 템플릿을 지원합니다. 지문 템플릿 데이터 영역에 대한 자세한 내용은 <a href='#bs2smartcardcredentials'>다음 문서</a>를 참고하세요."]
+          }, {
+            name: "templateSize",
+            type: "uint16_t",
+            size: 2,
+            description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
+            notes: ["300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.", "Mifare 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."]
+          }, {
+            name: "issueCount",
+            type: "uint16_t",
+            size: 2,
+            description: "스마트 카드 발급 회차입니다. 카드 ID와 발급 회차를 조합하여 블랙리스트를 관리하므로 발급 회차를 정확히 관리해야 합니다. 카드 재발급 시 발급 회차를 1씩 증가시켜야 합니다."
+          }, {
+            name: "duressMask",
+            type: "uint8_t",
+            size: 1,
+            description: "협박 지문 유무 마스크 값입니다."
+          }, {
+            name: "numOfFaceTemplate",
+            type: "uint8_t",
+            size: 1,
+            description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+            notes: ["최대 1개의 얼굴 템플릿을 지원합니다."]
+          }, {
+            name: "reserved",
+            type: "uint8_t[1]",
+            size: 1,
+            description: "예약된 공간입니다."
+          }]
+        }, {
+          name: "인증 설정",
+          description: "카드 인증 모드 및 옵션",
+          children: [{
+            name: "cardAuthMode",
+            type: "uint8_t",
+            size: 1,
+            description: "개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+            notes: ["<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."],
+            constants: [{
+              value: "2",
+              description: "카드 인증만 사용"
+            }, {
+              value: "3",
+              description: "카드와 지문 인증 사용"
+            }, {
+              value: "4",
+              description: "카드와 PIN 인증 사용"
+            }, {
+              value: "5",
+              description: "카드 인증 후 지문이나 PIN 인증 사용"
+            }, {
+              value: "6",
+              description: "카드, 지문, PIN 인증 사용"
+            }, {
+              value: "254",
+              description: "사용할 수 없음"
+            }, {
+              value: "255",
+              description: "정의되지 않음(시스템에 정의된 모드로 동작)"
+            }]
+          }, {
+            name: "cardAuthModeEx",
+            type: "uint8_t",
+            size: 1,
+            description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+            notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
+            constants: [{
+              value: "21",
+              description: "카드"
+            }, {
+              value: "22",
+              description: "카드 + 얼굴"
+            }, {
+              value: "23",
+              description: "카드 + 지문"
+            }, {
+              value: "24",
+              description: "카드 + PIN"
+            }, {
+              value: "26",
+              description: "카드 + 얼굴 또는 PIN"
+            }, {
+              value: "27",
+              description: "카드 + 지문 또는 PIN"
+            }, {
+              value: "28",
+              description: "카드 + 얼굴 또는 지문 또는 PIN"
+            }, {
+              value: "30",
+              description: "카드 + 얼굴 + PIN"
+            }, {
+              value: "32",
+              description: "카드 + 지문 + PIN"
+            }, {
+              value: "33",
+              description: "카드 + 얼굴 또는 지문 + PIN"
+            }, {
+              value: "254",
+              description: "사용할 수 없음"
+            }, {
+              value: "255",
+              description: "정의되지 않음(시스템 정의 모드)"
+            }]
+          }, {
+            name: "useAlphanumericID",
+            type: "uint8_t",
+            size: 1,
+            description: "영숫자(Alphanumeric) ID를 사용할지 결정하는 플래그(flag)입니다."
+          }]
+        }]
+      }],
+      dependencies: [{
+        name: "BS2_CARD_TYPE",
+        type: "enum",
+        description: "카드 타입 열거형"
+      }],
+      usedBy: [{
+        name: "BS2SmartCardData",
+        type: "struct",
+        description: "SmartCard 데이터 구조체"
+      }]
+    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct/* default */.Z, {
+      name: "BS2SmartCardCredentials",
+      description: "PIN 코드와 생체 인식 템플릿을 저장하는 구조체입니다.",
+      category: "Credentials",
+      size: "1568",
+      hierarchy: [{
+        name: "BS2SmartCardCredentials",
+        type: "struct",
+        size: 1568,
+        description: "인증 정보 저장 구조체",
+        children: [{
+          name: "pin",
+          type: "uint8_t[BS2_PIN_HASH_SIZE]",
+          size: 32,
+          description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다.",
+          notes: ["PIN 코드는 서드파티 툴에서 사용할 수 없습니다."]
+        }, {
+          name: "templateData",
+          type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
+          size: 1536,
+          description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
+          children: [{
+            name: "지문 템플릿",
+            description: "최대 4개의 지문 템플릿을 저장할 수 있습니다.",
+            children: [{
+              name: "Template 1",
+              type: "uint8_t[384]",
+              size: 384,
+              description: "첫 번째 지문 템플릿"
+            }, {
+              name: "Template 2",
+              type: "uint8_t[384]",
+              size: 384,
+              description: "두 번째 지문 템플릿"
+            }, {
+              name: "Template 3",
+              type: "uint8_t[384]",
+              size: 384,
+              description: "세 번째 지문 템플릿"
+            }, {
+              name: "Template 4",
+              type: "uint8_t[384]",
+              size: 384,
+              description: "네 번째 지문 템플릿"
+            }]
+          }, {
+            name: "얼굴 템플릿",
+            description: "최대 1개의 얼굴 템플릿을 522 사이즈로 저장할 수 있습니다.",
+            children: [{
+              name: "Template 1",
+              type: "uint8_t[552]",
+              size: 552,
+              description: "얼굴 템플릿"
+            }]
+          }]
+        }]
+      }],
+      constants: [{
+        value: "BS2_PIN_HASH_SIZE",
+        description: "PIN 해시 크기",
+        note: "32바이트"
+      }, {
+        value: "BS2_SMART_CARD_MAX_TEMPLATE_COUNT",
+        description: "최대 템플릿 개수",
+        note: "4개"
+      }, {
+        value: "BS2_FINGER_TEMPLATE_SIZE",
+        description: "지문 템플릿 크기",
+        note: "384바이트"
+      }],
+      usedBy: [{
+        name: "BS2SmartCardData",
+        type: "struct",
+        description: "SmartCard 데이터 구조체"
+      }]
+    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct/* default */.Z, {
+      name: "BS2AccessOnCardData",
+      description: "AOC 카드의 출입 권한 정보를 저장하는 구조체입니다.",
+      category: "Access Control",
+      size: "40",
+      hierarchy: [{
+        name: "BS2AccessOnCardData",
+        type: "struct",
+        size: 40,
+        description: "출입 권한 정보 구조체",
+        children: [{
+          name: "accessGroupID",
+          type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
+          size: 32,
+          description: "출입 그룹 ID 리스트입니다. 각 그룹은 1부터 65535까지의 ID를 가질 수 있으며, 최대 16개의 그룹을 지원합니다.",
+          children: [{
+            name: "Group ID 1",
+            type: "uint16_t",
+            size: 2,
+            description: "첫 번째 출입 그룹"
+          }, {
+            name: "Group ID 2",
+            type: "uint16_t",
+            size: 2,
+            description: "두 번째 출입 그룹"
+          }, {
+            name: "...",
+            type: "uint16_t",
+            size: 2,
+            description: "..."
+          }, {
+            name: "Group ID 16",
+            type: "uint16_t",
+            size: 2,
+            description: "마지막 출입 그룹"
+          }]
+        }, {
+          name: "시간 제한",
+          description: "출입 가능 시간 범위입니다.",
+          children: [{
+            name: "startTime",
+            type: "BS2_DATETIME",
+            size: 4,
+            description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
+          }, {
+            name: "endTime",
+            type: "BS2_DATETIME",
+            size: 4,
+            description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
+          }]
+        }]
+      }],
+      constants: [{
+        value: "BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT",
+        description: "최대 출입 그룹 개수",
+        note: "16개"
+      }],
+      dependencies: [{
+        name: "BS2_DATETIME",
+        type: "typedef",
+        description: "날짜/시간 타입"
+      }],
+      usedBy: [{
+        name: "BS2SmartCardData",
+        type: "struct",
+        description: "SmartCard 데이터 구조체"
+      }]
     }), "\n", (0,jsx_runtime.jsx)(TypedefStruct/* default */.Z, {
       name: "BS2SmartCardData",
       description: "SmartCard의 모든 데이터를 포함하는 복합 구조체입니다.",
@@ -190,154 +496,11 @@ function _createMdxContent(props) {
         size: 1656,
         description: "SmartCard 전체 데이터 컨테이너",
         children: [{
-          name: "BS2SmartCardHeader",
-          type: "struct",
+          name: "header",
+          type: "BS2SmartCardHeader",
           size: 16,
-          description: "SmartCard 헤더 구조체",
-          children: [{
-            name: "체크섬 영역",
-            description: "체크섬 영역은 카드 데이터의 무결성을 검증하는 데 사용합니다. 자세한 내용은 <a href='#crc'>다음 문서</a>를 참고하세요.",
-            children: [{
-              name: "hdrCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "카드 헤더 체크섬 값입니다. (cardCRC - reserved)"
-            }, {
-              name: "cardCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "카드 데이터 체크섬 값입니다. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
-            }]
-          }, {
-            name: "카드 메타데이터",
-            description: "카드 유형 및 템플릿 정보",
-            children: [{
-              name: "cardType",
-              type: "BS2_CARD_TYPE",
-              size: 1,
-              description: "카드 유형의 코드 값입니다.",
-              constants: [{
-                value: "0x02",
-                description: "Secure Credential Card (SCC)"
-              }, {
-                value: "0x03",
-                description: "Access on Card (AOC)"
-              }]
-            }, {
-              name: "numOfTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "지문 템플릿의 개수입니다. Access on Card (AOC) 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFaceTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
-              notes: ["최대 4개의 지문 템플릿을 지원합니다. 지문 템플릿 데이터 영역에 대한 자세한 내용은 <a href='#bs2smartcardcredentials'>다음 문서</a>를 참고하세요."]
-            }, {
-              name: "templateSize",
-              type: "uint16_t",
-              size: 2,
-              description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
-              notes: ["300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.", "Mifare 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."]
-            }, {
-              name: "issueCount",
-              type: "uint16_t",
-              size: 2,
-              description: "스마트 카드 발급 회차입니다. 카드 ID와 발급 회차를 조합하여 블랙리스트를 관리하므로 발급 회차를 정확히 관리해야 합니다. 카드 재발급 시 발급 회차를 1씩 증가시켜야 합니다."
-            }, {
-              name: "duressMask",
-              type: "uint8_t",
-              size: 1,
-              description: "협박 지문 유무 마스크 값입니다."
-            }, {
-              name: "numOfFaceTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
-              notes: ["최대 1개의 얼굴 템플릿을 지원합니다."]
-            }, {
-              name: "reserved",
-              type: "uint8_t[1]",
-              size: 1,
-              description: "예약된 공간입니다."
-            }]
-          }, {
-            name: "인증 설정",
-            description: "카드 인증 모드 및 옵션",
-            children: [{
-              name: "cardAuthMode",
-              type: "uint8_t",
-              size: 1,
-              description: "개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
-              notes: ["<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."],
-              constants: [{
-                value: "2",
-                description: "카드 인증만 사용"
-              }, {
-                value: "3",
-                description: "카드와 지문 인증 사용"
-              }, {
-                value: "4",
-                description: "카드와 PIN 인증 사용"
-              }, {
-                value: "5",
-                description: "카드 인증 후 지문이나 PIN 인증 사용"
-              }, {
-                value: "6",
-                description: "카드, 지문, PIN 인증 사용"
-              }, {
-                value: "254",
-                description: "사용할 수 없음"
-              }, {
-                value: "255",
-                description: "정의되지 않음(시스템에 정의된 모드로 동작)"
-              }]
-            }, {
-              name: "cardAuthModeEx",
-              type: "uint8_t",
-              size: 1,
-              description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
-              notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
-              constants: [{
-                value: "21",
-                description: "카드"
-              }, {
-                value: "22",
-                description: "카드 + 얼굴"
-              }, {
-                value: "23",
-                description: "카드 + 지문"
-              }, {
-                value: "24",
-                description: "카드 + PIN"
-              }, {
-                value: "26",
-                description: "카드 + 얼굴 또는 PIN"
-              }, {
-                value: "27",
-                description: "카드 + 지문 또는 PIN"
-              }, {
-                value: "28",
-                description: "카드 + 얼굴 또는 지문 또는 PIN"
-              }, {
-                value: "30",
-                description: "카드 + 얼굴 + PIN"
-              }, {
-                value: "32",
-                description: "카드 + 지문 + PIN"
-              }, {
-                value: "33",
-                description: "카드 + 얼굴 또는 지문 + PIN"
-              }, {
-                value: "254",
-                description: "사용할 수 없음"
-              }, {
-                value: "255",
-                description: "정의되지 않음(시스템 정의 모드)"
-              }]
-            }, {
-              name: "useAlphanumericID",
-              type: "uint8_t",
-              size: 1,
-              description: "영숫자(Alphanumeric) ID를 사용할지 결정하는 플래그(flag)입니다."
-            }]
-          }]
+          description: "SmartCard 헤더입니다.",
+          references: ["BS2SmartCardHeader"]
         }, {
           name: "cardID",
           type: "uint8_t[BS2_CARD_DATA_SIZE]",
@@ -371,103 +534,76 @@ function _createMdxContent(props) {
             }]
           }]
         }, {
-          name: "BS2SmartCardCredentials",
-          type: "struct",
+          name: "credentials",
+          type: "BS2SmartCardCredentials",
           size: 1568,
-          description: "PIN 코드나 생체 인증 템플릿이 저장되어 있는 인증 데이터 영역입니다.",
-          children: [{
-            name: "pin",
-            type: "uint8_t[BS2_PIN_HASH_SIZE]",
-            size: 32,
-            description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다.",
-            notes: ["PIN 코드는 서드파티 툴에서 사용할 수 없습니다."]
-          }, {
-            name: "templateData",
-            type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
-            size: 1536,
-            description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
-            children: [{
-              name: "지문 템플릿",
-              description: "최대 4개의 지문 템플릿을 저장할 수 있습니다.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "첫 번째 지문 템플릿"
-              }, {
-                name: "Template 2",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "두 번째 지문 템플릿"
-              }, {
-                name: "Template 3",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "세 번째 지문 템플릿"
-              }, {
-                name: "Template 4",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "네 번째 지문 템플릿"
-              }]
-            }, {
-              name: "얼굴 템플릿",
-              description: "최대 1개의 얼굴 템플릿을 522 사이즈로 저장할 수 있습니다.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[552]",
-                size: 552,
-                description: "얼굴 템플릿"
-              }]
-            }]
-          }]
+          description: "PIN 코드나 지문 템플릿이 저장되어 있는 인증 데이터 영역입니다.",
+          references: ["BS2SmartCardCredentials"]
         }, {
-          name: "BS2AccessOnCardData",
-          type: "struct",
+          name: "accessOnData",
+          type: "BS2AccessOnCardData",
           size: 40,
           description: "AOC 카드에서 사용하는 영역으로 출입 그룹 정보를 가지고 있습니다.",
+          references: ["BS2AccessOnCardData"]
+        }]
+      }],
+      dependencies: [{
+        name: "BS2SmartCardHeader",
+        type: "struct",
+        description: "SmartCard 헤더"
+      }, {
+        name: "BS2SmartCardCredentials",
+        type: "struct",
+        description: "인증 정보"
+      }, {
+        name: "BS2AccessOnCardData",
+        type: "struct",
+        description: "출입 권한 데이터"
+      }, {
+        name: "BS2_CARD_DATA_SIZE",
+        type: "constant",
+        description: "카드 데이터 크기 상수(32)"
+      }],
+      usedBy: [{
+        name: "BS2Card",
+        type: "union",
+        description: "카드 타입 래퍼"
+      }]
+    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct/* default */.Z, {
+      name: "BS2Card",
+      description: "모든 카드 타입을 포괄하는 최상위 구조체입니다.",
+      category: "Core Structure",
+      size: "1657",
+      hierarchy: [{
+        name: "BS2Card",
+        type: "union wrapper",
+        size: 1657,
+        description: "카드 타입 식별 및 데이터 저장",
+        children: [{
+          name: "isSmartCard",
+          type: "uint8_t",
+          size: 1,
+          description: "SmartCard 여부를 나타내는 플래그(flag)입니다.",
+          constants: [{
+            value: "1",
+            description: "SmartCard (<code>BS2SmartCardData</code> 사용)"
+          }]
+        }, {
+          name: "Union 데이터",
+          description: "카드 타입별 데이터",
           children: [{
-            name: "accessGroupID",
-            type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
-            size: 32,
-            description: "출입 그룹 ID 리스트입니다. 각 그룹은 1부터 65535까지의 ID를 가질 수 있으며, 최대 16개의 그룹을 지원합니다.",
-            children: [{
-              name: "Group ID 1",
-              type: "uint16_t",
-              size: 2,
-              description: "첫 번째 출입 그룹"
-            }, {
-              name: "Group ID 2",
-              type: "uint16_t",
-              size: 2,
-              description: "두 번째 출입 그룹"
-            }, {
-              name: "...",
-              type: "uint16_t",
-              size: 2,
-              description: "..."
-            }, {
-              name: "Group ID 16",
-              type: "uint16_t",
-              size: 2,
-              description: "마지막 출입 그룹"
-            }]
-          }, {
-            name: "시간 제한",
-            description: "출입 가능 시간 범위입니다.",
-            children: [{
-              name: "startTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
-            }, {
-              name: "endTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
-            }]
+            name: "smartCard",
+            type: "BS2SmartCardData",
+            size: 1656,
+            description: "SmartCard 데이터입니다. <code>isSmartCard</code>가 <code>1</code>일 때 사용합니다.",
+            references: ["BS2SmartCardData"]
           }]
         }]
+      }],
+      dependencies: [{
+        name: "BS2SmartCardData",
+        type: "struct",
+        description: "SmartCard 데이터 구조체"
       }]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "crc",

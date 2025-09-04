@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-confidential-smartcardapi-re-mdx-b24.json
-var site_docs_confidential_smartcardapi_re_mdx_b24_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/confidential/smartcardapi-re.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi-re","permalink":"/docs/en/confidential/smartcardapi-re","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi-re.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"heading_className":"confidential","isTranslationMissing":true}}')
+var site_docs_confidential_smartcardapi_re_mdx_b24_namespaceObject = JSON.parse('{"id":"confidential/smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/confidential/smartcardapi-re.mdx","sourceDirName":"confidential","slug":"/confidential/smartcardapi-re","permalink":"/docs/confidential/smartcardapi-re","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/confidential/smartcardapi-re.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi-re","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"isTranslationMissing":false}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -29,8 +29,7 @@ const frontMatter = {
 	id: 'smartcardapi-re',
 	title: '슈프리마 스마트 카드 발급 안내',
 	toc_max_heading_level: 3,
-	heading_className: 'confidential',
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
