@@ -12,6 +12,7 @@ import DimenW from '@site/static/img/common/ico-w.svg';
 import DimenH from '@site/static/img/common/ico-h.svg';
 import DimenD from '@site/static/img/common/ico-d.svg';
 import Face from '@site/static/img/menus/spec-credential-face.svg';
+import Fingerprint from '@site/static/img/menus/spec-credential-finger.svg';
 
 const glossaryMap = {
   ko: glossary_ko,
@@ -57,7 +58,7 @@ function Description({ contents }) {
 }
 
 
-export function SpecSectioin({data}) {
+export function SpecSection({data}) {
   const specs = data.items;
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const glossary = glossaryMap[currentLocale] || glossary_en;
@@ -96,6 +97,9 @@ export function SpecSectioin({data}) {
                         <div className={clsx(styles.column, styles.small_l1)}>
                           {subitem.type === 'face' && (
                             <Face width='80' height='80' />
+                          )}
+                          {subitem.type === 'fingerprint' && (
+                            <Fingerprint width='80' height='80' />
                           )}
                         </div>
                         <div className={clsx(styles.column, styles.small_l2)}>
@@ -207,7 +211,7 @@ function DescObj( {contents} ) {
     )
   } else if (typeof contents === 'boolean') {
     return (
-      <SupportedType suppported={contents} />
+      <SupportedType supported={contents} />
     )
   } else if (typeof contents[currentLocale] === 'undefined') {
     return (
