@@ -23,8 +23,6 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
 
 스마트 카드를 발급하기 전에 아래 사항을 확인하세요.
 
-* **SDK 요구 사항**: [BioStar 2 Device SDK](https://kb.supremainc.com/bs2sdk)
-
 * **호환 장치**: BioStar 지원 모든 슈프리마 장치
 
 * **카드 유형**: SCC(Secure Credential Card), AOC(Access on Card)
@@ -199,7 +197,10 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
               name: "pin",
               type: "uint8_t[BS2_PIN_HASH_SIZE]",
               size: 32,
-              description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다."
+              description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다.",
+              notes: [
+                "PIN 코드는 서드파티 툴에서 사용할 수 없습니다."
+              ]
             },
             {
               name: "templateData",
@@ -207,10 +208,23 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
               size: 1536,
               description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
               children: [
-                { name: "Template 1", type: "uint8_t[384]", size: 384, description: "첫 번째 템플릿" },
-                { name: "Template 2", type: "uint8_t[384]", size: 384, description: "두 번째 템플릿" },
-                { name: "Template 3", type: "uint8_t[384]", size: 384, description: "세 번째 템플릿" },
-                { name: "Template 4", type: "uint8_t[384]", size: 384, description: "네 번째 템플릿" }
+                {
+                  name: "지문 템플릿",
+                  description: "최대 4개의 지문 템플릿을 저장할 수 있습니다.",
+                  children: [
+                    { name: "Template 1", type: "uint8_t[384]", size: 384, description: "첫 번째 지문 템플릿" },
+                    { name: "Template 2", type: "uint8_t[384]", size: 384, description: "두 번째 지문 템플릿" },
+                    { name: "Template 3", type: "uint8_t[384]", size: 384, description: "세 번째 지문 템플릿" },
+                    { name: "Template 4", type: "uint8_t[384]", size: 384, description: "네 번째 지문 템플릿" }
+                  ]
+                },
+                {
+                  name: "얼굴 템플릿",
+                  description: "최대 1개의 얼굴 템플릿을 522 사이즈로 저장할 수 있습니다.",
+                  children: [
+                    { name: "Template 1", type: "uint8_t[552]", size: 552, description: "얼굴 템플릿" }
+                  ]
+                }
               ]
             }
           ]
