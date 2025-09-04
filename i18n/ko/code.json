@@ -404,6 +404,9 @@
   "specs.credentials.biometrics.face": {
     "message": "얼굴"
   },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "지문"
+  },
   "specs.credentials.rfcard": {
     "message": "RF 카드"
   },
@@ -430,6 +433,24 @@
   },
   "specs.credentials.biometrics.face.live_face_detection": {
     "message": "위조 얼굴 검출"
+  },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "이미지 크기"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "이미지 비트 심도"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "해상도"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "템플릿"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "추출 / 매치"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "위조 지문 검출"
   },
   "specs.general": {
     "message": "일반"
@@ -567,7 +588,7 @@
     "message": "Wiegand 출력 VOL"
   },
   "specs.power.wiegand_pullup": {
-    "message": "Wiegnad 출력 풀업 저항"
+    "message": "Wiegand 출력 풀업 저항"
   },
   "specs.power.relay": {
     "message": "릴레이"

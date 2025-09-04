@@ -404,6 +404,9 @@
   "specs.credentials.biometrics.face": {
     "message": "Face"
   },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "Fingerprint"
+  },
   "specs.credentials.rfcard": {
     "message": "RF Card"
   },
@@ -430,6 +433,24 @@
   },
   "specs.credentials.biometrics.face.live_face_detection": {
     "message": "Live Face Detection"
+  },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "Image Dimension"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "Image Bit Depth"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "Resolution"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "Template"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "Extractor / Matcher"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "Live Fingerprint Detection"
   },
   "specs.general": {
     "message": "General"
@@ -567,7 +588,7 @@
     "message": "Wiegand Output VOL"
   },
   "specs.power.wiegand_pullup": {
-    "message": "Wiegnad Output Pull-up Resistance"
+    "message": "Wiegand Output Pull-up Resistance"
   },
   "specs.power.relay": {
     "message": "Relay"
