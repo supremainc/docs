@@ -1,10 +1,11 @@
 ---
-id: smartcardapi-re
+id: smartcardapi
 title: 슈프리마 스마트 카드 발급 안내
 toc_max_heading_level: 3
 ---
 
 import TypedefStruct from '@site/src/components/TypedefStruct';
+import ResponsiveImageMap from '@site/src/components/ResponsiveImageMap';
 
 이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.
 
@@ -31,14 +32,40 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
 
 ## 구조체 관계도
 
-<map id="imgmap2025813133616" name="imgmap2025813133616">
-<area shape="rect" title="BS2Card" coords="22,217,190,319" href="#bs2card" />
-<area shape="rect" title="BS2SmartCardData" coords="271,281,539,424" href="#bs2smartcarddata" />
-<area shape="rect" title="BS2SmartCardHeader" coords="621,36,888,337" href="#bs2smartcardheader" />
-<area shape="rect" title="BS2SmartCardCredentials" coords="621,363,888,482" href="#bs2smartcardcredentials" />
-<area shape="rect" title="BS2AcessOnCardData" coords="621,508,888,640" href="#bs2accessoncarddata" />
-</map>
-<Image src='/img/common/smartcardapi-structure.png' className='useMap' usemap="#imgmap2025813133616" />
+<ResponsiveImageMap 
+  src="/img/common/smartcardapi-structure.png"
+  alt="SmartCard API 구조체 관계도"
+  className="useMap"
+  mapName="imgmap2025813133616"
+  originalWidth={2072}
+  originalHeight={1192}
+  areas={[
+    {
+      shape: "rect", 
+      title: "BS2SmartCardData",
+      coords: "489,507,971,765",
+      href: "#bs2smartcarddata"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardHeader", 
+      coords: "1115,34,1597,609",
+      href: "#bs2smartcardheader"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardCredentials",
+      coords: "1115,655,1597,868", 
+      href: "#bs2smartcardcredentials"
+    },
+    {
+      shape: "rect",
+      title: "BS2AccessOnCardData",
+      coords: "1115,914,1597,1154",
+      href: "#bs2accessoncarddata"
+    }
+  ]}
+/>
 
 :::note
 
@@ -98,7 +125,7 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
                   description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
                   notes: [
                     "300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.",
-                    "Mifare 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."
+                    "MIFARE 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."
                   ]
                 },
                 {
@@ -173,8 +200,8 @@ import TypedefStruct from '@site/src/components/TypedefStruct';
           size: 32,
           description: "단말기에서 사용할 카드 식별자입니다. <b>Access on Card(AOC)</b>는 배열의 32byte를 Card ID로 사용하고, <b>Secure Credential Card(SCC)</b>는 배열의 24byte를 Card ID로 사용합니다. <b>Secure Credential Card(SCC)</b>는 32byte를 Card ID(24 bytes)로, issueCount(4byte) 그리고 Time Stamp(4byte)로 채워져야 합니다. 또한, <code>BS2UserBlob</code> 구조체의 cardObjs array가 SC Card로 채워야 하며, SC Card 발급 시마다 <code>cardObjs</code>를 업데이트해야 합니다.",
           children: [
-            { name: "cardID: Access on Card(AOC)", type: "bytes[0-31]", size: 32, description: "AOC: 전체 32바이트 사용" },
-            { name: "cardID: Secure Credential Card(SCC)", 
+            { name: "cardID: Access on Card (AOC)", type: "bytes[0-31]", size: 32, description: "AOC: 전체 32바이트 사용" },
+            { name: "cardID: Secure Credential Card (SCC)", 
               type: "bytes[0-31]", 
               size: 32,
               description: "SCC: 카드 ID(32바이트)",
@@ -269,6 +296,7 @@ SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이�
 ### hdrCRC, cardCRC란? {#hdrcrc-cardcrc}
 
 - `hdrCRC`: `BS2SmartCardHeader`의 `cardCRC`부터 `reserved`까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다.
+
 - `cardCRC`: `cardType`부터 `BS2SmartCardData.accessOnData`까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다.
 
 ### CRC 계산 방법 {#crc-calculation}
