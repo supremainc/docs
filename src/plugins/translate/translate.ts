@@ -63,9 +63,9 @@ export async function translate(content: string, targetLanguage: string, isDescr
 - Avoid developer terms: logic, register
 
 ### Link Translation Rules:
-- "[다음 문서]()" → "[following]()"
-- "[다음 링크]()" → "[following link]()"
-- "~~에 대한 자세한 내용은 [다음 문서]()를 참고하세요" → "For more information about ~~, refer to the [following]"
+- "[다음 문서]()" → "[the following]()"
+- "[다음 링크]()" → "[the following link]()"
+- "~~에 대한 자세한 내용은 [다음 문서]()를 참고하세요" → "For more information about ~~, refer to [the following]()"
 - Use "information on" instead of "information about" for technical procedures
 
 ### Credential Types (keep in English):
