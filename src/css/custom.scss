@@ -400,7 +400,7 @@ footer {
     font-size: var(--ifm-h3-font-size);
     font-weight: 500;
   }
-  h4 { 
+  h4, .deviceonly { 
     --ifm-h4-font-size: 1.3rem;
     font-size: var(--ifm-h4-font-size);
     font-weight: 500;
@@ -849,6 +849,10 @@ footer {
     border-radius: 20px;
   }
 
+  span.only {
+    background-color: var(--ifm-color-cmd);
+  }
+
   span.cmd.bold, span.bold {
     font-weight: bold;
     color: var(--ifm-color-color-gray);
@@ -864,6 +868,7 @@ footer {
 
   ul, ol {
     padding-left: 28px;
+    margin-bottom: var(--ifm-list-paragraph-margin);
   }
 
   pre * {
