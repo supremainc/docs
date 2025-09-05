@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["742"], {
-27031: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6899"], {
+44714: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,13 +9,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardapi_mdx_d22_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_reference_smartcardissue_mdx_e09_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-smartcardapi-mdx-d22.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardapi_mdx_d22_namespaceObject = JSON.parse('{"id":"reference/smartcardapi","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardapi.mdx","sourceDirName":"reference","slug":"/reference/smartcardapi","permalink":"/docs/en/reference/smartcardapi","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardapi.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardapi","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-smartcardissue-mdx-e09.json
+var site_docs_reference_smartcardissue_mdx_e09_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"isTranslationMissing":false}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -566,12 +566,12 @@ function ResponsiveImageMap(param) {
     });
 }
 
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardapi.mdx
+;// CONCATENATED MODULE: ./docs/reference/smartcardissue.mdx
 
 
 const frontMatter = {
-	id: 'smartcardapi',
-	title: 'How to Issue Suprema Smart Cards',
+	id: 'smartcardissue',
+	title: '슈프리마 스마트 카드 발급 안내',
 	toc_max_heading_level: 3,
 	isTranslationMissing: false
 };
@@ -586,27 +586,27 @@ const assets = {
 
 
 const toc = [{
-  "value": "Structure Relationship Diagram",
-  "id": "structure-relationship-diagram",
+  "value": "구조체 관계도",
+  "id": "구조체-관계도",
   "level": 2
 }, {
-  "value": "Structure Hierarchy",
-  "id": "structure-hierarchy",
+  "value": "구조 계층",
+  "id": "구조-계층",
   "level": 2
 }, {
-  "value": "CRC Calculation and Validation",
+  "value": "CRC 계산 및 검증",
   "id": "crc",
   "level": 2
 }, {
-  "value": "What are hdrCRC and cardCRC?",
+  "value": "hdrCRC, cardCRC란?",
   "id": "hdrcrc-cardcrc",
   "level": 3
 }, {
-  "value": "How to Calculate CRC",
+  "value": "CRC 계산 방법",
   "id": "crc-calculation",
   "level": 3
 }, {
-  "value": "How to Validate",
+  "value": "검증 방법",
   "id": "crc-validation",
   "level": 3
 }];
@@ -628,60 +628,60 @@ function _createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform."
+      children: "이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Card data structure"
-          }), ": Data structure required for the production of SCC (Secure Credential Card) and AOC (Access on Card)"]
+            children: "카드 데이터 구조"
+          }), ": SCC(Secure Credential Card)와 AOC(Access on Card) 제작에 필요한 데이터 구조"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Structure specification"
-          }), ": Detailed requirements for each field that must be complied with during card manufacturing"]
+            children: "구조체 명세"
+          }), ": 카드 제작 시 준수해야 하는 필드별 상세 요구사항"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Data integrity"
-          }), ": Method for ensuring the quality of card data through CRC validation"]
+            children: "데이터 무결성"
+          }), ": CRC 검증을 통한 카드 데이터 품질 보장 방법"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Implementation reference"
-          }), ": Relationships between structures and how to correctly set data"]
+            children: "구현 참조"
+          }), ": 각 구조체 간의 관계와 올바른 데이터 설정 방법"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Smart cards produced according to this document operate normally on all BioStar compatible devices from Suprema."
+      children: "이 문서에 따라 제작된 스마트 카드는 슈프리마의 모든 BioStar 호환 장치에서 정상 동작합니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "Check the following before issuing smart cards."
+        children: "스마트 카드를 발급하기 전에 아래 사항을 확인하세요."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Compatible devices"
-            }), ": All Suprema devices supported by BioStar"]
+              children: "호환 장치"
+            }), ": BioStar 지원 모든 슈프리마 장치"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Card types"
-            }), ": SCC (Secure Credential Card), AOC (Access on Card)"]
+              children: "카드 유형"
+            }), ": SCC(Secure Credential Card), AOC(Access on Card)"]
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-relationship-diagram",
-      children: "Structure Relationship Diagram"
+      id: "구조체-관계도",
+      children: "구조체 관계도"
     }), "\n", (0,jsx_runtime.jsx)(ResponsiveImageMap, {
       src: "/img/common/smartcardapi-structure.png",
-      alt: "SmartCard API structure relationship diagram",
+      alt: "SmartCard API 구조체 관계도",
       className: "useMap",
       mapName: "imgmap2025813133616",
       originalWidth: 2072,
@@ -710,50 +710,50 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Clicking on the structure in the image will take you to the details of that structure."
+        children: "이미지의 구조체를 클릭하면 해당 구조체의 상세 정보로 이동합니다."
       })
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "page-break"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-hierarchy",
-      children: "Structure Hierarchy"
+      id: "구조-계층",
+      children: "구조 계층"
     }), "\n", (0,jsx_runtime.jsx)(TypedefStruct, {
       name: "BS2SmartCardData",
-      description: "Composite structure containing all data of SmartCard.",
+      description: "SmartCard의 모든 데이터를 포함하는 복합 구조체입니다.",
       category: "Smart Card",
       size: "1656",
       hierarchy: [{
         name: "BS2SmartCardData",
         type: "composite struct",
         size: 1656,
-        description: "Container for all SmartCard data",
+        description: "SmartCard 전체 데이터 컨테이너",
         children: [{
           name: "BS2SmartCardHeader",
           type: "struct",
           size: 16,
-          description: "SmartCard header structure",
+          description: "SmartCard 헤더 구조체",
           children: [{
-            name: "Checksum Area",
-            description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
+            name: "체크섬 영역",
+            description: "체크섬 영역은 카드 데이터의 무결성을 검증하는 데 사용합니다. 자세한 내용은 <a href='#crc'>다음 문서</a>를 참고하세요.",
             children: [{
               name: "hdrCRC",
               type: "uint16_t",
               size: 2,
-              description: "Checksum value of the card header. (cardCRC - reserved)"
+              description: "카드 헤더 체크섬 값입니다. (cardCRC - reserved)"
             }, {
               name: "cardCRC",
               type: "uint16_t",
               size: 2,
-              description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
+              description: "카드 데이터 체크섬 값입니다. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
             }]
           }, {
-            name: "Card Metadata",
-            description: "Card type and template information",
+            name: "카드 메타데이터",
+            description: "카드 유형 및 템플릿 정보",
             children: [{
               name: "cardType",
               type: "BS2_CARD_TYPE",
               size: 1,
-              description: "Code value of card type.",
+              description: "카드 유형의 코드 값입니다.",
               constants: [{
                 value: "0x02",
                 description: "Secure Credential Card (SCC)"
@@ -765,197 +765,197 @@ function _createMdxContent(props) {
               name: "numOfTemplate",
               type: "uint8_t",
               size: 1,
-              description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."]
+              description: "지문 템플릿의 개수입니다. Access on Card (AOC) 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFaceTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+              notes: ["최대 4개의 지문 템플릿을 지원합니다. 지문 템플릿 데이터 영역에 대한 자세한 내용은 <a href='#bs2smartcardcredentials'>다음 문서</a>를 참고하세요."]
             }, {
               name: "templateSize",
               type: "uint16_t",
               size: 2,
-              description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
-              notes: ["When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.", "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."]
+              description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
+              notes: ["300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.", "MIFARE 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."]
             }, {
               name: "issueCount",
               type: "uint16_t",
               size: 2,
-              description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
+              description: "스마트 카드 발급 회차입니다. 카드 ID와 발급 회차를 조합하여 블랙리스트를 관리하므로 발급 회차를 정확히 관리해야 합니다. 카드 재발급 시 발급 회차를 1씩 증가시켜야 합니다."
             }, {
               name: "duressMask",
               type: "uint8_t",
               size: 1,
-              description: "Mask for whether there is a duress fingerprint."
+              description: "협박 지문 유무 마스크 값입니다."
             }, {
               name: "numOfFaceTemplate",
               type: "uint8_t",
               size: 1,
-              description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 1 face template."]
+              description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
+              notes: ["최대 1개의 얼굴 템플릿을 지원합니다."]
             }, {
               name: "reserved",
               type: "uint8_t[1]",
               size: 1,
-              description: "Reserved."
+              description: "예약된 공간입니다."
             }]
           }, {
-            name: "Authentication Settings",
-            description: "Card authentication modes and options",
+            name: "인증 설정",
+            description: "카드 인증 모드 및 옵션",
             children: [{
               name: "cardAuthMode",
               type: "uint8_t",
               size: 1,
-              description: "Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."],
+              description: "개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+              notes: ["<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."],
               constants: [{
                 value: "2",
-                description: "Card authentication only"
+                description: "카드 인증만 사용"
               }, {
                 value: "3",
-                description: "Card and fingerprint authentication"
+                description: "카드와 지문 인증 사용"
               }, {
                 value: "4",
-                description: "Card and PIN authentication"
+                description: "카드와 PIN 인증 사용"
               }, {
                 value: "5",
-                description: "Fingerprint or PIN authentication after card authentication"
+                description: "카드 인증 후 지문이나 PIN 인증 사용"
               }, {
                 value: "6",
-                description: "Card, fingerprint, and PIN authentication"
+                description: "카드, 지문, PIN 인증 사용"
               }, {
                 value: "254",
-                description: "Not usable"
+                description: "사용할 수 없음"
               }, {
                 value: "255",
-                description: "Undefined (operates in a mode defined by the system)"
+                description: "정의되지 않음(시스템에 정의된 모드로 동작)"
               }]
             }, {
               name: "cardAuthModeEx",
               type: "uint8_t",
               size: 1,
-              description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.", "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."],
+              description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
+              notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
               constants: [{
                 value: "21",
-                description: "Card"
+                description: "카드"
               }, {
                 value: "22",
-                description: "Card + Face"
+                description: "카드 + 얼굴"
               }, {
                 value: "23",
-                description: "Card + Fingerprint"
+                description: "카드 + 지문"
               }, {
                 value: "24",
-                description: "Card + PIN"
+                description: "카드 + PIN"
               }, {
                 value: "26",
-                description: "Card + Face or PIN"
+                description: "카드 + 얼굴 또는 PIN"
               }, {
                 value: "27",
-                description: "Card + Fingerprint or PIN"
+                description: "카드 + 지문 또는 PIN"
               }, {
                 value: "28",
-                description: "Card + Face or Fingerprint or PIN"
+                description: "카드 + 얼굴 또는 지문 또는 PIN"
               }, {
                 value: "30",
-                description: "Card + Face + PIN"
+                description: "카드 + 얼굴 + PIN"
               }, {
                 value: "32",
-                description: "Card + Fingerprint + PIN"
+                description: "카드 + 지문 + PIN"
               }, {
                 value: "33",
-                description: "Card + Face or Fingerprint + PIN"
+                description: "카드 + 얼굴 또는 지문 + PIN"
               }, {
                 value: "254",
-                description: "Not usable"
+                description: "사용할 수 없음"
               }, {
                 value: "255",
-                description: "Undefined (system-defined mode)"
+                description: "정의되지 않음(시스템 정의 모드)"
               }]
             }, {
               name: "useAlphanumericID",
               type: "uint8_t",
               size: 1,
-              description: "Flag indicating whether to use Alphanumeric ID."
+              description: "영숫자(Alphanumeric) ID를 사용할지 결정하는 플래그(flag)입니다."
             }]
           }]
         }, {
           name: "cardID",
           type: "uint8_t[BS2_CARD_DATA_SIZE]",
           size: 32,
-          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
+          description: "단말기에서 사용할 카드 식별자입니다. <b>Access on Card(AOC)</b>는 배열의 32byte를 Card ID로 사용하고, <b>Secure Credential Card(SCC)</b>는 배열의 24byte를 Card ID로 사용합니다. <b>Secure Credential Card(SCC)</b>는 32byte를 Card ID(24 bytes)로, issueCount(4byte) 그리고 Time Stamp(4byte)로 채워져야 합니다. 또한, <code>BS2UserBlob</code> 구조체의 cardObjs array가 SC Card로 채워야 하며, SC Card 발급 시마다 <code>cardObjs</code>를 업데이트해야 합니다.",
           children: [{
             name: "cardID: Access on Card (AOC)",
             type: "bytes[0-31]",
             size: 32,
-            description: "AOC: Uses the entire 32 bytes."
+            description: "AOC: 전체 32바이트 사용"
           }, {
             name: "cardID: Secure Credential Card (SCC)",
             type: "bytes[0-31]",
             size: 32,
-            description: "SCC: Card ID (32 bytes)",
+            description: "SCC: 카드 ID(32바이트)",
             children: [{
               name: "cardID (SCC)",
               type: "bytes[0-23]",
               size: 24,
-              description: "SCC: Card ID (24 bytes)"
+              description: "SCC: 카드 ID(24바이트)"
             }, {
               name: "issueCount (SCC)",
               type: "bytes[24-27]",
               size: 4,
-              description: "SCC: Issue count"
+              description: "SCC: 발급 횟수"
             }, {
               name: "timeStamp (SCC)",
               type: "bytes[28-31]",
               size: 4,
-              description: "SCC: Issue time"
+              description: "SCC: 발급 시간"
             }]
           }]
         }, {
           name: "BS2SmartCardCredentials",
           type: "struct",
           size: 1568,
-          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
+          description: "PIN 코드나 생체 인증 템플릿이 저장되어 있는 인증 데이터 영역입니다.",
           children: [{
             name: "pin",
             type: "uint8_t[BS2_PIN_HASH_SIZE]",
             size: 32,
-            description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
-            notes: ["PIN codes cannot be used in third-party tools."]
+            description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다.",
+            notes: ["PIN 코드는 서드파티 툴에서 사용할 수 없습니다."]
           }, {
             name: "templateData",
             type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
             size: 1536,
-            description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
+            description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
             children: [{
-              name: "Fingerprint Templates",
-              description: "Supports up to 4 fingerprint templates.",
+              name: "지문 템플릿",
+              description: "최대 4개의 지문 템플릿을 저장할 수 있습니다.",
               children: [{
                 name: "Template 1",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "First fingerprint template"
+                description: "첫 번째 지문 템플릿"
               }, {
                 name: "Template 2",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "Second fingerprint template"
+                description: "두 번째 지문 템플릿"
               }, {
                 name: "Template 3",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "Third fingerprint template"
+                description: "세 번째 지문 템플릿"
               }, {
                 name: "Template 4",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "Fourth fingerprint template"
+                description: "네 번째 지문 템플릿"
               }]
             }, {
-              name: "Face Template",
-              description: "Supports up to 1 face template with size 552.",
+              name: "얼굴 템플릿",
+              description: "최대 1개의 얼굴 템플릿을 552 사이즈로 저장할 수 있습니다.",
               children: [{
                 name: "Template 1",
                 type: "uint8_t[552]",
                 size: 552,
-                description: "Face template"
+                description: "얼굴 템플릿"
               }]
             }]
           }]
@@ -963,22 +963,22 @@ function _createMdxContent(props) {
           name: "BS2AccessOnCardData",
           type: "struct",
           size: 40,
-          description: "Area used in AOC cards that contains access group information.",
+          description: "AOC 카드에서 사용하는 영역으로 출입 그룹 정보를 가지고 있습니다.",
           children: [{
             name: "accessGroupID",
             type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
             size: 32,
-            description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
+            description: "출입 그룹 ID 리스트입니다. 각 그룹은 1부터 65535까지의 ID를 가질 수 있으며, 최대 16개의 그룹을 지원합니다.",
             children: [{
               name: "Group ID 1",
               type: "uint16_t",
               size: 2,
-              description: "First access group"
+              description: "첫 번째 출입 그룹"
             }, {
               name: "Group ID 2",
               type: "uint16_t",
               size: 2,
-              description: "Second access group"
+              description: "두 번째 출입 그룹"
             }, {
               name: "...",
               type: "uint16_t",
@@ -988,71 +988,71 @@ function _createMdxContent(props) {
               name: "Group ID 16",
               type: "uint16_t",
               size: 2,
-              description: "Last access group"
+              description: "마지막 출입 그룹"
             }]
           }, {
-            name: "Time Restrictions",
-            description: "Time range for access permissions.",
+            name: "시간 제한",
+            description: "출입 가능 시간 범위입니다.",
             children: [{
               name: "startTime",
               type: "BS2_DATETIME",
               size: 4,
-              description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
+              description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
             }, {
               name: "endTime",
               type: "BS2_DATETIME",
               size: 4,
-              description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
+              description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
             }]
           }]
         }]
       }]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "crc",
-      children: "CRC Calculation and Validation"
+      children: "CRC 계산 및 검증"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["CRC-16 CCITT checksums (", (0,jsx_runtime.jsx)(_components.code, {
+      children: ["SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이터에 각각 CRC-16 CCITT 체크섬(", (0,jsx_runtime.jsx)(_components.code, {
         children: "hdrCRC"
       }), ", ", (0,jsx_runtime.jsx)(_components.code, {
         children: "cardCRC"
-      }), ") are used for the header and card data respectively, to ensure the integrity of SmartCard data."]
+      }), ")을 사용합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "hdrcrc-cardcrc",
-      children: "What are hdrCRC and cardCRC?"
+      children: "hdrCRC, cardCRC란?"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.code, {
             children: "hdrCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "cardCRC"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "reserved"
-          }), " (14 bytes total) of ", (0,jsx_runtime.jsx)(_components.code, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.code, {
             children: "BS2SmartCardHeader"
-          }), "."]
+          }), "의 ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "cardCRC"
+          }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "reserved"
+          }), "까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.code, {
             children: "cardCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from ", (0,jsx_runtime.jsx)(_components.code, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.code, {
             children: "cardType"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+          }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
             children: "BS2SmartCardData.accessOnData"
-          }), " (total card data excluding the header)."]
+          }), "까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "crc-calculation",
-      children: "How to Calculate CRC"
+      children: "CRC 계산 방법"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
+      children: [(0,jsx_runtime.jsx)(_components.a, {
         href: "https://kb.supremainc.com/bs2sdk/doku.php",
         children: "BioStar 2 SDK"
-      }), " provides the ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BS2_ComputeCRC16CCITT"
-      }), " function. Below is an example of its use."]
+      }), " 함수를 제공합니다. 아래는 사용 예시입니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-csharp",
@@ -1066,45 +1066,45 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardType"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "accessOnData"
-            }), "."]
+            }), "까지 계산합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "reserved"
-            }), "."]
+            }), "까지 계산합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Always calculate ", (0,jsx_runtime.jsx)(_components.code, {
+            children: ["반드시 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), " first, set it in the header, then calculate ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), "."]
+            }), "를 계산해야 합니다."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "crc-validation",
-      children: "How to Validate"
+      children: "검증 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To validate the integrity of card data when reading, do the following:"
+      children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Recalculate CRC using data read from the card."
+          children: "카드에서 읽은 데이터로 CRC 재계산"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Compare the stored CRC value with the calculated CRC value."
+          children: "저장된 CRC 값과 계산된 CRC 값 비교"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
@@ -1117,49 +1117,49 @@ function _createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Cautions for CRC Calculation"
+          children: "CRC 계산 시 주의사항"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Calculation Order"
-            }), ": Calculate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "계산 순서"
+            }), ": 반드시 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), " first, set it in the header, and then calculate ", (0,jsx_runtime.jsx)(_components.code, {
+            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), "."]
+            }), "를 계산해야 합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Structure Alignment"
-            }), ": Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment."]
+              children: "구조체 정렬"
+            }), ": CRC 계산 범위가 정확히 일치해야 하며, 구조체 패딩이나 정렬에 주의하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Initial Value"
-            }), ": CRC-16 CCITT uses polynomial 0x1021 and ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "initial value 0xFFFF"
-            }), "."]
+              children: "초기값"
+            }), ": CRC-16 CCITT는 0x1021 다항식, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "초기값 0xFFFF"
+            }), "를 사용합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "SDK Function"
-            }), ": The ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "SDK 함수"
+            }), ": ", (0,jsx_runtime.jsx)(_components.code, {
               children: "BS2_ComputeCRC16CCITT"
-            }), " function is provided in the ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " 함수는 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://kb.supremainc.com/bs2sdk/doku.php",
               children: "BioStar 2 SDK"
-            }), "."]
+            }), "에서 제공됩니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Data Order"
-            }), ": Input data is processed in little-endian byte order."]
+              children: "데이터 순서"
+            }), ": 입력 데이터는 바이트 단위 Little Endian으로 처리됩니다."]
           }), "\n"]
         }), "\n"]
       })]
