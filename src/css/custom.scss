@@ -900,6 +900,9 @@ footer {
     .text--left {
       text-align: left;
     }
+    .text--center {
+      text-align: center;
+    }
     .padding--t1rem {
       padding-top: 1rem !important;
     }
@@ -1054,6 +1057,7 @@ footer {
 
   // Columns
   .container {
+    margin-top: 1rem;
     .col {
       padding-left: 0;
       padding-right: 0;
