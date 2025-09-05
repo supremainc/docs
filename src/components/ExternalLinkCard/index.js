@@ -119,6 +119,26 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '85px'
     },
     {
+      title: 'BioLite N2',
+      url: `/device/biolite_n2`,
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
+      desc: `${translate({
+        id: "externalLinks.BioLiteN2.desc",
+        message: "옥외형 지문 인식 출입·근태 장치"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'X-Station 2',
+      url: '#',
+      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
       title: 'FaceStation 2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/facestation2.png',
@@ -135,16 +155,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.BioStationL2.desc",
         message: "지문인식 출입근태 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'BioLite N2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
-      desc: `${translate({
-        id: "externalLinks.BioLiteN2.desc",
-        message: "옥외형 지문인식 출입근태 장치"
       })}`,
       height: '90px'
     },
@@ -174,16 +184,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'X-Station 2',
-      url: '#',
-      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
-      desc: `${translate({
-        id: "externalLinks.XStation2.desc",
-        message: "차세대 모바일 출입인증 단말기"
       })}`,
       height: '90px'
     }

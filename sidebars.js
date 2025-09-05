@@ -788,6 +788,43 @@ const sidebars = {
       ],
     },
   ],
+    bioliten2: [
+    {
+      type: 'category',
+      label: 'BioLite N2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2/index',
+      },
+      items: [
+        'device/biolite_n2/safety-instructions',
+        'device/biolite_n2/getting-started',
+        'device/biolite_n2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2/using-device',
+          },
+          items: [
+            'device/biolite_n2/admin-menu',
+            'device/biolite_n2/user',
+            'device/biolite_n2/authentication',
+            'device/biolite_n2/settings',
+            'device/biolite_n2/event-log',
+          ],
+        },
+        'device/biolite_n2/troubleshooting',
+        'device/biolite_n2/product-specifications',
+        'device/biolite_n2/regulatory-information',
+        'device/biolite_n2/appendices',
+      ],
+    },
+  ],
 };
 
 export default sidebars;

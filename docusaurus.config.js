@@ -196,6 +196,11 @@ const config = {
                 type: 'doc',
                 label: 'FaceStation F2',
                 docId: 'device/facestation_f2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioLite N2',
+                docId: 'device/biolite_n2/index'
               }
             ]
           },
