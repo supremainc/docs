@@ -735,5 +735,23 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "필드 상세"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "가능한 값"
+  },
+  "theme.typedefstruct.value": {
+    "message": "값"
+  },
+  "theme.typedefstruct.description": {
+    "message": "설명"
+  },
+  "theme.typedefstruct.references": {
+    "message": "참고"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "관련 구조체"
   }
 }

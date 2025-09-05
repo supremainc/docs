@@ -735,5 +735,23 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "Field details"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "Available values"
+  },
+  "theme.typedefstruct.value": {
+    "message": "Value"
+  },
+  "theme.typedefstruct.description": {
+    "message": "Description"
+  },
+  "theme.typedefstruct.references": {
+    "message": "References"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "Related structs"
   }
 }
