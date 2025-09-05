@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
-import CodeBlock from '@theme/CodeBlock';
 import Heading from '@theme/Heading';
-import Admonition from '@theme/Admonition';
+import { translate } from '@docusaurus/Translate';
 
 const TypedefStruct = ({ 
   name, 
@@ -43,12 +42,18 @@ const TypedefStruct = ({
               {/* 필드별 상수 테이블 */}
               {item.constants && item.constants.length > 0 && (
                 <div className={styles.fieldConstants}>
-                  <Heading as='h6'>가능한 값</Heading>
+                  <Heading as='h6'>
+                    {translate({ id: 'theme.typedefstruct.availableValue' })}
+                  </Heading>
                   <table className={styles.constantsTable}>
                     <thead>
                       <tr>
-                        <th>값</th>
-                        <th>설명</th>
+                        <th>
+                          {translate({ id: 'theme.typedefstruct.value' })}
+                        </th>
+                        <th>
+                          {translate({ id: 'theme.typedefstruct.description' })}
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -64,7 +69,9 @@ const TypedefStruct = ({
               )}
               {item.references && item.references.length > 0 && (
                 <div className={styles.references}>
-                  <span className={styles.referencesLabel}>참조:</span>
+                  <span className={styles.referencesLabel}>
+                    {translate({ id: 'theme.typedefstruct.references' })}:
+                  </span>
                   {item.references.map((ref, refIndex) => (
                     <a 
                       key={refIndex} 
@@ -142,9 +149,6 @@ const TypedefStruct = ({
       {/* 구조 계층 */}
       {hierarchy.length > 0 && (
         <div className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <Heading as='h4'>구조 계층</Heading>
-          </div>
           <div className={styles.hierarchyContainer}>
             {renderHierarchy(hierarchy)}
           </div>
@@ -155,7 +159,9 @@ const TypedefStruct = ({
       {fields.length > 0 && (
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
-            <Heading as='h4'>필드 상세</Heading>
+            <Heading as='h4'>
+              {translate({ id: 'theme.typedefstruct.fieldDetails' })}
+            </Heading>
           </div>
           <div className={styles.fieldsList}>
             {fields.map((field, index) => (
@@ -172,12 +178,18 @@ const TypedefStruct = ({
                 {/* 필드별 상수 테이블 */}
                 {field.constants && field.constants.length > 0 && (
                   <div className={styles.fieldConstants}>
-                    <Heading as='h6'>가능한 값</Heading>
+                    <Heading as='h6'>
+                      {translate({ id: 'theme.typedefstruct.availableValue' })}
+                    </Heading>
                     <table className={styles.constantsTable}>
                       <thead>
                         <tr>
-                          <th>값</th>
-                          <th>설명</th>
+                          <th>
+                            {translate({ id: 'theme.typedefstruct.value' })}
+                          </th>
+                          <th>
+                            {translate({ id: 'theme.typedefstruct.description' })}
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -195,7 +207,9 @@ const TypedefStruct = ({
                 {/* 필드 관련 구조체 */}
                 {field.relatedStructs && field.relatedStructs.length > 0 && (
                   <div className={styles.relatedStructs}>
-                    <span className={styles.relatedLabel}>관련 구조체:</span>
+                    <span className={styles.relatedLabel}>
+                      {translate({ id: 'theme.typedefstruct.relatedStructs' })}:
+                    </span>
                     {field.relatedStructs.map((struct, structIndex) => (
                       <span key={structIndex}>
                         {renderStructLink(struct)}
