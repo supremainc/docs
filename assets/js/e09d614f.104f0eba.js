@@ -27,7 +27,10 @@ var react = __webpack_require__(67294);
 /* ESM default export */ const styles_module = ({"typedefContainer":"typedefContainer_Wn7J","titleRow":"titleRow_juh5","metadata":"metadata_jjxW","category":"category_KdBD","size":"size_yHpg","version":"version_y0px","description":"description_vl9m","section":"section_UAKO","sectionHeader":"sectionHeader_fRZ_","sectionSubtitle":"sectionSubtitle_Uhu4","hierarchyContainer":"hierarchyContainer_TJKg","hierarchyLevel":"hierarchyLevel_eVaW","nestedLevel":"nestedLevel_fvI8","hierarchyItem":"hierarchyItem_GODh","nestedLeveltop":"nestedLeveltop_mB2_","hierarchyNotes":"hierarchyNotes_QTbs","hierarchyNode":"hierarchyNode_fJgq","nodeHeader":"nodeHeader_VmLc","hierarchyName":"hierarchyName_Xieu","hierarchyType":"hierarchyType_cEEc","hierarchySize":"hierarchySize_iDgU","hierarchyDesc":"hierarchyDesc_qbou","references":"references_Fuyx","referencesLabel":"referencesLabel_ptzV","reference":"reference_oQRT","childrenContainer":"childrenContainer_yihK","structLink":"structLink_tUc1","relatedStruct":"relatedStruct_OSZX","memoryBlocks":"memoryBlocks_TkDs","memoryBlock":"memoryBlock_RkZ2","memoryBlockHeader":"memoryBlockHeader_jD1Y","memoryOffset":"memoryOffset_djHn","memoryFieldName":"memoryFieldName_QGoe","memoryType":"memoryType_KcxH","memorySize":"memorySize_eMk3","memoryDesc":"memoryDesc_np0k","codeBlock":"codeBlock_LQwb","field":"field_RchT","fieldHeader":"fieldHeader_HncE","fieldNumber":"fieldNumber_PrLt","fieldName":"fieldName_xHbg","fieldType":"fieldType_fbjm","fieldSize":"fieldSize_dkeI","fieldRange":"fieldRange_kmek","fieldDescription":"fieldDescription_sT1v","fieldConstants":"fieldConstants_jw4N","relatedStructs":"relatedStructs_KK4K","relatedLabel":"relatedLabel_uofL","dependencyGroup":"dependencyGroup_PDbs","dependencyList":"dependencyList_DTc4","dependency":"dependency_R2lA","depName":"depName_u4Ua","depType":"depType_lMEs","depDesc":"depDesc_T3ac","constantsTable":"constantsTable_GcDj","variantsTable":"variantsTable_UAHC","constantValue":"constantValue_cMnk","constantNote":"constantNote_TGMI","notesList":"notesList_P0Bz","note":"note_FyD5","depDesc_T3ac":"depDesc_T3ac_YWbU"});
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
 var Heading = __webpack_require__(34403);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__(96025);
 ;// CONCATENATED MODULE: ./src/components/TypedefStruct/index.js
+
 
 
 
@@ -88,7 +91,9 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                     children: [
                                         /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                                             as: "h6",
-                                            children: "\uAC00\uB2A5\uD55C \uAC12"
+                                            children: (0,Translate/* translate */.I)({
+                                                id: 'theme.typedefstruct.availableValue'
+                                            })
                                         }),
                                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
                                             className: styles_module.constantsTable,
@@ -97,10 +102,14 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                                     children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
                                                         children: [
                                                             /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: "\uAC12"
+                                                                children: (0,Translate/* translate */.I)({
+                                                                    id: 'theme.typedefstruct.value'
+                                                                })
                                                             }),
                                                             /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: "\uC124\uBA85"
+                                                                children: (0,Translate/* translate */.I)({
+                                                                    id: 'theme.typedefstruct.description'
+                                                                })
                                                             })
                                                         ]
                                                     })
@@ -129,9 +138,14 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                 item.references && item.references.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                                     className: styles_module.references,
                                     children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
                                             className: styles_module.referencesLabel,
-                                            children: "\uCC38\uC870:"
+                                            children: [
+                                                (0,Translate/* translate */.I)({
+                                                    id: 'theme.typedefstruct.references'
+                                                }),
+                                                ":"
+                                            ]
                                         }),
                                         item.references.map((ref, refIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
                                                 href: `${linkPrefix}${ref.toLowerCase()}`,
@@ -196,21 +210,12 @@ const TypedefStruct_TypedefStruct = (param)=>{
                     })
                 ]
             }),
-            hierarchy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+            hierarchy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                 className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.sectionHeader,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                            as: "h4",
-                            children: "\uAD6C\uC870 \uACC4\uCE35"
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.hierarchyContainer,
-                        children: renderHierarchy(hierarchy)
-                    })
-                ]
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: styles_module.hierarchyContainer,
+                    children: renderHierarchy(hierarchy)
+                })
             }),
             fields.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                 className: styles_module.section,
@@ -219,7 +224,9 @@ const TypedefStruct_TypedefStruct = (param)=>{
                         className: styles_module.sectionHeader,
                         children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                             as: "h4",
-                            children: "\uD544\uB4DC \uC0C1\uC138"
+                            children: (0,Translate/* translate */.I)({
+                                id: 'theme.typedefstruct.fieldDetails'
+                            })
                         })
                     }),
                     /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
@@ -268,7 +275,9 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                         children: [
                                             /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
                                                 as: "h6",
-                                                children: "\uAC00\uB2A5\uD55C \uAC12"
+                                                children: (0,Translate/* translate */.I)({
+                                                    id: 'theme.typedefstruct.availableValue'
+                                                })
                                             }),
                                             /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
                                                 className: styles_module.constantsTable,
@@ -277,10 +286,14 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                                         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
                                                             children: [
                                                                 /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: "\uAC12"
+                                                                    children: (0,Translate/* translate */.I)({
+                                                                        id: 'theme.typedefstruct.value'
+                                                                    })
                                                                 }),
                                                                 /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: "\uC124\uBA85"
+                                                                    children: (0,Translate/* translate */.I)({
+                                                                        id: 'theme.typedefstruct.description'
+                                                                    })
                                                                 })
                                                             ]
                                                         })
@@ -309,9 +322,14 @@ const TypedefStruct_TypedefStruct = (param)=>{
                                     field.relatedStructs && field.relatedStructs.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                                         className: styles_module.relatedStructs,
                                         children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
                                                 className: styles_module.relatedLabel,
-                                                children: "\uAD00\uB828 \uAD6C\uC870\uCCB4:"
+                                                children: [
+                                                    (0,Translate/* translate */.I)({
+                                                        id: 'theme.typedefstruct.relatedStructs'
+                                                    }),
+                                                    ":"
+                                                ]
                                             }),
                                             field.relatedStructs.map((struct, structIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
                                                     children: renderStructLink(struct)
