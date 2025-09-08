@@ -95,6 +95,16 @@
 .small_l2 {
   width: 75%;
 }
+.small_l2 span {
+  margin-left: .5rem;
+}
+.small_l2 ul {
+  margin-bottom: 1rem;
+}
+
+.small_l2:last-of-type ul {
+  margin-bottom: 0;
+}
 
 @media (max-width: 1569px) {
   .techspecsBody .small_c5.modelimg {
@@ -144,7 +154,7 @@
   .techspec.dimensions .techspecsBody {
     width: 90%;
   }
-  .techspecsBody {
+  .techspecsBody, .small_l2 span {
     font-size: .75rem;
     align-content: center;
   }

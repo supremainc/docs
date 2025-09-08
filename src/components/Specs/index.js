@@ -103,9 +103,12 @@ export function SpecSection({data}) {
                           )}
                         </div>
                         <div className={clsx(styles.column, styles.small_l2)}>
-                          <p><strong>
-                            {translate({id: subitem.label_id})}
-                          </strong></p>
+                          <p>
+                            <strong>
+                              {translate({id: subitem.label_id})}
+                            </strong>
+                            {subitem.badge && <span className='badge only'>{subitem.badge}</span>}
+                          </p>
                           {subitem.items && (
                             <ul>
                               {Object.values(subitem.items).map((subsubitem) => (
@@ -138,9 +141,7 @@ export function SpecSection({data}) {
               <div className={styles.techspecsBody}>
                 {Object.values(item.items).map((subitem, subindex) => (
                     <div key={subindex} className={styles.row}>
-                      <div className={clsx(styles.column, styles.small_l1)}>
-                        {subitem.label}
-                      </div>
+                      <div className={clsx(styles.column, styles.small_l1)} dangerouslySetInnerHTML={{__html: subitem.label}} />
                       <div className={clsx(styles.column, styles.small_l2)}>
                         <DescObj contents={subitem.value} />
                       </div>
