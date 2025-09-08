@@ -155,7 +155,7 @@
     width: 90%;
   }
   .techspecsBody, .small_l2 span {
-    font-size: .75rem;
+    font-size: .75rem !important;
     align-content: center;
   }
   .techspecsRowheader sup, .techspecsBody sup {
