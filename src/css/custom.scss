@@ -431,6 +431,10 @@ footer {
     }
   }
 
+  .magnifier {
+    margin-bottom: 1.5rem;
+  }
+
   .enroll-credential-fingerprint::before {
     content: url(./img/icon_credential_fingerprint.png);
     width: 20px;

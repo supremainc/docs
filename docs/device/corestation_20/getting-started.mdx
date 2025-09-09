@@ -44,102 +44,74 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 
 ## 각 부분의 명칭 및 기능
 
-{/* <Image src='/img/device/product-part-cs20.svg' className='none' width='100%' alone /> */}
+<Magnifier src='/img/device/product-part-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
 
-import imageOriginal from '@site/static/img/device/product-part-cs20.png'
-
-<Magnifier src={imageOriginal} width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
-
-* **비주얼 카메라**: 실제 이미지를 촬영합니다.
-
-* **적외선 카메라**: 적외선 이미지를 촬영합니다.
-
-* **디스플레이**: 동작을 위한 UI를 제공합니다.
-
-* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
-
-* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
-
-  * 초록색: 인증 성공
-
-  * 빨간색: 인증 실패
-
-  * 파란색: 정상 동작 상태
-
-  * 파란색/초록색 점멸:
-
-      * <Cmd>DHCP</Cmd>를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
-
-      * <Cmd>슬레이브</Cmd> 모드일 때 마스터 장치와 연결이 끊어진 상태
-
-  * 빨간색/보라색 점멸: 장치 잠금 상태
-
-  * 노란색 점멸: 입력 대기 상태
-
-* **케이블**
-
-  전원 / 이더넷 / RS-485 / Wiegand 입출력 / Input / 릴레이
-
-* **스피커**: 소리를 들을 수 있습니다.
-
-* **초기화 버튼**
-
-  * 네트워크 설정을 초기화합니다. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings)를 참고하세요.
-
-  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
-
-* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
-
-
-### 케이블 및 커넥터
-
-<Columns>
-<Column>
-
-<Image src='/img/device/bew3-cables-layout.png' alone width={500} className='none' />
-
-</Column>
-<Column className='padding--l10'>
-
-| 핀 | 명칭 | 색상 |
-| :--: | :--: | :--: |
-| 1 | INPUT2 | 주황색 |
-| 2 | INPUT1 | 갈색 |
-| 3 | INPUT0 | 보라색 |
-| 4 | ETX+ | 흰색 |
-| 5 | ETX- | 주황색 |
-| 6 | ERX+ | 검은색 |
-| 7 | ERX- | 노란색 |
-| 8 | RS485_0 TRXN | 노란색 (검은 띠) |
-| 9 | RS485_0 TRXP | 파란색 (흰 띠) |
-| 10 | RS485_1 TRXN | 노란색 |
-| 11 | RS485_1 TRXP | 파란색 |
-| 12 | PWR GND | 검은색 (흰 띠) |
-| 13 | PWR +VDC | 빨간색 |
-| 14 | VB2 | 갈색 |
-| 15 | VB2 | 파란색 |
-| 16 | VB1 | 초록색 |
-| 17 | VB1 | 빨간색 |
-| 18 | GND | 검은색 |
-| 19 | RELAY NO | 회색 (흰 띠) |
-| 20 | RELAY NC | 주황색 (흰 띠) |
-| 21 | RELAY COM | 초록색 (흰 띠) |
-| 22 | GND | 검은색 |
-| 23 | WGD OUT1 | 흰색 (검은 띠) |
-| 24 | WGD OUT0 | 초록색 (검은 띠) |
-| 25 | WGD IN1 | 흰색 |
-| 26 | WGD IN0 | 초록색 |
-
-</Column>
-</Columns>
+| No. | 이름 |
+| :--: | -- |
+| 1 | **AUX IN (0:2)** 연결 |
+| 2 | **RS-485** 연결 |
+| 3 | **RS-485** 종단 저항 스위치 |
+| 4 | **SUPERVISED INPUT (3:5)** 또는 **Input (3:5)** 연결  |
+| 5 | **RELAY 2 (Alarm)** 연결 |
+| 6 | **OUTPUT (3:5)** 연결 |
+| 7 | **RS-485 1** 종단 저항 스위치 |
+| 8 | **WIEGAND 1** 연결 |
+| 9 | **RS-485 1** 연결 |
+| 10 | **RELAY 3 (Lock)** 연결 |
+| 11 | CoreStation 20 전원 연결 (DC 12V / DC 24V IN) |
+| 12 | **RESET** 버튼  |
+| 13 | **ETHERNET** 연결 |
+| 14 | **INIT** 버튼 |
+| 15 | **RELAY 1 (Lock)** 연결 |
+| 16 | **WIEGAND 0** 연결 |
+| 17 | **RS-485 0** 연결 |
+| 18 | **RS-485 0** 종단 저항 스위치 |
+| 19 | **OUTPUT (0:2)** 연결 |
+| 20 | **RELAY 0 (Alarm)** 연결 |
+| 21 | **SUPERVISED INPUT (0:2)** 또는 **Input (0:2)** 연결  |
 
 :::info
 
-AWG 26 크기의 도체는 여러 가지가 있으며, 배선할 때 일반적인 피복이나 동등한 재질로 보호되어야 합니다. 또한, 리드선이 18 AWG (0.82 mm2) 보다 큰 도체에 접촉하지 않도록 주의하세요.
+* 장치와 연동된 CoreStation 20을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
+
+* 장치를 재부팅하려면 **RESET** 버튼을 누르세요.
+
+* CoreStation 20과 Wiegand 장치를 연결할 때 Wiegand 장치의 전원으로 CoreStation 20의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 Wiegand 장치를 2대 연결할 수 있습니다.
 
 :::
 
+### CoreStation 20 상태 LED
 
-import FaceEnrollCaution from '../../common/_face-enrollment-authentication-method.mdx'
+CoreStation 20의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로 확인할 수 있으며, 이더넷, RS-485, RS-485 0, RS-485 1, 시스템의 상태를 1초씩 순서대로 보여줍니다.
 
-<FaceEnrollCaution />
+| 항목 | LED | 상태 |
+|---|---|---|
+| 이더넷 | 빨간색/자홍색 점멸 | 고정 IP 연결 실패 |
+| ^ | 빨간색/파란색 점멸 | 유동 IP 연결 성공 |
+| ^ | 빨간색/하늘색 점멸 | 고정 IP 연결 성공 |
+| ^ | 빨간색/노란색 점멸 | 유동 IP 연결 대기 중 |
+| ^ | 빨간색/빨간색 점멸 | 유동 IP 연결 실패 |
+| RS-485 | 자홍색/파란색 점멸 | 슬레이브 장치 정상 |
+| ^ | 자홍색/노란색 점멸 | 슬레이브 장치 연결 해제 |
+| ^ | 자홍색/빨간색 점멸 | 슬레이브 장치 없음 |
+| RS-485 0 | 노란색/파란색 점멸 | 슬레이브 장치 정상 |
+| ^ | 노란색/노란색 점멸 | 슬레이브 장치 연결 해제 |
+| ^ | 노란색/빨간색 점멸 | 슬레이브 장치 없음 |
+| RS-485 1 | 초록색/노란색 점멸 | 슬레이브 장치 정상 |
+| ^ | 초록색/노란색 점멸 | 슬레이브 장치 연결 해제 |
+| ^ | 초록색/빨간색 점멸 | 슬레이브 장치 없음 |
+| 시스템 | 흰색/회색 점멸 | 시스템 잠금 (BioStar 2의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 흰색/자홍색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 흰색/파란색 점멸 | 탬퍼 켜짐 |
+| ^ | 흰색/하늘색 점멸 | BioStar 2 연결 성공 + 탬퍼 켜짐 |
+| ^ | 흰색/초록색 점멸 | BioStar 2 연결 성공 |
+| ^ | 흰색/노란색 점멸 | 시스템 잠금 (BioStar 2의 작업 조건 및 동작) |
+| ^ | 흰색/빨간색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) |
+
+### 설치 예제
+
+CoreStation 20은 중앙 집중식 출입 통제 시스템으로 엔터프라이즈급 환경을 위해 설계되었으며 최대 500,000명의 사용자 정보를 저장할 수 있습니다.
+
+BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
+
+<Image src='/img/device/installation-example-cs20.svg' width="100%" />
