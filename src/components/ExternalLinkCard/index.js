@@ -119,26 +119,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '85px'
     },
     {
-      title: 'FaceStation 2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/facestation2.png',
-      desc: `${translate({
-        id: "externalLinks.FaceStation2.desc",
-        message: "얼굴인증 출입근태 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'BioStation L2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/biostationl2.png',
-      desc: `${translate({
-        id: "externalLinks.BioStationL2.desc",
-        message: "지문인식 출입근태 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
       title: 'BioLite N2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
@@ -235,15 +215,6 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.XPass2.desc",
       })}`,
-    },
-    {
-      title: 'Airfob Patch',
-      url: '#',
-      img: 'https://supremainc.com/en/asset/images/thumbnail/Airfob Patch.png',
-      desc: `${translate({
-        id: "externalLinks.Aiirfobpatch.desc",
-        message: "모바일 출입카드 변환장치"
-      })}`
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -282,6 +253,51 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
         message: "CoreStation 전용 함체"
+      })}`
+    }
+  ];
+  const productLinks = productLinksProp || defaultProductLinks;
+
+  return (
+    <div className={clsx('container', styles.product, styles.grid)}>
+      {productLinks.map((props, idx) => (
+        <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
+
+export function Peripheral({ productLinks: productLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultProductLinks = [
+    {
+      title: 'Input Module',
+      url: '#',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.im120.desc",
+        message: "다중 입력 확장 모듈"
+      })}`
+    },
+    {
+      title: 'Output Module',
+      url: '#',
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/om-120.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.om120.desc",
+        message: "다중 출력 제어 모듈"
+      })}`
+    },
+    {
+      title: 'Secure Module',
+      url: '#',
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.sio2.desc",
+        message: "출입문 보안 컨트롤 모듈"
       })}`
     }
   ];
