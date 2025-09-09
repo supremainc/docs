@@ -26,6 +26,15 @@
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "Enclosure for CoreStation"
   },
+  "externalLinks.peripheral.im120.desc": {
+    "message": "Multiple Input Extension Module"
+  },
+  "externalLinks.peripheral.om120.desc": {
+    "message": "Multiple Output Extension Module"
+  },
+  "externalLinks.peripheral.sio2.desc": {
+    "message": "Compact Secure Single Door I/O"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
     "description": "The ARIA label for the breadcrumbs"

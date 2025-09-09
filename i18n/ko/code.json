@@ -26,6 +26,15 @@
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "CoreStation 전용 함체"
   },
+  "externalLinks.peripheral.im120.desc": {
+    "message": "다중 입력 확장 모듈"
+  },
+  "externalLinks.peripheral.om120.desc": {
+    "message": "다중 출력 제어 모듈"
+  },
+  "externalLinks.peripheral.sio2.desc": {
+    "message": "출입문 보안 컨트롤 모듈"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
