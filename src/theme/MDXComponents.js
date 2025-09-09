@@ -26,7 +26,7 @@ import Badge from '@site/src/components/Badge';
 import BugLists from '@site/src/components/BugLists';
 import Jira from '@site/src/components/Jira';
 import { Productpart, Callout, Item } from '@site/src/components/Productpart';
-import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
+import { SpecSection, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 import Faqs from '@site/src/components/Faqs';
 import { FaqsItems } from '@site/src/components/Faqs';
 import Calloutlists from '@site/src/components/Calloutlists';
@@ -142,7 +142,7 @@ export default {
     BugLists,
     Jira,
     Productpart, Callout, Item,
-    SpecSectioin, SpecSizeWieght, Anno,
+    SpecSection, SpecSizeWieght, Anno,
     Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnifier,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
