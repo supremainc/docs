@@ -57,7 +57,7 @@ function Description({ contents }) {
 }
 
 
-export function SpecSectioin({data}) {
+export function SpecSection({data}) {
   const specs = data.items;
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const glossary = glossaryMap[currentLocale] || glossary_en;
