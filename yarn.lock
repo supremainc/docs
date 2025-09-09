@@ -3261,6 +3261,25 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lodash.debounce@^4.0.6":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/lodash.debounce/-/lodash.debounce-4.0.9.tgz#0f5f21c507bce7521b5e30e7a24440975ac860a5"
+  integrity sha512-Ma5JcgTREwpLRwMM+XwBR7DaWe96nC38uCBDFKZWbNKD+osjVzdpnUSwBcqCptrp16sSOLBAUb50Car5I0TCsQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.throttle@^4.1.6":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@types/lodash.throttle/-/lodash.throttle-4.1.9.tgz#f17a6ae084f7c0117bd7df145b379537bc9615c5"
+  integrity sha512-PCPVfpfueguWZQB7pJQK890F2scYKoDUL3iM522AptHWn7d5NQmeS/LTEHIcLr5PaTzl3dK2Z0xSUHHTHwaL5g==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.20.tgz#1ca77361d7363432d29f5e55950d9ec1e1c6ea93"
+  integrity sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==
+
 "@types/md5@^2.3.5":
   version "2.3.5"
   resolved "https://registry.npmjs.org/@types/md5/-/md5-2.3.5.tgz"
@@ -3327,6 +3346,11 @@
   resolved "https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.5.tgz"
   integrity sha512-AUZTa7hQ2KY5L7AmtSiqxlhWxb4ina0yd8hNbl4TWuqnv/pFP0nDMb3YrfSBf4hJVGLh2YEIBfKaBW/9UEl6IQ==
 
+"@types/prop-types@*":
+  version "15.7.15"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
+  integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
+
 "@types/qs@*":
   version "6.9.18"
   resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.18.tgz"
@@ -3370,6 +3394,15 @@
   dependencies:
     csstype "^3.0.2"
 
+"@types/react@^16.9.1":
+  version "16.14.66"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.66.tgz#38fb6d7630756c78b896413499bf2fd0f8c7cc0a"
+  integrity sha512-KPilYP4+25N2ki7vrB4adSR2ucAj95xJcGfKC09bsxcHT+QtB//K7i1FenPnbkLA0Xt9pRi1/RXC1wxFvL9Wtw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "^0.16"
+    csstype "^3.0.2"
+
 "@types/retry@0.12.0":
   version "0.12.0"
   resolved "https://registry.npmjs.org/@types/retry/-/retry-0.12.0.tgz"
@@ -3381,6 +3414,11 @@
   integrity sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==
   dependencies:
     "@types/node" "*"
+
+"@types/scheduler@^0.16":
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.8.tgz#ce5ace04cfeabe7ef87c0091e50752e36707deff"
+  integrity sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==
 
 "@types/send@*":
   version "0.17.4"
@@ -7449,6 +7487,11 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz"
   integrity sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
+
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
@@ -9653,6 +9696,17 @@ react-loadable-ssr-addon-v5-slorber@^1.0.1:
   integrity sha512-YMMxTUQV/QFSnbgrP3tjDzLHRg7vsbMn8e9HAa8o/1iXoiomo48b7sk/kkmWEuWNDPJVlKSJRB6Y2fHqdJk+SQ==
   dependencies:
     "@types/react" "*"
+
+react-magnifier@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-magnifier/-/react-magnifier-3.0.4.tgz#0b6b9d33b3fcb8e41d4768f5f32abbaf8892cd3b"
+  integrity sha512-v38ku46pdis9EO8VtnTxXg9boFbzXrs+m6VoP8zLbT8ZoyUvVoP/LDkrZtN6Wo5tsgJRvSzJJP5pKNzmvprTow==
+  dependencies:
+    "@types/lodash.debounce" "^4.0.6"
+    "@types/lodash.throttle" "^4.1.6"
+    "@types/react" "^16.9.1"
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
 
 react-router-config@^5.1.1:
   version "5.1.1"
