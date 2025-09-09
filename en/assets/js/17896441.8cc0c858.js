@@ -1,1205 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7143"], {
-84973: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  "default": () => (/* binding */ MDXContent),
-  toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
-});
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-262.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/en/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(85893);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(50065);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(67294);
-;// CONCATENATED MODULE: ./src/components/TypedefStruct/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"typedefContainer":"typedefContainer_Wn7J","titleRow":"titleRow_juh5","metadata":"metadata_jjxW","category":"category_KdBD","size":"size_yHpg","version":"version_y0px","description":"description_vl9m","section":"section_UAKO","sectionHeader":"sectionHeader_fRZ_","sectionSubtitle":"sectionSubtitle_Uhu4","hierarchyContainer":"hierarchyContainer_TJKg","hierarchyLevel":"hierarchyLevel_eVaW","nestedLevel":"nestedLevel_fvI8","hierarchyItem":"hierarchyItem_GODh","nestedLeveltop":"nestedLeveltop_mB2_","hierarchyNotes":"hierarchyNotes_QTbs","hierarchyNode":"hierarchyNode_fJgq","nodeHeader":"nodeHeader_VmLc","hierarchyName":"hierarchyName_Xieu","hierarchyType":"hierarchyType_cEEc","hierarchySize":"hierarchySize_iDgU","hierarchyDesc":"hierarchyDesc_qbou","references":"references_Fuyx","referencesLabel":"referencesLabel_ptzV","reference":"reference_oQRT","childrenContainer":"childrenContainer_yihK","structLink":"structLink_tUc1","relatedStruct":"relatedStruct_OSZX","memoryBlocks":"memoryBlocks_TkDs","memoryBlock":"memoryBlock_RkZ2","memoryBlockHeader":"memoryBlockHeader_jD1Y","memoryOffset":"memoryOffset_djHn","memoryFieldName":"memoryFieldName_QGoe","memoryType":"memoryType_KcxH","memorySize":"memorySize_eMk3","memoryDesc":"memoryDesc_np0k","codeBlock":"codeBlock_LQwb","field":"field_RchT","fieldHeader":"fieldHeader_HncE","fieldNumber":"fieldNumber_PrLt","fieldName":"fieldName_xHbg","fieldType":"fieldType_fbjm","fieldSize":"fieldSize_dkeI","fieldRange":"fieldRange_kmek","fieldDescription":"fieldDescription_sT1v","fieldConstants":"fieldConstants_jw4N","relatedStructs":"relatedStructs_KK4K","relatedLabel":"relatedLabel_uofL","dependencyGroup":"dependencyGroup_PDbs","dependencyList":"dependencyList_DTc4","dependency":"dependency_R2lA","depName":"depName_u4Ua","depType":"depType_lMEs","depDesc":"depDesc_T3ac","constantsTable":"constantsTable_GcDj","variantsTable":"variantsTable_UAHC","constantValue":"constantValue_cMnk","constantNote":"constantNote_TGMI","notesList":"notesList_P0Bz","note":"note_FyD5","depDesc_T3ac":"depDesc_T3ac_YWbU"});
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
-var Heading = __webpack_require__(34403);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(96025);
-;// CONCATENATED MODULE: ./src/components/TypedefStruct/index.js
-
-
-
-
-
-const TypedefStruct_TypedefStruct = (param)=>{
-    let { name, description, code, fields = [], constants = [], notes = [], dependencies = [], usedBy = [], size, category, hierarchy = [], linkPrefix = "#" } = param;
-    const renderHierarchy = function(items) {
-        let level = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-            className: `${styles_module.hierarchyLevel} ${level > 0 ? styles_module.nestedLevel : styles_module.nestedLeveltop}`,
-            children: items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
-                    className: styles_module.hierarchyItem,
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
-                            className: styles_module.hierarchyNode,
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.nodeHeader,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            className: styles_module.hierarchyName,
-                                            id: item.name.toLowerCase(),
-                                            children: item.name
-                                        }),
-                                        item.type && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            className: styles_module.hierarchyType,
-                                            children: item.type
-                                        }),
-                                        item.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                            className: styles_module.hierarchySize,
-                                            children: [
-                                                item.size,
-                                                " ",
-                                                item.size > 1 ? "bytes" : "byte"
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                item.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                    className: styles_module.hierarchyDesc,
-                                    dangerouslySetInnerHTML: {
-                                        __html: item.description
-                                    }
-                                }),
-                                item.notes && /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
-                                    className: styles_module.hierarchyNotes,
-                                    children: item.notes.map((note, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                className: styles_module.hierarchyDesc,
-                                                dangerouslySetInnerHTML: {
-                                                    __html: note
-                                                }
-                                            })
-                                        }, index))
-                                }),
-                                item.constants && item.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.fieldConstants,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                            as: "h6",
-                                            children: (0,Translate/* translate */.I)({
-                                                id: 'theme.typedefstruct.availableValue'
-                                            })
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                                            className: styles_module.constantsTable,
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: (0,Translate/* translate */.I)({
-                                                                    id: 'theme.typedefstruct.value'
-                                                                })
-                                                            }),
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: (0,Translate/* translate */.I)({
-                                                                    id: 'theme.typedefstruct.description'
-                                                                })
-                                                            })
-                                                        ]
-                                                    })
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                                    children: item.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                    className: styles_module.constantValue,
-                                                                    children: constant.value
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                        dangerouslySetInnerHTML: {
-                                                                            __html: constant.description
-                                                                        }
-                                                                    })
-                                                                })
-                                                            ]
-                                                        }, constIndex))
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                item.references && item.references.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.references,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                            className: styles_module.referencesLabel,
-                                            children: [
-                                                (0,Translate/* translate */.I)({
-                                                    id: 'theme.typedefstruct.references'
-                                                }),
-                                                ":"
-                                            ]
-                                        }),
-                                        item.references.map((ref, refIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
-                                                href: `${linkPrefix}${ref.toLowerCase()}`,
-                                                className: styles_module.reference,
-                                                children: ref
-                                            }, refIndex))
-                                    ]
-                                })
-                            ]
-                        }),
-                        item.children && item.children.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                            className: styles_module.childrenContainer,
-                            children: renderHierarchy(item.children, level + 1)
-                        })
-                    ]
-                }, index))
-        });
-    };
-    const renderStructLink = (structName)=>{
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
-            href: `${linkPrefix}${structName.toLowerCase()}`,
-            className: styles_module.structLink,
-            children: structName
-        });
-    };
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: styles_module.typedefContainer,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.header,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.titleRow,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                as: "h3",
-                                id: name.toLowerCase(),
-                                children: name
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: styles_module.metadata,
-                                children: [
-                                    category && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                        className: styles_module.category,
-                                        children: category
-                                    }),
-                                    size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                        className: styles_module.size,
-                                        children: [
-                                            size,
-                                            " ",
-                                            size > 1 ? "bytes" : "byte"
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                        className: styles_module.description,
-                        children: description
-                    })
-                ]
-            }),
-            hierarchy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: styles_module.section,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: styles_module.hierarchyContainer,
-                    children: renderHierarchy(hierarchy)
-                })
-            }),
-            fields.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.sectionHeader,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                            as: "h4",
-                            children: (0,Translate/* translate */.I)({
-                                id: 'theme.typedefstruct.fieldDetails'
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.fieldsList,
-                        children: fields.map((field, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: styles_module.field,
-                                children: [
-                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.fieldHeader,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldNumber,
-                                                children: index + 1
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldName,
-                                                id: field.name.toLowerCase(),
-                                                children: field.name
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldType,
-                                                children: field.type
-                                            }),
-                                            field.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                                className: styles_module.fieldSize,
-                                                children: [
-                                                    field.size,
-                                                    " ",
-                                                    field.size > 1 ? "bytes" : "byte"
-                                                ]
-                                            }),
-                                            field.range && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldRange,
-                                                children: field.range
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                        className: styles_module.fieldDescription,
-                                        dangerouslySetInnerHTML: {
-                                            __html: field.description
-                                        }
-                                    }),
-                                    field.constants && field.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.fieldConstants,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                                as: "h6",
-                                                children: (0,Translate/* translate */.I)({
-                                                    id: 'theme.typedefstruct.availableValue'
-                                                })
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                                                className: styles_module.constantsTable,
-                                                children: [
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: (0,Translate/* translate */.I)({
-                                                                        id: 'theme.typedefstruct.value'
-                                                                    })
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: (0,Translate/* translate */.I)({
-                                                                        id: 'theme.typedefstruct.description'
-                                                                    })
-                                                                })
-                                                            ]
-                                                        })
-                                                    }),
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                                        children: field.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                                children: [
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                        className: styles_module.constantValue,
-                                                                        children: constant.value
-                                                                    }),
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                            dangerouslySetInnerHTML: {
-                                                                                __html: constant.description
-                                                                            }
-                                                                        })
-                                                                    })
-                                                                ]
-                                                            }, constIndex))
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    }),
-                                    field.relatedStructs && field.relatedStructs.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.relatedStructs,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                                className: styles_module.relatedLabel,
-                                                children: [
-                                                    (0,Translate/* translate */.I)({
-                                                        id: 'theme.typedefstruct.relatedStructs'
-                                                    }),
-                                                    ":"
-                                                ]
-                                            }),
-                                            field.relatedStructs.map((struct, structIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                    children: renderStructLink(struct)
-                                                }, structIndex))
-                                        ]
-                                    })
-                                ]
-                            }, index))
-                    })
-                ]
-            }),
-            constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.sectionHeader,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                as: "h4",
-                                children: "\uC0C1\uC218 \uC815\uC758"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                className: styles_module.sectionSubtitle,
-                                children: [
-                                    constants.length,
-                                    "\uAC1C \uC0C1\uC218"
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                        className: styles_module.variantsTable,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "\uAC12"
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "\uC124\uBA85"
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "\uBE44\uACE0"
-                                        })
-                                    ]
-                                })
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                children: constants.map((constant, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                className: styles_module.constantValue,
-                                                children: constant.value
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                children: constant.description
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                children: constant.note
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    })
-                ]
-            }),
-            (dependencies.length > 0 || usedBy.length > 0) && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.sectionHeader,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                            as: "h4",
-                            children: "\uC758\uC874\uC131 \uAD00\uACC4"
-                        })
-                    }),
-                    dependencies.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.dependencyGroup,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                as: "h5",
-                                children: "\uC774 \uAD6C\uC870\uCCB4\uAC00 \uC758\uC874\uD558\uB294 \uD0C0\uC785"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                className: styles_module.dependencyList,
-                                children: dependencies.map((dep, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.dependency,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depName,
-                                                children: renderStructLink(dep.name)
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depType,
-                                                children: dep.type
-                                            }),
-                                            dep.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depDesc,
-                                                children: dep.description
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    }),
-                    usedBy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.dependencyGroup,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
-                                as: "h5",
-                                children: "\uC774 \uAD6C\uC870\uCCB4\uB97C \uC0AC\uC6A9\uD558\uB294 \uD0C0\uC785"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                className: styles_module.dependencyList,
-                                children: usedBy.map((use, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.dependency,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depName,
-                                                children: renderStructLink(use.name)
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depType,
-                                                children: use.type
-                                            }),
-                                            use.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depDesc,
-                                                children: use.description
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-};
-/* ESM default export */ const TypedefStruct = (TypedefStruct_TypedefStruct);
-
-// EXTERNAL MODULE: ./src/components/Image/index.js + 1 modules
-var Image = __webpack_require__(20699);
-;// CONCATENATED MODULE: ./src/components/ResponsiveImageMap/index.js
-
-
-
-function ResponsiveImageMap(param) {
-    let { src, alt, className, mapName, areas, originalWidth = 910, originalHeight = 700 // 원본 이미지 높이
-     } = param;
-    const containerRef = (0,react.useRef)(null);
-    const mapRef = (0,react.useRef)(null);
-    const [isLoaded, setIsLoaded] = (0,react.useState)(false);
-    // 좌표를 현재 이미지 크기에 맞게 조정하는 함수
-    const updateAreaCoords = ()=>{
-        if (!containerRef.current || !mapRef.current || !isLoaded) return;
-        const img = containerRef.current.querySelector('img');
-        if (!img) return;
-        const actualWidth = img.offsetWidth;
-        const actualHeight = img.offsetHeight;
-        if (actualWidth === 0 || actualHeight === 0) return;
-        // 스케일 비율 계산
-        const scaleX = actualWidth / originalWidth;
-        const scaleY = actualHeight / originalHeight;
-        // 모든 area 요소의 좌표 업데이트
-        const areaElements = mapRef.current.querySelectorAll('area');
-        areaElements.forEach((area, index)=>{
-            if (areas[index]) {
-                const originalCoords = areas[index].coords;
-                const newCoords = originalCoords.split(',').map((coord, i)=>{
-                    const num = parseInt(coord);
-                    return Math.round(i % 2 === 0 ? num * scaleX : num * scaleY);
-                }).join(',');
-                area.setAttribute('coords', newCoords);
-            }
-        });
-    };
-    // 이미지 로드 완료 감지
-    (0,react.useEffect)(()=>{
-        if (!containerRef.current) return;
-        const img = containerRef.current.querySelector('img');
-        if (!img) return;
-        const handleImageLoad = ()=>{
-            setIsLoaded(true);
-            setTimeout(updateAreaCoords, 100);
-        };
-        if (img.complete) {
-            handleImageLoad();
-        } else {
-            img.addEventListener('load', handleImageLoad);
-        }
-        return ()=>{
-            img.removeEventListener('load', handleImageLoad);
-        };
-    }, []);
-    // 윈도우 리사이즈 시 좌표 업데이트
-    (0,react.useEffect)(()=>{
-        const handleResize = ()=>{
-            updateAreaCoords();
-        };
-        window.addEventListener('resize', handleResize);
-        // 컴포넌트 마운트 시에도 좌표 업데이트
-        const timer = setTimeout(updateAreaCoords, 200);
-        return ()=>{
-            window.removeEventListener('resize', handleResize);
-            clearTimeout(timer);
-        };
-    }, [
-        isLoaded
-    ]);
-    // 이미지 크기 변화 감지 (ResizeObserver 사용)
-    (0,react.useEffect)(()=>{
-        if (!containerRef.current) return;
-        const resizeObserver = new ResizeObserver(()=>{
-            updateAreaCoords();
-        });
-        resizeObserver.observe(containerRef.current);
-        return ()=>{
-            resizeObserver.disconnect();
-        };
-    }, [
-        isLoaded
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        ref: containerRef,
-        style: {
-            position: 'relative'
-        },
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("map", {
-                ref: mapRef,
-                id: mapName,
-                name: mapName,
-                children: areas.map((area, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("area", {
-                        shape: area.shape,
-                        coords: area.coords,
-                        href: area.href,
-                        title: area.title,
-                        alt: area.alt || area.title
-                    }, index))
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Image/* default */.Z, {
-                src: src,
-                alt: alt,
-                className: className,
-                usemap: `#${mapName}`,
-                alone: true
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
-
-
-const frontMatter = {
-	id: 'smartcardissue',
-	title: 'How to Issue Suprema Smart Cards',
-	toc_max_heading_level: 3,
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-
-
-
-
-const toc = [{
-  "value": "Structure Relationship Diagram",
-  "id": "structure-relationship-diagram",
-  "level": 2
-}, {
-  "value": "Structure Hierarchy",
-  "id": "structure-hierarchy",
-  "level": 2
-}, {
-  "value": "CRC Calculation and Validation",
-  "id": "crc",
-  "level": 2
-}, {
-  "value": "What are hdrCRC and cardCRC?",
-  "id": "hdrcrc-cardcrc",
-  "level": 3
-}, {
-  "value": "How to Calculate CRC",
-  "id": "crc-calculation",
-  "level": 3
-}, {
-  "value": "How to Validate",
-  "id": "crc-validation",
-  "level": 3
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    admonition: "admonition",
-    code: "code",
-    h2: "h2",
-    h3: "h3",
-    li: "li",
-    ol: "ol",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.a)(),
-    ...props.components
-  };
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Card data structure"
-          }), ": Data structure required for the issuance of SCC (Secure Credential Card) and AOC (Access on Card)"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Structure specification"
-          }), ": Detailed requirements for each field that must be complied with during card issuance"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Data integrity"
-          }), ": Method for ensuring the quality of card data through CRC validation"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Implementation reference"
-          }), ": Relationships between structures and how to correctly set data"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Smart cards issued according to this document operate normally on all BioStar compatible devices from Suprema."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "Check the following before issuing smart cards."
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Compatible devices"
-            }), ": All Suprema devices supported by BioStar"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Card types"
-            }), ": SCC (Secure Credential Card), AOC (Access on Card)"]
-          }), "\n"]
-        }), "\n"]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-relationship-diagram",
-      children: "Structure Relationship Diagram"
-    }), "\n", (0,jsx_runtime.jsx)(ResponsiveImageMap, {
-      src: "/img/common/smartcardapi-structure.png",
-      alt: "SmartCard API structure relationship diagram",
-      className: "useMap",
-      mapName: "imgmap2025813133616",
-      originalWidth: 2072,
-      originalHeight: 1192,
-      areas: [{
-        shape: "rect",
-        title: "BS2SmartCardData",
-        coords: "489,507,971,765",
-        href: "#bs2smartcarddata"
-      }, {
-        shape: "rect",
-        title: "BS2SmartCardHeader",
-        coords: "1115,34,1597,609",
-        href: "#bs2smartcardheader"
-      }, {
-        shape: "rect",
-        title: "BS2SmartCardCredentials",
-        coords: "1115,655,1597,868",
-        href: "#bs2smartcardcredentials"
-      }, {
-        shape: "rect",
-        title: "BS2AccessOnCardData",
-        coords: "1115,914,1597,1154",
-        href: "#bs2accessoncarddata"
-      }]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Clicking on the structure in the image will take you to the details of that structure."
-      })
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-hierarchy",
-      children: "Structure Hierarchy"
-    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct, {
-      name: "BS2SmartCardData",
-      description: "Composite structure containing all data of SmartCard.",
-      category: "Smart Card",
-      size: "1656",
-      hierarchy: [{
-        name: "BS2SmartCardData",
-        type: "composite struct",
-        size: 1656,
-        description: "Container for all SmartCard data",
-        children: [{
-          name: "BS2SmartCardHeader",
-          type: "struct",
-          size: 16,
-          description: "SmartCard header structure",
-          children: [{
-            name: "Checksum Area",
-            description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
-            children: [{
-              name: "hdrCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "Checksum value of the card header. (cardCRC - reserved)"
-            }, {
-              name: "cardCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
-            }]
-          }, {
-            name: "Card Metadata",
-            description: "Card type and template information",
-            children: [{
-              name: "cardType",
-              type: "BS2_CARD_TYPE",
-              size: 1,
-              description: "Code value of card type.",
-              constants: [{
-                value: "0x02",
-                description: "Secure Credential Card (SCC)"
-              }, {
-                value: "0x03",
-                description: "Access on Card (AOC)"
-              }]
-            }, {
-              name: "numOfTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."]
-            }, {
-              name: "templateSize",
-              type: "uint16_t",
-              size: 2,
-              description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
-              notes: ["When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.", "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."]
-            }, {
-              name: "issueCount",
-              type: "uint16_t",
-              size: 2,
-              description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
-            }, {
-              name: "duressMask",
-              type: "uint8_t",
-              size: 1,
-              description: "Mask for whether there is a duress fingerprint."
-            }, {
-              name: "numOfFaceTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 1 face template."]
-            }, {
-              name: "reserved",
-              type: "uint8_t[1]",
-              size: 1,
-              description: "Reserved."
-            }]
-          }, {
-            name: "Authentication Settings",
-            description: "Card authentication modes and options",
-            children: [{
-              name: "cardAuthMode",
-              type: "uint8_t",
-              size: 1,
-              description: "Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."],
-              constants: [{
-                value: "2",
-                description: "Card authentication only"
-              }, {
-                value: "3",
-                description: "Card and fingerprint authentication"
-              }, {
-                value: "4",
-                description: "Card and PIN authentication"
-              }, {
-                value: "5",
-                description: "Fingerprint or PIN authentication after card authentication"
-              }, {
-                value: "6",
-                description: "Card, fingerprint, and PIN authentication"
-              }, {
-                value: "254",
-                description: "Not usable"
-              }, {
-                value: "255",
-                description: "Undefined (operates in a mode defined by the system)"
-              }]
-            }, {
-              name: "cardAuthModeEx",
-              type: "uint8_t",
-              size: 1,
-              description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.", "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."],
-              constants: [{
-                value: "21",
-                description: "Card"
-              }, {
-                value: "22",
-                description: "Card + Face"
-              }, {
-                value: "23",
-                description: "Card + Fingerprint"
-              }, {
-                value: "24",
-                description: "Card + PIN"
-              }, {
-                value: "26",
-                description: "Card + Face or PIN"
-              }, {
-                value: "27",
-                description: "Card + Fingerprint or PIN"
-              }, {
-                value: "28",
-                description: "Card + Face or Fingerprint or PIN"
-              }, {
-                value: "30",
-                description: "Card + Face + PIN"
-              }, {
-                value: "32",
-                description: "Card + Fingerprint + PIN"
-              }, {
-                value: "33",
-                description: "Card + Face or Fingerprint + PIN"
-              }, {
-                value: "254",
-                description: "Not usable"
-              }, {
-                value: "255",
-                description: "Undefined (system-defined mode)"
-              }]
-            }, {
-              name: "useAlphanumericID",
-              type: "uint8_t",
-              size: 1,
-              description: "Flag indicating whether to use Alphanumeric ID."
-            }]
-          }]
-        }, {
-          name: "cardID",
-          type: "uint8_t[BS2_CARD_DATA_SIZE]",
-          size: 32,
-          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
-          children: [{
-            name: "cardID: Access on Card (AOC)",
-            type: "bytes[0-31]",
-            size: 32,
-            description: "AOC: Uses the entire 32 bytes."
-          }, {
-            name: "cardID: Secure Credential Card (SCC)",
-            type: "bytes[0-31]",
-            size: 32,
-            description: "SCC: Card ID (32 bytes)",
-            children: [{
-              name: "cardID (SCC)",
-              type: "bytes[0-23]",
-              size: 24,
-              description: "SCC: Card ID (24 bytes)"
-            }, {
-              name: "issueCount (SCC)",
-              type: "bytes[24-27]",
-              size: 4,
-              description: "SCC: Issue count"
-            }, {
-              name: "timeStamp (SCC)",
-              type: "bytes[28-31]",
-              size: 4,
-              description: "SCC: Issue time"
-            }]
-          }]
-        }, {
-          name: "BS2SmartCardCredentials",
-          type: "struct",
-          size: 1568,
-          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
-          children: [{
-            name: "pin",
-            type: "uint8_t[BS2_PIN_HASH_SIZE]",
-            size: 32,
-            description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
-            notes: ["PIN codes cannot be used in third-party tools."]
-          }, {
-            name: "templateData",
-            type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
-            size: 1536,
-            description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
-            children: [{
-              name: "Fingerprint Templates",
-              description: "Supports up to 4 fingerprint templates.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "First fingerprint template"
-              }, {
-                name: "Template 2",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Second fingerprint template"
-              }, {
-                name: "Template 3",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Third fingerprint template"
-              }, {
-                name: "Template 4",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Fourth fingerprint template"
-              }]
-            }, {
-              name: "Face Template",
-              description: "Supports up to 1 face template with size 552.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[552]",
-                size: 552,
-                description: "Face template"
-              }]
-            }]
-          }]
-        }, {
-          name: "BS2AccessOnCardData",
-          type: "struct",
-          size: 40,
-          description: "Area used in AOC cards that contains access group information.",
-          children: [{
-            name: "accessGroupID",
-            type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
-            size: 32,
-            description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
-            children: [{
-              name: "Group ID 1",
-              type: "uint16_t",
-              size: 2,
-              description: "First access group"
-            }, {
-              name: "Group ID 2",
-              type: "uint16_t",
-              size: 2,
-              description: "Second access group"
-            }, {
-              name: "...",
-              type: "uint16_t",
-              size: 2,
-              description: "..."
-            }, {
-              name: "Group ID 16",
-              type: "uint16_t",
-              size: 2,
-              description: "Last access group"
-            }]
-          }, {
-            name: "Time Restrictions",
-            description: "Time range for access permissions.",
-            children: [{
-              name: "startTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
-            }, {
-              name: "endTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
-            }]
-          }]
-        }]
-      }]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "crc",
-      children: "CRC Calculation and Validation"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["CRC-16 CCITT checksums (", (0,jsx_runtime.jsx)(_components.code, {
-        children: "hdrCRC"
-      }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "cardCRC"
-      }), ") are used for the header and card data respectively, to ensure the integrity of SmartCard data."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "hdrcrc-cardcrc",
-      children: "What are hdrCRC and cardCRC?"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "hdrCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "cardCRC"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "reserved"
-          }), " (14 bytes total) of ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "BS2SmartCardHeader"
-          }), "."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "cardCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "cardType"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "BS2SmartCardData.accessOnData"
-          }), " (total card data excluding the header)."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "crc-calculation",
-      children: "How to Calculate CRC"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "https://kb.supremainc.com/bs2sdk/doku.php",
-        children: "BioStar 2 SDK"
-      }), " provides the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BS2_ComputeCRC16CCITT"
-      }), " function. Below is an example of its use."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-csharp",
-        metastring: "title='Calculate checksum'",
-        children: "// Calculate card data checksum (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);\n\n// Calculate header checksum (hdrCRC)\ncard.header.cardCRC = cardCRC;  // Set the cardCRC value first\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardType"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "accessOnData"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "reserved"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Always calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " first, set it in the header, then calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), "."]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "crc-validation",
-      children: "How to Validate"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To validate the integrity of card data when reading, do the following:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Recalculate CRC using data read from the card."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Compare the stored CRC value with the calculated CRC value."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-csharp",
-        metastring: "title='CRC Validation'",
-        children: "// CRC validation example\nBS2SmartCardData readCard;  // Data read from card\n\n// 1. cardCRC validation\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // Card data corruption\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC validation\nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // Header data corruption\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "note",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Cautions for CRC Calculation"
-        })
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Calculation Order"
-            }), ": Calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " first, set it in the header, and then calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Structure Alignment"
-            }), ": Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Initial Value"
-            }), ": CRC-16 CCITT uses polynomial 0x1021 and ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "initial value 0xFFFF"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "SDK Function"
-            }), ": The ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "BS2_ComputeCRC16CCITT"
-            }), " function is provided in the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://kb.supremainc.com/bs2sdk/doku.php",
-              children: "BioStar 2 SDK"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Data Order"
-            }), ": Input data is processed in little-endian byte order."]
-          }), "\n"]
-        }), "\n"]
-      })]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.a)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-
-
-
-}),
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7048"], {
 20699: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
@@ -1667,7 +467,483 @@ function Admonition(unprocessedProps) {
 
 
 }),
-78898: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+87028: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Z: () => (/* binding */ DocItemLayout)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(85893);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(67294);
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(67026);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/hooks/useWindowSize.js
+var useWindowSize = __webpack_require__(54704);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
+var doc = __webpack_require__(63712);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Paginator/index.js + 2 modules
+var Paginator = __webpack_require__(42223);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBanner/index.js
+var DocVersionBanner = __webpack_require__(59580);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBadge/index.js
+var DocVersionBadge = __webpack_require__(46035);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Footer/index.js + 11 modules
+var Footer = __webpack_require__(27222);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Mobile/index.js + 1 modules
+var Mobile = __webpack_require__(90097);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js + 2 modules
+var Desktop = __webpack_require__(39809);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
+var ThemeClassNames = __webpack_require__(84681);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js + 1 modules
+var Heading = __webpack_require__(34403);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js
+var MDXContent = __webpack_require__(95939);
+// EXTERNAL MODULE: ./src/theme/Admonition/index.js + 14 modules
+var Admonition = __webpack_require__(79954);
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(16550);
+;// CONCATENATED MODULE: ./src/theme/DocItem/Content/index.js
+
+
+
+
+
+
+
+
+
+/**
+ Title can be declared inside md content or declared through
+ front matter and added manually. To make both cases consistent,
+ the added title is added under the same div.markdown block
+ See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
+
+ We render a "synthetic title" if:
+ - user doesn't ask to hide it with front matter
+ - the markdown content does not already contain a top-level h1 heading
+*/ function useSyntheticTitle() {
+    const { metadata, frontMatter, contentTitle } = (0,doc/* useDoc */.k)();
+    const shouldRender = !frontMatter.hide_title && typeof contentTitle === 'undefined';
+    if (!shouldRender) {
+        return null;
+    }
+    return metadata.title;
+}
+function DocItemContent(param) {
+    let { children } = param;
+    const { frontMatter } = (0,doc/* useDoc */.k)();
+    const syntheticTitle = useSyntheticTitle();
+    const headingClassName = frontMatter.heading_className || null;
+    const location = (0,react_router/* useLocation */.TH)();
+    (0,react.useEffect)(()=>{
+        if (location.hash) {
+            const targetId = location.hash.substring(1);
+            const decodedTargetId = decodeURI(targetId);
+            const targetElement = document.getElementById(decodedTargetId);
+            if (targetElement) {
+                const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [
+        location.hash
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: (0,clsx/* default */.Z)(ThemeClassNames/* ThemeClassNames,docs,docMarkdown */.k.docs.docMarkdown, 'markdown'),
+        children: [
+            syntheticTitle && /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
+                    as: "h1",
+                    className: headingClassName,
+                    children: syntheticTitle
+                })
+            }),
+            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsxs)(Admonition/* default */.Z, {
+                type: "note",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("b", {
+                        children: "Not translated"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("br", {}),
+                    "This page is currently being translated. We will complete the translation as soon as possible."
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
+                children: children
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsUtils.js
+var docsUtils = __webpack_require__(69369);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/routesUtils.js
+var routesUtils = __webpack_require__(79246);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__(83012);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__(96025);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(4757);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Icon/Home/index.js
+var Home = __webpack_require__(24244);
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const styles_module = ({"breadcrumbHomeIcon":"breadcrumbHomeIcon_xK9p"});
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/index.js
+
+
+
+
+
+
+
+function HomeBreadcrumbItem() {
+    const homeHref = (0,useBaseUrl/* default */.ZP)('/');
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+        className: "breadcrumbs__item",
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+            "aria-label": (0,Translate/* translate */.I)({
+                id: 'theme.docs.breadcrumbs.home',
+                message: 'Home page',
+                description: 'The ARIA label for the home page in the breadcrumbs'
+            }),
+            className: "breadcrumbs__link",
+            href: homeHref,
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Home/* default */.Z, {
+                className: styles_module.breadcrumbHomeIcon
+            })
+        })
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(94819);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/structuredDataUtils.js
+var structuredDataUtils = __webpack_require__(82488);
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/StructuredData/index.js
+
+
+
+
+function DocBreadcrumbsStructuredData(props) {
+    const structuredData = (0,structuredDataUtils/* useBreadcrumbsStructuredData */.o)({
+        breadcrumbs: props.breadcrumbs
+    });
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* default */.Z, {
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
+            type: "application/ld+json",
+            children: JSON.stringify(structuredData)
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const DocBreadcrumOption_styles_module = ({"btnprint":"btnprint_MOIq","feedback__button":"feedback__button_L4gG"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/ExecutionEnvironment.js
+var ExecutionEnvironment = __webpack_require__(57565);
+;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/index.js
+
+
+
+
+const DocuementButton = ()=>{
+    const [isClient, setIsClient] = (0,react.useState)(false);
+    (0,react.useEffect)(()=>{
+        if (ExecutionEnvironment/* default,canUseDOM */.Z.canUseDOM) {
+            setIsClient(true);
+        }
+    }, []);
+    const handleButtonClick = ()=>{
+        if (!isClient) return;
+        // 모든 details 요소에 open 속성을 부여하고 하위에 있는 div 요소에 display: block 스타일을 적용
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach((detailsElement)=>{
+            detailsElement.setAttribute('open', true);
+            const childDivs = detailsElement.querySelectorAll('div');
+            childDivs.forEach((div)=>{
+                div.style.display = 'block';
+                div.style.overflow = 'visible';
+                div.style.height = 'auto';
+            });
+        });
+        window.print();
+    };
+    const curLocation = isClient ? window.location.href : '';
+    const destURL = encodeURIComponent(curLocation);
+    const target = `https://forms.office.com/Pages/ResponsePage.aspx?id=_bYDU8LVnkqxz7A7AWK9TZ3QlIh-_zNBvEgx2mDsll1UQjNOVDhQNEFHUjMyTUw4NUZWWktMTUwwTi4u&r41f093b8508c4bf1996887fab4eb1ad0=${destURL}`;
+    // 팝업 창의 크기와 위치 설정 
+    const popupWidth = 600;
+    const popupHeight = 800;
+    const browserWidth = isClient ? window.innerWidth : 0;
+    const browserHeight = isClient ? window.innerHeight : 0;
+    const left = isClient ? (browserWidth - popupWidth) / 2 + window.screenX : 0;
+    const top = isClient ? (browserHeight - popupHeight) / 2 + window.screenY : 0;
+    const popupOptions = `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`;
+    const gotoFeedback = ()=>{
+        if (!isClient) return;
+        window.open(target, '_blank', popupOptions);
+    };
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: DocBreadcrumOption_styles_module.btnprint,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                onClick: handleButtonClick,
+                disabled: !isClient,
+                children: "PDF"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                onClick: gotoFeedback,
+                className: DocBreadcrumOption_styles_module.feedback__button,
+                disabled: !isClient,
+                children: "Feedback"
+            })
+        ]
+    });
+};
+/* ESM default export */ const DocBreadcrumOption = (DocuementButton);
+
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const DocBreadcrumbs_styles_module = ({"breadcrumbsContainer":"breadcrumbsContainer_Alpn"});
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO move to design system folder
+function BreadcrumbsItemLink(param) {
+    let { children, href, isLast } = param;
+    const className = 'breadcrumbs__link';
+    if (isLast) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+            className: className,
+            children: children
+        });
+    }
+    return href ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* default */.Z, {
+        className: className,
+        href: href,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+            children: children
+        })
+    }) : /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+        className: className,
+        children: children
+    });
+}
+// TODO move to design system folder
+function BreadcrumbsItem(param) {
+    let { children, active, index } = param;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+        className: (0,clsx/* default */.Z)('breadcrumbs__item', {
+            'breadcrumbs__item--active': active
+        }, 'item-' + String(index + 1)),
+        children: children
+    });
+}
+function DocBreadcrumbs() {
+    const breadcrumbs = (0,docsUtils/* useSidebarBreadcrumbs */.s1)();
+    const homePageRoute = (0,routesUtils/* useHomePageRoute */.Ns)();
+    if (!breadcrumbs) {
+        return null;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbsStructuredData, {
+                breadcrumbs: breadcrumbs
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("nav", {
+                className: (0,clsx/* default */.Z)(ThemeClassNames/* ThemeClassNames,docs,docBreadcrumbs */.k.docs.docBreadcrumbs, DocBreadcrumbs_styles_module.breadcrumbsContainer),
+                "aria-label": (0,Translate/* translate */.I)({
+                    id: 'theme.docs.breadcrumbs.navAriaLabel',
+                    message: 'Breadcrumbs',
+                    description: 'The ARIA label for the breadcrumbs'
+                }),
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
+                        className: "breadcrumbs",
+                        children: [
+                            homePageRoute && /*#__PURE__*/ (0,jsx_runtime.jsx)(HomeBreadcrumbItem, {}),
+                            breadcrumbs.map((item, idx)=>{
+                                const isLast = idx === breadcrumbs.length - 1;
+                                const href = item.type === 'category' && item.linkUnlisted ? undefined : item.href;
+                                return /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItem, {
+                                    index: idx,
+                                    active: isLast,
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItemLink, {
+                                        href: href,
+                                        isLast: isLast,
+                                        children: item.label
+                                    })
+                                }, idx);
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumOption, {})
+                ]
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ContentVisibility/index.js + 3 modules
+var ContentVisibility = __webpack_require__(45427);
+;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Layout_styles_module = ({"docItemContainer":"docItemContainer_c0TR","docItemCol":"docItemCol_z5aJ"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
+var TOCItems = __webpack_require__(76365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCCollapsible/index.js + 3 modules
+var TOCCollapsible = __webpack_require__(35434);
+;// CONCATENATED MODULE: ./src/components/GenerateToc/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const GenerateToc_styles_module = ({"tableOfContents":"tableOfContents_pzBX","docItemContainer":"docItemContainer_EhBe","tocMobile":"tocMobile_XdKt"});
+;// CONCATENATED MODULE: ./src/components/GenerateToc/index.js
+
+
+
+
+
+
+
+
+function GenerateTOC(param) {
+    let { className, device, ...props } = param;
+    const [tocItems, setTocItems] = (0,react.useState)([]);
+    const { frontMatter } = (0,doc/* useDoc */.k)();
+    (0,react.useEffect)(()=>{
+        // 페이지가 렌더링된 후에 TOC를 생성합니다.
+        const headers = document.querySelectorAll('h2:not(.margin-bottom--lg h2), h3:not(.margin-bottom--lg h3), h4:not(.margin-bottom--lg h4)');
+        const collectedToc = Array.from(headers).map((header)=>({
+                value: header.innerText,
+                id: header.id,
+                level: parseInt(header.tagName[1], 10)
+            }));
+        // TOC 데이터 수집
+        setTocItems(collectedToc);
+    }, []);
+    const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight';
+    const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
+    if (device === 'desktop') {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            className: (0,clsx/* default */.Z)(GenerateToc_styles_module.tableOfContents, 'thin-scrollbar', className),
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCItems/* default */.Z, {
+                toc: tocItems,
+                linkClassName: LINK_CLASS_NAME,
+                linkActiveClassName: LINK_ACTIVE_CLASS_NAME,
+                minHeadingLevel: frontMatter.toc_min_heading_level,
+                maxHeadingLevel: frontMatter.toc_max_heading_level,
+                ...props
+            })
+        });
+    } else if (device === 'mobile') {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCCollapsible/* default */.Z, {
+            toc: tocItems,
+            minHeadingLevel: frontMatter.toc_min_heading_level,
+            maxHeadingLevel: frontMatter.toc_max_heading_level,
+            className: (0,clsx/* default */.Z)(ThemeClassNames/* ThemeClassNames,docs,docTocMobile */.k.docs.docTocMobile, GenerateToc_styles_module.tocMobile)
+        });
+    }
+}
+
+;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Decide if the toc should be rendered, on mobile or desktop viewports
+ */ function useDocTOC() {
+    const { frontMatter, toc } = (0,doc/* useDoc */.k)();
+    const windowSize = (0,useWindowSize/* useWindowSize */.i)();
+    const hidden = frontMatter.hide_table_of_contents;
+    const canRender = !hidden && toc.length > 0;
+    const mobile = canRender ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Mobile/* default */.Z, {}) : undefined;
+    const desktop = canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Desktop/* default */.Z, {}) : undefined;
+    return {
+        hidden,
+        mobile,
+        desktop
+    };
+}
+function DocItemLayout(param) {
+    let { children } = param;
+    const docTOC = useDocTOC();
+    const { metadata } = (0,doc/* useDoc */.k)();
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: "row",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: (0,clsx/* default */.Z)('col', !docTOC.hidden && Layout_styles_module.docItemCol),
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(ContentVisibility/* default */.Z, {
+                        metadata: metadata
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBanner/* default */.Z, {}),
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: Layout_styles_module.docItemContainer,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbs, {}),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBadge/* default */.Z, {}),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
+                                        device: "mobile"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemContent, {
+                                        children: children
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(Footer/* default */.Z, {})
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Paginator/* default */.Z, {})
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: "col col--3",
+                children: !docTOC.hidden ? /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
+                    device: "desktop"
+                }) : null
+            })
+        ]
+    });
+}
+
+
+}),
+79841: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -3625,7 +2901,7 @@ function Description(param) {
         children: contents
     });
 }
-function SpecSectioin(param) {
+function SpecSection(param) {
     let { data } = param;
     const specs = data.items;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
@@ -4517,6 +3793,16 @@ function Treeview(param) {
 
 // EXTERNAL MODULE: ./node_modules/react-youtube/dist/YouTube.esm.js
 var YouTube_esm = __webpack_require__(13913);
+;// CONCATENATED MODULE: ./src/components/Pagebreak/index.js
+
+function PageBreak() {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: "page-break"
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/react-magnifier/dist/Magnifier.es.js
+var Magnifier_es = __webpack_require__(35495);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -6544,6 +5830,8 @@ const SvgIcoCameraOk = ({
 
 
 
+
+
 // icon images svg
 
 
@@ -6654,7 +5942,7 @@ const SvgIcoCameraOk = ({
     Productpart: Productpart,
     Callout: Callout,
     Item: Item,
-    SpecSectioin: SpecSectioin,
+    SpecSection: SpecSection,
     SpecSizeWieght: SpecSizeWieght,
     Anno: Anno,
     Faqs: Faqs,
@@ -6663,6 +5951,8 @@ const SvgIcoCameraOk = ({
     DocLink: DocLink,
     Treeview: Treeview,
     YouTube: YouTube_esm/* default */.Z,
+    PageBreak: PageBreak,
+    Magnifier: Magnifier_es/* default */.Z,
     IcSvTime: ico_serverTime,
     IcAccout: ico_account,
     IcHelp: ico_help,

@@ -62,22 +62,22 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Anno, SpecSectioin, SpecSizeWieght} = _components;
+  }, {Anno, SpecSection, SpecSizeWieght} = _components;
   if (!Anno) _missingMdxReference("Anno", true);
-  if (!SpecSectioin) _missingMdxReference("SpecSectioin", true);
+  if (!SpecSection) _missingMdxReference("SpecSection", true);
   if (!SpecSizeWieght) _missingMdxReference("SpecSizeWieght", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다."
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(SpecSectioin, {
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bew3_specs_namespaceObject.l.K9
-    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSectioin, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bew3_specs_namespaceObject.l.Cg
-    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSectioin, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bew3_specs_namespaceObject.l.tO
-    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSectioin, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bew3_specs_namespaceObject.l.w3
-    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSectioin, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bew3_specs_namespaceObject.l.qu
     }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSizeWieght, {
       data: bew3_specs_namespaceObject.l.GI

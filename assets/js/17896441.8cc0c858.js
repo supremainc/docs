@@ -943,7 +943,7 @@ function DocItemLayout(param) {
 
 
 }),
-78898: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+79841: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -2901,7 +2901,7 @@ function Description(param) {
         children: contents
     });
 }
-function SpecSectioin(param) {
+function SpecSection(param) {
     let { data } = param;
     const specs = data.items;
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
@@ -3793,6 +3793,16 @@ function Treeview(param) {
 
 // EXTERNAL MODULE: ./node_modules/react-youtube/dist/YouTube.esm.js
 var YouTube_esm = __webpack_require__(13913);
+;// CONCATENATED MODULE: ./src/components/Pagebreak/index.js
+
+function PageBreak() {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: "page-break"
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/react-magnifier/dist/Magnifier.es.js
+var Magnifier_es = __webpack_require__(35495);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -5820,6 +5830,8 @@ const SvgIcoCameraOk = ({
 
 
 
+
+
 // icon images svg
 
 
@@ -5930,7 +5942,7 @@ const SvgIcoCameraOk = ({
     Productpart: Productpart,
     Callout: Callout,
     Item: Item,
-    SpecSectioin: SpecSectioin,
+    SpecSection: SpecSection,
     SpecSizeWieght: SpecSizeWieght,
     Anno: Anno,
     Faqs: Faqs,
@@ -5939,6 +5951,8 @@ const SvgIcoCameraOk = ({
     DocLink: DocLink,
     Treeview: Treeview,
     YouTube: YouTube_esm/* default */.Z,
+    PageBreak: PageBreak,
+    Magnifier: Magnifier_es/* default */.Z,
     IcSvTime: ico_serverTime,
     IcAccout: ico_account,
     IcHelp: ico_help,
