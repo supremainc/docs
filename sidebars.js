@@ -661,6 +661,23 @@ const sidebars = {
       ]
     }
   ],
+  corestation20: [
+    {
+      type: 'category',
+      label: 'CoreStation 20',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_20/index',
+      },
+      items: [
+        'device/corestation_20/safety-instructions',
+        'device/corestation_20/getting-started',
+      ]
+    }
+  ],
   facestation3: [
     {
       type: 'category',
