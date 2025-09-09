@@ -433,26 +433,6 @@ function BiometricReader(param) {
             height: '85px'
         },
         {
-            title: 'FaceStation 2',
-            url: '#',
-            img: 'https://supremainc.com/ko/asset/images/thumbnail/facestation2.png',
-            desc: `${(0,Translate/* translate */.I)({
-                id: "externalLinks.FaceStation2.desc",
-                message: "\uC5BC\uAD74\uC778\uC99D \uCD9C\uC785\uADFC\uD0DC \uB2E8\uB9D0\uAE30"
-            })}`,
-            height: '90px'
-        },
-        {
-            title: 'BioStation L2',
-            url: '#',
-            img: 'https://supremainc.com/ko/asset/images/thumbnail/biostationl2.png',
-            desc: `${(0,Translate/* translate */.I)({
-                id: "externalLinks.BioStationL2.desc",
-                message: "\uC9C0\uBB38\uC778\uC2DD \uCD9C\uC785\uADFC\uD0DC \uB2E8\uB9D0\uAE30"
-            })}`,
-            height: '90px'
-        },
-        {
             title: 'BioLite N2',
             url: '#',
             img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
@@ -547,15 +527,6 @@ function RfMobileDevices(param) {
             desc: `${(0,Translate/* translate */.I)({
                 id: "externalLinks.XPass2.desc"
             })}`
-        },
-        {
-            title: 'Airfob Patch',
-            url: '#',
-            img: 'https://supremainc.com/en/asset/images/thumbnail/Airfob Patch.png',
-            desc: `${(0,Translate/* translate */.I)({
-                id: "externalLinks.Aiirfobpatch.desc",
-                message: "\uBAA8\uBC14\uC77C \uCD9C\uC785\uCE74\uB4DC \uBCC0\uD658\uC7A5\uCE58"
-            })}`
         }
     ];
     const productLinks = productLinksProp || defaultProductLinks;
@@ -592,6 +563,49 @@ function IntenlligentController(param) {
             desc: `${(0,Translate/* translate */.I)({
                 id: "externalLinks.CoreStationEnclosure.desc",
                 message: "CoreStation \uC804\uC6A9 \uD568\uCCB4"
+            })}`
+        }
+    ];
+    const productLinks = productLinksProp || defaultProductLinks;
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: (0,dist_clsx/* default */.Z)('container', styles_module.product, styles_module.grid),
+        children: productLinks.map((props, idx)=>/*#__PURE__*/ (0,jsx_runtime.jsx)(CardItem, {
+                ...props
+            }, idx))
+    });
+}
+function Peripheral(param) {
+    let { productLinks: productLinksProp } = param;
+    const { i18n: { currentLocale } } = (0,useDocusaurusContext/* default */.Z)();
+    const defaultProductLinks = [
+        {
+            title: 'Input Module',
+            url: '#',
+            img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
+            height: '90px',
+            desc: `${(0,Translate/* translate */.I)({
+                id: "externalLinks.peripheral.im120.desc",
+                message: "\uB2E4\uC911 \uC785\uB825 \uD655\uC7A5 \uBAA8\uB4C8"
+            })}`
+        },
+        {
+            title: 'Output Module',
+            url: '#',
+            img: 'https://supremainc.com/ko/asset/images/thumbnail/om-120.png',
+            height: '90px',
+            desc: `${(0,Translate/* translate */.I)({
+                id: "externalLinks.peripheral.om120.desc",
+                message: "\uB2E4\uC911 \uCD9C\uB825 \uC81C\uC5B4 \uBAA8\uB4C8"
+            })}`
+        },
+        {
+            title: 'Secure Module',
+            url: '#',
+            img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',
+            height: '90px',
+            desc: `${(0,Translate/* translate */.I)({
+                id: "externalLinks.peripheral.sio2.desc",
+                message: "\uCD9C\uC785\uBB38 \uBCF4\uC548 \uCEE8\uD2B8\uB864 \uBAA8\uB4C8"
             })}`
         }
     ];
@@ -1048,6 +1062,14 @@ function Home() {
                     })
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)(IntenlligentController, {}),
+                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
+                        as: "h2",
+                        children: "Peripherals"
+                    })
+                }),
+                /*#__PURE__*/ (0,jsx_runtime.jsx)(Peripheral, {}),
                 /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
                     className: (0,dist_clsx/* default */.Z)('container', index_module.headsec),
                     children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* default */.Z, {
