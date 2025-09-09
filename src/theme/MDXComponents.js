@@ -143,7 +143,7 @@ export default {
     BugLists,
     Jira,
     Productpart, Callout, Item,
-    SpecSectioin, SpecSizeWieght, Anno,
+    SpecSection, SpecSizeWieght, Anno,
     Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnifier,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
