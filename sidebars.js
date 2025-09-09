@@ -36,6 +36,7 @@ const sidebars = {
             'platform/biostar_air/what-is-biostar-air',
             'platform/biostar_air/access-control-hardware-compatibility',
             'platform/biostar_air/security-overview',
+            'platform/biostar_air/site-setup-networking',
             'platform/biostar_air/biostar-air-migration',
           ]
         },
