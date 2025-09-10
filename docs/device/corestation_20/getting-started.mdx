@@ -11,27 +11,39 @@ keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
 
 <Table className='component'>
 <Tbody>
+
 <Row className='center white'>
-<Td rowSpan={3}><Image src='/img/device/component-device-cs20.svg' className='none' height={350} alone /></Td>
+<Td rowspan={3}><Image src='/img/device/component-device-cs20.svg' className='none' height={350} alone /></Td>
 <Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
 </Row>
+
 <Row className='center'>
 <Td>퀵 가이드</Td>
 </Row>
+
 <Row className='center white'>
 <Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
 </Row>
+
 <Row className='center'>
+
 <Td>CoreStation 20</Td>
+
 <Td>오픈소스라이선스 가이드</Td>
+
 </Row>
+
 <Row className='center white'>
 <Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
 <Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
 </Row>
+
 <Row className='center'>
+
 <Td>고정용 나사 x6</Td>
+
 <Td>다이오드 x4</Td>
+
 </Row>
 </Tbody>
 </Table>
@@ -80,6 +92,8 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 
 :::
 
+<PageBreak />
+
 ### CoreStation 20 상태 LED
 
 CoreStation 20의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로 확인할 수 있으며, 이더넷, RS-485, RS-485 0, RS-485 1, 시스템의 상태를 1초씩 순서대로 보여줍니다.
@@ -108,10 +122,20 @@ CoreStation 20의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로
 | ^ | 흰색/노란색 점멸 | 시스템 잠금 (BioStar 2의 작업 조건 및 동작) |
 | ^ | 흰색/빨간색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) |
 
+<PageBreak />
+
 ### 설치 예제
 
 CoreStation 20은 중앙 집중식 출입 통제 시스템으로 엔터프라이즈급 환경을 위해 설계되었으며 최대 500,000명의 사용자 정보를 저장할 수 있습니다.
 
 BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
 
-<Image src='/img/device/installation-example-cs20.svg' width="100%" />
+<Image src='/img/device/installation-example-cs20.svg' width="70%" className='none print' />
+
+<PageBreak />
+
+### 시스템 구성도
+
+CoreStation 20은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+
+<Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
