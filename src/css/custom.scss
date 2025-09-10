@@ -698,12 +698,6 @@ footer {
     }
   }
   ul, ol {
-    li:only-child {
-      margin-left: -28px;
-    }
-    li:only-child::marker {
-      content: none;
-    }
     li {
       margin: var(--ifm-list-paragraph-margin) 0;
       p {
