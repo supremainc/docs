@@ -1371,6 +1371,14 @@ footer {
         float: left;
         width: 50%;
       }
+      .partname {
+        .col {
+          width: 100%;
+        }
+        .padding--l20 {
+          padding-left: 0 !important;
+        }
+      }
     }
     section.row {
       article {

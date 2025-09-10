@@ -678,6 +678,8 @@ const sidebars = {
         'device/corestation_20/getting-started',
         'device/corestation_20/installation',
         'device/corestation_20/product-specifications',
+        'device/corestation_20/regulatory-information',
+        'device/corestation_20/appendices'
       ]
     }
   ],

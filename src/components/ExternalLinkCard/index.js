@@ -242,7 +242,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     },
     {
       title: 'CoreStation 20',
-      url: '#',
+      url: '/device/corestation_20',
       img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
       desc: 'Powerful Security, Flexible Expansion'
     },
