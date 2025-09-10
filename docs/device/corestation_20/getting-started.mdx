@@ -139,3 +139,21 @@ BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 �
 CoreStation 20은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
 
 <Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
+
+:::info
+
+* RS-485 0 및 RS-485 1 포트에는 포트당 최대 2대의 장치를 연결할 수 있습니다.
+
+* RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
+
+* CS-20P 모델에 SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리더 포트에 직접 연결된 슬레이브 장치만 사용할 수 있습니다.
+
+* Door Interface를 호스트 포트에 슬레이브로 연결하면 CoreStation 20과의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다.
+
+:::
+
+<PageBreak />
+
+### 전체 연결 구성도
+
+<Magnifier src='/img/device/system-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
