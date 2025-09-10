@@ -928,6 +928,9 @@ footer {
   table {
     width: 100%;
     display: table;
+    tr.center td {
+      text-align: center;
+    }
     &.component {
       table-layout: fixed;
       tr.center td {
