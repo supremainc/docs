@@ -677,6 +677,7 @@ const sidebars = {
         'device/corestation_20/safety-instructions',
         'device/corestation_20/getting-started',
         'device/corestation_20/installation',
+        'device/corestation_20/product-specifications',
       ]
     }
   ],

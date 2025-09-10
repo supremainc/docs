@@ -464,6 +464,9 @@
   "specs.general": {
     "message": "General"
   },
+  "specs.general.modelName": {
+    "message": "Model"
+  },
   "specs.general.cpu": {
     "message": "CPU"
   },
@@ -496,6 +499,9 @@
   },
   "specs.general.storage_humidity": {
     "message": "Storage Humidity"
+  },
+  "specs.general.operating_condition": {
+    "message": "Operational Ambient Conditions"
   },
   "specs.general.camera": {
     "message": "Camera"
@@ -551,6 +557,15 @@
   "specs.interface.input": {
     "message": "Input"
   },
+  "specs.interface.output": {
+    "message": "Output"
+  },
+  "specs.interface.supervised": {
+    "message": "Supervised Input"
+  },
+  "specs.interface.auxInput": {
+    "message": "AUX Input"
+  },
   "specs.interface.ttl_input": {
     "message": "TTL Input"
   },
@@ -575,11 +590,17 @@
   "specs.interface.tamper": {
     "message": "Tamper"
   },
+  "specs.interface.samSlot": {
+    "message": "SAM Slot"
+  },
   "specs.power": {
     "message": "Electrical"
   },
   "specs.power.power": {
     "message": "Power"
+  },
+  "specs.power.power_output": {
+    "message": "Power Output"
   },
   "specs.power.switch_input_vih": {
     "message": "Switch Input VIH"
@@ -601,6 +622,9 @@
   },
   "specs.power.relay": {
     "message": "Relay"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE+ (12V out)"
   },
   "specs.size_weight": {
     "message": "Dimensions and Weight"

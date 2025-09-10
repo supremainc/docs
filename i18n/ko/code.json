@@ -464,6 +464,9 @@
   "specs.general": {
     "message": "일반"
   },
+  "specs.general.modelName": {
+    "message": "모델명"
+  },
   "specs.general.cpu": {
     "message": "CPU"
   },
@@ -496,6 +499,9 @@
   },
   "specs.general.storage_humidity": {
     "message": "보관 습도"
+  },
+  "specs.general.operating_condition": {
+    "message": "동작 환경 조건"
   },
   "specs.general.camera": {
     "message": "카메라"
@@ -551,6 +557,15 @@
   "specs.interface.input": {
     "message": "Input"
   },
+  "specs.interface.output": {
+    "message": "Output"
+  },
+  "specs.interface.supervised": {
+    "message": "Supervised 입력"
+  },
+  "specs.interface.auxInput": {
+    "message": "AUX 입력"
+  },
   "specs.interface.ttl_input": {
     "message": "TTL 입력"
   },
@@ -575,11 +590,17 @@
   "specs.interface.tamper": {
     "message": "템퍼"
   },
+  "specs.interface.samSlot": {
+    "message": "SAM 카드 슬롯"
+  },
   "specs.power": {
     "message": "전기 규격"
   },
   "specs.power.power": {
     "message": "전원"
+  },
+  "specs.power.power_output": {
+    "message": "전원 출력"
   },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
@@ -601,6 +622,9 @@
   },
   "specs.power.relay": {
     "message": "릴레이"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
     "message": "크기 및 무게"
