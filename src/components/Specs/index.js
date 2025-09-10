@@ -188,15 +188,13 @@ function DescObj( {contents} ) {
   // console.log(typeof contents[currentLocale]);
   if (typeof contents[currentLocale] === 'string') {
     return (
-      <>{contents[currentLocale]}</>
+      <span dangerouslySetInnerHTML={{__html: contents[currentLocale]}} />
     )
   } else if (typeof contents[currentLocale] === 'object') {
     return (
       <ul>
         {Object.values(contents[currentLocale]).map((item, index) => (
-          <li key={index}>
-            {item}
-          </li>
+          <li key={index} dangerouslySetInnerHTML={{__html: item}} />
         ))}
       </ul>
     )
