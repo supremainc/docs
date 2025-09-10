@@ -13,28 +13,24 @@ keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/device/component-device-bs3.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-device-bln2.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-wall-bracket-bs3.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-wall-bracket-bln2.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-drilling-template-bs3.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-drilling-template-bln2.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
-
-<Td><Image src='/img/device/component-connection-cables-bs3.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>BioStation 3</Td>
+<Td>BioLite N2</Td>
 
 <Td>벽걸이용 브래킷</Td>
 
 <Td>드릴링 템플릿</Td>
 
-<Td>퀵 가이드</Td>
-
-<Td>연결 케이블</Td>
+<Td>수축 튜브</Td>
 
 </Row>
 </Tbody>
@@ -42,28 +38,47 @@ keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
-
-<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
-
 <Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
 
 <Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
 
 </Row>
 <Row className='center'>
-
-<Td>다이오드</Td>
-
-<Td>120 Ω 저항</Td>
 
 <Td>PVC 앵커 x2</Td>
 
 <Td>고정용 나사 x2</Td>
 
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
 <Td>브래킷 고정용 나사(별 모양)</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>다이오드</Td>
 
 </Row>
 </Tbody>
@@ -75,93 +90,64 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 
 ## 각 부분의 명칭 및 기능
 
-<Image src='/img/device/name-function-each-part-bs3.png' className='none' width='60%' />
-
-* **마이크**: 인터폰 연결 시 사용자의 음성을 전달합니다.
-
-  * 마이크를 가리거나 막으면 음성 전달이 원활하지 않을 수 있습니다.
-
-* **적외선 카메라**: 적외선 이미지를 촬영합니다.
-
-* **비주얼 카메라**: 실제 이미지를 촬영합니다.
+<Image src='/img/device/name-function-each-part-bln2.png' className='none' width='60%' />
 
 * **디스플레이**: 동작을 위한 UI를 제공합니다.
 
+* **기능 버튼**: 근태 키, 문자 변경 등에 사용합니다.
+
+* **키패드**
+
+  * **0\~9**: 숫자 또는 문자를 입력할 때 사용합니다.
+
+  * **2**, **4**, **6**, **8**: 원하는 항목으로 이동할 때 사용합니다.
+
+* **OK 버튼**: 근태 모드 선택 및 설정을 저장할 때 사용합니다. 작업 코드가 설정되어 있다면 길게 눌러서 사용자의 작업 코드를 변경할 수 있습니다.
+
+* **ESC 버튼**: 메뉴 열기, 이전 화면으로 이동, 입력을 취소할 때 사용합니다.
+
+* **지문 인식부**: 출입을 위해 지문을 인식시키는 부분입니다.
+
 * **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
 
-* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
-
-  * 초록색: 인증 성공
-
-  * 빨간색: 인증 실패
-
-  * 파란색: 정상 동작 상태
-
-  * 파란색/초록색 점멸:
-
-    * <Cmd>DHCP</Cmd>를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
-
-    * <Cmd>슬레이브</Cmd> 모드일 때 마스터 장치와 연결이 끊어진 상태
-
-  * 빨간색/보라색 점멸: 장치 잠금 상태
-
-  * 노란색 점멸: 입력 대기 상태
+* **케이블**: 전원 케이블, RS-485 케이블, 이더넷 케이블, 릴레이 출력 케이블, Wiegand 입력/출력 케이블, Input 케이블
 
 * **스피커**: 소리를 들을 수 있습니다.
 
-* **이더넷**: 이더넷 케이블을 연결합니다.
+### 케이블 및 커넥터
 
-* **Input (5핀)**: Input 케이블을 연결합니다.
+<Columns>
+<Column>
 
-* **USB 확장 포트 (5핀)**: 기타 액세서리 제품을 연결할 수 있습니다.
+<Image src='/img/device/cables-layout-bln2.svg' alone width={500} className='none' />
 
-* **Wiegand 출력 (4핀)**: Wiegand 출력 케이블을 연결합니다.
+</Column>
+<Column className='padding--l10'>
 
-* **Wiegand 입력 (4핀)**: Wiegand 입력 케이블을 연결합니다.
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | PWR +VDC | 빨간색 |
+| 2 | PWR GND | 검은색 (흰띠) |
+| 3 | 485 TRXP | 파란색 (흰띠) |
+| 4 | 485 TRXN | 노란색 (검은띠) |
+| 5 | 485 GND | 흰색 (검은띠) |
+| 6 | ENET RXN | 노란색 |
+| 7 | ENET RXP | 초록색 |
+| 8 | ENET TXN | 빨간색 |
+| 9 | ENET TXP | 검은색 |
+| 10 | RLY NO | 회색 (흰띠) |
+| 11 | RLY COM | 초록색 (흰띠) |
+| 12 | RLY NC | 주황색 (흰띠) |
+| 13 | WG D0 | 초록색 |
+| 14 | WG D1 | 흰색 |
+| 15 | INPUT GND | 회색 |
+| 16 | INPUT1 | 갈색 |
+| 17 | INPUT0 | 보라색 |
 
-* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+</Column>
+</Columns>
 
-* **릴레이 (3핀)**: 릴레이 케이블을 연결합니다.
+{/* 올바른 지문 입력 방법 */}
+import Enroll_fingerprint from '../../common/_enroll-fingerprint.mdx'
 
-* **전원 (2핀)**: 전원 케이블을 연결합니다.
-
-* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
-
-{/* ## 케이블 및 커넥터 */}
-import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
-
-<CablesandConnectors />
-
-
-{/* 올바른 얼굴 등록 및 인증 방법 */}
-import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
-
-<DocumentA />
-
-## QR 코드 및 장치 라이선스에 대한 참고 사항
-
-### 올바른 QR 코드 인증 방법
-
-사용자에게 QR 코드를 발급하여 인증 수단으로 사용할 수 있습니다. 인식률을 높이기 위해 화면의 안내에 따라 올바르게 QR 코드를 스캔하세요.
-
-<Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
-
-* 장치의 카메라와 QR 코드 사이의 거리를 30 ~ 40 cm로 유지하세요.
-
-* QR 코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요.
-
-* 모바일 장치에 내려받은 QR 코드로 인증할 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하세요.
-
-* 화면의 지시에 따르지 않을 경우 QR 코드 인식이 오래 걸리거나 실패할 수 있습니다.
-
-### 장치 라이선스 참고 사항
-
-* QR 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요.
-
-* 장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다.
-
-* 장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다.
-
-import Masteradmin_settings from '../../common/_master-admin-settings.mdx'
-
-<Masteradmin_settings />
+<Enroll_fingerprint />
