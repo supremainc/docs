@@ -1,0 +1,534 @@
+---
+id: troubleshooting
+title: 테스트 및 문제 해결
+description: BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다.
+keywords: [플러그인 테스트, 문제 해결, 디버깅, 오류 해결]
+---
+
+# 테스트 및 문제 해결
+
+BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들과 해결 방법을 설명합니다.
+
+## 개발 단계 테스트
+
+### 1. ping 엔드포인트 테스트
+
+플러그인 등록 전에 ping 엔드포인트가 올바르게 작동하는지 확인합니다.
+
+**테스트 명령:**
+```bash
+curl -H "X-BioStar-Ping: test123" http://localhost:8000/your-plugin-path
+```
+
+**예상 응답:**
+```json
+{
+    "token": "test123"
+}
+```
+
+**Python 테스트 스크립트:**
+```python
+import requests
+
+def test_ping_endpoint():
+    url = "http://localhost:8000/your-plugin-path"
+    headers = {"X-BioStar-Ping": "test123"}
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        data = response.json()
+        if data.get("token") == "test123":
+            print("✅ Ping 엔드포인트 테스트 성공")
+        else:
+            print("❌ 응답 토큰이 일치하지 않습니다")
+    else:
+        print(f"❌ HTTP 상태 코드: {response.status_code}")
+
+test_ping_endpoint()
+```
+
+### 2. 콜백 엔드포인트 테스트
+
+사용자 인증 콜백 엔드포인트의 기본 동작을 테스트합니다.
+
+**테스트 명령:**
+```bash
+curl -X POST http://localhost:8000/your-plugin-path \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "user_id=test_user&plugin_id=test_plugin"
+```
+
+**매개변수 검증 테스트:**
+```bash
+# user_id 누락 테스트
+curl -X POST http://localhost:8000/your-plugin-path \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "plugin_id=test_plugin"
+
+# plugin_id 누락 테스트  
+curl -X POST http://localhost:8000/your-plugin-path \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "user_id=test_user"
+```
+
+### 3. 암호화 함수 테스트
+
+RSA 및 AES 암호화 함수가 올바르게 작동하는지 테스트합니다.
+
+**RSA 암호화 테스트:**
+```python
+def test_rsa_encryption():
+    # 테스트 메시지
+    test_message = "test_aes_key_123456789012345678901234"
+    
+    try:
+        # 암호화
+        encrypted = encrypt_with_public_key(test_message, "public_key.pem")
+        print(f"✅ RSA 암호화 성공: {len(encrypted)} characters")
+        
+        # Base64 형식 검증
+        import base64
+        base64.b64decode(encrypted)
+        print("✅ Base64 형식 유효")
+        
+    except Exception as e:
+        print(f"❌ RSA 암호화 실패: {str(e)}")
+
+test_rsa_encryption()
+```
+
+**AES 복호화 테스트:**
+```python
+def test_aes_decryption():
+    # 테스트 키 및 데이터
+    test_key = "12345678901234567890123456789012"
+    test_data = "test_session_id_12345"
+    
+    try:
+        # AES 암호화 (테스트용)
+        from Crypto.Cipher import AES
+        from Crypto.Util.Padding import pad
+        import base64
+        
+        key_bytes = test_key.encode('utf-8')[:32]
+        iv = key_bytes[:16]
+        
+        cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
+        encrypted = cipher.encrypt(pad(test_data.encode('utf-8'), AES.block_size))
+        encrypted_b64 = base64.b64encode(encrypted).decode('utf-8')
+        
+        # 복호화 테스트
+        decrypted = decrypt_aes256_base64(encrypted_b64, test_key)
+        
+        if decrypted == test_data:
+            print("✅ AES 복호화 테스트 성공")
+        else:
+            print(f"❌ 복호화 결과 불일치: {decrypted} != {test_data}")
+            
+    except Exception as e:
+        print(f"❌ AES 복호화 실패: {str(e)}")
+
+test_aes_decryption()
+```
+
+## 등록 단계 문제 해결
+
+### 플러그인 등록 실패
+
+**문제: "서버에 연결할 수 없습니다"**
+
+**확인사항:**
+1. **서버 실행 상태**
+   ```bash
+   # 프로세스 확인
+   ps aux | grep python  # Linux
+   netstat -ano | findstr :8000  # Windows
+   ```
+
+2. **포트 접근 가능성**
+   ```bash
+   # 로컬에서 테스트
+   telnet localhost 8000
+   
+   # 외부에서 테스트 (BioStar X 서버에서)
+   telnet your-plugin-server 8000
+   ```
+
+3. **방화벽 설정**
+   ```bash
+   # Ubuntu/Debian
+   sudo ufw allow 8000
+   
+   # CentOS/RHEL
+   sudo firewall-cmd --add-port=8000/tcp --permanent
+   sudo firewall-cmd --reload
+   
+   # Windows
+   # Windows Defender 방화벽에서 포트 8000 허용 규칙 추가
+   ```
+
+**문제: "잘못된 응답 형식"**
+
+**해결방법:**
+```python
+# 올바른 응답 형식 확인
+@app.get("/your-plugin-path")
+async def ping_endpoint(request: Request):
+    ping_token = request.headers.get("x-biostar-ping")
+    
+    # 반드시 JSON 형식으로 응답
+    return {"token": ping_token}
+    
+    # 잘못된 예시들:
+    # return ping_token  # 문자열 직접 반환 (X)
+    # return f"token: {ping_token}"  # 문자열 형식 (X)
+    # return {"ping_token": ping_token}  # 키 이름 틀림 (X)
+```
+
+### URL 접근 문제
+
+**문제: "URL 형식이 유효하지 않습니다"**
+
+**올바른 URL 형식:**
+```
+✅ 올바른 예시:
+http://192.168.1.100:8000/my-plugin
+https://plugins.company.com/biostar-integration
+http://localhost:3000/ta-system
+
+❌ 잘못된 예시:
+192.168.1.100:8000/my-plugin  # http:// 누락
+http://192.168.1.100/  # 경로 누락
+https://plugins.company.com:  # 포트만 있고 경로 누락
+```
+
+**문제: "중복된 URL입니다"**
+- 이미 등록된 다른 플러그인과 동일한 URL 사용 불가
+- 기존 등록된 플러그인 목록 확인 필요
+- URL 경로 또는 포트 변경 필요
+
+## 세션 브리지 문제 해결
+
+### 인증서 관련 문제
+
+**문제: "공개키 파일을 찾을 수 없습니다"**
+
+**해결방법:**
+1. **파일 경로 확인**
+   ```python
+   import os
+   
+   public_key_path = "public_key.pem"
+   if not os.path.exists(public_key_path):
+       print(f"❌ 파일이 존재하지 않습니다: {public_key_path}")
+       print(f"현재 작업 디렉토리: {os.getcwd()}")
+       print("사용 가능한 파일:", os.listdir("."))
+   ```
+
+2. **파일 권한 확인**
+   ```bash
+   # Linux/macOS
+   ls -la public_key.pem
+   chmod 644 public_key.pem  # 읽기 권한 부여
+   
+   # Windows
+   # 파일 속성에서 읽기 권한 확인
+   ```
+
+**문제: "공개키 형식이 올바르지 않습니다"**
+
+**해결방법:**
+```python
+def validate_public_key(key_path):
+    try:
+        from cryptography.hazmat.primitives import serialization
+        
+        with open(key_path, 'rb') as f:
+            public_key = serialization.load_pem_public_key(f.read())
+        
+        # 키 정보 출력
+        key_size = public_key.key_size
+        print(f"✅ 공개키 유효 - 키 크기: {key_size} bits")
+        
+    except Exception as e:
+        print(f"❌ 공개키 오류: {str(e)}")
+
+validate_public_key("public_key.pem")
+```
+
+### 세션 브리지 API 호출 문제
+
+**문제: "BioStar 서버 연결 실패"**
+
+**디버깅 방법:**
+```python
+import requests
+import logging
+
+# 로깅 활성화
+logging.basicConfig(level=logging.DEBUG)
+
+def debug_session_bridge_call(user_id, plugin_id, encrypted_key):
+    url = f"https://{BIOSTAR_SERVER}/api/session/bridge"
+    payload = {
+        "user_id": user_id,
+        "plugin_id": plugin_id,
+        "key": encrypted_key
+    }
+    
+    try:
+        response = requests.post(
+            url, 
+            json=payload,
+            verify=False,  # SSL 검증 비활성화 (개발 환경)
+            timeout=30
+        )
+        
+        print(f"HTTP 상태 코드: {response.status_code}")
+        print(f"응답 헤더: {dict(response.headers)}")
+        print(f"응답 본문: {response.text}")
+        
+        return response
+        
+    except requests.exceptions.ConnectTimeout:
+        print("❌ 연결 시간 초과")
+    except requests.exceptions.ConnectionError:
+        print("❌ 연결 오류 - 서버 주소/포트 확인 필요")
+    except Exception as e:
+        print(f"❌ 기타 오류: {str(e)}")
+```
+
+**문제: "복호화 오류"**
+
+**해결방법:**
+```python
+def debug_aes_decryption(encrypted_data, key):
+    try:
+        print(f"암호화된 데이터 길이: {len(encrypted_data)}")
+        print(f"키 길이: {len(key)}")
+        
+        # Base64 디코딩 테스트
+        import base64
+        cipher_text = base64.b64decode(encrypted_data)
+        print(f"복호화된 바이너리 길이: {len(cipher_text)}")
+        
+        # AES 블록 크기 확인 (16바이트의 배수여야 함)
+        if len(cipher_text) % 16 != 0:
+            print("❌ AES 블록 크기 오류 - 16바이트의 배수가 아님")
+            return
+        
+        # 키 준비
+        key_bytes = key.encode('utf-8')
+        if len(key_bytes) != 32:
+            print(f"⚠️ 키 길이 조정: {len(key_bytes)} -> 32")
+            key_bytes = key_bytes.ljust(32, b'\0')[:32]
+        
+        # IV 설정
+        iv = key_bytes[:16]
+        print(f"IV (hex): {iv.hex()}")
+        
+        # 복호화 시도
+        from Crypto.Cipher import AES
+        from Crypto.Util.Padding import unpad
+        
+        cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
+        decrypted_padded = cipher.decrypt(cipher_text)
+        
+        print(f"패딩 제거 전 길이: {len(decrypted_padded)}")
+        
+        decrypted = unpad(decrypted_padded, AES.block_size)
+        result = decrypted.decode('utf-8')
+        
+        print(f"✅ 복호화 성공: {result}")
+        return result
+        
+    except Exception as e:
+        print(f"❌ 복호화 실패: {str(e)}")
+        import traceback
+        traceback.print_exc()
+```
+
+## 런타임 문제 해결
+
+### 플러그인 접근 문제
+
+**문제: "플러그인 아이콘이 Launcher에 표시되지 않음"**
+
+**확인사항:**
+1. **등록 상태 확인**: Service Manager의 Plugins 페이지에서 등록 여부 확인
+2. **브라우저 캐시**: Launcher 페이지 새로고침 (Ctrl+F5)
+3. **최대 개수 초과**: 12개 제한 확인
+4. **서비스 재시작**: BioStar X 서비스 재시작
+
+**문제: "플러그인 클릭 시 오류 페이지"**
+
+**해결방법:**
+```python
+# 오류 처리 강화
+@app.post("/your-plugin-path")
+async def callback_endpoint(
+    request: Request,
+    user_id: str = Form(None),
+    plugin_id: str = Form(None)
+):
+    try:
+        # 매개변수 로깅
+        logger.info(f"Callback - user_id: {user_id}, plugin_id: {plugin_id}")
+        
+        if not user_id or not plugin_id:
+            logger.error("필수 매개변수 누락")
+            return HTMLResponse(
+                content="<h1>오류: 필수 정보가 누락되었습니다</h1>",
+                status_code=400
+            )
+        
+        # 세션 브리지 처리
+        session_id = await process_session_bridge(user_id, plugin_id)
+        
+        # 성공 시 플러그인 페이지 반환
+        return render_plugin_page(session_id)
+        
+    except Exception as e:
+        logger.exception("콜백 처리 중 오류 발생")
+        return HTMLResponse(
+            content=f"<h1>서비스 오류</h1><p>{str(e)}</p>",
+            status_code=500
+        )
+```
+
+### 성능 문제
+
+**문제: "플러그인 로딩 시간이 오래 걸림"**
+
+**최적화 방법:**
+```python
+import asyncio
+from functools import lru_cache
+
+# 캐싱 활용
+@lru_cache(maxsize=100)
+def get_user_info(user_id: str):
+    # 사용자 정보 캐싱
+    pass
+
+# 비동기 처리
+async def process_session_bridge_async(user_id, plugin_id):
+    # 비동기 HTTP 클라이언트 사용
+    import aiohttp
+    
+    async with aiohttp.ClientSession() as session:
+        async with session.post(bridge_url, json=payload) as response:
+            return await response.json()
+
+# 연결 풀링
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+session = requests.Session()
+retry_strategy = Retry(total=3, backoff_factor=1)
+adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=10)
+session.mount("http://", adapter)
+session.mount("https://", adapter)
+```
+
+## 로깅 및 모니터링
+
+### 포괄적인 로깅 설정
+
+```python
+import logging
+import sys
+from datetime import datetime
+
+# 로깅 설정
+def setup_logging():
+    # 로그 포맷 설정
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s'
+    )
+    
+    # 파일 핸들러
+    file_handler = logging.FileHandler(
+        f'plugin_{datetime.now().strftime("%Y%m%d")}.log'
+    )
+    file_handler.setFormatter(formatter)
+    
+    # 콘솔 핸들러
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(formatter)
+    
+    # 루트 로거 설정
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+    
+    return logger
+
+logger = setup_logging()
+```
+
+### 핵심 이벤트 로깅
+
+```python
+# 요청 로깅
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+    client_ip = request.client.host
+    method = request.method
+    url = str(request.url)
+    
+    logger.info(f"Request - {client_ip} {method} {url}")
+    
+    response = await call_next(request)
+    
+    process_time = time.time() - start_time
+    logger.info(f"Response - {response.status_code} ({process_time:.3f}s)")
+    
+    return response
+
+# 세션 브리지 로깅
+async def process_session_bridge(user_id, plugin_id):
+    logger.info(f"세션 브리지 시작 - user_id: {user_id}")
+    
+    try:
+        # ... 세션 브리지 처리
+        logger.info("세션 브리지 성공")
+        return session_id
+    except Exception as e:
+        logger.error(f"세션 브리지 실패 - {str(e)}")
+        raise
+```
+
+## 문의 및 지원
+
+### 일반적인 지원 절차
+
+1. **로그 수집**: 오류 발생 시점의 상세 로그 수집
+2. **환경 정보 수집**: OS, 브라우저, BioStar X 버전 정보
+3. **재현 단계**: 문제 재현을 위한 단계별 정보
+4. **스크린샷**: 오류 화면 캡처
+
+### 지원 요청 시 포함할 정보
+
+```
+환경 정보:
+- OS: Windows Server 2019
+- BioStar X 버전: 1.0.0
+- 플러그인 프레임워크: Python FastAPI 0.68.0
+- 브라우저: Chrome 95.0.4638.69
+
+문제 설명:
+- 발생 시간: 2024-01-15 14:30:00
+- 문제 증상: 플러그인 클릭 시 "서버 오류" 메시지 표시
+- 재현 단계: 1) Launcher에서 플러그인 아이콘 클릭 2) 오류 페이지 표시
+
+로그:
+[로그 파일 내용 첨부]
+```
+
+이상으로 BioStar X 플러그인 시스템의 전체적인 구조와 개발 방법을 분리된 문서로 완성했습니다. 각 문서는 독립적이면서도 서로 연결되어 사용자가 필요한 정보를 쉽게 찾을 수 있도록 구성했습니다.
