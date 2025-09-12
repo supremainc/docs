@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9992"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6164"], {
 82604: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -94,9 +94,11 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Plugin Address"
-        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        }), "는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), " 항목은 수정할 수 없습니다."]
+        }), "를 활성화하면 수정할 수 없고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: "Session Bridge"
+        }), "를 비활성화하면 수정할 수 있습니다."]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "플러그인-삭제",
@@ -333,157 +335,188 @@ function _missingMdxReference(id, component) {
 
 
 }),
-43118: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
+7376: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  "default": () => (/* binding */ MDXContent),
-  toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
+  ZP: () => (MDXContent),
+  d$: () => (toc)
 });
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-registration-guide-mdx-25b.json
-var site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","keywords":["플러그인 등록","관리","Service Manager","Session Bridge"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"개발 가이드","permalink":"/docs/platform/plugins/development-guide"},"next":{"title":"문제 해결","permalink":"/docs/platform/plugins/troubleshooting"}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(85893);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(50065);
-// EXTERNAL MODULE: ./docs/common/_bsx-register-plugin.mdx
-var _bsx_register_plugin = __webpack_require__(85748);
-// EXTERNAL MODULE: ./docs/common/_bsx-manage-plugins.mdx
-var _bsx_manage_plugins = __webpack_require__(82604);
-;// CONCATENATED MODULE: ./docs/platform/plugins/registration-guide.mdx
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85893);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(50065);
 
 
-const frontMatter = {
-	id: 'registration-guide',
-	title: '등록 및 관리',
-	description: 'BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.',
-	keywords: [
-		'플러그인 등록',
-		'관리',
-		'Service Manager',
-		'Session Bridge'
-	],
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
 
-const assets = {
-
-};
-
-/*## 플러그인 등록 및 확인*/
-/*플러그인 관리*/
 
 
 
 
 const toc = [{
-  "value": "등록 전 준비사항",
-  "id": "등록-전-준비사항",
+  "value": "플러그인(Plugins)이란?",
+  "id": "플러그인plugins이란",
   "level": 2
-}, ..._bsx_register_plugin/* toc */.d$, {
-  "value": "접근성 확인",
-  "id": "접근성-확인",
-  "level": 2
-}, {
-  "value": "GET 엔드포인트 테스트",
-  "id": "get-엔드포인트-테스트",
-  "level": 3
-}, {
-  "value": "POST 엔드포인트 테스트",
-  "id": "post-엔드포인트-테스트",
-  "level": 3
-}, {
-  "value": "설정 요구사항",
-  "id": "설정-요구사항",
-  "level": 2
-}, ..._bsx_manage_plugins/* toc */.d$];
+}];
 function _createMdxContent(props) {
   const _components = {
-    code: "code",
+    a: "a",
+    admonition: "admonition",
     h2: "h2",
-    h3: "h3",
     li: "li",
-    ol: "ol",
     p: "p",
-    pre: "pre",
     strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
+    ...props.components
+  }, {Include, Xclude} = _components;
+  if (!Include) _missingMdxReference("Include", true);
+  if (!Xclude) _missingMdxReference("Xclude", true);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "플러그인plugins이란",
+      children: "플러그인(Plugins)이란?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인(Plugins)은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
+      product: "biostar_x",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+        type: "info",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: ["플러그인 기능을 사용하려면 플러그인 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            href: "../biostar_x/licensing",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        })
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
+      product: "biostar_x",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+        type: "info",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: ["플러그인 기능을 사용하려면 플러그인 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+                href: "../biostar_x/licensing",
+                children: "다음 문서"
+              }), "를 참고하세요."]
+            }), "\n"]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: ["플러그인 개발에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+                href: "../plugins",
+                children: "다음 문서"
+              }), "를 참고하세요."]
+            }), "\n"]
+          }), "\n"]
+        })
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+79586: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ plugins_frontMatter),
+  "default": () => (/* binding */ plugins_MDXContent),
+  toc: () => (/* binding */ plugins_toc),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_plugins_mdx_099_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ plugins_contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-plugins-mdx-099.json
+var site_docs_platform_biostar_x_plugins_mdx_099_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"플러그인","description":"BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.","source":"@site/docs/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"플러그인","description":"BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.","keywords":["플러그인","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"디렉토리 연동 설정하기","permalink":"/docs/platform/biostar_x/settings-diretory-integration"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(85893);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(50065);
+// EXTERNAL MODULE: ./docs/common/_bsx-what-is-plugins.mdx
+var _bsx_what_is_plugins = __webpack_require__(7376);
+;// CONCATENATED MODULE: ./docs/common/_bsx-plugins-usage-example.mdx
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "주요 활용 사례",
+  "id": "주요-활용-사례",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    h2: "h2",
+    li: "li",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["개발한 플러그인을 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X Service Manager"
-      }), "에 등록하고 관리하는 방법을 안내합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "등록-전-준비사항",
-      children: "등록 전 준비사항"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+    children: [(0,jsx_runtime.jsx)(_components.h2, {
+      id: "주요-활용-사례",
+      children: "주요 활용 사례"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인(Plugins) 시스템을 통해 다양한 외부 시스템과 연동할 수 있습니다. 대표적인 활용 사례는 다음과 같습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "플러그인 서버 실행"
-          })
-        }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "플러그인을 등록하기 전에 반드시 플러그인 서버가 실행 중이어야 합니다. BioStar X는 등록 과정에서 플러그인 서버에 접근성을 확인합니다."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "근태 관리 시스템"
+          }), ": 외부 T&A(Time & Attendance) 솔루션과 연동"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "네트워크 접근 확인"
-          })
-        }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar X 서버에서 플러그인 서버로 접근할 수 있는지 확인하세요."
-        }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-bash",
-            children: "# BioStar X 서버에서 테스트\ncurl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
-          })
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "방문자 관리 시스템"
+          }), ": 별도의 방문자 등록 및 관리 시스템과 연동"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "보고서 솔루션"
+          }), ": 사용자 정의 보고서 생성 및 분석 도구 연동"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "타사 시스템 연동"
+          }), ": ERP, HRM 등 기존 업무 시스템과의 데이터 연동"]
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "접근성-확인",
-      children: "접근성 확인"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.code, {
-        children: "curl"
-      }), " 명령어를 사용해 수동으로 엔드포인트를 테스트할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "get-엔드포인트-테스트",
-      children: "GET 엔드포인트 테스트"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "post-엔드포인트-테스트",
-      children: "POST 엔드포인트 테스트"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST http://localhost:8000/bsx \\\n    -H \"Content-Type: application/x-www-form-urlencoded\" \\\n    -d \"user_id={user_id}&plugin_id={your_plugin_id}\"\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "설정-요구사항",
-      children: "설정 요구사항"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "서버 설정을 위한 설정 파일을 생성하세요."
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-python",
-        metastring: "title=\"config.py\"",
-        children: "SERVER_CONFIG = {\n    \"address\": \"192.168.1.2\", # BioStar server IP address\n    \"port\": 443, # BioStar server port\n    \"ssl_verify\": False # SSL verification\n}\nFILE_CONFIG = {\n    \"public_key_path\": \"public_key.pem\" # RSA public key file\n}\n"
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* default */.ZP, {})]
+    })]
   });
 }
 function MDXContent(props = {}) {
@@ -497,6 +530,59 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+
+
+// EXTERNAL MODULE: ./docs/common/_bsx-register-plugin.mdx
+var _bsx_register_plugin = __webpack_require__(85748);
+// EXTERNAL MODULE: ./docs/common/_bsx-manage-plugins.mdx
+var _bsx_manage_plugins = __webpack_require__(82604);
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/plugins.mdx
+
+
+const plugins_frontMatter = {
+	id: 'plugins',
+	title: '플러그인',
+	description: 'BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.',
+	keywords: [
+		'플러그인',
+		'BioStar X'
+	],
+	isTranslationMissing: false
+};
+const plugins_contentTitle = undefined;
+
+const assets = {
+
+};
+
+/*## 플러그인(Plugins)이란?*/
+/*## 주요 활용 사례*/
+/*## 플러그인 등록 및 확인*/
+/*플러그인 관리*/
+
+
+
+
+
+
+const plugins_toc = [..._bsx_what_is_plugins/* toc */.d$, ...toc, ..._bsx_register_plugin/* toc */.d$, ..._bsx_manage_plugins/* toc */.d$];
+function plugins_createMdxContent(props) {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: ["\n", "\n", (0,jsx_runtime.jsx)(_bsx_what_is_plugins/* default */.ZP, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* default */.ZP, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* default */.ZP, {})]
+  });
+}
+function plugins_MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.a)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(plugins_createMdxContent, {
+      ...props
+    })
+  }) : plugins_createMdxContent(props);
 }
 
 

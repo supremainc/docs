@@ -94,9 +94,11 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Plugin Address"
-        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        }), "는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), " 항목은 수정할 수 없습니다."]
+        }), "를 활성화하면 수정할 수 없고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: "Session Bridge"
+        }), "를 비활성화하면 수정할 수 있습니다."]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "플러그인-삭제",
@@ -348,7 +350,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-registration-guide-mdx-25b.json
-var site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/en/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","keywords":["플러그인 등록","관리","Service Manager","Session Bridge"],"isTranslationMissing":true},"sidebar":"bsxplugins","previous":{"title":"개발 가이드","permalink":"/docs/en/platform/plugins/development-guide"},"next":{"title":"문제 해결","permalink":"/docs/en/platform/plugins/troubleshooting"}}')
+var site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","keywords":["플러그인 등록","관리","Service Manager","Session Bridge"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"개발 가이드","permalink":"/docs/platform/plugins/development-guide"},"next":{"title":"문제 해결","permalink":"/docs/platform/plugins/troubleshooting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -370,7 +372,7 @@ const frontMatter = {
 		'Service Manager',
 		'Session Bridge'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
