@@ -566,6 +566,7 @@ const sidebars = {
             'platform/biostar_x/settings-diretory-integration'
           ]
         },
+        'platform/biostar_x/plugins',
         {
           type: 'category',
           label: 'UI 알아보기',
