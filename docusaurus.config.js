@@ -146,7 +146,8 @@ const config = {
         result.frontMatter.isTranslationMissing = !isI18n;
       }
       return result;
-    }
+    },
+    mermaid: true
   },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -253,7 +254,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',

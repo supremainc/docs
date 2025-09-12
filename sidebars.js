@@ -17,6 +17,26 @@
 
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
+  bsxplugins: [
+    {
+      type: 'category',
+      label: 'BioStar X Plugins',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/plugins/index',
+      },
+      items: [
+        'platform/plugins/plugins-overview',
+        'platform/plugins/getting-started',
+        'platform/plugins/development-guide',
+        'platform/plugins/registration-guide',
+        'platform/plugins/troubleshooting'
+      ]
+    }
+  ],
   biostar_air: [
     {
       type: 'category',
@@ -547,6 +567,7 @@ const sidebars = {
             'platform/biostar_x/settings-diretory-integration'
           ]
         },
+        'platform/biostar_x/plugins',
         {
           type: 'category',
           label: 'UI 알아보기',
