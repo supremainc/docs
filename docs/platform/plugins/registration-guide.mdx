@@ -65,117 +65,77 @@ keywords: [플러그인 등록, 관리, Service Manager, Session Bridge]
 
 :::
 
+## 런처 화면에서 확인
 
-## 등록 과정
+**BioStar X**의 <Cmd sid='shell.header.launcher' /> 화면에서 추가한 플러그인을 확인할 수 있습니다.
 
-### 1. 정보 입력 완료
-모든 필수 정보와 원하는 선택 정보를 입력합니다.
+<Image src='/img/biostarx-added-plugins-launcher.png' />
 
-### 2. Apply 버튼 클릭
-**Apply** 버튼을 클릭하여 등록을 시작합니다.
 
-### 3. 서버 접근성 확인
-BioStar X가 입력된 URL로 ping 요청을 전송합니다:
+## 접근성 확인
 
-```http
-GET /your-plugin-path
-Headers:
-  X-BioStar-Ping: <random_token>
+`curl` 명령어를 사용해 수동으로 엔드포인트를 테스트할 수 있습니다.
+
+### GET 엔드포인트 테스트
+
+```bash
+curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 ```
 
-### 4. 등록 완료 또는 실패
-- **성공**: 플러그인이 목록에 추가되고 Launcher에서 사용 가능
-- **실패**: 오류 메시지 표시 후 등록 취소
+### POST 엔드포인트 테스트
 
-**일반적인 등록 실패 원인:**
-- 플러그인 서버 미실행
-- 네트워크 접근 불가
-- 잘못된 URL 형식
-- ping 엔드포인트 미구현
+```bash
+curl -X POST http://localhost:8000/bsx \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "user_id={user_id}&plugin_id={your_plugin_id}"
+```
 
-## Session Bridge 인증서 관리
 
-Session Bridge를 활성화한 플러그인의 경우 추가적인 보안 설정이 필요합니다.
+## 설정 요구사항
 
-### 인증서 다운로드
+서버 설정을 위한 설정 파일을 생성하세요.
 
-1. **플러그인 상세 페이지 접속**: 등록된 플러그인 목록에서 해당 플러그인 클릭
-2. **인증서 다운로드**: "Download Certificate" 버튼 클릭
-3. **파일 저장**: `public_key.pem` 파일을 플러그인 서버에 저장
+```python title="config.py"
+SERVER_CONFIG = {
+    "address": "192.168.1.2", # BioStar server IP address
+    "port": 443, # BioStar server port
+    "ssl_verify": False # SSL verification
+}
+FILE_CONFIG = {
+    "public_key_path": "public_key.pem" # RSA public key file
+}
+```
 
-### 인증서 갱신
-
-- **새 인증서 발급**: 다운로드 버튼 클릭 시마다 새 인증서 생성
-- **기존 인증서 무효화**: 새 인증서 발급 시 기존 인증서 사용 불가
-- **주의사항**: 운영 중인 플러그인의 인증서 갱신 시 서비스 중단 가능성
 
 ## 플러그인 관리
 
+**BioStar X Service Manager**를 통해서 설치한 플러그인을 관리할 수 있습니다. 
+
+Windows에서 <Start/> → **BioStar X** → **BioStar X Service Manager**를 클릭하세요. **BioStar X Service Manager** 화면의 사이트 메뉴에서 <Cmd>PLUGINS</Cmd>를 클릭하세요.
+
 ### 플러그인 목록 확인
 
-Service Manager의 Plugins 페이지에서 등록된 모든 플러그인을 확인할 수 있습니다.
+사용자가 등록한 모든 플러그인을 확인할 수 있습니다.
 
-**표시 정보:**
-- 플러그인 이름 및 아이콘
-- URL 정보
-- Session Bridge 사용 여부
-- 등록 순서 (슈프리마 플러그인이 상단에 우선 표시)
+<Image src='/img/common/biostarx-sm-plugins-list.png' alone />
+
 
 ### 플러그인 수정
 
-**수정 가능 항목:**
-- Plugin 이름
-- Plugin 설명
-- Plugin 아이콘
+플러그인 목록에서 수정할 플러그인을 클릭하세요. 플러그인 정보 수정 화면이 나타납니다. 플러그인 이름(<Cmd>Plugin Name</Cmd>), 설명(<Cmd>Description</Cmd>), 아이콘(<Cmd>Plugin Icon</Cmd>) 항목을 수정할 수 있습니다.
 
-**수정 불가 항목 (Session Bridge 활성화 시):**
-- Plugin URL
-- Session Bridge 설정
+<Image src='/img/common/biostarx-sm-plugins-list-edit.png' alone />
+
+:::info
+
+<Cmd>Plugin Address</Cmd>, <Cmd>Session Bridge</Cmd> 항목은 수정할 수 없습니다.
+
+:::
 
 ### 플러그인 삭제
 
-#### 외부 플러그인 삭제
-1. **플러그인 선택**: 삭제할 플러그인을 목록에서 선택
-2. **삭제 버튼 클릭**: "Delete" 버튼 클릭
-3. **확인 팝업**: 삭제 확인 메시지에서 "확인" 클릭
-4. **삭제 완료**: 성공 메시지 표시 후 목록에서 제거
+1. 플러그인 목록에서 삭제할 플러그인의 가장 왼쪽에 체크 박스를 클릭해 선택하세요.
 
-#### 슈프리마 플러그인 삭제
-- **Service Manager에서 삭제 불가**: "Delete" 버튼 클릭 시 오류 메시지 표시
-- **삭제 방법**: Windows 프로그램 추가/제거를 통해서만 삭제 가능
+1. 화면 오른쪽 상단의 <IcTrash2 /> <Cmd>Delete</Cmd> 버튼을 클릭하세요.
 
-```
-오류 메시지 예시:
-"슈프리마에서 제공하는 플러그인은 Service Manager에서 
-삭제할 수 없습니다. 프로그램 추가/제거를 통해 제거하세요."
-```
-
-## 제한사항
-
-### 등록 개수 제한
-- **전체 플러그인**: 최대 12개 (Launcher UI 제한)
-- **외부 플러그인**: 최대 10개
-- **슈프리마 플러그인**: 최대 2개 (자동 계산됨)
-
-### 표시 순서
-- **슈프리마 플러그인**: 항상 목록 상단에 표시
-- **외부 플러그인**: 등록 순서대로 표시
-- **Launcher 표시**: 한 줄에 6개씩 두 줄까지 표시
-
-## 문제 해결
-
-### 등록 실패 시 확인사항
-
-1. **서버 실행 상태**: 플러그인 서버가 실행 중인지 확인
-2. **네트워크 연결**: BioStar X에서 플러그인 서버로 접근 가능한지 확인
-3. **방화벽 설정**: 필요한 포트가 열려있는지 확인
-4. **엔드포인트 구현**: GET 요청에 대한 올바른 응답 구현 확인
-
-### 세션 브리지 오류 시 확인사항
-
-1. **인증서 파일**: `public_key.pem` 파일이 올바른 위치에 있는지 확인
-2. **암호화 구현**: RSA/AES 암호화 함수 구현 확인
-3. **API 호출**: 세션 브리지 API 호출 형식 확인
-4. **네트워크 설정**: HTTPS 인증서 및 방화벽 설정 확인
-
-다음으로 [슈프리마 플러그인](./suprema-plugins) 문서를 참조하여 슈프리마에서 제공하는 플러그인에 대해 알아보세요.
+1. 확인 메시지가 나타나면 <Cmd>OK</Cmd> 버튼을 클릭하세요.

@@ -33,9 +33,7 @@ const sidebars = {
         'platform/plugins/getting-started',
         'platform/plugins/development-guide',
         'platform/plugins/registration-guide',
-        'platform/plugins/suprema-plugins',
-        'platform/plugins/troubleshooting',
-        'platform/plugins/session-bridge-example'
+        'platform/plugins/troubleshooting'
       ]
     }
   ],
