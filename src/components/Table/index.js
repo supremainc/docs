@@ -42,9 +42,10 @@ export function Row({children, className}) {
   )
 }
 
-export function Td({children, rowspan}) {
+export function Td({children, colspan, rowspan}) {
   return (
     <td 
+      {...(colspan && {colspan: colspan})}
       {...(rowspan && {rowspan: rowspan})}>
       {children}
     </td>
