@@ -233,7 +233,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'CoreStation',
-      url: '#',
+      url: '/device/corestation_40',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/corestation.png',
       desc: `${translate({
         id: "externalLinks.CoreStation.desc",

@@ -204,6 +204,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'CoreStation',
+                docId: 'device/corestation_40/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation 20',
                 docId: 'device/corestation_20/index'
               }
