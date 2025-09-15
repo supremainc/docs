@@ -13,7 +13,7 @@ keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
 <Tbody>
 
 <Row className='center white'>
-<Td rowspan={3}><Image src='/img/device/component-device-cs20.svg' className='none' height={350} alone /></Td>
+<Td rowspan={3}><Image src='/img/device/component-device-di24.svg' className='none' height={350} alone /></Td>
 <Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
 </Row>
 
@@ -27,7 +27,7 @@ keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
 
 <Row className='center'>
 
-<Td>CoreStation 20</Td>
+<Td>Door Interface</Td>
 
 <Td>오픈소스라이선스 가이드</Td>
 
@@ -59,7 +59,7 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 <Columns className='partname'>
 <Column>
 
-<Magnifier src='/img/device/product-part-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+<Magnifier src='/img/device/product-part-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
 
 </Column>
 <Column className='padding--l20'>
@@ -76,17 +76,16 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 | 8 | **WIEGAND 1** 연결 |
 | 9 | **RS-485 1** 연결 |
 | 10 | **RELAY 3 (Lock)** 연결 |
-| 11 | CoreStation 20 전원 연결 (DC 12V / DC 24V IN) |
+| 11 | Door Interface 전원 연결 (DC 12V / DC 24V IN) |
 | 12 | **RESET** 버튼  |
-| 13 | **ETHERNET** 연결 |
-| 14 | **INIT** 버튼 |
-| 15 | **RELAY 1 (Lock)** 연결 |
-| 16 | **WIEGAND 0** 연결 |
-| 17 | **RS-485 0** 연결 |
-| 18 | **RS-485 0** 종단 저항 스위치 |
-| 19 | **OUTPUT (0:2)** 연결 |
-| 20 | **RELAY 0 (Alarm)** 연결 |
-| 21 | **SUPERVISED INPUT (0:2)** 또는 **Input (0:2)** 연결 |
+| 13 | **INIT** 버튼 |
+| 14 | **RELAY 1 (Lock)** 연결 |
+| 15 | **WIEGAND 0** 연결 |
+| 16 | **RS-485 0** 연결 |
+| 17 | **RS-485 0** 종단 저항 스위치 |
+| 18 | **OUTPUT (0:2)** 연결 |
+| 19 | **RELAY 0 (Alarm)** 연결 |
+| 20 | **SUPERVISED INPUT (0:2)** 또는 **Input (0:2)** 연결 |
 
 </Column>
 </Columns>
@@ -97,26 +96,20 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 
 * 제품을 재부팅하려면 **RESET** 버튼을 누르세요.
 
-* 제품과 Wiegand 장치를 연결할 때 Wiegand 장치의 전원으로 제품의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 Wiegand 장치를 2대 연결할 수 있습니다.
+* 제품과 리더를 연결할 때 리더의 전원으로 제품의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 리더를 2대 연결할 수 있습니다.
 
 :::
 
 <PageBreak />
 
-### CoreStation 20 상태 LED
+### Door Interface 상태 LED
 
 제품의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로 확인할 수 있으며, 이더넷, RS-485, RS-485 0, RS-485 1, 시스템의 상태를 1초씩 순서대로 보여줍니다.
 
 | 항목 | LED | 상태 |
 |---|---|---|
-| 이더넷 | 빨간색/자홍색 점멸 | 고정 IP 연결 실패 |
-| ^ | 빨간색/파란색 점멸 | 유동 IP 연결 성공 |
-| ^ | 빨간색/하늘색 점멸 | 고정 IP 연결 성공 |
-| ^ | 빨간색/노란색 점멸 | 유동 IP 연결 대기 중 |
-| ^ | 빨간색/빨간색 점멸 | 유동 IP 연결 실패 |
-| RS-485 | 자홍색/파란색 점멸 | 슬레이브 장치 정상 |
-| ^ | 자홍색/노란색 점멸 | 슬레이브 장치 연결 해제 |
-| ^ | 자홍색/빨간색 점멸 | 슬레이브 장치 없음 |
+| RS-485 | 자홍색/파란색 점멸 | 마스터 장치 정상 |
+| ^ | 자홍색/노란색 점멸 | 마스터 장치 연결 해제 |
 | RS-485 0 | 노란색/파란색 점멸 | 슬레이브 장치 정상 |
 | ^ | 노란색/노란색 점멸 | 슬레이브 장치 연결 해제 |
 | ^ | 노란색/빨간색 점멸 | 슬레이브 장치 없음 |
@@ -135,19 +128,19 @@ import Components_note from '../../common/_getting-started-components-note.mdx'
 
 ### 설치 예제
 
-이 제품은 중앙 집중식 출입 통제 시스템으로 엔터프라이즈급 환경을 위해 설계되었으며 최대 500,000명의 사용자 정보를 저장할 수 있습니다.
+이 제품은 출입문 확장 모듈로 최대 2개의 출입문을 간편하게 구성할 수 있습니다.
 
 BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
 
-<Image src='/img/device/installation-example-cs20.svg' width="70%" className='none print' />
+<Image src='/img/device/installation-example-di24.svg' width="70%" className='none print' />
 
 <PageBreak />
 
 ### 시스템 구성도
 
-이 제품은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+이 제품은 3개의 RS-485 포트를 지원하며, 마스터 장치에 여러대의 Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
 
-<Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
+<Image src='/img/device/system-configuration-di24.svg' width="100%" className='none' />
 
 :::info
 
@@ -155,9 +148,7 @@ BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 �
 
 * RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
 
-* CS-20P 모델에 SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리더 포트에 직접 연결된 슬레이브 장치만 사용할 수 있습니다.
-
-* Door Interface를 호스트 포트에 슬레이브로 연결하면 CoreStation 20과의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다.
+* 마스터 장치의 호스트 포트에 Door Interface를 슬레이브로 연결하면 마스터 장치와의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다.
 
 :::
 

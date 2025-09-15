@@ -704,6 +704,27 @@ const sidebars = {
       ]
     }
   ],
+  doorinterface24: [
+    {
+      type: 'category',
+      label: 'Door Interface',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doorinterface/index',
+      },
+      items: [
+        'device/doorinterface/safety-instructions',
+        'device/doorinterface/getting-started',
+        'device/doorinterface/installation',
+        'device/doorinterface/product-specifications',
+        'device/doorinterface/regulatory-information',
+        'device/doorinterface/appendices'
+      ]
+    }
+  ],
   facestation3: [
     {
       type: 'category',
