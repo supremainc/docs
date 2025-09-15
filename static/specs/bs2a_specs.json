@@ -67,12 +67,12 @@
           "items": {
             "model1": {
               "label": "BS2A-ODPB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
+              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
               "annotation_value": "anno1"
             },
             "model2": {
               "label": "BS2A-OAPWB",
-              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno1"
             }
           }
