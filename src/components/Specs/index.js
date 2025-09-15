@@ -141,7 +141,15 @@ export function SpecSection({data}) {
               <div className={styles.techspecsBody}>
                 {Object.values(item.items).map((subitem, subindex) => (
                     <div key={subindex} className={styles.row}>
-                      <div className={clsx(styles.column, styles.small_l1)} dangerouslySetInnerHTML={{__html: subitem.label}} />
+                      {subitem.label_id ? (
+                        <div className={clsx(styles.column, styles.small_l1)}>
+                          {translate({id: subitem.label_id})}
+                        </div>
+                      ) : (
+                        <div className={clsx(styles.column, styles.small_l1)} dangerouslySetInnerHTML={{__html: subitem.label}} />
+                      )
+                      }
+                      
                       <div className={clsx(styles.column, styles.small_l2)}>
                         <DescObj contents={subitem.value} />
                       </div>
@@ -188,7 +196,7 @@ function DescObj( {contents} ) {
   // console.log(typeof contents[currentLocale]);
   if (typeof contents[currentLocale] === 'string') {
     return (
-      <span dangerouslySetInnerHTML={{__html: contents[currentLocale]}} />
+      <p dangerouslySetInnerHTML={{__html: contents[currentLocale]}} />
     )
   } else if (typeof contents[currentLocale] === 'object') {
     return (

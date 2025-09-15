@@ -1,0 +1,215 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3} colspan={2}><Image src='/img/device/component-device-cs40.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>퀵 가이드</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td colspan={2}>CoreStation 40</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>고정용 나사 x12</Td>
+
+<Td>스페이서 x6</Td>
+
+<Td>다이오드 x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+import Components_note from '../../common/_getting-started-components-note.mdx'
+
+<Components_note />
+
+<PageBreak />
+
+
+## 액세서리
+
+이 제품은 액세서리로 함체(ENCR-10)를 함께 구매할 수 있습니다. 함체에는 전원 상태 LED 보드, 전원 분배 보드, 전원 공급 장치, 탬퍼가 포함되어 있습니다. CoreStation을 함체에 설치하는 방법은 함체 설치를 참고하세요.
+
+<Image src='/img/device/component-encr10.svg' width='30%' className='none' alone />
+
+:::info
+
+* ENCR-10은 벽에 고정하여 사용할 수 있도록 설계되었습니다. 설치 높이에 제한 없이 안전하고 사용하기에 편리한 위치에 설치하세요.
+* ENCR-10 구성품에는 함체 고정용 나사, CoreStation 고정용 나사, 전원 장치 연결용 나사가 포함되어 있습니다. 각 나사의 용도에 맞추어 올바르게 사용하세요.
+
+  - 함체 고정용 나사(직경: 4 mm, 길이: 25 mm) x 4
+
+  - CoreStation 고정용 나사(직경: 3 mm, 길이: 5 mm) x 6
+
+  - 전원 장치 케이블 고정용 나사(직경: 3 mm, 길이: 8 mm) x 1
+
+:::
+
+<PageBreak />
+
+## 각 부분의 명칭 및 기능
+
+<Magnifier src='/img/device/product-part-cs40.svg' width='100%' zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+| No. | 이름 | No. | 이름 |
+| :--: | -- | :--: | -- |
+| 1 | **HOST RS-485** 연결 | 20 | **RESET** 버튼 |
+| 2 | **HOST RS-485** 종단 저항 스위치 | 21 | **AUX IN (0, 1)** 연결 |
+| 3 | **INIT** 버튼 | 22 | CoreStation 전원 연결(DC 12V IN) |
+| 4 | **ETHERNET** 연결 | 23 | **RELAY 3** 연결 |
+| 5 | **RELAY 1** 연결 | 24 | **SUPERVISED INPUT (6:7)** 또는 **Input (6:7)** 연결 |
+| 6 | **SUPERVISED INPUT (2:3)** 또는 **Input (2:3)** 연결 | 25 | **OUTPUT (6:7)** 연결 |
+| 7 | **OUTPUT (2:3)** 연결 | 26 | **WIEGAND 3** 연결 |
+| 8 | **WIEGAND 1** 연결 | 27 | 12VDC 출력 |
+| 9 | 12VDC 출력 | 28 | **RS-485 3** 연결 |
+| 10 | **RS-485 1** 연결 | 29 | **RS-485 3** 종단 저항 스위치 |
+| 11 | **RS-485 1** 종단 저항 스위치 | 30 | CoreStation 상태 LED |
+| 12 | **RELAY 0** 연결 | 31 | **RELAY 2** 연결 |
+| 13 | **SUPERVISED INPUT (0:1)** 또는 **Input (0:1)** 연결 | 32 | **SUPERVISED INPUT (4:5)** 또는 **Input (4:5)** 연결 |
+| 14 | **OUTPUT (0:1)** 연결 | 33 | **OUTPUT (4:5)** 연결 |
+| 15 | **WIEGAND 0** 연결 | 34 | **WIEGAND 2** 연결 |
+| 16 | 12VDC 출력 | 35 | 12VDC 출력 |
+| 17 | **RS-485 0** 연결 | 36 | **RS-485 2** 연결 |
+| 18 | **RS-485 0** 종단 저항 스위치 | 37 | **RS-485 2** 종단 저항 스위치 |
+| 19 | RTC 배터리 | | |
+
+
+:::info
+
+* 장치와 연동된 CoreStation을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
+
+* CoreStation과 Wiegand 장치를 연결할 때 Wiegand 장치의 전원으로 CoreStation의 전원 출력(12V, 최대 1.5A)을 사용할 수 있습니다. 200mA를 소모하는 Wiegand 장치를 3대 연결하면 남아 있는 전원 출력 단자에 최대 900mA를 소모하는 장치를 연결할 수 있습니다.
+
+* RTC 배터리 용량은 226mah이며, 기대 수명은 설치 환경 및 동작 방법에 따라 다를 수 있습니다. RTC 배터리 교체 시에는 CR2032를 준수하세요.
+
+:::
+
+<PageBreak />
+
+### 통신 상태 LED
+
+| LED | 상태 |
+| -- | -- |
+| **HOST RS-485 TX** | 주황색 점멸: RS-485 데이터를 송신 중인 상태 |
+| **HOST RS-485 RX** | 초록색 점멸: RS-485 데이터를 수신 중인 상태 |
+| **RELAY (0 ~ 3)** | 빨간색 점등: 릴레이 동작 |
+| **SUPERVISED INPUT (0 ~ 7)** | Input을 사용할 때<br/>- 초록색 점등: Normal Close<br/>- 꺼짐: Normal Open |
+| ^ | Supervised Input을 사용할 때<br/>- 초록색 점등: Normal Close(합선), Normal Open, 스위치 켜짐<br/>- 꺼짐: 스위치 꺼짐 |
+| **AUX IN (0, 1)** | 주황색 점등: AUX 신호를 수신 중인 상태 |
+
+### 출입통제 등급
+
+| 기능 | 등급 |
+| -- | -- |
+| Destructive Attack | Ⅰ |
+| Line Security | Ⅰ |
+| Endurance | Ⅳ |
+| Standby Power | Ⅰ |
+| Single Point Locking Device with Key Locks | Ⅰ |
+
+<PageBreak />
+
+### CoreStation 상태 LED
+
+CoreStation의 상태는 제품 전면부의 왼쪽에 위치한 STATUS LED 1 / 2로 확인할 수 있으며, 이더넷, RS-485 0, RS-485 1, RS-485 2, RS-485 3, RS-485 HOST, 시스템의 상태를 1초씩 순서대로 보여줍니다.
+
+| 항목 | LED 1 | LED 2 | 상태 |
+|---|---|---|---|
+| 이더넷 | 빨간색 | 빨간색 | 유동 IP 연결 실패 |
+| ^ | 빨간색 | 노란색 | 유동 IP 연결 대기 중 |
+| ^ | 빨간색 | 하늘색 | 고정 IP 연결 성공 |
+| ^ | 빨간색 | 파란색 | 유동 IP 연결 성공 |
+| ^ | 빨간색 | 자홍색 | 고정 IP 연결 실패 |
+| ^ | 빨간색 | 꺼짐 | HW 오류 |
+| RS-485 0 | 노란색 | 빨간색 | 슬레이브 장치 없음 |
+| ^ | 노란색 | 노란색 | 슬레이브 장치 연결 해제 |
+| ^ | 노란색 | 파란색 | 슬레이브 장치 정상 |
+| ^ | 노란색 | 꺼짐 | HW 오류 |
+| RS-485 1 | 초록색 | 빨간색 | 슬레이브 장치 없음 |
+| ^ | 초록색 | 노란색 | 슬레이브 장치 연결 해제 |
+| ^ | 초록색 | 파란색 | 슬레이브 장치 정상 |
+| ^ | 초록색 | 꺼짐 | HW 오류 |
+| RS-485 2 | 하늘색 | 빨간색 | 슬레이브 장치 없음 |
+| ^ | 하늘색 | 노란색 | 슬레이브 장치 연결 해제 |
+| ^ | 하늘색 | 파란색 | 슬레이브 장치 정상 |
+| ^ | 하늘색 | 꺼짐 | HW 오류 |
+| RS-485 3 | 파란색 | 빨간색 | 슬레이브 장치 없음 |
+| ^ | 파란색 | 노란색 | 슬레이브 장치 연결 해제 |
+| ^ | 파란색 | 파란색 | 슬레이브 장치 정상 |
+| ^ | 파란색 | 꺼짐 | HW 오류 |
+| RS-485 HOST | 자홍색 | 빨간색 | 슬레이브 장치 없음 |
+| ^ | 자홍색 | 노란색 | 슬레이브 장치 연결 해제 |
+| ^ | 자홍색 | 파란색 | 슬레이브 장치 정상 |
+| ^ | 자홍색 | 꺼짐 | HW 오류 |
+| 시스템 | 흰색 | 빨간색 | 시스템 잠금 (장치의 작업 조건 및 동작) |
+| ^ | 흰색 | 노란색 | 시스템 잠금 (BioStar 2의 작업 조건 및 동작) |
+| ^ | 흰색 | 초록색 | BioStar 2 연결 성공 |
+| ^ | 흰색 | 하늘색 | BioStar 2 연결 성공 + 탬퍼 켜짐 |
+| ^ | 흰색 | 파란색 | 탬퍼 켜짐 |
+| ^ | 흰색 | 자홍색 | 시스템 잠금 (장치의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 흰색 | 흰색 | 시스템 잠금 (BioStar 2의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 자홍색 | 자홍색 | 데이터베이스 마이그레이션 동작 중 |
+
+<PageBreak />
+
+### 설치 예제
+
+CoreStation은 바이오메트릭 인증을 수행할 수 있는 중앙 집중식 출입통제 시스템입니다. 엔터프라이즈급 시스템용으로 설계된 CoreStation은 최대 500,000 명의 사용자 정보를 저장할 수 있으며, 초당 400,000 지문 매칭을 수행할 수 있습니다.
+
+BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
+
+<Image src='/img/device/installation-example-cs40.png' width="80%" className='none print' />
+
+### 시스템 구성도
+
+CoreStation 20은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+
+<Image src='/img/device/system-configuration-cs40.svg' width="100%" className='none' />
+
+<PageBreak />
+
+### 전체 연결 구성도
+
+안정적인 CoreStation의 사용을 위해 전용 함체를 사용할 것을 권장합니다. 함체에는 LED 제어 보드, 전원 제어 보드, 전원 장치, 배터리, 탬퍼가 포함되어 있습니다.
+
+<Image src='/img/device/cs40-led-status.png' className='none' alone />
+
+<Image src='/img/device/cs40-wiring.png' className='none' alone />
+
+:::info
+
+A 스위치로 제어되는 소켓에 연결하지 마세요.
+
+:::

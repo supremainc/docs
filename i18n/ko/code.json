@@ -482,6 +482,9 @@
   "specs.general.led_type": {
     "message": "LED"
   },
+  "specs.general.led_type.multiColor": {
+    "message": "다중 색상"
+  },
   "specs.general.lcd_resolution": {
     "message": "화면 해상도"
   },
@@ -601,6 +604,9 @@
   },
   "specs.power.power_output": {
     "message": "전원 출력"
+  },
+  "specs.power.powerSupply": {
+    "message": "전원 장치 (SMPS) AC INPUT"
   },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"

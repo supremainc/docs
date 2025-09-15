@@ -482,6 +482,9 @@
   "specs.general.led_type": {
     "message": "LED"
   },
+  "specs.general.led_type.multiColor": {
+    "message": "Multi-color"
+  },
   "specs.general.lcd_resolution": {
     "message": "Display Resolution"
   },
@@ -601,6 +604,9 @@
   },
   "specs.power.power_output": {
     "message": "Power Output"
+  },
+  "specs.power.powerSupply": {
+    "message": "Power Supply (SMPS) AC INPUT"
   },
   "specs.power.switch_input_vih": {
     "message": "Switch Input VIH"

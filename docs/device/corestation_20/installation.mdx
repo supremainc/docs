@@ -13,7 +13,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 CoreStation 20을 장착할 위치에 고정용 나사로 제품을 단단히 고정하세요.
 
-<Image src='/img/device/device-fix-cs20.svg' className='none' width={800} />
+<Image src='/img/device/device-fix-cs20.svg' className='none' width={800} alone />
 
 <PageBreak />
 
@@ -114,6 +114,8 @@ import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 이 제품은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
 
+<Image src='/img/device/installation-rs485-connection-cs20.png' width='60%' className='none' />
+
 :::info
 
 * 제품에 연결된 RS-485 장치는 총 84대를 초과할 수 없습니다. (Door Interface 포함)
@@ -122,15 +124,11 @@ import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 * RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
 
-:::
-
-<Image src='/img/device/installation-rs485-connection-cs20.png' width='60%' className='none' />
-
-:::info
-
 * RS-485 케이블은 AWG26 이상을 사용해야 하며, 모든 배선은 ANSI/NFPA 70 표준을 준수해야 합니다.
 
 * RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
 
 * RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품은 종단 저항 스위치를 ON으로 설정하세요.
 
@@ -185,27 +183,7 @@ CS-20P 모델에 SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리�
 
 <PageBreak />
 
+{/* ## 공장 초기화 {#factory-reset} */}
+import FactoryReset from "../../common/_cs-fatory-reset.mdx";
 
-## 공장 초기화 {#factory-reset}
-
-CoreStation Setup Manager에서 공장 초기화를 진행할 수 있습니다.
-
-1. CoreStation Setup Manager에 접속한 뒤 **CONFIGURE**을 클릭하세요.
-
-1. **Factory Default**를 클릭하세요.
-
-:::info
-
-* 장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다.
-
-* CoreStation Setup Manager에 접속해 CoreStation 20의 네트워크 설정을 관리하거나 슬레이브 장치, 입력 및 출력 포트, Wiegand 포트의 연결 상태를 확인할 수 있습니다.
-
-* CoreStation Setup Manager는 CoreStation 20 펌웨어 1.0.0 버전 이상에서 지원됩니다.
-
-* CoreStation Setup Manager에 대한 자세한 내용은 사용자 가이드를 참고하세요. 사용자 가이드는 [슈프리마 다운로드 센터](https://download.supremainc.com)에서 다운로드할 수 있습니다.
-
-* BioStar 2 최신 버전은 CoreStation 20이 네트워크에 연결되어 재설정이 가능할 때 확인할 수 있습니다.
-
-* 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
-
-:::
+<FactoryReset />

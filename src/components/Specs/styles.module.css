@@ -39,6 +39,7 @@
 }
 
 .techspecsBody p {
+  display: inline-block;
   margin-bottom: 0;
 }
 
@@ -161,6 +162,7 @@
   }
   .techspecsRowheader sup, .techspecsBody sup {
     font-size: .5rem;
+    display: inline;
   }
   .techspecsBody ul li {
     line-height: 1.8;

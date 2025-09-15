@@ -662,6 +662,27 @@ const sidebars = {
       ]
     }
   ],
+  corestation40: [
+    {
+      type: 'category',
+      label: 'CoreStation 40',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_40/index',
+      },
+      items: [
+        'device/corestation_40/safety-instructions',
+        'device/corestation_40/getting-started',
+        'device/corestation_40/installation',
+        'device/corestation_40/product-specifications',
+        'device/corestation_40/regulatory-information',
+        'device/corestation_40/appendices'
+      ]
+    }
+  ],
   corestation20: [
     {
       type: 'category',
