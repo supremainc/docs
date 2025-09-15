@@ -665,7 +665,7 @@ const sidebars = {
   corestation40: [
     {
       type: 'category',
-      label: 'CoreStation 40',
+      label: 'CoreStation',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
