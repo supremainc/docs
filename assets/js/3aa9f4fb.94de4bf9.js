@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-troubleshooting-mdx-3aa.json
-var site_docs_platform_plugins_troubleshooting_mdx_3aa_namespaceObject = JSON.parse('{"id":"platform/plugins/troubleshooting","title":"문제 해결","description":"BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다.","source":"@site/docs/platform/plugins/troubleshooting.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/troubleshooting","permalink":"/docs/en/platform/plugins/troubleshooting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/troubleshooting.mdx","tags":[],"version":"current","frontMatter":{"id":"troubleshooting","title":"문제 해결","description":"BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다.","keywords":["문제 해결","디버깅","오류 해결"],"isTranslationMissing":true},"sidebar":"bsxplugins","previous":{"title":"등록 및 관리","permalink":"/docs/en/platform/plugins/registration-guide"}}')
+var site_docs_platform_plugins_troubleshooting_mdx_3aa_namespaceObject = JSON.parse('{"id":"platform/plugins/troubleshooting","title":"문제 해결","description":"BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다.","source":"@site/docs/platform/plugins/troubleshooting.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/troubleshooting","permalink":"/docs/platform/plugins/troubleshooting","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/troubleshooting.mdx","tags":[],"version":"current","frontMatter":{"id":"troubleshooting","title":"문제 해결","description":"BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다.","keywords":["문제 해결","디버깅","오류 해결"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"등록 및 관리","permalink":"/docs/platform/plugins/registration-guide"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'디버깅',
 		'오류 해결'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -62,7 +62,6 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     code: "code",
-    em: "em",
     h2: "h2",
     li: "li",
     p: "p",
@@ -113,10 +112,8 @@ function _createMdxContent(props) {
       children: "인증 콜백 실패"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.em, {
-            children: "public_key.pem"
-          }), " 파일이 존재하고 유효한지 확인하세요."]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "인증서 파일이 존재하고 유효한지 확인하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -140,10 +137,6 @@ function _createMdxContent(props) {
       children: "복호화 오류"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar X에서 올바른 공개키를 사용하고 있는지 확인하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "AES 키 생성 및 암호화 과정을 확인하세요."
         }), "\n"]

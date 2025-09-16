@@ -127,10 +127,29 @@ function _createMdxContent(props) {
           }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment Certification"
           }), " 창이 나타납니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "가 설치된 PC의 IP 주소를 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Server Address"
+          }), "에 입력한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Enrollment"
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-settings-server-enrollment-certification.png",
           className: "none",
           alone: true
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 기본 포트 번호는 443입니다. 포트 번호를 변경했다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Port"
+            }), "에 변경한 포트 번호를 입력하세요."]
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -209,18 +228,29 @@ function _createMdxContent(props) {
           }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment Certification"
           }), " 창이 나타납니다."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-settings-server-enrollment-certification.png",
-          className: "none",
-          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "가 설치된 PC의 IP 주소를 입력한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), "가 설치된 PC의 IP 주소를 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Server Address"
+          }), "에 입력한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-settings-server-enrollment-certification.png",
+          className: "none",
+          alone: true
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 기본 포트 번호는 443입니다. 포트 번호를 변경했다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Port"
+            }), "에 변경한 포트 번호를 입력하세요."]
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -285,7 +315,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "다음 정보를 입력하세요:"
+          children: "다음 정보를 입력하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

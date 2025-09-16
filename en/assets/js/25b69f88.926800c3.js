@@ -350,7 +350,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-registration-guide-mdx-25b.json
-var site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","keywords":["플러그인 등록","관리","Service Manager","Session Bridge"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"개발 가이드","permalink":"/docs/platform/plugins/development-guide"},"next":{"title":"문제 해결","permalink":"/docs/platform/plugins/troubleshooting"}}')
+var site_docs_platform_plugins_registration_guide_mdx_25b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/en/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"등록 및 관리","description":"BioStar X에 플러그인을 등록하고 관리하는 방법을 안내합니다.","keywords":["플러그인 등록","관리","Service Manager","Session Bridge"],"isTranslationMissing":true},"sidebar":"bsxplugins","previous":{"title":"개발 가이드","permalink":"/docs/en/platform/plugins/development-guide"},"next":{"title":"문제 해결","permalink":"/docs/en/platform/plugins/troubleshooting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -372,7 +372,7 @@ const frontMatter = {
 		'Service Manager',
 		'Session Bridge'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -390,28 +390,11 @@ const toc = [{
   "value": "등록 전 준비사항",
   "id": "등록-전-준비사항",
   "level": 2
-}, ..._bsx_register_plugin/* toc */.d$, {
-  "value": "접근성 확인",
-  "id": "접근성-확인",
-  "level": 2
-}, {
-  "value": "GET 엔드포인트 테스트",
-  "id": "get-엔드포인트-테스트",
-  "level": 3
-}, {
-  "value": "POST 엔드포인트 테스트",
-  "id": "post-엔드포인트-테스트",
-  "level": 3
-}, {
-  "value": "설정 요구사항",
-  "id": "설정-요구사항",
-  "level": 2
-}, ..._bsx_manage_plugins/* toc */.d$];
+}, ..._bsx_register_plugin/* toc */.d$, ..._bsx_manage_plugins/* toc */.d$];
 function _createMdxContent(props) {
   const _components = {
     code: "code",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -451,41 +434,7 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "접근성-확인",
-      children: "접근성 확인"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.code, {
-        children: "curl"
-      }), " 명령어를 사용해 수동으로 엔드포인트를 테스트할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "get-엔드포인트-테스트",
-      children: "GET 엔드포인트 테스트"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "post-엔드포인트-테스트",
-      children: "POST 엔드포인트 테스트"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST http://localhost:8000/bsx \\\n    -H \"Content-Type: application/x-www-form-urlencoded\" \\\n    -d \"user_id={user_id}&plugin_id={your_plugin_id}\"\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "설정-요구사항",
-      children: "설정 요구사항"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "서버 설정을 위한 설정 파일을 생성하세요."
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-python",
-        metastring: "title=\"config.py\"",
-        children: "SERVER_CONFIG = {\n    \"address\": \"192.168.1.2\", # BioStar server IP address\n    \"port\": 443, # BioStar server port\n    \"ssl_verify\": False # SSL verification\n}\nFILE_CONFIG = {\n    \"public_key_path\": \"public_key.pem\" # RSA public key file\n}\n"
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* default */.ZP, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* default */.ZP, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* default */.ZP, {})]
   });
 }
 function MDXContent(props = {}) {
