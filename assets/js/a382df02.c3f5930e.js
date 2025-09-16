@@ -54,7 +54,7 @@ const toc = [{
   "id": "서버-설정에서-인증서-설치",
   "level": 2
 }, {
-  "value": "VMS 서버의 인증서 설치하기",
+  "value": "VMS 서버의 인증서 설치",
   "id": "vms-certification",
   "level": 2
 }];
@@ -269,7 +269,7 @@ function _createMdxContent(props) {
       src: "/img/biostarx-settings-server-secure.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "vms-certification",
-      children: "VMS 서버의 인증서 설치하기"
+      children: "VMS 서버의 인증서 설치"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
