@@ -59,9 +59,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, Start} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Start) _missingMdxReference("Start", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["설치 패키지를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -74,18 +75,30 @@ function _createMdxContent(props) {
       children: "웹 브라우저에서 로그인하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "웹 브라우저를 실행하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["웹 브라우저의 주소 입력창에 ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "https://127.0.0.1"
-          }), "을 입력하세요."]
+          children: ["웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "로 연결됩니다."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-login-web-browser-ip-address.png"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
+          type: "note",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["웹 브라우저의 주소 표시줄에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "BioStar X"
+                }), "의 접속 주소를 확인하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
@@ -114,7 +127,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-login.png"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
+          type: "note",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -126,7 +139,7 @@ function _createMdxContent(props) {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: ["최초 로그인할 때는 웹 브라우저의 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "안전하지 않음"
-                }), " 경고가 표시됩니다. HTTPS 프로토콜을 적용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+                }), " 경고가 표시될 수 있습니다. HTTPS 프로토콜을 적용하려면 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "settings-server-https",
                   children: "다음 문서"
                 }), "를 참고하세요."]

@@ -43,9 +43,7 @@ function _createMdxContent(props) {
       id: "registering-online",
       children: "온라인 상태에서 등록하기"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["인터넷이 연결된 온라인 상태에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "BioStar X 라이선스"
-      }), "를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["인터넷이 연결된 온라인 상태에서 BioStar X 라이선스를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
       }), " 버튼을 클릭하세요."]
@@ -54,17 +52,17 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "registering-offline",
       children: "오프라인 상태에서 등록하기"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "BioStar X 라이선스"
-      }), "를 활성화하려면 다음의 안내에 따르세요."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 BioStar X 라이선스를 활성화하려면 다음의 안내에 따르세요."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            children: "Activation"
+            sid: "setting.xlicense.activation",
+            product: "2"
           }), " 섹션에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            children: "Offline Activation"
+            sid: "setting.xlicense.offlineActivation",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline.png"
@@ -195,18 +193,15 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcLicense} = _components;
+  }, {Cmd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcLicense) _missingMdxReference("IcLicense", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "setting.menu.license.biostarXLicense"
-      }), "를 구매했다면 라이선스 키를 등록하고 더 많은 기능을 사용할 수 있습니다."]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "BioStar X 라이선스를 구매했다면 라이선스 키를 등록하고 더 많은 기능을 사용할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.setting"
-      }), " → ", (0,jsx_runtime.jsx)(IcLicense, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.root"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.biostarXLicense"

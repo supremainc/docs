@@ -43,9 +43,7 @@ function _createMdxContent(props) {
       id: "registering-online",
       children: "온라인 상태에서 등록하기"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["인터넷이 연결된 온라인 상태에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "BioStar X 라이선스"
-      }), "를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["인터넷이 연결된 온라인 상태에서 BioStar X 라이선스를 활성화하려면, 이름과 전달받은 활성화 키를 입력하고, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
       }), " 버튼을 클릭하세요."]
@@ -54,17 +52,17 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "registering-offline",
       children: "오프라인 상태에서 등록하기"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "BioStar X 라이선스"
-      }), "를 활성화하려면 다음의 안내에 따르세요."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 BioStar X 라이선스를 활성화하려면 다음의 안내에 따르세요."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            children: "Activation"
+            sid: "setting.xlicense.activation",
+            product: "2"
           }), " 섹션에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            children: "Offline Activation"
+            sid: "setting.xlicense.offlineActivation",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline.png"

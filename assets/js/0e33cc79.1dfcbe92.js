@@ -61,6 +61,7 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    admonition: "admonition",
     em: "em",
     h2: "h2",
     h3: "h3",
@@ -106,6 +107,13 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["커뮤니케이션 서버는 64비트 운영 체제에서만 설치할 수 있습니다. 시스템 최소 요구 사항에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "system-requirements#communication-server",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["커뮤니케이션 서버를 설치하고 연결하려면 멀티 커뮤니케이션 서버 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "licensing#features-add-ons",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
@@ -184,13 +192,23 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 children: "gRPC Server Port"
               })]
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["BioStar X Server gRPC ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X Server gRPC Port for Communication"
-              })]
+              })
             })]
           })]
         })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: "SERVICE SETTINGS"
+        }), "에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "service-settings",
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "install-guide",
@@ -219,6 +237,18 @@ function _createMdxContent(props) {
           }), " 버튼을 선택하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-install-select-language.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["설치를 계속하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            code: "biostar2.install.agree",
+            className: "bold"
+          }), "를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            code: "biostar2.install.next",
+            className: "bold"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-install-comm-server-license-agree.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -251,17 +281,22 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " 서버의 IP 주소를 입력하고, ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 서버의 IP 주소와 포트 번호를 입력하고, ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " 서버와 연결하기 위해 각 항목을 입력하세요. 설정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
             code: "biostar2.install.next",
             className: "bold"
-          }), " 버튼을 클릭하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "#check-before-install",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-install-comm-server-settings.png"
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["각 입력 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#check-before-install",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -300,8 +335,8 @@ function _createMdxContent(props) {
       children: "설치 후 확인 사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["커뮤니케이션 서버 설치를 완료하면 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " 메인 서버에서 커뮤니케이션 서버와 연결되었는지 확인할  수 있습니다."]
+        children: "BioStar X Service Manager"
+      }), "를 통해 메인 서버와 커뮤니케이션 서버를 연결해야 합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -322,16 +357,63 @@ function _createMdxContent(props) {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "COMMUNICATION SERVERS"
           }), " 메뉴를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-sm-cluster-main-01.png",
+          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["커뮤니케이션 서버 목록에서 설치한 커뮤니케이션 서버의 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Server Status"
-          }), " 열이 ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "Connected"
-          }), " 상태인지 확인하세요."]
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Add Communication Server"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Add Communication Server"
+          }), " 창이 나타나면 설치한 커뮤니케이션 서버의 IP 주소와 일치하는 항목의 체크박스를 클릭하고, ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "Database"
+          }), " 열에서 사용할 데이터베이스를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-sm-cluster-main-03.png",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            children: "Add"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["커뮤니케이션 서버 목록에서 추가한 커뮤니케이션 서버의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Server Status"
+      }), " 열이 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Connected"
+      }), " 상태인지 확인하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/biostarx-sm-cluster-main-04.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "COMMUNICATION SERVERS"
+            }), " 메뉴는 멀티 커뮤니케이션 서버 라이선스를 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing#features-add-ons",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커뮤니케이션 서버를 삭제하려면 목록에서 삭제할 서버의 체크박스를 클릭하고 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Delete Commnunication Server"
+            }), " 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     })]
   });
 }
