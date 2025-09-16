@@ -725,7 +725,7 @@ const sidebars = {
       ]
     }
   ],
-  facestation3: [
+  facestationf2: [
     {
       type: 'category',
       label: 'FaceStation F2',
@@ -857,7 +857,7 @@ const sidebars = {
       ],
     },
   ],
-    bioliten2: [
+  bioliten2: [
     {
       type: 'category',
       label: 'BioLite N2',
@@ -891,6 +891,43 @@ const sidebars = {
         'device/biolite_n2/product-specifications',
         'device/biolite_n2/regulatory-information',
         'device/biolite_n2/appendices',
+      ],
+    },
+  ],
+  xstation2: [
+    {
+      type: 'category',
+      label: 'X-Station 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xstation_2/index',
+      },
+      items: [
+        'device/xstation_2/safety-instructions',
+        'device/xstation_2/getting-started',
+        'device/xstation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2/using-device',
+          },
+          items: [
+            'device/xstation_2/admin-menu',
+            'device/xstation_2/user',
+            'device/xstation_2/authentication',
+            'device/xstation_2/settings',
+            'device/xstation_2/event-log',
+          ],
+        },
+        'device/xstation_2/troubleshooting',
+        'device/xstation_2/product-specifications',
+        'device/xstation_2/regulatory-information',
+        'device/xstation_2/appendices',
       ],
     },
   ],
