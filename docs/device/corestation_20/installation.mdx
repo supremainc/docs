@@ -1,8 +1,8 @@
 ---
 id: installation
 title: 설치하기
-description: BioEntry W3 장치 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
-keywords: [설치, BioEntry W3, 장치]
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [설치, CoreStation 20, 장치]
 ---
 
 import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
@@ -11,7 +11,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 ## 제품 고정
 
-CoreStation 20을 장착할 위치에 고정용 나사로 제품을 단단히 고정하세요.
+장착할 위치에 고정용 나사로 제품을 단단히 고정하세요.
 
 <Image src='/img/device/device-fix-cs20.svg' className='none' width={800} alone />
 
@@ -34,7 +34,7 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 
 ### 케이블 규격별 최대 연장 길이
 
-전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. CoreStation 20은 DC 12V, DC 24V, PoE+ 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
+전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 이 제품은 DC 12V, DC 24V, PoE+ 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
 
 <Table>
 <Thead>
@@ -69,36 +69,35 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <Row className='center'>
 <Td>14 AWG</Td>
-<Td>380m</Td>
-<Td>190m</Td>
-<Td>1540m</Td>
-<Td>770m</Td>
-<Td>380m</Td>
-<Td>190m</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+<Td>1540 m</Td>
+<Td>770 m</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
 </Row>
 
 <Row className='center'>
 <Td>16 AWG</Td>
-<Td>240m</Td>
-<Td>120m</Td>
-<Td>960m</Td>
-<Td>480m</Td>
-<Td>240m</Td>
-<Td>120m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+<Td>960 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
 </Row>
 
 <Row className='center'>
 <Td>18 AWG</Td>
-<Td>150m</Td>
-<Td>75m</Td>
-<Td>600m</Td>
-<Td>300m</Td>
-<Td>150m</Td>
-<Td>75m</Td>
-
+<Td>150 m</Td>
+<Td>75 m</Td>
+<Td>600 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
 </Row>
-</Tbody>
 
+</Tbody>
 </Table>
 
 <PageBreak />
@@ -143,30 +142,23 @@ import RelayConnectioin from "../../common/_device-indoor-module-relay-connectio
 
 <PageBreak />
 
-## Wiegand 입력 연결
+{/* ## Wiegand 입력 연결 */}
+import WiegandConnection from "../../common/_device-cs20-di24-wiegand-connection.mdx";
 
-<Image src='/img/device/installation-wiegand-in-connection-cs20.png' width='60%' className='none' />
+<WiegandConnection />
 
 
-## 출입문 센서 및 퇴실 버튼 연결
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-cs20-di24-door-sensor-connection.mdx";
 
-SUPERVISED INPUT 0 ~ 5 단자는 일반적인 입력으로 사용하거나 Supervised Input으로 사용하도록 설정할 수 있습니다.
-
-<Image src='/img/device/installation-door-senser-rte-connection-cs20.png' width='60%' className='none' />
-
-:::info
-
-SUPERVISED INPUT **Alarm** 단자는 1㏀, 2.2㏀, 4.7㏀, 10㏀ 저항을 연결하여 사용할 수 있습니다. 연결할 입력 장치에 알맞는 저항을 연결한 뒤 BioStar 2에서 저항 값을 동일하게 설정하세요.
-
-:::
+<RtsConnection />
 
 <PageBreak />
 
-## AUX 입력 연결
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-cs20-di24-aux-connection.mdx";
 
-전원 장애 감지기, 탬퍼 또는 화재 감지기를 AUX IN 단자에 연결할 수 있습니다.
-
-<Image src='/img/device/installation-aux-in-connection-cs20.png' width='60%' className='none' />
+<AuxConnection />
 
 
 ## SAM 카드 슬롯 (CS-20P 모델만 지원)

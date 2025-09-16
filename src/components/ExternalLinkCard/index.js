@@ -291,6 +291,16 @@ export function Peripheral({ productLinks: productLinksProp }) {
       })}`
     },
     {
+      title: 'Door Interface',
+      url: '/device/doorinterface',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20250512100138876.webp',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.di24.desc",
+        message: "확장 가능한 제어, 끊김 없는 출입"
+      })}`
+    },
+    {
       title: 'Secure Module',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',

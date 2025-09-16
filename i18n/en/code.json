@@ -32,6 +32,9 @@
   "externalLinks.peripheral.om120.desc": {
     "message": "Multiple Output Extension Module"
   },
+  "externalLinks.peripheral.di24.desc": {
+    "message": "Scalable Control, Uninterrupted Access"
+  },
   "externalLinks.peripheral.sio2.desc": {
     "message": "Compact Secure Single Door I/O"
   },
