@@ -28,40 +28,6 @@ import RegisterPlugin from "../../common/_bsx-register-plugin.mdx"
 <RegisterPlugin />
 
 
-## 접근성 확인
-
-`curl` 명령어를 사용해 수동으로 엔드포인트를 테스트할 수 있습니다.
-
-### GET 엔드포인트 테스트
-
-```bash
-curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
-```
-
-### POST 엔드포인트 테스트
-
-```bash
-curl -X POST http://localhost:8000/bsx \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    -d "user_id={user_id}&plugin_id={your_plugin_id}"
-```
-
-
-## 설정 요구사항
-
-서버 설정을 위한 설정 파일을 생성하세요.
-
-```python title="config.py"
-SERVER_CONFIG = {
-    "address": "192.168.1.2", # BioStar server IP address
-    "port": 443, # BioStar server port
-    "ssl_verify": False # SSL verification
-}
-FILE_CONFIG = {
-    "public_key_path": "public_key.pem" # RSA public key file
-}
-```
-
 {/* 플러그인 관리 */}
 import ManagePlugins from '../../common/_bsx-manage-plugins.mdx'
 

@@ -42,27 +42,26 @@ sequenceDiagram
     participant BC as BioStar X Client
     
     Note over U,BC: Register Plugin
-    U->>+SM: Register Plugin
-    SM->>+BS: Reg
-    BS->>+P: Ping / e.g. ip_address / bsxcallback with header
-    P->>-BS: Pong
-    Note over BS,BC: PluginKey, PluginSecretKey or<br/>create a certificate
-    BS->>-SM: Response
-    SM->>-U: Response / Reg Success
-    
-    Note over U,BC: Download Key or Certification
-    U->>+SM: Get Key Download
-    Note over BS: Download is available from Plugins in Service Manager
-    SM->>+BS: Get Key
-    BS->>-SM: Response Key
-    SM->>-U: Response Key
-    
+    U->>+SM: Register plugin
+    SM->>+P: Ping to register address / e.g. {address}/bsx
+    P->>-SM: Pong with header value in body
+    SM-->SM: Certificate generation
+    SM->>-U: Response / Reg success
+
+    Note over U,BC: Download Certification
+    U->>+SM: Download certification
+    SM-->SM: Certification
+    SM->>-U: Response certification file
+
     Note over U,BC: Open Plugin Service
     U->>+BC: Plugin Click
-    BC->>-P: OpenRequest (with userid) with new tab
-    U-->>+P: Watched New Tab
-    P->>+BS: LoginWithSSo (key, userid)
+    BC->>-P: Post request(with user id, plugin id) with new tab
+    U-->>+P: Watched new tab
+    P->>+BS: Post method called <br/>→ /api/session/bridge,<br/>Body: {pluginid, userid, key (a random 32-byte key encrypted with the certification and transmitted)}
+    Note right of BS: /api/session/brdige
     BS->>-P: Response (bs-session-ID)
+    Note right of BS: Encrypt the current user's bs-session-id using the key and transmit it.
+    Note right of P: bs-session-id must be decrypted before use
     P->>-U: Response / Open Page
 ```
 
