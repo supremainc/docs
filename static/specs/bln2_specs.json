@@ -305,8 +305,8 @@
           "label": "전원",
           "label_id": "specs.power.power",
           "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 0.4 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 0.4 A" ]
+            "ko": "전압/전류: 12 Vdc / 최대 0.4 A",
+            "en": "Voltage/Current: 12 Vdc / Max. 0.4 A"
           }
         },
         "switch_input_vih": {
