@@ -299,7 +299,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Port"
-              }), ": VMS 서버의 포트 번호 (기본값: 7001)"]
+              }), ": VMS 서버의 포트 번호"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
