@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2471"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5564"], {
 12305: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -60,8 +60,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -91,8 +91,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -589,7 +589,7 @@ function MDXContent(props = {}) {
 
 
 }),
-93177: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+41472: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -598,13 +598,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_appendices_mdx_2e9_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_bioentry_w_3_appendices_mdx_14e_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-appendices-mdx-2e9.json
-var site_docs_device_biostation_3_appendices_mdx_2e9_namespaceObject = JSON.parse('{"id":"device/biostation_3/appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","source":"@site/docs/device/biostation_3/appendices.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/appendices","permalink":"/docs/device/biostation_3/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","keywords":["면책 조항","저작권","오픈 소스 라이선스","OSS"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"규제 인증 정보","permalink":"/docs/device/biostation_3/regulatory-information"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-bioentry-w-3-appendices-mdx-14e.json
+var site_docs_device_bioentry_w_3_appendices_mdx_14e_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","source":"@site/docs/device/bioentry_w3/appendices.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/appendices","permalink":"/docs/device/bioentry_w3/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","keywords":["면책 조항","저작권","오픈 소스 라이선스","OSS"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"규제 인증 정보","permalink":"/docs/device/bioentry_w3/regulatory-information"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -613,7 +613,7 @@ var lib = __webpack_require__(50065);
 var disclaimers = __webpack_require__(75951);
 // EXTERNAL MODULE: ./docs/common/_disclaimers-copyright-notice.mdx
 var _disclaimers_copyright_notice = __webpack_require__(36076);
-;// CONCATENATED MODULE: ./docs/device/biostation_3/appendices.mdx
+;// CONCATENATED MODULE: ./docs/device/bioentry_w3/appendices.mdx
 
 
 const frontMatter = {

@@ -122,10 +122,21 @@ function _createMdxContent(props) {
       children: "비디오 모니터링 기능을 통해 출입문, 구역, 장치와 연계된 카메라 영상을 실시간으로 확인하고 제어할 수 있습니다. 이 문서에서는 비디오 타일을 활용하여 카메라 영상을 추가하고, 크기 조정, 위치 변경, 전체 화면 보기 등 다양한 작업을 수행하는 방법을 안내합니다. 또한, 알람 상태 확인 및 해제와 같은 관리 기능을 통해 보안 상황에 신속히 대응할 수 있도록 지원합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "비디오 타일"
-        }), "은 화면 중앙에 위치한 카메라 영상 표시 영역입니다. 여러 개의 카메라 영상을 동시에 배치하고 모니터링할 수 있는 인터페이스 구성 요소입니다. 사용자는 비디오 타일에서 영상의 크기를 조정하거나 위치를 변경하고, 필요에 따라 영상을 닫거나 전체 화면으로 전환할 수 있습니다."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "비디오 타일"
+            }), "은 화면 중앙에 위치한 카메라 영상 표시 영역입니다. 여러 개의 카메라 영상을 동시에 배치하고 모니터링할 수 있는 인터페이스 구성 요소입니다. 사용자는 비디오 타일에서 영상의 크기를 조정하거나 위치를 변경하고, 필요에 따라 영상을 닫거나 전체 화면으로 전환할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["VMS의 녹화 영상을 재생할 때 브라우저에서 '안전하지 않음' 경고가 표시되거나 영상 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-server-https#vms-certification",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "play-video",

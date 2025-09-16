@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1798"], {
-12305: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8332"], {
+66118: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -60,8 +60,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -91,8 +91,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -123,7 +123,7 @@ function MDXContent(props = {}) {
 
 
 }),
-50284: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+41912: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
   d$: () => (toc)
@@ -309,7 +309,7 @@ function MDXContent(props = {}) {
 
 
 }),
-55632: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+76602: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -318,18 +318,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ open_source_licenses_frontMatter),
   "default": () => (/* binding */ open_source_licenses_MDXContent),
   toc: () => (/* binding */ open_source_licenses_toc),
-  metadata: () => (/* reexport */ site_docs_legal_open_source_licenses_mdx_f81_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ open_source_licenses_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-legal-open-source-licenses-mdx-f81.json
-var site_docs_legal_open_source_licenses_mdx_f81_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"오픈 소스 라이선스","description":"---","source":"@site/docs/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"오픈 소스 라이선스","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"최종 사용자 라이선스 계약","permalink":"/docs/legal/eula"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-legal-open-source-licenses-mdx-e1d.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"Open Source Licensse","description":"---","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/en/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"Open Source Licensse","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"Software End User License Agreement(EULA)","permalink":"/docs/en/legal/eula"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
-;// CONCATENATED MODULE: ./docs/common/_apache-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_apache-license.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -397,8 +397,8 @@ function _createMdxContent(props) {
       children: "Apache License"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Version 2.0, January 2004 (", (0,jsx_runtime.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/",
-        children: "http://www.apache.org/licenses/"
+        href: "https://www.apache.org/licenses/",
+        children: "https://www.apache.org/licenses/"
       }), ")"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION"
@@ -504,7 +504,7 @@ function MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_boringssl-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_boringssl-license.mdx
 
 
 const _boringssl_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -570,7 +570,7 @@ function _boringssl_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_gnu-general-public-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-general-public-license.mdx
 
 
 const _gnu_general_public_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -971,7 +971,7 @@ function _gnu_general_public_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_gnu-lesser-general-public-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-lesser-general-public-license.mdx
 
 
 const _gnu_lesser_general_public_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1167,7 +1167,7 @@ function _gnu_lesser_general_public_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_mit-open-source-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_mit-open-source-license.mdx
 
 
 const _mit_open_source_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1216,7 +1216,7 @@ function _mit_open_source_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_openssl-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_openssl-license.mdx
 
 
 const _openssl_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1261,8 +1261,8 @@ function _openssl_license_createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["All advertising materials mentioning features or use of this software must display the following acknowledgment: \"This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (", (0,jsx_runtime.jsx)(_components.a, {
-            href: "http://www.openssl.org/",
-            children: "http://www.openssl.org/"
+            href: "https://www.openssl.org/",
+            children: "https://www.openssl.org/"
           }), ")\""]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -1279,8 +1279,8 @@ function _openssl_license_createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Redistributions of any form whatsoever must retain the following acknowledgment: \"This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (", (0,jsx_runtime.jsx)(_components.a, {
-            href: "http://www.openssl.org/",
-            children: "http://www.openssl.org/"
+            href: "https://www.openssl.org/",
+            children: "https://www.openssl.org/"
           }), ")\""]
         }), "\n"]
       }), "\n"]
@@ -1309,7 +1309,7 @@ function _openssl_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_original-ssleay-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_original-ssleay-license.mdx
 
 
 const _original_ssleay_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1406,7 +1406,7 @@ function _original_ssleay_license_MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/common/_sil-open-font-license.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_sil-open-font-license.mdx
 
 
 const _sil_open_font_license_frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -1531,16 +1531,16 @@ function _sil_open_font_license_MDXContent(props = {}) {
 }
 
 
-// EXTERNAL MODULE: ./docs/common/_android-license.mdx
-var _android_license = __webpack_require__(12305);
-// EXTERNAL MODULE: ./docs/common/_ios-license.mdx
-var _ios_license = __webpack_require__(50284);
-;// CONCATENATED MODULE: ./docs/legal/open-source-licenses.mdx
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_android-license.mdx
+var _android_license = __webpack_require__(66118);
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_ios-license.mdx
+var _ios_license = __webpack_require__(41912);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx
 
 
 const open_source_licenses_frontMatter = {
 	id: 'open-source-licenses',
-	title: '오픈 소스 라이선스',
+	title: 'Open Source Licensse',
 	toc_max_heading_level: 2,
 	isTranslationMissing: false
 };

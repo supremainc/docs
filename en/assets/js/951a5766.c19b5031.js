@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["432"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8289"], {
 66118: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -60,8 +60,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -91,8 +91,8 @@ function _createMdxContent(props) {
       children: "You may obtain a copy of the License at"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "http://www.apache.org/licenses/LICENSE-2.0",
-        children: "http://www.apache.org/licenses/LICENSE-2.0"
+        href: "https://www.apache.org/licenses/LICENSE-2.0",
+        children: "https://www.apache.org/licenses/LICENSE-2.0"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Unless required by applicable law or agreed to in writing, software"
@@ -589,7 +589,7 @@ function MDXContent(props = {}) {
 
 
 }),
-64532: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+64856: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -598,13 +598,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_appendices_mdx_8a4_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_appendices_mdx_951_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-appendices-mdx-8a4.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_appendices_mdx_8a4_namespaceObject = JSON.parse('{"id":"device/biostation_3/appendices","title":"Appendices","description":"Includes legal notices contained in the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/appendices.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/appendices","permalink":"/docs/en/device/biostation_3/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","description":"Includes legal notices contained in the product.","keywords":["Disclaimers","Copyright","Open Source License","OSS"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"Regulatory Information","permalink":"/docs/en/device/biostation_3/regulatory-information"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-3-appendices-mdx-951.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_appendices_mdx_951_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/appendices","title":"Appendices","description":"Includes legal notices contained in the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/appendices.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/appendices","permalink":"/docs/en/device/bioentry_w3/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","description":"Includes legal notices contained in the product.","keywords":["Disclaimers","Copyright","Open Source License","OSS"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"Regulatory Information","permalink":"/docs/en/device/bioentry_w3/regulatory-information"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -613,7 +613,7 @@ var lib = __webpack_require__(50065);
 var disclaimers = __webpack_require__(24996);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_disclaimers-copyright-notice.mdx
 var _disclaimers_copyright_notice = __webpack_require__(4521);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/appendices.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/appendices.mdx
 
 
 const frontMatter = {
