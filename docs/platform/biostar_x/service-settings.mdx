@@ -65,6 +65,8 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 웹 기반 사용자 인터페이스를 담당하는 서비스입니다.
 
+<Image src='/img/common/biostarx-sm-cws.png' alone />
+
 * <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트
 
 * <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트
@@ -75,15 +77,21 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 시스템의 핵심 기능과 외부 API 통신을 처리하는 메인 서비스입니다.
 
+<Image src='/img/common/biostarx-sm-core-s.png' alone />
+
 * <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트
 
 * <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트
 
 * <Cmd>API Port</Cmd>: REST API 통신 포트
 
+* <Cmd>Rpc Port</Cmd>: 원격 프로시저 호출(RPC) 통신 포트
+
 ### Unified Gateway Service {#unified-gateway-service}
 
-역방향 프록시(Reverse Proxy) 방식을 통해 BioStar X 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
+역방향 프록시(Reverse Proxy) 방식을 통해 **BioStar X** 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
+
+<Image src='/img/common/biostarx-sm-ugs.png' alone />
 
 * <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트
 
@@ -91,11 +99,15 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 분산 시스템의 구성 정보 관리, 서비스 상태 모니터링 및 서비스 간 동기화를 담당하는 서비스입니다.
 
+<Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
 * <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트
 
 ### BioStar X Server (Main) {#biostar-x-server-(main)}
 
 시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다.
+
+<Image src='/img/common/biostarx-sm-server.png' alone />
 
 * <Cmd>Server Address</Cmd>: 메인 서버의 IP 주소
 
@@ -108,6 +120,8 @@ keywords: [Service Settings, Service Manager, BioStar X]
 ### BioStar X Cache Service {#biostar-x-cache-service}
 
 자주 사용되는 데이터를 메모리에 저장하여 시스템의 데이터 처리 속도와 성능을 향상시키는 서비스입니다.
+
+<Image src='/img/common/biostarx-sm-cache-s.png' alone />
 
 * <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트
 
