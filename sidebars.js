@@ -249,6 +249,7 @@ const sidebars = {
             'platform/biostar_x/change-db',
           ]
         },
+        'platform/biostar_x/ui-launcher',
         {
           type: 'category',
           label: '사용자',
@@ -577,7 +578,6 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/ui-common',
-            'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
             'platform/biostar_x/ui-monitoring',
             'platform/biostar_x/ui-dashboard',
