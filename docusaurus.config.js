@@ -72,6 +72,7 @@ const config = {
   },
   themes: [
     '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-mermaid'
   ],
   presets: [
     [
@@ -133,7 +134,8 @@ const config = {
         result.frontMatter.isTranslationMissing = !isI18n;
       }
       return result;
-    }
+    },
+    mermaid: true
   },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -233,7 +235,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'http' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico)',

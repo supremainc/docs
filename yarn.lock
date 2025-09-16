@@ -1906,7 +1906,7 @@
 
 "@docusaurus/theme-mermaid@^3.8.1":
   version "3.8.1"
-  resolved "https://registry.npmjs.org/@docusaurus/theme-mermaid/-/theme-mermaid-3.8.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-3.8.1.tgz#2b73b5e90057bd9fb46f267aeb2d3470b168a7c8"
   integrity sha512-IWYqjyTPjkNnHsFFu9+4YkeXS7PD1xI3Bn2shOhBq+f95mgDfWInkpfBN4aYvx4fTT67Am6cPtohRdwh4Tidtg==
   dependencies:
     "@docusaurus/core" "3.8.1"
