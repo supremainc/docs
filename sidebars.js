@@ -294,12 +294,13 @@ const sidebars = {
                 'platform/biostar_x/transfer-user-info-to-device',
                 // 'platform/biostar_x/delete-user-info-from-device',
                 'platform/biostar_x/trace-user-access-log',
-                'platform/biostar_x/export-import-user-info',
+                'platform/biostar_x/export-import-user-info'
               ]
             },
             // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
+            'platform/biostar_x/batch-import-face',
             'platform/biostar_x/migration-face',
             // 'platform/biostar_x/columnlayout'
           ]
