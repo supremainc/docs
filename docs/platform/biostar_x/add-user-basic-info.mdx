@@ -38,27 +38,29 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
   </Column>
   </Columns>
 
-* <Cmd sid='common.id' product='2' />: 사용자에게 부여할 고유 ID를 입력하세요.
+* <Cmd sid='team.user.table.id' />: 사용자에게 부여할 고유 ID를 입력하세요.
 
-* <Cmd sid='common.name' product='2' />: 사용자의 이름을 입력하세요.
+* <Cmd sid='team.user.table.name' />: 사용자의 이름을 입력하세요.
 
-* <Cmd sid='common.email' product='2' />: 이메일을 입력하세요.
+* <Cmd sid='team.user.table.email' />: 이메일을 입력하세요.
 
-* <Cmd sid='common.telephone' product='2' />: 전화번호를 입력하세요.
+* <Cmd sid='team.user.table.phone' />: 전화번호를 입력하세요.
 
-* <Cmd sid='common.department' product='2' />: 사용자가 소속된 부서를 입력하세요.
+* <Cmd sid='team.user.table.department' />: 사용자가 소속된 부서를 입력하세요.
 
-* <Cmd sid='common.title' product='2' />: 사용자의 직함을 입력하세요.
+* <Cmd sid='team.user.table.title' />: 사용자의 직책을 입력하세요.
 
-* <Cmd sid='common.group' product='2' />: 사용자의 그룹을 선택하세요. 사용자 그룹 추가 및 관리에 대한 자세한 내용은 [다음 문서](user-group-manage)를 참고하세요.
+* <Cmd sid='team.user.table.group' />: 사용자의 그룹을 선택하세요. 사용자 그룹 추가 및 관리에 대한 자세한 내용은 [다음 문서](user-group-manage)를 참고하세요.
 
-* <Cmd sid='common.period' product='2' />: 사용자 계정을 사용할 기간을 설정하세요. 날짜 및 시간 영역을 클릭해 직접 입력하거나 <IcCalc /> 버튼을 클릭해 원하는 날짜와 시간을 선택할 수 있습니다.
+* <Cmd sid='team.user.table.period' />: 사용자 계정을 사용할 기간을 설정하세요. 날짜 및 시간 영역을 클릭해 직접 입력하거나 <IcCalc /> 버튼을 클릭해 원하는 날짜와 시간을 선택할 수 있습니다.
 
-* <Cmd sid='common.status' product='2' />: 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다.
+* <Cmd sid='team.user.table.status' />: 사용자 계정을 사용하지 않도록 임시로 설정할 수 있습니다.
+
+입력한 기본 정보를 저장하려면 화면 오른쪽 상단의 <Cmd sid='user.save' product='2' /> 버튼을 클릭하세요.
 
 :::info
 
-* <Cmd sid='team.user.table.id' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid="common.server" product='2' /> 메뉴의 <Cmd sid="setting.userDevice.useridType" product='2' /> 옵션에 따라 설정할 수 있는 값이 다를 수 있습니다. 자세한 내용은 [다음 문서](settings-server-server#userid-type)를 참고하세요.
+* <Cmd sid='team.user.table.id' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> 메뉴의 <Cmd sid="setting.userDevice.useridType" product='2' /> 옵션에 따라 설정할 수 있는 값이 다를 수 있습니다. 자세한 내용은 [다음 문서](settings-server-server#userid-type)를 참고하세요.
 
   * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />: 1 ~ 4294967294 숫자로 입력할 수 있습니다.
 
@@ -76,7 +78,7 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 * 모바일 출입 카드를 사용한다면, 발송 방법에 따라 이메일 전송 시 사용자의 이메일을, 문자 메시지 전송 시 사용자의 전화번호를 반드시 입력하세요.
 
-* 비주얼 페이스 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요.
+* 얼굴 모바일 등록, 보안 QR을 사용하려면 반드시 사용자의 이메일 주소를 입력하세요.
 
 :::
 
