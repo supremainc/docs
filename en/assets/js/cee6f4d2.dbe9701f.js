@@ -73,32 +73,36 @@ const toc = [{
   "id": "9-limitation-of-liability",
   "level": 2
 }, {
-  "value": "10. Refund Policy.",
-  "id": "10-refund-policy",
+  "value": "10. Third-Party Service Integration.",
+  "id": "10-third-party-service-integration",
   "level": 2
 }, {
-  "value": "11. Indemnities.",
-  "id": "11-indemnities",
+  "value": "11. Refund Policy.",
+  "id": "11-refund-policy",
   "level": 2
 }, {
-  "value": "12. Export Law.",
-  "id": "12-export-law",
+  "value": "12. Indemnities.",
+  "id": "12-indemnities",
   "level": 2
 }, {
-  "value": "13. Governing Law.",
-  "id": "13-governing-law",
+  "value": "13. Export Law.",
+  "id": "13-export-law",
   "level": 2
 }, {
-  "value": "14. Arbitration.",
-  "id": "14-arbitration",
+  "value": "14. Governing Law.",
+  "id": "14-governing-law",
   "level": 2
 }, {
-  "value": "15. General.",
-  "id": "15-general",
+  "value": "15. Arbitration.",
+  "id": "15-arbitration",
   "level": 2
 }, {
-  "value": "16. Contact Information.",
-  "id": "16-contact-information",
+  "value": "16. General.",
+  "id": "16-general",
+  "level": 2
+}, {
+  "value": "17. Contact Information.",
+  "id": "17-contact-information",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -177,38 +181,43 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "IN NO EVENT WILL COMPANY BE LIABLE TO YOU FOR ANY SPECIAL, INCIDENTAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF DATA, LOSS OF BUSINESS PROFITS OR ANY OTHER PECUNIARY LOSS) OR FOR THE COST OF PROCURING SUBSTITUTE PRODUCTS ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE EXECUTION OF OR INABILITY TO EXECUTE THE SOFTWARE, WHETHER SUCH LIABILITY ARISES FROM ANY CLAIM BASED UPON CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, AND WHETHER OR NOT COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.  THE FOREGOING LIMITATIONS WILL SURVIVE AND APPLY EVEN IF ANY LIMITED REMEDY SPECIFIED IN THIS AGREEMENT IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "10-refund-policy",
-      children: "10. Refund Policy."
+      id: "10-third-party-service-integration",
+      children: "10. Third-Party Service Integration."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Features that integrate third-party services (such as ngrok-based Remote Access) are not a core part of the software and are provided using technology from independent third-party service providers. Suprema assumes no responsibility for any security threats, breaches, data loss, service interruptions, or other issues arising from the use of such third-party services. You are responsible for reviewing and complying with the terms of service and privacy policy of the third-party service, and you assume all risks associated with their use."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "11-refund-policy",
+      children: "11. Refund Policy."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Your Local Distributor has the obligation and responsibility to refund the license fee paid (if any) and the fee will be refundable in accordance with the refund policy of your Local Distributor. If you are unwilling to install or use the Software, you must click \"I do not accept\" or otherwise may not install or use the Software and you must ask your Local Distributor for a full refund of the fee within 30 days after the date of purchase. Once you click \"I Accept\" and enter the serial number of the Software,  it will be deemed to have been used, and thus, you will not, under any circumstances, be entitled to any license fee paid."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "11-indemnities",
-      children: "11. Indemnities."
+      id: "12-indemnities",
+      children: "12. Indemnities."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You shall indemnify, defend and hold Company and its affiliates and subsidiaries harmless from and against any and all claims, including, but not limited to, the claim in relation to: (a) your infringement of any intellectual property, privacy or other rights of any third party; (b) injury to or death of any person(s) or damage to or loss of property; (c) your breach of any term in this Agreement; and/or (d) your violation of applicable law. In such a case, Company will provide you with written notice of such claim, suit or action."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "12-export-law",
-      children: "12. Export Law."
+      id: "13-export-law",
+      children: "13. Export Law."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You agree to comply fully with all export or import controls imposed by the country of origin, destination or use, including regulations under such laws. You agree not to export or re-export (directly or indirectly) to ensure that neither the Software nor any technical data related thereto nor any direct product thereof are exported or re-exported directly or indirectly in violation of, or used for any purposes prohibited by, such laws and regulations."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "13-governing-law",
-      children: "13. Governing Law."
+      id: "14-governing-law",
+      children: "14. Governing Law."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "This Agreement will be governed by and construed in accordance with the laws of the Republic of Korea, without regard to or application of conflict of laws rules or principles.  The United Nations Convention on Contracts for the International Sale of Goods will not apply."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "14-arbitration",
-      children: "14. Arbitration."
+      id: "15-arbitration",
+      children: "15. Arbitration."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "In the event of any dispute controversy or claim arising out of, or in connection with, or relating to this Agreement, or the breach, termination or invalidity of this Agreement, all attempts shall be made to solve it through mutual consultation in a spirit of confidence and integrity. If all attempts so made through mutual consultations have proved to be of no help within a reasonable time, arbitration rather than legal proceedings shall solve it. The matter shall be finally settled by arbitration in Seoul, Korea in accordance with the Domestic(International) Arbitration Rules of the Korean Commercial Arbitration Board and under the Law of Korea."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "15-general",
-      children: "15. General."
+      id: "16-general",
+      children: "16. General."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You may not assign or transfer this Agreement or any rights granted hereunder, by operation of law or otherwise, without Company's prior written consent, and any attempt by you to do so, without such consent, will be void.  Except as expressly set forth in this Agreement, the exercise by either party of any of its remedies under this Agreement will be without prejudice to its other remedies under this Agreement or otherwise.  All notices or approvals required or permitted under this Agreement will be in writing and delivered by electronic mail, confirmed facsimile transmission, by overnight delivery service, or by certified mail, and in each instance will be deemed given upon receipt.  All notices or approvals will be sent to the addresses set forth in the applicable ordering document or invoice or to such other address as may be specified by either party to the other in accordance with this section.  The failure by either party to enforce any provision of this Agreement will not constitute a waiver of future enforcement of that or any other provision.  Any waiver, modification or amendment of any provision of this Agreement will be effective only if in writing and signed by authorized representatives of both parties.  If any provision of this Agreement is held to be unenforceable or invalid, that provision will be enforced to the maximum extent possible, and the other provisions will remain in full force and effect.  This Agreement is the complete and exclusive understanding and agreement between the parties regarding its subject matter, and supersedes all proposals, understandings or communications between the parties, oral or written, regarding its subject matter, unless you and Company have executed a separate agreement.  Any terms or conditions contained in your purchase order or other ordering document that are inconsistent with or in addition to the terms and conditions of this Agreement are hereby rejected by Company and will be deemed null."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "16-contact-information",
-      children: "16. Contact Information."
+      id: "17-contact-information",
+      children: "17. Contact Information."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["If you have any questions regarding this Agreement, please visit ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://www.supremainc.com/en/support",
