@@ -118,7 +118,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["모든 정보를 입력하고 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "user.save"
+            sid: "user.save",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]

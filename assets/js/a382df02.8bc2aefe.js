@@ -109,7 +109,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "auth.login-page.certificate-download-button.button"
+            sid: "auth.httpsDownload"
           }), " 링크를 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-server-login-down-https-cert.png"
