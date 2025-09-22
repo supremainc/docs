@@ -60,7 +60,6 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
-    blockquote: "blockquote",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -182,16 +181,13 @@ function _createMdxContent(props) {
           children: ["사용자 프로필 화면이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.permission.title"
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.permission.multiFactorAuth"
+            sid: "common.fingerprintLogin",
+            product: "2"
           }), " 항목을 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.use"
           }), "으로 설정하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-edit-user-mfa-use.png"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "로그인 아이디와 비밀번호를 입력하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -202,15 +198,6 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "다중 인증 설정을 완료합니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "비밀번호는 연속되는 문자, 키보드 문자 또는 숫자를 입력할 수 없습니다."
-      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "예, abcd, qwerty, 0123456"
-        }), "\n"]
-      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multi-factor-authentication-batch-set",
       children: "다중 인증 일괄 설정"
@@ -272,7 +259,8 @@ function _createMdxContent(props) {
           children: ["일괄 편집 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.permission.title"
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.user.permission.multiFactorAuth"
+            sid: "common.fingerprintLogin",
+            product: "2"
           }), " 옵션의 체크박스를 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.use"
           }), "으로 설정하세요."]
@@ -292,7 +280,8 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["선택한 사용자 중 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "team.user.permission.multiFactorAuth"
+          sid: "common.fingerprintLogin",
+          product: "2"
         }), " 기능을 활성화하는 데 필요한 조건을 만족하지 않는 사용자는 팝업 메시지에 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "user.batchedit.popup.notavailableuser",
           product: "2"
@@ -315,6 +304,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "지문 입력 화면이 나타나면 지문 스캐너를 통해 지문을 스캔하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-mfa-login-scan-fingerprint.png"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

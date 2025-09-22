@@ -92,13 +92,6 @@ function _createMdxContent(props) {
             product: "2"
           }), " 메뉴만 사용할 수 있는 등급입니다."]
         }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            sid: "setting.account.user",
-            product: "2"
-          }), ": 사용자 본인의 정보와 근태 정보만 확인할 수 있는 등급입니다."]
-        }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",

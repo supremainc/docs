@@ -201,7 +201,8 @@ function _createMdxContent(props) {
             product: "2"
           }), "을 클릭하면 이름이 동일한 필드끼리 재매핑됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-user-import-02.png"
+          src: "/img/biostarx-user-import-02.png",
+          width: "50%"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

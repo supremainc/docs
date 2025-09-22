@@ -125,35 +125,47 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Treeview, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["출입 그룹은 출입 등급, 층 등급, 사용자 그룹, 사용자를 포함하는 상위 계층입니다. 출입 그룹을 통해 출입 권한을 관리할 수 있습니다. 출입 그룹 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "출입 그룹"
+          }), "은 출입 등급, 층 등급, 사용자 그룹, 사용자를 포함하는 상위 계층입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "출입 그룹"
+          }), "을 통해 출입 권한을 관리할 수 있습니다. 출입 그룹 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-access-control-manage-access-group",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["출입 등급은 사용자가 출입할 수 있는 시간을 설정하고, 이 시간 동안 출입문에 출입할 수 있는 권한을 부여합니다. 출입 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "출입 등급"
+          }), "은 사용자가 출입할 수 있는 시간을 설정하고, 이 시간 동안 출입문에 출입할 수 있는 권한을 부여합니다. 출입 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-access-control-manage-access-level",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["층 등급을 통해 사용자가 엘리베이터를 이용해 출입할 수 있는 층을 관리할 수 있습니다. 층 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "층 등급"
+          }), "을 통해 사용자가 엘리베이터를 이용해 출입할 수 있는 층을 관리할 수 있습니다. 층 등급 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-access-control-manage-floor-level",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["스케줄은 출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하는 기능입니다. 스케줄 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "스케줄"
+          }), "은 출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하는 기능입니다. 스케줄 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-schedule",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["엘리베이터를 등록하고 엘리베이터를 통해 출입할 수 있는 층을 관리할 수 있습니다. 엘리베이터 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "엘리베이터"
+          }), "를 등록하고 엘리베이터를 통해 출입할 수 있는 층을 관리할 수 있습니다. 엘리베이터 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-elevators-add",
             children: "다음 문서"
           }), "를 참고하세요."]

@@ -92,13 +92,6 @@ function _createMdxContent(props) {
             product: "2"
           }), " 메뉴만 사용할 수 있는 등급입니다."]
         }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-            sid: "setting.account.user",
-            product: "2"
-          }), ": 사용자 본인의 정보와 근태 정보만 확인할 수 있는 등급입니다."]
-        }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
@@ -272,6 +265,10 @@ const toc = [..._enter_user_page/* toc */.d$, {
   "id": "operatorLevel",
   "level": 2
 }, ..._account_list/* toc */.d$, {
+  "value": "로그인 아이디 및 비밀번호 설정",
+  "id": "로그인-아이디-및-비밀번호-설정",
+  "level": 3
+}, {
   "value": "다중 인증 설정",
   "id": "multiFactorAuth",
   "level": 2
@@ -289,6 +286,7 @@ function _createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     p: "p",
     strong: "strong",
@@ -327,7 +325,45 @@ function _createMdxContent(props) {
         sid: "user.bioStarOperator",
         product: "2"
       }), " 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요."]
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_account_list/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_account_list/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "로그인-아이디-및-비밀번호-설정",
+      children: "로그인 아이디 및 비밀번호 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "권한 등급을 선택했다면 해당 사용자가 BioStar X에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-new-user-permission-set-login.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "아이디 및 비밀번호 설정 시 주의사항"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "아이디는 영문, 숫자 조합으로 8~32자 이내로 설정하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "보안상 취약한 비밀번호는 사용을 피하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "연속된 문자나 숫자(예, abcd, 1234)"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "일반적인 단어나 패턴(예, qwerty, password)"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "생년월일이나 개인정보 조합(예, 0123456)"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multiFactorAuth",
       children: "다중 인증 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
