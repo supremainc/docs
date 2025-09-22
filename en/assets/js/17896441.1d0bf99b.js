@@ -1014,7 +1014,7 @@ const ReplacementLocaleText = (param)=>{
             if (sid === 'biostar.login' || sid === 'audit.setting.server.server_addr' || sid === 'audit.setting.server.server_port') {
                 localeText = locale[sid].replace('2', 'X');
             } else {
-                localeText = locale[sid] ? locale[sid].replace(' <br/><br/> ', ' ').replace(' <br/><br/>', ' ').replace('<br/><br/> ', ' ').replace(' </br> ', ' ').replace(' <br>', ' ').replace('<br> ', ' ').replace('<br/>', ' ').replace(' <br> ', ' ').replace('&sol;', '/').replace('\\xB0\\x43', "\u2103").replace('\\xB0\\x46', "\u2109") : null;
+                localeText = locale[sid] ? locale[sid].replace(' <br/><br/> ', ' ').replace(' <br/><br/>', ' ').replace('<br/><br/> ', ' ').replace(' </br> ', ' ').replace(' <br>', ' ').replace('<br> ', ' ').replace('<br/>', ' ').replace(' <br> ', ' ').replace('<br>', ' ').replace('&sol;', '/').replace('\\xB0\\x43', "\u2103").replace('\\xB0\\x46', "\u2109") : null;
             }
         } else {
             // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
