@@ -309,8 +309,7 @@ function _createMdxContent(props) {
       }), " 페이지로 이동해, 아래 두 가지 방식으로 출입 권한을 설정할 수 있습니다."]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_enter_user_page/* default */.ZP, {}), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission",
-        product: "2"
+        sid: "team.user.permission.title"
       }), " 섹션에서 설정할 수 있는 항목은 아래와 같습니다. 각 항목에 대한 설명을 참고하여 적절한 사용자 권한을 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-new-user-permission.png"
@@ -319,8 +318,7 @@ function _createMdxContent(props) {
       children: "권한 등급 선택"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission",
-        product: "2"
+        sid: "team.user.permission.title"
       }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user.bioStarOperator",
         product: "2"
@@ -328,8 +326,10 @@ function _createMdxContent(props) {
     }), "\n", "\n", (0,jsx_runtime.jsx)(_account_list/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "로그인-아이디-및-비밀번호-설정",
       children: "로그인 아이디 및 비밀번호 설정"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "권한 등급을 선택했다면 해당 사용자가 BioStar X에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["권한 등급을 선택했다면 해당 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-new-user-permission-set-login.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -368,7 +368,8 @@ function _createMdxContent(props) {
       children: "다중 인증 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "team.user.permission.multiFactorAuth"
+        sid: "common.fingerprintLogin",
+        product: "2"
       }), "을 활성화하면 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "에 로그인할 때 지문 인증을 추가해 로그인할 수 있습니다."]
@@ -397,11 +398,9 @@ function _createMdxContent(props) {
       children: "사용자 IP 주소로 로그인 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자 IP 주소를 등록하면, 계정에 등록한 IP 정보와 일치할 경우에만 PC에 로그인할 수 있습니다. 이를 통해 보안을 강화할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission",
-        product: "2"
+        sid: "team.user.permission.title"
       }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "user.ip",
-        product: "2"
+        sid: "team.user.permission.userIp"
       }), " 항목에 사용자의 IP 주소를 입력하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -421,8 +420,7 @@ function _createMdxContent(props) {
       children: "출입 그룹 선택"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자의 출입 그룹을 설정해 조직별, 부서별로 출입을 제한할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission",
-        product: "2"
+        sid: "team.user.permission.title"
       }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.permission.accessGroup"
       }), " 항목에서 출입 그룹을 선택하세요."]

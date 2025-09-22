@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-batch-import-face-mdx-931.json
-var site_docs_platform_biostar_x_batch_import_face_mdx_931_namespaceObject = JSON.parse('{"id":"platform/biostar_x/batch-import-face","title":"얼굴 일괄 등록하기","description":"사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/batch-import-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/batch-import-face","permalink":"/docs/platform/biostar_x/batch-import-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/batch-import-face.mdx","tags":[],"version":"current","frontMatter":{"id":"batch-import-face","title":"얼굴 일괄 등록하기","description":"사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.","keywords":["얼굴","등록","일괄","크리덴셜","인증"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"다중 인증으로 로그인하기","permalink":"/docs/platform/biostar_x/login-with-mfa"},"next":{"title":"얼굴 마이그레이션","permalink":"/docs/platform/biostar_x/migration-face"}}')
+var site_docs_platform_biostar_x_batch_import_face_mdx_931_namespaceObject = JSON.parse('{"id":"platform/biostar_x/batch-import-face","title":"얼굴 일괄 등록하기","description":"사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/batch-import-face.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/batch-import-face","permalink":"/docs/en/platform/biostar_x/batch-import-face","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/batch-import-face.mdx","tags":[],"version":"current","frontMatter":{"id":"batch-import-face","title":"얼굴 일괄 등록하기","description":"사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.","keywords":["얼굴","등록","일괄","크리덴셜","인증"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Login in with Multi-Factor Authentication","permalink":"/docs/en/platform/biostar_x/login-with-mfa"},"next":{"title":"Face Migration","permalink":"/docs/en/platform/biostar_x/migration-face"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -34,7 +34,7 @@ const frontMatter = {
 		'크리덴셜',
 		'인증'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -180,7 +180,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "에 이미 등록된 사용자 데이터를 유지할 지 CSV 파일의 정보로 덮어쓰기할 지 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.next"
+            sid: "common.apply"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-import-03.png"

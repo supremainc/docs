@@ -76,10 +76,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Details, IcMoreW} = _components;
+  }, {Cmd, Details, IcMoreW, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
   if (!IcMoreW) _missingMdxReference("IcMoreW", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -225,12 +226,17 @@ function _createMdxContent(props) {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.faceMigration"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-face-migration.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["경고 팝업창의 내용을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.ok"
+            sid: "common.button.continue"
           }), "을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-face-migration-warning.png",
+          width: "60%"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -209,7 +209,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "에 이미 사용자 ID가 등록된 사용자 데이터를 유지할 지 CSV 파일의 정보로 덮어쓰기할 지 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.continue"
+            sid: "common.apply"
           }), "을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-import-03.png"
