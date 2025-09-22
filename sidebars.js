@@ -302,7 +302,7 @@ const sidebars = {
             'platform/biostar_x/login-with-mfa',
             'platform/biostar_x/batch-import-face',
             'platform/biostar_x/migration-face',
-            // 'platform/biostar_x/columnlayout'
+            'platform/biostar_x/lockoverride'
           ]
         },
         {
