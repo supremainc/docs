@@ -57,6 +57,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
             .replace('<br> ', ' ')
             .replace('<br/>', ' ')
             .replace(' <br> ', ' ')
+            .replace('<br>', ' ')
             .replace('&sol;', '/')
             .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
           : null;
