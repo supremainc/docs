@@ -62,10 +62,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcEdit, IcTrash2, Image, NextItem, NextStep} = _components;
+  }, {Cmd, IcClose, IcEdit, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcEdit) _missingMdxReference("IcEdit", true);
-  if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
@@ -113,7 +113,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["크리덴셜 항목을 수정하려면 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하고, 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+          children: ["크리덴셜 항목을 수정하려면 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하고, 삭제하려면 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-edit-user-credentials.png"
         }), "\n"]
@@ -186,6 +186,8 @@ function _createMdxContent(props) {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.batchEdit"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-batch-edit-users.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

@@ -136,6 +136,18 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.export.csv"
           }), "를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-export-csv.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.export.csv"
+          }), " ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.export.title"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.download"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -173,10 +185,9 @@ function _createMdxContent(props) {
           }), " ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.import.title"
           }), " 창에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "user.list.csvImport.importStartRow",
-            product: "2"
+            sid: "user.list.csvImport.importStartRow"
           }), "을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.continue"
+            sid: "common.button.next"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-import-01.png"
@@ -353,14 +364,18 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.export.dataFile"
           }), "을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-export-data.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "team.menu.export.dataFile"
+            sid: "team.menu.dialog.exprotDataFile.title"
           }), " 창에서 데이터 파일을 적용할 장치를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.confirm"
+            sid: "common.apply"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-export-data-select-device.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -399,6 +414,8 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.import.dataFile"
           }), "을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-import-data.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

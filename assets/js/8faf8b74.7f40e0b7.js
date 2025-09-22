@@ -202,7 +202,7 @@ function _createMdxContent(props) {
       id: "change-number-of-users-list-indications",
       children: "사용자 목록 표시 개수 변경"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록에 표시되는 사용자 수를 변경할 수 있습니다. 화면 오른쪽 상단의 목록 선택 상자에서 원하는 사용자 수를 선택하세요. 선택할 수 있는 옵션은 10명, 25명, 50명, 100명입니다."
+      children: "사용자 목록에 표시되는 사용자 수를 변경할 수 있습니다. 화면 오른쪽 상단의 목록 선택 상자에서 원하는 사용자 수를 선택하세요. 선택할 수 있는 옵션은 50명, 100명, 200명입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-list-select-row.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {

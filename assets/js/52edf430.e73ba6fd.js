@@ -80,6 +80,8 @@ function _createMdxContent(props) {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.transferToDevice"
           }), "을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-list-transfer-device.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -87,7 +89,8 @@ function _createMdxContent(props) {
             sid: "team.menu.transferToDevice"
           }), " 창이 나타나면 장치 목록에서 사용자 정보를 전송할 장치를 선택하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-user-transfer-to-devices.png"
+          src: "/img/biostarx-user-transfer-to-devices.png",
+          width: "50%"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -101,7 +104,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["전송할 장치를 모두 선택했다면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.button.ok"
+            sid: "common.apply"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
