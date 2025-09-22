@@ -365,13 +365,17 @@ function _createMdxContent(props) {
           children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.sendFaceMobileEnrollLink"
           }), "를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-face-mobile-link.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["메시지 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.yes",
-            product: "2"
+            sid: "common.button.ok"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-face-mobile-link-warning.png",
+          width: "60%"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
