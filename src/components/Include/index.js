@@ -18,7 +18,6 @@ export default function InDoc ({children, product, pages}) {
         const cPage = location.pathname.split("/");
         const lastPath = cPage[cPage.length - 1] !== "" ? cPage.length - 1 : cPage.length - 2;
         const isPage = Pages.includes(cPage[lastPath]);
-        console.log(isPage);
 
         return isPage ? <MDXContents>{children}</MDXContents> : null;
     }
