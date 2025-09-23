@@ -32,6 +32,9 @@
   "externalLinks.peripheral.om120.desc": {
     "message": "다중 출력 제어 모듈"
   },
+  "externalLinks.peripheral.di24.desc": {
+    "message": "확장 가능한 제어, 끊김 없는 출입"
+  },
   "externalLinks.peripheral.sio2.desc": {
     "message": "출입문 보안 컨트롤 모듈"
   },
@@ -413,6 +416,9 @@
   "specs.credentials.biometrics.face": {
     "message": "얼굴"
   },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "지문"
+  },
   "specs.credentials.rfcard": {
     "message": "RF 카드"
   },
@@ -440,8 +446,29 @@
   "specs.credentials.biometrics.face.live_face_detection": {
     "message": "위조 얼굴 검출"
   },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "이미지 크기"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "이미지 비트 심도"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "해상도"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "템플릿"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "추출 / 매치"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "위조 지문 검출"
+  },
   "specs.general": {
     "message": "일반"
+  },
+  "specs.general.modelName": {
+    "message": "모델명"
   },
   "specs.general.cpu": {
     "message": "CPU"
@@ -457,6 +484,9 @@
   },
   "specs.general.led_type": {
     "message": "LED"
+  },
+  "specs.general.led_type.multiColor": {
+    "message": "다중 색상"
   },
   "specs.general.lcd_resolution": {
     "message": "화면 해상도"
@@ -475,6 +505,9 @@
   },
   "specs.general.storage_humidity": {
     "message": "보관 습도"
+  },
+  "specs.general.operating_condition": {
+    "message": "동작 환경 조건"
   },
   "specs.general.camera": {
     "message": "카메라"
@@ -530,6 +563,15 @@
   "specs.interface.input": {
     "message": "Input"
   },
+  "specs.interface.output": {
+    "message": "Output"
+  },
+  "specs.interface.supervised": {
+    "message": "Supervised 입력"
+  },
+  "specs.interface.auxInput": {
+    "message": "AUX 입력"
+  },
   "specs.interface.ttl_input": {
     "message": "TTL 입력"
   },
@@ -554,11 +596,20 @@
   "specs.interface.tamper": {
     "message": "템퍼"
   },
+  "specs.interface.samSlot": {
+    "message": "SAM 카드 슬롯"
+  },
   "specs.power": {
     "message": "전기 규격"
   },
   "specs.power.power": {
     "message": "전원"
+  },
+  "specs.power.power_output": {
+    "message": "전원 출력"
+  },
+  "specs.power.powerSupply": {
+    "message": "전원 장치 (SMPS) AC INPUT"
   },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
@@ -576,10 +627,13 @@
     "message": "Wiegand 출력 VOL"
   },
   "specs.power.wiegand_pullup": {
-    "message": "Wiegnad 출력 풀업 저항"
+    "message": "Wiegand 출력 풀업 저항"
   },
   "specs.power.relay": {
     "message": "릴레이"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
     "message": "크기 및 무게"

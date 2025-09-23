@@ -32,6 +32,9 @@
   "externalLinks.peripheral.om120.desc": {
     "message": "Multiple Output Extension Module"
   },
+  "externalLinks.peripheral.di24.desc": {
+    "message": "Scalable Control, Uninterrupted Access"
+  },
   "externalLinks.peripheral.sio2.desc": {
     "message": "Compact Secure Single Door I/O"
   },
@@ -413,6 +416,9 @@
   "specs.credentials.biometrics.face": {
     "message": "Face"
   },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "Fingerprint"
+  },
   "specs.credentials.rfcard": {
     "message": "RF Card"
   },
@@ -440,8 +446,29 @@
   "specs.credentials.biometrics.face.live_face_detection": {
     "message": "Live Face Detection"
   },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "Image Dimension"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "Image Bit Depth"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "Resolution"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "Template"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "Extractor / Matcher"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "Live Fingerprint Detection"
+  },
   "specs.general": {
     "message": "General"
+  },
+  "specs.general.modelName": {
+    "message": "Model"
   },
   "specs.general.cpu": {
     "message": "CPU"
@@ -457,6 +484,9 @@
   },
   "specs.general.led_type": {
     "message": "LED"
+  },
+  "specs.general.led_type.multiColor": {
+    "message": "Multi-color"
   },
   "specs.general.lcd_resolution": {
     "message": "Display Resolution"
@@ -475,6 +505,9 @@
   },
   "specs.general.storage_humidity": {
     "message": "Storage Humidity"
+  },
+  "specs.general.operating_condition": {
+    "message": "Operational Ambient Conditions"
   },
   "specs.general.camera": {
     "message": "Camera"
@@ -530,6 +563,15 @@
   "specs.interface.input": {
     "message": "Input"
   },
+  "specs.interface.output": {
+    "message": "Output"
+  },
+  "specs.interface.supervised": {
+    "message": "Supervised Input"
+  },
+  "specs.interface.auxInput": {
+    "message": "AUX Input"
+  },
   "specs.interface.ttl_input": {
     "message": "TTL Input"
   },
@@ -554,11 +596,20 @@
   "specs.interface.tamper": {
     "message": "Tamper"
   },
+  "specs.interface.samSlot": {
+    "message": "SAM Slot"
+  },
   "specs.power": {
     "message": "Electrical"
   },
   "specs.power.power": {
     "message": "Power"
+  },
+  "specs.power.power_output": {
+    "message": "Power Output"
+  },
+  "specs.power.powerSupply": {
+    "message": "Power Supply (SMPS) AC INPUT"
   },
   "specs.power.switch_input_vih": {
     "message": "Switch Input VIH"
@@ -576,10 +627,13 @@
     "message": "Wiegand Output VOL"
   },
   "specs.power.wiegand_pullup": {
-    "message": "Wiegnad Output Pull-up Resistance"
+    "message": "Wiegand Output Pull-up Resistance"
   },
   "specs.power.relay": {
     "message": "Relay"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE+ (12V out)"
   },
   "specs.size_weight": {
     "message": "Dimensions and Weight"

@@ -1,0 +1,111 @@
+---
+id: installation
+title: 설치하기
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+1. 제공된 드릴링 템플릿을 이용하여 브래킷을 장착할 위치를 정하세요. 제품을 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-bs2a.svg' className='none' alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-bs2a.png' className='none' width='60%' />
+
+    <div className='overflow-x'>
+
+    | 벽 | 두께거리 |
+    | :--: | :--: |
+    | 100 mm | 500 mm |
+    | 120 mm | 400 mm |
+    | 150 mm | 300 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-bs2a.png' className='none' width='60%' />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 케이블 커버를 조립한 뒤 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device2-bs2a.svg' className='none' alone />
+
+    :::info
+
+    IP65 방수, 방진 등급을 만족하기 위해서는 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다.
+
+    :::
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device3-bs2a.svg' className='none' alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />

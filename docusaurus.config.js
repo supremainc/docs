@@ -188,6 +188,41 @@ const config = {
                 type: 'doc',
                 label: 'BioEntry W3',
                 docId: 'device/bioentry_w3/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStation 2a',
+                docId: 'device/biostation_2a/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation F2',
+                docId: 'device/facestation_f2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioLite N2',
+                docId: 'device/biolite_n2/index'
+              },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation',
+                docId: 'device/corestation_40/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation 20',
+                docId: 'device/corestation_20/index'
+              },
+              {
+                type: 'doc',
+                label: 'Door Interface',
+                docId: 'device/doorinterface/index'
               }
             ]
           },

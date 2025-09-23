@@ -684,6 +684,106 @@ const sidebars = {
       ]
     }
   ],
+  corestation40: [
+    {
+      type: 'category',
+      label: 'CoreStation',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_40/index',
+      },
+      items: [
+        'device/corestation_40/safety-instructions',
+        'device/corestation_40/getting-started',
+        'device/corestation_40/installation',
+        'device/corestation_40/product-specifications',
+        'device/corestation_40/regulatory-information',
+        'device/corestation_40/appendices'
+      ]
+    }
+  ],
+  corestation20: [
+    {
+      type: 'category',
+      label: 'CoreStation 20',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_20/index',
+      },
+      items: [
+        'device/corestation_20/safety-instructions',
+        'device/corestation_20/getting-started',
+        'device/corestation_20/installation',
+        'device/corestation_20/product-specifications',
+        'device/corestation_20/regulatory-information',
+        'device/corestation_20/appendices'
+      ]
+    }
+  ],
+  doorinterface24: [
+    {
+      type: 'category',
+      label: 'Door Interface',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doorinterface/index',
+      },
+      items: [
+        'device/doorinterface/safety-instructions',
+        'device/doorinterface/getting-started',
+        'device/doorinterface/installation',
+        'device/doorinterface/product-specifications',
+        'device/doorinterface/regulatory-information',
+        'device/doorinterface/appendices'
+      ]
+    }
+  ],
+  facestationf2: [
+    {
+      type: 'category',
+      label: 'FaceStation F2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_f2/index',
+      },
+      items: [
+        'device/facestation_f2/safety-instructions',
+        'device/facestation_f2/getting-started',
+        'device/facestation_f2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_f2/using-device',
+          },
+          items: [
+            'device/facestation_f2/admin-menu',
+            'device/facestation_f2/user',
+            'device/facestation_f2/authentication',
+            'device/facestation_f2/settings',
+            'device/facestation_f2/event-log'
+          ]
+        },
+        'device/facestation_f2/troubleshooting',
+        'device/facestation_f2/product-specifications',
+        'device/facestation_f2/regulatory-information',
+        'device/facestation_f2/appendices'
+      ]
+    }
+  ],
   bioentryw3: [
     {
       type: 'category',
@@ -742,7 +842,6 @@ const sidebars = {
       ],
     },
   ],
-  /*
   biostation2a: [
     {
       type: 'category',
@@ -780,7 +879,80 @@ const sidebars = {
       ],
     },
   ],
-  */
+  bioliten2: [
+    {
+      type: 'category',
+      label: 'BioLite N2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2/index',
+      },
+      items: [
+        'device/biolite_n2/safety-instructions',
+        'device/biolite_n2/getting-started',
+        'device/biolite_n2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2/using-device',
+          },
+          items: [
+            'device/biolite_n2/admin-menu',
+            'device/biolite_n2/user',
+            'device/biolite_n2/authentication',
+            'device/biolite_n2/settings',
+            'device/biolite_n2/event-log',
+          ],
+        },
+        'device/biolite_n2/troubleshooting',
+        'device/biolite_n2/product-specifications',
+        'device/biolite_n2/regulatory-information',
+        'device/biolite_n2/appendices',
+      ],
+    },
+  ],
+  xstation2: [
+    {
+      type: 'category',
+      label: 'X-Station 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xstation_2/index',
+      },
+      items: [
+        'device/xstation_2/safety-instructions',
+        'device/xstation_2/getting-started',
+        'device/xstation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2/using-device',
+          },
+          items: [
+            'device/xstation_2/admin-menu',
+            'device/xstation_2/user',
+            'device/xstation_2/authentication',
+            'device/xstation_2/settings',
+            'device/xstation_2/event-log',
+          ],
+        },
+        'device/xstation_2/troubleshooting',
+        'device/xstation_2/product-specifications',
+        'device/xstation_2/regulatory-information',
+        'device/xstation_2/appendices',
+      ],
+    },
+  ],
 };
 
 export default sidebars;
