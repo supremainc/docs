@@ -688,6 +688,8 @@ footer {
     }
   }
   ul, ol {
+    padding-left: 28px;
+    margin-bottom: var(--ifm-list-paragraph-margin);
     li {
       margin: var(--ifm-list-paragraph-margin) 0;
       p {
@@ -708,6 +710,9 @@ footer {
     li:last-of-type {
       margin-bottom: 0;
     }
+  }
+  ul + ul {
+    // margin-top: -.3rem;
   }
   ul + ul > li:first-of-type {
     margin-top: 0;
@@ -866,10 +871,6 @@ footer {
   }
   span.text-blue-500 {
     color: #3b82f6;
-  }
-
-  ul, ol {
-    padding-left: 28px;
   }
 
   pre * {

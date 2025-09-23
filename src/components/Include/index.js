@@ -11,14 +11,15 @@ export default function InDoc ({children, product, pages}) {
         const prods = Array.isArray(product) ? product : product.split(',');
         const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd);
-    
-        return isProduct ? <MDXContents><section>{children}</section></MDXContents> : null;
+
+        return isProduct ? <MDXContents>{children}</MDXContents> : null;
     } else if (pages) {
         const Pages = Array.isArray(pages) ? pages : pages.split(',');
         const cPage = location.pathname.split("/");
         const lastPath = cPage[cPage.length - 1] !== "" ? cPage.length - 1 : cPage.length - 2;
         const isPage = Pages.includes(cPage[lastPath]);
+        console.log(isPage);
 
-        return isPage ? <MDXContents><section>{children}</section></MDXContents> : null;
+        return isPage ? <MDXContents>{children}</MDXContents> : null;
     }
 }
