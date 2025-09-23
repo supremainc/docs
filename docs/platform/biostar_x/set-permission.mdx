@@ -1,11 +1,11 @@
 ---
 id: set-permission
 title: 사용자 권한 설정하기
-description: 사용자의 출입 권한 설정 방법을 안내합니다.
+description: BioStar X 사용자의 관리자 권한과 출입 권한을 설정하는 방법을 안내합니다.
 keywords: [ 사용자, 권한 ]
 ---
 
-사용자의 출입 권한 설정 방법을 안내합니다. 출입 권한을 통해 사용자가 어떤 공간을 출입할 수 있는지, 어떤 시간대에 출입할 수 있는지 등을 설정할 수 있습니다. 출입 권한은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다.
+조직의 보안 정책에 따라 사용자별로 **BioStar X** 운영 권한과 출입 권한을 차별화하여 설정할 수 있습니다. 관리자 등급을 통해 주요 메뉴 접근을 제한하고, 출입 그룹을 통해 물리적 공간 접근을 제어할 수 있습니다. 또한 IP 주소 제한과 다중 인증을 통해 보안을 강화할 수 있습니다.
 
 <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> 페이지로 이동해, 아래 두 가지 방식으로 출입 권한을 설정할 수 있습니다.
 
@@ -18,9 +18,9 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 <Image src='/img/biostarx-new-user-permission.png' />
 
 
-## 권한 등급 선택 {#operatorLevel}
+## 관리자 등급 선택 {#operatorLevel}
 
-권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='user.bioStarOperator' product='2' /> 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요.
+관리자 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='user.bioStarOperator' product='2' /> 항목에서 사용자의 관리자 등급을 선택하세요. 사용자에게 할당할 수 있는 관리자 등급은 아래 목록을 참고하세요.
 
 import AccountList from '../../common/_account-list.mdx';
 
@@ -28,7 +28,7 @@ import AccountList from '../../common/_account-list.mdx';
 
 ### 로그인 아이디 및 비밀번호 설정
 
-권한 등급을 선택했다면 해당 사용자가 **BioStar X**에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다.
+관리자 등급을 선택했다면 해당 사용자가 **BioStar X**에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다.
 
 <Image src='/img/biostarx-new-user-permission-set-login.png' />
 
@@ -70,8 +70,6 @@ import AccountList from '../../common/_account-list.mdx';
 * IP 주소는 xxx.xxx.xxx.xxx 형식으로 입력할 수 있으며 각 옥텟은 0~255 범위의 숫자로만 입력할 수 있습니다.
 
 * IP 주소를 등록하지 않으면 IP 정보와 관계없이 PC에 로그인할 수 있습니다.
-
-{/* * 클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다. */}
 
 :::
 
