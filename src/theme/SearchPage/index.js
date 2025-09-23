@@ -217,7 +217,7 @@ function SearchPageContent() {
           );
           return {
             title: titles.pop(),
-            url: processSearchResultUrl(url),
+            url: processSearchResultUrl(url.replace('/docs/', '/')),
             summary: snippet.content
               ? `${sanitizeValue(snippet.content.value)}...`
               : '',

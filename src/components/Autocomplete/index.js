@@ -51,7 +51,7 @@ export function ProductItem({ hit, components }) {
         (element, i) => element !== null
     );
     const last = title.length - 1;
-    const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "")
+    const durl = hit.url.replace("#__docusaurus_skipToContent_fallback", "").replace('https://supremainc.github.io/docs/', '/');
     // console.log(hit);
     return (
         <Link to={durl} target="_blank" className={styles.aaItemLink}>
