@@ -7,11 +7,21 @@ import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
+    const isDev = process.env.NODE_ENV === 'development';
     
-    const imagePath = 
-        currentLocale === 'ko' || alone ? 
-            useBaseUrl(src) : 
-            useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
+    // Generate image path based on environment
+    const baseUrl = 'https://supremainc.github.io/docs';
+    const imagePath = (() => {
+        const localizedSrc = currentLocale === 'ko' || alone ? 
+            src : 
+            src.replace('/img/', `/img/${currentLocale}/`);
+        
+        if (isDev) {
+            return useBaseUrl(localizedSrc);
+        } else {
+            return `${baseUrl}${localizedSrc}`;
+        }
+    })();
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);
@@ -36,8 +46,8 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             width: width || 'auto',
             height: height || 'auto'
         } : {
-            width: imageSize[imagePath]?.width || 'auto',
-            height: imageSize[imagePath]?.height || 'auto'
+            width: imageSize[imagePath.replace(baseUrl, '')]?.width || 'auto',
+            height: imageSize[imagePath.replace(baseUrl, '')]?.height || 'auto'
         }),
     };
 
