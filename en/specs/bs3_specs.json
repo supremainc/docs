@@ -398,7 +398,7 @@
           }
         },
         "wiegand_pullup": {
-          "label": "Wiegnad 출력 풀업 저항",
+          "label": "Wiegand 출력 풀업 저항",
           "label_id": "specs.power.wiegand_pullup",
           "value": {
             "ko": "1 kΩ으로 내부 풀업",
@@ -412,38 +412,6 @@
             "2 A @ 30 VDC Resistive load",
             "1 A @ 30 VDC Inductive load"
           ]
-        }
-      }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bs3-device-dimension.svg",
-          "size": {
-            "width": "82.5",
-            "height": "171",
-            "depth": "23.4"
-          },
-          "weight": [
-            "BS3-DB: 370g",
-            "BS3-APWB: 380g"
-          ]
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bs3-bracket-front-dimension.svg",
-          "size": {
-            "width": "72.9",
-            "height": "164"
-          },
-          "weight": "90g",
-          "weight_include": true
         }
       }
     }
