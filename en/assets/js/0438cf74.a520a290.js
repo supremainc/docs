@@ -150,11 +150,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Column, Columns, Image, Magnifier, PageBreak, Row, Table, Tbody, Td} = _components;
+  }, {Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Magnifier) _missingMdxReference("Magnifier", true);
+  if (!Magnify) _missingMdxReference("Magnify", true);
   if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
@@ -237,7 +237,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       className: "partname",
       children: [(0,jsx_runtime.jsx)(Column, {
-        children: (0,jsx_runtime.jsx)(Magnifier, {
+        children: (0,jsx_runtime.jsx)(Magnify, {
           src: "/img/device/product-part-cs20.svg",
           width: 600,
           zoomFactor: .4,
@@ -721,7 +721,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "전체-연결-구성도",
       children: "전체 연결 구성도"
-    }), "\n", (0,jsx_runtime.jsx)(Magnifier, {
+    }), "\n", (0,jsx_runtime.jsx)(Magnify, {
       src: "/img/device/system-cs20.svg",
       width: 600,
       zoomFactor: .4,

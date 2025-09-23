@@ -943,7 +943,7 @@ function DocItemLayout(param) {
 
 
 }),
-89908: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+14388: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -3882,6 +3882,22 @@ function PageBreak() {
 
 // EXTERNAL MODULE: ./node_modules/react-magnifier/dist/Magnifier.es.js
 var Magnifier_es = __webpack_require__(35495);
+;// CONCATENATED MODULE: ./src/components/Magnify/index.js
+
+
+
+function Magnify(props) {
+    const img = (0,useBaseUrl/* default */.ZP)(props.src);
+    const updatedProps = {
+        ...props,
+        src: img
+    };
+    // console.log(img);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Magnifier_es/* default */.Z, {
+        ...updatedProps
+    });
+}
+
 ;// CONCATENATED MODULE: ./static/img/menus/ico-license.svg
 var ico_license_path, ico_license_path2;
 function ico_license_extends() { return ico_license_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_license_extends.apply(null, arguments); }
@@ -6072,7 +6088,7 @@ const SvgIcoCameraOk = ({
     Treeview: Treeview,
     YouTube: YouTube_esm/* default */.Z,
     PageBreak: PageBreak,
-    Magnifier: Magnifier_es/* default */.Z,
+    Magnify: Magnify,
     IcSvTime: ico_serverTime,
     IcAccout: ico_account,
     IcHelp: ico_help,

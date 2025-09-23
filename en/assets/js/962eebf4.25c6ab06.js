@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7927"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5286"], {
 82601: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   ZP: () => (MDXContent),
@@ -61,7 +61,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-41508: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+62308: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -70,20 +70,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   "default": () => (/* binding */ MDXContent),
   toc: () => (/* binding */ toc),
-  metadata: () => (/* reexport */ site_docs_device_corestation_20_getting_started_mdx_043_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_doorinterface_getting_started_mdx_962_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-corestation-20-getting-started-mdx-043.json
-var site_docs_device_corestation_20_getting_started_mdx_043_namespaceObject = JSON.parse('{"id":"device/corestation_20/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/corestation_20/getting-started.mdx","sourceDirName":"device/corestation_20","slug":"/device/corestation_20/getting-started","permalink":"/docs/device/corestation_20/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/corestation_20/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":false},"sidebar":"corestation20","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/device/corestation_20/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/corestation_20/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-doorinterface-getting-started-mdx-962.json
+var site_docs_device_doorinterface_getting_started_mdx_962_namespaceObject = JSON.parse('{"id":"device/doorinterface/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/doorinterface/getting-started.mdx","sourceDirName":"device/doorinterface","slug":"/device/doorinterface/getting-started","permalink":"/docs/en/device/doorinterface/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/doorinterface/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":true},"sidebar":"doorinterface24","previous":{"title":"안전을 위한 주의사항","permalink":"/docs/en/device/doorinterface/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/en/device/doorinterface/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
 // EXTERNAL MODULE: ./docs/common/_getting-started-components-note.mdx
 var _getting_started_components_note = __webpack_require__(82601);
-;// CONCATENATED MODULE: ./docs/device/corestation_20/getting-started.mdx
+;// CONCATENATED MODULE: ./docs/device/doorinterface/getting-started.mdx
 
 
 const frontMatter = {
@@ -97,7 +97,7 @@ const frontMatter = {
 		'케이블',
 		'커넥터'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -117,8 +117,8 @@ const toc = [{
   "id": "각-부분의-명칭-및-기능",
   "level": 2
 }, {
-  "value": "CoreStation 20 상태 LED",
-  "id": "corestation-20-상태-led",
+  "value": "Door Interface 상태 LED",
+  "id": "door-interface-상태-led",
   "level": 3
 }, {
   "value": "설치 예제",
@@ -150,11 +150,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Column, Columns, Image, Magnifier, PageBreak, Row, Table, Tbody, Td} = _components;
+  }, {Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Magnifier) _missingMdxReference("Magnifier", true);
+  if (!Magnify) _missingMdxReference("Magnify", true);
   if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
@@ -174,7 +174,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Td, {
             rowspan: 3,
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-device-cs20.svg",
+              src: "/img/device/component-device-di24.svg",
               className: "none",
               height: 350,
               alone: true
@@ -203,7 +203,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "CoreStation 20"
+            children: "Door Interface"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "오픈소스라이선스 가이드"
           })]
@@ -237,8 +237,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       className: "partname",
       children: [(0,jsx_runtime.jsx)(Column, {
-        children: (0,jsx_runtime.jsx)(Magnifier, {
-          src: "/img/device/product-part-cs20.svg",
+        children: (0,jsx_runtime.jsx)(Magnify, {
+          src: "/img/device/product-part-di24.svg",
           width: 600,
           zoomFactor: .4,
           mgWidth: 500,
@@ -378,7 +378,7 @@ function _createMdxContent(props) {
                 },
                 children: "11"
               }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "CoreStation 20 전원 연결 (DC 12V / DC 24V IN)"
+                children: "Door Interface 전원 연결 (DC 12V / DC 24V IN)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -399,17 +399,6 @@ function _createMdxContent(props) {
                 children: "13"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
-                  children: "ETHERNET"
-                }), " 연결"]
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "14"
-              }), (0,jsx_runtime.jsxs)(_components.td, {
-                children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "INIT"
                 }), " 버튼"]
               })]
@@ -418,7 +407,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "15"
+                children: "14"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 1 (Lock)"
@@ -429,10 +418,21 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "16"
+                children: "15"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "WIEGAND 0"
+                }), " 연결"]
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "16"
+              }), (0,jsx_runtime.jsxs)(_components.td, {
+                children: [(0,jsx_runtime.jsx)(_components.strong, {
+                  children: "RS-485 0"
                 }), " 연결"]
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -444,17 +444,6 @@ function _createMdxContent(props) {
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RS-485 0"
-                }), " 연결"]
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "18"
-              }), (0,jsx_runtime.jsxs)(_components.td, {
-                children: [(0,jsx_runtime.jsx)(_components.strong, {
-                  children: "RS-485 0"
                 }), " 종단 저항 스위치"]
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -462,7 +451,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "19"
+                children: "18"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "OUTPUT (0:2)"
@@ -473,7 +462,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "20"
+                children: "19"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 0 (Alarm)"
@@ -484,7 +473,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "21"
+                children: "20"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "SUPERVISED INPUT (0:2)"
@@ -513,13 +502,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "제품과 Wiegand 장치를 연결할 때 Wiegand 장치의 전원으로 제품의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 Wiegand 장치를 2대 연결할 수 있습니다."
+            children: "제품과 리더를 연결할 때 리더의 전원으로 제품의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 리더를 2대 연결할 수 있습니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "corestation-20-상태-led",
-      children: "CoreStation 20 상태 LED"
+      id: "door-interface-상태-led",
+      children: "Door Interface 상태 LED"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "제품의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로 확인할 수 있으며, 이더넷, RS-485, RS-485 0, RS-485 1, 시스템의 상태를 1초씩 순서대로 보여줍니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
@@ -536,57 +525,18 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "5",
-            children: "이더넷"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "빨간색/자홍색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "고정 IP 연결 실패"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "빨간색/파란색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "유동 IP 연결 성공"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "빨간색/하늘색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "고정 IP 연결 성공"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "빨간색/노란색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "유동 IP 연결 대기 중"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "빨간색/빨간색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "유동 IP 연결 실패"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "3",
+            rowSpan: "2",
             children: "RS-485"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "자홍색/파란색 점멸"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "슬레이브 장치 정상"
+            children: "마스터 장치 정상"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "자홍색/노란색 점멸"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "슬레이브 장치 연결 해제"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "자홍색/빨간색 점멸"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "슬레이브 장치 없음"
+            children: "마스터 장치 연결 해제"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -681,21 +631,21 @@ function _createMdxContent(props) {
       id: "설치-예제",
       children: "설치 예제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 제품은 중앙 집중식 출입 통제 시스템으로 엔터프라이즈급 환경을 위해 설계되었으며 최대 500,000명의 사용자 정보를 저장할 수 있습니다."
+      children: "이 제품은 출입문 확장 모듈로 최대 2개의 출입문을 간편하게 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar 2와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/installation-example-cs20.svg",
+      src: "/img/device/installation-example-di24.svg",
       width: "70%",
       className: "none print"
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "시스템-구성도",
       children: "시스템 구성도"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 제품은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다."
+      children: "이 제품은 3개의 RS-485 포트를 지원하며, 마스터 장치에 여러대의 Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/system-configuration-cs20.svg",
-      width: "70%",
+      src: "/img/device/system-configuration-di24.svg",
+      width: "100%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -710,19 +660,15 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "CS-20P 모델에 SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리더 포트에 직접 연결된 슬레이브 장치만 사용할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Door Interface를 호스트 포트에 슬레이브로 연결하면 CoreStation 20과의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다."
+            children: "마스터 장치의 호스트 포트에 Door Interface를 슬레이브로 연결하면 마스터 장치와의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "전체-연결-구성도",
       children: "전체 연결 구성도"
-    }), "\n", (0,jsx_runtime.jsx)(Magnifier, {
-      src: "/img/device/system-cs20.svg",
+    }), "\n", (0,jsx_runtime.jsx)(Magnify, {
+      src: "/img/device/system-di24.svg",
       width: 600,
       zoomFactor: .4,
       mgWidth: 500,

@@ -163,9 +163,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Image, Magnifier, PageBreak, Row, Table, Tbody, Td} = _components;
+  }, {Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Image) _missingMdxReference("Image", true);
-  if (!Magnifier) _missingMdxReference("Magnifier", true);
+  if (!Magnify) _missingMdxReference("Magnify", true);
   if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
@@ -295,7 +295,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "각-부분의-명칭-및-기능",
       children: "각 부분의 명칭 및 기능"
-    }), "\n", (0,jsx_runtime.jsx)(Magnifier, {
+    }), "\n", (0,jsx_runtime.jsx)(Magnify, {
       src: "/img/device/product-part-cs40.svg",
       width: "100%",
       zoomFactor: .4,
