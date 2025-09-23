@@ -1,0 +1,1 @@
+gh workflow run azure-static-web-apps-victorious-beach-03178ad00.yml --ref main

@@ -90,6 +90,7 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
+            'device/xstation_2/**.{md,mdx}',
             '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
@@ -223,11 +224,11 @@ const config = {
                 label: 'BioLite N2',
                 docId: 'device/biolite_n2/index'
               },
-              {
-                type: 'doc',
-                label: 'X-Station 2',
-                docId: 'device/xstation_2/index'
-              },
+              // {
+              //   type: 'doc',
+              //   label: 'X-Station 2',
+              //   docId: 'device/xstation_2/index'
+              // },
               {
                 type: 'doc',
                 label: 'CoreStation',
