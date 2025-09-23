@@ -1810,19 +1810,16 @@ function InDoc(param) {
         const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd);
         return isProduct ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
-            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
-                children: children
-            })
+            children: children
         }) : null;
     } else if (pages) {
         const Pages = Array.isArray(pages) ? pages : pages.split(',');
         const cPage = location.pathname.split("/");
         const lastPath = cPage[cPage.length - 1] !== "" ? cPage.length - 1 : cPage.length - 2;
         const isPage = Pages.includes(cPage[lastPath]);
+        console.log(isPage);
         return isPage ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* default */.Z, {
-            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("section", {
-                children: children
-            })
+            children: children
         }) : null;
     }
 }

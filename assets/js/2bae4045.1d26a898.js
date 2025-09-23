@@ -27,8 +27,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Include} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
@@ -93,9 +94,20 @@ function _createMdxContent(props) {
           }), " 메뉴만 사용할 수 있는 등급입니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
       type: "info",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
+        pages: "set-permission",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["관리자 등급을 설정하지 않으려면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+              sid: "common.selectNone"
+            }), "을 선택하세요. 이 경우 해당 사용자는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에 로그인할 수 없습니다."]
+          }), "\n"]
+        })
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
             children: ["사전 정의된 사용자 권한 외 새로운 사용자 권한을 추가하려면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
@@ -121,7 +133,7 @@ function _createMdxContent(props) {
             }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
-      })
+      })]
     })]
   });
 }
@@ -227,7 +239,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-set-permission-mdx-2ba.json
-var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"사용자의 출입 권한 설정 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"PIN 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-pin"},"next":{"title":"사용자 고급 설정하기","permalink":"/docs/platform/biostar_x/set-user-advanced"}}')
+var site_docs_platform_biostar_x_set_permission_mdx_2ba_namespaceObject = JSON.parse('{"id":"platform/biostar_x/set-permission","title":"사용자 권한 설정하기","description":"BioStar X 사용자의 관리자 권한과 출입 권한을 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/set-permission.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/set-permission","permalink":"/docs/platform/biostar_x/set-permission","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/set-permission.mdx","tags":[],"version":"current","frontMatter":{"id":"set-permission","title":"사용자 권한 설정하기","description":"BioStar X 사용자의 관리자 권한과 출입 권한을 설정하는 방법을 안내합니다.","keywords":["사용자","권한"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"PIN 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-pin"},"next":{"title":"사용자 고급 설정하기","permalink":"/docs/platform/biostar_x/set-user-advanced"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -242,7 +254,7 @@ var _account_list = __webpack_require__(48644);
 const frontMatter = {
 	id: 'set-permission',
 	title: '사용자 권한 설정하기',
-	description: '사용자의 출입 권한 설정 방법을 안내합니다.',
+	description: 'BioStar X 사용자의 관리자 권한과 출입 권한을 설정하는 방법을 안내합니다.',
 	keywords: [
 		'사용자',
 		'권한'
@@ -255,13 +267,12 @@ const assets = {
 
 };
 
-/** 클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다.*/
 
 
 
 
 const toc = [..._enter_user_page/* toc */.d$, {
-  "value": "권한 등급 선택",
+  "value": "관리자 등급 선택",
   "id": "operatorLevel",
   "level": 2
 }, ..._account_list/* toc */.d$, {
@@ -299,8 +310,10 @@ function _createMdxContent(props) {
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 출입 권한 설정 방법을 안내합니다. 출입 권한을 통해 사용자가 어떤 공간을 출입할 수 있는지, 어떤 시간대에 출입할 수 있는지 등을 설정할 수 있습니다. 출입 권한은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["조직의 보안 정책에 따라 사용자별로 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 운영 권한과 출입 권한을 차별화하여 설정할 수 있습니다. 관리자 등급을 통해 주요 메뉴 접근을 제한하고, 출입 그룹을 통해 물리적 공간 접근을 제어할 수 있습니다. 또한 IP 주소 제한과 다중 인증을 통해 보안을 강화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
@@ -315,19 +328,19 @@ function _createMdxContent(props) {
       src: "/img/biostarx-new-user-permission.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "operatorLevel",
-      children: "권한 등급 선택"
+      children: "관리자 등급 선택"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["관리자 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "team.user.permission.title"
       }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user.bioStarOperator",
         product: "2"
-      }), " 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요."]
+      }), " 항목에서 사용자의 관리자 등급을 선택하세요. 사용자에게 할당할 수 있는 관리자 등급은 아래 목록을 참고하세요."]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_account_list/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "로그인-아이디-및-비밀번호-설정",
       children: "로그인 아이디 및 비밀번호 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["권한 등급을 선택했다면 해당 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["관리자 등급을 선택했다면 해당 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {

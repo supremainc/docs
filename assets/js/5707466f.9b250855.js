@@ -49,6 +49,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
@@ -106,7 +107,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.permission.title"
-          }), " 섹션에서 사용자의 출입 권한을 설정하세요."]
+          }), " 섹션에서 사용자의 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 운영 권한과 출입 권한을 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
