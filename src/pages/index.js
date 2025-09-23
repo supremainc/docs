@@ -82,7 +82,7 @@ function HomepageHeader() {
                       const goUrl = activeUrl.replace("https://supremainc.github.io/docs", curOrigin);
                       window.onkeydown = (e) => {
                           if (e.keyCode === 13) {
-                              window.location.href = goUrl;
+                              window.location.href = activeUrl;
                           }
                       }
                   }
