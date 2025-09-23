@@ -90,10 +90,11 @@ export function Hit({ hit, children }) {
     sdkName = 'BioStar X';
   }
   //END SWIZZLED CODE
+
   return (
     //START SWIZZLED CODE
     <Link
-      to={hit.url.replace('/docs/', '/')}
+      to={hit.url}
       style={{
         display: 'flex',
         alignItems: 'center',
