@@ -1,0 +1,178 @@
+---
+id: authentication
+title: 인증
+description: 지원하는 인증 방식과 인증 절차를 설명합니다.
+keywords: [인증 모드, 인증 옵션, PIN, 지문, 근태]
+---
+
+지원하는 인증 방식과 인증 절차를 설명합니다.
+
+## 인증 모드
+
+장치의 인증 모드를 설정할 수 있습니다. <Cmd>지문</Cmd>, <Cmd>PIN</Cmd>, <Cmd>카드 / QR 코드</Cmd>, <Cmd>ID</Cmd>를 조합하여 인증 모드로 사용할 수 있으며, 각 인증 모드마다 사용할 스케줄을 설정할 수도 있습니다.
+
+:::info
+
+* 지문 인증은 XS2-ODPB, XS2-OAPB 제품에서만 사용할 수 있습니다.
+
+:::
+
+### 인증 모드 등록 {#registering-auth-mode}
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd> → <Cmd>인증 모드</Cmd>를 누르세요.
+
+1. <Image src='/img/common/ico-add2.svg' ico alone />을 선택하세요.
+
+1. <Image src='/img/common/ico-add1.svg' ico alone />을 누르면 추가할 수 있는 크리덴셜이 화면에 나타납니다. 원하는 크리덴셜을 추가하세요. 크리덴셜이 추가된 상태에서 <Image src='/img/common/ico-cancel.svg' ico alone />을 누르면 추가한 크리덴셜을 삭제할 수 있습니다.
+
+    <Image src='/img/device/xs2-auth-authmode.png' />
+
+1. 원하는 인증 모드를 설정한 뒤 <Cmd>스케줄</Cmd>을 설정하세요.
+
+    <div className='overflow-x'>
+
+    | 구분 | 설명 |
+    | :--: | -- |
+    | 지문 | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: 지문만 사용하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 지문로 인증한 뒤 PIN을 입력하는 모드입니다. |
+    | 카드 / QR 코드 | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: 카드 / QR코드만 사용하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: 카드 / QR코드로 인증한 뒤 지문으로 인증하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 지문으로 인증하거나 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 지문 인증과 PIN 입력을 모두 사용하는 모드입니다. |
+    | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: ID를 입력한 뒤 지문으로 인증하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 지문으로 인증하거나 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 지문 인증과 PIN 입력을 모두 사용하는 모드입니다. |
+
+    </div>
+
+    :::info
+
+    * 인증 모드 아이콘의 이미지는 모델에 따라 다를 수 있습니다.
+
+    * <Cmd>스케줄</Cmd>은 BioStar 2에서 설정할 수 있습니다. 설정한 스케줄이 없다면 <Cmd>항상 사용</Cmd>만 선택할 수 있습니다.
+
+    * <Cmd>스케줄</Cmd> 설정에 대한 자세한 내용은 [BioStar 2 관리자 설명서](../../platform/biostar_x/settings-schedule)를 참고하세요.
+
+    * XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB 모델에서 <Cmd>QR/바코드</Cmd> 인증을 사용하려면 <Cmd>인증</Cmd> → <Cmd>QR/바코드 인증 옵션</Cmd>에서 <Cmd>QR/바코드</Cmd>가 활성화 되어있어야 하며, 별도의 장치 라이선스가 필요합니다. 자세한 내용은 [라이선스](settings#license)를 참고하세요.
+
+    :::
+
+1. 설정을 저장하려면 <Cmd>OK</Cmd>를 누르세요.
+
+### 인증 모드 편집
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd> → <Cmd>인증 모드</Cmd>를 누르세요.
+
+1. 수정할 인증 모드를 선택하세요.
+
+1. [인증 모드 등록](#registering-auth-mode)을 참고하여 인증 모드를 수정한 뒤 <Cmd>OK</Cmd>를 누르세요.
+
+### 인증 모드 삭제
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd> → <Cmd>인증 모드</Cmd>를 누르세요.
+
+1. <Image src='/img/common/ico-delete.svg' ico alone />을 누른 뒤 삭제할 항목을 선택하세요. 여러 개를 선택할 수도 있습니다.
+
+1. 선택한 항목을 삭제하려면 <Cmd>OK</Cmd>를 누르세요.
+
+## 인증 옵션
+
+### 서버 매칭
+
+서버 매칭을 설정할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd>을 누른 뒤 <Cmd>인증 옵션</Cmd>에서 <Cmd>서버 매칭 (카드, ID)</Cmd>를 활성화하세요.
+
+    <Image src='/img/device/bs3-auth-option.png' />
+
+    * <Cmd>서버 매칭 (카드, ID)</Cmd>: 서버 매칭을 설정하면 장치에서 사용자 인증을 수행하지 않고, BioStar 2에서 사용자 인증을 수행합니다. 서버 매칭은 장치에 사용자 정보가 너무 많을 때나 사용자 크리덴셜 정보가 저장된 장치를 외부에 노출하고 싶지 않을 때 유용하게 사용할 수 있습니다.
+
+    :::info
+
+    * <Cmd>서버 매칭</Cmd>은 카드, ID만 사용할 수 있습니다.
+
+    * <Cmd>서버 매칭</Cmd>을 사용할 경우 장치와 BioStar 2에서 서버 매칭을 활성화해야 합니다. BioStar 2 서버 매칭 설정에 대한 자세한 내용은 [BioStar 2 관리자 설명서](../../platform/biostar_x/settings-server-server#servermatching)를 참고하세요.
+
+    :::
+
+### QR 인증
+
+QR코드 인증을 설정할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd>을 누른 뒤 <Cmd>인증 옵션</Cmd>에서 <Cmd>QR 인증</Cmd>을 활성화하세요.
+
+    <Image src='/img/device/bs3-auth-option-qr.png' />
+
+    * <Cmd>QR 인증</Cmd>: 장치의 카메라를 통한 QR 코드 인증 사용 여부를 설정할 수 있습니다.
+
+    * <Cmd>카드를 QR로 인증하기</Cmd>: 사용자에게 발급한 CSN 카드 또는 Wiegand 카드와 동일한 데이터의 QR코드로 인증할 수 있도록 설정할 수 있습니다. <Cmd>QR 인증</Cmd>이 활성화되어있는 경우에만 설정할 수 있습니다.
+
+    :::info
+
+    <Cmd>QR 인증</Cmd>을 사용하려면 별도의 장치 라이선스가 필요합니다. 자세한 내용은 [라이선스](settings#license)를 참고하세요.
+
+    :::
+
+## PIN
+
+비밀번호 입력 시 스크램블 키패드 사용 여부를 설정할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd>을 누른 뒤 <Cmd>PIN</Cmd>에서 <Cmd>스크램블 키패드</Cmd> 사용 여부를 설정하세요.
+
+    <Image src='/img/device/bs3-pin.png' />
+
+    * <Cmd>스크램블 키패드</Cmd>: 비밀번호를 입력할 때 숫자 키의 위치가 무작위로 섞여 비밀번호 유출을 방지할 수 있습니다.
+
+## 인증 결과 표시 옵션
+
+인증 결과 표시 옵션을 설정할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd>을 누른 뒤 <Cmd>인증 결과 표시 옵션</Cmd>에서 원하는 항목을 변경하세요.
+
+    <Image src='/img/device/bs3-auth-result-display-option.png' />
+
+    * <Cmd>사용자 ID 표시</Cmd>: 장치의 인증 결과 화면에서 사용자 ID가 표시되는 방법을 선택할 수 있습니다.
+
+      * <Cmd>전체 표시</Cmd>: 사용자 ID를 모두 표시합니다.
+
+      * <Cmd>첫 문자만 표시</Cmd>: 사용자 ID의 첫 문자만 표시합니다.
+
+      * <Cmd>표시하지 않기</Cmd>: 사용자 ID를 표시하지 않습니다.
+
+    * <Cmd>사용자 이름 표시</Cmd>: 장치의 인증 결과 화면에서 사용자 이름이 표시되는 방법을 선택할 수 있습니다.
+
+      * <Cmd>전체 표시</Cmd>: 사용자 이름을 모두 표시합니다.
+
+      * <Cmd>첫 문자만 표시</Cmd>: 사용자 이름의 첫 문자만 표시합니다.
+
+      * <Cmd>표시하지 않기</Cmd>: 사용자 이름을 표시하지 않습니다.
+
+## 근태
+
+근태 모드 등록 방법을 설정할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd>인증</Cmd> → <Cmd>근태</Cmd>를 선택하세요.
+
+1. 원하는 항목을 설정하세요.
+
+    <Image src='/img/device/bs3-auth2.png' />
+
+    * <Cmd>근태 모드</Cmd>: 근태 모드를 사용할 방법을 설정할 수 있습니다.
+
+    * <Cmd>근태 코드</Cmd>: 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 <Cmd>근태 코드</Cmd> → <Image src='/img/common/ico-add2.svg' ico alone />을 선택한 뒤 화면에 표시할 아이콘, <Cmd>근태 이벤트 이름</Cmd>, <Cmd>스케줄</Cmd>을 설정하세요.
+
+    * <Cmd>근태 등록 필요</Cmd>: 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>수동변경</Cmd>으로 설정했을 때 사용할 수 있습니다.
+
+    * <Cmd>근태 고정 키</Cmd>: 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. <Cmd>근태 모드</Cmd>를 <Cmd>고정</Cmd>으로 설정했을 때 사용할 수 있습니다.
+
+    * <Cmd>작업 코드</Cmd>: 작업 코드 사용 여부를 선택할 수 있습니다.

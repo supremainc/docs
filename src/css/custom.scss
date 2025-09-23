@@ -400,7 +400,7 @@ footer {
     font-size: var(--ifm-h3-font-size);
     font-weight: 500;
   }
-  h4 { 
+  h4, .deviceonly { 
     --ifm-h4-font-size: 1.3rem;
     font-size: var(--ifm-h4-font-size);
     font-weight: 500;
@@ -429,6 +429,10 @@ footer {
       margin-top: .5rem;
       margin-left: 1.5rem;
     }
+  }
+
+  .magnifier {
+    margin-bottom: 1.5rem;
   }
 
   .enroll-credential-fingerprint::before {
@@ -595,6 +599,9 @@ footer {
       display: inline-block;
     }
   }
+  > p {
+    margin-bottom: var(--ifm-paragraph-margin-bottom);
+  }
   p, li {
     em {
       // font-style: normal;
@@ -632,6 +639,9 @@ footer {
       }
       img.none {
         border: none;
+      }
+      img.padding--1rem {
+        padding: 1rem;
       }
     }
     img.ico {
@@ -860,6 +870,10 @@ footer {
     background-color: rgb(0, 102, 204);
   }
 
+  span.only {
+    background-color: var(--ifm-color-cmd);
+  }
+
   span.cmd.bold, span.bold {
     font-weight: bold;
     color: var(--ifm-color-color-gray);
@@ -902,6 +916,9 @@ footer {
     .text--left {
       text-align: left;
     }
+    .text--center {
+      text-align: center;
+    }
     .padding--t1rem {
       padding-top: 1rem !important;
     }
@@ -917,12 +934,17 @@ footer {
   table {
     width: 100%;
     display: table;
+    tr.center td {
+      text-align: center;
+    }
     &.component {
       table-layout: fixed;
       tr.center td {
         text-align: center;
         p.hasimg img {
           margin: 0 auto;
+          width: revert-layer;
+          height: revert-layer;
         }
       }
       tr.white td {
@@ -1054,6 +1076,7 @@ footer {
 
   // Columns
   .container {
+    margin-top: 1rem;
     .col {
       padding-left: 0;
       padding-right: 0;
@@ -1107,7 +1130,10 @@ footer {
     --ifm-alert-background-color: #354e5c;
   }
   img.ico[src*="ico-menu.svg"],
+  img.ico[src*="ico-menu1.svg"],
+  img.ico[src*="ico-menu2.svg"],
   img.ico[src*="ico-search.svg"],
+  img.ico[src*="ico-regulatory.svg"],
   img.ico[src*="ico-delete.svg"] {
     filter: invert(1);
   }
@@ -1279,6 +1305,16 @@ footer {
     li::marker {
       font-size: .8rem !important;
     }
+    .magnifier {
+      width: 100% !important;
+      display: block;
+      text-align: center;
+    }
+    .magnifier img.magnifier-image {
+      width: 50% !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .hasimg {
       margin-top: 1rem !important;
       img {
@@ -1342,6 +1378,14 @@ footer {
         flex: none !important;
         float: left;
         width: 50%;
+      }
+      .partname {
+        .col {
+          width: 100%;
+        }
+        .padding--l20 {
+          padding-left: 0 !important;
+        }
       }
     }
     section.row {

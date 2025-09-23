@@ -110,7 +110,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'FaceStation F2',
-      url: '#',
+      url: '/device/facestation_f2',
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",
@@ -120,11 +120,21 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioLite N2',
-      url: '#',
+      url: `/device/biolite_n2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
       desc: `${translate({
         id: "externalLinks.BioLiteN2.desc",
-        message: "옥외형 지문인식 출입근태 장치"
+        message: "옥외형 지문 인식 출입·근태 장치"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'X-Station 2',
+      url: '#',
+      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
       })}`,
       height: '90px'
     },
@@ -154,16 +164,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'X-Station 2',
-      url: '#',
-      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
-      desc: `${translate({
-        id: "externalLinks.XStation2.desc",
-        message: "차세대 모바일 출입인증 단말기"
       })}`,
       height: '90px'
     }
@@ -233,7 +233,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'CoreStation',
-      url: '#',
+      url: '/device/corestation_40',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/corestation.png',
       desc: `${translate({
         id: "externalLinks.CoreStation.desc",
@@ -242,7 +242,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     },
     {
       title: 'CoreStation 20',
-      url: '#',
+      url: '/device/corestation_20',
       img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
       desc: 'Powerful Security, Flexible Expansion'
     },
@@ -288,6 +288,16 @@ export function Peripheral({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.peripheral.om120.desc",
         message: "다중 출력 제어 모듈"
+      })}`
+    },
+    {
+      title: 'Door Interface',
+      url: '/device/doorinterface',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20250512100138876.webp',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.di24.desc",
+        message: "확장 가능한 제어, 끊김 없는 출입"
       })}`
     },
     {
