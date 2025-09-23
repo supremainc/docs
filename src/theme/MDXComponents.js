@@ -34,7 +34,7 @@ import DocLink from '@site/src/components/DocLink';
 import Treeview from '@site/src/components/Treeview';
 import YouTube from 'react-youtube';
 import PageBreak from '@site/src/components/Pagebreak';
-import Magnifier from "react-magnifier";
+import Magnify from "@site/src/components/Magnify";
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -144,7 +144,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnifier,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
