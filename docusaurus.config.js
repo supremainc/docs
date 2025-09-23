@@ -172,8 +172,8 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'img/suprema-logo.svg',
-          srcDark: 'img/suprema-logo-white.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
+          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
@@ -278,7 +278,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'img/suprema-logo-bottom.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
           width: '173px',
         },
         links: [
