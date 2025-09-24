@@ -85,19 +85,45 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 ## VMS 서버의 인증서 설치 {#vms-certification}
 
-<Cmd sid='shell.header.arena' /> 페이지에서 VMS의 녹화 영상을 재생할 때 브라우저에서 '안전하지 않음' 경고가 표시되거나 영상 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다.
+<Cmd sid='shell.header.arena' /> 페이지에서 Video Management System(VMS)의 녹화 영상을 재생할 때 브라우저에서 '안전하지 않음' 경고가 표시되거나 영상 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 또한 인증서 설치를 통해서 VMS와 BioStar X를 같은 서버에서 이용할 수도 있습니다.
 
-VMS 서버는 일반적으로 Chain 형태의 PEM 인증서를 사용하므로, 인증서 설치 시 Chain Type 옵션을 선택해야 합니다.
+### VMS 서버에서 인증서 설치 {#install-vms-certification}
 
-1. VMS 서버에서 IP 주소 기반의 인증서를 생성하세요.
+VMS 서버에서 IP 주소 기반의 인증서를 생성하세요.
 
-    :::note
+:::info
 
-    VMS 서버에서 IP 주소 기반의 인증서를 생성하는 방법은 사용하는 VMS 제품의 매뉴얼을 참고하세요.
+인증서를 설치하기 전에 VMS를 설치한 PC에 Open JDK 21 이상이 설치되어 있는지 확인하세요.
 
-    :::
+:::
+
+1. *C:\Program Files\BioStar X\third* 경로로 이동해 명령 프롬프트를 실행하세요.
+
+1. 다음 명령어를 실행하세요. 
+
+    <Tabs groupId='os' defaultValue='Windows'>
+    <TabItem value="Windows">
+    ```java
+    java -jar scaleUtil-1.0-all.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+    ```
+    </TabItem>
+    <TabItem value="Linux">
+    ```java
+    java -jar scaleUtil-1.0-all.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+    ```
+    </TabItem>
+    </Tabs>
+
+    - `<%VENDOR.NAME%>` 부분에 VMS를 설치한 경로를 입력하세요.
+    
+    - `{VMS_IP_ADDRESS}` 부분에 VMS 서버의 IP 주소를 입력하세요.
+
+1. VMS를 설치한 경로에서 인증서 파일(*\*.pem*)이 생성되었는지 확인하세요.
 
 1. VMS 서버를 재부팅하세요.
+
+
+### 클라이언트 PC에서 인증서 설치 {#install-client-certification}
 
 1. **BioStar X**를 설치한 클라이언트 PC에서 로그인 화면 또는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />에서 HTTPS 인증서 설치 프로그램(*cert-register.zip*)을 다운로드하세요.
 

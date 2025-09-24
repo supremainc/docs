@@ -486,6 +486,10 @@ footer {
     }
   }
 
+  .tabs__item--active {
+    background-color: var(--ifm-color-nextstep-background);
+  }
+
   section {
     ul {
       margin-bottom: var(--ifm-list-paragraph-margin);
