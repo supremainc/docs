@@ -290,7 +290,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ]
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',
