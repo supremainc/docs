@@ -1,0 +1,71 @@
+[
+  {
+    "name": "모든 출입문 그룹",
+    "children": [
+      {
+        "name": "출입문 그룹 A",
+        "type": "door-group",
+        "children": [
+          {
+            "name": "출입문",
+            "type": "door-device",
+            "children": [
+              {
+                "name": "출입문 센서",
+                "type": "door-sensor"
+              },
+              {
+                "name": "출입문 릴레이",
+                "type": "door-relay"
+              },
+              {
+                "name": "경비 상태",
+                "type": "door-arm"
+              },
+              {
+                "name": "Camera",
+                "type": "door-camera"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "모든 엘리베이터 그룹",
+    "type": "elevator",
+    "children": [
+      {
+        "name": "엘리베이터 그룹 B",
+        "type": "elevator-group",
+        "children": [
+          {
+            "name": "엘리베이터 1",
+            "type": "elevator-device",
+            "children": [
+              {
+                "name": "엘리베이터 1 - 1층",
+                "type": "elevator-floor"
+              },
+              {
+                "name": "엘리베이터 1 - 2층",
+                "type": "elevator-floor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "모든 고급 출입 통제",
+    "type": "access-control",
+    "children": [
+      {
+        "name": "출입 통제 구역",
+        "type": "access-zone"
+      }
+    ]
+  }
+]
