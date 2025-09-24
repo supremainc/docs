@@ -72,16 +72,6 @@ const config = {
       },
     }
   },
-  headTags: [
-    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: '07FFA029DF50324E',
-      }
-    }
-  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
     '@docusaurus/theme-mermaid'
@@ -312,9 +302,9 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: 'G6Y3H2PNC3',
-        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
-        indexName: 'SPDocs',
+        appId: '11LXF9EJH7',
+        apiKey: '4882650c3591013a4db2f9211c31c4f4',
+        indexName: 'supremaincio',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
