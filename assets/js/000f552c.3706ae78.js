@@ -148,8 +148,6 @@ function _createMdxContent(props) {
       children: ["개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.unlock"
       }), "을 클릭하고 원하는 옵션을 선택하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입문을 개방하면 출입문 릴레이 아이콘이 ", (0,jsx_runtime.jsx)(IcRelayLock, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcRelayUnlock, {}), " 상태로 변경됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -170,6 +168,8 @@ function _createMdxContent(props) {
           }), ": 시간에 상관없이 출입문을 개방합니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입문을 개방하면 출입문 릴레이 아이콘이 ", (0,jsx_runtime.jsx)(IcRelayLock, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcRelayUnlock, {}), " 상태로 변경됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -217,13 +217,13 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.openVideo"
       }), "를 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
-      }), " 섹션의 비디오 타일에 선택한 카메라의 영상이 추가됩니다."]
+      }), " 섹션의 비디오 타일에 선택한 카메라의 영상을 추가하고, 재생할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-door-control-open-video.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["또는 원하는 카메라를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.openVideo"
-      }), "를 클릭하면 선택한 카메라의 영상이 비디오 타일에 추가됩니다."]
+      }), "를 클릭하면 선택한 카메라의 영상을 추가하고, 재생할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-door-camera-control-open-video.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -318,10 +318,22 @@ function _createMdxContent(props) {
       }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.disarm"
       }), "을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["경비 상태의 출입문은 경비 상태 아이콘이 ", (0,jsx_runtime.jsx)(IcDisarm, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcArm, {}), " 상태로 변경됩니다. 이때 해당 출입 통제 구역에도 ", (0,jsx_runtime.jsx)(IcArm, {}), " 아이콘이 적용됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-monitoring-door-arm-status.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["경비 상태의 출입문은 경비 상태 아이콘이 ", (0,jsx_runtime.jsx)(IcDisarm, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcArm, {}), " 상태로 변경됩니다. 이때 해당 출입 통제 구역에도 ", (0,jsx_runtime.jsx)(IcArm, {}), " 아이콘이 적용됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 라이선스에서 추가 옵션을 구매하거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "엔터프라이즈"
+        }), "(Enterprise) 라이선스 이상에서 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "detail-view",
       children: "상세 정보 확인"

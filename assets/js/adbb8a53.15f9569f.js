@@ -77,17 +77,22 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
     li: "li",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Glossary} = _components;
+  }, {Cmd, Glossary, IcRelayLock, IcRelayUnlock, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Glossary) _missingMdxReference("Glossary", true);
+  if (!IcRelayLock) _missingMdxReference("IcRelayLock", true);
+  if (!IcRelayUnlock) _missingMdxReference("IcRelayUnlock", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 슬레이브 장치를 손쉽게 제어할 수 있도록 이 문서에서는 장치별 제어 방법을 안내합니다. 출입문 릴레이를 통한 잠금/해제, 카메라 영상 및 상세 정보 확인, 그리고 경비 상태 조작 등 다양한 기능을 사용할 수 있습니다."
@@ -122,6 +127,8 @@ function _createMdxContent(props) {
       children: "출입문 릴레이 장치 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 릴레이 장치를 제어할 수 있습니다. 릴레이 장치에서 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-relay-popup.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(Glossary, {
@@ -154,6 +161,8 @@ function _createMdxContent(props) {
           }), ": 시간에 상관없이 출입문을 개방합니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입문 릴레이를 개방하면 출입문 릴레이 아이콘이 ", (0,jsx_runtime.jsx)(IcRelayLock, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcRelayUnlock, {}), " 상태로 변경됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -197,14 +206,51 @@ function _createMdxContent(props) {
       id: "control-arm",
       children: "출입문 경비 장치 제어"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입문과 연결된 경비 장치를 통해 출입문의 경비 상태를 일시적으로 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["출입문과 연결된 경비 장치를 통해 출입문을 경비 상태로 설정하거나 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.arm"
+      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.disarm"
       }), "를 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-arm-popup.png",
+      className: "none"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 라이선스에서 추가 옵션을 구매하거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "엔터프라이즈"
+        }), "(Enterprise) 라이선스 이상에서 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "control-camera",
       children: "출입문 카메라 장치 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "출입문과 연결된 카메라 장치를 제어할 수 있습니다. 카메라 장치의 영상을 실시간으로 확인하거나 상세 정보를 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-camera-popup.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이 기능은 출입문에 카메라가 연결되어 있어야 사용할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "camera-video",
       children: "카메라 영상 확인"
@@ -213,12 +259,9 @@ function _createMdxContent(props) {
         sid: "arena.tree.contextMenu.openVideo"
       }), "를 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
-      }), " 섹션에서 비디오를 재생할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "이 기능은 출입문에 카메라가 연결되어 있어야 사용할 수 있습니다."
-      })
+      }), " 섹션의 비디오 타일에 선택한 카메라의 영상을 추가하고, 재생할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-door-camera-control-open-video.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "camera-detail",
       children: "카메라 상세 정보 확인"
