@@ -131,6 +131,10 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Target System"
+          }), "을 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "로 선택하고, ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "가 설치된 PC의 IP 주소를 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Server Address"
@@ -232,6 +236,10 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Target System"
+          }), "을 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "로 선택하고, ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "가 설치된 PC의 IP 주소를 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Server Address"
@@ -314,8 +322,12 @@ function _createMdxContent(props) {
           }), " 창이 나타납니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "다음 정보를 입력하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Target System"
+          }), "을 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "VMS"
+          }), "로 선택하고 다음 정보를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -330,12 +342,6 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Port"
               }), ": VMS 서버의 포트 번호"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Chain Type"
-              }), ": 체크박스를 선택해 VMS용 Chain 인증서 설치"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
