@@ -283,9 +283,9 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: '11LXF9EJH7',
-        apiKey: '4882650c3591013a4db2f9211c31c4f4',
-        indexName: 'supremaincio',
+        appId: 'G6Y3H2PNC3',
+        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+        indexName: 'SPDocs',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
