@@ -67,6 +67,10 @@ const toc = [{
   "id": "apb-reset",
   "level": 2
 }, {
+  "value": "경비 설정 및 해제",
+  "id": "경비-설정-및-해제",
+  "level": 2
+}, {
   "value": "상세 정보 확인",
   "id": "detail-view",
   "level": 2
@@ -83,9 +87,13 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Glossary, Image} = _components;
+  }, {Cmd, Glossary, IcArm, IcDisarm, IcRelayLock, IcRelayUnlock, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Glossary) _missingMdxReference("Glossary", true);
+  if (!IcArm) _missingMdxReference("IcArm", true);
+  if (!IcDisarm) _missingMdxReference("IcDisarm", true);
+  if (!IcRelayLock) _missingMdxReference("IcRelayLock", true);
+  if (!IcRelayUnlock) _missingMdxReference("IcRelayUnlock", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -119,6 +127,20 @@ function _createMdxContent(props) {
       }), "을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), "을 선택하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-popup.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "arena.tree.contextMenu.openVideo"
+        }), " 옵션은 VMS와 연동되어 있고, 출입문과 카메라가 연계되어 있어야 사용할 수 있습니다. 또한 이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "door-open",
       children: "출입문 개방"
@@ -126,6 +148,8 @@ function _createMdxContent(props) {
       children: ["개방 상태의 출입문은 누구든지 출입할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.unlock"
       }), "을 클릭하고 원하는 옵션을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입문을 개방하면 출입문 릴레이 아이콘이 ", (0,jsx_runtime.jsx)(IcRelayLock, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcRelayUnlock, {}), " 상태로 변경됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -195,23 +219,19 @@ function _createMdxContent(props) {
         sid: "shell.header.arena"
       }), " 섹션의 비디오 타일에 선택한 카메라의 영상이 추가됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-door-control-open-video.png",
-      alt: "비디오 열기"
+      src: "/img/monitoring-door-control-open-video.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["비디오를 선택한 상태에서는 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.map.doorControl"
-      }), " 도구를 통해 출입문을 제어할 수 있습니다."]
+      children: ["또는 원하는 카메라를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.openVideo"
+      }), "를 클릭하면 선택한 카메라의 영상이 비디오 타일에 추가됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-door-control.png",
-      alt: "출입문 제어"
+      src: "/img/monitoring-door-camera-control-open-video.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "arena.map.doorControl"
-            }), " 도구는 출입문에 카메라가 연계되어 있어야 사용할 수 있습니다. 선택한 카메라가 출입문과 연계되어 있지 않으면 사용할 수 없습니다."]
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "출입문에 연결된 카메라가 한 대 이상이라면 첫번째로 연결된 카메라가 비디오 타일에 표시됩니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -224,6 +244,15 @@ function _createMdxContent(props) {
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -232,7 +261,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
-      }), "를 클릭하세요. 화면 오른쪽 위에 알람 메시지가 표시됩니다."]
+      }), "를 클릭하세요. 화면 오른쪽 상단에 알람 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "apb-reset",
       children: "APB 해제"
@@ -250,6 +279,8 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.tree.contextMenu.clearApb"
           }), " 창이 나타나면 안티 패스백을 위반한 사용자 목록을 확인하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/monitoring-door-monitoring-disable-apb.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -259,7 +290,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "화면 오른쪽 위에 완료 메시지가 표시됩니다."
+      children: "화면 오른쪽 상단에 완료 메시지가 표시됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -279,12 +310,27 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "경비-설정-및-해제",
+      children: "경비 설정 및 해제"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["출입문이 경비 구역으로 설정되어 있다면 경비를 설정하거나 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.arm"
+      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.contextMenu.disarm"
+      }), "을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["경비 상태의 출입문은 경비 상태 아이콘이 ", (0,jsx_runtime.jsx)(IcDisarm, {}), " 상태에서 ", (0,jsx_runtime.jsx)(IcArm, {}), " 상태로 변경됩니다. 이때 해당 출입 통제 구역에도 ", (0,jsx_runtime.jsx)(IcArm, {}), " 아이콘이 적용됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-arm-status.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "detail-view",
       children: "상세 정보 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["출입문에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.viewDetail"
       }), "를 클릭하세요. 화면 오른쪽에 출입문 상세 정보와 이벤트 발생 이력이 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-door-view-details.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

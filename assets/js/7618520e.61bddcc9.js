@@ -1,6 +1,6 @@
 "use strict";
 (self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6569"], {
-93882: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+93213: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -20,6 +20,8 @@ var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSO
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(50065);
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/door-tree.json
+var door_tree_namespaceObject = JSON.parse('[{"name":"모든 출입문 그룹","children":[{"name":"출입문 그룹 A","type":"door-group","children":[{"name":"출입문","type":"door-device","children":[{"name":"출입문 센서","type":"door-sensor"},{"name":"출입문 릴레이","type":"door-relay"},{"name":"경비 상태","type":"door-arm"},{"name":"Camera","type":"door-camera"}]}]}]},{"name":"모든 엘리베이터 그룹","type":"elevator","children":[{"name":"엘리베이터 그룹 B","type":"elevator-group","children":[{"name":"엘리베이터 1","type":"elevator-device","children":[{"name":"엘리베이터 1 - 1층","type":"elevator-floor"},{"name":"엘리베이터 1 - 2층","type":"elevator-floor"}]}]}]},{"name":"모든 고급 출입 통제","type":"access-control","children":[{"name":"출입 통제 구역","type":"access-zone"}]}]')
 ;// CONCATENATED MODULE: ./docs/platform/biostar_x/check-door-status.mdx
 
 
@@ -41,38 +43,62 @@ const assets = {
 
 
 
+
 const toc = [{
   "value": "시작하기 전에",
   "id": "시작하기-전에",
   "level": 2
 }, {
-  "value": "출입문 상태 확인",
-  "id": "check-the-door-status",
+  "value": "트리 구조 알아보기",
+  "id": "트리-구조-알아보기",
   "level": 2
 }, {
-  "value": "출입문 열림/잠금 확인",
-  "id": "open-the-doorlock-confirmation",
+  "value": "상태 확인하기",
+  "id": "상태-확인하기",
   "level": 2
+}, {
+  "value": "출입문 상태 확인",
+  "id": "check-the-door-status",
+  "level": 3
 }, {
   "value": "출입문 잠금 확인",
   "id": "check-the-door-lock",
-  "level": 2
+  "level": 3
 }, {
   "value": "카메라 상태 확인",
   "id": "check-the-camera-status",
-  "level": 2
+  "level": 3
 }, {
   "value": "경비 상태 확인",
   "id": "check-the-security-status",
+  "level": 3
+}, {
+  "value": "엘리베이터 상태 확인",
+  "id": "엘리베이터-상태-확인",
+  "level": 3
+}, {
+  "value": "그룹 목록 확장/축소",
+  "id": "그룹-목록-확장축소",
   "level": 2
+}, {
+  "value": "최상위 그룹",
+  "id": "최상위-그룹",
+  "level": 3
+}, {
+  "value": "하위 그룹",
+  "id": "하위-그룹",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
+    ol: "ol",
     p: "p",
+    strong: "strong",
     table: "table",
     tbody: "tbody",
     td: "td",
@@ -82,19 +108,20 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, IcArm, IcCamFail, IcCamOk, IcDisarm, IcDoorClose, IcDoorOpen, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image} = _components;
+  }, {Cmd, IcArm, IcCamFail, IcCamOk, IcDisarm, IcErr, IcNotsync, IcRelayLock, IcRelayUnlock, Image, StatusNormal, StatusOK, Treeview} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcArm) _missingMdxReference("IcArm", true);
   if (!IcCamFail) _missingMdxReference("IcCamFail", true);
   if (!IcCamOk) _missingMdxReference("IcCamOk", true);
   if (!IcDisarm) _missingMdxReference("IcDisarm", true);
-  if (!IcDoorClose) _missingMdxReference("IcDoorClose", true);
-  if (!IcDoorOpen) _missingMdxReference("IcDoorOpen", true);
   if (!IcErr) _missingMdxReference("IcErr", true);
   if (!IcNotsync) _missingMdxReference("IcNotsync", true);
   if (!IcRelayLock) _missingMdxReference("IcRelayLock", true);
   if (!IcRelayUnlock) _missingMdxReference("IcRelayUnlock", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!StatusNormal) _missingMdxReference("StatusNormal", true);
+  if (!StatusOK) _missingMdxReference("StatusOK", true);
+  if (!Treeview) _missingMdxReference("Treeview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "출입문 및 관련 장치의 상태를 정확하게 파악하는 것은 보안 시스템의 핵심입니다. 이 문서에서는 장치의 상태를 확인하는 방법과 오류 발생 시 대처 방안을 안내합니다. 안내된 아이콘과 상세 설명을 통해 관리자들이 각각 장치의 작동 상태를 한눈에 파악하고, 문제 발생 시 신속하게 대응할 수 있도록 돕습니다."
@@ -133,6 +160,51 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "트리-구조-알아보기",
+      children: "트리 구조 알아보기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.tree.door.title"
+      }), " 탭에서 트리 구조는 아래와 같은 구조로 구성되어 있습니다."]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(Treeview, {
+      data: door_tree_namespaceObject
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치 추가 및 구성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-manage-devices",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["출입문 추가 및 구성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-manage-door",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["엘리베이터 추가 및 구성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-manage-elevators",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["출입 통제 구역 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-advanced-ac",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "상태-확인하기",
+      children: "상태 확인하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "check-the-door-status",
       children: "출입문 상태 확인"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -196,54 +268,7 @@ function _createMdxContent(props) {
         src: "/img/monitoring-door-status-tooltip-device.png",
         alt: "장치 목록"
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "open-the-doorlock-confirmation",
-      children: "출입문 열림/잠금 확인"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "출입문 센서를 통해 출입문이 열려 있는지 확인할 수 있습니다. 출입문 센서의 상태는 아래를 참고하세요."
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "col2--20-80 overflow-x",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              style: {
-                textAlign: "center"
-              },
-              children: "상태 아이콘"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "설명"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: (0,jsx_runtime.jsx)(IcDoorClose, {
-                width: "35px",
-                height: "35px"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문이 닫힌 상태입니다."
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              style: {
-                textAlign: "center"
-              },
-              children: (0,jsx_runtime.jsx)(IcDoorOpen, {
-                width: "auto",
-                height: "40px"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문이 열린 상태입니다."
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "check-the-door-lock",
       children: "출입문 잠금 확인"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -290,7 +315,7 @@ function _createMdxContent(props) {
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "check-the-camera-status",
       children: "카메라 상태 확인"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -337,11 +362,11 @@ function _createMdxContent(props) {
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "check-the-security-status",
       children: "경비 상태 확인"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "출입문의 경비 상태를 확인할 수 있습니다."
+      children: "출입문 또는 출입 통제 구역의 경비 상태를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "col2--20-80 overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -386,9 +411,114 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "경비 상태는 출입문을 Intrusion Alarm Zone으로 설정했을 때만 표시됩니다."
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["경비 상태는 출입문을 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "경비 구역"
+        }), "으로 설정했을 때만 표시됩니다. 경비 구역 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-advanced-ac-intrusion-alarm",
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "엘리베이터-상태-확인",
+      children: "엘리베이터 상태 확인"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "엘리베이터의 잠금 상태를 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "col2--20-80 overflow-x",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "상태 아이콘"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "설명"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: (0,jsx_runtime.jsx)(StatusNormal, {
+                width: "auto",
+                height: "35px"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "엘리베이터 잠금 해제 상태입니다."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: (0,jsx_runtime.jsx)(StatusOK, {
+                width: "auto",
+                height: "35px"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "엘리베이터 잠금 상태입니다."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "그룹-목록-확장축소",
+      children: "그룹 목록 확장/축소"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "최상위 그룹 또는 하위 그룹을 통해서 목록을 확장하거나 축소할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-group-expand-collapse.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "최상위-그룹",
+      children: "최상위 그룹"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.door.title"
+          }), " 탭에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.door.allDoorGroups"
+          }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.door.allElevatorGroups"
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.door.allZones"
+          }), "를 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.expandAll"
+          }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.collapseAll"
+          }), " 옵션을 선택하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 최상위 그룹을 기준으로 모든 하위 목록을 확장하거나 축소할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "하위-그룹",
+      children: "하위 그룹"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "각 최상의 그룹의 하위 그룹 목록을 확장하거나 축소하려면 하위 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.contextMenu.expandBelow"
+          }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.tree.contextMenu.collapseBelow"
+          }), " 옵션을 선택하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "선택한 하위 그룹의 목록을 확장하거나 축소할 수 있습니다."
     })]
   });
 }

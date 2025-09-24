@@ -105,18 +105,16 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
-  }, {Cmd, Column, Columns, IcClose, IcFullscreen, IcMoreB, IcPause, IcPlay, IcRestorscreen, Image, Num} = _components;
+  }, {Calloutlists, Cmd, Column, Columns, IcClose, IcFullscreen, IcMoreB, IcRestorscreen, Image} = _components;
+  if (!Calloutlists) _missingMdxReference("Calloutlists", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
   if (!IcFullscreen) _missingMdxReference("IcFullscreen", true);
   if (!IcMoreB) _missingMdxReference("IcMoreB", true);
-  if (!IcPause) _missingMdxReference("IcPause", true);
-  if (!IcPlay) _missingMdxReference("IcPlay", true);
   if (!IcRestorscreen) _missingMdxReference("IcRestorscreen", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Num) _missingMdxReference("Num", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "비디오 모니터링 기능을 통해 출입문, 구역, 장치와 연계된 카메라 영상을 실시간으로 확인하고 제어할 수 있습니다. 이 문서에서는 비디오 타일을 활용하여 카메라 영상을 추가하고, 크기 조정, 위치 변경, 전체 화면 보기 등 다양한 작업을 수행하는 방법을 안내합니다. 또한, 알람 상태 확인 및 해제와 같은 관리 기능을 통해 보안 상황에 신속히 대응할 수 있도록 지원합니다."
@@ -194,38 +192,46 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/monitoring-video-player.png",
       alt: "플레이어"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "1"
-          }), ": 카메라 장치의 이름입니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Calloutlists, {
+      children: (0,jsx_runtime.jsxs)(_components.ol, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "카메라 장치의 이름입니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["영상을 전체 화면(", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/menus/ico-fullscreen.svg",
+              ico: true,
+              alone: true
+            }), ")으로 재생하거나 비디오 타일에서 제외(", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/menus/ico-close.svg",
+              ico: true,
+              alone: true
+            }), ")할 수 있는 버튼입니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["영상을 재생하거나 일시 정지하려면 ", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/menus/ico-play.svg",
+              ico: true,
+              alone: true
+            }), " 또는 ", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/menus/ico-pause.svg",
+              ico: true,
+              alone: true
+            }), " 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다."
+          }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "2"
-          }), ": 영상을 전체 화면(", (0,jsx_runtime.jsx)(IcFullscreen, {}), ")으로 재생하거나 비디오 타일에서 제외(", (0,jsx_runtime.jsx)(IcClose, {}), ")할 수 있는 버튼입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "3"
-          }), ": 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "4"
-          }), " ", (0,jsx_runtime.jsx)(IcPlay, {}), " / ", (0,jsx_runtime.jsx)(IcPause, {}), ": 버튼을 클릭하면 영상을 재생하거나 일시 정지할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Num, {
-            num: "5"
-          }), ": 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다."]
-        }), "\n"]
-      }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "door-control-tool",
       children: "출입문 제어 도구"
@@ -380,7 +386,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsxs)(_components.p, {
           children: ["비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(IcFullscreen, {}), " 버튼을 클릭하세요."]
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["전체 화면을 종료하려면 화면 오른쪽 위에 ", (0,jsx_runtime.jsx)(IcRestorscreen, {}), " 버튼을 클릭하세요. 또는 키보드의 ", (0,jsx_runtime.jsx)("kbd", {
+          children: ["전체 화면을 종료하려면 화면 오른쪽 상단에 ", (0,jsx_runtime.jsx)(IcRestorscreen, {}), " 버튼을 클릭하세요. 또는 키보드의 ", (0,jsx_runtime.jsx)("kbd", {
             children: "ESC"
           }), " 키를 누르세요."]
         })]

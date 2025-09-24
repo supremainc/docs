@@ -22246,9 +22246,9 @@ var routesChunkNames = __webpack_require__(37138);
         /*require.resolve*/(89100)
     ],
     "7618520e": [
-        ()=>__webpack_require__.e(/* import() | 7618520e */ "6569").then(__webpack_require__.bind(__webpack_require__, 93882)),
+        ()=>__webpack_require__.e(/* import() | 7618520e */ "6569").then(__webpack_require__.bind(__webpack_require__, 93213)),
         "@site/docs/platform/biostar_x/check-door-status.mdx",
-        /*require.resolve*/(93882)
+        /*require.resolve*/(93213)
     ],
     "78bda86c": [
         ()=>__webpack_require__.e(/* import() | 78bda86c */ "4140").then(__webpack_require__.bind(__webpack_require__, 42281)),

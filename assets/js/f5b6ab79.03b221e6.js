@@ -162,7 +162,7 @@ function _createMdxContent(props) {
         children: "안티패스백"
       }), " 구역의 APB 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearApb"
-      }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
+      }), "를 클릭하세요. 화면 오른쪽 상단에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -200,7 +200,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["해당 구역에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
-      }), "를 클릭하세요. 화면 오른쪽 위에 완료 메시지가 표시됩니다."]
+      }), "를 클릭하세요. 화면 오른쪽 상단에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
