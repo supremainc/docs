@@ -19,7 +19,7 @@ import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
-import { StatusOK, StatusFail, StatusUpdating } from '@site/src/components/Status';
+import { StatusOK, StatusFail, StatusUpdating, StatusNormal } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
 import Separator from '@site/src/components/Separator';
 import Badge from '@site/src/components/Badge';
@@ -51,10 +51,12 @@ import IcErr from '@site/static/img/menus/ico-err.svg';
 import IcNotsync from '@site/static/img/menus/ico-notsync.svg';
 import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
 import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
+import IcDoorSensor from '@site/static/img/menus/ico-door-sensor.svg';
 import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
 import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
 import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcDisarm from '@site/static/img/menus/ico-disarms.svg';
+import IcZone from '@site/static/img/menus/ico-zone.svg';
 import IcDisable from '@site/static/img/menus/ico-disable.svg';
 import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
 import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
@@ -136,7 +138,7 @@ export default {
     GlossaryAll,
     Num,
     StatusOK,
-    StatusFail, StatusUpdating,
+    StatusFail, StatusUpdating, StatusNormal,
     Overview,
     Separator,
     Badge,
@@ -160,11 +162,11 @@ export default {
     IcErr,
     IcNotsync,
     IcDoorClose,
-    IcDoorOpen,
+    IcDoorOpen, IcDoorSensor,
     IcRelayLock,
     IcRelayUnlock,
     IcArm,
-    IcDisarm,
+    IcDisarm, IcZone,
     IcDisable,
     IcFullscreen,
     IcRestorscreen,

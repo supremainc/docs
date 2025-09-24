@@ -6,6 +6,13 @@ import IcAcLevel from '@site/static/img/menus/ico-aclevel.svg';
 import IcFloorLevel from '@site/static/img/menus/ico-floorlv.svg';
 import IcFloorElev from '@site/static/img/menus/ico-flelev.svg';
 import IcFlElevFl from '@site/static/img/menus/ico-flelevfl.svg';
+import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
+import IcDoorSensor from '@site/static/img/menus/ico-door-sensor.svg';
+import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
+import IcArm from '@site/static/img/menus/ico-arms.svg';
+import IcElev from '@site/static/img/menus/ico-elevator.svg';
+import IcZone from '@site/static/img/menus/ico-zone.svg';
+import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
 
 const dataKo = [
     {
@@ -118,13 +125,21 @@ function TreeNode({ node, level = 0 }) {
                         <IcDown />
                     </span>
                 )}
-                {level > 1 && (
+                {(level > 1 || node.type === 'access-zone') && (
                     <span className={styles.treeIcon}>
                         {node.type === 'access-level' && <IcAcLevel height='25' width='auto' /> }
                         {node.type === 'door' && <IcAcDoor height='25' width='auto' /> }
+                        {node.type === 'door-device' && <IcDoorClose height='21' width='auto' /> }
+                        {node.type === 'door-sensor' && <IcDoorSensor height='25' width='auto' /> }
+                        {node.type === 'door-relay' && <IcRelayLock height='25' width='auto' /> }
+                        {node.type === 'door-arm' && <IcArm height='25' width='auto' /> }
+                        {node.type === 'door-camera' && <IcCamOk height='25' width='auto' /> }
                         {node.type === 'floor-level' && <IcFloorLevel height='25' width='auto' /> }
+                        {node.type === 'access-zone' && <IcZone height='25' width='auto' /> }
                         {node.type === 'elevator' && <IcFloorElev height='25' width='auto' /> }
+                        {node.type === 'elevator-device' && <IcElev height='25' width='auto' /> }
                         {node.type === 'elevator-schedule' && <IcFlElevFl height='25' width='auto' /> }
+                        {node.type === 'elevator-floor' && <div style={{ backgroundColor: '#aaa', width: '10px', height: '10px', borderRadius: '50%', top: '8px', position: 'relative' }} /> }
                     </span>
                 )}
                 
