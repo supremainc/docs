@@ -62,7 +62,7 @@
                 "template": {
                   "label": "템플릿",
                   "label_id": "specs.credentials.biometrics.fingerprint.template",
-                  "value": "SUPREMA / ISO19794-2, ANSI-378"
+                  "value": "SUPREMA / ISO19794-2 / ANSI-378"
                 },
                 "extractor_matcher": {
                   "label": "추출 / 매치",
@@ -112,7 +112,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "FSF2-DB<br/>FSF2-AB",
+              "label": "FSF2-DB, FSF2-AB",
               "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm"
             },
             "model2": {
@@ -240,7 +240,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "FSF2-DB<br/>FSF2-AB",
+              "label": "FSF2-DB, FSF2-AB",
               "value": {
                 "ko": ["얼굴: 50,000"],
                 "en": ["Face: 50,000"]
@@ -267,7 +267,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "FSF2-DB<br/>FSF2-AB",
+              "label": "FSF2-DB, FSF2-AB",
               "value": {
                 "ko": [
                   "얼굴: 100,000",
