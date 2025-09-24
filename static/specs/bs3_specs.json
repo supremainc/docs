@@ -294,9 +294,9 @@
             "en": "1 Relay"
           }
         },
-        "poe": {
+        "poe_plus": {
           "label": "PoE+",
-          "label_id": "specs.interface.poe",
+          "label_id": "specs.interface.poe_plus",
           "type": "model",
           "items": {
             "model1": {

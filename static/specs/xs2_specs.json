@@ -1,5 +1,5 @@
 {
-  "biostation3": {
+  "xstation2": {
     "credentials": {
       "label": "크리덴셜",
       "label_id": "specs.credentials",
@@ -9,34 +9,52 @@
           "label_id": "specs.credentials.biometrics",
           "type": "biometric",
           "items": {
-            "face": {
-              "label": "얼굴",
-              "label_id": "specs.credentials.biometrics.face",
-              "type": "face",
+            "fingerprint": {
+              "label": "지문",
+              "label_id": "specs.credentials.biometrics.fingerprint",
+              "type": "fingerprint",
               "items": {
-                "auth_distance": {
-                  "label": "인증 거리",
-                  "label_id": "specs.credentials.biometrics.face.auth_distance",
-                  "value": "0.3 ~ 1.0 m",
-                  "annotation_label": "anno1"
-                },
-                "auth_height": {
-                  "label": "인증 높이",
-                  "label_id": "specs.credentials.biometrics.face.auth_height",
-                  "value": "1.4 ~ 1.9 m"
-                },
-                "matching_speed": {
-                  "label": "매칭 속도",
-                  "label_id": "specs.credentials.biometrics.face.matching_speed",
+                "image_dimension": {
+                  "label": "이미지 크기",
+                  "label_id": "specs.credentials.biometrics.fingerprint.image_dimension",
                   "value": {
-                    "ko": "0.2초 이내",
-                    "en": "Within 0.2 seconds"
+                    "ko": "300 x 400 픽셀",
+                    "en": "300 x 400 pixels"
                   }
                 },
-                "live_face_detection": {
-                  "label": "위조 얼굴 검출",
-                  "label_id": "specs.credentials.biometrics.face.live_face_detection",
-                  "value": true
+                "resolution": {
+                  "label": "해상도",
+                  "label_id": "specs.credentials.biometrics.fingerprint.resolution",
+                  "value": "500 dpi"
+                },
+                "template": {
+                  "label": "템플릿",
+                  "label_id": "specs.credentials.biometrics.fingerprint.template",
+                  "value": "SUPREMA / ISO19794-2 / ANSI-378"
+                },
+                "extractor_matcher": {
+                  "label": "추출 / 매치",
+                  "label_id": "specs.credentials.biometrics.fingerprint.extractor_matcher",
+                  "value": {
+                    "ko": "MINEX 인증 및 호환",
+                    "en": "MINEX certified and compliant"
+                  }
+                },
+                "sensor_certificates": {
+                  "label": "센서 인증",
+                  "label_id": "specs.credentials.biometrics.fingerprint.sensor_certificates",
+                  "value": {
+                    "ko": "FBI PIV 및 FBI Mobile ID FAP20",
+                    "en": "FBI PIV and FBI Mobile ID FAP20"
+                  }
+                },
+                "live_fingerprint_detection": {
+                  "label": "위조 지문 검출",
+                  "label_id": "specs.credentials.biometrics.fingerprint.live_fingerprint_detection",
+                  "value": {
+                    "ko": "지원 (SW 기반)",
+                    "en": "Supported (SW-based)"
+                  }
                 }
               }
             }
@@ -48,27 +66,52 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "BEW3-DB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
-              "annotation_value": "anno2"
+              "label": "XS2-QDPB, XS2-DPB, XS2-ODPB",
+              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+              "annotation_value": "anno1"
             },
             "model2": {
-              "label": "BEW3-APWB",
-              "value": "12125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-              "annotation_value": "anno2"
+              "label": "XS2-QAPB, XS2-APB,</br>XS2-OAPB",
+              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+              "annotation_value": "anno1"
             }
           }
         },
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire/EM/iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
-          "annotation_label": "anno3"
+          "value": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
+          "annotation_label": "anno2"
         },
         "mobile": {
           "label": "모바일",
           "label_id": "specs.credentials.mobile",
           "value": "NFC, BLE"
+        },
+        "keypad": {
+          "label": "스크램블 키패드(PIN)",
+          "label_id": "specs.credentials.keypad",
+          "value": true
+        },
+        "qr_barcode": {
+          "label": "QR/바코드",
+          "label_id": "specs.credentials.qr_barcode",
+          "type": "model",
+          "annotation_label": "anno3",
+          "items": {
+            "model1": {
+              "label": "XS2-QDPB, XS2-QAPB",
+              "value": true
+            },
+            "model2": {
+              "label": "XS2-DPB, XS2-APB,</br>XS2-ODPB, XS2-OAPB",
+              "value": {
+                "ko": "지원<sup id='dupl'><a href='#anno4'></a></sup>",
+                "en": "Supported<sup id='dupl'><a href='#anno4'></a></sup>"
+              },
+              "annotation_value": "anno4"
+            }
+          }
         }
       }
     },
@@ -84,7 +127,7 @@
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "16 GB Flash + 2 GB RAM"
+          "value": "16 GB Flash + 1 GB RAM"
         },
         "crypto_chip": {
           "label": "크립토 칩",
@@ -95,21 +138,24 @@
           "label": "디스플레이",
           "label_id": "specs.general.lcd_type",
           "value": {
-            "ko": "1.3\" PMOLED"
+            "ko": "4\" IPS 컬러 LCD",
+            "en": "4\" IPS color LCD"
           }
         },
-        "led_type": {
-          "label": "LED",
-          "label_id": "specs.general.led_type",
+        "lcd_resolution": {
+          "label": "화면 해상도",
+          "label_id": "specs.general.lcd_resolution",
           "value": {
-            "ko": "다중 색상",
-            "en": "Multi-color"
+            "ko": "480 x 800 픽셀",
+            "en": "480 x 800 pixels",
+            "es": "480 x 800 píxeles",
+            "jp": "480 x 800 画素"
           }
         },
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "16 bit"
+          "value": "24bit"
         },
         "operating_temp": {
           "label": "동작 온도",
@@ -137,27 +183,42 @@
             "en": "0 % ~ 90 %, non-condensing"
           }
         },
-        "camera": {
-          "label": "카메라",
-          "label_id": "specs.general.camera",
-          "value": "2 MP 2 EA"
+        "camera_type": {
+          "label": "카메라 종류",
+          "label_id": "specs.general.camera_type",
+          "value": {
+            "ko": "CMOS 2M 픽셀",
+            "en": "CMOS 2M pixels"
+          }
+        },
+        "camera_resolution": {
+          "label": "카메라 해상도",
+          "label_id": "specs.general.camera_resolution",
+          "value": {
+            "ko": "1600 x 1200 픽셀",
+            "en": "1600 x 1200 pixels"
+          }
         },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
           "label_link": "../../reference/glossary#ip_rating",
-          "value": "IP67"
-        },
-        "ik_rating": {
-          "label": "IK 등급",
-          "label_id": "specs.general.ik_rating",
-          "label_link": "../../reference/glossary#ik_rating",
-          "value": "IK08"
+          "value": "IP65"
         },
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, EAC, TELEC"
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "XS2-QDPB, XS2-QAPB, XS2-DPB, XS2-APB",
+              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE"
+            },
+            "model2": {
+              "label": "XS2-ODPB, XS2-OAPB",
+              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE"
+            }
+          }
         }
       }
     },
@@ -168,34 +229,34 @@
         "max_users": {
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
-          "value": "100,000",
-          "annotation_value": "anno4"
+          "value": "500,000<sup id='dupl'><a href='#anno5'></a></sup>",
+          "annotation_value": "anno5"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
-            "ko": ["얼굴: 30,000", "카드: 100,000"],
-            "en": ["Face: 30,000", "Card: 100,000"]
+            "ko": "지문: 100,000",
+            "en": "Fingerprint: 100,000"
           }
         },
         "max_credentials_1on1": {
           "label": "최대 크리덴셜 수 (1:1)",
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
-            "ko": [ "얼굴: 30,000", "카드: 100,000" ],
-            "en": [ "Face: 30,000", "Card: 100,000" ]
+            "ko": [ "지문: 500,000", "카드: 500,000", "PIN: 500,000" ],
+            "en": [ "Fingerprint: 500,000", "Card: 500,000", "PIN: 500,000" ]
           }
         },
         "max_text_logs": {
           "label": "최대 텍스트 로그 수",
           "label_id": "specs.storage.max_text_logs",
-          "value": "1,000,000"
+          "value": "5,000,000"
         },
         "max_image_logs": {
           "label": "최대 이미지 로그 수",
           "label_id": "specs.storage.max_image_logs",
-          "value": "10,000"
+          "value": "50,000"
         }
       }
     },
@@ -210,6 +271,11 @@
             "ko": "지원 (10/100 Mbps, 자동 MDI/MDI-X)",
             "en": "Supported (10/100 Mbps, auto MDI/MDI-X)"
           }
+        },
+        "network_protocol": {
+          "label": "네트워크 프로토콜",
+          "label_id": "specs.interface.network_protocol",
+          "value": "TCP, UDP"
         },
         "rs485": {
           "label": "RS-485",
@@ -231,16 +297,16 @@
           "label": "Wiegand",
           "label_id": "specs.interface.wiegand",
           "value": {
-            "ko": "1채널 입력, 1채널 출력",
-            "en": "1 ch Input, 1 ch Output"
+            "ko": "1채널 입력/출력 (선택 가능)",
+            "en": "1 ch Input / Output (Selectable)"
           }
         },
         "input": {
           "label": "Input",
           "label_id": "specs.interface.input",
           "value": {
-            "ko": "입력 3채널",
-            "en": "3 ch Inputs"
+            "ko": "입력 2채널",
+            "en": "2 ch Inputs"
           }
         },
         "relay": {
@@ -251,41 +317,18 @@
             "en": "1 Relay"
           }
         },
-        "poe": {
-          "label": "PoE",
-          "label_id": "specs.interface.poe",
-          "type": "model",
-          "items": {
-            "model1": {
-              "label": "BEW3-DB",
-              "value": false
-            },
-            "model2": {
-              "label": "BEW3-APWB",
-              "value": {
-                "ko": "지원 (IEEE 802.3af 호환)",
-                "en": "Supported (IEEE 802.3af compliant)"
-              }
-            }
-          }
-        },
-        "rtsp": {
-          "label": "RTSP",
-          "label_id": "specs.interface.rtsp",
-          "value": true
-        },
         "usb": {
           "label": "USB",
           "label_id": "specs.interface.usb",
-          "value": {
-            "ko": "USB 2.0 (Type C), 펌웨어 업그레이드만 지원",
-            "en": "USB 2.0 (Type C), only FW-Upgrade"
-          }
+          "value": "USB 2.0 (Host)"
         },
-        "usb_ext": {
-          "label": "USB 확장 포트",
-          "label_id": "specs.interface.usb_ext",
-          "value": true
+        "poe": {
+          "label": "PoE",
+          "label_id": "specs.interface.poe",
+          "value": {
+            "ko": "지원 (IEEE 802.3af 호환)",
+            "en": "Supported (IEEE 802.3af compliant)"
+          }
         },
         "tamper": {
           "label": "탬퍼",
@@ -302,8 +345,8 @@
           "label": "전원",
           "label_id": "specs.power.power",
           "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 1.0 A", "전압/전류: 24 Vdc / 최대 0.6 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 1.0 A", "Voltage/Current: 24 Vdc / Max. 0.6 A" ]
+            "ko": [ "전압/전류: 12 Vdc / 최대 0.8 A", "전압/전류: 24 Vdc / 최대 0.5 A" ],
+            "en": [ "Voltage/Current: 12 Vdc / Max. 0.8 A", "Voltage/Current: 24 Vdc / Max. 0.5 A" ]
           }
         },
         "switch_input_vih": {
@@ -367,38 +410,6 @@
             "2 A @ 30 VDC Resistive load",
             "1 A @ 30 VDC Inductive load"
           ]
-        }
-      }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bew3-device-dimension.svg",
-          "size": {
-            "width": "50",
-            "height": "160",
-            "depth": "34.15"
-          },
-          "weight": [
-            "BEW3-DB: 283g",
-            "BEW3-APWB: 291g"
-          ]
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bew3-bracket-front-dimension.svg",
-          "size": {
-            "width": "39.4",
-            "height": "153.2"
-          },
-          "weight": "36g",
-          "weight_include": true
         }
       }
     }
