@@ -12,6 +12,7 @@
             "fingerprint": {
               "label": "지문",
               "label_id": "specs.credentials.biometrics.fingerprint",
+              "badge": "XS2-ODPB, XS2-OAPB",
               "type": "fingerprint",
               "items": {
                 "image_dimension": {
@@ -66,12 +67,12 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-QDPB, XS2-DPB, XS2-ODPB",
+              "label": "XS2-DPB, XS2-QDPB, XS2-ODPB",
               "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
               "annotation_value": "anno1"
             },
             "model2": {
-              "label": "XS2-QAPB, XS2-APB,</br>XS2-OAPB",
+              "label": "XS2-APB, XS2-QAPB,</br>XS2-OAPB",
               "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno1"
             }
@@ -96,8 +97,8 @@
         "qr_barcode": {
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
-          "type": "model",
           "annotation_label": "anno3",
+          "type": "model",
           "items": {
             "model1": {
               "label": "XS2-QDPB, XS2-QAPB",
@@ -106,8 +107,8 @@
             "model2": {
               "label": "XS2-DPB, XS2-APB,</br>XS2-ODPB, XS2-OAPB",
               "value": {
-                "ko": "지원<sup id='dupl'><a href='#anno4'></a></sup>",
-                "en": "Supported<sup id='dupl'><a href='#anno4'></a></sup>"
+                "ko": "지원<sup id='anno4_dest'><a href='#anno4'></a></sup>",
+                "en": "Supported<sup id='anno4_dest'><a href='#anno4'></a></sup>"
               },
               "annotation_value": "anno4"
             }
@@ -211,7 +212,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-QDPB, XS2-QAPB, XS2-DPB, XS2-APB",
+              "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
               "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE"
             },
             "model2": {
@@ -229,23 +230,56 @@
         "max_users": {
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
-          "value": "500,000<sup id='dupl'><a href='#anno5'></a></sup>",
+          "value": "500,000",
           "annotation_value": "anno5"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
           "label_id": "specs.storage.max_credentials_1n",
-          "value": {
-            "ko": "지문: 100,000",
-            "en": "Fingerprint: 100,000"
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "XS2-ODPB, XS2-OAPB",
+              "value": {
+                "ko": "지문: 100,000",
+                "en": "Fingerprint: 100,000"
+              }
+            }
           }
         },
         "max_credentials_1on1": {
           "label": "최대 크리덴셜 수 (1:1)",
           "label_id": "specs.storage.max_credentials_1on1",
-          "value": {
-            "ko": [ "지문: 500,000", "카드: 500,000", "PIN: 500,000" ],
-            "en": [ "Fingerprint: 500,000", "Card: 500,000", "PIN: 500,000" ]
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
+              "value": {
+                "ko": [
+                  "카드: 500,000",
+                  "PIN: 500,000"
+                ],
+                "en": [
+                  "Card: 500,000",
+                  "PIN: 500,000"
+                ]
+              }
+            },
+            "model2": {
+              "label": "XS2-ODPB, XS2-OAPB",
+              "value": {
+                "ko": [
+                  "지문: 500,000",
+                  "카드: 500,000",
+                  "PIN: 500,000"
+                ],
+                "en": [
+                  "Fingerprint: 500,000",
+                  "Card: 500,000",
+                  "PIN: 500,000"
+                ]
+              }
+            }
           }
         },
         "max_text_logs": {
