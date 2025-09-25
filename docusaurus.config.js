@@ -122,6 +122,8 @@ const config = {
     ]
   ],
   plugins: [
+    // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
+    ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}]
   ],
