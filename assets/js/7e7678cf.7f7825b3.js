@@ -463,18 +463,21 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "맵의 크기를 조절하려면 지도 상에서 빈 구역을 클릭하세요. 각 모서리에 크기를 조절할 수 있는 핸들이 표시됩니다. 핸들을 클릭한 상태에서 드래그하여 원하는 크기로 조절하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/biostarx-monitoring-map-resize.gif"
+      src: "/img/common/biostarx-monitoring-map-resize.gif",
+      alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["크기를 조절한 상태에서 맵을 다른 위치로 이동하려면 맵 위에 ", (0,jsx_runtime.jsx)(IcMove, {}), " 아이콘을 클릭한 상태에서 원하는 위치로 드래그하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/biostarx-monitoring-map-move.gif"
+      src: "/img/common/biostarx-monitoring-map-move.gif",
+      alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "entry-floor",
       children: "층으로 진입하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "맵에서 층으로 진입하려면 구역(Area)을 클릭하세요. 팝업 메뉴에 진입할 수 있는 층 목록이 표시되면 원하는 층을 선택하세요. 선택한 층의 도면과 출입문, 카메라를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/common/monitoring-map-select-floor.png"
+      src: "/img/common/monitoring-map-select-floor.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -489,7 +492,8 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "카메라를 더블 클릭하면 해당 구역의 영상을 재생할 수 있습니다."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/monitoring-map-select-floor-play-video.png"
+          src: "/img/common/monitoring-map-select-floor-play-video.png",
+          alone: true
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -498,7 +502,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["층(Floor)에 출입문과 카메라를 설정하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+              href: "settings-map-manage-floor",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
@@ -525,8 +529,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "다른 층으로 이동하려면 맵 왼쪽 상단의 선택 옵션을 클릭하고, 목록에서 이동하길 원하는 층을 선택하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/monitoring-map-select-floor-list-box.png",
-      alt: "다른 층 선택하기"
+      src: "/img/common/monitoring-map-select-floor-list-box.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -543,6 +547,8 @@ function _createMdxContent(props) {
           }), " 목록에서 카메라를 더블 클릭하세요. 또는 마우스 오른쪽 버튼을 클릭하고 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.tree.contextMenu.openVideo"
           }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-map-open-camera.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
