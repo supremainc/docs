@@ -80,8 +80,10 @@ function _createMdxContent(props) {
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X와 연동되는 플러그인을 개발하기 위한 기본 준비사항과 개념을 안내합니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "와 연동되는 플러그인을 개발하기 위한 기본 준비사항과 개념을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "시작하기-전에",
       children: "시작하기 전에"
@@ -122,7 +124,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X 서버"
-          }), ": 테스트용 BioStar X 환경"]
+          }), ": 테스트용 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 환경"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -140,8 +144,10 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "플러그인-아키텍처",
       children: "플러그인 아키텍처"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인은 다음과 같은 구조로 동작합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인은 다음과 같은 구조로 동작합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.mermaid, {
       value: "sequenceDiagram\n    autonumber\n    participant U as User\n    participant P as Plugin\n    participant SM as ServiceManager\n    participant BS as BioStar X Server\n    participant BC as BioStar X Client\n    \n    Note over U,BC: Register Plugin\n    U->>+SM: Register plugin\n    SM->>+P: Ping to register address / e.g. {address}/bsx\n    P->>-SM: Pong with header value in body\n    SM-->SM: Certificate generation\n    SM->>-U: Response / Reg success\n\n    Note over U,BC: Download Certification\n    U->>+SM: Download certification\n    SM-->SM: Certification\n    SM->>-U: Response certification file\n\n    Note over U,BC: Open Plugin Service\n    U->>+BC: Plugin Click\n    BC->>-P: Post request(with user id, plugin id) with new tab\n    U-->>+P: Watched new tab\n    P->>+BS: Post method called <br/>→ /api/session/bridge,<br/>Body: {pluginid, userid, key (a random 32-byte key encrypted with the certification and transmitted)}\n    Note right of BS: /api/session/brdige\n    BS->>-P: Response (bs-session-ID)\n    Note right of BS: Encrypt the current user's bs-session-id using the key and transmit it.\n    Note right of P: bs-session-id must be decrypted before use\n    P->>-U: Response / Open Page"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -152,8 +158,10 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "플러그인-동작-개요",
       children: "플러그인 동작 개요"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인 시스템은 크게 세 단계로 동작합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인 시스템은 크게 세 단계로 동작합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -179,6 +187,11 @@ function _createMdxContent(props) {
         href: "./development-guide",
         children: "개발 가이드"
       }), "를 참고하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "인증서는 플로그인 등록 후 해당 플러그인 상세 페이지에서 다운로드할 수 있습니다. 인증서를 분실했다면 새로 다운로드할 수 있습니다. 이때 기존 인증서는 무효화됩니다."
+      })
     })]
   });
 }

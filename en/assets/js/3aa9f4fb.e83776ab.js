@@ -74,8 +74,10 @@ function _createMdxContent(props) {
   if (!Badge) _missingMdxReference("Badge", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인 개발, 등록, 운영 과정에서 발생할 수 있는 문제들의 해결 방법을 제공합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "플러그인-등록-실패",
       children: "플러그인 등록 실패"
@@ -161,7 +163,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.code, {
             children: "curl"
-          }), " 명령어를 사용하여 BioStar X 서버에 요청 시뮬레이션하세요."]
+          }), " 명령어를 사용하여 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 서버에 요청 시뮬레이션하세요."]
         }), "\n"]
       }), "\n"]
     })]

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-index-mdx-dc1.json
-var site_docs_platform_plugins_index_mdx_dc1_namespaceObject = JSON.parse('{"id":"platform/plugins/index","title":"BioStar X 플러그인 개발자 가이드","description":"BioStar X 플랫폼과 연동되는 플러그인 개발을 위한 통합 가이드입니다.","source":"@site/docs/platform/plugins/index.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/","permalink":"/docs/platform/plugins/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar X 플러그인 개발자 가이드","description":"BioStar X 플랫폼과 연동되는 플러그인 개발을 위한 통합 가이드입니다.","keywords":["플러그인","개발","BioStar X","연동","API","세션 브리지"],"hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"bsxplugins","next":{"title":"개요","permalink":"/docs/platform/plugins/plugins-overview"}}')
+var site_docs_platform_plugins_index_mdx_dc1_namespaceObject = JSON.parse('{"id":"platform/plugins/index","title":"BioStar X 플러그인 개발자 가이드","description":"BioStar X 플랫폼과 연동되는 플러그인 개발을 위한 통합 가이드입니다.","source":"@site/docs/platform/plugins/index.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/","permalink":"/docs/en/platform/plugins/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar X 플러그인 개발자 가이드","description":"BioStar X 플랫폼과 연동되는 플러그인 개발을 위한 통합 가이드입니다.","keywords":["플러그인","개발","BioStar X","연동","API","세션 브리지"],"hide_table_of_contents":true,"isTranslationMissing":true},"sidebar":"bsxplugins","next":{"title":"개요","permalink":"/docs/en/platform/plugins/plugins-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -35,7 +35,7 @@ const frontMatter = {
 		'세션 브리지'
 	],
 	hide_table_of_contents: true,
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -55,15 +55,20 @@ function _createMdxContent(props) {
     a: "a",
     h2: "h2",
     p: "p",
+    strong: "strong",
     ...(0,lib/* useMDXComponents */.a)(),
     ...props.components
   }, {Overview} = _components;
   if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인 시스템에 대한 통합 가이드입니다. 플러그인의 기본 개념부터 실제 개발, 등록, 운영까지 필요한 모든 정보를 제공합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인 개발을 처음 시작한다면 다음 순서로 문서를 읽어보세요."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인 시스템에 대한 통합 가이드입니다. 플러그인의 기본 개념부터 실제 개발, 등록, 운영까지 필요한 모든 정보를 제공합니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인 개발을 처음 시작한다면 다음 순서로 문서를 읽어보세요."]
     }), "\n", (0,jsx_runtime.jsx)(Overview, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "지원-및-문의",
       children: "지원 및 문의"

@@ -183,8 +183,10 @@ function _createMdxContent(props) {
     children: ["\n", "\n", (0,jsx_runtime.jsx)(_bsx_what_is_plugins/* default */.ZP, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "주요-활용-사례",
       children: "주요 활용 사례"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플러그인(Plugins) 시스템을 통해 다양한 외부 시스템과 연동할 수 있습니다. 대표적인 활용 사례는 다음과 같습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플러그인(Plugins) 시스템을 통해 다양한 외부 시스템과 연동할 수 있습니다. 대표적인 활용 사례는 다음과 같습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -267,7 +269,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "자동 연동"
-          }), ": 설치 시 BioStar X와 자동 연동"]
+          }), ": 설치 시 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "와 자동 연동"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

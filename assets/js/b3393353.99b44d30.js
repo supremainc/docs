@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-plugins-development-guide-mdx-b33.json
-var site_docs_platform_plugins_development_guide_mdx_b33_namespaceObject = JSON.parse('{"id":"platform/plugins/development-guide","title":"개발 가이드","description":"BioStar X 플러그인의 실제 개발 방법과 구현 예시를 제공합니다.","source":"@site/docs/platform/plugins/development-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/development-guide","permalink":"/docs/en/platform/plugins/development-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/development-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"development-guide","title":"개발 가이드","description":"BioStar X 플러그인의 실제 개발 방법과 구현 예시를 제공합니다.","keywords":["플러그인 개발","엔드포인트","세션 브리지","암호화"],"isTranslationMissing":true},"sidebar":"bsxplugins","previous":{"title":"시작하기","permalink":"/docs/en/platform/plugins/getting-started"},"next":{"title":"등록 및 관리","permalink":"/docs/en/platform/plugins/registration-guide"}}')
+var site_docs_platform_plugins_development_guide_mdx_b33_namespaceObject = JSON.parse('{"id":"platform/plugins/development-guide","title":"개발 가이드","description":"BioStar X 플러그인의 실제 개발 방법과 구현 예시를 제공합니다.","source":"@site/docs/platform/plugins/development-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/development-guide","permalink":"/docs/platform/plugins/development-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/development-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"development-guide","title":"개발 가이드","description":"BioStar X 플러그인의 실제 개발 방법과 구현 예시를 제공합니다.","keywords":["플러그인 개발","엔드포인트","세션 브리지","암호화"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"시작하기","permalink":"/docs/platform/plugins/getting-started"},"next":{"title":"등록 및 관리","permalink":"/docs/platform/plugins/registration-guide"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(85893);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'세션 브리지',
 		'암호화'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -98,6 +98,8 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    admonition: "admonition",
     code: "code",
     h2: "h2",
     h3: "h3",
@@ -112,13 +114,17 @@ function _createMdxContent(props) {
   }, {Badge} = _components;
   if (!Badge) _missingMdxReference("Badge", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X와 연동되는 플러그인의 실제 개발 방법과 구현 예시를 안내합니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "와 연동되는 플러그인의 실제 개발 방법과 구현 예시를 안내합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "필수-엔드포인트-구현",
       children: "필수 엔드포인트 구현"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["BioStar X와 연동되는 플러그인을 개발하려면 다음 두 개의 엔드포인트를 반드시 구현해야 합니다. 이 문서에서는 ", (0,jsx_runtime.jsx)(_components.code, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "와 연동되는 플러그인을 개발하려면 다음 두 개의 엔드포인트를 반드시 구현해야 합니다. 이 문서에서는 ", (0,jsx_runtime.jsx)(_components.code, {
         children: "/bsx"
       }), "를 예시 경로로 사용합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -150,7 +156,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-python",
         metastring: "title=\"Python FastAPI\"",
-        children: "from fastapi import FastAPI, Request\nfrom fastapi.responses import JSONResponse\n\napp = FastAPI()\n\n@app.get(\"/bsx\")\nasync def bsx_ping(request: Request):\n    \"\"\"BioStar 플러그인 등록용 ping 엔드포인트\"\"\"\n    ping_token = request.headers.get(\"x-biostar-ping\")\n    # 응답에 ping 토큰 반환\n    response_data = {\"token\": ping_token}\n    response = JSONResponse(content=response_data)\n    return response\n"
+        children: "from fastapi import FastAPI, Request\nfrom fastapi.responses import JSONResponse\n\napp = FastAPI()\n\n@app.get(\"/bsx\")\nasync def bsx_ping(request: Request):\n    \"\"\"BioStar X 플러그인 등록용 ping 엔드포인트\"\"\"\n    ping_token = request.headers.get(\"x-biostar-ping\")\n    # 응답에 ping 토큰 반환\n    response_data = {\"token\": ping_token}\n    response = JSONResponse(content=response_data)\n    return response\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "응답-형식",
@@ -183,8 +189,22 @@ function _createMdxContent(props) {
       }), " ", (0,jsx_runtime.jsx)(_components.code, {
         children: "/bsx"
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자가 BioStar 웹 인터페이스에서 플러그인 아이콘을 클릭할 때 호출되는 엔드포인트입니다. 이 과정에서 BioStar에 로그한 사용자의 세션(session)을 요청해 응답을 받습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 웹 인터페이스에서 플러그인 아이콘을 클릭할 때 호출되는 엔드포인트입니다. 이 과정에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 로그한 사용자의 세션(session)을 요청해 응답을 받습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "와 플러그인 간의 보안 통신을 위해 인증서가 필요합니다. 인증서는 플러그인 등록 후 해당 플러그인 상세 페이지에서 다운로드할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "registration-guide#register-plugin",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "요청-형식-1",
       children: "요청 형식"
@@ -217,13 +237,17 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "키 암호화"
-          }), ": RSA 공개키로 AES 키 암호화"]
+          }), ": RSA 공개키로 AES 키 암호화(예시 코드에서는 ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "public_key.pem"
+          }), " 파일 이름으로 가정)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "세션 브리지 요청"
-          }), ": BioStar X 서버에 세션 요청"]
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 서버에 세션 요청"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -235,7 +259,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-python",
-        children: "import uuid\nimport requests\nfrom fastapi import HTTPException, Form\n\n@app.post(\"/bsx\")\nasync def bsx_callback(\n    request: Request,\n    user_id: str = Form(None, description=\"사용자 ID\"),\n    plugin_id: str = Form(None, description=\"플러그인 ID\")\n):\n    \"\"\"BioStar 플러그인 콜백 처리\"\"\"\n    # 1. 필수 매개변수 검증\n    if not user_id:\n      raise HTTPException(status_code=400, detail=\"user_id가 필요합니다\")\n    if not plugin_id:\n      raise HTTPException(status_code=400, detail=\"plugin_id가 필요합니다\")\n    \n    # 2. 보안 통신을 위한 AES 키 생성\n    key = uuid.uuid4().hex # 32바이트 키\n    \n    # 3. RSA 공개키로 키 암호화\n    encrypted_key = encrypt_with_public_key(key, \"public_key.pem\")\n    \n    # 4. BioStar 서버에 세션 브리지 요청\n    payload = {\n        \"user_id\": user_id,\n        \"plugin_id\": plugin_id,\n        \"key\": encrypted_key\n    }\n\n    response = requests.post(\n        f\"https://{BIOSTAR_SERVER}/api/session/bridge\",\n        json=payload,\n        verify=False\n    )\n\n    # 5. 응답 처리\n    if response.status_code == 200:\n        data = response.json()\n        if data.get(\"Response\", {}).get(\"code\") == \"0\":\n            # 세션 ID 복호화\n            encrypted_session = data.get(\"bs_session_id\")\n            bs_session_id = decrypt_aes256_base64(encrypted_session, key)\n        else:\n            # BioStar 오류 처리\n            error_msg = data.get(\"Response\", {}).get(\"message\", \"알 수 없는 오류\")\n            raise HTTPException(status_code=400, detail=f\"BioStar 오류: {error_msg}\")\n    else:\n        raise HTTPException(status_code=500, detail=\"BioStar 서버 연결 실패\")\n"
+        children: "import uuid\nimport requests\nfrom fastapi import HTTPException, Form\n\n@app.post(\"/bsx\")\nasync def bsx_callback(\n    request: Request,\n    user_id: str = Form(None, description=\"사용자 ID\"),\n    plugin_id: str = Form(None, description=\"플러그인 ID\")\n):\n    \"\"\"BioStar X 플러그인 콜백 처리\"\"\"\n    # 1. 필수 매개변수 검증\n    if not user_id:\n      raise HTTPException(status_code=400, detail=\"user_id가 필요합니다\")\n    if not plugin_id:\n      raise HTTPException(status_code=400, detail=\"plugin_id가 필요합니다\")\n    \n    # 2. 보안 통신을 위한 AES 키 생성\n    key = uuid.uuid4().hex # 32바이트 키\n    \n    # 3. RSA 공개키로 키 암호화\n    encrypted_key = encrypt_with_public_key(key, \"public_key.pem\")\n    \n    # 4. BioStar 서버에 세션 브리지 요청\n    payload = {\n        \"user_id\": user_id,\n        \"plugin_id\": plugin_id,\n        \"key\": encrypted_key\n    }\n\n    response = requests.post(\n        f\"https://{BIOSTAR_SERVER}/api/session/bridge\",\n        json=payload,\n        verify=False\n    )\n\n    # 5. 응답 처리\n    if response.status_code == 200:\n        data = response.json()\n        if data.get(\"Response\", {}).get(\"code\") == \"0\":\n            # 세션 ID 복호화\n            encrypted_session = data.get(\"bs_session_id\")\n            bs_session_id = decrypt_aes256_base64(encrypted_session, key)\n        else:\n            # BioStar X 오류 처리\n            error_msg = data.get(\"Response\", {}).get(\"message\", \"알 수 없는 오류\")\n            raise HTTPException(status_code=400, detail=f\"BioStar X 오류: {error_msg}\")\n    else:\n        raise HTTPException(status_code=500, detail=\"BioStar X 서버 연결 실패\")\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "테스트-1",
