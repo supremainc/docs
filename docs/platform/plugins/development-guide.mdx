@@ -5,11 +5,11 @@ description: BioStar X 플러그인의 실제 개발 방법과 구현 예시를 
 keywords: [플러그인 개발, 엔드포인트, 세션 브리지, 암호화]
 ---
 
-BioStar X와 연동되는 플러그인의 실제 개발 방법과 구현 예시를 안내합니다.
+**BioStar X**와 연동되는 플러그인의 실제 개발 방법과 구현 예시를 안내합니다.
 
 ## 필수 엔드포인트 구현
 
-BioStar X와 연동되는 플러그인을 개발하려면 다음 두 개의 엔드포인트를 반드시 구현해야 합니다. 이 문서에서는 `/bsx`를 예시 경로로 사용합니다.
+**BioStar X**와 연동되는 플러그인을 개발하려면 다음 두 개의 엔드포인트를 반드시 구현해야 합니다. 이 문서에서는 `/bsx`를 예시 경로로 사용합니다.
 
 ### 플러그인 등록 엔드포인트
 
@@ -35,7 +35,7 @@ app = FastAPI()
 
 @app.get("/bsx")
 async def bsx_ping(request: Request):
-    """BioStar 플러그인 등록용 ping 엔드포인트"""
+    """BioStar X 플러그인 등록용 ping 엔드포인트"""
     ping_token = request.headers.get("x-biostar-ping")
     # 응답에 ping 토큰 반환
     response_data = {"token": ping_token}
@@ -64,7 +64,13 @@ curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 
 <Badge className='post'>POST</Badge> `/bsx`
 
-사용자가 BioStar 웹 인터페이스에서 플러그인 아이콘을 클릭할 때 호출되는 엔드포인트입니다. 이 과정에서 BioStar에 로그한 사용자의 세션(session)을 요청해 응답을 받습니다.
+사용자가 **BioStar X** 웹 인터페이스에서 플러그인 아이콘을 클릭할 때 호출되는 엔드포인트입니다. 이 과정에서 **BioStar X**에 로그한 사용자의 세션(session)을 요청해 응답을 받습니다. 
+
+:::info
+
+**BioStar X**와 플러그인 간의 보안 통신을 위해 인증서가 필요합니다. 인증서는 플러그인 등록 후 해당 플러그인 상세 페이지에서 다운로드할 수 있습니다. 자세한 내용은 [다음 문서](registration-guide#register-plugin)를 참고하세요.
+
+:::
 
 #### 요청 형식
 
@@ -81,9 +87,9 @@ user_id={user_id}&plugin_id={plugin_id}
 
 1. **AES 키 생성**: 보안 통신용 32바이트 키 생성
 
-1. **키 암호화**: RSA 공개키로 AES 키 암호화
+1. **키 암호화**: RSA 공개키로 AES 키 암호화(예시 코드에서는 `public_key.pem` 파일 이름으로 가정)
 
-1. **세션 브리지 요청**: BioStar X 서버에 세션 요청
+1. **세션 브리지 요청**: **BioStar X** 서버에 세션 요청
 
 1. **세션 복호화**: 받은 암호화된 세션 ID를 AES로 복호화
 
@@ -98,7 +104,7 @@ async def bsx_callback(
     user_id: str = Form(None, description="사용자 ID"),
     plugin_id: str = Form(None, description="플러그인 ID")
 ):
-    """BioStar 플러그인 콜백 처리"""
+    """BioStar X 플러그인 콜백 처리"""
     # 1. 필수 매개변수 검증
     if not user_id:
       raise HTTPException(status_code=400, detail="user_id가 필요합니다")
@@ -132,11 +138,11 @@ async def bsx_callback(
             encrypted_session = data.get("bs_session_id")
             bs_session_id = decrypt_aes256_base64(encrypted_session, key)
         else:
-            # BioStar 오류 처리
+            # BioStar X 오류 처리
             error_msg = data.get("Response", {}).get("message", "알 수 없는 오류")
-            raise HTTPException(status_code=400, detail=f"BioStar 오류: {error_msg}")
+            raise HTTPException(status_code=400, detail=f"BioStar X 오류: {error_msg}")
     else:
-        raise HTTPException(status_code=500, detail="BioStar 서버 연결 실패")
+        raise HTTPException(status_code=500, detail="BioStar X 서버 연결 실패")
 ```
 
 #### 테스트
