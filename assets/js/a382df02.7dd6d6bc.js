@@ -348,6 +348,12 @@ function _createMdxContent(props) {
                 children: "{VMS_IP_ADDRESS}"
               }), " 부분에 VMS 서버의 IP 주소를 입력하세요."]
             }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["설치한 VMS 제품에 따라 ", (0,jsx_runtime.jsx)(_components.em, {
+                children: "ssl"
+              }), " 경로가 다를 수 있습니다."]
+            }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -361,6 +367,15 @@ function _createMdxContent(props) {
           children: "VMS 서버를 재부팅하세요."
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["VMS가 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "와 서로 다른 서버에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.em, {
+          children: "scaleUtil-1.0-all.jar"
+        }), " 파일을 VMS 서버로 복사하고 위 과정을 진행하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "install-client-certification",
       children: "클라이언트 PC에서 인증서 설치"
