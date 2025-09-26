@@ -625,7 +625,7 @@ function Peripheral({ productLinks: productLinksProp }) {
 var Layout = __webpack_require__(10584);
 ;// CONCATENATED MODULE: ./src/pages/index.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const index_module = ({"heroLayout":"heroLayout_anMo","heroBanner":"heroBanner_qdFl","banner":"banner_d9gt","section__banner":"section__banner_IdUe","banner__biostar":"banner__biostar_l3_x","banner__biostarh2":"banner__biostarh2_eMi9","banner__biostar__img":"banner__biostar__img_WPsw","containerRef":"containerRef_P_fM","integration":"integration_kp0j","integration__item":"integration__item_3nqr","paxton":"paxton_OBze","buttons":"buttons_AeoN","hero__title":"hero__title_sobY","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
+/* ESM default export */ const index_module = ({"heroLayout":"heroLayout_anMo","heroBanner":"heroBanner_qdFl","banner":"banner_d9gt","section__banner":"section__banner_IdUe","banner__biostar":"banner__biostar_l3_x","banner__biostarh2":"banner__biostarh2_eMi9","banner__biostar__img":"banner__biostar__img_WPsw","containerRef":"containerRef_P_fM","integration":"integration_kp0j","integration__item":"integration__item_3nqr","paxton":"paxton_OBze","hero__title":"hero__title_sobY","buttons":"buttons_AeoN","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(5338);
 // EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 69 modules
