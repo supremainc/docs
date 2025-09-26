@@ -10,6 +10,7 @@ const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
+const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
