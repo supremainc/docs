@@ -79,7 +79,7 @@ function HomepageHeader() {
                   if (curid !== false) {
                       const activeUrl = state.state.collections[0].items[curid].url;
                       const curOrigin = window.location.origin;
-                      const goUrl = activeUrl.replace("https://supremainc.github.io/docs", curOrigin);
+                      const goUrl = activeUrl.replace("https://docs.supremainc.com", curOrigin);
                       window.onkeydown = (e) => {
                           if (e.keyCode === 13) {
                               window.location.href = activeUrl;

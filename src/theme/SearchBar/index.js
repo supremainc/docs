@@ -1,6 +1,7 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
-import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
+import {DocSearchButton} from '@docsearch/react/button';
+import {useDocSearchKeyboardEvents} from '@docsearch/react/useDocSearchKeyboardEvents';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import {useHistory} from '@docusaurus/router';
@@ -11,6 +12,8 @@ import {
 import {
   useAlgoliaContextualFacetFilters,
   useSearchResultUrlProcessor,
+  useAlgoliaAskAi,
+  mergeFacetFilters,
 } from '@docusaurus/theme-search-algolia/client';
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -85,10 +88,10 @@ function useResultsFooterComponent({closeModal}) {
 // }
 export function Hit({ hit, children }) {
   //START SWIZZLED CODE
-  let sdkName = '';
-  if (hit.url.includes('biostar')) {
-    sdkName = 'BioStar X';
-  }
+  // let sdkName = '';
+  // if (hit.url.includes('biostar x')) {
+  //   sdkName = 'BioStar X';
+  // }
   //END SWIZZLED CODE
 
   return (
@@ -114,7 +117,7 @@ export function Hit({ hit, children }) {
           paddingRight: '1rem',
         }}
       >
-        {sdkName}
+        {/* {sdkName} */}
       </span>
     </Link>
     // Original code: <Link to={hit.url}>{children}</Link>
@@ -135,10 +138,6 @@ function ResultsFooter({state, onClose}) {
   );
 }
 function useSearchParameters({contextualSearch, ...props}) {
-  function mergeFacetFilters(f1, f2) {
-    const normalize = (f) => (typeof f === 'string' ? [f] : f);
-    return [...normalize(f1), ...normalize(f2)];
-  }
   const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
   const configFacetFilters = props.searchParameters?.facetFilters ?? [];
   const facetFilters = contextualSearch
@@ -158,10 +157,11 @@ function DocSearch({externalUrlRegex, ...props}) {
   const transformItems = useTransformItems(props);
   const transformSearchClient = useTransformSearchClient();
   const searchContainer = useRef(null);
-  // TODO remove "as any" after React 19 upgrade
   const searchButtonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [initialQuery, setInitialQuery] = useState(undefined);
+  const {isAskAiActive, currentPlaceholder, onAskAiToggle, extraAskAiProps} =
+    useAlgoliaAskAi(props);
   const prepareSearchContainer = useCallback(() => {
     if (!searchContainer.current) {
       const divElement = document.createElement('div');
@@ -177,7 +177,8 @@ function DocSearch({externalUrlRegex, ...props}) {
     setIsOpen(false);
     searchButtonRef.current?.focus();
     setInitialQuery(undefined);
-  }, []);
+    onAskAiToggle(false);
+  }, [onAskAiToggle]);
   const handleInput = useCallback(
     (event) => {
       if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
@@ -198,6 +199,8 @@ function DocSearch({externalUrlRegex, ...props}) {
     onClose: closeModal,
     onInput: handleInput,
     searchButtonRef,
+    isAskAiActive: isAskAiActive ?? false,
+    onAskAiToggle: onAskAiToggle ?? (() => {}),
   });
   return (
     <>
@@ -223,8 +226,6 @@ function DocSearch({externalUrlRegex, ...props}) {
 
       {isOpen &&
         DocSearchModal &&
-        // TODO need to fix this React Compiler lint error
-        // eslint-disable-next-line react-compiler/react-compiler
         searchContainer.current &&
         createPortal(
           <DocSearchModal
@@ -238,14 +239,13 @@ function DocSearch({externalUrlRegex, ...props}) {
             {...(props.searchPagePath && {
               resultsFooterComponent,
             })}
-            placeholder={translations.placeholder}
+            placeholder={currentPlaceholder}
             {...props}
             translations={props.translations?.modal ?? translations.modal}
             searchParameters={searchParameters}
             ignoreCompositionEvents={true}
+            {...extraAskAiProps}
           />,
-          // TODO need to fix this React Compiler lint error
-          // eslint-disable-next-line react-compiler/react-compiler
           searchContainer.current,
         )}
     </>
