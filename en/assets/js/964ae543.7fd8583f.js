@@ -1,0 +1,34 @@
+"use strict";
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3727"], {
+45244: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.r(__webpack_exports__);
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (Redirect2Product)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(96540);
+/* ESM import */var _docusaurus_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(56347);
+
+
+
+function Redirect2Product() {
+    const location = (0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_2__/* .useLocation */.zy)();
+    const search = location.search;
+    // example: ?name=xpassq2
+    const product = search ? `${new URLSearchParams(search).get('name')}` : '';
+    switch(product){
+        case 'bs3':
+            return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_docusaurus_router__WEBPACK_IMPORTED_MODULE_2__/* .Redirect */.rd, {
+                to: `/device/biostation_3`
+            });
+        default:
+            return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_docusaurus_router__WEBPACK_IMPORTED_MODULE_2__/* .Redirect */.rd, {
+                to: `/`
+            });
+    }
+}
+
+
+}),
+
+}]);
