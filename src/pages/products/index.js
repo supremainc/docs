@@ -1,5 +1,6 @@
 import React from 'react';
 import {Redirect, useLocation} from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Redirect2Product() {
     const location = useLocation();
@@ -8,8 +9,8 @@ export default function Redirect2Product() {
     const product = search ? `${new URLSearchParams(search).get('name')}` : '';
     switch (product) {
         case 'bs3':
-            return <Redirect to={`/device/biostation_3`} />;
+            return <Redirect to={useBaseUrl(`/device/biostation_3`)} />;
         default:
-            return <Redirect to={`/`} />;
+            return <Redirect to={useBaseUrl(`/`)} />;
     }
 }
