@@ -553,6 +553,10 @@ const sidebars = {
             {
               type: 'category',
               label: '비디오 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-videos'
+              },
               items: [
                 'platform/biostar_x/settings-video-integration',
                 'platform/biostar_x/settings-videos-camera',
