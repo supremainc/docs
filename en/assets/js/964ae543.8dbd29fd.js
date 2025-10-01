@@ -35,6 +35,8 @@ function Redirect2Product() {
         case 'bs3m':
             // 외부 사이트로 리다이렉트 예시
             return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
+        case 'xpq2':
+            return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
         default:
             return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_docusaurus_router__WEBPACK_IMPORTED_MODULE_3__/* .Redirect */.rd, {
                 to: (0,_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */.Ay)(`/`)

@@ -58,10 +58,6 @@ const toc = [{
   "id": "vms-certification",
   "level": 2
 }, {
-  "value": "VMS 서버에서 인증서 설치",
-  "id": "install-vms-certification",
-  "level": 3
-}, {
   "value": "클라이언트 PC에서 인증서 설치",
   "id": "install-client-certification",
   "level": 3
@@ -70,23 +66,19 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
-    code: "code",
     em: "em",
     h2: "h2",
     h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
-    pre: "pre",
     strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image, TabItem, Tabs} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!TabItem) _missingMdxReference("TabItem", true);
-  if (!Tabs) _missingMdxReference("Tabs", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["BioStar X를 HTTPS로 연결하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -292,7 +284,7 @@ function _createMdxContent(props) {
       id: "vms-certification",
       children: "VMS 서버의 인증서 설치"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "아래와 같은 상황이 발생한다면 VMS 서버에 인증서를 설치해 문제를 해결하세요."
+      children: "아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -313,86 +305,24 @@ function _createMdxContent(props) {
           }), "를 같은 서버에 설치할 때"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "install-vms-certification",
-      children: "VMS 서버에서 인증서 설치"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "VMS 서버에서 IP 주소 기반의 인증서를 생성하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "인증서를 설치하기 전에 VMS를 설치한 PC에 Open JDK 21 이상이 설치되어 있는지 확인하세요."
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.em, {
-            children: "C:\\Program Files\\BioStar X\\third"
-          }), " 경로로 이동해 명령 프롬프트를 실행하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "다음 명령어를 실행하세요."
-        }), "\n", (0,jsx_runtime.jsxs)(Tabs, {
-          groupId: "os",
-          defaultValue: "Windows",
-          children: [(0,jsx_runtime.jsx)(TabItem, {
-            value: "Windows",
-            children: (0,jsx_runtime.jsx)(_components.pre, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                className: "language-java",
-                children: "java -jar scaleUtil-1.0-all.jar vmsCertCreate \"C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\<%VENDOR.NAME%>\\<%VENDOR.NAME%> Media Server\\ssl\" {VMS_IP_ADDRESS}\n"
-              })
-            })
-          }), (0,jsx_runtime.jsx)(TabItem, {
-            value: "Linux",
-            children: (0,jsx_runtime.jsx)(_components.pre, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                className: "language-java",
-                children: "java -jar scaleUtil-1.0-all.jar vmsCertCreate \"/opt/<%VENDOR.NAME%>/mediaserver/var/ssl\" {VMS_IP_ADDRESS}\n"
-              })
-            })
-          })]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.code, {
-                children: "<%VENDOR.NAME%>"
-              }), " 부분에 VMS를 설치한 경로를 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.code, {
-                children: "{VMS_IP_ADDRESS}"
-              }), " 부분에 VMS 서버의 IP 주소를 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["설치한 VMS 제품에 따라 ", (0,jsx_runtime.jsx)(_components.em, {
-                children: "ssl"
-              }), " 경로가 다를 수 있습니다."]
-            }), "\n"]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["VMS 서버에 인증서를 설치하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-video-integration#install-vms-certification",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["VMS 서버와 연동하는 기능은 기능 추가 옵션을 별도로 구매해야 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["VMS를 설치한 경로에서 인증서 파일(", (0,jsx_runtime.jsx)(_components.em, {
-            children: "*.pem"
-          }), ")이 생성되었는지 확인하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "VMS 서버를 재부팅하세요."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["VMS가 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), "와 서로 다른 서버에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "scaleUtil-1.0-all.jar"
-        }), " 파일을 VMS 서버로 복사하고 위 과정을 진행하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "install-client-certification",
@@ -462,27 +392,6 @@ function _createMdxContent(props) {
       children: ["웹 브라우저를 다시 시작한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), " 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "shell.header.arena"
-            }), " 페이지의 비디오 모니터링에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "monitoring-video",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["VMS 서버와 연동하는 기능은 기능 추가 옵션을 별도로 구매해야 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "licensing",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n"]
-      })
     })]
   });
 }
