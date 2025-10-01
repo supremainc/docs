@@ -1,0 +1,139 @@
+---
+id: settings-video-integration
+title: VMS 연동하기
+description: BioStar X에서 실시간 영상 모니터링 및 녹화 영상 재생을 위한 Video Management System(VMS) 연동 방법을 안내합니다.
+keywords: [비디오, 연동, 카메라, 설정]
+---
+
+**Video Management System**(VMS)는 여러 카메라의 영상을 통합 관리하고 녹화, 재생할 수 있는 영상 관리 시스템입니다. BioStar X와 VMS를 연동하면 출입 통제와 영상 보안을 하나의 플랫폼에서 통합 관리할 수 있습니다.
+
+VMS 연동을 통해 다음과 같은 혜택을 얻을 수 있습니다.
+
+* **실시간 모니터링**: 출입문과 연결된 카메라의 실시간 영상 확인할 수 있습니다.
+
+* **통합 이벤트 관리**: 출입 이벤트와 영상을 연계하여 보안 상황 파악할 수 있습니다.
+
+* **효율적인 증거 수집**: 특정 시점의 녹화 영상을 빠르게 검색 및 재생할 수 있습니다.
+
+* **북마크 기능**: 중요한 이벤트 시점에 영상 태그를 추가하여 쉽게 찾고 검토할 수 있습니다.
+
+
+## 시작하기 전에
+
+**Video Management System**(VMS)과 연동하려면 다음 사항을 확인하세요.
+
+* VMS와 연동 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+* VMS 서버가 올바르게 설치되고 구성되었는지 확인하세요. VMS 서버는 **BioStar X**와 온라인으로 연결 가능한 상태여야 합니다.
+
+* **BioStar X**와 호환되는 VMS를 사용하세요. **BioStar X VMS** 또는 **Nx Witness v5.1.5** 계열의 VMS를 사용할 수 있습니다.
+
+* VMS 서버의 IP 주소, 포트 번호, 관리자 계정 정보를 준비하세요. 이 정보는 **BioStar X**에서 VMS 서버에 연결하는 데 필요합니다.
+
+* VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용해야 합니다. VMS 서버에 HTTPS 인증서가 설치되어 있는지 확인하세요. 인증서 설치 방법은 [다음 문서](settings-server-https#vms-certification)를 참고하세요.
+
+
+## VMS 서버 연동 설정
+
+<Steps>
+<Step>
+
+### VMS 연동 활성화
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />을 클릭하세요.
+
+1. 처음 접속한다면 **BioStar X** 관리자 계정으로 로그인해야 합니다.
+
+    <Image src='/img/biostarx-settings-video-integration-login.png' />
+
+1. <Cmd sid='video.setting.integration.title' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하세요.
+
+    <Image src='/img/biostarx-settings-video-integration.png' />
+
+1. VMS 서버 정보를 입력하세요.
+
+    * <Cmd sid='video.setting.integration.serverAddress' product='2' />: VMS 서버의 IP 주소를 입력하세요.
+
+    * <Cmd sid='video.setting.integration.port' product='2' />: VMS 서버의 포트 번호를 입력하세요.
+
+    * <Cmd sid='video.setting.integration.loginId' product='2' />: VMS 서버의 관리자 계정 아이디를 입력하세요.
+
+    * <Cmd sid='video.setting.integration.password' product='2' />: VMS 서버의 관리자 계정 비밀번호를 입력하세요.
+
+1. VMS 서버 정보를 모두 입력했으면 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+VMS 서버와 연동에 실패해 오류 메시지가 나타나면 서버 주소 및 관리자 계정 정보 등을 다시 확인하세요. VMS 서버가 온라인 상태인지, 방화벽 설정으로 인해 네트워크 연결이 차단되지 않았는지 점검하는 것도 필요합니다.
+
+:::
+
+</Step>
+<Step>
+
+### 서비스 재시작
+
+VMS 서버 정보를 동기화하려면 **BioStar X**의 일부 서비스를 재시작해야 합니다.
+
+1. Windows에서 <Start/> → **BioStar X** → **BioStar X Service Manager**를 클릭하세요.
+
+1. **All Services** 목록에서 아래 서비스의 **Stop** 버튼을 클릭해 서비스를 중지하세요.
+
+    <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
+
+    * **BioStar X Unified Gateway Service**
+
+    * **BioStar X Core Web Service**
+
+1. 중지 요청한 서비스의 상태가 **Pending**에서 **Stopped**로 변경되면 **Start** 버튼을 클릭해 서비스를 재시작하세요.
+
+    <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
+
+</Step>
+<Step>
+
+### 카메라 확인 및 설정
+
+VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> 메뉴에서 연결된 카메라를 확인할 수 있습니다. 자세한 내용은 [다음 문서](settings-videos-camera)를 참조하세요.
+
+</Step>
+</Steps>
+
+
+## VMS 이벤트 및 북마크 설정
+
+연동한 VMS 서버에 북마크 태그, 이벤트 태그 정보를 전달할 수 있습니다. 이때, 이벤트 로그, 출입문 이름, 장치 이름, 사용자 아이디를 함께 전달할 수 있도록 선택할 수 있습니다. 원하는 옵션을 선택하고 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-settings-video-event-bookmark.png' />
+
+* <Cmd sid='common.language' product='2' />: VMS 서버에 전달하는 이벤트 및 북마크 태그의 언어를 선택하세요. 한국어 또는 영어를 선택할 수 있습니다.
+
+* <Cmd sid='video.setting.tag.bookmark' product='2' />: 북마크 태그는 VMS 서버에 보관된 영상에 표시와 이름이 지정되어 쉽게 찾고 검토할 수 있는 기능입니다. 북마크 태그로 전송할 정보를 선택하세요.
+
+* <Cmd sid='video.setting.tag.event' product='2' />: 특정 시점에 발생한 이벤트를 VMS 서버로 전송해 기록할 수 있습니다. 이벤트 태그로 전송할 정보를 선택하세요.
+
+
+:::info
+
+* VMS에서 북마크 기능에 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html)를 참고하세요.
+
+* VMS에서 이벤트 기능에 대한 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html)를 참고하세요.
+
+:::
+
+
+## VMS 서버 연동 해제
+
+연동한 VMS 서버의 연결을 해제하려면 다음 단계를 따르세요. VMS 연동을 해제하면 비디오 설정, 등록한 카메라, 규칙이 모두 삭제됩니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />을 클릭하세요.
+
+1. <Cmd sid='video.setting.integration.title' product='2' /> 옵션을 <Cmd sid='common.notUse' product='2' />으로 설정하세요.
+
+1. 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+1. 메시지 창의 내용을 확인하고 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
