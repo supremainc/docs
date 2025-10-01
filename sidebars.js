@@ -553,6 +553,14 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '비디오 설정하기',
+              items: [
+                'platform/biostar_x/settings-video-integration',
+                'platform/biostar_x/settings-videos-camera',
+              ]
+            },
+            {
+              type: 'category',
               label: '맵 관리하기',
               link: {
                 type: 'doc',

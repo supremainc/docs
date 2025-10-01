@@ -23,6 +23,8 @@ export default function Redirect2Product() {
         case 'bs3m':
             // 외부 사이트로 리다이렉트 예시
             return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
+        case 'xpq2':
+            return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
         default:
             return <Redirect to={useBaseUrl(`/`)} />;
     }
