@@ -295,6 +295,14 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-video-delete-camera.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["삭제하려는 카메라가 하나의 규칙에 포함되어 있다면 카메라를 삭제할 수 없습니다. 해당 카메라를 규칙에서 제거한 후 다시 시도하세요. 규칙 생성 및 관리에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-videos-rule",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "카메라-그룹-설정-및-관리",
       children: "카메라 그룹 설정 및 관리"
