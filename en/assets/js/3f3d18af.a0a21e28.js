@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-videos-camera-mdx-3f3.json
-var site_docs_platform_biostar_x_settings_videos_camera_mdx_3f3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-videos-camera","title":"카메라 설정하기","description":"VMS 연동 후 BioStar X에 카메라를 추가하고, 그룹으로 구성하여 효율적으로 관리하는 방법을 안내합니다. 실시간 모니터링과 영상 검색을 위한 카메라 설정 방법을 다룹니다.","source":"@site/docs/platform/biostar_x/settings-videos-camera.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-videos-camera","permalink":"/docs/platform/biostar_x/settings-videos-camera","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-videos-camera.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-videos-camera","title":"카메라 설정하기","description":"VMS 연동 후 BioStar X에 카메라를 추가하고, 그룹으로 구성하여 효율적으로 관리하는 방법을 안내합니다. 실시간 모니터링과 영상 검색을 위한 카메라 설정 방법을 다룹니다.","keywords":["카메라","설정","관리","그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"VMS 연동하기","permalink":"/docs/platform/biostar_x/settings-video-integration"},"next":{"title":"맵 관리하기","permalink":"/docs/platform/biostar_x/settings-map-management"}}')
+var site_docs_platform_biostar_x_settings_videos_camera_mdx_3f3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-videos-camera","title":"카메라 설정하기","description":"VMS 연동 후 BioStar X에 카메라를 추가하고, 그룹으로 구성하여 효율적으로 관리하는 방법을 안내합니다. 실시간 모니터링과 영상 검색을 위한 카메라 설정 방법을 다룹니다.","source":"@site/docs/platform/biostar_x/settings-videos-camera.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-videos-camera","permalink":"/docs/en/platform/biostar_x/settings-videos-camera","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-videos-camera.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-videos-camera","title":"카메라 설정하기","description":"VMS 연동 후 BioStar X에 카메라를 추가하고, 그룹으로 구성하여 효율적으로 관리하는 방법을 안내합니다. 실시간 모니터링과 영상 검색을 위한 카메라 설정 방법을 다룹니다.","keywords":["카메라","설정","관리","그룹"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"VMS 연동하기","permalink":"/docs/en/platform/biostar_x/settings-video-integration"},"next":{"title":"카메라 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/settings-videos-rule"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'관리',
 		'그룹'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

@@ -207,7 +207,7 @@ function _createMdxContent(props) {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: ["VMS 서버와 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), "를 같은 서버에 설치할 때는 VMS 서버에 인증서를 설치해야 합니다."]
+                }), "를 같은 서버에 설치할 때는 인증서를 설치해야 합니다."]
               }), "\n"]
             }), "\n"]
           })
