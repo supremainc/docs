@@ -677,6 +677,7 @@ const sidebars = {
             }
           ]
         },
+        'reference/smartcardissue'
       ]
     }
   ],
