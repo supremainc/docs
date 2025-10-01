@@ -556,6 +556,7 @@ const sidebars = {
               items: [
                 'platform/biostar_x/settings-video-integration',
                 'platform/biostar_x/settings-videos-camera',
+                'platform/biostar_x/settings-videos-rule',
               ]
             },
             {
