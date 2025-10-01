@@ -85,7 +85,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 ## VMS 서버의 인증서 설치 {#vms-certification}
 
-아래와 같은 상황이 발생한다면 VMS 서버에 인증서를 설치해 문제를 해결하세요.
+아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다.
 
 * **Video Management System**(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때
 
@@ -93,47 +93,11 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * VMS 서버와 **BioStar X**를 같은 서버에 설치할 때
 
-
-### VMS 서버에서 인증서 설치 {#install-vms-certification}
-
-VMS 서버에서 IP 주소 기반의 인증서를 생성하세요.
-
 :::info
 
-인증서를 설치하기 전에 VMS를 설치한 PC에 Open JDK 21 이상이 설치되어 있는지 확인하세요.
+* VMS 서버에 인증서를 설치하는 방법은 [다음 문서](settings-video-integration#install-vms-certification)를 참고하세요.
 
-:::
-
-1. *C:\Program Files\BioStar X\third* 경로로 이동해 명령 프롬프트를 실행하세요.
-
-1. 다음 명령어를 실행하세요. 
-
-    <Tabs groupId='os' defaultValue='Windows'>
-    <TabItem value="Windows">
-    ```java
-    java -jar scaleUtil-1.0-all.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-    ```
-    </TabItem>
-    <TabItem value="Linux">
-    ```java
-    java -jar scaleUtil-1.0-all.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-    ```
-    </TabItem>
-    </Tabs>
-
-    - `<%VENDOR.NAME%>` 부분에 VMS를 설치한 경로를 입력하세요.
-    
-    - `{VMS_IP_ADDRESS}` 부분에 VMS 서버의 IP 주소를 입력하세요.
-
-    - 설치한 VMS 제품에 따라 *ssl* 경로가 다를 수 있습니다.
-
-1. VMS를 설치한 경로에서 인증서 파일(*\*.pem*)이 생성되었는지 확인하세요.
-
-1. VMS 서버를 재부팅하세요.
-
-:::info
-
-VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUtil-1.0-all.jar* 파일을 VMS 서버로 복사하고 위 과정을 진행하세요.
+* VMS 서버와 연동하는 기능은 기능 추가 옵션을 별도로 구매해야 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
 
 :::
 
@@ -157,11 +121,3 @@ VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUti
 1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
 
 웹 브라우저를 다시 시작한 뒤 <Cmd sid='shell.header.arena' /> 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요.
-
-:::info
-
-* <Cmd sid='shell.header.arena' /> 페이지의 비디오 모니터링에 대한 자세한 내용은 [다음 문서](monitoring-video)를 참고하세요.
-
-* VMS 서버와 연동하는 기능은 기능 추가 옵션을 별도로 구매해야 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
-
-:::
