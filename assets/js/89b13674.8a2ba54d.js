@@ -129,8 +129,8 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["VMS의 녹화 영상을 재생할 때 브라우저에서 '안전하지 않음' 경고가 표시되거나 영상 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-server-https#vms-certification",
+            children: ["VMS의 녹화 영상을 재생할 때 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-video-integration#video-troubleshooting",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
