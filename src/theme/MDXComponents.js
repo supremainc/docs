@@ -109,6 +109,7 @@ import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
 import IcMapmore from '@site/static/img/menus/ico-map-more.svg';
 import IcAlert from '@site/static/img/menus/ico-door-alert.svg';
 import IcVidLog from '@site/static/img/menus/ico-vid-log.svg';
+import IcViewAlert from '@site/static/img/menus/ico-view-alert.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -181,5 +182,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcViewAlert
 }
