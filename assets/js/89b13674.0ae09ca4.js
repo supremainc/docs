@@ -145,6 +145,15 @@ function _createMdxContent(props) {
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["비디오 모니터링은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing#features-add-ons",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -237,7 +246,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다."
+            children: "현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다. 과거 시간의 영상을 재생할 때 다시 실시간 영상으로 전환하려면 이 아이콘을 클릭하세요."
           }), "\n"]
         }), "\n"]
       })

@@ -52,16 +52,12 @@ const toc = [{
   "id": "event-list",
   "level": 2
 }, {
-  "value": "색상에 따른 이벤트 구분하기",
+  "value": "색상에 따른 이벤트 구분",
   "id": "event-color",
   "level": 2
 }, {
-  "value": "알람 이벤트 확인하기",
+  "value": "알람 이벤트 확인",
   "id": "alarm-event",
-  "level": 2
-}, {
-  "value": "연관 이벤트 확인하기",
-  "id": "related-event",
   "level": 2
 }, {
   "value": "실시간 이벤트",
@@ -72,15 +68,11 @@ const toc = [{
   "id": "filter-event",
   "level": 2
 }, {
-  "value": "필터 적용하기",
+  "value": "필터 적용",
   "id": "apply-filter",
   "level": 3
 }, {
-  "value": "필터 저장하기",
-  "id": "save-filter",
-  "level": 3
-}, {
-  "value": "필터 해제하기",
+  "value": "필터링 해제",
   "id": "remove-filter",
   "level": 3
 }, {
@@ -88,16 +80,28 @@ const toc = [{
   "id": "clear-event-list",
   "level": 2
 }, {
-  "value": "이벤트 관련 팝업 메뉴 기능",
-  "id": "이벤트-관련-팝업-메뉴-기능",
+  "value": "알람 확인 및 조치 사항 기록",
+  "id": "알람-확인-및-조치-사항-기록",
   "level": 2
 }, {
-  "value": "알람 확인 및 조치 기록하기",
-  "id": "알람-확인-및-조치-기록하기",
-  "level": 2
+  "value": "알람 이벤트에 대한 조치 사항 기록",
+  "id": "record-action-for-alarm-event",
+  "level": 3
+}, {
+  "value": "알람 이벤트 인지 여부 보류",
+  "id": "defer-alarm-event-acknowledgment",
+  "level": 3
+}, {
+  "value": "이벤트 목록에서 알람 이벤트 확인",
+  "id": "이벤트-목록에서-알람-이벤트-확인",
+  "level": 3
 }, {
   "value": "확인하지 않은 알람 이벤트 보기",
   "id": "확인하지-않은-알람-이벤트-보기",
+  "level": 2
+}, {
+  "value": "이벤트 목록 열 설정",
+  "id": "이벤트-목록-열-설정",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -114,22 +118,24 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcAdd, IcAlarm, IcClose, IcErr, IcFilter, IcMoreB, IcPause, IcPlay, Kbd} = _components;
+  }, {Cmd, IcAlarm, IcClose, IcFilter, IcMoreB, IcPause, IcPlay, IcVidLog, IcViewAlert, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcAdd) _missingMdxReference("IcAdd", true);
   if (!IcAlarm) _missingMdxReference("IcAlarm", true);
   if (!IcClose) _missingMdxReference("IcClose", true);
-  if (!IcErr) _missingMdxReference("IcErr", true);
   if (!IcFilter) _missingMdxReference("IcFilter", true);
   if (!IcMoreB) _missingMdxReference("IcMoreB", true);
   if (!IcPause) _missingMdxReference("IcPause", true);
   if (!IcPlay) _missingMdxReference("IcPlay", true);
-  if (!Kbd) _missingMdxReference("Kbd", true);
+  if (!IcVidLog) _missingMdxReference("IcVidLog", true);
+  if (!IcViewAlert) _missingMdxReference("IcViewAlert", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["모니터링 페이지에서 화면 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"
       }), " 섹션에서는 실시간으로 발생하는 이벤트를 확인하고 관리할 수 있습니다. 이벤트의 상태, 알람 이벤트 처리, 필터링, 색상 구분 등 다양한 기능을 통해 효율적으로 이벤트를 관리할 수 있습니다. 특히, 출입문, 장치, 사용자와 연관된 이벤트를 실시간으로 모니터링하고 필요한 조치를 빠르게 수행할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "event-list",
       children: "이벤트 목록 확인하기"
@@ -137,18 +143,14 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"
       }), " 섹션에서는 발생한 이벤트를 실시간으로 확인할 수 있습니다. 이벤트는 아래 정보를 포함합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-details.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.date"
           }), ": 이벤트가 발생한 날짜와 시각입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.eventTable.area"
-          }), ": 이벤트가 발생한 구역입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -161,12 +163,6 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.device"
           }), ": 이벤트가 발생한 장치입니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.eventTable.userGroup"
-          }), ": 이벤트를 발생시킨 사용자 그룹입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -184,15 +180,21 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.status"
-          }), ": 이벤트 상태입니다. 활성화된 이벤트의 경우 Active 상태로 표시됩니다. 알람 이벤트에는 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 이벤트 상태입니다. 활성화된 이벤트의 경우 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.preview.event.active"
+          }), " 상태로 표시됩니다. 알람 이벤트에는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.acknowledge"
-          }), " 버튼이 표시됩니다."]
+          }), " 버튼이 표시됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.acknowledge"
+          }), " 버튼을 클릭하면 해당 이벤트는 해소됩니다."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-alarm-active.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.view"
-          }), ": 이벤트에 출입문과 연결된 카메라의 영상 정보를 포함하고 있다면 비디오 아이콘이 표시됩니다. 아이콘을 클릭하면 영상을 확인할 수 있습니다."]
+          }), ": 이벤트에 출입문과 연결된 카메라의 영상 정보를 포함하고 있다면 비디오 아이콘(", (0,jsx_runtime.jsx)(IcVidLog, {}), ")이 표시됩니다. 아이콘을 클릭하면 영상을 확인할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -210,9 +212,11 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "event-color",
-      children: "색상에 따른 이벤트 구분하기"
+      children: "색상에 따른 이벤트 구분"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "이벤트 목록에서 발생한 이벤트는 색상으로 구분할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-types.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -222,29 +226,41 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "노란색"
-          }), ": 경고 이벤트입니다. 출입이 허용되지 않은 구역에 사용자가 출입을 시도했거나, 출입문이 열려 있는 경우와 같이 주의가 필요한 이벤트입니다."]
+          children: [(0,jsx_runtime.jsx)("span", {
+            style: {
+              fontWeight: 'bold',
+              color: '#ffa200'
+            },
+            children: "주황색"
+          }), ": 주의 이벤트입니다. 출입이 허용되지 않은 구역에 사용자가 출입을 시도했거나, 출입문이 열려 있는 경우와 같이 주의가 필요한 이벤트입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)("span", {
+            style: {
+              fontWeight: 'bold',
+              color: '#ff0000'
+            },
             children: "빨간색"
           }), ": ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#alarm",
             children: "알람"
-          }), " 이벤트입니다. 시스템에서 발생한 이벤트 중 조치가 필요한 이벤트입니다."]
+          }), " 이벤트입니다. 시스템에서 발생한 이벤트 중 조치가 필요한 경고 이벤트입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)("span", {
+            style: {
+              fontWeight: 'bold',
+              color: '#6dae00'
+            },
             children: "녹색"
           }), ": 해소된 알람 이벤트입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "alarm-event",
-      children: "알람 이벤트 확인하기"
+      children: "알람 이벤트 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"
@@ -252,37 +268,15 @@ function _createMdxContent(props) {
         sid: "arena.eventTable.title"
       }), " 섹션 상단 오른쪽에 ", (0,jsx_runtime.jsx)(IcAlarm, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.toolbar.alarmEvents"
-      }), " 버튼을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이벤트 목록에 알람 이벤트만 표시됩니다. 알람 이벤트는 빨간색으로 표시됩니다."
+      }), " 버튼을 클릭하세요. 이벤트 목록에 알람 이벤트만 표시됩니다. 알람 이벤트는 빨간색으로 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-view-only-alarm.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["알람 이벤트를 포함한 모든 이벤트를 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "arena.eventTable.title"
         }), " 섹션 상단 오른쪽에 ", (0,jsx_runtime.jsx)(IcAlarm, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "arena.eventTable.toolbar.allEvents"
-        }), " 버튼을 클릭하세요."]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "related-event",
-      children: "연관 이벤트 확인하기"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.title"
-      }), " 섹션에서 보고 있는 비디오 또는 맵과 연관된 이벤트만 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.eventTable.title"
-      }), " 섹션 상단 오른쪽에 ", (0,jsx_runtime.jsx)(IcFilter, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "arena.eventTable.toolbar.relatedEvents"
-      }), " 버튼을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이벤트 목록에 연관 이벤트만 표시됩니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["모든 이벤트를 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "arena.eventTable.title"
-        }), " 섹션 상단 오른쪽에 ", (0,jsx_runtime.jsx)(IcFilter, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "arena.eventTable.toolbar.allEvents"
         }), " 버튼을 클릭하세요."]
       })
@@ -299,12 +293,14 @@ function _createMdxContent(props) {
       }), " 버튼을 클릭하세요. ", (0,jsx_runtime.jsx)(IcPlay, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.toolbar.play"
       }), " 버튼을 클릭하면 실시간 이벤트를 재개합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-pause.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "filter-event",
       children: "이벤트 필터링"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "apply-filter",
-      children: "필터 적용하기"
+      children: "필터 적용"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 원하는 조건으로 이벤트 목록을 필터링할 수 있습니다. 이를 통해 원하는 조건의 이벤트를 빠르게 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -313,16 +309,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.title"
           }), " 섹션 목록의 각 헤더 컬럼에 ", (0,jsx_runtime.jsx)(IcFilter, {}), " 아이콘을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-filter-01.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "필터 창이 나타나면 왼쪽 목록에서 원하는 항목을 클릭하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-filter-02.png"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["선택한 항목을 해제하려면 ", (0,jsx_runtime.jsx)("span", {
             className: "text-blue-500",
             children: (0,jsx_runtime.jsx)(IcClose, {})
+          }), " 버튼을 클릭하세요. 모든 항목을 해제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.removeAll"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -348,6 +348,10 @@ function _createMdxContent(props) {
             }), " 조건을 적용합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "각 헤더 컬럼별로 필터링할 수 있는 항목은 다를 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["필터링 조건을 설정하면 헤더 컬럼의 ", (0,jsx_runtime.jsx)("span", {
               className: "text-blue-500",
@@ -357,62 +361,8 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "save-filter",
-      children: "필터 저장하기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "설정한 필터 조건을 저장할 수 있습니다. 저장한 필터는 탭 버튼을 클릭해 불러올 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.eventTable.title"
-          }), " 섹션의 왼쪽 상단에 ", (0,jsx_runtime.jsx)(IcAdd, {}), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "새로운 탭이 생성되면 원하는 이름을 입력하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["이름을 모두 입력하면 ", (0,jsx_runtime.jsx)(Kbd, {
-            children: "Enter"
-          }), " 키를 누르거나 외부 영역을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "필터 조건을 설정하세요."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "arena.eventTable.toolbar.allEvents"
-            }), " 탭은 기본값으로 제공됩니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "탭 이름을 더블 클릭하면 탭 이름을 변경할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["탭에 표시된 ", (0,jsx_runtime.jsx)(IcClose, {}), " 버튼을 클릭하면 탭을 삭제할 수 있습니다. 한번 삭제한 탭은 복구할 수 없습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "필터 조건을 저장한 탭은 사용자 계정에 저장됩니다. 다른 사용자 계정으로 로그인하면 저장한 탭은 표시되지 않습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["필터 탭을 선택하지 않은 상태에서 알람 이벤트가 발생하면 ", (0,jsx_runtime.jsx)(IcErr, {}), " 아이콘이 표시됩니다."]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "remove-filter",
-      children: "필터 해제하기"
+      children: "필터링 해제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "적용한 필터 조건을 해제할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -433,6 +383,8 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭하세요. 모든 필터를 해제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.removeAll"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-filter-02.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -467,143 +419,55 @@ function _createMdxContent(props) {
       }), "를 선택하세요. 이벤트 목록에 불필요한 이벤트가 많이 쌓여 있다면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.clearEvents"
       }), " 기능을 사용해 정리할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-remove.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "이벤트-관련-팝업-메뉴-기능",
-      children: "이벤트 관련 팝업 메뉴 기능"
+      id: "알람-확인-및-조치-사항-기록",
+      children: "알람 확인 및 조치 사항 기록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이벤트 목록의 개별 항목에서 마우스 오른쪽 버튼을 클릭하면 팝업 메뉴가 나타납니다. 팝업 메뉴에서 제공하는 기능을 사용해 이벤트와 연관된 출입문 및 장치, 카메라를 빠르게 선택할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.contextMenu.findDoorInTree"
-          }), ": 이벤트 로그와 연관된 출입문을 화면 왼쪽 사이드바에서 빠르게 찾을 수 있습니다. 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.door.title"
-          }), " 탭이 활성화되고 해당 출입문을 하이라이트 표시합니다."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 이벤트 로그에 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문"
-            }), " 정보를 포함하고 있어야 사용할 수 있습니다."]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.contextMenu.findDeviceInTree"
-          }), ": 이벤트 로그와 연관된 장치를 화면 왼쪽 사이드바에서 빠르게 찾을 수 있습니다. 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.device.title"
-          }), " 탭이 활성화되고 해당 장치를 하이라이트 표시합니다."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 이벤트 로그에 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치"
-            }), " 정보를 포함하고 있어야 사용할 수 있습니다."]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.contextMenu.openVideo"
-          }), ": 이벤트 로그의 출입문과 연결된 비디오를 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.title"
-          }), " 섹션에서 재생할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 이벤트 로그에 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문"
-            }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "규칙"
-            }), " 정보를 포함해야 사용할 수 있습니다."]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.contextMenu.openMap"
-          }), ": 이벤트 로그의 출입문과 연결된 맵을 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.title"
-          }), " 섹션에서 조회할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 이벤트 로그에 출입문으로 구성한 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "맵"
-            }), " 정보를 포함해야 사용할 수 있습니다."]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "arena.tree.contextMenu.viewDetail"
-          }), ": 이벤트 로그에 대한 상세 정보를 확인할 수 있습니다. 화면 오른쪽에서 상세 정보 창이 나타납니다."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "note",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이벤트의 종류에 따라 표시되는 정보는 다를 수 있습니다. 이벤트 규칙을 설정하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-alert",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          })
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "알람-확인-및-조치-기록하기",
-      children: "알람 확인 및 조치 기록하기"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["알람 이벤트가 발생하면 이벤트 목록의 상태 컬럼에 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.acknowledge"
-      }), " 버튼이 표시됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.acknowledge"
-      }), " 버튼을 통해 관리자는 발생한 알람 이벤트에 대한 인지 여부와 조치 내용을 기록할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["알람 이벤트의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.acknowledge"
-      }), " 버튼을 클릭하세요. 팝업 창이 나타나면 알람 이벤트에 대한 인지 여부와 조치 내용을 입력하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Memo"
-          }), ": 알람 이벤트에 대해 조치 사항을 기록할 수 있습니다. 최대 500자까지 입력할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.acknowledge"
-          }), ": 알람 이벤트에 대한 인지 여부와 조치 사항을 기록합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.ignore"
-          }), ": 알람 이벤트에 대한 인지 여부를 보류합니다. 조치 사항은 기록할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Ignore All"
-          }), ": 발생한 모든 알람 이벤트의 인지 여부를 보류합니다. 조치 사항은 기록할 수 있습니다."]
-        }), "\n"]
-      }), "\n"]
+      children: "출입문 강제 열림과 같은 알람 이벤트가 발생하면 알람 메시지 창이 표시됩니다. 알람 메시지 창에는 발생한 알람 이벤트의 상세 내용이 포함됩니다. 이때 관리자는 발생한 알람 이벤트에 대한 인지 여부와 조치 내용을 기록할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-alert-message.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "제공하는 기능은 알람 이벤트일 때만 사용할 수 있습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              children: "Ignore All"
-            }), " 버튼은 같은 알람 이벤트가 2개 이상 발생했을 때만 표시됩니다."]
-          }), "\n"]
-        }), "\n"]
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.ignoreAll"
+        }), " 버튼은 알람 이벤트가 2개 이상 발생했을 때만 표시됩니다."]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "record-action-for-alarm-event",
+      children: "알람 이벤트에 대한 조치 사항 기록"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["메시지 입력 필드에 알람 이벤트에 대한 조치 사항을 입력하세요. 최대 500자까지 입력할 수 있습니다. 조치 사항을 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.acknowledge"
+      }), " 버튼을 클릭하세요. 알람 이벤트에 대한 인지 여부와 조치 사항이 기록됩니다. 알람 메시지 창은 닫힙니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "defer-alarm-event-acknowledgment",
+      children: "알람 이벤트 인지 여부 보류"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.ignore"
+      }), " 버튼을 클릭해 알람 이벤트에 대한 인지 여부를 보류할 수도 있습니다. 조치 사항은 기록할 수 있습니다. 알람 메시지 창은 닫힙니다. 보류한 알람 이벤트는 이벤트 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.preview.event.active"
+      }), " 상태로 표시되고, ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.acknowledge"
+      }), " 버튼을 사용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-list-alarm-active.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "이벤트-목록에서-알람-이벤트-확인",
+      children: "이벤트 목록에서 알람 이벤트 확인"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["이벤트 목록의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.eventTable.status"
+      }), " 컬럼에 표시된 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.acknowledge"
+      }), " 버튼을 클릭하면 발생한 알람 이벤트에 대한 인지 여부와 조치 내용을 기록할 수 있습니다. 입력을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.acknowledge"
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-monitoring-event-alert-acknowledge.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "확인하지-않은-알람-이벤트-보기",
       children: "확인하지 않은 알람 이벤트 보기"
@@ -614,18 +478,22 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.eventTable.title"
-          }), " 섹션 오른쪽 상단에 아이콘 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["알람 이벤트 팝업 창이 나타나면 왼쪽 목록에서 조치 사항을 기록할 알람 이벤트를 선택하세요. 모든 이벤트를 선택하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.selectAll"
-          }), " 버튼을 클릭하세요."]
+          }), " 섹션 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcViewAlert, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-view-alerts-01.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "Memo"
+            sid: "arena.activeAlarm.activeAlarmEvents"
+          }), " 창이 나타나면 왼쪽 목록에서 조치 사항을 기록할 알람 이벤트를 선택하세요. 모든 이벤트를 선택하려면 헤더 컬럼 가장 왼쪽의 체크박스를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-view-alerts-02.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.activeAlarm.memo"
           }), " 입력 필드에 알람 이벤트에 대한 조치 사항을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -647,7 +515,46 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: ["알람 이벤트 목록에서 한 개 이상의 이벤트를 선택해야 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.acknowledge"
-        }), " 버튼을 클릭할 수 있습니다."]
+        }), " 버튼이 활성화됩니다."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "이벤트-목록-열-설정",
+      children: "이벤트 목록 열 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "이벤트 목록에서 표시할 열을 추가하거나 순서 변경, 숨김 설정을 할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.title"
+          }), " 섹션의 오른쪽 상단에서 ", (0,jsx_runtime.jsx)(IcMoreB, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.columnLayout"
+          }), "을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-column-layout.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "arena.eventTable.columnLayout"
+          }), " 창이 나타나면 표시할 열의 체크박스를 클릭해 추가하거나 숨김 설정을 할 수 있습니다. 드래그 앤 드롭으로 열의 순서를 변경할 수도 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-monitoring-event-list-column-layout-popup.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["열 설정을 모두 변경했으면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.apply"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["열 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "columnSetting.button.defaultColumn",
+          product: "2"
+        }), " 버튼을 클릭하세요."]
       })
     })]
   });
