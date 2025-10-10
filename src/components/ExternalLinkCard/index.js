@@ -130,7 +130,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'X-Station 2',
-      url: '#',
+      url: `/device/xstation_2`,
       img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",

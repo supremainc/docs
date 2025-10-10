@@ -461,6 +461,9 @@
   "specs.credentials.biometrics.fingerprint.extractor_matcher": {
     "message": "Extractor / Matcher"
   },
+  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+    "message": "Sensor Certificates"
+  },
   "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
     "message": "Live Fingerprint Detection"
   },
@@ -511,6 +514,12 @@
   },
   "specs.general.camera": {
     "message": "Camera"
+  },
+  "specs.general.camera_type": {
+    "message": "Camera Type"
+  },
+  "specs.general.camera_resolution": {
+    "message": "Camera Resolution"
   },
   "specs.general.ip_rating": {
     "message": "IP Rating"
@@ -579,6 +588,9 @@
     "message": "Relay"
   },
   "specs.interface.poe": {
+    "message": "PoE"
+  },
+  "specs.interface.poe_plus": {
     "message": "PoE+"
   },
   "specs.interface.interphone": {
