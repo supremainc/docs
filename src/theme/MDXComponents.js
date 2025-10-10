@@ -88,6 +88,7 @@ import IcEdit from '@site/static/img/menus/ico-edit.svg';
 import IcEdit2 from '@site/static/img/menus/ico-edit2.svg';
 import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
+import IcRepTrash from '@site/static/img/menus/ico-report-trash.svg';
 import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
 import IcTslot from '@site/static/img/menus/ico-timeslot-add.svg';
 import IcEraser from '@site/static/img/menus/ico-eraser.svg';
@@ -109,7 +110,9 @@ import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
 import IcMapmore from '@site/static/img/menus/ico-map-more.svg';
 import IcAlert from '@site/static/img/menus/ico-door-alert.svg';
 import IcVidLog from '@site/static/img/menus/ico-vid-log.svg';
+import IcReportVid from '@site/static/img/menus/ico-report-vidlog.svg';
 import IcViewAlert from '@site/static/img/menus/ico-view-alert.svg';
+import IcRepoEdit from '@site/static/img/menus/ico-report-edit.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -182,5 +185,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcViewAlert
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit
 }
