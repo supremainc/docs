@@ -37,11 +37,10 @@ const config = {
   tagline: getLocalizedConfigValue('tagline'),
   favicon: 'https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico',
   // Set the production url of your site here
-  url: 'https://supremainc.github.io',
+  url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
-  noIndex: false,
+  baseUrl: '/',
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
@@ -51,7 +50,6 @@ const config = {
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
-  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'log',
   onDuplicateRoutes: 'warn',
@@ -74,6 +72,16 @@ const config = {
       },
     }
   },
+  headTags: [
+    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '07FFA029DF50324E',
+      }
+    }
+  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
     '@docusaurus/theme-mermaid'
@@ -92,7 +100,6 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
-            'device/xstation_2/**.{md,mdx}',
             '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
@@ -103,7 +110,7 @@ const config = {
         },
         sitemap: {
           lastmod: 'date',
-          changefreq: 'always',
+          changefreq: 'daily',
           priority: 0.5,
           ignorePatterns: ['/tags/**']
         },
@@ -150,7 +157,6 @@ const config = {
       }
       return result;
     },
-    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn'
     }
@@ -160,13 +166,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/sns_img02.jpg',
-      announcementBar: {
-        id: 'annoucementbar',
-        content: getLocalizedConfigValue('announcementBar'),
-        backgroundColor: '#FFB27D',
-        textColor: '#091E42',
-        isCloseable: false,
-      },
       docs: {
         sidebar: {
           hideable: true,
@@ -177,8 +176,8 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'img/suprema-logo.svg',
-          srcDark: 'img/suprema-logo-white.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
+          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
@@ -229,11 +228,11 @@ const config = {
                 label: 'BioLite N2',
                 docId: 'device/biolite_n2/index'
               },
-              // {
-              //   type: 'doc',
-              //   label: 'X-Station 2',
-              //   docId: 'device/xstation_2/index'
-              // },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
               {
                 type: 'doc',
                 label: 'CoreStation',
@@ -283,7 +282,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'img/suprema-logo-bottom.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
           width: '173px',
         },
         links: [
@@ -307,9 +306,9 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: '11LXF9EJH7',
-        apiKey: '4882650c3591013a4db2f9211c31c4f4',
-        indexName: 'supremaincio',
+        appId: 'G6Y3H2PNC3',
+        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+        indexName: 'SPDocs',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],

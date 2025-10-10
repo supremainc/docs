@@ -901,6 +901,9 @@ footer {
   .columns {
     .col {
       height: fit-content;
+      ul li {
+        margin-top: 0;
+      }
     }
     .width--10 {
       max-width: 10%;
@@ -1177,6 +1180,26 @@ footer {
       overflow-x: scroll;
       table {
         width: max-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .markdown {
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: 0 !important;
+            .badge {
+              position: relative;
+              top: unset;
+              right: unset;
+              width: auto;
+            }
+          }
+        }
       }
     }
   }
