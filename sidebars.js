@@ -851,6 +851,21 @@ const sidebars = {
         'device/biostation_3/product-specifications',
         'device/biostation_3/regulatory-information',
         'device/biostation_3/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'Release Notes',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3/release-notes/index',
+          },
+          items: [
+            'device/biostation_3/release-notes/141',
+          ]
+        },
       ],
     },
   ],

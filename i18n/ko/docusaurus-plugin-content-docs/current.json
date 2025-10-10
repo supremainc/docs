@@ -234,5 +234,9 @@
   "sidebar.biostar_air.category.Release Notes": {
     "message": "릴리스 노트",
     "description": "The label for category 릴리스 노트 in sidebar biostar_air"
+  },
+  "sidebar.biostation3.category.Release Notes": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostation3"
   }
 }

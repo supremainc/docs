@@ -234,5 +234,9 @@
   "sidebar.biostar_air.category.Release Notes": {
     "message": "Release Notes",
     "description": "The label for category Release Notes in sidebar biostar_air"
+  },
+  "sidebar.biostation3.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category Release Notes in sidebar biostation3"
   }
 }
