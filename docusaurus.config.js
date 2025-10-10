@@ -228,11 +228,11 @@ const config = {
                 label: 'BioLite N2',
                 docId: 'device/biolite_n2/index'
               },
-              // {
-              //   type: 'doc',
-              //   label: 'X-Station 2',
-              //   docId: 'device/xstation_2/index'
-              // },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
               {
                 type: 'doc',
                 label: 'CoreStation',
