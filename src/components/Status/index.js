@@ -13,6 +13,12 @@ export function StatusFail() {
     )
 }
 
+export function StatusNormal() {
+    return (
+        <div className={clsx(styles.status, styles.normal)}></div>
+    )
+}
+
 export function StatusUpdating() {
     return (
         <div className={clsx(styles.status, styles.updating)}></div>

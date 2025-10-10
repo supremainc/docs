@@ -14,9 +14,8 @@ export default function Head ({level, hashid, children, className}) {
     if (level === 'none') {
         return null
     }
-
     if (!hashid) {
-        hid = children.replace(/\s/g, "_");
+        hid = children.join("_");
     } else {
         hid = hashid;
     }

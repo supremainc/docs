@@ -1,0 +1,662 @@
+.typedefContainer {
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.titleRow {
+  margin-bottom: 0.5rem;
+}
+
+.titleRow h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.metadata {
+  display: inline-block;
+  position: relative;
+  top: -0.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.metadata span {
+  margin-left: 0.5rem;
+}
+
+.category,
+.size,
+.version {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.size {
+  background: var(--ifm-color-info);
+  color: white;
+}
+
+.version {
+  background: var(--ifm-color-success);
+  color: white;
+}
+
+.description {
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 섹션 스타일 */
+.section {
+  margin: 1.5rem 0;
+  /* border-bottom: 1px solid var(--ifm-color-emphasis-100); */
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.85rem;
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* 계층 구조 시각화 - 캡쳐에 맞게 수정 */
+.hierarchyContainer {
+  background: var(--ifm-color-emphasis-50);
+  border-radius: 6px;
+  /* padding: 1.5rem; */
+}
+
+.hierarchyLevel {
+  position: relative;
+}
+
+.nestedLevel .nestedLevel {
+  margin-left: 1rem;
+}
+
+ul.hierarchyItem {
+  margin-bottom: 1rem;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  --item-gap: 1rem;
+}
+
+.nestedLeveltop > ul.hierarchyItem > li:first-of-type::before {
+  border: none;
+}
+
+ul.hierarchyItem ul {
+  list-style-type: none;
+  padding-left: var(--item-gap);
+}
+
+ul.hierarchyItem ul.hierarchyNotes {
+  list-style-type: disc;
+  margin: .5rem 0 .5rem .5rem;
+}
+
+ul.hierarchyItem ul.hierarchyNotes::before {
+  content: none;
+}
+
+ul.hierarchyItem ul.hierarchyNotes li::before {
+  content: none;
+}
+
+ul.hierarchyItem ul::before {
+  content: '';
+  position: absolute;
+  left: 0rem;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid var(--ifm-color-border);
+}
+
+ul.hierarchyItem ul:last-of-type::before {
+  border-left: none;
+}
+
+ul.hierarchyItem ul li::before {
+  margin-left: unset !important;
+}
+
+ul.hierarchyItem ul li.hierarchyNode {
+  margin-left: 1rem;
+}
+
+ul.hierarchyItem ul + ul::before {
+  /* border-left: none; */
+}
+
+.hierarchyItem:last-child {
+  margin-bottom: 0;
+}
+
+li.hierarchyNode {
+  /* border-bottom: 1px solid var(--ifm-color-border); */
+  padding-bottom: 1rem;
+  position: relative;
+  display: block;
+}
+
+li.hierarchyNode::before {
+  content: '' !important;
+  position: absolute !important;
+  display: block;
+  left: -2rem;
+  color: var(--ifm-color-border);
+  border-left: 1px solid var(--ifm-color-border);
+  border-bottom: 1px solid var(--ifm-color-border);
+  width: 1rem;
+  height: 33px;
+  top: -17px;
+}
+
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hierarchyName {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+}
+
+.hierarchyType {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-color-info);
+  font-size: 0.85rem;
+  background: var(--ifm-color-info-contrast-background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.hierarchySize {
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  background: var(--ifm-color-emphasis-200);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.hierarchyDesc {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+}
+
+.references {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.referencesLabel {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+  margin-right: 0.5rem;
+}
+
+.reference {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.reference:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+}
+
+/* 연결선 스타일 - 캡쳐에 맞게 트리 구조 표현 */
+.childrenContainer {
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* .nestedLevel .hierarchyItem::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 2rem;
+  width: 1rem;
+  height: 2px;
+  background: var(--ifm-color-primary-light);
+} */
+
+/* 구조체 링크 스타일 */
+.structLink {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.structLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+.relatedStruct {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+/* 메모리 레이아웃 시각화 */
+.memoryBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.memoryBlock {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-color-emphasis-50);
+}
+
+.memoryBlockHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.memoryOffset {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  background: var(--ifm-color-emphasis-200);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.memoryFieldName {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  flex: 1;
+}
+
+.memoryType {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-color-info);
+  font-size: 0.85rem;
+}
+
+.memorySize {
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  font-weight: 600;
+}
+
+.memoryDesc {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+  background: var(--ifm-color-emphasis-100);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* 코드 블록 */
+.codeBlock {
+  background: var(--ifm-code-background);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.codeBlock pre {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.codeBlock code {
+  background: transparent;
+  padding: 0;
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-code-color);
+}
+
+.field {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  /* border-radius: 6px; */
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-50);
+}
+
+.field + .field {
+  border-top: none;
+}
+
+.fieldHeader {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.fieldNumber {
+  display: inline-block;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  background: var(--ifm-color-primary-contrast-background);
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  width: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-right: .5rem;
+}
+
+.fieldName {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--ifm-color-content);
+  background: var(--ifm-code-background);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-right: .5rem;
+}
+
+.fieldType {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-color-info);
+  font-size: 0.85rem;
+  background: var(--ifm-color-info-contrast-background);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  margin-right: .5rem;
+}
+
+.fieldSize {
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  background: var(--ifm-color-emphasis-200);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  word-break: normal;
+}
+
+.fieldRange {
+  font-size: 0.8rem;
+  color: var(--ifm-color-warning-dark);
+  background: var(--ifm-color-warning-contrast-background);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  margin-left: .5rem;
+}
+
+.fieldDescription {
+  margin: 0 0 1rem 0;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+}
+
+.fieldConstants {
+  margin-top: 1rem;
+  background: var(--ifm-background-color);
+  border-radius: 4px;
+  /* padding: 1rem; */
+}
+
+.fieldConstants h6 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.relatedStructs {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.relatedLabel {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+  margin-right: 0.5rem;
+}
+
+.relatedStruct {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+/* 의존성 섹션 */
+.dependencyGroup {
+  margin-bottom: 2rem;
+}
+
+.dependencyGroup:last-child {
+  margin-bottom: 0;
+}
+
+.dependencyGroup h5 {
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.dependencyList {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.dependency {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--ifm-color-emphasis-50);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.depName {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.depType {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--ifm-color-info);
+  font-size: 0.85rem;
+  background: var(--ifm-color-info-contrast-background);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.depDesc {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.constantsTable, .variantsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.constantsTable thead th, .variantsTable thead th {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-content);
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.constantsTable tbody td, .variantsTable tbody td {
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  vertical-align: top;
+}
+
+.constantsTable tbody td:first-of-type {
+  width: 20%;
+  text-align: center;
+}
+
+.constantsTable tbody td:nth-of-type(2) {
+  width: 80%;
+  /* text-align: center; */
+}
+
+.variantsTable tbody td:first-of-type {
+  width: 40%;
+}
+
+.variantsTable tbody td {
+  width: 30%;
+}
+
+.constantsTable tbody tr:nth-child(even) {
+  background: var(--ifm-color-emphasis-50);
+}
+
+.constantValue {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-code-background);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.constantNote {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.notesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note {
+  background: var(--ifm-alert-background-color);
+  margin-bottom: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.note:last-child {
+  margin-bottom: 0;
+}
+
+/* 다크 모드 대응 */
+[data-theme='dark'] .typedefContainer {
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .constantsTable thead th {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .constantsTable tbody tr:nth-child(even) {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .typedefContainer {
+    padding: 1rem;
+  }
+  
+  .fieldHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .constantsTable {
+    font-size: 0.8rem;
+  }
+  
+  .constantsTable thead th,
+  .constantsTable tbody td {
+    padding: 0.5rem;
+  }
+}
+
+
+@media print {
+  .hierarchyName a, a.reference, a.structLink {
+    color: var(--ifm-color-primary) !important;
+    font-size: .85rem;
+  }
+  .hierarchyType, .hierarchySize {
+    font-size: .6rem;
+  }
+  .depType, .depDesc_T3ac {
+    font-size: .6rem;
+  }
+}

@@ -1,17 +1,57 @@
 ---
 id: check-door-status
-title: 출입문 점검하기
-description: 출입문의 상태를 확인하고 상황에 따라 대처하는 방법을 안내합니다.
+title: 출입문 상태 확인하기
+description: BioStar X에서 출입문과 연결된 장치의 상태를 실시간으로 모니터링하고 문제 발생 시 해결하는 방법을 안내합니다.
 keywords: [ 모니터링, 출입문 ]
 ---
 
-출입문 및 관련 장비의 상태를 정확하게 파악하는 것은 보안 시스템의 핵심입니다. 이 문서에서는 장치의 상태를 확인하는 방법과 오류 발생 시 대처 방안을 안내합니다. 안내된 아이콘과 상세 설명을 통해 관리자들이 각각 장치의 작동 상태를 한눈에 파악하고, 문제 발생 시 신속하게 대응할 수 있도록 돕습니다.
+출입문과 연결된 장치의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. <Cmd sid='shell.header.arena' />에서 제공하는 상태 아이콘을 통해 장치 연결 상태, 출입문 잠금 상태, 카메라 작동 상태 등을 한눈에 확인하고, 문제 발생 시 즉시 대응하세요.
 
 <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 각 출입문과 연결된 슬레이브 장치의 상태를 확인할 수 있습니다.
 
-## 출입문 상태 확인 {#check-the-door-status}
+## 시작하기 전에
 
-출입문 상태를 확인하여 출입문이 정상적으로 작동하는지 확인할 수 있습니다. 출입문 상태는 아래를 참고하세요.
+출입문과 연결된 장치를 올바르게 구성했는지 확인하세요. 장치가 네트워크에 연결되어 있고, 최신 펌웨어로 업데이트되어 있는지 점검하는 것이 중요합니다. 문제가 발생할 경우, 장치의 전원 상태와 네트워크 연결 상태를 먼저 확인하는 것이 좋습니다.
+
+:::info
+
+* 장치 추가 및 구성에 대한 자세한 내용은 [다음 문서](settings-manage-devices)를 참고하세요.
+
+* 출입문 추가 및 구성에 대한 자세한 내용은 [다음 문서](settings-manage-door)를 참고하세요.
+
+* 출입문의 상태를 모니터링하거나 제어하려면 <Cmd sid='setting.server.logUploadType' product='2' /> 기능이 활성화되어 있어야 합니다. 이 기능은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> 메뉴 경로의 <Cmd sid='common.general' product='2' /> 섹션에서 활성화할 수 있습니다.
+
+* VMS 서버와 연동해 카메라를 출입문과 연결하는 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+:::
+
+## 트리 구조 알아보기 {#door-tree-structure}
+
+화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 트리 구조는 아래와 같은 구조로 구성되어 있습니다.
+
+import Doortree from './door-tree.json';
+
+<Treeview data={Doortree} />
+
+:::info
+
+* 장치 추가 및 구성에 대한 자세한 내용은 [다음 문서](settings-manage-devices)를 참고하세요.
+
+* 출입문 추가 및 구성에 대한 자세한 내용은 [다음 문서](settings-manage-door)를 참고하세요.
+
+* 엘리베이터 추가 및 구성에 대한 자세한 내용은 [다음 문서](settings-manage-elevators)를 참고하세요.
+
+* 출입 통제 구역 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
+
+* 출입문과 카메라를 연동하려면 [다음 문서](settings-videos-rule)를 참고하세요.
+
+:::
+
+## 상태 확인하기
+
+### 연결 오류 및 알람 확인 {#check-the-error-status}
+
+출입문 또는 엘리베이터 상태를 확인하여 정상 작동 여부를 확인할 수 있습니다. 각 아이콘별 상태는 아래를 참고하세요.
 
 <div className='col2--20-80 overflow-x'>
 
@@ -19,12 +59,13 @@ keywords: [ 모니터링, 출입문 ]
 | :--: | -- |
 | <IcErr width='35px' height='35px' /> | 커뮤니케이션 서버 오류이거나 연결이 끊긴 상태입니다. |
 | <IcNotsync width='35px' height='35px' /> | 동기화 오류가 발생한 상태입니다. |
+| <IcAlert width='40px' height='40px' /> | 출입문에서 알람이 발생한 상태입니다. 배회 감지, 침입 감지 등이 발생하면 해당 아이콘이 표시됩니다. |
 
 </div>
 
 :::tip
 
-상태 아이콘을 클릭하면 툴팁을 통해서 상세 정보를 확인할 수 있습니다. 툴팁에 표시된 오류 메시지의 링크를 클릭하면 출입문과 연결된 장치 목록으로 이동할 수 있습니다.
+상태 아이콘을 클릭하면 툴팁을 통해서 상세 정보를 확인할 수 있습니다. 툴팁에 표시된 오류 메시지의 링크를 클릭하면 출입문 또는 엘리베이터와 연결된 장치 목록으로 이동할 수 있습니다.
 
 <Image src='/img/monitoring-door-status-tooltip.png' alt='툴팁 메시지'/>
 
@@ -34,23 +75,10 @@ keywords: [ 모니터링, 출입문 ]
 
 :::
 
-## 출입문 열림/잠금 확인 {#open-the-doorlock-confirmation}
 
-출입문 센서를 통해 출입문이 열려 있는지 확인할 수 있습니다. 출입문 센서의 상태는 아래를 참고하세요.
+### 출입문 잠금 확인 {#check-the-door-lock}
 
-<div className='col2--20-80 overflow-x'>
-
-| 상태 아이콘 | 설명 |
-| :--: | -- |
-| <IcDoorClose width='35px' height='35px' /> | 출입문이 닫힌 상태입니다. |
-| <IcDoorOpen width='auto' height='40px' /> | 출입문이 열린 상태입니다. |
-
-</div>
-
-
-## 출입문 잠금 확인 {#check-the-door-lock}
-
-릴레이 상태를 통해 출입문의 잠금 상태를 확인할 수 있습니다. 출입문 릴레이의 상태는 아래를 참고하세요.
+출입문 릴레이 상태를 통해 출입문의 잠금 상태를 확인할 수 있습니다. 출입문 릴레이의 상태는 아래를 참고하세요.
 
 <div className='col2--20-80 overflow-x'>
 
@@ -62,7 +90,7 @@ keywords: [ 모니터링, 출입문 ]
 </div>
 
 
-## 카메라 상태 확인 {#check-the-camera-status}
+### 카메라 상태 확인 {#check-the-camera-status}
 
 카메라의 상태를 확인하여 카메라가 정상적으로 작동하는지 확인할 수 있습니다. 카메라의 상태는 아래를 참고하세요.
 
@@ -76,14 +104,15 @@ keywords: [ 모니터링, 출입문 ]
 </div>
 
 
-## 경비 상태 확인 {#check-the-security-status}
+### 경비 상태 확인 {#check-the-security-status}
 
-출입문의 경비 상태를 확인할 수 있습니다. 
+출입문 또는 출입 통제 구역의 경비 상태를 확인할 수 있습니다. 
 
 <div className='col2--20-80 overflow-x'>
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
+| <IcDisable width='auto' height='30px' /> | 비활성화된 구역의 아이콘입니다. 비활성화된 구역은 알람이 발생하지 않습니다. |
 | <IcArm width='auto' height='35px'/> | 경비가 활성화된 상태입니다. |
 | <IcDisarm width='auto' height='35px'/> | 경비가 비활성화된 상태입니다. |
 
@@ -91,6 +120,42 @@ keywords: [ 모니터링, 출입문 ]
 
 :::info
 
-경비 상태는 출입문을 Intrusion Alarm Zone으로 설정했을 때만 표시됩니다.
+경비 상태는 출입문을 **경비 구역**으로 설정했을 때만 표시됩니다. 경비 구역 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-intrusion-alarm)를 참고하세요.
 
 :::
+
+### 엘리베이터 상태 확인
+
+엘리베이터의 잠금 상태를 확인할 수 있습니다.
+
+<div className='col2--20-80 overflow-x'>
+
+| 상태 아이콘 | 설명 |
+| :--: | -- |
+| <StatusNormal width='auto' height='35px'/> | 엘리베이터 잠금 해제 상태입니다. |
+| <StatusOK width='auto' height='35px'/> | 엘리베이터 잠금 상태입니다. |
+
+</div>
+
+
+## 그룹 목록 확장/축소
+
+최상위 그룹 또는 하위 그룹을 통해서 목록을 확장하거나 축소할 수 있습니다. 
+
+<Image src='/img/biostarx-monitoring-group-expand-collapse.png' />
+
+### 최상위 그룹
+
+1. <Cmd sid='arena.tree.door.title' /> 탭에서 <Cmd sid='arena.tree.door.allDoorGroups' /> 또는 <Cmd sid='arena.tree.door.allElevatorGroups' />, <Cmd sid='arena.tree.door.allZones' />를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 
+
+1. 팝업 메뉴에서 <Cmd sid='arena.tree.expandAll' /> 또는 <Cmd sid='arena.tree.collapseAll' /> 옵션을 선택하세요. 
+
+선택한 최상위 그룹을 기준으로 모든 하위 목록을 확장하거나 축소할 수 있습니다.
+
+### 하위 그룹
+
+1. 각 최상의 그룹의 하위 그룹 목록을 확장하거나 축소하려면 하위 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 
+
+1. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.expandBelow' /> 또는 <Cmd sid='arena.tree.contextMenu.collapseBelow' /> 옵션을 선택하세요. 
+
+선택한 하위 그룹의 목록을 확장하거나 축소할 수 있습니다.

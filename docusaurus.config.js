@@ -10,6 +10,7 @@ const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
+const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -50,7 +51,8 @@ const config = {
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'log',
+  onDuplicateRoutes: 'warn',
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -70,8 +72,19 @@ const config = {
       },
     }
   },
+  headTags: [
+    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '07FFA029DF50324E',
+      }
+    }
+  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-mermaid'
   ],
   presets: [
     [
@@ -99,7 +112,7 @@ const config = {
           lastmod: 'date',
           changefreq: 'daily',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          ignorePatterns: ['/tags/**']
         },
         svgr: {
           svgrConfig: {
@@ -110,10 +123,20 @@ const config = {
     ]
   ],
   plugins: [
+    // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
+    ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
-    [ 'docusaurus-plugin-image-zoom', {}]
+    [ 'docusaurus-plugin-image-zoom', {}],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-98B2Y5C3H6',
+        anonymizeIP: true,
+      },
+    ],
   ],
   markdown: {
+    mermaid: true,
     parseFrontMatter: async (params) => {
       // Reuse the default parser
       const result = await params.defaultParseFrontMatter(params);
@@ -133,6 +156,9 @@ const config = {
         result.frontMatter.isTranslationMissing = !isI18n;
       }
       return result;
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
     }
   },
   themeConfig:
@@ -150,8 +176,8 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'img/suprema-logo.svg',
-          srcDark: 'img/suprema-logo-white.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
+          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
@@ -256,7 +282,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'img/suprema-logo-bottom.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
           width: '173px',
         },
         links: [
@@ -268,10 +294,10 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ]
       },
       zoom: {
-        selector: '.markdown :not(em, div) > img:not(.ico)',
+        selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',
         background: {
           light: 'rgb(255, 255, 255)',
           dark: 'rgb(50, 50, 50)'
@@ -280,20 +306,20 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: '11LXF9EJH7',
-        apiKey: '4882650c3591013a4db2f9211c31c4f4',
-        indexName: 'supremaincio',
+        appId: 'G6Y3H2PNC3',
+        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+        indexName: 'SPDocs',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
           attributesToSnippet: [
-            'content:20', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
+            'content:35', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
           ],
           snippetEllipsisText: '…'
         },
         searchPagePath: 'search',
       }
-    }),
+    })
 };
 
 export default config;

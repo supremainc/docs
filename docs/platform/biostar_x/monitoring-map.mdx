@@ -29,6 +29,8 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 
 맵 또는 층에 표시되는 구성 요소는 구역(Area)과 구역과 연결된 카메라를 확인할 수 있습니다. 구역을 통해서 층(Floor)으로 접근할 수 있습니다. 층에는 출입문과 카메라를 확인할 수 있습니다.
 
+<Image src='/img/biostarx-monitoring-map-main.png' />
+
 <div className='col2--20-80'>
 
 | 구성 요소 | 설명 |
@@ -49,8 +51,9 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 | 기능 | 설명 |
 | :--: | -- |
 | ![확대/축소](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![확대/축소](/img/common/monitoring-map-zoom-reduce-horizon.svg) | 맵의 왼쪽 위, 오른쪽 아래에 위치한 버튼을 클릭해 확대/축소할 수 있습니다. 또는 마우스 휠을 사용하여 맵을 확대하거나 축소할 수 있습니다.|
+| <IcMapmore width='30' height='30' /> | 버튼을 클릭하면 추가 기능을 이용할 수 있습니다. |
 | <IcClose width='30' height='30'/> | 비디오 타일에 위치한 맵 또는 층을 닫으려면 오른쪽 위에 버튼을 클릭하세요. |
-| <IcMove width='30' height='30'/> | 맵 위에 마우스를 오버하면 표시되는 아이콘을 클릭해 드래그하면 맵을 비디오 타일의 다른 위치로 이동할 수 있습니다. |
+| <IcMove width='30' height='30'/> | 아이콘을 클릭한 상태에서 드래그하면 맵을 다른 위치로 이동할 수 있습니다. |
 
 </div>
 
@@ -62,10 +65,25 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 
 :::
 
+### 상태 점검하기
+
+화면 왼쪽 사이드바에서 각 구역의 출입문과 카메라 상태를 점검할 수 있습니다. 각 아이콘별 상태는 아래를 참고하세요.
+
+<div className='col2--20-80'>
+
+| 상태 아이콘 | 설명 |
+| :--: | -- |
+| <IcErr width='35px' height='35px' /> | 커뮤니케이션 서버 오류이거나 연결이 끊긴 상태입니다. |
+| <IcAlert width='40px' height='40px' /> | 출입문에서 알람이 발생한 상태입니다. 배회 감지, 침입 감지 등이 발생하면 해당 아이콘이 표시됩니다. |
+| <IcCamOk width='auto' height='35px'/> | 카메라가 연결된 상태입니다. |
+| <IcCamFail width='auto' height='35px'/> | 카메라가 꺼져 있거나 연결이 해제된 상태입니다. |
+
+</div>
+
 
 ## 맵 열기 {#open-map}
 
-모든 구역에 설정된 각 구역이 구글 지도와 연동되어 있다면, <Cmd sid='arena.title' /> 섹션의 비디오 타일에 맵을 표시할 수 있습니다.
+모든 구역에 설정된 각 구역이 구글 지도와 연동되어 있다면, <Cmd sid='arena.title' /> 섹션에 맵을 표시할 수 있습니다.
 
 1. 화면 왼쪽 사이드바에서 맵으로 확인할 구역을 선택하세요.
 
@@ -86,23 +104,34 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 
 :::
 
+
+## 맵 크기 조절 및 위치 이동 {#resize-map}
+
+맵의 크기를 조절하려면 지도 상에서 빈 구역을 클릭하세요. 각 모서리에 크기를 조절할 수 있는 핸들이 표시됩니다. 핸들을 클릭한 상태에서 드래그하여 원하는 크기로 조절하세요.
+
+<Image src='/img/common/biostarx-monitoring-map-resize.gif' alone />
+
+크기를 조절한 상태에서 맵을 다른 위치로 이동하려면 맵 위에 <IcMove /> 아이콘을 클릭한 상태에서 원하는 위치로 드래그하세요.
+
+<Image src='/img/common/biostarx-monitoring-map-move.gif' alone />
+
 ## 층으로 진입하기 {#entry-floor}
 
 맵에서 층으로 진입하려면 구역(Area)을 클릭하세요. 팝업 메뉴에 진입할 수 있는 층 목록이 표시되면 원하는 층을 선택하세요. 선택한 층의 도면과 출입문, 카메라를 확인할 수 있습니다.
 
-<Image src='/img/monitoring-map-select-floor.png' alt='층 선택하기' />
+<Image src='/img/common/monitoring-map-select-floor.png' alone />
 
 * 출입문을 클릭하면 해당 출입문을 제어할 수 있는 팝업 메뉴가 표시됩니다. 제공하는 기능에 대한 자세한 내용은 [다음 문서](control-door)를 참고하세요.
 
-  <Image src='/img/monitoring-map-floor-control-door.png' alt='출입문 제어' />
+  <Image src='/img/monitoring-map-floor-control-door.png' />
 
-* 카메라를 클릭하면 해당 구역의 영상을 재생할 수 있습니다.
+* 카메라를 더블 클릭하면 해당 구역의 영상을 재생할 수 있습니다.
 
-  <Image src='/img/monitoring-map-select-floor-play-video.png' alt='카메라 영상 재생' />
+  <Image src='/img/common/monitoring-map-select-floor-play-video.png' alone />
 
 :::info
 
-* 층(Floor)에 출입문과 카메라를 설정하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+* 층(Floor)에 출입문과 카메라를 설정하는 방법에 대한 자세한 내용은 [다음 문서](settings-map-manage-floor)를 참고하세요.
 
 * 구역이 표시되는 맵으로 이동하려면 왼쪽 상단의 <IcBack/> 버튼을 클릭하세요.
 
@@ -117,7 +146,7 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 
 다른 층으로 이동하려면 맵 왼쪽 상단의 선택 옵션을 클릭하고, 목록에서 이동하길 원하는 층을 선택하세요.
 
-<Image src='/img/monitoring-map-select-floor-list-box.png' alt='다른 층 선택하기' />
+<Image src='/img/common/monitoring-map-select-floor-list-box.png' alone />
 
 :::info
 
@@ -129,6 +158,8 @@ keywords: [ 모니터링, 맵, 구역, 층 ]
 ## 카메라 제어하기 {#control-camera}
 
 * 비디오 타일에 카메라 영상을 배치하고 재생하려면, 화면 왼쪽 사이드바의 <Cmd sid='arena.map.title' /> 목록에서 카메라를 더블 클릭하세요. 또는 마우스 오른쪽 버튼을 클릭하고 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.openVideo' />를 클릭하세요.
+
+  <Image src='/img/biostarx-monitoring-map-open-camera.png' />
 
 * 카메라의 이름, 위치 등과 같은 상세 정보를 확인하려면 화면 왼쪽 사이드바의 <Cmd sid='arena.map.title' /> 목록에서 카메라를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.viewDetail' />를 클릭하세요.
 

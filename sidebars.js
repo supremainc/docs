@@ -17,6 +17,26 @@
 
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
+  bsxplugins: [
+    {
+      type: 'category',
+      label: 'BioStar X Plugins',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/plugins/index',
+      },
+      items: [
+        'platform/plugins/plugins-overview',
+        'platform/plugins/getting-started',
+        'platform/plugins/development-guide',
+        'platform/plugins/registration-guide',
+        'platform/plugins/troubleshooting'
+      ]
+    }
+  ],
   biostar_air: [
     {
       type: 'category',
@@ -205,6 +225,7 @@ const sidebars = {
             id: 'platform/biostar_x/getting-started',
           },
           items: [
+            'platform/biostar_x/check-ethernet',
             'platform/biostar_x/express-install',
             'platform/biostar_x/custom-install',
             'platform/biostar_x/migration-x',
@@ -228,6 +249,7 @@ const sidebars = {
             'platform/biostar_x/change-db',
           ]
         },
+        'platform/biostar_x/ui-launcher',
         {
           type: 'category',
           label: '사용자',
@@ -273,14 +295,15 @@ const sidebars = {
                 'platform/biostar_x/transfer-user-info-to-device',
                 // 'platform/biostar_x/delete-user-info-from-device',
                 'platform/biostar_x/trace-user-access-log',
-                'platform/biostar_x/export-import-user-info',
+                'platform/biostar_x/export-import-user-info'
               ]
             },
             // 'platform/biostar_x/user-template',
             'platform/biostar_x/view-user-by-access',
             'platform/biostar_x/login-with-mfa',
+            'platform/biostar_x/batch-import-face',
             'platform/biostar_x/migration-face',
-            // 'platform/biostar_x/columnlayout'
+            'platform/biostar_x/lockoverride'
           ]
         },
         {
@@ -302,9 +325,7 @@ const sidebars = {
                 'platform/biostar_x/check-door-status',
                 'platform/biostar_x/control-door',
                 'platform/biostar_x/control-door-slave-device',
-                'platform/biostar_x/check-elevator-status',
                 'platform/biostar_x/control-elevator',
-                'platform/biostar_x/check-zone-status',
                 'platform/biostar_x/control-zone',
               ]
             },
@@ -532,6 +553,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '비디오 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-videos'
+              },
+              items: [
+                'platform/biostar_x/settings-video-integration',
+                'platform/biostar_x/settings-videos-camera',
+                'platform/biostar_x/settings-videos-rule',
+              ]
+            },
+            {
+              type: 'category',
               label: '맵 관리하기',
               link: {
                 type: 'doc',
@@ -546,6 +580,7 @@ const sidebars = {
             'platform/biostar_x/settings-diretory-integration'
           ]
         },
+        'platform/biostar_x/plugins',
         {
           type: 'category',
           label: 'UI 알아보기',
@@ -555,7 +590,6 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/ui-common',
-            'platform/biostar_x/ui-launcher',
             'platform/biostar_x/ui-user',
             'platform/biostar_x/ui-monitoring',
             'platform/biostar_x/ui-dashboard',
@@ -643,6 +677,7 @@ const sidebars = {
             }
           ]
         },
+        'reference/smartcardissue'
       ]
     }
   ],

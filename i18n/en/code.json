@@ -819,5 +819,27 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.mslogin.buttonText": {
+    "message": "🔑 Log in with Microsoft account",
+    "description": "The text for the login button"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "Field details"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "Available values"
+  },
+  "theme.typedefstruct.value": {
+    "message": "Value"
+  },
+  "theme.typedefstruct.description": {
+    "message": "Description"
+  },
+  "theme.typedefstruct.references": {
+    "message": "References"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "Related structs"
   }
 }

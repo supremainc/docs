@@ -36,7 +36,7 @@ The **Entra ID** or **Active Directory** integration setting is available when t
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-   <Image src='/img/biostar2-setting-directory-integ-entraid.png' />
+   <Image src='/img/biostarx-setting-directory-integ-entraid.png' />
 
 5. Set each item as instructed below.
 
@@ -47,7 +47,7 @@ The **Entra ID** or **Active Directory** integration setting is available when t
 
 Enter the server information for **Entra ID** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
 
-<Image src='/img/biostar2-setting-directory-server.png' />
+<Image src='/img/biostarx-setting-directory-server.png' />
 
 * <Cmd sid='settings.activeDirectory.ClientID' product='2' />: Enter the **Client ID** of the application registered in **Entra ID**.
 
@@ -75,7 +75,7 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 <Step>
 
-<UserCustomField hashid='userfieldEntraid' name='Entra ID' img01='biostar2-setting-directory-userfield.png' img02='biostar2-setting-directory-userfield-select-other.png' sid='settings.activeDirectory.FieldNameEI' />
+<UserCustomField hashid='userfieldEntraid' name='Entra ID' img01='biostarx-setting-directory-userfield.png' img02='biostarx-setting-directory-userfield-select-other.png' sid='settings.activeDirectory.FieldNameEI' />
 
 :::caution
 
@@ -91,7 +91,7 @@ The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrat
 
 Change the <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' /> to enable login to  BioStar 2 using **Entra ID SSO**.
 
-<Image src='/img/biostar2-setting-directory-login-with-entraid.png' />
+<Image src='/img/biostarx-setting-directory-login-with-entraid.png' />
 
 Copy the redirection URI from the <Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> field(<IcCopy2 />) and paste it into the SSO redirection settings in the **Entra ID** portal. When a user successfully logs in with **Entra ID**, they will be redirected to this address.
 
@@ -121,7 +121,7 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 
 After completing all settings in <Cmd sid='setting.activeDirectory.menu' product='2' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to the [following](#checksettings) to check the results.
 
-<Image src='/img/biostar2-setting-directory-btn-apply.png' />
+<Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
 :::
 
@@ -135,7 +135,7 @@ After completing all settings in <Cmd sid='setting.activeDirectory.menu' product
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-   <Image src='/img/biostar2-setting-directory-integ-ad.png' />
+   <Image src='/img/biostarx-setting-directory-integ-ad.png' />
 
 5. Set each item as instructed below.
 
@@ -156,7 +156,7 @@ After completing all settings in <Cmd sid='setting.activeDirectory.menu' product
 
 Enter the server information for **Active Directory** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
 
-<Image src='/img/biostar2-setting-directory-ad-server.png' />
+<Image src='/img/biostarx-setting-directory-ad-server.png' />
 
 * <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: Enter the server address for Windows Active Directory.
 
@@ -188,7 +188,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
 <Step>
 
-<UserCustomField hashid='userfieldAD' name='Active Directory' img01='biostar2-setting-directory-userfield-ad.png' img02='biostar2-setting-directory-userfield-select-other-ad.png' sid='settings.activeDirectory.FieldNameAD' />
+<UserCustomField hashid='userfieldAD' name='Active Directory' img01='biostarx-setting-directory-userfield-ad.png' img02='biostarx-setting-directory-userfield-select-other-ad.png' sid='settings.activeDirectory.FieldNameAD' />
 
 </Step>
 
@@ -198,7 +198,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
 To configure login to BioStar 2 using the user ID of the Active Directory server, change the <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server will be mapped to the BioStar 2 login ID.
 
-<Image src='/img/biostar2-setting-directory-login-with-ad.png' />
+<Image src='/img/biostarx-setting-directory-login-with-ad.png' />
 
 </Step>
 
@@ -214,7 +214,7 @@ To configure login to BioStar 2 using the user ID of the Active Directory server
 
 After completing all settings in <Cmd sid='setting.activeDirectory.menu' product='2' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to the [following](#checksettings) to check the results.
 
-<Image src='/img/biostar2-setting-directory-btn-apply.png' />
+<Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
 :::
 
@@ -226,7 +226,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
 * After completing the login settings with **Entra ID** or **Active Directory**, you can see <Cmd sid='login.entraidLoginBtn' product='2' /> when logging in to BioStar 2.
 
-  <Image src='/img/biostar2-setting-directory-entraid-login.png' />
+  <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
 ## Exclude the directory integration {#exclude-integration}
 
@@ -240,7 +240,7 @@ When integrating with **Entra ID** or **Active Directory** through the <Cmd sid=
 
 4. When the detail information screen of the selected user appears, click the checkbox of <Cmd sid='user.adsync.exclude' product='2' /> in <Cmd sid='common.advanced' product='2' />.
 
-   <Image src='/img/biostar2-user-advance-exclude-sync.png' />
+   <Image src='/img/biostarx-user-advance-exclude-sync.png' />
 
 5. Click the <Cmd sid='button.apply' product='2' /> button.
 
@@ -256,11 +256,11 @@ To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature,
 
 3. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
-   <Image src='/img/biostar2-setting-directory-unset.png' />
+   <Image src='/img/biostarx-setting-directory-unset.png' />
 
 4. When the <Cmd sid='alert.warning' product='2' /> message appears, click <Cmd sid='button.continue' product='2' />.
 
-   <Image src='/img/biostar2-setting-directory-unset-warn-message.png' />
+   <Image src='/img/biostarx-setting-directory-unset-warn-message.png' />
 
 5. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 

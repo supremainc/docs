@@ -9,7 +9,15 @@ keywords: [ 모니터링 , 비디오 ]
 
 :::info
 
-**비디오 타일**은 화면 중앙에 위치한 카메라 영상 표시 영역입니다. 여러 개의 카메라 영상을 동시에 배치하고 모니터링할 수 있는 인터페이스 구성 요소입니다. 사용자는 비디오 타일에서 영상의 크기를 조정하거나 위치를 변경하고, 필요에 따라 영상을 닫거나 전체 화면으로 전환할 수 있습니다.
+* **비디오 타일**은 화면 중앙에 위치한 카메라 영상 표시 영역입니다. 여러 개의 카메라 영상을 동시에 배치하고 모니터링할 수 있는 인터페이스 구성 요소입니다. 사용자는 비디오 타일에서 영상의 크기를 조정하거나 위치를 변경하고, 필요에 따라 영상을 닫거나 전체 화면으로 전환할 수 있습니다.
+
+  <Image src='/img/biostarx-monitoring-video-tiles.png' width='70%' />
+
+* VMS와 연동하고 카메라를 추가 및 관리하는 방법은 [다음 문서](settings-videos)를 참고하세요.
+
+* VMS의 녹화 영상을 재생할 때 로드 에러가 발생한다면, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 자세한 내용은 [다음 문서](settings-video-integration#video-troubleshooting)를 참고하세요.
+
+* 비디오 모니터링은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 :::
 
@@ -25,13 +33,13 @@ keywords: [ 모니터링 , 비디오 ]
 
 선택한 카메라의 영상을 화면 가운데 비디오 타일에 배치할 수 있습니다.
 
-<Image src='/img/monitoring-door-control-open-video.png' alt='비디오 열기' />
+<Image src='/img/monitoring-door-control-open-video.png' />
 
 :::info
 
-* 사이드바의 출입문 목록에서 카메라를 선택하고 비디오 타일 영역으로 드래그 앤 드롭 방식으로 영상을 추가할 수도 있습니다.
+* 사이드바의 목록에서 카메라를 선택하고 비디오 타일 영역으로 드래그 앤 드롭 방식으로 영상을 추가할 수도 있습니다.
 
-  <Image src='/img/monitoring-door-control-open-video-drag-drop.png' alt='Drag and drop' />
+  <Image src='/img/monitoring-door-control-open-video-drag-drop.png' />
 
 * 비디오 타일에는 화면 왼쪽 상단부터 차례로 추가되며, 현재 화면에 추가할 공간이 없으면 에러 메시지가 표시됩니다. {/* 이런 경우 화면에 탭을 추가하고 <Cmd sid='arena.tree.contextMenu.openVideo' />를 다시 클릭하세요. */}
 
@@ -40,30 +48,35 @@ keywords: [ 모니터링 , 비디오 ]
 
 ## 영상 제어하기 {#control-video}
 
-비디오 타일에 배치한 영상은 기본적으로 실시간 재생됩니다. 영상의 재생 도구를 통해 영상을 멈추거나 과거 시간의 영상을 조회할 수 있습니다.
+비디오 타일에 배치한 영상은 기본적으로 실시간 재생됩니다. 영상의 재생 도구를 통해 영상을 멈추거나 과거 시간의 녹화된 영상을 조회할 수 있습니다.
 
-<Image src='/img/monitoring-video-player.png' alt='플레이어' />
+<Image src='/img/monitoring-video-player.png' alone />
 
-* <Num num='1' />: 카메라 장치의 이름입니다.
+<Calloutlists>
 
-* <Num num='2' />: 영상을 전체 화면(<IcFullscreen/>)으로 재생하거나 비디오 타일에서 제외(<IcClose/>)할 수 있는 버튼입니다.
+1. 카메라 장치의 이름입니다.
 
-* <Num num='3' />: 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다.
+1. 영상을 전체 화면(<Image src='/img/menus/ico-fullscreen.svg' ico alone />)으로 재생하거나 비디오 타일에서 제외(<Image src='/img/menus/ico-close.svg' ico alone />)할 수 있는 버튼입니다.
 
-* <Num num='4' /> <IcPlay/> / <IcPause/>: 버튼을 클릭하면 영상을 재생하거나 일시 정지할 수 있습니다.
+1. 영상의 재생 위치를 조정할 수 있는 슬라이더입니다. 슬라이더를 드래그하여 과거 시간의 영상을 조회할 수 있습니다.
 
-* <Num num='5' />: 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다.
+1. 영상을 재생하거나 일시 정지하려면 <Image src='/img/menus/ico-play.svg' ico alone /> 또는 <Image src='/img/menus/ico-pause.svg' ico alone /> 버튼을 클릭하세요.
 
+1. 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다. 과거 시간의 영상을 재생할 때 다시 실시간 영상으로 전환하려면 이 아이콘을 클릭하세요.
+
+</Calloutlists>
 
 ## 출입문 제어 도구 {#door-control-tool}
 
-영상을 추가한 후 <Cmd sid='arena.map.doorControl' /> 도구를 활용해 추가 작업을 수행할 수 있습니다. 출입문과 연계된 카메라를 선택하면 출입문을 제어할 수 있는 <Cmd sid='arena.map.doorControl' /> 도구가 활성화됩니다. 출입문을 개방하거나 잠금, 해제, 알람 해제 등의 기능을 사용할 수 있습니다.
+영상을 추가한 후 <Cmd sid='arena.map.doorControl' /> 도구를 활용해 추가 작업을 수행할 수 있습니다. 비디오 타일에서 출입문과 연계된 카메라를 선택하면 출입문을 제어할 수 있는 <Cmd sid='arena.map.doorControl' /> 도구가 활성화됩니다. 출입문을 개방하거나 잠금, 해제, 알람 해제 등의 기능을 사용할 수 있습니다.
 
 <Image src='/img/monitoring-door-control.png' alt='출입문 제어' />
 
 :::info
 
-* 이 기능은 출입문에 카메라가 연계되어 있어야 사용할 수 있습니다.
+* <Cmd sid='arena.map.doorControl' /> 도구는 오른쪽 패널에 아무것도 열려있지 않을 때 사용할 수 있습니다. 오른쪽 패널에 상세 정보가 열려있다면 닫은 채로 사용하세요.
+
+* 이 기능은 출입문에 카메라가 연계되어 있어야 사용할 수 있습니다. 출입문과 카메라 연동에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
 
 * <Cmd sid='arena.map.doorControl' /> 도구에서 사용할 수 있는 기능에 대한 자세한 내용은 [다음 문서](control-door)를 참고하세요.
 
@@ -71,13 +84,17 @@ keywords: [ 모니터링 , 비디오 ]
 
 ## 영상 알람 확인하기 {#check-the-video-alarm}
 
-카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 알람 아이콘이 3초간 표시된 후 사라졌다가 다시 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다.
+카메라와 연계된 출입문 중 하나가 알람 상태가 되면 영상에 알람 아이콘이 표시됩니다. 연계된 출입문의 알람을 모두 해제해야 알람 아이콘이 사라집니다.
 
 <Image src='/img/monitoring-video-alarm.png' alt='알람' />
 
 출입문의 알람을 해제하려면 출입문 목록에서 오른쪽 마우스 버튼을 클릭하고, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 클릭하세요. 또는 <Cmd sid='arena.map.doorControl' /> 도구에서 <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 클릭하세요.
 
-선택한 영상의 화면 상단에 성공 또는 실패 메시지가 표시됩니다.
+<Image src='/img/biostarx-monitoring-camera-clear-alarm.png' />
+
+화면 상단에 성공 또는 실패 메시지가 표시됩니다.
+
+<Image src='/img/biostarx-monitoring-camera-clear-alarm-success.png' />
 
 :::info
 
@@ -88,13 +105,13 @@ keywords: [ 모니터링 , 비디오 ]
 
 ## 비디오 로그 확인하기 {#check-video-log}
 
-규칙으로 설정된 출입문에 특정 이벤트가 발생하면 <Cmd sid='arena.eventTable.title' /> 섹션 목록의 해당 이벤트 항목에는 비디오 로그 아이콘이 표시됩니다.
+규칙으로 설정된 출입문에 특정 이벤트가 발생하면 <Cmd sid='arena.eventTable.title' /> 섹션 목록의 해당 이벤트 항목에는 비디오 로그(<IcVidLog />) 아이콘이 표시됩니다. 비디오 로그 아이콘이 표시된 이벤트 항목을 클릭하면 화면 오른쪽에 상세 정보가 나타납니다. 특정 이벤트가 발생한 시간의 영상을 확인할 수 있습니다.
 
-비디오 로그 아이콘이 표시된 이벤트 항목을 클릭하면 화면 오른쪽에 상세 정보가 나타납니다. 특정 이벤트가 발생한 시간의 영상을 확인할 수 있습니다.
+<Image src='/img/biostarx-monitoring-camera-event-video-log.png' />
 
 :::info
 
-* 비디오 로그 아이콘은 출입문에 카메라가 연계되어 있어야 표시됩니다.
+* 비디오 로그 아이콘은 출입문에 카메라가 연계되어 있어야 표시됩니다. 카메라와 출입문 연동에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
 
 * 이벤트 설정 규칙 기준 가장 첫 번째로 연결한 카메라를 우선 재생합니다. 영상을 보다 큰 화면으로 재생하려면 화면을 더블 클릭하세요.
 
@@ -113,29 +130,29 @@ keywords: [ 모니터링 , 비디오 ]
 
 1. 영상의 크기를 변경할 비디오를 클릭하면 선택한 영상의 프레임이 활성화됩니다.
 
-    <Image src='/img/monitoring-video-adjust-size-01.png' alt='영상 선택' />
+    <Image src='/img/monitoring-video-adjust-size-01.png' alone />
 
 1. 프레임의 경계 위로 마우스 커서를 가져가면, 크기를 조절할 수 있는 커서 모양으로 변경됩니다.
 
 1. 모서리를 클릭하고 원하는 크기로 드래그하세요. 
 
-    <Image src='/img/monitoring-video-adjust-size-02.png' alt='영상 크기 조절' />
+    <Image src='/img/monitoring-video-adjust-size-02.png' alone />
 
 배치된 타일의 크기에 비례하여 영상의 크기를 조절할 수 있습니다. 반대로 영상의 크기를 줄일 수도 있습니다.
 
-<Image src='/img/monitoring-video-adjust-size-03.png' alt='영상 크기 조절' />
+<Image src='/img/monitoring-video-adjust-size-03.png' alone />
 
 ### 영상 크기 확대 {#video-size-enlargement}
 
 영상을 비디오 타일 전체 크기로 확대하려면 영상을 더블 클릭하세요. 영상이 비디오 타일의 크기로 확대됩니다.
 
-<Image src='/img/common/monitoring-video-extend.gif' />
+<Image src='/img/common/monitoring-video-extend.gif' alone />
 
 ### 영상 위치 변경하기 {#changing-the-video-location}
 
 위치를 변경할 영상을 클릭하고 원하는 위치로 드래그하세요. 선택한 영상의 위치를 변경할 수 있습니다.
 
-<Image src='/img/monitoring-video-move-position.png' alt='영상 위치 변경' />
+<Image src='/img/monitoring-video-move-position.png' alone />
 
 {/* 크기를 늘린 영상은 이동되지 않습니다. ??? */}
 
@@ -145,14 +162,14 @@ keywords: [ 모니터링 , 비디오 ]
 <Columns>
 <Column>
 
-<Image src='/img/monitoring-video-fullscreen.png' alt='전체 화면' />
+<Image src='/img/monitoring-video-fullscreen.png' alone />
 
 </Column>
-<Column>
+<Column className='padding--l10'>
 
 비디오 타일에 배치된 영상을 전체 화면으로 보려면 영상의 오른쪽 상단에 있는 <IcFullscreen /> 버튼을 클릭하세요.
 
-전체 화면을 종료하려면 화면 오른쪽 위에 <IcRestorscreen/> 버튼을 클릭하세요. 또는 키보드의 <kbd>ESC</kbd> 키를 누르세요.
+전체 화면을 종료하려면 화면 오른쪽 상단에 <IcRestorscreen/> 버튼을 클릭하세요. 또는 키보드의 <kbd>ESC</kbd> 키를 누르세요.
 
 </Column>
 </Columns>
@@ -163,10 +180,10 @@ keywords: [ 모니터링 , 비디오 ]
 <Columns>
 <Column>
 
-<Image src='/img/monitoring-video-close.png' alt='영상 닫기' />
+<Image src='/img/monitoring-video-close.png' alone />
 
 </Column>
-<Column>
+<Column className='padding--l10'>
 
 비디오 타일에 배치된 영상을 닫으려면 영상의 오른쪽 상단에 있는 <IcClose /> 버튼을 클릭하세요.
 
@@ -176,4 +193,6 @@ keywords: [ 모니터링 , 비디오 ]
 
 ## 모든 영상 닫기 {#close-all-video}
 
-비디오 타일에 배치한 모든 영상을 닫으려면 화면 오른쪽 상단에 <IcMoreB/> 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd>Close All</Cmd>을 클릭하세요.
+비디오 타일에 배치한 모든 영상을 닫으려면 화면 오른쪽 상단에 <IcMoreB/> 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='arena.monitoring.contextMenu.closeAll' />를 클릭하세요.
+
+<Image src='/img/biostarx-monitoring-video-close-all.png' />

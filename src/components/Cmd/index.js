@@ -57,6 +57,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
             .replace('<br> ', ' ')
             .replace('<br/>', ' ')
             .replace(' <br> ', ' ')
+            .replace('<br>', ' ')
             .replace('&sol;', '/')
             .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
           : null;
@@ -66,7 +67,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       // const text = getLocaleText(locale, sid);
       // localeText = text ? text.replace('<br>', '') : null;
       const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+      localeText = locale[sid] ? locale[sid].replace('<br>', '').replace('{{value}}', 'N') : null;
     }
     
     if (tip) {

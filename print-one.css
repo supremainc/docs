@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
+
+@prince-pdf {
+  -prince-pdf-page-layout: single-page;
+  -prince-pdf-page-mode: show-bookmarks;
+  -prince-pdf-open-action: zoom(fit-page);
+  -prince-shrink-to-fit: none;
+}
+
+@page {
+  size: A3;
+  margin-top: 0.7in;
+  margin-bottom: 0.7in;
+  margin-left: 0.5in;
+  margin-right: 0.5in;
+  prince-shrink-to-fit: none;
+  @top-right { content: string(doctitle);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
+  @bottom-center { content: counter(page);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
+}
+
+/* @page:first {
+  margin: 0 !important;
+  @bottom-center { content: normal !important;}
+} */
+
+body {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%; /* 스케일 다운을 보정 */
+}
+
+@media print {
+  .breadcrumbs__item--active.item-2 { -prince-bookmark-level: 1 }
+  .breadcrumbs__item--active.item-3 { -prince-bookmark-level: 2 }
+  .breadcrumbs__item--active.item-4 { -prince-bookmark-level: 3 }
+  .breadcrumbs__item--active.item-5 { -prince-bookmark-level: 4 }
+
+  h1 { -prince-bookmark-level: none }
+  h2 { -prince-bookmark-level: none }
+  h3 { -prince-bookmark-level: none }
+  h4 { -prince-bookmark-level: none }
+  h5 { -prince-bookmark-level: none }
+  h6 { -prince-bookmark-level: none }
+  
+  section#toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+  .markdown header h1 { string-set: doctitle content() }
+
+  .navbar,
+  .pagination-nav,
+  a.hash-link,
+  div[class*="docItemContainer"] article footer,
+  aside[class*="docSidebarContainer"],
+  a[class*="skipToContent"],
+  div[class*="lastUpdated"],
+  div[class*="tocCollapsible"],
+  div[class*="tableOfContents"],
+  .footer {
+    display: none !important;
+  }
+  
+  div[class*='docItemCol'] {
+    padding: 0;
+  }
+
+  .theme-back-to-top-button {
+    display: none;
+  }
+  .markdown {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+    print-color-adjust: exact !important;
+  }
+  .markdown {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .markdown h1 {
+      font-size: 2rem;
+  }
+  .markdown h2 {
+      font-size: 1.8rem;
+      page-break-before: auto;
+      padding-top: 0;
+  }
+  .markdown h3 {
+      font-size: 1.6rem;
+  }
+  .markdown h4 {
+      font-size: 1.4rem;
+  }
+  .markdown h5 {
+      font-size: 1.2rem;
+  }
+  .markdown h6 {
+      font-size: 1rem;
+  }
+  .markdown p,
+  .markdown dt,
+  .markdown dd {
+      font-size: 0.8rem;
+      line-height: 1.2;
+  }
+  .markdown p svg,
+  .markdown dt svg,
+  .markdown dd svg {
+      position: relative;
+      top: 2px;
+  }
+  .markdown img {
+      max-width: 65%;
+  }
+  .markdown ol li {
+      page-break-inside: avoid;
+  }
+  .markdown table {
+      font-size: 0.8rem;
+      border: 1px;
+  }
+  .markdown table td {
+      padding: 0.3rem;
+  }
+  .markdown .theme-code-block {
+      font-size: 0.8rem;
+  }
+  .markdown .theme-admonition {
+      page-break-inside: avoid;
+  }
+  .markdown .theme-admonition-note .admNote {
+      top: -3px;
+      left: 2px;
+  }
+  .markdown .theme-admonition-note .admNote svg {
+      width: 16.63px !important;
+      height: 16.63px !important;
+  }
+  .markdown div.container .col {
+      display: inline;
+      flex: none !important;
+      float: left;
+      width: 50%;
+  }
+  .markdown section.row article {
+      display: inline;
+      flex: none !important;
+      width: 50%;
+  }
+  .markdown section.row article > a.padding--lg {
+      padding: 20px !important;
+  }
+  .theme-doc-footer {
+      display: none;
+  }
+}

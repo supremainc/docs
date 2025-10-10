@@ -38,6 +38,8 @@
   --main-black-4: rgba(255, 255, 255, 0.4);
   --main-text-color: #333;
   --main-circle-color: #adadad;
+  --docsearch-subtle-color: none !important;
+  --docsearch-muted-color: #333 !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -63,6 +65,7 @@
   --main-black-4: rgba(0, 0, 0, 0.4);
   --main-text-color: #fff;
   --main-circle-color: #fff;
+  --docsearch-muted-color: #fff !important;
   .navbar__title {
     color: #fff !important;
   }
@@ -131,7 +134,7 @@ html[lang='en-US'] * {
 .aa-Panel {
   width: 70%;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--ifm-color-nextstep-background) !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   .aa-Item {
@@ -332,16 +335,16 @@ footer {
   white-space: normal !important;
   span.before {
     font-size: .5rem;
-    display: none;
+    // display: none;
   }
   span.before::after {
     content: "\A";
     white-space: pre;
-    display: none;
+    // display: none;
   }
   span.after {
-    // font-weight: bold;
-    // color: var(--ifm-color-primary);
+    font-weight: bold;
+    color: var(--ifm-color-primary);
   }
 }
 // Tabulator 스타일
@@ -357,14 +360,14 @@ footer {
 .markdown {
   counter-reset: count;
   header h1 {
-    &.confidential::after {
+    &.confidential::before {
       content: "CONFIDENTIAL";
       display: inline-block;
       position: relative;
       color: var(--ifm-color-cmd);
       font-weight: 600;
       font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-right: 1rem;
       padding: .3rem;
       border: 1px solid;
       border-radius: 6px;
@@ -488,6 +491,10 @@ footer {
     h4.tab-label {
       display: none;
     }
+  }
+
+  .tabs__item--active {
+    background-color: var(--ifm-color-nextstep-background);
   }
 
   section {
@@ -683,9 +690,9 @@ footer {
     }
   }
   
-  ul ul, ul ol, ol ol, ol ul {
-    margin: 1rem 0;
-  }
+  // ul ul, ul ol, ol ol, ol ul {
+  //   margin: 1rem 0;
+  // }
   ul, ol > ul {
     list-style-type: disc;
     ul {
@@ -720,6 +727,9 @@ footer {
     li:last-of-type {
       margin-bottom: 0;
     }
+  }
+  ul + ul {
+    // margin-top: -.3rem;
   }
   ul + ul > li:first-of-type {
     margin-top: 0;
@@ -860,6 +870,12 @@ footer {
     background-color: var(--ifm-color-border);
     border-radius: 20px;
   }
+  span.badge.get {
+    background-color: rgb(47, 129, 50);
+  }
+  span.badge.post {
+    background-color: rgb(0, 102, 204);
+  }
 
   span.only {
     background-color: var(--ifm-color-cmd);
@@ -885,6 +901,9 @@ footer {
   .columns {
     .col {
       height: fit-content;
+      ul li {
+        margin-top: 0;
+      }
     }
     .width--10 {
       max-width: 10%;
@@ -1161,6 +1180,26 @@ footer {
       overflow-x: scroll;
       table {
         width: max-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .markdown {
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: 0 !important;
+            .badge {
+              position: relative;
+              top: unset;
+              right: unset;
+              width: auto;
+            }
+          }
+        }
       }
     }
   }

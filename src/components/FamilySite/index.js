@@ -7,8 +7,7 @@ const DropdownMenu = () => {
   const dropdownRef = useRef(null);
 
   const links = [
-    { name: 'OEM FINGERPRINT MODULES', url: `https://www.suprema.co.kr/embedded-modules/${currentLocale}/main.asp` },
-    { name: 'SUPREMA AI', url: `https://www.suprema.ai/${currentLocale}`},
+    { name: 'OEM Biometric Modules', url: `https://www.suprema.co.kr/embedded-modules/${currentLocale}/main.asp` },
     { name: 'MOCA SYSTEM', url: 'https://www.airfob.com/' },
   ];
 
