@@ -1,0 +1,53 @@
+---
+id: product-specifications
+title: 제품 사양
+description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+keywords: [크리덴셜, 일반, 얼굴, 저장 용량, 인터페이스, 전기 규격, 제품 치수]
+---
+
+제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+
+import specs from '@site/static/specs/xs2_specs.json';
+
+{/* 크리덴셜 */}
+<SpecSection data={specs.xstation2.credentials} />
+
+{/* 일반 */}
+<SpecSection data={specs.xstation2.general} />
+
+{/* 저장 용량 */}
+<SpecSection data={specs.xstation2.storage} />
+
+{/* 인터페이스 */}
+<SpecSection data={specs.xstation2.interface} />
+
+{/* 전기 규격 */}
+<SpecSection data={specs.xstation2.power} />
+
+## 크기 및 무게
+
+<Badge only>XS2-DPB, XS2-APB</Badge>
+
+<Image src='/img/device/xs2-dpb-apb-dimension.svg' className='none' />
+
+<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+
+<Image src='/img/device/xs2-qdpb-qapb-dimension.svg' className='none' />
+
+<Badge only>XS2-ODPB, XS2-OAPB</Badge>
+
+<Image src='/img/device/xs2-odpb-oapb-dimension.svg' className='none' />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 카드는 DESFire EV1 카드와 하위 호환되므로, DESFire EV1 카드의 기능을 포함하여 CSN 및 스마트 카드 기능이 지원됩니다.
+
+<Anno id='anno2'>2)</Anno> RF 인식 거리는 설치 환경에 따라 다를 수 있습니다.
+
+<Anno id='anno3'>3)</Anno> 최대 32개의 ASCII 코드 문자열로 구성된 QR/바코드를 지원합니다.
+
+<Anno id='anno4'>4)</Anno> 별도의 장치 라이선스가 필요합니다.
+
+<Anno id='anno5'>5)</Anno> 크리덴셜 없이 등록된 사용자 기준입니다.
+
+:::

@@ -461,6 +461,9 @@
   "specs.credentials.biometrics.fingerprint.extractor_matcher": {
     "message": "추출 / 매치"
   },
+  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+    "message": "센서 인증"
+  },
   "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
     "message": "위조 지문 검출"
   },
@@ -511,6 +514,12 @@
   },
   "specs.general.camera": {
     "message": "카메라"
+  },
+  "specs.general.camera_type": {
+    "message": "카메라 종류"
+  },
+  "specs.general.camera_resolution": {
+    "message": "카메라 해상도"
   },
   "specs.general.ip_rating": {
     "message": "IP 등급"
@@ -579,6 +588,9 @@
     "message": "릴레이"
   },
   "specs.interface.poe": {
+    "message": "PoE"
+  },
+  "specs.interface.poe_plus": {
     "message": "PoE+"
   },
   "specs.interface.interphone": {
