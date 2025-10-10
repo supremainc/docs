@@ -1185,6 +1185,26 @@ footer {
   }
 }
 
+@media (max-width: 640px) {
+  .markdown {
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: 0 !important;
+            .badge {
+              position: relative;
+              top: unset;
+              right: unset;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .DocSearch-Commands, .DocSearch-Hit-Tree {
     display: flex !important;

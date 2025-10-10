@@ -45,14 +45,16 @@ function renderSubItems(items, parentLink, renderAll) {
         const isInternal = isInternalUrl(subItemHref);
         return (
           <li key={subItem.label} className={styles.ovSubitem}>
-            <Link
-              className={clsx(
-                styles.overviewLink,
-                isInternal && styles.overviewLinkInternal,
-              )}
-              to={subItemHref}>
-              {subItem.label}
-            </Link>
+            {subItemHref.indexOf('release-notes') === -1 && (
+              <Link
+                className={clsx(
+                  styles.overviewLink,
+                  isInternal && styles.overviewLinkInternal,
+                )}
+                to={subItemHref}>
+                {subItem.label}
+              </Link>
+            )}
           </li>
         );
       })}
