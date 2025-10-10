@@ -100,7 +100,6 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
-            'device/xstation_2/**.{md,mdx}',
             '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
