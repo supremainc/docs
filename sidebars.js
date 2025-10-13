@@ -865,6 +865,16 @@ const sidebars = {
           },
           items: [
             'device/biostation_3/release-notes/141',
+            'device/biostation_3/release-notes/140',
+            'device/biostation_3/release-notes/131',
+            'device/biostation_3/release-notes/130',
+            'device/biostation_3/release-notes/121',
+            'device/biostation_3/release-notes/120',
+            'device/biostation_3/release-notes/111',
+            'device/biostation_3/release-notes/110',
+            'device/biostation_3/release-notes/102',
+            'device/biostation_3/release-notes/101',
+            'device/biostation_3/release-notes/100',
           ]
         },
       ],
