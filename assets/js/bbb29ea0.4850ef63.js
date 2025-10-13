@@ -59,7 +59,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "대시보드에 추가된 위젯을 수정하는 방법을 안내합니다."
+      children: "대시보드에 추가한 위젯을 수정하는 방법을 안내합니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -71,16 +71,23 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["우측 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.dashboardSettings",
-            product: "2"
-          }), "으로 진입하세요."]
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정하고자 하는 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.dashboardSettings",
+            product: "2"
+          }), " 모드로 진입하면 수정하려는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "위젯"
-          }), "의 우측 상단에 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 아이콘을 클릭한 다음 원하는 부분을 수정하세요."]
+          }), "의 오른쪽 상단에 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 아이콘을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.editWidget",
+            product: "2"
+          }), " 창이 나타나면 원하는 항목을 수정하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-widget-edit.png",
           className: "none",
@@ -88,22 +95,24 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정을 완료한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["수정을 완료하면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.apply",
             product: "2"
-          }), "을 클릭하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), " 화면 우측 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.apply",
             product: "2"
-          }), "을 클릭하면 수정한 사항이 반영됩니다."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "대시보드 화면에서 수정한 사항이 반영된 것을 확인하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {

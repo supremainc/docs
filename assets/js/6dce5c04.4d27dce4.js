@@ -69,39 +69,40 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["우측 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.dashboardSettings",
-            product: "2"
-          }), "으로 진입하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["삭제하고자 하는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "위젯"
-          }), "의 우측 상단에 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 아이콘을 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-dashboard-widget-del.png",
-          className: "none",
-          caption: true
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["삭제 확인 팝업창을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.yes",
-            product: "2"
-          }), "를 클릭하세요."]
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.dashboardSettings",
             product: "2"
-          }), " 화면 우측 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 모드로 진입하면 삭제하려는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "위젯"
+          }), "의 오른쪽 상단에 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["삭제 확인 팝업창을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.yes",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-dashboard-widget-del.png",
+          className: "none"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.dashboardSettings",
+            product: "2"
+          }), " 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.apply",
             product: "2"
-          }), "을 클릭하면 수정한 사항이 반영됩니다."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "대시보드 화면에서 수정한 사항이 반영된 것을 확인하세요."
     })]
   });
 }

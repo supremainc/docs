@@ -87,7 +87,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "커스텀 리포트 생성",
-  "id": "커스텀-리포트-생성",
+  "id": "custom-report",
   "level": 2
 }, {
   "value": "리포트 관리",
@@ -507,7 +507,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커스텀-리포트-생성",
+      id: "custom-report",
       children: "커스텀 리포트 생성"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "원하는 조건에 맞게 필터링하여 커스텀 리포트를 생성할 수 있습니다. 생성한 리포트는 템플릿으로 저장하여 추후 동일한 조건으로 리포트를 생성할 때 유용하게 사용할 수 있습니다."

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-dashboard-adding-widget-mdx-0ef.json
-var site_docs_platform_biostar_x_dashboard_adding_widget_mdx_0ef_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard-adding-widget","title":"위젯 추가하기","description":"대시보드에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.","source":"@site/docs/platform/biostar_x/dashboard-adding-widget.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard-adding-widget","permalink":"/docs/platform/biostar_x/dashboard-adding-widget","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard-adding-widget.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard-adding-widget","title":"위젯 추가하기","description":"대시보드에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.","keywords":["대시보드","위젯"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"},"next":{"title":"위젯 수정하기","permalink":"/docs/platform/biostar_x/dashboard-edit-widget"}}')
+var site_docs_platform_biostar_x_dashboard_adding_widget_mdx_0ef_namespaceObject = JSON.parse('{"id":"platform/biostar_x/dashboard-adding-widget","title":"위젯 추가하기","description":"대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다.","source":"@site/docs/platform/biostar_x/dashboard-adding-widget.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/dashboard-adding-widget","permalink":"/docs/platform/biostar_x/dashboard-adding-widget","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/dashboard-adding-widget.mdx","tags":[],"version":"current","frontMatter":{"id":"dashboard-adding-widget","title":"위젯 추가하기","description":"대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다.","keywords":["대시보드","위젯"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"},"next":{"title":"위젯 수정하기","permalink":"/docs/platform/biostar_x/dashboard-edit-widget"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'dashboard-adding-widget',
 	title: '위젯 추가하기',
-	description: '대시보드에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.',
+	description: '대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다.',
 	keywords: [
 		'대시보드',
 		'위젯'
@@ -42,37 +42,45 @@ const assets = {
 
 
 const toc = [{
+  "value": "위젯 추가",
+  "id": "add-widgets",
+  "level": 2
+}, {
   "value": "위젯 종류",
-  "id": "위젯-종류",
+  "id": "widget-types",
   "level": 2
 }, {
   "value": "차트",
-  "id": "차트",
+  "id": "chart",
   "level": 3
 }, {
   "value": "카운터",
-  "id": "카운터",
+  "id": "bar",
   "level": 3
 }, {
   "value": "텍스트",
-  "id": "텍스트",
+  "id": "text",
   "level": 3
 }, {
   "value": "실시간 이벤트",
-  "id": "실시간-이벤트",
+  "id": "realtime-events",
   "level": 3
 }, {
   "value": "실시간 출입 모니터링",
-  "id": "실시간-출입-모니터링",
+  "id": "real-time-access-monitoring",
   "level": 3
 }, {
   "value": "시스템 사용 현황",
-  "id": "시스템-사용-현황",
+  "id": "system-usage-status",
   "level": 3
 }, {
   "value": "출입문 제어",
-  "id": "출입문-제어",
+  "id": "door-control",
   "level": 3
+}, {
+  "value": "위젯 데이터 새로고침 간격 설정",
+  "id": "widget-refresh-interval",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -82,6 +90,7 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
@@ -91,6 +100,89 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다. 다양한 위젯을 추가하여 출입 통제 시스템의 주요 정보를 업무 환경에 맞게 구성할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "추가할 수 있는 위젯 종류는 아래와 같습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "차트"
+          }), ": 출입 이벤트 데이터를 막대/선/원형 차트로 시각화"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "카운터"
+          }), ": 일간/주간 이벤트 발생 수를 숫자로 표시"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "실시간 이벤트"
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에서 발생하는 모든 이벤트를 실시간 모니터링"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "실시간 출입 모니터링"
+          }), ": 특정 장치의 인증 성공 사용자 정보를 실시간 표시"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "시스템 사용 현황"
+          }), ": 사용자, 장치, 출입문 등의 등록 현황을 숫자로 표시"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "출입문 제어"
+          }), ": 선택한 출입문의 상태 확인 및 원격 제어"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "텍스트"
+          }), ": 공지사항이나 위젯 타이틀 등 사용자 정의 텍스트 배치"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "대시보드에 배치한 위젯을 통해서 아래와 같은 이점을 얻을 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "맞춤형 구성"
+          }), ": 업무에 필요한 정보만 선별하여 한 화면에 배치"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "실시간 모니터링"
+          }), ": 출입 이벤트와 시스템 상태를 즉시 확인"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "직관적인 시각화"
+          }), ": 차트와 카운터를 통한 데이터의 시각적 표현"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "효율적인 관리"
+          }), ": 모니터링과 제어 기능을 통합하여 업무 효율성 향상"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "add-widgets",
+      children: "위젯 추가"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.dashboard"
       }), "에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다."]
@@ -108,29 +200,55 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.addWidget",
             product: "2"
-          }), "를 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이미 위젯이 추가 되어있는 경우에는 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.dashboardSettings",
-              product: "2"
-            }), "으로 진입한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.addWidget",
-              product: "2"
-            }), "를 클릭하세요."]
-          })
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-dashboard-add-widget.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["원하는 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "reportApp.widgetTypes",
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.addNewWidget",
             product: "2"
-          }), "을 선택한 다음 위젯에 따라 필수 항목을 입력 또는 설정하세요."]
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.widgetType",
+            product: "2"
+          }), "에서 원하는 항목을 선택하고 필수 항목을 입력 또는 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-dashboard-add-widget-type.png",
+          width: 400
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["위젯 설정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "위젯 표시 영역에 위젯이 생성되면 크기를 조절하거나 원하는 위치에 배치하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["모든 설정을 완료하면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.apply",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["이미 위젯이 추가 되어있다면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.dashboardSettings",
+          product: "2"
+        }), " 모드로 진입하면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.addWidget",
+          product: "2"
+        }), " 버튼을 클릭하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "위젯-종류",
+      id: "widget-types",
       children: "위젯 종류"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -146,7 +264,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "차트",
+      id: "chart",
       children: "차트"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "원하는 차트 데이터를 선택하여 발생한 이벤트 수를 차트로 나타낼 수 있습니다."
@@ -215,18 +333,18 @@ function _createMdxContent(props) {
             sid: "reportApp.chartColorSchemes",
             product: "2"
           }), ": 다섯 가지의 색상 조합 중에 원하는 색상을 선택하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "reportApp.chartColorSchemes",
-              product: "2"
-            }), "을 선택할 때 보여지는 차트의 값은 실제 값이 아닌 미리보기를 위한 임의의 값입니다."]
-          })
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "reportApp.chartColorSchemes",
+          product: "2"
+        }), "을 선택할 때 보여지는 차트의 값은 실제 값이 아닌 미리보기를 위한 임의의 값입니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "카운터",
+      id: "bar",
       children: "카운터"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "원하는 카운터 데이터를 선택하여 발생한 이벤트 수를 숫자로 나타낼 수 있습니다."
@@ -272,7 +390,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "텍스트",
+      id: "text",
       children: "텍스트"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -294,10 +412,12 @@ function _createMdxContent(props) {
         }), " 옵션을 체크하면 배경에 투명도가 적용됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "실시간-이벤트",
+      id: "realtime-events",
       children: "실시간 이벤트"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X에서 발생하는 이벤트를 실시간으로 보여줍니다. 특정 이벤트, 사용자, 출입문, 장치를 필터링해서 이벤트를 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에서 발생하는 이벤트를 실시간으로 보여줍니다. 특정 이벤트, 사용자, 출입문, 장치를 필터링해서 이벤트를 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-real-time-event.png",
       caption: true
@@ -332,7 +452,7 @@ function _createMdxContent(props) {
         }), "로 돌아올 경우 목록이 비워지고 다시 이벤트가 기록됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "실시간-출입-모니터링",
+      id: "real-time-access-monitoring",
       children: "실시간 출입 모니터링"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["하나의 장치를 선택하여 선택한 장치에 인증을 성공한 사용자의 프로필 사진 및 정보(", (0,jsx_runtime.jsx)(Cmd, {
@@ -380,7 +500,7 @@ function _createMdxContent(props) {
         }), "은 최대 5명까지 기록됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "시스템-사용-현황",
+      id: "system-usage-status",
       children: "시스템 사용 현황"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar X의 다양한 사용 현황을 숫자로 나타냅니다."
@@ -437,7 +557,7 @@ function _createMdxContent(props) {
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "출입문-제어",
+      id: "door-control",
       children: "출입문 제어"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "하나의 출입문을 선택하여 선택한 출입문의 상태를 확인하고 제어할 수 있습니다."
@@ -479,18 +599,34 @@ function _createMdxContent(props) {
           product: "2"
         }), " 위젯의 이름은 출입문의 이름으로 자동 지정되며 수정할 수 없습니다."]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "widget-refresh-interval",
+      children: "위젯 데이터 새로고침 간격 설정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "대시보드에 추가된 위젯의 데이터 새로고침 간격을 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      start: "4",
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["위젯의 설정을 마친 다음 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "reportApp.apply",
-          product: "2"
-        }), "을 클릭하면 위젯 표시 영역에 위젯이 생성됩니다. 원하는대로 크기를 조절한 다음 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "reportApp.apply",
-          product: "2"
-        }), "을 클릭하면 위젯이 ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "shell.header.dashboard"
-        }), "에 추가됩니다."]
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.dashboard"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcSet2, {}), " 아이콘을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.dashboardSettings",
+            product: "2"
+          }), " 모드로 진입하면 화면 하단에 일반 설정에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.autoRefreshInterval",
+            product: "2"
+          }), "를 설정하세요."]
+        }), "\n"]
       }), "\n"]
     })]
   });

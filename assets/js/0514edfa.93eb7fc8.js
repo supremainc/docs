@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-data-settings-mdx-051.json
-var site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/data-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-settings","permalink":"/docs/platform/biostar_x/data-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.","keywords":["리포트 저장","자동 생성"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule"},"next":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"}}')
+var site_docs_platform_biostar_x_data_settings_mdx_051_namespaceObject = JSON.parse('{"id":"platform/biostar_x/data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정했다면 리포트를 저장할 경로를 설정하세요.","source":"@site/docs/platform/biostar_x/data-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/data-settings","permalink":"/docs/platform/biostar_x/data-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/data-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"data-settings","title":"리포트 저장 경로 설정하기","description":"자동 생성 스케줄을 설정했다면 리포트를 저장할 경로를 설정하세요.","keywords":["리포트 저장","자동 생성"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"자동 생성 스케줄 설정하기","permalink":"/docs/platform/biostar_x/data-automatic-report-schedule"},"next":{"title":"대시보드","permalink":"/docs/platform/biostar_x/how-to-guide-dashboard"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'data-settings',
 	title: '리포트 저장 경로 설정하기',
-	description: '자동 생성 스케줄을 설정한 리포트의 저장 경로를 설정할 수 있습니다.',
+	description: '자동 생성 스케줄을 설정했다면 리포트를 저장할 경로를 설정하세요.',
 	keywords: [
 		'리포트 저장',
 		'자동 생성'
@@ -44,6 +44,7 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    em: "em",
     li: "li",
     ol: "ol",
     p: "p",
@@ -58,7 +59,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "reportApp.mainMenu.schedule",
         product: "2"
-      }), "을 설정한 리포트의 저장 경로를 설정할 수 있습니다."]
+      }), "을 설정했다면 리포트를 저장할 경로를 설정하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -78,7 +79,9 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.exportReportPath",
               product: "2"
-            }), ": 지정한 경로로 리포트가 저장되며, 경로를 입력하지 않으면 사용자 PC의 \"Documents\\BioStarX\" 폴더에 자동으로 저장됩니다."]
+            }), ": 지정한 경로로 리포트가 저장되며, 경로를 입력하지 않으면 사용자 PC의 ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "Documents\\BioStarX"
+            }), " 폴더에 자동 저장됩니다."]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

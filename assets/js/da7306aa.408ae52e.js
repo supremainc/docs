@@ -42,22 +42,32 @@ const assets = {
 
 
 const toc = [{
-  "value": "정보 설정하기",
-  "id": "정보-설정하기",
+  "value": "자동 생성 스케줄 추가",
+  "id": "자동-생성-스케줄-추가",
   "level": 2
 }, {
-  "value": "리포트 및 스케줄 설정하기",
-  "id": "리포트-및-스케줄-설정하기",
-  "level": 2
+  "value": "정보 설정",
+  "id": "정보-설정",
+  "level": 3
 }, {
-  "value": "리포트 형식 설정하기",
-  "id": "리포트-형식-설정하기",
+  "value": "리포트 및 스케줄 설정",
+  "id": "리포트-및-스케줄-설정",
+  "level": 3
+}, {
+  "value": "리포트 형식 설정",
+  "id": "리포트-형식-설정",
+  "level": 3
+}, {
+  "value": "자동 생성 스케줄 삭제",
+  "id": "자동-생성-스케줄-삭제",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -73,25 +83,46 @@ function _createMdxContent(props) {
         sid: "reportApp.customReport",
         product: "2"
       }), "를 자동으로 생성하도록 스케줄을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "자동-생성-스케줄-추가",
+      children: "자동 생성 스케줄 추가"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.mainMenu.schedule",
             product: "2"
-          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 탭을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "reportApp.addSchedule",
             product: "2"
           }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-data-auto-schedule-main.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "각 항목을 설정하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.schedule.newSchedulePageTitle"
+          }), " 화면이 나타나면 각 항목을 설정하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "정보-설정하기",
-      children: "정보 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "정보-설정",
+      children: "정보 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "자동 생성 스케줄의 기본 정보를 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -104,9 +135,9 @@ function _createMdxContent(props) {
           product: "2"
         }), ": 스케줄의 이름을 입력하세요."]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "리포트-및-스케줄-설정하기",
-      children: "리포트 및 스케줄 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "리포트-및-스케줄-설정",
+      children: "리포트 및 스케줄 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "리포트별 자동 생성 스케줄을 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -135,9 +166,17 @@ function _createMdxContent(props) {
           }), ": 리포트를 자동 생성할 시간을 설정할 수 있습니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "리포트-형식-설정하기",
-      children: "리포트 형식 설정하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["커스텀 리포트 생성에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "data-generate-reports#custom-report",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "리포트-형식-설정",
+      children: "리포트 형식 설정"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "리포트별 형식을 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -201,6 +240,48 @@ function _createMdxContent(props) {
           sid: "reportApp.apply",
           product: "2"
         }), "을 클릭하세요."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["모든 설정을 완료했다면 리포트를 저장할 경로를 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "data-settings",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "자동-생성-스케줄-삭제",
+      children: "자동 생성 스케줄 삭제"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), "를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), "를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "reportApp.mainMenu.schedule",
+            product: "2"
+          }), " 탭을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "자동 스케줄 목록에서 삭제할 스케줄의 체크박스를 클릭하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-data-auto-schedule-remove-item.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.delete"
+          }), "를 클릭하세요."]
+        }), "\n"]
       }), "\n"]
     })]
   });
