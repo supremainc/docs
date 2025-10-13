@@ -521,6 +521,9 @@
   "specs.general.camera_resolution": {
     "message": "카메라 해상도"
   },
+  "specs.general.camera_angle": {
+    "message": "카메라 각도"
+  },
   "specs.general.ip_rating": {
     "message": "IP 등급"
   },
