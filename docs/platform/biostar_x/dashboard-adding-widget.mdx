@@ -1,25 +1,67 @@
 ---
 id: dashboard-adding-widget
 title: 위젯 추가하기
-description: 대시보드에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.
+description: 대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다.
 keywords: [대시보드, 위젯]
 ---
+
+**BioStar X** 대시보드는 사용자가 원하는 정보를 자유롭게 배치할 수 있는 사용자 정의형 모니터링 화면입니다. 다양한 위젯을 추가하여 출입 통제 시스템의 주요 정보를 업무 환경에 맞게 구성할 수 있습니다.
+
+추가할 수 있는 위젯 종류는 아래와 같습니다.
+
+- **차트**: 출입 이벤트 데이터를 막대/선/원형 차트로 시각화
+
+- **카운터**: 일간/주간 이벤트 발생 수를 숫자로 표시
+
+- **실시간 이벤트**: **BioStar X**에서 발생하는 모든 이벤트를 실시간 모니터링
+
+- **실시간 출입 모니터링**: 특정 장치의 인증 성공 사용자 정보를 실시간 표시
+
+- **시스템 사용 현황**: 사용자, 장치, 출입문 등의 등록 현황을 숫자로 표시
+
+- **출입문 제어**: 선택한 출입문의 상태 확인 및 원격 제어
+
+- **텍스트**: 공지사항이나 위젯 타이틀 등 사용자 정의 텍스트 배치
+
+대시보드에 배치한 위젯을 통해서 아래와 같은 이점을 얻을 수 있습니다.
+
+- **맞춤형 구성**: 업무에 필요한 정보만 선별하여 한 화면에 배치
+
+- **실시간 모니터링**: 출입 이벤트와 시스템 상태를 즉시 확인
+
+- **직관적인 시각화**: 차트와 카운터를 통한 데이터의 시각적 표현
+
+- **효율적인 관리**: 모니터링과 제어 기능을 통합하여 업무 효율성 향상
+
+
+## 위젯 추가 {#add-widgets}
 
 <Cmd sid='shell.header.dashboard' />에 위젯을 추가하여 원하는 정보를 확인할 수 있습니다.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.dashboard' />를 클릭하세요.
 
-1. <Cmd sid='reportApp.addWidget' product='2' />를 클릭하세요.
+1. <Cmd sid='reportApp.addWidget' product='2' /> 버튼을 클릭하세요.
 
-    :::info
+    <Image src='/img/biostarx-dashboard-add-widget.png' />
 
-    이미 위젯이 추가 되어있는 경우에는 <IcSet2 /> 아이콘을 클릭해 <Cmd sid='reportApp.dashboardSettings' product='2' />으로 진입한 다음 <Cmd sid='reportApp.addWidget' product='2' />를 클릭하세요.
+1. <Cmd sid='reportApp.addNewWidget' product='2' /> 창이 나타나면 <Cmd sid='reportApp.widgetType' product='2' />에서 원하는 항목을 선택하고 필수 항목을 입력 또는 설정하세요.
 
-    :::
+    <Image src='/img/biostarx-dashboard-add-widget-type.png' width={400} />
 
-1. 원하는 <Cmd sid='reportApp.widgetTypes' product='2' />을 선택한 다음 위젯에 따라 필수 항목을 입력 또는 설정하세요.
+1. 위젯 설정을 완료하고 <Cmd sid='reportApp.apply' product='2' /> 버튼을 클릭하세요.
 
-## 위젯 종류
+1. 위젯 표시 영역에 위젯이 생성되면 크기를 조절하거나 원하는 위치에 배치하세요.
+
+1. 모든 설정을 완료하면 화면 오른쪽 상단의 <Cmd sid='reportApp.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+이미 위젯이 추가 되어있다면 화면 오른쪽 상단의 <IcSet2 /> 아이콘을 클릭하세요. <Cmd sid='reportApp.dashboardSettings' product='2' /> 모드로 진입하면 <Cmd sid='reportApp.addWidget' product='2' /> 버튼을 클릭하세요.
+
+:::
+
+
+## 위젯 종류 {#widget-types}
 
 * 각 위젯 별로 위젯 크기 기본값이 다르게 설정되어 있으며 기본값에서 가장 보기 좋게 최적화되어 있습니다.
 
@@ -27,7 +69,7 @@ keywords: [대시보드, 위젯]
 
     <Image src='/img/biostarx-adjust-win-size.png' caption />
 
-### 차트
+### 차트 {#chart}
 
 원하는 차트 데이터를 선택하여 발생한 이벤트 수를 차트로 나타낼 수 있습니다.
 
@@ -35,19 +77,19 @@ keywords: [대시보드, 위젯]
 
 * <Cmd sid='reportApp.widgetTypes.chartData' product='2' />: 일간, 주간 이벤트 목록 중에서 원하는 차트 데이터를 선택하세요.
 
-    * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+  * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
 * <Cmd sid='reportApp.chartType' product='2' />: <Cmd sid='reportApp.chartTypes.verticalBar' product='2' />, <Cmd sid='reportApp.chartTypes.horizontalBar' product='2' />, <Cmd sid='reportApp.chartTypes.line' product='2' />, <Cmd sid='reportApp.chartTypes.pie' product='2' /> 중에 원하는 타입을 선택하세요.
 
 * <Cmd sid='reportApp.chartColorSchemes' product='2' />: 다섯 가지의 색상 조합 중에 원하는 색상을 선택하세요.
 
-    :::info
+:::info
 
-    <Cmd sid='reportApp.chartColorSchemes' product='2' />을 선택할 때 보여지는 차트의 값은 실제 값이 아닌 미리보기를 위한 임의의 값입니다.
+<Cmd sid='reportApp.chartColorSchemes' product='2' />을 선택할 때 보여지는 차트의 값은 실제 값이 아닌 미리보기를 위한 임의의 값입니다.
 
-    :::
+:::
 
-### 카운터
+### 카운터 {#bar}
 
 원하는 카운터 데이터를 선택하여 발생한 이벤트 수를 숫자로 나타낼 수 있습니다.
 
@@ -55,9 +97,9 @@ keywords: [대시보드, 위젯]
 
 * <Cmd sid='reportApp.widgetTypes.counterData' product='2' />: 일간, 주간 이벤트 목록 중에서 원하는 카운터 데이터를 선택하세요.
 
-    * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+  * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
-### 텍스트
+### 텍스트 {#text}
 
 <Cmd sid='shell.header.dashboard' />의 위젯 영역에 사용자가 원하는 텍스트를 입력하여 배치할 수 있습니다. 생성 후 필요한 위치에 배치하여 위젯의 타이틀로 사용하거나 공지사항 등으로 사용할 수 있습니다.
 
@@ -69,9 +111,9 @@ keywords: [대시보드, 위젯]
 
 :::
 
-### 실시간 이벤트
+### 실시간 이벤트 {#realtime-events}
 
-BioStar X에서 발생하는 이벤트를 실시간으로 보여줍니다. 특정 이벤트, 사용자, 출입문, 장치를 필터링해서 이벤트를 확인할 수 있습니다.
+**BioStar X**에서 발생하는 이벤트를 실시간으로 보여줍니다. 특정 이벤트, 사용자, 출입문, 장치를 필터링해서 이벤트를 확인할 수 있습니다.
 
 <Image src='/img/biostarx-real-time-event.png' caption />
 
@@ -87,7 +129,7 @@ BioStar X에서 발생하는 이벤트를 실시간으로 보여줍니다. 특�
 
 :::
 
-### 실시간 출입 모니터링
+### 실시간 출입 모니터링 {#real-time-access-monitoring}
 
 하나의 장치를 선택하여 선택한 장치에 인증을 성공한 사용자의 프로필 사진 및 정보(<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />)를 실시간으로 보여줍니다.
 
@@ -105,7 +147,7 @@ BioStar X에서 발생하는 이벤트를 실시간으로 보여줍니다. 특�
 
 :::
 
-### 시스템 사용 현황
+### 시스템 사용 현황 {#system-usage-status}
 
 BioStar X의 다양한 사용 현황을 숫자로 나타냅니다.
 
@@ -115,7 +157,7 @@ BioStar X의 다양한 사용 현황을 숫자로 나타냅니다.
 
 * <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
 
-### 출입문 제어
+### 출입문 제어 {#door-control}
 
 하나의 출입문을 선택하여 선택한 출입문의 상태를 확인하고 제어할 수 있습니다.
 
@@ -131,4 +173,13 @@ BioStar X의 다양한 사용 현황을 숫자로 나타냅니다.
 
 :::
 
-4. 위젯의 설정을 마친 다음 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 위젯 표시 영역에 위젯이 생성됩니다. 원하는대로 크기를 조절한 다음 <Cmd sid='reportApp.apply' product='2' />을 클릭하면 위젯이 <Cmd sid='shell.header.dashboard' />에 추가됩니다.
+
+## 위젯 데이터 새로고침 간격 설정 {#widget-refresh-interval}
+
+대시보드에 추가된 위젯의 데이터 새로고침 간격을 설정할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.dashboard' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <IcSet2 /> 아이콘을 클릭하세요.
+
+1. <Cmd sid='reportApp.dashboardSettings' product='2' /> 모드로 진입하면 화면 하단에 일반 설정에서 <Cmd sid='reportApp.autoRefreshInterval' product='2' />를 설정하세요.
