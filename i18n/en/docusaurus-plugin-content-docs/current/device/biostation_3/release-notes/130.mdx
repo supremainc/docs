@@ -1,114 +1,114 @@
 ---
 id: 130
-title: 펌웨어 버전 1.3.0
+title: Firmware Version 1.3.0
 ---
 
-# 펌웨어 버전 1.3.0 (빌드 번호 1.3.0_240514)
+# Firmware Version 1.3.0 (Build No. 1.3.0_240514)
 
-릴리즈<Separator/>2024-06-28
+Release<Separator/>2024-06-28
 
-## 신규 기능 및 개선
+## New Features and Improvements
 
 ---
 
-1. XPass D2 신규 BLE 칩 펌웨어(빌드 번호: 1.7.0_220921) 지원
+1. XPass D2 new BLE (Bluetooth Low Energy) chip firmware (Build No. 1.7.0_220921) support.
 
-    - 장치의 BLE 칩이 변경됨에 따라 펌웨어가 기존 장치 및 신규 장치의 BLE 칩과 모두 호환하도록 지원
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
 
-1. **커스텀 스마트 카드 레이아웃** 지원
+1. Supports **Custom Smart Card Layout**.
 
-1. 장치 부팅 후 1분 동안 SEOS 설정 카드를 CSN으로 인식하지 않도록 개선
+1. Improved to not recognize SEOS configuration cards as CSN for 1 minute after device booting.
 
-1. QR 인증 관련 이벤트 코드 추가
+1. Added event code for QR authentication.
 
-1. **커스텀 스마트 카드 레이아웃**에 FeliCa 카드 추가 지원
+1. Support for adding FeliCa card to **Custom Smart Card Layout**.
 
-1. 사용자 유효기간을 최대 '**2037-12-31**'까지 설정할 수 있도록 개선
+1. Extended the user expiration period to a maximum of '**2037-12-31**'.
 
-1. **인텔리전트 슬레이브**를 사용할 경우 타사 컨트롤러의 인증 성공/실패 결과를 장치 화면에 표시하는 **컨트롤러 결과 표시** 기능 지원
+1. Supports the **Display Result from Controller** feature for displaying authentication success or failure results from a 3rd party controller on the device screen when using **Intelligent Slave**.
 
-1. 장치를 타사 컨트롤러와 Wiegand로 연결했을 때 컨트롤러로부터 반복적으로 입력되는 인증에 대한 신호를 무시하는 **반복 신호 무시 시간** 기능 지원
+1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
 
-1. **IP 인터폰** 화면 UI 개선
+1. Improved **Intercom** screen UI.
 
-1. 장치에서 **IP 인터폰**의 SIP 서버 설정 시 SIP 전송 방법을 선택할 수 있는 **SIP 서버 전송** 기능 지원
+1. Supports the **SIP Server Transport** feature, which selects the SIP transmission method when setting up the SIP server of **Intercom** on the device.
 
-1. **IP 인터폰**, **RTSP** 사용 시 장치에서 송출되는 영상의 해상도를 선택할 수 있는 기능 지원
+1. Supports the feature of selecting the resolution of the video output from the device when using **Intercom** and **RTSP**.
 
-    - IP 인터폰 비디오 해상도
+    - Intercom Video Resolution
 
-    - RTSP 비디오 해상도
+    - RTSP Video Resolution
 
-1. SDK에서 GetLogWithFilter 함수를 이용해 사용자 정보 업데이트 성공 이벤트 로그를 가져올 수 있도록 개선
+1. Improved to get user update succeeded event log using the GetLogWithFilter function in the SDK.
 
-1. 장치의 인증 결과 화면에서 사용자 ID, 이름이 표시되는 방법을 선택할 수 있는 **인증 결과 표시 옵션** 기능 지원
+1. Supports the **Auth Result Display Option** that allows you to select how the user ID and name are displayed on the authentication result screen of the device.
 
-1. **확장 개인 인증 모드**의 두 번째 크리덴셜을 지문으로 설정한 사용자가 인증에 실패했을 때 표시되는 팝업 메시지 개선
+1. Improved pop-up message displayed when authentication fails for users who set the second credential as a fingerprint in **Extended Private Auth Mode**.
 
-## 버그 수정
+## Bug Fixes
 
 ---
 
 <BugLists>
 
-1. 장치에 저장 가능한 최대 내선 번호 수가 초과되어도 **내선 추가** 아이콘이 표시되는 문제 <Badge>1.0.0</Badge>
+1. When the maximum number of extension numbers that can be stored on the device is exceeded, the **Add Extension** icon is still displayed. <Badge>1.0.0</Badge>
 
-1. **마스크 검출** 기능이 <b>사용 (소프트)</b>으로 설정되어있고 마스크 확인 방식이 **인증 후 확인**으로 설정된 장치에 마스크를 착용하지 않은 얼굴로 인증하는 경우 발생하는 문제 <Badge>1.0.0</Badge>
+1. An issue occurs when authenticating with a face not wearing a mask on a device with the **Mask Detection** set to **Enabled (Soft)** and the mask check method set to **Check After Authentication**. <Badge>1.0.0</Badge>
 
-    - 간헐적으로 인증 모드 오류 발생
+    - An authentication mode error occurs intermittently.
 
-    - 연속으로 얼굴을 인증할 경우 장치가 멈추는 문제
+    - The device freezes when facial authentication is continuous.
 
-1. 무선 AP 전원이 꺼진 상태에서 장치를 재시작한 후 AP 전원을 켜면 무선 네트워크가 자동으로 다시 연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. When the Wireless AP power is turned off and the device is restarted, the wireless network does not automatically reconnect when the AP power is turned back on. <Badge>1.0.0</Badge>
 
-1. **인증 모드**가 카드 / QR 코드로 설정되어있고 마스크 확인 방식이 **확인 후 인증**으로 설정된 장치에 마스크를 착용하고 인증한 후 QR로 인증하면 간헐적으로 QR 인증에 실패하는 문제 <Badge>1.1.0</Badge>
+1. When the **Auth Mode** is set to Card / QR Code and the mask check method is set to **Check Before Authentication** on the device, QR authentication intermittently fails after wearing a mask and authenticating. <Badge>1.1.0</Badge>
 
-1. IP 인터폰 통화 중에 BioStar 2에서 장치 설정을 변경하면 통화 종료 후 카드 인증이 실패하는 문제 <Badge>1.1.0</Badge>
+1. If device settings are changed in BioStar 2 during an intercom call, card authentication fails after the call ends. <Badge>1.1.0</Badge>
 
-1. 장치가 슬레이브로 연결된 상태에서 DESFire AoC로 인증할 경우 인증이 실패하는 문제 <Badge>1.0.0</Badge>
+1. Authentication fails when authenticating with a DESFire AoC while the device is connected as a slave. <Badge>1.0.0</Badge>
 
-1. 장치 메뉴에서 **릴레이**를 설정한 경우 모바일 카드로 출입문이 열리지 않는 문제 <Badge>1.0.0</Badge>
+1. When **Relay** is set in the device menu, the door does not open with a mobile card. <Badge>1.0.0</Badge>
 
-1. 일반 사용자가 이벤트 로그 확인 중 **메뉴 표시 시간**이 지나 장치 화면이 꺼진 후 얼굴로 인증하면 **이벤트 로그** 화면이 유지되는 문제 <Badge>1.0.0</Badge>
+1. If a general user performs face authentication and checks the event log, the **Menu Timeout** elapses, and the device switches to a standby state, the **EVENT LOG** screen appears at the next face authentication. <Badge>1.0.0</Badge>
 
-1. **경비 구역**을 설정한 상태에서 홈 화면의 **경비/해제** 버튼을 눌렀을 때 인증 가이드 메시지가 잘못 표시되는 문제 <Badge>1.0.0</Badge>
+1. The authentication guide message was displayed incorrectly when pressing the **Arm/Disarm** button on the home screen while setting the **Intrusion Alarm Zone**. <Badge>1.0.0</Badge>
 
-1. 무선 네트워크를 사용하는 환경에서 무선 네트워크 연결이 반복적으로 끊어질 경우 RF카드 인증에 실패하는 문제 <Badge>1.0.0</Badge>
+1. When network is repeatedly disconnected in an environment using a wireless network, RF card authentication will fail. <Badge>1.0.0</Badge>
 
-1. 32자로 저장된 사용자 ID가 특정 이벤트 로그에서 31자까지만 표기되는 문제 <Badge>1.0.0</Badge>
+1. The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. <Badge>1.0.0</Badge>
 
-1. 네트워크가 **무선 LAN**으로 연결된 상태에서 장치를 재시작했을 때 이전에 연결했던 무선 네트워크에 자동으로 재연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. The device would not automatically reconnect to the previously connected wireless network when restarted while the network was connected as **Wireless**. <Badge>1.0.0</Badge>
 
-1. 네트워크가 무선 LAN으로 연결된 상태에서 이더넷 연결로 변경한 후 다시 **무선 LAN**으로 진입하면 무선 AP 목록이 표시되지 않는 문제 <Badge>1.0.0</Badge>
+1. If the network is connected to a wireless LAN and then enters **Wireless** again after changing to an ethernet connection, the wireless AP list is not displayed. <Badge>1.0.0</Badge>
 
-1. **무선 LAN** 연결 시 무한 로딩이 지속되는 문제 <Badge>1.0.0</Badge>
+1. Infinite loading occurred while attempting to connect via **Wireless**. <Badge>1.0.0</Badge>
 
-1. 네트워크가 **무선 LAN**으로 연결된 상태에서 **이더넷** 연결로 변경한 후 다시 **무선 LAN**으로 변경하면 이전에 연결했던 무선 네트워크에 자동으로 재연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. When the network is connected to **Wireless**, switches to **Ethernet**, and then switches back to **Wireless**, it does not automatically reconnect to the previously connected wireless network. <Badge>1.0.0</Badge>
 
-1. 장치의 **공장 초기화** 진행 시 이미지 로그가 삭제되지 않는 문제 <Badge>1.0.0</Badge>
+1. Image Logs were not deleted when performing **Factory Default** on the device. <Badge>1.0.0</Badge>
 
-1. 장치가 서버와 연결되지 않은 상태에서 32자리 사용자 ID를 가진 사용자가 장치에 인증했을 경우, 장치가 서버와 다시 연결된 후에도 BioStar 2에 인증 이벤트 로그가 업데이트되지 않는 문제 <Badge>1.0.0</Badge>
+1. When a user with a 32-character user ID authenticates to the device while the device is not connected to the server, the authentication event log is not updated in BioStar 2 even after the device is reconnected to the server. <Badge>1.0.0</Badge>
 
-1. 장치에 저장된 지문 수가 1:N 최대치를 넘겨 추가되었을 경우 **사용자 등록현황**의 **지문 수**가 비정상적으로 표시되는 문제 <Badge>1.0.0</Badge>
+1. If the number of fingerprints stored in the device exceeds the 1:N maximum, the **Finger** in **User Usage** count is displayed abnormally. <Badge>1.0.0</Badge>
 
-1. 연결한 무선 네트워크의 Wi-Fi 신호 세기가 무선 LAN 목록과 홈 화면의 WLAN 아이콘에서 다르게 표시되는 문제 <Badge>1.0.0</Badge>
+1. The Wi-Fi signal strength of the connected wireless network was displayed differently in the wireless LAN list and the WLAN icon on the home screen. <Badge>1.0.0</Badge>
 
-1. **인증 모드**가 ID + 얼굴/PIN으로 설정된 장치의 홈 화면에서 **ID 입력** 아이콘을 터치해 ID를 입력한 후 나타나는 얼굴/PIN 입력 화면에서 왼쪽 상단의 **ID 입력** 아이콘을 터치해 PIN 입력하면 인증에 성공하는 문제 <Badge>1.0.0</Badge>
+1. On the home screen of a device with **Auth Mode** set to ID + Face/PIN, after entering the ID, the **Input ID** icon allows to enter PIN instead of changing the authentication process to the entered ID. <Badge>1.0.0</Badge>
 
-1. 장치에서 삭제된 이미지 로그가 서버에 계속 업로드되는 문제 <Badge>1.0.0</Badge>
+1. Deleted image logs from the device gets continuously uploaded to the server. <Badge>1.0.0</Badge>
 
-1. 장치가 BioStar 2의 **대기 장치** 목록에 있을 때 장치의 **장치** →** 서버** 설정을 꺼도 BioStar 2의 **대기 장치** 목록에 장치가 표시되고, 장치 상단에 BioStar 2 아이콘이 표시되는 문제 <Badge>1.0.0</Badge>
+1. When the device's **Device** →** Server** setting gets inactive while the device is on the **Waiting Device** list of BioStar 2, the device still appears in the **Waiting Device** list, and the BioStar 2 connect icon is displayed at the top of the device. <Badge>1.0.0</Badge>
 
-1. Wiegand 장치의 **출력 모드**가 **항시 통과**로 설정되어있고, 마스크 확인 방식이 **확인만**으로 설정된 장치에서 마스크 확인이 완료된 후에도 얼굴 인증 과정이 동작하는 문제 <Badge>1.1.0</Badge>
+1. The facial authentication process continues to operate even after mask detection is completed on a device where the Wiegand device's **Output Mode** is set to **Bypass** and the mask check mode is set to **Check Only**. <Badge>1.1.0</Badge>
 
-1. API로 사진을 업로드하여 비주얼 페이스 등록 시 사진에 검은 여백이 생기며 간헐적으로 인증에 실패하는 문제 <Badge>1.0.0</Badge>
+1. When enrolling a Visual Face by uploading a photo using the API, a blank area appears on the photo, and authentication fails intermittently. <Badge>1.0.0</Badge>
 
-1. SDK에서 BS2_SetFaceConfig 함수를 이용해 장치에서 얼굴 인증 시 작동 모드를 설정할 때 유효하지 않은 값을 입력하면 무한 재부팅되는 문제 <Badge>1.0.0</Badge>
+1. When setting the face authentication operation mode on a device using the SDK's BS2_SetFaceConfig function, there is an issue where an infinite reboot occurs if an incorrect value is entered. <Badge>1.0.0</Badge>
 
-1. SDK를 사용하여 유효하지 않은 ID의 스케줄을 생성한 경우 장치가 정상적으로 부팅되지 않는 문제 <Badge>1.0.0</Badge>
+1. When creating a schedule with an invalid ID using the SDK, the device fails to boot properly. <Badge>1.0.0</Badge>
 
-1. 장치에 저장된 얼굴 수가 1:N 최대치를 넘겨 추가되었을 경우, 얼굴 인증으로 관리자 로그인이 가능한 문제 <Badge>1.1.0</Badge>
+1. When the number of faces stored on the device exceeds the 1:N maximum, administrator login is possible via facial authentication. <Badge>1.1.0</Badge>
 
-1. **장치 → 서버** 모드를 사용 중일 때 DHCP 서버에 연결이 실패할 경우 서버 IP 주소가 초기화되는 문제 <Badge>1.0.0</Badge>
+1. When using **Device **→** Server** mode, the server IP address is reset if the connection to the DHCP server fails. <Badge>1.0.0</Badge>
 
 </BugLists>

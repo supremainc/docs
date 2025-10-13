@@ -1,144 +1,142 @@
 ---
 id: 101
-title: 펌웨어 버전 1.0.1
+title: Firmware Version 1.0.1
 ---
 
-# 펌웨어 버전 1.0.1 (빌드 번호 1.0.1_221020)
+# Firmware Version 1.0.1 (Build No. 1.0.1_221020)
 
-릴리즈<Separator/>2022-10-21
+Release<Separator/>2022-10-21
 
-## 신규 기능 및 개선
+## New Features and Improvements
 
 ---
 
-1. 저조도 사용 환경에 대한 행동 감지 성능 개선
+1. Improved motion detection performance for low-light environments.
 
-1. 비주얼 페이스 매칭 알고리즘 개선
+1. Improved Visual Face matching algorithm.
 
-1. 장치에 표시되는 모든 팝업 메시지가 **메시지 표시 시간**에 설정된 시간에 따라 동작하도록 개선
+1. Improved all pop-up messages displayed on the device to operate according to the time set in **Message Timeout**.
 
-1. **릴레이** 메뉴의 한국어 용어 일부 수정
+1. Fixed Korean and English strings in the **RTSP** menu.
 
-1. **RTSP** 메뉴의 한국어, 영어 용어 일부 수정
-
-## 버그 수정
+## Bug Fixes
 
 ---
 
 <BugLists>
 
-1. BioStar 2에서 리소스나 펌웨어를 업그레이드할 때 장치에 아무런 정보가 출력되지 않아 업그레이드 진행 상태를 확인할 수 없던 문제 <Badge>1.0.0</Badge>
+1. When upgrading resources or firmware from BioStar 2, the device could not check the progress of the upgrade because no information was displayed. <Badge>1.0.0</Badge>
 
-1. BioStar 2에서 다수의 사용자를 장치에 동기화한 후 장치를 재시작했을 때 장치의 **사용자 등록현황**에 비주얼 페이스의 개수가 동기화한 개수와 다르게 표시되는 문제 <Badge>1.0.0</Badge>
+1. When synchronizing multiple users to a device in BioStar 2 and then restarting the device, the **User Usage** on the device displays a different number of visual faces than the number of synchronized. <Badge>1.0.0</Badge>
 
-1. 슬레이브로 연결된 장치에 로고 이미지를 추가한 후 장치 상세 페이지로 진입하면 Invalid payload 오류가 발생하고 RS-485의 연결이 해제되는 문제 <Badge>1.0.0</Badge>
+1. When entering the device detail page after adding a logo image to the device connected as a slave, an Invalid payload error occurs and the RS-485 get disconnected. <Badge>1.0.0</Badge>
 
-1. BioStar 2에서 **장치 해시키 수동 관리**를 **사용**으로 설정하고 마이그레이션을 진행했을 때 장치에서 모든 사용자가 삭제되지만, 별도의 삭제 알림 팝업이 표시되지 않는 문제 <Badge>1.0.0</Badge>
+1. When **Device Hashkey Management** is set to **Use** in BioStar 2 and migration proceeds, all users are deleted from the device, but a delete notification pop-up is not displayed. <Badge>1.0.0</Badge>
 
-1. 장치가 간헐적으로 멈춘 후 재시작되는 문제 <Badge>1.0.0</Badge>
+1. Device hangs intermittently and then restarts. <Badge>1.0.0</Badge>
 
-1. **무선 LAN** 메뉴에 진입했을 때 새로운 SSID가 나타나지 않고 이전에 검색되었던 SSID만 나타나는 문제 <Badge>1.0.0</Badge>
+1. When entering the **Wireless**, the new SSID does not appear, but only the previously searched SSID appears. <Badge>1.0.0</Badge>
 
-1. BioStar 2를 사용하여 장치에 얼굴 또는 카드를 등록할 때 스캔 화면이 보이지 않고 화면보호기 상태가 유지되는 문제 <Badge>1.0.0</Badge>
+1. When enrolling a visual face or card on a device using the BioStar 2, the scan screen is not visible and the screen saver state remains. <Badge>1.0.0</Badge>
 
-1. 장치에 1개의 내선 번호만 저장된 상태에서 메인화면의 콜 버튼을 눌렀을 때 저장된 1개의 내선 번호로 바로 연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. When the call button on the main screen is pressed with only one extension number stored in the device, it does not connect directly. <Badge>1.0.0</Badge>
 
-1. **사용자 편집**에서 **확장 개인 인증 모드**를 **ID** + **지문**/**PIN**으로 선택한 후 **OK**를 누르면 **확장 개인 인증 모드** 목록에서 지문 아이콘이 얼굴 아이콘으로 잘못 표기되는 문제 <Badge>1.0.0</Badge>
+1. In **Edit User**, if you select **Extended Private Auth Mode** as **ID** + **Fingerprint**/**PIN** and press **OK**, the fingerprint icon is incorrectly displayed as a face icon in the **Extended Private Auth Mode** list. <Badge>1.0.0</Badge>
 
-1. 장치가 슬레이브로 연결된 상태에서 개인 인증 모드가 **카드** + **얼굴**로 설정된 AoC로 인증할 경우 인증 실패가 발생하는 문제 <Badge>1.0.0</Badge>
+1. Authentication failure occurs when authenticating with AoC with private auth mode set to **Card** + **Face**. <Badge>1.0.0</Badge>
 
-1. BioStar 2를 통해 장치를 재시작했을 때 알림음만 출력되고 재시작 팝업 메시지가 나타나지 않는 문제 <Badge>1.0.0</Badge>
+1. When the device is restarted via BioStar 2, only a notification sound plays and the restart pop-up message does not appear. <Badge>1.0.0</Badge>
 
-1. USB로 펌웨어 업그레이드 시 성공, 실패 팝업 메시지가 나타나지 않고 재시작되는 문제 <Badge>1.0.0</Badge>
+1. Firmware upgrade via USB restarts the device without a success or failure popup message. <Badge>1.0.0</Badge>
 
-1. BioStar 2의 **근태 관리** 메뉴에서 **Always**를 제외한 **스케줄**로 **근태 코드**를 생성하고, 장치에서 해당 **근태 코드**를 선택하면 **스케줄** 표시 부분이 공백으로 표시되는 문제 <Badge>1.0.0</Badge>
+1. In BioStar 2's **T&A** menu, the **Schedule** display part is blank when creating a **T&A Code** with a **Schedule** other than **Always** and selecting the **T&A Code** on the device. <Badge>1.0.0</Badge>
 
-1. **메모리 정보**의 **DRAM 사용량**에서 사용 중인 메모리가 잘못 표시되는 문제 <Badge>1.0.0</Badge>
+1. Memory usage incorrectly displayed in **DRAM Usage** in **Memory Info**. <Badge>1.0.0</Badge>
 
-1. 슬레이브로 연결된 장치에서 메뉴로 진입하면 경고음이 아닌 일반 메뉴 터치음이 출력되는 문제 <Badge>1.0.0</Badge>
+1. When entering the menu from a device connected as a slave, a normal menu touch sound plays instead of a warning sound. <Badge>1.0.0</Badge>
 
-1. BioStar 2의 **사용자** 메뉴에서 비주얼 페이스를 등록할 때 1번째 얼굴을 등록한 다음 2번째 얼굴을 스캔하는 과정에서 스캔 대기 시간이 초과할 경우 1번째에 등록했던 얼굴이 나타나는 문제 <Badge>1.0.0</Badge>
+1. When enrolling a visual face in the **USER** menu in BioStar 2, when the scan waiting time exceeded while enrolling the 1st face and then scanning the 2nd face, the face enrolled in the 1st appears. <Badge>1.0.0</Badge>
 
-1. 네트워크가 무선 LAN으로 연결된 상태에서 이더넷 연결로 변경한 후 다시 **무선 LAN**으로 진입하면 무선 AP 목록이 표시되지 않는 현상 <Badge>1.0.0</Badge>
+1. If the network is connected to a wireless LAN and then enters **Wireless** again after changing to an ethernet connection, the wireless AP list is not displayed. <Badge>1.0.0</Badge>
 
-1. Wiegand **입출력** 설정이 **출력**으로 되어 있을 때 장치가 간헐적으로 멈추는 문제 <Badge>1.0.0</Badge>
+1. Device hangs intermittently when Wiegand **Input/Output** setting is set to **Output**. <Badge>1.0.0</Badge>
 
-1. 장치의 **IP 인터폰** 설정에서 **표시 이름**의 허용 글자 수가 최대치를 초과하여 저장되는 문제 <Badge>1.0.0</Badge>
+1. Extension number gets stored in the phonebook while exceeding the maximum characters in the **Display Name** of the **Intercom** settings. <Badge>1.0.0</Badge>
 
-1. 장치의 **인증 모드**에서 설정되어있는 **인증 모드**를 선택하여 편집 화면으로 진입하면 터치음이 출력되지 않는 문제 <Badge>1.0.0</Badge>
+1. When entering the edit screen by selecting the **Auth Mode** set in the device's **Auth Mode**, the touch sound does not play. <Badge>1.0.0</Badge>
 
-1. 장치가 슬레이브로 연결되어 있는 상태에서 간헐적으로 연결이 끊긴 상태로 동작하는 문제 <Badge>1.0.0</Badge>
+1. Device connected as a slave intermittently operates while disconnected. <Badge>1.0.0</Badge>
 
-1. 장치의 메인화면에서 콜 버튼을 눌러 내선 번호 목록이 표시된 상태에서 BioStar 2를 통해 장치의 **IP 인터폰**을 **사용 안 함**으로 변경했을 경우 내선 번호에 전화를 걸면 오류가 발생하는 문제 <Badge>1.0.0</Badge>
+1. An error occurs when calling the extension number when the **Intercom** of the device is set to **Not Use** via BioStar 2 while the list of extension numbers is displayed by pressing the call button on the main screen of the device. <Badge>1.0.0</Badge>
 
-1. **인증 모드**에 **스케줄**을 설정하는 화면에서 생성된 스케줄이 중복되어 보여지는 문제 <Badge>1.0.0</Badge>
+1. In the screen to set the **Schedule** in **Auth Mode**, the already created schedule is shown as a duplicate. <Badge>1.0.0</Badge>
 
-1. 장치의 **공장 초기화** 진행 시 로딩이 진행되다가 장치가 멈추는 문제 <Badge>1.0.0</Badge>
+1. When the device is in the middle of **Factory Default** process, the device hangs while loading. <Badge>1.0.0</Badge>
 
-1. 장치의 **언어** 설정을 **사용자 정의**로 적용했을 때 **사운드**의 **음성 안내** 메뉴 부분이 공백으로 보이는 문제 <Badge>1.0.0</Badge>
+1. When the **Language** of the device is set to **Custom**, the **Voice Instruction** menu part of **Sound** displays as a blank. <Badge>1.0.0</Badge>
 
-1. RS-485로 연결된 마스터 장치에서 **표준 시간대**를 변경했을 때 슬레이브 장치의 **표준 시간대**가 변경되지 않는 문제 <Badge>1.0.0</Badge>
+1. When the **Time Zone** of the master device connected via RS-485 is changed, the **Time Zone** of the slave device does not change. <Badge>1.0.0</Badge>
 
-1. NFC로 설정된 모바일 카드로 인증할 때 인증이 실패되고 간헐적으로 장치가 재시작되는 문제 <Badge>1.0.0</Badge>
+1. When authenticating with a mobile card set to NFC, authentication fails and the device restarts intermittently <Badge>1.0.0</Badge>
 
-1. 사용자 검색에서 **검색 조건**을 **카드**로 선택하고 등록되지 않은 카드를 스캔했을 때 올바른 문구가 나타나지 않는 문제 <Badge>1.0.0</Badge>
+1. The correct message does not appear when an unenrolled card is scanned with **Filter** set to **Card** in the user search <Badge>1.0.0</Badge>
 
-1. **이벤트 로그** 검색 화면에서 **검색 조건**을 설정하는 팝업이 장치에 설정된 **메뉴 표시 시간**이 지나도 사라지지 않는 문제 <Badge>1.0.0</Badge>
+1. The pop-up to set the **Filter** on the **EVENT LOG** search screen does not disappear even after the time set in the device's **Menu Timeout** has elapsed. <Badge>1.0.0</Badge>
 
-1. 장치에서 **표준 시간대**를 변경했을 때 이벤트 로그가 남지 않던 문제 <Badge>1.0.0</Badge>
+1. Event log is not logged when **Time Zone** is changed on the device. <Badge>1.0.0</Badge>
 
-1. 장치가 **설정** 메뉴에 진입되어있는 상태에서 BioStar 2를 통해 **비주얼 페이스**를 스캔할 경우 스캔이 완료된 후에도 장치에서 스캔 화면이 종료되지 않는 문제 <Badge>1.0.0</Badge>
+1. When scanning **Visual Face** via BioStar 2 while the device is in the **SETTINGS**, the scan screen does not close on the device even after scanning is complete. <Badge>1.0.0</Badge>
 
-1. **이더넷** 설정 화면에서 하단의 빈 공간을 터치하면 **전송 속도** 선택 팝업이 나타나는 문제 <Badge>1.0.0</Badge>
+1. **Baud Rate** selection pop-up appears when touching an empty space at the bottom of the **Ethernet** screen. <Badge>1.0.0</Badge>
 
-1. 다른 사용자와 중복된 카드가 등록되어있는 사용자를 BioStar 2에서 장치로 전송할 경우 사용자가 장치에서 삭제되는 문제 <Badge>1.0.0</Badge>
+1. When sending a user whose card is duplicated with another user from BioStar 2 to the device, the user is deleted from the device. <Badge>1.0.0</Badge>
 
-1. 마스터-슬레이브로 연결된 장치를 각각 펌웨어 업그레이드했을 때, 슬레이브 장치는 정상적으로 완료되나 마스터 장치는 멈춰버리는 문제 <Badge>1.0.0</Badge>
+1. When the firmware is upgraded for each device connected as master-slave, the slave device completes normally, but the master device hangs. <Badge>1.0.0</Badge>
 
-1. **RTSP**를 **사용 안 함**으로 설정한 후에도 RTSP 연결 종료 이벤트 로그가 생성되지 않고 RTSP 아이콘이 삭제되지 않는 문제 <Badge>1.0.0</Badge>
+1. RTSP connection termination event log is not logged and RTSP icon is not deleted even after setting **RTSP** to **Not Use**. <Badge>1.0.0</Badge>
 
-1. 설정 오류로 인해 **기본값 복원** 시 재시작되지 않는 문제 <Badge>1.0.0</Badge>
+1. Does not restart on **Restore Default** due to setup error. <Badge>1.0.0</Badge>
 
-1. **날짜와 시간**이 올바르게 표기되지 않는 문제 <Badge>1.0.0</Badge>
+1. **Date & Time** not displayed correctly. <Badge>1.0.0</Badge>
 
-1. 사용자 추가 시 카드 스캔 화면에서 카드 입력 없이 대기할 경우 백라이트가 꺼지지 않는 문제 <Badge>1.0.0</Badge>
+1. When adding a user, the backlight does not turn off when waiting without card input on the card scan screen. <Badge>1.0.0</Badge>
 
-1. **이벤트 로그**에서 **시작 시간**과 **끝 시간**으로 검색 시 조회되지 않는 문제 <Badge>1.0.0</Badge>
+1. Search does not work when searching by **Start Time** and **End Time** in **EVENT LOG**. <Badge>1.0.0</Badge>
 
-1. **인증 모드 편집**에서 선택한 스케줄이 표기되지 않고 다른 스케줄이 표기되는 문제 <Badge>1.0.0</Badge>
+1. An incorrect schedule displays in the **Edit Auth Mode**. <Badge>1.0.0</Badge>
 
-1. 사용자에 카드 등록 시 설정되지 않은 Wiegand 포맷의 카드를 스캔한 후 기본 인식되도록 설정된 카드를 스캔하면 스캔 되지 않는 문제 <Badge>1.0.0</Badge>
+1. If you scan a Wiegand format card that is not set when enrolling a card to a user and then scan a normal card, it will not be scanned. <Badge>1.0.0</Badge>
 
-1. 수신처가 통화를 종료한 후에도 장치에서는 통화 상태 화면이 유지되는 문제 <Badge>1.0.0</Badge>
+1. The device retains the call screen even after the recipient terminates the call. <Badge>1.0.0</Badge>
 
-1. Wi-Fi 지원 모델일 경우 **대시보드**와 **장치 정보**에 **무선 MAC** 항목이 나타나지 않는 문제 <Badge>1.0.0</Badge>
+1. **WiFi MAC** does not appear in **DASHBOARD** and **Device Info** for Wi-Fi supported models. <Badge>1.0.0</Badge>
 
-1. 카드 스캔 화면에서 백그라운드가 터치되고 얼굴이 인증되는 문제 <Badge>1.0.0</Badge>
+1. On the scan card screen, the background allows touch and the face can get authenticated. <Badge>1.0.0</Badge>
 
-1. BioStar 2에서 카드 등록 시 **스마트 카드 쓰기**를 선택한 후 스캔 대기 중에 장치가 재시작되는 문제 <Badge>1.0.0</Badge>
+1. When enrolling a card in BioStar 2, after selecting **Write Smart Card**, the device restarts while waiting for scan. <Badge>1.0.0</Badge>
 
-1. 마스터-슬레이브로 장치가 연결된 상태에서 BioStar 2로 슬레이브 장치의 펌웨어를 업그레이드하는 경우 발생하는 문제 <Badge>1.0.0</Badge>
+1. An issue occurs when upgrading the firmware of a slave device from BioStar 2 while the device is connected as Master-Slave. <Badge>1.0.0</Badge>
 
-    - 슬레이브 장치의 연결이 끊기며 펌웨어 업그레이드가 실패하는 문제
+    - Slave device disconnects and the firmware upgrade fails.
 
-    - 마스터 장치의 재시작이 실패하는 문제
+    - Master device restart fails.
 
-1. **이벤트 로그**를 반복적으로 검색할 경우 **OK** 버튼이 동작하지 않는 문제 <Badge>1.0.0</Badge>
+1. The **OK** button does not work when repeatedly searching the **EVENT LOG**. <Badge>1.0.0</Badge>
 
-1. 간헐적으로 이미지 로그가 비정상적으로 출력되는 문제 <Badge>1.0.0</Badge>
+1. Intermittently, the image log is logged abnormally. <Badge>1.0.0</Badge>
 
-1. 다수의 사운드 파일을 연속 재생 시 스피커가 반복적으로 켜지고 꺼지는 문제 <Badge>1.0.0</Badge>
+1. Speaker turns on and off repeatedly when multiple sound files are played continuously. <Badge>1.0.0</Badge>
 
-1. 장치가 잠겨 있는 상태에서 펌웨어를 업그레이드할 경우 장치가 비정상적으로 재시작되는 문제 <Badge>1.0.0</Badge>
+1. The device restarts abnormally when the firmware is upgraded while the device is locked. <Badge>1.0.0</Badge>
 
-1. BioStar 2에서 장치로 비주얼 페이스를 전송할 때 무선 LAN 연결이 간헐적으로 끊어지는 문제 <Badge>1.0.0</Badge>
+1. Wireless connection intermittently disconnects when sending Visual face from BioStar 2 to device. <Badge>1.0.0</Badge>
 
-1. IP 인터폰 통화 중 **메뉴 표시 시간**에 설정된 시간에 화면이 꺼지는 문제 <Badge>1.0.0</Badge>
+1. The screen turns off at the time set in **Menu Timeout** during an Intercom call. <Badge>1.0.0</Badge>
 
-1. 전체 로그 삭제 시 이벤트 로그만 삭제되고 이미지 로그는 삭제되지 않는 문제 <Badge>1.0.0</Badge>
+1. When deleting all logs, image logs does not get deleted. <Badge>1.0.0</Badge>
 
-1. **장치 정보**에서 **MAC** 항목을 길게 터치했을 때 **VFMCore** 버전 정보가 표기되지 않는 문제 <Badge>1.0.0</Badge>
+1. **VFMCore** version information is not displayed when long-touching the **MAC** in **Device Info**. <Badge>1.0.0</Badge>
 
-1. **스마트 카드** 발급 시 **개인 인증 모드**에 지문/얼굴을 포함하여 발급할 경우 특정 카드에서 간헐적으로 발급이 실패하는 문제 <Badge>1.0.0</Badge>
+1. When issuing a **Smart Card**, if a fingerprint/face is included in **Private Auth Mode**, the issuance fails intermittently in a specific card. <Badge>1.0.0</Badge>
 
 </BugLists>
