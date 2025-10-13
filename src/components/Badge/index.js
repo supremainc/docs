@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { translate } from '@docusaurus/Translate';
 import PropTypes from 'prop-types';
 
 export default function Badge({ children, className, only = false }) {
