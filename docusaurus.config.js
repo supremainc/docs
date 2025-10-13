@@ -235,6 +235,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'FaceStation 2',
+                docId: 'device/facestation_2/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation',
                 docId: 'device/corestation_40/index'
               },

@@ -966,6 +966,43 @@ const sidebars = {
       ],
     },
   ],
+  facestation2: [
+    {
+      type: 'category',
+      label: 'FaceStation 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_2/index',
+      },
+      items: [
+        'device/facestation_2/safety-instructions',
+        'device/facestation_2/getting-started',
+        'device/facestation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/using-device',
+          },
+          items: [
+            'device/facestation_2/admin-menu',
+            'device/facestation_2/user',
+            'device/facestation_2/authentication',
+            'device/facestation_2/settings',
+            'device/facestation_2/event-log',
+          ],
+        },
+        'device/facestation_2/troubleshooting',
+        'device/facestation_2/product-specifications',
+        'device/facestation_2/regulatory-information',
+        'device/facestation_2/appendices',
+      ],
+    },
+  ],
 };
 
 export default sidebars;
