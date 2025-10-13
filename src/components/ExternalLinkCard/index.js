@@ -139,6 +139,16 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
+      title: 'FaceStation 2',
+      url: `/device/facestation_2`,
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/facestation2.png',
+      desc: `${translate({
+        id: "externalLinks.FaceStation2.desc",
+        message: "얼굴 인증 출입근태 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
       title: 'BioEntry W2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
