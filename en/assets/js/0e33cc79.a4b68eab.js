@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-install-communication-server-mdx-0e3.json
-var site_docs_platform_biostar_x_install_communication_server_mdx_0e3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/install-communication-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/install-communication-server","permalink":"/docs/platform/biostar_x/install-communication-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/install-communication-server.mdx","tags":[],"version":"current","frontMatter":{"id":"install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","keywords":["커뮤니케이션 서버","설치하기"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"업그레이드하기","permalink":"/docs/platform/biostar_x/migration-x"},"next":{"title":"로그인하기","permalink":"/docs/platform/biostar_x/login"}}')
+var site_docs_platform_biostar_x_install_communication_server_mdx_0e3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","source":"@site/docs/platform/biostar_x/install-communication-server.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/install-communication-server","permalink":"/docs/en/platform/biostar_x/install-communication-server","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/install-communication-server.mdx","tags":[],"version":"current","frontMatter":{"id":"install-communication-server","title":"커뮤니케이션 서버 설치하기","description":"커뮤니케이션 서버 설치 과정을 안내합니다.","keywords":["커뮤니케이션 서버","설치하기"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"업그레이드하기","permalink":"/docs/en/platform/biostar_x/migration-x"},"next":{"title":"How to Log in","permalink":"/docs/en/platform/biostar_x/login"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'커뮤니케이션 서버',
 		'설치하기'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -411,6 +411,13 @@ function _createMdxContent(props) {
             children: ["커뮤니케이션 서버를 삭제하려면 목록에서 삭제할 서버의 체크박스를 클릭하고 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
               children: "Delete Commnunication Server"
             }), " 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커뮤니케이션 서버를 추가했을 때 메인 서버의 부하를 줄이기 위해 커뮤니케이션 서버와 연동할 보조 데이터베이스를 추가할 수 있습니다. 보조 데이터베이스 추가에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "add-sub-db",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
