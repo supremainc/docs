@@ -1,11 +1,11 @@
 ---
 id: settings-server-server
 title: 서버 상세 설정하기
-description: BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 안내합니다.
+description: BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 얼굴 이미지 저장에 대한 설정을 안내합니다.
 keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스템 로그]
 ---
 
-**BioStar X** 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 비주얼 페이스 이미지 저장에 대한 설정을 변경할 수 있습니다.
+**BioStar X** 서버의 기본 정보, 사용자 및 장치 관리, 서버 매칭, 시스템 로그 단계, 얼굴 이미지 저장에 대한 설정을 변경할 수 있습니다.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -19,7 +19,7 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 
     * <Cmd sid='setting.server.logLevelManagement' product='2' />: 시스템 로그 단계 설정을 변경할 수 있습니다.
 
-    * <Cmd sid='settings.expertSettings.title' product='2' />: 비주얼 페이스에 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다.
+    * <Cmd sid='settings.expertSettings.title' product='2' />: 얼굴의 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다.
 
 1. 설정을 저장하려면 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
@@ -126,10 +126,6 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 
 * XPass D2 펌웨어 1.0.0 이상
 
-* XPass 펌웨어 2.4.0 이상
-
-* XPass S2 펌웨어 2.4.0 이상
-
 * X-Station 2 펌웨어 1.0.0 이상
 
 * BioStation 3 펌웨어 1.0.0 이상
@@ -138,9 +134,7 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 
 :::info
 
-* <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />를 선택하면 BioLite Net, BioEntry Plus, BioEntry W 모델에서는 사용할 수 없습니다. 또한, XPass와 XPass S2 모델에 저장된 사용자가 모두 삭제되고, 네트워크를 제외한 모든 설정이 초기화됩니다.
-
-* <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />에서 <Cmd sid="setting.userDevice.useridType.numeric" product='2' />로 변경하면 **BioStar X**에 등록한 모든 사용자 정보를 삭제해야 합니다.
+<Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />에서 <Cmd sid="setting.userDevice.useridType.numeric" product='2' />로 변경하면 **BioStar X**에 등록한 모든 사용자 정보를 삭제해야 합니다.
 
 :::
 
@@ -323,7 +317,7 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 시스템 로그는 미리 지정된 카테고리에 따라 관리하며 로그의 레벨은 <Cmd sid="setting.server.logLevel.trace" product='2' />, <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, <Cmd sid="setting.server.logLevel.error" product='2' />로 구분합니다. 상위 레벨은 하위 레벨의 로그를 모두 포함합니다. 예를 들어, 시스템 로그 단계를 <Cmd sid="setting.server.logLevel.trace" product='2' />으로 선택하면, 하위 레벨인 <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, <Cmd sid="setting.server.logLevel.error" product='2' /> 로그를 모두 포함하여 저장합니다.
 
 
-## 비주얼 페이스 이미지 저장하기 {#storevisualfaceimage}
+## 얼굴 이미지 저장하기 {#storevisualfaceimage}
 
 얼굴을 크리덴셜로 등록할 때 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다.
 
@@ -343,7 +337,7 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 
 1. <Cmd sid="settings.expertSettings.detail.title" product='2' /> 화면으로 진입하면 <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> 옵션을 설정하세요.
 
-    <Image src='/img/biostarx-settings-server-expert2.png' className='none' />
+    <Image src='/img/biostarx-settings-server-expert2.png' />
 
     * <Cmd sid="common.use" product='2' />: 기본값입니다. 얼굴 크리덴셜의 실제 이미지와 템플릿을 모두 저장합니다.
 
@@ -355,10 +349,10 @@ keywords: [서버 설정, 사용자 관리, 장치 관리, 서버 매칭, 시스
 
 **<Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> 옵션 비활성화 시 주의 사항**
 
-* 이 기능을 비활성화할 경우 저장된 비주얼 페이스의 이미지가 모두 삭제되며, 앞으로 등록되는 비주얼 페이스도 이미지를 제외한 템플릿만을 저장합니다.
+* 이 기능을 비활성화할 경우 저장된 얼굴 이미지가 모두 삭제되며, 앞으로 등록되는 얼굴 이미지도 이미지를 제외한 템플릿만을 저장합니다.
 
-* 등록된 비주얼 페이스가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. <Cmd sid='team.menu.faceMigration' /> 기능에 대한 자세한 내용은 [다음 문서](migration-face)를 참고하세요.
+* 등록된 얼굴 이미지가 두 가지 타입의 템플릿을 가지고 있지 않은 경우 이 기능을 비활성화할 수 없습니다. <Cmd sid='team.menu.faceMigration' /> 기능에 대한 자세한 내용은 [다음 문서](migration-face)를 참고하세요.
 
-* 이 기능을 비활성화한 후 <Cmd sid="menu.dataImport" product='2' /> 시 유효하지 않은 비주얼 페이스 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요.
+* 이 기능을 비활성화한 후 <Cmd sid="menu.dataImport" product='2' /> 시 유효하지 않은 얼굴 이미지 템플릿이 포함되어 있는 경우 데이터 파일을 가져올 수 없습니다. 문제를 해결하려면 이 기능을 일시적으로 활성화한 후 데이터 파일을 가져오세요.
 
 :::
