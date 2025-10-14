@@ -71,6 +71,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    code: "code",
     h2: "h2",
     h3: "h3",
     li: "li",
@@ -258,7 +259,9 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.remoteAccess.field.hostURL"
-              }), ": 엔드포인트 URL을 입력하세요."]
+              }), ": 엔드포인트 URL을 입력하세요. URL은 ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "your-name.bsx.ngrok.app"
+              }), " 형식입니다."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsxs)(_components.p, {
