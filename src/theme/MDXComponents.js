@@ -113,6 +113,9 @@ import IcVidLog from '@site/static/img/menus/ico-vid-log.svg';
 import IcReportVid from '@site/static/img/menus/ico-report-vidlog.svg';
 import IcViewAlert from '@site/static/img/menus/ico-view-alert.svg';
 import IcRepoEdit from '@site/static/img/menus/ico-report-edit.svg';
+import IcZoom from '@site/static/img/menus/ico-zoom.svg';
+import IcFLockDr from '@site/static/img/menus/ico-floor-locked-door.svg';
+import IcFUlockDr from '@site/static/img/menus/ico-floor-unlock-door.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -185,5 +188,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr
 }
