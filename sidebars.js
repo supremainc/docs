@@ -550,6 +550,7 @@ const sidebars = {
                 'platform/biostar_x/settings-advanced-ac-interlock',
                 'platform/biostar_x/settings-advanced-ac-muster',
                 'platform/biostar_x/settings-advanced-ac-occupancy',
+                'platform/biostar_x/settings-advanced-ac-roll-call',
               ]
             },
             {

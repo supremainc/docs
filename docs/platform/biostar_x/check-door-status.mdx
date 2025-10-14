@@ -57,8 +57,7 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <IcErr width='35px' height='35px' /> | 커뮤니케이션 서버 오류이거나 연결이 끊긴 상태입니다. |
-| <IcNotsync width='35px' height='35px' /> | 동기화 오류가 발생한 상태입니다. |
+| <IcErr width='35px' height='35px' /> | 커뮤니케이션 서버 오류이거나 연결 끊김, 동기화 오류 상태입니다. |
 | <IcAlert width='40px' height='40px' /> | 출입문에서 알람이 발생한 상태입니다. 배회 감지, 침입 감지 등이 발생하면 해당 아이콘이 표시됩니다. |
 
 </div>
@@ -67,11 +66,29 @@ import Doortree from './door-tree.json';
 
 상태 아이콘을 클릭하면 툴팁을 통해서 상세 정보를 확인할 수 있습니다. 툴팁에 표시된 오류 메시지의 링크를 클릭하면 출입문 또는 엘리베이터와 연결된 장치 목록으로 이동할 수 있습니다.
 
-<Image src='/img/monitoring-door-status-tooltip.png' alt='툴팁 메시지'/>
+<Image src='/img/monitoring-door-status-tooltip.png' />
 
 해당 장치에서 마우스 오른쪽 버튼을 클릭하고, <Cmd sid='arena.tree.contextMenu.reconnect' /> 또는 <Cmd sid='arena.tree.contextMenu.reboot' /> 옵션을 선택하세요.
 
-<Image src='/img/monitoring-door-status-tooltip-device.png' alt='장치 목록' />
+<Image src='/img/monitoring-door-status-tooltip-device.png' />
+
+:::
+
+:::info
+
+* 출입문 또는 엘리베이터에서 발생하는 알람은 다음 설정을 통해 구성할 수 있습니다.
+
+  * [출입문 알람 설정](settings-door-add#alarm)
+
+  * [엘리베이터 알람 설정](settings-elevators-add#alarm)
+
+  * [고급 출입 통제 설정](settings-advanced-ac)
+
+* VMS 서버와 연동 시 영상에 대한 AI 이벤트 알람을 설정하면 **BioStar X**로 알람을 전송할 수도 있습니다. 자세한 내용은 VMS 서버의 매뉴얼을 참고하세요.
+
+* 알람 해제에 대한 자세한 내용은 [다음 문서](monitoring-event#acknowledge-alarm-and-record-action)를 참고하세요.
+
+* 커뮤니케이션 서버 오류, 연결 끊김, 동기화 오류가 발생한다면 **BioStar X Service Manager**를 통해 연결 상태를 확인할 수 있습니다. <Start/> → **BioStar X** → **BioStar X Service Manager** → <Cmd>COMMUNICATION SERVERS</Cmd> 메뉴를 클릭하세요. 커뮤니케이션 서버 목록에서 각 서버의 <Cmd>Server Status</Cmd> 열이 <Cmd>Connected</Cmd> 상태인지 확인하세요. 자세한 내용은 [다음 문서](install-communication-server#check-after-install)를 참고하세요.
 
 :::
 
@@ -132,8 +149,8 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <StatusNormal width='auto' height='35px'/> | 엘리베이터 잠금 해제 상태입니다. |
-| <StatusOK width='auto' height='35px'/> | 엘리베이터 잠금 상태입니다. |
+| <StatusNormal width='auto' height='35px'/> | 엘리베이터 잠금 상태입니다. |
+| <StatusOK width='auto' height='35px'/> | 엘리베이터 잠금 해제 상태입니다. |
 
 </div>
 
