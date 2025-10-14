@@ -119,9 +119,9 @@ FLUSH PRIVILEGES;
 ```
 
 ```sql title='Example'
-CREATE USER 'biostar2_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
+CREATE USER 'biostarx_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
 
-GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostar2_ac_user'@'192.168.12.42';
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.42';
 FLUSH PRIVILEGES;
 ```
 
@@ -140,9 +140,9 @@ FLUSH PRIVILEGES;
 ```
 
 ```sql title='Example'
-CREATE USER 'biostar2_ac_user'@'192.168.12.161' IDENTIFIED BY 'password';
+CREATE USER 'biostarx_ac_user'@'192.168.12.161' IDENTIFIED BY 'password';
 
-GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostar2_ac_user'@'192.168.12.161';
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.161';
 FLUSH PRIVILEGES;
 ```
 
@@ -190,9 +190,9 @@ ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABA
 ```
 
 ```sql title='Example'
-CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostar2_ac_user', PASSWORD 'password');
+CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_user', PASSWORD 'password');
   
-ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostar2_ac_usermt__fttid__', PASSWORD 'password');
+ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_usermt__fttid__', PASSWORD 'password');
 ```
 
 </Step>
