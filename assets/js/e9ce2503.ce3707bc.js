@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3453"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5834"], {
 2377: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-remote-access-mdx-e9c.json
-var site_docs_platform_biostar_x_settings_remote_access_mdx_e9c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-remote-access","title":"리모트 액세스 설정하기","description":"ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-remote-access","permalink":"/docs/en/platform/biostar_x/settings-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-remote-access","title":"리모트 액세스 설정하기","description":"ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.","keywords":["리모트","액세스","ngrok"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Directory Integration Settings","permalink":"/docs/en/platform/biostar_x/settings-diretory-integration"},"next":{"title":"플러그인","permalink":"/docs/en/platform/biostar_x/plugins"}}')
+var site_docs_platform_biostar_x_settings_remote_access_mdx_e9c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-remote-access","title":"리모트 액세스 설정하기","description":"ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-remote-access","permalink":"/docs/platform/biostar_x/settings-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-remote-access","title":"리모트 액세스 설정하기","description":"ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.","keywords":["리모트","액세스","ngrok"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"디렉토리 연동 설정하기","permalink":"/docs/platform/biostar_x/settings-diretory-integration"},"next":{"title":"플러그인","permalink":"/docs/platform/biostar_x/plugins"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'액세스',
 		'ngrok'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -218,7 +218,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.remoteAccess.root"
-              }), "을 클릭하세요."]
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -227,7 +227,7 @@ function _createMdxContent(props) {
               }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.remoteAccess.root"
               }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "common.user"
+                sid: "common.use"
               }), "으로 변경하세요."]
             }), "\n"]
           }), "\n"]
