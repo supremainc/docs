@@ -263,6 +263,13 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["카메라 규칙 설정에서 한 개 이상의 카메라를 연결했다면 첫 번째 카메라의 영상을 재생합니다. 카메라 규칙 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-videos-rule",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "어드밴스"
             }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {

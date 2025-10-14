@@ -334,6 +334,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["카메라 규칙에서 알람을 설정할 수 있습니다. 카메라 규칙 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-videos-rule",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["VMS 서버와 연동 시 영상에 대한 AI 이벤트 알람을 설정하면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "로 알람을 전송할 수도 있습니다. 자세한 내용은 VMS 서버의 매뉴얼을 참고하세요."]

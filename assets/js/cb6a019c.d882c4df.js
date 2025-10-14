@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-diretory-integration-mdx-cb6.json
-var site_docs_platform_biostar_x_settings_diretory_integration_mdx_cb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 구성하기","permalink":"/docs/platform/biostar_x/settings-map-manage-area"},"next":{"title":"플러그인","permalink":"/docs/platform/biostar_x/plugins"}}')
+var site_docs_platform_biostar_x_settings_diretory_integration_mdx_cb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 구성하기","permalink":"/docs/platform/biostar_x/settings-map-manage-area"},"next":{"title":"리모트 액세스 설정하기","permalink":"/docs/platform/biostar_x/settings-remote-access"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -476,8 +476,7 @@ function settings_diretory_integration_createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.activeDirectory.menu",
-            product: "2"
+            sid: "setting.menu.directoryIntegration.root"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -717,8 +716,7 @@ function settings_diretory_integration_createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.activeDirectory.menu",
-          product: "2"
+          sid: "setting.menu.directoryIntegration.root"
         }), " 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "button.apply",
           product: "2"
@@ -750,8 +748,7 @@ function settings_diretory_integration_createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.activeDirectory.menu",
-            product: "2"
+            sid: "setting.menu.directoryIntegration.root"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -948,8 +945,7 @@ function settings_diretory_integration_createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "setting.activeDirectory.menu",
-          product: "2"
+          sid: "setting.menu.directoryIntegration.root"
         }), " 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "button.apply",
           product: "2"
@@ -1001,8 +997,7 @@ function settings_diretory_integration_createMdxContent(props) {
       children: "디렉토리 연동 제외하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "setting.activeDirectory.menu",
-        product: "2"
+        sid: "setting.menu.directoryIntegration.root"
       }), " 기능을 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Entra ID"
       }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -1053,8 +1048,7 @@ function settings_diretory_integration_createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["선택한 사용자는 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "setting.activeDirectory.menu",
-        product: "2"
+        sid: "setting.menu.directoryIntegration.root"
       }), " 기능을 사용할 때 연동에서 제외됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "disableIntegration",
@@ -1077,8 +1071,7 @@ function settings_diretory_integration_createMdxContent(props) {
             sid: "common.setting",
             product: "2"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.activeDirectory.menu",
-            product: "2"
+            sid: "setting.menu.directoryIntegration.root"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
