@@ -67,11 +67,11 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 <Image src='/img/common/biostarx-sm-cws.png' alone />
 
-* <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트
+* <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트 (기본값: 5002)
 
-* <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트
+* <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트 (기본값: 9310)
 
-* <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트
+* <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트 (기본값: 52000)
 
 ### BioStar X Core Service {#biostar-x-core-service}
 
@@ -79,13 +79,13 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 <Image src='/img/common/biostarx-sm-core-s.png' alone />
 
-* <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트
+* <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트 (기본값: 9002)
 
-* <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트
+* <Cmd>API Port</Cmd>: REST API 통신 포트 (기본값: 9010)
 
-* <Cmd>API Port</Cmd>: REST API 통신 포트
+* <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트 (기본값: 9000)
 
-* <Cmd>Rpc Port</Cmd>: 원격 프로시저 호출(RPC) 통신 포트
+* <Cmd>Rpc Port</Cmd>: 원격 프로시저 호출(RPC) 통신 포트 (기본값: 51218)
 
 ### Unified Gateway Service {#unified-gateway-service}
 
@@ -93,7 +93,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 <Image src='/img/common/biostarx-sm-ugs.png' alone />
 
-* <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트
+* <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트 (기본값: 443)
 
 ### BioStar X Coordinator Service {#biostar-x-coordinator-service}
 
@@ -101,7 +101,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 <Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
 
-* <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트
+* <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트 (기본값: 21810)
 
 ### BioStar X Server (Main) {#biostar-x-server-(main)}
 
@@ -111,11 +111,11 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>Server Address</Cmd>: 메인 서버의 IP 주소
 
-* <Cmd>SSL Server Port</Cmd>: SSL 보안 암호화 통신 포트
+* <Cmd>Server Port</Cmd>: 일반 서버 통신 포트 (기본값: 51212)
 
-* <Cmd>Server Port</Cmd>: 일반 서버 통신 포트
+* <Cmd>SSL Server Port</Cmd>: SSL 보안 암호화 통신 포트 (기본값: 51213)
 
-* <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트
+* <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트 (기본값: 51219)
 
 ### BioStar X Cache Service {#biostar-x-cache-service}
 
@@ -123,11 +123,11 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 <Image src='/img/common/biostarx-sm-cache-s.png' alone />
 
-* <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트
+* <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트 (기본값: 10800)
 
-* <Cmd>Discovery Port</Cmd>: 분산 캐시 노드 자동 발견을 위한 포트
+* <Cmd>Communication Port</Cmd>: 캐시 노드 간 내부 통신 포트 (기본값: 47500)
 
-* <Cmd>Communication Port</Cmd>: 캐시 노드 간 내부 통신 포트
+* <Cmd>Discovery Port</Cmd>: 분산 캐시 노드 자동 발견을 위한 포트 (기본값: 47100)
 
 <NextStep>
 <NextItem to='change-port'>

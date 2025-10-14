@@ -5,7 +5,7 @@ description: 커뮤니케이션 서버 설치 과정을 안내합니다.
 keywords: [커뮤니케이션 서버, 설치하기]
 ---
 
-이 문서에서는 **BioStar X**의 **커뮤니케이션(Communication) 서버**를 설치하는 방법을 안내합니다. 
+이 문서에서는 **BioStar X**의 **커뮤니케이션(Communications) 서버** 설치 방법을 안내합니다. 
 
 커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다.
 
@@ -31,13 +31,15 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
 아래에 커뮤니케이션 서버 설치 시 입력해야 하는 정보가 나와 있습니다. 각 항목을 확인하고 준비하세요.
 
+<Image src='/img/biostarx-cumm-server-matching.png' />
+
 <div className='table-fixed'>
 
 | BioStar X Service Manager | 커뮤니케이션 서버 설치 시 입력 정보 |
 | -- | -- |
+| <Cmd>BioStar X Core Service</Cmd> → <Cmd>RPC Port</Cmd> | **BioStar X Server gRPC Port for Communication** |
 | <Cmd>BioStar X Coordinator Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Coordinator Service Port for Communication** |
 | <Cmd>BioStar X Cache Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Cache Service Client for Communication** |
-| <Cmd>BioStar X Server (Main)</Cmd> → <Cmd>gRPC Server Port</Cmd> | **BioStar X Server gRPC Port for Communication** |
 
 </div>
 
@@ -94,7 +96,7 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
     <Image src='/img/biostarx-install-comm-server-install-step.png' />
 
-1. 설치 완료 메시지를 확인하고 <Cmd code='biostar2.install.finish' className='bold'/> 버튼을 클릭하세요.
+1. 설치 완료 메시지를 확인하고 <Cmd code='biostar2.install.complete' className='bold'/> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-install-comm-server-complete.png' />
 
@@ -109,7 +111,7 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
 1. <Cmd>BioStar X Service Manager</Cmd> 창이 나타납니다.
 
-1. 화면 왼쪽 사이드바에서 <Cmd>COMMUNICATION SERVERS</Cmd> 메뉴를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd>COMMUNICATIONS</Cmd> 메뉴를 클릭하세요.
 
     <Image src='/img/common/biostarx-sm-cluster-main-01.png' alone />
 
@@ -127,7 +129,7 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
 :::info
 
-* <Cmd>COMMUNICATION SERVERS</Cmd> 메뉴는 멀티 커뮤니케이션 서버 라이선스를 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+* <Cmd>COMMUNICATIONS</Cmd> 메뉴는 멀티 커뮤니케이션 서버 라이선스를 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 * 커뮤니케이션 서버를 삭제하려면 목록에서 삭제할 서버의 체크박스를 클릭하고 화면 오른쪽 상단의 <Cmd>Delete Commnunication Server</Cmd> 버튼을 클릭하세요.
 
