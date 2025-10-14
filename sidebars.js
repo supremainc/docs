@@ -814,9 +814,25 @@ const sidebars = {
         'device/bioentry_w3/installation',
         'device/bioentry_w3/product-specifications',
         'device/bioentry_w3/regulatory-information',
-        'device/bioentry_w3/appendices'
-      ]
-    }
+        'device/bioentry_w3/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_w3/release-notes/index',
+          },
+          items: [
+            'device/bioentry_w3/release-notes/101',
+            'device/bioentry_w3/release-notes/100',
+          ]
+        },
+      ],
+    },
   ],
   biostation3: [
     {
@@ -858,7 +874,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Release Notes',
+          label: '릴리스 노트',
           link: {
             type: 'doc',
             id: 'device/biostation_3/release-notes/index',
