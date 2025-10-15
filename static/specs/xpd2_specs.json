@@ -7,8 +7,7 @@
         "rfcard": {
           "label": "RF 카드",
           "label_id": "specs.credentials.rfcard",
-          "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-          "annotation_value": "anno1"
+          "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa"
         },
         "rf_distance": {
           "label": "RF 인식 거리",
