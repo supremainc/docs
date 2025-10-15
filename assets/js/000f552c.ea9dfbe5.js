@@ -108,10 +108,6 @@ function _createMdxContent(props) {
           children: "출입문과 연결된 카메라를 통해 실시간으로 출입 상황을 모니터링할 수 있습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "출입문을 잠금 상태로 유지함으로써 허가된 사용자만 출입할 수 있도록 보안을 강화할 수 있습니다."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.a, {
             href: "../../reference/glossary#apb",

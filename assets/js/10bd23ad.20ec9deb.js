@@ -300,7 +300,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["사용자 데이터를 가져올 때 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " 서버에 등록한 크리덴셜 데이터가 이미 존재할 경우 기존 데이터에 덮어씌워집니다."]
+            }), " 서버에 등록한 지문과 얼굴 크리덴셜이 이미 존재할 경우 기존 데이터에 덮어씌워집니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-videos-rule-mdx-170.json
-var site_docs_platform_biostar_x_settings_videos_rule_mdx_170_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-videos-rule","title":"카메라 규칙 설정하기","description":"BioStar X에서 VMS와 연동하여 카메라 규칙을 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-videos-rule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-videos-rule","permalink":"/docs/en/platform/biostar_x/settings-videos-rule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-videos-rule.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-videos-rule","title":"카메라 규칙 설정하기","description":"BioStar X에서 VMS와 연동하여 카메라 규칙을 설정하는 방법을 안내합니다.","keywords":["카메라","규칙","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"카메라 설정하기","permalink":"/docs/en/platform/biostar_x/settings-videos-camera"},"next":{"title":"Manage Map","permalink":"/docs/en/platform/biostar_x/settings-map-management"}}')
+var site_docs_platform_biostar_x_settings_videos_rule_mdx_170_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-videos-rule","title":"비디오 규칙 설정하기","description":"BioStar X에서 VMS와 연동하여 비디오 규칙을 설정하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-videos-rule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-videos-rule","permalink":"/docs/platform/biostar_x/settings-videos-rule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-videos-rule.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-videos-rule","title":"비디오 규칙 설정하기","description":"BioStar X에서 VMS와 연동하여 비디오 규칙을 설정하는 방법을 안내합니다.","keywords":["카메라","규칙","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"카메라 설정하기","permalink":"/docs/platform/biostar_x/settings-videos-camera"},"next":{"title":"맵 관리하기","permalink":"/docs/platform/biostar_x/settings-map-management"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,14 +25,14 @@ var lib = __webpack_require__(84429);
 
 const frontMatter = {
 	id: 'settings-videos-rule',
-	title: '카메라 규칙 설정하기',
-	description: 'BioStar X에서 VMS와 연동하여 카메라 규칙을 설정하는 방법을 안내합니다.',
+	title: '비디오 규칙 설정하기',
+	description: 'BioStar X에서 VMS와 연동하여 비디오 규칙을 설정하는 방법을 안내합니다.',
 	keywords: [
 		'카메라',
 		'규칙',
 		'설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -95,7 +95,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "규칙은 카메라와 출입문에서 발생하는 이벤트를 조합해 VMS 서버에 이벤트와 북마크 형식으로 전송하기 위한 설정입니다. 적절한 카메라 규칙 설정을 통해 다음과 같은 보안 관리 기능을 활용할 수 있습니다."
+      children: "규칙은 카메라와 출입문에서 발생하는 이벤트를 조합해 VMS 서버에 이벤트와 북마크 형식으로 전송하기 위한 설정입니다. 적절한 비디오 규칙 설정을 통해 다음과 같은 보안 관리 기능을 활용할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -119,7 +119,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["카메라 규칙 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["비디오 규칙 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "어드밴스"
         }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing#features-add-ons",

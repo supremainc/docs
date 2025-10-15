@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-check-door-status-mdx-761.json
-var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 상태 확인하기","description":"BioStar X에서 출입문과 연결된 장치의 상태를 실시간으로 모니터링하고 문제 발생 시 해결하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 상태 확인하기","description":"BioStar X에서 출입문과 연결된 장치의 상태를 실시간으로 모니터링하고 문제 발생 시 해결하는 방법을 안내합니다.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-door"},"next":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"}}')
+var site_docs_platform_biostar_x_check_door_status_mdx_761_namespaceObject = JSON.parse('{"id":"platform/biostar_x/check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.","source":"@site/docs/platform/biostar_x/check-door-status.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/check-door-status","permalink":"/docs/platform/biostar_x/check-door-status","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/check-door-status.mdx","tags":[],"version":"current","frontMatter":{"id":"check-door-status","title":"출입문 상태 확인하기","description":"출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.","keywords":["모니터링","출입문"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-door"},"next":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -28,7 +28,7 @@ var door_tree_namespaceObject = JSON.parse('[{"name":"모든 출입문 그룹","
 const frontMatter = {
 	id: 'check-door-status',
 	title: '출입문 상태 확인하기',
-	description: 'BioStar X에서 출입문과 연결된 장치의 상태를 실시간으로 모니터링하고 문제 발생 시 해결하는 방법을 안내합니다.',
+	description: '출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.',
 	keywords: [
 		'모니터링',
 		'출입문'
@@ -108,7 +108,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcAlert, IcArm, IcCamFail, IcCamOk, IcDisable, IcDisarm, IcErr, IcRelayLock, IcRelayUnlock, Image, Start, StatusNormal, StatusOK, Treeview} = _components;
+  }, {Cmd, IcAlert, IcArm, IcCamFail, IcCamOk, IcDisable, IcDisarm, IcErr, IcRelayLock, IcRelayUnlock, Image, StatusNormal, StatusOK, Treeview} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAlert) _missingMdxReference("IcAlert", true);
   if (!IcArm) _missingMdxReference("IcArm", true);
@@ -120,15 +120,14 @@ function _createMdxContent(props) {
   if (!IcRelayLock) _missingMdxReference("IcRelayLock", true);
   if (!IcRelayUnlock) _missingMdxReference("IcRelayUnlock", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!Start) _missingMdxReference("Start", true);
   if (!StatusNormal) _missingMdxReference("StatusNormal", true);
   if (!StatusOK) _missingMdxReference("StatusOK", true);
   if (!Treeview) _missingMdxReference("Treeview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입문과 연결된 장치의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
-      }), "에서 제공하는 상태 아이콘을 통해 장치 연결 상태, 출입문 잠금 상태, 카메라 작동 상태 등을 한눈에 확인하고, 문제 발생 시 즉시 대응하세요."]
+      }), "에서 제공하는 상태 아이콘을 통해 출입문에 할당된 장치의 이상 상태를 한눈에 확인하고, 문제 발생 시 즉시 대응하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
@@ -138,7 +137,7 @@ function _createMdxContent(props) {
         sid: "shell.header.arena"
       }), "을 선택하세요. 화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.door.title"
-      }), " 탭에서 각 출입문과 연결된 슬레이브 장치의 상태를 확인할 수 있습니다."]
+      }), " 탭에서 각 출입문의 상태를 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "시작하기-전에",
       children: "시작하기 전에"
@@ -270,7 +269,7 @@ function _createMdxContent(props) {
                 height: "35px"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "커뮤니케이션 서버 오류이거나 연결 끊김, 동기화 오류 상태입니다."
+              children: "장치 연결 끊김, 커뮤니케이션 서버 오류, 동기화 오류 등 장치 이상 상태를 표시합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -282,7 +281,7 @@ function _createMdxContent(props) {
                 height: "40px"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문에서 알람이 발생한 상태입니다. 배회 감지, 침입 감지 등이 발생하면 해당 아이콘이 표시됩니다."
+              children: "출입문 알람(강제 문열림, 장시간 문열림, APB, 화재 알람, 비상 개방) 또는 AI 영상 분석 알람(배회 감지, 침입 감지 등)이 발생한 상태를 표시합니다."
             })]
           })]
         })]
@@ -334,7 +333,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["카메라 규칙에서 알람을 설정할 수 있습니다. 카메라 규칙 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["비디오 규칙에서 출입문과 카메라를 연결하여 알람을 설정할 수 있습니다. 비디오 규칙 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-videos-rule",
               children: "다음 문서"
             }), "를 참고하세요."]
@@ -349,25 +348,6 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["알람 해제에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "monitoring-event#acknowledge-alarm-and-record-action",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["커뮤니케이션 서버 오류, 연결 끊김, 동기화 오류가 발생한다면 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X Service Manager"
-            }), "를 통해 연결 상태를 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X Service Manager"
-            }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "COMMUNICATION SERVERS"
-            }), " 메뉴를 클릭하세요. 커뮤니케이션 서버 목록에서 각 서버의 ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "Server Status"
-            }), " 열이 ", (0,jsx_runtime.jsx)(Cmd, {
-              children: "Connected"
-            }), " 상태인지 확인하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "install-communication-server#check-after-install",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
@@ -403,7 +383,7 @@ function _createMdxContent(props) {
                 height: "35px"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "출입문이 닫힌 상태입니다."
+              children: "출입문이 잠긴 상태입니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -540,7 +520,7 @@ function _createMdxContent(props) {
       id: "엘리베이터-상태-확인",
       children: "엘리베이터 상태 확인"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "엘리베이터의 잠금 상태를 확인할 수 있습니다."
+      children: "엘리베이터를 통한 층 접근 제어 상태를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "col2--20-80 overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -566,7 +546,7 @@ function _createMdxContent(props) {
                 height: "35px"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "엘리베이터 잠금 상태입니다."
+              children: "엘리베이터를 통해 해당 층에 접근할 수 없는 상태(잠김)입니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -578,7 +558,7 @@ function _createMdxContent(props) {
                 height: "35px"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "엘리베이터 잠금 해제 상태입니다."
+              children: "엘리베이터를 통해 해당 층에 접근할 수 있는 상태(해제)입니다."
             })]
           })]
         })]

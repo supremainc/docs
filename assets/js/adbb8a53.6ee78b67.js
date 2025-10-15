@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-door-slave-device-mdx-adb.json
-var site_docs_platform_biostar_x_control_door_slave_device_mdx_adb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-door-slave-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door-slave-device","permalink":"/docs/platform/biostar_x/control-door-slave-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door-slave-device.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문","슬레이브 장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"},"next":{"title":"엘리베이터 제어하기","permalink":"/docs/platform/biostar_x/control-elevator"}}')
+var site_docs_platform_biostar_x_control_door_slave_device_mdx_adb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 장치를 제어하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/control-door-slave-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-door-slave-device","permalink":"/docs/platform/biostar_x/control-door-slave-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-door-slave-device.mdx","tags":[],"version":"current","frontMatter":{"id":"control-door-slave-device","title":"슬레이브 장치 제어하기","description":"출입문과 연결된 장치를 제어하는 방법을 안내합니다.","keywords":["모니터링","출입문","슬레이브 장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입문 제어하기","permalink":"/docs/platform/biostar_x/control-door"},"next":{"title":"엘리베이터 제어하기","permalink":"/docs/platform/biostar_x/control-elevator"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'control-door-slave-device',
 	title: '슬레이브 장치 제어하기',
-	description: '출입문과 연결된 슬레이브 장치를 제어하는 방법을 안내합니다.',
+	description: '출입문과 연결된 장치를 제어하는 방법을 안내합니다.',
 	keywords: [
 		'모니터링',
 		'출입문',
@@ -96,7 +96,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "출입문과 연결된 슬레이브 장치를 손쉽게 제어할 수 있도록 이 문서에서는 장치별 제어 방법을 안내합니다. 출입문 릴레이를 통한 잠금/해제, 카메라 영상 및 상세 정보 확인, 그리고 경비 상태 조작 등 다양한 기능을 사용할 수 있습니다."
+      children: "출입문과 연결된 장치를 손쉽게 제어할 수 있도록 이 문서에서는 장치별 제어 방법을 안내합니다. 출입문 릴레이를 통한 잠금/해제, 카메라 영상 및 상세 정보 확인, 그리고 경비 상태 조작 등 다양한 기능을 사용할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -116,7 +116,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "하위 목록에서 연결된 슬레이브 장치를 선택하고, 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."
+          children: "하위 목록에서 연결된 장치를 선택하고, 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {

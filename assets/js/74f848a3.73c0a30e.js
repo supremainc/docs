@@ -537,12 +537,12 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "GIS 맵"
+                children: "GIS 지도"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "GIS 맵을 이용해 구역(Area) 및 시설(Facility), 층(Floor)을 설정할 수 있습니다."
+              children: "GIS 지도를 이용해 구역(Area) 및 시설(Facility), 층(Floor)을 설정할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {

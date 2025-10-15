@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-map-mdx-7e7.json
-var site_docs_platform_biostar_x_monitoring_map_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","source":"@site/docs/platform/biostar_x/monitoring-map.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-map","permalink":"/docs/platform/biostar_x/monitoring-map","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-map.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","keywords":["모니터링","맵","구역","층"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 제어하기","permalink":"/docs/platform/biostar_x/control-zone"},"next":{"title":"장치 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-device"}}')
+var site_docs_platform_biostar_x_monitoring_map_mdx_7e7_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. GIS 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","source":"@site/docs/platform/biostar_x/monitoring-map.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-map","permalink":"/docs/platform/biostar_x/monitoring-map","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-map.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-map","title":"맵 모니터링하기","description":"맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. GIS 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.","keywords":["모니터링","맵","구역","층"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"고급 출입 통제 제어하기","permalink":"/docs/platform/biostar_x/control-zone"},"next":{"title":"장치 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'monitoring-map',
 	title: '맵 모니터링하기',
-	description: '맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. 구글 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.',
+	description: '맵 모니터링 기능을 통해 구역과 층별 출입문 및 카메라 현황을 실시간으로 확인하고 제어하는 방법을 안내합니다. GIS 지도와 연동하여 구역 및 층 구조를 시각적으로 관리하며, 출입문 제어와 카메라 영상 재생 등 다양한 기능을 활용할 수 있습니다.',
 	keywords: [
 		'모니터링',
 		'맵',
@@ -140,7 +140,7 @@ function _createMdxContent(props) {
         height: "1771"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["그림과 같이 구성한 지역을 GIS 맵과 연동하여 지도 위의 구역(Area) → 시설(Facility) → 층(Floor) 순으로 접근하여 출입문과 카메라를 모니터링하고 제어할 수 있습니다. 이러한 구조는 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["그림과 같이 구성한 지역을 GIS 지도와 연동하여 지도 위의 구역(Area) → 시설(Facility) → 층(Floor) 순으로 접근하여 출입문과 카메라를 모니터링하고 제어할 수 있습니다. 이러한 구조는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.title"
       }), " 페이지의 사이드바에서도 같은 구조로 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -458,7 +458,7 @@ function _createMdxContent(props) {
       id: "open-map",
       children: "맵 열기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["구역이 GIS 맵과 연동되어 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["구역이 GIS 지도와 연동되어 있다면, ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.title"
       }), " 섹션에 맵을 표시할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -497,7 +497,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["GIS 맵과 연동하여 구역을 구성하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["GIS 지도와 연동하여 구역을 구성하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-map-manage-area",
               children: "다음 문서"
             }), "를 참고하세요."]

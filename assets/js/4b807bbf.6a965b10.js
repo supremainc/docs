@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-lockoverride-mdx-4b8.json
-var site_docs_platform_biostar_x_lockoverride_mdx_4b8_namespaceObject = JSON.parse('{"id":"platform/biostar_x/lockoverride","title":"비상 개방 권한 설정하기","description":"특정 사용자가 비상 시 모든 출입문을 개방할 수 있도록 카드 크리덴셜에 비상 개방 권한을 부여하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/lockoverride.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/lockoverride","permalink":"/docs/en/platform/biostar_x/lockoverride","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/lockoverride.mdx","tags":[],"version":"current","frontMatter":{"id":"lockoverride","title":"비상 개방 권한 설정하기","description":"특정 사용자가 비상 시 모든 출입문을 개방할 수 있도록 카드 크리덴셜에 비상 개방 권한을 부여하는 방법을 안내합니다.","keywords":["비상","개방","출입"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Face Migration","permalink":"/docs/en/platform/biostar_x/migration-face"},"next":{"title":"Monitoring","permalink":"/docs/en/platform/biostar_x/how-to-guide-monitoring"}}')
+var site_docs_platform_biostar_x_lockoverride_mdx_4b8_namespaceObject = JSON.parse('{"id":"platform/biostar_x/lockoverride","title":"비상 개방 권한 설정하기","description":"특정 사용자가 비상 시 모든 출입문을 개방할 수 있도록 카드 크리덴셜에 비상 개방 권한을 부여하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/lockoverride.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/lockoverride","permalink":"/docs/platform/biostar_x/lockoverride","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/lockoverride.mdx","tags":[],"version":"current","frontMatter":{"id":"lockoverride","title":"비상 개방 권한 설정하기","description":"특정 사용자가 비상 시 모든 출입문을 개방할 수 있도록 카드 크리덴셜에 비상 개방 권한을 부여하는 방법을 안내합니다.","keywords":["비상","개방","출입"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"얼굴 마이그레이션","permalink":"/docs/platform/biostar_x/migration-face"},"next":{"title":"모니터링","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'개방',
 		'출입'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -67,7 +67,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "비상 상황에서 특정 사용자가 모든 출입문에 접근할 수 있도록 비상 개방 권한을 설정할 수 있습니다. 비상 개방 권한이 설정된 카드로 출입문을 개방하면, 해당 출입문은 일정 시간 동안 열린 상태를 유지하여 누구나 출입할 수 있습니다."
+      children: "비상 상황에서 특정 사용자가 모든 출입문에 접근할 수 있도록 비상 개방 권한을 설정할 수 있습니다. 비상 개방 권한이 설정된 카드로 출입문을 개방하면, 해당 출입문은 열린 상태를 유지하여 누구나 출입할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "시작하기-전에",
       children: "시작하기 전에"
@@ -119,7 +119,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 프리뷰 화면이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["사용자 상세 화면이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.user.credential.title"
           }), " 섹션으로 이동하세요."]
         }), "\n"]
@@ -148,7 +148,12 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "비상 개방 권한 설정을 완료합니다. 사용자는 비상 개방 권한이 설정된 출입 카드로 모든 출입문을 개방할 수 있습니다."
+      children: "비상 개방 권한 설정을 완료합니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "사용자는 비상 개방 권한이 설정된 출입 카드로 모든 출입문을 개방할 수 있습니다."
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {

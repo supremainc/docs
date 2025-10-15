@@ -69,11 +69,19 @@ function _createMdxContent(props) {
       }), "에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 되돌릴 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "settings-system-system-backup",
-          children: "다음 문서"
-        }), "를 참고하세요."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-system-system-backup",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "복원 작업을 진행할 때 복원 대상의 서버 IP 주소가 백업 받은 서버 IP 주소와 다를 경우 복원 작업이 실패할 수 있습니다. 복원 작업을 진행하기 전에 서버 IP 주소를 확인하세요."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",

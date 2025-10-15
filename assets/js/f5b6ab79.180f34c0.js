@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-control-zone-mdx-f5b.json
-var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"구역 제어하기","description":"구역을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 제어하기","permalink":"/docs/platform/biostar_x/control-elevator"},"next":{"title":"맵 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-map"}}')
+var site_docs_platform_biostar_x_control_zone_mdx_f5b_namespaceObject = JSON.parse('{"id":"platform/biostar_x/control-zone","title":"고급 출입 통제 제어하기","description":"고급 출입 통제을 제어하고 상세 정보를 확인하세요.","source":"@site/docs/platform/biostar_x/control-zone.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/control-zone","permalink":"/docs/platform/biostar_x/control-zone","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/control-zone.mdx","tags":[],"version":"current","frontMatter":{"id":"control-zone","title":"고급 출입 통제 제어하기","description":"고급 출입 통제을 제어하고 상세 정보를 확인하세요.","keywords":["모니터링","고급 출입 통제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"엘리베이터 제어하기","permalink":"/docs/platform/biostar_x/control-elevator"},"next":{"title":"맵 모니터링하기","permalink":"/docs/platform/biostar_x/monitoring-map"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,11 +25,11 @@ var lib = __webpack_require__(84429);
 
 const frontMatter = {
 	id: 'control-zone',
-	title: '구역 제어하기',
-	description: '구역을 제어하고 상세 정보를 확인하세요.',
+	title: '고급 출입 통제 제어하기',
+	description: '고급 출입 통제을 제어하고 상세 정보를 확인하세요.',
 	keywords: [
 		'모니터링',
-		'구역'
+		'고급 출입 통제'
 	],
 	isTranslationMissing: false
 };
@@ -50,7 +50,7 @@ const toc = [{
   "id": "alarm",
   "level": 2
 }, {
-  "value": "구역 활성화/비활성화",
+  "value": "고급 출입 통제 활성화/비활성화",
   "id": "zone-revitalizationdisabled",
   "level": 2
 }, {
@@ -92,7 +92,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "구역을 제어하는 방법을 안내합니다. 제공하는 기능을 통해 문제 발생 시 빠르게 대처할 수 있고, 구역을 효율적으로 관리할 수 있습니다."
+      children: "고급 출입 통제로 설정된 구역을 제어하는 방법을 안내합니다. 제공하는 기능을 통해 문제 발생 시 빠르게 대처할 수 있고, 구역을 효율적으로 관리할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -122,45 +122,45 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "구역의 종류에 따라 제공하는 기능이 다릅니다. 구역의 종류는 다음과 같습니다."
+        children: "고급 출입 통제의 종류에 따라 제공하는 기능이 다릅니다. 고급 출입 통제의 종류는 다음과 같습니다."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
               children: "안티패스백"
-            }), " 구역"]
+            })
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "화재 경보 구역"
+            children: "화재 경보"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "스케줄 잠금/개방 구역"
+            children: "스케줄 잠금/개방"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "경비 구역"
+            children: "경비"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "인터락 구역"
+            children: "인터락"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "소집 구역"
+            children: "소집"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "재실 인원 제한 구역"
+            children: "재실 인원 제한"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "인원 점검(Roll Call) 구역"
+            children: "인원 점검(Roll Call)"
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["각 구역에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["각 고급 출입 통제에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "settings-advanced-ac",
           children: "다음 문서"
         }), "를 참고하세요."]
@@ -187,9 +187,9 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["구역에 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "안티패스백"
-            }), "을 설정하는 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-advanced-ac-apb",
               children: "다음 문서"
             }), "를 참고하세요."]
@@ -209,7 +209,7 @@ function _createMdxContent(props) {
       id: "alarm",
       children: "알람 해제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["해당 구역에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["해당 고급 출입 통제 구역에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.clearAlarm"
       }), "를 클릭하세요. 화면 오른쪽 상단에 완료 메시지가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -221,9 +221,9 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "zone-revitalizationdisabled",
-      children: "구역 활성화/비활성화"
+      children: "고급 출입 통제 활성화/비활성화"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["구역을 활성화하거나 사용하지 않는 구역은 비활성화할 수 있습니다. 비활성화된 구역은 ", (0,jsx_runtime.jsx)(IcDisable, {
+      children: ["고급 출입 통제을 활성화하거나 사용하지 않는 고급 출입 통제 구역은 비활성화할 수 있습니다. 비활성화된 구역은 ", (0,jsx_runtime.jsx)(IcDisable, {
         width: "20px",
         height: "20px"
       }), " 아이콘이 표시됩니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -347,27 +347,27 @@ function _createMdxContent(props) {
       id: "detail-view",
       children: "상세 정보 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["구역에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["고급 출입 통제에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.tree.contextMenu.viewDetail"
       }), "를 클릭하세요. 화면 오른쪽에 구역 상세 정보와 이벤트 발생 이력이 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "구역 상세 정보"
-          }), ": 구역의 이름, 위치, 상태 정보 등을 확인할 수 있습니다."]
+            children: "고급 출입 통제 상세 정보"
+          }), ": 고급 출입 통제 구역의 이름, 위치, 상태 정보 등을 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "arena.recentEvent"
-          }), ": 선택한 구역에서 발생한 최근 이벤트 목록을 확인할 수 있습니다."]
+          }), ": 선택한 고급 출입 통제에서 발생한 최근 이벤트 목록을 확인할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["구역 상세 정보 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["고급 출입 통제 상세 정보 섹션의 각 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "settings-advanced-ac",
           children: "다음 문서"
         }), "를 참고하세요."]

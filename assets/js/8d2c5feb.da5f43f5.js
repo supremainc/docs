@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1105"], {
-50138: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["583"], {
+84618: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,30 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_management_mdx_261_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_monitoring_door_mdx_8d2_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-management-mdx-261.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_management_mdx_261_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-management","title":"Manage Map","description":"Guide how to set and manage floors, facilities, and areas.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-management.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-management","permalink":"/docs/en/platform/biostar_x/settings-map-management","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-management.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-management","title":"Manage Map","description":"Guide how to set and manage floors, facilities, and areas.","keywords":["Map","Floor","Facility","Zone"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"카메라 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/settings-videos-rule"},"next":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-monitoring-door-mdx-8d2.json
+var site_docs_platform_biostar_x_monitoring_door_mdx_8d2_namespaceObject = JSON.parse('{"id":"platform/biostar_x/monitoring-door","title":"출입문 모니터링하기","description":"출입문과 엘리베이터, 고급 출입 통제를 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/monitoring-door.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/monitoring-door","permalink":"/docs/platform/biostar_x/monitoring-door","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/monitoring-door.mdx","tags":[],"version":"current","frontMatter":{"id":"monitoring-door","title":"출입문 모니터링하기","description":"출입문과 엘리베이터, 고급 출입 통제를 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.","keywords":["모니터링","출입문","장치","엘리베이터","구역"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"모니터링","permalink":"/docs/platform/biostar_x/how-to-guide-monitoring"},"next":{"title":"출입문 상태 확인하기","permalink":"/docs/platform/biostar_x/check-door-status"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-management.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/monitoring-door.mdx
 
 
 const frontMatter = {
-	id: 'settings-map-management',
-	title: 'Manage Map',
-	description: 'Guide how to set and manage floors, facilities, and areas.',
+	id: 'monitoring-door',
+	title: '출입문 모니터링하기',
+	description: '출입문과 엘리베이터, 고급 출입 통제를 모니터링합니다. 관련한 기능들을 제어하고 실시간 영상을 통해 모니터링하는 방법을 안내합니다.',
 	keywords: [
-		'Map',
-		'Floor',
-		'Facility',
-		'Zone'
+		'모니터링',
+		'출입문',
+		'장치',
+		'엘리베이터',
+		'구역'
 	],
 	isTranslationMissing: false
 };
@@ -46,41 +47,15 @@ const assets = {
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
-    admonition: "admonition",
-    li: "li",
     p: "p",
-    strong: "strong",
-    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, DocCardList} = _components;
-  if (!Cmd) _missingMdxReference("Cmd", true);
+  }, {DocCardList} = _components;
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Map settings allow you to set and manage floors, facilities, and zones in conjunction with the map. Use this feature to view a map segmented by zones, facilities, and floors on the ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.arena"
-      }), " page."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information about map monitoring, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "monitoring-map",
-              children: "following"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The map settings and map monitoring features is only available with an ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Advanced"
-            }), " or higher license."]
-          }), "\n"]
-        }), "\n"]
-      })
-    })]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "출입문 모니터링은 보안 시스템의 핵심 기능 중 하나로, 출입문 상태를 실시간으로 확인하고 제어할 수 있습니다. 이 문서에서는 출입문과 엘리베이터, 고급 출입 통제를 모니터링하고 제어하는 방법을 안내합니다. 이를 통해 효율적인 보안 관리와 신속한 대응이 가능합니다."
+    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
 function MDXContent(props = {}) {

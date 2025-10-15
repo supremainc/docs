@@ -98,6 +98,10 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "얼굴 이미지 파일은 한 폴더에 모두 저장되어 있어야 합니다. 얼굴 이미지 파일의 이름은 사용자 아이디와 동일해야 합니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "지원하는 이미지 파일의 크기는 최대 10MB입니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -331,15 +335,19 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["모바일로 얼굴 등록 기능을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["모바일 얼굴 등록 기능을 사용하기 전에 SMTP 설정을 포함한 이메일 정보 설정을 완료하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-email-setting",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["모바일로 얼굴 등록 기능은 에어팝 포털과 연동해야 사용할 수 있습니다. 에어팝 포털 연동 및 모바일 출입 카드 사용에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-credential-mobile-access-card",
+          children: ["모바일 얼굴 등록 기능은 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.remoteAccess.root"
+          }), " 기능을 활성화해야 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.remoteAccess.root"
+          }), "에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-remote-access",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
@@ -395,7 +403,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "얼굴 등록 모바일 링크를 수신하는 사용자가 외부 이메일 애플리케이션을 사용한다면, 이메일 애플리케이션의 언어를 해당 국가의 언어로 설정해야 합니다. 언어에 따라 유니코드를 지원하지 않을 경우 이메일상에서 텍스트가 비정상적으로 출력될 수 있습니다."
+            children: "얼굴 등록 모바일 링크를 통해 접속하는 페이지에 표시되는 언어는 모바일 기기에서 사용하는 브라우저의 언어 설정을 따릅니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
