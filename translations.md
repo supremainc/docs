@@ -38,3 +38,5 @@ crowdin upload -b main
 주석 오류 찾기
 
 {/\*
+
+\\ 중복된 특수기호
