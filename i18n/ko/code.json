@@ -609,10 +609,16 @@
     "message": "USB 확장 포트"
   },
   "specs.interface.tamper": {
-    "message": "템퍼"
+    "message": "탬퍼"
   },
   "specs.interface.samSlot": {
     "message": "SAM 카드 슬롯"
+  },
+  "specs.interface.led": {
+    "message": "LED"
+  },
+  "specs.interface.beep": {
+    "message": "Beep"
   },
   "specs.power": {
     "message": "전기 규격"
@@ -629,11 +635,20 @@
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
   },
+  "specs.power.led_beep_input_vih": {
+    "message": "LED, Beep 입력 VIH"
+  },
   "specs.power.switch_input_vil": {
     "message": "스위치 입력 VIL"
   },
+  "specs.power.led_beep_input_vil": {
+    "message": "LED, Beep 입력 VIL"
+  },
   "specs.power.switch_pullup": {
     "message": "스위치 풀업 저항"
+  },
+  "specs.power.led_beep_pullup": {
+    "message": "LED, Beep 풀업 저항"
   },
   "specs.power.wiegand_voh": {
     "message": "Wiegand 출력 VOH"

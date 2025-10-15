@@ -614,6 +614,12 @@
   "specs.interface.samSlot": {
     "message": "SAM Slot"
   },
+  "specs.interface.led": {
+    "message": "LED"
+  },
+  "specs.interface.beep": {
+    "message": "Beep"
+  },
   "specs.power": {
     "message": "Electrical"
   },
