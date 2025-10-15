@@ -1024,6 +1024,27 @@ const sidebars = {
       ]
     }
   ],
+  bioentryp2: [
+    {
+      type: 'category',
+      label: 'BioEntry P2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_p2/index',
+      },
+      items: [
+        'device/bioentry_p2/safety-instructions',
+        'device/bioentry_p2/getting-started',
+        'device/bioentry_p2/installation',
+        'device/bioentry_p2/product-specifications',
+        'device/bioentry_p2/regulatory-information',
+        'device/bioentry_p2/appendices'
+      ]
+    }
+  ],
 };
 
 export default sidebars;

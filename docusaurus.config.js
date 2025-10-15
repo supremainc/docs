@@ -245,6 +245,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'BioEntry P2',
+                docId: 'device/bioentry_p2/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation',
                 docId: 'device/corestation_40/index'
               },
