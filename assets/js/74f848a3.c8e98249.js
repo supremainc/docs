@@ -39,18 +39,6 @@ const assets = {
 };
 
 /*Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock*/
-/*<NextStep>
-<NextItem to='bs2-to-bsx-migration'>
-
-**BioStar 2**에서 **BioStar X**로 마이그레이션하는 방법을 확인하세요.
-
-</NextItem>
-<NextItem to='bsx-licensing-examples'>
-
-**BioStar X**의 라이선스 적용 사례를 통해 **BioStar 2**와의 차이점을 이해하고, 업그레이드 시 고려해야 할 사항을 안내합니다.
-
-</NextItem>
-</NextStep>*/
 
 
 const toc = [{
@@ -72,10 +60,6 @@ const toc = [{
 }, {
   "value": "장치 라이선스",
   "id": "장치-라이선스",
-  "level": 2
-}, {
-  "value": "참고 사항",
-  "id": "reference",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -558,7 +542,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "GIS 맵을 이용해 구역을 설정할 수 있습니다."
+              children: "GIS 맵을 이용해 구역(Area) 및 시설(Facility), 층(Floor)을 설정할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -610,7 +594,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Directory Integration"
+                children: "디렉토리 연동"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템"
@@ -790,102 +774,7 @@ function _createMdxContent(props) {
           })]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "reference",
-      children: "참고 사항"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "출입문 스케줄 제어"
-          }), ": 출입문을 지원하는 라이선스에서는 별도의 비용 없이 제공합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에서는 어드밴스(Advanced) 이상 라이선스에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "구역"
-          }), "(Zone) 기능을 지원하는 경우에만 제공합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "플러그인/SDK 라이선스"
-          }), ": 이 기능이 구현될 경우 별도로 라이선스를 부여합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Single Sign-On(SSO) 및 다중 인증(Multi-factor authentication, MFA)"
-          })
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "외부 공급자를 활용해 SSO 또는 다중 인증을 구현한다면 별도의 라이선스가 필요합니다."
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "슈프리마에서 제공하는 장치를 이용한 다중 인증은 무료로 제공합니다."
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "CSV 고급 데이터 가져오기"
-          }), ": 이 기능이 구현될 경우 유료로 제공할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "기타 고급 지원 요청"
-          }), ": 슈프리마의 고급 지원이 필요한 요청은 별도 비용이 청구될 수 있습니다. 아래를 참고하세요."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "커스텀 인증서를 활용한 보안 통신"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "HTTPS를 위한 커스텀 인증서 적용"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "시스템 업그레이드"
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "추가 비용이 발생할 수 있는 항목(TSS)"
-          })
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "맞춤형 시스템 통합 또는 API 개발"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "현장 지원 서비스"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "특화 교육 또는 자격 인증"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "성능 튜닝 및 최적화"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "시스템 백업 및 재해 복구 구성"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "설치 후 설정 변경"
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {

@@ -49,7 +49,7 @@ const toc = [{
   "id": "시작하기-전에",
   "level": 2
 }, {
-  "value": "CSV 파일로 가져와 등록",
+  "value": "CSV 파일 가져오기로 등록",
   "id": "import-csv",
   "level": 2
 }, {
@@ -107,7 +107,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "import-csv",
-      children: "CSV 파일로 가져와 등록"
+      children: "CSV 파일 가져오기로 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "CSV 가져오기 기능으로 사용자의 얼굴을 일괄 등록할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {

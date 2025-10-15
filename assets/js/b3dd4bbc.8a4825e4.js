@@ -463,6 +463,10 @@ function enroll_credential_mobile_createMdxContent(props) {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
                 children: "BioEntry W3 펌웨어 1.0.0 이상"
               }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "FaceStation F2 펌웨어 2.2.0 이상"
+              }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

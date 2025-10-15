@@ -38,9 +38,6 @@ const assets = {
 
 };
 
-/*사용하지 않는 문장입니다. 아래 내용은 번역하지 않습니다.*/
-/*1. <IcAccout width='26' height='26' /> **사용자 계정**: 현재 로그인한 사용자의 계정 정보를 확인할 수 있습니다.*/
-/*1. <IcAibtn width='26' height='26' /> **AI 프롬프트**: **BioStar X**의 AI 프롬프트 기능을 사용할 수 있는 버튼입니다. 버튼을 클릭하면 AI 프롬프트 창이 나타납니다. 사용자의 질문에 답변하고 원하는 기능을 실행할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
 
 
 const toc = [];
@@ -151,7 +148,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", "\n", "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {

@@ -214,15 +214,8 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
+              href: "settings-access-control-manage-access-group",
               children: "출입 그룹 등록 및 관리"
-            })
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "#",
-              children: "그래픽 맵 그룹 등록 및 관리"
             })
           }), "\n"]
         }), "\n"]

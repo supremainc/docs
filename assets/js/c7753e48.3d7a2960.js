@@ -127,9 +127,13 @@ function _createMdxContent(props) {
           children: "FaceStation F2 v1.x.x 펌웨어 지원 중단 안내"
         })
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["FaceStation F2의 1.x.x 버전 펌웨어를 사용 중이라면, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), "의 얼굴 마이그레이션 기능을 사용할 수 없습니다. FaceStation F2를 최신 펌웨어로 업그레이드하세요. 최신 펌웨어는 ", (0,jsx_runtime.jsx)(_components.a, {
+        }), "는 사용자의 얼굴을 장치에 동기화할 때 템플릿만 전송하도록 변경하여 동기화 성능을 최적화했습니다. 따라서 장치에서만 템플릿을 추출할 수 있는 FaceStation F2 v1.x.x 펌웨어의 지원이 중단됩니다. 현재 FaceStation F2의 1.x.x 버전 펌웨어를 사용 중인 경우 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "를 사용하기 위해서는 FaceStation F2를 최신 펌웨어로 업그레이드하여 사용하세요."]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["최신 펌웨어는 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://download.supremainc.com/",
           children: "슈프리마 다운로드 센터"
         }), "에서 다운로드할 수 있습니다."]

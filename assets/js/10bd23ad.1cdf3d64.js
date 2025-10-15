@@ -257,7 +257,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["CSV 가져오기를 통해 사용자의 얼굴을 등록할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "enroll-credential-face#import-csv",
+              href: "batch-import-face#import-csv",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

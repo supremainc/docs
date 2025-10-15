@@ -39,9 +39,6 @@ const assets = {
 
 };
 
-/** <Cmd sid='team.menu.resendMobileAccess' />: 모바일로 출입 권한을 재전송할 수 있습니다. 사용자가 모바일로 출입 권한을 받지 못했거나, 모바일 기기를 변경한 경우에 사용할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
-/** <Cmd sid='team.menu.sendFaceMobileEnrollLink' />: 사용자가 모바일 애플리케이션으로 얼굴을 등록할 수 있는 링크를 이메일로 보낼 수 있습니다. 사용자가 모바일 애플리케이션을 설치한 후 얼굴 등록을 할 수 있도록 안내할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
-/** <Cmd sid='team.menu.resendQR' />: QR 코드를 인증 수단으로 사용하는 사용자에게 QR 코드를 재전송할 수 있습니다. 자세한 내용은 [다음 문서](#)를 참고하세요.*/
 
 
 const toc = [];
@@ -221,7 +218,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", "\n", "\n"]
+    })]
   });
 }
 function MDXContent(props = {}) {
