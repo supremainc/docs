@@ -359,7 +359,8 @@ function _createMdxContent(props) {
             children: "VMS"
           }), "로 선택하고 다음 정보를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png"
+          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png",
+          alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

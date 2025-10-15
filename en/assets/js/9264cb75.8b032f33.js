@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9091"], {
-19275: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4268"], {
+98384: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_ui_dashboard_mdx_a76_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_ui_dashboard_mdx_926_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-ui-dashboard-mdx-a76.json
-var site_docs_platform_biostar_x_ui_dashboard_mdx_a76_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-dashboard","title":"대시보드","description":"대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","source":"@site/docs/platform/biostar_x/ui-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-dashboard","permalink":"/docs/platform/biostar_x/ui-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-dashboard","title":"대시보드","description":"대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.","keywords":["대시보드","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"모니터링","permalink":"/docs/platform/biostar_x/ui-monitoring"},"next":{"title":"설정","permalink":"/docs/platform/biostar_x/ui-settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-ui-dashboard-mdx-926.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_ui_dashboard_mdx_926_namespaceObject = JSON.parse('{"id":"platform/biostar_x/ui-dashboard","title":"Dashboard","description":"Here is an overview of the User Interface of the dashboard page.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/ui-dashboard.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/ui-dashboard","permalink":"/docs/en/platform/biostar_x/ui-dashboard","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/ui-dashboard.mdx","tags":[],"version":"current","frontMatter":{"id":"ui-dashboard","title":"Dashboard","description":"Here is an overview of the User Interface of the dashboard page.","keywords":["DASHBOARD","UI"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Monitoring","permalink":"/docs/en/platform/biostar_x/ui-monitoring"},"next":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/ui-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/ui-dashboard.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/ui-dashboard.mdx
 
 
 const frontMatter = {
 	id: 'ui-dashboard',
-	title: '대시보드',
-	description: '대시보드 페이지의 사용자 인터페이스(User Interface)를 안내합니다.',
+	title: 'Dashboard',
+	description: 'Here is an overview of the User Interface of the dashboard page.',
 	keywords: [
-		'대시보드',
+		'DASHBOARD',
 		'UI'
 	],
 	isTranslationMissing: false
@@ -57,9 +57,9 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["Guides the user interface (UI) of the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.dashboard"
-      }), " 페이지의 사용자 인터페이스(User Interface)를 안내합니다."]
+      }), " page."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-dashboard.png",
       className: "none",
@@ -69,41 +69,39 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "위젯 표시 영역"
-            }), ": 사용자가 추가한 위젯이 표시되는 영역입니다."]
+              children: "Widget Area"
+            }), ": The area where user-added widgets are displayed."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "각 위젯의 크기는 위젯별로 제한된 크기 내에서 자유롭게 조정할 수 있습니다."
+                children: "The size of each widget can be freely adjusted within the size limits for each widget."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "위젯은 비어있는 영역에만 배치할 수 있으며 위젯끼리 겹쳐놓을 수 없습니다."
+                children: "Widgets can only be placed in empty areas, and they cannot overlap each other."
               }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "새로고침"
-            }), ": 대시보드 페이지를 새로고침하여 수정한 위젯의 데이터를 업데이트합니다."]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.dashboardSettings",
-                product: "2"
-              }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "reportApp.autoRefreshInterval",
-                product: "2"
-              }), "에서 새로고침 주기를 설정할 수 있습니다."]
-            }), "\n"]
+              children: "Refresh"
+            }), ": Refresh the dashboard page to update the data in the modified widget."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Set the refresh cycle in ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.autoRefreshInterval",
+              product: "2"
+            }), " in ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.dashboardSettings",
+              product: "2"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "reportApp.dashboardSettings",
               product: "2"
-            }), ": 새 위젯을 추가하거나 추가되어있는 위젯의 데이터와 모양을 설정할 수 있습니다."]
+            }), ": Add new widgets or set the data and appearance of the added widgets."]
           }), "\n"]
         }), "\n"]
       })

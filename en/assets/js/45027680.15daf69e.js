@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-diretory-integration-mdx-450.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_diretory_integration_mdx_450_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"Directory Integration Settings","description":"This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar 2.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/en/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"Directory Integration Settings","description":"This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar 2.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure Area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area"},"next":{"title":"Set up Remote Access","permalink":"/docs/en/platform/biostar_x/settings-remote-access"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_diretory_integration_mdx_450_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"Directory Integration Settings","description":"This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/en/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"Directory Integration Settings","description":"This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure Area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area"},"next":{"title":"Set up Remote Access","permalink":"/docs/en/platform/biostar_x/settings-remote-access"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -65,7 +65,7 @@ function _createMdxContent(props) {
         sid: "settings.activeDirectory.userGroup",
         product: "2"
       }), ". Deselect any user groups that should not be synchronized with ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-directory-usergroup-filter.png"
@@ -329,7 +329,7 @@ function _sync_with_integ_missingMdxReference(id, component) {
 const settings_diretory_integration_frontMatter = {
 	id: 'settings-diretory-integration',
 	title: 'Directory Integration Settings',
-	description: 'This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar 2.',
+	description: 'This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.',
 	isTranslationMissing: false
 };
 const settings_diretory_integration_contentTitle = undefined;
@@ -392,7 +392,7 @@ function settings_diretory_integration_createMdxContent(props) {
         children: "Entra ID"
       }), ") or ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Active Directory"
-      }), " with BioStar 2."]
+      }), " with BioStar X."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Integrating with ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Entra ID"
@@ -402,7 +402,7 @@ function settings_diretory_integration_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["You can log in to BioStar 2 using your ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["You can log in to BioStar X using your ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Entra ID"
           }), " account via Single Sign-On (SSO) provided by ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Entra ID"
@@ -410,7 +410,7 @@ function settings_diretory_integration_createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["You can log in to BioStar 2 using Lightweight Directory Access Protocol (LDAP) authentication provided by ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["You can log in to BioStar X using Lightweight Directory Access Protocol (LDAP) authentication provided by ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Active Directory"
           }), "."]
         }), "\n"]
@@ -420,7 +420,7 @@ function settings_diretory_integration_createMdxContent(props) {
             children: "Entra ID"
           }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Active Directory"
-          }), " can be synchronized with BioStar 2."]
+          }), " can be synchronized with BioStar X."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -453,7 +453,7 @@ function settings_diretory_integration_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Log in to BioStar 2 with an administrator account."
+          children: "Log in to BioStar X with an administrator account."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -610,7 +610,7 @@ function settings_diretory_integration_createMdxContent(props) {
               product: "2"
             }), " field cannot be mapped when integrating with ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Entra ID"
-            }), ". It is automatically generated and applied by BioStar 2."]
+            }), ". It is automatically generated and applied by BioStar X."]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
@@ -627,7 +627,7 @@ function settings_diretory_integration_createMdxContent(props) {
           }), " to ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.enabled",
             product: "2"
-          }), " to enable login to  BioStar 2 using ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " to enable login to  BioStar X using ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Entra ID SSO"
           }), "."]
         }), (0,jsx_runtime.jsx)(Image, {
@@ -704,7 +704,7 @@ function settings_diretory_integration_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Log in to BioStar 2 with an administrator account."
+          children: "Log in to BioStar X with an administrator account."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -890,7 +890,7 @@ function settings_diretory_integration_createMdxContent(props) {
             product: "2"
           })
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To configure login to BioStar 2 using the user ID of the Active Directory server, change the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["To configure login to BioStar X using the user ID of the Active Directory server, change the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.activeDirectory.LogintitleAD",
             product: "2"
           }), " to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -898,7 +898,7 @@ function settings_diretory_integration_createMdxContent(props) {
             product: "2"
           }), ". The value of the ", (0,jsx_runtime.jsx)(_components.code, {
             children: "sAMAccountName"
-          }), " field from the Active Directory server will be mapped to the BioStar 2 login ID."]
+          }), " field from the Active Directory server will be mapped to the BioStar X login ID."]
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-setting-directory-login-with-ad.png"
         })]
@@ -952,7 +952,7 @@ function settings_diretory_integration_createMdxContent(props) {
           }), ", you can see ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "login.entraidLoginBtn",
             product: "2"
-          }), " when logging in to BioStar 2."]
+          }), " when logging in to BioStar X."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-setting-directory-entraid-login.png"
         }), "\n"]
@@ -973,7 +973,7 @@ function settings_diretory_integration_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Log in to BioStar 2 with an administrator account."
+          children: "Log in to BioStar X with an administrator account."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1024,7 +1024,7 @@ function settings_diretory_integration_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Log in to BioStar 2 with an administrator account."
+          children: "Log in to BioStar X with an administrator account."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1080,7 +1080,7 @@ function settings_diretory_integration_createMdxContent(props) {
           children: "Entra ID"
         }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Active Directory"
-        }), " in BioStar 2 will be removed. The integrated user and group information will not be deleted, but will no longer be synchronized. Please make sure to check before disabling the integration."]
+        }), " in BioStar X will be removed. The integrated user and group information will not be deleted, but will no longer be synchronized. Please make sure to check before disabling the integration."]
       })
     })]
   });

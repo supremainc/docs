@@ -246,10 +246,8 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsxs)(_components.strong, {
-                  children: ["a hh", ":mm"]
-                })
+              children: [(0,jsx_runtime.jsxs)(_components.strong, {
+                children: ["a hh", ":mm"]
               }), ": PM 11:59, 12-hour format"]
             }), "\n"]
           }), "\n"]

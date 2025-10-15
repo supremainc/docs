@@ -599,13 +599,15 @@ function _createMdxContent(props) {
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: ["** personnel check** (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "personnel check"
+              }), " (", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Roll Call"
               }), ")"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "System"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "*"
+              children: "-"
             })]
           })]
         })]
@@ -639,7 +641,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "System"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -736,7 +738,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "Device"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "An annual maintenance contract is required for advanced support."
           })]
@@ -750,7 +752,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "X-Station 2 (no QR reading sensor), BioStation 3"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -762,7 +764,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "CoreStation 40"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         })]
       })]

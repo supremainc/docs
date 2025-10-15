@@ -65,7 +65,7 @@ function _createMdxContent(props) {
       }), " 섹션에 ", (0,jsx_runtime.jsx)("strong", {
         children: props.name
       }), "로부터 사용자 그룹 정보를 가져옵니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "에 동기화하지 않을 사용자 그룹을 선택 해제하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-directory-usergroup-filter.png"

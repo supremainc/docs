@@ -110,8 +110,13 @@ function _createMdxContent(props) {
           }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click Server → Settings in the left sidebar."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.server.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.server",
+            product: "2"
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -148,8 +153,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click Apply at the bottom right of the screen to save the settings."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " at the bottom right of the screen to save the settings."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -462,8 +470,11 @@ function _createMdxContent(props) {
       }), " option for convenience."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click the Add button to add a device."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.add",
+            product: "2"
+          }), " button to add a device."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -476,12 +487,18 @@ function _createMdxContent(props) {
           className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click Add to add the selected device."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.add",
+            product: "2"
+          }), " to add the selected device."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click Apply at the bottom right of the screen to save the settings for the added device."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " at the bottom right of the screen to save the settings for the added device."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -525,8 +542,11 @@ function _createMdxContent(props) {
       }), " option, you can add fields to input additional information about the user. The added fields will be displayed on the user information screen."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "To add a custom user field, click the Add button."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To add a custom user field, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.plusAdd",
+            product: "2"
+          }), " button."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -553,7 +573,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.server.custom_field.type.combobox",
                 product: "2"
-              }), ": Allows addition of up to 20 items of 32 characters; each item is separated by a semicolon (;). (e.g., option1;option2;option3)"]
+              }), ": Allows addition of up to 20 items of 32 characters; each item is separated by a semicolon (;). (e.g., Select1;Select2;Select3)"]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-server-management-custome-field-select.png"
             }), "\n"]
@@ -584,8 +604,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Click the Apply button at the bottom right of the screen to save the added custom user field."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " button at the bottom right of the screen to save the added custom user field."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -599,16 +622,22 @@ function _createMdxContent(props) {
             }), " column. The position of the added fields will change."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "After modifying the custom user fields, click the Apply button at the bottom right of the screen."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["After modifying the custom user fields, click the ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "button.apply",
+              product: "2"
+            }), " button at the bottom right of the screen."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["Click the ", (0,jsx_runtime.jsx)(IcTrash2, {}), " button to delete a custom user field. Deleted fields cannot be recovered."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "For detailed information on registering and modifying user information, refer to the following document."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For detailed information on registering and modifying user information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "how-to-guide-user",
+              children: "the following"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
@@ -618,7 +647,10 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["To delete personal information and credential information from the ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " server when issuing an AoC (Access on Card) credential that stores the user's credential on the card, enable the ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " server when issuing an ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "../../reference/glossary#access_on_card",
+        children: "Access on Card(AoC)"
+      }), " credential that stores the user's credential on the card, enable the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.server.deleteCredentialAfterAOC",
         product: "2"
       }), " option."]
@@ -758,9 +790,12 @@ function _createMdxContent(props) {
       children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.serverMatching",
         product: "2"
-      }), " section, you can configure the server matching feature to authenticate user information with ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " section, you can set up the ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "../../reference/glossary#server_matching",
+        children: "server matching"
+      }), " feature to authenticate user information on ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " without authenticating it on the device."]
+      }), " without authenticating on the device."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-server-server-matching.png",
       className: "none"

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8176"], {
-74364: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8865"], {
+70352: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_credential_card_csn_mobile_mdx_ed4_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_credential_card_csn_mobile_mdx_085_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-credential-card-csn-mobile-mdx-ed4.json
-var site_docs_platform_biostar_x_settings_credential_card_csn_mobile_mdx_ed4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-card-csn-mobile","title":"CSN 모바일 카드 삭제 시 관리 지침","description":"CSN 모바일 카드를 삭제한 후 삭제 이력을 관리할 수 있는 기능을 제공합니다.","source":"@site/docs/platform/biostar_x/settings-credential-card-csn-mobile.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-card-csn-mobile","permalink":"/docs/platform/biostar_x/settings-credential-card-csn-mobile","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-card-csn-mobile.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-card-csn-mobile","title":"CSN 모바일 카드 삭제 시 관리 지침","description":"CSN 모바일 카드를 삭제한 후 삭제 이력을 관리할 수 있는 기능을 제공합니다.","keywords":["모바일","CSN","카드","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Wiegand 카드 데이터 형식 변경하기","permalink":"/docs/platform/biostar_x/settings-credential-card-change-data-format"},"next":{"title":"Wiegand 카드 형식 설정하기","permalink":"/docs/platform/biostar_x/settings-credential-wiegand-format"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-credential-card-csn-mobile-mdx-085.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_credential_card_csn_mobile_mdx_085_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-credential-card-csn-mobile","title":"CSN Mobile Card Deletion Management Guidelines","description":"Provides the feature to manage deletion history after deleting CSN mobile cards.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-credential-card-csn-mobile.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-credential-card-csn-mobile","permalink":"/docs/en/platform/biostar_x/settings-credential-card-csn-mobile","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-credential-card-csn-mobile.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-credential-card-csn-mobile","title":"CSN Mobile Card Deletion Management Guidelines","description":"Provides the feature to manage deletion history after deleting CSN mobile cards.","keywords":["Mobile","CSN","card","Settings"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Change Wiegand Card Data Format","permalink":"/docs/en/platform/biostar_x/settings-credential-card-change-data-format"},"next":{"title":"Set Wiegand Card Format","permalink":"/docs/en/platform/biostar_x/settings-credential-wiegand-format"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-credential-card-csn-mobile.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-credential-card-csn-mobile.mdx
 
 
 const frontMatter = {
 	id: 'settings-credential-card-csn-mobile',
-	title: 'CSN 모바일 카드 삭제 시 관리 지침',
-	description: 'CSN 모바일 카드를 삭제한 후 삭제 이력을 관리할 수 있는 기능을 제공합니다.',
+	title: 'CSN Mobile Card Deletion Management Guidelines',
+	description: 'Provides the feature to manage deletion history after deleting CSN mobile cards.',
 	keywords: [
-		'모바일',
+		'Mobile',
 		'CSN',
-		'카드',
-		'설정'
+		'card',
+		'Settings'
 	],
 	isTranslationMissing: false
 };
@@ -44,12 +44,12 @@ const assets = {
 
 
 const toc = [{
-  "value": "삭제된 CSN 모바일 카드 별도 관리",
-  "id": "삭제된-csn-모바일-카드-별도-관리",
+  "value": "Separate management of deleted CSN mobile cards",
+  "id": "separate-management-of-deleted-csn-mobile-cards",
   "level": 2
 }, {
-  "value": "삭제된 카드 ID로 재발급 방지",
-  "id": "삭제된-카드-id로-재발급-방지",
+  "value": "Preventing reissuance of deleted card IDs",
+  "id": "preventing-reissuance-of-deleted-card-ids",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -65,25 +65,27 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["When using CSN mobile cards integrated with the Airfob Portal Regular Site in ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에 에어팝 포털 레귤러 사이트를 연동하여 CSN 모바일 카드를 사용 중일 때, 카드를 소지한 사용자가 카드를 삭제하더라도 동일한 카드 ID를 다른 사용자에게 발급할 수 있게 되어 있었습니다. 그러나 동일한 카드 ID를 다른 사용자에게 발급할 경우 기존의 카드 소지자도 계속 출입이 가능한 문제가 발생합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 문제를 해결하기 위해 CSN 모바일 카드를 삭제한 후 삭제 이력을 관리할 수 있는 기능을 제공합니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "삭제된-csn-모바일-카드-별도-관리",
-      children: "삭제된 CSN 모바일 카드 별도 관리"
+      }), ", if a user deletes a card, the same card ID could be reissued to another user. However, this could lead to an issue where the original cardholder could still access the premises even after the card has been reissued."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["삭제된 CSN 모바일 카드는 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["To address this issue, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " provides the feature to manage deletion history after deleting CSN mobile cards."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "separate-management-of-deleted-csn-mobile-cards",
+      children: "Separate management of deleted CSN mobile cards"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Deleted CSN mobile cards are recorded in the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.setting",
         product: "2"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.card",
         product: "2"
-      }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.card.deletedCsnMobileCard",
         product: "2"
-      }), " 목록에 기록됩니다. 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " list. In this list, you can view the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.card.cardType",
         product: "2"
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -92,48 +94,40 @@ function _createMdxContent(props) {
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.card.cardId",
         product: "2"
-      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.card.lastCardHolder",
         product: "2"
-      }), "를 확인할 수 있습니다."]
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostar-298-deleted-csn-mobile-card.png",
-      caption: true
+      src: "/img/biostarx-settings-credentail-mobile-removed-card.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "삭제된-카드-id로-재발급-방지",
-      children: "삭제된 카드 ID로 재발급 방지"
+      id: "preventing-reissuance-of-deleted-card-ids",
+      children: "Preventing reissuance of deleted card IDs"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "삭제 이력이 있는 CSN 모바일 카드를 다른 사용자에게 발급하려고 하는 경우 실패 처리합니다."
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostar-298-deleted-csn-mobile-card-1.png",
-      className: "none",
-      caption: true
+      children: "If there is a history of deletion for a CSN mobile card, the system will prevent that card ID from being reissued to another user."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["삭제된 카드 ID로 카드를 발급하고자 하는 경우 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["To reissue a card with a deleted card ID, the corresponding CSN mobile card must first be removed from the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.card.deletedCsnMobileCard",
         product: "2"
-      }), " 목록에서 해당 CSN 모바일 카드를 제외한 후에만 발급이 가능합니다."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostar-deleted-csn-mobile-card-2.png",
-      caption: true
+      }), " list."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: ["CSN mobile cards included in the ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "setting.card.deletedCsnMobileCard",
           product: "2"
-        }), " 목록에 포함되어 있는 CSN 모바일 카드는 ", (0,jsx_runtime.jsx)(Cmd, {
+        }), " list cannot be deleted from the ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "setting.card.unassignedCard",
           product: "2"
-        }), " 목록에서 삭제할 수 없습니다."]
+        }), " list."]
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: ["To delete a card from the ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "setting.card.unassignedCard",
           product: "2"
-        }), " 목록에서 카드를 삭제하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        }), " list, first remove the card from the ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "setting.card.deletedCsnMobileCard",
           product: "2"
-        }), " 목록에서 카드를 먼저 제외한 다음 다시 시도하세요."]
+        }), " list and then proceed with the deletion."]
       })]
     })]
   });
