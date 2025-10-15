@@ -1004,7 +1004,7 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
             if (sid === 'biostar.login' || sid === 'audit.setting.server.server_addr' || sid === 'audit.setting.server.server_port') {
                 localeText = locale[sid].replace('2', 'X');
             } else {
-                localeText = locale[sid] ? locale[sid].replace(' <br/><br/> ', ' ').replace(' <br/><br/>', ' ').replace('<br/><br/> ', ' ').replace(' </br> ', ' ').replace(' <br>', ' ').replace('<br> ', ' ').replace('<br/>', ' ').replace(' <br> ', ' ').replace(' </br> ', ' ').replace('<br>', ' ').replace('</br>', ' ').replace('&sol;', '/').replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉') : null;
+                localeText = locale[sid] ? locale[sid].replace(' <br/><br/> ', ' ').replace(' <br/><br/>', ' ').replace('<br/><br/> ', ' ').replace(' </br> ', ' ').replace(' <br />', ' ').replace(' <br>', ' ').replace('<br> ', ' ').replace('<br/>', ' ').replace(' <br> ', ' ').replace(' </br> ', ' ').replace('<br>', ' ').replace('</br>', ' ').replace('&sol;', '/').replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉') : null;
             }
         } else {
             // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
@@ -5538,7 +5538,7 @@ const SvgIcoSetting2 = ({
 }, title) : null, ico_setting2_g || (ico_setting2_g = /*#__PURE__*/react.createElement("g", {
   clipPath: "url(#a)"
 }, /*#__PURE__*/react.createElement("path", {
-  fill: "#000",
+  fill: "currentcolor",
   d: "M14.27 6.06h-1.94c-.09-.31-.21-.6-.36-.88l1.37-1.37c.31-.31.31-.82 0-1.13l-.95-.95a.803.803 0 0 0-1.13 0L9.88 3.11c-.28-.15-.57-.27-.88-.36V.8c0-.44-.36-.8-.8-.8H6.86c-.44 0-.8.36-.8.8v1.95c-.31.09-.6.21-.88.36L3.81 1.74a.803.803 0 0 0-1.13 0l-.95.95c-.31.31-.31.82 0 1.13L3.1 5.19c-.15.28-.27.57-.36.88H.8c-.44 0-.8.36-.8.8v1.34c0 .44.36.8.8.8h1.94c.09.31.21.6.36.88l-1.37 1.37c-.31.31-.31.82 0 1.13l.95.95c.31.31.82.31 1.13 0l1.37-1.37c.28.15.57.27.88.36v1.95c0 .44.36.8.8.8H8.2c.44 0 .8-.36.8-.8v-1.95c.31-.09.6-.21.88-.36l1.38 1.38c.31.31.82.31 1.13 0l.95-.95c.31-.31.31-.82 0-1.13L11.97 9.9c.15-.28.27-.57.36-.88h1.94c.44 0 .8-.36.8-.8V6.88c0-.44-.36-.8-.8-.8zM7.54 9.91a2.38 2.38 0 0 1-2.38-2.38c0-1.32 1.06-2.38 2.38-2.38a2.38 2.38 0 0 1 2.38 2.38c0 1.32-1.06 2.38-2.38 2.38"
 }))), ico_setting2_defs || (ico_setting2_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
   id: "a"
@@ -5618,10 +5618,10 @@ const SvgIcoCalendar = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_calendar_path || (ico_calendar_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#333",
+  fill: "currentColor",
   d: "M3.49 4.203h3.32V2.66H9.3v1.543h3.321V2.66h2.49V15H1V2.66h2.49zm0 9.248h2.49v-1.66H3.49zm3.32 0H9.3v-1.66H6.81zm3.32-1.66v1.66h2.491v-1.66zm-6.64-1.66h2.49V8.47H3.49zm3.32 0H9.3V8.47H6.81zm3.32 0h2.491V8.47h-2.49zM3.49 6.81h2.49V5.15H3.49zm3.32 0H9.3V5.15H6.81zm3.32 0h2.491V5.15h-2.49z"
 })), ico_calendar_path2 || (ico_calendar_path2 = /*#__PURE__*/react.createElement("path", {
-  fill: "#333",
+  fill: "currentColor",
   d: "M4 1h2v3H4zM10 1h2v3h-2z"
 })));
 /* ESM default export */ const ico_calendar = (SvgIcoCalendar);
@@ -5680,7 +5680,7 @@ const SvgIcoRefresh = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_refresh_path || (ico_refresh_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#000",
+  fill: "currentColor",
   d: "m14.74 7.67.258-2.618c.029-.299-.286-.502-.572-.366l-.658.311C12.639 3.207 10.567 2 8.208 2 5.29 2 2.831 3.83 2.017 6.34c-.072.203.1.421.328.421h.815c.143 0 .272-.081.314-.203.686-1.845 2.56-3.174 4.732-3.174 1.788 0 3.375.895 4.261 2.237l-.657.312a.367.367 0 0 0-.029.651l2.373 1.357c.244.15.558 0 .587-.272M7.8 15c2.914 0 5.37-2.137 6.184-5.066.071-.237-.1-.49-.329-.49h-.814a.33.33 0 0 0-.314.236c-.685 2.153-2.556 3.705-4.727 3.705-1.785 0-3.37-1.044-4.256-2.612l.657-.364c.271-.158.285-.586.028-.76L1.86 8.066c-.243-.174-.572.016-.6.333l-.257 3.055c-.029.348.285.585.571.427l.657-.364C3.372 13.59 5.443 15 7.8 15"
 })));
 /* ESM default export */ const ico_refresh = (SvgIcoRefresh);
