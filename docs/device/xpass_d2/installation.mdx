@@ -1,0 +1,176 @@
+---
+id: installation
+title: 설치하기
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+:::info
+
+이 문서는 멀리언 타입을 기준으로 설치 방법을 설명합니다. 갱 박스 타입과 키패드 타입도 동일한 방법으로 설치하세요.
+
+:::
+
+1. 제품을 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-xpd2.svg' className='none' width={300} alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Badge only>XPD2-MDB</Badge>
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-xpd2-mdb.png' className='none' width={300} />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 360 mm |
+    | 120 mm | 360 mm |
+    | 150 mm | 300 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-xpd2-mdb.png' className='none' width={300} />
+
+    </Column>
+    </Columns>
+
+    <Badge only>XPD2-GDB, XPD2-GKDB</Badge>
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-xpd2-gdb.png' className='none' width={300} />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 400 mm |
+    | 120 mm | 380 mm |
+    | 150 mm | 380 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-xpd2-gdb.png' className='none' width={300} />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device2-xpd2.svg' className='none' width={250} alone />
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device3-xpd2.svg' className='none' width={250} alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+## 전원 연결
+
+이 제품은 마스터 장치나 CoreStation에 연결하여 RFID 카드 또는 모바일 카드 리더로 사용할 수 있습니다.
+
+<Image src='/img/device/installation-power-connection-xpd2.png' width='60%' className='none' />
+
+:::caution
+
+* 전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다.
+
+  * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
+
+* 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
+
+:::
+
+## RS-485 연결
+
+<Image src='/img/device/installation-rs485-connection-xpd2.png' width='53%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+:::
+
+## Wiegand 및 기타 케이블 연결
+
+<Image src='/img/device/installation-wiegand-other-connection-xpd2.png' width='60%' className='none' />
+
+## 공장 초기화 {#factory-reset}
+
+장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다.
+
+1. 전원을 켜세요.
+
+1. 초기화 버튼을 빠르게 세 번 누르세요.
+
+1. 장치의 LED가 초록색으로 깜박거릴 때 초기화 버튼을 한 번 더 누르세요.
+
+:::info
+
+장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다.
+
+:::
+
+## RS-485 전송 속도 재설정
+
+원하는 통신 속도를 선택하여 설정할 수 있습니다.
+
+1. 전원을 켜세요.
+
+1. 초기화 버튼을 2초 이상 누르세요. 설정 모드로 진입하면 LED가 초록색으로 깜빡입니다.
+
+1. 장치의 LED가 초록색으로 깜빡일 때, 초기화 버튼을 원하는 횟수만큼 누르세요. 누른 횟수에 따라 전송 속도가 설정되며, LED 색상으로 설정된 속도를 확인할 수 있습니다.
+
+    <div className='overflow-x'>
+
+    | 누름 횟수 | 전송 속도 | LED 색상 |
+    | ---- | --------- | -------- |
+    | 1    | 9600      | 하늘색   |
+    | 2    | 19200     | 파란색   |
+    | 3    | 38400     | 보라색   |
+    | 4    | 57600     | 흰색     |
+    | 5    | 115200    | 빨간색   |
+
+    </div>
+
+1. 설정한 전송 속도의 LED 색상이 5초 동안 깜빡입니다. 비프음이 울리면 전송 속도 설정이 완료됩니다.
+
+:::info
+
+설정 모드 진입 후 초기화 버튼을 누르지 않으면 전송 속도가 자동으로 115200으로 설정됩니다.
+
+:::
