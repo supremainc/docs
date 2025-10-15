@@ -1,0 +1,467 @@
+"use strict";
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7631"], {
+75800: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_facility_mdx_4ea_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-map-manage-facility-mdx-4ea.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_map_manage_facility_mdx_4ea_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-map-manage-facility","title":"Configure Facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-facility.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-map-manage-facility","permalink":"/docs/en/platform/biostar_x/settings-map-manage-facility","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-map-manage-facility.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-map-manage-facility","title":"Configure Facility","description":"Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.","keywords":["Zone","Facility","Floor"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configure Floors","permalink":"/docs/en/platform/biostar_x/settings-map-manage-floor"},"next":{"title":"Configure Area","permalink":"/docs/en/platform/biostar_x/settings-map-manage-area"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(84429);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-map-manage-facility.mdx
+
+
+const frontMatter = {
+	id: 'settings-map-manage-facility',
+	title: 'Configure Facility',
+	description: 'Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.',
+	keywords: [
+		'Zone',
+		'Facility',
+		'Floor'
+	],
+	isTranslationMissing: false
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Add facility",
+  "id": "add-facility",
+  "level": 2
+}, {
+  "value": "Modify facility",
+  "id": "modify-facility",
+  "level": 2
+}, {
+  "value": "Add floors to existing facilities",
+  "id": "add-floors-to-existing-facilities",
+  "level": 3
+}, {
+  "value": "Delete floors from the facility",
+  "id": "delete-floors-from-the-facility",
+  "level": 3
+}, {
+  "value": "Delete facility",
+  "id": "delete-facility",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    h2: "h2",
+    h3: "h3",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  }, {Cmd, IcClose, IcDorder, Image} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcClose) _missingMdxReference("IcClose", true);
+  if (!IcDorder) _missingMdxReference("IcDorder", true);
+  if (!Image) _missingMdxReference("Image", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Configure facility and arrange floors. Arrange floors sequentially to represent the actual layout of the facility. Configuring facilities provides the feature to select facilities placed on the map in the ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "shell.header.arena"
+      }), " page and enter each floor for monitoring."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/monitoring-map-select-floor.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Enroll floors before configuring facilities. For more information about floor enrollment, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-map-manage-floor",
+              children: "the following"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For more information about map monitoring, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "monitoring-map",
+              children: "the following"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Map settings and map monitoring feature can be used via additional options with an ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "advanced"
+            }), " license or higher. For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing#features-add-ons",
+              children: "the following"
+            }), "."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "add-facility",
+      children: "Add facility"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Follow these steps to design the structure by adding floors to the facility."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.facility"
+          }), " in the left sidebar."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.table.action.newFacility"
+          }), " in the upper right of the facility list screen."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-map-add-facility.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Enter the name and description of the facility you want to add in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.information.section.title"
+          }), " section of the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.page.title"
+          }), " screen."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.add"
+          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.configuration.section.title"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-map-add-facility-config.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.dialog.floor.titleAddFloor"
+          }), " window appears, select the floor you want to add from the list of floors."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-map-facility-add-floor.png"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "You can also get floors by entering keywords in the input field."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["To select all floors, choose ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.floor.table.title"
+              }), "."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["If you have selected all floors, click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.apply"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To check the floors added to the access door list and change the order, drag the ", (0,jsx_runtime.jsx)(IcDorder, {}), " icon in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.floorTableHeaders.order"
+          }), " column to change the order."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To complete the facility configuration and save, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " button at the bottom right of the screen."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "modify-facility",
+      children: "Modify facility"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "add-floors-to-existing-facilities",
+      children: "Add floors to existing facilities"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can add floors to an already created facility."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.facility"
+          }), " in the left sidebar."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Select the facility to which you want to add floors from the facility list."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.add"
+          }), " in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.configuration.section.title"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-map-add-facility-config-add.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.dialog.floor.titleAddFloor"
+          }), " window appears, click the checkbox of the floor to select."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["If you have selected all floors, click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.apply"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To check the floors added to the access door list and change the order, drag the ", (0,jsx_runtime.jsx)(IcDorder, {}), " icon in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.floorTableHeaders.order"
+          }), " column to change the order."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To complete the facility configuration and save, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " button at the bottom right of the screen."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "delete-floors-from-the-facility",
+      children: "Delete floors from the facility"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can delete floors from an already created facility."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.facility"
+          }), " in the left sidebar."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Select the facility from which you want to delete floors in the facility list."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(IcClose, {}), " button of the floor you want to delete in ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.facility.configuration.section.title"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["To complete the floor deletion and save, click the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.apply",
+            product: "2"
+          }), " button at the bottom right of the screen."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "delete-facility",
+      children: "Delete facility"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " page."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.map.facility"
+          }), " in the left sidebar."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Click the checkbox of the facility you want to delete in the facility list."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-map-remove-facility-list.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.delete"
+          }), " at the top right of the screen."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["When the confirmation message window appears, click ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.dialog.yes"
+          }), "."]
+        }), "\n"]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+84429: (function (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  R: () => (useMDXComponents),
+  x: () => (MDXProvider)
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(96540);
+/**
+ * @import {MDXComponents} from 'mdx/types.js'
+ * @import {Component, ReactElement, ReactNode} from 'react'
+ */
+
+/**
+ * @callback MergeComponents
+ *   Custom merge function.
+ * @param {Readonly<MDXComponents>} currentComponents
+ *   Current components from the context.
+ * @returns {MDXComponents}
+ *   Additional components.
+ *
+ * @typedef Props
+ *   Configuration for `MDXProvider`.
+ * @property {ReactNode | null | undefined} [children]
+ *   Children (optional).
+ * @property {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @property {boolean | null | undefined} [disableParentContext=false]
+ *   Turn off outer component context (default: `false`).
+ */
+
+
+
+/** @type {Readonly<MDXComponents>} */
+const emptyComponents = {}
+
+const MDXContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(emptyComponents)
+
+/**
+ * Get current components from the MDX Context.
+ *
+ * @param {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @returns {MDXComponents}
+ *   Current components.
+ */
+function useMDXComponents(components) {
+  const contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext)
+
+  // Memoize to avoid unnecessary top-level context changes
+  return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(
+    function () {
+      // Custom merge via a function prop
+      if (typeof components === 'function') {
+        return components(contextComponents)
+      }
+
+      return {...contextComponents, ...components}
+    },
+    [contextComponents, components]
+  )
+}
+
+/**
+ * Provider for MDX context.
+ *
+ * @param {Readonly<Props>} properties
+ *   Properties.
+ * @returns {ReactElement}
+ *   Element.
+ * @satisfies {Component}
+ */
+function MDXProvider(properties) {
+  /** @type {Readonly<MDXComponents>} */
+  let allComponents
+
+  if (properties.disableParentContext) {
+    allComponents =
+      typeof properties.components === 'function'
+        ? properties.components(emptyComponents)
+        : properties.components || emptyComponents
+  } else {
+    allComponents = useMDXComponents(properties.components)
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+    MDXContext.Provider,
+    {value: allComponents},
+    properties.children
+  )
+}
+
+
+}),
+
+}]);
