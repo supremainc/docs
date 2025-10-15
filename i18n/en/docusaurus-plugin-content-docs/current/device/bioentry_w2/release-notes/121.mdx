@@ -1,0 +1,46 @@
+---
+id: 121
+title: Firmware Version 1.2.1
+---
+
+# Firmware Version 1.2.1 (Build No. 1.2.1_180523)
+
+Release<Separator/>2018-06-20
+
+## New Features and Improvements
+
+---
+
+1. In a device with an LCD, the user name is displayed on the LCD when authentication is successful even when connected in slave mode.
+
+1. Support for connecting new devices.
+
+    - BioLite N2(BLN2-PAB), XPass D2(XPD2-GDB, XPD2-GKDB)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Problem that is affected by the schedule set on the device, even though the smart card is set to the bypass card.
+
+1. Issue where the bypass does not work when authentication with AoC in Wiegand output.
+
+1. Issue where event logs and real-time logs are not uploaded normally to BioStar 2.
+
+1. Problem that relay state is not maintained when reconnecting a device connected by RS-485.
+
+1. Issue in which the door relay status operates as On when the device is reconnected after starting and ending the Schedule Unlock with the door relay device disconnected.
+
+1. Problem that the time zone is not initialized even if the factory reset is performed while secure communication and data encryption key are in use.
+
+1. Issue where if the authentication is successful when the device set as door relay is disconnected, the relay will operate according to previous value after reconnection of the device.
+
+1. Problem that does not respond to the input ground.
+
+1. Modified to limit kernel downgrade based on the hardware version of the device.
+
+1. Issue where the device restarts when authenticating with an unregistered fingerprint.
+
+</BugLists>

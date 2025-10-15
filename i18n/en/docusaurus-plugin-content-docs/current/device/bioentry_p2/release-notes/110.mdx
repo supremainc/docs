@@ -1,0 +1,64 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.1.0_180317)
+
+Release<Separator/>2018-03-26
+
+## New Features and Improvements
+
+---
+
+1. Support Muster zone.
+
+1. Support Reset without Network Settings.
+
+1. Support Daylight Saving Time setting.
+
+1. Improves Trigger & Action for duress finger.
+
+1. Support Private Authentication on AoC.
+
+1. Improves to handle the encryption key of the important information stored in database differently from server to server.
+
+1. Support One Device Mode (Legacy).
+
+1. Added a message asking whether to delete the fingerprint in the database after completing AoC issuance.
+
+1. Support the secure tamper.
+
+1. Support ISO14443A 10 Byte CSN.
+
+1. Support connecting with BioLite N2, XPass D2.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. iCLASS 2K card can not be issued as a smart card.
+
+1. Problem with reading mobile smart cards on Galaxy S4.
+
+1. Galaxy S5 NFC is recognized as a CSN card when authenticating with NFC and the authentication fails.
+
+1. Issue that does not work when template size is set to 384 bytes when issuing NFC card.
+
+1. Fixed that Hard APB authentication failure notification is distinguished from general authentication failure notification.
+
+1. Issue where the device can not read HID Prox II card.
+
+1. Fixed to generate buzzer or sound when starting the intrusion alarm.
+
+1. Problem that delay time of Action Signal Output is not applied in the slave device.
+
+1. Fixed to the device operates in the input waiting state until the authentication time is exceeded when a Wiegand card that is different from the Wiegand format set in the device is input after Arm / Disarm card input.
+
+1. Problem where the response rate was slow when Arm / Disarm occurred.
+
+1. Fixed to Entrance Limit Soft log to be recorded when authentication exceeds the allowed number.
+
+</BugLists>

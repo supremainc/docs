@@ -1,0 +1,50 @@
+---
+id: 170
+title: Firmware Version 1.7.0
+---
+
+# Firmware Version 1.7.0 (Build No. 1.7.0_220509)
+
+Release<Separator/>2022-06-16
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.0 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports setting the byte order for smart cards.
+
+    - Supports setting the byte order of data to be output to Wiegand or OSDP.
+
+1. Improved the Arm/Disarm status is maintained if the device loses power.
+
+1. Supports the dual SE processor.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Mobile card authentication suddenly does not work <Badge>1.0.0</Badge>.
+
+1. The device failed to recognize the iCLASS Seos card intermittently before rebooting the device (BEW2-OAP, BEW2-OAPB) <Badge>1.0.0</Badge>.
+
+1. When the device is connected as an intelligent slave and the first card registered to the user is a Wiegand card of a format other than 26-bit, the CSN value is output through OSDP when authenticated with the user's fingerprint <Badge>1.6.3</Badge>.
+
+1. Incorrect Bit Count and card data were output when the device was connected to a 3rd-party system via OSDP and the CSN card was registered in Wiegand format and authenticated <Badge>1.6.3</Badge>.
+
+1. The user ID was abnormally displayed in the event log if the user authenticated with AoC set as the blacklist card when the User ID Type was set to Alphanumeric <Badge>1.0.0</Badge>.
+
+1. The card ID was always output as MSB through OSDP when the card ID is input while the device was connected by an intelligent slave <Badge>1.6.3</Badge>.
+
+1. Device does not recognize certain HID iCLASS Seos cards <Badge>1.0.0</Badge>.
+
+</BugLists>

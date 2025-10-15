@@ -1,0 +1,100 @@
+---
+id: 202
+title: Firmware Version 2.0.2
+---
+
+# Firmware Version 2.0.2 (Build No. 2.0.2_220502)
+
+Release<Separator/>2022-05-10
+
+## New Features and Improvements
+
+---
+
+1. Visual Face algorithm v2 support.
+
+1. Improved to detect a mask when enrolling a face so that the face cannot be enrolled with a mask on or covering the mouth.
+
+1. Improved Dynamic ROI (Region of Interest) performance.
+
+1. Added a progress bar to screen during migration.
+
+1. Improved to check for the duplication of cards registered with users when transmitting user data from the server to devices.
+
+1. Improved the Arm/Disarm status is maintained if the device loses power.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When upgrading the firmware from v1.x.x to v2.x.x using a USB memory, the upgrade fails, and when the device is rebooted after removing the USB memory, the device stops in the loading state. <Badge>1.0.0</Badge>
+
+    :::info
+
+    When upgrading the firmware using a USB memory inevitably, first set **Menu Timeout** to **Always On** in the **Display & Sound** menu before proceeding with the upgrade. Also, even if a failure message is displayed during the upgrade, DO NOT remove the USB memory and wait until a success message is displayed. The device will restart automatically when the upgrade is complete.
+
+    :::
+
+1. When upgrading the firmware from v1.x.x to v2.x.x while the device memory is full, the device does not boot. <Badge>1.0.0</Badge>
+
+1. The device restarted abnormally after scanning some cards on the device. <Badge>1.0.0</Badge>
+
+1. When communicating with a 3rd party control panel via OSDP, the device does not respond to the Output Status Report command while the relay reacts to it. <Badge>1.1.2</Badge>
+
+1. When communicating with a 3rd party control panel via OSDP, the device incorrectly responds as 'Inactive' when receiving the Input Status Request command while the input port is grounded. <Badge>1.1.2</Badge>
+
+1. When communicating with a 3rd party control panel via OSDP, the device does not respond to the Device Capabilities command (FSF2-DB, FSF2-AB). <Badge>1.0.0</Badge>
+
+1. The master device restarted abnormally if changing the floor settings after setting up the scheduled unlock zone. <Badge>1.0.0</Badge>
+
+1. When different faces are enrolled in one user, authentication failed with the second enrolled face. <Badge>1.0.0</Badge>
+
+1. When changing the intelligent slave settings on the detailed page of the device on BioStar 2, the settings were not applied. <Badge>1.1.4</Badge>
+
+1. If the user authenticated on the device at the time of Auth Timeout, an incorrect error message was displayed. <Badge>1.0.0</Badge>
+
+1. When authenticating with a duress fingerprint on a device with the auth mode set to ID+face+fingerprint/PIN, the duress fingerprint log does not leave. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain HID iCLASS Seos cards. <Badge>1.0.0</Badge>
+
+1. Device does not connect to a 3rd party controller (Software House iSTAR Edge G2) via OSDP. <Badge>1.0.0</Badge>
+
+1. The device's face authentication and temperature measurement performance has deteriorated in outdoor environments with ceilings. <Badge>1.0.0</Badge>
+
+1. The device's mask detection performance has deteriorated when the user wears a specific color mask. <Badge>1.0.0</Badge>
+
+1. The device is slow to recognize the EM card. <Badge>1.0.0</Badge>
+
+1. If the user authenticated on the device at the time of Auth Timeout, it was authenticated, but the door was not opened. <Badge>1.0.0</Badge>
+
+1. When the dual authentication was set on the device, if the fake fingerprint was used in the second authentication, a screen unrelated to the situation was output after authentication failure (FSF2-ODB). <Badge>1.0.0</Badge>
+
+1. The device rebooted abnormally when a user scanned a card on the device with several cards overlapped in a wallet or the like. <Badge>1.0.0</Badge>
+
+1. When setting the elevator to the scheduled unlock zone and using the 'Started by User Authentication' option, the floor is activated normally when a user belonging to the access group authenticates, but the 'Floor released' logs are output. <Badge>1.0.0</Badge>
+
+1. When upgrading firmware using USB memory, the device reboots after an upgrade failure message is displayed, and the firmware is upgraded afterward. <Badge>1.0.0</Badge>
+
+1. Global APB behavior for the same input was different depending on firmware version. <Badge>1.1.1</Badge>
+
+1. When the device is connected as an intelligent slave and the first card registered to the user is a Wiegand card of a format other than 26-bit, the CSN value is output through OSDP when authenticated with the user's credentials other than the card. <Badge>1.1.2</Badge>
+
+1. If some ports of the OM-120 connected as a slave are set as a door relay and the device is rebooted, the relay was operated abnormally. <Badge>1.0.0</Badge>
+
+1. 'Check Only' was displayed in the event log even though the Check Mode of the thermal camera was set to 'Check After Authentication'. <Badge>1.1.1</Badge>
+
+1. When loading the logs for the user who entered the admin menu using the SDK, the user ID was not displayed. <Badge>1.0.0</Badge>
+
+1. The 'Delete the Root Certificate' was not displayed when a user with the administrator level accessed the menu on the device where the certificate was stored. <Badge>1.0.0</Badge>
+
+1. When authenticating on a device that has dual authentication set up, the authentication success sound is not output for the dual authentication result, and the home screen is maintained. <Badge>1.0.0</Badge>
+
+1. The user ID was abnormally displayed in the event log if the user authenticated with AoC set as the blacklist card when the User ID Type was set to Alphanumeric. <Badge>1.0.0</Badge>
+
+1. After issuing a secure credential card with face data to a user, when the user's face data was deleted and the secure credential card was authenticated, authentication failed even though the face template was stored in the card. <Badge>1.0.0</Badge>
+
+1. When initializing the master device with the 'Keep Network Settings' option, the RS-485 communication key was initialized and the slave device was disconnected. <Badge>1.0.0</Badge>
+
+</BugLists>

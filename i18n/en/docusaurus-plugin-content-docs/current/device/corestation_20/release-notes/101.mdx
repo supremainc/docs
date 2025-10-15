@@ -1,0 +1,66 @@
+---
+id: 101
+title: Firmware Version 1.0.1
+---
+
+# Firmware Version 1.0.1 (Build No. 1.0.1_250604)
+
+Release<Separator/>2025-06-05
+
+## New Features and Improvements
+
+---
+
+1. Supports **Custom Smart Card** of devices connected as slaves.
+
+1. Supports new device connection in CoreStation Setup Manager.
+
+    - Door Interface (DI-24)
+
+1. Supports new device.
+
+    - Door Interface (DI-24)
+
+1. Supports elevator control via the Fire Aux input port.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. LED status indicator flashes only in red. <Badge>1.0.0</Badge>
+
+1. More than three slave devices can be connected to a single RS-485 port in CoreStation Setup Manager. <Badge>1.0.0</Badge>
+
+1. **Secure Tamper** does not operate in CoreStation Setup Manager when the **Use Port** is enabled for the AUX port connected to the tamper. <Badge>1.0.0</Badge>
+
+1. When the tamper is triggered on the device, the LED light returns to its previous lighting state. <Badge>1.0.0</Badge>
+
+1. The default settings for AUX ports (AC Fail, Tamper, Fire) are disabled in CoreStation Setup Manager. <Badge>1.0.0</Badge>
+
+1. Authentication fails with a 'period expired' message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
+
+1. When authenticating with a complex QR code on a device connected as a slave, the card value is not displayed and the event log is incorrectly logged as '1:1 authentication failed(QR/Barcode)'. <Badge>1.0.0</Badge>
+
+1. After creating a door on a device configured as a slave and using the slave device's relay for door control, the relay status is incorrectly displayed. <Badge>1.0.0</Badge>
+
+1. After rebooting the controller while the door is unlocked due to a fire alarm, the fire alarm is not properly cleared even after clearing the alarm. <Badge>1.0.0</Badge>
+
+1. After enabling dual authentication on a door configured with a Wiegand reader, the master device restarts when authentication is performed. <Badge>1.0.0</Badge>
+
+1. When the elevator is set to **Schedule Unlock**, if the RS-485 connection of the slave device is disconnected and then reconnected after the **Schedule Unlock** ends, the relay does not operate as locked. <Badge>1.0.0</Badge>
+
+1. When the time is changed and the **Time Synchronization with Server** option is enabled, synchronization does not occur immediately but only after a certain period of time. <Badge>1.0.0</Badge>
+
+1. After performing **Restore to default** to **Without Network** and slave devices are added again, the newly added slave devices are shown as disconnected in the UI, but are actually connected according to the device log. <Badge>1.0.0</Badge>
+
+1. Wiegand format card data of 25 bits or less is not recognized. <Badge>1.0.0</Badge>
+
+1. When **Dual Authentication** is set on a door with an OSDP reader, the LED and buzzer operate incorrectly in the waiting-for-input state after the first authentication. <Badge>1.0.0</Badge>
+
+1. CoreStation 20 enters an infinite reboot when upgrading the Door Interface firmware after changing the RS-485 port baud rate of CoreStation 20 and Door Interface. <Badge>1.0.0</Badge>
+
+1. When a specific device is connected as a slave, configuration changes are not properly applied. <Badge>1.0.0</Badge>
+
+</BugLists>

@@ -714,7 +714,35 @@ const sidebars = {
         'device/corestation_40/installation',
         'device/corestation_40/product-specifications',
         'device/corestation_40/regulatory-information',
-        'device/corestation_40/appendices'
+        'device/corestation_40/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/corestation_40/release-notes/index',
+          },
+          items: [
+            'device/corestation_40/release-notes/171',
+            'device/corestation_40/release-notes/161',
+            'device/corestation_40/release-notes/153',
+            'device/corestation_40/release-notes/152',
+            'device/corestation_40/release-notes/151',
+            'device/corestation_40/release-notes/141',
+            'device/corestation_40/release-notes/140',
+            'device/corestation_40/release-notes/131',
+            'device/corestation_40/release-notes/130',
+            'device/corestation_40/release-notes/120',
+            'device/corestation_40/release-notes/112',
+            'device/corestation_40/release-notes/111',
+            'device/corestation_40/release-notes/110',
+            'device/corestation_40/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -735,7 +763,24 @@ const sidebars = {
         'device/corestation_20/installation',
         'device/corestation_20/product-specifications',
         'device/corestation_20/regulatory-information',
-        'device/corestation_20/appendices'
+        'device/corestation_20/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/corestation_20/release-notes/index',
+          },
+          items: [
+            'device/corestation_20/release-notes/102',
+            'device/corestation_20/release-notes/101',
+            'device/corestation_20/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -756,7 +801,69 @@ const sidebars = {
         'device/doorinterface/installation',
         'device/doorinterface/product-specifications',
         'device/doorinterface/regulatory-information',
-        'device/doorinterface/appendices'
+        'device/doorinterface/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/doorinterface/release-notes/index',
+          },
+          items: [
+            'device/doorinterface/release-notes/101',
+            'device/doorinterface/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  doormodule: [
+    {
+      type: 'category',
+      label: 'Door Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/doormodule/index',
+      // },
+      items: [
+        // 'device/doormodule/safety-instructions',
+        // 'device/doormodule/getting-started',
+        // 'device/doormodule/installation',
+        // 'device/doormodule/product-specifications',
+        // 'device/doormodule/regulatory-information',
+        // 'device/doormodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/doormodule/release-notes/index',
+          },
+          items: [
+            'device/doormodule/release-notes/122',
+            'device/doormodule/release-notes/121',
+            'device/doormodule/release-notes/120',
+            'device/doormodule/release-notes/115',
+            'device/doormodule/release-notes/114',
+            'device/doormodule/release-notes/113',
+            'device/doormodule/release-notes/112',
+            'device/doormodule/release-notes/1015',
+            'device/doormodule/release-notes/1014',
+            'device/doormodule/release-notes/1013',
+            'device/doormodule/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -793,9 +900,268 @@ const sidebars = {
         'device/facestation_f2/troubleshooting',
         'device/facestation_f2/product-specifications',
         'device/facestation_f2/regulatory-information',
-        'device/facestation_f2/appendices'
+        'device/facestation_f2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_f2/release-notes/index',
+          },
+          items: [
+            'device/facestation_f2/release-notes/221',
+            'device/facestation_f2/release-notes/220',
+            'device/facestation_f2/release-notes/214',
+            'device/facestation_f2/release-notes/213',
+            'device/facestation_f2/release-notes/212',
+            'device/facestation_f2/release-notes/211',
+            'device/facestation_f2/release-notes/210',
+            'device/facestation_f2/release-notes/203',
+            'device/facestation_f2/release-notes/202',
+            'device/facestation_f2/release-notes/114',
+            'device/facestation_f2/release-notes/112',
+            'device/facestation_f2/release-notes/111',
+            'device/facestation_f2/release-notes/105',
+            'device/facestation_f2/release-notes/104',
+            'device/facestation_f2/release-notes/103',
+            'device/facestation_f2/release-notes/102',
+            'device/facestation_f2/release-notes/101',
+            'device/facestation_f2/release-notes/100',
+          ]
+        },
       ]
     }
+  ],
+  facestation2: [
+    {
+      type: 'category',
+      label: 'FaceStation 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/facestation_2/index',
+      // },
+      items: [
+        // 'device/facestation_2/safety-instructions',
+        // 'device/facestation_2/getting-started',
+        // 'device/facestation_2/installation',
+        // {
+        //   type: 'category',
+        //   label: '사용하기',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'device/facestation_2/using-device',
+        //   },
+        //   items: [
+        //     'device/facestation_2/admin-menu',
+        //     'device/facestation_2/user',
+        //     'device/facestation_2/authentication',
+        //     'device/facestation_2/settings',
+        //     'device/facestation_2/event-log'
+        //   ]
+        // },
+        // 'device/facestation_2/troubleshooting',
+        // 'device/facestation_2/product-specifications',
+        // 'device/facestation_2/regulatory-information',
+        // 'device/facestation_2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/release-notes/index',
+          },
+          items: [
+            'device/facestation_2/release-notes/155',
+            'device/facestation_2/release-notes/154',
+            'device/facestation_2/release-notes/153',
+            'device/facestation_2/release-notes/152',
+            'device/facestation_2/release-notes/151',
+            'device/facestation_2/release-notes/150',
+            'device/facestation_2/release-notes/142',
+            'device/facestation_2/release-notes/141',
+            'device/facestation_2/release-notes/140',
+            'device/facestation_2/release-notes/131',
+            'device/facestation_2/release-notes/130',
+            'device/facestation_2/release-notes/121',
+            'device/facestation_2/release-notes/120',
+            'device/facestation_2/release-notes/111',
+            'device/facestation_2/release-notes/110',
+            'device/facestation_2/release-notes/104',
+            'device/facestation_2/release-notes/103',
+            'device/facestation_2/release-notes/102',
+            'device/facestation_2/release-notes/101',
+            'device/facestation_2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryp2: [
+    {
+      type: 'category',
+      label: 'BioEntry P2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/bioentry_p2/index',
+      // },
+      items: [
+        // 'device/bioentry_p2/safety-instructions',
+        // 'device/bioentry_p2/getting-started',
+        // 'device/bioentry_p2/installation',
+        // 'device/bioentry_p2/troubleshooting',
+        // 'device/bioentry_p2/product-specifications',
+        // 'device/bioentry_p2/regulatory-information',
+        // 'device/bioentry_p2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_p2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_p2/release-notes/152',
+            'device/bioentry_p2/release-notes/151',
+            'device/bioentry_p2/release-notes/144',
+            'device/bioentry_p2/release-notes/143',
+            'device/bioentry_p2/release-notes/142',
+            'device/bioentry_p2/release-notes/141',
+            'device/bioentry_p2/release-notes/140',
+            'device/bioentry_p2/release-notes/131',
+            'device/bioentry_p2/release-notes/130',
+            'device/bioentry_p2/release-notes/121',
+            'device/bioentry_p2/release-notes/120',
+            'device/bioentry_p2/release-notes/112',
+            'device/bioentry_p2/release-notes/111',
+            'device/bioentry_p2/release-notes/110',
+            'device/bioentry_p2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryr2: [
+    {
+      type: 'category',
+      label: 'BioEntry R2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/bioentry_r2/index',
+      // },
+      items: [
+        // 'device/bioentry_r2/safety-instructions',
+        // 'device/bioentry_r2/getting-started',
+        // 'device/bioentry_r2/installation',
+        // 'device/bioentry_r2/troubleshooting',
+        // 'device/bioentry_r2/product-specifications',
+        // 'device/bioentry_r2/regulatory-information',
+        // 'device/bioentry_r2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_r2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_r2/release-notes/141',
+            'device/bioentry_r2/release-notes/140',
+            'device/bioentry_r2/release-notes/131',
+            'device/bioentry_r2/release-notes/130',
+            'device/bioentry_r2/release-notes/120',
+            'device/bioentry_r2/release-notes/111',
+            'device/bioentry_r2/release-notes/110',
+            'device/bioentry_r2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryw2: [
+    {
+      type: 'category',
+      label: 'BioEntry W2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/bioentry_w2/index',
+      // },
+      items: [
+        // 'device/bioentry_w2/safety-instructions',
+        // 'device/bioentry_w2/getting-started',
+        // 'device/bioentry_w2/installation',
+        // 'device/bioentry_w2/product-specifications',
+        // 'device/bioentry_w2/regulatory-information',
+        // 'device/bioentry_w2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_w2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_w2/release-notes/182',
+            'device/bioentry_w2/release-notes/181',
+            'device/bioentry_w2/release-notes/180',
+            'device/bioentry_w2/release-notes/171',
+            'device/bioentry_w2/release-notes/170',
+            'device/bioentry_w2/release-notes/163',
+            'device/bioentry_w2/release-notes/162',
+            'device/bioentry_w2/release-notes/161',
+            'device/bioentry_w2/release-notes/160',
+            'device/bioentry_w2/release-notes/150',
+            'device/bioentry_w2/release-notes/141',
+            'device/bioentry_w2/release-notes/140',
+            'device/bioentry_w2/release-notes/131',
+            'device/bioentry_w2/release-notes/130',
+            'device/bioentry_w2/release-notes/123',
+            'device/bioentry_w2/release-notes/122',
+            'device/bioentry_w2/release-notes/121',
+            'device/bioentry_w2/release-notes/120',
+            'device/bioentry_w2/release-notes/115',
+            'device/bioentry_w2/release-notes/114',
+            'device/bioentry_w2/release-notes/113',
+            'device/bioentry_w2/release-notes/112',
+            'device/bioentry_w2/release-notes/111',
+            'device/bioentry_w2/release-notes/110',
+            'device/bioentry_w2/release-notes/101',
+            'device/bioentry_w2/release-notes/100',
+          ]
+        },
+      ],
+    },
   ],
   bioentryw3: [
     {
@@ -930,6 +1296,23 @@ const sidebars = {
         'device/biostation_2a/product-specifications',
         'device/biostation_2a/regulatory-information',
         'device/biostation_2a/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_2a/release-notes/index',
+          },
+          items: [
+            'device/biostation_2a/release-notes/111',
+            'device/biostation_2a/release-notes/110',
+            'device/biostation_2a/release-notes/100',
+          ]
+        },
       ],
     },
   ],
@@ -967,6 +1350,35 @@ const sidebars = {
         'device/biolite_n2/product-specifications',
         'device/biolite_n2/regulatory-information',
         'device/biolite_n2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2/release-notes/index',
+          },
+          items: [
+            'device/biolite_n2/release-notes/162',
+            'device/biolite_n2/release-notes/161',
+            'device/biolite_n2/release-notes/160',
+            'device/biolite_n2/release-notes/150',
+            'device/biolite_n2/release-notes/142',
+            'device/biolite_n2/release-notes/141',
+            'device/biolite_n2/release-notes/140',
+            'device/biolite_n2/release-notes/132',
+            'device/biolite_n2/release-notes/131',
+            'device/biolite_n2/release-notes/130',
+            'device/biolite_n2/release-notes/120',
+            'device/biolite_n2/release-notes/110',
+            'device/biolite_n2/release-notes/102',
+            'device/biolite_n2/release-notes/101',
+            'device/biolite_n2/release-notes/100',
+          ]
+        },
       ],
     },
   ],
