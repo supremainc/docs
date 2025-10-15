@@ -104,7 +104,12 @@ const config = {
           lastmod: 'date',
           changefreq: 'always',
           priority: 0.5,
-          ignorePatterns: ['/tags/**']
+          ignorePatterns: [
+            '/tags/**',
+            'back/**',
+            'cover/**',
+            'products/**'
+          ]
         },
         svgr: {
           svgrConfig: {
