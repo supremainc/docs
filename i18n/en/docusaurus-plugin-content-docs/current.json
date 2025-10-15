@@ -282,5 +282,9 @@
   "sidebar.xstation2.category.사용하기": {
     "message": "How to Use",
     "description": "The label for category 사용하기 in sidebar xstation2"
+  },
+  "sidebar.biostarx.category.bsxDashboard": {
+    "message": "Dashboard",
+    "description": "The label for category 대시보드 in sidebar biostarx"
   }
 }
