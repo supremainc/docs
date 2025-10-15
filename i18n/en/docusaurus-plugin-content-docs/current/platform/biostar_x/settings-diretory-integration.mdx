@@ -1,22 +1,22 @@
 ---
 id: settings-diretory-integration
 title: Directory Integration Settings
-description: This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar 2.
+description: This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.
 ---
 
 import UserGroupFilter from '../../common/_usergroupfilter.mdx';
 import UserCustomField from '../../common/_usercustomfield.mdx';
 import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
-This document provides guidance on how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with BioStar 2. 
+This document provides guidance on how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with BioStar X. 
 
 Integrating with **Entra ID** or **Active Directory** provides the following convenient features, enhancing both security and usability. This enhances both security and convenience.
 
-* You can log in to BioStar 2 using your **Entra ID** account via Single Sign-On (SSO) provided by **Entra ID**.
+* You can log in to BioStar X using your **Entra ID** account via Single Sign-On (SSO) provided by **Entra ID**.
 
-* You can log in to BioStar 2 using Lightweight Directory Access Protocol (LDAP) authentication provided by **Active Directory**.
+* You can log in to BioStar X using Lightweight Directory Access Protocol (LDAP) authentication provided by **Active Directory**.
 
-* Users and groups configured in **Entra ID** or **Active Directory** can be synchronized with BioStar 2.
+* Users and groups configured in **Entra ID** or **Active Directory** can be synchronized with BioStar X.
 
 * You can map user information such as job title, department, and group used in **Entra ID** or **Active Directory** to the custom fields of **BioStar X**.
 
@@ -28,7 +28,7 @@ The **Entra ID** or **Active Directory** settings feature is available through a
 
 ## Integrate with Entra ID {#intergrate-with-entraid}
 
-1. Log in to BioStar 2 with an administrator account.
+1. Log in to BioStar X with an administrator account.
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -83,7 +83,7 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 :::caution
 
-The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrating with **Entra ID**. It is automatically generated and applied by BioStar 2.
+The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrating with **Entra ID**. It is automatically generated and applied by BioStar X.
 
 :::
 
@@ -93,7 +93,7 @@ The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrat
 
 ### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {#setssoEntraid}
 
-Change the <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' /> to enable login to  BioStar 2 using **Entra ID SSO**.
+Change the <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' /> to enable login to  BioStar X using **Entra ID SSO**.
 
 <Image src='/img/biostarx-setting-directory-login-with-entraid.png' />
 
@@ -131,7 +131,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 ## Integrate with Active Directory {#integrate-with-active-directory}
 
-1. Log in to BioStar 2 with an administrator account.
+1. Log in to BioStar X with an administrator account.
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -200,7 +200,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
 ### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {#setssoAD}
 
-To configure login to BioStar 2 using the user ID of the Active Directory server, change the <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server will be mapped to the BioStar 2 login ID.
+To configure login to BioStar X using the user ID of the Active Directory server, change the <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server will be mapped to the BioStar X login ID.
 
 <Image src='/img/biostarx-setting-directory-login-with-ad.png' />
 
@@ -228,7 +228,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
 * You can check the synchronized user list in the <Cmd sid='common.user' product='2' /> menu.
 
-* After completing the login settings with **Entra ID** or **Active Directory**, you can see <Cmd sid='login.entraidLoginBtn' product='2' /> when logging in to BioStar 2.
+* After completing the login settings with **Entra ID** or **Active Directory**, you can see <Cmd sid='login.entraidLoginBtn' product='2' /> when logging in to BioStar X.
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
@@ -236,7 +236,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
 When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
 
-1. Log in to BioStar 2 with an administrator account.
+1. Log in to BioStar X with an administrator account.
 
 2. Go to the <Cmd sid='common.user' product='2' /> menu.
 
@@ -254,7 +254,7 @@ The selected users will be excluded from integration when using the <Cmd sid='se
 
 To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow the steps:
 
-1. Log in to BioStar 2 with an administrator account.
+1. Log in to BioStar X with an administrator account.
 
 2. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
 
@@ -270,6 +270,6 @@ To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature,
 
 :::caution
 
-When the <Cmd sid='settings.activeDirectory.title' product='2' /> is set to <Cmd sid='settings.activeDirectory.notUse' product='2' />, all integration settings with **Entra ID** or **Active Directory** in BioStar 2 will be removed. The integrated user and group information will not be deleted, but will no longer be synchronized. Please make sure to check before disabling the integration.
+When the <Cmd sid='settings.activeDirectory.title' product='2' /> is set to <Cmd sid='settings.activeDirectory.notUse' product='2' />, all integration settings with **Entra ID** or **Active Directory** in BioStar X will be removed. The integrated user and group information will not be deleted, but will no longer be synchronized. Please make sure to check before disabling the integration.
 
 :::

@@ -14,7 +14,7 @@ You can change the basic information settings of the BioStar X server, user and 
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click Server → Settings in the left sidebar.
+2. Click <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' /> in the left sidebar.
 
 3. Set the desired items in each section.
 
@@ -26,7 +26,7 @@ You can change the basic information settings of the BioStar X server, user and 
 
    * <Cmd sid='settings.expertSettings.title' product='2' />: You can set it to save both the actual image and the template of the face or save only the template without storing the actual image.
 
-4. Click Apply at the bottom right of the screen to save the settings.
+4. Click <Cmd sid='button.apply' product='2' /> at the bottom right of the screen to save the settings.
 
 ## Basic information settings {#basic-setting}
 
@@ -144,15 +144,15 @@ Changing from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' 
 
 You can add frequently used devices for enrolling fingerprints, faces, or cards in the <Cmd sid="setting.server.enrollment_device.title" product='2' /> option for convenience. 
 
-1. Click the Add button to add a device.
+1. Click the <Cmd sid='button.add' product='2' /> button to add a device.
 
 2. When the <Cmd sid='setting.server.enrollment_device.configure.title' product='2' /> window appears, click the checkbox of the desired device from the list.
 
    <Image src='/img/biostarx-settings-server-management-enroll-device.png' className='none' />
 
-3. Click Add to add the selected device.
+3. Click <Cmd sid='button.add' product='2' /> to add the selected device.
 
-4. Click Apply at the bottom right of the screen to save the settings for the added device.
+4. Click <Cmd sid='button.apply' product='2' /> at the bottom right of the screen to save the settings for the added device.
 
 :::info
 
@@ -174,7 +174,7 @@ You can add frequently used devices for enrolling fingerprints, faces, or cards 
 
 In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you can add fields to input additional information about the user. The added fields will be displayed on the user information screen.
 
-1. To add a custom user field, click the Add button.
+1. To add a custom user field, click the <Cmd sid="button.plusAdd" product='2' /> button.
 
 2. Enter the name of the custom user field and select the desired item type.
 
@@ -184,7 +184,7 @@ In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you c
 
    * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />: Allows entry of up to 32 characters of numbers and letters.
 
-   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />: Allows addition of up to 20 items of 32 characters; each item is separated by a semicolon (;). (e.g., option1;option2;option3)
+   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />: Allows addition of up to 20 items of 32 characters; each item is separated by a semicolon (;). (e.g., Select1;Select2;Select3)
 
      <Image src='/img/biostarx-settings-server-management-custome-field-select.png' />
 
@@ -200,23 +200,23 @@ In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you c
 
      :::
 
-3. Click the Apply button at the bottom right of the screen to save the added custom user field.
+3. Click the <Cmd sid='button.apply' product='2' /> button at the bottom right of the screen to save the added custom user field.
 
 :::info
 
 * To change the order of the custom user fields, change the numbers in the <Cmd sid='setting.server.custom_field.order' product='2' /> column. The position of the added fields will change.
 
-* After modifying the custom user fields, click the Apply button at the bottom right of the screen.
+* After modifying the custom user fields, click the <Cmd sid='button.apply' product='2' /> button at the bottom right of the screen.
 
 * Click the <IcTrash2 /> button to delete a custom user field. Deleted fields cannot be recovered.
 
-* For detailed information on registering and modifying user information, refer to the following document.
+* For detailed information on registering and modifying user information, refer to [the following](how-to-guide-user).
 
 :::
 
 ### AoC card settings {#aoc-card-setting}
 
-To delete personal information and credential information from the **BioStar X** server when issuing an AoC (Access on Card) credential that stores the user's credential on the card, enable the <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' /> option.
+To delete personal information and credential information from the **BioStar X** server when issuing an [Access on Card(AoC)](../../reference/glossary#access_on_card) credential that stores the user's credential on the card, enable the <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' /> option.
 
 :::info
 
@@ -284,7 +284,7 @@ To delete personal information and credential information from the **BioStar X**
 
 ## Server matching {#servermatching}
 
-In the <Cmd sid='common.serverMatching' product='2' /> section, you can configure the server matching feature to authenticate user information with **BioStar X** without authenticating it on the device.
+In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up the [server matching](../../reference/glossary#server_matching) feature to authenticate user information on **BioStar X** without authenticating on the device.
 
 <Image src='/img/biostarx-settings-server-server-matching.png' className='none' />
 
