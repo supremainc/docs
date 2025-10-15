@@ -1,0 +1,104 @@
+---
+id: settings-remote-access
+title: Set up remote access
+description: This guide explains how to set up remote access via the ngrok service.
+keywords:
+  - remote
+  - access
+  - ngrok
+---
+
+Remote access via ngrok allows secure access to internal networks from external networks. This feature enables access to the **BioStar X** server remotely without firewall settings or port forwarding.
+
+:::info
+
+* The remote access feature is available as an additional option for **Advanced** licenses and above. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+* When purchasing the remote access license, Suprema generates a bot account, endpoint, and license document for remote access use on the ngrok Suprema site.
+
+:::
+
+:::caution
+
+* The remote access feature is provided through tunneling by the third-party service, ngrok.
+
+* BioStar X simply supports the connection by calling the ngrok API, but the security, safety, and continuity of internet connectivity entirely depend on the ngrok service. Therefore, Suprema assumes no responsibility for any security incidents, data loss, or system breaches that may occur during the use of this feature.
+
+:::
+
+## When to use this?
+
+Use the remote access feature in the following situations.
+
+* When you need to connect to the **BioStar X** server from an external network
+
+* When it's challenging to connect directly due to firewalls or NAT environments
+
+* When you want to quickly set up remote access without complex network setups
+
+* When you need to temporarily provide outside access rights
+
+## Remote access setup
+
+<Steps>
+<Step>
+
+### Activate remote access license
+
+1. Log in with your **BioStar X** admin ID.
+
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+3. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' /> in the left sidebar.
+
+4. Enter the remote access license key and admin name provided by Suprema, then click <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+:::info
+
+For more information on license registration, refer to [the following](settings-license-biostar-x-license).
+
+:::
+
+</Step>
+<Step>
+
+### Activate remote access
+
+1. Log in with your **BioStar X** admin ID.
+
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+3. Click <Cmd sid='setting.menu.remoteAccess.root' /> in the left sidebar.
+
+4. In the <Cmd sid='setting.remoteAccess.section.title' /> section, change the <Cmd sid='setting.menu.remoteAccess.root' /> option to <Cmd sid='common.use' />.
+
+<Image src='/img/biostarx-settings-remote-access.png' />
+
+</Step>
+<Step>
+
+### Enter ngrok setup information
+
+Enter the ngrok setup information provided by Suprema.
+
+* <Cmd sid='setting.remoteAccess.field.ngrokUserId' />: Enter your ngrok account.
+
+* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Enter your **Authtoken**.
+
+* <Cmd sid='setting.remoteAccess.field.hostURL' />: Enter the endpoint URL. The URL is in the format `your-name.bsx.ngrok.app`.
+
+After entering all the information, click the <Cmd sid='button.apply' product='2' /> button. If a warning message window appears, check the content and click the <Cmd sid='setting.remoteAccess.button.agree' /> button.
+
+</Step>
+
+</Steps>
+
+## Access endpoint URL
+
+After completing the setup, verify whether you can access the **BioStar X** server from an external network using the endpoint URL you entered in <Cmd sid='setting.remoteAccess.field.hostURL' />.
+
+:::info
+
+If you cannot access via endpoint URL from an external network, contact the sales point or distributor that issued your license.
+
+:::

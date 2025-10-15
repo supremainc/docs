@@ -1,0 +1,105 @@
+## Set master administrator
+
+The <Cmd>Master Administrator</Cmd> feature enhances full administrator privileges of the device to improve device security and block unauthorized access and configuration changes. You must **enroll credentials** for the <Cmd>Master Administrator</Cmd> with a new device, and only registered master administrators can access the administrator menu to change device settings.
+
+:::note
+
+What is a master administrator?
+
+* If you use the device without setting an administrator, anyone can access the administrator menu and change device settings. The master administrator feature enforces overall administrator settings to address these security vulnerabilities.
+
+* The master administrator cannot be deleted directly and is only deleted during <Cmd>Factory Initialize</Cmd>.
+
+:::
+
+### Enroll master administrator on a new device
+
+On a new device, you must register the <Cmd>Master Administrator</Cmd> from the start and access will be limited if not registered.
+
+:::info
+
+* The registration screen for <Cmd>Master Administrator</Cmd> appears during the first boot of a new device. You cannot proceed to the next screen without registering <Cmd>Master Administrator</Cmd>.
+
+* Even if you assign a full administrator through BioStar 2, you must register the <Cmd>Master Administrator</Cmd> to use all features.
+
+* New devices cannot perform firmware downgrades.
+
+:::
+
+1. When you boot a new device, the registration screen for <Cmd>Master Administrator</Cmd> appears.
+
+   <Include product='biostation_3'>
+
+   <Image src='/img/how-to/setting-master-admin-1.png' width='300px' />
+
+   </Include>
+
+2. You must enroll at least two types of credentials to register the <Cmd>Master Administrator</Cmd>. Select and enroll two desired credentials.
+
+   <Include product='biostation_3'>
+
+   <Image src='/img/how-to/setting-master-admin-2.png' width='300px' />
+
+   </Include>
+
+   The credentials that can be enrolled as <Cmd>Master Administrator</Cmd> are as follows.
+
+   <Table>
+     <Tbody>
+     <Row>
+       <Th>Credential type</Th>
+       <Th>Number of enrollments</Th>
+       <Th>Conditions</Th>
+     </Row>
+     <Row>
+       <Td>Card</Td>
+       <Td>Up to 4</Td>
+       <Td>Supports only CSN and Wiegand types<br/>Duplication within the same type is not allowed</Td>
+     </Row>
+     <Row>
+       <Td>Face</Td>
+       <Td>Up to 2</Td>
+       <Td>Only enrollable on devices with the same algorithm</Td>
+     </Row>
+     <Row>
+       <Td>Fingerprint</Td>
+       <Td>Up to 2</Td>
+       <Td>-</Td>
+     </Row>
+     <Row>
+       <Td>PIN</Td>
+       <Td>1</Td>
+       <Td>At least 8 characters long</Td>
+     </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **Enrollment conditions**
+
+   * You must enroll at least two types of credentials.
+
+   * The same conditions apply to both new devices and firmware upgrade devices.
+
+   * All credentials supported by the device can be used as authentication means.
+
+   :::
+
+3. After enrolling two or more types of credentials, press the <Cmd>Complete</Cmd> button to complete the registration of <Cmd>Master Administrator</Cmd>.
+
+   <Include product='biostation_3'>
+
+   <Image src='/img/how-to/setting-master-admin-3.png' width='300px' />
+
+   </Include>
+
+### Notices
+
+* **When manually changing the device encryption key**
+
+  When manually changing the device encryption key, a warning message will appear stating that the master administrator's PIN will be deleted, so check the message before proceeding with the change.
+
+* **Limitations on face image transmission over RS-485 communication segments**
+
+  Biometric credential images are not transmitted over RS-485 communication segments, so a substitute image will be displayed when viewing the registered master administrator's face on the slave device.

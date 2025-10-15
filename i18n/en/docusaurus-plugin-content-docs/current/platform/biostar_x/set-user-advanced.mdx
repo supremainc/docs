@@ -1,0 +1,40 @@
+---
+id: set-user-advanced
+title: Configure user advanced settings
+description: Learn how to set messages to display on the device when the user enters and how to exclude directory integration features.
+keywords:
+  - User
+  - Advanced Settings
+---
+
+You can set messages to display on the device when the user enters or exclude the user from synchronization during <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> integration. This feature can be set when adding or editing a user.
+
+Go to the <Cmd sid='shell.header.user' /> page and set access permissions using the two methods below.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+The items that can be set in the <Cmd sid='common.advanced' product='2' /> section are as follows.
+
+<Image src='/img/biostarx-user-advanced.png' />
+
+* <Cmd sid='common.privateMessage' product='2' />: You can enter a message to display on the device when the user enters. You can enter up to 128 characters for the message.
+
+* <Cmd sid='user.adsync.exclude' product='2' />: You can exclude the user from synchronization during <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> integration.
+
+:::info
+
+* The <Cmd sid='user.adsync.exclude' product='2' /> option is available through additional options for **Advanced** or higher licenses. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+* For more information on directory integration settings, refer to [the following](settings-diretory-integration).
+
+:::
+
+<NextStep>
+<NextItem to='edit-user'>
+
+Check how to edit user information.
+
+</NextItem>
+</NextStep>

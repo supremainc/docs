@@ -7,16 +7,292 @@ keywords:
   - Template
 ---
 
-Reports are created in the desired format.
+You can view all events that occurred in **BioStar X** or just the alarm history. You can filter and generate custom reports according to user-defined conditions.
 
-<Image src='/img/biostarx-data.png' className='none' />
+Click <Cmd sid='shell.header.data' /> or select <Cmd sid='shell.header.data' /> from the shortcut list at the top left of the screen on the <Cmd sid='shell.header.launcher' /> page.
 
-<Calloutlists>
+## View all events
 
-1. <Cmd sid='reportApp.savedReports' product='2' / >: Click <Cmd sid='reportApp.saveReport' product='2' /> in the created report, it will be saved as a template below this. This is useful when you need to create a report with the same conditions in the future.
+You can view all events that occurred in **BioStar X**. Click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' /> on the left sidebar of the screen.
 
-2. <Cmd sid='reportApp.user' product='2' />: Create a report by selecting a template relevant to the user.
+<Image src='/img/biostarx-data-generate-report.png' className='none' />
 
-3. <Cmd sid='reportApp.event' product='2' />: Create a <Cmd sid='reportApp.customReport' product='2' /> by selecting desired Events, Periods, and Filters (<Cmd>USERS</Cmd>, <Cmd>DOORS</Cmd>, <Cmd>DEVICES</Cmd>).
+* To check the previous or next page from the listed results, click <IcFw2 /> or <IcBw2 /> at the top right of the screen.
 
-</Calloutlists>
+* To change the number of rows displayed in the list, click the dropdown menu at the top right of the screen and select your desired value. You can select from a minimum of 25 rows to a maximum of 200 rows.
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+### Set period
+
+You can set the desired period in the <Cmd sid='data.header.customReport.period' /> option at the top left of the screen. Click the date area.
+
+<Image src='/img/biostarx-data-all-events-select-period.png' />
+
+* You can select predefined periods from today ranging from the 1st to 6 months. The events that occurred during the selected period will be automatically displayed in the list.
+
+* By selecting <Cmd sid='data.dialog.rollCall.userDefined' />, you can also manually set your desired period. When the period selection window appears, set the start date, end date, and time, then click <Cmd sid='common.button.ok' />. The events that occurred during the set period will automatically appear in the list.
+
+  <Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+  :::info
+
+  To select today's date, click <Cmd sid='data.dialog.rollCall.today' />.
+
+  :::
+
+### Set query conditions
+
+You can filter the list by setting your desired conditions in the header section of the query list. You can set conditions for all items except for dates. 
+
+1. In the header section of the event list, click the <IcFilter2 /> button for the desired column.
+
+2. When the filter condition window appears, select your desired items.
+
+3. Once your selections are complete, click the <Cmd sid='button.addCondition' product='2' /> button.
+
+Only events matching the selected conditions will be displayed in the list.
+
+<Image src='/img/biostarx-data-all-events-filtered.png' />
+
+### Clear query conditions
+
+To clear the set query conditions, click the <IcClose /> button in the conditions set below the header section. The set conditions will be cleared, and all events will be displayed in the list again.
+
+<Image src='/img/biostarx-data-all-events-disable-filter.png' />
+
+### Check event video
+
+If a camera is connected to a device where a specific event occurred in the event list, an <Cmd sid='data.column.customReport.view' /> column will show the <IcReportVid /> icon for that event. By clicking the icon, you can view the video at the time the event occurred through a pop-up window.
+
+<Image src='/img/biostarx-data-all-events-video-log.png' />
+
+:::info
+
+* If you have connected more than one camera in the camera rule settings, it will play the video from the first camera. For more information about camera rule settings, refer to [the following](settings-videos-rule).
+
+* This feature is available with additional options on the **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+* For information on linking doors and cameras, refer to [the following](settings-videos-rule).
+
+:::
+
+### Export to CSV
+
+You can export the queried event list as a CSV file. Click <IcMoreW /> → <Cmd sid='menu.csvDownload' product='2' /> at the top right of the screen. You can download the CSV file to your PC.
+
+:::info
+
+The name format of the CSV file is `Report_YYYYMMDD_hash.csv`. (For example, *Report_20251002_94a85b7519664378b4b39b879f1e81b7.csv*)
+
+:::
+
+## View alarm history
+
+You can only view alarm (alert) history. Click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.alertHistory' /> on the left sidebar of the screen.
+
+<Image src='/img/biostarx-data-alert-lists.png' />
+
+* To check the previous or next page from the listed results, click <IcFw2 /> or <IcBw2 /> at the top right of the screen.
+
+* To go to the first or last page of the queried list, click <IcFirst2 /> or <IcLast2 /> at the top right of the screen.
+
+* To change the number of rows displayed in the list, click the dropdown menu at the top right of the screen and select your desired value. You can select from a minimum of 25 rows to a maximum of 200 rows.
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+:::info
+
+For more information about checking alarm (alert) events in event monitoring, refer to [the following](monitoring-event).
+
+:::
+
+### Set period
+
+You can set the desired period and query the alarm history that occurred during that period. In the <Cmd sid='reportHeader.datetime' product='2' /> column of the queried list, click the <IcFilter2 /> button. When the period selection window appears, set the start date, end date, and time, then click <Cmd sid='common.button.ok' />. The events that occurred during the set period will automatically appear in the list.
+
+<Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+:::info
+
+To select today's date, click <Cmd sid='data.dialog.rollCall.today' />.
+
+:::
+
+### Set query conditions
+
+You can filter the list by setting your desired conditions in the header section of the query list. You can set conditions for all items except for dates. 
+
+1. In the header section of the event list, click the <IcFilter2 /> button for the desired column.
+
+2. When the filter condition window appears, select your desired items.
+
+3. Once your selections are complete, click the <Cmd sid='button.addCondition' product='2' /> button.
+
+Only events matching the selected conditions will be displayed in the list.
+
+<Image src='/img/biostarx-data-alert-events-filtered.png' />
+
+### Clear query conditions
+
+To clear the set query conditions, click the <IcClose /> button in the conditions set below the header section. The set conditions will be cleared, and all events will be displayed in the list again.
+
+<Image src='/img/biostarx-data-alert-events-disable-filter.png' />
+
+## User report query
+
+You can select user-related templates to generate reports. In the left sidebar of the screen, click the desired template under <Cmd sid='data.sidebar.user' />.
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-data-user-report.png' />
+
+</Column>
+<Column className='padding--l10'>
+
+* <Cmd sid='data.sidebar.usersInformation' />: You can view detailed user information in a list format.
+
+* <Cmd sid='data.sidebar.usersInDevice' />: You can view information of users registered to the device.
+
+* <Cmd sid='data.sidebar.userDetail' />: You can view detailed user information in a card format.
+
+* <Cmd sid='data.sidebar.userPhotoGallery' />: You can view user profile pictures in a gallery format.
+
+* <Cmd sid='data.sidebar.usersWithoutCredential' />: You can view users who have not set credentials.
+
+* <Cmd sid='data.sidebar.privateAuthModeByUser' />: You can view user-specific private authentication mode settings.
+
+* <Cmd sid='data.sidebar.numberOfCredentialsByUser' />: You can view the number of credentials set for the user.
+
+* <Cmd sid='data.sidebar.allCards' />: You can view users based on enrolled cards.
+
+* <Cmd sid='data.sidebar.unassignedCards' />: You can view cards that have not been assigned to users.
+
+* <Cmd sid='data.sidebar.blacklistCards' />: You can view disabled cards.
+
+* <Cmd sid='data.sidebar.expiredUsers' />: You can view users whose expiration date has passed.
+
+* <Cmd sid='data.sidebar.usersToBeExpiredInNDays' />: You can view users whose expiration date is approaching within N days. You can directly input the number of days before generating the report.
+
+* <Cmd sid='data.report.idleUsersWithValue' />: You can view users who have had no access records for the past N months. You can directly input the number of months before generating the report.
+
+* <Cmd sid='data.sidebar.inactiveUsers' />: You can view inactive users.
+
+</Column>
+
+</Columns>
+
+:::info
+
+* The generated report can be saved under <Cmd sid='data.sidebar.savedReports' />. Click the <Cmd sid='data.button.saveReport' /> button at the top left of the report.
+
+* For more information about report management, refer to [the following](#report-management).
+
+:::
+
+## Generate custom report {#custom-report}
+
+You can filter and generate custom reports according to your desired conditions. The generated report can be saved as a template for convenient use when generating reports with the same conditions in the future.
+
+1. Click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.customReport' /> on the left sidebar of the screen.
+
+2. In the <Cmd sid='data.dialog.customReport.events' /> window, select the desired events.
+
+   <Image src='/img/biostarx-data-custom-report-set-filter.png' />
+
+3. Once you have completed your desired event selection, click the <Cmd sid='common.button.next' /> button.
+
+   <Image src='/img/biostarx-data-custom-report-select-items.png' />
+
+   * In the search (<IcSearch />) input field, you can search for desired items.
+
+   * By clicking the <IcRepTrash /> button in the rightmost list, you can exclude the selected items.
+
+4. Set the query period and click the <Cmd sid='common.button.next' /> button.
+
+   <Image src='/img/biostarx-data-custom-report-set-period.png' className='none' />
+
+   * <Cmd sid='data.static' />: You can set a specific date and time to set the query period.
+
+   * <Cmd sid='data.dynamic' />: You can set the start date, end date, and time based on today. It is useful when generating reports for a specific period iteratively.
+
+5. You can set conditions based on users, doors, and devices, either grouped or individually.
+
+   <Image src='/img/biostarx-data-custom-report-select-filters.png' className='none' />
+
+   * By clicking the <IcRepTrash /> button in the right list, you can exclude the selected items.
+
+6. Select your desired conditions and click the <Cmd sid='common.button.next' /> button.
+
+7. In the column settings window, select the columns to be displayed in the report.
+
+   <Image src='/img/biostarx-data-custom-report-set-columns.png' />
+
+8. Once you have finished selecting your desired columns, click the <Cmd sid='data.button.generate' /> button.
+
+Complete the creation of the custom report.
+
+<Image src='/img/biostarx-data-custom-report-complete.png' />
+
+:::info
+
+* To modify the report title, event items, period, and filter conditions, click the <IcRepoEdit /> button at the top of the report.
+
+* The report title can also be changed under <Cmd sid='data.sidebar.savedReports' /> in the left sidebar of the screen. Select the custom report for which you want to change the title and right-click. Select <Cmd sid='data.sidebar.renameSavedReport' /> from the pop-up menu.
+
+  <Image src='/img/biostarx-data-custom-report-rename.png' />
+
+* For more information about report management, refer to [the following](#report-management).
+
+:::
+
+## Report management {#report-management}
+
+### Report Save
+
+To save the generated report as a template, click the <Cmd sid='data.button.saveReport' /> button. Saved reports can be viewed under <Cmd sid='data.sidebar.savedReports' /> in the left sidebar of the screen.
+
+<Image src='/img/biostarx-data-custom-report-saved.png' />
+
+### Save report file
+
+To export the report as a PDF or CSV file, click the <Cmd sid='data.button.export' /> button. When the <Cmd sid='data.exportReport' /> window appears, set each item and click the <Cmd sid='data.button.export' /> button.
+
+<Image src='/img/biostarx-data-custom-report-export.png' />
+
+### Print report
+
+To print the report using a printer connected to your PC, click the <Cmd sid='data.button.print' /> button. When the <Cmd sid='data.printReport' /> window appears, set each item and click the <Cmd sid='data.button.print' /> button.
+
+<Image src='/img/biostarx-data-custom-report-print.png' />
+
+The print preview screen will appear in a new tab of your web browser. Click the print button at the top right of the screen to start printing.
+
+### Delete report
+
+To delete a saved report, select the report to be deleted under <Cmd sid='data.sidebar.savedReports' /> in the left sidebar and right-click. Select <Cmd sid='data.sidebar.deleteSavedReport' /> from the pop-up menu.
+
+<Image src='/img/biostarx-data-custom-report-remove.png' />
+
+### Set columns
+
+You can change the column settings displayed in the report. Through column settings, you can select the columns to be displayed or change the order of the columns.
+
+1. Click the <Cmd sid='data.dialog.customReport.columns' /> button at the top right of the report.
+
+2. When the <Cmd sid='common.dialog.columnSetting.title' /> window appears, select or deselect the desired columns.
+
+   <Image src='/img/biostarx-data-column-setting.png' />
+
+3. To change the order of the columns, click and drag the desired column to change its position.
+
+4. To save the settings, click the <Cmd sid='common.apply' /> button.
+
+:::info
+
+* To reset the column layout settings, click the <Cmd sid='columnSetting.button.defaultColumn' product='2' /> button.
+
+* Depending on the generated report, the columns that can be selected or deselected may vary.
+
+:::

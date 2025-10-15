@@ -1,0 +1,45 @@
+---
+id: troubleshooting
+title: Troubleshooting
+description: Provides solutions for issues that may occur during the development, registration, and operation of the BioStar X plugin.
+keywords:
+  - Troubleshooting
+  - Debugging
+  - Troubleshooting
+---
+
+Provides solutions for issues that may occur during the development, registration, and operation of the **BioStar X** plugin.
+
+## Plugin registration failure
+
+* Make sure the server is running before registering the plugin.
+
+* Ensure that the <Badge className='get'>GET</Badge> `/bsx` endpoint responds correctly. You can test it using the `curl` command.
+
+  ```bash
+  curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
+  ```
+
+* Check if the **BioStar X** server can access the plugin server URL.
+
+## Authentication callback failure
+
+* Check if the certificate file exists and is valid.
+
+* Check the **BioStar X** server address and port in the <Cmd>SERVICE SETTINGS</Cmd> of the **BioStar X Service Manager**.
+
+* Verify that the network between the plugin server and **BioStar X** server is connected.
+
+## Decryption error
+
+* Check the AES key generation and encryption process.
+
+* Ensure that the IV derives from the same key.
+
+## Debug tips
+
+* Enable logging to check the details of requests and responses.
+
+* Test endpoints individually before full integration.
+
+* Simulate requests to the **BioStar X** server using the `curl` command.

@@ -6,13 +6,13 @@ keywords:
   - Custom installation
 ---
 
-This guides the user on how to set up a <Cmd code='biostar2.install.customInstall' className='bold'/> to integrate with a database that the user has already installed.
+This document provides a step-by-step guide on how to install **BioStar X** using the <Cmd code='biostar2.install.customInstall' className='bold'/> method. <Cmd code='biostar2.install.customInstall' className='bold'/> creates a database schema in conjunction with an existing database (MariaDB, MS SQL Server) installed on a local or remote server. Prepare the database and user account to be linked before starting the installation.
 
-:::info
+## Before starting {#start-before}
 
 * The databases that can be used in integration with **BioStar X** are as follows.
 
-  * MariaDB 10.1.10
+  * MariaDB 11.4.4
 
   * MS SQL Server 2012 SP3
 
@@ -35,8 +35,10 @@ This guides the user on how to set up a <Cmd code='biostar2.install.customInstal
 * To use Windows authentication, [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) is required.
   Please install the driver first.
 
-:::
-
 import InstallStep from '../../common/_biostar-install-steps.mdx';
 
 <InstallStep />
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />

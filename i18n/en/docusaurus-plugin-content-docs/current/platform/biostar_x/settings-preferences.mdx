@@ -1,67 +1,95 @@
 ---
 id: settings-preferences
-title: Preferences
-description: You can change language/time zone, date/time format, and upload a sound file to be used as an alert.
+title: Configure settings
+description: This guide covers how to set the language and time zone, date/time format, and notification sound when you first install BioStar X or change your usage environment.
 keywords:
   - Initial Settings
 ---
 
-You can change language/time zone, date/time format, and upload a sound file to be used as an alert.
+To effectively use **BioStar X**, the appropriate settings for your usage environment are necessary. Below are the required settings for various situations.
+
+* Initial settings for the newly installed **BioStar X**
+
+* Change to the preferred language
+
+* Set time according to local time zone
+
+* Customize event notification sound
+
+## Access default settings {#preference}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. In the left sidebar, click the <Cmd sid='common.preference' product='2' />.
 
-3. Edit the necessary fields.
+3. Set desired options in each section.
 
-## Language / Time zone
+   * <Cmd sid='preference.languageTimezone' product='2' />: Interface language and time zone, daylight saving time
 
-You can configure the BioStar X language and time zone settings.
+   * <Cmd sid='preference.dateTimeFormat' product='2' />: Date and time format
+
+   * <Cmd sid='device.info.sound' product='2' />: Event notification sound
+
+4. Complete all settings and click <Cmd sid='common.apply' /> at the bottom right of the screen.
+
+## Set language and standard time zone {#language-timezone}
+
+You can set the interface language for **BioStar X**, the time zone, and daylight saving time rules.
 
 <Image src='/img/biostarx-settings-preference-language-timezone.png' className='none' />
 
-* <Cmd sid='common.language' product='2' />: Select a language to use.
+* <Cmd sid='common.language' product='2' />: Select the interface language you want to use.
 
-* <Cmd sid='common.timeZone' product='2' />: Select a time zone to use.
+* <Cmd sid='common.timeZone' product='2' />: Select the time zone that corresponds to your current location.
 
-* <Cmd sid='common.dst' product='2' />: Select the daylight saving time to apply to BioStar X server. If the desired item is not listed, refer to the [following](settings-system-daylight-saving-time).
+* <Cmd sid='common.dst' product='2' />: Choose the daylight saving time rules to apply to the **BioStar X** server. If the desired item is not available, you can refer to [the following](settings-system-daylight-saving-time) to add it.
 
-## Date/Time
+## Set date and time display format {#date-time-format}
 
-You can configure the date and time format to use in BioStar X.
+You can set the date and time display format to be used across the system.
 
 <Image src='/img/biostarx-settings-preference-date-time.png' className='none' />
 
-* <Cmd sid="common.dateFormat" product='2' />: Changes the date format.
+* <Cmd sid='common.dateFormat' product='2' />: You can change the date format.
 
-* <Cmd sid="common.timeFormat" product='2' />: Changes the time format.
+  * **mm/dd/yyyy**: 01/31/2025
 
-## Sound
+  * **yyyy/mm/dd**: 2025/01/31
 
-You can upload a sound file to use in BioStar X.
+  * **dd/mm/yyyy**: 31/01/2025
+
+* <Cmd sid='common.timeFormat' product='2' />: You can change the time format.
+
+  * **hh:mm**: 23:59, 24-hour format
+
+  * **hh:mm a**: 11:59 PM, 12-hour format
+
+  * ***a hh:mm***: PM 11:59, 12-hour format
+
+## Set event notification sound {#sound}
+
+You can upload a sound file to be used when an event occurs.
 
 <Image src='/img/biostarx-settings-preference-sound.png' className='none' />
 
-<Calloutlists>
+1. Click <Cmd sid='button.plusAdd' product='2' />.
 
-1. Click <Cmd sid="button.plusAdd" product='2' />.
+2. When the <Cmd sid='setting.preference.sound.alert.add' product='2' /> window appears, click <Cmd sid='setting.preference.sound.alert.addSound.browse' product='2' />.
 
    <Image src='/img/biostarx-settings-preference-add-sound.png' className='none' />
 
-2. Click <Cmd sid="setting.preference.sound.alert.addSound.browse" product='2' /> to select a file.
+3. Select the *.wav* or *.mp3* file you want to upload and click **Open**.
 
-3. Select .wav file or .mp3 file and then click **Open**. 
+4. Click the <Cmd sid='button.add' product='2' /> button to upload the sound file.
 
-4. Click <Cmd sid="button.add" product='2' /> to upload.
-
-</Calloutlists>
-
-4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+Click <Cmd sid='common.apply' /> at the bottom right of the screen to save the settings.
 
 :::info
 
-* Sound files must be .wav or .mp3 format.
+* Only *.wav* or *.mp3* file formats can be uploaded for sound files.
 
 * A maximum file size is 10MB.
+
+* For how to apply the uploaded sound file when an event occurs, refer to [the following](settings-alert#edit-alert-message).
 
 :::

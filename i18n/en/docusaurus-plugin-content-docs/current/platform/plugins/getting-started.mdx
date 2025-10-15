@@ -1,0 +1,93 @@
+---
+id: getting-started
+title: Getting Started
+description: This guides the requirements and basic concepts for starting BioStar X plugin development.
+keywords:
+  - Plugin Development
+  - Getting Started
+  - Requirements
+  - Architecture
+---
+
+This provides the basic requirements and concepts for developing plugins that integrate with **BioStar X**.
+
+## Before start
+
+### Necessary prior knowledge
+
+* **HTTP REST API development experience**: Basic understanding of web service development and API communication
+
+* **Understanding RSA public key encryption**: Basic knowledge of asymmetric encryption methods
+
+* **Understanding AES symmetric key encryption**: Basic knowledge of symmetric encryption methods
+
+* **Web server development experience**: Python FastAPI, Node.js Express, Java Spring Boot, etc.
+
+### Development environment requirements
+
+* **BioStar X server**: Test **BioStar X** environment
+
+* **Development web server**: Web server to host the plugin
+
+* **HTTP client**: API testing tools like curl, Postman, etc.
+
+## Plugin architecture
+
+**BioStar X** plugin operates with the following structure.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as User
+    participant P as Plugin
+    participant SM as ServiceManager
+    participant BS as BioStar X Server
+    participant BC as BioStar X Client
+    
+    Note over U,BC: Register Plugin
+    U->>+SM: Register plugin
+    SM->>+P: Ping to register address / e.g. {address}/bsx
+    P->>-SM: Pong with header value in body
+    SM-->SM: Certificate generation
+    SM->>-U: Response / Reg success
+
+    Note over U,BC: Download certification
+    U->>+SM: Download certification
+    SM-->SM: Certification
+    SM->>-U: Response certification file
+
+    Note over U,BC: Open Plugin Service
+    U->>+BC: Plugin Click
+    BC->>-P: Post request(with user id, plugin id) with new tab
+    U-->>+P: Watched new tab
+    P->>+BS: Post method called <br/>→ /api/session/bridge,<br/>Body: {pluginid, userid, key (a random 32-byte key encrypted with the certification and transmitted)}
+    Note right of BS: /api/session/brdige
+    BS->>-P: Response (bs-session-ID)
+    Note right of BS: Encrypt the current user's bs-session-id using the key and transmit it.
+    Note right of P: bs-session-id must be decrypted before use
+    P->>-U: Response / Open Page
+```
+
+:::note
+
+The key or certificate cannot be downloaded again unless reissued after being downloaded once.
+
+:::
+
+## Plugin operation overview
+
+The **BioStar X** plugin system operates in three main stages.
+
+1. **Plugin registration**: Registering the plugin server in the Service Manager and checking accessibility
+
+2. **Certificate management**: Key management for secure communication using Session Bridge
+
+3. **Plugin execution**: Authentication through automatic session bridge when the user accesses the plugin
+
+For specific implementation methods at each stage, refer to the [development guide](./development-guide).
+
+:::info
+
+Certificates can be downloaded from the details page of the corresponding plugin after plugin registration. If you lose the certificate, you can download it again. At this time, the existing certificate will be invalidated.
+
+:::

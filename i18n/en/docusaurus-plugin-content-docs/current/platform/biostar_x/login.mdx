@@ -11,25 +11,33 @@ If you have completed the installation of **BioStar X** through the installation
 
 ## Log in from a Web Browser {#log-in-from-a-web-browser}
 
-1. Please launch the web browser.
+1. Click <Start/> → **BioStar X** → **BioStar X** on Windows. 
 
-2. Enter `https://127.0.0.1` in the address bar of your web browser.
+2. Connect to **BioStar X** via a web browser.
 
-   :::info
+   <Image src='/img/common/biostarx-login-web-browser-ip-address.png' />
+
+   :::note
+
+   * Check the access address of **BioStar X** in the web browser's address bar.
 
    * If you installed **BioStar X** on another PC, enter the IP address of that PC. e.g. `https://192.168.0.1`
 
    * Do not use 'localhost' as the **BioStar X** access address.
 
+   * **BioStar X** processes all requests through the Unified Gateway. Thus, web access and API calls are made through the Unified Gateway port (default 443).
+
    :::
 
 3. When the login screen appears, log in with the administrator account.
 
-   :::info
+   <Image src='/img/biostarx-login.png' />
+
+   :::note
 
    * The admin ID is **admin**. 
 
-   * When you first log in, a **Not Secure** warning will be displayed in the address bar of your web browser. To apply the HTTPS protocol, refer to the [following](settings-server-https).
+   * If you see a **Not Secure** warning in the web browser's address bar, you need to install the HTTPS certificate. For more information on installing the certificate, refer to [the following](settings-server-https).
 
    :::
 
@@ -43,6 +51,6 @@ After logging in, you can view the <Cmd sid='shell.header.launcher' /> screen.
 
 * The external IP address of the PC where **BioStar X** is installed can be checked by visiting [this link](https://whatismyipaddress.com/).
 
-* **BioStar X** uses **port 443** by default. If there is a program using port **443**, close it and try connecting again. If you cannot close the program, run **BioStar Setting** to change the port number. For more information, refer to the [following](change-port).
+* **BioStar X** uses **port 443** by default. If there is a program using port **443**, close it and try connecting again. If you cannot close the program, run the **BioStar X Service Manager** to change the port number. For more information, refer to [the following](change-port).
 
 :::

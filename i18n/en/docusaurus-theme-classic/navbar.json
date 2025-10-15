@@ -42,5 +42,37 @@
   "item.label.How-to Articles": {
     "message": "How-to Articles",
     "description": "Navbar item with label How-to Articles"
+  },
+  "item.label.BioEntry W3": {
+    "message": "BioEntry W3",
+    "description": "Navbar item with label BioEntry W3"
+  },
+  "item.label.BioStation 2a": {
+    "message": "BioStation 2a",
+    "description": "Navbar item with label BioStation 2a"
+  },
+  "item.label.FaceStation F2": {
+    "message": "FaceStation F2",
+    "description": "Navbar item with label FaceStation F2"
+  },
+  "item.label.BioLite N2": {
+    "message": "BioLite N2",
+    "description": "Navbar item with label BioLite N2"
+  },
+  "item.label.X-Station 2": {
+    "message": "X-Station 2",
+    "description": "Navbar item with label X-Station 2"
+  },
+  "item.label.CoreStation": {
+    "message": "CoreStation",
+    "description": "Navbar item with label CoreStation"
+  },
+  "item.label.CoreStation 20": {
+    "message": "CoreStation 20",
+    "description": "Navbar item with label CoreStation 20"
+  },
+  "item.label.Door Interface": {
+    "message": "Door Interface",
+    "description": "Navbar item with label Door Interface"
   }
 }

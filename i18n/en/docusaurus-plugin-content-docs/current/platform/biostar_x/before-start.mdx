@@ -11,7 +11,7 @@ keywords:
 
 :::tip
 
-This guide provides important information you should know before starting **BioStar X**. **BioStar X** supports 32-bit and 64-bit operating systems. Check the system requirements of the PC where you want to install **BioStar X**, then install it.
+This guide provides important information you should know before starting **BioStar X**. **BioStar X** supports 64-bit operating systems. Check the system requirements of the PC where you want to install **BioStar X**, then install it.
 
 :::
 
@@ -20,8 +20,6 @@ This guide provides important information you should know before starting **BioS
 Before installing **BioStar X**, check the following and proceed with the installation.
 
 * **BioStar X** can only be installed on a 64bit operating system.
-
-* If you are using Windows 8.1, refer to the following link to install the [KB2919355 update](https://support.microsoft.com/help/2919355/windows-rt-8-1--windows-8-1--and-windows-server-2012-r2-update-april-2).
 
 * If you are using MS SQL 2012 Express, refer to the following link to install the [Service Pack 3](https://www.microsoft.com/download/details.aspx?id=49996).
 
@@ -33,45 +31,7 @@ Before installing **BioStar X**, check the following and proceed with the instal
 
 * If you want to back up the database of **BioStar X**, be sure to also back up the *enckey* in the *\Program Files\BioStar X\util* folder and the *system.conf* and *setting.conf* file in the *\Program Files\BioStar X* folder. Otherwise, the database will be unavailable.
 
-* The default values for the ports used by **BioStar X** are as follows. If another program occupies the same port, **BioStar X** may not work properly.
-
-  :::info
-
-  <Columns>
-  <Column className='text--left'>
-
-  * <Cmd sid="port.webServerHttp" product='2' />: 80
-
-  * <Cmd sid="port.webSocket" product='2' />: 9002
-
-  * <Cmd sid="port.mariaDB" product='2' />: 3312
-
-  * <Cmd sid="port.tnaHttps" product='2' />: 3002
-
-  * <Cmd sid="port.webServerFastCgi" product='2' />: 9000
-
-  * <Cmd sid="port.gatewayHttps" product='2' />: 5002
-
-  </Column>
-
-  <Column className='text--left'>
-
-  * <Cmd sid="port.webServerHttps" product='2' />: 443
-
-  * <Cmd sid="port.apiPort" product='2' />: 9010
-
-  * <Cmd sid="port.tnaHttp" product='2' />: 3000
-
-  * <Cmd sid="port.tnaNgrok" product='2' />: 52001
-
-  * <Cmd sid="port.gatewayHttp" product='2' />: 5000
-
-  * <Cmd sid="port.reportHttp" product='2' />: 4213
-
-  </Column>
-  </Columns>
-
-  :::
+* Refer to [the following](service-settings) for the default port used by **BioStar X**. If another program occupies the same port, **BioStar X** may not work properly.
 
 ## Check the Database {#checkdb}
 
@@ -230,8 +190,20 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 
 </Steps>
 
-## Next step {#next-step}
+<NextStep>
+<NextItem to='system-requirements'>
 
-* Find out the [minimum system requirements](system-requirements) to install **BioStar X**. 
+Learn the minimum system requirements to install **BioStar X**.
 
-* You can quickly find out how to install **BioStar X** in the [following](express-install).
+</NextItem>
+<NextItem to='express-install'>
+
+This guide provides a simple installation method for first-time users.
+
+</NextItem>
+<NextItem to='custom-install'>
+
+This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.
+
+</NextItem>
+</NextStep>
