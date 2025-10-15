@@ -240,6 +240,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'XPass D2',
+                docId: 'device/xpass_d2/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation',
                 docId: 'device/corestation_40/index'
               },

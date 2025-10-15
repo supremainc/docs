@@ -1003,6 +1003,27 @@ const sidebars = {
       ],
     },
   ],
+  xpassd2: [
+    {
+      type: 'category',
+      label: 'XPass D2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_d2/index',
+      },
+      items: [
+        'device/xpass_d2/safety-instructions',
+        'device/xpass_d2/getting-started',
+        'device/xpass_d2/installation',
+        'device/xpass_d2/product-specifications',
+        'device/xpass_d2/regulatory-information',
+        'device/xpass_d2/appendices'
+      ]
+    }
+  ],
 };
 
 export default sidebars;
