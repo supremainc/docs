@@ -1,0 +1,156 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-mdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-mdb.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-device-xpd2-gdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gdb.svg' className='none' width={90} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass D2 멀리언 타입 (XPD2-MDB)</Td>
+
+<Td>벽걸이용 브래킷 (XPD2-MDB)</Td>
+
+<Td>XPass D2 갱 박스 타입 (XPD2-GDB)</Td>
+
+<Td>벽걸이용 브래킷 (XPD2-GDB)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-gkdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gkdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass D2 키패드 타입 (XPD2-GKDB)</Td>
+
+<Td>벽걸이용 브래킷 (XPD2-GKDB)</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>브래킷 고정용 나사 (별 모양)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>120 Ω 저항</Td>
+
+<Td>수축 튜브</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Components_note from '../../common/_getting-started-components-note.mdx'
+
+<Components_note />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-xpd2.png' width='80%' className='none' />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 파란색/하늘색 점멸: 정상 동작 상태
+
+  * 파란색/초록색 점멸: 네트워크 설정 초기화 시
+
+  * 초록색 점멸: 입력 대기 상태
+
+  * 초록색/흰색 점멸: 슈프리마 AirFob Pass (BLE) 애플리케이션과 연결 중인 상태
+
+  * 흰색 점멸: Device Manager 애플리케이션과 연결 중인 상태
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **모바일 출입카드 인식부**: 출입을 위해 모바일 출입카드를 인식시키는 부분입니다.
+
+* **초기화 버튼**: 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+* **케이블**
+
+  전원 / RS-485 / Wiegand 출력 / LED 입력 / Beep 입력 / 탬퍼
+
+* **키패드**: <Badge only>XPD2-GKDB</Badge> 카드 ID를 직접 입력하여 인증할 때 사용합니다. 직접 입력 방식으로 인증하려면 BioStar 2에서 인증 방법 설정을 변경하세요.
+
+  * **0\~9**: 숫자를 입력할 때 사용합니다.
+
+  * <Image src='/img/common/ico-star.svg' ico alone />: Wiegand 카드 ID를 입력할 때 FC 코드와 ID를 구분하기 위해 사용합니다.
+
+  * <Image src='/img/common/ico-pound.svg' ico alone />: 입력을 종료할 때 사용합니다.
+
+### 케이블
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xpd2.png' alone width={500} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | PWR +VDC | 빨간색 |
+| 2 | GND | 검은색 (흰띠) |
+| 3 | 485 TRXN | 노란색 (검은띠) |
+| 4 | 485 TRXP | 파란색 (흰띠) |
+| 5 | WG D0 | 초록색 |
+| 6 | WG D1 | 흰색 |
+| 7 | LED RED | 주황색 |
+| 8 | LED GRN | 갈색 |
+| 9 | BEEP | 보라색 |
+| 10 | TMPR | 회색 |
+
+</Column>
+</Columns>
