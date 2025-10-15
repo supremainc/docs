@@ -1,13 +1,13 @@
 ---
 id: check-door-status
 title: 출입문 상태 확인하기
-description: BioStar X에서 출입문과 연결된 장치의 상태를 실시간으로 모니터링하고 문제 발생 시 해결하는 방법을 안내합니다.
+description: 출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.
 keywords: [ 모니터링, 출입문 ]
 ---
 
-출입문과 연결된 장치의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. <Cmd sid='shell.header.arena' />에서 제공하는 상태 아이콘을 통해 장치 연결 상태, 출입문 잠금 상태, 카메라 작동 상태 등을 한눈에 확인하고, 문제 발생 시 즉시 대응하세요.
+출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. <Cmd sid='shell.header.arena' />에서 제공하는 상태 아이콘을 통해 출입문에 할당된 장치의 이상 상태를 한눈에 확인하고, 문제 발생 시 즉시 대응하세요.
 
-<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 각 출입문과 연결된 슬레이브 장치의 상태를 확인할 수 있습니다.
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 각 출입문의 상태를 확인할 수 있습니다.
 
 ## 시작하기 전에
 
@@ -57,8 +57,8 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <IcErr width='35px' height='35px' /> | 커뮤니케이션 서버 오류이거나 연결 끊김, 동기화 오류 상태입니다. |
-| <IcAlert width='40px' height='40px' /> | 출입문에서 알람이 발생한 상태입니다. 배회 감지, 침입 감지 등이 발생하면 해당 아이콘이 표시됩니다. |
+| <IcErr width='35px' height='35px' /> | 장치 연결 끊김, 커뮤니케이션 서버 오류, 동기화 오류 등 장치 이상 상태를 표시합니다. |
+| <IcAlert width='40px' height='40px' /> | 출입문 알람(강제 문열림, 장시간 문열림, APB, 화재 알람, 비상 개방) 또는 AI 영상 분석 알람(배회 감지, 침입 감지 등)이 발생한 상태를 표시합니다. |
 
 </div>
 
@@ -84,13 +84,11 @@ import Doortree from './door-tree.json';
 
   * [고급 출입 통제 설정](settings-advanced-ac)
 
-* 카메라 규칙에서 알람을 설정할 수 있습니다. 카메라 규칙 설정에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
+* 비디오 규칙에서 출입문과 카메라를 연결하여 알람을 설정할 수 있습니다. 비디오 규칙 설정에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
 
 * VMS 서버와 연동 시 영상에 대한 AI 이벤트 알람을 설정하면 **BioStar X**로 알람을 전송할 수도 있습니다. 자세한 내용은 VMS 서버의 매뉴얼을 참고하세요.
 
 * 알람 해제에 대한 자세한 내용은 [다음 문서](monitoring-event#acknowledge-alarm-and-record-action)를 참고하세요.
-
-* 커뮤니케이션 서버 오류, 연결 끊김, 동기화 오류가 발생한다면 **BioStar X Service Manager**를 통해 연결 상태를 확인할 수 있습니다. <Start/> → **BioStar X** → **BioStar X Service Manager** → <Cmd>COMMUNICATION SERVERS</Cmd> 메뉴를 클릭하세요. 커뮤니케이션 서버 목록에서 각 서버의 <Cmd>Server Status</Cmd> 열이 <Cmd>Connected</Cmd> 상태인지 확인하세요. 자세한 내용은 [다음 문서](install-communication-server#check-after-install)를 참고하세요.
 
 :::
 
@@ -103,7 +101,7 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <IcRelayLock width='auto' height='35px' /> | 출입문이 닫힌 상태입니다. |
+| <IcRelayLock width='auto' height='35px' /> | 출입문이 잠긴 상태입니다. |
 | <IcRelayUnlock width='auto' height='40px' /> | 출입문이 열린 상태입니다. |
 
 </div>
@@ -145,14 +143,14 @@ import Doortree from './door-tree.json';
 
 ### 엘리베이터 상태 확인
 
-엘리베이터의 잠금 상태를 확인할 수 있습니다.
+엘리베이터를 통한 층 접근 제어 상태를 확인할 수 있습니다.
 
 <div className='col2--20-80 overflow-x'>
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <StatusNormal width='auto' height='35px'/> | 엘리베이터 잠금 상태입니다. |
-| <StatusOK width='auto' height='35px'/> | 엘리베이터 잠금 해제 상태입니다. |
+| <StatusNormal width='auto' height='35px'/> | 엘리베이터를 통해 해당 층에 접근할 수 없는 상태(잠김)입니다. |
+| <StatusOK width='auto' height='35px'/> | 엘리베이터를 통해 해당 층에 접근할 수 있는 상태(해제)입니다. |
 
 </div>
 
