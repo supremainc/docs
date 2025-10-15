@@ -161,10 +161,8 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "사용자당 최대 1개의 PIN 크리덴셜을 등록할 수 있습니다."
-            }), "\n"]
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "사용자당 최대 1개의 PIN 크리덴셜을 등록할 수 있습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
