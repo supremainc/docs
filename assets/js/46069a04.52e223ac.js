@@ -96,14 +96,10 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "사용자 정보를 삭제하기 전에 장치에서 사용자 정보를 우선 삭제하세요."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["아이디가 ", (0,jsx_runtime.jsx)(_components.code, {
               children: "1"
-            }), "인 사용자는 삭제하더라도 해당 정보가 유지됩니다."]
+            }), "인 사용자는 삭제할 수 없습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

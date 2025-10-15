@@ -270,7 +270,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["저장된 CSV 파일에 새로운 열을 추가하면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["저장된 CSV 파일에 매칭되지 않는 열을 추가하면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "에서 파일을 가져올 수 없습니다."]
           }), "\n"]
@@ -298,9 +298,9 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["FaceStation F2에서 얼굴 인식 사용자 데이터를 가져올 때 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["사용자 데이터를 가져올 때 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " 서버에 사진 올리기 또는 모바일 장치를 통해 등록한 얼굴 인식 데이터가 이미 존재할 경우 기존 데이터가 덮어씌워집니다."]
+            }), " 서버에 등록한 크리덴셜 데이터가 이미 존재할 경우 기존 데이터에 덮어씌워집니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

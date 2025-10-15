@@ -55,7 +55,7 @@ function _createMdxContent(props) {
           sid: "common.department",
           product: "2"
         }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "common.title",
+          sid: "team.user.detail.title",
           product: "2"
         }), " 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."]
       }), "\n"]
@@ -149,7 +149,7 @@ function enroll_credential_mobile_createMdxContent(props) {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다. 모바일 출입 카드는 각 사용자가 개별 등록하거나 CSV 불러오기 기능을 이용해 다수의 사용자를 한 번에 등록할 수도 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "에어팝 포털에서 설정한 모바일 출입 카드 발송 방법에 따라 사용자의 이메일 또는 전화번호를 입력해야 합니다."
+      children: "에어팝 포털에서 설정한 모바일 출입 카드 발송 방법에 따라 사용자의 이메일을 입력해야 합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -331,7 +331,7 @@ function enroll_credential_mobile_createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(MDXContent, {}), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이메일 또는 텍스트 메시지를 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제하여 활성화 코드를 다시 발급하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["이메일을 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제하여 활성화 링크를 다시 발급하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "재전송"
             }), " 버튼을 클릭하세요."]
           }), "\n"]
@@ -353,7 +353,7 @@ function enroll_credential_mobile_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "템플릿 온 모바일"
-      }), "은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 액세스 카드입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 출입 카드입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), " 서버, 에어팝 포털(Airfob Portal)과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -361,7 +361,7 @@ function enroll_credential_mobile_createMdxContent(props) {
         children: "템플릿 온 모바일"
       }), "의 발급과 바이오메트릭 템플릿 등록 과정이 따로 진행되기 때문에, 사용자는 관리자와 대면하지 않고도 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "템플릿 온 모바일"
-      }), " 지원 장치에서 직접 비주얼 페이스를 등록할 수 있습니다."]
+      }), " 지원 장치에서 직접 얼굴을 등록할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -407,11 +407,7 @@ function enroll_credential_mobile_createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "user.secureCredentialCard",
                 product: "2"
-              }), ": 보안 크리덴셜 카드입니다. 사용자의 카드 ID, PIN 데이터를 카드에 저장할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar X"
-              }), "에 저장된 사용자 정보를 사용하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "서버 매칭"
-              }), "이 켜져 있어야 합니다."]
+              }), ": 보안 크리덴셜 카드입니다. 사용자의 카드 ID, PIN 데이터를 카드에 저장할 수 있습니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -475,7 +471,7 @@ function enroll_credential_mobile_createMdxContent(props) {
               children: "CSN 모바일 카드"
             }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "템플릿 온 모바일"
-            }), " 중 하나만 사용할 수 있습니다."]
+            }), " 중 하나만 발급할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

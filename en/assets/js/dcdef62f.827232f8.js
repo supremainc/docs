@@ -119,8 +119,12 @@ function set_user_advanced_createMdxContent(props) {
   if (!NextItem) set_user_advanced_missingMdxReference("NextItem", true);
   if (!NextStep) set_user_advanced_missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다. 이 기능은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자 출입 시 장치에 표시할 메시지를 설정하거나 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "settings.activeDirectory.title",
+        product: "2",
+        className: "normal"
+      }), " 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다. 이 기능은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
@@ -147,7 +151,11 @@ function set_user_advanced_createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.adsync.exclude",
             product: "2"
-          }), ": 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
+          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.activeDirectory.title",
+            product: "2",
+            className: "normal"
+          }), " 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

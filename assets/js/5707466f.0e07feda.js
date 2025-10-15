@@ -157,7 +157,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.advanced",
             product: "2"
-          }), " 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
+          }), " 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.activeDirectory.title",
+            product: "2",
+            className: "normal"
+          }), " 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다."]
         })
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

@@ -436,7 +436,7 @@ function settings_diretory_integration_createMdxContent(props) {
             children: "Entra ID"
           }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Active Directory"
-          }), "에서 사용되는 직함과 부서, 그룹 등의 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), "에서 사용되는 직책과 부서, 그룹 등의 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "의 사용자 정의 필드와 맵핑할 수 있습니다."]
         }), "\n"]

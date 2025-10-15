@@ -56,7 +56,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "비밀번호 정책 설정",
-  "id": "비밀번호-정책-설정",
+  "id": "password-policy-configuration",
   "level": 2
 }, {
   "value": "비밀번호 복잡성 설정",
@@ -161,7 +161,7 @@ function _createMdxContent(props) {
         }), "인 최초 관리자 계정으로 접속한 경우에 활성화됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "비밀번호-정책-설정",
+      id: "password-policy-configuration",
       children: "비밀번호 정책 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {

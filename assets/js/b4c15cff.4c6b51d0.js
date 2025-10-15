@@ -161,7 +161,7 @@ function _createMdxContent(props) {
                   sid: "team.menu.faceMigration"
                 }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), " 이전 버전에서 등록한 비주얼 페이스를 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                }), " 이전 버전에서 등록한 얼굴을 최신 알고리즘으로 업그레이드하여 인식 성능을 향상할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "migration-face",
                   children: "다음 문서"
                 }), "를 참고하세요."]

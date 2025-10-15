@@ -317,7 +317,7 @@ function _createMdxContent(props) {
           }), ": 애플리케이션 아이디를 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.cardFormat.fileId",
             product: "2"
-          }), "를 포함하는 일종의 디렉터리 역할을 합니다."]
+          }), "를 포함하는 일종의 디렉토리 역할을 합니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {

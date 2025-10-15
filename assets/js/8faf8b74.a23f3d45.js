@@ -128,7 +128,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-users-list.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록은 등록된 사용자를 모두 표시하며, 각 사용자의 아이디, 이름, 이메일 주소, 사용 기간, 등록한 크리덴셜 현황, 상태를 기본으로 확인할 수 있습니다. 사용자는 등록한 순으로 목록에 표시됩니다."
+      children: "사용자 목록은 등록된 사용자를 모두 표시하며, 각 사용자의 아이디, 이름, 이메일 주소, 사용 기간, 등록한 크리덴셜 현황, 상태를 기본으로 확인할 수 있습니다. 사용자는 아이디 순으로 목록에 표시됩니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

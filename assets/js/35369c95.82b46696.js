@@ -72,7 +72,7 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자 인증 수단으로 QR 코드 또는 바코드를 등록하는 방법을 안내합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에서 직접 생성하는 암호화된 QR 코드와 외부에서 발급된 QR/바코드를 등록할 수 있습니다."]
+      }), "에서 직접 생성하는 QR 코드와 외부에서 발급된 QR/바코드를 등록할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {

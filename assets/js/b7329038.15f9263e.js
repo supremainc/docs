@@ -113,7 +113,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["액티브 디렉터리 서버 계정으로 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "settings.activeDirectory.title",
+              product: "2",
+              className: "normal"
+            }), " 계정으로 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "biostar.login",
               product: "2"
             }), " 옵션을 사용한다면 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -126,7 +130,7 @@ function _createMdxContent(props) {
               sid: "team.user.permission.multiFactorAuth"
             }), "을 설정한 관리자는 출입 통제 이외의 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " 서비스(근태 관리 및 비디오)에 등록할 수 없습니다. 해당 서비스를 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " 서비스(근태 관리 및 비디오)에 최초 인증할 수 없습니다. 해당 서비스를 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.permission.multiFactorAuth"
             }), " 설정을 해제한 후 로그인하세요. 이후 다시 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.user.permission.multiFactorAuth"
@@ -298,8 +302,10 @@ function _createMdxContent(props) {
           }), " 로그인 화면으로 접속하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 아이디와 비밀번호를 입력해 로그인하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["사용자 아이디와 비밀번호를 입력한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "auth.login"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
