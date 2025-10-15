@@ -100,9 +100,16 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
-            '**/_*.{md,mdx}'
+            '**/_*.{md,mdx}',
+            'platform/biostar_air/**.{md,mdx}',
+            'device/**/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
+        },
+        pages: {
+          exclude: [
+            '_backup/**.{js,jsx,ts,tsx,md,mdx}'
+          ]
         },
         blog: false,
         theme: {
@@ -129,7 +136,7 @@ const config = {
   ],
   plugins: [
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
-    ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
+    // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
     [
@@ -187,80 +194,86 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Platforms',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStar X',
-                docId: 'platform/biostar_x/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioStar Air',
-                docId: 'platform/biostar_air/index'
-              }
-            ]
-          },
-          {
-            type: 'dropdown',
-            label: 'Devices',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStation 3',
-                docId: 'device/biostation_3/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioEntry W3',
-                docId: 'device/bioentry_w3/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioStation 2a',
-                docId: 'device/biostation_2a/index'
-              },
-              {
-                type: 'doc',
-                label: 'FaceStation F2',
-                docId: 'device/facestation_f2/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioLite N2',
-                docId: 'device/biolite_n2/index'
-              },
-              {
-                type: 'doc',
-                label: 'X-Station 2',
-                docId: 'device/xstation_2/index'
-              },
-              {
-                type: 'doc',
-                label: 'CoreStation',
-                docId: 'device/corestation_40/index'
-              },
-              {
-                type: 'doc',
-                label: 'CoreStation 20',
-                docId: 'device/corestation_20/index'
-              },
-              {
-                type: 'doc',
-                label: 'Door Interface',
-                docId: 'device/doorinterface/index'
-              }
-            ]
-          },
-          {
             type: 'doc',
-            label: 'How-to Articles',
+            label: 'BioStar X',
             position: 'right',
-            docId: 'how-to/index'
+            docId: 'platform/biostar_x/index'
           },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Platforms',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar X',
+          //       docId: 'platform/biostar_x/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar Air',
+          //       docId: 'platform/biostar_air/index'
+          //     }
+          //   ]
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Devices',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStation 3',
+          //       docId: 'device/biostation_3/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioEntry W3',
+          //       docId: 'device/bioentry_w3/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStation 2a',
+          //       docId: 'device/biostation_2a/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'FaceStation F2',
+          //       docId: 'device/facestation_f2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioLite N2',
+          //       docId: 'device/biolite_n2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'X-Station 2',
+          //       docId: 'device/xstation_2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'CoreStation',
+          //       docId: 'device/corestation_40/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'CoreStation 20',
+          //       docId: 'device/corestation_20/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Door Interface',
+          //       docId: 'device/doorinterface/index'
+          //     }
+          //   ]
+          // },
+          // {
+          //   type: 'doc',
+          //   label: 'How-to Articles',
+          //   position: 'right',
+          //   docId: 'how-to/index'
+          // },
           {
             type: 'doc',
             label: 'Reference',
