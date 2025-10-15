@@ -1,0 +1,95 @@
+---
+id: migration-x
+title: Upgrade
+description: This document guides the procedure for upgrading BioStar 2 to BioStar X and the requirements to check before the upgrade.
+keywords:
+  - Upgrade
+---
+
+This document provides a step-by-step guide on how to upgrade BioStar 2 to **BioStar X**. Check the system requirements and precautions before starting the upgrade.
+
+## Before starting {#start-before}
+
+Before upgrading from BioStar 2 to **BioStar X**, ensure the following:
+
+* You must contact your dealer to prepare at least one BioStar X license before upgrading to **BioStar X**.
+
+* You can upgrade to **BioStar X** if you are using BioStar 2 version 2.9.9 or higher.
+
+  * If you are using a version lower than BioStar 2 v2.6.4, you must sequentially upgrade to v2.9.9 before upgrading. For instructions on upgrading BioStar 2 step-by-step, refer to the **BioStar 2 Admin Guide**. 
+
+  * You cannot upgrade if you are using BioStar 2 version 2.9.8 or lower.
+
+* A different licensing policy applies when upgrading to **BioStar X** compared to BioStar 2.
+
+* If the following devices are connected to BioStar 2, the upgrade to **BioStar X** is not supported. 
+
+  * XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net
+
+* If you upgrade while having an Advanced or higher grade license of BioStar 2 AC license activated, the following service features and settings will be deleted.
+
+  * Graphic Map
+
+  * Cloud
+
+* To use the BioStar 2 T&A service on **BioStar X**, you must purchase the **BioStar X T&A** license separately.
+
+## Upgrade installation guide {#upgrade-install}
+
+1. Go to the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*BioStar X Setup.X.Y.Z.BB.exe*).
+
+2. Run the downloaded installation file.
+
+3. Select the language to use and select the <Cmd code='biostar2.install.ok' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-select-language.png' />
+
+4. Agree to the licensing policy of transitioning from BioStar 2 to **BioStar X**. Click the checkbox and select the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-2-to-x-agree.png' />
+
+5. To continue the installation, select <Cmd code='biostar2.install.agree' className='bold'/> and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-agree.png' />
+
+6. When upgrading from BioStar 2, the existing database will be connected to proceed with the installation. Click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-upgrade-select-install-type.png' />
+
+7. Enter the root account password of the existing database and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-input-db-pw.png' />
+
+8. Set the path to store the encryption key and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-set-encrypt-path.png' />
+
+9. Read the information about the management and responsibility of personal information stored in the database, and click the <Cmd code='biostar2.install.next' className='bold'/> button to continue the installation.
+
+   <Image src='/img/biostarx-install-read-covenant.png' />
+
+10. If a message about port number appears, click <Cmd code='biostar2.install.ok' />.
+
+    <Image src='/img/biostarx-install-set-port-confirm.png' />
+
+11. Set the port for **BioStar X** communication and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+    <Image src='/img/biostarx-upgrade-set-port.png' />
+
+12. Select the components of **BioStar X** and click the <Cmd code='biostar2.install.next' className='bold'/> button. If you select **USB Device Agent**, the USB Agent and driver for using BioMini, BioMini Plus 2, BioMini Slim 2, and DUALi DE-620 will be installed together.
+
+    <Image src='/img/biostarx-install-additional.png' />
+
+13. When all preparations for installation are complete, click the <Cmd code='biostar2.install.btnInstall' className='bold'/> button.
+
+    <Image src='/img/biostarx-upgrade-complete.png' />
+
+14. Select whether to install additional programs and click the **Finish** button.
+
+    <Image src='/img/biostarx-install-additional-fin.png' />
+
+15. Complete the installation of **USB Device Agent** by following the instructions on the installation screen.
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />

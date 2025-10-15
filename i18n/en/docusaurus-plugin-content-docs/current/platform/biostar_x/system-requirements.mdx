@@ -1,40 +1,46 @@
 ---
 id: system-requirements
-title: System Minimum Requirements
-description: Check the system requirements for installing BioStar X and configure the optimal environment for your organization size.
+title: System minimum requirements
+description: Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.
 keywords:
-  - System Minimum Requirements
+  - System minimum requirements
   - Operating System
   - Database
   - CPU
   - RAM
 ---
 
-**BioStar X** provides a reliable and scalable integrated security management solution for large enterprise environments. The system can efficiently manage more than 1,000 devices through a distributed architecture consisting of a main server and a communication server.
+**BioStar X** provides a reliable and scalable integrated security management solution for large enterprise environments. The system can efficiently manage over a thousand devices through a distributed architecture consisting of a main server and a communication server.
 
-The main server manages the core management features of the system, while the communication server is responsible for device communication, distributing the load and optimizing performance. Additionally, administrators can access the system via a web browser on client PCs and perform all management tasks. Check the system requirements for installing BioStar X and configure the optimal environment for your organization size.
+The main server manages the core management features of the system, while the communication server is responsible for device communication, distributing the load and optimizing performance. Additionally, administrators can access the system via a web browser on client PCs and perform all management tasks. Check the system requirements below to configure the optimal environment for your organization size.
+
+:::info
+
+For more information on license configuration and optimization, contact [Suprema Technical Support](https://support.supremainc.com).
+
+:::
 
 ## Main Server {#main-server}
 
-The main server is the computer on which the central management system of **BioStar X** is installed. The user accesses the system through a web browser to manage it and handle all tasks such as setting user information or access permissions. It is also responsible for monitoring the overall status of the system and managing event logs or alarms.
+The main server is the server where the central management system of **BioStar X** is installed. The user accesses the system through a web browser to manage it and handle all tasks such as setting user information or access permissions. It is also responsible for monitoring the overall status of the system and managing event logs or alarms.
 
 <div className='overflow-x col5--15-10-25'>
 
-| \>                 | Item             | Small          | Medium          | Enterprise                                                                                                                                         |
-| ------------------ | ---------------- | -------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usage Environment  | Total Devices    | 1 to 50        | 51 to 100       | 101 to 1,000                                                                                                                                       |
-| System Requirement | Operating System | \>             | \>              | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022                                                              |
-| ^                  | Database         | \>             | \>              | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
-| ^                  | CPU              | 2.3 GHz 8-core | 2.3 GHz 12-core | Minimum 2.3 GHz<br/>Recommended 4.0 GHz 16-core                                                                                                    |
-| ^                  | RAM              | 16 GB          | 32 GB           | Minimum 64 GB<br/>Recommended 128 GB                                                                                                               |
-| ^                  | SSD              | 512 GB         | 512 GB          | 1 TB                                                                                                                                               |
-| ^                  | HDD              | \>             | \>              | When using the <Cmd sid='common.imageLog' product='2' /> feature, 200 GB is required for 10 million image logs.                                    |
+| \>                 | Item             | Small         | Mid-sized organization | Enterprise                                                                                                                                         |
+| ------------------ | ---------------- | ------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Usage Environment  | Total Devices    | 1 to 50       | 51 to 100              | 101 to 1,000                                                                                                                                       |
+| System Requirement | Operating System | \>            | \>                     | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022                                                              |
+| ^                  | Database         | \>            | \>                     | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
+| ^                  | CPU              | 2.3GHz 6-core | 2.3 GHz 8-core         | Minimum 2.3 GHz<br/>Recommended 4.0 GHz 16-core                                                                                                    |
+| ^                  | RAM              | 16 GB         | 32 GB                  | Minimum 64 GB<br/>Recommended 128 GB                                                                                                               |
+| ^                  | SSD              | 512 GB        | 512 GB                 | 1 TB                                                                                                                                               |
+| ^                  | HDD              | \>            | \>                     | When using the <Cmd sid='common.imageLog' product='2' /> feature, 200 GB is required for 10 million image logs.                                    |
 
 </div>
 
 :::info
 
-* **BioStar X** can only be installed on a 64bit operating system.
+* **BioStar X** can only be installed on 64-bit operating systems.
 
 * MS SQL Server communication security supports TLS 1.2.
 
@@ -48,9 +54,35 @@ The main server is the computer on which the central management system of **BioS
 
 :::
 
+### SQL Server license requirements {#sqlserver-requriements}
+
+If using SQL Server as the database, a proper SQL Server license is required depending on the number of connected devices for stable operation of **BioStar X**. Refer to the recommended license configurations for each environment to select a license suitable for the size and needs of your organization.
+
+:::info
+
+For more information on SQL Server licenses, refer to [Microsoft SQL Server Licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
+
+:::
+
+#### General usage {#general}
+
+| Organization           | Total Devices       | Number of cores | SQL Server license                       |
+| ---------------------- | ------------------- | --------------- | ---------------------------------------- |
+| Small                  | 1 to 50             | 4 - 6           | SQL Server Standard Edition (Core-based) |
+| Mid-sized organization | 50 - 300 devices    | 8 - 12          | ^                                        |
+| Enterprise             | 300 - 1,000 devices | 16 - 24         | ^                                        |
+
+#### Using the BioStar X API {#useapi}
+
+| Organization           | Total Devices       | Number of cores | SQL Server license                       |
+| ---------------------- | ------------------- | --------------- | ---------------------------------------- |
+| Small                  | 1 to 50             | 4 - 6           | SQL Server Standard Edition (Core-based) |
+| Mid-sized organization | 50 - 300 devices    | 8 - 12          | ^                                        |
+| Enterprise             | 300 - 1,000 devices | 16 - 24         | ^                                        |
+
 ## Communication Server {#communication-server}
 
-The communication server is a computer dedicated to communicating with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single communication server can connect up to 1,000 devices, and you can add multiple communication servers as needed.
+The communication server is a server dedicated to communication with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single communication server can connect up to 1,000 devices, and you can add multiple communication servers as needed.
 
 <div className='overflow-x'>
 
@@ -65,16 +97,16 @@ The communication server is a computer dedicated to communicating with access co
 
 ## Client {#client}
 
-The client is a computer that operates the system via the **BioStar X** accessed by the administrator through a web browser.
+The client is the PC where administrators access **BioStar X** through a web browser to operate the system.
 
 <div className='overflow-x'>
 
-| \>                 | Item        | Small   | Medium  | Enterprise                                     |
-| ------------------ | ----------- | ------- | ------- | ---------------------------------------------- |
-| System Requirement | CPU         | 2.5 GHz | 2.5 GHz | Minimum 2.5 GHz                                |
-| ^                  | RAM         | 16 GB   | 32 GB   | Minimum 32 GB                                  |
-| ^                  | GPU         | \>      | \>      | Minimum NVIDIA GeForce RTX 4060 when using VMS |
-| ^                  | web browser | \>      | \>      | Google Chrome version 100 or higher            |
+| \>                 | Item        | Small   | Mid-sized organization | Enterprise                                     |
+| ------------------ | ----------- | ------- | ---------------------- | ---------------------------------------------- |
+| System Requirement | CPU         | 2.5 GHz | 2.5 GHz                | Minimum 2.5 GHz                                |
+| ^                  | RAM         | 16 GB   | 32 GB                  | Minimum 32 GB                                  |
+| ^                  | GPU         | \>      | \>                     | Minimum NVIDIA GeForce RTX 4060 when using VMS |
+| ^                  | web browser | \>      | \>                     | Google Chrome version 100 or higher            |
 
 </div>
 

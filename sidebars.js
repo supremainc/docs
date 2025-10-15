@@ -352,6 +352,7 @@ const sidebars = {
         {
           type: 'category',
           label: '대시보드',
+          key: "bsxDashboard",
           link: {
             type: 'doc',
             id: 'platform/biostar_x/how-to-guide-dashboard',

@@ -1,13 +1,21 @@
 ---
 id: view-user-by-access
 title: Manage Access Groups
-description: Instructions on how to check and add users registered for each access group.
+description: This guide shows how to query users by access group and explore the access permission structure.
 keywords:
   - User
   - Access Permission
 ---
 
-This guide describes how to check users registered for each access permission group. You can check the user's access permissions and edit the user's information.
+This guide shows how to query and manage users based on access groups. Use <Cmd sid='team.tree.accessExplorer' /> to check registered users by access group and explore the access permission hierarchy through the tree structure.
+
+:::info
+
+To check access doors or floors belonging to an access group in <Cmd sid='team.tree.accessExplorer' />, you must first set up the access control feature. For more information, refer to [the following](settings-access-control).
+
+:::
+
+## Check users by access group {#view-user-by-access}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -15,28 +23,34 @@ This guide describes how to check users registered for each access permission gr
 
    <Image src='/img/biostarx-user-access-explorer.png' />
 
-3. Click on the desired access permission group in <Cmd>All Access Groups</Cmd>.
+3. Click the desired access permission group in <Cmd sid='team.user.tree.accessExplorerRootName' />.
 
 You can view users belonging to the selected access permission group in the user list.
 
 :::info
 
+To expand or collapse access levels or floor levels under the access group, click <IcAdd /> or <IcMinus />.
+
+:::
+
+## Learn about the tree structure {#learn-tree-view}
+
 The tree structure menu is composed of the following structure.
 
-**All Access Groups**
+<Treeview />
 
-* Access Group: Access Group
+* **Access group** is the upper layer that includes access levels, floor levels, user groups, and users. You can manage access permissions through the **access group**. For more information on creating access groups, refer to [the following](settings-access-control-manage-access-group).
 
-  * Access Level: Access Level
+* **Access level** sets the times when users can enter and grants permission to access doors during this time. For more information on creating access levels, refer to [the following](settings-access-control-manage-access-level).
 
-    * Door: Entrance door
+* You can manage the floors users can access via elevators through the **floor level**. For more information on creating floor levels, refer to [the following](settings-access-control-manage-floor-level).
 
-    * Schedule: Schedule
+* **Schedule** is a feature that efficiently operates access control and attendance management by setting access and holiday schedules. For more information on registering schedules, refer to [the following](settings-schedule).
 
-  * Floor Level: Floor Level
+* You can register elevators and manage the floors accessible via the elevators. For more information about elevator enrollment, refer to [the following](settings-elevators-add).
 
-    * Floor: Floor
+:::info
 
-    * Schedule: Schedule
+The elevator registration feature is available through additional options for **Advanced** licenses and above. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::

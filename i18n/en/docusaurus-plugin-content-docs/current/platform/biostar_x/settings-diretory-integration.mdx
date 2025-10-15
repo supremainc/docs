@@ -18,11 +18,11 @@ Integrating with **Entra ID** or **Active Directory** provides the following con
 
 * Users and groups configured in **Entra ID** or **Active Directory** can be synchronized with BioStar 2.
 
-* User information such as title, department, and group used in **Entra ID** or **Active Directory** can be mapped to custom fields in BioStar 2.
+* You can map user information such as job title, department, and group used in **Entra ID** or **Active Directory** to the custom fields of **BioStar X**.
 
 :::info
 
-The **Entra ID** or **Active Directory** integration setting is available when the **Advance** license is activated. For more information about the license policy, refer to the [following](licensing).
+The **Entra ID** or **Active Directory** settings feature is available through additional options on the **Advance** license and above. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::
 
@@ -32,7 +32,7 @@ The **Entra ID** or **Active Directory** integration setting is available when t
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-3. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
+3. Click <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar of the screen.
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
@@ -53,15 +53,19 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 * <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />: Enter the **Client secret** added in **Certificates & secrets** of the application registered in **Entra ID**.
 
-* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: Enter the **Directory (Tenant) ID** of the application registered in **Entra ID**.
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: Enter the primary domain name that you input when creating your organization in **Entra ID**.
 
 :::info
 
-* For more information about registering an application in **Entra ID**, refer to the [following link](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
+* For more information about registering an application in **Entra ID**, refer to [the following link](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
 
-* For more information about configuring **Certificates & secrets** in **Entra ID**, refer to the [following link](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
+* For more information about configuring **Certificates & secrets** in **Entra ID**, refer to [the following link](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
 
 * **Tenant ID** can be found in the **Overview** of the registered application in **Entra ID**.
+
+* You can check the information for <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> in the **Overview** of **Entra ID**.
+
+  <Image src='/img/biostarx-setting-directory-primary-domain.png' />
 
 :::
 
@@ -119,7 +123,7 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 
 :::note
 
-After completing all settings in <Cmd sid='setting.activeDirectory.menu' product='2' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to the [following](#checksettings) to check the results.
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to [the following](#checksettings) to check the results.
 
 <Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
@@ -131,7 +135,7 @@ After completing all settings in <Cmd sid='setting.activeDirectory.menu' product
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-3. Click <Cmd sid='setting.activeDirectory.menu' product='2' /> on the left sidebar.
+3. Click <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar of the screen.
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
@@ -174,7 +178,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
   4. View the value of **distinguishedName**.
 
-* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install the Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, refer to the [following](ad-encrypt).
+* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install the Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, refer to [the following](ad-encrypt).
 
   * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />: Enter the password for the encryption key store of the Windows Active Directory server. You can enter the password when the <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> is set to <Cmd sid='device.info.enabled' product='2' />.
 
@@ -212,7 +216,7 @@ To configure login to BioStar 2 using the user ID of the Active Directory server
 
 :::note
 
-After completing all settings in <Cmd sid='setting.activeDirectory.menu' product='2' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to the [following](#checksettings) to check the results.
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to [the following](#checksettings) to check the results.
 
 <Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
@@ -230,7 +234,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
 ## Exclude the directory integration {#exclude-integration}
 
-When integrating with **Entra ID** or **Active Directory** through the <Cmd sid='setting.activeDirectory.menu' product='2' /> feature, users that do not exist in the directory service may be deleted from BioStar 2. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
+When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
 
 1. Log in to BioStar 2 with an administrator account.
 
@@ -244,7 +248,7 @@ When integrating with **Entra ID** or **Active Directory** through the <Cmd sid=
 
 5. Click the <Cmd sid='button.apply' product='2' /> button.
 
-The selected user will be excluded from the integration when using the <Cmd sid='setting.activeDirectory.menu' product='2' /> feature.
+The selected users will be excluded from integration when using the <Cmd sid='setting.menu.directoryIntegration.root' /> feature.
 
 ## Disable the directory integration {#disableIntegration}
 
@@ -252,7 +256,7 @@ To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature,
 
 1. Log in to BioStar 2 with an administrator account.
 
-2. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.activeDirectory.menu' product='2' />.
+2. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
 
 3. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 

@@ -1,15 +1,15 @@
 ---
 id: settings-map-manage-area
 title: Configure area
-description: Configure floors and facilities to manage. Verify secured areas through the map.
+description: Complete the floor and facility configuration to set up the area. Verify secured areas through the map.
 keywords:
   - Map
-  - Area
-  - Layer
+  - Zone
+  - Floor
   - Facility
 ---
 
-Configure floors and facilities to manage. Verify secured areas through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the <Cmd sid='shell.header.arena' /> page.
+Complete the floor and facility configuration to set up the area. Verify secured areas through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the <Cmd sid='shell.header.arena' /> page.
 
 <Image src='/img/monitoring-map-open-map.png' />
 
@@ -21,9 +21,9 @@ Configure floors and facilities to manage. Verify secured areas through the map.
 
   * <DocLink docId='platform/biostar_x/settings-map-manage-facility' />
 
-* For more information about map monitoring, refer to the [following](monitoring-map).
+* For more information about map monitoring, refer to [the following](monitoring-map).
 
-* The map settings and map monitoring features is only available with an **Advanced** or higher license.
+* Map settings and map monitoring feature can be used via additional options with an **advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::
 
@@ -35,9 +35,11 @@ Configure and manage zones of the security areas you are currently managing via 
 
 2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> on the left sidebar.
 
-3. Click <Cmd>New Area</Cmd> at the top right of the zone list screen.
+3. Click the <Cmd sid='setting.area.table.action.newArea' /> button in the upper right of the area list screen.
 
-4. Enter the name and description of the zone you want to add in the <Cmd sid='setting.area.information.section.title' /> section of the <Cmd sid='setting.area.page.title' /> screen.
+   <Image src='/img/biostarx-settings-map-add-area.png' />
+
+4. Enter the name and description of the area you want to add in the <Cmd sid='setting.area.information.section.title' /> section of the <Cmd sid='setting.area.page.title' /> screen.
 
 5. Set the location of the zone to add on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
 
@@ -49,7 +51,13 @@ Configure and manage zones of the security areas you are currently managing via 
 
    <Image src='/img/biostarx-settings-map-area-drawing.gif' alone />
 
-8. To add facilities to the configured zone, right-click and select <Cmd sid='map.menu.add.facility' />.
+   :::note
+
+   To reset the area, you must delete the configured area. To delete the area, click the <IcFremove /> button.
+
+   :::
+
+8. To add facilities to the configured area, right-click and select <Cmd sid='map.menu.add.facility' />.
 
    <Image src='/img/biostarx-settings-map-area-add-02.png' />
 
@@ -65,17 +73,21 @@ Configure and manage zones of the security areas you are currently managing via 
 
 9. When the <Cmd sid='setting.area.label.addFacility' /> window appears, select the facility to add and click <Cmd sid='common.apply' />.
 
+   <Image src='/img/biostarx-settings-map-area-add-03.png' />
+
    :::note
 
    When adding an entrance or camera, the <Cmd sid='setting.area.label.addDoor' /> or <Cmd sid='setting.area.label.addCamera' /> window will also appear. Select the item to add and click <Cmd sid='common.apply' />.
 
    :::
 
-10. Click <Cmd>Apply</Cmd> when you complete the zone configuration.
+10. Once the area settings are complete, click the <Cmd sid='button.apply' product='2' /> button in the lower right of the screen.
 
 :::info
 
 * You can search for your desired location using the input field at the top left of the map. Click <IcCurP /> to return to the current location.
+
+  <Image src='/img/biostarx-settings-map-area-find-point.png' />
 
 * When adding a zone on the map, it can only be set as a single polygon. When setting a zone, ensure that the start and end points are the same. Once configured, the shape of the zone cannot be changed. To modify the zone, you must delete it and re-add it.
 
@@ -97,41 +109,35 @@ To reset a zone on the map, you must delete the existing zone and re-add it.
 
 3. Select the zone you want to reset from the zone list. 
 
-4. Click the existing zone on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
+4. In the map under the <Cmd sid='setting.area.configuration.section.title' /> section, click the <IcFremove /> button at the top left of the already created area.
 
-5. When the zone deletion confirmation message appears, click <Cmd sid='common.delete' />.
+   <Image src='/img/biostarx-settings-map-area-reset.png' alone />
 
-   <Image src='/img/biostarx-settings-map-area-reset.png' />
+5. Right-click on the map and select <Cmd sid='setting.area.label.setArea' /> from the popup menu.
 
-6. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
-
-7. Set the zone in your desired shape and click <Cmd sid='common.apply' /> to save.
+6. To set the area as desired and save, click the <Cmd sid='button.apply' product='2' /> button in the lower right of the screen.
 
 ### Delete facility/entrance/camera
 
 Click the facility, entrance, or camera you want to delete on the map. The <IcFremove /> icon will appear. Click the icon to delete the selected facility.
 
+<Image src='/img/biostarx-settings-map-area-x-btn.png' alone />
+
 ### Set camera coverage
 
-You can set the camera coverage area on the map. Hover the mouse cursor over the camera icon and right-click, then select <Cmd sid='setting.area.button.showCoverage' />.
+You can set the camera coverage area on the map. Right-click the icon where the camera is placed and select <Cmd sid='setting.area.button.addCoverage' />.
 
 <Image src='/img/biostarx-settings-map-area-camera-setting.png' />
 
-* To change the coverage area, click and drag the <IcCamrot /> icon in the desired direction.
+* To change the shooting range, click and drag the green area's shooting range in the desired direction.
 
-  <Image src='/img/biostarx-settings-map-area-camera-rot.gif' alone />
+  <Image src='/img/biostarx-settings-map-area-camera-rot.png' alone />
 
 * To adjust the coverage area, hold the edge of the range and drag to resize.
 
-  <Image src='/img/biostarx-settings-map-area-camera-adjust.gif' alone />
+  <Image src='/img/biostarx-settings-map-area-camera-adjust.png' alone />
 
 * To delete the coverage area, click the <IcFremove /> icon.
-
-:::info
-
-To hide the camera coverage area, hover the mouse cursor over the camera icon on the map, right-click, and select <Cmd sid='setting.area.button.hideCoverage' />.
-
-:::
 
 :::caution
 
@@ -147,4 +153,8 @@ Settings made by the user are only features provided for the convenience of secu
 
 3. Check the checkbox of the zone you want to delete from the zone list.
 
-4. Click the <Cmd sid='common.delete' /> button at the top right of the screen.
+   <Image src='/img/biostarx-settings-map-area-remove-item.png' />
+
+4. Click <Cmd sid='common.delete' /> at the top right of the screen.
+
+5. When the confirmation message window appears, click <Cmd sid='common.dialog.yes' />.

@@ -13,8 +13,6 @@ You can use the **Multi-Factor Authentication** feature to enhance security when
 
 :::info
 
-* **Multi-Factor Authentication** refers to the method of authenticating users through two or more authentication procedures.
-
 * Users who want to use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature must enroll their fingerprint and set their username, password, and operator level.
 
 * To use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature, a fingerprint scanner that supports multi-factor authentication login must be connected to the **BioStar X** client PC. Please refer to the list below for devices supported by the fingerprint scanner.
@@ -25,9 +23,9 @@ You can use the **Multi-Factor Authentication** feature to enhance security when
 
   * BioMini Slim 2
 
-* If you use the <Cmd>Use for BioStar X Login</Cmd> option with an Active Directory Server account, you will not be able to use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature.
+* If you use the <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> account with the <Cmd sid='biostar.login' product='2' /> option, you cannot use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature.
 
-* Users with <Cmd sid='team.user.permission.multiFactorAuth' /> set cannot register for BioStar X services other than BioStar X AC.
+* Administrators who set <Cmd sid='team.user.permission.multiFactorAuth' /> cannot authenticate with **BioStar X** services (attendance management and video) other than access control. To use the service, log in after disabling the <Cmd sid='team.user.permission.multiFactorAuth' /> setting. You can then reactivate the <Cmd sid='team.user.permission.multiFactorAuth' /> setting.
 
 :::
 
@@ -47,17 +45,29 @@ Follow the steps below to set <Cmd sid='team.user.permission.multiFactorAuth' />
 
 2. Double click on the user who wants to set <Cmd sid='team.user.permission.multiFactorAuth' /> from the user list.
 
-   Alternatively, click a user and then click the <Cmd sid='team.user.preview.button.seeMore' /> button in the profile screen that appears on the right side of the screen.
+   Alternatively, select a user and click the <Cmd sid='team.user.preview.button.seeMore' /> button in the profile displayed on the right screen.
 
-3. When the user profile screen appears, set the <Cmd sid='team.user.permission.multiFactorAuth' /> to <Cmd sid='common.use' /> in the <Cmd sid='team.user.permission.title' /> section.
+3. When the user preview screen appears, set the <Cmd sid='common.fingerprintLogin' product='2' /> item to <Cmd sid='common.use' /> in the <Cmd sid='team.user.permission.title' /> section.
 
    <Image src='/img/biostarx-edit-user-mfa-use.png' />
 
-4. Click the <Cmd sid='common.save' /> button at the top right of the screen.
+4. Click <Cmd sid='common.save' /> at the top right of the screen.
 
 Completing multi-factor authentication setup.
 
 ## Multi-Factor Authentication Batch Setting {#multi-factor-authentication-batch-set}
+
+:::note
+
+**Before you start**
+
+To use the multi-authentication login feature, you must meet the following conditions.
+
+* The user must have a registered fingerprint authentication method.
+
+* <Cmd sid='team.userTemplate.table.operator' />, <Cmd sid='user.loginId' product='2' />, and <Cmd sid='common.password' product='2' /> must be set. Please refer to [the following](set-permission) for details.
+
+:::
 
 You can use the batch edit feature to apply the <Cmd sid='team.user.permission.multiFactorAuth' /> feature to multiple users.
 
@@ -65,19 +75,19 @@ You can use the batch edit feature to apply the <Cmd sid='team.user.permission.m
 
 2. Click the checkbox to the left of the user you want to set up multi-factor authentication for in the user list.
 
-3. Click the <Cmd sid='common.batchEdit' /> button at the top right of the screen.
+3. Click <Cmd sid='common.batchEdit' /> at the top right of the screen.
 
-4. When the batch edit window appears, set the <Cmd sid='team.user.permission.multiFactorAuth' /> to <Cmd sid='common.use' /> in the <Cmd sid='team.user.permission.title' /> section.
+4. When the batch edit window appears, click the checkbox for the <Cmd sid='common.fingerprintLogin' product='2' /> option in the <Cmd sid='team.user.permission.title' /> section and set it to <Cmd sid='common.use' />.
 
    <Image src='/img/biostarx-batch-edit-user-mfa-use.png' />
 
-5. Click the <Cmd sid='common.save' /> button at the top right of the screen.
+5. Click <Cmd sid='common.save' /> at the top right of the screen.
 
 Completing the multi-factor authentication setup for multiple selected users.
 
 :::info
 
-If any of the selected users do not meet the conditions required to set <Cmd sid='team.user.permission.multiFactorAuth' /> to use, a pop-up message will display <Cmd>Not applicable user(s)</Cmd>. Please check the conditions required for the settings and try again.
+Users among the selected who do not meet the conditions required to activate the <Cmd sid='common.fingerprintLogin' product='2' /> feature can be confirmed through the popup message of <Cmd sid='user.batchedit.popup.notavailableuser' product='2' />. Please check the conditions required for the settings and try again.
 
 :::
 
@@ -85,9 +95,11 @@ If any of the selected users do not meet the conditions required to set <Cmd sid
 
 1. Access **BioStar X** log in screen through a web browser.
 
-2. Please enter your user ID and password to log in.
+2. Enter your user ID and password, then click the <Cmd sid='auth.login' /> button.
 
 3. When the fingerprint input screen appears, scan your fingerprint using the fingerprint scanner.
+
+   <Image src='/img/biostarx-mfa-login-scan-fingerprint.png' />
 
 Completing the login.
 
@@ -97,6 +109,6 @@ Completing the login.
 
 * Fingerprint scanning can be attempted up to three times consecutively. If the fingerprint is not accurately scanned within these three attempts, authentication will fail.
 
-* In the case of authentication failure, click the <Cmd>Retry</Cmd> to attempt fingerprint authentication again. Up to two retry attempts are allowed. If authentication fails after retry attempts, the process will revert to the ID and Password login step.
+* If authentication fails, click the <Cmd sid='button.retry' product='2' /> button to retry fingerprint authentication. Up to two retry attempts are allowed. If authentication fails after retry attempts, the process will revert to the ID and Password login step.
 
 :::

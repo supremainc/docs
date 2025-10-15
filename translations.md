@@ -6,7 +6,6 @@
 crowdin upload -b main
 ```
 
-
 크라우딘 번역 전 태그 감추기할 목록
 
 - Image
@@ -29,5 +28,9 @@ crowdin upload -b main
 - Magnify
 - NextStep, NextItem
 - DbQueryCreate
-- 주석 {/* */}
+- 주석 {/**/}
 - import
+
+영어에 남아있는 한글 정규식 검색
+
+^.*[가-힣].*$
