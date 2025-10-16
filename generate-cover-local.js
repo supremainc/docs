@@ -54,7 +54,7 @@ function getLocalizedSubtitle(subtitleCode, isKorean = true) {
         },
         'AG': {
             ko: '관리자 가이드',
-            en: 'ADMINISTRATOR GUIDE'
+            en: 'Administrator Guide'
         }
     };
 
@@ -90,6 +90,9 @@ function generateCoverHTML(params) {
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
 
+    // coverpage 클래스 결정
+    const coverpageClass = title === 'BioStar X' ? 'coverpage bsx' : 'coverpage';
+
     return `<!DOCTYPE html>
 <html lang="${isKorean ? 'ko' : 'en'}">
 <head>
@@ -115,10 +118,17 @@ function generateCoverHTML(params) {
         .coverpage {
             height: 11.693in;
             width: 8.27in;
-            background: rgb(255,255,255);
-            background: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
+            background-color: rgb(255,255,255);
+            background-image: radial-gradient(circle, rgba(255,255,255,1) 84%, rgba(217,224,229,1) 100%);
             position: relative;
             overflow: hidden;
+            /* Prince XML 렌더링 최적화 */
+            -prince-background-image-resolution: 300dpi;
+        }
+
+        .bsx {
+            background: #ffffff;
+            background-image: none;
         }
         
         .title {
@@ -133,6 +143,11 @@ function generateCoverHTML(params) {
             flex-direction: column;
             justify-content: center;
         }
+        .bsx .title {
+            background: linear-gradient(163deg, #01AAEB, #D8007F);
+            background: -webkit-linear-gradient(163deg, #01AAEB, #D8007F);
+            border: none;
+        }
         
         .title h1 {
             font-family: "Montserrat", sans-serif;
@@ -141,6 +156,11 @@ function generateCoverHTML(params) {
             margin-bottom: 0;
             line-height: 1.1;
         }
+        .bsx .title h1 {
+            font-size: 42pt;
+            border-bottom: 0.5pt solid #fff;
+            padding-bottom: 1.5rem;
+        }
         
         .title h1.small {
             font-size: 37pt;
@@ -148,12 +168,22 @@ function generateCoverHTML(params) {
         }
         
         .title .subtitle {
+            position: relative;
             font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
             font-weight: 200;
             font-size: 26pt;
             margin-bottom: 0;
             line-height: 1.2;
             left: 4px;
+            text-transform: uppercase;
+        }
+
+        .bsx .title .subtitle {
+            font-size: 24pt;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
+            text-transform: none;
         }
         
         .title .ver {
@@ -164,6 +194,10 @@ function generateCoverHTML(params) {
             margin-top: 0.2rem;
             left: 4px;
         }
+
+        .bsx .title .ver {
+            font-weight: normal;
+        }
         
         .title .lang,
         .title .number {
@@ -173,9 +207,16 @@ function generateCoverHTML(params) {
             position: relative;
             text-align: right;
         }
+        .bsx .title .lang, .bsx .title .number {
+            font-weight: normal;
+        }
         
         .title .lang {
             margin-top: 4.7rem;
+        }
+        .bsx .title .lang {
+            margin-top: .8rem;
+            margin-bottom: 1rem;
         }
         
         .footer {
@@ -188,6 +229,10 @@ function generateCoverHTML(params) {
         .logo {
             width: 113px;
             height: auto;
+        }
+
+        .bsx .logo {
+            width: 150px;
         }
         
         @page {
@@ -209,7 +254,7 @@ function generateCoverHTML(params) {
     </style>
 </head>
 <body>
-    <div class="coverpage">
+    <div class="${coverpageClass}">
         <div class="title">
             <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
             <div class="subtitle">${processedSubtitle}</div>
