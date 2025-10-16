@@ -62,7 +62,7 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire/EM/iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
+          "value": "MIFARE/DESFire/EM/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
           "annotation_label": "anno3"
         },
         "mobile": {
