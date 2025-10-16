@@ -26,7 +26,7 @@ mkdir -p ./pdf
 echo "📄 HTML 파일 생성 중..."
 node generate-cover-local.js \
     --title="BioStar X" \
-    --subtitle="ADMINISTRATOR GUIDE" \
+    --subtitle="Administrator Guide" \
     --version="1.0.0" \
     --lang="English" \
     --number="102.00.BSX" \
