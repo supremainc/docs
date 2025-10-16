@@ -970,6 +970,85 @@ const sidebars = {
   //     ],
   //   },
   // ],
+  // facestation2: [
+  //   {
+  //     type: 'category',
+  //     label: 'FaceStation 2',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/facestation_2/index',
+  //     },
+  //     items: [
+  //       'device/facestation_2/safety-instructions',
+  //       'device/facestation_2/getting-started',
+  //       'device/facestation_2/installation',
+  //       {
+  //         type: 'category',
+  //         label: '사용하기',
+  //         link: {
+  //           type: 'doc',
+  //           id: 'device/facestation_2/using-device',
+  //         },
+  //         items: [
+  //           'device/facestation_2/admin-menu',
+  //           'device/facestation_2/user',
+  //           'device/facestation_2/authentication',
+  //           'device/facestation_2/settings',
+  //           'device/facestation_2/event-log',
+  //         ],
+  //       },
+  //       'device/facestation_2/troubleshooting',
+  //       'device/facestation_2/product-specifications',
+  //       'device/facestation_2/regulatory-information',
+  //       'device/facestation_2/appendices',
+  //     ],
+  //   },
+  // ],
+  // xpassd2: [
+  //   {
+  //     type: 'category',
+  //     label: 'XPass D2',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/xpass_d2/index',
+  //     },
+  //     items: [
+  //       'device/xpass_d2/safety-instructions',
+  //       'device/xpass_d2/getting-started',
+  //       'device/xpass_d2/installation',
+  //       'device/xpass_d2/product-specifications',
+  //       'device/xpass_d2/regulatory-information',
+  //       'device/xpass_d2/appendices'
+  //     ]
+  //   }
+  // ],
+  // bioentryp2: [
+  //   {
+  //     type: 'category',
+  //     label: 'BioEntry P2',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/bioentry_p2/index',
+  //     },
+  //     items: [
+  //       'device/bioentry_p2/safety-instructions',
+  //       'device/bioentry_p2/getting-started',
+  //       'device/bioentry_p2/installation',
+  //       'device/bioentry_p2/product-specifications',
+  //       'device/bioentry_p2/regulatory-information',
+  //       'device/bioentry_p2/appendices'
+  //     ]
+  //   }
+  // ],
 };
 
 export default sidebars;
