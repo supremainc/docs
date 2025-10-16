@@ -226,9 +226,13 @@ ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'bios
 
   :::
 
+<div className='print--invisible'>
+
 * 위 쿼리를 통해서 생성된 아래 `CREATE` 문을 보조 데이터베이스에 반드시 입력하세요.
 
   <DbQueryCreate />
+
+</div>
 
 </Step>
 <Step>
@@ -402,6 +406,8 @@ WHERE s.name = @SourceSchema
 ORDER BY t.name;
 ```
 
+<div className='print--invisible'>
+
 :::info
 
 위 쿼리문을 통해 생성되는 `CREATE` 문 예시입니다.
@@ -409,6 +415,8 @@ ORDER BY t.name;
 <DbQueryCreateSQL />
 
 :::
+
+</div>
 
 </Step>
 <Step>

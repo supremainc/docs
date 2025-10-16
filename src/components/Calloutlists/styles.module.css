@@ -24,6 +24,13 @@
   top: 0px;
 }
 
+@media print {
+  .calloutLists ol li::before {
+    height: 22px;
+    padding-top: 4px;
+  }
+}
+
 .calloutLists ol li p svg {
   position: absolute;
   left: 37px;
