@@ -521,6 +521,9 @@
   "specs.general.camera_resolution": {
     "message": "Camera Resolution"
   },
+  "specs.general.camera_angle": {
+    "message": "Camera Angle"
+  },
   "specs.general.ip_rating": {
     "message": "IP Rating"
   },
@@ -611,6 +614,12 @@
   "specs.interface.samSlot": {
     "message": "SAM Slot"
   },
+  "specs.interface.led": {
+    "message": "LED"
+  },
+  "specs.interface.beep": {
+    "message": "Beep"
+  },
   "specs.power": {
     "message": "Electrical"
   },
@@ -626,11 +635,20 @@
   "specs.power.switch_input_vih": {
     "message": "Switch Input VIH"
   },
+  "specs.power.led_beep_input_vih": {
+    "message": "LED, Beep Input VIH"
+  },
   "specs.power.switch_input_vil": {
     "message": "Switch Input VIL"
   },
+  "specs.power.led_beep_input_vil": {
+    "message": "LED, Beep Input VIL"
+  },
   "specs.power.switch_pullup": {
     "message": "Switch Pull-up Resistance"
+  },
+  "specs.power.led_beep_pullup": {
+    "message": "LED, Beep Pull-up Resistance"
   },
   "specs.power.wiegand_voh": {
     "message": "Wiegand Output VOH"

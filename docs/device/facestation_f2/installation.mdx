@@ -103,12 +103,13 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 {/* ## 독립형 연결 */}
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
-import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
 <StandaloneConnection />
 
 {/* 공통 노트 */}
-<CommonNotes product='FaceStation F2' />
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes product='FaceStation F2' product_2='BioStation 3' />
 
 {/* ## Secure I/O 2 연결 */}
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
@@ -116,7 +117,7 @@ import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 <SecureIOConnection />
 
 {/* 공통 노트 */}
-<CommonNotes product='FaceStation F2' />
+<CommonNotes product='FaceStation F2' product_2='BioStation 3' />
 
 {/* ## Wiegand 연결 */}
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";

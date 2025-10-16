@@ -139,6 +139,16 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
+      title: 'FaceStation 2',
+      url: `/device/facestation_2`,
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/facestation2.png',
+      desc: `${translate({
+        id: "externalLinks.FaceStation2.desc",
+        message: "얼굴 인증 출입근태 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
       title: 'BioEntry W2',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
@@ -150,7 +160,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioEntry P2',
-      url: '#',
+      url: `/device/bioentry_p2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc",
@@ -210,7 +220,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass D2',
-      url: '#',
+      url: `/device/xpass_d2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc: `${translate({
         id: "externalLinks.XPass2.desc",

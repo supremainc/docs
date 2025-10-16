@@ -1,8 +1,8 @@
 ---
 id: installation
 title: 설치하기
-description: BioEntry W3 장치 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
-keywords: [설치, BioEntry W3, 장치]
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
 ---
 
 import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
@@ -13,13 +13,13 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 1. 제품을 장착할 위치를 정하세요.
 
-    <Image src='/img/device/installation-recommended-bs3.svg' className='none' alone />
+    <Image src='/img/device/installation-recommended-bew3.svg' className='none' alone />
 
     <InstallationBracketNotes height={137} />
 
 1. 제품을 장착할 위치에 브래킷 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
 
-    <Image src='/img/device/bew3-bracket-fix.png' className='none' alone />
+    <Image src='/img/device/installation-device1-bew3.svg' className='none' alone />
 
     :::info
 
@@ -44,9 +44,9 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
     </Column>
 
-    <Column className='padding--l20'>
+    <Column className='text--center'>
     
-    <Image src='/img/device/bew3-installation_distance.png' className='none' />
+    <Image src='/img/device/bew3-installation_distance.png' className='none' width='70%' />
 
     </Column>
     </Columns>
@@ -57,11 +57,11 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 1. 고정된 브래킷 위에 제품을 장착하세요.
 
-    <Image src='/img/device/bew3-device-fix.png' className='none' alone />
+    <Image src='/img/device/installation-device2-bew3.svg' className='none' alone />
 
 1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
 
-    <Image src='/img/device/bew3-device-fix-bottom.png' className='none' alone />
+    <Image src='/img/device/installation-device3-bew3.svg' className='none' alone />
 
     :::info
 
@@ -96,11 +96,12 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 {/* ## 독립형 연결 */}
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
-import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
 <StandaloneConnection />
 
 {/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
 <CommonNotes />
 
 <div className='page-break' />
