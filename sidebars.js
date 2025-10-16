@@ -867,6 +867,127 @@ const sidebars = {
       ]
     }
   ],
+  inputmodule: [
+    {
+      type: 'category',
+      label: 'Input Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/inputmodule/index',
+      // },
+      items: [
+        // 'device/inputmodule/safety-instructions',
+        // 'device/inputmodule/getting-started',
+        // 'device/inputmodule/installation',
+        // 'device/inputmodule/product-specifications',
+        // 'device/inputmodule/regulatory-information',
+        // 'device/inputmodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/inputmodule/release-notes/index',
+          },
+          items: [
+            'device/inputmodule/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  outputmodule: [
+    {
+      type: 'category',
+      label: 'Output Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/outputmodule/index',
+      // },
+      items: [
+        // 'device/outputmodule/safety-instructions',
+        // 'device/outputmodule/getting-started',
+        // 'device/outputmodule/installation',
+        // 'device/outputmodule/product-specifications',
+        // 'device/outputmodule/regulatory-information',
+        // 'device/outputmodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/outputmodule/release-notes/index',
+          },
+          items: [
+            'device/outputmodule/release-notes/121',
+            'device/outputmodule/release-notes/120',
+            'device/outputmodule/release-notes/110',
+            'device/outputmodule/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  securemodule: [
+    {
+      type: 'category',
+      label: 'Secure Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/securemodule/index',
+      // },
+      items: [
+        // 'device/securemodule/safety-instructions',
+        // 'device/securemodule/getting-started',
+        // 'device/securemodule/installation',
+        // 'device/securemodule/product-specifications',
+        // 'device/securemodule/regulatory-information',
+        // 'device/securemodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/securemodule/release-notes/index',
+          },
+          items: [
+            'device/securemodule/release-notes/131',
+            'device/securemodule/release-notes/130',
+            'device/securemodule/release-notes/124',
+            'device/securemodule/release-notes/123',
+            'device/securemodule/release-notes/121',
+            'device/securemodule/release-notes/119',
+            'device/securemodule/release-notes/118',
+            'device/securemodule/release-notes/117',
+            'device/securemodule/release-notes/114',
+            'device/securemodule/release-notes/112',
+            'device/securemodule/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
   facestationf2: [
     {
       type: 'category',
