@@ -293,7 +293,7 @@
   },
   "/docs/img/biostarx-header.png": {
     "width": 1500,
-    "height": 597
+    "height": 612
   },
   "/docs/img/biostarx-install-2-to-x-agree.png": {
     "width": 499,
@@ -644,8 +644,8 @@
     "height": 556
   },
   "/docs/img/biostarx-new-user-credential-face-mobile-app.png": {
-    "width": 970,
-    "height": 301
+    "width": 1522,
+    "height": 518
   },
   "/docs/img/biostarx-new-user-credential-face-nth.png": {
     "width": 600,
@@ -757,7 +757,7 @@
   },
   "/docs/img/biostarx-setting-device-advanced-search-result.png": {
     "width": 600,
-    "height": 194
+    "height": 192
   },
   "/docs/img/biostarx-setting-device-advanced-search.png": {
     "width": 600,
@@ -785,7 +785,7 @@
   },
   "/docs/img/biostarx-setting-device-edit-advanced-triggernaction.png": {
     "width": 1240,
-    "height": 668
+    "height": 687
   },
   "/docs/img/biostarx-setting-device-edit-advanced-wiegand.png": {
     "width": 1200,
@@ -796,8 +796,8 @@
     "height": 475
   },
   "/docs/img/biostarx-setting-device-edit-auth-mode.png": {
-    "width": 1500,
-    "height": 358
+    "width": 1200,
+    "height": 343
   },
   "/docs/img/biostarx-setting-device-edit-info.png": {
     "width": 1500,
@@ -845,7 +845,7 @@
   },
   "/docs/img/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 600,
-    "height": 470
+    "height": 467
   },
   "/docs/img/biostarx-setting-device-manage-device-users.png": {
     "width": 300,
@@ -857,7 +857,7 @@
   },
   "/docs/img/biostarx-setting-device-sync-device.png": {
     "width": 1500,
-    "height": 438
+    "height": 391
   },
   "/docs/img/biostarx-setting-device-upgrade-firmware-popup.png": {
     "width": 600,
@@ -865,7 +865,7 @@
   },
   "/docs/img/biostarx-setting-device-upgrade-firmware.png": {
     "width": 1500,
-    "height": 445
+    "height": 391
   },
   "/docs/img/biostarx-setting-directory-ad-server.png": {
     "width": 1400,
@@ -973,7 +973,7 @@
   },
   "/docs/img/biostarx-setting-door-edit-batch.png": {
     "width": 400,
-    "height": 201
+    "height": 172
   },
   "/docs/img/biostarx-setting-door-rename-group.png": {
     "width": 400,
@@ -1041,7 +1041,7 @@
   },
   "/docs/img/biostarx-settings-alert.png": {
     "width": 1500,
-    "height": 510
+    "height": 797
   },
   "/docs/img/biostarx-settings-card-printer-custom-user.png": {
     "width": 946,
@@ -1097,7 +1097,7 @@
   },
   "/docs/img/biostarx-settings-credentail-card.png": {
     "width": 1500,
-    "height": 281
+    "height": 293
   },
   "/docs/img/biostarx-settings-credentail-mobile-access-connection.png": {
     "width": 1200,
@@ -1114,6 +1114,10 @@
   "/docs/img/biostarx-settings-credentail-mobile-access.png": {
     "width": 1200,
     "height": 252
+  },
+  "/docs/img/biostarx-settings-credentail-mobile-removed-card.png": {
+    "width": 1000,
+    "height": 465
   },
   "/docs/img/biostarx-settings-credentail-smart-format-add.png": {
     "width": 1200,
@@ -1144,8 +1148,8 @@
     "height": 521
   },
   "/docs/img/biostarx-settings-email-visual-face.png": {
-    "width": 1103,
-    "height": 400
+    "width": 800,
+    "height": 404
   },
   "/docs/img/biostarx-settings-license-device-license.png": {
     "width": 1201,
@@ -1308,12 +1312,12 @@
     "height": 117
   },
   "/docs/img/biostarx-settings-server-expert2.png": {
-    "width": 1054,
+    "width": 499,
     "height": 116
   },
   "/docs/img/biostarx-settings-server-general.png": {
     "width": 1262,
-    "height": 196
+    "height": 184
   },
   "/docs/img/biostarx-settings-server-https.png": {
     "width": 800,
@@ -1349,11 +1353,11 @@
   },
   "/docs/img/biostarx-settings-server-server-matching.png": {
     "width": 1309,
-    "height": 279
+    "height": 262
   },
   "/docs/img/biostarx-settings-server-system-log-level.png": {
     "width": 1262,
-    "height": 176
+    "height": 164
   },
   "/docs/img/biostarx-settings-system-audit-trail-add-filter.png": {
     "width": 1500,
@@ -1678,6 +1682,10 @@
   "/docs/img/biostarx-user-sub-group-add.png": {
     "width": 400,
     "height": 272
+  },
+  "/docs/img/biostarx-user-sub-group-expand-collapse.png": {
+    "width": 400,
+    "height": 182
   },
   "/docs/img/biostarx-user-transfer-to-devices.png": {
     "width": 800,
@@ -3265,7 +3273,7 @@
   },
   "/docs/img/en/biostarx-edit-user-credentials.png": {
     "width": 800,
-    "height": 352
+    "height": 260
   },
   "/docs/img/en/biostarx-edit-user-mfa-use.png": {
     "width": 800,
@@ -3277,7 +3285,7 @@
   },
   "/docs/img/en/biostarx-header.png": {
     "width": 1500,
-    "height": 572
+    "height": 611
   },
   "/docs/img/en/biostarx-install-2-to-x-agree.png": {
     "width": 499,
@@ -3628,8 +3636,8 @@
     "height": 553
   },
   "/docs/img/en/biostarx-new-user-credential-face-mobile-app.png": {
-    "width": 970,
-    "height": 301
+    "width": 1522,
+    "height": 518
   },
   "/docs/img/en/biostarx-new-user-credential-face-nth.png": {
     "width": 600,
@@ -3752,8 +3760,8 @@
     "height": 500
   },
   "/docs/img/en/biostarx-setting-device-edit-advanced-imagelog.png": {
-    "width": 1011,
-    "height": 797
+    "width": 1200,
+    "height": 774
   },
   "/docs/img/en/biostarx-setting-device-edit-advanced-tamper.png": {
     "width": 856,
@@ -3765,7 +3773,7 @@
   },
   "/docs/img/en/biostarx-setting-device-edit-advanced-triggernaction.png": {
     "width": 1116,
-    "height": 600
+    "height": 621
   },
   "/docs/img/en/biostarx-setting-device-edit-advanced-wiegand.png": {
     "width": 1140,
@@ -3776,8 +3784,8 @@
     "height": 474
   },
   "/docs/img/en/biostarx-setting-device-edit-auth-mode.png": {
-    "width": 1304,
-    "height": 327
+    "width": 1200,
+    "height": 337
   },
   "/docs/img/en/biostarx-setting-device-edit-info.png": {
     "width": 1670,
@@ -3836,16 +3844,16 @@
     "height": 509
   },
   "/docs/img/en/biostarx-setting-device-sync-device.png": {
-    "width": 1469,
-    "height": 236
+    "width": 1500,
+    "height": 345
   },
   "/docs/img/en/biostarx-setting-device-upgrade-firmware-popup.png": {
     "width": 590,
     "height": 268
   },
   "/docs/img/en/biostarx-setting-device-upgrade-firmware.png": {
-    "width": 1469,
-    "height": 236
+    "width": 1500,
+    "height": 345
   },
   "/docs/img/en/biostarx-setting-directory-ad-server.png": {
     "width": 1400,
@@ -3953,7 +3961,7 @@
   },
   "/docs/img/en/biostarx-setting-door-edit-batch.png": {
     "width": 400,
-    "height": 201
+    "height": 173
   },
   "/docs/img/en/biostarx-setting-door-rename-group.png": {
     "width": 439,
@@ -4021,7 +4029,7 @@
   },
   "/docs/img/en/biostarx-settings-alert.png": {
     "width": 1500,
-    "height": 694
+    "height": 802
   },
   "/docs/img/en/biostarx-settings-card-printer-custom-user.png": {
     "width": 950,
@@ -4076,8 +4084,8 @@
     "height": 223
   },
   "/docs/img/en/biostarx-settings-credentail-card.png": {
-    "width": 1488,
-    "height": 255
+    "width": 1500,
+    "height": 290
   },
   "/docs/img/en/biostarx-settings-credentail-mobile-access-connection.png": {
     "width": 1200,
@@ -4094,6 +4102,10 @@
   "/docs/img/en/biostarx-settings-credentail-mobile-access.png": {
     "width": 1200,
     "height": 241
+  },
+  "/docs/img/en/biostarx-settings-credentail-mobile-removed-card.png": {
+    "width": 1000,
+    "height": 478
   },
   "/docs/img/en/biostarx-settings-credentail-smart-format-add.png": {
     "width": 1198,
@@ -4124,8 +4136,8 @@
     "height": 521
   },
   "/docs/img/en/biostarx-settings-email-visual-face.png": {
-    "width": 1103,
-    "height": 400
+    "width": 800,
+    "height": 426
   },
   "/docs/img/en/biostarx-settings-license-device-license.png": {
     "width": 1201,
@@ -4264,12 +4276,12 @@
     "height": 117
   },
   "/docs/img/en/biostarx-settings-server-expert2.png": {
-    "width": 1054,
+    "width": 485,
     "height": 116
   },
   "/docs/img/en/biostarx-settings-server-general.png": {
     "width": 1262,
-    "height": 196
+    "height": 181
   },
   "/docs/img/en/biostarx-settings-server-https.png": {
     "width": 800,
@@ -4305,11 +4317,15 @@
   },
   "/docs/img/en/biostarx-settings-server-server-matching.png": {
     "width": 1309,
-    "height": 279
+    "height": 266
   },
   "/docs/img/en/biostarx-settings-server-system-log-level.png": {
     "width": 1262,
-    "height": 176
+    "height": 164
+  },
+  "/docs/img/en/biostarx-settings-system-audit-trail-add-filter.png": {
+    "width": 1500,
+    "height": 326
   },
   "/docs/img/en/biostarx-settings-system-audit-trail-column-setting.png": {
     "width": 400,
@@ -4606,6 +4622,10 @@
   "/docs/img/en/biostarx-user-sub-group-add.png": {
     "width": 400,
     "height": 272
+  },
+  "/docs/img/en/biostarx-user-sub-group-expand-collapse.png": {
+    "width": 400,
+    "height": 186
   },
   "/docs/img/en/biostarx-user-transfer-to-devices.png": {
     "width": 800,
