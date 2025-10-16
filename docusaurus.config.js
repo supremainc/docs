@@ -313,7 +313,9 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ],
+        theme: prismThemes.github,
+        darkTheme: prismThemes.vsDark,
       },
       zoom: {
         selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',
@@ -337,6 +339,7 @@ const config = {
           snippetEllipsisText: '…'
         },
         searchPagePath: 'search',
+        askAi: 'kyhdNEjfn9nK'
       }
     })
 };
