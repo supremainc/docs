@@ -336,6 +336,7 @@ const config = {
           snippetEllipsisText: '…'
         },
         searchPagePath: 'search',
+        askAi: 'kyhdNEjfn9nK'
       }
     })
 };
