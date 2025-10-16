@@ -49,3 +49,9 @@
   position: absolute;
   left: -1rem;
 }
+
+@media print {
+  .fdstep h4 {
+    margin-top: 0rem;
+  }
+}

@@ -101,7 +101,7 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            'platform/biostar_air/**.{md,mdx}',
+            'platform/biostar_air/**/**.{md,mdx}',
             'device/**/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
