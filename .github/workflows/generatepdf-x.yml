@@ -55,8 +55,10 @@ jobs:
         echo "버전: ${{ github.event.inputs.version }}"
         echo "문서 번호: ${{ github.event.inputs.document_number }}"
         echo "릴리스 날짜: ${{ github.event.inputs.release_date }}"
-        echo "한국어 URL: ${BASE_URL_KO}"
-        echo "English URL: ${BASE_URL_EN}"
+        echo ""
+        echo "=== PDF 생성 URL ==="
+        echo "한국어: ${BASE_URL_KO}"
+        echo "영어: ${BASE_URL_EN}"
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
