@@ -603,6 +603,7 @@ const sidebars = {
         'platform/biostar_x/licensing'
       ],
     },
+    'platform/biostar_x/appendices'
   ],
   legal: [
     {
