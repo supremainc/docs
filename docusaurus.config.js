@@ -250,6 +250,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'BioEntry R2',
+                docId: 'device/bioentry_r2/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation',
                 docId: 'device/corestation_40/index'
               },
