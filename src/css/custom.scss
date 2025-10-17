@@ -1298,6 +1298,10 @@ footer {
         padding-top: 0 !important;
       }
     }
+    pre, code, .theme-code-block {
+      page-break-inside: auto !important;
+      break-inside: auto !important;
+    }
     pre {
       code {
         background-color: transparent !important;

@@ -28,9 +28,9 @@ img {
   @bottom-center { content: counter(page);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
 }
 
-@page:first {
+/* @page:first {
   @bottom-center { content: normal !important;}
-}
+} */
 
 @media print {
   .breadcrumbs__item--active.item-2 { -prince-bookmark-level: 1 }
