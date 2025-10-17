@@ -1959,6 +1959,10 @@
     "width": 50,
     "height": 50
   },
+  "/docs/img/common/ico-authmode-face-fs2.png": {
+    "width": 35,
+    "height": 35
+  },
   "/docs/img/common/ico-authmode-finger-bln2.png": {
     "width": 87,
     "height": 87
@@ -2010,6 +2014,10 @@
   "/docs/img/common/login-dashboard.png": {
     "width": 1500,
     "height": 745
+  },
+  "/docs/img/common/logo-osdp-verified.png": {
+    "width": 278,
+    "height": 259
   },
   "/docs/img/common/monitoring-map-area-tree-example.png": {
     "width": 400,
@@ -2071,33 +2079,21 @@
     "width": 590,
     "height": 943
   },
-  "/docs/img/device/bew3-bracket-fix.png": {
-    "width": 182,
-    "height": 350
-  },
   "/docs/img/device/bew3-cables-layout.png": {
     "width": 500,
     "height": 808
-  },
-  "/docs/img/device/bew3-device-fix-bottom.png": {
-    "width": 189,
-    "height": 128
-  },
-  "/docs/img/device/bew3-device-fix.png": {
-    "width": 354,
-    "height": 350
   },
   "/docs/img/device/bew3-dimension.png": {
     "width": 1097,
     "height": 663
   },
   "/docs/img/device/bew3-installation_distance.png": {
-    "width": 450,
-    "height": 302
+    "width": 492,
+    "height": 340
   },
   "/docs/img/device/bew3-installation_distance1.png": {
-    "width": 300,
-    "height": 138
+    "width": 466,
+    "height": 249
   },
   "/docs/img/device/bew3-power-connetion.png": {
     "width": 648,
@@ -2431,6 +2427,10 @@
     "width": 250,
     "height": 444
   },
+  "/docs/img/device/cables-layout-xpd2.png": {
+    "width": 763,
+    "height": 817
+  },
   "/docs/img/device/cs20-dimension.png": {
     "width": 538,
     "height": 923
@@ -2463,9 +2463,97 @@
     "width": 1200,
     "height": 500
   },
+  "/docs/img/device/facestation2-main.png": {
+    "width": 1000,
+    "height": 452
+  },
   "/docs/img/device/facestationf2-main.png": {
     "width": 1200,
     "height": 778
+  },
+  "/docs/img/device/fs2-auth-mode.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-auth-option.png": {
+    "width": 350,
+    "height": 163
+  },
+  "/docs/img/device/fs2-auth.png": {
+    "width": 350,
+    "height": 164
+  },
+  "/docs/img/device/fs2-auth1.png": {
+    "width": 350,
+    "height": 96
+  },
+  "/docs/img/device/fs2-datetime.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-displaysound-homescreen.png": {
+    "width": 750,
+    "height": 212
+  },
+  "/docs/img/device/fs2-displaysound.png": {
+    "width": 350,
+    "height": 204
+  },
+  "/docs/img/device/fs2-eventlog.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-eventlog1.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-eventlog2.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-interphone.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-menu.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-network-ethernet.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-network-lan.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-network-serial.png": {
+    "width": 350,
+    "height": 62
+  },
+  "/docs/img/device/fs2-network-server.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-thermal-camera.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-user-add.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-user-enroll-face.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-user-id-type.png": {
+    "width": 350,
+    "height": 211
+  },
+  "/docs/img/device/fs2-user-usage.png": {
+    "width": 350,
+    "height": 211
   },
   "/docs/img/device/fsf2-auth.png": {
     "width": 590,
@@ -2555,6 +2643,10 @@
     "width": 1144,
     "height": 737
   },
+  "/docs/img/device/installation-automatic-door-fs2.png": {
+    "width": 901,
+    "height": 696
+  },
   "/docs/img/device/installation-automatic-door-fsf2.png": {
     "width": 1089,
     "height": 775
@@ -2619,6 +2711,10 @@
     "width": 985,
     "height": 621
   },
+  "/docs/img/device/installation-input-connection-fs2.png": {
+    "width": 976,
+    "height": 496
+  },
   "/docs/img/device/installation-input-connection-fsf2.png": {
     "width": 915,
     "height": 484
@@ -2650,6 +2746,10 @@
   "/docs/img/device/installation-network-direct-connection-cs40.png": {
     "width": 1070,
     "height": 680
+  },
+  "/docs/img/device/installation-network-direct-connection-fs2.png": {
+    "width": 1093,
+    "height": 473
   },
   "/docs/img/device/installation-network-direct-connection-fsf2.png": {
     "width": 1075,
@@ -2683,6 +2783,10 @@
     "width": 969,
     "height": 718
   },
+  "/docs/img/device/installation-network-hub-connection-fs2.png": {
+    "width": 1057,
+    "height": 445
+  },
   "/docs/img/device/installation-network-hub-connection-fsf2.png": {
     "width": 1076,
     "height": 410
@@ -2715,9 +2819,17 @@
     "width": 877,
     "height": 416
   },
+  "/docs/img/device/installation-power-connection-fs2.png": {
+    "width": 926,
+    "height": 580
+  },
   "/docs/img/device/installation-power-connection-fsf2.png": {
     "width": 953,
     "height": 527
+  },
+  "/docs/img/device/installation-power-connection-xpd2.png": {
+    "width": 998,
+    "height": 525
   },
   "/docs/img/device/installation-power-connection-xs2.png": {
     "width": 979,
@@ -2746,6 +2858,10 @@
   "/docs/img/device/installation-relay-fail-safe-lock-cs40.png": {
     "width": 930,
     "height": 501
+  },
+  "/docs/img/device/installation-relay-fail-safe-lock-fs2.png": {
+    "width": 1037,
+    "height": 449
   },
   "/docs/img/device/installation-relay-fail-safe-lock-fsf2.png": {
     "width": 993,
@@ -2783,6 +2899,10 @@
     "width": 903,
     "height": 492
   },
+  "/docs/img/device/installation-relay-fail-secure-lock-fs2.png": {
+    "width": 998,
+    "height": 461
+  },
   "/docs/img/device/installation-relay-fail-secure-lock-fsf2.png": {
     "width": 959,
     "height": 485
@@ -2803,6 +2923,10 @@
     "width": 999,
     "height": 602
   },
+  "/docs/img/device/installation-rs485-connection-xpd2.png": {
+    "width": 882,
+    "height": 552
+  },
   "/docs/img/device/installation-sam-slot-connection-cs20.png": {
     "width": 537,
     "height": 421
@@ -2822,6 +2946,10 @@
   "/docs/img/device/installation-sio2-connection-bs3.png": {
     "width": 1194,
     "height": 786
+  },
+  "/docs/img/device/installation-sio2-connection-fs2.png": {
+    "width": 894,
+    "height": 677
   },
   "/docs/img/device/installation-sio2-connection-fsf2.png": {
     "width": 1099,
@@ -2847,6 +2975,10 @@
     "width": 896,
     "height": 839
   },
+  "/docs/img/device/installation-standalone-connection-fs2.png": {
+    "width": 933,
+    "height": 648
+  },
   "/docs/img/device/installation-standalone-connection-fsf2.png": {
     "width": 1147,
     "height": 832
@@ -2871,9 +3003,21 @@
     "width": 434,
     "height": 198
   },
+  "/docs/img/device/installation-wall1-fs2.png": {
+    "width": 458,
+    "height": 325
+  },
   "/docs/img/device/installation-wall1-fsf2.png": {
     "width": 600,
     "height": 246
+  },
+  "/docs/img/device/installation-wall1-xpd2-gdb.png": {
+    "width": 472,
+    "height": 233
+  },
+  "/docs/img/device/installation-wall1-xpd2-mdb.png": {
+    "width": 459,
+    "height": 244
   },
   "/docs/img/device/installation-wall1-xs2.png": {
     "width": 448,
@@ -2891,9 +3035,21 @@
     "width": 482,
     "height": 385
   },
+  "/docs/img/device/installation-wall2-fs2.png": {
+    "width": 481,
+    "height": 402
+  },
   "/docs/img/device/installation-wall2-fsf2.png": {
     "width": 600,
     "height": 488
+  },
+  "/docs/img/device/installation-wall2-xpd2-gdb.png": {
+    "width": 499,
+    "height": 349
+  },
+  "/docs/img/device/installation-wall2-xpd2-mdb.png": {
+    "width": 496,
+    "height": 418
   },
   "/docs/img/device/installation-wall2-xs2.png": {
     "width": 490,
@@ -2919,6 +3075,10 @@
     "width": 574,
     "height": 639
   },
+  "/docs/img/device/installation-wiegand-in-connection-fs2.png": {
+    "width": 834,
+    "height": 442
+  },
   "/docs/img/device/installation-wiegand-in-out-connection-fsf2.png": {
     "width": 779,
     "height": 390
@@ -2931,6 +3091,10 @@
     "width": 832,
     "height": 528
   },
+  "/docs/img/device/installation-wiegand-other-connection-xpd2.png": {
+    "width": 1008,
+    "height": 666
+  },
   "/docs/img/device/installation-wiegand-out-connection-bew3.png": {
     "width": 649,
     "height": 445
@@ -2942,6 +3106,10 @@
   "/docs/img/device/installation-wiegand-out-connection-bs3.png": {
     "width": 1117,
     "height": 481
+  },
+  "/docs/img/device/installation-wiegand-out-connection-fs2.png": {
+    "width": 840,
+    "height": 444
   },
   "/docs/img/device/name-function-each-part-bew3.png": {
     "width": 1152,
@@ -2959,9 +3127,17 @@
     "width": 732,
     "height": 925
   },
+  "/docs/img/device/name-function-each-part-fs2.png": {
+    "width": 730,
+    "height": 782
+  },
   "/docs/img/device/name-function-each-part-fsf2.png": {
     "width": 1500,
     "height": 1719
+  },
+  "/docs/img/device/name-function-each-part-xpd2.png": {
+    "width": 1188,
+    "height": 899
   },
   "/docs/img/device/name-function-each-part-xs2.png": {
     "width": 778,
@@ -2970,6 +3146,10 @@
   "/docs/img/device/product-part-cs20.png": {
     "width": 1518,
     "height": 2533
+  },
+  "/docs/img/device/xpassd2-main.png": {
+    "width": 1000,
+    "height": 452
   },
   "/docs/img/device/xs2-auth-authmode.png": {
     "width": 250,
@@ -4696,12 +4876,12 @@
     "height": 663
   },
   "/docs/img/en/device/bew3-installation_distance.png": {
-    "width": 450,
-    "height": 302
+    "width": 482,
+    "height": 337
   },
   "/docs/img/en/device/bew3-installation_distance1.png": {
-    "width": 300,
-    "height": 138
+    "width": 463,
+    "height": 243
   },
   "/docs/img/en/device/bew3-power-connetion.png": {
     "width": 648,
@@ -5023,6 +5203,90 @@
     "width": 1200,
     "height": 500
   },
+  "/docs/img/en/device/fs2-auth-mode.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-auth-option.png": {
+    "width": 350,
+    "height": 162
+  },
+  "/docs/img/en/device/fs2-auth.png": {
+    "width": 350,
+    "height": 161
+  },
+  "/docs/img/en/device/fs2-auth1.png": {
+    "width": 350,
+    "height": 93
+  },
+  "/docs/img/en/device/fs2-datetime.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-displaysound-homescreen.png": {
+    "width": 750,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-displaysound.png": {
+    "width": 350,
+    "height": 203
+  },
+  "/docs/img/en/device/fs2-eventlog.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-eventlog1.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-eventlog2.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-interphone.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-menu.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-network-ethernet.png": {
+    "width": 350,
+    "height": 209
+  },
+  "/docs/img/en/device/fs2-network-lan.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-network-serial.png": {
+    "width": 350,
+    "height": 58
+  },
+  "/docs/img/en/device/fs2-network-server.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-thermal-camera.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-user-add.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-user-enroll-face.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-user-id-type.png": {
+    "width": 350,
+    "height": 210
+  },
+  "/docs/img/en/device/fs2-user-usage.png": {
+    "width": 350,
+    "height": 210
+  },
   "/docs/img/en/device/fsf2-auth.png": {
     "width": 590,
     "height": 944
@@ -5107,6 +5371,10 @@
     "width": 1141,
     "height": 734
   },
+  "/docs/img/en/device/installation-automatic-door-fs2.png": {
+    "width": 895,
+    "height": 686
+  },
   "/docs/img/en/device/installation-automatic-door-fsf2.png": {
     "width": 1085,
     "height": 761
@@ -5163,6 +5431,10 @@
     "width": 990,
     "height": 620
   },
+  "/docs/img/en/device/installation-input-connection-fs2.png": {
+    "width": 984,
+    "height": 514
+  },
   "/docs/img/en/device/installation-input-connection-fsf2.png": {
     "width": 915,
     "height": 484
@@ -5194,6 +5466,10 @@
   "/docs/img/en/device/installation-network-hub-connection-cs40.png": {
     "width": 969,
     "height": 714
+  },
+  "/docs/img/en/device/installation-network-hub-connection-fs2.png": {
+    "width": 1062,
+    "height": 457
   },
   "/docs/img/en/device/installation-network-hub-connection-fsf2.png": {
     "width": 1076,
@@ -5227,9 +5503,17 @@
     "width": 877,
     "height": 425
   },
+  "/docs/img/en/device/installation-power-connection-fs2.png": {
+    "width": 936,
+    "height": 584
+  },
   "/docs/img/en/device/installation-power-connection-fsf2.png": {
     "width": 953,
     "height": 527
+  },
+  "/docs/img/en/device/installation-power-connection-xpd2.png": {
+    "width": 1016,
+    "height": 535
   },
   "/docs/img/en/device/installation-power-connection-xs2.png": {
     "width": 984,
@@ -5258,6 +5542,10 @@
   "/docs/img/en/device/installation-relay-fail-safe-lock-cs40.png": {
     "width": 942,
     "height": 513
+  },
+  "/docs/img/en/device/installation-relay-fail-safe-lock-fs2.png": {
+    "width": 1045,
+    "height": 475
   },
   "/docs/img/en/device/installation-relay-fail-safe-lock-fsf2.png": {
     "width": 992,
@@ -5295,6 +5583,10 @@
     "width": 900,
     "height": 487
   },
+  "/docs/img/en/device/installation-relay-fail-secure-lock-fs2.png": {
+    "width": 1000,
+    "height": 475
+  },
   "/docs/img/en/device/installation-relay-fail-secure-lock-fsf2.png": {
     "width": 958,
     "height": 453
@@ -5315,6 +5607,10 @@
     "width": 1022,
     "height": 607
   },
+  "/docs/img/en/device/installation-rs485-connection-xpd2.png": {
+    "width": 892,
+    "height": 563
+  },
   "/docs/img/en/device/installation-sam-slot-connection-cs20.png": {
     "width": 541,
     "height": 418
@@ -5334,6 +5630,10 @@
   "/docs/img/en/device/installation-sio2-connection-bs3.png": {
     "width": 1004,
     "height": 630
+  },
+  "/docs/img/en/device/installation-sio2-connection-fs2.png": {
+    "width": 947,
+    "height": 713
   },
   "/docs/img/en/device/installation-sio2-connection-fsf2.png": {
     "width": 1146,
@@ -5359,6 +5659,10 @@
     "width": 911,
     "height": 850
   },
+  "/docs/img/en/device/installation-standalone-connection-fs2.png": {
+    "width": 937,
+    "height": 685
+  },
   "/docs/img/en/device/installation-standalone-connection-fsf2.png": {
     "width": 1149,
     "height": 820
@@ -5383,9 +5687,21 @@
     "width": 472,
     "height": 224
   },
+  "/docs/img/en/device/installation-wall1-fs2.png": {
+    "width": 417,
+    "height": 297
+  },
   "/docs/img/en/device/installation-wall1-fsf2.png": {
     "width": 600,
     "height": 246
+  },
+  "/docs/img/en/device/installation-wall1-xpd2-gdb.png": {
+    "width": 470,
+    "height": 225
+  },
+  "/docs/img/en/device/installation-wall1-xpd2-mdb.png": {
+    "width": 471,
+    "height": 251
   },
   "/docs/img/en/device/installation-wall1-xs2.png": {
     "width": 453,
@@ -5403,9 +5719,21 @@
     "width": 507,
     "height": 409
   },
+  "/docs/img/en/device/installation-wall2-fs2.png": {
+    "width": 402,
+    "height": 338
+  },
   "/docs/img/en/device/installation-wall2-fsf2.png": {
     "width": 600,
     "height": 488
+  },
+  "/docs/img/en/device/installation-wall2-xpd2-gdb.png": {
+    "width": 502,
+    "height": 352
+  },
+  "/docs/img/en/device/installation-wall2-xpd2-mdb.png": {
+    "width": 490,
+    "height": 413
   },
   "/docs/img/en/device/installation-wall2-xs2.png": {
     "width": 484,
@@ -5431,6 +5759,10 @@
     "width": 660,
     "height": 718
   },
+  "/docs/img/en/device/installation-wiegand-in-connection-fs2.png": {
+    "width": 876,
+    "height": 496
+  },
   "/docs/img/en/device/installation-wiegand-in-out-connection-fsf2.png": {
     "width": 820,
     "height": 397
@@ -5442,6 +5774,10 @@
   "/docs/img/en/device/installation-wiegand-inout-connection-xs2.png": {
     "width": 816,
     "height": 519
+  },
+  "/docs/img/en/device/installation-wiegand-other-connection-xpd2.png": {
+    "width": 1087,
+    "height": 676
   },
   "/docs/img/en/device/installation-wiegand-out-connection-bew3.png": {
     "width": 646,
@@ -5455,6 +5791,10 @@
     "width": 1117,
     "height": 475
   },
+  "/docs/img/en/device/installation-wiegand-out-connection-fs2.png": {
+    "width": 871,
+    "height": 491
+  },
   "/docs/img/en/device/name-function-each-part-bln2.png": {
     "width": 384,
     "height": 901
@@ -5467,9 +5807,17 @@
     "width": 805,
     "height": 925
   },
+  "/docs/img/en/device/name-function-each-part-fs2.png": {
+    "width": 763,
+    "height": 753
+  },
   "/docs/img/en/device/name-function-each-part-fsf2.png": {
     "width": 1623,
     "height": 1719
+  },
+  "/docs/img/en/device/name-function-each-part-xpd2.png": {
+    "width": 1227,
+    "height": 920
   },
   "/docs/img/en/device/name-function-each-part-xs2.png": {
     "width": 779,
