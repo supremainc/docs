@@ -8,9 +8,9 @@ on:
         required: true
         default: "1.0.0"
       document_number:
-        description: "문서 번호 (예: 101.00.BSX)"
+        description: "문서 번호 (예: 102.00.BSX)"
         required: true
-        default: "101.00.BSX"
+        default: "102.00.BSX"
       release_date:
         description: "릴리스 날짜 (YYMMDD 형식)"
         required: true
