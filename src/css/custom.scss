@@ -434,6 +434,14 @@ footer {
     }
   }
 
+  pre.license {
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: break-spaces;
+  }
+
   .magnifier {
     margin-bottom: 1.5rem;
   }
@@ -1301,6 +1309,9 @@ footer {
     pre, code, .theme-code-block {
       page-break-inside: auto !important;
       break-inside: auto !important;
+    }
+    pre.license {
+      font-size: .7rem;
     }
     pre {
       code {
