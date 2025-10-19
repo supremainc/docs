@@ -51,6 +51,7 @@ files: [
       "/docs/common/_android-license.mdx",
       "/docs/common/_airfob-portal-site-type.mdx",
       "/docs/common/_biostarair-customer-notice.mdx",
+      "/docs/common/bsx-license/*.mdx",
       "/docs/platform/biostar_air/**/*.mdx",
       "/docs/device/**/*.mdx",
       "/docs/how-to/**/*.mdx",
