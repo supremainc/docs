@@ -94,10 +94,10 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["등록한 장치의 네트워크 설정을 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.network",
         product: "2"
-      }), " 섹션에서는 등록한 장치의 네트워크 설정을 안내합니다. 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다."]
+      }), " 섹션에서는 장치의 TCP/IP, RS-485, 서버 통신 등의 네트워크를 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-device-edit-network.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -136,10 +136,10 @@ function _createMdxContent(props) {
       id: "유동-ip-설정",
       children: "유동 IP 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치가 유동 IP를 사용하도록 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["장치가 유동 IP를 사용하도록 설정하려면  ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.useDhcp",
         product: "2"
-      }), " 그룹을 선택하세요. 장치가 DHCP 서버로부터 IP 주소를 자동으로 할당받습니다. 이 경우 장치의 IP 주소는 변경될 수 있습니다."]
+      }), " 옵션의 체크박스를 클릭하세요. 장치가 DHCP 서버로부터 IP 주소를 자동으로 할당받습니다. 이 경우 장치의 IP 주소는 변경될 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "고정-ip-설정",
       children: "고정 IP 설정"
@@ -147,7 +147,7 @@ function _createMdxContent(props) {
       children: ["장치의 IP 주소를 고정으로 설정하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.useDhcp",
         product: "2"
-      }), " 그룹을 선택 해제하세요. 아래의 네트워크 정보를 입력할 수 있습니다."]
+      }), " 옵션의 체크박스 선택을 해제하세요. 아래의 세부 항목에 장치의 네트워크 정보를 입력할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -264,10 +264,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.wlan",
         product: "2"
-      }), " 그룹에서는 장치의 무선 랜 설정을 켜거나 끌 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "device.info.enable",
-        product: "2"
-      }), " 옵션을 선택하거나 해제하세요. 세부 항목은 장치에서 설정할 수 있으며, 자세한 내용은 장치의 사용자 가이드를 참고하세요."]
+      }), " 그룹에서는 장치의 무선 랜 설정을 켜거나 끌 수 있습니다. 세부 항목은 장치에서 설정할 수 있으며, 자세한 내용은 장치의 사용자 가이드를 참고하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -502,6 +499,8 @@ function _createMdxContent(props) {
             sid: "device.info.ipdUseFailCode",
             product: "2"
           }), ": 인텔리전트 슬레이브를 사용할 때 인증 실패 등 예외 상황이 발생하면, 예외 코드를 10진수(0~18446744073709551615) 또는 16진수(0~FFFFFFFFFFFFFFFF) 형식으로 입력해 정확한 로그를 남길 수 있습니다. 16진수는 숫자 또는 영문자로 입력할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-edit-network-exception-code.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

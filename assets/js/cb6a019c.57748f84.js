@@ -932,6 +932,15 @@ function settings_diretory_integration_createMdxContent(props) {
           }), " 필드의 값이 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), " 로그인 아이디로 맵핑됩니다."]
+        }), (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "caution",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "sAMAccountName"
+            }), " 필드에는 특수 문자가 포함될 수 없습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "의 로그인 아이디 정책에 맞지 않는 경우, 로그인에 실패할 수 있습니다."]
+          })
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-setting-directory-login-with-ad.png"
         })]

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-details-advanced-mdx-8d4.json
-var site_docs_platform_biostar_x_settings_device_details_advanced_mdx_8d4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-device-details-advanced.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-advanced","permalink":"/docs/platform/biostar_x/settings-device-details-advanced","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-advanced.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","keywords":["장치","고급"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"인증 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-auth"},"next":{"title":"열화상 및 마스크 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-thermal-mask"}}')
+var site_docs_platform_biostar_x_settings_device_details_advanced_mdx_8d4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 마스터 관리자, 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-device-details-advanced.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-details-advanced","permalink":"/docs/platform/biostar_x/settings-device-details-advanced","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-details-advanced.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-details-advanced","title":"고급 설정하기","description":"고급 설정 섹션에서 마스터 관리자, 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.","keywords":["장치","고급"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"인증 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-auth"},"next":{"title":"열화상 및 마스크 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details-thermal-mask"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'settings-device-details-advanced',
 	title: '고급 설정하기',
-	description: '고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.',
+	description: '고급 설정 섹션에서 마스터 관리자, 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.',
 	keywords: [
 		'장치',
 		'고급'
@@ -106,11 +106,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Details, IcAdd, IcEdit, IcTrash2, Image} = _components;
+  }, {Cmd, Details, IcAdd, IcEdit, IcSearch, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
   if (!IcAdd) _missingMdxReference("IcAdd", true);
   if (!IcEdit) _missingMdxReference("IcEdit", true);
+  if (!IcSearch) _missingMdxReference("IcSearch", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -118,7 +119,7 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.advanced",
         product: "2"
-      }), " 섹션에서 설정할 수 있는 항목에 대해 안내합니다. 관리자 권한 관리, 근태 이벤트, 화면 및 소리, 작업 조건 및 동작, 이미지 로그, Wiegand, 보안 탬퍼 등 다양한 고급 기능의 설정 방법과 각 옵션의 의미를 확인할 수 있습니다. 환경에 맞는 설정을 적용해 효율적으로 장치를 관리하세요."]
+      }), " 섹션에서 설정할 수 있는 항목에 대해 안내합니다. 마스터 관리자, 관리자 권한 관리, 근태 이벤트, 화면 및 소리, 작업 조건 및 동작, 이미지 로그, Wiegand, 보안 탬퍼 등 다양한 고급 기능의 설정 방법과 각 옵션의 의미를 확인할 수 있습니다. 환경에 맞는 설정을 적용해 효율적으로 장치를 관리하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -354,10 +355,12 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-setting-device-edit-advanced-administrator.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["등급별 관리자를 추가하려면 ", (0,jsx_runtime.jsx)(IcAdd, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.add",
+      children: ["등급별 관리자를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.plusAdd",
         product: "2"
-      }), " 버튼을 클릭하세요. 각 등급별 사용 권한은 아래를 참고하세요."]
+      }), " 버튼을 클릭하세요. 사용자 목록이 나타나면 원하는 사용자를 선택하세요. 사용자 목록에서 ", (0,jsx_runtime.jsx)(IcSearch, {}), " 버튼을 클릭하면 원하는 사용자를 검색할 수도 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "각 등급별 사용 권한은 아래를 참고하세요."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table-fixed",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -438,6 +441,13 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "관리자는 최대 1,000명까지 추가해 관리할 수 있습니다. 추가할 수 있는 관리자 수는 장치 펌웨어 버전에 따라 달라질 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["등록한 사용자를 검색하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "device.info.admin.searchTitle",
+              product: "2"
+            }), "에서 ", (0,jsx_runtime.jsx)(IcSearch, {}), " 버튼을 클릭하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -524,7 +534,7 @@ function _createMdxContent(props) {
             children: ["이 옵션은 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "device.info.tnaMode",
               product: "2"
-            }), " 옵션을  ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " 옵션이 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "device.tna.mode.byUser",
               product: "2"
             }), "으로 설정되었을 때 사용할 수 있습니다."]
@@ -572,6 +582,8 @@ function _createMdxContent(props) {
                 sid: "device.tna.mode.bySchedule",
                 product: "2"
               }), "으로 설정하면 자동으로 변경할 스케줄을 설정할 수 있습니다."]
+            }), "\n", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/biostarx-setting-device-edit-advanced-tna-auto.png"
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -626,7 +638,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "device.info.keypadBackLight",
               product: "2"
-            }), ": 키패드 백라이트를 켜거나 끌 수 있습니다. 이 옵션을 활성화하면 키패드 후면의 조명이 켜집니다. 어두운 환경에서 키 식별을 쉽게 할 수 있습니다."]
+            }), ": 키패드 백라이트를 켜거나 끌 수 있습니다. 이 옵션을 활성화하면 키패드 후면의 조명이 켜집니다. 어두운 환경에서도 키를 쉽게 식별할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.admonition, {
@@ -765,7 +777,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.info.volume",
+              sid: "device.info.sound",
               product: "2"
             }), ": 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 ", (0,jsx_runtime.jsx)(_components.em, {
               children: "*.wav"
@@ -919,7 +931,7 @@ function _createMdxContent(props) {
                   }), "로 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "device.display.background.slideShow",
                     product: "2"
-                  }), "으로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                  }), "로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "common.add",
                     product: "2"
                   }), " 버튼을 클릭하세요."]
@@ -930,7 +942,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.info.volume",
+              sid: "device.info.sound",
               product: "2"
             }), ": 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 ", (0,jsx_runtime.jsx)(_components.em, {
               children: "*.wav"
@@ -1143,6 +1155,13 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.wiegandInOut",
+            product: "2"
+          }), ": 입출력 모드를 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.wiegandOutPulseWidth",
             product: "2"
           }), ": Wiegand 신호의 펄스 폭을 설정하세요."]
@@ -1153,6 +1172,13 @@ function _createMdxContent(props) {
             sid: "device.card.wiegand.inOutFormat",
             product: "2"
           }), ": 장치에 지정할 Wiegand 형식을 변경하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.wiegandOutPulseInterval",
+            product: "2"
+          }), ": Wiegand 신호의 펄스 간격을 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1176,20 +1202,6 @@ function _createMdxContent(props) {
               }), ": Wiegand 인증과 관계없이 CSN을 전송합니다. 출입문 제어 기능이 없는 장치로 사용할 때 설정하세요."]
             }), "\n"]
           }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.wiegandInOut",
-            product: "2"
-          }), ": 입출력 모드를 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.wiegandOutPulseInterval",
-            product: "2"
-          }), ": Wiegand 신호의 펄스 간격을 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

@@ -65,6 +65,10 @@ const toc = [{
   "value": "카드 인증 설정",
   "id": "카드-인증-설정",
   "level": 2
+}, {
+  "value": "PIN 인증 설정",
+  "id": "pin-인증-설정",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -79,17 +83,19 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Details, IcAdd, Image} = _components;
+  }, {Cmd, Details, IcAdd, IcEdit, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
   if (!IcAdd) _missingMdxReference("IcAdd", true);
+  if (!IcEdit) _missingMdxReference("IcEdit", true);
+  if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.authentication",
         product: "2"
-      }), " 섹션에서는 장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요."]
+      }), " 섹션에서는 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -123,6 +129,16 @@ function _createMdxContent(props) {
             href: "#added-auth-mode",
             children: "다음 문서"
           }), "를 참고하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["추가한 인증 모드를 수정하려면 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["추가한 인증 모드를 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -142,11 +158,18 @@ function _createMdxContent(props) {
             }), " 및 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ag.floorLevel.title",
               product: "2"
-            }), "에 장치를 등록할 수 없습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "#settings-access-level",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+            }), "에 장치를 등록할 수 없습니다."]
           })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.authTimeout",
+            product: "2"
+          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.authenticationMode",
+            product: "2"
+          }), " 옵션에서 여러가지 크리덴셜을 조합해 사용할 때 두 번째 크리덴셜을 인증하는 대기 시간입니다. 지정한 시간 내에 크리덴셜을 인증하지 않으면 인증에 실패합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
@@ -267,16 +290,6 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.authTimeout",
-            product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.authenticationMode",
-            product: "2"
-          }), " 옵션에서 여러가지 크리덴셜을 조합해 사용할 때 두 번째 크리덴셜을 인증하는 대기 시간입니다. 지정한 시간 내에 크리덴셜을 인증하지 않으면 인증에 실패합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device.info.faceDetection",
             product: "2"
           }), ": 사용자가 인증할 때 장치에 내장된 카메라로 얼굴을 인식하는 알고리즘 단계를 설정하세요."]
@@ -312,9 +325,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.userNameDisplay",
+            sid: "device.info.userIdDisplay",
             product: "2"
-          }), ": 인증을 성공할 때 장치에 표시되는 사용자 이름을 표시하거나 숨길 수 있습니다."]
+          }), ": 인증을 성공할 때 장치에 표시되는 사용자 아이디를 표시하거나 숨길 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -332,9 +345,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.userIdDisplay",
+            sid: "device.info.userNameDisplay",
             product: "2"
-          }), ": 인증을 성공할 때 장치에 표시되는 사용자 아이디를 표시하거나 숨길 수 있습니다."]
+          }), ": 인증을 성공할 때 장치에 표시되는 사용자 이름을 표시하거나 숨길 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -417,6 +430,8 @@ function _createMdxContent(props) {
         sid: "device.info.fingerprint",
         product: "2"
       }), " 그룹에서는 장치의 지문 인증에 대한 세부 사항을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-fingerprint.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -568,6 +583,8 @@ function _createMdxContent(props) {
         sid: "user.credential.face",
         product: "2"
       }), " 그룹에서는 장치의 얼굴 인증에 대한 세부 사항을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-face.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -645,12 +662,19 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "device.info.disabled",
                 product: "2"
-              }), " 얼굴 등록 절차를 3단계로 설정합니다. 고품질의 얼굴 템플릿을 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": 얼굴 등록 절차를 3단계로 설정합니다. 고품질의 얼굴 템플릿을 등록하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device.info.disabled",
                 product: "2"
               }), "으로 설정하세요."]
             }), "\n"]
           }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device.info.duplicateCheck",
+            product: "2"
+          }), ": 얼굴을 등록할 때 중복 등록 여부를 검사할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -720,13 +744,6 @@ function _createMdxContent(props) {
             sid: "device.info.face.operation_mode.enable",
             product: "2"
           }), "로 설정하면 활성화됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.info.duplicateCheck",
-            product: "2"
-          }), ": 얼굴을 등록할 때 중복 등록 여부를 검사할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -899,6 +916,8 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "CSN 카드 및 포맷 종류를 선택하고 바이트 순서를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-csn.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
@@ -955,6 +974,8 @@ function _createMdxContent(props) {
         sid: "device.cardFormat.wiegand.format",
         product: "2"
       }), " 옵션에서 사용할 Wiegand 형식을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-wiegand.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -971,6 +992,8 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "슈프리마 스마트 카드 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-smart.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1010,6 +1033,8 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "타사에서 발급한 커스텀 스마트 카드의 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-custom.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1087,6 +1112,8 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "모바일 카드의 인식 방법을 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-csn-mobile.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1109,6 +1136,8 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "템플릿 온 모바일의 인식 방법과 사용자가 장치에서 직접 등록할 바이오메트릭을 지정하고 바이트 순서를 설정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-card-tom.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
@@ -1144,6 +1173,27 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "pin-인증-설정",
+      children: "PIN 인증 설정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.pin",
+        product: "2"
+      }), " 그룹에서는 장치의 PIN 인증을 위해 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.info.scrambleKeypad",
+        product: "2"
+      }), " 옵션을 켜거나 끌 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-pin.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "device.info.scrambleKeypad",
+          product: "2"
+        }), " 옵션은 LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품에서만 사용할 수 있습니다."]
+      })
     })]
   });
 }

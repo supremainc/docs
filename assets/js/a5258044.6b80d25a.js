@@ -169,7 +169,7 @@ function _createMdxContent(props) {
       children: ["장치의 펌웨어 버전을 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "device.info.firmwareVersion",
         product: "2"
-      }), " 항목을 확인하세요. 펌웨어를 업그레이드하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 항목에서 확인할 수 있습니다. 펌웨어를 업그레이드하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.firmwareUpgrade",
         product: "2"
       }), " 버튼을 클릭하세요."]
@@ -262,6 +262,14 @@ function _createMdxContent(props) {
         sid: "device.info.unlock",
         product: "2"
       }), " 버튼을 클릭하세요. 장치의 잠금을 해제할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["작업 조건 및 동작 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "settings-triger-and-action",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "장치-초기화",
       children: "장치 초기화"

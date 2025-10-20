@@ -118,7 +118,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "device.info.advanced",
                 product: "2"
-              }), ": 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              }), ": 마스터 관리자, 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "settings-device-details-advanced",
                 children: "다음 문서"
               }), "를 참고하세요."]
