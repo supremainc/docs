@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7995"], {
-20567: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1928"], {
+49434: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_device_using_functions_mdx_15c_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_device_manage_device_users_mdx_7d6_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-using-functions-mdx-15c.json
-var site_docs_platform_biostar_x_settings_device_using_functions_mdx_15c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-using-functions","title":"장치 관리 기능 사용하기","description":"장치를 재연결하거나 동기화, 일괄 편집 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-using-functions.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-using-functions","permalink":"/docs/platform/biostar_x/settings-device-using-functions","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-using-functions.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-using-functions","title":"장치 관리 기능 사용하기","description":"장치를 재연결하거나 동기화, 일괄 편집 기능에 대해 안내합니다.","keywords":["장치"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"펌웨어 업그레이드하기","permalink":"/docs/platform/biostar_x/settings-device-upgrade-firmware"},"next":{"title":"장치 설정하기","permalink":"/docs/platform/biostar_x/settings-device-details"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-device-manage-device-users-mdx-7d6.json
+var site_docs_platform_biostar_x_settings_device_manage_device_users_mdx_7d6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-device-manage-device-users","title":"장치에 등록한 사용자 관리하기","description":"장치에 등록한 사용자를 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-device-manage-device-users.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-device-manage-device-users","permalink":"/docs/platform/biostar_x/settings-device-manage-device-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-device-manage-device-users.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-device-manage-device-users","title":"장치에 등록한 사용자 관리하기","description":"장치에 등록한 사용자를 관리하는 방법을 안내합니다.","keywords":["장치","사용자"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"슬레이브 장치 등록하기","permalink":"/docs/platform/biostar_x/settings-adding-slave-device"},"next":{"title":"펌웨어 업그레이드하기","permalink":"/docs/platform/biostar_x/settings-device-upgrade-firmware"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-device-using-functions.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-device-manage-device-users.mdx
 
 
 const frontMatter = {
-	id: 'settings-device-using-functions',
-	title: '장치 관리 기능 사용하기',
-	description: '장치를 재연결하거나 동기화, 일괄 편집 기능에 대해 안내합니다.',
+	id: 'settings-device-manage-device-users',
+	title: '장치에 등록한 사용자 관리하기',
+	description: '장치에 등록한 사용자를 관리하는 방법을 안내합니다.',
 	keywords: [
-		'장치'
+		'장치',
+		'사용자'
 	],
 	isTranslationMissing: false
 };
@@ -52,15 +53,16 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcMoreW, Image} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcMoreW) _missingMdxReference("IcMoreW", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["장치에 등록한 사용자 수, 지문 수, 얼굴 수, 카드 수를 확인할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 장치 삭제 기능을 제공합니다."]
+      }), "에 등록하지 않았거나 이미 등록한 사용자 정보와 비교해 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버로 전송하거나 삭제할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -84,114 +86,102 @@ function _createMdxContent(props) {
           }), " 목록에서 장치를 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "팝업 메뉴에서 원하는 기능을 선택하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.manageUsersInDevice",
+            product: "2"
+          }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-manage-device-users.png"
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.menu.manageUsersInDevice",
+        product: "2"
+      }), " 창이 나타나면 장치에 등록한 사용자 정보와 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 등록한 사용자 정보를 비교할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-setting-device-functions.png"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "팝업 메뉴를 통해 제공하는 기능은 아래를 참고하세요."
+      src: "/img/biostarx-setting-device-manage-device-users-popup.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.status",
+        product: "2"
+      }), " 열에서 표시된 값을 참고하여 사용자 정보를 장치에서 삭제할지, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버로 전송할지 선택할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.status",
+        product: "2"
+      }), " 열의 값은 다음과 같습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.reconnect",
+            sid: "user.syncStatus.same",
             product: "2"
-          }), ": 선택한 장치를 재연결할 수 있습니다. 한 개의 장치를 선택했을 때 사용할 수 있습니다. 이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "와 연결이 끊겼을 때 사용할 수 있습니다."]
+          }), " 서버에 등록한 정보와 동일한 사용자"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.syncDevice",
+            sid: "user.syncStatus.different",
             product: "2"
-          }), ": 등록한 장치와 ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "의 모든 사용자 정보를 동기화할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 서버에 등록한 정보와 다른 사용자를"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "user.syncStatus.newUser",
+            product: "2"
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " 데이터베이스 정보를 기준으로 사용자 정보를 동기화하며, 장치에만 등록한 사용자 정보는 삭제합니다. 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에 업로드하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.manageUsersInDevice",
-            product: "2"
-          }), " 기능을 사용하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.sync_all",
-            product: "2"
-          }), ": 장치에 저장된 모든 설정 정보 및 사용자 정보를 삭제하고 다시 전송할 수 있습니다. 이 기능은 장치 목록에서 장치를 선택하고 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " 버튼을 클릭하여 사용할 수도 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.batchEdit",
-            product: "2"
-          }), ": 여러 개의 장치 정보를 한번에 변경할 수 있습니다. 한 개 이상의 장치를 선택했을 때 사용할 수 있습니다. 장치 정보 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-device-details",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.manageUsersInDevice",
-            product: "2"
-          }), ": 장치에 등록된 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에 업로드하거나 장치에서 삭제할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-device-manage-device-users",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.firmwareUpgrade",
-            product: "2"
-          }), ": 장치의 펌웨어를 간편하게 업그레이드할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-device-upgrade-firmware",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.menu.reboot",
-            product: "2"
-          }), ": 선택한 장치를 재시작할 수 있습니다. 이 기능은 장치가 정상 동작하지 않을 때 사용할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.deleteDevice",
-            product: "2"
-          }), ": 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다."]
+          }), " 서버에 등록되어 있지 않은 사용자"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["특정 사용자 정보를 장치에서 삭제하려면 삭제할 사용자를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.delete",
+        product: "2"
+      }), " 버튼을 클릭하세요. 사용자 정보를 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버로 전송하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.upload",
+        product: "2"
+      }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.menu.addWiegandDevice",
+              sid: "button.manageUsersInDevice",
               product: "2"
-            }), " 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-adding-wiegand",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+            }), " 기능은 하나의 장치만 선택해 사용할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device.menu.searchSlaveDevice",
+              sid: "button.upload",
               product: "2"
-            }), " 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-adding-slave-device",
+            }), " 버튼을 클릭할 때 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 서버에 동일한 ID를 가진 사용자가 있다면 장치의 정보로 업데이트할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["삭제한 사용자 정보는 장치에서만 삭제되며 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 서버에서는 유지됩니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치의 세부 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-device-details",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]

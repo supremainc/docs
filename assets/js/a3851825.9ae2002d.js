@@ -51,18 +51,19 @@ const toc = [{
   "id": "upgrade-firmware",
   "level": 2
 }, {
-  "value": "한 개의 장치 펌웨어 업그레이드",
-  "id": "한-개의-장치-펌웨어-업그레이드",
+  "value": "한 개 장치의 펌웨어 업그레이드",
+  "id": "한-개-장치의-펌웨어-업그레이드",
   "level": 3
 }, {
-  "value": "여러 개의 장치 펌웨어 업그레이드",
-  "id": "여러-개의-장치-펌웨어-업그레이드",
+  "value": "여러 장치의 펌웨어 업그레이드",
+  "id": "여러-장치의-펌웨어-업그레이드",
   "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    blockquote: "blockquote",
     em: "em",
     h2: "h2",
     h3: "h3",
@@ -88,19 +89,11 @@ function _createMdxContent(props) {
       children: ["장치의 펌웨어를 업그레이드하기 전에 새로운 버전의 펌웨어 파일을 먼저 준비하세요. 다운로드한 펌웨어 파일을 아래 경로에 저장하세요. ", (0,jsx_runtime.jsx)(_components.em, {
         children: "firmware"
       }), " 폴더가 없다면 새로 생성하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["32비트 운영체제: ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "C:\\Program Files\\BioStar X\\firmware"
-          })]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["64비트 운영체제: ", (0,jsx_runtime.jsx)(_components.em, {
-            children: "C:\\Program Files\\BioStar X\\firmware"
-          })]
-        }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: "C:\\Program Files\\BioStar X\\firmware"
+        })
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -114,8 +107,8 @@ function _createMdxContent(props) {
       id: "upgrade-firmware",
       children: "펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "한-개의-장치-펌웨어-업그레이드",
-      children: "한 개의 장치 펌웨어 업그레이드"
+      id: "한-개-장치의-펌웨어-업그레이드",
+      children: "한 개 장치의 펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -151,8 +144,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "장치에 대한 펌웨어 업그레이드를 진행합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "여러-개의-장치-펌웨어-업그레이드",
-      children: "여러 개의 장치 펌웨어 업그레이드"
+      id: "여러-장치의-펌웨어-업그레이드",
+      children: "여러 장치의 펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

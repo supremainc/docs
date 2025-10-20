@@ -138,7 +138,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["장치를 등록하고 세부 정보를 설정하려면 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-adding-devices",
+              href: "settings-device-details",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
@@ -151,10 +151,19 @@ function _createMdxContent(props) {
       children: "장치를 등록하기 전에 다음 사항을 확인하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "settings-access-control",
-          children: "다음 문서"
-        }), "를 참고하세요."]
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-access-control",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치를 효율적으로 관리하기 위한 그룹을 생성하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-manage-device-group",
+            children: "다음 문서"
+          }), "를 참고하세요."]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "quickadd-device",
@@ -184,6 +193,8 @@ function _createMdxContent(props) {
             sid: "device.searchDevice",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-search-device.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -199,7 +210,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "등록할 장치를 선택하거나 등록하지 않을 장치는 선택을 해제하세요."
+          children: "장치 목록에서 등록할 장치를 선택하거나 등록하지 않을 장치는 선택을 해제하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -241,7 +252,7 @@ function _createMdxContent(props) {
           sid: "button.setIp",
           product: "2"
         }), " 버튼을 클릭해 변경할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "##setipaddress",
+          href: "#setipaddress",
           children: "다음 문서"
         }), "를 참고하세요."]
       })
@@ -349,6 +360,8 @@ function _createMdxContent(props) {
             sid: "button.func.advancedSearch",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-adv-search-device.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

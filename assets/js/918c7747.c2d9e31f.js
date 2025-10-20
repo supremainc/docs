@@ -64,8 +64,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "여러 개의 장치를 효율적으로 관리할 수 있는 장치 그룹 기능을 안내합니다. 장치 그룹을 사용하면 여러 장치를 하나의 그룹으로 묶어 관리할 수 있어, 대규모 시스템에서 장치 설정을 일괄적으로 적용하거나 모니터링할 때 유용합니다."
@@ -98,11 +99,13 @@ function _createMdxContent(props) {
             sid: "menu.device.allDeviceGroups",
             product: "2"
           }), "에서 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-add-group.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "device.addDeviceGroup",
+            sid: "device.menu.addDeviceGroup",
             product: "2"
           }), "를 클릭하세요."]
         }), "\n"]
@@ -152,13 +155,15 @@ function _createMdxContent(props) {
             sid: "menu.device.allDeviceGroups",
             product: "2"
           }), " 하위에서 이름을 변경할 장치 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-rename-group.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["팝업 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device.menu.renameDeviceGroup",
             product: "2"
-          }), "를 클릭하세요."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -194,6 +199,8 @@ function _createMdxContent(props) {
             sid: "menu.device.allDeviceGroups",
             product: "2"
           }), " 하위에서 삭제할 장치 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-remove-group.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
