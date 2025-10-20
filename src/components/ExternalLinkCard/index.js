@@ -150,7 +150,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioEntry W2',
-      url: '#',
+      url: `/device/bioentry_w2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
       desc: `${translate({
         id: "externalLinks.BioentryW2.desc",
