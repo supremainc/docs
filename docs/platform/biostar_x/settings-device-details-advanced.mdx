@@ -15,6 +15,83 @@ keywords: [장치, 고급]
 
 :::
 
+
+## 마스터 관리자 추가 {#master-administrator}
+
+<Cmd sid='device.masterAdmin.title' product='2' /> 기능은 장치의 전체 관리자 권한을 강화하여, 장치의 보안을 향상시키고 무단 접근 및 설정 변경을 방지하기 위한 기능입니다. 새 장치는 이 기능을 통해 반드시 마스터 관리자를 등록해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 설정을 변경할 수 있습니다.
+
+<Cmd sid='device.info.advanced' product='2' /> →  <Cmd sid='device.info.administrator' product='2' />의 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴에서 원하는 크리덴셜 2종류를 선택하여 등록하세요.
+
+<Image src='/img/biostarx-setting-device-adv-admin-master-admin.png' />
+
+<Cmd sid='device.masterAdmin.title' product='2' />에 등록할 수 있는 크리덴셜은 다음과 같습니다.
+
+| 크리덴셜 종류 | 등록 가능 개수 | 세부 조건 |
+| -- | :--: | -- |
+| 카드 | 최대 4개 | CSN, Wiegand 타입만 지원하며, 동일 타입 내 중복 등록할 수 없습니다. |
+| 얼굴 | 최대 2개 | 동종 알고리즘 탑재 장치에서만 등록할 수 있습니다. |
+| 지문 | 최대 2개 | - |
+| PIN | 1개 | 최소 8자리 이상의 숫자를 입력할 수 있습니다. |
+
+* 등록한 크리덴셜을 변경하려면 해당 크리덴셜 오른쪽에 <IcEdit /> 버튼을 클릭하세요.
+
+* 등록한 크리덴셜을 삭제하려면 해당 크리덴셜 오른쪽에 <IcTrash2 /> 버튼을 클릭하세요.
+
+:::note
+
+**등록 조건**
+
+* 최소 두 종류 이상의 크리덴셜을 등록해야 합니다.
+
+* 새 장치와 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
+
+* 장치가 지원하는 모든 크리덴셜을 인증 수단으로 사용할 수 있습니다.
+
+:::
+
+:::info
+
+* 이 기능은 LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품에서만 사용할 수 있습니다.
+
+* 펌웨어를 업그레이드한 기존 장치는 BioStar 2의 장치 설정에 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴가 나타나지 않습니다.
+
+* 펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 설정 방법은 [다음 문서](#two-step-authentication)를 참고하세요.
+
+* 이 기능을 지원하는 장치 및 펌웨어 버전에 대한 자세한 내용은 [다음 문서](../../how-to/master-admin)를 참고하세요.
+
+:::
+
+## 2단계 인증 설정 {#two-step-authentication}
+
+펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-adv-two-step.png' />
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면, 장치의 전체 관리자 인증 시 두 종류 이상의 크리덴셜을 사용해야 합니다. 예를 들어, 카드와 PIN을 모두 등록한 경우, 전체 관리자 인증 시 카드 스캔과 PIN 입력을 모두 해야만 인증을 성공할 수 있습니다.
+
+:::info
+
+모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+:::caution
+
+장치에 전체 관리자가 설정되어 있지 않은 경우 다음과 같은 팝업 메시지가 나타납니다. <Cmd sid='device.info.advanced' product='2' /> →  <Cmd sid='device.info.administrator' product='2' />에서 모든 권한에 관리자를 추가하세요.
+
+<Image src='/img/biostarx-setting-device-adv-warning-admin.png' />
+
+:::
+
+:::warning
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />을 활성화한 후 모든 관리자의 크리덴셜을 2종 미만으로 삭제하면, **BioStar X**에 연결할 수 없는 상황일 때 장치에서 관리자 메뉴에 접근할 수 없게 됩니다. 따라서 관리자 크리덴셜을 삭제할 때는 각별한 주의가 필요합니다.
+
+:::
+
+
 ## 관리자 추가 {#administrator}
 
 <Cmd sid='device.info.administrator' product='2' /> 그룹에서는 장치의 관리자를 등급별로 관리할 수 있습니다. 
