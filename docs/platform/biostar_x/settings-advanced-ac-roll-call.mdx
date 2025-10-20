@@ -61,7 +61,7 @@ keywords: [고급 출입 통제, 인원 점검]
 
 * 동일한 장치를 <Cmd sid='zone.entryDevices' product='2' />와 <Cmd sid='zone.exitDevices' product='2' />로 동시에 설정할 수 없습니다.
 
-* <Cmd sid='zone.entryDevices' product='2' />와 <Cmd sid='zone.exitDevices' product='2' />는 최대 128개까지 선택할 수 있습니다.
+* <Cmd sid='zone.entryDevices' product='2' />와 <Cmd sid='zone.exitDevices' product='2' />는 최대 10개까지 선택할 수 있습니다.
 
 * <Cmd sid='door.dualAuthentication' product='2' />을 설정한 장치는 <Cmd sid='zone.entryDevices' product='2' />와 <Cmd sid='zone.exitDevices' product='2' />로 설정할 수 없습니다.
 
@@ -125,7 +125,7 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 
     <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-02.png' width={253} alone />
 
-1. 확인 메시지가 나타나면 **OK** 버튼을 탭하세요.
+1. 확인 메시지가 나타나면 **Yes** 버튼을 탭하세요.
 
 인원 점검을 시작하며, 진행 중인 인원 점검 항목을 탭하면 인원 점검 현황을 확인할 수 있습니다.
 
@@ -144,6 +144,8 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 * 진행 중인 인원 점검은 **BioStar X**에서 종료할 수 있습니다. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.rollCall' product='2' /> 메뉴로 이동해 진행 중인 인원 점검 항목을 선택한 후 화면 오른쪽 상단의 <Cmd sid='data.header.rollCall.ended' /> 버튼을 클릭하세요.
 
   <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
+
+* 인원 점검을 완료한 후 <Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' />에서 관련 보고서를 확인할 수 있습니다.
 
 :::info
 
