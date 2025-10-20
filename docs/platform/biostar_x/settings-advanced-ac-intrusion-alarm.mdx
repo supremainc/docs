@@ -1,11 +1,11 @@
 ---
 id: settings-advanced-ac-intrusion-alarm
-title: 경비 구역
-description: 경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.
-keywords: [고급 출입 통제, 경비 구역]
+title: 경비
+description: 경비 설정 방법을 안내합니다. 경비 기능은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.
+keywords: [고급 출입 통제, 경비]
 ---
 
-경비 구역 설정 방법을 안내합니다. 경비 구역은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.
+경비 설정 방법을 안내합니다. 경비 설정은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다.
 
 :::info
 
@@ -13,7 +13,7 @@ keywords: [고급 출입 통제, 경비 구역]
 
 :::
 
-## 경비 구역 등록 {#addIntrusionAlarmZone}
+## 경비 등록 {#addIntrusionAlarmZone}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -23,15 +23,27 @@ keywords: [고급 출입 통제, 경비 구역]
 
 1. <Cmd sid='zone.intrusion' product='2' />를 선택하고 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-1. <Cmd sid='common.info' product='2' /> 섹션에서 추가할 경비 구역의 이름을 입력하세요.
+1. <Cmd sid='common.info' product='2' /> 섹션에서 추가할 경비 설정의 이름을 입력하세요.
 
-1. <Cmd sid='common.setting' product='2' /> 섹션에서 스케줄 잠금 구역의 세부 항목을 설정하세요. 자세한 내용은 [다음 문서](#setting)를 참고하세요.
+    <Image src='/img/biostarx-settings-adv-ac-add-intrusion.png' />
+
+1. <Cmd sid='common.setting' product='2' /> 섹션에서 경비 설정의 세부 항목을 설정하세요. 자세한 내용은 [다음 문서](#setting)를 참고하세요.
 
 1. <Cmd sid='zone.intrusion.armConfiguration' product='2' /> 섹션에서 경비 개시와 해제에 대한 인증 설정을 추가하세요. 자세한 내용은 [다음 문서](#armConfiguration)를 참고하세요.
 
+    <Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png' />
+
+    :::note
+
+    <Cmd sid='zone.intrusion.armConfiguration' product='2' /> 섹션은 <Cmd sid='common.info' product='2' /> 섹션에서 출입문을 선택했을 때 표시됩니다.
+
+    :::
+
 1. <Cmd sid='zone.intrusion.intrusionSetting' product='2' /> 섹션에서 침입 감지 신호를 설정하세요. 자세한 내용은 [다음 문서](#intrusionSetting)를 참고하세요.
 
-1. <Cmd sid='common.alarm' product='2' /> 섹션에서 경비 구역에 특정 이벤트가 발생했을 때 수행할 동작을 설정하세요.
+    <Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-intrusion.png' />
+
+1. <Cmd sid='common.alarm' product='2' /> 섹션에서 특정 이벤트가 발생했을 때 수행할 동작을 설정하세요.
 
 1. 모든 설정을 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
@@ -42,20 +54,22 @@ keywords: [고급 출입 통제, 경비 구역]
 :::
 
 
-### 설정 옵션 안내 {#setting}
+## 설정 옵션 안내 {#setting}
 
-경비 구역의 일반 설정을 변경할 수 있습니다.
+경비 설정을 위한 세부 항목은 아래와 같습니다.
 
-* <Cmd sid='zone.globalZone' product='2' />: 구역의 적용 범위를 설정하세요. 경비 구역은 <Cmd sid='zone.globalZone.local' product='2' /> 모드만 지원하며, 입실 장치와 RS-485로 연결된 장치들로만 구역을 설정할 수 있습니다.
+* <Cmd sid='zone.globalZone' product='2' />: 적용 범위를 설정하세요. 경비 설정은 <Cmd sid='zone.globalZone.local' product='2' /> 모드만 지원하며, 입실 장치와 RS-485로 연결된 장치들로만 설정할 수 있습니다.
 
-* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: 구역 설정을 활성화하거나 일시적으로 비활성화할 수 있습니다.
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: 설정을 활성화하거나 일시적으로 비활성화할 수 있습니다.
 
-* <Cmd sid='zone.pause.doorselected' product='2' />: 경비 구역으로 지정할 출입문을 선택하세요.
+* <Cmd sid='zone.pause.doorselected' product='2' />: 경비 기능을 적용할 출입문을 선택하세요.
 
 
-### 경비 개시 또는 해제 설정 {#armConfiguration}
+## 경비 개시 또는 해제 설정 {#armConfiguration}
 
 경비 개시와 해제에 대한 인증 설정을 추가할 수 있습니다.
+
+<Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png' />
 
 * <Cmd sid='zone.intrusion.delayTime' product='2' />: 경비 시작이나 경비 해제까지의 지연 시간을 설정할 수 있습니다. 즉, 개시는 인증 후 경비 시작까지의 지연 시간이며, 해제는 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다.
 
@@ -65,25 +79,25 @@ keywords: [고급 출입 통제, 경비 구역]
 
 * <Cmd sid='zone.intrusion.armInput' product='2' />: 장치에 의한 경비 시작/해제 또는 입력 신호에 의한 경비 시작/해제를 설정할 수 있습니다. <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하고 각 항목을 설정하세요.
 
-#### 장치에 의한 경비 시작/해제 추가 {#addArmInput}
+### 장치에 의한 경비 시작/해제 추가 {#addArmInput}
 
-<Cmd sid='zone.intrusion.armInput' product='2' /> 옵션에서 장치의 <IcEdit /> 버튼을 클릭하세요. 출입문의 입실/퇴실 장치 중 경비 구역을 제어할 장치를 선택하고 <Cmd sid='zone.intrusion.armType' product='2' />를 선택하세요.
+<Cmd sid='zone.intrusion.armInput' product='2' /> (<Cmd sid='common.device' product='2' />) 옵션에서 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요. 경비 기능을 제어할 장치를 선택하고 <Cmd sid='zone.intrusion.armType' product='2' />를 선택하세요.
 
 <Cmd sid='zone.intrusion.inputType' product='2' />는 <Cmd sid='zone.intrusion.inputType.card' product='2' />, <Cmd sid='zone.intrusion.inputType.key' product='2' />, <Cmd sid='zone.intrusion.inputType.cardOrKey' product='2' />를 선택할 수 있습니다. LCD 화면이 없는 장치는 입력 종류를 <Cmd sid='zone.intrusion.inputType.card' product='2' />만 사용할 수 있습니다.
 
 <Image src='/img/biostarx-settings-advanced-ac-intusion-add-device.png' />
 
 
-#### 입력 신호에 의한 경비 시작/해제 추가 {#addArmInputBySignal}
+### 입력 신호에 의한 경비 시작/해제 추가 {#addArmInputBySignal}
 
-<Cmd sid='zone.intrusion.armInput' product='2' /> 옵션에서 장치의 <IcEdit /> 버튼을 클릭하세요. 경비 구역을 제어할 장치를 선택하세요. <Cmd sid='zone.intrusion.inputType.port' product='2' />를 클릭하여 선택된 장치의 입력 포트를 선택하세요.
+<Cmd sid='zone.intrusion.armInput' product='2' /> (<Cmd sid='zone.intrusion.inputType.input' product='2' />) 옵션에서 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요. 경비 기능을 제어할 장치를 선택하세요. <Cmd sid='zone.intrusion.inputType.port' product='2' />를 클릭하여 선택된 장치의 입력 포트를 선택하세요.
 
 <Cmd sid='zone.intrusion.armType' product='2' />를 선택한 뒤 스위치 종류와 신호의 지속 시간을 설정하세요.
 
 <Image src='/img/biostarx-settings-advanced-ac-intusion-add-signal.png' />
 
 
-### 침입감지 설정 {#intrusionSetting}
+## 침입감지 설정 {#intrusionSetting}
 
 침입 감지 신호를 설정할 수 있습니다. <Cmd sid='button.addplus' product='2' /> 버튼을 클릭하고 아래와 같이 설정하면 BioStation 3 장치의 0번 입력 포트에 연결된 N/O 센서가 100(ms) 동안 신호를 보낸 경우 침입을 감지한 것으로 인식합니다.
 

@@ -1,11 +1,11 @@
 ---
 id: settings-advanced-ac-apb
-title: 안티패스백 구역
-description: 안티패스백 구역 설정 방법을 안내합니다. 안티패스백 구역은 출입문을 기준으로 생성된 안티패스백보다 향상된 기능을 제공합니다. 
+title: 안티패스백
+description: 안티패스백 설정 방법을 안내합니다. 안티패스백은 출입문 또는 장치를 기준으로 생성된 안티패스백보다 향상된 기능을 제공합니다. 
 keywords: [고급 출입 통제, 안티패스백]
 ---
 
-안티패스백 구역은 출입문을 기준으로 생성된 안티패스백보다 향상된 기능을 제공합니다. 
+안티패스백은 출입문 또는 장치를 기준으로 생성된 안티패스백보다 향상된 기능을 제공합니다. 안티패스백을 설정하여 사용자가 입실 및 퇴실할 때 지정된 출입문과 장치를 사용하도록 강제할 수 있습니다. 이를 통해 무단 재출입을 방지하고, 보안을 강화할 수 있습니다.
 
 :::info
 
@@ -13,7 +13,7 @@ keywords: [고급 출입 통제, 안티패스백]
 
 :::
 
-## 안티패스백 구역 등록 {#addAPBZone}
+## 안티패스백 등록 {#addAPBZone}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -23,30 +23,42 @@ keywords: [고급 출입 통제, 안티패스백]
 
 1. <Cmd sid='zone.antiPassback' product='2' />을 선택하고 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-1. <Cmd sid='common.info' product='2' /> 섹션에서 추가할 안티패스백 구역의 이름을 입력하세요.
+1. <Cmd sid='common.info' product='2' /> 섹션에서 추가할 안티패스백 기능의 이름을 입력하세요.
 
-1. <Cmd sid='common.setting' product='2' /> 섹션에서 안티패스백 구역의 세부 항목을 설정하세요. 자세한 내용은 [다음 문서](#setting)를 참고하세요.
+    <Image src='/img/biostarx-settings-adv-ac-add-apb.png' />
+
+1. <Cmd sid='common.setting' product='2' /> 섹션에서 안티패스백 기능의 세부 항목을 설정하세요. 자세한 내용은 [다음 문서](#setting)를 참고하세요.
 
 1. <Cmd sid='common.alarm' product='2' /> 섹션에서 안티패스백 위반이 발생했을 때 수행할 동작을 설정하세요.
 
-1. <Cmd sid='zone.apb.bypass' product='2' /> 섹션에서 안티패스백 구역을 항상 통과할 수 있는 출입 그룹을 선택하세요. 이 그룹에 속한 사용자는 안티패스백 구역을 우회할 수 있습니다.
+1. <Cmd sid='zone.apb.bypass' product='2' /> 섹션에서 안티패스백을 우회하여 통과할 수 있는 출입 그룹을 선택하세요. 이 그룹에 속한 사용자는 안티패스백을 우회할 수 있습니다.
 
 1. 모든 설정을 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
+:::info
 
-### 설정 옵션 안내 {#setting}
+<Cmd sid='common.alarm' product='2' /> 섹션은 <Cmd sid='zone.entryDevices' product='2' />와 <Cmd sid='zone.exitDevices' product='2' />를 모두 설정해야 사용할 수 있습니다.
 
-안티패스백 구역 설정을 변경할 수 있습니다.
+:::
 
-* <Cmd sid='zone.globalZone' product='2' />: 구역의 적용 범위를 설정하세요.
 
-  * <Cmd sid='zone.globalZone.local' product='2' />: 입실 장치와 RS-485로 연결된 장치들로만 구역을 설정할 수 있습니다.
+## 설정 옵션 안내 {#setting}
 
-  * <Cmd sid='zone.globalZone.global' product='2' />: **BioStar X**에 등록된 모든 장치로 구역을 설정할 수 있습니다.
+안티패스백 설정을 위한 세부 항목은 아래와 같습니다.
 
-* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: 구역 설정을 활성화하거나 일시적으로 비활성화할 수 있습니다.
+* <Cmd sid='zone.globalZone' product='2' />: 적용 범위를 설정하세요.
+
+  * <Cmd sid='zone.globalZone.local' product='2' />: 입실 장치와 RS-485로 연결된 장치들로 설정할 수 있습니다.
+
+  * <Cmd sid='zone.globalZone.global' product='2' />: **BioStar X**에 등록된 모든 장치로 설정할 수 있습니다.
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: 설정을 활성화하거나 일시적으로 비활성화할 수 있습니다.
 
 * <Cmd sid='zone.apbType' product='2' />: 안티패스백 종류를 선택하세요.
+
+  * <Cmd sid='door.apbType.hard' product='2' />: 안티패스백 이벤트를 생성하고 출입할 수 없습니다.
+  
+  * <Cmd sid='door.apbType.soft' product='2' />: 안티패스백 이벤트를 생성하고 출입할 수 있습니다.
 
 * <Cmd sid='door.resetTime' product='2' />: 안티패스백 규칙을 위반한 사용자에게 출입을 다시 허용할 때까지의 대기 시간을 설정하세요. 알람 발생 후 설정된 시간이 지나면 해당 사용자의 출입을 자동으로 허용합니다.
 

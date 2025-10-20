@@ -63,7 +63,7 @@
     "type": "access-control",
     "children": [
       {
-        "name": "출입 통제 구역",
+        "name": "출입 통제 설정",
         "type": "access-zone"
       }
     ]
