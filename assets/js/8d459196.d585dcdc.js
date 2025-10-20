@@ -855,9 +855,19 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "device.info.serverPrivateMsg",
+              product: "2"
+            }), ": 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "device.info.useScreenSaver",
               product: "2"
-            }), ": 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다."]
+            }), ": 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다. 이 기능을 활성화하지 않은 경우 장치에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "device.info.useScreenSaver",
+              product: "2"
+            }), " 옵션을 활성화더라도 인증 성공 메시지가 표시되지 않습니다."]
           }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
             type: "note",
             children: (0,jsx_runtime.jsx)(_components.p, {

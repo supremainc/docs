@@ -335,7 +335,7 @@ function _createMdxContent(props) {
             }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "zone.exitDevices",
               product: "2"
-            }), "는 최대 128개까지 선택할 수 있습니다."]
+            }), "는 최대 10개까지 선택할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -491,7 +491,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["확인 메시지가 나타나면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "OK"
+            children: "Yes"
           }), " 버튼을 탭하세요."]
         }), "\n"]
       }), "\n"]
@@ -549,6 +549,16 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-adv-ac-rollcoll-ended.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["인원 점검을 완료한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.mainMenu.generate"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.sidebar.rollCall"
+          }), "에서 관련 보고서를 확인할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {

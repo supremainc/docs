@@ -267,6 +267,8 @@ function _createMdxContent(props) {
         sid: "device.intercom.extension.popup.title",
         product: "2"
       }), " 창에서 제공하는 기능에 대해 안내합니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-edit-ipinterphone-extension.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

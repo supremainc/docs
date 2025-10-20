@@ -146,14 +146,14 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.thermal.maskCheckModeHard",
+                sid: "device.mask.checkModeHard",
                 product: "2"
               }), ": 마스크를 착용하지 않은 사용자는 인증 거부되며 마스크 미착용 이벤트 로그를 기록합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.thermal.maskCheckModeSoft",
+                sid: "device.mask.checkModeSoft",
                 product: "2"
               }), ": 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트 로그를 기록합니다."]
             }), "\n"]
@@ -193,14 +193,14 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.thermal.tempCheckModeHard",
+                sid: "device.thermal.checkModeHard",
                 product: "2"
               }), ": 기준 온도를 초과한 사용자는 인증 거부되며 기준 온도 초과 이벤트 로그를 기록합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "device.thermal.tempCheckModeSoft",
+                sid: "device.thermal.checkModeSoft",
                 product: "2"
               }), " 기준 온도를 초과한 사용자도 인증할 수 있으나 온도 초과 이벤트 로그를 기록합니다."]
             }), "\n"]
@@ -495,7 +495,16 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "device.thermal.mode",
         product: "2"
-      }), " 그룹에서는 마스크 검출 또는 열화상 카메라를 사용할 경우 장치의 용도에 따라 확인 방식을 설정할 수 있습니다."]
+      }), " 그룹에서는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.mask.useMask",
+        product: "2"
+      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "device.thermal.useThermalCamera",
+        product: "2"
+      }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "common.use",
+        product: "2"
+      }), "으로 설정하면 장치의 용도에 따라 확인 방식을 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
