@@ -63,7 +63,7 @@
     "type": "access-control",
     "children": [
       {
-        "name": "Access Control zone",
+        "name": "Access Control setting",
         "type": "access-zone"
       }
     ]
