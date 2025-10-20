@@ -1333,6 +1333,9 @@ footer {
     p, dt, dd, li {
       font-size: .8rem !important;
       line-height: 1.4;
+      strong {
+        word-break: keep-all;
+      }
       code {
         font-size: .7rem;
         background-color: #dceaffd8;
