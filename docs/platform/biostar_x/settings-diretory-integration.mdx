@@ -202,6 +202,12 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 Active Directory 서버의 사용자 아이디로 로그인하도록 설정하려면 <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> 항목을 <Cmd sid='device.info.enabled' product='2' />으로 변경하세요. Active Directory 서버의 `sAMAccountName` 필드의 값이 **BioStar X** 로그인 아이디로 맵핑됩니다.
 
+:::caution
+
+`sAMAccountName` 필드에는 특수 문자가 포함될 수 없습니다. **BioStar X**의 로그인 아이디 정책에 맞지 않는 경우, 로그인에 실패할 수 있습니다.
+
+:::
+
 <Image src='/img/biostarx-setting-directory-login-with-ad.png' />
 
 </Step>
