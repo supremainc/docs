@@ -5,7 +5,7 @@ description: 장치의 사용자 인증과 관련된 다양한 설정 방법을 
 keywords: [장치, 인증]
 ---
 
-<Cmd sid='device.info.authentication' product='2' /> 섹션에서는 장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요.
+장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. <Cmd sid='device.info.authentication' product='2' /> 섹션에서는 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요.
 
 :::info
 
@@ -24,13 +24,19 @@ keywords: [장치, 인증]
 
 * <Cmd sid='device.info.authenticationMode' product='2' />: 한 개 이상의 크리덴셜을 조합해 장치의 인증 모드를 설정하세요. 자세한 내용은 [다음 문서](#added-auth-mode)를 참고하세요.
 
+  * 추가한 인증 모드를 수정하려면 <IcEdit /> 버튼을 클릭하세요.
+
+  * 추가한 인증 모드를 삭제하려면 <IcTrash2 /> 버튼을 클릭하세요.
+
 * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: 장치에 등록된 사용자에게 출입 그룹 설정 없이 모든 출입 권한을 부여할 수 있습니다.
 
   :::info
 
-  이 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 <Cmd sid='common.accessLevel' product='2' /> 및 <Cmd sid='ag.floorLevel.title' product='2' />에 장치를 등록할 수 없습니다. 자세한 내용은 [다음 문서](#settings-access-level)를 참고하세요.
+  이 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 <Cmd sid='common.accessLevel' product='2' /> 및 <Cmd sid='ag.floorLevel.title' product='2' />에 장치를 등록할 수 없습니다.
 
   :::
+
+* <Cmd sid='device.info.authTimeout' product='2' />: <Cmd sid='device.info.authenticationMode' product='2' /> 옵션에서 여러가지 크리덴셜을 조합해 사용할 때 두 번째 크리덴셜을 인증하는 대기 시간입니다. 지정한 시간 내에 크리덴셜을 인증하지 않으면 인증에 실패합니다.
 
 * <Cmd sid='common.serverMatching' product='2' />
 
@@ -86,8 +92,6 @@ keywords: [장치, 인증]
 
   </details>
 
-* <Cmd sid='device.info.authTimeout' product='2' />: <Cmd sid='device.info.authenticationMode' product='2' /> 옵션에서 여러가지 크리덴셜을 조합해 사용할 때 두 번째 크리덴셜을 인증하는 대기 시간입니다. 지정한 시간 내에 크리덴셜을 인증하지 않으면 인증에 실패합니다.
-
 * <Cmd sid='device.info.faceDetection' product='2' />: 사용자가 인증할 때 장치에 내장된 카메라로 얼굴을 인식하는 알고리즘 단계를 설정하세요.
 
   * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: 사람 팔 길이 정도의 거리에서 얼굴을 검출할 수 있습니다.
@@ -102,11 +106,11 @@ keywords: [장치, 인증]
 
   :::
 
-* <Cmd sid='device.info.userNameDisplay' product='2' />: 인증을 성공할 때 장치에 표시되는 사용자 이름을 표시하거나 숨길 수 있습니다.
+* <Cmd sid='device.info.userIdDisplay' product='2' />: 인증을 성공할 때 장치에 표시되는 사용자 아이디를 표시하거나 숨길 수 있습니다.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-* <Cmd sid='device.info.userIdDisplay' product='2' />: 인증을 성공할 때 장치에 표시되는 사용자 아이디를 표시하거나 숨길 수 있습니다.
+* <Cmd sid='device.info.userNameDisplay' product='2' />: 인증을 성공할 때 장치에 표시되는 사용자 이름을 표시하거나 숨길 수 있습니다.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
@@ -136,6 +140,8 @@ keywords: [장치, 인증]
 ## 지문 인증 설정
 
 <Cmd sid='device.info.fingerprint' product='2' /> 그룹에서는 장치의 지문 인증에 대한 세부 사항을 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-detail-fingerprint.png' />
 
 * <Cmd sid='device.info.securityLevel' product='2' />: 지문을 인증할 때 사용할 보안 등급을 설정하세요. 보안 등급이 높을수록 [본인 거부율(FRR)](../../reference/glossary#frr)이 높아지지만 [타인 수락율(FAR)](../../reference/glossary#far)이 낮아집니다.
 
@@ -180,6 +186,8 @@ keywords: [장치, 인증]
 
 <Cmd sid='user.credential.face' product='2' /> 그룹에서는 장치의 얼굴 인증에 대한 세부 사항을 설정할 수 있습니다.
 
+<Image src='/img/biostarx-setting-device-detail-face.png' />
+
 * <Cmd sid='device.info.securityLevel' product='2' />: 얼굴을 인증할 때 사용할 보안 등급을 설정하세요. 보안 등급이 높을수록 [본인 거부율(FRR)](../../reference/glossary#frr)이 높아지지만 [타인 수락율(FAR)](../../reference/glossary#far)이 낮아집니다.
 
 * <Cmd sid='face.operationMode.enrollTime' product='2' />: 사용자 얼굴을 등록할 때 설정한 시간 동안 얼굴을 등록하지 못하면 얼굴 등록이 취소됩니다.
@@ -196,7 +204,9 @@ keywords: [장치, 인증]
 
   * <Cmd sid='device.info.enable' product='2' />: 얼굴 등록 절차를 1단계로 설정합니다.
   
-  * <Cmd sid='device.info.disabled' product='2' /> 얼굴 등록 절차를 3단계로 설정합니다. 고품질의 얼굴 템플릿을 등록하려면 <Cmd sid='device.info.disabled' product='2' />으로 설정하세요.
+  * <Cmd sid='device.info.disabled' product='2' />: 얼굴 등록 절차를 3단계로 설정합니다. 고품질의 얼굴 템플릿을 등록하려면 <Cmd sid='device.info.disabled' product='2' />으로 설정하세요.
+
+* <Cmd sid='device.info.duplicateCheck' product='2' />: 얼굴을 등록할 때 중복 등록 여부를 검사할 수 있습니다.
 
 * <Cmd sid='device.info.faceDetectSetting' product='2' />: 얼굴을 인증할 때 사용자의 얼굴을 인식하는 환경을 설정하세요.
 
@@ -213,8 +223,6 @@ keywords: [장치, 인증]
   * <Cmd sid='device.info.face.operation_mode.disable' product='2' />: 장치의 인증 범위 안에서 사용자가 걸어가면서도 얼굴을 인증할 수 있도록 빠르게 인증을 수행할 수 있습니다.
 
 * <Cmd sid='device.info.faceFakeDetection' product='2' />: 사진 등의 위조 얼굴을 이용한 사용자 인증을 방지할 수 있습니다. <Cmd sid='device.info.faceOperationMode' product='2' /> 옵션을 <Cmd sid='device.info.face.operation_mode.enable' product='2' />로 설정하면 활성화됩니다.
-
-* <Cmd sid='device.info.duplicateCheck' product='2' />: 얼굴을 등록할 때 중복 등록 여부를 검사할 수 있습니다.
 
 :::info
 
@@ -276,6 +284,8 @@ keywords: [장치, 인증]
 
 CSN 카드 및 포맷 종류를 선택하고 바이트 순서를 설정할 수 있습니다.
 
+<Image src='/img/biostarx-setting-device-detail-card-csn.png' />
+
 * <Cmd sid='device.info.byteOrder' product='2' /> 
 
   * <Cmd>MSB</Cmd>: 카드 데이터를 처리할 때 큰 바이트 단위에서 작은 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 왼쪽에서 오른쪽으로 순차 저장합니다.
@@ -292,6 +302,8 @@ CSN 카드 및 포맷 종류를 선택하고 바이트 순서를 설정할 수 �
 
 Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니다. <Cmd sid='device.cardFormat.wiegand.format' product='2' /> 옵션에서 사용할 Wiegand 형식을 선택하세요.
 
+<Image src='/img/biostarx-setting-device-detail-card-wiegand.png' />
+
 :::info
 
 새로운 Wiegand 형식을 설정하려면 [다음 문서](settings-credential-wiegand-format)를 참고하세요.
@@ -300,7 +312,9 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 
 ### <Cmd sid='device.card.supremaSmartCard' product='2' />
 
-슈프리마 스마트 카드 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다. 
+슈프리마 스마트 카드 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-detail-card-smart.png' />
 
 * <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: 슈프리마 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](settings-credential-smart-format)를 참고하세요.
 
@@ -314,6 +328,8 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 ### <Cmd sid='device.card.customSmartCard' product='2' />
 
 타사에서 발급한 커스텀 스마트 카드의 종류를 선택하고 카드 레이아웃과 바이트 순서를 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
 * <Cmd sid='device.batch.customSmartCardLayout' product='2' />: 커스텀 스마트 카드 레이아웃을 선택하세요. 새로운 스마트 카드 레이아웃을 설정하려면 [다음 문서](settings-credential-smart-format)를 참고하세요.
 
@@ -349,6 +365,8 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 
 모바일 카드의 인식 방법을 설정할 수 있습니다.
 
+<Image src='/img/biostarx-setting-device-detail-card-csn-mobile.png' />
+
 * <Cmd>NFC</Cmd>: 모바일 기기에서 NFC 통신을 통해 모바일 카드를 인식합니다.
 
 * <Cmd>BLE</Cmd>: 저전력 블루투스(Bluetooth Low Energy, BLE) 통신를 통해 모바일 카드를 인식합니다.
@@ -356,6 +374,8 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 ### <Cmd sid='device.info.templateOnMobile' product='2' />
 
 템플릿 온 모바일의 인식 방법과 사용자가 장치에서 직접 등록할 바이오메트릭을 지정하고 바이트 순서를 설정할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-detail-card-tom.png' />
 
 * <Cmd sid='device.info.TomOutputByteOrder' product='2' />
 
@@ -372,3 +392,16 @@ Wiegand 카드 종류를 선택하고 Wiegand 형식을 설정할 수 있습니�
 - BioEntry W3 펌웨어 1.0.0 이상
 
 </details>
+
+
+## PIN 인증 설정
+
+<Cmd sid='device.info.pin' product='2' /> 그룹에서는 장치의 PIN 인증을 위해 <Cmd sid='device.info.scrambleKeypad' product='2' /> 옵션을 켜거나 끌 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-detail-pin.png' />
+
+:::info
+
+<Cmd sid='device.info.scrambleKeypad' product='2' /> 옵션은 LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품에서만 사용할 수 있습니다.
+
+:::
