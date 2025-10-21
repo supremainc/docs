@@ -22,15 +22,26 @@
 
 <Include product='bioentry_p2'><Image src='/img/device/installation-power-connection-bep2.png' width='65%' className='none' /></Include>
 
+<Include product='bioentry_w2'><Image src='/img/device/installation-power-connection-bew2.png' width='65%' className='none' /></Include>
+
 :::caution
 
-<Include product='bioentry_w3'>
+<Include product='bioentry_w3,bioentry_w2'>
 
 * Listed Class 2 전원 장치 사용을 권장합니다.
 
 </Include>
 
-<Include product='bioentry_w3,biostation_2a,biostation_3,xstation_2'>
+{/* BEW2 UL향 합본 문구 */}
+<Include product='bioentry_w2'>
+
+* 장치의 전원 장치는 외부 12VDC Listed Class 2 전원 장치 또는 UL294B PoE 전원 장치를 사용해야 합니다.
+
+* ULC S319를 만족하기 위해 'PSC-100A' 전원 공급 장치 및 'Casil CA 1270' 배터리를 연결해야 합니다.
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biostation_3,xstation_2,bioentry_w2'>
 
 * 전원 장치(또는 어댑터)와 PoE 전원 장치를 함께 연결하지 마세요.
 
@@ -128,6 +139,35 @@
 <Include product='biostation_3,xstation_2,facestation_2'>
 
 * CAT5 UTP 2-Wire 케이블을 전원 공급 용도로 사용하지 마세요.
+
+</Include>
+
+<Include product='bioentry_w2'>
+
+* 알람 신호는 릴레이 접점 방식으로 AC OK 및 배터리 저전압 상태 핀을 통해 전송됩니다.
+
+  <div className='overflow-x'>
+
+  | 기능 | 설명 | 릴레이 상태 |
+  | :--: | :--: | :--: |
+  | AC 전원 확인 | AC 전원 켜짐 | 단락 |
+  | ^ | AC 전원 꺼짐 | 단선 |
+  | 배터리 저전압 상태 | 배터리 전압이 11 V 이하일 때 | 단락 |
+  | ^ | 배터리 전압이 11 V 이상일 때 | 단선 |
+
+  </div>
+
+* 알람 신호 기능을 사용하려면 외부 전원 소스가 필요합니다. 최대 인가 전압은 30 V이며, 최대 싱크 전류는 1 A입니다.
+
+* PoE 전원은 National Electrical Code, ANSI / NFPA 70, Article 725.121, 클래스 2 및 클래스 3 회로의 전원을 준수해야합니다.
+
+* 5e 케이블 연결은 권장하는 최소 성능 범주입니다. 성능 범주는 설치 현장에서 요구되는 전송 속도와 일치해야 합니다.
+
+* PSE 또는 전력 인젝터와 PD 사이에 연결할 수 있는 최소 도체 게이지는 패치 코드의 경우 26 AWG(0.13 mm2)입니다. 수평 또는 라이저 케이블의 경우 24 AWG(0.21 mm2)입니다.
+
+* PoE를 이용해 전원을 공급할 경우 UL294B 또는 UL294 8th Edition을 준수해야 합니다.
+
+* IEEE 802.3 (at 또는 af) 사양의 준수는 이 요구 사항의 일환으로 치부되지 않습니다.
 
 </Include>
 
