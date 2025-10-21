@@ -152,8 +152,28 @@ const toc = [{
   "id": "deleteOccupancyZone",
   "level": 2
 }, ..._explore_list_pages/* .toc */.RM, {
-  "value": "모바일 앱에서 인원 점검 시작하기",
+  "value": "인원 점검 시작하기",
   "id": "mobileAppRollCall",
+  "level": 2
+}, {
+  "value": "모바일 앱에서 인원 점검 시작하기",
+  "id": "useRollCallMobileApp",
+  "level": 3
+}, {
+  "value": "인원 점검 진행 중 사용자 정보 확인",
+  "id": "인원-점검-진행-중-사용자-정보-확인",
+  "level": 3
+}, {
+  "value": "인원 점검 진행 중 사용자에게 메모 남기기",
+  "id": "인원-점검-진행-중-사용자에게-메모-남기기",
+  "level": 3
+}, {
+  "value": "인원 점검 세부 정보 확인",
+  "id": "viewRollCallinfo",
+  "level": 3
+}, {
+  "value": "인원 점검 보고서 확인",
+  "id": "viewRollCallReport",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -161,6 +181,7 @@ function _createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -168,10 +189,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, DocLink, IcRCdone, IcRCplay, IcRCstop, Image} = _components;
+  }, {Cmd, DocLink, IcRCdone, IcRCinfo, IcRCmemo, IcRCplay, IcRCstop, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!DocLink) _missingMdxReference("DocLink", true);
   if (!IcRCdone) _missingMdxReference("IcRCdone", true);
+  if (!IcRCinfo) _missingMdxReference("IcRCinfo", true);
+  if (!IcRCmemo) _missingMdxReference("IcRCmemo", true);
   if (!IcRCplay) _missingMdxReference("IcRCplay", true);
   if (!IcRCstop) _missingMdxReference("IcRCstop", true);
   if (!Image) _missingMdxReference("Image", true);
@@ -265,6 +288,8 @@ function _createMdxContent(props) {
       children: "설정 옵션 안내"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "인원 점검 설정을 위한 세부 항목은 아래와 같습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-adv-ac-add-rollcall-config.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -458,11 +483,39 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_explore_list_pages/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "mobileAppRollCall",
-      children: "모바일 앱에서 인원 점검 시작하기"
+      children: "인원 점검 시작하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["인원 점검 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 모바일 앱에서도 사용할 수 있습니다. 모바일 앱에서 인원 점검 기능을 사용하려면 다음 단계를 따르세요."]
+      }), " 모바일 앱에서 사용할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), " 모바일 앱은 다음 링크를 통해 설치할 수 있습니다."]
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["iOS: ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253",
+              children: "Apple App Store"
+            })]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["안드로이드: ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://play.google.com/store/apps/details?id=com.suprema.biostarmobile",
+              children: "Google Play"
+            })]
+          }), "\n"]
+        }), "\n"]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "useRollCallMobileApp",
+      children: "모바일 앱에서 인원 점검 시작하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "모바일 앱에서 인원 점검 기능을 시작하려면 다음 단계를 따르세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -473,7 +526,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["앱의 초기 화면에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Rolll Call"
+            children: "Roll Call"
           }), " 버튼을 탭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png",
@@ -499,17 +552,11 @@ function _createMdxContent(props) {
       children: "인원 점검을 시작하며, 진행 중인 인원 점검 항목을 탭하면 인원 점검 현황을 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png",
-      width: 593,
+      width: 595,
       alone: true,
       className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["진행 중인 인원 점검을 종료하려면 인원 점검 목록 화면에서 ", (0,jsx_runtime.jsx)(IcRCstop, {}), " 버튼을 탭하거나 인원 점검 현황 화면에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "END"
-          }), " 버튼을 탭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["입실 사용자는 ", (0,jsx_runtime.jsx)(IcRCdone, {}), " 아이콘이 표시됩니다. 모든 사용자가 입실하면 인원 점검이 종료 메시지가 나타납니다. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Yes"
@@ -535,12 +582,20 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["진행 중인 인원 점검을 종료하려면 인원 점검 목록 화면에서 ", (0,jsx_runtime.jsx)(IcRCstop, {}), " 버튼을 탭하거나 인원 점검 현황 화면에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "END"
+          }), " 버튼을 탭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["진행 중인 인원 점검은 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "에서 종료할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "에서도 종료할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.advancedAc.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.sidebar.events"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "zone.rollCall",
             product: "2"
@@ -558,32 +613,127 @@ function _createMdxContent(props) {
             sid: "data.mainMenu.generate"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "data.sidebar.rollCall"
-          }), "에서 관련 보고서를 확인할 수 있습니다."]
+          }), "에서 관련 보고서를 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "#viewRollCallReport",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), " 모바일 앱은 다음 링크를 통해 설치할 수 있습니다."]
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["iOS: ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253",
-              children: "Apple App 스토어"
-            })]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["안드로이드: ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://play.google.com/store/apps/details?id=com.suprema.biostarmobile",
-              children: "Google Play 스토어"
-            })]
-          }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "인원-점검-진행-중-사용자-정보-확인",
+      children: "인원 점검 진행 중 사용자 정보 확인"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "모바일 앱에서 인원 점검 진행 중 각 사용자의 정보를 확인할 수 있습니다. 사용자에게 긴급 연락이 필요하거나 현재 사용자의 위치를 파악할 때 유용하게 사용할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["인원 점검 진행 중 세부 정보를 확인할 사용자 항목을 왼쪽으로 스와이프하세요. 이후 ", (0,jsx_runtime.jsx)(IcRCinfo, {}), " 버튼을 탭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png",
+      className: "none",
+      width: 595,
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "인원-점검-진행-중-사용자에게-메모-남기기",
+      children: "인원 점검 진행 중 사용자에게 메모 남기기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "모바일 앱에서 인원 점검 진행 중 특정 사용자가 입실하지 않은 경우, 해당 사용자에게 메모를 남길 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["인원 점검 진행 중 메모를 입력할 사용자 항목을 왼쪽으로 스와이프하세요. 이후 ", (0,jsx_runtime.jsx)(IcRCmemo, {}), " 버튼을 탭하세요. 메모 입력 화면에서 내용을 입력한 후 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Save"
+      }), " 버튼을 탭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png",
+      className: "none",
+      width: 595,
+      alone: true
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["메모를 입력한 사용자는 인원 점검 목록에서 ", (0,jsx_runtime.jsx)(IcRCmemo, {}), " 아이콘이 표시됩니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png",
+      width: 253,
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "viewRollCallinfo",
+      children: "인원 점검 세부 정보 확인"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "모바일 앱에서 인원 점검 설정의 세부 정보를 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["모바일 기기에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " 모바일 앱을 실행하세요."]
         }), "\n"]
-      })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["앱의 초기 화면에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Roll Call"
+          }), " 버튼을 탭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png",
+          width: 253,
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["목록에서 세부 정보를 확인할 항목을 왼쪽으로 스와이프한 후 ", (0,jsx_runtime.jsx)(IcRCinfo, {}), " 버튼을 탭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png",
+          width: 595,
+          alone: true,
+          className: "none"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "viewRollCallReport",
+      children: "인원 점검 보고서 확인"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "인원 점검 보고서를 확인하려면 다음 단계를 따르세요."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.data"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.sidebar.events"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.sidebar.rollCall"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.dialog.rollCall.selectRollCall"
+          }), " 창이 나타나면 보고서로 확인할 인원 점검 항목을 선택한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.button.next"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-adv-ac-rollcoll-report-01.png"
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "원하는 인원 점검 항목이 보이지 않는다면 화면 상단의 기간을 조정해보세요."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["옵션 설정 창에서 보고서에 포함할 데이터를 선택한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "data.button.generate"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-adv-ac-rollcoll-report-02.png"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "보고서를 생성합니다. 보고서에서는 각 사용자의 정보 및 입실 시간, 퇴실 시간, 마지막 장소, 메모 내용 등을 확인할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-adv-ac-rollcoll-report-generated.png",
+      caption: true
     })]
   });
 }

@@ -103,6 +103,8 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "shell.header.setting"
             }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.menu.device.root"
+            }), " → ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "common.imageLog",
               product: "2"
             }), " 메뉴에서 설정한 내용은 장치에 반영되지 않습니다. 장치의 ", (0,jsx_runtime.jsx)(Cmd, {
