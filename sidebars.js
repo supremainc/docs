@@ -1503,7 +1503,56 @@ const sidebars = {
       ],
     },
   ],
-  xstation2: [
+  xpass2: [
+    {
+      type: 'category',
+      label: 'XPass 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/xpass_2/index',
+      // },
+      items: [
+        // 'device/xpass_2/safety-instructions',
+        // 'device/xpass_2/getting-started',
+        // 'device/xpass_2/installation',
+        // 'device/xpass_2/troubleshooting',
+        // 'device/xpass_2/product-specifications',
+        // 'device/xpass_2/regulatory-information',
+        // 'device/xpass_2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_2/release-notes/index',
+          },
+          items: [
+            'device/xpass_2/release-notes/150',
+            'device/xpass_2/release-notes/143',
+            'device/xpass_2/release-notes/142',
+            'device/xpass_2/release-notes/141',
+            'device/xpass_2/release-notes/132',
+            'device/xpass_2/release-notes/131',
+            'device/xpass_2/release-notes/124',
+            'device/xpass_2/release-notes/123',
+            'device/xpass_2/release-notes/122',
+            'device/xpass_2/release-notes/121',
+            'device/xpass_2/release-notes/120',
+            'device/xpass_2/release-notes/110',
+            'device/xpass_2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
+  xstation72: [
     {
       type: 'category',
       label: 'X-Station 2',

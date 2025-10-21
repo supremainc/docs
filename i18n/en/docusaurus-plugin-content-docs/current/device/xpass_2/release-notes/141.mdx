@@ -1,0 +1,58 @@
+---
+id: 141
+title: Firmware Version 1.4.1
+---
+
+# Firmware Version 1.4.1 (Build No. 1.4.1_240319)
+
+Release<Separator/>2024-07-25
+
+:::caution
+
+Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.3.1 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added new model.
+
+    - XP2-MAPB
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or higher)
+
+1. Supports **Custom Smart Card Layout**.
+
+1. Supports a XPass D2 new BLE (Bluetooth Low Energy) chip firmware.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Improved synchronization to complete if user enrollment fails when synchronizing multiple users to the device in BioStar 2.
+
+1. Improved smartcard output byte order setting.
+
+    - When using Wiegand or OSDP output, it is improved to be affected by the smartcard output byte order when the Wiegand output information is set to send user ID.
+
+1. Improved when authenticating with a BLE mobile card running on iOS, authentication fails and the device restarts intermittently.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Device does not recognize some MIFARE Classic cards. <Badge>1.0.0</Badge>
+
+1. When running the Device Manager application v1.1.8 on iOS, certain devices do not connect. <Badge>1.3.1</Badge>
+
+1. Device abnormally restarts when changing the device's Network settings in BioStar 2. <Badge>1.0.0</Badge>
+
+1. Authentication fails when authenticating with a DESFire AoC while the device is connected as a slave. <Badge>1.0.0</Badge>
+
+1. Improved the structure to fix cache management errors caused by database storage, modification, or deletion errors. <Badge>1.0.0</Badge>
+
+</BugLists>
