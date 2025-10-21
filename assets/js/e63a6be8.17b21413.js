@@ -63,8 +63,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -168,10 +169,23 @@ function _createMdxContent(props) {
             sid: "settings.deviceConnectionManager.followerSelectLabel",
             product: "2"
           }), " 항목에서 이동시키려는 장치가 등록된 서버를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-connection-manager-01.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["오른쪽에 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.deviceConnectionManager.selectedSelectLabel",
+            product: "2"
+          }), " 항목에서 장치를 이동시킬 대상 서버를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-connection-manager-02.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "장치 목록에서 이동시키려는 장치를 선택하세요. 여러 개의 장치를 선택할 수 있습니다."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-connection-manager-03.png"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
@@ -180,26 +194,21 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["오른쪽에 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "settings.deviceConnectionManager.selectedSelectLabel",
-            product: "2"
-          }), " 항목에서 장치를 이동시킬 대상 서버를 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치를 이동하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["장치를 대상 서버로 이동하려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.deviceConnectionManager.moveButtonTitle",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-connection-manager-04.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "메시지 창에서 이동될 총 장치 수, TCP/IP 연결 장치 수, 이동할 서버 이름 및 IP 주소를 확인하세요."
+          children: "메시지 창에서 이동할 총 장치 수, TCP/IP 연결 장치 수, 이동할 서버 이름 및 IP 주소를 확인하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.apply",
+            sid: "button.yes",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
@@ -215,8 +224,11 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "연결된 확장 서버가 없다면 화면 오른쪽에 대상 서버는 표시되지 않습니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["연결된 확장 서버가 없다면 화면 오른쪽의 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "settings.deviceConnectionManager.selectedSelectLabel",
+              product: "2"
+            }), "는 표시되지 않습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

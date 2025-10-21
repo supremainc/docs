@@ -64,8 +64,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["클라이언트 PC에서 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -104,6 +105,8 @@ function _createMdxContent(props) {
             sid: "button.download",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-usb-agent-download.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -148,6 +151,8 @@ function _createMdxContent(props) {
             sid: "settings.usbAgent.byteOrder",
             product: "2"
           }), " 옵션을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-usb-byte-order.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -210,6 +215,8 @@ function _createMdxContent(props) {
             sid: "settings.usbAgent.port",
             product: "2"
           }), " 입력 필드에서 포트 번호를 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-usb-agent-port.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -222,7 +229,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "USB Agent 클라이언트별 동작하는 프로그램으로 포트 번호 설정은 서버가 해당 포트 번호를 통신하기 위한 용도입니다."
+        children: "USB Agent 클라이언트별 동작하는 프로그램으로, 포트 번호 설정은 서버가 해당 포트 번호를 통신하기 위한 용도입니다."
       })
     })]
   });
