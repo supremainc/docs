@@ -131,7 +131,7 @@ function _createMdxContent(props) {
             }), " 및 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               sid: "setting.account.visitorOperator",
               product: "2"
-            }), " 등급을 사용하려면 별도의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            }), " 등급은 별도의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "licensing#features-add-ons",
               children: "다음 문서"
             }), "를 참고하세요."]
@@ -234,10 +234,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcSearch, IcTrash2} = _components;
+  }, {Cmd, IcSearch, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcSearch) _missingMdxReference("IcSearch", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["등록한 사용자에게 운영 권한을 부여하고 커스텀 권한을 추가 및 설정하는 방법을 안내합니다. 운영 권한은 사용자가 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -278,7 +279,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "계정 목록에서 원하는 계정 종류를 클릭하세요."
+          children: "계정 목록에서 원하는 항목을 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -289,6 +290,9 @@ function _createMdxContent(props) {
             sid: "button.plusAdd",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-account-add-permission.png",
+          caption: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -355,6 +359,9 @@ function _createMdxContent(props) {
             sid: "settings.account.addUser",
             product: "2"
           }), " 옵션에서 운영을 제외할 사용자의 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-account-exclude-permission.png",
+          caption: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -399,13 +406,6 @@ function _createMdxContent(props) {
             sid: "settings.account.menu.setting",
             product: "2"
           }), ": 메뉴에 접근할 수 있는 권한을 확인할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "settings.account.addUser",
-            product: "2"
-          }), ": 권한이 부여된 사용자를 확인할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -422,6 +422,13 @@ function _createMdxContent(props) {
               }), ": 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다."]
             }), "\n"]
           }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "settings.account.addUser",
+            product: "2"
+          }), ": 권한이 부여된 사용자를 확인할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

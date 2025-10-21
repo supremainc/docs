@@ -131,7 +131,7 @@ function _createMdxContent(props) {
             }), " 및 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               sid: "setting.account.visitorOperator",
               product: "2"
-            }), " 등급을 사용하려면 별도의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            }), " 등급은 별도의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "licensing#features-add-ons",
               children: "다음 문서"
             }), "를 참고하세요."]

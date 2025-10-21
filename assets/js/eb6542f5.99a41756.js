@@ -793,6 +793,8 @@ function _createMdxContent(props) {
         sid: "user.credential.barcode",
         product: "2"
       }), " 그룹에서는 장치의 QR/바코드 인증에 대한 세부 사항을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-detail-qrbarcode.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

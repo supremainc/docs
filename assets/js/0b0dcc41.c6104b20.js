@@ -60,9 +60,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcTrash2} = _components;
+  }, {Cmd, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "사용자가 원하는 권한 등급을 추가하는 방법을 안내합니다. 커스텀 권한은 기본 제공하는 운영 권한 외에 추가적인 권한을 설정할 수 있는 사용자 맞춤형 기능입니다."
@@ -90,10 +91,14 @@ function _createMdxContent(props) {
             sid: "setting.account.addCustomOperator",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-account-add-custom-permission.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "새로 생성하는 권한에 대한 이름과 설명을 입력하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-account-add-custom-permission-details.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -153,7 +158,8 @@ function _createMdxContent(props) {
       id: "detailSetting",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "settings.account.menu.detailSetting",
-        product: "2"
+        product: "2",
+        className: "normal"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["아이템에 대한 상세 권한을 설정하세요. 각 메뉴에 대한 수정 및 보기 권한을 부여할 그룹을 선택할 수 있습니다. 아이템 상세 권한은 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -166,65 +172,81 @@ function _createMdxContent(props) {
         sid: "common.permission.module.doorGroup",
         product: "2"
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission.module.elevatorGroup",
-        product: "2"
-      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.permission.module.accessGroup",
         product: "2"
-      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.permission.module.zoneType",
-        product: "2"
-      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "audit.menu.graphicMap",
-        product: "2"
       }), "에 대해 설정할 수 있으며, 각 메뉴에서 이미 생성되어 있는 그룹 정보를 기준으로 설정할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-account-add-custom-permission-details-item.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "원하는 그룹이 없을 경우 해당 메뉴로 이동하여 새 그룹을 추가하세요. 그룹 추가에 대한 자세한 내용은 다음 문서를 참고하세요."
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "user-group-manage",
-              children: "사용자 그룹 등록 및 관리"
-            })
+            children: "원하는 그룹이 없을 경우 해당 메뉴로 이동하여 새 그룹을 추가하세요. 그룹 추가에 대한 자세한 내용은 다음 문서를 참고하세요."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: (0,jsx_runtime.jsx)(_components.a, {
+                  href: "user-group-manage",
+                  children: "사용자 그룹 등록 및 관리"
+                })
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-manage-device-group",
+                  children: "장치 그룹 등록 및 관리"
+                })
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-manage-door-group",
+                  children: "출입문 그룹 등록 및 관리"
+                })
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-manage-elevators-group",
+                  children: "엘리베이터 그룹 등록 및 관리"
+                })
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-access-control-manage-access-group",
+                  children: "출입 그룹 등록 및 관리"
+                })
+              }), "\n"]
+            }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-manage-device-group",
-              children: "장치 그룹 등록 및 관리"
-            })
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-manage-door-group",
-              children: "출입문 그룹 등록 및 관리"
-            })
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-manage-elevators-group",
-              children: "엘리베이터 그룹 등록 및 관리"
-            })
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-access-control-manage-access-group",
-              children: "출입 그룹 등록 및 관리"
-            })
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.permission.module.elevatorGroup",
+              product: "2"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.account.item.advAC",
+              product: "2"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.account.item.map",
+              product: "2"
+            }), " 권한은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "어드밴스"
+            }), "(Advanced) 라이선스 이상에서 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "../biostar_x/licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
-      })]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "menuSetting",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "settings.account.menu.setting",
-        product: "2"
+        product: "2",
+        className: "normal"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["개별 메뉴에 대한 ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -232,6 +254,8 @@ function _createMdxContent(props) {
       }), " 및 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "보기"
       }), " 권한을 설정하세요. 메뉴마다 다른 권한을 설정할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-account-add-custom-permission-details-menus.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -286,13 +310,16 @@ function _createMdxContent(props) {
       id: "addUser",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "settings.account.addUser",
-        product: "2"
+        product: "2",
+        className: "normal"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["권한을 부여할 사용자 정보를 추가하거나 확인할 수 있습니다. 사용자를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.plusAdd",
         product: "2"
-      }), " 버튼을 클릭하세요."]
+      }), " 버튼을 클릭하세요. 사용자 목록에서 권한을 부여할 사용자를 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-account-add-custom-permission-details-users.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
