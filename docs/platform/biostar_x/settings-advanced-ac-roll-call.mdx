@@ -45,6 +45,8 @@ keywords: [고급 출입 통제, 인원 점검]
 
 인원 점검 설정을 위한 세부 항목은 아래와 같습니다.
 
+<Image src='/img/biostarx-settings-adv-ac-add-rollcall-config.png' />
+
 * <Cmd sid='zone.globalZone' product='2' />: 적용 범위를 확인할 수 있습니다. 인원 점검 설정은 <Cmd sid='zone.globalZone.global' product='2' /> 모드만 지원하며 **BioStar X**에 등록된 모든 장치로 설정할 수 있습니다.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: 설정을 활성화하거나 일시적으로 비활성화할 수 있습니다.
@@ -111,13 +113,27 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 <ExploreListPages />
 
 
-## 모바일 앱에서 인원 점검 시작하기 {#mobileAppRollCall}
+## 인원 점검 시작하기 {#mobileAppRollCall}
 
-인원 점검 기능은 **BioStar X** 모바일 앱에서도 사용할 수 있습니다. 모바일 앱에서 인원 점검 기능을 사용하려면 다음 단계를 따르세요.
+인원 점검 기능은 **BioStar X** 모바일 앱에서 사용할 수 있습니다.
+
+:::info
+
+**BioStar X** 모바일 앱은 다음 링크를 통해 설치할 수 있습니다.
+
+* iOS: [Apple App Store](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
+
+* 안드로이드: [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
+
+:::
+
+### 모바일 앱에서 인원 점검 시작하기 {#useRollCallMobileApp}
+
+모바일 앱에서 인원 점검 기능을 시작하려면 다음 단계를 따르세요.
 
 1. 모바일 기기에서 **BioStar X** 모바일 앱을 실행하세요.
 
-1. 앱의 초기 화면에서 **Rolll Call** 버튼을 탭하세요.
+1. 앱의 초기 화면에서 **Roll Call** 버튼을 탭하세요.
 
     <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
 
@@ -129,9 +145,7 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 
 인원 점검을 시작하며, 진행 중인 인원 점검 항목을 탭하면 인원 점검 현황을 확인할 수 있습니다.
 
-<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={593} alone className='none' />
-
-* 진행 중인 인원 점검을 종료하려면 인원 점검 목록 화면에서 <IcRCstop /> 버튼을 탭하거나 인원 점검 현황 화면에서 **END** 버튼을 탭하세요.
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={595} alone className='none' />
 
 * 입실 사용자는 <IcRCdone /> 아이콘이 표시됩니다. 모든 사용자가 입실하면 인원 점검이 종료 메시지가 나타납니다. **Yes** 버튼을 탭해 인원 점검을 종료하세요.
 
@@ -141,18 +155,75 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 
   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
 
-* 진행 중인 인원 점검은 **BioStar X**에서 종료할 수 있습니다. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.rollCall' product='2' /> 메뉴로 이동해 진행 중인 인원 점검 항목을 선택한 후 화면 오른쪽 상단의 <Cmd sid='data.header.rollCall.ended' /> 버튼을 클릭하세요.
+* 진행 중인 인원 점검을 종료하려면 인원 점검 목록 화면에서 <IcRCstop /> 버튼을 탭하거나 인원 점검 현황 화면에서 **END** 버튼을 탭하세요.
+
+* 진행 중인 인원 점검은 **BioStar X**에서도 종료할 수 있습니다. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='data.sidebar.events' /> → <Cmd sid='zone.rollCall' product='2' /> 메뉴로 이동해 진행 중인 인원 점검 항목을 선택한 후 화면 오른쪽 상단의 <Cmd sid='data.header.rollCall.ended' /> 버튼을 클릭하세요.
 
   <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
 
-* 인원 점검을 완료한 후 <Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' />에서 관련 보고서를 확인할 수 있습니다.
+* 인원 점검을 완료한 후 <Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' />에서 관련 보고서를 확인할 수 있습니다. 자세한 내용은 [다음 문서](#viewRollCallReport)를 참고하세요.
 
-:::info
 
-**BioStar X** 모바일 앱은 다음 링크를 통해 설치할 수 있습니다.
+### 인원 점검 진행 중 사용자 정보 확인
 
-* iOS: [Apple App 스토어](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
+모바일 앱에서 인원 점검 진행 중 각 사용자의 정보를 확인할 수 있습니다. 사용자에게 긴급 연락이 필요하거나 현재 사용자의 위치를 파악할 때 유용하게 사용할 수 있습니다.
 
-* 안드로이드: [Google Play 스토어](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
+인원 점검 진행 중 세부 정보를 확인할 사용자 항목을 왼쪽으로 스와이프하세요. 이후 <IcRCinfo /> 버튼을 탭하세요.
 
-:::
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png' className='none' width={595} alone />
+
+
+### 인원 점검 진행 중 사용자에게 메모 남기기
+
+모바일 앱에서 인원 점검 진행 중 특정 사용자가 입실하지 않은 경우, 해당 사용자에게 메모를 남길 수 있습니다.
+
+인원 점검 진행 중 메모를 입력할 사용자 항목을 왼쪽으로 스와이프하세요. 이후 <IcRCmemo /> 버튼을 탭하세요. 메모 입력 화면에서 내용을 입력한 후 **Save** 버튼을 탭하세요.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png' className='none' width={595} alone />
+
+메모를 입력한 사용자는 인원 점검 목록에서 <IcRCmemo /> 아이콘이 표시됩니다.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png' width={253} alone />
+
+
+
+### 인원 점검 세부 정보 확인 {#viewRollCallinfo}
+
+모바일 앱에서 인원 점검 설정의 세부 정보를 확인할 수 있습니다.
+
+1. 모바일 기기에서 **BioStar X** 모바일 앱을 실행하세요.
+
+1. 앱의 초기 화면에서 **Roll Call** 버튼을 탭하세요.
+
+    <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
+
+1. 목록에서 세부 정보를 확인할 항목을 왼쪽으로 스와이프한 후 <IcRCinfo /> 버튼을 탭하세요.
+
+    <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png' width={595} alone className='none' />
+
+
+## 인원 점검 보고서 확인 {#viewRollCallReport}
+
+인원 점검 보고서를 확인하려면 다음 단계를 따르세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.data' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' />을 클릭하세요.
+
+1. <Cmd sid='data.dialog.rollCall.selectRollCall' /> 창이 나타나면 보고서로 확인할 인원 점검 항목을 선택한 후 <Cmd sid='data.button.next' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-01.png' />
+
+    :::note
+
+    원하는 인원 점검 항목이 보이지 않는다면 화면 상단의 기간을 조정해보세요.
+
+    :::
+
+1. 옵션 설정 창에서 보고서에 포함할 데이터를 선택한 후 <Cmd sid='data.button.generate' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-02.png' />
+
+보고서를 생성합니다. 보고서에서는 각 사용자의 정보 및 입실 시간, 퇴실 시간, 마지막 장소, 메모 내용 등을 확인할 수 있습니다.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated.png' caption />

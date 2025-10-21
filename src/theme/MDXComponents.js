@@ -119,6 +119,8 @@ import IcFUlockDr from '@site/static/img/menus/ico-floor-unlock-door.svg';
 import IcRCplay from '@site/static/img/menus/ico-app-rollcall-play.svg';
 import IcRCstop from '@site/static/img/menus/ico-app-rollcall-stop.svg';
 import IcRCdone from '@site/static/img/menus/ico-app-rollcall-done.svg';
+import IcRCinfo from '@site/static/img/menus/ico-app-rollcall-info.svg';
+import IcRCmemo from '@site/static/img/menus/ico-app-rollcall-memo.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -191,5 +193,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo
 }
