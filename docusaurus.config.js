@@ -35,7 +35,7 @@ function getLocalizedConfigValue(key) {
 const config = {
   title: getLocalizedConfigValue('title'),
   tagline: getLocalizedConfigValue('tagline'),
-  favicon: 'https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico',
+  favicon: 'https://supremainc.com/ko/asset/images/common/Website_favicon.png',
   // Set the production url of your site here
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
