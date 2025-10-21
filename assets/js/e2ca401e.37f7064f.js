@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["353"], {
-1740: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4561"], {
+71413: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,33 +9,33 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_index_mdx_cff_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_index_mdx_e2c_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-index-mdx-cff.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_index_mdx_cff_namespaceObject = JSON.parse('{"id":"platform/biostar_x/index","title":"BioStar X","description":"BioStar X is a next-generation web-based access control and attendance management platform, combining Suprema\'s innovative biometric technology with the latest security solutions to create a robust security system.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/index.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/","permalink":"/docs/en/platform/biostar_x/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar X","description":"BioStar X is a next-generation web-based access control and attendance management platform, combining Suprema\'s innovative biometric technology with the latest security solutions to create a robust security system.","keywords":["Access control","Time Attendance","Biometric","Multi-Factor Authentication","Mobile access card","Visitor Management","Data Encryption","Security API","Enterprise Security"],"hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"biostarx","next":{"title":"Overview","permalink":"/docs/en/platform/biostar_x/overview"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-index-mdx-e2c.json
+var site_docs_platform_biostar_x_index_mdx_e2c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/index","title":"BioStar X","description":"BioStar X는 최고 수준의 생체보안 출입통제와 비디오 매니지먼트 시스템(VMS), 그리고 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성을 모두 갖춘 슈프리마의 통합 보안 플랫폼입니다.","source":"@site/docs/platform/biostar_x/index.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/","permalink":"/docs/platform/biostar_x/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar X","description":"BioStar X는 최고 수준의 생체보안 출입통제와 비디오 매니지먼트 시스템(VMS), 그리고 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성을 모두 갖춘 슈프리마의 통합 보안 플랫폼입니다.","keywords":["출입통제","근태 관리","생체 인식","다중 인증","모바일 출입 카드","방문자 관리","데이터 암호화","보안 API","기업 보안"],"hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"biostarx","next":{"title":"개요","permalink":"/docs/platform/biostar_x/overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/index.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/index.mdx
 
 
 const frontMatter = {
 	title: 'BioStar X',
-	description: 'BioStar X is a next-generation web-based access control and attendance management platform, combining Suprema\'s innovative biometric technology with the latest security solutions to create a robust security system.',
+	description: 'BioStar X는 최고 수준의 생체보안 출입통제와 비디오 매니지먼트 시스템(VMS), 그리고 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성을 모두 갖춘 슈프리마의 통합 보안 플랫폼입니다.',
 	keywords: [
-		'Access control',
-		'Time Attendance',
-		'Biometric',
-		'Multi-Factor Authentication',
-		'Mobile access card',
-		'Visitor Management',
-		'Data Encryption',
-		'Security API',
-		'Enterprise Security'
+		'출입통제',
+		'근태 관리',
+		'생체 인식',
+		'다중 인증',
+		'모바일 출입 카드',
+		'방문자 관리',
+		'데이터 암호화',
+		'보안 API',
+		'기업 보안'
 	],
 	hide_table_of_contents: true,
 	isTranslationMissing: false
@@ -49,8 +49,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "Welcome to the BioStar X User Guide",
-  "id": "welcome-to-the-biostar-x-user-guide",
+  "value": "BioStar X 사용자 가이드 문서에 오신 것을 환영합니다",
+  "id": "biostar-x-사용자-가이드-문서에-오신-것을-환영합니다",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -65,22 +65,22 @@ function _createMdxContent(props) {
   if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "welcome-to-the-biostar-x-user-guide",
-      children: "Welcome to the BioStar X User Guide"
+      id: "biostar-x-사용자-가이드-문서에-오신-것을-환영합니다",
+      children: "BioStar X 사용자 가이드 문서에 오신 것을 환영합니다"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " is Suprema's next-generation integrated security platform that combines AI-based access control with intelligent video analytics. An innovative platform that can effectively integrate and manage overall security operations beyond simple access control. ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "는 AI 기반 출입통제와 지능형 영상 분석을 결합한 슈프리마의 차세대 통합 보안 플랫폼입니다. 단순한 출입 관리를 넘어 보안 운영 전반을 효과적으로 통합 관리할 수 있는 혁신적인 플랫폼입니다. AI 기반 출입통제와 지능형 영상 분석 결합의 완성인 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ", the culmination of AI-based access control and intelligent video analysis, is designed to utilize AI technology to perform real-time access management, video monitoring, and abnormal behavior detection all on a single platform. In addition to access control, it is equipped with various AI-based video analysis features such as intrusion detection, loitering detection, and fall detection, allowing for proactive responses."]
+      }), "는 AI 기술을 활용해 실시간 출입 관리와 영상 모니터링, 이상 행동 감지를 하나의 플랫폼에서 수행할 수 있도록 설계되었습니다. 출입통제뿐만 아니라 침입 탐지, 배회 감지, 쓰러짐 감지 등 다양한 AI 기반 영상 분석 기능을 갖추고 있어 사전 대응이 가능합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This document provides various features and configuration methods of ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["이 문서에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ". We provide extensive and diverse guidance to help you make the most out of all the features of ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "의 다양한 기능과 설정 방법을 제공합니다. 다양하고 풍부한 안내를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ". Follow the step-by-step guide to easily and quickly implement ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "의 모든 기능을 최대한 활용할 수 있도록 도와드립니다. 단계별 안내를 따라 쉽고 빠르게 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "."]
+      }), "를 도입해보세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }

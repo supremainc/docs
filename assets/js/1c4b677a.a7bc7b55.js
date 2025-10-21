@@ -84,7 +84,8 @@ function _createMdxContent(props) {
         sid: "shell.header.arena"
       }), " 페이지에서 실시간 이벤트를 통해 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-setting-device-imagelog-example.png"
+      src: "/img/biostarx-setting-device-imagelog-example.png",
+      caption: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["이미지 로그를 설정하면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "arena.eventTable.title"

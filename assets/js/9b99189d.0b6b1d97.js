@@ -160,6 +160,10 @@ const toc = [{
   "id": "useRollCallMobileApp",
   "level": 3
 }, {
+  "value": "진행 중인 인원 점검 제어",
+  "id": "진행-중인-인원-점검-제어",
+  "level": 3
+}, {
   "value": "인원 점검 진행 중 사용자 정보 확인",
   "id": "인원-점검-진행-중-사용자-정보-확인",
   "level": 3
@@ -555,12 +559,24 @@ function _createMdxContent(props) {
       width: 595,
       alone: true,
       className: "none"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "진행-중인-인원-점검-제어",
+      children: "진행 중인 인원 점검 제어"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["입실 사용자는 ", (0,jsx_runtime.jsx)(IcRCdone, {}), " 아이콘이 표시됩니다. 모든 사용자가 입실하면 인원 점검이 종료 메시지가 나타납니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["입실 사용자는 ", (0,jsx_runtime.jsx)(IcRCdone, {}), " 아이콘이 표시됩니다. 모든 사용자가 입실하면 인원 점검이 종료 메시지가 나타납니다. 인원 점검을 종료하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Yes"
-          }), " 버튼을 탭해 인원 점검을 종료하세요."]
+          }), " 버튼을 탭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "관리자가 수동으로 사용자의 입실 또는 상태를 변경할 수 있습니다. 사용자 목록에서 상태를 변경할 사용자의 가장 오른쪽의 원 버튼을 길게 터치하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png",
+          alone: true,
+          className: "none",
+          width: 595
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
