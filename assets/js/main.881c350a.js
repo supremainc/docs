@@ -34822,7 +34822,7 @@ __webpack_require__.d(__webpack_exports__, {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   "title": "Suprema Docs",
   "tagline": "슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.",
-  "favicon": "https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico",
+  "favicon": "https://supremainc.com/ko/asset/images/common/Website_favicon.png",
   "url": "https://supremainc.github.io",
   "baseUrl": "/docs/",
   "noIndex": false,

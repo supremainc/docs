@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["612"], {
-38973: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4172"], {
+86254: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_access_control_manage_access_group_mdx_7ae_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_access_control_manage_access_level_mdx_ec9_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-access-control-manage-access-group-mdx-7ae.json
-var site_docs_platform_biostar_x_settings_access_control_manage_access_group_mdx_7ae_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-access-control-manage-access-group","title":"출입 그룹 관리하기","description":"출입 등급과 사용자 그룹 정보를 사용해 출입 그룹을 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-access-control-manage-access-group.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-access-control-manage-access-group","permalink":"/docs/platform/biostar_x/settings-access-control-manage-access-group","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-access-control-manage-access-group.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-access-control-manage-access-group","title":"출입 그룹 관리하기","description":"출입 등급과 사용자 그룹 정보를 사용해 출입 그룹을 설정할 수 있습니다.","keywords":["출입 그룹","출입 등급","사용자 그룹"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 등급 관리하기","permalink":"/docs/platform/biostar_x/settings-access-control-manage-access-level"},"next":{"title":"층 등급 관리하기","permalink":"/docs/platform/biostar_x/settings-access-control-manage-floor-level"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-access-control-manage-access-level-mdx-ec9.json
+var site_docs_platform_biostar_x_settings_access_control_manage_access_level_mdx_ec9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-access-control-manage-access-level","permalink":"/docs/platform/biostar_x/settings-access-control-manage-access-level","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-access-control-manage-access-level.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-access-control-manage-access-level","title":"출입 등급 관리하기","description":"출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.","keywords":["출입 등급"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 통제 설정하기","permalink":"/docs/platform/biostar_x/settings-access-control"},"next":{"title":"출입 그룹 관리하기","permalink":"/docs/platform/biostar_x/settings-access-control-manage-access-group"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-access-control-manage-access-group.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-access-control-manage-access-level.mdx
 
 
 const frontMatter = {
-	id: 'settings-access-control-manage-access-group',
-	title: '출입 그룹 관리하기',
-	description: '출입 등급과 사용자 그룹 정보를 사용해 출입 그룹을 설정할 수 있습니다.',
+	id: 'settings-access-control-manage-access-level',
+	title: '출입 등급 관리하기',
+	description: '출입문에 사용자가 출입할 수 있는 시간을 설정하여 출입 등급으로 등록할 수 있습니다.',
 	keywords: [
-		'출입 그룹',
-		'출입 등급',
-		'사용자 그룹'
+		'출입 등급'
 	],
 	isTranslationMissing: false
 };
@@ -47,16 +45,16 @@ const toc = [{
   "id": "beforeStart",
   "level": 2
 }, {
-  "value": "출입 그룹 등록",
-  "id": "addAccessGroup",
+  "value": "출입 등급 등록",
+  "id": "addAccessLevel",
   "level": 2
 }, {
-  "value": "출입 그룹 수정",
-  "id": "editAccessGroup",
+  "value": "출입 등급 수정",
+  "id": "editAccessLevel",
   "level": 2
 }, {
-  "value": "출입 그룹 삭제",
-  "id": "deleteAccessGroup",
+  "value": "출입 등급 삭제",
+  "id": "deleteAccessLevel",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -77,38 +75,29 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "출입 등급과 사용자 그룹 정보를 사용해 출입 그룹을 설정하는 방법을 안내합니다. 출입 그룹은 출입문에 출입할 수 있는 권한을 설정하는 중요한 요소입니다. 출입 그룹을 설정하면 사용자가 출입문에 출입할 수 있는 권한을 관리할 수 있습니다."
+      children: "출입 등급은 사용자가 출입할 수 있는 시간을 설정하고, 이 시간 동안 출입문에 출입할 수 있는 권리입니다. 출입 등급은 출입 그룹을 설정하기 위한 주요 요소입니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "beforeStart",
       children: "시작하기 전에"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "출입 그룹을 등록하기 전에 다음 사항을 확인 후 진행하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["출입 등급을 설정하세요. 출입 등급 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-access-control-manage-access-level",
+          children: ["출입 등급을 등록하기 전에 출입문을 설정해야 합니다. 출입문 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-door-add",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["층 등급을 설정하세요. 층 등급 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "settings-access-control-manage-floor-level",
-            children: "다음 문서"
-          }), "를 참고하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 그룹을 설정하세요. 사용자 그룹 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "user-group-manage",
+          children: ["스케줄 설정을 통해 출입 등급에 적용할 시간을 미리 정의할 수 있습니다. 스케줄 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-schedule",
             children: "다음 문서"
           }), "를 참고하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "addAccessGroup",
-      children: "출입 그룹 등록"
+      id: "addAccessLevel",
+      children: "출입 등급 등록"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -122,19 +111,21 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.accessControl.root"
-          }), "을 클릭하세요."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.func.addAccessGroup",
+            sid: "button.func.addAccessLevel",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-access-level.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "accessGroup.addNewAccessGroup",
+            sid: "accessGroup.addNewAccessLevel",
             product: "2"
           }), " 화면에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.name",
@@ -144,51 +135,25 @@ function _createMdxContent(props) {
             product: "2"
           }), "을 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-add-access-group.png"
+          src: "/img/biostarx-settings-add-access-level.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.accessLevel",
+            sid: "common.door",
             product: "2"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addplus",
-            product: "2"
-          }), " 버튼을 클릭해 출입 그룹에 적용할 출입 등급을 선택하세요."]
+          }), " 항목에서 출입 등급에 적용할 출입문을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ag.floorLevel.title",
+            sid: "common.schedule",
             product: "2"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addplus",
-            product: "2"
-          }), " 버튼을 클릭해 출입 그룹에 적용할 층 등급을 선택하세요."]
+          }), " 항목에서 출입 등급에 적용할 스케줄을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "accessGroup.userGroup",
-            product: "2"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addplus",
-            product: "2"
-          }), " 버튼을 클릭해 출입 그룹에 적용할 사용자 그룹을 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.user",
-            product: "2"
-          }), " 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.addplus",
-            product: "2"
-          }), " 버튼을 클릭해 출입 그룹에 사용자를 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["출입 그룹을 등록하려면 화면 가장 아래에 있는 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["출입 등급을 등록하려면 화면 가장 아래에 있는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -198,32 +163,51 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "출입 등급은 출입 그룹당 최대 128개까지 등록할 수 있습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["원하는 출입 등급이 없다면 새로운 출입 등급을 등록해야 합니다. 출입 등급 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-access-control-manage-access-level",
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.door",
+              product: "2"
+            }), "과 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.schedule",
+              product: "2"
+            }), " 항목에서 ", (0,jsx_runtime.jsx)(IcSearch, {}), " 버튼을 클릭하면 원하는 출입문과 스케줄을 검색할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.door",
+              product: "2"
+            }), "과 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.schedule",
+              product: "2"
+            }), " 항목에서 추가한 항목을 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["원하는 출입문이 없다면 새로운 출입문을 등록해야 합니다. 출입문 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-door-add",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["원하는 층 등급이 없다면 새로운 층 등급을 등록해야 합니다. 층 등급 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-access-control-manage-floor-level",
+            children: ["원하는 스케줄이 없다면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "button.plusAddSchedule",
+              product: "2"
+            }), "를 클릭해 추가할 수 있습니다. 스케줄 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-schedule",
               children: "다음 문서"
             }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["추가한 항목을 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["원하는 항목을 검색하려면 ", (0,jsx_runtime.jsx)(IcSearch, {}), " 버튼을 클릭하세요."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "editAccessGroup",
-      children: "출입 그룹 수정"
+      id: "editAccessLevel",
+      children: "출입 등급 수정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -242,13 +226,15 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "access_control.tab.access_group",
+            sid: "access_control.tab.access_level",
             product: "2"
           }), " 탭을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-access-level-tab.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "출입 그룹 목록에서 수정할 출입 그룹을 클릭하세요."
+          children: "출입 등급 목록에서 수정할 출입 등급을 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -263,8 +249,8 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "deleteAccessGroup",
-      children: "출입 그룹 삭제"
+      id: "deleteAccessLevel",
+      children: "출입 등급 삭제"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -283,22 +269,24 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "access_control.tab.access_group",
+            sid: "access_control.tab.access_level",
             product: "2"
           }), " 탭을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "출입 그룹 목록에서 삭제할 출입 그룹의 체크박스를 클릭하세요."
+          children: "출입 등급 목록에서 삭제할 출입 등급의 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 오른쪽 상단에 있는 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.deleteAccessGroup",
+            sid: "button.deleteAccessLevel",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-delete-access-level.png"
     })]
   });
 }
