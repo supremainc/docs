@@ -311,6 +311,16 @@ export function Peripheral({ productLinks: productLinksProp }) {
       })}`
     },
     {
+      title: 'Door Module',
+      url: '/device/doormodule',
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/dm-20.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.dm20.desc",
+        message: "다중 출입문 보안 I/O 모듈"
+      })}`
+    },
+    {
       title: 'Secure Module',
       url: '#',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',

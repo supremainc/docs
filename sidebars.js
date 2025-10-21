@@ -697,7 +697,7 @@ const sidebars = {
       ]
     }
   ],
-  corestation40: [
+  corestation: [
     {
       type: 'category',
       label: 'CoreStation',
@@ -739,7 +739,7 @@ const sidebars = {
       ]
     }
   ],
-  doorinterface24: [
+  doorinterface: [
     {
       type: 'category',
       label: 'Door Interface',
@@ -757,6 +757,27 @@ const sidebars = {
         'device/doorinterface/product-specifications',
         'device/doorinterface/regulatory-information',
         'device/doorinterface/appendices'
+      ]
+    }
+  ],
+  doormodule: [
+    {
+      type: 'category',
+      label: 'Door Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doormodule/index',
+      },
+      items: [
+        'device/doormodule/safety-instructions',
+        'device/doormodule/getting-started',
+        'device/doormodule/installation',
+        'device/doormodule/product-specifications',
+        'device/doormodule/regulatory-information',
+        'device/doormodule/appendices'
       ]
     }
   ],
