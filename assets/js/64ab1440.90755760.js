@@ -49,8 +49,9 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "등록된 출입문을 삭제하는 방법을 안내합니다."
@@ -75,8 +76,17 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 오른쪽 상단에 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "button.delete",
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.deleteDoor",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-door-delete.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["확인 메시지 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.yes",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
@@ -87,7 +97,7 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "button.delete",
+          sid: "button.deleteDoor",
           product: "2"
         }), " 버튼은 출입문 목록에서 한 개 이상의 출입문을 선택해야 활성화됩니다."]
       })

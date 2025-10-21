@@ -245,7 +245,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.name",
             product: "2"
-          }), ": 출입문의 이름을 입력하세요. 출입문의 위치를 특정할 수 있는 이름을 입력하면 편리하게 관리할 수 있습니다."]
+          }), ": 출입문의 이름을 입력하세요. 편리한 관리를 위해 특정할 수 있는 이름을 입력하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -386,7 +386,10 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "timedAPB.title",
               product: "2"
-            }), "이 활성화되어 있다면 이 옵션은 사용할 수 없습니다."]
+            }), "이 활성화되어 있다면 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "door.apbUseDoorSensor",
+              product: "2"
+            }), " 옵션은 사용할 수 없습니다."]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -707,6 +710,8 @@ function _createMdxContent(props) {
         sid: "timedAPB.title",
         product: "2"
       }), " 섹션에서는 안티패스백 기능의 초기화 시간을 설정하여 사용자의 빈번한 입실을 효과적으로 제한할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-door-adding-time-litmit-apb.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -737,10 +742,12 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "door.alarm",
         product: "2"
-      }), " 섹션에서는 출입문이 강제로 열리거나, 열린 채로 방치되었거나 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 막을 수 있습니다. 원하는 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 섹션에서는 출입문이 강제로 열리거나, 열린 채로 방치되었거나 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 막을 수 있습니다. 알람을 추가할 항목에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.addplus",
         product: "2"
-      }), " 버튼을 클릭해 알람을 설정하세요."]
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-door-adding-alarm.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -768,7 +775,10 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "door.antiPassBack",
             product: "2"
-          }), ": 안티패스백 위반이 발생했을 때 알람 동작을 설정하세요."]
+          }), " / ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "timedAPB.title",
+            product: "2"
+          }), ": 안티패스백 또는 시간 제한 안티패스백 위반이 발생했을 때 알람 동작을 설정하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
