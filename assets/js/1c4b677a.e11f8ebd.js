@@ -69,9 +69,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcDown, IcTrash2, Image} = _components;
+  }, {Cmd, IcDown, IcImgLog, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcDown) _missingMdxReference("IcDown", true);
+  if (!IcImgLog) _missingMdxReference("IcImgLog", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -82,6 +83,12 @@ function _createMdxContent(props) {
       }), "는 카메라가 있는 장치에서 발생한 이벤트를 이미지로 확인할 수 있는 기능입니다. 출입문을 통과하는 사용자의 얼굴 이미지나 이벤트 발생 시의 상황을 장치의 카메라로 기록할 수 있습니다. 기록된 이미지는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
       }), " 페이지에서 실시간 이벤트를 통해 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-setting-device-imagelog-example.png"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["이미지 로그를 설정하면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "arena.eventTable.title"
+      }), " 목록에서 해당 이벤트에 대한 이미지 로그가 생성됩니다. 이벤트 항목의 가장 오른쪽에 ", (0,jsx_runtime.jsx)(IcImgLog, {}), " 버튼을 클릭하세요. 오른쪽 패널에서 해당 이벤트가 발생했을 때 촬영된 이미지를 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -311,6 +318,8 @@ function _createMdxContent(props) {
             sid: "setting.imageLog.deleteOption",
             product: "2"
           }), " 섹션에서 이미지 로그 삭제 조건을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-imagelog-delete-option.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -394,6 +403,8 @@ function _createMdxContent(props) {
             sid: "setting.imageLog.imageLogFilePath",
             product: "2"
           }), " 입력 필드에 이미지 로그를 저장할 경로를 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-imagelog-savepath.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -459,6 +470,8 @@ function _createMdxContent(props) {
             sid: "setting.image_log.display",
             product: "2"
           }), " 항목의 체크박스를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-setting-device-imagelog-userprofile.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
