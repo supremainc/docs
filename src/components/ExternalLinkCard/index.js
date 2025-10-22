@@ -282,7 +282,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'Input Module',
-      url: '#',
+      url: '/device/inputmodule',
       img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
       height: '90px',
       desc: `${translate({

@@ -739,6 +739,27 @@ const sidebars = {
       ]
     }
   ],
+  inputmodule: [
+    {
+      type: 'category',
+      label: 'Input Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/inputmodule/index',
+      },
+      items: [
+        'device/inputmodule/safety-instructions',
+        'device/inputmodule/getting-started',
+        'device/inputmodule/installation',
+        'device/inputmodule/product-specifications',
+        'device/inputmodule/regulatory-information',
+        'device/inputmodule/appendices'
+      ]
+    }
+  ],
   doorinterface: [
     {
       type: 'category',

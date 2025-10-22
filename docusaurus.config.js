@@ -270,6 +270,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'Input Module',
+                docId: 'device/inputmodule/index'
+              },
+              {
+                type: 'doc',
                 label: 'Door Interface',
                 docId: 'device/doorinterface/index'
               },
