@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-diretory-integration-mdx-cb6.json
-var site_docs_platform_biostar_x_settings_diretory_integration_mdx_cb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"구역 구성하기","permalink":"/docs/platform/biostar_x/settings-map-manage-area"},"next":{"title":"리모트 액세스 설정하기","permalink":"/docs/platform/biostar_x/settings-remote-access"}}')
+var site_docs_platform_biostar_x_settings_diretory_integration_mdx_cb6_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-diretory-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-diretory-integration","permalink":"/docs/platform/biostar_x/settings-diretory-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-diretory-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-diretory-integration","title":"디렉토리 연동 설정하기","description":"Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관리하는 방법을 안내합니다.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"방문자 설정","permalink":"/docs/platform/biostar_x/settings-visitor"},"next":{"title":"리모트 액세스 설정하기","permalink":"/docs/platform/biostar_x/settings-remote-access"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -134,14 +134,14 @@ function _usercustomfield_createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "의 사용자 필드와 맵핑할 ", (0,jsx_runtime.jsx)("strong", {
         children: props.name
       }), " 필드를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "settings.activeDirectory.FieldConfiguration",
         product: "2"
       }), " 섹션에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar 2"
+        children: "BioStar X"
       }), "의 사용자 필드로 사용할 ", (0,jsx_runtime.jsx)("strong", {
         children: props.name
       }), "의 필드를 선택하세요."]
@@ -151,7 +151,7 @@ function _usercustomfield_createMdxContent(props) {
       type: "info",
       children: [(0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar 2"
+          children: "BioStar X"
         }), "의 각 사용자 필드는 ", (0,jsx_runtime.jsx)("strong", {
           children: props.name
         }), "의 사용자 정보와 일치하는 항목을 맵핑할 수 있도록 기본 설정되어 있습니다. 기본 설정된 필드값이 아닌 다른 필드값을 선택하려면 ", (0,jsx_runtime.jsx)(Cmd, {

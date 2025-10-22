@@ -567,7 +567,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "방문객"
+                children: "방문자"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "시스템"

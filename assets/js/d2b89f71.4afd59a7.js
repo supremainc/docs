@@ -674,7 +674,7 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStar 2 Mobile 2.4.1 이상"
+              children: "BioStar X Mobile 1.0.0 이상"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -738,7 +738,7 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStar 2 Mobile 2.4.1 이상"
+              children: "BioStar X Mobile 1.0.0 이상"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
