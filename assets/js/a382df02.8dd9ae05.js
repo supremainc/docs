@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-server-https-mdx-a38.json
-var site_docs_platform_biostar_x_settings_server_https_mdx_a38_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-https","title":"HTTPS 인증서 설치하기","description":"BioStar X를 HTTPS로 연결하려면 BioStar X가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다.","source":"@site/docs/platform/biostar_x/settings-server-https.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-https","permalink":"/docs/platform/biostar_x/settings-server-https","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-https.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-https","title":"HTTPS 인증서 설치하기","description":"BioStar X를 HTTPS로 연결하려면 BioStar X가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다.","keywords":["HTTPS","인증서"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 상세 설정하기","permalink":"/docs/platform/biostar_x/settings-server-server"},"next":{"title":"라이선스 활성화하기","permalink":"/docs/platform/biostar_x/settings-license"}}')
+var site_docs_platform_biostar_x_settings_server_https_mdx_a38_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-server-https","title":"HTTPS 인증서 설치하기","description":"BioStar X를 HTTPS로 연결하려면 BioStar X를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.","source":"@site/docs/platform/biostar_x/settings-server-https.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-server-https","permalink":"/docs/platform/biostar_x/settings-server-https","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-server-https.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-server-https","title":"HTTPS 인증서 설치하기","description":"BioStar X를 HTTPS로 연결하려면 BioStar X를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.","keywords":["HTTPS","인증서"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 상세 설정하기","permalink":"/docs/platform/biostar_x/settings-server-server"},"next":{"title":"라이선스 활성화하기","permalink":"/docs/platform/biostar_x/settings-license"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'settings-server-https',
 	title: 'HTTPS 인증서 설치하기',
-	description: 'BioStar X를 HTTPS로 연결하려면 BioStar X가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다.',
+	description: 'BioStar X를 HTTPS로 연결하려면 BioStar X를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.',
 	keywords: [
 		'HTTPS',
 		'인증서'
@@ -81,9 +81,11 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["BioStar X를 HTTPS로 연결하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다."]
+      }), "를 HTTPS로 연결하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "인증서-설치가-필요한-경우",
       children: "인증서 설치가 필요한 경우"
@@ -130,8 +132,8 @@ function _createMdxContent(props) {
           children: ["다운로드한 파일의 압축을 해제하고, ", (0,jsx_runtime.jsx)(_components.em, {
             children: "cert-register.exe"
           }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enrollment Certification"
-          }), " 창이 나타납니다."]
+            children: "Enroll Certificate"
+          }), " 프로그램이 실행됩니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -179,7 +181,7 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Enrollment Certification"
+          children: "Enroll Certificate"
         }), "에서 입력하는 IP 주소는 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
         }), "에 설정된 IP 주소와 동일해야 합니다. ", (0,jsx_runtime.jsx)(Cmd, {
@@ -235,8 +237,8 @@ function _createMdxContent(props) {
           children: ["다운로드한 파일의 압축을 해제한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "cert-register.exe"
           }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enrollment Certification"
-          }), " 창이 나타납니다."]
+            children: "Enroll Certificate"
+          }), " 프로그램이 실행됩니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -348,8 +350,8 @@ function _createMdxContent(props) {
           children: ["다운로드한 파일의 압축을 해제한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "cert-register.exe"
           }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Enrollment Certification"
-          }), " 창이 나타납니다."]
+            children: "Enroll Certificate"
+          }), " 프로그램이 실행됩니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

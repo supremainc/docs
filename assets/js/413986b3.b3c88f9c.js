@@ -64,7 +64,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "커스텀 사용자 필드 추가하기",
-  "id": "커스텀-사용자-필드-추가하기",
+  "id": "adding-custom-user-fields",
   "level": 2
 }, {
   "value": "카드 템플릿 속성 ID",
@@ -475,7 +475,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "새 사용자가 생성되고 사용자 정보를 가진 카드 템플릿으로 카드가 인쇄됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커스텀-사용자-필드-추가하기",
+      id: "adding-custom-user-fields",
       children: "커스텀 사용자 필드 추가하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "커스텀 사용자 필드를 추가한 카드 템플릿으로 카드를 인쇄할 수 있습니다."

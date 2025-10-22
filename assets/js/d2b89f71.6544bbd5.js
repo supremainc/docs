@@ -77,6 +77,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    code: "code",
     h2: "h2",
     h3: "h3",
     li: "li",
@@ -86,11 +87,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Details, DocLink, IcDown, IcTrash2, Image} = _components;
+  }, {Cmd, Details, DocLink, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Details) _missingMdxReference("Details", true);
   if (!DocLink) _missingMdxReference("DocLink", true);
-  if (!IcDown) _missingMdxReference("IcDown", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -167,7 +167,7 @@ function _createMdxContent(props) {
         product: "2"
       }), " 섹션에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 기본 정보를 설정할 수 있습니다."]
+      }), "의 기본 정보를 확인하거나  설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-server-general.png",
       className: "none"
@@ -177,26 +177,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.biostarIPAdress",
             product: "2"
-          }), ": 서버 IP 주소를 설정하세요. 특정 IP 주소를 사용하려면 ", (0,jsx_runtime.jsx)(IcDown, {}), "을 클릭하고 목록에서 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.ipAddress.any",
-            product: "2"
-          }), "을 선택하면 서버가 자동으로 IP 주소를 할당받습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.biostarPort",
-            product: "2"
-          }), ": 서버 포트를 변경할 수 있습니다. 원하는 포트 번호를 입력하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.sessionTimeout",
-            product: "2"
-          }), ": 세션 만료 시간을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에 로그인한 뒤 설정한 시간 동안 조작이 없다면 자동으로 로그아웃됩니다."]
+          }), ": 서버 IP 주소를 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -211,9 +192,25 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.server.biostarPort",
+            product: "2"
+          }), ": 서버 포트를 변경할 수 있습니다. 원하는 포트 번호를 입력하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.server.logRetainDays",
             product: "2"
           }), ": 로그 저장 기간은 1~120까지 설정할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.sessionTimeout",
+            product: "2"
+          }), ": 세션 만료 시간을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에 로그인한 뒤 설정한 시간 동안 조작이 없다면 자동으로 로그아웃됩니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -512,7 +509,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "사용자 정보를 등록할 때 지문 또는 얼굴, 카드 크리덴셜을 등록하기 위한 자세한 내용은 다음 문서를 참고하세요."
+            children: "사용자 정보를 등록할 때 지문 또는 얼굴, 카드 크리덴셜 등록에 대한 자세한 내용은 다음 문서를 참고하세요."
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
@@ -598,11 +595,17 @@ function _createMdxContent(props) {
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "파일명은 최소 1자~최대 120자까지 가능합니다."
+                    children: "파일명은 최소 1자에서 최대 120자까지 가능합니다."
                   }), "\n"]
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "파일명 제약사항: 파일명은 영숫자, 밑줄(_), 하이픈(-)을 사용하고, 확장자를 구분할 때는 점(.)을 사용합니다."
+                  children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                    children: ["파일명 제약사항: 파일명은 영숫자, 밑줄(", (0,jsx_runtime.jsx)(_components.code, {
+                      children: "_"
+                    }), "), 하이픈(", (0,jsx_runtime.jsx)(_components.code, {
+                      children: "-"
+                    }), ")을 사용하고, 확장자를 구분할 때는 점(", (0,jsx_runtime.jsx)(_components.code, {
+                      children: "."
+                    }), ")을 사용합니다."]
                   }), "\n"]
                 }), "\n"]
               })
@@ -625,7 +628,7 @@ function _createMdxContent(props) {
             children: ["커스텀 사용자 필드의 순서를 변경하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "setting.server.custom_field.order",
               product: "2"
-            }), " 열의 숫자를 변경하세요. 추가된 필드의 위치가 변경됩니다."]
+            }), " 열의 숫자를 변경하세요. 해당 필드의 위치가 변경됩니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -642,6 +645,13 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["사용자 정보 등록 및 수정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "how-to-guide-user",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["커스텀 사용자 필드를 추가한 사용자 정보를 카드로 인쇄할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-card-printer#adding-custom-user-fields",
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
@@ -824,8 +834,10 @@ function _createMdxContent(props) {
           }), ": 한 번에 매칭할 수 있는 최대 서버 매칭 수를 설정할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
-          children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "이 옵션은 PC의 CPU 성능에 따라 달라질 수 있습니다."
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["이 옵션은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "를 설치한 서버 PC의 CPU 성능에 따라 달라질 수 있습니다."]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -849,7 +861,9 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "common.serverMatching",
           product: "2"
-        }), "은 어드밴스(Advanced) 이상의 라이선스에서 기능 추가 옵션(Feature Add-ons)을 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        }), "은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 이상의 라이선스에서 기능 추가 옵션(Feature Add-ons)을 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing",
           children: "다음 문서"
         }), "를 참고하세요."]
@@ -901,7 +915,7 @@ function _createMdxContent(props) {
       id: "storevisualfaceimage",
       children: "얼굴 이미지 저장하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "얼굴을 크리덴셜로 등록할 때 실제 이미지와 템플릿을 모두 저장하도록 하거나 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다."
+      children: "얼굴을 크리덴셜로 등록할 때 실제 이미지와 템플릿을 모두 저장하도록 하거나, 실제 이미지는 저장하지 않고 템플릿만 저장하도록 설정할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
