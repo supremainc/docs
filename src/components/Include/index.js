@@ -3,7 +3,7 @@ import MDXContents from '@theme-original/MDXContent';
 import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function InDoc ({children, product, pages}) {
+export default function InDoc ({children, product, pages, type, ref}) {
     const { i18n: {currentLocale} } = useDocusaurusContext();
     const location = useLocation();
     
@@ -20,5 +20,8 @@ export default function InDoc ({children, product, pages}) {
         const isPage = Pages.includes(cPage[lastPath]);
 
         return isPage ? <MDXContents>{children}</MDXContents> : null;
+    } else if (type && ref) {
+        const isMatch = ref.split(',').map(t => t.trim()).includes(type);
+        return isMatch ? <MDXContents>{children}</MDXContents> : null;
     }
 }
