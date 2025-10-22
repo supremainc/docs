@@ -114,10 +114,6 @@ const settings_credential_mobile_access_card_toc = [{
   "id": "biostar-x-mobile-access-setup",
   "level": 2
 }, {
-  "value": "설정 옵션 안내",
-  "id": "setting",
-  "level": 3
-}, ...toc, {
   "value": "장치 등록",
   "id": "registerDevice",
   "level": 2
@@ -131,7 +127,6 @@ function settings_credential_mobile_access_card_createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -383,76 +378,52 @@ function settings_credential_mobile_access_card_createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
               children: "각 항목을 설정하세요."
+            }), "\n", (0,jsx_runtime.jsx)(Image, {
+              src: "/img/biostarx-settings-credentail-mobile-access.png"
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "setting.mobileCredential.setting",
+                    product: "2"
+                  }), ": 모바일 출입 카드 사용 여부를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "common.use",
+                    product: "2"
+                  }), "으로 설정하면 사용자에게 모바일 출입 카드를 발급할 수 있습니다."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "setting.mobileCredential.siteId",
+                    product: "2"
+                  }), ": 에어팝 포털에서 개설한 사이트 ID를 입력하세요. 사이트 ID는 에어팝 포털의 ", (0,jsx_runtime.jsx)(_components.strong, {
+                    children: "설정"
+                  }), "(Settings) → ", (0,jsx_runtime.jsx)(_components.strong, {
+                    children: "사이트"
+                  }), "(Site) 메뉴 경로에서 확인할 수 있습니다."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "setting.mobileCredential.email",
+                    product: "2"
+                  }), ": 모바일 출입 카드 관리자 계정의 이메일 주소를 입력하세요."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "setting.mobileCredential.password",
+                    product: "2"
+                  }), ": 모바일 출입 카드 관리자 계정의 암호를 입력하세요."]
+                }), "\n"]
+              }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["모든 설정을 마쳤다면 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "button.close",
+                sid: "setting.mobileCredential.connect",
                 product: "2"
               }), " 버튼을 클릭하세요."]
-            }), "\n"]
-          }), "\n"]
-        }), (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-credentail-mobile-access.png"
-        }), (0,jsx_runtime.jsx)(_components.h3, {
-          id: "setting",
-          children: "설정 옵션 안내"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.setting",
-                product: "2"
-              }), ": 모바일 출입 카드 사용 여부를 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "common.use",
-                product: "2"
-              }), "으로 설정하면 사용자에게 모바일 출입 카드를 발급할 수 있습니다."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.siteType",
-                product: "2"
-              }), ": 사이트의 종류를 확인하세요."]
-            }), "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.mobileCredentialServerAddress",
-                product: "2"
-              }), ": 에어팝 포털의 도메인 주소를 확인하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.mobileCredentialPort",
-                product: "2"
-              }), ": 에어팝 포털의 포트 번호를 확인할 수 있습니다."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.siteId",
-                product: "2"
-              }), ": 에어팝 포털에서 개설한 사이트 ID를 입력하세요. 사이트 ID는 에어팝 포털의 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "설정"
-              }), "(Settings) → ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "사이트"
-              }), "(Site) 메뉴 경로에서 확인할 수 있습니다."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.email",
-                product: "2"
-              }), ": 모바일 출입 카드 관리자 계정의 이메일 주소를 입력하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "setting.mobileCredential.password",
-                product: "2"
-              }), ": 모바일 출입 카드 관리자 계정의 암호를 입력하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
