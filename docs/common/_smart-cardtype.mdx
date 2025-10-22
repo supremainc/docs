@@ -1,0 +1,67 @@
+<Include type={props.type} ref='mifare,custom-mifare'>
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: 암호화 종류를 <Cmd>SL1</Cmd> 또는 <Cmd>SL3</Cmd>로 설정할 수 있습니다.
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.card.format.desfireAvd' product='2' />: 타사에서 발급한 DESFire 카드를 사용할 수 있습니다. DESFire만 설정할 수 있습니다.
+
+</Include>
+
+<Include type={props.type} ref='mifare,custom-mifare,iclass,desfire,custom-desfire,iclassseos'>
+
+* <Cmd sid='setting.cardFormat.primaryKey' product='2' />: 스마트 카드와 카드 리더 사이의 통신을 암호화하는 키입니다.
+
+* <Cmd sid='setting.cardFormat.secondaryKey' product='2' />: 카드의 기본 사이트 키가 일치하지 않을 때 사용하여 인증을 수행할 수 있습니다. 보조 사이트 키는 섹션 상단의 <Cmd sid='setting.cardFormat.secondaryKey' product='2' /> 옵션을 활성화해야만 입력할 수 있습니다.
+
+</Include>
+
+<Include type={props.type} ref='mifare,iclass'>
+
+* <Cmd sid='setting.cardFormat.startBlockIndex' product='2' />: 각 템플릿이 저장될 시작 블록을 선택하세요. 이 블록은 사용자 정보가 저장될 블록의 인덱스이며, 사용자가 이미 스마트 카드를 사용하고 있다면 저장 가능한 블록을 설정하세요. 
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass'>
+
+* <Cmd sid='setting.cardFormat.blockIndex' product='2' />: 각 템플릿이 저장될 시작 블록을 선택하세요. 이 블록은 사용자 정보가 저장될 블록의 인덱스이며, 사용자가 이미 스마트 카드를 사용하고 있다면 저장 가능한 블록을 설정하세요.
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.appId' product='2' />: 애플리케이션 아이디를 설정하세요. <Cmd sid='setting.cardFormat.fileId' product='2' />를 포함하는 일종의 디렉토리 역할을 합니다.
+
+* <Cmd sid='setting.cardFormat.fileId' product='2' />: 파일 아이디를 설정하세요.
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: 암호화 종류를 <Cmd>DES/3DES</Cmd> 또는 <Cmd>AES</Cmd>로 설정할 수 있습니다.
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.skipBytes' product='2' />: 카드 번호를 읽어들일 시작점을 설정할 수 있습니다.
+
+* <Cmd sid='setting.cardFormat.dataSize' product='2' />: (설정한 <Cmd sid='setting.cardFormat.primaryKey' product='2' />와 <Cmd sid='setting.cardFormat.secondaryKey' product='2' />가 카드의 설정값과 동일한 경우) 읽어들일 카드의 데이터 크기를 설정할 수 있습니다.
+
+</Include>
+
+<Include type={props.type} ref='iclassseos'>
+
+* <Cmd sid='setting.cardFormat.ADF' product='2' />: 디지털 자격 증명이 저장되는 ADF 주소입니다.
+
+</Include>
+
+<Include type={props.type} ref='felica'>
+
+* <Cmd sid='setting.cardFormat.systemCode' product='2' />: FeliCa 카드를 읽기 위한 시스템 코드를 16진수로 최대 4자리까지 입력하세요.
+
+* <Cmd sid='setting.cardFormat.serviceCode' product='2' />: FeliCa 카드를 읽기 위한 서비스 코드를 16진수로 최대 4자리까지 입력하세요.
+
+* <Cmd sid='setting.cardFormat.idField' product='2' />: 카드에서 특정 영역을 읽을 수 있도록 설정합니다. <Cmd sid='button.addplus' product='2' /> 버튼을 클릭해 읽고자 하는 최대 8개 블록에 대해 설정할 수 있습니다. 
+
+  <Cmd sid='setting.cardFormat.blockNumber' product='2' />: 카드를 읽어들일 블록을 설정합니다. (0 ~ 150)
+
+</Include>
