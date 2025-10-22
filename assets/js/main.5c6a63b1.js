@@ -22978,9 +22978,9 @@ var routesChunkNames = __webpack_require__(15124);
         /*require.resolve*/(72615)
     ],
     "b3dd4bbc": [
-        ()=>__webpack_require__.e(/* import() | b3dd4bbc */ "8657").then(__webpack_require__.bind(__webpack_require__, 7492)),
+        ()=>__webpack_require__.e(/* import() | b3dd4bbc */ "8657").then(__webpack_require__.bind(__webpack_require__, 89837)),
         "@site/docs/platform/biostar_x/enroll-credential-mobile.mdx",
-        /*require.resolve*/(7492)
+        /*require.resolve*/(89837)
     ],
     "b4c15cff": [
         ()=>__webpack_require__.e(/* import() | b4c15cff */ "5626").then(__webpack_require__.bind(__webpack_require__, 79482)),

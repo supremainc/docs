@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8657"], {
-7492: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7274"], {
+15620: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ enroll_credential_mobile_frontMatter),
   toc: () => (/* binding */ enroll_credential_mobile_toc),
   "default": () => (/* binding */ enroll_credential_mobile_MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_enroll_credential_mobile_mdx_b3d_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_enroll_credential_mobile_mdx_034_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ enroll_credential_mobile_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-enroll-credential-mobile-mdx-b3d.json
-var site_docs_platform_biostar_x_enroll_credential_mobile_mdx_b3d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential-mobile","title":"모바일 출입 카드 등록하기","description":"슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다.","source":"@site/docs/platform/biostar_x/enroll-credential-mobile.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential-mobile","permalink":"/docs/platform/biostar_x/enroll-credential-mobile","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential-mobile.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential-mobile","title":"모바일 출입 카드 등록하기","description":"슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다.","keywords":["모바일 출입 카드","등록","크리덴셜","인증","카드"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"출입 카드 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-card"},"next":{"title":"QR/Barcode 등록하기","permalink":"/docs/platform/biostar_x/enroll-credential-qrbarcode"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-enroll-credential-mobile-mdx-034.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_enroll_credential_mobile_mdx_034_namespaceObject = JSON.parse('{"id":"platform/biostar_x/enroll-credential-mobile","title":"Enroll Mobile Access Cards","description":"Integrating with Suprema\'s Airfob Portal enables issuing mobile access cards to users.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/enroll-credential-mobile.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/enroll-credential-mobile","permalink":"/docs/en/platform/biostar_x/enroll-credential-mobile","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/enroll-credential-mobile.mdx","tags":[],"version":"current","frontMatter":{"id":"enroll-credential-mobile","title":"Enroll Mobile Access Cards","description":"Integrating with Suprema\'s Airfob Portal enables issuing mobile access cards to users.","keywords":["Mobile access card","Enrollment","Credentials","Certifications","card"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Enroll Access Card","permalink":"/docs/en/platform/biostar_x/enroll-credential-card"},"next":{"title":"Enroll QR/Barcode","permalink":"/docs/en/platform/biostar_x/enroll-credential-qrbarcode"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/common/_enroll-credential-mobile-notes.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_enroll-credential-mobile-notes.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -45,31 +45,31 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(_components.ul, {
     children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "common.info",
-          product: "2"
-        }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["If you have enabled the ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.photo",
           product: "2"
         }), ", ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.department",
           product: "2"
-        }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "team.user.detail.title",
           product: "2"
-        }), " 옵션을 활성화했다면, 해당 정보를 사용자의 모바일 출입 카드에 표시할 수 있습니다."]
+        }), " options in the ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.info",
+          product: "2"
+        }), " section, that information can be displayed on the user's mobile access card."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "common.validPeriod",
           product: "2"
-        }), " 항목은 에어팝 포털에서 사이트 생성 시 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "다이내믹"
-        }), " 사이트로 설정할 때 활성화됩니다. 사용자의 모바일 출입 카드의 만료 기간 및 사용 기간을 설정할 수 있습니다. 에어팝 포털 사용에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " field is activated when the site is created as a ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Dynamic"
+        }), " site in the Airfob Portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://airfob.zohodesk.com/portal",
-          children: "다음 링크"
-        }), "를 참고하세요."]
+          children: "following link"
+        }), "."]
       }), "\n"]
     }), "\n"]
   });
@@ -91,19 +91,19 @@ function _missingMdxReference(id, component) {
 }
 
 
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/enroll-credential-mobile.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/enroll-credential-mobile.mdx
 
 
 const enroll_credential_mobile_frontMatter = {
 	id: 'enroll-credential-mobile',
-	title: '모바일 출입 카드 등록하기',
-	description: '슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다.',
+	title: 'Enroll Mobile Access Cards',
+	description: 'Integrating with Suprema\'s Airfob Portal enables issuing mobile access cards to users.',
 	keywords: [
-		'모바일 출입 카드',
-		'등록',
-		'크리덴셜',
-		'인증',
-		'카드'
+		'Mobile access card',
+		'Enrollment',
+		'Credentials',
+		'Certifications',
+		'card'
 	],
 	isTranslationMissing: false
 };
@@ -117,16 +117,16 @@ const assets = {
 
 
 const enroll_credential_mobile_toc = [{
-  "value": "CSN 모바일",
+  "value": "CSN mobile",
   "id": "csnmobilecard",
   "level": 2
 }, {
-  "value": "카드 할당",
-  "id": "카드-할당",
+  "value": "Card assignment",
+  "id": "card-assignment",
   "level": 3
 }, ...toc, {
-  "value": "직접 입력",
-  "id": "직접-입력",
+  "value": "Enter manually",
+  "id": "enter-manually",
   "level": 3
 }, ...toc, ...toc];
 function enroll_credential_mobile_createMdxContent(props) {
@@ -147,183 +147,185 @@ function enroll_credential_mobile_createMdxContent(props) {
   if (!Image) enroll_credential_mobile_missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다. 모바일 출입 카드는 각 사용자가 개별 등록하거나 CSV 불러오기 기능을 이용해 다수의 사용자를 한 번에 등록할 수도 있습니다."
+      children: "Integrating with Suprema's Airfob Portal enables issuing mobile access cards to users. Users can enroll mobile access cards individually or use the CSV import feature to enroll multiple users at once."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "에어팝 포털에서 설정한 모바일 출입 카드 발송 방법에 따라 사용자의 이메일을 입력해야 합니다."
+      children: "You need to enter the user's email according to the method of sending mobile access cards set up in the AirPop portal."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "CSN 모바일 카드"
-            }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "템플릿 온 모바일"
-            }), " 중 하나만 사용할 수 있습니다."]
+            children: ["Only one of the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "CSN Mobile Card"
+            }), " or the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Template on Mobile"
+            }), " can be used."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이 기능은 에어팝 포털과 연동해야 사용할 수 있습니다. 에어팝 포털 연동 및 모바일 출입 카드 사용에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["This feature can only be used when linked with the Airfob portal. For more information regarding the Airfob Portal and mobile access card use, refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-credential-mobile-access-card",
-              children: "다음 문서"
-            }), "를 참고하세요."]
+              children: "the following"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "csnmobilecard",
-      children: "CSN 모바일"
+      children: "CSN mobile"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자에게 CSN 모바일 출입 카드를 발급할 수 있습니다."
+      children: "You can issue CSN mobile access cards to users."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "카드-할당",
-      children: "카드 할당"
+      id: "card-assignment",
+      children: "Card assignment"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.credential",
-            product: "2"
-          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.mobileCredential",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.credential",
+            product: "2"
+          }), " section."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.header.mobile",
             product: "2"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " window appears, select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardType",
             product: "2"
-          }), " 옵션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " option and select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardEnrol.cardTypeCsnMobile",
             product: "2"
-          }), "을 선택하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.registrationOption",
             product: "2"
-          }), " 옵션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " options, select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.assignCard",
             product: "2"
-          }), "을 선택하세요."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-new-user-credential-mobile-csn-assign.png"
+          src: "/img/biostarx-new-user-credential-mobile-csn-assign.png",
+          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "카드 목록에서 할당하려는 카드를 선택하거나 검색하세요."
+          children: "Select or search for the card desired to assign from the card list."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.info",
             product: "2"
-          }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.validPeriod",
             product: "2"
-          }), "을 설정하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.enroll",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(MDXContent, {})
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "직접-입력",
-      children: "직접 입력"
+      id: "enter-manually",
+      children: "Enter manually"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.credential",
-            product: "2"
-          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.mobileCredential",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.credential",
+            product: "2"
+          }), " section."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.header.mobile",
             product: "2"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " window appears, select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardType",
             product: "2"
-          }), " 옵션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " option and select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardEnrol.cardTypeCsnMobile",
             product: "2"
-          }), "을 선택하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.registrationOption",
-            product: "2"
-          }), " 옵션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.enterManually",
             product: "2"
-          }), "을 선택하세요."]
+          }), " from the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.registrationOption",
+            product: "2"
+          }), " options."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-new-user-credential-mobile-csn.png"
+          src: "/img/biostarx-new-user-credential-mobile-csn.png",
+          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "zone.intrusion.inputType",
             product: "2"
-          }), " 옵션을 선택하세요."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "user.random.cardid",
                 product: "2"
-              }), ": 자동으로 카드 아이디를 생성합니다."]
+              }), ": Automatically generate a card ID."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.useUserId",
                 product: "2"
-              }), ": 사용자 아이디를 카드 아이디로 사용합니다."]
+              }), ": Uses the user ID as the card ID."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "user.manual.input",
                 product: "2"
-              }), ": 카드 아이디를 직접 입력할 수 있습니다."]
+              }), ": Allows manual entry of the card ID."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.info",
             product: "2"
-          }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.validPeriod",
             product: "2"
-          }), "을 설정하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.enroll",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -331,16 +333,16 @@ function enroll_credential_mobile_createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(MDXContent, {}), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이메일을 통해 전송한 활성화 코드를 사용자가 분실하거나 삭제하여 활성화 링크를 다시 발급하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "재전송"
-            }), " 버튼을 클릭하세요."]
+            children: ["If the user has lost or deleted the activation link sent via email, click the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "resend"
+            }), " button to reissue the activation link."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["CSN 모바일 애플리케이션에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information about the CSN mobile application, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://www.csn.edu/csn-mobile-apps",
-              children: "다음 링크"
-            }), "를 참고하세요."]
+              children: "following link"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })]
@@ -352,132 +354,129 @@ function enroll_credential_mobile_createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "템플릿 온 모바일"
-      }), "은 사용자의 바이오메트릭 템플릿을 모바일 기기에 저장하는 모바일 출입 카드입니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Template on Mobile"
+      }), " is a mobile access card that stores the user's biometric template on a mobile device. It can authenticate biometrically without storing user data on the ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버, 에어팝 포털(Airfob Portal)과 장치에 사용자 데이터를 저장하지 않고도 바이오메트릭으로 인증할 수 있습니다."]
+      }), " server or the AirPop portal (Airfob Portal) and device."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["이 기능은 바이오메트릭을 크리덴셜로 사용하고 싶으나 개인정보 보호로 인해 서버 및 장치에 생체 정보를 저장할 수 없는 환경에서 유용하게 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "템플릿 온 모바일"
-      }), "의 발급과 바이오메트릭 템플릿 등록 과정이 따로 진행되기 때문에, 사용자는 관리자와 대면하지 않고도 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "템플릿 온 모바일"
-      }), " 지원 장치에서 직접 얼굴을 등록할 수 있습니다."]
+      children: ["This feature is useful for environments that want to use biometrics as credentials but cannot store biometric information on the server and device due to privacy concerns. Since the issuance of ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Template on Mobile"
+      }), " and the biometric template registration process are conducted separately, users can enroll their face directly on ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Template on Mobile"
+      }), " supported devices without facing an administrator."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.credential",
-            product: "2"
-          }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.mobileCredential",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button in the ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.credential",
+            product: "2"
+          }), " section."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.header.mobile",
             product: "2"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " window appears, select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardType",
             product: "2"
-          }), " 옵션에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " option and select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardEnroll.cardTypeTemplateOnMobile",
             product: "2"
-          }), "을 선택하세요."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-new-user-credential-mobile-tom.png"
+          src: "/img/biostarx-new-user-credential-mobile-tom.png",
+          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select the desired card type from ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.cardModeLong",
             product: "2"
-          }), " 옵션에서 원하는 카드 종류를 선택하세요."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "user.accessOnCard",
                 product: "2"
-              }), ": 사용자의 정보(카드 ID, PIN, 출입 그룹, 기간, 개인 인증 모드)를 카드에 저장할 수 있습니다."]
+              }), ": User information (card ID, PIN, access group, duration, private authentication mode) can be stored on the card."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "user.secureCredentialCard",
                 product: "2"
-              }), ": 보안 크리덴셜 카드입니다. 사용자의 카드 ID, PIN 데이터를 카드에 저장할 수 있습니다."]
+              }), ": Secure credential card. User card ID and PIN data can be stored."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.info",
             product: "2"
-          }), "와 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " and ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.validPeriod",
             product: "2"
-          }), "을 설정하세요."]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.enroll",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " button."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["등록한 사용자의 메일 주소로 발급 메일을 발송합니다. 메일의 링크를 통해 에어팝 패스(Airfob Pass) 애플리케이션을 설치하고, 모바일 기기에 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "템플릿 온 모바일"
-      }), " 발급을 완료해야 사용할 수 있습니다."]
+      children: ["An issuance email will be sent to the registered user's email address. The user must install the Airfob Pass application through the link in the email to complete the issuance of the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Template on Mobile"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "tip",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "템플릿 온 모바일 인증 방법"
+          children: "How to Template on Mobile Authentication"
         })
-      }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "사용자는 템플릿 온 모바일을 발급받은 모바일 기기를 장치에 태그하고, 화면의 안내에 따라 얼굴을 인증하세요."
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["The user tags the mobile device that issued the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Template on Mobile"
+        }), " against the auth device and follows the on-screen prompts to authenticate their face."]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(MDXContent, {}), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "템플릿 온 모바일"
-            }), "을 사용할 수 있는 장치와 펌웨어 버전은 아래 목록을 참고하세요."]
+            children: ["For devices and firmware versions that support ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Template on Mobile"
+            }), ", refer to the list below."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioStation 3 펌웨어 1.2.0 이상"
+                children: "BioStation 3 firmware version 1.2.0 or higher"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioEntry W3 펌웨어 1.0.0 이상"
+                children: "BioEntry W3 firmware version 1.0.0 or higher"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "FaceStation F2 펌웨어 2.2.0 이상"
+                children: "FaceStation F2 Firmware version 2.2.0 or higher"
               }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["모바일 출입 카드는 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "CSN 모바일 카드"
-            }), "와 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "템플릿 온 모바일"
-            }), " 중 하나만 발급할 수 있습니다."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "템플릿 온 모바일"
-            }), "은 사용자당 하나만 발급할 수 있습니다."]
+            children: ["Only one mobile access card can be issued: either ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "CSN mobile card"
+            }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Template on Mobile"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })]
