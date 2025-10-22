@@ -1,59 +1,65 @@
 ---
 id: settings-card-printer
 title: 카드 인쇄하기
-description: BioStar X와 cardPresso를 연동하여 BioStar X에서 사용자가 원하는 디자인의 카드를 인쇄할 수 있습니다.
+description: BioStar X와 cardPresso를 연동하여 사용자가 원하는 디자인의 카드를 인쇄할 수 있습니다.
 keywords: [cardPresso, 카드 프린터]
 ---
 
-BioStar X와 cardPresso를 연동하여 BioStar X에서 사용자가 원하는 디자인의 카드를 인쇄할 수 있습니다.
+**BioStar X**와 cardPresso를 연동하여 사용자가 원하는 디자인의 카드를 인쇄할 수 있습니다. cardPresso는 카드 디자인 및 인쇄를 위한 전문 소프트웨어입니다. cardPresso를 사용하면 다양한 카드 템플릿을 생성하고 사용자 정보를 카드에 맞게 배치할 수 있습니다.
 
-## cardPresso 설치 및 설정하기 {#installing-configuring-cardPresso}
+## 시작하기 전에
 
-BioStar X의 카드 프린터 기능을 사용하려면 cardPresso 프로그램을 아래와 같이 설치 및 설정하세요.
+**BioStar X**의 카드 프린터 기능을 사용하려면 cardPresso 프로그램을 설치하고 **BioStar X**와 연결해야 합니다. cardPresso 프로그램의 웹 인쇄 서버 기능을 사용하려면 cardPresso XXL edition 라이선스가 필요합니다.
 
-1. cardPreso를 이용하여 카드를 인쇄하려는 PC에 최신 버전의 cardPresso를 다운로드하세요. 다운로드 경로는 [다음 링크](https://www.cardpresso.com/downloads-cp)를 참고하세요.
+:::info
+
+* cardPresso 프로그램의 라이선스 유형에 대한 자세한 내용은 [cardPresso Editions](https://www.cardpresso.com/cardpresso-software/editions/) 페이지를 참고하세요.
+
+* 웹 인쇄 서버 기능은 Windows 운영체제에서만 지원됩니다.
+
+:::
+
+### cardPresso 설치 및 설정하기 {#installing-configuring-cardPresso}
+
+cardPresso 프로그램을 설치하고 웹 인쇄 서버를 설정하려면 아래 단계를 따르세요. 
+
+:::note
+
+설치 버전에 따라 메뉴 경로나 화면이 다를 수 있습니다.
+
+:::
+
+1. 웹 인쇄 서버로 운영할 PC의 운영체제에 맞는 최신 버전의 cardPresso를 [cardPresso Download](https://www.cardpresso.com/downloads-cp)에서 다운로드하세요. 
 
 1. 프로그램을 설치하고 cardPresso에서 발급한 라이선스를 활성화하세요.
 
-    * 라이선스 유형: cardPresso XXL edition
+1. cardPresso를 실행한 후 카드 템플릿을 제작하세요.
 
-    * BioStar X에서 지원하는 속성 ID는 아래와 같습니다. 카드 템플릿 생성 시, 속성 ID를 알맞은 **XML 항목 ID 이름**으로 입력하세요.
+    <Image src='/img/common/cardpresso-new-card-template.png' alone caption />
 
-    <div className='overflow-x'>
+1. 제작한 카드 템플릿을 **BioStar X**를 설치한 서버의 원하는 경로에 저장하세요. (예, *C:\template\example.card*)
 
-    | 목록 | BioStar X 사용자 데이터 | XML 항목 ID 이름 |
-    | :--: | :--: | :--: |
-    | 1 | User ID | ID |
-    | 2 | User Name | NAME |
-    | 3 | Email | EMAIL |
-    | 4 | Department | DEPARTMENT |
-    | 5 | Telephone | TELEPHONE |
-    | 6 | User Group | GROUP |
-    | 7 | Profile Photo | PHOTO |
-    | 8 | Custom Field 1 | CUSTOM1 |
-    | 9 | Custom Field 2 | CUSTOM2 |
-    | 10 | Custom Field 3 | CUSTOM3 |
-    | 11 | Custom Field 4 | CUSTOM4 |
-    | 12 | Custom Field 5 | CUSTOM5 |
-    | 13 | Custom Field 6 | CUSTOM6 |
-    | 14 | Custom Field 7 | CUSTOM7 |
-    | 15 | Custom Field 8 | CUSTOM8 |
-    | 16 | Custom Field 9 | CUSTOM9 |
-    | 17 | Custom Field 10 | CUSTOM10 |
+1. cardPresso를 설치한 PC의 바탕 화면에서 마우스 오른쪽 버튼을 클릭한 후 팝업 메뉴에서 **새로 만들기** → **바로 가기**를 클릭하세요. {/* New → Shortcut */}
 
-    </div>
+1. **항목 위치 입력** 필드에 아래와 같이 입력한 후 **다음** 버튼을 클릭하세요.
 
-1. cardPresso 웹 인쇄 서버에서 사용할 <Cmd sid="common.cardPrinter.cardTemplate" product='2' />의 저장 경로를 설정한 후 **저장**을 클릭하세요.
+    ```
+    "C:\Program Files (x86)\cardPresso\cardPresso.exe" /PRINTSERVER
+    ```
 
-    <Image src='/img/biostarx-settings-card-printer-installation.png' />
+    <Image src='/img/cardpresso-print-server-short-cut.png' width={400} />
 
-1. 바탕 화면에 생성된 cardPresso 아이콘을 마우스 우클릭하여 **바로 가기 만들기**를 실행하세요.
+    :::note
 
-1. 생성된 바로가기 아이콘에 마우스 우클릭하여 **속성**을 선택하세요. **바로가기** 탭의 **대상** 항목 끝부분에 한 칸 띄우고 `/PRINTSERVER`를 추가한 다음 **확인**을 클릭하세요. 이 바로가기가 웹 인쇄 서버 바로가기가 됩니다.
+    설치 환경에 따라 cardPresso가 설치된 경로가 다를 수 있습니다. cardPresso가 설치된 경로를 확인한 후, 위 경로를 알맞게 수정하세요.
 
-    <Image src='/img/biostarx-settings-card-printer-installation1.png' />
+    :::
 
-1. 수정한 cardPresso 웹 인쇄 서버 바로가기 아이콘을 더블 클릭하여 실행한 뒤 각 항목을 설정하세요.
+1. 바로 가기 이름을 입력한 후 **마침** 버튼을 클릭하세요.
+
+1. 바탕화면에 생성한 cardPresso 웹 인쇄 서버 바로가기 아이콘을 더블 클릭하여 실행하세요.
+
+1. cardPresso 웹 인쇄 서버 창이 나타나면, **설정** 아이콘을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-installation2.png' />
 
@@ -65,15 +71,19 @@ BioStar X의 카드 프린터 기능을 사용하려면 cardPresso 프로그램�
 
 1. 설정이 완료되면 **저장**을 클릭하세요.
 
-1. 우측 하단부에 있는 <Image src='/img/common/ico-card-printer-play.png' ico alone />을 클릭하여 서비스를 시작하세요. 알맞게 설정된 경우 아이콘이 <Image src='/img/common/ico-card-printer-stop.png' ico alone />로 변경되고 **listen OK** 메시지가 나타납니다.
-
-    * 카드 인쇄가 완료되기 전까지 창을 닫지 마세요.
+1. 오른쪽 하단에 있는 <Image src='/img/common/ico-card-printer-play.png' ico alone />을 클릭하여 서비스를 시작하세요. 알맞게 설정된 경우 아이콘이 <Image src='/img/common/ico-card-printer-stop.png' ico alone />로 변경되고 **listen OK** 메시지가 나타납니다.
 
     <Image src='/img/biostarx-settings-card-printer-installation3.png' />
 
+    :::note
+
+    카드 인쇄가 완료되기 전까지 창을 닫지 마세요.
+
+    :::
+
 ## cardPresso를 BioStar X에 연결하기
 
-cardPresso를 BioStar X에 연결하려면 BioStar X를 아래와 같이 설정하세요.
+cardPresso를 **BioStar X**에 연결하려면 아래와 같이 설정하세요.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -83,9 +93,9 @@ cardPresso를 BioStar X에 연결하려면 BioStar X를 아래와 같이 설정�
 
     <Image src='/img/biostarx-settings-card-printer.png' className='none' />
 
-    * <Cmd sid="common.cardPrinter.id" product='2' />: cardPresso 로그인 ID를 입력하세요.
+    * <Cmd sid="common.cardPrinter.id" product='2' />: cardPresso 로그인 ID를 입력하세요. (기본값: ADMIN)
 
-    * <Cmd sid="common.cardPrinter.password" product='2' />: cardPresso 로그인 암호를 입력하세요.
+    * <Cmd sid="common.cardPrinter.password" product='2' />: cardPresso 로그인 암호를 입력하세요. (기본값: admin)
 
     * <Cmd sid="common.cardPrinter.ipAddress" product='2' />: 웹 인쇄 서버로 동작하는 PC의 IP 주소를 입력하세요.
 
@@ -93,7 +103,7 @@ cardPresso를 BioStar X에 연결하려면 BioStar X를 아래와 같이 설정�
 
     * <Cmd sid="common.cardPrinter.printerName" product='2' />: 카드 프린터로 사용할 프린터 이름을 입력하세요. Windows의 **제어판** → **장치 및 프린터**에서 확인할 수 있습니다.
 
-    * <Cmd sid="common.cardPrinter.cardTemplate" product='2' />: <Cmd sid="button.plusAdd" product='2' />를 클릭해 <Cmd sid="common.cardPrinter.cardTemplate" product='2' />을 추가할 수 있습니다. <Cmd sid="setting.server.card_template.configure.th.name" product='2' />은 카드 템플릿의 파일명과 확장자가 포함된 전체 경로를 입력하세요.
+    * <Cmd sid="common.cardPrinter.cardTemplate" product='2' />: <Cmd sid="button.plusAdd" product='2' />를 클릭해 <Cmd sid="common.cardPrinter.cardTemplate" product='2' />을 추가할 수 있습니다. <Cmd sid="setting.server.card_template.configure.th.name" product='2' /> 항목에 카드 템플릿의 파일명과 확장자가 포함된 전체 경로를 입력하세요.
 
         * 카드 템플릿의 파일명은 영문, 숫자, 특수 기호로 설정할 수 있습니다.
 
@@ -103,7 +113,7 @@ cardPresso를 BioStar X에 연결하려면 BioStar X를 아래와 같이 설정�
 
     * <Cmd sid="common.cardPrinter.printTestLabel" product='2' />: 카드 템플릿을 테스트 인쇄할 수 있습니다.
 
-1. 설정이 완료되면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+1. 설정을 완료하면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
 
 ## 카드 템플릿 테스트 인쇄하기
 
@@ -113,11 +123,12 @@ Administrator 정보를 가진 카드 템플릿을 테스트 인쇄할 수 있�
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.cardPrinter" product='2' />를 클릭하세요.
 
-1. 인쇄하려는 카드 템플릿을 선택한 후, <Cmd sid="common.cardPrinter.testPrint" product='2' />를 클릭하세요.
+1. 인쇄하려는 카드 템플릿을 선택한 후, <Cmd sid="common.cardPrinter.testPrint" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer1.png' className='none' />
 
 1. Administrator 정보를 가진 카드 템플릿이 인쇄됩니다.
+
 
 ## 사용자별 카드 템플릿 인쇄하기 {#printing-card-template-per-user}
 
@@ -127,21 +138,21 @@ Administrator 정보를 가진 카드 템플릿을 테스트 인쇄할 수 있�
 
 1. 화면 오른쪽 상단의 <Cmd sid='team.user.dialog.newUser' /> 버튼을 클릭하세요. <Cmd sid='team.user.dialog.newUser' /> 창이 나타납니다.
 
-1. 양식을 입력하고 <Cmd sid="button.printCard" product='2' />를 클릭하세요.
+1. 양식을 입력하고 <Cmd sid="button.printCard" product='2' /> 버튼을 클릭하세요.
 
     * 사용자 정보는 영문, 숫자, 특수 기호로 입력할 수 있습니다.
 
     <Image src='/img/biostarx-settings-card-printer-user.png' />
 
-1. 인쇄하려는 카드 템플릿을 선택하고 <Cmd sid="common.cardPrinter.print" product='2' />를 클릭하세요.
+1. 인쇄하려는 카드 템플릿을 선택하고 <Cmd sid="common.cardPrinter.print" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
 
-1. 카드 인쇄 여부를 묻는 팝업창이 나타나면 <Cmd sid="common.cardPrinter.ok" product='2' />을 클릭하세요.
+1. 카드 인쇄 여부를 묻는 팝업창이 나타나면 <Cmd sid="common.cardPrinter.ok" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
 
-1. 새 사용자가 생성되고 사용자 정보를 가진 카드 템플릿으로 카드가 인쇄됩니다.
+새 사용자가 생성되고 사용자 정보를 가진 카드 템플릿으로 카드가 인쇄됩니다.
 
 ## 커스텀 사용자 필드 추가하기
 
@@ -149,15 +160,15 @@ Administrator 정보를 가진 카드 템플릿을 테스트 인쇄할 수 있�
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid="common.server" product='2' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' />를 클릭하세요.
 
-1. <Cmd sid="setting.server.custom_field.title" product='2' /> 항목에서 <Cmd sid="button.plusAdd" product='2' />를 클릭해 <Cmd sid="setting.server.custom_field.configure.th.name" product='2' />을 입력하고 <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />을 선택하세요. 추가한 <Cmd sid="setting.server.custom_field.title" product='2' />의 순서대로 카드 템플릿의 속성 **ID**가 결정됩니다.
-
-    * BioStar X 속성 ID 기준으로 **순서 1**은 **CUSTOM1**과 같습니다. BioStar X 속성 ID에 대한 자세한 내용은 [다음 문서](#installing-configuring-cardPresso)를 참고하세요.
+1. <Cmd sid='setting.server.userDeviceManagement' product='2' /> 섹션의 <Cmd sid="setting.server.custom_field.title" product='2' /> 항목에서 <Cmd sid="button.plusAdd" product='2' /> 버튼을 클릭해 <Cmd sid="setting.server.custom_field.configure.th.name" product='2' />을 입력하고 <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />을 선택하세요. 추가한 <Cmd sid="setting.server.custom_field.title" product='2' />의 순서대로 카드 템플릿의 속성 **ID**가 결정됩니다.
 
     <Image src='/img/biostarx-settings-card-printer-custom-user.png' />
 
-1. 설정이 완료되면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+    BioStar X 속성 ID 기준으로 **순서 1**은 **CUSTOM1**과 같습니다. BioStar X 속성 ID에 대한 자세한 내용은 [다음 문서](#card-template-attribute-ids)를 참고하세요.
+
+1. 설정을 완료하면 화면 가장 아래에 있는 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요.
 
 1. cardPresso 프로그램에서 **파일** → **템플릿 열기**를 클릭해 카드 템플릿 파일을 여세요. 새로운 속성을 추가하고 BioStar X 속성 ID 순서에 알맞은 **XML 항목 ID 이름**으로 **ID**를 입력하세요.
 
@@ -165,16 +176,47 @@ Administrator 정보를 가진 카드 템플릿을 테스트 인쇄할 수 있�
 
 1. 설정이 완료되면 **파일** → **저장**을 클릭하세요.
 
-1. BioStar X <Cmd sid='shell.header.user' /> 페이지에서 카드 템플릿을 적용할 사용자를 선택하세요. <Cmd sid="setting.server.custom_field.title" product='2' /> 항목에서 추가한 항목들이 나타납니다. 양식을 입력하고 <Cmd sid="button.printCard" product='2' />를 클릭하세요.
+1. **BioStar X**로 돌아와 <Cmd sid='shell.header.user' /> 페이지에서 카드 템플릿을 적용할 사용자를 선택하세요.
+
+1. 추가한 커스텀 사용자 필드 항목을 확인할 수 있습니다. 해당 양식에 맞게 입력하고 <Cmd sid="button.printCard" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-custom-user1.png' />
 
-1. 인쇄하려는 카드 템플릿을 선택하고 <Cmd sid="common.cardPrinter.print" product='2' />를 클릭하세요.
+1. 인쇄하려는 카드 템플릿을 선택하고 <Cmd sid="common.cardPrinter.print" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
 
-1. 카드 인쇄 여부를 묻는 팝업창이 나타나면 <Cmd sid="common.cardPrinter.ok" product='2' />을 클릭하세요.
+1. 카드 인쇄 여부를 묻는 팝업창이 나타나면 <Cmd sid="common.cardPrinter.ok" product='2' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
 
-1. 사용자 정보가 저장되고 커스텀 사용자 필드를 추가한 카드 템플릿으로 카드가 인쇄됩니다.
+사용자 정보가 저장되고 커스텀 사용자 필드를 추가한 카드 템플릿으로 카드가 인쇄됩니다.
+
+
+## 카드 템플릿 속성 ID {#card-template-attribute-ids}
+
+**BioStar X**에서 지원하는 속성 ID는 아래와 같습니다. 카드 템플릿 생성 시, 속성 ID를 알맞은 **XML 항목 ID 이름**으로 입력하세요.
+
+<div className='overflow-x cols3--20-40-40'>
+
+| 목록 | BioStar X 사용자 데이터 | XML 항목 ID 이름 |
+| :--: | :--: | :--: |
+| 1 | User ID | ID |
+| 2 | User Name | NAME |
+| 3 | Email | EMAIL |
+| 4 | Department | DEPARTMENT |
+| 5 | Telephone | TELEPHONE |
+| 6 | User Group | GROUP |
+| 7 | Profile Photo | PHOTO |
+| 8 | Custom Field 1 | CUSTOM1 |
+| 9 | Custom Field 2 | CUSTOM2 |
+| 10 | Custom Field 3 | CUSTOM3 |
+| 11 | Custom Field 4 | CUSTOM4 |
+| 12 | Custom Field 5 | CUSTOM5 |
+| 13 | Custom Field 6 | CUSTOM6 |
+| 14 | Custom Field 7 | CUSTOM7 |
+| 15 | Custom Field 8 | CUSTOM8 |
+| 16 | Custom Field 9 | CUSTOM9 |
+| 17 | Custom Field 10 | CUSTOM10 |
+
+</div>
