@@ -5,41 +5,50 @@ description: 설정된 퀵 액션을 메인화면에 추가할 수 있습니다.
 keywords: [퀵 액션, 커스텀 인터페이스]
 ---
 
-<Cmd sid="common.customInterface" product='2' /> 메뉴에서 퀵 액션 버튼을 추가하면 BioStar X 메인화면에서 간편하게 퀵 액션 버튼을 클릭하여 다수의 출입문을 한 번에 제어할 수 있습니다.
+<Cmd sid="common.customInterface" product='2' /> 메뉴에서 퀵 액션 버튼을 추가하면 **BioStar X** 메인 화면에서 간편하게 퀵 액션 버튼을 클릭하여 다수의 출입문을 한 번에 제어할 수 있습니다.
+
+:::info
 
 퀵 액션으로 사용할 <Cmd sid="common.triggerAndAction" product='2' />을 추가하려면 [다음 문서](settings-triger-and-action)를 참고하세요.
 
-## 메인화면에 퀵 액션 버튼 추가하기
+:::
+
+## 퀵 액션 버튼 추가하기
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.customInterface" product='2' />를 클릭하세요.
 
-1. <Cmd sid="common.quickActionLayout" product='2' />에서 <Cmd sid="button.plusAdd" product='2' />를 클릭하여 각 항목을 입력 및 선택하세요.
+    <Image src='/img/biostarx-settings-custom-interface.png' />
+
+1. <Cmd sid="common.quickActionLayout" product='2' /> 섹션에서 <Cmd sid="button.plusAdd" product='2' /> 버튼을 클릭하세요.
+
+
+1. <Cmd sid='settings.customInterface.quickAction.add' product='2' /> 창이 나타나면 각 항목을 입력하고 설정하세요.
 
     <Image src='/img/settings-custom-interface-add-quick-action.png' className='none' />
 
-    * <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />: 추가하려는 <Cmd sid="common.quickAction" product='2' />을 실행할 수 있는 <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />을 선택하세요. 복수로 선택할 수 있습니다.
+    * <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />: 추가하려는 퀵 액션을 실행할 수 있는 <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />을 선택하세요. 복수로 선택할 수 있습니다.
 
-    * <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />: 실행되게 할 <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />을 선택하세요. 복수로 선택할 수 있습니다.
+    * <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />: 실행할 <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />을 선택하세요. 복수로 선택할 수 있습니다.
 
-    * <Cmd sid="settings.customInterface.quickAction.confirmBeforeRun" product='2' />: 이 옵션을 활성화하면 메인화면에서 <Cmd sid="common.quickAction" product='2' /> 버튼을 눌렀을 때 <Cmd sid="common.quickAction" product='2' />의 실행 여부를 묻는 확인 팝업창이 나타납니다.
+    * <Cmd sid="settings.customInterface.quickAction.confirmBeforeRun" product='2' />: 이 옵션을 활성화하면 <Cmd sid="common.quickAction" product='2' /> 버튼을 눌렀을 때 실행 여부를 묻는 확인 팝업창이 나타납니다.
 
-1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요.
 
-1. <Cmd sid="common.customInterface" product='2' /> 화면에서 <Cmd sid="button.apply" product='2' />을 클릭하세요. BioStar X 상단 바에 추가한 <Cmd sid="common.quickAction" product='2' /> 버튼이 생성됩니다.
+1. 화면 오른쪽 하단의 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요. 
 
-    <Image src='/img/settings-custom-interface-main-quick-action.png' className='none' />
+**BioStar X** 화면의 오른쪽 상단 헤더 영역에 추가한 <Cmd sid="common.quickAction" product='2' /> 버튼이 생성됩니다. 생성한 <Cmd sid="common.quickAction" product='2' /> 버튼을 클릭해 <Cmd sid="common.triggerAndAction" product='2' />에서 설정한대로 동작하는지 확인하세요.
 
-    :::info
+<Image src='/img/settings-custom-interface-main-quick-action.png' className='none' />
 
-    * <Cmd sid="common.quickAction" product='2' /> 버튼은 메인화면의 상단 바에 최대 4개까지 추가할 수 있습니다.
+:::info
 
-    * 사용자에게 설정된 <Cmd sid="user.bioStarOperator" product='2' />에 따라 나타나는 <Cmd sid="common.quickAction" product='2' /> 버튼이 다를 수 있습니다.
+* <Cmd sid="common.quickAction" product='2' /> 버튼은 화면 상단 헤더 영역에 최대 4개까지 추가할 수 있습니다. 어느 페이지에서든 사용할 수 있도록 고정되어 있습니다.
 
-    :::
+* 사용자에게 설정된 <Cmd sid="user.bioStarOperator" product='2' />에 따라 사용할 수 있는 <Cmd sid="common.quickAction" product='2' /> 버튼이 다를 수 있습니다.
 
-1. 상단 바에 생성된 <Cmd sid="common.quickAction" product='2' /> 버튼을 클릭하면 <Cmd sid="common.triggerAndAction" product='2' />에서 설정한대로 동작합니다.
+:::
 
 ## 퀵 액션 버튼 수정하기
 
@@ -47,11 +56,13 @@ keywords: [퀵 액션, 커스텀 인터페이스]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.customInterface" product='2' />를 클릭하세요.
 
-1. 수정하고자 하는 퀵 액션 버튼 우측 열의 <IcEditUL /> 아이콘을 클릭한 다음 원하는 부분을 수정하고 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+1. 수정하려는 퀵 액션 버튼의 오른쪽에 <IcEditUL /> 버튼을 클릭하세요.
 
     <Image src='/img/settings-custom-interface-quick-action-layout.png' />
 
-1. <Cmd sid="common.customInterface" product='2' /> 화면에서 <Cmd sid="button.apply" product='2' />을 클릭하면 수정한 사항이 반영됩니다.
+1. 수정을 위한 팝업창이 나타나면 원하는 항목을 수정하고 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요.
+
+1. 수정 사항을 저장하려면 화면 오른쪽 하단의 <Cmd sid="button.apply" product='2' /> 버튼을 클릭하세요.
 
 ## 퀵 액션 버튼 삭제하기
 
@@ -59,10 +70,12 @@ keywords: [퀵 액션, 커스텀 인터페이스]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.customInterface" product='2' />를 클릭하세요.
 
-1. 삭제하고자 하는 퀵 액션 버튼 우측 열의 <IcTrash2 /> 아이콘을 클릭하세요.
+1. 삭제하려는 퀵 액션 버튼의 오른쪽에 <IcTrash2 /> 버튼을 클릭하세요.
 
-    <Image src='/img/settings-custom-interface-confirm.png' className='none' />
+    <Image src='/img/settings-custom-interface-quick-action-layout.png' />
 
 1. 삭제 확인 팝업창을 확인하고 <Cmd sid="button.yes" product='2' />를 클릭하세요.
 
-1. <Cmd sid="common.customInterface" product='2' /> 화면에서 <Cmd sid="button.apply" product='2' />을 클릭하면 삭제한 사항이 반영됩니다.
+    <Image src='/img/settings-custom-interface-confirm.png' className='none' />
+
+1. 삭제한 사항이 반영하려면 화면 오른쪽 하단의 <Cmd sid="button.apply" product='2' />을 클릭하세요.
