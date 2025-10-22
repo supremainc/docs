@@ -58,6 +58,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    code: "code",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -171,7 +172,13 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.emailContent.smtp",
             product: "2"
-          }), ": 이메일 발송을 위해 간이 우편 전송 프로토콜(Simple Mail Transfer Protocol, SMTP)을 설정하세요."]
+          }), ": 이메일 발송을 위해 간이 우편 전송 프로토콜(Simple Mail Transfer Protocol, SMTP)을 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.smtpSetting",
+            product: "2"
+          }), " 버튼을 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.emailContent.smtp",
+            product: "2"
+          }), " 설정 창이 나타납니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-email-smtp-option.png",
           className: "none"
@@ -195,7 +202,9 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.triggerAction.smtpServerAddr",
                 product: "2"
-              }), ": SMTP 서버 주소를 입력하세요. SMTP 서버 주소는 smtp.이메일 서비스 공급자.com과 같은 형태이며, SMTP 서버로 사용할 이메일의 설정 화면에서 확인할 수 있습니다."]
+              }), ": SMTP 서버 주소를 입력하세요. SMTP 서버 주소는 ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "smtp.{email-service-provider}.com"
+              }), "과 같은 형태이며, SMTP 서버로 사용할 이메일의 설정 화면에서 확인할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -242,7 +251,21 @@ function _createMdxContent(props) {
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "SMTP 서버를 2단계 인증이 설정된 이메일 계정으로 사용할 경우 해당 계정의 비밀번호 변경 시 다음 사항에 유의하세요. 2단계 인증을 설정하면 SMTP 암호는 해당 이메일 계정의 비밀번호가 아닌 2단계 인증으로 생성된 앱 비밀번호를 사용합니다. 이때 해당 이메일 계정의 비밀번호가 변경되면 앱 비밀번호는 자동으로 삭제되며, SMTP 암호는 사용할 수 없게 됩니다. 해당 이메일 계정의 비밀번호 변경 시 앱 비밀번호를 다시 생성한 뒤 SMTP 암호를 다시 설정하세요."
+                children: "SMTP 서버를 2단계 인증이 설정된 이메일 계정으로 사용할 경우 해당 계정의 비밀번호 변경 시 다음 사항에 유의하세요."
+              }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "2단계 인증을 설정하면 SMTP 암호는 해당 이메일 계정의 비밀번호가 아닌 2단계 인증으로 생성된 앱 비밀번호를 사용합니다."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "이때 해당 이메일 계정의 비밀번호가 변경되면 앱 비밀번호는 자동으로 삭제되며, SMTP 암호는 사용할 수 없게 됩니다."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "해당 이메일 계정의 비밀번호 변경 시 앱 비밀번호를 다시 생성한 뒤 SMTP 암호를 다시 설정하세요."
+                  }), "\n"]
+                }), "\n"]
               }), "\n"]
             }), "\n"]
           })
@@ -252,23 +275,20 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.emailContent.smtpTestMail",
             product: "2"
-          }), ": 확인을 위해 설정한 이메일을 수신할 이메일 주소를 입력한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": SMTP 설정에 문제가 없는지 확인하려면 수신할 이메일 주소를 입력한 후 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.smtpSettingTest",
             product: "2"
-          }), "를 클릭하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "얼굴-등록-모바일-링크-설정하기",
       children: "얼굴 등록 모바일 링크 설정하기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["얼굴 등록 모바일 링크를 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["이메일을 통해 사용자에게 얼굴 등록 모바일 링크를 전송하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.use",
         product: "2"
-      }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.notUse",
-        product: "2"
-      }), "으로 설정하면 이메일을 통해 사용자에게 얼굴 등록 모바일 링크를 전송할 수 없습니다."]
+      }), "으로 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-email-visual-face.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -333,10 +353,7 @@ function _createMdxContent(props) {
       children: ["이메일을 통해 사용자에게 QR/바코드를 발급하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.use",
         product: "2"
-      }), "으로 설정하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.notUse",
-        product: "2"
-      }), "으로 설정하면 이메일을 통해 사용자에게 QR/바코드를 전송할 수 없습니다."]
+      }), "으로 설정하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-email-qr.png",
       className: "none"
