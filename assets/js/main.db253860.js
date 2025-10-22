@@ -23103,9 +23103,9 @@ var routesChunkNames = __webpack_require__(15124);
         /*require.resolve*/(97078)
     ],
     "c3aab8a5": [
-        ()=>__webpack_require__.e(/* import() | c3aab8a5 */ "852").then(__webpack_require__.bind(__webpack_require__, 4183)),
+        ()=>__webpack_require__.e(/* import() | c3aab8a5 */ "852").then(__webpack_require__.bind(__webpack_require__, 10121)),
         "@site/docs/platform/biostar_x/settings-credential-smart-format.mdx",
-        /*require.resolve*/(4183)
+        /*require.resolve*/(10121)
     ],
     "c3cb0b23": [
         ()=>__webpack_require__.e(/* import() | c3cb0b23 */ "8078").then(__webpack_require__.bind(__webpack_require__, 4789)),

@@ -49,23 +49,22 @@ const toc = [{
 }, {
   "value": "설정 옵션 안내",
   "id": "setting",
-  "level": 3
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcEdit2, Image} = _components;
+  }, {Cmd, IcEdit, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  if (!IcEdit2) _missingMdxReference("IcEdit2", true);
+  if (!IcEdit) _missingMdxReference("IcEdit", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -92,14 +91,16 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 왼쪽 카드 형식 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.wiegand",
             product: "2"
           }), "를 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-credentail-card-wiegand-list.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Wiegand 형식 목록에 ", (0,jsx_runtime.jsx)(IcEdit2, {}), " 버튼을 클릭하세요."]
+          children: ["Wiegand 형식 목록에서 이름이 지정되지 않은 항목의 ", (0,jsx_runtime.jsx)(IcEdit, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -110,8 +111,6 @@ function _createMdxContent(props) {
             href: "#setting",
             children: "다음 문서"
           }), "를 참고하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-credential-wiegand-format.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -134,9 +133,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "setting",
       children: "설정 옵션 안내"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Wiegand 카드 형식을 추가하거나 수정할 때 아래 항목을 참고하여 비트 구성을 설정하세요."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-credential-wiegand-format.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
