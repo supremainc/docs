@@ -16,8 +16,8 @@
     "translate:file": "tsx src/plugins/translate/index.ts --file"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.18.1",
-    "@algolia/autocomplete-theme-classic": "^1.18.1",
+    "@algolia/autocomplete-js": "^1.19.4",
+    "@algolia/autocomplete-theme-classic": "^1.19.4",
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/faster": "^3.9.2",
     "@docusaurus/logger": "^3.9.2",
