@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["4755"], {
-34153: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["1114"], {
+18196: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -586,6 +586,9 @@ function checkOptions(options) {
    false ? 0 : void 0;
 }
 ;// CONCATENATED MODULE: ./node_modules/@algolia/autocomplete-core/dist/esm/utils/createCancelablePromiseList.js
+// Ensures multiple callers sync to the same promise.
+var _hasWaitPromiseResolved = true;
+var _waitPromise;
 function createCancelablePromiseList() {
   var list = [];
   return {
@@ -604,6 +607,22 @@ function createCancelablePromiseList() {
     },
     isEmpty: function isEmpty() {
       return list.length === 0;
+    },
+    wait: function wait(timeout) {
+      // Reuse promise if already exists. Keeps multiple callers subscribed to the same promise.
+      if (!_hasWaitPromiseResolved) {
+        return _waitPromise;
+      }
+
+      // Creates a promise which either resolves after all pending requests complete
+      // or the timeout is reached (if provided). Whichever comes first.
+      _hasWaitPromiseResolved = false;
+      _waitPromise = !timeout ? Promise.all(list) : Promise.race([Promise.all(list), new Promise(function (resolve) {
+        return setTimeout(resolve, timeout);
+      })]);
+      return _waitPromise.then(function () {
+        _hasWaitPromiseResolved = true;
+      });
     }
   };
 }
@@ -1438,6 +1457,44 @@ function isSearchResponseWithAutomaticInsightsFlag(items) {
 function getAutocompleteElementId(autocompleteInstanceId, elementId, source) {
   return [autocompleteInstanceId, source === null || source === void 0 ? void 0 : source.sourceId, elementId].filter(Boolean).join('-').replace(/\s/g, '');
 }
+;// CONCATENATED MODULE: ./node_modules/@algolia/autocomplete-core/dist/esm/utils/getPluginSubmitPromise.js
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = getPluginSubmitPromise_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function getPluginSubmitPromise_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return getPluginSubmitPromise_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return getPluginSubmitPromise_arrayLikeToArray(o, minLen); }
+function getPluginSubmitPromise_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+/**
+ * If a plugin is configured to await a submit event, this returns a promise
+ * for either the max timeout value found or until it completes.
+ * Otherwise, return undefined.
+ */
+var getPluginSubmitPromise_getPluginSubmitPromise = function getPluginSubmitPromise(plugins, pendingRequests) {
+  var waitUntilComplete = false;
+  var timeouts = [];
+  var _iterator = _createForOfIteratorHelper(plugins),
+    _step;
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var _plugin$__autocomplet, _plugin$__autocomplet2, _plugin$__autocomplet3;
+      var plugin = _step.value;
+      var value = (_plugin$__autocomplet = plugin.__autocomplete_pluginOptions) === null || _plugin$__autocomplet === void 0 ? void 0 : (_plugin$__autocomplet2 = (_plugin$__autocomplet3 = _plugin$__autocomplet).awaitSubmit) === null || _plugin$__autocomplet2 === void 0 ? void 0 : _plugin$__autocomplet2.call(_plugin$__autocomplet3);
+      if (typeof value === 'number') {
+        timeouts.push(value);
+      } else if (value === true) {
+        waitUntilComplete = true;
+        break; // break loop as bool overrides num array below
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+  if (waitUntilComplete) {
+    return pendingRequests.wait();
+  } else if (timeouts.length > 0) {
+    return pendingRequests.wait(Math.max.apply(Math, timeouts));
+  }
+  return undefined;
+};
 ;// CONCATENATED MODULE: ./node_modules/@algolia/autocomplete-core/dist/esm/onKeyDown.js
 function onKeyDown_typeof(obj) { "@babel/helpers - typeof"; return onKeyDown_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, onKeyDown_typeof(obj); }
 var onKeyDown_excluded = ["event", "props", "refresh", "store"];
@@ -1540,11 +1597,14 @@ function onKeyDown_onKeyDown(_ref) {
     if (store.getState().activeItemId === null || store.getState().collections.every(function (collection) {
       return collection.items.length === 0;
     })) {
-      // If requests are still pending when the panel closes, they could reopen
-      // the panel once they resolve.
-      // We want to prevent any subsequent query from reopening the panel
-      // because it would result in an unsolicited UI behavior.
-      if (!props.debug) {
+      var waitForSubmit = getPluginSubmitPromise_getPluginSubmitPromise(props.plugins, store.pendingRequests);
+      if (waitForSubmit !== undefined) {
+        waitForSubmit.then(store.pendingRequests.cancelAll); // Cancel the rest if timeout number is provided
+      } else if (!props.debug) {
+        // If requests are still pending when the panel closes, they could reopen
+        // the panel once they resolve.
+        // We want to prevent any subsequent query from reopening the panel
+        // because it would result in an unsolicited UI behavior.
         store.pendingRequests.cancelAll();
       }
       return;
@@ -1745,20 +1805,30 @@ function getPropGetters(_ref) {
   var getFormProps = function getFormProps(providedProps) {
     var inputElement = providedProps.inputElement,
       rest = getPropGetters_objectWithoutProperties(providedProps, _excluded3);
+    var handleSubmit = function handleSubmit(event) {
+      var _providedProps$inputE;
+      props.onSubmit(getPropGetters_objectSpread({
+        event: event,
+        refresh: refresh,
+        state: store.getState()
+      }, setters));
+      store.dispatch('submit', null);
+      (_providedProps$inputE = providedProps.inputElement) === null || _providedProps$inputE === void 0 ? void 0 : _providedProps$inputE.blur();
+    };
     return getPropGetters_objectSpread({
       action: '',
       noValidate: true,
       role: 'search',
       onSubmit: function onSubmit(event) {
-        var _providedProps$inputE;
         event.preventDefault();
-        props.onSubmit(getPropGetters_objectSpread({
-          event: event,
-          refresh: refresh,
-          state: store.getState()
-        }, setters));
-        store.dispatch('submit', null);
-        (_providedProps$inputE = providedProps.inputElement) === null || _providedProps$inputE === void 0 ? void 0 : _providedProps$inputE.blur();
+        var waitForSubmit = getPluginSubmitPromise_getPluginSubmitPromise(props.plugins, store.pendingRequests);
+        if (waitForSubmit !== undefined) {
+          waitForSubmit.then(function () {
+            return handleSubmit(event);
+          });
+        } else {
+          handleSubmit(event);
+        }
       },
       onReset: function onReset(event) {
         var _providedProps$inputE2;
@@ -2363,6 +2433,17 @@ var LoadingIcon_LoadingIcon = function LoadingIcon(_ref) {
   element.setAttribute('width', '20');
   element.setAttribute('height', '20');
   element.innerHTML = "<circle\n  cx=\"50\"\n  cy=\"50\"\n  fill=\"none\"\n  r=\"35\"\n  stroke=\"currentColor\"\n  stroke-dasharray=\"164.93361431346415 56.97787143782138\"\n  stroke-width=\"6\"\n>\n  <animateTransform\n    attributeName=\"transform\"\n    type=\"rotate\"\n    repeatCount=\"indefinite\"\n    dur=\"1s\"\n    values=\"0 50 50;90 50 50;180 50 50;360 50 50\"\n    keyTimes=\"0;0.40;0.65;1\"\n  />\n</circle>";
+  var pauseAnimations = function pauseAnimations() {
+    // Wait until the element is in the DOM.
+    if (!element.parentElement) {
+      setTimeout(pauseAnimations, 0);
+      return;
+    }
+    element.pauseAnimations();
+  };
+  if ('pauseAnimations' in element) {
+    pauseAnimations();
+  }
   return element;
 };
 ;// CONCATENATED MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/utils/setProperties.js
@@ -2668,6 +2749,7 @@ function createAutocompleteDom(_ref) {
   if (isDetached) {
     var detachedSearchButtonIcon = createDomElement('div', {
       class: classNames.detachedSearchButtonIcon,
+      ariaLabel: translations.detachedSearchButtonTitle,
       children: [SearchIcon_SearchIcon({
         environment: environment
       })]
@@ -3291,6 +3373,7 @@ function renderSearchBox(_ref) {
   setProperties(dom.loadingIndicator, {
     hidden: state.status !== 'stalled'
   });
+  toggleAnimation(dom.loadingIndicator, state.status === 'stalled');
   setProperties(dom.clearButton, {
     hidden: !state.query
   });
@@ -3300,6 +3383,23 @@ function renderSearchBox(_ref) {
   setProperties(dom.detachedSearchButtonPlaceholder, {
     hidden: Boolean(state.query)
   });
+}
+
+// Safari will animate the SVG even when it's hidden. We need to pause the
+// animation manually. See:
+// - https://github.com/algolia/autocomplete/issues/1322
+// - https://bugs.webkit.org/show_bug.cgi?id=298217
+function toggleAnimation(element, isActive) {
+  var _element$firstChild;
+  var svgElement = ((_element$firstChild = element.firstChild) === null || _element$firstChild === void 0 ? void 0 : _element$firstChild.nodeName) === 'svg' ? element.firstChild : null;
+  if (!svgElement || !svgElement.pauseAnimations || !svgElement.unpauseAnimations) {
+    return;
+  }
+  if (isActive) {
+    svgElement.unpauseAnimations();
+  } else {
+    svgElement.pauseAnimations();
+  }
 }
 function renderPanel(render, _ref2) {
   var autocomplete = _ref2.autocomplete,
@@ -3992,7 +4092,7 @@ var userAgents = [{
 __webpack_require__.d(__webpack_exports__, {
   r: () => (version)
 });
-var version = '1.18.1';
+var version = '1.19.4';
 
 }),
 83784: (function () {

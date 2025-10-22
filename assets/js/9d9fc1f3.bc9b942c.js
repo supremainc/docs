@@ -191,28 +191,53 @@ const assets = {
 
 
 
-const toc = [..._register_license_key/* .toc */.RM];
+const toc = [..._register_license_key/* .toc */.RM, {
+  "value": "활성화된 라이선스 확인",
+  "id": "활성화된-라이선스-확인",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    h2: "h2",
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd} = _components;
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["구매한 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "setting.menu.license.biostarXLicense"
-      }), "를 활성화할 수 있습니다."]
+      children: ["구매한 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 라이선스를 활성화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["사용자의 네트워크 환경에 따라 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.biostarXLicense"
       }), "를 활성화할 수 있는 방법이 다릅니다. 제공하는 안내에 따라 네트워크 상태를 확인하고 라이선스를 활성화하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.license.root"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "setting.menu.license.biostarXLicense"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -232,25 +257,19 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.setting"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.license.root"
-          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.license.biostarXLicense"
-          }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_register_license_key/* ["default"] */.Ay, {})]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_register_license_key/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "활성화된-라이선스-확인",
+      children: "활성화된 라이선스 확인"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.xlicense.myLicense",
+        product: "2"
+      }), "에서는 활성화된 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 라이선스 정보를 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-license-active-license.png"
+    })]
   });
 }
 function MDXContent(props = {}) {

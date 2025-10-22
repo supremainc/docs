@@ -638,8 +638,8 @@ var Layout = __webpack_require__(10584);
 /* ESM default export */ const index_module = ({"heroLayout":"heroLayout_anMo","heroBanner":"heroBanner_qdFl","banner":"banner_d9gt","section__banner":"section__banner_IdUe","banner__biostar":"banner__biostar_l3_x","banner__biostarh2":"banner__biostarh2_eMi9","banner__biostar__img":"banner__biostar__img_WPsw","containerRef":"containerRef_P_fM","integration":"integration_kp0j","integration__item":"integration__item_3nqr","paxton":"paxton_OBze","hero__title":"hero__title_sobY","buttons":"buttons_AeoN","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(5338);
-// EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 69 modules
-var autocomplete = __webpack_require__(34153);
+// EXTERNAL MODULE: ./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js + 70 modules
+var autocomplete = __webpack_require__(18196);
 ;// CONCATENATED MODULE: ./src/components/Autocomplete/styles.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const Autocomplete_styles_module = ({"itemContent":"itemContent_fcoZ","aaItemLink":"aaItemLink_RHtO","title":"title__Y14","hitname":"hitname_qfOW","hitbreadcrums":"hitbreadcrums_co_g","content":"content_TTLw"});

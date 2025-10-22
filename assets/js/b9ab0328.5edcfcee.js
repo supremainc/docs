@@ -148,7 +148,7 @@ function _createMdxContent(props) {
         product: "2"
       }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다."]
+      }), " 및 USB 메모리를 이용하여 장치의 라이선스를 활성화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_device_license_info/* ["default"] */.Ay, {}), (0,jsx_runtime.jsxs)(_components.ul, {
@@ -173,7 +173,10 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["대상 장치가 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "에 등록되어 있는지 확인하세요."]
+          }), "에 등록되어 있는지 확인하세요. 장치 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "settings-adding-devices",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -202,7 +205,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.list.csvImport.browse",
             product: "2"
-          }), " 버튼을 클릭하고 장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오세요."]
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-license-device-license.png",
+          className: "none"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -217,8 +227,7 @@ function _createMdxContent(props) {
             product: "2"
           }), " 항목에 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-license-device-license.png",
-          className: "none"
+          src: "/img/biostarx-settings-license-device-license-loaded.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -374,6 +383,17 @@ function _createMdxContent(props) {
                   product: "2"
                 })]
               }), "\n"]
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "note",
+              children: (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["장치가 라이선스의 기능을 지원하지 않는 모델이거나 펌웨어 버전이 낮으면 ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.status",
+                  product: "2"
+                }), "가 ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.server.license.device.list.notSupported",
+                  product: "2"
+                }), "으로 표시됩니다. 해당 기능의 지원 모델과 펌웨어 버전을 확인하세요."]
+              })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

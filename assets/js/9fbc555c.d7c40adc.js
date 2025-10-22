@@ -45,13 +45,16 @@ const toc = [];
 function _createMdxContent(props) {
   const _components = {
     p: "p",
+    strong: "strong",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   }, {DocCardList} = _components;
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 라이선스 및 장치 라이선스를 활성화할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
