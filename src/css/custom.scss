@@ -580,7 +580,7 @@ footer {
       }
       &+ul {
         margin-top: 0;
-        li:first-of-type {
+        > li:first-of-type {
           margin-top: 0;
         }
       }
