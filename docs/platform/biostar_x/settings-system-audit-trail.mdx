@@ -27,6 +27,10 @@ keywords: [감사 추적, 시스템 변경 이력, audit trail, 로그 관리, �
 
 ### 추적되는 동작 유형 {#method}
 
+<Cmd sid='auditTrail.filter.title' product='2' /> 섹션의 <Cmd sid='auditTrail.method' product='2' /> 옵션을 클릭하면 다음과 같은 동작 유형으로 감사 추적을 분류할 수 있습니다.
+
+<Image src='/img/biostarx-settings-system-audit-trail-action-filter.png' />
+
 * <Cmd sid='audit.method.1' product='2' />: 새로운 항목 생성
 
 * <Cmd sid='audit.method.3' product='2' />: 기존 항목 변경
@@ -36,6 +40,8 @@ keywords: [감사 추적, 시스템 변경 이력, audit trail, 로그 관리, �
 * <Cmd sid='audit.method.2' product='2' />: 시스템 기능 실행 (로그인, 장치 제어 등)
 
 ### 권한 등급별 분류 {#permision}
+
+관리자 등급에 따라 감사 추적을 분류할 수 있습니다. <Cmd sid='auditTrail.filter.title' product='2' /> 섹션의 <Cmd sid='user.bioStarOperator' product='2' /> 옵션을 클릭하면 다음과 같은 권한 등급으로 필터링할 수 있습니다.
 
 * <Cmd sid='audit.permission.1' product='2' />: 모든 시스템 기능 접근
 
@@ -47,7 +53,11 @@ keywords: [감사 추적, 시스템 변경 이력, audit trail, 로그 관리, �
 
 * <Cmd sid='audit.permission.254' product='2' />: 근태 관리 기능
 
-* <Cmd sid='audit.permission.255' product='2' />: 제한된 기능 접근
+:::info
+
+<Cmd sid='audit.permission.253' product='2' /> 및 <Cmd sid='audit.permission.254' product='2' /> 권한 등급은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+:::
 
 
 ## 기간 설정 조회
@@ -58,9 +68,13 @@ keywords: [감사 추적, 시스템 변경 이력, audit trail, 로그 관리, �
 
 화면 왼쪽 필터 목록에서 <Cmd sid='auditTrail.filter.one_month' product='2' /> 또는 <Cmd sid='auditTrail.filter.three_month' product='2' />을 선택하세요.
 
+<Image src='/img/biostarx-settings-system-audit-trail-defined-period.png' />
+
 ### 사용자 정의 기간으로 조회
 
 상세한 기간 설정이 필요한 경우, <Cmd sid='auditTrail.filter.title' product='2' /> 섹션의 <Cmd sid='common.datetime' product='2' /> 옵션에서 시작 날짜와 종료 날짜를 설정하세요.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
 
 
 ## 필터 설정
@@ -273,8 +287,6 @@ keywords: [감사 추적, 시스템 변경 이력, audit trail, 로그 관리, �
 * **장치 설정**: <Cmd sid='audit.setting.server.enrollment_device_list' product='2' />, <Cmd sid='audit.setting.server.fingerprint_format' product='2' />, <Cmd sid='audit.setting.server.support_mobile_credential' product='2' />, <Cmd sid='audit.setting.server.use_photo_log' product='2' />
 
 * **라이선스**: <Cmd sid='audit.setting.server.licenses' product='2' />
-
-* **클라우드 설정**: <Cmd sid='audit.setting.cloud.use_cloud' product='2' />, <Cmd sid='audit.setting.cloud.server_address' product='2' />, <Cmd sid='audit.setting.cloud.sub_domain' product='2' />, <Cmd sid='audit.setting.cloud.email' product='2' />, <Cmd sid='audit.setting.cloud.http_port' product='2' />, <Cmd sid='audit.setting.cloud.version' product='2' />
 
 * **기본 설정**: <Cmd sid='audit.setting.preference.language' product='2' />, <Cmd sid='audit.setting.preference.date_format' product='2' />, <Cmd sid='audit.setting.preference.time_format' product='2' />, <Cmd sid='audit.setting.preference.time_zone' product='2' />
 
