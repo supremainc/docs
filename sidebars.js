@@ -37,162 +37,162 @@ const sidebars = {
       ]
     }
   ],
-  // biostar_air: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioStar Air',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'platform/biostar_air/index',
-  //     },
-  //     items: [
-  //       {
-  //         type: 'category',
-  //         label: 'Overview',
-  //         items: [
-  //           'platform/biostar_air/what-is-biostar-air',
-  //           'platform/biostar_air/access-control-hardware-compatibility',
-  //           'platform/biostar_air/security-overview',
-  //           'platform/biostar_air/site-setup-networking',
-  //           'platform/biostar_air/biostar-air-migration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Site Management',
-  //         items: [
-  //           'platform/biostar_air/getting-started',
-  //           'platform/biostar_air/biostar-air-login',
-  //           {
-  //             type: 'category',
-  //             label: 'User Management',
-  //             items: [
-  //               'platform/biostar_air/managing-users',
-  //               'platform/biostar_air/adding-individual-users',
-  //               'platform/biostar_air/adding-users-in-bulk',
-  //               'platform/biostar_air/troubleshooting-adding-users-in-bulk',
-  //               'platform/biostar_air/user-card-types',
-  //               'platform/biostar_air/managing-user-groups',
-  //               'platform/biostar_air/managing-card-templates',
-  //               'platform/biostar_air/managing-adding-users',
-  //               'platform/biostar_air/linkpass-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Device Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-devices',
-  //               'platform/biostar_air/configuring-ta',
-  //               'platform/biostar_air/configuring-the-airfob-patch-and-tag',
-  //               'platform/biostar_air/configuring-the-sio2-secure-module',
-  //               'platform/biostar_air/how-to-upgrade-firmware',
-  //               'platform/biostar_air/biometric-readers-and-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Door Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-doors',
-  //               'platform/biostar_air/managing-door-and-device-groups',
-  //               'platform/biostar_air/managing-door-schedules',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Monitoring',
-  //             items: [
-  //               'platform/biostar_air/event-and-audit-logs',
-  //               'platform/biostar_air/monitoring-door-status',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Reports',
-  //             items: [
-  //               'platform/biostar_air/configuring-reports',
-  //               'platform/biostar_air/reports-time-attendance-reports',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Settings',
-  //             items: [
-  //               'platform/biostar_air/managing-administrators',
-  //               'platform/biostar_air/site-settings',
-  //               'platform/biostar_air/daylight-saving-time',
-  //               'platform/biostar_air/customizing-email-templates',
-  //               'platform/biostar_air/managing-sites-with-phone',
-  //               'platform/biostar_air/custom-wiegand-card-formats'
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Advanced Features',
-  //             items: [
-  //               'platform/biostar_air/managing-door-access',
-  //               'platform/biostar_air/managing-elevator-access',
-  //               'platform/biostar_air/managing-roll-call-fire-muster',
-  //               'platform/biostar_air/sip-intercom-for-biostation3'
-  //             ]
-  //           },
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Video Management',
-  //         items: [
-  //           'platform/biostar_air/ip-camera-support-and-configuration',
-  //           'platform/biostar_air/video-troubleshooting',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Using Mobile Credentials',
-  //         items: [
-  //           'platform/biostar_air/suprema-pass-app-overview',
-  //           'platform/biostar_air/opening-doors-with-mobile-credentials',
-  //           'platform/biostar_air/suprema-pass-app-advanced-features',
-  //           'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-  //           'platform/biostar_air/troubleshooting-suprema-pass-app',
-  //           'platform/biostar_air/location-services-issues',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Partners and Integrations',
-  //         items: [
-  //           'platform/biostar_air/intro-to-partner-portal',
-  //           'platform/biostar_air/biostar-air-partner-portal-detailed-use',
-  //           'platform/biostar_air/federated-sites',
-  //           'platform/biostar_air/integration-quickstart',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Hardware',
-  //         items: [
-  //           'platform/biostar_air/wiring-and-configuration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'html',
-  //         value: '<hr />'
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Release Notes',
-  //         items: [
-  //           'platform/biostar_air/release-notes/v2_10'
-  //         ]
-  //       }
-  //     ]
-  //   }
-  // ],
+  biostar_air: [
+    {
+      type: 'category',
+      label: 'BioStar Air',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_air/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Overview',
+          items: [
+            'platform/biostar_air/what-is-biostar-air',
+            'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/security-overview',
+            'platform/biostar_air/site-setup-networking',
+            'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Site Management',
+          items: [
+            'platform/biostar_air/getting-started',
+            'platform/biostar_air/biostar-air-login',
+            {
+              type: 'category',
+              label: 'User Management',
+              items: [
+                'platform/biostar_air/managing-users',
+                'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/adding-users-in-bulk',
+                'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+                'platform/biostar_air/user-card-types',
+                'platform/biostar_air/managing-user-groups',
+                'platform/biostar_air/managing-card-templates',
+                'platform/biostar_air/managing-adding-users',
+                'platform/biostar_air/linkpass-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Device Management',
+              items: [
+                'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/configuring-ta',
+                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/how-to-upgrade-firmware',
+                'platform/biostar_air/biometric-readers-and-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Door Management',
+              items: [
+                'platform/biostar_air/managing-registered-doors',
+                'platform/biostar_air/managing-door-and-device-groups',
+                'platform/biostar_air/managing-door-schedules',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Monitoring',
+              items: [
+                'platform/biostar_air/event-and-audit-logs',
+                'platform/biostar_air/monitoring-door-status',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Reports',
+              items: [
+                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/reports-time-attendance-reports',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Settings',
+              items: [
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/site-settings',
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/managing-sites-with-phone',
+                'platform/biostar_air/custom-wiegand-card-formats'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Advanced Features',
+              items: [
+                'platform/biostar_air/managing-door-access',
+                'platform/biostar_air/managing-elevator-access',
+                'platform/biostar_air/managing-roll-call-fire-muster',
+                'platform/biostar_air/sip-intercom-for-biostation3'
+              ]
+            },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Video Management',
+          items: [
+            'platform/biostar_air/ip-camera-support-and-configuration',
+            'platform/biostar_air/video-troubleshooting',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Using Mobile Credentials',
+          items: [
+            'platform/biostar_air/suprema-pass-app-overview',
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/location-services-issues',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Partners and Integrations',
+          items: [
+            'platform/biostar_air/intro-to-partner-portal',
+            'platform/biostar_air/biostar-air-partner-portal-detailed-use',
+            'platform/biostar_air/federated-sites',
+            'platform/biostar_air/integration-quickstart',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Hardware',
+          items: [
+            'platform/biostar_air/wiring-and-configuration',
+          ]
+        },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'Release Notes',
+          items: [
+            'platform/biostar_air/release-notes/v2_10'
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',
@@ -700,333 +700,333 @@ const sidebars = {
       ]
     }
   ],
-  // corestation40: [
-  //   {
-  //     type: 'category',
-  //     label: 'CoreStation',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/corestation_40/index',
-  //     },
-  //     items: [
-  //       'device/corestation_40/safety-instructions',
-  //       'device/corestation_40/getting-started',
-  //       'device/corestation_40/installation',
-  //       'device/corestation_40/product-specifications',
-  //       'device/corestation_40/regulatory-information',
-  //       'device/corestation_40/appendices'
-  //     ]
-  //   }
-  // ],
-  // corestation20: [
-  //   {
-  //     type: 'category',
-  //     label: 'CoreStation 20',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/corestation_20/index',
-  //     },
-  //     items: [
-  //       'device/corestation_20/safety-instructions',
-  //       'device/corestation_20/getting-started',
-  //       'device/corestation_20/installation',
-  //       'device/corestation_20/product-specifications',
-  //       'device/corestation_20/regulatory-information',
-  //       'device/corestation_20/appendices'
-  //     ]
-  //   }
-  // ],
-  // doorinterface24: [
-  //   {
-  //     type: 'category',
-  //     label: 'Door Interface',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/doorinterface/index',
-  //     },
-  //     items: [
-  //       'device/doorinterface/safety-instructions',
-  //       'device/doorinterface/getting-started',
-  //       'device/doorinterface/installation',
-  //       'device/doorinterface/product-specifications',
-  //       'device/doorinterface/regulatory-information',
-  //       'device/doorinterface/appendices'
-  //     ]
-  //   }
-  // ],
-  // facestationf2: [
-  //   {
-  //     type: 'category',
-  //     label: 'FaceStation F2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/facestation_f2/index',
-  //     },
-  //     items: [
-  //       'device/facestation_f2/safety-instructions',
-  //       'device/facestation_f2/getting-started',
-  //       'device/facestation_f2/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/facestation_f2/using-device',
-  //         },
-  //         items: [
-  //           'device/facestation_f2/admin-menu',
-  //           'device/facestation_f2/user',
-  //           'device/facestation_f2/authentication',
-  //           'device/facestation_f2/settings',
-  //           'device/facestation_f2/event-log'
-  //         ]
-  //       },
-  //       'device/facestation_f2/troubleshooting',
-  //       'device/facestation_f2/product-specifications',
-  //       'device/facestation_f2/regulatory-information',
-  //       'device/facestation_f2/appendices'
-  //     ]
-  //   }
-  // ],
-  // bioentryw3: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioEntry W3',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/bioentry_w3/index',
-  //     },
-  //     items: [
-  //       'device/bioentry_w3/safety-instructions',
-  //       'device/bioentry_w3/getting-started',
-  //       'device/bioentry_w3/installation',
-  //       'device/bioentry_w3/product-specifications',
-  //       'device/bioentry_w3/regulatory-information',
-  //       'device/bioentry_w3/appendices'
-  //     ]
-  //   }
-  // ],
-  // biostation3: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioStation 3',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/biostation_3/index',
-  //     },
-  //     items: [
-  //       'device/biostation_3/safety-instructions',
-  //       'device/biostation_3/getting-started',
-  //       'device/biostation_3/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/biostation_3/using-device',
-  //         },
-  //         items: [
-  //           'device/biostation_3/admin-menu',
-  //           'device/biostation_3/user',
-  //           'device/biostation_3/authentication',
-  //           'device/biostation_3/settings',
-  //           'device/biostation_3/event-log',
-  //         ],
-  //       },
-  //       'device/biostation_3/troubleshooting',
-  //       'device/biostation_3/product-specifications',
-  //       'device/biostation_3/regulatory-information',
-  //       'device/biostation_3/appendices',
-  //     ],
-  //   },
-  // ],
-  // biostation2a: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioStation 2a',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/biostation_2a/index',
-  //     },
-  //     items: [
-  //       'device/biostation_2a/safety-instructions',
-  //       'device/biostation_2a/getting-started',
-  //       'device/biostation_2a/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/biostation_2a/using-device',
-  //         },
-  //         items: [
-  //           'device/biostation_2a/admin-menu',
-  //           'device/biostation_2a/user',
-  //           'device/biostation_2a/authentication',
-  //           'device/biostation_2a/settings',
-  //           'device/biostation_2a/event-log',
-  //         ],
-  //       },
-  //       'device/biostation_2a/troubleshooting',
-  //       'device/biostation_2a/product-specifications',
-  //       'device/biostation_2a/regulatory-information',
-  //       'device/biostation_2a/appendices',
-  //     ],
-  //   },
-  // ],
-  // bioliten2: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioLite N2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/biolite_n2/index',
-  //     },
-  //     items: [
-  //       'device/biolite_n2/safety-instructions',
-  //       'device/biolite_n2/getting-started',
-  //       'device/biolite_n2/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/biolite_n2/using-device',
-  //         },
-  //         items: [
-  //           'device/biolite_n2/admin-menu',
-  //           'device/biolite_n2/user',
-  //           'device/biolite_n2/authentication',
-  //           'device/biolite_n2/settings',
-  //           'device/biolite_n2/event-log',
-  //         ],
-  //       },
-  //       'device/biolite_n2/troubleshooting',
-  //       'device/biolite_n2/product-specifications',
-  //       'device/biolite_n2/regulatory-information',
-  //       'device/biolite_n2/appendices',
-  //     ],
-  //   },
-  // ],
-  // xstation2: [
-  //   {
-  //     type: 'category',
-  //     label: 'X-Station 2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/xstation_2/index',
-  //     },
-  //     items: [
-  //       'device/xstation_2/safety-instructions',
-  //       'device/xstation_2/getting-started',
-  //       'device/xstation_2/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/xstation_2/using-device',
-  //         },
-  //         items: [
-  //           'device/xstation_2/admin-menu',
-  //           'device/xstation_2/user',
-  //           'device/xstation_2/authentication',
-  //           'device/xstation_2/settings',
-  //           'device/xstation_2/event-log',
-  //         ],
-  //       },
-  //       'device/xstation_2/troubleshooting',
-  //       'device/xstation_2/product-specifications',
-  //       'device/xstation_2/regulatory-information',
-  //       'device/xstation_2/appendices',
-  //     ],
-  //   },
-  // ],
-  // facestation2: [
-  //   {
-  //     type: 'category',
-  //     label: 'FaceStation 2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/facestation_2/index',
-  //     },
-  //     items: [
-  //       'device/facestation_2/safety-instructions',
-  //       'device/facestation_2/getting-started',
-  //       'device/facestation_2/installation',
-  //       {
-  //         type: 'category',
-  //         label: '사용하기',
-  //         link: {
-  //           type: 'doc',
-  //           id: 'device/facestation_2/using-device',
-  //         },
-  //         items: [
-  //           'device/facestation_2/admin-menu',
-  //           'device/facestation_2/user',
-  //           'device/facestation_2/authentication',
-  //           'device/facestation_2/settings',
-  //           'device/facestation_2/event-log',
-  //         ],
-  //       },
-  //       'device/facestation_2/troubleshooting',
-  //       'device/facestation_2/product-specifications',
-  //       'device/facestation_2/regulatory-information',
-  //       'device/facestation_2/appendices',
-  //     ],
-  //   },
-  // ],
-  // xpassd2: [
-  //   {
-  //     type: 'category',
-  //     label: 'XPass D2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/xpass_d2/index',
-  //     },
-  //     items: [
-  //       'device/xpass_d2/safety-instructions',
-  //       'device/xpass_d2/getting-started',
-  //       'device/xpass_d2/installation',
-  //       'device/xpass_d2/product-specifications',
-  //       'device/xpass_d2/regulatory-information',
-  //       'device/xpass_d2/appendices'
-  //     ]
-  //   }
-  // ],
+  corestation40: [
+    {
+      type: 'category',
+      label: 'CoreStation',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_40/index',
+      },
+      items: [
+        'device/corestation_40/safety-instructions',
+        'device/corestation_40/getting-started',
+        'device/corestation_40/installation',
+        'device/corestation_40/product-specifications',
+        'device/corestation_40/regulatory-information',
+        'device/corestation_40/appendices'
+      ]
+    }
+  ],
+  corestation20: [
+    {
+      type: 'category',
+      label: 'CoreStation 20',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_20/index',
+      },
+      items: [
+        'device/corestation_20/safety-instructions',
+        'device/corestation_20/getting-started',
+        'device/corestation_20/installation',
+        'device/corestation_20/product-specifications',
+        'device/corestation_20/regulatory-information',
+        'device/corestation_20/appendices'
+      ]
+    }
+  ],
+  doorinterface24: [
+    {
+      type: 'category',
+      label: 'Door Interface',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doorinterface/index',
+      },
+      items: [
+        'device/doorinterface/safety-instructions',
+        'device/doorinterface/getting-started',
+        'device/doorinterface/installation',
+        'device/doorinterface/product-specifications',
+        'device/doorinterface/regulatory-information',
+        'device/doorinterface/appendices'
+      ]
+    }
+  ],
+  facestationf2: [
+    {
+      type: 'category',
+      label: 'FaceStation F2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_f2/index',
+      },
+      items: [
+        'device/facestation_f2/safety-instructions',
+        'device/facestation_f2/getting-started',
+        'device/facestation_f2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_f2/using-device',
+          },
+          items: [
+            'device/facestation_f2/admin-menu',
+            'device/facestation_f2/user',
+            'device/facestation_f2/authentication',
+            'device/facestation_f2/settings',
+            'device/facestation_f2/event-log'
+          ]
+        },
+        'device/facestation_f2/troubleshooting',
+        'device/facestation_f2/product-specifications',
+        'device/facestation_f2/regulatory-information',
+        'device/facestation_f2/appendices'
+      ]
+    }
+  ],
+  bioentryw3: [
+    {
+      type: 'category',
+      label: 'BioEntry W3',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w3/index',
+      },
+      items: [
+        'device/bioentry_w3/safety-instructions',
+        'device/bioentry_w3/getting-started',
+        'device/bioentry_w3/installation',
+        'device/bioentry_w3/product-specifications',
+        'device/bioentry_w3/regulatory-information',
+        'device/bioentry_w3/appendices'
+      ]
+    }
+  ],
+  biostation3: [
+    {
+      type: 'category',
+      label: 'BioStation 3',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3/index',
+      },
+      items: [
+        'device/biostation_3/safety-instructions',
+        'device/biostation_3/getting-started',
+        'device/biostation_3/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3/using-device',
+          },
+          items: [
+            'device/biostation_3/admin-menu',
+            'device/biostation_3/user',
+            'device/biostation_3/authentication',
+            'device/biostation_3/settings',
+            'device/biostation_3/event-log',
+          ],
+        },
+        'device/biostation_3/troubleshooting',
+        'device/biostation_3/product-specifications',
+        'device/biostation_3/regulatory-information',
+        'device/biostation_3/appendices',
+      ],
+    },
+  ],
+  biostation2a: [
+    {
+      type: 'category',
+      label: 'BioStation 2a',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_2a/index',
+      },
+      items: [
+        'device/biostation_2a/safety-instructions',
+        'device/biostation_2a/getting-started',
+        'device/biostation_2a/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_2a/using-device',
+          },
+          items: [
+            'device/biostation_2a/admin-menu',
+            'device/biostation_2a/user',
+            'device/biostation_2a/authentication',
+            'device/biostation_2a/settings',
+            'device/biostation_2a/event-log',
+          ],
+        },
+        'device/biostation_2a/troubleshooting',
+        'device/biostation_2a/product-specifications',
+        'device/biostation_2a/regulatory-information',
+        'device/biostation_2a/appendices',
+      ],
+    },
+  ],
+  bioliten2: [
+    {
+      type: 'category',
+      label: 'BioLite N2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2/index',
+      },
+      items: [
+        'device/biolite_n2/safety-instructions',
+        'device/biolite_n2/getting-started',
+        'device/biolite_n2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2/using-device',
+          },
+          items: [
+            'device/biolite_n2/admin-menu',
+            'device/biolite_n2/user',
+            'device/biolite_n2/authentication',
+            'device/biolite_n2/settings',
+            'device/biolite_n2/event-log',
+          ],
+        },
+        'device/biolite_n2/troubleshooting',
+        'device/biolite_n2/product-specifications',
+        'device/biolite_n2/regulatory-information',
+        'device/biolite_n2/appendices',
+      ],
+    },
+  ],
+  xstation2: [
+    {
+      type: 'category',
+      label: 'X-Station 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xstation_2/index',
+      },
+      items: [
+        'device/xstation_2/safety-instructions',
+        'device/xstation_2/getting-started',
+        'device/xstation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2/using-device',
+          },
+          items: [
+            'device/xstation_2/admin-menu',
+            'device/xstation_2/user',
+            'device/xstation_2/authentication',
+            'device/xstation_2/settings',
+            'device/xstation_2/event-log',
+          ],
+        },
+        'device/xstation_2/troubleshooting',
+        'device/xstation_2/product-specifications',
+        'device/xstation_2/regulatory-information',
+        'device/xstation_2/appendices',
+      ],
+    },
+  ],
+  facestation2: [
+    {
+      type: 'category',
+      label: 'FaceStation 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_2/index',
+      },
+      items: [
+        'device/facestation_2/safety-instructions',
+        'device/facestation_2/getting-started',
+        'device/facestation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/using-device',
+          },
+          items: [
+            'device/facestation_2/admin-menu',
+            'device/facestation_2/user',
+            'device/facestation_2/authentication',
+            'device/facestation_2/settings',
+            'device/facestation_2/event-log',
+          ],
+        },
+        'device/facestation_2/troubleshooting',
+        'device/facestation_2/product-specifications',
+        'device/facestation_2/regulatory-information',
+        'device/facestation_2/appendices',
+      ],
+    },
+  ],
+  xpassd2: [
+    {
+      type: 'category',
+      label: 'XPass D2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_d2/index',
+      },
+      items: [
+        'device/xpass_d2/safety-instructions',
+        'device/xpass_d2/getting-started',
+        'device/xpass_d2/installation',
+        'device/xpass_d2/product-specifications',
+        'device/xpass_d2/regulatory-information',
+        'device/xpass_d2/appendices'
+      ]
+    }
+  ],
   // bioentryp2: [
   //   {
   //     type: 'category',

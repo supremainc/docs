@@ -37,10 +37,11 @@ const config = {
   tagline: getLocalizedConfigValue('tagline'),
   favicon: 'https://supremainc.com/ko/asset/images/common/Website_favicon.png',
   // Set the production url of your site here
-  url: 'https://docs.supremainc.com',
+  url: 'https://supremainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
+  noIndex: false,
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
@@ -50,6 +51,7 @@ const config = {
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'log',
   onDuplicateRoutes: 'warn',
@@ -72,16 +74,6 @@ const config = {
       },
     }
   },
-  headTags: [
-    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: '07FFA029DF50324E',
-      }
-    }
-  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
     '@docusaurus/theme-mermaid'
@@ -100,16 +92,9 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
-            '**/_*.{md,mdx}',
-            'platform/biostar_air/**/**.{md,mdx}',
-            'device/**/**.{md,mdx}'
+            '**/_*.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
-        },
-        pages: {
-          exclude: [
-            '_backup/**.{js,jsx,ts,tsx,md,mdx}'
-          ]
         },
         blog: false,
         theme: {
@@ -117,7 +102,7 @@ const config = {
         },
         sitemap: {
           lastmod: 'date',
-          changefreq: 'daily',
+          changefreq: 'always',
           priority: 0.5,
           ignorePatterns: [
             '/tags/**',
@@ -136,7 +121,7 @@ const config = {
   ],
   plugins: [
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
-    // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
+    ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
     [
@@ -178,6 +163,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/sns_img02.jpg',
+      announcementBar: {
+        id: 'annoucementbar',
+        content: getLocalizedConfigValue('announcementBar'),
+        backgroundColor: '#FFB27D',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -188,107 +180,101 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
-          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
+          src: 'img/suprema-logo.svg',
+          srcDark: 'img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
           {
-            type: 'doc',
-            label: 'BioStar X',
+            type: 'dropdown',
+            label: 'Platforms',
             position: 'right',
-            docId: 'platform/biostar_x/index'
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Platforms',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar X',
-          //       docId: 'platform/biostar_x/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar Air',
-          //       docId: 'platform/biostar_air/index'
-          //     }
-          //   ]
-          // },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Devices',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStation 3',
-          //       docId: 'device/biostation_3/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry W3',
-          //       docId: 'device/bioentry_w3/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStation 2a',
-          //       docId: 'device/biostation_2a/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'FaceStation F2',
-          //       docId: 'device/facestation_f2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioLite N2',
-          //       docId: 'device/biolite_n2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'X-Station 2',
-          //       docId: 'device/xstation_2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'FaceStation 2',
-          //       docId: 'device/facestation_2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'XPass D2',
-          //       docId: 'device/xpass_d2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry P2',
-          //       docId: 'device/bioentry_p2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'CoreStation',
-          //       docId: 'device/corestation_40/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'CoreStation 20',
-          //       docId: 'device/corestation_20/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Door Interface',
-          //       docId: 'device/doorinterface/index'
-          //     }
-          //   ]
-          // },
-          // {
-          //   type: 'doc',
-          //   label: 'How-to Articles',
-          //   position: 'right',
-          //   docId: 'how-to/index'
-          // },
+          {
+            type: 'dropdown',
+            label: 'Devices',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStation 3',
+                docId: 'device/biostation_3/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioEntry W3',
+                docId: 'device/bioentry_w3/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStation 2a',
+                docId: 'device/biostation_2a/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation F2',
+                docId: 'device/facestation_f2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioLite N2',
+                docId: 'device/biolite_n2/index'
+              },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation 2',
+                docId: 'device/facestation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass D2',
+                docId: 'device/xpass_d2/index'
+              },
+              // {
+              //   type: 'doc',
+              //   label: 'BioEntry P2',
+              //   docId: 'device/bioentry_p2/index'
+              // },
+              {
+                type: 'doc',
+                label: 'CoreStation',
+                docId: 'device/corestation_40/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation 20',
+                docId: 'device/corestation_20/index'
+              },
+              {
+                type: 'doc',
+                label: 'Door Interface',
+                docId: 'device/doorinterface/index'
+              }
+            ]
+          },
+          {
+            type: 'doc',
+            label: 'How-to Articles',
+            position: 'right',
+            docId: 'how-to/index'
+          },
           {
             type: 'doc',
             label: 'Reference',
@@ -315,7 +301,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
+          src: 'img/suprema-logo-bottom.svg',
           width: '173px',
         },
         links: [
@@ -341,9 +327,9 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: 'G6Y3H2PNC3',
-        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
-        indexName: 'SPDocs',
+        appId: '11LXF9EJH7',
+        apiKey: '4882650c3591013a4db2f9211c31c4f4',
+        indexName: 'supremaincio',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
