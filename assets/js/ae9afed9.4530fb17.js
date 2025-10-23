@@ -177,6 +177,16 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "method",
       children: "추적되는 동작 유형"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.filter.title",
+        product: "2"
+      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.method",
+        product: "2"
+      }), " 옵션을 클릭하면 다음과 같은 동작 유형으로 감사 추적을 분류할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-system-audit-trail-action-filter.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -210,6 +220,14 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "permision",
       children: "권한 등급별 분류"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["관리자 등급에 따라 감사 추적을 분류할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.filter.title",
+        product: "2"
+      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "user.bioStarOperator",
+        product: "2"
+      }), " 옵션을 클릭하면 다음과 같은 권한 등급으로 필터링할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -246,14 +264,23 @@ function _createMdxContent(props) {
             product: "2"
           }), ": 근태 관리 기능"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "audit.permission.255",
-            product: "2"
-          }), ": 제한된 기능 접근"]
-        }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "audit.permission.253",
+          product: "2"
+        }), " 및 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "audit.permission.254",
+          product: "2"
+        }), " 권한 등급은 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "어드밴스"
+        }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "licensing#features-add-ons",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "기간-설정-조회",
       children: "기간 설정 조회"
@@ -270,6 +297,8 @@ function _createMdxContent(props) {
         sid: "auditTrail.filter.three_month",
         product: "2"
       }), "을 선택하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-system-audit-trail-defined-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "사용자-정의-기간으로-조회",
       children: "사용자 정의 기간으로 조회"
@@ -281,6 +310,8 @@ function _createMdxContent(props) {
         sid: "common.datetime",
         product: "2"
       }), " 옵션에서 시작 날짜와 종료 날짜를 설정하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/biostarx-settings-system-audit-trail-set-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "필터-설정",
       children: "필터 설정"
@@ -1288,30 +1319,6 @@ function _createMdxContent(props) {
               children: "라이선스"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.licenses",
-              product: "2"
-            })]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "클라우드 설정"
-            }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.use_cloud",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.server_address",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.sub_domain",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.email",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.http_port",
-              product: "2"
-            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "audit.setting.cloud.version",
               product: "2"
             })]
           }), "\n"]

@@ -121,6 +121,8 @@ function _createMdxContent(props) {
             sid: "button.plusAdd",
             product: "2"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-system-daylight-saving-time-init.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -134,7 +136,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["추가한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["추가한 설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -217,7 +219,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["수정한 설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -267,7 +269,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["삭제한 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["삭제한 설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
           }), " 버튼을 클릭하세요."]

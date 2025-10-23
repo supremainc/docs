@@ -39,15 +39,6 @@ const assets = {
 
 };
 
-/*
-
-:::info
-
-<Cmd>클라우드</Cmd>를 사용하면 <Cmd sid="setting.server.passwordLevelMedium" product='2' />과 <Cmd sid="setting.server.passwordLevelStrong" product='2' />만 사용할 수 있습니다.
-
-:::
-
-*/
 
 
 const toc = [{
@@ -76,7 +67,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "고급 보안 설정",
-  "id": "고급-보안-설정",
+  "id": "advanced-security-configuration",
   "level": 2
 }, {
   "value": "개인 정보 보호 강화",
@@ -88,11 +79,12 @@ const toc = [{
   "level": 3
 }, {
   "value": "동시 접속 제어",
-  "id": "동시-접속-제어",
+  "id": "session-security-configuration",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
@@ -141,6 +133,38 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "보안과 관련한 각 항목을 설정하세요."
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.systemSecurity.loginPassword",
+                product: "2"
+              }), ": 로그인 비밀번호와 관련된 보안 수준을 설정합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#password-policy-configuration",
+                children: "다음 섹션"
+              }), "을 참고하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.secure.comm.title",
+                product: "2"
+              }), ":개인 정보와 장치 간 통신 보안을 강화할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#advanced-security-configuration",
+                children: "다음 섹션"
+              }), "을 참고하세요."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.systemSecurity.sessionSecurity",
+                product: "2"
+              }), ": 세션 보안을 강화할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "#session-security-configuration",
+                children: "다음 섹션"
+              }), "을 참고하세요."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -158,7 +182,7 @@ function _createMdxContent(props) {
           product: "2"
         }), " 메뉴는 아이디가 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "1"
-        }), "인 최초 관리자 계정으로 접속한 경우에 활성화됩니다."]
+        }), "인 최초 관리자 계정만 사용할 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "password-policy-configuration",
@@ -202,7 +226,7 @@ function _createMdxContent(props) {
           }), ": 비밀번호를 설정할 때 10~32 영문 문자(대문자와 소문자, 최소 한 글자 이상의 대문자 포함)와 숫자, 특수 기호를 조합해야 합니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "비밀번호-변경-주기-설정",
       children: "비밀번호 변경 주기 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -248,7 +272,7 @@ function _createMdxContent(props) {
         children: "최대 10회까지 설정할 수 있습니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "고급-보안-설정",
+      id: "advanced-security-configuration",
       children: "고급 보안 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -511,7 +535,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "동시-접속-제어",
+      id: "session-security-configuration",
       children: "동시 접속 제어"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {

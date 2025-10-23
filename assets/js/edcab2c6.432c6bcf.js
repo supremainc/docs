@@ -78,7 +78,7 @@ function _createMdxContent(props) {
       }), "의 데이터베이스, 각종 설정, 키 등 주요 정보를 백업할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.backup",
         product: "2"
-      }), " 기능을 사용하면 서버의 데이터 손실을 방지하거나 새로운 PC로 이전할 때 사용합니다."]
+      }), " 기능을 사용하면 서버의 데이터 손실을 방지하거나 새로운 PC로 이전할 때 사용하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "지원하는 백업 방식은 아래와 같습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -145,9 +145,6 @@ function _createMdxContent(props) {
             sid: "common.backup",
             product: "2"
           }), "을 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-system-system-backup-general.png",
-          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -155,6 +152,9 @@ function _createMdxContent(props) {
             sid: "common.backup.general",
             product: "2"
           }), " 섹션에서 백업 파일을 저장할 경로와 최대 백업 파일 수를 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-system-system-backup-general.png",
+          className: "none"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -231,9 +231,6 @@ function _createMdxContent(props) {
             sid: "common.backup",
             product: "2"
           }), "을 클릭하세요."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-settings-system-system-backup-automatic.png",
-          className: "none"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -244,6 +241,9 @@ function _createMdxContent(props) {
             sid: "common.backup.frequency",
             product: "2"
           }), " 옵션을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-system-system-backup-automatic.png",
+          className: "none"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

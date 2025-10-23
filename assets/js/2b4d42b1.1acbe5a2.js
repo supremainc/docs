@@ -113,8 +113,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.preference",
-            product: "2"
+            sid: "setting.menu.preferences.root"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -147,7 +146,8 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["모든 설정을 완료하고 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.apply"
+            sid: "button.apply",
+            product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
@@ -189,6 +189,11 @@ function _createMdxContent(props) {
           }), "를 참고하여 추가할 수 있습니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.apply",
+        product: "2"
+      }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "date-time-format",
       children: "날짜 및 시간 표시 형식 설정"
@@ -255,6 +260,11 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "button.apply",
+        product: "2"
+      }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "sound",
       children: "이벤트 알림 소리 설정"
@@ -304,7 +314,8 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["설정을 저장하려면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "common.apply"
+        sid: "button.apply",
+        product: "2"
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",

@@ -48,13 +48,16 @@ const toc = [];
 function _createMdxContent(props) {
   const _components = {
     p: "p",
+    strong: "strong",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   }, {DocCardList} = _components;
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플랫폼의 주요 시스템 설정 방법을 안내합니다."
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 플랫폼의 주요 시스템 설정 방법을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
   });
 }
