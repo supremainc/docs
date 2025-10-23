@@ -82,6 +82,7 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
+    em: "em",
     h2: "h2",
     h3: "h3",
     li: "li",
@@ -314,6 +315,39 @@ function _createMdxContent(props) {
           children: "Client Port"
         }), ": 클라이언트 연결을 위한 통신 포트 (기본값: 21810)"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: "Client Port"
+            }), " 값을 변경하면, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Windows Services"
+            }), "(", (0,jsx_runtime.jsx)(_components.em, {
+              children: "services.msc"
+            }), ")에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Coordinator Service"
+            }), " 서비스를 찾아 수동으로 재시작하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Coordinator Service"
+            }), " 서비스를 재시작한 후 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Service Manager"
+            }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "SERVICES"
+            }), " 메뉴에서 모든 서비스를 재시작하세요."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Stop All"
+            }), " 버튼을 클릭하세요. 모든 서비스가 중지된 후 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: "Start All"
+            }), " 버튼이 활성화되면 버튼을 클릭하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostar-x-server-(main)",
       children: "BioStar X Server (Main)"
