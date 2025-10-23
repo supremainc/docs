@@ -579,7 +579,21 @@ const sidebars = {
             },
             'platform/biostar_x/settings-visitor',
             'platform/biostar_x/settings-diretory-integration',
-            'platform/biostar_x/settings-remote-access'
+            'platform/biostar_x/settings-remote-access',
+            {
+              type: 'category',
+              label: '근태 관리 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/tna',
+              },
+              items: [
+                'platform/biostar_x/tna-rule-setting',
+                'platform/biostar_x/tna-rule-shift-paycode',
+                'platform/biostar_x/tna-rule-shift-day',
+                'platform/biostar_x/tna-rule-shift-schedule',
+              ]
+            }
           ]
         },
         'platform/biostar_x/plugins',
