@@ -760,6 +760,27 @@ const sidebars = {
       ]
     }
   ],
+  outputmodule: [
+    {
+      type: 'category',
+      label: 'Output Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/outputmodule/index',
+      },
+      items: [
+        'device/outputmodule/safety-instructions',
+        'device/outputmodule/getting-started',
+        'device/outputmodule/installation',
+        'device/outputmodule/product-specifications',
+        'device/outputmodule/regulatory-information',
+        'device/outputmodule/appendices'
+      ]
+    }
+  ],
   doorinterface: [
     {
       type: 'category',

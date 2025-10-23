@@ -292,7 +292,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     },
     {
       title: 'Output Module',
-      url: '#',
+      url: '/device/outputmodule',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/om-120.png',
       height: '90px',
       desc: `${translate({
