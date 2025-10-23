@@ -1552,7 +1552,105 @@ const sidebars = {
       ],
     },
   ],
-  xstation72: [
+  xpassd2: [
+    {
+      type: 'category',
+      label: 'XPass D2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/xpass_d2/index',
+      // },
+      items: [
+        // 'device/xpass_d2/safety-instructions',
+        // 'device/xpass_d2/getting-started',
+        // 'device/xpass_d2/installation',
+        // 'device/xpass_d2/troubleshooting',
+        // 'device/xpass_d2/product-specifications',
+        // 'device/xpass_d2/regulatory-information',
+        // 'device/xpass_d2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_d2/release-notes/index',
+          },
+          items: [
+            'device/xpass_d2/release-notes/182',
+            'device/xpass_d2/release-notes/181',
+            'device/xpass_d2/release-notes/180',
+            'device/xpass_d2/release-notes/172',
+            'device/xpass_d2/release-notes/171',
+            'device/xpass_d2/release-notes/170',
+            'device/xpass_d2/release-notes/160',
+            'device/xpass_d2/release-notes/150',
+            'device/xpass_d2/release-notes/142',
+            'device/xpass_d2/release-notes/141',
+            'device/xpass_d2/release-notes/140',
+          ]
+        },
+      ],
+    },
+  ],
+  xpasss2: [
+    {
+      type: 'category',
+      label: 'XPass S2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      // link: {
+      //   type: 'doc',
+      //   id: 'device/xpass_s2/index',
+      // },
+      items: [
+        // 'device/xpass_s2/safety-instructions',
+        // 'device/xpass_s2/getting-started',
+        // 'device/xpass_s2/installation',
+        // 'device/xpass_s2/troubleshooting',
+        // 'device/xpass_s2/product-specifications',
+        // 'device/xpass_s2/regulatory-information',
+        // 'device/xpass_s2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_s2/release-notes/index',
+          },
+          items: [
+            'device/xpass_s2/release-notes/244',
+            'device/xpass_s2/release-notes/243',
+            'device/xpass_s2/release-notes/242',
+            'device/xpass_s2/release-notes/241',
+            'device/xpass_s2/release-notes/240',
+            'device/xpass_s2/release-notes/231',
+            'device/xpass_s2/release-notes/230',
+            'device/xpass_s2/release-notes/226',
+            'device/xpass_s2/release-notes/225',
+            'device/xpass_s2/release-notes/223',
+            'device/xpass_s2/release-notes/221',
+            'device/xpass_s2/release-notes/220',
+            'device/xpass_s2/release-notes/213',
+            'device/xpass_s2/release-notes/212',
+            'device/xpass_s2/release-notes/202',
+          ]
+        },
+      ],
+    },
+  ],
+  xstation2: [
     {
       type: 'category',
       label: 'X-Station 2',
@@ -1586,6 +1684,35 @@ const sidebars = {
         'device/xstation_2/product-specifications',
         'device/xstation_2/regulatory-information',
         'device/xstation_2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2/release-notes/index',
+          },
+          items: [
+            'device/xstation_2/release-notes/131',
+            'device/xstation_2/release-notes/130',
+            'device/xstation_2/release-notes/123',
+            'device/xstation_2/release-notes/122',
+            'device/xstation_2/release-notes/121',
+            'device/xstation_2/release-notes/120',
+            'device/xstation_2/release-notes/114',
+            'device/xstation_2/release-notes/113',
+            'device/xstation_2/release-notes/112',
+            'device/xstation_2/release-notes/111',
+            'device/xstation_2/release-notes/110',
+            'device/xstation_2/release-notes/103',
+            'device/xstation_2/release-notes/102',
+            'device/xstation_2/release-notes/101',
+            'device/xstation_2/release-notes/100',
+          ]
+        },
       ],
     },
   ],

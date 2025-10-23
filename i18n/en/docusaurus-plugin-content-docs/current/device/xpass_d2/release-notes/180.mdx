@@ -1,0 +1,48 @@
+---
+id: 180
+title: Firmware Version 1.8.0
+---
+
+# Firmware Version 1.8.0 (Build No. 1.8.0_241015)
+
+Release<Separator/>2024-10-15
+
+:::caution
+
+Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.7.0 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports for firmware upgrade of BLE chip devices via the Device Manager application.
+
+1. Improved RS-485 communication quality.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When using the BS2_GetDeviceCapabilities function in the SDK to get information supported by the device, the CustomClassicPlus and CustomDesFireEV1 are displayed as False though the device supports custom smart cards <Badge>1.7.1</Badge>
+
+1. When authenticating an HID Prox card continuously, intermittently outputs an incorrect value. <Badge>1.0.0</Badge>
+
+1. When the **Input card ID from keypad** option is enabled, there is an issue where the card ID value recorded in the event log differs from the entered value when an unassigned card ID is input using the keypad. <Badge>1.0.0</Badge>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>1.7.1</Badge>
+
+1. When running the Device Manager application v1.1.8 on certain iOS, the device does not connect. <Badge>1.0.0</Badge>
+
+1. When the device is connected to a 3rd party control panel via OSDP, the device does not receive a response from the 3rd party control panel. <Badge>1.0.0</Badge>
+
+1. When the Micom firmware of the device is upgraded first in BioStar 2, followed by the upgrade of the new BLE firmware, the device cannot reconnect to the Device Manager application. <Badge>1.7.0</Badge>
+
+1. When changing the baud rate of a device connected as a slave using the SDK, the changes are not properly reflected. <Badge>1.7.1</Badge>
+
+</BugLists>
