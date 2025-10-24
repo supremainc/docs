@@ -592,6 +592,7 @@ const sidebars = {
                 'platform/biostar_x/tna-rule-shift-paycode',
                 'platform/biostar_x/tna-rule-shift-day',
                 'platform/biostar_x/tna-rule-shift-schedule',
+                'platform/biostar_x/tna-rule-shift-overtime'
               ]
             }
           ]
