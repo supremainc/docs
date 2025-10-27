@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5512"], {
-33244: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9755"], {
+6688: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tna_rule_shift_paycode_mdx_83d_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tna_rule_shift_overtime_mdx_aae_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-rule-shift-paycode-mdx-83d.json
-var site_docs_platform_biostar_x_tna_rule_shift_paycode_mdx_83d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-rule-shift-paycode","title":"시간 규칙 설정하기","description":"근무 시간 계산에 사용될 시간 규칙 설정을 안내합니다.","source":"@site/docs/platform/biostar_x/tna-rule-shift-paycode.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-rule-shift-paycode","permalink":"/docs/platform/biostar_x/tna-rule-shift-paycode","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-rule-shift-paycode.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-rule-shift-paycode","title":"시간 규칙 설정하기","description":"근무 시간 계산에 사용될 시간 규칙 설정을 안내합니다.","keywords":["근무 시간","시간 규칙"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"근무 규칙 설정하기","permalink":"/docs/platform/biostar_x/tna-rule-setting"},"next":{"title":"일일 근무 규칙 설정하기","permalink":"/docs/platform/biostar_x/tna-rule-shift-day"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-rule-shift-overtime-mdx-aae.json
+var site_docs_platform_biostar_x_tna_rule_shift_overtime_mdx_aae_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-rule-shift-overtime","title":"기타 근무 규칙 설정하기","description":"일일 근무 규칙에 연장 근무 시간 규칙을 추가하지 않았을 때 유용하게 사용할 수 있는 기타 근무 규칙 추가 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/tna-rule-shift-overtime.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-rule-shift-overtime","permalink":"/docs/en/platform/biostar_x/tna-rule-shift-overtime","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-rule-shift-overtime.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-rule-shift-overtime","title":"기타 근무 규칙 설정하기","description":"일일 근무 규칙에 연장 근무 시간 규칙을 추가하지 않았을 때 유용하게 사용할 수 있는 기타 근무 규칙 추가 방법을 안내합니다.","keywords":["기타 근무 규칙","연장 근무"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"주간 근무 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/tna-rule-shift-schedule"},"next":{"title":"근무 스케줄 설정하기","permalink":"/docs/en/platform/biostar_x/tna-rule-schedule"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/tna-rule-shift-paycode.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/tna-rule-shift-overtime.mdx
 
 
 const frontMatter = {
-	id: 'tna-rule-shift-paycode',
-	title: '시간 규칙 설정하기',
-	description: '근무 시간 계산에 사용될 시간 규칙 설정을 안내합니다.',
+	id: 'tna-rule-shift-overtime',
+	title: '기타 근무 규칙 설정하기',
+	description: '일일 근무 규칙에 연장 근무 시간 규칙을 추가하지 않았을 때 유용하게 사용할 수 있는 기타 근무 규칙 추가 방법을 안내합니다.',
 	keywords: [
-		'근무 시간',
-		'시간 규칙'
+		'기타 근무 규칙',
+		'연장 근무'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -57,24 +57,42 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["근무 시간 계산에 사용될 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "tab.payCode",
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "tab.shift",
         product: "2",
         className: "normal"
-      }), " 설정을 안내합니다. 정상 근무용 시간 규칙, 연장 근무용 시간 규칙, 부재용 시간 규칙을 설정할 수 있습니다. 각 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "tab.payCode",
+      }), "에 연장 근무 시간 규칙을 추가하지 않았을 때 유용하게 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "tab.shift",
         product: "2",
         className: "normal"
-      }), "은 시간당 가중치를 다르게 지정하여 사용할 수 있습니다."]
+      }), "에서 설정하는 연장 근무는 시작 시간과 종료 시간을 갖고 있으나 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "rule.rule",
+        product: "2",
+        className: "normal"
+      }), "은 정규 근무 시간 범위를 넘어선 총 시간을 계산합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "rule.rule",
+        product: "2",
+        className: "normal"
+      }), "은 일별/주별/월별 총 연장 근무 시간으로 관리할 때 편리하게 사용할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "rule.rule",
+        product: "2",
+        className: "normal"
+      }), "을 설정하면 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "tab.shift",
+        product: "2",
+        className: "normal"
+      }), "에 추가된 연장 근무 시간 규칙 대신 적용됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "",
       children: (0,jsx_runtime.jsx)(Cmd, {
-        sid: "payCode.addPayCode",
+        sid: "rule.addRule",
         product: "2",
         className: "bold"
       })
@@ -93,23 +111,23 @@ function _createMdxContent(props) {
             sid: "tab.shift",
             product: "2"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
+            sid: "rule.rule",
             product: "2"
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "payCode.addPayCode",
+            sid: "rule.addRule",
             product: "2"
           }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/biostarx-tna-shift-paycode.png"
+          src: "/img/biostarx-tna-shift-overtime.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "payCode.addPayCode",
+            sid: "rule.addRule",
             product: "2"
           }), " 화면이 나타나면 각 항목을 설정하세요."]
         }), "\n"]
@@ -126,11 +144,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["이어서 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "tab.shift",
-              product: "2",
-              className: "normal"
-            }), "을 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["이어서 근무 스케줄을 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "payCode.applyAndAddShift",
               product: "2"
             }), " 버튼을 클릭하세요."]
@@ -138,7 +152,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["설정을 저장한 후 다른 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "tab.payCode",
+              sid: "rule.rule",
               product: "2"
             }), "을 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ta.apply_add_another",
@@ -150,8 +164,14 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "설정-옵션-안내",
       children: "설정 옵션 안내"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "rule.rule",
+        product: "2",
+        className: "normal"
+      }), "을 설정하세요. 일별, 주별, 월별 단위로 적용할 연장 근무 규칙을 설정할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-tna-shift-paycode-adding.png"
+      src: "/img/biostarx-tna-shift-overtime-adding.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -159,7 +179,7 @@ function _createMdxContent(props) {
             sid: "form.name",
             product: "2"
           }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
+            sid: "rule.rule",
             product: "2",
             className: "normal"
           }), "의 이름을 입력하세요."]
@@ -170,7 +190,7 @@ function _createMdxContent(props) {
             sid: "form.description",
             product: "2"
           }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
+            sid: "rule.rule",
             product: "2",
             className: "normal"
           }), "에 대한 설명을 입력하세요."]
@@ -178,80 +198,71 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "form.type",
+            sid: "rule.overtime",
             product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
-            product: "2",
-            className: "normal"
-          }), "의 종류를 선택하세요."]
+          }), ": 일별, 주별, 월별 단위로 정규 근무 시간 이후 적용할 연장 근무 규칙을 선택하세요. 일정 시간 이후에 다른 연장 근무 규칙을 적용할 수 있습니다. 최대 연장 근무 시간을 설정하여 근로자가 일할 수 있는 연장 근무 시간을 제한할 수도 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+          type: "tip",
+          children: [(0,jsx_runtime.jsxs)(_components.p, {
+            children: ["아래와 같이 설정하면 정규 근무 시간이 오전 8시에서 오후 5시일 때 오후 5시부터 오후 11시까지 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Overtime(1.5)"
+            }), " 시간 규칙이 적용되며, 오후 11시부터 오전 2시까지 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Overtime(2)"
+            }), " 시간 규칙이 적용됩니다. 또한, 하루 일할 수 있는 최대 초과 근무 시간이 9시간으로 제한되어 오전 2시까지 일한 기록만 사용하여 하루 급여를 계산합니다."]
+          }), (0,jsx_runtime.jsx)(Image, {
+            src: "/img/biostarx-tna-shift-overtime-example.png"
+          })]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "총 근무 시간은 휴식 시간이나 식사 시간을 포함하지 않습니다."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "rule.weekendOvertime",
+            product: "2"
+          }), " / ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "rule.holidayOvertime",
+            product: "2"
+          }), ": 주말 또는 휴일에 적용할 근무 규칙을 설정하세요."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "payCode.countAsAttendance",
+                sid: "payCode.payCode",
                 product: "2"
-              }), ": 정상 근무에 사용할 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": 적용할 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "tab.payCode",
                 product: "2",
                 className: "normal"
-              }), "으로 설정합니다."]
+              }), "을 선택하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "payCode.accumulateTowardOvertime",
+                sid: "shift.dayStartTime",
                 product: "2"
-              }), ": 연장 근무에 사용할 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "tab.payCode",
-                product: "2",
-                className: "normal"
-              }), "으로 설정합니다."]
+              }), ": 근무 시작 시간을 설정하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "payCode.trackOnLeaveManagement",
+                sid: "rule.firstInLastOut",
                 product: "2"
-              }), ": 외출, 외근, 출장, 휴가 등에 사용할 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "tab.payCode",
-                product: "2",
-                className: "normal"
-              }), "으로 설정합니다."]
+              }), ": 가장 처음 사용자가 인증한 시간을 출근 시간으로 기록하며, 가장 마지막에 사용자가 인증한 시간을 퇴근 시간으로 기록합니다."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "payCode.timeRate",
-            product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
-            product: "2",
-            className: "normal"
-          }), "에 따른 시간당 가중치를 설정하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "1"
-          }), "은 기본 가중치이며, ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2"
-          }), "로 설정하면 설정된 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
-            product: "2",
-            className: "normal"
-          }), "이 적용될 때 근무 시간이 시간당 2배로 계산됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "payCode.color",
-            product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tab.payCode",
-            product: "2",
-            className: "normal"
-          }), "을 구분할 색상을 설정하세요."]
-        }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
+        to: "tna-rule-schedule",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "기간, 사용자, 기타 근무 규칙, 휴가 일정을 구성하여 근무 스케줄 설정 방법을 안내합니다."
+        })
+      })
     })]
   });
 }

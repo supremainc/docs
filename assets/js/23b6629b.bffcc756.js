@@ -470,9 +470,11 @@ function tna_rule_shift_day_createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, NextItem, NextStep} = _components;
   if (!Cmd) tna_rule_shift_day_missingMdxReference("Cmd", true);
   if (!Image) tna_rule_shift_day_missingMdxReference("Image", true);
+  if (!NextItem) tna_rule_shift_day_missingMdxReference("NextItem", true);
+  if (!NextStep) tna_rule_shift_day_missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "24시간을 기준으로 시간에 따라 시간 규칙을 다르게 적용하여 근무 규칙을 생성할 수 있습니다. 고정 근무, 유연 근무, 유동 근무를 선택할 수 있으며, 하루 시작 시간, 시간 반올림 규칙 등을 설정할 수 있습니다."
@@ -708,6 +710,13 @@ function tna_rule_shift_day_createMdxContent(props) {
             }), "을 설정할 수 있습니다."]
           }), "\n"]
         }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
+        to: "tna-rule-shift-schedule",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "설정된 하루 단위의 근무 규칙으로 주간 근무 규칙을 설정할 수 있습니다. 주별, 일별 주간 근무 규칙을 설정할 수 있습니다."
+        })
       })
     })]
   });

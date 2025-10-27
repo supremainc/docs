@@ -57,9 +57,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -254,6 +256,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
+        to: "tna-rule-schedule",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "기간, 사용자, 기타 근무 규칙, 휴가 일정을 구성하여 근무 스케줄 설정 방법을 안내합니다."
+        })
+      })
     })]
   });
 }

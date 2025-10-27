@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3947"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6328"], {
 92473: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-rule-shift-schedule-mdx-92c.json
-var site_docs_platform_biostar_x_tna_rule_shift_schedule_mdx_92c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-rule-shift-schedule","title":"주간 근무 규칙 설정하기","description":"설정한 일일 근무 규칙을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/tna-rule-shift-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-rule-shift-schedule","permalink":"/docs/en/platform/biostar_x/tna-rule-shift-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-rule-shift-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-rule-shift-schedule","title":"주간 근무 규칙 설정하기","description":"설정한 일일 근무 규칙을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.","keywords":["주간 근무 규칙"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"일일 근무 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/tna-rule-shift-day"},"next":{"title":"기타 근무 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/tna-rule-shift-overtime"}}')
+var site_docs_platform_biostar_x_tna_rule_shift_schedule_mdx_92c_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-rule-shift-schedule","title":"주간 근무 규칙 설정하기","description":"설정한 일일 근무 규칙을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/tna-rule-shift-schedule.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-rule-shift-schedule","permalink":"/docs/platform/biostar_x/tna-rule-shift-schedule","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-rule-shift-schedule.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-rule-shift-schedule","title":"주간 근무 규칙 설정하기","description":"설정한 일일 근무 규칙을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.","keywords":["주간 근무 규칙"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"일일 근무 규칙 설정하기","permalink":"/docs/platform/biostar_x/tna-rule-shift-day"},"next":{"title":"기타 근무 규칙 설정하기","permalink":"/docs/platform/biostar_x/tna-rule-shift-overtime"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'주간 근무 규칙'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -55,10 +55,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcTrash2, Image} = _components;
+  }, {Cmd, IcTrash2, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!NextItem) _missingMdxReference("NextItem", true);
+  if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["설정한 ", (0,jsx_runtime.jsx)(Cmd, {
@@ -253,6 +255,13 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(NextStep, {
+      children: (0,jsx_runtime.jsx)(NextItem, {
+        to: "tna-rule-shift-overtime",
+        children: (0,jsx_runtime.jsx)(_components.p, {
+          children: "일일 근무 규칙에 초과 근무 시간 규칙을 추가 적용하여 유연한 근무 규칙 생성 방법을 안내합니다."
+        })
+      })
     })]
   });
 }

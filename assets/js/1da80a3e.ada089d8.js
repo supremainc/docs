@@ -42,28 +42,13 @@ const assets = {
 
 
 const toc = [{
-  "value": "<Cmd class=\"bold\"></Cmd> 설정",
-  "id": "-설정",
-  "level": 2
-}, {
-  "value": "<Cmd class=\"bold\"></Cmd> 설정",
-  "id": "-설정-1",
-  "level": 2
-}, {
-  "value": "<Cmd class=\"bold\"></Cmd> 설정",
-  "id": "-설정-2",
-  "level": 2
-}, {
-  "value": "<Cmd class=\"bold\"></Cmd> 설정",
-  "id": "-설정-3",
-  "level": 2
-}, {
-  "value": "근무 스케줄 설정",
-  "id": "근무-스케줄-설정",
+  "value": "근무 스케줄",
+  "id": "근무-스케줄",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     h2: "h2",
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
@@ -79,46 +64,73 @@ function _createMdxContent(props) {
       children: "근무 규칙을 처음 등록하다면 아래 순서에 따라 설정하세요."
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
-        children: [(0,jsx_runtime.jsxs)(_components.h2, {
-          id: "-설정",
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(_components.h2, {
+          id: "",
+          children: (0,jsx_runtime.jsx)(Cmd, {
             sid: "tab.payCode",
             product: "2",
             className: "bold"
-          }), " 설정"]
+          })
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "근태 기록 관리, 초과 근무, 부재에 대한 시간 규칙을 설정할 수 있습니다. 시간당 가중치를 설정할 수 있으며, 한 눈에 알아보기 쉽도록 색상을 지정하여 표시할 수 있습니다."
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "tab.payCode",
+            product: "2",
+            className: "normal"
+          }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "tna-rule-shift-paycode",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
-        children: [(0,jsx_runtime.jsxs)(_components.h2, {
-          id: "-설정-1",
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(_components.h2, {
+          id: "-1",
+          children: (0,jsx_runtime.jsx)(Cmd, {
             sid: "tab.shift",
             product: "2",
             className: "bold"
-          }), " 설정"]
+          })
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "하루(24시간) 단위의 근무 규칙을 설정할 수 있습니다. 근무 규칙은 시간에 따른 시간 규칙 설정, 하루 시작 시간 설정, 시간 반올림 규칙 등을 포함합니다."
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "tab.shift",
+            product: "2",
+            className: "normal"
+          }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "tna-rule-shift-day",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
-        children: [(0,jsx_runtime.jsxs)(_components.h2, {
-          id: "-설정-2",
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(_components.h2, {
+          id: "-2",
+          children: (0,jsx_runtime.jsx)(Cmd, {
             sid: "tab.scheduleTemplate",
             product: "2",
             className: "bold"
-          }), " 설정"]
+          })
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "설정된 하루 단위의 근무 규칙으로 주간 근무 규칙을 설정할 수 있습니다. 주별, 일별 주간 근무 규칙을 설정할 수 있습니다."
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "tab.scheduleTemplate",
+            product: "2",
+            className: "normal"
+          }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "tna-rule-shift-schedule",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
-        children: [(0,jsx_runtime.jsxs)(_components.h2, {
-          id: "-설정-3",
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(_components.h2, {
+          id: "-3",
+          children: (0,jsx_runtime.jsx)(Cmd, {
             sid: "rule.rule",
             product: "2",
             className: "bold"
-          }), " 설정"]
+          })
         }), (0,jsx_runtime.jsxs)(_components.p, {
           children: ["일일 근무 규칙에 초과 근무 시간 규칙을 추가하지 않았을 때 유용하게 사용할 수 있습니다. 일일 근무 규칙에서 설정하는 초과 근무는 시작 시간과 종료 시간을 갖고 있으나 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "rule.rule",
@@ -130,13 +142,31 @@ function _createMdxContent(props) {
             sid: "rule.rule",
             product: "2"
           }), "을 설정하면 근무 규칙에 추가된 초과 근무 시간 규칙 대신 적용됩니다."]
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "rule.rule",
+            product: "2",
+            className: "normal"
+          }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "tna-rule-shift-overtime",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h2, {
-          id: "근무-스케줄-설정",
-          children: "근무 스케줄 설정"
+          id: "근무-스케줄",
+          children: "근무 스케줄"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "이전 단계에서 설정한 근무 스케줄을 적용할 기간, 사용자. 기타 근무 규칙, 휴가 일정을 설정할 수 있습니다."
+          children: "이전 단계에서 설정한 근무 스케줄을 적용할 기간, 사용자, 기타 근무 규칙, 휴가 일정을 설정할 수 있습니다."
+        }), (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "ta.schedule",
+            product: "2",
+            className: "normal"
+          }), " 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "tna-rule-schedule",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })]
       })]
     })]
