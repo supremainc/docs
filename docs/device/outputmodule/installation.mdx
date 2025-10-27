@@ -1,0 +1,140 @@
+---
+id: installation
+title: 설치하기
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [ 설치, 전원, RS-485, 릴레이, AUX, 함체, 탬퍼 ]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 제품 고정
+
+1. 제품을 장착할 위치에 스페이서를 고정용 나사로 고정하세요.
+
+1. 고정된 스페이서 위에 고정용 나사로 제품을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device-om120.svg' className='none' width='30%' alone />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## RS-485 연결
+
+<Image src='/img/device/installation-rs485-connection-om120.png' width='70%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품은 종단 저항 스위치를 ON으로 설정하세요.
+
+* 이 제품은 하나의 마스터 장치에 최대 31대까지 연결할 수 있습니다.
+
+:::
+
+## 릴레이 연결
+
+<Image src='/img/device/installation-relay-om120.png' className='none' width='70%' />
+
+:::info
+
+* 릴레이를 연결하는 방법은 엘리베이터 종류마다 다를 수 있습니다. 자세한 사항은 엘리베이터 시공사에 문의하세요.
+
+* 각 릴레이 출력은 제어 패널과 층 버튼에 올바르게 연결되어야 합니다.
+
+:::
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+## 함체 설치 {#install-enclosure}
+
+물리적·전기적 보호를 위해 제품을 함체(ENCR-10) 내부에 설치할 수 있습니다. 함체에는 전원 상태 LED 보드, 전원 분배 보드, 전원 공급 장치, 탬퍼가 포함되어 있습니다. 함체는 별매품입니다.
+
+### 백업 배터리 고정
+
+배터리 벨크로 스트랩을 함체에 끼운 뒤 배터리를 고정하세요.
+
+<Image src='/img/device/installation-enclosure-battery.png' className='none' width='60%' alone />
+
+:::caution
+
+백업 배터리는 12 VDC 사양과 7 Ah 이상의 제품을 사용하세요. 이 제품은 'ROCKET'사의 'ES7-12' 제품으로 테스트 되었으며, 'ES7-12'에 준하는 제품을 사용할 것을 권장합니다.
+
+:::
+
+:::info
+
+* 백업 배터리는 별매품입니다.
+
+* 백업 배터리의 크기 및 단자의 모양과 크기를 반드시 확인하세요. 백업 배터리의 크기가 권장 사양보다 클 경우 함체에 장착할 수 없거나 장착한 뒤 함체가 닫히지 않을 수 있습니다. 또한 단자의 모양 및 크기가 다를 경우 제공된 케이블을 사용해 배터리를 연결할 수 없습니다.
+
+  <Image src='/img/device/installation-enclosure-battery-size.svg' className='none' />
+
+:::
+
+<PageBreak />
+
+### 제품 고정
+
+1. 함체에서 제품을 장착할 위치를 확인하세요. 1개의 함체에 2개의 제품을 설치할 수 있습니다.
+
+    <Image src='/img/device/installation-enclosure-fix1-im120.png' className='none' width='25%' alone />
+
+1. 장착할 위치에 맞추어 제품을 함체에 올린 뒤 고정용 나사로 고정하세요.
+
+    <Image src='/img/device/installation-enclosure-fix2-om120.png' className='none' width='33%' alone />
+
+:::info
+
+* ENCR-10은 벽에 고정하여 사용할 수 있도록 설계되었습니다. 설치 높이에 제한 없이 안전하고 사용하기에 편리한 위치에 설치하세요.
+
+* ENCR-10 구성품에는 함체 고정용 나사, 제품 고정용 나사, 전원 장치 연결용 나사가 포함되어 있습니다. 각 나사의 용도에 맞추어 올바르게 사용하세요.
+
+  * 함체 고정용 나사(직경: 4 mm, 길이: 25 mm) x4
+
+  * 제품 고정용 나사(직경: 3 mm, 길이: 5 mm) x6
+
+  * 전원 장치 케이블 고정용 나사(직경: 3 mm, 길이: 8 mm) x1
+
+:::
+
+### 전원 및 AUX 입력 연결
+
+전원 장애를 막기 위해 무정전 전원 장치(UPS)를 연결하여 사용할 수 있으며, 전원 장애 감지기나 다른 장치의 접점 출력을 AUX IN 단자에 연결할 수 있습니다.
+
+<Image src='/img/device/installation-enclosure-power-aux-input-connection-om120.png' className='none' width='75%' alone />
+
+:::caution
+
+* 출입 통제 장치와 제품에 연결하는 전원은 반드시 분리하여 사용하세요.
+
+* 전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다.
+
+  * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
+
+* 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
+
+* 백업 배터리는 12 VDC 사양과 7 Ah 이상의 제품을 사용하세요. 이 제품은 'ROCKET'사의 'ES7-12' 제품으로 테스트 되었으며, 'ES7-12'에 준하는 제품을 사용할 것을 권장합니다.
+
+:::
+
+### 탬퍼 연결
+
+외부 요인에 의해 함체가 열릴 경우 경보를 울리거나 이벤트 로그를 남길 수 있습니다.
+
+<Image src='/img/device/installation-enclosure-connection-om120.png' className='none' width='45%' alone />
+
+:::info
+
+제품 설치에 대한 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+
+:::
