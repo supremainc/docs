@@ -621,7 +621,8 @@ const sidebars = {
                 'platform/biostar_x/visitor-register-manage',
                 'platform/biostar_x/visitor-register-checkin-manage',
                 'platform/biostar_x/visitor-register-checkout-manage',
-                'platform/biostar_x/visitor-register-all-manage'
+                'platform/biostar_x/visitor-register-all-manage',
+                'platform/biostar_x/visitor-remove-expire-personal'
               ]
             }
           ]
