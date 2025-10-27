@@ -1,0 +1,62 @@
+---
+id: tna-rule-shift-schedule
+title: 주간 근무 규칙 설정하기
+description: 설정한 일일 근무 규칙을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.
+keywords: [주간 근무 규칙]
+---
+
+설정한 <Cmd sid='tab.shift' product='2' className='normal' />을 기반으로 주간 단위의 근무 규칙을 생성하는 방법을 안내합니다.
+
+## <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' className='bold' />
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.scheduleTemplate' product='2' />을 클릭하세요.
+
+1. <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-shift-schedule.png' />
+
+1. <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' /> 화면이 나타나면 각 항목을 설정하세요.
+
+:::info
+
+* 설정을 저장하려면 화면 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+* 이어서 근무 스케줄을 추가하려면 <Cmd sid='payCode.applyAndAddShift' product='2' /> 버튼을 클릭하세요.
+
+* 설정을 저장한 후 다른 <Cmd sid='tab.scheduleTemplate' product='2' />을 추가하려면 <Cmd sid='ta.apply_add_another' product='2' /> 버튼을 클릭하세요.
+
+:::
+
+## 설정 옵션 안내
+
+<Image src='/img/biostarx-tna-shift-schedule-adding.png' />
+
+* <Cmd sid='form.name' product='2' />: <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />의 이름을 입력하세요.
+
+* <Cmd sid='form.description' product='2' />: <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />에 대한 설명을 입력하세요.
+
+* <Cmd sid='form.type' product='2' />: <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />을 <Cmd sid='scheduleTemplate.type.weekly' product='2' /> 또는 <Cmd sid='scheduleTemplate.type.daily' product='2' /> 일별로 설정할 수 있습니다.
+
+  <Cmd sid='scheduleTemplate.type.daily' product='2' />을 선택하면 반복 사용 기간(<Cmd sid='scheduleTemplate.cycle' product='2' />)을 설정할 수 있습니다.
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-daily.png' />
+
+* <Cmd sid='scheduleTemplate.weekendSetting' product='2' />: 주말로 지정할 요일을 설정하세요.
+
+* <Cmd sid='scheduleTemplate.shift' product='2' />: 설정된 <Cmd sid='tab.shift' product='2' className='normal' /> 목록을 확인할 수 있습니다.
+
+* 주별/일별 스케줄: 설정한 <Cmd sid='tab.shift' product='2' className='normal' />을 드래그앤드랍으로 설정하세요. 
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-drag-shift.png' />
+
+  :::info
+
+  * 월요일부터 일요일까지 모두 적용하려면 <Cmd sid='scheduleTemplate.copyAll' product='2' /> 버튼을 클릭하세요.
+
+  * 적용한 <Cmd sid='tab.shift' product='2' className='normal' />을 해제하려면 <IcTrash2 /> 버튼을 클릭하세요.
+
+  * <Cmd sid='shift.dayStartTimeExcessTime' product='2' />을 설정한 <Cmd sid='tab.shift' product='2' className='normal' />을 적용하면 전일 초과 허용 시간이 전일 근무 규칙의 하루 시작 시간보다 24시간 앞에 위치하도록 설정할 수 없습니다.
+
+  :::

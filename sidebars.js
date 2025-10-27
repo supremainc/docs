@@ -579,10 +579,38 @@ const sidebars = {
             },
             'platform/biostar_x/settings-visitor',
             'platform/biostar_x/settings-diretory-integration',
-            'platform/biostar_x/settings-remote-access'
+            'platform/biostar_x/settings-remote-access',
           ]
         },
-        'platform/biostar_x/plugins',
+        {
+          type: 'category',
+          label: '플러그인',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/plugins',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '근태 관리 사용하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/tna',
+              },
+              items: [
+                'platform/biostar_x/tna-rule-setting',
+                'platform/biostar_x/tna-rule-shift-paycode',
+                'platform/biostar_x/tna-rule-shift-day',
+                'platform/biostar_x/tna-rule-shift-schedule',
+                'platform/biostar_x/tna-rule-shift-overtime',
+                'platform/biostar_x/tna-rule-schedule',
+                'platform/biostar_x/tna-report',
+                'platform/biostar_x/tna-report-edit',
+                'platform/biostar_x/tna-settings'
+              ]
+            }
+          ]
+        },
         {
           type: 'category',
           label: 'UI 알아보기',

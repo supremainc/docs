@@ -1,0 +1,200 @@
+---
+id: tna-rule-schedule
+title: 근무 스케줄 설정하기
+description: 설정된 주간 근무 규칙, 기타 근무 규칙, 기간, 휴일을 사용자에게 지정하여 근무 스케줄을 생성 방법을 안내합니다.
+keywords: [근무 스케줄, 근무 규칙]
+---
+
+설정된 <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='rule.rule' product='2' className='normal' />, 기간, 휴일을 사용자에게 지정하여 근무 스케줄을 생성할 수 있습니다.
+
+생성된 근무 스케줄에 임시 스케줄이나 개인 휴가도 추가할 수 있습니다.
+
+:::info
+
+스케줄을 생성하기 전에 사용할 <Cmd sid='tab.payCode' product='2' className='normal' />, <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='tab.shift' product='2' className='normal' />, 휴일을 올바르게 생성했는지 확인하세요. 
+
+* 근무 규칙 설정에 대한 자세한 내용을 다음 문서를 참고하세요.
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-day' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-schedule' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-overtime' />
+
+* 휴일 설정에 대한 자세한 내용은 [다음 문서](settings-schedule#addHolidaySchedule)를 참고하세요.
+
+:::
+
+## 근무 스케줄
+
+### 근무 스케줄 추가
+
+다음 안내에 따라 등록한 사용자의 근무 스케줄을 추가하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ta.schedule' product='2' /> 탭을 클릭하세요.
+
+1. <Cmd sid='schedule.addSchedule' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-schedule-template.png' />
+
+1. <Cmd sid='schedule.addSchedule' product='2' /> 화면이 나타나면 각 항목을 설정하세요.
+
+:::info
+
+* 설정을 저장하려면 화면 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+* 설정을 저장한 후 다른 <Cmd sid='ta.schedule' product='2' />을 추가하려면 <Cmd sid='ta.apply_add_another' product='2' /> 버튼을 클릭하세요.
+
+:::
+
+### 설정 옵션 안내
+
+근무 스케줄 설정 옵션을 안내합니다.
+
+<Image src='/img/biostarx-tna-schedule-template-adding.png' />
+
+* <Cmd sid='form.name' product='2' />: 근무 스케줄의 이름을 입력하세요.
+
+* <Cmd sid='form.description' product='2' />: 근무 스케줄에 대한 설명을 입력하세요.
+
+* <Cmd sid='rule.rule' product='2' />: 설정한 <Cmd sid='rule.rule' product='2' className='normal' />을 선택하세요. <Cmd sid='rule.rule' product='2' className='normal' />을 설정하면 <Cmd sid='tab.shift' product='2' className='normal' />에 설정한 초과 근무 시간 규칙이 적용되지 않습니다. 사용하지 않으려면 <Cmd sid='common.none' product='2' />을 선택하세요.
+
+  :::info
+
+  원하는 <Cmd sid='rule.rule' product='2' className='normal' />이 없다면 추가할 수 있습니다. 자세한 내용은 [다음 문서](tna-rule-shift-overtime)를 참고하세요.
+
+  :::
+
+* <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' />: 설정한 <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' />을 선택하세요. 한번 설정한 <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' />은 수정할 수 없습니다.
+
+  :::info
+
+  원하는 <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' />이 없다면 추가할 수 있습니다. 자세한 내용은 [다음 문서](tna-rule-shift-schedule)를 참고하세요.
+
+  :::
+
+* <Cmd sid='schedule.period' product='2' />: 근태 이벤트를 수집할 기간을 설정하세요.
+
+  :::info
+
+  시작 날짜는 한 번 설정하면 나중에 변경할 수 없습니다. 종료 날짜는 나중에 변경할 수 있으며, 설정된 날짜보다 이전 날짜로 변경하면 변경된 기간만큼의 부재 이벤트가 삭제됩니다.
+
+  :::
+
+* <Cmd sid='schedule.holiday' product='2' />: 설정한 휴가 일정을 선택하세요. 용하지 않으려면 <Cmd sid='common.none' product='2' />을 선택하세요.
+
+  :::info
+
+  원하는 휴가 일정이 없다면 추가할 수 있습니다. 자세한 내용은 [다음 문서](settings-schedule#addHolidaySchedule)를 참고하세요.
+
+  :::
+
+* <Cmd sid='schedule.users' product='2' />: 규칙을 적용할 사용자를 추가하세요.
+
+:::info
+
+전체 근무 스케줄에 포함된 사용자 수는 등록한 근태 관리 라이선스가 지원하는 최대 사용자 수를 초과할 수 없습니다. 각 라이선스당 최대 사용자는 <DocLink docId='platform/biostar_x/licensing' />을 참고하세요.
+
+:::
+
+### 근무 스케줄 수정
+
+등록한 근무 스케줄 수정 방법을 안내합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='tna.scheduleTemplate' product='2' /> 탭을 클릭하세요.
+
+1. <Cmd sid='ta.schedule' product='2' /> 목록에서 수정할 항목을 클릭하세요. 또는 화면 왼쪽 사이드바에서 수정할 항목의 <IcEdit /> 버튼을 클릭하세요.
+
+1. 원하는 항목을 수정하고 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+### 근무 스케줄 삭제
+
+등록한 근무 스케줄 삭제 방법을 안내합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='tna.scheduleTemplate' product='2' /> 탭을 클릭하세요.
+
+1. <Cmd sid='ta.schedule' product='2' /> 목록에서 삭제할 항목의 체크박스를 클릭하세요.
+
+    <Image src='/img/biostarx-tna-schedule-remove-item.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='schedule.deleteSchedule' product='2' /> 버튼을 클릭하세요. 또는 화면 왼쪽 사이드바에서 삭제할 항목의 <IcTrash2 /> 버튼을 클릭하세요.
+
+1. 확인 메시지 창이 나타나면 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+
+## 임시 스케줄 추가
+
+이미 등록한 스케줄이 있다면 사용자에게 임시로 다른 근무 규칙을 적용할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ta.schedule' product='2' /> 탭을 클릭하세요.
+
+1. 화면 왼쪽 목록에서 스케줄에 할당된 사용자를 선택하면 달력이 표시됩니다.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
+
+1. 달력에서 임시 스케줄을 추가할 날짜를 클릭하세요.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='schedule.addTemporarySchedule' product='2' />를 클릭하세요.
+
+1. <Cmd sid='schedule.addTemporarySchedule' product='2' /> 설정창이 나타나면 각 항목을 설정하세요.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule-setting.png' />
+
+    다른 사용자에게도 동일한 근무 스케줄을 적용하려면 <IcSearch /> 버튼을 클릭한 후 사용자를 선택하세요.
+
+1. 설정한 근무 규칙을 적용하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+사용자에게 적용한 임시 스케줄을 삭제하려면 달력에서 설정된 임시 스케줄을 클릭하세요. 확인 메시지 창이 나타나면 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+:::
+
+
+## 부재 추가 및 삭제
+
+사용자의 부재 일정을 추가할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ta.schedule' product='2' /> 탭을 클릭하세요.
+
+1. 화면 왼쪽 목록에서 스케줄에 할당된 사용자를 선택하면 달력이 표시됩니다.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
+
+1. 달력에서 사용자의 부재 일정을 추가할 날짜를 클릭하세요.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='schedule.addLeave' product='2' />를 클릭하세요.
+
+1. <Cmd sid='leave.editLeave' product='2' /> 설정창이 나타나면 각 항목을 설정하세요.
+
+    <Image src='/img/biostarx-tna-schedule-template-add-leave-setting.png' />
+
+    다른 사용자에게도 동일한 부재 일정을 적용하려면 <IcSearch /> 버튼을 클릭한 후 사용자를 선택하세요.
+
+1. 설정한 부재 일정을 적용하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 원하는 부재 관리 시간 규칙이 없다면 추가할 수 있습니다. 시간 규칙 추가에 대한 자세한 내용은 [다음 문서](tna-rule-shift-paycode)를 참고하세요.
+
+* 사용자에게 적용한 부재 일정을 삭제하려면 달력에서 설정된 부재 일정의 <IcTrash2 /> 버튼을 클릭하세요. 확인 메시지 창이 나타나면 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+  <Image src='/img/biostarx-tna-schedule-remove-leave-item.png' alone />
+
+:::

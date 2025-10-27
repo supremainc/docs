@@ -1,0 +1,168 @@
+---
+id: tna
+title: 근태 관리 사용하기
+description:  근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다
+keywords: [근태 관리, 출입 기록, 보고서]
+---
+
+근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다. <Cmd sid='shell.header.tna' className='normal' /> 기능은 플러그인 형태로 제공되며 별도의 라이선스가 필요합니다.
+
+:::info
+
+<Cmd sid='shell.header.tna' className='normal' /> 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+:::
+
+## 시작하기 전에
+
+<Cmd sid='shell.header.tna' className='normal' /> 기능을 사용하려면 라이선스를 적용하고 별도의 설치 파일을 다운 받아 설치해야 합니다.
+
+### 라이선스 적용
+
+<Cmd sid='shell.header.tna' className='normal' /> 라이선스 적용 방법을 안내합니다. **BioStar X** 구입처로부터 <Cmd sid='shell.header.tna' className='normal' /> 라이선스를 구입한 후 다음 안내에 따라 라이선스를 적용하세요.
+
+1. **BioStar X** 관리자 계정으로 로그인하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' />를 클릭하세요.
+
+1. <Cmd sid='setting.xlicense.activation' product='2' />에서 <Cmd sid='setting.xlicense.activatedBy' product='2' />와 <Cmd sid='setting.xlicense.activationKey' product='2' /> 항목을 차례로 입력하세요.
+
+    <Image src='/img/biostarx-tutorial-license-online.png' />
+
+1. <Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하세요.
+
+등록한 라이선스는 <Cmd sid='setting.xlicense.myLicense' product='2' />에서 확인할 수 있습니다.
+
+:::info
+
+폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 라이선스를 활성화하려면 [다음 문서](settings-license-biostar-x-license#registering-offline)를 참고하세요.
+
+:::
+
+### 플러그인 설치
+
+<Cmd sid='shell.header.tna' className='normal' /> 기능을 사용하려면 별도의 설치 파일을 다운 받아 설치해야 합니다. 다음 안내에 따라 플러그인을 설치하세요.
+
+1. [슈프리마 다운로드 센터](https://download.supremainc.com/)로 접속해 <Cmd sid='shell.header.tna' className='normal' /> 플러그인 설치 파일(*BioStar X TA.X.Y.Z.BB.exe*)을 다운로드하세요.
+
+1. 설치 파일을 실행하고 안내에 따라 설치를 완료하세요.
+
+1. 다운로드한 설치 파일을 실행하세요.
+
+1. 사용할 언어를 선택하고 <Cmd code='biostar2.install.ok' className='bold'/> 버튼을 선택하세요.
+
+    <Image src='/img/biostarx-install-select-language.png' />
+
+1. 설치를 계속하려면 <Cmd code='biostar2.install.agree' className='bold'/>를 선택하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-agree.png' />
+
+1. 데이터베이스의 루트(root) 계정 암호를 입력하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-input-db-pw.png' />
+
+1. 데이터베이스에 저장되는 개인 정보 관리 권한 및 책임에 대한 안내를 읽고 설치를 계속하려면 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-read-covenant.png' />
+
+1. **BioStar X**와 통신하기 위한 포트를 설정하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-set-port.png' />
+
+    :::note
+
+    포트 번호는 기본값(3002)을 사용하거나 다른 포트 번호로 변경할 수 있습니다. 포트 번호를 변경한 경우 방화벽에서 해당 포트가 열려 있는지 확인하세요.
+
+    :::
+
+1. 설치 구성 요소를 선택한 후 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-additional.png' />
+
+1. 모든 설치 준비를 완료했다면 <Cmd code='biostar2.install.btnInstall' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-install-complete.png' />
+
+:::info
+
+* 다운로드한 파일명에서 `X.Y.Z`는 버전 정보이며, `BB`는 빌드 번호입니다.
+
+* 데이터베이스의 루트(root) 계정 암호는 **BioStar X**를 설치할 때 사용한 암호를 사용하세요.
+
+:::
+
+## <Cmd sid='shell.header.tna' className='bold' /> 화면 접근하기
+
+<Cmd sid='shell.header.tna' className='normal' /> 라이선스와 플러그인 설치를 완료하면 <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' className='normal' /> 기능을 접근할 수 있는 메뉴가 추가됩니다.
+
+<Image src='/img/biostarx-tna-main.png' />
+
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' /> 아이콘을 클릭하세요. 또는 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+
+## <Cmd sid='shell.header.tna' className='bold' /> 로그인
+
+<Cmd sid='shell.header.tna' className='normal' /> 기능에 최초 진입 시 별도의 로그인 화면이 나타납니다. **BioStar X** 관리자 계정으로 로그인하세요. <Cmd sid='shell.header.tna' className='normal' /> 기능에 관리자 계정으로 로그인하면 이후로 별도의 로그인 과정 없이 <Cmd sid='shell.header.tna' className='normal' /> 기능을 사용할 수 있습니다.
+
+<Image src='/img/biostarx-tna-login.png' />
+
+
+## 초기 설정
+
+1. <Cmd sid='shell.header.tna' className='normal' /> 기능에 최초 로그인하면 초기 설정을 위해 근태 관리자용 장치를 추가해야 합니다. 화면에서 <Cmd sid='common.setting' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-initial-setting.png' />
+
+1. 장치 목록에서 근태 관리를 위한 장치를 선택하세요.
+
+    <Image src='/img/biostarx-tna-initial-setting-register-device.png' />
+
+1. <Cmd sid='setting.register' product='2' /> 버튼이 활성화되면 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-initial-setting-select-device.png' />
+
+1. 선택한 장치가 <Cmd sid='setting.registerDevices' product='2' /> 목록에 표시되면 <Cmd sid='setting.setting' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-initial-setting-selected-device.png' />
+
+1. <Cmd sid='setting.setting' product='2' /> 창이 나타나면 근태 관리를 위한 기본 설정을 완료하세요.
+
+### 근태 모드 설정
+
+근태 모드 및 근태 이벤트 설정을 진행하세요.
+
+<Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+* <Cmd sid='device.info.mode' product='2' />: 근태 이벤트 등록 방법을 선택하세요.
+
+  * <Cmd sid='device.tna.mode.byUser' product='2' />: 인증할 때 사용자가 근태 이벤트를 선택할 수 있습니다.
+
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />: 설정한 스케줄에 따라 근태 이벤트가 자동으로 변경됩니다. 근태 이벤트에서 적용할 스케줄을 선택할 수 있습니다.
+
+  * <Cmd sid='device.tna.mode.lastChoice' product='2' />: 사용자가 마지막으로 사용한 근태 이벤트를 계속 사용할 수 있습니다.
+
+  * <Cmd sid='device.tna.mode.fixed' product='2' />: 선택한 근태 이벤트만 사용할 수 있습니다.
+
+  * <Cmd sid='device.tna.mode.unused' product='2' />: 근태 이벤트를 기록하지 않습니다.
+
+* <Cmd sid='device.info.tnaRequired' product='2' />: 인증할 때 반드시 근태 이벤트를 등록하도록 설정할 수 있습니다. <Cmd sid='device.info.mode' product='2' />를 <Cmd sid='device.tna.mode.byUser' product='2' />으로 설정했을 때 사용할 수 있습니다.
+
+* <Cmd sid='device.info.tnaEvent' product='2' />: 근태 이벤트의 이름을 수정하거나 <Cmd sid='device.info.mode' product='2' />를 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정했을 때 사용되는 스케줄을 추가할 수 있습니다.
+
+  * <Cmd sid='device.tna.eventKey' product='2' />: 근태 등록에 사용할 수 있는 키 목록입니다.
+
+  * <Cmd sid='device.tna.label' product='2' />: 근태 키에 따른 근태 이벤트 이름을 변경할 수 있습니다.
+
+  * <Cmd sid='device.tna.schedule' product='2' />: <Cmd sid='device.info.mode' product='2' />를 <Cmd sid='device.tna.mode.bySchedule' product='2' /> 설정하면 자동으로 변경할 스케줄을 설정할 수 있습니다. 스케줄 설정에 대한 자세한 내용은 [다음 문서](settings-schedule)를 참고하세요.
+
+:::info
+
+* LCD 화면을 지원하지 않는 장치는 <Cmd sid='device.info.mode' product='2' />를 <Cmd sid='device.tna.mode.bySchedule' product='2' />과 <Cmd sid='device.tna.mode.fixed' product='2' />으로 설정할 수 있습니다. 고정된 근태 이벤트를 등록하거나 미리 설정된 스케줄에 따라 변경되는 근태 이벤트를 등록할 수 있습니다. 
+
+* <Cmd sid='device.tna.mode.bySchedule' product='2' />과 <Cmd sid='device.tna.mode.fixed' product='2' /> 모드를 지원하는 장치 모델은 BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2입니다.
+
+* <Cmd sid='setting.setting' product='2' /> 메뉴에 대한 자세한 내용은 [다음 문서](tna-settings)를 참고하세요.
+
+:::
