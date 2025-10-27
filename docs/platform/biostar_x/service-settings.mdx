@@ -103,6 +103,16 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트 (기본값: 21810)
 
+:::info
+
+* <Cmd>Client Port</Cmd> 값을 변경하면, **Windows Services**(*services.msc*)에서 **BioStar X Coordinator Service** 서비스를 찾아 수동으로 재시작하세요.
+
+* **BioStar X Coordinator Service** 서비스를 재시작한 후 **BioStar X Service Manager** → **SERVICES** 메뉴에서 모든 서비스를 재시작하세요. 
+
+  화면 오른쪽 상단의 <Cmd>Stop All</Cmd> 버튼을 클릭하세요. 모든 서비스가 중지된 후 <Cmd>Start All</Cmd> 버튼이 활성화되면 버튼을 클릭하세요.
+
+:::
+
 ### BioStar X Server (Main) {#biostar-x-server-(main)}
 
 시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다.

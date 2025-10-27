@@ -158,16 +158,16 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       height: '90px'
     },
-    {
-      title: 'BioEntry P2',
-      url: `/device/bioentry_p2`,
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
-      desc: `${translate({
-        id: "externalLinks.BioentryP2.desc",
-        message: "콤팩트 지문인식 단말기"
-      })}`,
-      height: '90px'
-    },
+    // {
+    //   title: 'BioEntry P2',
+    //   url: `/device/bioentry_p2`,
+    //   img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
+    //   desc: `${translate({
+    //     id: "externalLinks.BioentryP2.desc",
+    //     message: "콤팩트 지문인식 단말기"
+    //   })}`,
+    //   height: '90px'
+    // },
     {
       title: 'BioEntry R2',
       url: '#',
