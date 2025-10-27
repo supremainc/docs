@@ -205,11 +205,6 @@ const config = {
             items: [
               {
                 type: 'doc',
-                label: 'BioStation 3',
-                docId: 'device/biostation_3/index'
-              },
-              {
-                type: 'doc',
                 label: 'BioEntry W3',
                 docId: 'device/bioentry_w3/index'
               },
@@ -220,18 +215,13 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'BioStation 3',
+                docId: 'device/biostation_3/index'
+              },
+              {
+                type: 'doc',
                 label: 'FaceStation F2',
                 docId: 'device/facestation_f2/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioLite N2',
-                docId: 'device/biolite_n2/index'
-              },
-              {
-                type: 'doc',
-                label: 'X-Station 2',
-                docId: 'device/xstation_2/index'
               },
               {
                 type: 'doc',
@@ -240,8 +230,8 @@ const config = {
               },
               {
                 type: 'doc',
-                label: 'XPass D2',
-                docId: 'device/xpass_d2/index'
+                label: 'BioLite N2',
+                docId: 'device/biolite_n2/index'
               },
               {
                 type: 'doc',
@@ -257,6 +247,21 @@ const config = {
                 type: 'doc',
                 label: 'BioEntry R2',
                 docId: 'device/bioentry_r2/index'
+              },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass 2',
+                docId: 'device/xpass_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass D2',
+                docId: 'device/xpass_d2/index'
               },
               {
                 type: 'doc',

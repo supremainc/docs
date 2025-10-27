@@ -202,7 +202,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass 2',
-      url: '#',
+      url: `/device/xpass_2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
