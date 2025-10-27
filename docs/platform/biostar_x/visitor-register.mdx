@@ -1,0 +1,105 @@
+---
+id: visitor-register
+title: 방문 신청하기
+description: 방문 신청용 PC에서 방문자가 출입을 신청하는 방법을 안내합니다.
+keywords: [방문 신청]
+---
+
+사내 사용자가 아닌 외부 방문자가 방문 신청용 PC를 통해서 방문자가 출입을 신청하는 방법을 안내합니다.
+
+:::info
+
+* 방문 신청용 PC는 별도로 구성해야 하며, 방문자 설정이 선행되어야 합니다. 방문자 설정 방법에 대한 자세한 내용은 [다음 문서](settings-visitor)를 참고하세요.
+
+* 방문 신청용 PC에 방문 신청 페이지 바로가기 아이콘이 없는 경우, [다음 문서](settings-visitor#settings-visitor-pc-link)를 참고해 바로가기 아이콘을 생성하세요.
+
+:::
+
+## 신규 방문 신청
+
+처음 방문하는 방문자가 방문 신청용 PC에서 출입을 신청하는 방법을 안내합니다.
+
+1. 방문 신청용 PC에서 방문 신청 페이지를 실행하세요. 방문 신청 페이지 URL 주소는 `https://{biostar_x_server_ip}/#/register-welcome` 형식입니다.
+
+    <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+1. 화면 중앙의 <Cmd sid='visitor.welcome.first.time' product='2' />를 클릭하세요.
+
+1. 방문처 출입에 대한 약관 및 개인 정보 처리 방침에 대한 동의를 완료한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+1. 방문 신청에 필요한 정보를 입력하세요.
+
+    <Image src='/img/biostarx-visitor-register-info.png' />
+
+    * <Cmd sid='common.visitor' product='2' />: 방문자의 이름과 전화번호를 입력하세요.
+
+    * <Cmd sid='visitor.host' product='2' />: 방문할 담당자의 이름과 전화번호를 입력하세요.
+
+    * <Cmd sid='visitor.accessInfo' product='2' />: 출입 그룹 및 방문 기간을 설정하세요.
+
+1. 정보 입력은 완료한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+1. 출입 수단을 설정하세요.
+
+    <Image src='/img/biostarx-visitor-register-access-credential.png' />
+
+    * <Cmd sid='common.fingerPrint' product='2' />: 지문 인증을 사용하려면 <Cmd sid='button.addFingerprint' product='2' /> 버튼을 클릭한 후 지문을 등록하세요.
+
+    * <Cmd sid='common.card' product='2' />: 카드 인증을 사용하려면 <Cmd sid='visitor.request' product='2' />으로 설정한 후 방문 담당자에게 카드를 발급 받으세요.
+
+1. 설정을 완료한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+1. 신청한 모든 정보를 확인한 후 화면 오른쪽 하단의 <Cmd sid='button.register' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-visitor-register-complete.png' />
+
+:::info
+
+* 방문처 출입에 대한 약관 및 개인 정보 처리 방침 작성에 대한 자세한 내용은 [다음 문서](settings-visitor#settings-visitor-terms)를 참고하세요.
+
+* 이름은 최대 48자까지 입력할 수 있습니다.
+
+* 방문자 정보 입력에 커스텀 필드를 추가하려면 [다음 문서](settings-visitor#settings-visitor-custom-field)를 참고하세요.
+
+* 방문 PC에 할당한 방문처의 출입 그룹만 선택할 수 있습니다. 자세한 내용은 [다음 문서](settings-visitor#settings-visitor-site)를 참고하세요.
+
+* 출입 그룹에 대한 자세한 내용은 [다음 문서](settings-access-control-manage-access-group)를 참고하세요.
+
+* 이전 단계로 돌아가 방문 정보를 수정하려면 <Cmd sid='button.previousPage' product='2' /> 버튼을 클릭하세요.
+
+* 지문을 스캔하려면 방문자 신청용 PC에 지문 등록 장치가 연결되어 있어야 합니다.
+
+:::
+
+
+## 기존 정보로 방문 신청
+
+방문처에 지문이 등록되어 있다면 지문을 검색한 뒤 기존 방문 정보를 사용해 방문을 신청할 수 있습니다.
+
+1. 방문 신청용 PC에서 방문 신청 페이지를 실행하세요. 방문 신청 페이지 URL 주소는 `https://{biostar_x_server_ip}/#/register-welcome` 형식입니다.
+
+    <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+1. 화면 중앙의 지문 아이콘 하단의 <Cmd sid='visitor.welcome.search' product='2' />를 클릭하세요.
+
+1. 지문 스캔 장치에 지문을 스캔하세요. 스캔한 지문을 이용해 등록된 사용자를 검색합니다.
+
+1. 이전에 지문을 등록한 방문자와 일치하는 지문이 있다면 확인 메시지가 나타납니다.
+
+    <Image src='/img/biostarx-visitor-register-confirm-message.png' />
+
+1. 검색된 방문자가 맞는다면 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+1. 방문처 출입에 대한 약관 및 개인 정보 처리 방침에 대한 동의를 완료한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+1. 이전 방문 시 설정한 방문 정보를 확인하세요. 기존 정보를 수정이 필요하면 각 항목을 수정한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-visitor-register-saved-info.png' />
+
+1. 이전 방문 시 설정한 출입 수단을 확인하세요. 기존 출입 수단을 변경하려면 변경할 항목을 수정한 후 화면 오른쪽 하단의 <Cmd sid='button.nextPage' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-visitor-register-saved-access-credential.png' />
+
+1. 신청한 모든 정보를 확인한 후 화면 오른쪽 하단의 <Cmd sid='button.register' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-visitor-register-complete.png' />
