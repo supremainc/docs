@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-mdx-475.json
-var site_docs_platform_biostar_x_tna_mdx_475_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna","title":"근태 관리 사용하기","description":"근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다","source":"@site/docs/platform/biostar_x/tna.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna","permalink":"/docs/platform/biostar_x/tna","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna.mdx","tags":[],"version":"current","frontMatter":{"id":"tna","title":"근태 관리 사용하기","description":"근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다","keywords":["근태 관리","출입 기록","보고서"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"플러그인","permalink":"/docs/platform/biostar_x/plugins"},"next":{"title":"근무 규칙 설정하기","permalink":"/docs/platform/biostar_x/tna-rule-setting"}}')
+var site_docs_platform_biostar_x_tna_mdx_475_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna","title":"근태 관리 사용하기","description":"근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다","source":"@site/docs/platform/biostar_x/tna.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna","permalink":"/docs/en/platform/biostar_x/tna","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna.mdx","tags":[],"version":"current","frontMatter":{"id":"tna","title":"근태 관리 사용하기","description":"근태 관리 규칙을 설정하고, 장치를 통해 기록된 근무 기록을 확인하거나 보고서로 출력할 수 있습니다","keywords":["근태 관리","출입 기록","보고서"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Plugin","permalink":"/docs/en/platform/biostar_x/plugins"},"next":{"title":"근무 규칙 설정하기","permalink":"/docs/en/platform/biostar_x/tna-rule-setting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'출입 기록',
 		'보고서'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -55,8 +55,8 @@ const toc = [{
   "id": "플러그인-설치",
   "level": 3
 }, {
-  "value": "<Cmd class=\"bold\"></Cmd> 화면 접근하기",
-  "id": "-화면-접근하기",
+  "value": "<Cmd class=\"bold\"></Cmd> 메뉴",
+  "id": "-메뉴",
   "level": 2
 }, {
   "value": "<Cmd class=\"bold\"></Cmd> 로그인",
@@ -86,8 +86,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, IcAdd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAdd) _missingMdxReference("IcAdd", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
@@ -311,11 +312,11 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "-화면-접근하기",
+      id: "-메뉴",
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.tna",
         className: "bold"
-      }), " 화면 접근하기"]
+      }), " 메뉴"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.tna",
@@ -323,9 +324,8 @@ function _createMdxContent(props) {
       }), " 라이선스와 플러그인 설치를 완료하면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "shell.header.tna",
-        className: "normal"
-      }), " 기능을 접근할 수 있는 메뉴가 추가됩니다."]
+        sid: "shell.header.tna"
+      }), " 메뉴가 추가됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-tna-main.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -333,9 +333,9 @@ function _createMdxContent(props) {
         sid: "shell.header.launcher"
       }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.tna"
-      }), " 아이콘을 클릭하세요. 또는 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " 아이콘을 클릭하거나, 화면 왼쪽 상단의 바로 가기 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.tna"
-      }), "를 클릭하세요."]
+      }), "를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
       id: "-로그인",
       children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -381,10 +381,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["활성화된 ", (0,jsx_runtime.jsx)(IcAdd, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.register",
             product: "2"
-          }), " 버튼이 활성화되면 버튼을 클릭하세요."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-tna-initial-setting-select-device.png"
         }), "\n"]

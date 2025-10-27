@@ -930,7 +930,7 @@ function DocItemLayout({ children }) {
 
 
 }),
-26560: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+78966: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -6538,6 +6538,33 @@ const SvgIcoList = ({
   d: "M6.5 2v12"
 })));
 /* ESM default export */ const ico_list = (SvgIcoList);
+;// CONCATENATED MODULE: ./static/img/menus/ico-tna-expand.svg
+var ico_tna_expand_path, ico_tna_expand_path2;
+function ico_tna_expand_extends() { return ico_tna_expand_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_tna_expand_extends.apply(null, arguments); }
+
+const SvgIcoTnaExpand = ({
+  title,
+  titleId,
+  ...props
+}) => /*#__PURE__*/react.createElement("svg", ico_tna_expand_extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 16,
+  height: 16,
+  fill: "none",
+  viewBox: "0 0 16 16",
+  "aria-labelledby": titleId
+}, props), title ? /*#__PURE__*/react.createElement("title", {
+  id: titleId
+}, title) : null, ico_tna_expand_path || (ico_tna_expand_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#96D2D2",
+  d: "M1 1h14v14H1z"
+})), ico_tna_expand_path2 || (ico_tna_expand_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#fff",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M3.333 8h9.334M8 3.333v9.334"
+})));
+/* ESM default export */ const ico_tna_expand = (SvgIcoTnaExpand);
 ;// CONCATENATED MODULE: ./src/theme/MDXComponents.js
 
 
@@ -6577,6 +6604,7 @@ const SvgIcoList = ({
 
 
 // icon images svg
+
 
 
 
@@ -6804,7 +6832,8 @@ const SvgIcoList = ({
     IcRCinfo: ico_app_rollcall_info,
     IcRCmemo: ico_app_rollcall_memo,
     IcImgLog: ico_imagelog,
-    IcList: ico_list
+    IcList: ico_list,
+    IcTnaExpand: ico_tna_expand
 });
 
 

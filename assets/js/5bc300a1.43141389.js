@@ -1,26 +1,12 @@
 "use strict";
 (self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7587"], {
-81259: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
+37759: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ tna_settings_frontMatter),
-  toc: () => (/* binding */ tna_settings_toc),
-  "default": () => (/* binding */ tna_settings_MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tna_settings_mdx_5bc_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ tna_settings_contentTitle)
+  Ay: () => (MDXContent),
+  RM: () => (toc)
 });
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-settings-mdx-5bc.json
-var site_docs_platform_biostar_x_tna_settings_mdx_5bc_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-settings","title":"근태 관리 설정하기","description":"근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/tna-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-settings","permalink":"/docs/en/platform/biostar_x/tna-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-settings","title":"근태 관리 설정하기","description":"근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.","keywords":["근태","설정"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"근태 기록 수정하기","permalink":"/docs/en/platform/biostar_x/tna-report-edit"},"next":{"title":"Explore UI","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/common/_settings-email-settings.mdx
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -38,92 +24,92 @@ function _createMdxContent(props) {
     li: "li",
     p: "p",
     ul: "ul",
-    ...(0,lib/* .useMDXComponents */.R)(),
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
   }, {Cmd} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.triggerAction.smtpServer",
             product: "2"
           }), ": SMTP 서버 이름을 입력하세요."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "common.description",
             product: "2"
           }), ": SMTP에 대한 설명을 입력하세요."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.triggerAction.smtpServerAddr",
             product: "2"
-          }), ": SMTP 서버 주소를 입력하세요. SMTP 서버 주소는 ", (0,jsx_runtime.jsx)(_components.code, {
+          }), ": SMTP 서버 주소를 입력하세요. SMTP 서버 주소는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "smtp.{email-service-provider}.com"
           }), "과 같은 형태이며, SMTP 서버로 사용할 이메일의 설정 화면에서 확인할 수 있습니다."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.triggerAction.portDefault25",
             product: "2"
           }), ": SMTP 서버의 포트 번호를 입력하세요. SMTP 서비스 공급자의 이메일 설정 화면에서 확인할 수 있습니다."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "common.userName",
             product: "2"
           }), ": SMTP 서비스의 계정을 입력하세요."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "common.password",
             product: "2"
           }), ": SMTP 서비스의 계정 암호를 입력하세요."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.triggerAction.securityType",
             product: "2"
           }), ": 보안 종류를 선택하세요."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.triggerAction.sender",
             product: "2"
           }), ": 보낸 사람의 이메일 주소를 입력하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
             children: "SMTP에 대한 자세한 내용은 시스템 관리자에게 문의하세요."
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
             children: "SMTP 서버를 2단계 인증이 설정된 이메일 계정으로 사용할 경우 해당 계정의 비밀번호 변경 시 다음 사항에 유의하세요."
-          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
                 children: "2단계 인증을 설정하면 SMTP 암호는 해당 이메일 계정의 비밀번호가 아닌 2단계 인증으로 생성된 앱 비밀번호를 사용합니다."
               }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
                 children: "이때 해당 이메일 계정의 비밀번호가 변경되면 앱 비밀번호는 자동으로 삭제되며, SMTP 암호는 사용할 수 없게 됩니다."
               }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
                 children: "해당 이메일 계정의 비밀번호 변경 시 앱 비밀번호를 다시 생성한 뒤 SMTP 암호를 다시 설정하세요."
               }), "\n"]
             }), "\n"]
@@ -135,12 +121,12 @@ function _createMdxContent(props) {
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
-    ...(0,lib/* .useMDXComponents */.R)(),
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
   };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
     ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
       ...props
     })
   }) : _createMdxContent(props);
@@ -150,10 +136,34 @@ function _missingMdxReference(id, component) {
 }
 
 
+
+}),
+4870: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_tna_settings_mdx_5bc_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-tna-settings-mdx-5bc.json
+var site_docs_platform_biostar_x_tna_settings_mdx_5bc_namespaceObject = JSON.parse('{"id":"platform/biostar_x/tna-settings","title":"근태 관리 설정하기","description":"근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.","source":"@site/docs/platform/biostar_x/tna-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/tna-settings","permalink":"/docs/platform/biostar_x/tna-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/tna-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"tna-settings","title":"근태 관리 설정하기","description":"근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.","keywords":["근태","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"근태 기록 수정하기","permalink":"/docs/platform/biostar_x/tna-report-edit"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(84429);
+// EXTERNAL MODULE: ./docs/common/_settings-email-settings.mdx
+var _settings_email_settings = __webpack_require__(37759);
 ;// CONCATENATED MODULE: ./docs/platform/biostar_x/tna-settings.mdx
 
 
-const tna_settings_frontMatter = {
+const frontMatter = {
 	id: 'tna-settings',
 	title: '근태 관리 설정하기',
 	description: '근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.',
@@ -161,9 +171,9 @@ const tna_settings_frontMatter = {
 		'근태',
 		'설정'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
-const tna_settings_contentTitle = undefined;
+const contentTitle = undefined;
 
 const assets = {
 
@@ -172,7 +182,7 @@ const assets = {
 
 
 
-const tna_settings_toc = [{
+const toc = [{
   "value": "근태 관리 설정 진입",
   "id": "근태-관리-설정-진입",
   "level": 2
@@ -180,8 +190,8 @@ const tna_settings_toc = [{
   "value": "근태 관리 설정 항목",
   "id": "근태-관리-설정-항목",
   "level": 2
-}, ...toc];
-function tna_settings_createMdxContent(props) {
+}, ..._settings_email_settings/* .toc */.RM];
+function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
@@ -194,9 +204,9 @@ function tna_settings_createMdxContent(props) {
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   }, {Cmd, IcSet, Image} = _components;
-  if (!Cmd) tna_settings_missingMdxReference("Cmd", true);
-  if (!IcSet) tna_settings_missingMdxReference("IcSet", true);
-  if (!Image) tna_settings_missingMdxReference("Image", true);
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcSet) _missingMdxReference("IcSet", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다. CSV 내보내기로 근태 보고서를 내보낼 때 문서의 구분자를 설정할 수도 있습니다."
@@ -332,7 +342,7 @@ function tna_settings_createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "-2",
+      id: "senderInfo",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.triggerAction.senderInfor",
         product: "2",
@@ -345,8 +355,8 @@ function tna_settings_createMdxContent(props) {
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-tna-settings-sender-info.png"
-    }), "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "-3",
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_settings_email_settings/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "-2",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.export",
         product: "2",
@@ -360,7 +370,7 @@ function tna_settings_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-tna-settings-export-csv.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "-4",
+      id: "-3",
       children: (0,jsx_runtime.jsx)(Cmd, {
         sid: "tna.settings.punchlogs.optionTitle",
         product: "2",
@@ -382,19 +392,19 @@ function tna_settings_createMdxContent(props) {
     })]
   });
 }
-function tna_settings_MDXContent(props = {}) {
+function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   };
   return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
     ...props,
-    children: (0,jsx_runtime.jsx)(tna_settings_createMdxContent, {
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
       ...props
     })
-  }) : tna_settings_createMdxContent(props);
+  }) : _createMdxContent(props);
 }
-function tna_settings_missingMdxReference(id, component) {
+function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 

@@ -82,11 +82,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, DocLink, IcEdit, IcSearch, IcTrash2, Image} = _components;
+  }, {Cmd, DocLink, IcEdit, IcSearch, IcTnaExpand, IcTrash2, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!DocLink) _missingMdxReference("DocLink", true);
   if (!IcEdit) _missingMdxReference("IcEdit", true);
   if (!IcSearch) _missingMdxReference("IcSearch", true);
+  if (!IcTnaExpand) _missingMdxReference("IcTnaExpand", true);
   if (!IcTrash2) _missingMdxReference("IcTrash2", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -313,7 +314,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "schedule.holiday",
             product: "2"
-          }), ": 설정한 휴가 일정을 선택하세요. 용하지 않으려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 설정한 휴가 일정을 선택하세요. 사용하지 않으려면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.none",
             product: "2"
           }), "을 선택하세요."]
@@ -358,7 +359,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tna.scheduleTemplate",
+            sid: "ta.schedule",
             product: "2"
           }), " 탭을 클릭하세요."]
         }), "\n"]
@@ -394,7 +395,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "tna.scheduleTemplate",
+            sid: "ta.schedule",
             product: "2"
           }), " 탭을 클릭하세요."]
         }), "\n"]
@@ -444,8 +445,12 @@ function _createMdxContent(props) {
           }), " 탭을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 목록에서 원하는 스케줄의 ", (0,jsx_runtime.jsx)(IcTnaExpand, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "화면 왼쪽 목록에서 스케줄에 할당된 사용자를 선택하면 달력이 표시됩니다."
+          children: "스케줄에 할당된 사용자 목록이 표시되고 임시 스케줄을 적용할 사용자를 선택하면 달력이 표시됩니다."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-tna-schedule-template-add-temp-user.png"
         }), "\n"]
@@ -511,8 +516,12 @@ function _createMdxContent(props) {
           }), " 탭을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 목록에서 원하는 스케줄의 ", (0,jsx_runtime.jsx)(IcTnaExpand, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "화면 왼쪽 목록에서 스케줄에 할당된 사용자를 선택하면 달력이 표시됩니다."
+          children: "스케줄에 할당된 사용자 목록이 표시되고 부재 일정을 적용할 사용자를 선택하면 달력이 표시됩니다."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-tna-schedule-template-add-temp-user.png"
         }), "\n"]

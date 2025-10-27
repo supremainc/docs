@@ -97,9 +97,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcSearch, Image} = _components;
+  }, {Cmd, IcSearch, IcSet, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcSearch) _missingMdxReference("IcSearch", true);
+  if (!IcSet) _missingMdxReference("IcSet", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -217,7 +218,7 @@ function _createMdxContent(props) {
             sid: "common.userGroup",
             product: "2"
           }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.userGroup",
+            sid: "common.user",
             product: "2"
           }), " 항목에서 ", (0,jsx_runtime.jsx)(IcSearch, {}), " 버튼을 클릭한 후 그룹 또는 사용자를 지정하세요."]
         }), "\n"]
@@ -255,7 +256,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ta.report.condition.reportType",
             product: "2"
-          }), ": 원하는 보고서 종류를 선택하세요. 제공하는  보고서 종류는 아래와 같습니다."]
+          }), ": 원하는 보고서 종류를 선택하세요. 제공하는 보고서 종류는 아래와 같습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -277,7 +278,7 @@ function _createMdxContent(props) {
               sid: "report.exception",
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "report.editHistory",
+              sid: "report.modifiedPunchLogHistory",
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "report.workweek",
@@ -375,7 +376,16 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-tna-report-period-setting.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["보고서 기간을 일별, 월별, 주별로 설정할 수 있습니다. 특정 기간의 보고서를 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["보고서 기간을 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "timeCard.daily",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "timeCard.weekly",
+        product: "2"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "timeCard.monthly",
+        product: "2"
+      }), "로 설정할 수 있습니다. 특정 기간의 보고서를 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "timeCard.custom",
         product: "2"
       }), "를 선택하세요."]
@@ -513,10 +523,10 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["자동 발신한 이메일의 보낸 사람 정보는 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["자동 발신한 이메일의 보낸 사람 정보는 화면 왼쪽 사이드바의 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "setting.setting",
               product: "2"
-            }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            }), "(", (0,jsx_runtime.jsx)(IcSet, {}), ") → ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "setting.triggerAction.senderInfor",
               product: "2"
             }), "에서 설정할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
