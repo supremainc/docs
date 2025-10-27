@@ -608,6 +608,21 @@ const sidebars = {
                 'platform/biostar_x/tna-report-edit',
                 'platform/biostar_x/tna-settings'
               ]
+            },
+            {
+              type: 'category',
+              label: '방문자 신청 및 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/visitor',
+              },
+              items: [
+                'platform/biostar_x/visitor-register',
+                'platform/biostar_x/visitor-register-manage',
+                'platform/biostar_x/visitor-register-checkin-manage',
+                'platform/biostar_x/visitor-register-checkout-manage',
+                'platform/biostar_x/visitor-register-all-manage'
+              ]
             }
           ]
         },
