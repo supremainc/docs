@@ -823,6 +823,27 @@ const sidebars = {
       ]
     }
   ],
+  securemodule: [
+    {
+      type: 'category',
+      label: 'Secure Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/securemodule/index',
+      },
+      items: [
+        'device/securemodule/safety-instructions',
+        'device/securemodule/getting-started',
+        'device/securemodule/installation',
+        'device/securemodule/product-specifications',
+        'device/securemodule/regulatory-information',
+        'device/securemodule/appendices'
+      ]
+    }
+  ],
   facestationf2: [
     {
       type: 'category',

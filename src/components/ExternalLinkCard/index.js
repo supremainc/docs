@@ -322,7 +322,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     },
     {
       title: 'Secure Module',
-      url: '#',
+      url: '/device/securemodule',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',
       height: '90px',
       desc: `${translate({

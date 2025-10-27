@@ -287,6 +287,11 @@ const config = {
                 type: 'doc',
                 label: 'Door Module',
                 docId: 'device/doormodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Secure Module',
+                docId: 'device/securemodule/index'
               }
             ]
           },
