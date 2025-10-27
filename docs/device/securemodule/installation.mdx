@@ -1,0 +1,45 @@
+---
+id: installation
+title: 연결하기
+description: 제품의 연결 예시를 확인할 수 있습니다.
+keywords: [ Secure Module, 장치 ]
+---
+
+제품의 연결 예시를 확인할 수 있습니다.
+
+:::info
+
+* 제품과 연결되는 케이블은 AWG22 ~ AWG16을 사용하세요.
+
+* 제품의 케이블 연결부에 케이블을 연결하기 위해 케이블 끝을 약 5 ~ 6 mm 정도 탈피하여 사용하세요.
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## RS-485 연결
+
+<Image src='/img/device/installation-rs485-connection-sio2.png' width='75%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+:::
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
