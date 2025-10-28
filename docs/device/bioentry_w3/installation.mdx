@@ -114,7 +114,6 @@ import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 {/* 공통 노트 */}
 <CommonNotes />
 
-
 {/* ## Wiegand 연결 */}
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
@@ -122,41 +121,15 @@ import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
 <div className='page-break' />
 
-## 네트워크 설정 초기화 {#reset-network-settings}
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
 
-1. 전원을 켜세요.
+<Resetnetwork />
 
-1. 장치가 자동으로 재부팅될 때까지 초기화 버튼을 누르세요.
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
 
-1. 초기화된 네트워크 정보를 이용해 장치를 연결하세요.
-
-    * **TCP/IP 주소**: DHCP 주소 할당 (DHCP 주소 할당을 실패하면 169.254.x.x로 설정됩니다.)
-
-    * **서버 모드**: 사용 해제
-
-    * **RS-485**: 기본값, 115200 bps
-
-1. TCP/IP나 RS-485 정보를 변경하세요.
-
-1. 전원을 끄고 켠 뒤 네트워크 정보가 올바르게 설정되었는지 확인하세요.
-
-
-## 공장 초기화 {#factory-reset}
-
-장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다.
-
-1. 전원을 켜세요.
-
-1. 초기화 버튼을 빠르게 세 번 누르세요.
-
-1. 장치의 LED가 초록색으로 깜박거릴 때 초기화 버튼을 한 번 더 누르세요.
-
-:::info
-
-장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다.
-
-:::
-
+<Factoryreset />
 
 ## 펌웨어 업그레이드
 
