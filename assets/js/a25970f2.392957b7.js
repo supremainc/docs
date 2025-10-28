@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-visitor-register-checkout-manage-mdx-a25.json
-var site_docs_platform_biostar_x_visitor_register_checkout_manage_mdx_a25_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register-checkout-manage","title":"체크아웃 방문자 관리하기","description":"체크아웃 상태의 방문자를 확인하고 해당 방문 신청 정보를 사용해 다시 방문을 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-register-checkout-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register-checkout-manage","permalink":"/docs/en/platform/biostar_x/visitor-register-checkout-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register-checkout-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register-checkout-manage","title":"체크아웃 방문자 관리하기","description":"체크아웃 상태의 방문자를 확인하고 해당 방문 신청 정보를 사용해 다시 방문을 등록할 수 있습니다.","keywords":["체크아웃","방문자 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"체크인 방문자 관리하기","permalink":"/docs/en/platform/biostar_x/visitor-register-checkin-manage"},"next":{"title":"전체 방문자 관리하기","permalink":"/docs/en/platform/biostar_x/visitor-register-all-manage"}}')
+var site_docs_platform_biostar_x_visitor_register_checkout_manage_mdx_a25_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register-checkout-manage","title":"체크아웃 방문자 관리하기","description":"체크아웃 상태의 방문자를 확인하고 해당 방문 신청 정보를 사용해 다시 방문을 등록할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-register-checkout-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register-checkout-manage","permalink":"/docs/platform/biostar_x/visitor-register-checkout-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register-checkout-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register-checkout-manage","title":"체크아웃 방문자 관리하기","description":"체크아웃 상태의 방문자를 확인하고 해당 방문 신청 정보를 사용해 다시 방문을 등록할 수 있습니다.","keywords":["체크아웃","방문자 관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"체크인 방문자 관리하기","permalink":"/docs/platform/biostar_x/visitor-register-checkin-manage"},"next":{"title":"전체 방문자 관리하기","permalink":"/docs/platform/biostar_x/visitor-register-all-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'체크아웃',
 		'방문자 관리'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -86,7 +86,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정이 필요한 항목이 있다면 개별 항목을 수정한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["수정 필요한 항목이 있다면 개별 항목을 수정한 후 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.enroll",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -94,8 +94,11 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-visitor-register-checkout-edit.png"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "재등록한 방문자가 방문 신청 목록에 추가됩니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["재등록한 방문자가 방문 신청 목록에 추가됩니다. 화면 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "visitor.status.register",
+        product: "2"
+      }), " 탭을 클릭해 확인하세요."]
     })]
   });
 }

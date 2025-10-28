@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-visitor-register-manage-mdx-c8f.json
-var site_docs_platform_biostar_x_visitor_register_manage_mdx_c8f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register-manage","title":"방문 신청 관리하기","description":"방문 신청을 승인하거나 수정, 추가, 삭제할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-register-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register-manage","permalink":"/docs/en/platform/biostar_x/visitor-register-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register-manage","title":"방문 신청 관리하기","description":"방문 신청을 승인하거나 수정, 추가, 삭제할 수 있습니다.","keywords":["방문 신청","관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"방문 신청하기","permalink":"/docs/en/platform/biostar_x/visitor-register"},"next":{"title":"체크인 방문자 관리하기","permalink":"/docs/en/platform/biostar_x/visitor-register-checkin-manage"}}')
+var site_docs_platform_biostar_x_visitor_register_manage_mdx_c8f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register-manage","title":"방문 신청 관리하기","description":"방문 신청을 승인하거나 수정, 추가, 삭제할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-register-manage.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register-manage","permalink":"/docs/platform/biostar_x/visitor-register-manage","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register-manage.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register-manage","title":"방문 신청 관리하기","description":"방문 신청을 승인하거나 수정, 추가, 삭제할 수 있습니다.","keywords":["방문 신청","관리"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"방문 신청하기","permalink":"/docs/platform/biostar_x/visitor-register"},"next":{"title":"체크인 방문자 관리하기","permalink":"/docs/platform/biostar_x/visitor-register-checkin-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'방문 신청',
 		'관리'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -47,7 +47,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "승인 및 카드 등록",
-  "id": "승인-및-카드-등록",
+  "id": "approve-and-register-card",
   "level": 3
 }, {
   "value": "지문 검색으로 방문자 승인",
@@ -104,7 +104,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["방문자의 방문 정보를 확인한 후 수정이 필요한 항목은 수정 후 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["방문자의 방문 정보를 확인한 후 수정 필요한 항목은 수정 후 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.edit",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -137,7 +137,12 @@ function _createMdxContent(props) {
             children: ["방문을 신청할 때 방문자 출입 이용 약관에 동의하지 않은 신청자의 경우 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "button.checkin",
               product: "2"
-            }), " 버튼이 비활성화됩니다. 약관 보기를 클릭해 방문자에게 출입 이용 약관을 제공한 뒤 약관 동의를 받으세요. 방문자 출입 이용 약관에 동의하지 않을 경우 방문이 제한됩니다."]
+            }), " 버튼이 비활성화됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "visitor.term.watch",
+              product: "2"
+            }), " 버튼을 클릭해 방문자에게 출입 이용 약관을 제공하고, 약관 동의를 받으세요. 방문자 출입 이용 약관에 동의하지 않는다면 방문이 제한됩니다."]
+          }), "\n", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/visitor-register-manage-view-term.png"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -147,7 +152,10 @@ function _createMdxContent(props) {
             }), " 버튼이 활성화됩니다. 방문자의 방문을 승인하고 출입 카드를 발급하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "visitor.button.approveAndRegisterCard",
               product: "2"
-            }), " 버튼을 클릭하세요."]
+            }), " 버튼을 클릭하세요. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#approve-and-register-card",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -155,7 +163,10 @@ function _createMdxContent(props) {
               sid: "shell.header.setting"
             }), " → ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "shell.header.visitor"
-            }), " 메뉴에서 아래와 같은 최소 설정이 필요합니다."]
+            }), " 메뉴에서 아래와 같은 최소 설정이 필요합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-visitor#settings-visitor",
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n", (0,jsx_runtime.jsx)(Image, {
             src: "/img/biostarx-visitor-settings-use-card.png"
           }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -199,7 +210,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "승인-및-카드-등록",
+      id: "approve-and-register-card",
       children: "승인 및 카드 등록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "방문 신청을 승인하고 출입 카드를 발급하는 방법을 안내합니다."
@@ -219,6 +230,18 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "카드 등록 창이 나타나면 원하는 등록 방법을 선택하세요."
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.registerByCardReader",
+              product: "2"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "common.enterManually",
+              product: "2"
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
@@ -333,6 +356,13 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["방문자의 방문 정보를 확인한 후 수정 필요한 항목은 수정 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.edit",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "visitor.status.checkIn",
             product: "2"
@@ -386,7 +416,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "visitor.host",
             product: "2"
-          }), " 섹션에서 방문할 담당자의 이름과 전화번호를 입력하세요."]
+          }), " 섹션에서 방문 대상 담당자의 이름과 전화번호를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-visitor-register-lists-add-admin-info.png"
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {

@@ -81,7 +81,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "방문자의 방문 정보를 확인하세요."
+          children: "방문자의 방문 신청 정보를 확인하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-visitor-register-checkin-edit.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

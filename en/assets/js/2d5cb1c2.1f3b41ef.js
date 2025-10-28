@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-visitor-remove-expire-personal-mdx-2d5.json
-var site_docs_platform_biostar_x_visitor_remove_expire_personal_mdx_2d5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-remove-expire-personal","title":"개인 정보 만료 방문자 삭제하기","description":"개인 정보 보관 기간이 만료된 방문자 정보를 삭제할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-remove-expire-personal.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-remove-expire-personal","permalink":"/docs/platform/biostar_x/visitor-remove-expire-personal","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-remove-expire-personal.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-remove-expire-personal","title":"개인 정보 만료 방문자 삭제하기","description":"개인 정보 보관 기간이 만료된 방문자 정보를 삭제할 수 있습니다.","keywords":["방문자","개인 정보","삭제"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"전체 방문자 관리하기","permalink":"/docs/platform/biostar_x/visitor-register-all-manage"},"next":{"title":"UI 알아보기","permalink":"/docs/platform/biostar_x/ui-overview"}}')
+var site_docs_platform_biostar_x_visitor_remove_expire_personal_mdx_2d5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-remove-expire-personal","title":"개인 정보 만료 방문자 삭제하기","description":"개인 정보 보관 기간이 만료된 방문자 정보를 삭제할 수 있습니다.","source":"@site/docs/platform/biostar_x/visitor-remove-expire-personal.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-remove-expire-personal","permalink":"/docs/en/platform/biostar_x/visitor-remove-expire-personal","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-remove-expire-personal.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-remove-expire-personal","title":"개인 정보 만료 방문자 삭제하기","description":"개인 정보 보관 기간이 만료된 방문자 정보를 삭제할 수 있습니다.","keywords":["방문자","개인 정보","삭제"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"전체 방문자 관리하기","permalink":"/docs/en/platform/biostar_x/visitor-register-all-manage"},"next":{"title":"Explore UI","permalink":"/docs/en/platform/biostar_x/ui-overview"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'개인 정보',
 		'삭제'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -59,29 +59,6 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "개인 정보 보관 기간이 만료된 방문자 정보를 삭제할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "setting.account.administrator",
-              product: "2",
-              className: "bold"
-            }), " 권한을 가진 사용자만 개인 정보 만료 방문자 목록을 확인할 수 있습니다. 사용자 권한에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "add-user",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["개인 정보 보관 기간 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings-visitor#settings-visitor-terms",
-              children: "다음 문서"
-            }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n"]
-      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -119,6 +96,29 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.account.administrator",
+              product: "2",
+              className: "bold"
+            }), " 권한을 가진 사용자만 개인 정보 만료 방문자 목록을 확인할 수 있습니다. 사용자 권한에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "add-user",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["개인 정보 보관 기간 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings-visitor#settings-visitor-terms",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
+      })
     })]
   });
 }

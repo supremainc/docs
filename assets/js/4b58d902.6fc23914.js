@@ -66,7 +66,7 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "사내 사용자가 아닌 외부 방문자가 방문 신청용 PC를 통해서 방문자가 출입을 신청하는 방법을 안내합니다."
+      children: "사내 사용자가 아닌 외부 방문자가 방문 신청용 PC를 통해서 출입을 신청하는 방법을 안내합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -132,20 +132,20 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "visitor.host",
                 product: "2"
-              }), ": 방문할 담당자의 이름과 전화번호를 입력하세요."]
+              }), ": 방문 대상 담당자의 이름과 전화번호를 입력하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "visitor.accessInfo",
                 product: "2"
-              }), ": 출입 그룹 및 방문 기간을 설정하세요."]
+              }), ": 출입 구역 및 방문 기간을 설정하세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["정보 입력은 완료한 후 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["정보 입력을 완료한 후 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.nextPage",
             product: "2"
           }), " 버튼을 클릭하세요."]
@@ -174,7 +174,7 @@ function _createMdxContent(props) {
               }), ": 카드 인증을 사용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "visitor.request",
                 product: "2"
-              }), "으로 설정한 후 방문 담당자에게 카드를 발급 받으세요."]
+              }), "으로 설정한 후 관리자에게 카드를 발급 받으세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -259,7 +259,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 중앙의 지문 아이콘 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 중앙에 있는 지문 아이콘 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "visitor.welcome.search",
             product: "2"
           }), "를 클릭하세요."]
@@ -290,7 +290,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["이전 방문 시 설정한 방문 정보를 확인하세요. 기존 정보를 수정이 필요하면 각 항목을 수정한 후 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["이전 방문 시 설정한 방문 정보를 확인하세요. 기존 정보를 수정하려면 각 항목을 수정한 후 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.nextPage",
             product: "2"
           }), " 버튼을 클릭하세요."]
