@@ -324,7 +324,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-legal-open-source-licenses-mdx-e1d.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"Open Source Licensse","description":"---","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/en/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"Open Source Licensse","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"Software End User License Agreement(EULA)","permalink":"/docs/en/legal/eula"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_legal_open_source_licenses_mdx_e1d_namespaceObject = JSON.parse('{"id":"legal/open-source-licenses","title":"Open Source License","description":"---","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/legal/open-source-licenses.mdx","sourceDirName":"legal","slug":"/legal/open-source-licenses","permalink":"/docs/en/legal/open-source-licenses","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/open-source-licenses.mdx","tags":[],"version":"current","frontMatter":{"id":"open-source-licenses","title":"Open Source License","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"legal","previous":{"title":"Software End User License Agreement(EULA)","permalink":"/docs/en/legal/eula"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -1540,7 +1540,7 @@ var _ios_license = __webpack_require__(68412);
 
 const open_source_licenses_frontMatter = {
 	id: 'open-source-licenses',
-	title: 'Open Source Licensse',
+	title: 'Open Source License',
 	toc_max_heading_level: 2,
 	isTranslationMissing: false
 };
