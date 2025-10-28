@@ -222,19 +222,19 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar 2 v2.9.9 이상의 환경이라면 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["BioStar 2 v2.9.11 이상의 환경이라면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), "로 업그레이드할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["BioStar 2 v2.6.4 이하 버전을 사용하고 있다면 v2.9.9까지 순차 업그레이드를 진행한 후 업그레이드할 수 있습니다. BioStar 2를 단계별로 업그레이드하는 방법은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["BioStar 2 v2.6.4 이하 버전을 사용하고 있다면 v2.9.11까지 순차 업그레이드를 진행한 후 업그레이드할 수 있습니다. BioStar 2를 단계별로 업그레이드하는 방법은 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar 2 관리자 가이드"
               }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStar 2 v2.9.8 이하 버전에서는 업그레이드할 수 없습니다."
+              children: "BioStar 2 v2.9.10 이하 버전에서는 업그레이드할 수 없습니다."
             }), "\n"]
           }), "\n"]
         }), "\n"]
