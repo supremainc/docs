@@ -1129,6 +1129,27 @@ const sidebars = {
       ]
     }
   ],
+  xpasss2: [
+    {
+      type: 'category',
+      label: 'XPass S2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_s2/index',
+      },
+      items: [
+        'device/xpass_s2/safety-instructions',
+        'device/xpass_s2/getting-started',
+        'device/xpass_s2/installation',
+        'device/xpass_s2/product-specifications',
+        'device/xpass_s2/regulatory-information',
+        'device/xpass_s2/appendices'
+      ]
+    }
+  ],
   bioentryp2: [
     {
       type: 'category',

@@ -260,6 +260,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'XPass S2',
+                docId: 'device/xpass_s2/index'
+              },
+              {
+                type: 'doc',
                 label: 'XPass D2',
                 docId: 'device/xpass_d2/index'
               },
