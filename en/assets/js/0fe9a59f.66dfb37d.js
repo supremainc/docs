@@ -136,7 +136,7 @@ const assets = {
 
 
 const toc = [{
-  "value": "Registering User Information",
+  "value": "Registering user information",
   "id": "registering-user-information",
   "level": 2
 }, {
@@ -178,7 +178,7 @@ function _createMdxContent(props) {
       children: "Describes how to register, edit, delete, and manage users."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "registering-user-information",
-      children: "Registering User Information"
+      children: "Registering user information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "The user information including credentials can be registered."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {

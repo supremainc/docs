@@ -113,8 +113,11 @@ function _createMdxContent(props) {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "리모트 액세스(Remote Access) 기능은 제3자 서비스인 ngrok의 터널링을 통해 제공됩니다."
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["리모트 액세스(Remote Access) 기능은 제3자 서비스인 ngrok의 터널링 서비스를 통해 제공됩니다. 기능 사용 전 반드시 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "../../legal/eula#remote-access-agreement",
+              children: "Remote Access 기능 사용 동의"
+            }), " 약관을 확인하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

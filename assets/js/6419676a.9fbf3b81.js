@@ -74,7 +74,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "10. Remote Access 기능 사용 동의",
-  "id": "10-remote-access-기능-사용-동의",
+  "id": "remote-access-agreement",
   "level": 2
 }, {
   "value": "보증의 부인 (Disclaimer of Warranties)",
@@ -196,7 +196,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "본 계약 상 명시된 제한적 보상에 의하여, 배상의 주요 목적을 달성하지 못하는 경우에도 본 책임의 제한 조항은 유효하게 적용됩니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "10-remote-access-기능-사용-동의",
+      id: "remote-access-agreement",
       children: "10. Remote Access 기능 사용 동의"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "본 기능은 제3자인 ngrok의 터널링 서비스를 통해 제공됩니다."
