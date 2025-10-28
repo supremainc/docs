@@ -73,9 +73,17 @@ const toc = [{
   "id": "9-limitation-of-liability",
   "level": 2
 }, {
-  "value": "10. Third-Party Service Integration.",
-  "id": "10-third-party-service-integration",
+  "value": "10. Remote Access Feature Agreement",
+  "id": "10-remote-access-feature-agreement",
   "level": 2
+}, {
+  "value": "Disclaimer of Warranties",
+  "id": "disclaimer-of-warranties",
+  "level": 3
+}, {
+  "value": "Limitation of Liability",
+  "id": "limitation-of-liability",
+  "level": 3
 }, {
   "value": "11. Refund Policy.",
   "id": "11-refund-policy",
@@ -109,8 +117,11 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     h2: "h2",
+    h3: "h3",
+    li: "li",
     p: "p",
     strong: "strong",
+    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   };
@@ -181,10 +192,62 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "IN NO EVENT WILL COMPANY BE LIABLE TO YOU FOR ANY SPECIAL, INCIDENTAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF DATA, LOSS OF BUSINESS PROFITS OR ANY OTHER PECUNIARY LOSS) OR FOR THE COST OF PROCURING SUBSTITUTE PRODUCTS ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE EXECUTION OF OR INABILITY TO EXECUTE THE SOFTWARE, WHETHER SUCH LIABILITY ARISES FROM ANY CLAIM BASED UPON CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, AND WHETHER OR NOT COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.  THE FOREGOING LIMITATIONS WILL SURVIVE AND APPLY EVEN IF ANY LIMITED REMEDY SPECIFIED IN THIS AGREEMENT IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "10-third-party-service-integration",
-      children: "10. Third-Party Service Integration."
+      id: "10-remote-access-feature-agreement",
+      children: "10. Remote Access Feature Agreement"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Features that integrate third-party services (such as ngrok-based Remote Access) are not a core part of the software and are provided using technology from independent third-party service providers. Suprema assumes no responsibility for any security threats, breaches, data loss, service interruptions, or other issues arising from the use of such third-party services. You are responsible for reviewing and complying with the terms of service and privacy policy of the third-party service, and you assume all risks associated with their use."
+      children: "This feature is provided through the tunneling service of a third party, ngrok."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "BioStar X only calls the ngrok API to support the connection, and the security, stability, and continuity of the internet connection rely entirely on the ngrok service."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Therefore, Suprema Inc. shall not be liable for any damages arising from service interruptions, security vulnerabilities, or data loss caused by ngrok, unless such damages result from Suprema’s willful misconduct or gross negligence. Suprema is also not responsible for any issues resulting from the integration of this service."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "By using this feature, the user acknowledges and agrees to the risks associated with the use of this third-party service."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This includes, within the scope set forth under the Disclaimer of Warranties and Limitation of Liability provisions of ngrok’s Terms of Service, that the liability of Suprema Inc. shall be limited to the same extent as that of ngrok. The user acknowledges and agrees to the applicability of such limitations of liability."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "disclaimer-of-warranties",
+      children: "Disclaimer of Warranties"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK AND THAT THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE.\""
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "NOTHING IN THESE TERMS SHALL EXCLUDE OR LIMIT NGROK's WARRANTY OR LIABILITY FOR LOSSES WHICH MAY NOT BE LAWFULLY EXCLUDED OR LIMITED BY APPLICABLE LAW."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "NGROK MAKES NO EXPRESS WARRANTIES AND DISCLAIMS ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE SERVICES, INCLUDING EXPRESS AND IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, NGROK DOES NOT REPRESENT OR WARRANT TO YOU THAT:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(A) YOUR USE OF THE SERVICES WILL MEET YOUR REQUIREMENTS, OR"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(B) YOUR USE OF THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR FREE FROM ERROR."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "limitation-of-liability",
+      children: "Limitation of Liability"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "YOU EXPRESSLY UNDERSTAND AND AGREE THAT TO THE EXTENT PERMITTED BY APPLICABLE LAW, NGROK SHALL NOT BE LIABLE TO YOU UNDER BREACH OF CONTRACT, TORT, OR ANY OTHER LEGAL THEORY"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(A) FOR ERRORS IN THE NGROK SERVICES OR MATERIALS, LOSS OR INACCURACY OR CORRUPTION OF DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, OR LOSS OF PROFITS OR BUSINESS;"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(B) FOR ANY INDIRECT, EXEMPLARY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, WHETHER OR NOT NGROK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES;"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(C) FOR ANY MATTER BEYOND NGROK'S REASONABLE CONTROL; OR"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "(D) FOR ANY AMOUNTS THAT, IN THE AGGREGATE, EXCEED THE GREATER OF (I) $100 OR (II) THE AMOUNT PAID OR PAYABLE BY YOU TO NGROK FOR THE NGROK SERVICES IN THE SIX (6) MONTHS PRIOR TO THE ACT THAT GAVE RISE TO THE LIABILITY."
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "11-refund-policy",
       children: "11. Refund Policy."
