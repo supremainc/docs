@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-visitor-register-mdx-4b5.json
-var site_docs_platform_biostar_x_visitor_register_mdx_4b5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register","title":"방문 신청하기","description":"방문 신청용 PC에서 방문자가 출입을 신청하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/visitor-register.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register","permalink":"/docs/platform/biostar_x/visitor-register","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register","title":"방문 신청하기","description":"방문 신청용 PC에서 방문자가 출입을 신청하는 방법을 안내합니다.","keywords":["방문 신청"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"방문자 신청 및 관리","permalink":"/docs/platform/biostar_x/visitor"},"next":{"title":"방문 신청 관리하기","permalink":"/docs/platform/biostar_x/visitor-register-manage"}}')
+var site_docs_platform_biostar_x_visitor_register_mdx_4b5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor-register","title":"방문 신청하기","description":"방문 신청용 PC에서 방문자가 출입을 신청하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/visitor-register.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor-register","permalink":"/docs/en/platform/biostar_x/visitor-register","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor-register.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor-register","title":"방문 신청하기","description":"방문 신청용 PC에서 방문자가 출입을 신청하는 방법을 안내합니다.","keywords":["방문 신청"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"방문자 신청 및 관리하기","permalink":"/docs/en/platform/biostar_x/visitor"},"next":{"title":"방문 신청 관리하기","permalink":"/docs/en/platform/biostar_x/visitor-register-manage"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -30,7 +30,7 @@ const frontMatter = {
 	keywords: [
 		'방문 신청'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 

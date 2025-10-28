@@ -127,7 +127,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-visitor-mdx-c36.json
-var site_docs_platform_biostar_x_visitor_mdx_c36_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor","title":"방문자 신청 및 관리","description":"방문자 플러그인을 통해 방문 신청 페이지를 생성하고 방문자 출입 관리 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/visitor.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor","permalink":"/docs/en/platform/biostar_x/visitor","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor","title":"방문자 신청 및 관리","description":"방문자 플러그인을 통해 방문 신청 페이지를 생성하고 방문자 출입 관리 방법을 안내합니다.","keywords":["방문자","출입 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"근태 관리 설정하기","permalink":"/docs/en/platform/biostar_x/tna-settings"},"next":{"title":"방문 신청하기","permalink":"/docs/en/platform/biostar_x/visitor-register"}}')
+var site_docs_platform_biostar_x_visitor_mdx_c36_namespaceObject = JSON.parse('{"id":"platform/biostar_x/visitor","title":"방문자 신청 및 관리하기","description":"방문자 플러그인을 통해 방문 신청 페이지를 생성하고 방문자 출입 관리 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/visitor.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/visitor","permalink":"/docs/en/platform/biostar_x/visitor","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/visitor.mdx","tags":[],"version":"current","frontMatter":{"id":"visitor","title":"방문자 신청 및 관리하기","description":"방문자 플러그인을 통해 방문 신청 페이지를 생성하고 방문자 출입 관리 방법을 안내합니다.","keywords":["방문자","출입 관리"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"근태 관리 설정하기","permalink":"/docs/en/platform/biostar_x/tna-settings"},"next":{"title":"방문 신청하기","permalink":"/docs/en/platform/biostar_x/visitor-register"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -139,7 +139,7 @@ var _bsx_license_apply = __webpack_require__(45363);
 
 const frontMatter = {
 	id: 'visitor',
-	title: '방문자 신청 및 관리',
+	title: '방문자 신청 및 관리하기',
 	description: '방문자 플러그인을 통해 방문 신청 페이지를 생성하고 방문자 출입 관리 방법을 안내합니다.',
 	keywords: [
 		'방문자',
