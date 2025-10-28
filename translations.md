@@ -8,6 +8,7 @@ crowdin upload -b main
 
 크라우딘 번역 전 태그 감추기할 목록
 
+- Cmd
 - Image
 - Table, Thead, Th, Tbody, Row, Td
 - Columns, Column
@@ -30,6 +31,8 @@ crowdin upload -b main
 - DbQueryCreate
 - 주석 {/**/}
 - import
+- details
+- summary
 
 영어에 남아있는 한글 정규식 검색
 
