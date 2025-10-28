@@ -1380,6 +1380,15 @@ const sidebars = {
             'device/biostation_3/release-notes/100',
           ]
         },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'doc',
+          label: 'A&E',
+          id: 'device/biostation_3/ae/biostation3_ae',
+        },
       ],
     },
   ],
