@@ -172,7 +172,7 @@ function _createMdxContent(props) {
           }), ": 사용자의 사진을 등록하세요. 웹캠으로 사진을 촬영하거나 PC에서 사진을 업로드할 수 있습니다. 프로필에 마우스를 오버하면 사용할 수 있는 도구가 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsxs)(Columns, {
           children: [(0,jsx_runtime.jsx)(Column, {
-            className: "width--20 padding--t1rem",
+            className: "width--20",
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/biostarx-new-user-photo.png",
               alone: true
