@@ -551,6 +551,9 @@
   "specs.storage.max_image_logs": {
     "message": "Max. Image logs"
   },
+  "specs.storage.max_card": {
+    "message": "Max. Card"
+  },
   "specs.interface": {
     "message": "Interfaces"
   },

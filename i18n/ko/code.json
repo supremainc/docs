@@ -551,6 +551,9 @@
   "specs.storage.max_image_logs": {
     "message": "최대 이미지 로그 수"
   },
+  "specs.storage.max_card": {
+    "message": "최대 카드 수"
+  },
   "specs.interface": {
     "message": "인터페이스"
   },
