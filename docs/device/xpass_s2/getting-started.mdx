@@ -1,0 +1,147 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass S2</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>드릴링 템플릿</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>PVC 앵커 x2</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>수축 튜브</Td>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>브래킷 고정용 나사 (별 모양)</Td>
+
+<Td>퀵 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Components_note from '../../common/_getting-started-components-note.mdx'
+
+<Components_note />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-xps2.png' className='none' width="70%" />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 분홍색: 처리 중
+
+  * 파란색/하늘색 점멸: 정상 동작 상태
+  
+  * 빨간색/분홍색 점멸: 단말기 잠김
+
+  * 파란색/빨간색 점멸: 시간 초기화 상태, 시간 재설정 필요
+
+  * 파란색/노란색 점멸:
+
+      * <Cmd>DHCP</Cmd>를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+      * <Cmd>슬레이브</Cmd> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+  * 빨간색 점멸: 제품 초기화 오류, 제조사 문의 필요
+
+  * 노란색 점멸: 입력 대기 상태
+
+* **RF 카드 인식부**: 출입을 위해 RF 카드를 인식시키는 부분입니다.
+
+* **초기화 버튼**
+
+  * 네트워크 설정을 초기화합니다. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings)를 참고하세요.
+
+  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+* **네트워크 상태 LED**: 네트워크 연결 상태를 표시합니다.
+
+### 케이블
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xps2.png' width={550} className='none' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | WG GND | 검은색 |
+| 2 | INPUT GND | 회색 |
+| 3 | 485 GND | 흰색(검은띠) |
+| 4 | WG D0 | 초록색 |
+| 5 | WG D1 | 흰색 |
+| 6 | INPUT0 | 보라색 |
+| 7 | INPUT1 | 갈색 |
+| 8 | 485 TRXP | 파란색(흰띠) |
+| 9 | 485 TRXN | 노란색(검은띠) |
+| 10 | ENET TXN | 빨간색 |
+| 11 | ENET TXP | 검은색 |
+| 12 | ENET RXN | 노란색 |
+| 13 | ENET RXP | 초록색 |
+| 14 | PWR GND | 검은색(흰띠) |
+| 15 | RLY NO | 회색(흰띠) |
+| 16 | RLY COM | 초록색(흰띠) |
+| 17 | RLY NC | 주황색(흰띠) |
+| 18 | PWR +VDC | 빨간색 |
+
+</Column>
+</Columns>
