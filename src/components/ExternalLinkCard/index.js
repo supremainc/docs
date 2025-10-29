@@ -341,3 +341,28 @@ export function Peripheral({ productLinks: productLinksProp }) {
     </div>
   );
 }
+
+export function Apps({ productLinks: productLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultProductLinks = [
+    {
+      title: 'Device Manager',
+      url: '#',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.im120.desc",
+        message: "Device manager"
+      })}`
+    }
+  ];
+  const productLinks = productLinksProp || defaultProductLinks;
+
+  return (
+    <div className={clsx('container', styles.product, styles.grid)}>
+      {productLinks.map((props, idx) => (
+        <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
