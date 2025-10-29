@@ -14,7 +14,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const imagePath = (() => {
         const localizedSrc = currentLocale === 'ko' || alone ? 
             src : 
-            src.replace('/images/', `/images/${currentLocale}/`);
+            src.replace('/img/', `/img/${currentLocale}/`);
         
         if (isDev) {
             return useBaseUrl(localizedSrc);
@@ -23,7 +23,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         }
     })();
 
-    const errTarget = useBaseUrl('/images/default-placeholder-image.webp')
+    const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);
     
 
