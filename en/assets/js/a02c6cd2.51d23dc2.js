@@ -255,7 +255,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "device.info.deviceId",
               product: "2"
-            }), "는 100000~999999 범위 내에서 지정할 수 있습니다. 기존 슈프리마 장치 ID와 겹치지 않는 범위 내에서 지정해야 합니다."]
+            }), "는 100000~999999 범위 내에서 지정할 수 있습니다. 기존 슈프리마 장치 ID와 중복되지 않는 범위 내에서 지정해야 합니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
