@@ -10,11 +10,11 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const isDev = process.env.NODE_ENV === 'development';
     
     // Generate image path based on environment
-    const baseUrl = 'https://supremainc.github.io/docs';
+    const baseUrl = 'https://supremadocs.blob.core.windows.net';
     const imagePath = (() => {
         const localizedSrc = currentLocale === 'ko' || alone ? 
             src : 
-            src.replace('/img/', `/img/${currentLocale}/`);
+            src.replace('/images/', `/images/${currentLocale}/`);
         
         if (isDev) {
             return useBaseUrl(localizedSrc);
@@ -23,7 +23,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         }
     })();
 
-    const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
+    const errTarget = useBaseUrl('/images/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);
     
 
