@@ -45,6 +45,7 @@
     "tabulator-tables": "^6.3.1"
   },
   "devDependencies": {
+    "@azure/storage-blob": "^12.17.0",
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
     "@types/fs-extra": "^11.0.4",
@@ -65,6 +66,7 @@
     "image-size": "^2.0.2",
     "jiti": "^2.2.1",
     "md5": "^2.3.0",
+    "mime-types": "^2.1.35",
     "node-fetch": "^3.3.2",
     "openai": "^4.67.1",
     "prettier": "^3.3.3",
