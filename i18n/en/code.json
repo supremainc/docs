@@ -38,6 +38,15 @@
   "externalLinks.peripheral.sio2.desc": {
     "message": "Compact Secure Single Door I/O"
   },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "Scalable communication and security module"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "Mobile-based access control device management application"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "Centralized access control management web server"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
     "description": "The ARIA label for the breadcrumbs"

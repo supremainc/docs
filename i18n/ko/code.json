@@ -38,6 +38,15 @@
   "externalLinks.peripheral.sio2.desc": {
     "message": "출입문 보안 컨트롤 모듈"
   },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "확장형 통신 및 보안 모듈"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "모바일 기반 출입통제 장치 관리 애플리케이션"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "중앙집중형 출입통제 관리 웹서버"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"

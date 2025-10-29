@@ -280,6 +280,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'ENCR-10',
+                docId: 'device/encr_10/index'
+              },
+              {
+                type: 'doc',
                 label: 'Input Module',
                 docId: 'device/inputmodule/index'
               },

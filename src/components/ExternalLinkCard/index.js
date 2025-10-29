@@ -258,7 +258,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     },
     {
       title: 'ENCR-10',
-      url: '#',
+      url: '/device/encr_10',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/encr-10.png',
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
@@ -334,13 +334,19 @@ export function Peripheral({ productLinks: productLinksProp }) {
       title: 'Extended Module',
       url: '#',
       img: '/img/device/extended-module.png',
-      desc: 'Powerful Security, Flexible Expansion'
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
+      })}`
     },
     {
       title: 'Extended Module-SC',
       url: '#',
       img: '/img/device/extended-module-sc.png',
-      desc: 'Powerful Security, Flexible Expansion'
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
+      })}`
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -362,14 +368,20 @@ export function Apps({ externalLinks: externalLinksProp }) {
       url: `#`,
       Svg: require('/img/device/device-manager.svg').default,
       height: '45px',
-      desc: '모바일 기반 출입통제 장치 관리 애플리케이션'
+      desc: `${translate({
+        id: "externalLinks.apps.devicemanager.desc",
+        message: "모바일 기반 출입통제 장치 관리 애플리케이션"
+      })}`
     },
     {
       title: 'CoreStation Setup Manager',
       url: `#`,
       Svg: require('/img/device/cs-setup-manager.svg').default,
       height: '45px',
-      desc: '중앙집중형 출입통제 관리 웹서버'
+      desc: `${translate({
+        id: "externalLinks.apps.setupmanager.desc",
+        message: "중앙집중형 출입통제 관리 웹서버"
+      })}`
     }
   ];
   const externalLinks = externalLinksProp || defaultExternalLinks;
