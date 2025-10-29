@@ -14,11 +14,11 @@ keywords:
 
 * This feature requires the **Device Manager** license to be activated. For more information about the license policy, refer to [the following](licensing).
 
-* For specifications and installation of the communication server, refer to the following documents.
+* For specifications and installation of the communication server, refer to the followings:
 
   * [Communication Server Specifications](system-requirements#communication-server)
 
-  * Click the following to install the communication server
+  * [Install Communication Server](install-communication-server)
 
 :::
 
@@ -44,7 +44,15 @@ You can move devices registered on the main server or other communication server
 
 3. From the <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> section on the left, select the server where the device you want to move is registered.
 
-4. Select the device(s) you want to move from the device list. You can select multiple devices.
+   <Image src='/img/biostarx-setting-device-connection-manager-01.png' />
+
+4. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> section on the right, select the target server to which you want to move the devices.
+
+   <Image src='/img/biostarx-setting-device-connection-manager-02.png' />
+
+5. Select the device(s) you want to move from the device list. You can select multiple devices.
+
+   <Image src='/img/biostarx-setting-device-connection-manager-03.png' />
 
    :::note
 
@@ -52,13 +60,13 @@ You can move devices registered on the main server or other communication server
 
    :::
 
-5. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> section on the right, select the target server to which you want to move the devices.
+6. Click <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> to move the device to the target server.
 
-6. To move the devices, click the <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> button.
+   <Image src='/img/biostarx-setting-device-connection-manager-04.png' />
 
-7. In the message window, verify the total number of devices to be moved, the number of TCP/IP connected devices, and the name and IP address of the server to which you are moving.
+7. Check the total number of devices to move, the number of TCP/IP connected devices, the name of the server to move to, and the IP address in the message window.
 
-8. Click the <Cmd sid='button.apply' product='2' /> button.
+8. Click <Cmd sid='button.yes' product='2' />.
 
 Once the move is complete, you can check the total number of devices moved, the number of TCP/IP connected devices, and the name and IP address of the moved server in the message window. 
 
@@ -66,7 +74,7 @@ If there are devices that failed to move, the message window will show the numbe
 
 :::info
 
-* If there are no connected extension servers, the target server will not be displayed on the right side of the screen.
+* If there are no connected extension servers, <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> on the right side of the screen will not be displayed.
 
 * When selecting a server, you can see all registered devices, including Wiegand and RS-485 connected devices on that server.
 

@@ -7,7 +7,7 @@ keywords:
   - Certifications
 ---
 
-The <Cmd sid='device.info.authentication' product='2' /> section provides various methods for configuring user authentication on the device. You can check the authentication modes and key authentication options that the device supports in a step-by-step manner. Note that changes to settings will be applied to the actual device, and configure the authentication policy according to your environment by referring to the features and precautions of each option.
+Instructions for various settings related to user authentication on the device are provided. <Cmd sid='device.info.authentication' product='2' /> section provides step-by-step information on authentication methods and key authentication options supported by the device. Note that changes to settings will be applied to the actual device, and configure the authentication policy according to your environment by referring to the features and precautions of each option.
 
 :::info
 
@@ -25,13 +25,19 @@ You can set the device's authentication mode, permissions, server matching, and 
 
 * <Cmd sid='device.info.authenticationMode' product='2' />: Set the authentication mode of the device by combining one or more credentials. For more information, refer to [the following](#added-auth-mode).
 
+  * Click the <IcEdit /> button to modify the added authentication mode.
+
+  * Click the <IcTrash2 /> button to delete the added authentication mode.
+
 * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Users registered on the device can be granted all access permissions without defining access group settings.
 
   :::info
 
-  When this option is set to <Cmd sid='common.use' product='2' />, the device cannot be registered in <Cmd sid='common.accessLevel' product='2' /> and <Cmd sid='ag.floorLevel.title' product='2' />. For more information, refer to [the following](#settings-access-level).
+  When this option is set to <Cmd sid='common.use' product='2' />, the device cannot be registered in <Cmd sid='common.accessLevel' product='2' /> and <Cmd sid='ag.floorLevel.title' product='2' />.
 
   :::
+
+* <Cmd sid='device.info.authTimeout' product='2' />: This is the timeout for authenticating the second credential when multiple credentials are used in <Cmd sid='device.info.authenticationMode' product='2' /> option. If the credential is not authenticated within the specified time, authentication will fail.
 
 * <Cmd sid='common.serverMatching' product='2' />
 
@@ -87,8 +93,6 @@ You can set the device's authentication mode, permissions, server matching, and 
 
   </details>
 
-* <Cmd sid='device.info.authTimeout' product='2' />: This is the timeout for authenticating the second credential when multiple credentials are used in <Cmd sid='device.info.authenticationMode' product='2' /> option. If the credential is not authenticated within the specified time, authentication will fail.
-
 * <Cmd sid='device.info.faceDetection' product='2' />: Set the algorithm steps for recognizing faces using the built-in camera when the user authenticates.
 
   * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: Detects faces at a distance equivalent to the length of a person's arm.
@@ -103,11 +107,11 @@ You can set the device's authentication mode, permissions, server matching, and 
 
   :::
 
-* <Cmd sid='device.info.userNameDisplay' product='2' />: Control whether to display or hide the user name shown on the device when authentication is successful.
+* <Cmd sid='device.info.userIdDisplay' product='2' />: Control whether to display or hide the user ID shown on the device when authentication is successful.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-* <Cmd sid='device.info.userIdDisplay' product='2' />: Control whether to display or hide the user ID shown on the device when authentication is successful.
+* <Cmd sid='device.info.userNameDisplay' product='2' />: Control whether to display or hide the user name shown on the device when authentication is successful.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
@@ -136,6 +140,8 @@ If the desired schedule is not available in the <Cmd sid='schedule.schedule' pro
 ## Fingerprint authentication settings
 
 In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configure details related to the device's fingerprint authentication.
+
+<Image src='/img/biostarx-setting-device-detail-fingerprint.png' />
 
 * <Cmd sid='device.info.securityLevel' product='2' />: Set the security level used for authenticating fingerprints. Higher security levels increase the [False Rejection Rate (FRR)](../../reference/glossary#frr) but decrease the [False Acceptance Rate (FAR)](../../reference/glossary#far).
 
@@ -179,6 +185,8 @@ In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configur
 
 In the <Cmd sid='user.credential.face' product='2' /> group, you can configure details related to the device's facial authentication.
 
+<Image src='/img/biostarx-setting-device-detail-face.png' />
+
 * <Cmd sid='device.info.securityLevel' product='2' />: Set the security level used for authenticating faces. Higher security levels increase the [False Rejection Rate (FRR)](../../reference/glossary#frr) but decrease the [False Acceptance Rate (FAR)](../../reference/glossary#far).
 
 * <Cmd sid='face.operationMode.enrollTime' product='2' />: If the user's face is not enrolled within the set time when registering, the face enrollment will be canceled.
@@ -195,7 +203,9 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 
   * <Cmd sid='device.info.enable' product='2' />: Configures the face enrollment procedure to one step.
 
-  * <Cmd sid='device.info.disabled' product='2' />: Configures the face enrollment procedure to three steps. Set to <Cmd sid='device.info.disabled' product='2' /> for high-quality face template enrollment.
+  * <Cmd sid='device.info.disabled' product='2' />: Sets the face enrollment procedure to 3 steps. Set to <Cmd sid='device.info.disabled' product='2' /> for high-quality face template enrollment.
+
+* <Cmd sid='device.info.duplicateCheck' product='2' />: Check for duplicate registrations when enrolling faces.
 
 * <Cmd sid='device.info.faceDetectSetting' product='2' />: Configure the environmental settings for recognizing the user's face during authentication.
 
@@ -213,8 +223,6 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 
 * <Cmd sid='device.info.faceFakeDetection' product='2' />: Prevent user authentication using fake faces such as photos. This is activated when the <Cmd sid='device.info.faceOperationMode' product='2' /> option is set to <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
 
-* <Cmd sid='device.info.duplicateCheck' product='2' />: Check for duplicate registrations when enrolling faces.
-
 :::info
 
 * The options available for configuration may vary depending on the type of device.
@@ -230,6 +238,8 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 ## QR/Barcode settings
 
 In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configure details for QR/barcode authentication on the device.
+
+<Image src='/img/biostarx-setting-device-detail-qrbarcode.png' />
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' />: Set whether to use QR/barcode authentication through the device's camera.
 
@@ -273,6 +283,8 @@ Only card types supported by the device will be displayed in the <Cmd sid='setti
 
 You can select the types of CSN cards and formats and set the byte order.
 
+<Image src='/img/biostarx-setting-device-detail-card-csn.png' />
+
 * <Cmd sid='device.info.byteOrder' product='2' />
 
   * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
@@ -289,6 +301,8 @@ You can select the types of CSN cards and formats and set the byte order.
 
 Select the types of Wiegand cards and set the Wiegand formats. Choose the Wiegand format to be used in the <Cmd sid='device.cardFormat.wiegand.format' product='2' /> option.
 
+<Image src='/img/biostarx-setting-device-detail-card-wiegand.png' />
+
 :::info
 
 For information about how to set a new Wiegand format, refer to [the following](settings-credential-wiegand-format).
@@ -297,7 +311,9 @@ For information about how to set a new Wiegand format, refer to [the following](
 
 ### <Cmd sid='device.card.supremaSmartCard' product='2' />
 
-Select the types of Suprema smart cards and set the card layout and byte order. 
+Select the types of Suprema smart cards and set the card layout and byte order.
+
+<Image src='/img/biostarx-setting-device-detail-card-smart.png' />
 
 * <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Choose the Suprema smart card layout. For information about how to set a new smart card layout, refer to [the following](settings-credential-smart-format).
 
@@ -310,6 +326,8 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 ### <Cmd sid='device.card.customSmartCard' product='2' />
 
 Select types of custom smart cards issued by third parties and set the card layout and byte order.
+
+<Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
 * <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Choose the custom smart card layout. For information about how to set a new smart card layout, refer to [the following](settings-credential-smart-format).
 
@@ -345,6 +363,8 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 You can set the method for recognizing mobile cards.
 
+<Image src='/img/biostarx-setting-device-detail-card-csn-mobile.png' />
+
 * <Cmd>NFC</Cmd>: Recognizes mobile cards through NFC communication from mobile devices.
 
 * <Cmd>BLE</Cmd>: Recognizes mobile cards through Bluetooth Low Energy (BLE) communication.
@@ -352,6 +372,8 @@ You can set the method for recognizing mobile cards.
 ### <Cmd sid='device.info.templateOnMobile' product='2' />
 
 You can specify how recognition works on the Template on Mobile and set the byte order for biometrics enrolled directly by the user on the device.
+
+<Image src='/img/biostarx-setting-device-detail-card-tom.png' />
 
 * <Cmd sid='device.info.TomOutputByteOrder' product='2' />
 
@@ -368,3 +390,15 @@ You can specify how recognition works on the Template on Mobile and set the byte
 * BioEntry W3 firmware version 1.0.0 or higher
 
 </details>
+
+## PIN authentication settings
+
+In the <Cmd sid='device.info.pin' product='2' /> group, you can turn the <Cmd sid='device.info.scrambleKeypad' product='2' /> option on or off for the device's PIN authentication.
+
+<Image src='/img/biostarx-setting-device-detail-pin.png' />
+
+:::info
+
+The <Cmd sid='device.info.scrambleKeypad' product='2' /> option is only available on Suprema products that support user interfaces through the LCD screen.
+
+:::

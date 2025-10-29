@@ -1,0 +1,74 @@
+---
+id: tna-rule-shift-overtime
+title: Set Other Work Rules
+description: This provides methods to add additional work rules that can be useful when overtime rules are not added to the daily work rules.
+keywords:
+  - Other work rules
+  - Overtime
+---
+
+This is useful when overtime rules are not added to <Cmd sid='tab.shift' product='2' className='normal' />. The overtime settings in <Cmd sid='tab.shift' product='2' className='normal' /> have start and end times, while <Cmd sid='rule.rule' product='2' className='normal' /> calculates the total hours beyond the regular working hours. <Cmd sid='rule.rule' product='2' className='normal' /> is convenient for managing total overtime hours on a daily, weekly, or monthly basis. When <Cmd sid='rule.rule' product='2' className='normal' /> is set, it replaces the overtime rules added to <Cmd sid='tab.shift' product='2' className='normal' />.
+
+## <Cmd sid='rule.addRule' product='2' className='bold' />
+
+1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='tab.shift' product='2' /> → <Cmd sid='rule.rule' product='2' /> in the left sidebar.
+
+3. Click the <Cmd sid='rule.addRule' product='2' /> button.
+
+   <Image src='/img/biostarx-tna-shift-overtime.png' />
+
+4. When the <Cmd sid='rule.addRule' product='2' /> screen appears, set each item.
+
+:::info
+
+* Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+* To continue adding the work schedule, click the <Cmd sid='payCode.applyAndAddShift' product='2' /> button.
+
+* After saving the settings, click the <Cmd sid='ta.apply_add_another' product='2' /> button to add another <Cmd sid='rule.rule' product='2' />.
+
+:::
+
+## Setting options guide
+
+Set <Cmd sid='rule.rule' product='2' className='normal' />. You can set overtime rules to apply on a daily, weekly, or monthly basis.
+
+<Image src='/img/biostarx-tna-shift-overtime-adding.png' />
+
+* <Cmd sid='form.name' product='2' />: Enter the name of <Cmd sid='rule.rule' product='2' className='normal' />.
+
+* <Cmd sid='form.description' product='2' />: Enter a description for <Cmd sid='rule.rule' product='2' className='normal' />.
+
+* <Cmd sid='rule.overtime' product='2' />: Select the overtime rules to apply after the regular working hours on a daily, weekly, or monthly basis. You can apply other overtime rules after a certain period of time. You can also set a maximum overtime limit to restrict the amount of overtime hours an employee can work.
+
+  :::tip
+
+  If set as follows, the **Overtime(1.5)** time rule will apply from 5:00 PM to 11:00 PM when the regular work hours are from 8:00 AM to 5:00 PM, and the **Overtime(2)** time rule will apply from 11:00 PM to 2:00 AM. In addition, daily overtime is restricted to a maximum of 9 hours, and records only until 2:00 AM will be used to calculate daily wages.
+
+  <Image src='/img/biostarx-tna-shift-overtime-example.png' />
+
+  :::
+
+  :::info
+
+  Total working hours do not include breaks or meal times.
+
+  :::
+
+* <Cmd sid='rule.weekendOvertime' product='2' /> / <Cmd sid='rule.holidayOvertime' product='2' />: Set the work rules to apply on weekends or holidays.
+
+  * <Cmd sid='payCode.payCode' product='2' />: Select the <Cmd sid='tab.payCode' product='2' className='normal' /> to apply.
+
+  * <Cmd sid='shift.dayStartTime' product='2' />: Set the start time of work.
+
+  * <Cmd sid='rule.firstInLastOut' product='2' />: Record the time the first user authenticated as the start time and the time the last user authenticated as the end time.
+
+<NextStep>
+<NextItem to='tna-rule-schedule'>
+
+This guides you on how to set up your work schedule by configuring period, users, other work rules, and leave schedules.
+
+</NextItem>
+</NextStep>

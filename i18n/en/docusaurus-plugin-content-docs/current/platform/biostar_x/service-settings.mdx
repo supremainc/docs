@@ -104,6 +104,16 @@ This service is responsible for managing configuration information of the distri
 
 * <Cmd>Client Port</Cmd>: Communication port for client connections (default: 21810)
 
+:::info
+
+* Change the value of <Cmd>Client Port</Cmd>, then manually restart the **BioStar X Coordinator Service** in **Windows Services**(*services.msc*).
+
+* After restarting the **BioStar X Coordinator Service**, go to **BioStar X Service Manager** → **SERVICES** and restart all services. 
+
+  Click <Cmd>Stop All</Cmd> in the top right corner of the screen. After all services are stopped, when the <Cmd>Start All</Cmd> button is enabled, click the button.
+
+:::
+
 ### BioStar X Server (Main) {#biostar-x-server-(main)}
 
 This is the core service that serves as the main server of the system.

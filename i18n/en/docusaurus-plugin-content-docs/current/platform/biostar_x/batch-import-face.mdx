@@ -16,6 +16,8 @@ Learn how to batch enroll users' faces. You can enroll faces of multiple users a
 
 Prepare user face images before starting batch enrollment. 
 
+* Face image files must be stored in one folder. Face image file names must match user IDs.
+
 * The maximum file size for supported image types is 10MB.
 
 * Supported image formats include JPG, JPEG, and PNG.
@@ -50,7 +52,7 @@ You can enroll users' faces in bulk using the CSV import feature.
 
     <Image src='/img/biostarx-user-import-03.png' />
 
-12. In <Cmd sid='user.list.csvImport.visualFaceImageFolder' product='2' />, click the <Cmd sid='button.browse' product='2' /> button.
+12. Click the <Cmd sid='button.browse' product='2' /> button in <Cmd sid='user.list.csvImport.visualFaceImageFolder' product='2' />.
 
     <Image src='/img/biostarx-new-user-credential-face-import-csv.png' />
 
@@ -110,9 +112,9 @@ You can send face enrollment links to users via email. Users can access the link
 
 ### Before start
 
-* Complete the email information settings, including SMTP settings, before using the facial enrollment feature via mobile. For more information, refer to [the following](settings-email-setting).
+* Complete the email information settings, including SMTP settings, before using the mobile face enrollment feature. For more information, refer to [the following](settings-email-setting).
 
-* The facial enrollment feature via mobile must be linked with the Airpop portal to be used. For more information regarding the Airfob Portal and mobile access card use, refer to [the following](settings-credential-mobile-access-card).
+* You must enable the <Cmd sid='setting.menu.remoteAccess.root' /> feature to use the mobile face enrollment feature. For more information on <Cmd sid='setting.menu.remoteAccess.root' /> refer to [the following](settings-remote-access).
 
 ### Send face enrollment link
 
@@ -134,7 +136,7 @@ The face enrollment link is sent to the email of the selected users. Once the us
 
 * You can check the email sending status in <Cmd sid='monitoring.auditTrail' product='2' />. For more information, refer to [the following](settings-system-audit-trail).
 
-* If the user receiving the face enrollment mobile link uses an external email application, the language of the email application must be set to the language of the respective country. If the language does not support Unicode, the text may be displayed abnormally in the email.
+* The language displayed on the page accessed via the face enrollment mobile link follows the language settings of the browser used on the mobile device.
 
 * When the user accesses the sent face enrollment mobile link, the face enrollment service will be executed as shown below. Follow the instructions on the screen.
 
@@ -146,6 +148,6 @@ The face enrollment link is sent to the email of the selected users. Once the us
 
 * The sent face enrollment mobile link will expire after 24 hours.
 
-* Once the Visual Face Mobile Enrollment process is successful after uploading a face picture, an enrollment success message appears on the screen. If enrollment fails, a failure message and reason are displayed, and the user can retry the Visual Face Enrollment again using a different face picture.
+* Once the Face Mobile Enrollment process is successful after uploading a face picture, an enrollment success message appears on the screen. If enrollment fails, a failure message and reason are displayed, and the user can retry the Visual Face Enrollment again using a different face picture.
 
 :::

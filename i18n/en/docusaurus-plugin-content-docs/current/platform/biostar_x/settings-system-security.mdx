@@ -23,11 +23,17 @@ Check your organization's security policy and regulations before enhancing syste
 
 3. Set each item related to security.
 
+   * <Cmd sid='setting.systemSecurity.loginPassword' product='2' />: Set the security level related to login password. For more information, refer to [the following section](#password-policy-configuration).
+
+   * <Cmd sid='setting.server.secure.comm.title' product='2' />: Enhance communication security between personal information and devices. For more information, refer to [the following section](#advanced-security-configuration).
+
+   * <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' />: Enhance session security. For more information, refer to [the following section](#session-security-configuration).
+
 4. Click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen to save your settings.
 
 :::info
 
-The <Cmd sid="setting.server.secure.comm.title" product='2' /> menu is activated when accessed with the first admin account with ID **1**.
+Only the first administrator account with ID **1** can use the <Cmd sid="setting.server.secure.comm.title" product='2' /> menu.
 
 :::
 
@@ -46,18 +52,6 @@ You can set the complexity of user passwords. Adjust the slider for the <Cmd sid
 * <Cmd sid="setting.server.passwordLevelMedium" product='2' />: When setting a password, a combination of 8 to 32 alphabetic characters (uppercase or lowercase) and numbers is required.
 
 * <Cmd sid="setting.server.passwordLevelStrong" product='2' />: When setting a password, a combination of 10 to 32 alphabetic characters (uppercase and lowercase, including at least one uppercase letter), numbers, and special characters is required.
-
-{/*
-
-:::info
-
-If you use <Cmd>Cloud</Cmd>, only <Cmd sid="setting.server.passwordLevelMedium" product='2' /> and <Cmd sid="setting.server.passwordLevelStrong" product='2' /> are available.
-
-:::
-
-:::
-
-*/}
 
 ### Set password change cycle
 
@@ -89,7 +83,7 @@ It can be set to a maximum of 10 times.
 
 :::
 
-## Advanced security settings
+## Advanced security settings {#advanced-security-configuration}
 
 In the <Cmd sid='setting.server.secure.comm.title' product='2' /> section, you can enhance personal information and communication security between devices.
 
@@ -196,7 +190,7 @@ Set up secure communication between the **BioStar X** server and access control 
 
 :::
 
-## Concurrent access control
+## Concurrent access control {#session-security-configuration}
 
 In the <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> section, you can limit duplicate logins for the same account to enhance security. Set the <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' /> option to <Cmd sid="common.inactive" product='2' />. When there are concurrent login attempts for the same account, existing users logged in will be logged out.
 

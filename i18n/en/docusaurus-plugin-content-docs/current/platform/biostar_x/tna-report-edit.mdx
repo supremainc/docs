@@ -1,0 +1,84 @@
+---
+id: tna-report-edit
+title: Edit T&A Report
+description: This guide explains how to modify attendance records in generated reports.
+keywords:
+  - Time & attendance report
+  - Edit
+---
+
+Click the generated report table to modify attendance records.
+
+:::info
+
+* You must first generate a report to modify the attendance records. For more information on report generation, refer to [the following](tna-report).
+
+* Records of users without an attendance schedule cannot be modified.
+
+:::
+
+1. Click the item in the list of generated reports to modify the record.
+
+2. Modify the attendance records or add absences as desired.
+
+## Edit in the list
+
+<Image src='/img/biostarx-tna-report-edit-list.png' />
+
+<Calloutlists className='svg-none-style'>
+
+1. <Cmd sid='timeCard.dateRange' product='2' />: Set the period for attendance records to display in the list.
+
+2. **Daily attendance record**: Shows the daily attendance record.
+
+   * Click in/out times to add/modify/delete attendance records. After clicking the in/out times, click the <IcEdit /> button to modify the registered attendance record, and click the <Cmd sid='button.apply' product='2' /> button to save changes.
+
+   * Click the <IcEdit /> button to add an absence. You need a time code set as absence to add vacation. Click <IcTrash2 /> for the added user absence to delete it.
+
+3. **Attendance record summary**: You can check attendance records for the specified period.
+
+4. **Refresh** / **View in calendar**
+
+   * <IcRefresh />: Refresh the attendance record list.
+
+   * <IcCalc />: View attendance records in a calendar format.
+
+</Calloutlists>
+
+:::info
+
+For more information on creating time codes, refer to [the following](tna-rule-shift-paycode).
+
+:::
+
+## Edit in the calendar
+
+<Image src='/img/biostarx-tna-report-edit-calendar.png' />
+
+<Calloutlists className='svg-none-style'>
+
+1. **Event type**: You can select or hide event types to appear on the calendar.
+
+2. **Month**: Click <IcFw /> or <IcBw /> to move to the previous or next month.
+
+3. **Daily attendance record**: Shows the daily attendance record.
+
+   * Click working hours (in white) to add/modify/delete attendance records. Click the <IcEdit /> button to modify the registered attendance record, and click the <Cmd sid='button.apply' product='2' /> button to save changes.
+
+   * Click working rules (in gray) to add user absence management. You need a time code set as absence to add user absence. Click <IcTrash2 /> for the added user absence to delete it.
+
+4. **Attendance record summary**: Shows the monthly attendance record.
+
+5. **Refresh** / **View in list**
+
+   * <IcRefresh />: Refresh the attendance record list.
+
+   * <IcList />: View attendance records in a list format.
+
+</Calloutlists>
+
+:::info
+
+For more information on creating time codes, refer to [the following](tna-rule-shift-paycode).
+
+:::

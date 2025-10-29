@@ -1,15 +1,15 @@
 ---
 id: check-door-status
 title: Check Door Status
-description: This guides you on how to monitor the status of devices connected to the door in real-time and resolve any issues that may arise.
+description: You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
 keywords:
   - Monitoring
   - Door
 ---
 
-Monitor the status of devices connected to the door in real-time to ensure stable operation of the security system. Use the status icons provided by <Cmd sid='shell.header.arena' /> to quickly check the connection status of devices, the locking status of the door, the operation status of the camera, and respond immediately in case of any issues.
+You can monitor the status of the entrance door in real-time to operate the security system reliably. Check the abnormal status of the device assigned to the entrance door at a glance through the status icon provided in <Cmd sid='shell.header.arena' /> and respond immediately when a problem occurs.
 
-Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. In the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar, you can check the status of each door and the connected slave devices.
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. You can check the status of each entrance door in the <Cmd sid='arena.tree.door.title' /> tab located in the left sidebar of the screen.
 
 ## Before start
 
@@ -43,7 +43,7 @@ import Doortree from './door-tree.json';
 
 * For more information about adding and configuring elevators, refer to [the following](settings-manage-elevators).
 
-* For more information about setting access control areas, refer to [the following](settings-advanced-ac).
+* For more information on advanced access control settings, refer to [the following](settings-advanced-ac).
 
 * To link the door and the camera, refer to [the following](settings-videos-rule).
 
@@ -57,10 +57,10 @@ You can check the status of the door or elevator to verify proper operation. Ref
 
 <div className='col2--20-80 overflow-x'>
 
-|               Status Icon              | Description                                                                                                         |
-| :------------------------------------: | ------------------------------------------------------------------------------------------------------------------- |
-|  <IcErr width='35px' height='35px' />  | There is a communication server error, or connection loss, or synchronization error status.                         |
-| <IcAlert width='40px' height='40px' /> | An alarm has occurred at the door. If loitering or intrusion is detected, the corresponding icon will be displayed. |
+|               Status Icon              | Description                                                                                                                                                                                                           |
+| :------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  <IcErr width='35px' height='35px' />  | Displays device abnormal statuses such as disconnection, communication server errors, and synchronization errors.                                                                                                     |
+| <IcAlert width='40px' height='40px' /> | Displays the status when entrance door alarms (forced door opening, prolonged door opening, APB, fire alarms, emergency openings) or AI video analysis alarms (loitering detection, intrusion detection, etc.) occur. |
 
 </div>
 
@@ -86,30 +86,28 @@ Right-click on the device and select the <Cmd sid='arena.tree.contextMenu.reconn
 
   * [Advanced access control settings](settings-advanced-ac)
 
-* You can set alarms in camera rules. For more information about camera rule settings, refer to [the following](settings-videos-rule).
+* You can connect the entrance door and the camera in video rules to set alarms. For more information on video rule settings, refer to [the following](settings-videos-rule).
 
-* When linked with the VMS server, AI event alarms for videos can be sent to **BioStar X**. For more details, refer to the manual for the VMS server.
+* When linked with the VMS server, AI event alarms for videos can be sent to **BioStar X**. For more information, refer to the manual for the VMS server.
 
 * For more information on acknowledging alarms, refer to [the following](monitoring-event#acknowledge-alarm-and-record-action).
 
-* If there are communication server errors, connection loss, or synchronization errors, you can check the connection status through **BioStar X Service Manager**. Click <Start/> → **BioStar X** → **BioStar X Service Manager** → <Cmd>COMMUNICATION SERVERS</Cmd> menu. Check if the <Cmd>Server Status</Cmd> column for each server in the communication server list is in <Cmd>Connected</Cmd> status. For more information, refer to [the following](install-communication-server#check-after-install).
-
 :::
 
-### Checking Door Lock Status {#check-the-door-lock}
+### Checking door lock status {#check-the-door-lock}
 
 You can check the locking status of the door through the door relay status. Refer to the following for the status of the door relay.
 
 <div className='col2--20-80 overflow-x'>
 
-|                  Status Icon                 | Description         |
-| :------------------------------------------: | ------------------- |
-|  <IcRelayLock width='auto' height='35px' />  | The door is closed. |
-| <IcRelayUnlock width='auto' height='40px' /> | The door is open.   |
+|                  Status Icon                 | Description                  |
+| :------------------------------------------: | ---------------------------- |
+|  <IcRelayLock width='auto' height='35px' />  | The entrance door is locked. |
+| <IcRelayUnlock width='auto' height='40px' /> | The door is open.            |
 
 </div>
 
-### Checking Camera Status {#check-the-camera-status}
+### Checking camera status {#check-the-camera-status}
 
 Check the camera status to verify that the camera is operating normally. Refer to the following for camera status.
 
@@ -122,36 +120,36 @@ Check the camera status to verify that the camera is operating normally. Refer t
 
 </div>
 
-### Checking Arming Status {#check-the-security-status}
+### Checking arming status {#check-the-security-status}
 
-You can check the security status of the door or access control area. 
+You can check the security status of the entrance door or advanced access control settings. 
 
 <div className='col2--20-80 overflow-x'>
 
-|                Status Icon               | Description                                                                          |
-| :--------------------------------------: | ------------------------------------------------------------------------------------ |
-| <IcDisable width='auto' height='30px' /> | The icon for the deactivated zone. The deactivated zone will not trigger any alarms. |
-|    <IcArm width='auto' height='35px'/>   | The door is armed.                                                                   |
-|  <IcDisarm width='auto' height='35px'/>  | The door is disarmed.                                                                |
+|                Status Icon               | Description                                                                       |
+| :--------------------------------------: | --------------------------------------------------------------------------------- |
+| <IcDisable width='auto' height='30px' /> | This is the icon for inactive settings. Inactive settings do not generate alarms. |
+|    <IcArm width='auto' height='35px'/>   | The door is armed.                                                                |
+|  <IcDisarm width='auto' height='35px'/>  | The door is disarmed.                                                             |
 
 </div>
 
 :::info
 
-The security status is displayed only when the door is set as a **secured area**. For more information about how to set up the intrusion alarm zone, refer to [the following](settings-advanced-ac-intrusion-alarm).
+The security status is displayed only when the entrance door is set to **guard**. For more information on security settings, refer to [the following](settings-advanced-ac-intrusion-alarm).
 
 :::
 
 ### Check elevator status
 
-You can check the locking status of the elevator.
+You can check the floor access control status via the elevator.
 
 <div className='col2--20-80 overflow-x'>
 
-|                 Status Icon                | Description           |
-| :----------------------------------------: | --------------------- |
-| <StatusNormal width='auto' height='35px'/> | Elevator is locked.   |
-|   <StatusOK width='auto' height='35px'/>   | Elevator is unlocked. |
+|                 Status Icon                | Description                                           |
+| :----------------------------------------: | ----------------------------------------------------- |
+| <StatusNormal width='auto' height='35px'/> | The corresponding floor is locked via the elevator.   |
+|   <StatusOK width='auto' height='35px'/>   | The corresponding floor is unlocked via the elevator. |
 
 </div>
 
