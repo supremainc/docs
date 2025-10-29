@@ -333,28 +333,13 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module',
       url: '#',
-      img: '#',
-      height: '90px',
+      img: '/img/device/extended-module.png',
       desc: 'Powerful Security, Flexible Expansion'
     },
     {
       title: 'Extended Module-SC',
       url: '#',
-      img: '#',
-      height: '90px',
-      desc: 'Powerful Security, Flexible Expansion'
-    },
-    {
-      title: 'TCM10-FS2',
-      url: '#',
-      img: '/img/device/tcm10-fs2.png',
-      height: '80px',
-      desc: 'Powerful Security, Flexible Expansion'
-    },
-    {
-      title: 'TCM10-FSF2',
-      url: '#',
-      img: '/img/device/tcm10-fsf2.png',
+      img: '/img/device/extended-module-sc.png',
       desc: 'Powerful Security, Flexible Expansion'
     }
   ];
@@ -373,32 +358,18 @@ export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
     {
-      title: 'BioStar2 Device SDK',
-      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${currentLocale}:start`,
-      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
+      title: 'Device Manager',
+      url: `#`,
+      Svg: require('/img/device/device-manager.svg').default,
       height: '45px',
-      desc: '지문 인식 장치의 핵심 기능을<br/>타사 소프트웨어와 완벽한 통합 지원'
+      desc: '모바일 기반 출입통제 장치 관리 애플리케이션'
     },
     {
-      title: 'BioStar2 API',
-      url: 'https://bs2api.biostar2.com/',
-      Svg: require('@site/static/img/biostar-api.svg').default,
+      title: 'CoreStation Setup Manager',
+      url: `#`,
+      Svg: require('/img/device/cs-setup-manager.svg').default,
       height: '45px',
-      desc: 'BioStar2의 모든 API를<br/>한눈에 볼 수 있는 API 문서'
-    },
-    {
-      title: 'Suprema G-SDK',
-      url: 'https://supremainc.github.io/g-sdk/',
-      Svg: require('@site/static/img/gsdk.svg').default,
-      height: '45px',
-      desc: '다양한 프로그래밍 언어 지원하는<br/>크로스 플랫폼 솔루션'
-    },
-    {
-      title: 'SVP Android SDK',
-      url: `https://kb.supremainc.com/svpsdk/doku.php?id=${currentLocale}:getting_started`,
-      Svg: require('@site/static/img/banner/android-banner.svg').default,
-      height: '45px',
-      desc: '슈프리마 장치의 핵심 기능을<br/> 타 소프트웨어에서 지원'
+      desc: '중앙집중형 출입통제 관리 웹서버'
     }
   ];
   const externalLinks = externalLinksProp || defaultExternalLinks;
