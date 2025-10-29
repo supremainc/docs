@@ -369,26 +369,44 @@ export function Peripheral({ productLinks: productLinksProp }) {
   );
 }
 
-export function Apps({ productLinks: productLinksProp }) {
+export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
+  const defaultExternalLinks = [
     {
-      title: 'Device Manager',
-      url: '#',
-      img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
-      height: '90px',
-      desc: `${translate({
-        id: "externalLinks.peripheral.im120.desc",
-        message: "Device manager"
-      })}`
+      title: 'BioStar2 Device SDK',
+      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${currentLocale}:start`,
+      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
+      height: '45px',
+      desc: '지문 인식 장치의 핵심 기능을<br/>타사 소프트웨어와 완벽한 통합 지원'
+    },
+    {
+      title: 'BioStar2 API',
+      url: 'https://bs2api.biostar2.com/',
+      Svg: require('@site/static/img/biostar-api.svg').default,
+      height: '45px',
+      desc: 'BioStar2의 모든 API를<br/>한눈에 볼 수 있는 API 문서'
+    },
+    {
+      title: 'Suprema G-SDK',
+      url: 'https://supremainc.github.io/g-sdk/',
+      Svg: require('@site/static/img/gsdk.svg').default,
+      height: '45px',
+      desc: '다양한 프로그래밍 언어 지원하는<br/>크로스 플랫폼 솔루션'
+    },
+    {
+      title: 'SVP Android SDK',
+      url: `https://kb.supremainc.com/svpsdk/doku.php?id=${currentLocale}:getting_started`,
+      Svg: require('@site/static/img/banner/android-banner.svg').default,
+      height: '45px',
+      desc: '슈프리마 장치의 핵심 기능을<br/> 타 소프트웨어에서 지원'
     }
   ];
-  const productLinks = productLinksProp || defaultProductLinks;
+  const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (
-    <div className={clsx('container', styles.product, styles.grid)}>
-      {productLinks.map((props, idx) => (
-        <CardItem key={idx} {...props} />
+    <div className={clsx('container', styles.grid, styles.externalLinks)}>
+      {externalLinks.map((props, idx) => (
+        <ExternalLinkBanner key={idx} {...props} />
       ))}
     </div>
   );
