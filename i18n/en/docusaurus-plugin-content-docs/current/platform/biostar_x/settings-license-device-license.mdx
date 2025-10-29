@@ -8,7 +8,7 @@ keywords:
 
 Activate the <Cmd sid="setting.server.license.device" product='2' /> issued by Suprema to use specific features associated with the license.
 
-You can activate the <Cmd sid="setting.server.license.device" product='2' /> on the device using **BioStar X** and a USB memory.
+<Cmd sid="setting.server.license.device" product='2' /> can activate the device license using **BioStar X** and a USB memory stick.
 
 :::info
 
@@ -26,7 +26,7 @@ Before activating the device license, check the following.
 
 * Prepare a valid device license file. Contact the place of purchase for the device license file.
 
-* Ensure the target device is registered in **BioStar X**.
+* Ensure the target device is registered in **BioStar X**. For more information about device enrollment, refer to [the following](settings-adding-devices).
 
 ## Apply device license {#apply-device-license}
 
@@ -34,13 +34,17 @@ Before activating the device license, check the following.
 
 2. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid="setting.server.license.device" product='2' /> in the left sidebar.
 
-3. Click the <Cmd sid="user.list.csvImport.browse" product='2' /> button and load the device license file from the path where it is saved.
-
-4. The information corresponding to the loaded license appears in <Cmd sid="setting.server.license.name" product='2' />, <Cmd sid="setting.server.license.device.count" product='2' />, <Cmd sid="setting.server.license.device.list" product='2' />.
+3. Click <Cmd sid="user.list.csvImport.browse" product='2' />.
 
    <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
 
-5. Check <Cmd sid="setting.server.license.device.list" product='2' />, and to activate the device license, click the <Cmd sid="setting.server.license.button.activate" product='2' /> button.
+4. Load the device license file from the path where the device license is saved.
+
+5. The information corresponding to the loaded license appears in <Cmd sid="setting.server.license.name" product='2' />, <Cmd sid="setting.server.license.device.count" product='2' />, <Cmd sid="setting.server.license.device.list" product='2' />.
+
+   <Image src='/img/biostarx-settings-license-device-license-loaded.png' />
+
+6. Check <Cmd sid="setting.server.license.device.list" product='2' />, and to activate the device license, click the <Cmd sid="setting.server.license.button.activate" product='2' /> button.
 
 :::info
 
@@ -97,6 +101,12 @@ When you load the device license file, the following information appears.
   * <Cmd sid="setting.server.license.device.status" product='2' />: This is the current status of the device. Only devices in <Cmd sid="setting.server.license.device.list.normal" product='2' /> state can activate licenses.
 
     * <Cmd sid="setting.server.license.device.list.normal" product='2' />, <Cmd sid="setting.server.license.device.list.disconnected" product='2' />, <Cmd sid="setting.server.license.device.list.notSupported" product='2' />, <Cmd sid="setting.server.license.device.list.unregistered" product='2' />
+
+    :::note
+
+    If the device is a model that does not support the license feature or if the firmware version is low, <Cmd sid='setting.server.license.device.status' product='2' /> will be displayed as <Cmd sid='setting.server.license.device.list.notSupported' product='2' />. Check the supported models and firmware versions for that feature.
+
+    :::
 
   * <Cmd sid="setting.server.license.status" product='2' />: This indicates whether the license is activated. Only <Cmd sid="setting.server.license.device.list.notActivated" product='2' /> devices can activate licenses.
 

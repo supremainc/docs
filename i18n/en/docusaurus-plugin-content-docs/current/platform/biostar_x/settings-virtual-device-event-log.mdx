@@ -1,0 +1,182 @@
+---
+id: settings-virtual-device-event-log
+title: Integrate Virtual Device Event Log
+description: This guide explains how to enroll a virtual device and log events that occur in external systems to BioStar X.
+keywords:
+  - Virtual Device
+  - Event Logs
+  - API
+  - Integration
+---
+
+By using the virtual device feature, you can log events such as clock-in and clock-out directly to **BioStar X** from mobile apps or third-party services when integrating the attendance management feature. You can systematically manage event logs without a physical device, which is useful for integration with external systems.
+
+## When to use this?
+
+Use the virtual device event log integration feature in the following situations.
+
+* When managing events from the external T&A management system in **BioStar X**
+
+* When you need to save access logs (Punch Log) from the mobile app or external system directly to **BioStar X** (recording check-in/check-out events without database linkage)
+
+* When you need to send events directly via the **BioStar X** API from third-party applications or services
+
+## Before start
+
+The **Event Log API** license must be activated. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::info
+
+For more information on license application, refer to [the following](settings-license-biostar-x-license).
+
+:::
+
+## Register virtual device
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
+
+3. Click <IcMoreW /> at the top right of the device list and select <Cmd sid='device.addVirtualDevice' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-add-virtual-device.png' />
+
+4. Enter the setting information when the <Cmd sid='device.addVirtualDevice' product='2' /> screen appears.
+
+   <Image src='/img/biostarx-settings-device-add-virtual-device-settings.png' />
+
+   * <Cmd sid='device.info.name' product='2' />: Enter the virtual device's name.
+
+   * <Cmd sid='device.info.group' product='2' />: Select the group to assign the virtual device.
+
+   * <Cmd sid='device.info.deviceId' product='2' />: Enter the unique ID of the virtual device. It must be specified within a range that does not duplicate with the existing device ID.
+
+   * <Cmd sid='common.description' product='2' />: Enter the description for virtual device.
+
+5. Click <Cmd sid='button.apply' product='2' /> at the bottom right of the screen to register the virtual device.
+
+:::info
+
+* <Cmd sid='device.info.deviceId' product='2' /> can be specified within the range of 100000 - 999999. It must be specified within a range that does not duplicate with the existing Suprema device ID.
+
+* The value of <Cmd sid='device.info.deviceId' product='2' /> that has already been created cannot be modified.
+
+:::
+
+### Manage device groups
+
+Virtual devices can use the device group feature just like regular devices.
+
+* You can place it in the same group as existing devices.
+
+* If the user has group permissions, they can grant permissions to virtual devices within that group.
+
+:::info
+
+For more information on device groups, refer to [the following](settings-manage-device-group).
+
+:::
+
+### Virtual device limitations
+
+* Virtual devices appear only in the following menu.
+
+  * <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' />
+
+  * View all event logs and preview event logs in <Cmd sid='shell.header.arena' />
+
+  * Retrieve event log from <Cmd sid='shell.header.data' />
+
+* The virtual device cannot use access control features at the door and <Cmd sid='setting.menu.advancedAc.root' />.
+
+* Cannot be specified as a device for <Cmd sid='shell.header.tna' product='2' /> setting.
+
+* Virtual devices do not appear in the device list in the sidebar of the <Cmd sid='shell.header.arena' /> menu.
+
+* Cannot use device control feature.
+
+* Not included in the number of devices for the **Multi Communication Server** license.
+
+## Log events via API
+
+### Supported event type
+
+Only the following event types can be recorded.
+
+* **Access granted**
+
+* **Access Denied**
+
+### API parameters
+
+You must provide the following parameters when logging events.
+
+| Parameter  | Description                                       | Required |
+| ---------- | ------------------------------------------------- | -------- |
+| Event Type | Access Granted or Access Denied                   | Yes      |
+| Datetime   | Event occurrence time                             | Yes      |
+| Device ID  | Only registered virtual device IDs are allowed    | Yes      |
+| User ID    | User ID                                           | Yes      |
+| T&A key    | Only available for input with the specified value | Option   |
+
+:::info
+
+* You can log multiple event logs for a single virtual device at once with a single API call.
+
+* For more information on using API, refer to [the following](https://bs2api.biostar2.com/).
+
+:::
+
+## Retrieve event log
+
+You can retrieve the event logs recorded through the virtual device in the menu.
+
+* <Cmd sid='shell.header.arena' />: Retrieve and filter all events, event preview
+
+* <Cmd sid='shell.header.data' />: Retrieve and filter all events
+
+:::info
+
+* For more information about event retrieval on <Cmd sid='shell.header.arena' />, refer to [the following](monitoring-event).
+
+* For more information about <Cmd sid='shell.header.data' />, refer to [the following](data-generate-reports).
+
+:::
+
+## Audit trail
+
+Audit trail is recorded as shown in the example below when logs are recorded for events.
+
+```
+Access granted, 2025/08/05 03:37:49, outside access door on 12th floor, Administrator(1)
+```
+
+:::info
+
+* Even if events are logged in batch, an individual audit trail entry is created for each event.
+
+* For more information on <Cmd sid='setting.menu.system.auditTrail' />, refer to [the following](settings-system-audit-trail).
+
+:::
+
+## Troubleshooting
+
+### If the <Cmd sid='device.addVirtualDevice' product='2' className='normal' /> button is not visible
+
+Check if the **Event Log API** license is activated.
+
+### When the API call fails
+
+* Check if the **Event Log API** license is activated.
+
+* Check the device ID is a registered virtual device.
+
+* Check if the API parameter format is correct.
+
+### When events are not getting retrieved
+
+* Verify that the recorded device is the correct virtual device ID.
+
+* Check the virtual device is selected in the event filter.
+
+* Check audit trails to ensure no errors occurred when logging events.

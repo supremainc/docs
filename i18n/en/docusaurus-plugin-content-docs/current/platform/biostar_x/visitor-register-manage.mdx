@@ -1,0 +1,178 @@
+---
+id: visitor-register-manage
+title: Manage Visitors
+description: You can approve, modify, add, or delete visitor requests.
+keywords:
+  - Visitor Application
+  - Manage
+---
+
+You can approve or modify visitor requests. Administrators can also add or delete visitors directly.
+
+## Visitor approval
+
+This guide shows how to check visitor requests and approve their access.
+
+1. Click <Cmd sid='shell.header.visitor' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the visitor you want to approve in the visitor list.
+
+   <Image src='/img/biostarx-visitor-register-lists.png' />
+
+3. After checking the visitor's information, correct any required items and click <Cmd sid='common.edit' product='2' />.
+
+4. Click the <Cmd sid='visitor.status.checkIn' product='2' /> button at the bottom right of the screen.
+
+5. Check the contents of <Cmd sid='visitor.visitRegisterInfo' product='2' /> and to approve the visit, click the <Cmd sid='button.checkin' product='2' /> button at the bottom right of the screen.
+
+   <Image src='/img/biostarx-visitor-register-item-approved.png' />
+
+:::info
+
+* If the applicant has not agreed to the visitor access terms, the <Cmd sid='button.checkin' product='2' /> button will be disabled. Click the <Cmd sid='visitor.term.watch' product='2' /> button to provide the access terms to the visitor and obtain agreement. If the visitor does not agree to the access terms, the visit will be restricted.
+
+  <Image src='/img/visitor-register-manage-view-term.png' />
+
+* If a card registration device is set up on the visitor PC, the <Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> button will be activated. Click the <Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> button to approve the visitor and issue an access card. For more information, refer to [the following](#approve-and-register-card).
+
+* To set up card usage on the visitor PC, go to <Cmd sid='shell.header.setting' /> → <Cmd sid='shell.header.visitor' /> menu and the following minimum settings are required. For more information, refer to [the following](settings-visitor#settings-visitor).
+
+  <Image src='/img/biostarx-visitor-settings-use-card.png' />
+
+  * <Cmd sid='visitor.site' product='2' /> <Cmd sid='common.setting' product='2' /> → <Cmd sid='common.card' product='2' /> <Cmd sid='common.use' product='2' /> / <Cmd sid='user.cardType' product='2' />
+
+  * <Cmd sid='visitor.pc.management' product='2' /> <Cmd sid='visitor.pc.setting' product='2' /> → <Cmd sid='common.card' product='2' /> <Cmd sid='setting.server.enrollment_device.device_name' product='2' />
+
+:::
+
+### Approve and enroll card {#approve-and-register-card}
+
+This guide shows how to approve visitor requests and issue access cards. 
+
+1. In the <Cmd sid='visitor.visitRegisterInfo' product='2' /> screen, click the <Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> button at the bottom right of the screen.
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card.png' />
+
+2. When the card registration window appears, select your desired registration method.
+
+   * <Cmd sid='common.registerByCardReader' product='2' />
+
+   * <Cmd sid='common.enterManually' product='2' />
+
+#### <Cmd sid='common.registerByCardReader' product='2' className='normal' />
+
+You can scan card information with a device connected to the visitor PC.
+
+1. Select <Cmd sid='common.registerByCardReader' product='2' /> for <Cmd sid='common.registrationOption' product='2' />.
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card-reader.png' />
+
+2. To scan the card to enroll, click the <Cmd sid='common.readCard' product='2' /> button.
+
+3. To enroll the card, click the <Cmd sid='button.enroll' product='2' /> button.
+
+#### <Cmd sid='common.enterManually' product='2' className='normal' />
+
+You can enroll by directly entering the card number.
+
+1. Select <Cmd sid='common.enterManually' product='2' /> for <Cmd sid='common.registrationOption' product='2' />.
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card-manual.png' />
+
+2. Directly enter <Cmd sid='user.cardId' product='2' />.
+
+3. To enroll the card, click the <Cmd sid='button.enroll' product='2' /> button.
+
+## Fingerprint search for visitor approval
+
+You can search for visitors with enrolled fingerprints and process their approval.
+
+1. Click <Cmd sid='shell.header.visitor' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the <Cmd sid='visitor.button.searchVisitorByFingerprint' product='2' /> button in the upper left of the visitor request list.
+
+   <Image src='/img/biostarx-visitor-list-search-fingerprint.png' />
+
+3. Scan the visitor's fingerprint on the fingerprint scanning device.
+
+4. If a visitor matching the fingerprint is found, a confirmation message will appear. Click the <Cmd sid='visitor.button.registerInformation' product='2' /> button.
+
+   <Image src='/img/biostarx-visitor-list-search-fingerprint-confirm.png' />
+
+5. After checking the visitor's information, correct any required items and click <Cmd sid='common.edit' product='2' />.
+
+6. Click the <Cmd sid='visitor.status.checkIn' product='2' /> button at the bottom right of the screen.
+
+7. Check the contents of <Cmd sid='visitor.visitRegisterInfo' product='2' /> and to approve the visit, click the <Cmd sid='button.checkin' product='2' /> button at the bottom right of the screen.
+
+## Add visitor
+
+This guide shows how an administrator can add visitors directly.
+
+1. Click <Cmd sid='shell.header.visitor' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the <IcAdd /> <Cmd sid='button.func.addVisitor' product='2' /> button in the upper left of the visitor list.
+
+   <Image src='/img/biostarx-visitor-register-lists-add.png' />
+
+3. Enter the visitor's name and phone number in the <Cmd sid='common.visitor' product='2' /> section.
+
+   <Image src='/img/biostarx-visitor-register-lists-add-visitor-info.png' />
+
+4. Enter the name and phone number of the responsible person for the visit in the <Cmd sid='visitor.host' product='2' /> section.
+
+   <Image src='/img/biostarx-visitor-register-lists-add-admin-info.png' />
+
+   :::note
+
+   When you enter a name or phone number, a list of users matching the entered information will be displayed. To designate the desired user, click the <Cmd sid='button.choose' product='2' /> button.
+
+   :::
+
+5. Set the access group and visit duration in the <Cmd sid='visitor.accessInfo' product='2' /> section.
+
+   <Image src='/img/biostarx-visitor-register-lists-add-access-info.png' />
+
+   :::note
+
+   You can only select access groups assigned to the visiting department for the visit PC. For more information, refer to [the following](settings-visitor#settings-visitor-site).
+
+   :::
+
+6. Set the means of access in the <Cmd sid='common.credential' product='2' /> section.
+
+   <Image src='/img/biostarx-visitor-register-lists-add-credential.png' />
+
+   * <Cmd sid='common.card' product='2' />: To use card authentication, set it to <Cmd sid='visitor.request' product='2' />.
+
+   * <Cmd sid='common.fingerPrint' product='2' />: To use fingerprint authentication, click the <Cmd sid='button.addFingerprint' product='2' /> button and then enroll the visitor's fingerprint.
+
+7. To complete adding the visitor, click the <Cmd sid='button.register' product='2' /> button at the bottom right of the screen.
+
+:::info
+
+* The name can be entered up to 48 characters long.
+
+* To add custom fields to visitor information input, refer to [the following](settings-visitor#settings-visitor-custom-field).
+
+:::
+
+## Delete visitor
+
+1. Click <Cmd sid='shell.header.visitor' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the checkbox of the visitor you want to delete from the visitor request list.
+
+   <Image src='/img/biostarx-visitor-register-lists-remove-visitor.png' />
+
+3. Click the <Cmd sid='button.func.deleteVisitor' product='2' /> button at the top right of the screen.
+
+4. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
+
+:::info
+
+* The <Cmd sid='button.func.deleteVisitor' product='2' /> button will be activated when a visitor's checkbox is clicked.
+
+* Visitors can only be deleted from the visitor request list.
+
+:::

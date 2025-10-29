@@ -2,19 +2,23 @@
 
 * The device can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device.
 
-<Include product='biostation_3,facestation_f2'>
+<Include product='biostation_3,facestation_f2,facestation_2'>
 
 * If a fingerprint authentication device is configured as a slave device in {props.product}, you cannot add another {props.product} as a slave device.
 
 * If the fingerprint authentication device is the master device, {props.product} cannot be added as a slave device.
-
-* If FaceStation F2 is a master device, {props.product} cannot be used as a slave device, and vice versa.
 
 * When you connect {props.product} as a slave device while {props.product} is the master device, only one {props.product} can be added as a slave device.
 
 * When {props.product} is the master device and another {props.product} is connected to it as a slave device, you can connect one additional Secure I/O 2 and DM-20 each.
 
 * When {props.product} is the master device and another {props.product} is connected to it as a slave device, you cannot connect additional OM-120.
+
+</Include>
+
+<Include product='biostation_3,facestation_f2'>
+
+* {props.product} cannot be used as a slave device when {props.product_2} is the master device, and vice versa.
 
 </Include>
 

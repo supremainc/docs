@@ -28,29 +28,29 @@ In the <Cmd sid='device.info.temperMask' product='2' /> or <Cmd sid='device.info
 
 :::
 
-## Mask Settings {#mask-settings}
+## Mask settings {#mask-settings}
 
 In the <Cmd sid='device.mask.title' product='2' /> group, you can set whether to use mask detection.
 
 * <Cmd sid='device.mask.useMask' product='2' />: Select whether to use mask detection.
 
-  * <Cmd sid='device.thermal.maskCheckModeHard' product='2' />: Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded.
+  * <Cmd sid='device.mask.checkModeHard' product='2' />: Users without masks are denied authentication, and events of mask unwear recorded.
 
-  * <Cmd sid='device.thermal.maskCheckModeSoft' product='2' />: Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded.
+  * <Cmd sid='device.mask.checkModeSoft' product='2' />: Users without masks can authenticate, but events of mask unwear are recorded.
 
   * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />: Mask detection is not used.
 
 * <Cmd sid='device.thermal.maskdetectlevel' product='2' />: Select the mask detection sensitivity.
 
-## Thermal Camera Settings {#thermal-camera-settings}
+## Thermal camera settings {#thermal-camera-settings}
 
 In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use of the thermal camera and its parameters.
 
 * <Cmd sid='device.thermal.useThermalCamera' product='2' />: Set whether to use the thermal camera.
 
-  * <Cmd sid='device.thermal.tempCheckModeHard' product='2' />: Users exceeding the threshold temperature are denied authentication, and a threshold exceed event log is recorded.
+  * <Cmd sid='device.thermal.checkModeHard' product='2' />: Users exceeding the threshold temperature are denied authentication, and events of exceeding the threshold temperature are recorded.
 
-  * <Cmd sid='device.thermal.tempCheckModeSoft' product='2' />: Users exceeding the threshold temperature can still authenticate, but a temperature exceed event log is recorded.
+  * <Cmd sid='device.thermal.checkModeSoft' product='2' />: Users exceeding the threshold temperature can authenticate, but events of exceeding the threshold temperature are recorded.
 
 * <Cmd sid='device.thermal.usecentigrade' product='2' />: Set the temperature display unit.
 
@@ -101,9 +101,9 @@ In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use
 
 :::
 
-## Thermal and Mask Verification Methods {#thermal-mask-verification}
+## Thermal and mask verification methods {#thermal-mask-verification}
 
-In the <Cmd sid='device.thermal.mode' product='2' /> group, you can set the verification method according to the device's use when utilizing mask detection or the thermal camera.
+<Cmd sid='device.thermal.mode' product='2' /> group allows settings to determine the verification method based on the device's purpose when <Cmd sid='device.mask.useMask' product='2' /> or <Cmd sid='device.thermal.useThermalCamera' product='2' /> options are set to <Cmd sid='common.use' product='2' />.
 
 * <Cmd sid='device.thermal.authBeforeMode' product='2' />: Checks the user's mask usage or measures temperature after authentication.
 

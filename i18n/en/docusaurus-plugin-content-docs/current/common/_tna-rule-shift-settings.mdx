@@ -1,0 +1,129 @@
+<Include type={props.type} ref='fixed'>
+
+* <Cmd sid='shift.dayStartTime' product='2' />: Set the start time for the workday.
+
+  <Cmd sid='shift.dayStartTimeExcessTime' product='2' /> allows you to set work rules for hours worked in excess of 24 hours based on the set day start time. It can be set for a maximum of 6 hours.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png' />
+
+</Include>
+
+<Include type={props.type} ref='flexible,floating'>
+
+* <Cmd sid='shift.dayStartTime' product='2' />: Set the start time for the workday.
+
+</Include>
+
+* <Cmd sid='shift.firstInLastOut' product='2' />: When this option is activated, the first authenticated time is recorded as the start time, and the last authenticated time is recorded as the end time.
+
+  :::info
+
+  When this option is activated, you must set <Cmd sid='shift.breakByPunch' product='2' /> to record user break times.
+
+  :::
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.flexible.hours' product='2' />: Set the total working hours for the day.
+
+</Include>
+
+<Include type={props.type} ref='fixed,floating'>
+
+* <Cmd sid='shift.timeSegment' product='2' />: After selecting the items set in the <Cmd sid='shift.payCode' product='2' /> column for attendance records, set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />.
+
+  <Include type={props.type} ref='floating'>
+
+  * <Cmd sid='shift.punchInTimeRange' product='2' />: Set the time range that will be considered normal work when arriving early or leaving late compared to the set start or end time.
+
+  </Include>
+
+  * <Cmd sid='shift.grace' product='2' />: Set grace time to allow for normal work when arriving late or leaving early compared to the set time.
+
+    <Image src='/img/biostarx-tna-shift-day-adding-fixed-allow-time.png' />
+
+* <Cmd sid='shift.rounding' product='2' />: Automatically round the start and end times. Set units and standards for both start and end times.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-roundup.png' />
+
+  * <Cmd sid='shift.unitMin' product='2' />: Set rules to round registered time when clock-in events are recorded earlier or later than the set start time.
+
+  * <Cmd sid='shift.pointMin' product='2' />: Set rules to round registered time when clock-out events are recorded earlier or later than the set end time.
+
+  :::tip
+
+  For example, if the clock-in time is set to 09:00, and <Cmd sid='shift.unitMin' product='2' /> is set to 15 minutes and <Cmd sid='shift.pointMin' product='2' /> is set to 8 minutes, it will round as follows.
+
+  * 09:07 clock-in → rounded down to 09:00 (less than 8 minutes)
+
+  * 09:08 clock-in → rounded up to 09:15 (8 minutes or more)
+
+  :::
+
+  :::info
+
+  The <Cmd sid='shift.rounding' product='2' /> rules take precedence over <Cmd sid='shift.grace' product='2' />.
+
+  :::
+
+</Include>
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.payCode' product='2' />: Select the items for attendance records.
+
+* <Cmd sid='shift.punchInTimeLimit' product='2' /> / <Cmd sid='shift.punchOutTimeLimit' product='2' />: Set the time range in which users can authenticate their clock-in and clock-out times.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png' />
+
+</Include>
+
+* <Cmd sid='shift.mealDeduction1' product='2' /> / <Cmd sid='shift.mealDeduction2' product='2' />: Set deductions for meal times from daily working hours.
+
+  * <Cmd sid='shift.mealDeduction.type.byPunch' product='2' />: Set to deduct based on time records registered on the attendance device without setting fixed meal deduction times.
+
+  * <Cmd sid='shift.mealDeduction.type.auto' product='2' />: Set to automatically deduct meal times by defining <Cmd sid='shift.deductionTime' product='2' /> and <Cmd sid='shift.minimalHoursBeforeDeduction' product='2' />.
+
+  * <Cmd sid='shift.mealDeduction.type.fixed' product='2' />: Set to deduct fixed times by defining <Cmd sid='shift.startTime' product='2' /> and <Cmd sid='shift.endTime' product='2' />.
+
+  :::info
+
+  * Using <Cmd sid='shift.mealDeduction2' product='2' /> allows for deductions of two meal times from daily working hours.
+
+  * If the meal deduction types are <Cmd sid='shift.mealDeduction.type.auto' product='2' /> or <Cmd sid='shift.mealDeduction.type.fixed' product='2' />, then <Cmd sid='shift.mealDeduction1' product='2' /> and <Cmd sid='shift.mealDeduction2' product='2' /> can only be set to the same type.
+
+  :::
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.rounding' product='2' />: Automatically round the start and end times. Set units and standards for both start and end times.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-roundup.png' />
+
+  * <Cmd sid='shift.unitMin' product='2' />: Set rules to round registered time when clock-in events are recorded earlier or later than the set start time.
+
+  * <Cmd sid='shift.pointMin' product='2' />: Set rules to round registered time when clock-out events are recorded earlier or later than the set end time.
+
+  :::tip
+
+  For example, if the clock-in time is set to 09:00, and <Cmd sid='shift.unitMin' product='2' /> is set to 15 minutes and <Cmd sid='shift.pointMin' product='2' /> is set to 8 minutes, it will round as follows.
+
+  * 09:07 clock-in → rounded down to 09:00 (less than 8 minutes)
+
+  * 09:08 clock-in → rounded up to 09:15 (8 minutes or more)
+
+  :::
+
+  :::info
+
+  The <Cmd sid='shift.rounding' product='2' /> rules take precedence over <Cmd sid='shift.grace' product='2' />.
+
+  :::
+
+</Include>
+
+* <Cmd sid='shift.breakTime' product='2' />: Set break times.
+
+  * <Cmd sid='shift.breakTime.type.byPunch' product='2' />: Set to follow the time records registered on the attendance device without setting fixed break times. When this option is activated, you can set <Cmd sid='shift.maxAllowedBreakTime' product='2' />.
+
+  * <Cmd sid='shift.breakTime.type.fixed' product='2' />: Set <Cmd sid='shift.startTime' product='2' /> and <Cmd sid='shift.endTime' product='2' /> as fixed times for user break time.

@@ -1,0 +1,86 @@
+---
+id: tna-settings
+title: Set Time & Attendance
+description: You can register devices to use for attendance management or set the sender information to be used when sending notification emails.
+keywords:
+  - T&A (Time and Attendance)
+  - Settings
+---
+
+You can register devices to use for attendance management or set the sender information to be used when sending notification emails. You can also set the document delimiter for exporting attendance reports via CSV.
+
+## Access attendance management settings
+
+1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <IcSet /> on the left sidebar.
+
+   <Image src='/img/biostarx-tna-access-btn.png' />
+
+3. Edit the necessary fields.
+
+<Image src='/img/biostarx-tna-settings.png' />
+
+## Attendance management settings
+
+### <Cmd sid='setting.devices' product='2' className='normal' />
+
+List of devices that can be used for attendance management. To register as an attendance management device, select the desired device and click <Cmd sid='setting.register' product='2' />.
+
+<Image src='/img/biostarx-tna-settings-unregister-list.png' />
+
+### <Cmd sid='setting.registerDevices' product='2' className='normal' />
+
+List of devices currently used for attendance management. 
+
+* To unregister, select the desired device and click <Cmd sid='setting.unregister' product='2' />.
+
+  <Image src='/img/biostarx-tna-settings-register-list.png' />
+
+* To edit the attendance settings of a registered device, click <Cmd sid='setting.setting' product='2' />. For more information on attendance settings, refer to [the following link](settings-device-details-advanced#attendance-management).
+
+  <Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+  <Cmd sid='setting.typeCode' product='2' /> is a setting to map <Cmd sid='device.tna.eventKey' product='2' /> with attendance event types. Attendance event types are as follows:
+
+  * <Cmd sid='PUNCH_TYPE_CHECK_IN' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_CHECK_OUT' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_BREAK_START' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_BREAK_END' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_MEAL_START' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_MEAL_END' product='2' />
+
+:::info
+
+* You can only edit the attendance settings of a device when connected to the device.
+
+* If you delete a registered device from the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> menu, the registered attendance management device will also be automatically deleted.
+
+:::
+
+### <Cmd sid='setting.triggerAction.senderInfor' product='2' className='normal' /> {#senderInfo}
+
+You can set the sender information to be used when sending notification emails. Click <Cmd sid='button.edit' product='2' />.
+
+<Image src='/img/biostarx-tna-settings-sender-info.png' />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+<EmailSmtpOptions />
+
+### <Cmd sid='setting.export' product='2' className='normal' />
+
+With the <Cmd sid='button.downloadToCsv' product='2' /> feature, you can choose the document delimiter when exporting attendance reports.
+
+<Image src='/img/biostarx-tna-settings-export-csv.png' />
+
+### <Cmd sid='tna.settings.punchlogs.optionTitle' product='2' className='normal' />
+
+You can set the period to store attendance records. Set the <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> option to <Cmd sid='common.active' product='2' /> and enter the period. To save the settings, click <Cmd sid='tna.settings.apply' product='2' />.
+
+<Image src='/img/biostarx-tna-settings-save-period.png' />

@@ -1,0 +1,105 @@
+---
+id: visitor-register
+title: Apply to Visit
+description: This guides how visitors can apply for entry using the visitor application PC.
+keywords:
+  - Visitor Application
+---
+
+This guides how external visitors who are not internal users apply for entry using the visitor application PC.
+
+:::info
+
+* The visitor application PC must be configured separately, and visitor settings must precede it. For more information on how to set up visitor settings, refer to [the following](settings-visitor).
+
+* If there is no shortcut icon for the visitor application page on the visitor application PC, refer to [the following](settings-visitor#settings-visitor-pc-link) to create a shortcut icon.
+
+:::
+
+## New visitor application
+
+This guides how first-time visitors apply for entry using the visitor application PC.
+
+1. Run the visitor application page on the visitor application PC. The URL address for the visitor application page is in the format `https://{biostar_x_server_ip}/#/register-welcome`.
+
+   <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+2. Click <Cmd sid='visitor.welcome.first.time' product='2' /> in the center of the screen.
+
+3. After agreeing to the terms and privacy policy regarding access to the visiting department, click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+4. Enter the information required for the visit application.
+
+   <Image src='/img/biostarx-visitor-register-info.png' />
+
+   * <Cmd sid='common.visitor' product='2' />: Enter the visitor's name and phone number.
+
+   * <Cmd sid='visitor.host' product='2' />: Enter the name and phone number of the person responsible for the visit destination.
+
+   * <Cmd sid='visitor.accessInfo' product='2' />: Set the access area and visit duration.
+
+5. After entering the information, click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+6. Set the means of entry.
+
+   <Image src='/img/biostarx-visitor-register-access-credential.png' />
+
+   * <Cmd sid='common.fingerPrint' product='2' />: To use fingerprint authentication, click the <Cmd sid='button.addFingerprint' product='2' /> button and then enroll your fingerprint.
+
+   * <Cmd sid='common.card' product='2' />: To use card authentication, set it up with <Cmd sid='visitor.request' product='2' /> and receive a card from the administrator.
+
+7. After completing the settings, click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+8. After confirming all the information provided, click the <Cmd sid='button.register' product='2' /> button in the lower right corner of the screen.
+
+   <Image src='/img/biostarx-visitor-register-complete.png' />
+
+:::info
+
+* For more information on writing terms and privacy policies regarding access to the visiting department, refer to [the following](settings-visitor#settings-visitor-terms).
+
+* The name can be entered up to 48 characters long.
+
+* To add custom fields to visitor information input, refer to [the following](settings-visitor#settings-visitor-custom-field).
+
+* You can only select access groups assigned to the visiting department for the visit PC. For more information, refer to [the following](settings-visitor#settings-visitor-site).
+
+* For more information on access groups, refer to [the following](settings-access-control-manage-access-group).
+
+* To return to the previous step and modify the visit information, click the <Cmd sid='button.previousPage' product='2' /> button.
+
+* To scan fingerprints, a fingerprint registration device must be connected to the visitor application PC.
+
+:::
+
+## Apply using existing information
+
+If a fingerprint is enrolled at the visiting location, you can search for the fingerprint and apply for a visit using the existing visit information.
+
+1. Run the visitor application page on the visitor application PC. The URL address for the visitor application page is in the format `https://{biostar_x_server_ip}/#/register-welcome`.
+
+   <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+2. Click <Cmd sid='visitor.welcome.search' product='2' /> below the fingerprint icon in the center of the screen.
+
+3. Scan your fingerprint on the fingerprint scanning device. Use the scanned fingerprint to search for registered users.
+
+4. If a fingerprint matches a previously enrolled visitor, a confirmation message will appear.
+
+   <Image src='/img/biostarx-visitor-register-confirm-message.png' />
+
+5. If the searched visitor is correct, click the <Cmd sid='button.yes' product='2' /> button.
+
+6. After agreeing to the terms and privacy policy regarding access to the visiting department, click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+7. Confirm the visit information set during the previous visit. To modify existing information, edit each item and then click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+   <Image src='/img/biostarx-visitor-register-saved-info.png' />
+
+8. Confirm the means of entry set during the previous visit. To change the existing means of entry, edit the item to be changed and then click the <Cmd sid='button.nextPage' product='2' /> button in the lower right corner of the screen.
+
+   <Image src='/img/biostarx-visitor-register-saved-access-credential.png' />
+
+9. After confirming all the information provided, click the <Cmd sid='button.register' product='2' /> button in the lower right corner of the screen.
+
+   <Image src='/img/biostarx-visitor-register-complete.png' />
