@@ -557,12 +557,12 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "지문 서버 매칭"
+                children: "서버 매칭"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "지문"
+              children: "ID, 카드, 지문, 적외선(IR) 얼굴"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "장치에서 스캔한 지문과 서버 데이터베이스에 저장된 지문 템플릿을 비교하는 서버 매칭 방식입니다. 고급 지원을 위해 유지보수 계약이 필요합니다."
+              children: "장치에 저장된 ID, 카드, 지문과 적외선 얼굴 정보를 서버 데이터베이스에 저장된 크리덴셜과 비교하는 서버 매칭 방식입니다. 고급 지원을 위해 유지보수 계약이 필요합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -667,7 +667,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "시스템"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "시스템이 외부 API를 통해 이벤트 로그를 수신하고 기록할 수 있습니다. 이를 통해 타사 애플리케이션이나 서비사가 중앙 집중식 로깅 및 보를 위해 액세스 제어 세스템에 이벤트 데이터를 직접 추가할 수 있습니다."
+            children: "시스템이 외부 API를 통해 이벤트 로그를 수신하고 기록할 수 있습니다. 이를 통해 타사 애플리케이션이나 서비스가 중앙 집중식 로깅 및 보고를 위해 출입 통제 시스템에 이벤트 데이터를 직접 추가할 수 있습니다."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -715,7 +715,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "고급 출입 통제"
-        }), ": 안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 침입 경보(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 고급 출입 통제 기능을 사용할 수 있는 패키지입니다."]
+        }), ": 안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 경비(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 고급 출입 통제 기능을 사용할 수 있는 패키지입니다."]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "장치-라이선스",
