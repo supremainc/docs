@@ -329,6 +329,33 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.sio2.desc",
         message: "출입문 보안 컨트롤 모듈"
       })}`
+    },
+    {
+      title: 'Extended Module',
+      url: '#',
+      img: '#',
+      height: '90px',
+      desc: 'Powerful Security, Flexible Expansion'
+    },
+    {
+      title: 'Extended Module-SC',
+      url: '#',
+      img: '#',
+      height: '90px',
+      desc: 'Powerful Security, Flexible Expansion'
+    },
+    {
+      title: 'TCM10-FS2',
+      url: '#',
+      img: '/img/device/tcm10-fs2.png',
+      height: '80px',
+      desc: 'Powerful Security, Flexible Expansion'
+    },
+    {
+      title: 'TCM10-FSF2',
+      url: '#',
+      img: '/img/device/tcm10-fsf2.png',
+      desc: 'Powerful Security, Flexible Expansion'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
