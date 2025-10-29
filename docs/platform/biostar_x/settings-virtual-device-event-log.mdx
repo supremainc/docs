@@ -11,11 +11,9 @@ keywords: [가상 장치, 이벤트 로그, API, 연동]
 
 다음과 같은 상황에서 가상 장치 이벤트 로그 연동 기능을 사용하세요.
 
-* 모바일 앱에서 발생한 출근/퇴근 이벤트를 데이터베이스 연동 없이 **BioStar X**에 기록해야 할 때
-
 * 외부 근태 관리 시스템의 이벤트를 **BioStar X**에서 통합 관리해야 할 때
 
-* 서로 다른 앱이나 서비스에서 발생한 이벤트를 구분하여 기록해야 할 때
+* 모바일 앱이나 외부 시스템에서 발생한 출입 기록(Punch Log)을 **BioStar X**에 직접 저장해야 할 때(데이터베이스 연동 없이 출근/퇴근 이벤트 기록)
 
 * 타사 애플리케이션이나 서비스에서 **BioStar X** API를 통해 직접 이벤트를 전송해야 할 때
 
@@ -81,9 +79,9 @@ keywords: [가상 장치, 이벤트 로그, API, 연동]
 
 ### 가상 장치 제약 사항
 
-* 가상 장치는 다음 메뉴 경로에서만 화면상에 표시됩니다.
+* 가상 장치는 다음 메뉴에서만 표시됩니다.
 
-  - <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.root' />
+  - <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' />
 
   - <Cmd sid='shell.header.arena' /> 메뉴의 모든 이벤트 로그 조회 및 이벤트 로그 미리보기
 
@@ -162,3 +160,25 @@ Access Granted, 2025/08/05 03:37:49, 12층 출입문 외부, Administrator(1)
 * <Cmd sid='setting.menu.system.auditTrail' />에 대한 자세한 내용은 [다음 문서](settings-system-audit-trail)를 참고하세요.
 
 :::
+
+## 문제 해결
+
+### <Cmd sid='device.addVirtualDevice' product='2' className='normal' /> 버튼이 보이지 않는 경우
+
+**이벤트 로그 API** 라이선스를 활성화했는지 확인하세요.
+
+### API 호출이 실패하는 경우
+
+* **이벤트 로그 API** 라이선스를 활성화했는지 확인하세요.
+
+* 장치 ID가 등록된 가상 장치인지 확인하세요.
+
+* API 파라미터 형식이 올바른지 확인하세요.
+
+### 이벤트가 조회되지 않는 경우
+
+* 기록한 장치가 올바른 가상 장치 ID인지 확인하세요.
+
+* 이벤트 필터에서 해당 가상 장치가 선택되어 있는지 확인하세요.
+
+* 이벤트 기록 시 오류가 발생하지 않았는지 감사 추적을 확인하세요.
