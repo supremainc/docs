@@ -43,3 +43,19 @@ crowdin upload -b main
 {/\*
 
 \\ 중복된 특수기호
+
+---
+
+물결 사용 -> 하이픈
+
+CXPath: //heading[0]/content
+
+CXPath: //yaml/title
+
+gathering setting -> muster setting
+
+the following document,  [the following]() document.
+
+visual face
+
+settings-remote-access.mdx 문서 업데이트
