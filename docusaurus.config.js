@@ -280,8 +280,8 @@ const config = {
               },
               {
                 type: 'doc',
-                label: 'ENCR-10',
-                docId: 'device/encr_10/index'
+                label: 'Enclosure',
+                docId: 'device/enclosure/index'
               },
               {
                 type: 'doc',

@@ -739,24 +739,24 @@ const sidebars = {
       ]
     }
   ],
-  encr10: [
+  enclosure: [
     {
       type: 'category',
-      label: 'ENCR-10',
+      label: 'Enclosure',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
       link: {
         type: 'doc',
-        id: 'device/encr_10/index',
+        id: 'device/enclosure/index',
       },
       items: [
-        'device/encr_10/safety-instructions',
-        'device/encr_10/getting-started',
-        'device/encr_10/installation',
-        'device/encr_10/product-specifications',
-        'device/encr_10/regulatory-information',
-        'device/encr_10/appendices'
+        'device/enclosure/safety-instructions',
+        'device/enclosure/getting-started',
+        'device/enclosure/installation',
+        'device/enclosure/product-specifications',
+        'device/enclosure/regulatory-information',
+        'device/enclosure/appendices'
       ]
     }
   ],

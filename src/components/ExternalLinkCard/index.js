@@ -257,8 +257,8 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       desc: 'Powerful Security, Flexible Expansion'
     },
     {
-      title: 'ENCR-10',
-      url: '/device/encr_10',
+      title: 'Enclosure',
+      url: '/device/enclosure',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/encr-10.png',
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
