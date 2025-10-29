@@ -228,7 +228,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "device.info.deviceId",
                 product: "2"
-              }), ": 가상 장치의 고유 ID를 입력하세요. 기존 장치 ID와 겹치지 않는 범위 내에서 지정해야 합니다."]
+              }), ": 가상 장치의 고유 ID를 입력하세요. 기존 장치 ID와 중복되지 않는 범위 내에서 지정해야 합니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
