@@ -425,6 +425,9 @@
   "specs.credentials.rf_distance": {
     "message": "RF Read Range"
   },
+  "specs.credentials.multi_controller": {
+    "message": "Multi-Controller"
+  },
   "specs.credentials.mobile": {
     "message": "Mobile"
   },

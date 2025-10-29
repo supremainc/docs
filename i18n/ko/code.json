@@ -425,6 +425,9 @@
   "specs.credentials.rf_distance": {
     "message": "RF 인식 거리"
   },
+  "specs.credentials.multi_controller": {
+    "message": "다중 컨트롤러"
+  },
   "specs.credentials.mobile": {
     "message": "모바일"
   },
