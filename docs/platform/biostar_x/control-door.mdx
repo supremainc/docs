@@ -11,9 +11,7 @@ keywords: [ 모니터링, 출입문 ]
 
 * 출입문과 연결된 카메라를 통해 실시간으로 출입 상황을 모니터링할 수 있습니다.
 
-* 출입문을 잠금 상태로 유지함으로써 허가된 사용자만 출입할 수 있도록 보안을 강화할 수 있습니다.
-
-* [안티 패스백](../../reference/glossary#apb) 기능을 통해 무단출입을 방지하고, 출입 기록을 정확하게 관리할 수 있습니다.
+* [안티패스백](../../reference/glossary#apb) 기능을 통해 무단출입을 방지하고, 출입 기록을 정확하게 관리할 수 있습니다.
 
 <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 제어하길 원하는 출입문을 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
 
@@ -21,7 +19,9 @@ keywords: [ 모니터링, 출입문 ]
 
 :::info
 
-<Cmd sid='arena.tree.contextMenu.openVideo' /> 옵션은 VMS와 연동되어 있고, 출입문과 카메라가 연계되어 있어야 사용할 수 있습니다. 또한 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+* 출입문의 상태를 모니터링하거나 제어하려면 <Cmd sid='setting.server.logUploadType' product='2' /> 기능이 활성화되어 있어야 합니다. 이 기능은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> 메뉴 경로의 <Cmd sid='common.general' product='2' /> 섹션에서 활성화할 수 있습니다.
+
+* <Cmd sid='arena.tree.contextMenu.openVideo' /> 옵션은 VMS와 연동되어 있고, 출입문과 카메라가 연계되어 있어야 사용할 수 있습니다. 또한 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
 
 :::
 
@@ -76,7 +76,7 @@ keywords: [ 모니터링, 출입문 ]
 
 * 비디오 모니터링에 대한 자세한 내용은 [다음 문서](monitoring-video)를 참고하세요.
 
-* 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+* 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 :::
 
@@ -86,11 +86,11 @@ keywords: [ 모니터링, 출입문 ]
 
 ## APB 해제 {#apb-reset}
 
-안티 패스백 위반이 발생했을 때, APB 알람을 해제할 수 있습니다. 
+안티패스백 위반이 발생했을 때, APB 알람을 해제할 수 있습니다. 
 
 1. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearApb' />를 클릭하세요. 
 
-1. <Cmd sid='arena.tree.contextMenu.clearApb' /> 창이 나타나면 안티 패스백을 위반한 사용자 목록을 확인하세요.
+1. <Cmd sid='arena.tree.contextMenu.clearApb' /> 창이 나타나면 안티패스백을 위반한 사용자 목록을 확인하세요.
 
     <Image src='/img/monitoring-door-monitoring-disable-apb.png' />
 
@@ -102,18 +102,18 @@ keywords: [ 모니터링, 출입문 ]
 
 * <Glossary termid='apb'/>
 
-* 출입문에 **안티 패스백**을 설정하는 방법에 대한 자세한 내용은 [다음 문서](settings-door-add#antipassback)를 참고하세요.
+* 출입문에 **안티패스백**을 설정하는 방법에 대한 자세한 내용은 [다음 문서](settings-door-add#antipassback)를 참고하세요.
 
 :::
 
 
 ## 경비 설정 및 해제
 
-출입문이 경비 구역으로 설정되어 있다면 경비를 설정하거나 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' />을 클릭하세요.
+출입문이 경비로 설정되어 있다면 경비를 설정하거나 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' />을 클릭하세요.
 
 <Image src='/img/biostarx-monitoring-door-arm-status.png' />
 
-경비 상태의 출입문은 경비 상태 아이콘이 <IcDisarm /> 상태에서 <IcArm /> 상태로 변경됩니다. 이때 해당 출입 통제 구역에도 <IcArm /> 아이콘이 적용됩니다.
+경비 상태의 출입문은 경비 상태 아이콘이 <IcDisarm /> 상태에서 <IcArm /> 상태로 변경됩니다. 이때 해당 출입 통제 설정에도 <IcArm /> 아이콘이 적용됩니다.
 
 :::info
 

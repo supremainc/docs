@@ -1,0 +1,212 @@
+---
+id: settings-videos-camera
+title: 카메라 설정하기
+description: VMS 연동 후 BioStar X에 카메라를 추가하고, 그룹으로 구성하여 효율적으로 관리하는 방법을 안내합니다. 실시간 모니터링과 영상 검색을 위한 카메라 설정 방법을 다룹니다.
+keywords: [카메라, 설정, 관리, 그룹]
+---
+
+VMS 연동을 완료한 후에는 BioStar X에서 사용할 카메라를 선택하고 설정해야 합니다. 적절한 카메라 설정을 통해 다음과 같은 보안 관리 기능을 활용할 수 있습니다.
+
+- **선택적 모니터링**: VMS의 모든 카메라 중 필요한 카메라만 **BioStar X**에 추가할 수 있습니다.
+
+- **효율적인 관리**: 카메라를 그룹별로 구성하여 위치나 용도에 따른 체계적으로 관리할 수 있습니다.
+
+:::info
+
+VMS 서버와 연동하는 방법은 [다음 문서](settings-video-integration)를 참고하세요.
+
+:::
+
+## 카메라 설정 및 관리
+
+VMS 연동 후 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> 메뉴에서 카메라를 설정하고 관리할 수 있습니다.
+
+### 카메라 추가
+
+VMS와 연동되어 있다면 VMS 서버에 연결된 카메라를 **BioStar X**에 추가하고 <Cmd sid='shell.header.arena' /> 페이지에서 실시간 영상 및 녹화 영상을 재생할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. <Cmd sid='video.addCamera.button' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='video.addCamera' product='2' /> 창이 나타나면 카메라 목록에서 제외할 카메라를 선택하세요.
+
+    원하는 카메라가 표시되지 않는다면 <Cmd sid='video.addCamera.refresh' product='2' /> 버튼을 클릭해 카메라 목록을 새로고침하세요.
+
+1. 카메라를 모두 선택했으면 화면 오른쪽 하단의 <Cmd sid='button.add' product='2' /> 버튼을 클릭하세요.
+
+카메라 목록에서 추가한 카메라를 확인할 수 있습니다.
+
+<Image src='/img/biostarx-settings-video-add-camera.png' />
+
+
+### 카메라 정보 수정
+
+추가한 카메라의 정보를 수정할 수 있습니다. 카메라 이름 및 그룹, 설명 등을 변경할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='video.table.th.camera' product='2' /> 탭을 클릭하세요.
+
+1. 카메라 목록에서 정보를 수정할 카메라를 클릭하세요.
+
+1. 카메라 정보가 표시된 화면이 나타나면 원하는 항목을 수정하세요.
+
+    <Image src='/img/biostarx-settings-video-edit-camera-info.png' />
+
+1. 카메라 정보를 모두 수정했으면 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+카메라 아이디와 IP 주소는 수정할 수 없습니다.
+
+:::
+
+
+### 카메라 삭제
+
+추가한 카메라를 삭제할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. 카메라 목록에서 삭제할 카메라의 가장 왼쪽에 체크박스를 클릭하세요. 1대 이상의 카메라를 선택할 수 있습니다.
+
+1. 화면 오른쪽 상단의 <IcTrash /> <Cmd sid='video.camera.delete' product='2' /> 버튼을 클릭하세요.
+
+1. 메시지를 확인하고 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-settings-video-delete-camera.png' />
+
+:::info
+
+삭제하려는 카메라가 하나의 규칙에 포함되어 있다면 카메라를 삭제할 수 없습니다. 해당 카메라를 규칙에서 제거한 후 다시 시도하세요. 규칙 생성 및 관리에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
+
+:::
+
+
+
+## 카메라 그룹 설정 및 관리
+
+### 카메라 그룹 추가
+
+카메라 그룹을 추가해 여러 대의 카메라를 그룹으로 묶어 관리할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='video.table.th.camera' product='2' /> 탭을 클릭하세요.
+
+1. <Cmd sid='video.camera.all.group' product='2' /> 항목을 선택하고 마우스 오른쪽 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-video-add-camera-group.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='video.contextMenu.add.group' product='2' />를 클릭하세요.
+
+1. 원하는 그룹 이름을 입력하고 <Kbd>Enter</Kbd> 키를 누르세요.
+
+:::info
+
+* 카메라 그룹은 8단계의 하위 그룹까지 생성할 수 있습니다.
+
+* 카메라 그룹 이름은 최대 48자까지 입력할 수 있습니다.
+
+* 카메라 목록에서 카메라 그룹을 선택하면 해당 그룹에 속한 카메라만 목록에 표시됩니다.
+
+:::
+
+
+### 그룹에 여러 대의 카메라 추가
+
+추가한 그룹에 1대 이상의 카메라를 추가할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. 카메라 목록에서 그룹에 추가할 카메라의 가장 왼쪽에 체크박스를 클릭하세요. 1대 이상의 카메라를 선택할 수 있습니다.
+
+1. 1대 이상의 카메라를 선택하면 화면 오른쪽 상단의 <IcEditUL /> <Cmd sid='button.batchEdit' product='2' /> 버튼이 활성화됩니다. <Cmd sid='button.batchEdit' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-video-batch-edit-camera.png' />
+
+1. <Cmd sid='button.batchEdit' product='2' /> 창이 나타나면 <Cmd sid='common.group' product='2' /> 항목의 <IcEdit /> 버튼을 클릭하세요.
+
+1. 그룹 목록에서 원하는 그룹을 선택하세요.
+
+1. <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+<Cmd sid='video.table.th.camera' product='2' /> 탭의 카메라 목록에서 원하는 항목을 선택하고 드래그 앤 드롭으로도 카메라를 그룹에 추가할 수 있습니다.
+
+<Image src='/img/biostarx-settings-video-move-camera-group.png' alone />
+
+:::
+
+
+### 카메라 그룹 이름 수정
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. <Cmd sid='video.table.th.camera' product='2' /> 탭을 클릭하세요.
+
+1. 이름을 변경할 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='video.contextMenu.rename.group' product='2' />을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-video-rename-camera-group.png' />
+
+1. 원하는 그룹 이름을 입력하고 <Kbd>Enter</Kbd> 키를 누르세요.
+
+
+### 카메라 그룹 삭제
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. <Cmd sid='video.table.th.camera' product='2' /> 탭을 클릭하세요.
+
+1. 이름을 변경할 그룹을 선택하고 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='video.contextMenu.delete.group' product='2' />를 클릭하세요.
+
+1. 경고 메시지를 확인하고 <Cmd sid='button.yes' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+카메라 그룹에 카메라가 포함되어 있다면 그룹을 삭제할 수 없습니다. 그룹에 속한 카메라를 다른 그룹으로 이동하거나 그룹에서 제거한 후 다시 시도하세요.
+
+:::
+
+
+## 목록 열 설정
+
+목록에서 표시할 열을 추가하거나 순서 변경, 숨김 설정을 할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />를 클릭하세요.
+
+1. <Cmd sid='video.header.all.camera' product='2' /> 목록의 오른쪽 상단에서 <IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' />을 클릭하세요.
+
+1. <Cmd sid='columnSetting.dialog.header' product='2' /> 창이 나타나면 표시할 열의 체크박스를 클릭해 추가하거나 숨김 설정을 할 수 있습니다. 드래그 앤 드롭으로 열의 순서를 변경할 수도 있습니다.
+
+    <Image src='/img/biostarx-settings-video-column-layout.png' />
+
+1. 열 설정을 모두 변경했으면 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+열 설정을 초기화하려면 <Cmd sid='columnSetting.button.defaultColumn' product='2' /> 버튼을 클릭하세요.
+
+:::

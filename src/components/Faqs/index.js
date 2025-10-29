@@ -61,7 +61,7 @@ export default function Faqs() {
   const { i18n: {currentLocale} } = useDocusaurusContext();
   const location = useLocation();
   
-  const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3]
+  const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
 
   // console.log(cProd);
   

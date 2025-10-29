@@ -1,0 +1,129 @@
+<Include type={props.type} ref='fixed'>
+
+* <Cmd sid='shift.dayStartTime' product='2' />: 하루 근무의 시작 시간을 설정하세요. 
+
+  <Cmd sid='shift.dayStartTimeExcessTime' product='2' />을 사용하면 설정된 하루 시작 시간을 기준으로 24시간을 초과한 근무 시간에 대해 근무 규칙을 설정할 수 있습니다. 최대 6시간까지 설정할 수 있습니다.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png' />
+
+</Include>
+
+<Include type={props.type} ref='flexible,floating'>
+
+* <Cmd sid='shift.dayStartTime' product='2' />: 하루 근무의 시작 시간을 설정하세요. 
+
+</Include>
+
+* <Cmd sid='shift.firstInLastOut' product='2' />: 이 옵션을 활성화하면, 가장 처음 사용자가 인증한 시간을 출근 시간으로 기록하며, 가장 마지막에 사용자가 인증한 시간을 퇴근 시간으로 기록합니다.
+
+  :::info
+
+  이 옵션을 활성화하면 사용자의 휴식 시간을 기록하기 위해 <Cmd sid='shift.breakByPunch' product='2' />을 설정해야 합니다.
+
+  :::
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.flexible.hours' product='2' />: 하루 총 근무 시간을 설정하세요.
+
+</Include>
+
+<Include type={props.type} ref='fixed,floating'>
+
+* <Cmd sid='shift.timeSegment' product='2' />: <Cmd sid='shift.payCode' product='2' /> 열에서 근태 기록을 설정한 항목을 선택한 후 <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />을 설정하세요.
+
+  <Include type={props.type} ref='floating'>
+
+  * <Cmd sid='shift.punchInTimeRange' product='2' />: 설정된 출근 또는 퇴근 시간보다 일찍 출근하거나 늦게 퇴근한 경우에 정상 근무로 인정할 시간 범위를 설정하세요.
+
+  </Include>
+
+  * <Cmd sid='shift.grace' product='2' />: 설정한 시간보다 늦게 출근하거나 빨리 퇴근한 경우에도 정상 근무로 인정할 수 있는 허용 시간을 설정하세요.
+
+    <Image src='/img/biostarx-tna-shift-day-adding-fixed-allow-time.png' />
+
+* <Cmd sid='shift.rounding' product='2' />: 출근 및 퇴근 시간을 자동으로 반올림할 수 있습니다. 출근과 퇴근 각각에 대해 단위와 기준을 설정하세요.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-roundup.png' />
+
+  * <Cmd sid='shift.unitMin' product='2' />: 설정된 시작 시간 보다 빠르거나 늦게 출근 이벤트가 등록될 경우 등록된 시간을 반올림하는 규칙을 설정할 수 있습니다.
+
+  * <Cmd sid='shift.pointMin' product='2' />: 설정된 종료 시간 보다 빠르거나 늦게 퇴근 이벤트가 등록될 경우 등록된 시간을 반올림하는 규칙을 설정할 수 있습니다.
+
+  :::tip
+
+  예를 들어, 출근 시간이 09:00로 설정되어 있고, <Cmd sid='shift.unitMin' product='2' />가 15분, <Cmd sid='shift.pointMin' product='2' />이 8분으로 설정된 경우 다음과 같이 반올림됩니다.
+
+  - 09:07 출근 → 09:00으로 내림 (기준 8분 미만)
+
+  - 09:08 출근 → 09:15로 올림 (기준 8분 이상)
+
+  :::
+
+  :::info
+
+  <Cmd sid='shift.rounding' product='2' /> 규칙은 <Cmd sid='shift.grace' product='2' />보다 우선 적용됩니다
+
+  :::
+
+</Include>
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.payCode' product='2' />: 근태 기록을 설정한 항목을 선택하세요.
+
+* <Cmd sid='shift.punchInTimeLimit' product='2' /> / <Cmd sid='shift.punchOutTimeLimit' product='2' />: 사용자가 출근 및 퇴근 시간을 인증할 수 있는 시간 범위를 설정할 수 있습니다.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png' />
+
+</Include>
+
+* <Cmd sid='shift.mealDeduction1' product='2' /> / <Cmd sid='shift.mealDeduction2' product='2' />: 일일 근무 시간에서 식사 시간을 공제하도록 설정할 수 있습니다.
+
+  * <Cmd sid='shift.mealDeduction.type.byPunch' product='2' />: 고정된 식사 공제 시간을 설정하지 않고, 근태 등록 장치에 등록된 시간 기록에 따라 공제하도록 설정할 수 있습니다.
+
+  * <Cmd sid='shift.mealDeduction.type.auto' product='2' />: <Cmd sid='shift.deductionTime' product='2' />과 <Cmd sid='shift.minimalHoursBeforeDeduction' product='2' />을 설정하여 자동으로 식사 시간을 공제하도록 설정할 수 있습니다.
+
+  * <Cmd sid='shift.mealDeduction.type.fixed' product='2' />: <Cmd sid='shift.startTime' product='2' /> 및 <Cmd sid='shift.endTime' product='2' />을 설정하여 고정된 시간을 공제하도록 설정할 수 있습니다.
+
+  :::info
+
+  * <Cmd sid='shift.mealDeduction2' product='2' />를 사용하면 일일 근무 시간에서 두 번의 식사 시간을 공제할 수 있습니다.
+
+  * 식사 공제 종류를 <Cmd sid='shift.mealDeduction.type.auto' product='2' /> 또는 <Cmd sid='shift.mealDeduction.type.fixed' product='2' />으로 사용하면 <Cmd sid='shift.mealDeduction1' product='2' />과 <Cmd sid='shift.mealDeduction2' product='2' />는 동일한 종류로만 설정할 수 있습니다.
+
+  :::
+
+<Include type={props.type} ref='flexible'>
+
+* <Cmd sid='shift.rounding' product='2' />: 출근 및 퇴근 시간을 자동으로 반올림할 수 있습니다. 출근과 퇴근 각각에 대해 단위와 기준을 설정하세요.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-fixed-roundup.png' />
+
+  * <Cmd sid='shift.unitMin' product='2' />: 설정된 시작 시간 보다 빠르거나 늦게 출근 이벤트가 등록될 경우 등록된 시간을 반올림하는 규칙을 설정할 수 있습니다.
+
+  * <Cmd sid='shift.pointMin' product='2' />: 설정된 종료 시간 보다 빠르거나 늦게 퇴근 이벤트가 등록될 경우 등록된 시간을 반올림하는 규칙을 설정할 수 있습니다.
+
+  :::tip
+
+  예를 들어, 출근 시간이 09:00로 설정되어 있고, <Cmd sid='shift.unitMin' product='2' />가 15분, <Cmd sid='shift.pointMin' product='2' />이 8분으로 설정된 경우 다음과 같이 반올림됩니다.
+
+  - 09:07 출근 → 09:00으로 내림 (기준 8분 미만)
+
+  - 09:08 출근 → 09:15로 올림 (기준 8분 이상)
+
+  :::
+
+  :::info
+
+  <Cmd sid='shift.rounding' product='2' /> 규칙은 <Cmd sid='shift.grace' product='2' />보다 우선 적용됩니다
+
+  :::
+
+</Include>
+
+* <Cmd sid='shift.breakTime' product='2' />: 휴식 시간을 설정할 수 있습니다.
+
+  * <Cmd sid='shift.breakTime.type.byPunch' product='2' />: 고정된 휴식 시간을 설정하지 않고, 근태 등록 장치에 등록된 시간 기록에 따르도록 설정할 수 있습니다. 이 옵션을 활성화하면 <Cmd sid='shift.maxAllowedBreakTime' product='2' />을 설정할 수 있습니다.
+
+  * <Cmd sid='shift.breakTime.type.fixed' product='2' />: <Cmd sid='shift.startTime' product='2' /> 및 <Cmd sid='shift.endTime' product='2' />을 설정하여 고정된 시간을 사용자의 휴식 시간으로 설정할 수 있습니다.

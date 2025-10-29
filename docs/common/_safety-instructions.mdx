@@ -140,7 +140,7 @@
 
 * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
 
-<Xclude product='corestation_20,corestation_40,doorinterface'>
+<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2'>
 
 **제품과 Secure I/O 2, 전기정(전기식 잠금 장치)은 반드시 개별 전원을 사용하세요**.
 
@@ -156,9 +156,17 @@
 
 </Include>
 
-<Include product='biostation_3,biostation_2a,bioentry_w3,corestation_20,xstation_2'>
+<Include product='biostation_2a,bioentry_w3,xstation_2'>
 
 **전원 장치와 PoE 전원을 함께 연결하지 마세요**.
+
+* 장치가 오작동할 수 있습니다.
+
+</Include>
+
+<Include product='biostation_3,corestation_20'>
+
+**전원 장치와 PoE+ 전원을 함께 연결하지 마세요**.
 
 * 장치가 오작동할 수 있습니다.
 
@@ -177,6 +185,14 @@
 **완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
 
 * 방수·방진 성능이 저하될 경우 고장의 원인이 됩니다.
+
+</Include>
+
+<Include product='biostation_3,corestation_20'>
+
+**PoE+ 전원 연결 시에는 반드시 PoE+ 또는 PoE++ 규격으로 연결하세요**.
+
+* 표준 PoE를 사용할 경우 장치가 불안정하게 동작하거나 영구적으로 손상될 수 있습니다.
 
 </Include>
 
@@ -200,7 +216,7 @@
 
 </Xclude>
 
-<Xclude product='bioentry_w3'>
+<Xclude product='bioentry_w3,xpass_d2'>
 
 **제품의 버튼(터치패드)을 무리하게 누르거나 날카로운 도구를 사용해 누르지 마세요**.
 

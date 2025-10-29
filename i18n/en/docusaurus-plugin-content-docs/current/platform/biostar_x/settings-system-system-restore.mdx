@@ -1,33 +1,47 @@
 ---
 id: settings-system-system-restore
 title: System Restore
-description: If BioStar X does not operate normally, it can use the BioStar X Restore program to restore backed up files by selecting a restore point.
+description: This guide explains how to restore the database, settings, licenses, etc. of BioStar X to a previous state using a system backup file.
 keywords:
   - System Restore
+  - restore
+  - Restore backup
+  - Data recovery
+  - BioStar X Restore
 ---
 
-If BioStar X does not operate normally, it can use the BioStar X Restore program to restore backed up files by selecting a restore point.
+You can restore using a system backup file when there is an issue with **BioStar X** or you need to revert to a previous state. The restore feature enables you to return the database, various settings, and license information to the state at the time of backup.
 
-:::info
+:::caution
 
-If the MSSQL database and BioStar X are installed on different PCs, BioStar X System Backup and Restore cannot be used.
+Once the restore operation begins, the current data will revert to the backup state. It is recommended to create a backup of the current state before proceeding with the restore. To create a backup of the current state, refer to [the following](settings-system-system-backup).
 
 :::
 
-1. Run <Start/> → **BioStar X** → **BioStar X Restore**.
+:::info
 
-   * Program path: C:\Program Files\BioStar X\biostar-restore.exe
+If the SQL Server database and **BioStar X** are installed on different servers, you cannot use **BioStar X** system backup and restore.
 
-2. Click **Select File** to select the saved backup file and then click **Restore** to start restoring.
+:::
+
+1. In Windows, run <Start/> → **BioStar X** → **BioStar X Restore**.
+
+   * Program path: *C:\Program Files\BioStar X\biostar-restore.exe*
+
+2. Click the **Select File** button and choose the backup file to restore.
 
    <Image src='/img/common/setting-system-restore.png' className='none' alone />
 
-3. **Starting Biostar services...Done** messages displayed and restoration is completed.
+3. To start the restoration, click the **Restore** button. 
 
-4. Reconnect to BioStar X.
+When the message **Starting Biostar services...Done** appears, the restoration is complete. Access **BioStar X** to verify the restored data.
 
 :::info
 
-If the BioStar X version at the time of backup is different from the current version, the restoration will not proceed.
+* Restoration cannot proceed if the version of **BioStar X** at the time of the backup is different from the current version. To check the version of **BioStar X**, click the <IcInfo /> button at the top right of the screen.
+
+  <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
+
+* To check the version of **BioStar X** at the time of the backup, extract the backup file and check the `biostarVersion` value in the *sysbackup.conf* file.
 
 :::

@@ -1,19 +1,17 @@
 ---
 id: settings-email-setting
 title: 이메일 설정하기
-description: 사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.
-keywords: [이메일 설정, 비주얼 페이스]
+description: 사용자에게 얼굴 등록 모바일 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.
+keywords: [이메일 설정, 얼굴 등록]
 ---
 
-사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.
+사용자에게 얼굴 등록 모바일 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.
 
 :::info
 
-{/* * 이메일 정보를 설정하기 전에 클라우드를 먼저 활성화하세요. 클라우드를 사용하려면 스탠다드 이상의 라이선스가 필요합니다. 클라우드에 대한 자세한 내용은 [다음 문서](#)를 참고하세요. */}
+* 사용자에게 얼굴 등록 모바일 링크를 전송하거나 QR/바코드를 발급하려면 반드시 사용자 정보에 이메일 주소가 등록되어 있어야 합니다. 사용자 정보에 대한 자세한 내용은 [다음 문서](add-user-basic-info)를 참고하세요.
 
-* 사용자에게 비주얼 페이스 모바일 등록 링크를 전송하거나 QR/바코드를 발급하려면 반드시 사용자 정보에 이메일 주소가 등록되어 있어야 합니다. 사용자 정보에 대한 자세한 내용은 [다음 문서](add-user-basic-info)를 참고하세요.
-
-* **비주얼 페이스**를 사용할 수 있는 장치는 아래와 같습니다.
+* **얼굴 인증**할 수 있는 장치는 아래와 같습니다.
 
   * FaceStation F2, BioStation 3, BioEntry W3
 
@@ -37,49 +35,32 @@ keywords: [이메일 설정, 비주얼 페이스]
 
 1. 각 항목을 설정하세요.
 
+1. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.
+
 ## 이메일 콘텐츠 설정하기 {#email-contents-setting}
 
 이메일 발송을 위한 SMTP 서버 정보를 입력하세요.
 
 <Image src='/img/biostarx-settings-email-contents.png' className='none' />
 
-* <Cmd sid="common.emailContent.smtp" product='2' />: 이메일 발송을 위해 간이 우편 전송 프로토콜(Simple Mail Transfer Protocol, SMTP)을 설정하세요.
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+* <Cmd sid="common.emailContent.smtp" product='2' />: 이메일 발송을 위해 간이 우편 전송 프로토콜(Simple Mail Transfer Protocol, SMTP)을 설정하세요. <Cmd sid='button.smtpSetting' product='2' /> 버튼을 클릭하면 <Cmd sid="common.emailContent.smtp" product='2' /> 설정 창이 나타납니다.
 
   <Image src='/img/biostarx-settings-email-smtp-option.png' className='none' />
 
-  * <Cmd sid="setting.triggerAction.smtpServer" product='2' />: SMTP 서버 이름을 입력하세요.
+  <EmailSmtpOptions />
 
-  * <Cmd sid="common.description" product='2' />: SMTP에 대한 설명을 입력하세요.
+* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: SMTP 설정에 문제가 없는지 확인하려면 수신할 이메일 주소를 입력한 후 <Cmd sid="button.smtpSettingTest" product='2' /> 버튼을 클릭하세요.
 
-  * <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />: SMTP 서버 주소를 입력하세요. SMTP 서버 주소는 smtp.이메일 서비스 공급자.com과 같은 형태이며, SMTP 서버로 사용할 이메일의 설정 화면에서 확인할 수 있습니다.
 
-  * <Cmd sid="setting.triggerAction.portDefault25" product='2' />: SMTP 서버의 포트 번호를 입력하세요. SMTP 서비스 공급자의 이메일 설정 화면에서 확인할 수 있습니다.
+## 얼굴 등록 모바일 링크 설정하기
 
-  * <Cmd sid="common.userName" product='2' />: SMTP 서비스의 계정을 입력하세요.
+이메일을 통해 사용자에게 얼굴 등록 모바일 링크를 전송하려면 <Cmd sid="common.use" product='2' />으로 설정하세요.
 
-  * <Cmd sid="common.password" product='2' />: SMTP 서비스의 계정 암호를 입력하세요.
+<Image src='/img/biostarx-settings-email-visual-face.png' />
 
-  * <Cmd sid="setting.triggerAction.securityType" product='2' />: 보안 종류를 선택하세요.
-
-  * <Cmd sid="setting.triggerAction.sender" product='2' />: 보낸 사람의 이메일 주소를 입력하세요.
-
-  :::info
-
-  * SMTP에 대한 자세한 내용은 시스템 관리자에게 문의하세요.
-
-  * SMTP 서버를 2단계 인증이 설정된 이메일 계정으로 사용할 경우 해당 계정의 비밀번호 변경 시 다음 사항에 유의하세요. 2단계 인증을 설정하면 SMTP 암호는 해당 이메일 계정의 비밀번호가 아닌 2단계 인증으로 생성된 앱 비밀번호를 사용합니다. 이때 해당 이메일 계정의 비밀번호가 변경되면 앱 비밀번호는 자동으로 삭제되며, SMTP 암호는 사용할 수 없게 됩니다. 해당 이메일 계정의 비밀번호 변경 시 앱 비밀번호를 다시 생성한 뒤 SMTP 암호를 다시 설정하세요.
-
-  :::
-
-* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: 확인을 위해 설정한 이메일을 수신할 이메일 주소를 입력한 뒤 <Cmd sid="button.smtpSettingTest" product='2' />를 클릭하세요.
-
-## 비주얼 페이스 모바일 등록 설정하기
-
-비주얼 페이스 모바일 등록을 사용하려면 <Cmd sid="common.use" product='2' />으로 설정하세요. <Cmd sid="common.notUse" product='2' />으로 설정하면 이메일을 통해 사용자에게 비주얼 페이스 등록 링크를 전송할 수 없습니다.
-
-<Image src='/img/biostarx-settings-email-visual-face.png' className='none' />
-
-* <Cmd sid="common.emailContent.title" product='2' />: 비주얼 페이스 모바일 등록 링크를 전송할 이메일의 제목을 입력하세요.
+* <Cmd sid="common.emailContent.title" product='2' />: 얼굴 등록 모바일 링크를 전송할 이메일의 제목을 입력하세요.
 
 * <Cmd sid="common.emailContent.companyName" product='2' />: 회사 이름을 입력하세요.
 
@@ -95,7 +76,7 @@ keywords: [이메일 설정, 비주얼 페이스]
 
 * <Cmd sid="common.emailContent.adminContact" product='2' />: 담당자의 연락처를 입력하세요.
 
-* <Cmd sid="printOption.footer" product='2' />: 법적 고지문 등 비주얼 페이스를 등록할 사용자에게 고지할 내용을 입력하세요. 비주얼 페이스 모바일 등록 링크 전송 메일의 하단에 표시됩니다.
+* <Cmd sid="printOption.footer" product='2' />: 법적 고지문 등 얼굴을 등록할 사용자에게 고지할 내용을 입력하세요. 얼굴 등록 모바일 링크 전송 메일의 하단에 표시됩니다.
 
   :::info
 
@@ -105,7 +86,7 @@ keywords: [이메일 설정, 비주얼 페이스]
 
 ## QR/바코드 발급 설정하기
 
-이메일을 통해 사용자에게 QR/바코드를 발급하려면 <Cmd sid="common.use" product='2' />으로 설정하세요. <Cmd sid="common.notUse" product='2' />으로 설정하면 이메일을 통해 사용자에게 QR/바코드를 전송할 수 없습니다.
+이메일을 통해 사용자에게 QR/바코드를 발급하려면 <Cmd sid="common.use" product='2' />으로 설정하세요.
 
 <Image src='/img/biostarx-settings-email-qr.png' className='none' />
 
@@ -124,5 +105,3 @@ keywords: [이메일 설정, 비주얼 페이스]
   :::
 
 * <Cmd sid="common.emailContent.adminContact" product='2' />: 담당자의 연락처를 입력하세요.
-
-4. 설정을 저장하려면 <Cmd sid="button.apply" product='2' />을 클릭하세요.

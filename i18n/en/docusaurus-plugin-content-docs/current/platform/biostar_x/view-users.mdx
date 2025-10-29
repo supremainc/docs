@@ -1,13 +1,13 @@
 ---
 id: view-users
 title: Explore Users
-description: This guide explains how to quickly search for and view the desired user.
+description: This guide explains how to use the features for viewing, searching, sorting, and managing the user list.
 keywords:
   - User
   - Search
 ---
 
-This guide explains how to quickly search for and view the desired user. You can search for specific user IDs, names, email addresses, and so on.
+This guide explains how to view and manage registered users on the user list page. You can quickly find desired users through general and advanced searches, and use features like list sorting, column settings, and printing.
 
 To access the <Cmd sid='shell.header.user' /> page, click <Cmd sid='shell.header.user' /> in the <Cmd sid='shell.header.launcher' /> or select <Cmd sid='shell.header.user' /> from the menu at the top left of the screen.
 
@@ -17,9 +17,9 @@ On the user list page, you can check the basic information and status of users, 
 
 <Image src='/img/biostarx-users-list.png' />
 
-The user list displays all registered users, and you can check each user's ID, name, email address, duration, status of enrolled credentials. Users are displayed in the order they registered.
+The user list displays all registered users, showing their ID, name, email address, usage period, credential status, and state by default. Users are listed in order by their ID.
 
-* To view the detailed information of an individual user, click on the desired user in the user list. User profile information will be displayed on the right side of the screen. Click the <Cmd sid='team.user.preview.button.seeMore' /> button on the user's profile information to navigate to the page where you can edit the user's detailed information.
+* To view the detailed information of an individual user, click on the desired user in the user list. User profile information will be displayed on the right side of the screen. Click the <Cmd sid='team.user.preview.button.seeMore' /> button in the user profile information to navigate to the page where you can edit detailed user information.
 
   <Image src='/img/biostarx-users-list-view-profile.png' />
 
@@ -27,9 +27,9 @@ The user list displays all registered users, and you can check each user's ID, n
 
 :::info
 
-* For more information about user information modification, refer to the [following](edit-user).
+* For more information about user information modification, refer to [the following](edit-user).
 
-* You can change the column layout in the user list. For more information about the layout change of the column, refer to the [following](view-users#user-list-column-settings).
+* You can change the column layout in the user list. For more information on changing column layouts, refer to [the following](view-users#user-list-column-settings).
 
 :::
 
@@ -55,7 +55,7 @@ The user list displays a default of 10 users. You can click the button at the to
 
 ### Change the number of users displayed on the list {#change-number-of-users-list-indications}
 
-You can change the number of users displayed in the user list. Select the desired number of users from the list box at the top right of the screen. The selectable options are 10, 25, 50, or 100 users.
+You can change the number of users displayed in the user list. Select the desired number of users from the list box at the top right of the screen. Available options are 50, 100, or 200 users.
 
 <Image src='/img/biostarx-users-list-select-row.png' />
 
@@ -65,6 +65,12 @@ You can change the sorting criteria of the user list. Clicking the column header
 
 <Image src='/img/biostarx-users-list-order.png' />
 
+:::info
+
+There may be items that cannot be sorted depending on the column type.
+
+:::
+
 ## Search user {#user-search}
 
 Provides guidance on how to search for specific users. You can quickly find the desired users using the search feature on the user list page.
@@ -73,13 +79,13 @@ Provides guidance on how to search for specific users. You can quickly find the 
 
 * Search terms are case-insensitive.
 
-* User’s basic information must be entered to search for users. For more information about user information input, refer to the [following](add-user-basic-info).
+* User’s basic information must be entered to search for users. For more information about user information input, refer to [the following](add-user-basic-info).
 
 :::
 
 ### General search {#general-search}
 
-You can search by the user's ID and name. Enter the desired keywords in the search input field at the top of the screen and press the <Kbd>Enter</Kbd>. Users matching the specified keyword will be displayed in the list. You can check the number of users found in the <Cmd>All Users</Cmd> item.
+You can search based on the user's ID, name, or email. Enter the desired keywords in the search input field at the top of the screen and press the <Kbd>Enter</Kbd>. Users matching the specified keyword will be displayed in the list. You can check the number of search results at the very top of the list.
 
 <Image src='/img/biostarx-users-search-result.png' />
 
@@ -89,7 +95,7 @@ You can search for specific user IDs, names, email addresses, and so on.
 
 1. Click the <IcAdvSearch /> button next to the search input field at the top of the screen. 
 
-2. When the advanced search window opens, enter the desired search criteria and press the <Kbd>Enter</Kbd> or click the <Cmd sid='common.search' /> button.
+2. When the advanced search window opens, enter your desired search criteria and click <Cmd sid='common.search' />.
 
 <Image src='/img/biostarx-users-advanced-search.png' />
 
@@ -99,4 +105,46 @@ You can search for specific user IDs, names, email addresses, and so on.
 
 * To reset the criteria entered the advanced search window, click the <Cmd sid='common.clearAll' /> button.
 
+* Advanced search supports searching for <Cmd sid='setting.server.custom_field.title' product='2' />. For more information on <Cmd sid='setting.server.custom_field.title' product='2' />, refer to [the following](settings-server-server#custom-field).
+
 :::
+
+## User list column settings {#user-list-column-settings}
+
+You can change the column settings displayed in the user list. Through column settings, you can select the columns to be displayed or change the order of the columns.
+
+1. Click the <IcMoreW /> button at the top right of the user list screen.
+
+2. Click <Cmd sid='team.menu.columnLayout' />.
+
+3. When the <Cmd sid='common.dialog.columnSetting.title' /> window appears, select or deselect the desired columns.
+
+   <Image src='/img/biostarx-users-list-column-layout.png' />
+
+4. To change the order of the columns, click and drag the desired column to change its position.
+
+5. To save the settings, click the <Cmd sid='common.apply' /> button.
+
+:::info
+
+* Column settings are saved for each user account.
+
+* To reset the column layout settings, click the <Cmd sid='columnSetting.button.defaultColumn' product='2' /> button.
+
+:::
+
+## Print user list {#print-user-list}
+
+You can save the user list you are currently viewing as a PDF or SVG file.
+
+1. Click the <IcMoreW /> button at the top right of the user list screen.
+
+2. Click <Cmd sid='team.menu.print' />.
+
+3. When the <Cmd sid='printOption.dialog.header' product='2' /> window appears, select your desired format in the <Cmd sid='printOption.fileFormat' product='2' /> options and set the other options.
+
+   <Image src='/img/biostarx-users-print-list.png' />
+
+4. Click the <Cmd sid='team.menu.print' /> button.
+
+You can print the PDF or SVG file that opens through the browser.

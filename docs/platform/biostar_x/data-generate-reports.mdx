@@ -5,16 +5,299 @@ description: 원하는 포맷에 맞게 리포트를 생성할 수 있습니다.
 keywords: [리포트, 템플릿]
 ---
 
-원하는 포맷에 맞게 리포트를 생성할 수 있습니다.
+**BioStar X**에서 발생한 모든 이벤트를 조회하거나 경보 이력만 조회할 수 있습니다. 사용자가 원하는 조건에 맞게 필터링하여 커스텀 리포트를 생성할 수도 있습니다.
 
-<Image src='/img/biostarx-data.png' className='none' />
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.data' />를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.data' />를 선택하세요.
 
-<Calloutlists>
+## 모든 이벤트 조회
 
-1. <Cmd sid='reportApp.savedReports' product='2' / >: 생성한 리포트에서 <Cmd sid='reportApp.saveReport' product='2' />을 클릭하면 이곳의 하위에 템플릿으로 저장됩니다. 추후 동일한 조건으로 리포트를 생성해야할 때 유용하게 사용할 수 있습니다.
+**BioStar X**에서 발생한 모든 이벤트를 조회할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' />를 클릭하세요.
 
-1. <Cmd sid='reportApp.user' product='2' />: 사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다.
+<Image src='/img/biostarx-data-generate-report.png' className='none' />
 
-1. <Cmd sid='reportApp.event' product='2' />: 원하는 이벤트, 기간, 필터(<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.doors' product='2' />, <Cmd sid='reportApp.device' product='2' />)를 선택하여 <Cmd sid='reportApp.customReport' product='2' />를 생성할 수 있습니다.
+* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw2 /> 또는 <IcBw2 /> 버튼을 클릭하세요.
 
-</Calloutlists>
+* 목록에 표시할 행의 수를 변경하려면 화면 오른쪽 상단의 드랍다운 메뉴를 클릭하고 원하는 값을 선택하세요. 최소 25행부터 최대 200행까지 선택할 수 있습니다.
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+### 기간 설정
+
+화면 왼쪽 상단의 <Cmd sid='data.header.customReport.period' /> 항목에서 원하는 기간을 설정할 수 있습니다. 날짜 영역을 클릭하세요.
+
+<Image src='/img/biostarx-data-all-events-select-period.png' />
+
+* 오늘 날짜를 기준으로 1일부터 6달까지 사전 정의된 기간을 선택할 수 있습니다. 원하는 기간을 선택하면 해당 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
+
+* <Cmd sid='data.dialog.rollCall.userDefined' />을 선택하면 원하는 기간을 직접 설정할 수도 있습니다. 기간 선택 창이 나타나면 시작 날짜와 종료 날짜, 시간을 설정하고 <Cmd sid='common.button.ok' /> 버튼을 클릭하세요. 설정한 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
+
+  <Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+  :::info
+
+  오늘 날짜를 선택하려면 <Cmd sid='data.dialog.rollCall.today' /> 버튼을 클릭하세요.
+
+  :::
+
+### 조회 조건 설정
+
+조회 목록의 헤더 부분에서 원하는 조건을 설정하여 목록을 필터링할 수 있습니다. 날짜를 제외한 모든 항목에 조건을 설정할 수 있습니다. 
+
+1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter2 /> 버튼을 클릭하세요.
+
+1. 필터 조건 창이 나타나면 원하는 항목을 선택하세요.
+
+1. 선택을 완료했으면 <Cmd sid='button.addCondition' product='2' /> 버튼을 클릭하세요.
+
+선택한 조건에 맞는 이벤트만 목록에 표시됩니다.
+
+<Image src='/img/biostarx-data-all-events-filtered.png' />
+
+### 조회 조건 해제
+
+설정한 조회 조건을 해제하려면 헤더 부분 아래에 설정된 조건에서 <IcClose /> 버튼을 클릭하세요. 설정한 조건이 해제되고 모든 이벤트가 목록에 다시 표시됩니다.
+
+<Image src='/img/biostarx-data-all-events-disable-filter.png' />
+
+### 이벤트 영상 확인하기
+
+이벤트 목록에서 특정 이벤트가 발생한 장치에 카메라가 연결되어 있다면 해당 이벤트의 <Cmd sid='data.column.customReport.view' /> 컬럼에 <IcReportVid /> 아이콘이 표시됩니다. 아이콘을 클릭하면 팝업창을 통해 해당 이벤트가 발생한 시점의 영상을 확인할 수 있습니다.
+
+<Image src='/img/biostarx-data-all-events-video-log.png' />
+
+:::info
+
+* 카메라 규칙 설정에서 한 개 이상의 카메라를 연결했다면 첫 번째 카메라의 영상을 재생합니다. 카메라 규칙 설정에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
+
+* 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+* 출입문과 카메라 연동에 대한 자세한 내용은 [다음 문서](settings-videos-rule)를 참고하세요.
+
+:::
+
+### CSV 내보내기
+
+조회된 이벤트 목록을 CSV 파일로 내보낼 수 있습니다. 화면 오른쪽 상단의 <IcMoreW /> → <Cmd sid='menu.csvDownload' product='2' />를 클릭하세요. 사용자의 PC에 CSV 파일을 다운로드할 수 있습니다.
+
+:::info
+
+CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Report_20251002_94a85b7519664378b4b39b879f1e81b7.csv*)
+
+:::
+
+
+## 경보 이력 조회
+
+경보(알람) 이력만 조회할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.alertHistory' />을 클릭하세요.
+
+<Image src='/img/biostarx-data-alert-lists.png' />
+
+* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw2 /> 또는 <IcBw2 /> 버튼을 클릭하세요.
+
+* 조회된 목록에서 첫 페이지 또는 마지막 페이지로 이동하려면 화면 오른쪽 상단의 <IcFirst2 /> 또는 <IcLast2 /> 버튼을 클릭하세요.
+
+* 목록에 표시할 행의 수를 변경하려면 화면 오른쪽 상단의 드랍다운 메뉴를 클릭하고 원하는 값을 선택하세요. 최소 25행부터 최대 200행까지 선택할 수 있습니다.
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+:::info
+
+이벤트 모니터링에서 경보(알람) 이벤트 확인에 대한 자세한 내용은 [다음 문서](monitoring-event)를 참고하세요.
+
+:::
+
+### 기간 설정
+
+원하는 기간을 설정하고 해당 기간에 발생한 경보 이력을 조회할 수 있습니다. 조회 목록의 <Cmd sid='reportHeader.datetime' product='2' /> 컬럼에서 <IcFilter2 /> 버튼을 클릭하세요. 기간 선택 창이 나타나면 시작 날짜와 종료 날짜, 시간을 설정하고 <Cmd sid='common.button.ok' /> 버튼을 클릭하세요. 설정한 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
+
+<Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+:::info
+
+오늘 날짜를 선택하려면 <Cmd sid='data.dialog.rollCall.today' /> 버튼을 클릭하세요.
+
+:::
+
+### 조회 조건 설정
+
+조회 목록의 헤더 부분에서 원하는 조건을 설정하여 목록을 필터링할 수 있습니다. 날짜를 제외한 모든 항목에 조건을 설정할 수 있습니다. 
+
+1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter2 /> 버튼을 클릭하세요.
+
+1. 필터 조건 창이 나타나면 원하는 항목을 선택하세요.
+
+1. 선택을 완료했으면 <Cmd sid='button.addCondition' product='2' /> 버튼을 클릭하세요.
+
+선택한 조건에 맞는 이벤트만 목록에 표시됩니다.
+
+<Image src='/img/biostarx-data-alert-events-filtered.png' />
+
+### 조회 조건 해제
+
+설정한 조회 조건을 해제하려면 헤더 부분 아래에 설정된 조건에서 <IcClose /> 버튼을 클릭하세요. 설정한 조건이 해제되고 모든 이벤트가 목록에 다시 표시됩니다.
+
+<Image src='/img/biostarx-data-alert-events-disable-filter.png' />
+
+
+## 사용자 리포트 조회
+
+사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.user' /> 하위에서 원하는 템플릿을 클릭하세요.
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-data-user-report.png' />
+
+</Column>
+<Column className='padding--l10'>
+
+* <Cmd sid='data.sidebar.usersInformation' />: 사용자 상세 정보를 목록 형식으로 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.usersInDevice' />: 장치에 등록된 사용자의 정보를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.userDetail' />: 사용자 상세 정보를 카드 형식으로 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.userPhotoGallery' />: 사용자 프로필 사진을 갤러리 형식으로 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.usersWithoutCredential' />: 크리덴셜을 설정하지 않은 사용자를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.privateAuthModeByUser' />: 사용자의 개인 인증 모드 설정 정보를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.numberOfCredentialsByUser' />: 사용자에게 설정된 크리덴셜 개수를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.allCards' />: 등록된 카드를 기준으로 사용자를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.unassignedCards' />: 사용자에게 할당되지 않은 카드를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.blacklistCards' />: 사용 정지된 카드를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.expiredUsers' />: 유효 기간이 만료된 사용자를 조회할 수 있습니다.
+
+* <Cmd sid='data.sidebar.usersToBeExpiredInNDays' />: N일 이내에 유효 기간이 만료되는 사용자를 조회할 수 있습니다. 일 수는 리포트를 생성하기 전에 직접 입력할 수 있습니다.
+
+* <Cmd sid='data.report.idleUsersWithValue' />: 최근 N개월 동안 출입 기록이 없는 사용자를 조회할 수 있습니다. 개월 수는 리포트를 생성하기 전에 직접 입력할 수 있습니다.
+
+* <Cmd sid='data.sidebar.inactiveUsers' />: 비활성화된 사용자를 조회할 수 있습니다.
+
+</Column>
+
+</Columns>
+
+:::info
+
+* 생성한 리포트는 <Cmd sid='data.sidebar.savedReports' /> 하위에 저장할 수 있습니다. 리포트 왼쪽 상단의 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요.
+
+* 리포트 관리에 대한 자세한 내용은 [다음 문서](#report-management)를 참고하세요.
+
+:::
+
+## 커스텀 리포트 생성 {#custom-report}
+
+원하는 조건에 맞게 필터링하여 커스텀 리포트를 생성할 수 있습니다. 생성한 리포트는 템플릿으로 저장하여 추후 동일한 조건으로 리포트를 생성할 때 유용하게 사용할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.customReport' />를 클릭하세요.
+
+1. <Cmd sid='data.dialog.customReport.events' /> 창에서 원하는 이벤트를 선택하세요.
+
+    <Image src='/img/biostarx-data-custom-report-set-filter.png' />
+
+1. 원하는 이벤트 선택을 완료하면 <Cmd sid='common.button.next' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-data-custom-report-select-items.png' />
+
+    * 검색(<IcSearch />) 입력 필드에서 원하는 항목을 검색할 수 있습니다.
+
+    * 가장 오른쪽 목록에서 <IcRepTrash /> 버튼을 클릭하면 선택한 항목을 제외할 수 있습니다.
+
+1. 조회 기간을 설정하고 <Cmd sid='common.button.next' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-data-custom-report-set-period.png' className='none' />
+
+    * <Cmd sid='data.static' />: 특정 날짜와 시간을 설정해 조회 기간을 설정할 수 있습니다.
+
+    * <Cmd sid='data.dynamic' />: 오늘 날짜를 기준으로 시작일, 종료일, 시간을 설정할 수 있습니다. 반복적으로 일정 기간의 리포트를 생성할 때 유용합니다.
+
+1. 사용자, 출입문, 장치를 기준으로 그룹별, 개별적으로 조건을 설정할 수 있습니다.
+
+    <Image src='/img/biostarx-data-custom-report-select-filters.png' className='none' />
+
+    * 오른쪽 목록에서 <IcRepTrash /> 버튼을 클릭하면 선택한 항목을 제외할 수 있습니다.
+
+1. 원하는 조건을 선택하고 <Cmd sid='common.button.next' /> 버튼을 클릭하세요.
+
+1. 열 설정 창에서 리포트에 표시할 컬럼을 선택하세요.
+
+    <Image src='/img/biostarx-data-custom-report-set-columns.png' />
+
+1. 원하는 컬럼 선택을 완료하면 <Cmd sid='data.button.generate' /> 버튼을 클릭하세요.
+
+커스텀 리포트 생성을 완료합니다.
+
+<Image src='/img/biostarx-data-custom-report-complete.png' />
+
+:::info
+
+* 리포트 제목, 이벤트 항목, 기간, 필터 조건을 수정하려면, 리포트 상단 영역에서 <IcRepoEdit /> 버튼을 클릭하세요.
+
+* 리포트 제목은 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서도 변경할 수 있습니다. 제목을 변경할 커스텀 리포트를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='data.sidebar.renameSavedReport' />을 선택하세요.
+
+  <Image src='/img/biostarx-data-custom-report-rename.png' />
+
+* 리포트 관리에 대한 자세한 내용은 [다음 문서](#report-management)를 참고하세요.
+
+:::
+
+
+## 리포트 관리 {#report-management}
+
+### 리포트 저장
+
+생성한 리포트를 템플릿으로 저장하려면 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요. 저장한 리포트는 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서 확인할 수 있습니다.
+
+<Image src='/img/biostarx-data-custom-report-saved.png' />
+
+
+### 리포트 파일 저장
+
+리포트를 PDF 또는 CSV 파일로 내보내려면 <Cmd sid='data.button.export' /> 버튼을 클릭하세요. <Cmd sid='data.exportReport' /> 창이 나타나면 각 항목을 설정하고 <Cmd sid='data.button.export' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-data-custom-report-export.png' />
+
+
+### 리포트 인쇄
+
+PC와 연결된 프린터로 리포트를 인쇄하려면 <Cmd sid='data.button.print' /> 버튼을 클릭하세요. <Cmd sid='data.printReport' /> 창이 나타나면 각 항목을 설정하고 <Cmd sid='data.button.print' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-data-custom-report-print.png' />
+
+웹 브라우저의 새 탭을 통해 인쇄 미리보기 화면이 나타납니다. 화면 오른쪽 상단의 인쇄 버튼을 클릭하면 인쇄를 시작할 수 있습니다.
+
+
+### 리포트 삭제
+
+저장한 리포트를 삭제하려면 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서 삭제할 리포트를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='data.sidebar.deleteSavedReport' />를 선택하세요.
+
+<Image src='/img/biostarx-data-custom-report-remove.png' />
+
+
+### 열 설정
+
+리포트에 표시되는 열(Column) 설정을 변경할 수 있습니다. 열 설정을 통해 표시할 열을 선택하거나 열의 순서를 변경할 수 있습니다.
+
+1. 리포트 오른쪽 상단의 <Cmd sid='data.dialog.customReport.columns' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='common.dialog.columnSetting.title' /> 창이 나타나면 원하는 열을 선택하거나 선택 해제하세요.
+
+    <Image src='/img/biostarx-data-column-setting.png' />
+
+1. 열의 순서를 변경하려면 원하는 열을 클릭한 채로 드래그하여 위치를 변경하세요.
+
+1. 설정을 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+:::info
+
+* 열 레이아웃 설정을 초기화하려면 <Cmd sid='columnSetting.button.defaultColumn' product='2' /> 버튼을 클릭하세요.
+
+* 생성한 리포트에 따라 선택 또는 선택 해제할 수 있는 열이 다를 수 있습니다.
+
+:::

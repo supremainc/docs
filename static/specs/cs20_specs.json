@@ -188,9 +188,10 @@
             "en": "3 ch (AC POWER FAIL, Tamper, Fire)"
           }
         },
-        "poe": {
+        "poe_plus": {
           "label": "PoE+",
-          "label_id": "specs.interface.poe",
+          "label_id": "specs.interface.poe_plus",
+          "annotation_label": "anno2",
           "value": {
             "ko": [
               "CS-20: 미지원",

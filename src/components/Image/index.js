@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
 import imageSize from './sizeOfimages.json';
 
-export default function Image({src, alt, className, alone, caption, ico, width, height}) {
+export default function Image({src, alt, className, alone, caption, ico, width, height, usemap}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     const isDev = process.env.NODE_ENV === 'development';
     
@@ -37,6 +37,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const imageProps = {
         loading: "lazy",
         decoding: "async",
+        decoding: "async",
         src: imagePath,
         alt: alt,
         onError: onError,
@@ -49,6 +50,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             width: imageSize[imagePath.replace(baseUrl, '')]?.width || 'auto',
             height: imageSize[imagePath.replace(baseUrl, '')]?.height || 'auto'
         }),
+        usemap: usemap
     };
 
     if (ico) {

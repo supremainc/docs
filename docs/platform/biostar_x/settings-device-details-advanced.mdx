@@ -1,11 +1,11 @@
 ---
 id: settings-device-details-advanced
 title: 고급 설정하기
-description: 고급 설정 섹션에서 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.
+description: 고급 설정 섹션에서 마스터 관리자, 장치 관리자, 화면/소리, 작업 조건 및 동작 등을 설정할 수 있습니다.
 keywords: [장치, 고급]
 ---
 
-<Cmd sid='device.info.advanced' product='2' /> 섹션에서 설정할 수 있는 항목에 대해 안내합니다. 관리자 권한 관리, 근태 이벤트, 화면 및 소리, 작업 조건 및 동작, 이미지 로그, Wiegand, 보안 탬퍼 등 다양한 고급 기능의 설정 방법과 각 옵션의 의미를 확인할 수 있습니다. 환경에 맞는 설정을 적용해 효율적으로 장치를 관리하세요.
+<Cmd sid='device.info.advanced' product='2' /> 섹션에서 설정할 수 있는 항목에 대해 안내합니다. 마스터 관리자, 관리자 권한 관리, 근태 이벤트, 화면 및 소리, 작업 조건 및 동작, 이미지 로그, Wiegand, 보안 탬퍼 등 다양한 고급 기능의 설정 방법과 각 옵션의 의미를 확인할 수 있습니다. 환경에 맞는 설정을 적용해 효율적으로 장치를 관리하세요.
 
 :::info
 
@@ -15,13 +15,92 @@ keywords: [장치, 고급]
 
 :::
 
+
+## 마스터 관리자 추가 {#master-administrator}
+
+<Cmd sid='device.masterAdmin.title' product='2' /> 기능은 장치의 전체 관리자 권한을 강화하여, 장치의 보안을 향상시키고 무단 접근 및 설정 변경을 방지하기 위한 기능입니다. 새 장치는 이 기능을 통해 반드시 마스터 관리자를 등록해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 설정을 변경할 수 있습니다.
+
+<Cmd sid='device.info.advanced' product='2' /> →  <Cmd sid='device.info.administrator' product='2' />의 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴에서 원하는 크리덴셜 2종류를 선택하여 등록하세요.
+
+<Image src='/img/biostarx-setting-device-adv-admin-master-admin.png' />
+
+<Cmd sid='device.masterAdmin.title' product='2' />에 등록할 수 있는 크리덴셜은 다음과 같습니다.
+
+| 크리덴셜 종류 | 등록 가능 개수 | 세부 조건 |
+| -- | :--: | -- |
+| 카드 | 최대 4개 | CSN, Wiegand 타입만 지원하며, 동일 타입 내 중복 등록할 수 없습니다. |
+| 얼굴 | 최대 2개 | 동종 알고리즘 탑재 장치에서만 등록할 수 있습니다. |
+| 지문 | 최대 2개 | - |
+| PIN | 1개 | 최소 8자리 이상의 숫자를 입력할 수 있습니다. |
+
+* 등록한 크리덴셜을 변경하려면 해당 크리덴셜 오른쪽에 <IcEdit /> 버튼을 클릭하세요.
+
+* 등록한 크리덴셜을 삭제하려면 해당 크리덴셜 오른쪽에 <IcTrash2 /> 버튼을 클릭하세요.
+
+:::note
+
+**등록 조건**
+
+* 최소 두 종류 이상의 크리덴셜을 등록해야 합니다.
+
+* 새 장치와 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
+
+* 장치가 지원하는 모든 크리덴셜을 인증 수단으로 사용할 수 있습니다.
+
+:::
+
+:::info
+
+* 이 기능은 LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품에서만 사용할 수 있습니다.
+
+* 펌웨어를 업그레이드한 기존 장치는 BioStar 2의 장치 설정에 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴가 나타나지 않습니다.
+
+* 펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 설정 방법은 [다음 문서](#two-step-authentication)를 참고하세요.
+
+* 이 기능을 지원하는 장치 및 펌웨어 버전에 대한 자세한 내용은 [다음 문서](../../how-to/master-admin)를 참고하세요.
+
+:::
+
+## 2단계 인증 설정 {#two-step-authentication}
+
+펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-adv-two-step.png' />
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면, 장치의 전체 관리자 인증 시 두 종류 이상의 크리덴셜을 사용해야 합니다. 예를 들어, 카드와 PIN을 모두 등록한 경우, 전체 관리자 인증 시 카드 스캔과 PIN 입력을 모두 해야만 인증을 성공할 수 있습니다.
+
+:::info
+
+모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+:::caution
+
+장치에 전체 관리자가 설정되어 있지 않은 경우 다음과 같은 팝업 메시지가 나타납니다. <Cmd sid='device.info.advanced' product='2' /> →  <Cmd sid='device.info.administrator' product='2' />에서 모든 권한에 관리자를 추가하세요.
+
+<Image src='/img/biostarx-setting-device-adv-warning-admin.png' />
+
+:::
+
+:::warning
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />을 활성화한 후 모든 관리자의 크리덴셜을 2종 미만으로 삭제하면, **BioStar X**에 연결할 수 없는 상황일 때 장치에서 관리자 메뉴에 접근할 수 없게 됩니다. 따라서 관리자 크리덴셜을 삭제할 때는 각별한 주의가 필요합니다.
+
+:::
+
+
 ## 관리자 추가 {#administrator}
 
 <Cmd sid='device.info.administrator' product='2' /> 그룹에서는 장치의 관리자를 등급별로 관리할 수 있습니다. 
 
 <Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
 
-등급별 관리자를 추가하려면 <IcAdd /> <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요. 각 등급별 사용 권한은 아래를 참고하세요.
+등급별 관리자를 추가하려면 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요. 사용자 목록이 나타나면 원하는 사용자를 선택하세요. 사용자 목록에서 <IcSearch /> 버튼을 클릭하면 원하는 사용자를 검색할 수도 있습니다.
+
+각 등급별 사용 권한은 아래를 참고하세요.
 
 <div className='table-fixed'>
 
@@ -36,6 +115,8 @@ keywords: [장치, 고급]
 :::info
 
 * 관리자는 최대 1,000명까지 추가해 관리할 수 있습니다. 추가할 수 있는 관리자 수는 장치 펌웨어 버전에 따라 달라질 수 있습니다.
+
+* 등록한 사용자를 검색하려면 <Cmd sid='device.info.admin.searchTitle' product='2' />에서 <IcSearch /> 버튼을 클릭하세요.
 
 * **장치 설정**은 장치의 화면 및 소리, 네트워크, RS-485 등의 설정을 변경할 수 있습니다.
 
@@ -68,7 +149,7 @@ keywords: [장치, 고급]
 
   :::note
 
-  이 옵션은 <Cmd sid='device.info.tnaMode' product='2' /> 옵션을  <Cmd sid='device.tna.mode.byUser' product='2' />으로 설정되었을 때 사용할 수 있습니다. 
+  이 옵션은 <Cmd sid='device.info.tnaMode' product='2' /> 옵션이 <Cmd sid='device.tna.mode.byUser' product='2' />으로 설정되었을 때 사용할 수 있습니다. 
 
   :::
 
@@ -80,9 +161,11 @@ keywords: [장치, 고급]
 
   * <Cmd sid='device.tna.schedule' product='2' />: <Cmd sid='device.info.tnaMode' product='2' /> 옵션을 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정하면 자동으로 변경할 스케줄을 설정할 수 있습니다.
 
+    <Image src='/img/biostarx-setting-device-edit-advanced-tna-auto.png' />
+
 :::info
 
-* LCD 화면이 없는 장치는 근태 모드를 <Cmd sid='device.tna.mode.fixed' product='2' />과 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정할 수 있으며, 고정된 근태 이벤트를 등록하거나 미리 설정된 스케줄에 따라 변경되는 근태 이벤트를 등록할 수 있습니다. 지원하는 장치 종류는 BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2입니다.
+* LCD 화면이 없는 장치는 근태 모드를 <Cmd sid='device.tna.mode.fixed' product='2' />과 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정할 수 있으며, 고정된 근태 이벤트를 등록하거나 미리 설정된 스케줄에 따라 변경되는 근태 이벤트를 등록할 수 있습니다. 지원하는 장치 종류는 BioEntry P2, BioEntry W2, XPass D2, XPass 2입니다.
 
 * 새 스케줄 설정에 대한 자세한 내용은 [다음 문서](settings-schedule)를 참고하세요.
 
@@ -95,27 +178,17 @@ keywords: [장치, 고급]
 
 <details>
 
-<summary>	BioEntry P2, BioEntry W2, BioLite Net, BioEntry Plus, BioEntry W, Xpass, Xpass S2, XPass D2, XPass 2</summary>
-
-* <Cmd sid='device.info.language' product='2' />: 장치의 화면에 표시할 언어를 설정하세요. 장치에 언어 리소스 파일을 전송하려면 <Cmd sid='device.updateResource' product='2' /> 버튼을 클릭하세요.
+<summary>BioEntry P2, BioEntry W2, XPass D2, XPass 2</summary>
 
 * <Cmd sid='device.info.sound' product='2' />: 소리를 켜거나 끌 수 있습니다.
 
-* <Cmd sid='device.info.menuTimeout' product='2' />: 메뉴 화면에서 대기 화면으로 변경되는 시간을 설정하세요.
-
-* <Cmd sid='device.info.backlightTimeout' product='2' />: 화면 조명이 자동으로 꺼지는 시간을 설정하세요.
-
-* <Cmd sid='device.info.msgTimeout' product='2' />: 메시지가 자동으로 사라지는 시간을 설정하세요.
-
 * <Cmd sid='device.info.ledBuzzer' product='2' />: LED나 버저를 작동할 이벤트 항목을 선택하고 설정하세요.
 
-* <Cmd sid='device.info.keypadBackLight' product='2' />: 키패드 백라이트를 켜거나 끌 수 있습니다. 이 옵션을 활성화하면 키패드 후면의 조명이 켜집니다. 어두운 환경에서 키 식별을 쉽게 할 수 있습니다.
+* <Cmd sid='device.info.keypadBackLight' product='2' />: 키패드 백라이트를 켜거나 끌 수 있습니다. 이 옵션을 활성화하면 키패드 후면의 조명이 켜집니다. 어두운 환경에서도 키를 쉽게 식별할 수 있습니다.
 
 :::note
 
-* <Cmd sid='device.info.language' product='2' />, <Cmd sid='device.info.menuTimeout' product='2' />, <Cmd sid='device.info.backlightTimeout' product='2' />, <Cmd sid='device.info.msgTimeout' product='2' /> 옵션은 BioLite Net 모델에서 지원합니다.
-
-* <Cmd sid='device.info.keypadBackLight' product='2' /> 옵션은 XPass D2 하드웨어 V02M, 펌웨어 1.7.1 버전 이상에서 사용할 수 있습니다.
+<Cmd sid='device.info.keypadBackLight' product='2' /> 옵션은 XPass D2 하드웨어 V02M, 펌웨어 1.7.1 버전 이상에서 사용할 수 있습니다.
 
 :::
 
@@ -157,7 +230,7 @@ keywords: [장치, 고급]
 
   :::
 
-* <Cmd sid='device.info.volume' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
+* <Cmd sid='device.info.sound' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
 
   :::note
 
@@ -185,7 +258,9 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.info.msgTimeout' product='2' />: 메시지가 자동으로 사라지는 시간을 설정하세요.
 
-* <Cmd sid='device.info.useScreenSaver' product='2' />: 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다.
+* <Cmd sid='device.info.serverPrivateMsg' product='2' />: 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다.
+
+* <Cmd sid='device.info.useScreenSaver' product='2' />: 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다. 이 기능을 활성화하지 않은 경우 장치에서 <Cmd sid='device.info.useScreenSaver' product='2' /> 옵션을 활성화더라도 인증 성공 메시지가 표시되지 않습니다.
 
   :::note
 
@@ -209,11 +284,11 @@ keywords: [장치, 고급]
 
   * 배경화면 종류를 변경할 경우 <Cmd sid='button.update' product='2' /> 버튼을 클릭해도 장치에 적용되지 않습니다. 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-  * 홈 화면을 <Cmd sid='device.display.background.logo' product='2' />로 설정하고 <Cmd sid='device.display.background.slideShow' product='2' />으로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
+  * 홈 화면을 <Cmd sid='device.display.background.logo' product='2' />로 설정하고 <Cmd sid='device.display.background.slideShow' product='2' />로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
 
   :::
 
-* <Cmd sid='device.info.volume' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
+* <Cmd sid='device.info.sound' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
 
   :::note
 
@@ -292,19 +367,19 @@ keywords: [장치, 고급]
 
 <Image src='/img/biostarx-setting-device-edit-advanced-wiegand.png' />
 
+* <Cmd sid='device.info.wiegandInOut' product='2' />: 입출력 모드를 선택하세요.
+
 * <Cmd sid='device.info.wiegandOutPulseWidth' product='2' />: Wiegand 신호의 펄스 폭을 설정하세요.
 
 * <Cmd sid='device.card.wiegand.inOutFormat' product='2' />: 장치에 지정할 Wiegand 형식을 변경하세요.
+
+* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />: Wiegand 신호의 펄스 간격을 설정하세요.
 
 * <Cmd sid='device.card.wiegand.out' product='2' />: Wiegand 신호 출력 모드를 설정하세요. 
 
   * <Cmd sid='device.card.wiegand.out.normal' product='2' />: 설정된 Wiegand 형식으로 카드를 스캔합니다. 오류 코드를 설정할 수 있으며 Wiegand를 사용하는 카드 인증을 실패했을 때 전송할 값을 선택할 수 있습니다.
   
   * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Wiegand 인증과 관계없이 CSN을 전송합니다. 출입문 제어 기능이 없는 장치로 사용할 때 설정하세요.
-
-* <Cmd sid='device.info.wiegandInOut' product='2' />: 입출력 모드를 선택하세요.
-
-* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />: Wiegand 신호의 펄스 간격을 설정하세요.
 
 * <Cmd sid='device.card.wiegand.outputInfo' product='2' />: 인증 시 장치에 출력되는 정보를 선택하세요.
 

@@ -17,15 +17,19 @@ keywords: [장치]
 
 <Image src='/img/biostarx-setting-device-functions.png' />
 
-팝업 메뉴를 통해 제공하는 기능은 아래를 참고하세요.
+팝업 메뉴를 통해 제공하는 기능은 아래를 참고하세요. 장치에 따라 제공하는 기능은 다를 수 있습니다.
 
 * <Cmd sid='button.reconnect' product='2' />: 선택한 장치를 재연결할 수 있습니다. 한 개의 장치를 선택했을 때 사용할 수 있습니다. 이 기능은 **BioStar X**와 연결이 끊겼을 때 사용할 수 있습니다.
+
+  :::info
+
+  이 기능은 <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션으로 연결된 장치는 지원하지 않습니다. 장치 등록에 대한 자세한 내용은 [다음 문서](settings-adding-devices#setipaddress)를 참고하세요.
+
+  :::
 
 * <Cmd sid='button.syncDevice' product='2' />: 등록한 장치와 **BioStar X**의 모든 사용자 정보를 동기화할 수 있습니다. **BioStar X** 데이터베이스 정보를 기준으로 사용자 정보를 동기화하며, 장치에만 등록한 사용자 정보는 삭제합니다. 사용자 정보를 **BioStar X**에 업로드하려면 <Cmd sid='button.manageUsersInDevice' product='2' /> 기능을 사용하세요.
 
 * <Cmd sid='device.sync_all' product='2' />: 장치에 저장된 모든 설정 정보 및 사용자 정보를 삭제하고 다시 전송할 수 있습니다. 이 기능은 장치 목록에서 장치를 선택하고 <IcMoreW /> 버튼을 클릭하여 사용할 수도 있습니다.
-
-* <Cmd sid='button.batchEdit' product='2' />: 여러 개의 장치 정보를 한번에 변경할 수 있습니다. 한 개 이상의 장치를 선택했을 때 사용할 수 있습니다. 장치 정보 설정에 대한 자세한 내용은 [다음 문서](settings-device-details)를 참고하세요.
 
 * <Cmd sid='button.manageUsersInDevice' product='2' />: 장치에 등록된 사용자 정보를 **BioStar X**에 업로드하거나 장치에서 삭제할 수 있습니다. 자세한 내용은 [다음 문서](settings-device-manage-device-users)를 참고하세요.
 

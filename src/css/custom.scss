@@ -38,6 +38,8 @@
   --main-black-4: rgba(255, 255, 255, 0.4);
   --main-text-color: #333;
   --main-circle-color: #adadad;
+  --docsearch-subtle-color: none !important;
+  --docsearch-muted-color: #333 !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -63,6 +65,7 @@
   --main-black-4: rgba(0, 0, 0, 0.4);
   --main-text-color: #fff;
   --main-circle-color: #fff;
+  --docsearch-muted-color: #fff !important;
   .navbar__title {
     color: #fff !important;
   }
@@ -131,7 +134,7 @@ html[lang='en-US'] * {
 .aa-Panel {
   width: 70%;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--ifm-color-nextstep-background) !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   .aa-Item {
@@ -280,9 +283,9 @@ footer {
     }
     .dropdown-menu {
       position: absolute;
-      top: -87px;
-      left: -93px;
-      width: 200px;
+      top: -100px;
+      left: -58px;
+      width: 165px;
       background: white;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -290,7 +293,7 @@ footer {
       ul {
         list-style: none;
         padding: 0;
-        margin: 5px;
+        margin: 5px 10px;
         li {
           padding: 2px 0;
         }
@@ -332,16 +335,16 @@ footer {
   white-space: normal !important;
   span.before {
     font-size: .5rem;
-    display: none;
+    // display: none;
   }
   span.before::after {
     content: "\A";
     white-space: pre;
-    display: none;
+    // display: none;
   }
   span.after {
-    // font-weight: bold;
-    // color: var(--ifm-color-primary);
+    font-weight: bold;
+    color: var(--ifm-color-primary);
   }
 }
 // Tabulator 스타일
@@ -357,14 +360,14 @@ footer {
 .markdown {
   counter-reset: count;
   header h1 {
-    &.confidential::after {
+    &.confidential::before {
       content: "CONFIDENTIAL";
       display: inline-block;
       position: relative;
       color: var(--ifm-color-cmd);
       font-weight: 600;
       font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-right: 1rem;
       padding: .3rem;
       border: 1px solid;
       border-radius: 6px;
@@ -429,6 +432,14 @@ footer {
       margin-top: .5rem;
       margin-left: 1.5rem;
     }
+  }
+
+  pre.license {
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: break-spaces;
   }
 
   .magnifier {
@@ -569,7 +580,7 @@ footer {
       }
       &+ul {
         margin-top: 0;
-        li:first-of-type {
+        > li:first-of-type {
           margin-top: 0;
         }
       }
@@ -898,6 +909,9 @@ footer {
   .columns {
     .col {
       height: fit-content;
+      ul li {
+        margin-top: 0;
+      }
     }
     .width--10 {
       max-width: 10%;
@@ -1125,6 +1139,23 @@ footer {
   sup a::before {
     content: counter(count)  ")";
   }
+
+  .svg-none-style {
+    ol {
+      li {
+        p:has(svg) {
+          padding-left: unset;
+        }
+        p {
+          svg {
+            position: relative;
+            left: unset;
+          }
+        }
+      }
+    }
+
+  }
 }
 
 // Dark theme
@@ -1174,6 +1205,26 @@ footer {
       overflow-x: scroll;
       table {
         width: max-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .markdown {
+    .bug--lists {
+      ol {
+        li {
+          p {
+            padding-right: 0 !important;
+            .badge {
+              position: relative;
+              top: unset;
+              right: unset;
+              width: auto;
+            }
+          }
+        }
       }
     }
   }
@@ -1231,6 +1282,10 @@ footer {
       height: 0;
       margin-top: 0
     }
+
+    div[class*='fdstep'] .print--invisible {
+      display: none;
+    }
     ul + hr, section + hr {
       margin-top: 30px;
       border: .25pt solid var(--ifm-color-border);
@@ -1268,6 +1323,13 @@ footer {
         padding-top: 0 !important;
       }
     }
+    pre, code, .theme-code-block {
+      page-break-inside: auto !important;
+      break-inside: auto !important;
+    }
+    pre.license {
+      font-size: .7rem;
+    }
     pre {
       code {
         background-color: transparent !important;
@@ -1288,6 +1350,9 @@ footer {
     p, dt, dd, li {
       font-size: .8rem !important;
       line-height: 1.4;
+      strong {
+        word-break: keep-all;
+      }
       code {
         font-size: .7rem;
         background-color: #dceaffd8;

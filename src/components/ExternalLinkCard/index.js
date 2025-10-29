@@ -130,11 +130,21 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'X-Station 2',
-      url: '#',
+      url: `/device/xstation_2`,
       img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'FaceStation 2',
+      url: `/device/facestation_2`,
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/facestation2.png',
+      desc: `${translate({
+        id: "externalLinks.FaceStation2.desc",
+        message: "얼굴 인증 출입근태 단말기"
       })}`,
       height: '90px'
     },
@@ -148,16 +158,16 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       height: '90px'
     },
-    {
-      title: 'BioEntry P2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
-      desc: `${translate({
-        id: "externalLinks.BioentryP2.desc",
-        message: "콤팩트 지문인식 단말기"
-      })}`,
-      height: '90px'
-    },
+    // {
+    //   title: 'BioEntry P2',
+    //   url: `/device/bioentry_p2`,
+    //   img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
+    //   desc: `${translate({
+    //     id: "externalLinks.BioentryP2.desc",
+    //     message: "콤팩트 지문인식 단말기"
+    //   })}`,
+    //   height: '90px'
+    // },
     {
       title: 'BioEntry R2',
       url: '#',
@@ -184,7 +194,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'X-Station 2',
-      url: '#',
+      url: `/device/xstation_2`,
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
@@ -210,7 +220,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass D2',
-      url: '#',
+      url: `/device/xpass_d2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc: `${translate({
         id: "externalLinks.XPass2.desc",

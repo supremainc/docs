@@ -461,6 +461,9 @@
   "specs.credentials.biometrics.fingerprint.extractor_matcher": {
     "message": "추출 / 매치"
   },
+  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+    "message": "센서 인증"
+  },
   "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
     "message": "위조 지문 검출"
   },
@@ -511,6 +514,15 @@
   },
   "specs.general.camera": {
     "message": "카메라"
+  },
+  "specs.general.camera_type": {
+    "message": "카메라 종류"
+  },
+  "specs.general.camera_resolution": {
+    "message": "카메라 해상도"
+  },
+  "specs.general.camera_angle": {
+    "message": "카메라 각도"
   },
   "specs.general.ip_rating": {
     "message": "IP 등급"
@@ -579,6 +591,9 @@
     "message": "릴레이"
   },
   "specs.interface.poe": {
+    "message": "PoE"
+  },
+  "specs.interface.poe_plus": {
     "message": "PoE+"
   },
   "specs.interface.interphone": {
@@ -594,10 +609,16 @@
     "message": "USB 확장 포트"
   },
   "specs.interface.tamper": {
-    "message": "템퍼"
+    "message": "탬퍼"
   },
   "specs.interface.samSlot": {
     "message": "SAM 카드 슬롯"
+  },
+  "specs.interface.led": {
+    "message": "LED"
+  },
+  "specs.interface.beep": {
+    "message": "Beep"
   },
   "specs.power": {
     "message": "전기 규격"
@@ -614,11 +635,20 @@
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
   },
+  "specs.power.led_beep_input_vih": {
+    "message": "LED, Beep 입력 VIH"
+  },
   "specs.power.switch_input_vil": {
     "message": "스위치 입력 VIL"
   },
+  "specs.power.led_beep_input_vil": {
+    "message": "LED, Beep 입력 VIL"
+  },
   "specs.power.switch_pullup": {
     "message": "스위치 풀업 저항"
+  },
+  "specs.power.led_beep_pullup": {
+    "message": "LED, Beep 풀업 저항"
   },
   "specs.power.wiegand_voh": {
     "message": "Wiegand 출력 VOH"
@@ -687,7 +717,7 @@
   },
   "theme.SearchPage.algoliaLabel": {
     "message": "Algolia로 검색",
-    "description": "The ARIA label for Algolia mention"
+    "description": "The description label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
     "message": "검색 결과가 없습니다.",
@@ -718,15 +748,15 @@
   },
   "theme.SearchModal.startScreen.noRecentSearchesText": {
     "message": "최근 검색어 없음",
-    "description": "The text when no recent searches"
+    "description": "The text when there are no recent searches"
   },
   "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
     "message": "이 검색어를 저장",
-    "description": "The label for save recent search button"
+    "description": "The title for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
     "message": "이 검색어를 최근 검색어에서 삭제",
-    "description": "The label for remove recent search button"
+    "description": "The title for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
     "message": "즐겨찾기",
@@ -734,63 +764,63 @@
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
     "message": "이 검색어를 즐겨찾기에서 삭제",
-    "description": "The label for remove favorite search button"
+    "description": "The title for remove favorite search button"
   },
   "theme.SearchModal.errorScreen.titleText": {
     "message": "결과를 불러올 수 없음",
-    "description": "The title for error screen of search modal"
+    "description": "The title for error screen"
   },
   "theme.SearchModal.errorScreen.helpText": {
     "message": "인터넷 연결을 다시 확인하시기 바랍니다.",
-    "description": "The help text for error screen of search modal"
+    "description": "The help text for error screen"
   },
   "theme.SearchModal.footer.selectText": {
     "message": "로 선택",
-    "description": "The explanatory text of the action for the enter key"
+    "description": "The select text for footer"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
     "message": "엔터 키",
-    "description": "The ARIA label for the Enter key button that makes the selection"
+    "description": "The ARIA label for select key in footer"
   },
   "theme.SearchModal.footer.navigateText": {
     "message": "로 이동",
-    "description": "The explanatory text of the action for the Arrow up and Arrow down key"
+    "description": "The navigate text for footer"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
     "message": "화살표 위 키",
-    "description": "The ARIA label for the Arrow up key button that makes the navigation"
+    "description": "The ARIA label for navigate up key in footer"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
     "message": "화살표 아래 키",
-    "description": "The ARIA label for the Arrow down key button that makes the navigation"
+    "description": "The ARIA label for navigate down key in footer"
   },
   "theme.SearchModal.footer.closeText": {
     "message": "로 종료",
-    "description": "The explanatory text of the action for Escape key"
+    "description": "The close text for footer"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
     "message": "Esc 키",
-    "description": "The ARIA label for the Escape key button that close the modal"
+    "description": "The ARIA label for close key in footer"
   },
   "theme.SearchModal.footer.searchByText": {
     "message": "검색 제공",
-    "description": "The text explain that the search is making by Algolia"
+    "description": "The 'Powered by' text for footer"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
     "message": "검색 결과 없음",
-    "description": "The text explains that there are no results for the following search"
+    "description": "The text when there are no results"
   },
   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
     "message": "다른 추천 검색어",
-    "description": "The text for the suggested query when no results are found for the following search"
+    "description": "The text for suggested query"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
     "message": "검색 결과가 없는 것이 오류라고 생각되십니까?",
-    "description": "The text for the question where the user thinks there are missing results"
+    "description": "The text for reporting missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
     "message": "알려주시기 바랍니다.",
-    "description": "The text for the link to report missing results"
+    "description": "The link text for reporting missing results"
   },
   "theme.SearchModal.placeholder": {
     "message": "문서 검색",
@@ -807,5 +837,131 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.mslogin.buttonText": {
+    "message": "🔑 Microsoft 계정으로 로그인",
+    "description": "The text for the login button"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "필드 상세"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "가능한 값"
+  },
+  "theme.typedefstruct.value": {
+    "message": "값"
+  },
+  "theme.typedefstruct.description": {
+    "message": "설명"
+  },
+  "theme.typedefstruct.references": {
+    "message": "참고"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "관련 구조체"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.SearchModal.searchBox.placeholderText": {
+    "message": "문서 검색",
+    "description": "The placeholder text for the main search input field"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAi": {
+    "message": "다른 질문하기...",
+    "description": "The placeholder text when in AI question mode"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+    "message": "답변 중...",
+    "description": "The placeholder text for search box when AI is streaming an answer"
+  },
+  "theme.SearchModal.searchBox.enterKeyHint": {
+    "message": "검색",
+    "description": "The hint for the search box enter key text"
+  },
+  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+    "message": "입력",
+    "description": "The hint for the Ask AI search box enter key text"
+  },
+  "theme.SearchModal.searchBox.searchInputLabel": {
+    "message": "검색",
+    "description": "The ARIA label for search input"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The text for back to keyword search button"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The ARIA label for back to keyword search button"
+  },
+  "theme.SearchModal.startScreen.recentConversationsTitle": {
+    "message": "최근 대화",
+    "description": "The title for recent conversations"
+  },
+  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+    "message": "이 대화를 기록에서 삭제",
+    "description": "The title for remove recent conversation button"
+  },
+  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+    "message": "AI에게 질문: ",
+    "description": "The placeholder text for Ask AI input"
+  },
+  "theme.SearchModal.askAiScreen.disclaimerText": {
+    "message": "답변은 AI가 생성하며 오류가 있을 수 있습니다. 응답을 확인해주세요.",
+    "description": "The disclaimer text for AI answers"
+  },
+  "theme.SearchModal.askAiScreen.relatedSourcesText": {
+    "message": "관련 출처",
+    "description": "The text for related sources"
+  },
+  "theme.SearchModal.askAiScreen.thinkingText": {
+    "message": "생각 중...",
+    "description": "The text when AI is thinking"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonText": {
+    "message": "복사",
+    "description": "The text for copy button"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+    "message": "복사됨!",
+    "description": "The text for copy button when copied"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonTitle": {
+    "message": "복사",
+    "description": "The title for copy button"
+  },
+  "theme.SearchModal.askAiScreen.likeButtonTitle": {
+    "message": "좋아요",
+    "description": "The title for like button"
+  },
+  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+    "message": "싫어요",
+    "description": "The title for dislike button"
+  },
+  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+    "message": "피드백 감사합니다!",
+    "description": "The text for thanks for feedback"
+  },
+  "theme.SearchModal.askAiScreen.preToolCallText": {
+    "message": "검색 중...",
+    "description": "The text before tool call"
+  },
+  "theme.SearchModal.askAiScreen.duringToolCallText": {
+    "message": "검색 중: ",
+    "description": "The text during tool call"
+  },
+  "theme.SearchModal.askAiScreen.afterToolCallText": {
+    "message": "검색 완료: ",
+    "description": "The text after tool call"
+  },
+  "theme.SearchModal.footer.submitQuestionText": {
+    "message": "질문 제출",
+    "description": "The submit question text for footer"
+  },
+  "theme.SearchModal.footer.backToSearchText": {
+    "message": "검색으로 돌아가기",
+    "description": "The back to search text for footer"
   }
 }

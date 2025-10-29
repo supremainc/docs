@@ -18,11 +18,11 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 * **Entra ID** 또는 **Active Directory**에서 구성한 사용자 및 그룹을 **BioStar X**와 동기화할 수 있습니다.
 
-* **Entra ID** 또는 **Active Directory**에서 사용되는 직함과 부서, 그룹 등의 사용자 정보를 **BioStar X**의 사용자 정의 필드와 맵핑할 수 있습니다.
+* **Entra ID** 또는 **Active Directory**에서 사용되는 직책과 부서, 그룹 등의 사용자 정보를 **BioStar X**의 사용자 정의 필드와 맵핑할 수 있습니다.
 
 :::info
 
-**Entra ID** 또는 **Active Directory** 설정 기능은 **어드밴스**(Advance) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+**Entra ID** 또는 **Active Directory** 설정 기능은 **어드밴스**(Advance) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 :::
 
@@ -32,7 +32,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.directoryIntegration.root' />을 클릭하세요.
 
 1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.AdServerNew' product='2' />를 선택하세요.
 
@@ -123,7 +123,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 :::note
 
-<Cmd sid='setting.activeDirectory.menu' product='2' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
+<Cmd sid='setting.menu.directoryIntegration.root' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
 
 <Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
@@ -135,7 +135,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.directoryIntegration.root' />을 클릭하세요.
 
 1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.AdServerOld' product='2' />를 선택하세요.
 
@@ -202,6 +202,12 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 Active Directory 서버의 사용자 아이디로 로그인하도록 설정하려면 <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> 항목을 <Cmd sid='device.info.enabled' product='2' />으로 변경하세요. Active Directory 서버의 `sAMAccountName` 필드의 값이 **BioStar X** 로그인 아이디로 맵핑됩니다.
 
+:::caution
+
+`sAMAccountName` 필드에는 특수 문자가 포함될 수 없습니다. **BioStar X**의 로그인 아이디 정책에 맞지 않는 경우, 로그인에 실패할 수 있습니다.
+
+:::
+
 <Image src='/img/biostarx-setting-directory-login-with-ad.png' />
 
 </Step>
@@ -216,7 +222,7 @@ Active Directory 서버의 사용자 아이디로 로그인하도록 설정하�
 
 :::note
 
-<Cmd sid='setting.activeDirectory.menu' product='2' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
+<Cmd sid='setting.menu.directoryIntegration.root' /> 설정을 모두 완료한 후 저장하려면 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 설정 결과를 확인하려면 [다음 문서](#checksettings)를 참고하세요.
 
 <Image src='/img/biostarx-setting-directory-btn-apply.png' />
 
@@ -236,7 +242,7 @@ Active Directory 서버의 사용자 아이디로 로그인하도록 설정하�
 
 ## 디렉토리 연동 제외하기 {#exclude-integration}
 
-<Cmd sid='setting.activeDirectory.menu' product='2' /> 기능을 통해 **Entra ID** 또는 **Active Directory**와 연동할 경우, 디렉토리 서비스에 존재하지 않는 사용자는 **BioStar X**에서 삭제될 수 있습니다. 삭제되지 않길 원하는 사용자가 있다면 아래 방법을 통해 연동에서 제외할 수 있습니다.
+<Cmd sid='setting.menu.directoryIntegration.root' /> 기능을 통해 **Entra ID** 또는 **Active Directory**와 연동할 경우, 디렉토리 서비스에 존재하지 않는 사용자는 **BioStar X**에서 삭제될 수 있습니다. 삭제되지 않길 원하는 사용자가 있다면 아래 방법을 통해 연동에서 제외할 수 있습니다.
 
 1. **BioStar X**에 관리자 아이디로 로그인하세요.
 
@@ -250,7 +256,7 @@ Active Directory 서버의 사용자 아이디로 로그인하도록 설정하�
 
 1. <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-선택한 사용자는 <Cmd sid='setting.activeDirectory.menu' product='2' /> 기능을 사용할 때 연동에서 제외됩니다.
+선택한 사용자는 <Cmd sid='setting.menu.directoryIntegration.root' /> 기능을 사용할 때 연동에서 제외됩니다.
 
 
 ## 디렉토리 연동 해제하기 {#disableIntegration}
@@ -259,7 +265,7 @@ Active Directory 서버의 사용자 아이디로 로그인하도록 설정하�
 
 1. **BioStar X**에 관리자 아이디로 로그인하세요.
 
-1. <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.activeDirectory.menu' product='2' />을 클릭하세요.
+1. <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' />을 클릭하세요.
 
 1. <Cmd sid='settings.activeDirectory.title' product='2' /> 항목에서 <Cmd sid='settings.activeDirectory.notUse' product='2' />을 선택하세요.
 

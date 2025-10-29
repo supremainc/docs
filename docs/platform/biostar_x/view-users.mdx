@@ -15,7 +15,7 @@ keywords: [사용자, 검색]
 
 <Image src='/img/biostarx-users-list.png' />
 
-사용자 목록은 등록된 사용자를 모두 표시하며, 각 사용자의 아이디, 이름, 이메일 주소, 사용 기간, 등록한 크레덴셜 현황, 상태를 기본으로 확인할 수 있습니다. 사용자는 등록한 순으로 목록에 표시됩니다.
+사용자 목록은 등록된 사용자를 모두 표시하며, 각 사용자의 아이디, 이름, 이메일 주소, 사용 기간, 등록한 크리덴셜 현황, 상태를 기본으로 확인할 수 있습니다. 사용자는 아이디 순으로 목록에 표시됩니다.
 
 * 개별 사용자의 상세 정보를 확인하려면 사용자 목록에서 원하는 사용자를 클릭하세요. 사용자의 프로필 정보가 화면 오른쪽에 표시됩니다. 사용자 프로필 정보에서 <Cmd sid='team.user.preview.button.seeMore' /> 버튼을 클릭하면 사용자의 상세 정보를 수정할 수 있는 페이지로 이동합니다.
 
@@ -63,6 +63,12 @@ keywords: [사용자, 검색]
 
 <Image src='/img/biostarx-users-list-order.png' />
 
+:::info
+
+열의 종류에 따라 정렬할 수 없는 항목이 있을 수 있습니다.
+
+:::
+
 
 ## 사용자 검색 {#user-search}
 
@@ -78,7 +84,7 @@ keywords: [사용자, 검색]
 
 ### 일반 검색 {#general-search}
 
-사용자의 아이디, 이름을 기준으로 검색할 수 있습니다. 화면 상단의 검색 입력 필드에 원하는 키워드를 입력하고 <Kbd>Enter</Kbd> 키를 누르세요. 해당 키워드와 일치하는 사용자가 목록에 표시됩니다. <Cmd>All Users</Cmd> 항목에서 검색된 사용자의 수를 확인할 수 있습니다.
+사용자의 아이디, 이름, 이메일을 기준으로 검색할 수 있습니다. 화면 상단의 검색 입력 필드에 원하는 키워드를 입력하고 <Kbd>Enter</Kbd> 키를 누르세요. 해당 키워드와 일치하는 사용자가 목록에 표시됩니다. 목록 최상단에서 검색 결과 개수를 확인할 수 있습니다.
 
 <Image src='/img/biostarx-users-search-result.png' />
 
@@ -88,7 +94,7 @@ keywords: [사용자, 검색]
 
 1. 화면 상단의 검색 입력 필드 옆에 있는 <IcAdvSearch /> 버튼을 클릭하세요. 
 
-1. 고급 검색 창이 열리면, 원하는 검색 조건을 입력하고 <Kbd>Enter</Kbd> 키를 누르거나 <Cmd sid='common.search' /> 버튼을 클릭하세요.
+1. 고급 검색 창이 열리면, 원하는 검색 조건을 입력하고 <Cmd sid='common.search' /> 버튼을 클릭하세요.
 
 <Image src='/img/biostarx-users-advanced-search.png' />
 
@@ -97,6 +103,8 @@ keywords: [사용자, 검색]
 * 입력 필드 중 <IcTips /> 아이콘이 표시된 항목은 개인 정보 DB 암호화로 인해 전문만 검색할 수 있습니다.
 
 * 고급 검색 창에서 입력한 조건을 초기화하려면 <Cmd sid='common.clearAll' /> 버튼을 클릭하세요.
+
+* 고급 검색은 <Cmd sid='setting.server.custom_field.title' product='2' />에 대한 검색을 지원합니다. <Cmd sid='setting.server.custom_field.title' product='2' />에 대한 자세한 내용은 [다음 문서](settings-server-server#custom-field)를 참고하세요.
 
 :::
 
@@ -119,7 +127,9 @@ keywords: [사용자, 검색]
 
 :::info
 
-열 레이아웃 설정을 초기화하려면 <Cmd sid='common.dialog.columnSetting.reset' /> 버튼을 클릭하세요.
+* 열 설정은 각 사용자 계정별로 저장됩니다.
+
+* 열 레이아웃 설정을 초기화하려면 <Cmd sid='columnSetting.button.defaultColumn' product='2' /> 버튼을 클릭하세요.
 
 :::
 

@@ -53,7 +53,7 @@ function SupportedType({ supported, annot }) {
 
 function Description({ contents }) {
   return (
-    <>{contents}</>
+    <p dangerouslySetInnerHTML={{ __html: contents }} />
   )
 }
 

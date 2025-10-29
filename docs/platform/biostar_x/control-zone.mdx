@@ -1,50 +1,54 @@
 ---
 id: control-zone
-title: 구역 제어하기
-description: 구역을 제어하고 상세 정보를 확인하세요.
-keywords: [ 모니터링, 구역 ]
+title: 고급 출입 통제 제어하기
+description: 고급 출입 통제을 제어하고 상세 정보를 확인하세요.
+keywords: [ 모니터링, 고급 출입 통제 ]
 ---
 
-구역을 제어하는 방법을 안내합니다. 제공하는 기능을 통해 문제 발생 시 빠르게 대처할 수 있고, 구역을 효율적으로 관리할 수 있습니다.
+고급 출입 통제로 설정된 출입문 또는 장치 제어 방법을 안내합니다. 제공하는 기능을 통해 문제 발생 시 빠른 대처 및 효율적으로 관리할 수 있습니다.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 
 
-1. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 <Cmd sid='arena.tree.door.allZones' />으로 이동하세요. 
+1. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 <Cmd sid='arena.tree.door.allZones' />로 이동하세요. 
 
-1. 원하는 구역을 선택하고 오른쪽 마우스 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
+1. 설정된 고급 출입 통제를 선택하고 오른쪽 마우스 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
+
+<Image src='/img/biostarx-monitoring-door-zone-popup.png' />
 
 :::info
 
-구역의 종류에 따라 제공하는 기능이 다릅니다. 구역의 종류는 다음과 같습니다.
+고급 출입 통제의 종류에 따라 제공하는 기능이 다릅니다. 고급 출입 통제의 종류는 다음과 같습니다.
 
-* **안티패스백** 구역
+* **안티패스백**
 
-* 화재 경보 구역
+* 화재 경보
 
-* 스케줄 잠금/개방 구역
+* 스케줄 잠금/개방
 
-* 경비 구역
+* 경비
 
-* 인터락 구역
+* 인터락
 
-* 소집 구역
+* 소집
 
-* 재실 인원 제한 구역
+* 재실 인원 제한
 
-각 구역에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
+* 인원 점검(Roll Call)
+
+각 고급 출입 통제에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
 
 :::
 
 
 ## APB 해제 {#apb-release}
 
-**안티패스백** 구역의 APB 알람을 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearApb' />를 클릭하세요. 화면 오른쪽 상단에 완료 메시지가 표시됩니다.
+**안티패스백**으로 설정된 출입문 또는 장치의 APB 알람을 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearApb' />를 클릭하세요. 화면 상단에 완료 메시지가 표시됩니다.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.clearApb' /> 기능은 **안티패스백** 구역에서만 사용할 수 있습니다.
+* <Cmd sid='arena.tree.contextMenu.clearApb' /> 기능은 **안티패스백**에서만 사용할 수 있습니다.
 
-* 구역에 **안티패스백**을 설정하는 방법에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-apb)를 참고하세요.
+* **안티패스백** 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-apb)를 참고하세요.
 
 * **안티패스백**에 대한 자세한 내용은 [다음 문서](../../reference/glossary#apb)를 참고하세요.
 
@@ -53,68 +57,68 @@ keywords: [ 모니터링, 구역 ]
 
 ## 알람 해제 {#alarm}
 
-해당 구역에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 클릭하세요. 화면 오른쪽 상단에 완료 메시지가 표시됩니다.
+출입문 또는 장치에서 발생한 알람을 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.clearAlarm' />를 클릭하세요. 화면 상단에 완료 메시지가 표시됩니다.
 
 :::info
 
-<Cmd sid='arena.tree.contextMenu.clearAlarm' /> 기능은 재실 인원 제한 구역에서는 사용할 수 없습니다.
+<Cmd sid='arena.tree.contextMenu.clearAlarm' />는 재실 인원 제한 기능에서 사용할 수 없습니다.
 
 :::
 
 
-## 구역 활성화/비활성화 {#zone-revitalizationdisabled}
+## 활성화/비활성화 {#zone-revitalizationdisabled}
 
-구역을 활성화하거나 사용하지 않는 구역은 비활성화할 수 있습니다. 비활성화된 구역은 <IcDisable width='20px' height='20px' /> 아이콘이 표시됩니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.enable' /> 또는 <Cmd sid='arena.tree.contextMenu.disable' />를 클릭하세요.
+고급 출입 통제 기능을 활성화하거나 사용하지 않는 기능은 비활성화할 수 있습니다. 비활성화된 고급 출입 통제는 <IcDisable width='20px' height='20px' /> 아이콘이 표시됩니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.enable' /> 또는 <Cmd sid='arena.tree.contextMenu.disable' />를 클릭하세요.
 
 
-## 경비 구역 제어 {#security-zone-control}
+## 경비/경비 해제 {#security-zone-control}
 
-경비 구역의 경비 상태를 제어할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' />를 클릭하세요.
+출입문 또는 장치의 경비를 설정하거나 해제할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' />를 클릭하세요.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' /> 기능은 경비 구역에서만 사용할 수 있습니다.
+* <Cmd sid='arena.tree.contextMenu.arm' /> 또는 <Cmd sid='arena.tree.contextMenu.disarm' />는 경비로 설정된 고급 출입 통제에서만 사용할 수 있습니다.
 
-* 경비 구역 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-intrusion-alarm)를 참고하세요.
+* 경비 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-intrusion-alarm)를 참고하세요.
 
 :::
 
-## 소집 구역 보고서 확인 {#confirmation-of-muster-reports}
+## 소집 보고서 확인 {#confirmation-of-muster-reports}
 
-소집 구역에 대한 보고서를 확인하려면 <Cmd sid='arena.tree.contextMenu.musterReport' />를 클릭하세요. 새 창이 열리면 소집 구역에 대한 보고서를 확인할 수 있는 페이지로 이동합니다.
+소집에 대한 보고서를 확인하려면 <Cmd sid='arena.tree.contextMenu.musterReport' />를 클릭하세요. 새 창이 열리면 사용자 목록과 소집 기능으로 설정된 장치를 통해 사용자의 입실 및 퇴실 시간, 체류 시간 초과 여부를 확인할 수 있습니다.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.musterReport' /> 기능은 소집 구역에서만 사용할 수 있습니다.
+* <Cmd sid='arena.tree.contextMenu.musterReport' /> 기능은 소집에서만 사용할 수 있습니다.
 
-* 소집 구역 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-muster)를 참고하세요.
+* 소집 기능에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-muster)를 참고하세요.
 
 :::
 
-## 재실 인원 제한 구역 모니터링 {#monitoring-of-restrictions-on-the-number-of-people}
+## 재실 인원 제한 모니터링 {#monitoring-of-restrictions-on-the-number-of-people}
 
-재실 인원 제한 구역에 대한 상태를 확인할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' />을 클릭하세요. 새 창이 열리면 재실 인원 제한 구역을 모니터링하는 페이지로 이동합니다.
+재실 인원 제한 기능으로 설정된 장치에 대한 상태를 확인할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' />을 클릭하세요. 새 창이 열리면 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> 메뉴로 이동합니다. <Cmd sid='zone.occupancy.title' product='2' /> 목록에서 상태를 확인할 수 있습니다.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> 기능은 재실 인원 제한 구역에서만 사용할 수 있습니다.
+* <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> 기능은 재실 인원 제한 기능으로 설정된 항목에서만 사용할 수 있습니다.
 
-* 재실 인원 제한 구역 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-occupancy)를 참고하세요.
+* 재실 인원 제한 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac-occupancy)를 참고하세요.
 
 :::
 
 
 ## 상세 정보 확인 {#detail-view}
 
-구역에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.viewDetail' />를 클릭하세요. 화면 오른쪽에 구역 상세 정보와 이벤트 발생 이력이 표시됩니다.
+고급 출입 통제에 대한 상세 정보와 이벤트 발생 이력을 확인할 수 있습니다. 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.viewDetail' />를 클릭하세요. 화면 오른쪽 패널에 상세 정보와 이벤트 발생 이력이 표시됩니다.
 
-* **구역 상세 정보**: 구역의 이름, 위치, 상태 정보 등을 확인할 수 있습니다.
+* **상세 정보**: 고급 출입 통제 기능의 이름 및 상태, 장치 정보 등을 확인할 수 있습니다.
 
-* <Cmd sid='arena.recentEvent' />: 선택한 구역에서 발생한 최근 이벤트 목록을 확인할 수 있습니다.
+* <Cmd sid='arena.recentEvent' />: 선택한 고급 출입 통제에서 발생한 최근 이벤트 목록을 확인할 수 있습니다.
 
 :::info
 
-구역 상세 정보 섹션의 각 항목에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
+고급 출입 통제 상세 정보 섹션의 각 항목에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
 
 :::
 

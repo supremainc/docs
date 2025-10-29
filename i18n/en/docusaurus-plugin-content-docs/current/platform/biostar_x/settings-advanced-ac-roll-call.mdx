@@ -1,0 +1,106 @@
+---
+id: settings-advanced-ac-roll-call
+title: Roll Call Zone
+description: Guide on how to set up the roll call area.
+keywords:
+  - Advanced access control
+  - Roll call
+---
+
+Roll call is a feature that quickly generates a list of individuals based on entry and exit records in a specific area at a specific time, allowing for current location monitoring. In the event of an emergency, the system can determine if a user has arrived at the roll call area by authenticating through entry or exit devices in a pre-defined area.
+
+Can be used for emergency response, safety checks, and providing rescue team information. This allows for efficient management of personnel status utilizing entry and exit records.
+
+:::info
+
+Roll Call Zone settings are available through additional options with the **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::
+
+## Register roll call area {#addRollcallZone}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+
+3. Click <Cmd sid='button.func.addZone' product='2' />.
+
+4. Select <Cmd sid='zone.rollCall' product='2' /> and click <Cmd sid='button.apply' product='2' />.
+
+5. In the <Cmd sid='common.info' product='2' /> section, enter the name and description of the roll call area to be added.
+
+6. In the <Cmd sid='device.info.configuration' product='2' /> section, set the details for the roll call area. For more information, refer to [the following](#setting).
+
+7. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+:::info
+
+<Cmd sid='common.name' product='2' /> allows a maximum of 48 characters, and the same name cannot be set for different zones.
+
+:::
+
+### Setting options guide {#setting}
+
+You can change the roll call area settings.
+
+* <Cmd sid='zone.globalZone' product='2' />: You can check the scope of application for the zone. The roll call area only supports <Cmd sid='zone.globalZone.global' product='2' /> mode and can be set for all devices registered in **BioStar X**.
+
+* Enable or temporarily deactivate zone settings with <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />.
+
+* <Cmd sid='zone.rollCall.manualStatusChange' product='2' />: You can set it to change the status manually.
+
+* <Cmd sid='zone.entryDevices' product='2' />: Select the device to be used when entering. You can choose from the list of registered devices.
+
+* <Cmd sid='zone.exitDevices' product='2' />: Select the device to be used when exiting. You can choose from the list of registered devices.
+
+* <Cmd sid='common.users' product='2' />: You can select user groups or individual users that can enter the area.
+
+:::info
+
+* The same device cannot be set for both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' /> at the same time.
+
+* You can select up to 128 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+
+* Devices configured with <Cmd sid='door.dualAuthentication' product='2' /> cannot be set as <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+
+* For more information about device registration, refer to the following.
+
+  * <DocLink docId='platform/biostar_x/settings-adding-devices' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
+
+:::
+
+## Activate/deactivate zone {#activateDeactivateOccupancyZone}
+
+You can activate a disabled roll call area or deactivate an active area.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+
+3. Click <Cmd sid='zone.rollCall' product='2' /> in the area list.
+
+4. Click the checkbox for the area to activate or deactivate in the roll call area list.
+
+5. Click the <Cmd sid='zone.pause.activate' product='2' /> or <Cmd sid='zone.pause.deactivate' product='2' /> button in the upper right corner of the screen.
+
+## Delete zone {#deleteOccupancyZone}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+
+3. Click <Cmd sid='zone.rollCall' product='2' /> in the area list.
+
+4. Click the checkbox for the area to delete in the roll call area list.
+
+5. Click the <Cmd sid='button.deleteZone' product='2' /> button in the upper right corner of the screen.
+
+6. When the warning message appears, click the <Cmd sid='button.continue' product='2' /> button.
+
+import ExploreListPages from '../../common/_explore-list-pages.mdx';
+
+<ExploreListPages />

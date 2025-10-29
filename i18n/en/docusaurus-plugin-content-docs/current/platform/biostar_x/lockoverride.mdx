@@ -1,0 +1,57 @@
+---
+id: lockoverride
+title: Set Emergency Open Permissions
+description: This guide explains how to grant emergency open permissions to card credentials for specific users to open all doors in emergency situations.
+keywords:
+  - Emergency
+  - Open
+  - Access
+---
+
+You can set emergency open permissions to allow specific users to access all doors in emergency situations. When the door is opened with a card that has emergency open permissions, it will remain open for a certain time, allowing anyone to enter.
+
+## Before start
+
+You must first add the card credentials before setting the emergency open permissions. For more information on how to add card credentials, refer to [the following](enroll-credential-card).
+
+:::info
+
+* Other credentials besides card credentials are not supported.
+
+* All card credentials are supported except smart cards (AoC) and ToM mobile access cards (ToM AoC).
+
+* Depending on the device, emergency open functionality may not be supported. Refer to the supported devices and firmware versions below.
+
+  * BioStation 3 firmware v1.4.0 or higher
+
+:::
+
+## Set emergency open permissions
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Double click the user you wish to set emergency open permissions for in the user list.
+
+   Alternatively, select a user and click the <Cmd sid='team.user.preview.button.seeMore' /> button in the profile displayed on the right screen.
+
+3. When the user preview screen appears, go to the <Cmd sid='team.user.credential.title' /> section.
+
+4. Click the checkbox in the <Cmd sid='team.user.table.lockOverride' /> item for the card credentials you want to allow for emergency open.
+
+   <Image src='/img/biostarx-user-credential-set-emergency-opening.png' />
+
+5. When a warning message appears, check the content and click <Cmd sid='common.button.continue' />.
+
+   <Image src='/img/biostarx-user-credential-set-emergency-opening-warning.png' width='60%' />
+
+6. Click <Cmd sid='common.save' /> at the top right of the screen.
+
+Complete the setting of emergency open permissions. Users can open all doors with the access card that has been set with emergency open permissions.
+
+:::info
+
+* You can select more than one card credential to grant emergency open permissions.
+
+* To revoke emergency open permissions, click the checkbox in the <Cmd sid='team.user.table.lockOverride' /> item for the selected card credentials again.
+
+:::

@@ -1,17 +1,25 @@
 * <Cmd sid='setting.account.administrator' product='2' />: This is an administrator level that can use all menus.
 
-* <Cmd sid='setting.account.userOperator' product='2' />: This level can only use the <Cmd sid='shell.header.user' /> and <Cmd sid='shell.header.setting' /> menus.
+* <Cmd sid='setting.account.userOperator' product='2' />: <Cmd sid='shell.header.user' /> menu has **read** and **write** permissions.
 
-* <Cmd sid='setting.account.monitoringOperator' product='2' />: This level can use the <Cmd sid='shell.header.arena' /> and <Cmd sid='shell.header.setting' /> menus. The <Cmd sid='shell.header.dashboard' />, <Cmd sid='shell.header.user' />, <Cmd sid='shell.header.arena' />, and <Cmd sid='shell.header.setting' /> menus are available as **view only**.
+* <Cmd sid='setting.account.monitoringOperator' product='2' />: <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, and <Cmd sid='shell.header.dashboard' /> menus have **read** and **write** permissions.
 
-* <Cmd sid='setting.account.taOperator' product='2' />: This level can use the <Cmd sid='common.gnb.time_attendance' product='2' /> menu, and the user menu is available as **view only**.
+* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> menu has **read** and **write** permissions.
 
-* <Cmd sid='setting.account.visitorOperator' product='2' />: This level can only use the <Cmd sid='common.gnb.visitor' product='2' /> menu.
+* <Cmd sid='setting.account.visitorOperator' product='2' />: <Cmd sid='common.gnb.visitor' product='2' /> menu has **read** and **write** permissions.
 
 :::info
 
-* To add new user permissions other than the predefined ones, refer to the [following](settings-adding-custom-account).
+<Include pages='set-permission'>
+
+* Select <Cmd sid='common.selectNone' /> if you do not want to set an admin level. In this case, the user cannot log in to **BioStar X**.
+
+</Include>
+
+* To add new user permissions other than the predefined ones, refer to [the following](settings-adding-custom-account).
 
 * The permissions of the default accounts cannot be modified or deleted.
+
+* A separate license is required to use <Cmd sid='setting.account.taOperator' product='2' /> and <Cmd sid='setting.account.visitorOperator' product='2' /> levels. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::

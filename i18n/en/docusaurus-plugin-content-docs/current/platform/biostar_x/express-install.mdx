@@ -1,13 +1,23 @@
 ---
 id: express-install
 title: Express Installation
-description: This guide provides instructions on how to set up BioStar X quickly.
+description: This guide provides steps to quickly install BioStar X by automatically creating the embedded MariaDB server and database.
 keywords:
   - Express installation
 ---
 
-This document guides you on how to install **BioStar X** using the **New Installation** method. To proceed with <Cmd code='biostar2.install.customInstall' /> to connect with the database you have already installed, refer to the [following](custom-install).
+This procedure guides you step-by-step to install **BioStar X** using <Cmd code='biostar2.install.expressInstall' className='bold' />. <Cmd code='biostar2.install.expressInstall' className='bold' /> automatically installs the embedded MariaDB server and creates the database, allowing for quick installation without separate database configuration.
+
+:::info
+
+To proceed with <Cmd code='biostar2.install.customInstall' className='bold' /> to connect with an already installed database, refer to [the following](custom-install).
+
+:::
 
 import InstallStep from '../../common/_biostar-install-steps.mdx';
 
 <InstallStep />
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />
