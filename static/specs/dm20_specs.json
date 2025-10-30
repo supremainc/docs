@@ -27,26 +27,15 @@
             "multiColor": {
               "label": "다중 색상",
               "label_id": "specs.general.led_type.multiColor",
-              "value": {
-                "ko": [
-                  "전원 - 1개",
-                  "릴레이 - 4개",
-                  "Input - 4개",
-                  "Output - 6개",
-                  "Supervised 입력 - 4개",
-                  "RS-485 - 2개",
-                  "Run - 1개"
-                ],
-                "en": [
-                  "Power - 1개",
-                  "Relay - 4개",
-                  "Input - 4개",
-                  "Output - 6개",
-                  "Supervised Input - 4개",
-                  "RS-485 - 2개",
-                  "Run - 1개"
-                ]
-              }
+              "value": [
+                "POWER - 1개",
+                "RELAY - 4개",
+                "INPUT - 4개",
+                "SUPERVISED INPUT - 4개",
+                "OUTPUT - 6개",
+                "RS-485 - 2개",
+                "RUN - 1개"
+              ]
             }
           }
         },
@@ -109,8 +98,15 @@
           "value": {
             "ko": "4채널",
             "en": "4 ch"
-          },
-          "annotation_value": "anno1"
+          }
+        },
+        "supervised": {
+          "label": "Supervised 입력",
+          "label_id": "specs.interface.supervised",
+          "value": {
+            "ko": "4채널",
+            "en": "4 ch"
+          }
         },
         "output": {
           "label": "Output",
@@ -118,14 +114,6 @@
           "value": {
             "ko": "6채널",
             "en": "6 ch"
-          }
-        },
-        "supervised": {
-          "label": "Supervised 입력",
-          "label_id": "specs.interface.supervised",
-          "value": {
-            "ko": "4채널<sup id='dupl'><a href='#anno1'></a></sup>",
-            "en": "4 ch<sup id='dupl'><a href='#anno1'></a></sup>"
           }
         },
         "relay": {

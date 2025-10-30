@@ -22,11 +22,20 @@
         "led_type": {
           "label": "LED",
           "label_id": "specs.general.led_type",
-          "value": {
-            "ko": "다중 색상",
-            "en": "Multi-color"
-          },
-          "annotation_value": "anno1"
+          "type": "model",
+          "items": {
+            "multiColor": {
+              "label": "다중 색상",
+              "label_id": "specs.general.led_type.multiColor",
+              "value": [
+                "POWER - 1개",
+                "RS-485 TX - 1개",
+                "RS-485 RX - 1개",
+                "INPUT - 2개",
+                "RELAY - 1개"
+              ]
+            }
+          }
         },
         "operating_temp": {
           "label": "동작 온도",
