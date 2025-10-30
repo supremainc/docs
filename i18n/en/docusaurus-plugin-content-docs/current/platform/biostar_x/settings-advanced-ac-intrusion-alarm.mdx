@@ -1,13 +1,13 @@
 ---
 id: settings-advanced-ac-intrusion-alarm
-title: Intrusion Alarm Zone
-description: This guide describes how to set the intrusion alarm zone. The intrusion alarm zone provides a feature to lock doors or trigger alarms upon detecting an intrusion.
+title: Intrusion Alarm
+description: This guides you on how to set up security. The intrusion alarm feature provides capabilities to lock doors or trigger alarms when intrusion is detected.
 keywords:
   - Advanced access control
-  - Intrusion Alarm Zone
+  - Intrusion Alarm
 ---
 
-This guide describes how to set the intrusion alarm zone. The intrusion alarm zone provides a feature to lock doors or trigger alarms upon detecting an intrusion.
+This guides you on how to set up security. The intrusion alarm settings provide capabilities to lock doors or trigger alarms when intrusion is detected.
 
 :::info
 
@@ -15,7 +15,7 @@ This guide describes how to set the intrusion alarm zone. The intrusion alarm zo
 
 :::
 
-## Register Intrusion Alarm Zone {#addIntrusionAlarmZone}
+## Add intrusion alarm {#addIntrusionAlarmZone}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -25,15 +25,27 @@ This guide describes how to set the intrusion alarm zone. The intrusion alarm zo
 
 4. Select <Cmd sid='zone.intrusion' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the intrusion alarm zone to be added in the <Cmd sid='common.info' product='2' /> section.
+5. Enter the name of the intrusion alarm setting to add in the <Cmd sid='common.info' product='2' /> section.
 
-6. Set the details of the scheduled locking zone in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to [the following](#setting).
+   <Image src='/img/biostarx-settings-adv-ac-add-intrusion.png' />
+
+6. Set the details of the intrusion alarm settings in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to [the following](#setting).
 
 7. Add authentication settings for arming and disarming in the <Cmd sid='zone.intrusion.armConfiguration' product='2' /> section. For more information, refer to [the following](#armConfiguration).
 
+   <Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png' />
+
+   :::note
+
+   The <Cmd sid='zone.intrusion.armConfiguration' product='2' /> section appears when you select a door in the <Cmd sid='common.info' product='2' /> section.
+
+   :::
+
 8. Set up intrusion detection signals in the <Cmd sid='zone.intrusion.intrusionSetting' product='2' /> section. For more information, refer to [the following](#intrusionSetting).
 
-9. Set the actions to be performed when specific events occur in the intrusion alarm zone in the <Cmd sid='common.alarm' product='2' /> section.
+   <Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-intrusion.png' />
+
+9. Set the actions to be performed when specific events occur in the <Cmd sid='common.alarm' product='2' /> section.
 
 10. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
@@ -43,19 +55,21 @@ The <Cmd sid='zone.intrusion.armConfiguration' product='2' />, <Cmd sid='zone.in
 
 :::
 
-### Setting options guide {#setting}
+## Setting options guide {#setting}
 
-You can change the general settings of the intrusion alarm zone.
+The details for intrusion alarm settings are as follows.
 
-* Set the scope of the zone with <Cmd sid='zone.globalZone' product='2' />. The intrusion alarm zone supports only <Cmd sid='zone.globalZone.local' product='2' /> mode, and zones can only be set up with the entrance device and devices connected via RS-485.
+* <Cmd sid='zone.globalZone' product='2' />: Set the application range. The intrusion alarm settings only support the <Cmd sid='zone.globalZone.local' product='2' /> mode and can only be set with devices connected via RS-485 and entry devices.
 
-* Enable or temporarily deactivate zone settings with <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />.
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: You can activate or temporarily deactivate the settings.
 
-* Select the doors to be designated as the intrusion alarm zone with <Cmd sid='zone.pause.doorselected' product='2' />.
+* Select the door to apply the intrusion alarm function at <Cmd sid='zone.pause.doorselected' product='2' />.
 
-### Arming or disarming settings {#armConfiguration}
+## Arming or disarming settings {#armConfiguration}
 
 You can add authentication settings for arming and disarming.
+
+<Image src='/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png' />
 
 * Set the delay time until arming or disarming with <Cmd sid='zone.intrusion.delayTime' product='2' />. This means that the arming is the delay time after authentication until the alarm starts, and the disarming is the delay time before the alarm is triggered after an intrusion is detected.
 
@@ -65,23 +79,23 @@ You can add authentication settings for arming and disarming.
 
 * Set the arming/disarming by the device or input signal with <Cmd sid='zone.intrusion.armInput' product='2' />. Click the <Cmd sid='button.plusAdd' product='2' /> button and configure each item.
 
-#### Add arming/disarming by device {#addArmInput}
+### Add arming/disarming by device {#addArmInput}
 
-Click <IcEdit /> of the <Cmd sid='zone.intrusion.armInput' product='2' /> option. Select the device that will control the intrusion alarm zone from the entrance/exit devices and choose <Cmd sid='zone.intrusion.armType' product='2' />.
+Click the <Cmd sid='button.plusAdd' product='2' /> button in the <Cmd sid='zone.intrusion.armInput' product='2' /> (<Cmd sid='common.device' product='2' />) option. Select the device to control the intrusion alarm feature and choose <Cmd sid='zone.intrusion.armType' product='2' />.
 
 <Cmd sid='zone.intrusion.inputType' product='2' /> can select <Cmd sid='zone.intrusion.inputType.card' product='2' />, <Cmd sid='zone.intrusion.inputType.key' product='2' />, or <Cmd sid='zone.intrusion.inputType.cardOrKey' product='2' />. Devices without an LCD screen can only use <Cmd sid='zone.intrusion.inputType.card' product='2' /> for input type.
 
 <Image src='/img/biostarx-settings-advanced-ac-intusion-add-device.png' />
 
-#### Add arming/disarming by input signal {#addArmInputBySignal}
+### Add arming/disarming by input signal {#addArmInputBySignal}
 
-Click <IcEdit /> of the <Cmd sid='zone.intrusion.armInput' product='2' /> option. Select the device that will control the intrusion alarm zone. Click <Cmd sid='zone.intrusion.inputType.port' product='2' /> to choose the input port of the selected device.
+Click the <Cmd sid='button.plusAdd' product='2' /> button in the <Cmd sid='zone.intrusion.armInput' product='2' /> (<Cmd sid='zone.intrusion.inputType.input' product='2' />) option. Select the device to control the intrusion alarm feature. Click <Cmd sid='zone.intrusion.inputType.port' product='2' /> to choose the input port of the selected device.
 
 After choosing <Cmd sid='zone.intrusion.armType' product='2' />, set the type of switch and the duration of the signal.
 
 <Image src='/img/biostarx-settings-advanced-ac-intusion-add-signal.png' />
 
-### Intrusion detection settings {#intrusionSetting}
+## Intrusion detection settings {#intrusionSetting}
 
 You can set up the intrusion detection signals. Click <Cmd sid='button.addplus' product='2' /> and set it as shown below to recognize an intrusion when an N/O sensor connected to input port 0 of the BioStation 3 device sends a signal for 100(ms).
 

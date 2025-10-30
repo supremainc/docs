@@ -1,23 +1,23 @@
 ---
 id: settings-advanced-ac-roll-call
-title: Roll Call Zone
-description: Guide on how to set up the roll call area.
+title: Roll Call
+description: This guides how to set up roll call.
 keywords:
   - Advanced access control
   - Roll call
 ---
 
-Roll call is a feature that quickly generates a list of individuals based on entry and exit records in a specific area at a specific time, allowing for current location monitoring. In the event of an emergency, the system can determine if a user has arrived at the roll call area by authenticating through entry or exit devices in a pre-defined area.
+Roll call is a feature that quickly generates a list of personnel based on entry records at a specific time and place, allowing for real-time tracking of current locations. In the event of an emergency, the user can determine whether they have arrived at the roll call location by authenticating through entry or exit devices at a pre-designated location.
 
 Can be used for emergency response, safety checks, and providing rescue team information. This allows for efficient management of personnel status utilizing entry and exit records.
 
 :::info
 
-Roll Call Zone settings are available through additional options with the **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+Roll call settings can be used through additional options available with an **Advanced** license or above. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::
 
-## Register roll call area {#addRollcallZone}
+## Register roll call {#addRollcallZone}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -27,25 +27,29 @@ Roll Call Zone settings are available through additional options with the **Adva
 
 4. Select <Cmd sid='zone.rollCall' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. In the <Cmd sid='common.info' product='2' /> section, enter the name and description of the roll call area to be added.
+5. Enter the name and description of the roll call setting to be added in the <Cmd sid='common.info' product='2' /> section.
 
-6. In the <Cmd sid='device.info.configuration' product='2' /> section, set the details for the roll call area. For more information, refer to [the following](#setting).
+   <Image src='/img/biostarx-settings-adv-ac-add-rollcall.png' />
+
+6. Set details in the <Cmd sid='device.info.configuration' product='2' /> section. For more information, refer to [the following](#setting).
 
 7. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-<Cmd sid='common.name' product='2' /> allows a maximum of 48 characters, and the same name cannot be set for different zones.
+<Cmd sid='common.name' product='2' /> can accept up to 48 characters and cannot be set with the same name as other settings.
 
 :::
 
-### Setting options guide {#setting}
+## Setting options guide {#setting}
 
-You can change the roll call area settings.
+The details for roll call settings are as follows.
 
-* <Cmd sid='zone.globalZone' product='2' />: You can check the scope of application for the zone. The roll call area only supports <Cmd sid='zone.globalZone.global' product='2' /> mode and can be set for all devices registered in **BioStar X**.
+<Image src='/img/biostarx-settings-adv-ac-add-rollcall-config.png' />
 
-* Enable or temporarily deactivate zone settings with <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />.
+* <Cmd sid='zone.globalZone' product='2' />: You can check the scope of application. Roll call settings are supported only in <Cmd sid='zone.globalZone.global' product='2' /> mode, and can be configured for all devices registered in **BioStar X**.
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: You can activate or temporarily deactivate the settings.
 
 * <Cmd sid='zone.rollCall.manualStatusChange' product='2' />: You can set it to change the status manually.
 
@@ -53,13 +57,13 @@ You can change the roll call area settings.
 
 * <Cmd sid='zone.exitDevices' product='2' />: Select the device to be used when exiting. You can choose from the list of registered devices.
 
-* <Cmd sid='common.users' product='2' />: You can select user groups or individual users that can enter the area.
+* <Cmd sid='common.users' product='2' />: You can select user groups or individual users who are allowed to enter.
 
 :::info
 
 * The same device cannot be set for both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' /> at the same time.
 
-* You can select up to 128 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+* You can select up to 10 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
 
 * Devices configured with <Cmd sid='door.dualAuthentication' product='2' /> cannot be set as <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
 
@@ -73,29 +77,29 @@ You can change the roll call area settings.
 
 :::
 
-## Activate/deactivate zone {#activateDeactivateOccupancyZone}
+## Activate/deactivate {#activateDeactivateOccupancyZone}
 
-You can activate a disabled roll call area or deactivate an active area.
+You can activate disabled roll call settings or deactivate activated settings.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
 
-3. Click <Cmd sid='zone.rollCall' product='2' /> in the area list.
+3. Click <Cmd sid='zone.rollCall' product='2' /> from the list.
 
-4. Click the checkbox for the area to activate or deactivate in the roll call area list.
+4. Click the checkbox for the item you want to activate or deactivate in the roll call settings list.
 
 5. Click the <Cmd sid='zone.pause.activate' product='2' /> or <Cmd sid='zone.pause.deactivate' product='2' /> button in the upper right corner of the screen.
 
-## Delete zone {#deleteOccupancyZone}
+## Delete {#deleteOccupancyZone}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
 
-3. Click <Cmd sid='zone.rollCall' product='2' /> in the area list.
+3. Click <Cmd sid='zone.rollCall' product='2' /> from the list.
 
-4. Click the checkbox for the area to delete in the roll call area list.
+4. Click the checkbox for the item you want to delete from the roll call settings list.
 
 5. Click the <Cmd sid='button.deleteZone' product='2' /> button in the upper right corner of the screen.
 
@@ -104,3 +108,119 @@ You can activate a disabled roll call area or deactivate an active area.
 import ExploreListPages from '../../common/_explore-list-pages.mdx';
 
 <ExploreListPages />
+
+## Start roll call {#mobileAppRollCall}
+
+The roll call feature is available in the **BioStar X** mobile app.
+
+:::info
+
+You can install the **BioStar X** mobile app via the following links.
+
+* iOS: [Apple App Store](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
+
+* Android: [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
+
+:::
+
+### Start roll call in the mobile app {#useRollCallMobileApp}
+
+To start the roll call feature in the mobile app, follow these steps.
+
+1. Launch the **BioStar X** mobile app on your mobile device.
+
+2. Tap the **Roll Call** button on the app's home screen.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
+
+3. In the Roll Call list, tap the <IcRCplay /> button for the item you want to execute roll call.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-02.png' width={253} alone />
+
+4. When the confirmation message appears, tap the **Yes** button.
+
+Roll call will start, and by tapping on the ongoing roll call item, you can check the status of the roll call.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={595} alone className='none' />
+
+### Ongoing roll call control
+
+* Users entering will be marked with the <IcRCdone /> icon. When all users have entered, a message indicating that roll call has ended will appear. To end the roll call, tap the **Yes** button.
+
+* The administrator can manually change the user's entry or status. Long press the round button on the far right of the user whose status you wish to change from the user list.
+
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png' alone className='none' width={595} />
+
+* To reset an entering user, tap the **Reset** button. Change the **Accounted** user to **Unaccounted** status.
+
+* If roll call is ended by another administrator, a notification message will appear.
+
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
+
+* To end an ongoing roll call, tap the <IcRCstop /> button in the roll call list screen, or tap the **END** button in the roll call status screen.
+
+* You can also end the ongoing roll call in **BioStar X**. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='data.sidebar.events' /> → <Cmd sid='zone.rollCall' product='2' /> menu, select the ongoing roll call item, and click the <Cmd sid='data.header.rollCall.ended' /> button at the top right of the screen.
+
+  <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
+
+* After completing the roll call, you can check related reports from <Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' />. For more information, refer to [the following](#viewRollCallReport).
+
+### User information during roll call
+
+During roll call in the mobile app, you can check each user's information. It is useful to contact users in an emergency or to locate a user's current position.
+
+Swipe left on the user item for which you want to check details during roll call. Then tap the <IcRCinfo /> button.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png' className='none' width={595} alone />
+
+### Leave a note for users during roll call
+
+If a specific user has not entered during roll call in the mobile app, you can leave a note for that user.
+
+Swipe left on the user item where you want to input a note during roll call. Then tap the <IcRCmemo /> button. On the note input screen, enter the content and tap the **Save** button.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png' className='none' width={595} alone />
+
+Users who have entered notes will be marked with the <IcRCmemo /> icon in the roll call list.
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png' width={253} alone />
+
+### Check roll call details {#viewRollCallinfo}
+
+You can check the details of the roll call settings in the mobile app.
+
+1. Launch the **BioStar X** mobile app on your mobile device.
+
+2. Tap the **Roll Call** button on the app's home screen.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
+
+3. Swipe left on the item to check details from the list, then tap the <IcRCinfo /> button.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png' width={595} alone className='none' />
+
+## View roll call reports {#viewRollCallReport}
+
+To check the roll call report, follow these steps.
+
+1. Click <Cmd sid='shell.header.launcher' /> on the page of <Cmd sid='shell.header.data' />.
+
+2. On the left sidebar of the screen, click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' />.
+
+3. When the <Cmd sid='data.dialog.rollCall.selectRollCall' /> window appears, select the roll call item you want to check in the report, then click the <Cmd sid='data.button.next' /> button.
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-01.png' />
+
+   :::note
+
+   If you do not see the desired roll call item, adjust the period at the top of the screen.
+
+   :::
+
+4. In the option settings window, select the data to include in the report, then click the <Cmd sid='data.button.generate' /> button.
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-02.png' />
+
+Generating the report. The report provides information on each user, including their entry time, exit time, last location, and notes.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated.png' caption />

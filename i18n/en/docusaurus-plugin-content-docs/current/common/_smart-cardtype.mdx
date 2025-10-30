@@ -1,0 +1,67 @@
+<Include type={props.type} ref='mifare,custom-mifare'>
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Set encryption type to <Cmd>SL1</Cmd> or <Cmd>SL3</Cmd>.
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.card.format.desfireAvd' product='2' />: You can use DESFire cards issued by third parties. Only DESCire can be configured.
+
+</Include>
+
+<Include type={props.type} ref='mifare,custom-mifare,iclass,desfire,custom-desfire,iclassseos'>
+
+* <Cmd sid='setting.cardFormat.primaryKey' product='2' />: The key that encrypts communications between the smart card and the card reader.
+
+* <Cmd sid='setting.cardFormat.secondaryKey' product='2' />: Used for authentication when the card's primary site key does not match. The secondary site key can only be entered after activating the <Cmd sid='setting.cardFormat.secondaryKey' product='2' /> option at the top of the section.
+
+</Include>
+
+<Include type={props.type} ref='mifare,iclass'>
+
+* <Cmd sid='setting.cardFormat.startBlockIndex' product='2' />: Select the starting block where each template will be saved. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card.
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass'>
+
+* <Cmd sid='setting.cardFormat.blockIndex' product='2' />: Select the starting block where each template will be saved. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card.
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.idField' product='2' />: Configure to read a specific area on the card. Acts as a directory containing <Cmd sid='setting.cardFormat.fileId' product='2' />.
+
+* <Cmd sid='setting.cardFormat.fileId' product='2' />: Set the file ID.
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Set the encryption type to <Cmd>DES/3DES</Cmd> or <Cmd>AES</Cmd>.
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.skipBytes' product='2' />: Set the starting point for reading the card number.
+
+* <Cmd sid='setting.cardFormat.dataSize' product='2' />: (When the set <Cmd sid='setting.cardFormat.primaryKey' product='2' /> and <Cmd sid='setting.cardFormat.secondaryKey' product='2' /> values are the same as the card's configuration) Configure the data size of the card to be read.
+
+</Include>
+
+<Include type={props.type} ref='iclassseos'>
+
+* <Cmd sid='setting.cardFormat.ADF' product='2' />: The ADF address where digital credentials are stored.
+
+</Include>
+
+<Include type={props.type} ref='felica'>
+
+* <Cmd sid='setting.cardFormat.systemCode' product='2' />: Enter the system code to read FeliCa cards in hexadecimal, with a maximum of 4 characters.
+
+* <Cmd sid='setting.cardFormat.serviceCode' product='2' />: Enter the service code to read FeliCa cards in hexadecimal, with a maximum of 4 characters.
+
+* <Cmd sid='setting.cardFormat.appId' product='2' />: Set the application ID, serving as a type of directory that includes <Cmd sid='setting.cardFormat.fileId' product='2' />. You can set up to 8 blocks to read by clicking <Cmd sid='button.addplus' product='2' />.
+
+  <Cmd sid='setting.cardFormat.blockNumber' product='2' />: Set the block to read from the card. (0\-150)
+
+</Include>

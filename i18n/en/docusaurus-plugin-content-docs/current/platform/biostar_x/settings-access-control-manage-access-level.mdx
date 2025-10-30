@@ -1,7 +1,7 @@
 ---
 id: settings-access-control-manage-access-level
 title: Manage Access Levels
-description: Set user access times to enroll in access level.
+description: Set the time periods during which a user may access a door and register them as an access level.
 keywords:
   - Access level
 ---
@@ -10,15 +10,19 @@ Access levels enable users to set times for entry and grant permission to access
 
 ## Before start {#beforeStart}
 
-Initialize doors before enrolling access levels. For more information about door enrollment, refer to [the following](settings-door-add).
+* Initialize doors before enrolling access levels. For more information about door enrollment, refer to [the following](settings-door-add).
 
-## Enroll access level {#addAccessLevel}
+* You can predefine time to apply to access levels through schedule settings. For more information about schedule settings, refer to [the following](settings-schedule).
+
+## Register access level {#addAccessLevel}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.accessControl.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessControl.root' /> on the left sidebar.
 
 3. Click <Cmd sid='button.func.addAccessLevel' product='2' />.
+
+   <Image src='/img/biostarx-settings-access-level.png' />
 
 4. Enter <Cmd sid='common.name' product='2' /> and <Cmd sid='common.description' product='2' /> in the <Cmd sid='accessGroup.addNewAccessLevel' product='2' /> screen.
 
@@ -28,17 +32,17 @@ Initialize doors before enrolling access levels. For more information about door
 
 6. Select the schedule to apply the access level in the <Cmd sid='common.schedule' product='2' /> field.
 
-7. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to enroll the access level.
+7. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to register the access level.
 
 :::info
 
-* Up to 128 access levels can be enrolled per access group.
+* Up to 128 access levels can be registered per access group.
 
 * Click <IcSearch /> in the <Cmd sid='common.door' product='2' /> and <Cmd sid='common.schedule' product='2' /> fields to search for the desired doors and schedules.
 
 * Click <IcTrash2 /> to delete items added in the <Cmd sid='common.door' product='2' /> and <Cmd sid='common.schedule' product='2' /> fields.
 
-* If the desired door is not available, you need to enroll a new door. For more information about door enrollment, refer to [the following](settings-door-add).
+* If the desired door is not available, you need to register a new door. For more information about door enrollment, refer to [the following](settings-door-add).
 
 * If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one. For more information about schedule settings, refer to [the following](settings-schedule).
 
@@ -51,6 +55,8 @@ Initialize doors before enrolling access levels. For more information about door
 2. Click <Cmd sid='setting.menu.accessControl.root' /> in the left sidebar.
 
 3. Click the <Cmd sid='access_control.tab.access_level' product='2' /> tab.
+
+   <Image src='/img/biostarx-settings-access-level-tab.png' />
 
 4. Click the access level you wish to modify from the access level list.
 
@@ -69,3 +75,5 @@ Initialize doors before enrolling access levels. For more information about door
 4. Check the checkbox of the access level you wish to delete from the access level list.
 
 5. Click <Cmd sid='button.deleteAccessLevel' product='2' /> at the top right of the screen.
+
+<Image src='/img/biostarx-settings-delete-access-level.png' />

@@ -11,17 +11,17 @@ keywords:
 
 Guides actual development methods and implementation examples of plugins integrated with **BioStar X**.
 
-## Required Endpoint Implementation
+## Required endpoint Implementation
 
 To develop a plugin integrated with **BioStar X**, you must implement the following two endpoints. This document uses `/bsx` as the example path.
 
-### Plugin Registration Endpoint
+### Plugin registration endpoint
 
 <Badge className='get'>GET</Badge> `/bsx`
 
 This is the endpoint called to check server accessibility by the **BioStar X Service Manager** when registering the plugin.
 
-#### Request Format
+#### Request format
 
 ```http
 GET /bsx
@@ -29,7 +29,7 @@ Headers:
     X-BioStar-Ping: <ping_token>
 ```
 
-#### Implementation Requirements
+#### Implementation requirements
 
 ```python title="Python FastAPI"
 from fastapi import FastAPI, Request
@@ -47,7 +47,7 @@ async def bsx_ping(request: Request):
     return response
 ```
 
-#### Response Format
+#### Response format
 
 ```json title="Success (200 OK)"
 {
@@ -63,7 +63,7 @@ You can manually test the endpoint using the `curl` command.
 curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 ```
 
-### User Authentication Callback Endpoint
+### User authentication callback endpoint
 
 <Badge className='post'>POST</Badge> `/bsx`
 
@@ -75,7 +75,7 @@ A certificate is required for secure communication between **BioStar X** and the
 
 :::
 
-#### Request Format
+#### Request format
 
 ```http
 POST /bsx
@@ -84,7 +84,7 @@ Content-Type: application/x-www-form-urlencoded
 user_id={user_id}&plugin_id={plugin_id}
 ```
 
-#### Implementation Requirements
+#### Implementation requirements
 
 1. **Parameter Validation**: Check required values for `user_id` and `plugin_id`
 
@@ -158,11 +158,11 @@ curl -X POST http://localhost:8000/bsx \
     -d "user_id={user_id}&plugin_id={your_plugin_id}"
 ```
 
-## Encryption Implementation
+## Encryption implementation
 
 You must implement the following encryption functions.
 
-### RSA Public Key Encryption
+### RSA public key encryption
 
 ```python
 from cryptography.hazmat.primitives import serialization, padding
@@ -178,7 +178,7 @@ def encrypt_with_public_key(message: str, public_key_path: str) -> str:
     return base64.b64encode(encrypted).decode('utf-8')
 ```
 
-### AES-256 Decryption
+### AES-256 decryption
 
 ```python
 from Crypto.Cipher import AES

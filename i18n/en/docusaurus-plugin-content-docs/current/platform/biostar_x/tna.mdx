@@ -1,0 +1,153 @@
+---
+id: tna
+title: How to Use Time & Attendance
+description: Set the attendance management rules and check the recorded work history through the device or output it as a report
+keywords:
+  - Time Attendance
+  - Access records
+  - Reports
+---
+
+Set the attendance management rules and check the recorded work history through the device or output it as a report. The <Cmd sid='shell.header.tna' className='normal' /> feature is provided as a plugin and requires a separate license.
+
+:::info
+
+The <Cmd sid='shell.header.tna' className='normal' /> feature can be used with additional options on **advanced** (Advanced) licenses or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::
+
+## Before start
+
+To use the <Cmd sid='shell.header.tna' className='normal' /> feature, apply the license and download the separate installation file for installation.
+
+### Apply license
+
+Instructions for applying the <Cmd sid='shell.header.tna' className='normal' /> license. After purchasing the <Cmd sid='shell.header.tna' className='normal' /> license from a **BioStar X** vendor, follow the instructions to apply the license.
+
+import LicenseApply from '../../common/_bsx-license-apply.mdx'
+
+<LicenseApply />
+
+### Install plugin
+
+To use the <Cmd sid='shell.header.tna' className='normal' /> feature, a separate installation file must be downloaded and installed. Follow the instructions to install the plugin.
+
+1. Access the [Suprema Download Center](https://download.supremainc.com/) and download the <Cmd sid='shell.header.tna' className='normal' /> plugin installation file (*BioStar X TA.X.Y.Z.BB.exe*).
+
+2. Run the installation file and complete the installation according to the instructions.
+
+3. Run the downloaded installation file.
+
+4. Select the language to use and select the <Cmd code='biostar2.install.ok' className='bold'/> button.
+
+   <Image src='/img/biostarx-install-select-language.png' />
+
+5. To continue the installation, select <Cmd code='biostar2.install.agree' className='bold'/> and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-tna-install-agree.png' />
+
+6. Enter the root account password for the database and click the <Cmd code='biostar2.install.next' className='bold'/> button.
+
+   <Image src='/img/biostarx-tna-install-input-db-pw.png' />
+
+7. Read the information about the management and responsibility of personal information stored in the database, and click the <Cmd code='biostar2.install.next' className='bold'/> button to continue the installation.
+
+   <Image src='/img/biostarx-tna-install-read-covenant.png' />
+
+8. Set the port for communication with **BioStar X** and click <Cmd code='biostar2.install.next' className='bold'/>.
+
+   <Image src='/img/biostarx-tna-install-set-port.png' />
+
+   :::note
+
+   You can use the default port number (3002) or change to a different port number. If you change the port number, ensure that the corresponding port is open in the firewall.
+
+   :::
+
+9. Select the installation components and click <Cmd code='biostar2.install.next' className='bold' />.
+
+   <Image src='/img/biostarx-tna-install-additional.png' />
+
+10. When all preparations for installation are complete, click the <Cmd code='biostar2.install.btnInstall' className='bold'/> button.
+
+    <Image src='/img/biostarx-tna-install-complete.png' />
+
+:::info
+
+* In the downloaded file name, `X.Y.Z` is the version information and `BB` is the build number.
+
+* Use the password for the root account of the database that was used when installing **BioStar X**.
+
+:::
+
+## <Cmd sid='shell.header.tna' className='bold' /> menu
+
+Once the <Cmd sid='shell.header.tna' className='normal' /> license and plugin installation are complete, the <Cmd sid='shell.header.launcher' /> page will have the <Cmd sid='shell.header.tna' /> menu added.
+
+<Image src='/img/biostarx-tna-main.png' />
+
+Click the <Cmd sid='shell.header.tna' /> icon on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.tna' /> from the shortcut list at the top left of the screen.
+
+## <Cmd sid='shell.header.tna' className='bold' /> login
+
+A separate login screen will appear the first time you enter the <Cmd sid='shell.header.tna' className='normal' /> feature. Log in with the **BioStar X** administrator account. When you log in to the <Cmd sid='shell.header.tna' className='normal' /> feature with the administrator account, you can use the <Cmd sid='shell.header.tna' className='normal' /> feature thereafter without a separate login process.
+
+<Image src='/img/biostarx-tna-login.png' />
+
+## Initial setup
+
+1. The first time you log into the <Cmd sid='shell.header.tna' className='normal' /> feature, you need to add a device for attendance management for initial setup. Click the <Cmd sid='common.setting' product='2' /> button on the screen.
+
+   <Image src='/img/biostarx-tna-initial-setting.png' />
+
+2. Select a device for attendance management from the device list.
+
+   <Image src='/img/biostarx-tna-initial-setting-register-device.png' />
+
+3. Click the activated <IcAdd /> <Cmd sid='setting.register' product='2' /> button.
+
+   <Image src='/img/biostarx-tna-initial-setting-select-device.png' />
+
+4. If the selected device appears in the <Cmd sid='setting.registerDevices' product='2' /> list, click the <Cmd sid='setting.setting' product='2' /> button.
+
+   <Image src='/img/biostarx-tna-initial-setting-selected-device.png' />
+
+5. When the <Cmd sid='setting.setting' product='2' /> window appears, complete the basic settings for attendance management.
+
+### Configure attendance mode
+
+Proceed with the attendance mode and attendance event settings.
+
+<Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+* <Cmd sid='device.info.mode' product='2' />: Choose how to register attendance events.
+
+  * <Cmd sid='device.tna.mode.byUser' product='2' />: Users can select attendance events during authentication.
+
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />: Attendance events automatically change according to a set schedule. You can select a schedule to apply to attendance events.
+
+  * <Cmd sid='device.tna.mode.lastChoice' product='2' />: The last used attendance event can continue to be used.
+
+  * <Cmd sid='device.tna.mode.fixed' product='2' />: Only the selected attendance event can be used.
+
+  * <Cmd sid='device.tna.mode.unused' product='2' />: Does not log attendance events.
+
+* <Cmd sid='device.info.tnaRequired' product='2' />: You can set it to require registration of attendance events during authentication. Can be used when <Cmd sid='device.info.mode' product='2' /> is set to <Cmd sid='device.tna.mode.byUser' product='2' />.
+
+* <Cmd sid='device.info.tnaEvent' product='2' />: You can modify the name of attendance events or add schedules used when setting <Cmd sid='device.info.mode' product='2' /> to <Cmd sid='device.tna.mode.bySchedule' product='2' />.
+
+  * <Cmd sid='device.tna.eventKey' product='2' />: This is a list of keys that can be used to register attendance.
+
+  * <Cmd sid='device.tna.label' product='2' />: You can change the name of attendance events according to the attendance key.
+
+  * <Cmd sid='device.tna.schedule' product='2' />: If you set <Cmd sid='device.info.mode' product='2' /> to <Cmd sid='device.tna.mode.bySchedule' product='2' />, you can automatically set the schedule to change. For more information about schedule settings, refer to [the following](settings-schedule).
+
+:::info
+
+* Devices that do not support LCD screens can set <Cmd sid='device.info.mode' product='2' /> to <Cmd sid='device.tna.mode.bySchedule' product='2' /> and <Cmd sid='device.tna.mode.fixed' product='2' />. You can register fixed attendance events or change attendance events based on pre-scheduled settings. 
+
+* Device models that support <Cmd sid='device.tna.mode.bySchedule' product='2' /> and <Cmd sid='device.tna.mode.fixed' product='2' /> modes include BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2.
+
+* For more information on the <Cmd sid='setting.setting' product='2' /> menu, refer to [the following](tna-settings).
+
+:::

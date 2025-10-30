@@ -1,0 +1,71 @@
+---
+id: tna-rule-shift-schedule
+title: Set Weekly Shifts
+description: This guides how to create weekly shift rules based on the configured daily shift rules.
+keywords:
+  - Weekly shift rules
+---
+
+This guides how to create weekly shift rules based on the configured <Cmd sid='tab.shift' product='2' className='normal' />.
+
+## <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' className='bold' />
+
+1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.scheduleTemplate' product='2' /> in the left sidebar.
+
+3. Click <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' />.
+
+   <Image src='/img/biostarx-tna-shift-schedule.png' />
+
+4. When the <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' /> screen appears, set each item.
+
+:::info
+
+* Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+* To continue adding the work schedule, click the <Cmd sid='payCode.applyAndAddShift' product='2' /> button.
+
+* After saving the settings, click <Cmd sid='ta.apply_add_another' product='2' /> to add another <Cmd sid='tab.scheduleTemplate' product='2' />.
+
+:::
+
+## Setting options guide
+
+<Image src='/img/biostarx-tna-shift-schedule-adding.png' />
+
+* <Cmd sid='form.name' product='2' />: Enter the name of <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />.
+
+* <Cmd sid='form.description' product='2' />: Enter a description for <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />.
+
+* <Cmd sid='form.type' product='2' />: Set <Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> to <Cmd sid='scheduleTemplate.type.weekly' product='2' /> or <Cmd sid='scheduleTemplate.type.daily' product='2' /> daily.
+
+  Selecting <Cmd sid='scheduleTemplate.type.daily' product='2' /> allows you to set the repeating usage period (<Cmd sid='scheduleTemplate.cycle' product='2' />).
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-daily.png' />
+
+* <Cmd sid='scheduleTemplate.weekendSetting' product='2' />: Set the days to designate as weekends.
+
+* <Cmd sid='scheduleTemplate.shift' product='2' />: View the list of configured <Cmd sid='tab.shift' product='2' className='normal' /> rules.
+
+* Weekly/daily schedule: Drag and drop the configured <Cmd sid='tab.shift' product='2' className='normal' />. 
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-drag-shift.png' />
+
+  :::info
+
+  * To apply to all from Monday to Sunday, click <Cmd sid='scheduleTemplate.copyAll' product='2' />.
+
+  * To remove the applied <Cmd sid='tab.shift' product='2' className='normal' />, click the <IcTrash2 /> button.
+
+  * Applying the set <Cmd sid='tab.shift' product='2' className='normal' /> with <Cmd sid='shift.dayStartTimeExcessTime' product='2' /> cannot be set to have an excess time positioned more than 24 hours before the start time of the daily shift rules.
+
+  :::
+
+<NextStep>
+<NextItem to='tna-rule-shift-overtime'>
+
+This guides how to create flexible shift rules by additionally applying overtime rules to daily shift rules.
+
+</NextItem>
+</NextStep>

@@ -33,6 +33,10 @@ For more information on major tracking items, refer to [the following](#audit-tr
 
 ### Types of tracked actions {#method}
 
+Click <Cmd sid='auditTrail.method' product='2' /> option in the <Cmd sid='auditTrail.filter.title' product='2' /> section to categorize audit trails by the following action types.
+
+<Image src='/img/biostarx-settings-system-audit-trail-action-filter.png' />
+
 * <Cmd sid='audit.method.1' product='2' />: Create new item
 
 * <Cmd sid='audit.method.3' product='2' />: Modify existing item
@@ -42,6 +46,8 @@ For more information on major tracking items, refer to [the following](#audit-tr
 * <Cmd sid='audit.method.2' product='2' />: Execute system functions (login, device control, etc.)
 
 ### Classification by permission level {#permision}
+
+Audit trails can be categorized according to admin level. Click <Cmd sid='user.bioStarOperator' product='2' /> option in the <Cmd sid='auditTrail.filter.title' product='2' /> section to filter by the following permission levels.
 
 * <Cmd sid='audit.permission.1' product='2' />: Access all system functions
 
@@ -53,7 +59,11 @@ For more information on major tracking items, refer to [the following](#audit-tr
 
 * <Cmd sid='audit.permission.254' product='2' />: Attendance management functions
 
-* <Cmd sid='audit.permission.255' product='2' />: Restricted function access
+:::info
+
+<Cmd sid='audit.permission.253' product='2' /> and <Cmd sid='audit.permission.254' product='2' /> permission levels are available through additional options for **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::
 
 ## Period setting query
 
@@ -63,9 +73,13 @@ Set the period to check the audit trail history for a specific duration.
 
 Select <Cmd sid='auditTrail.filter.one_month' product='2' /> or <Cmd sid='auditTrail.filter.three_month' product='2' /> from the filter list on the left screen.
 
+<Image src='/img/biostarx-settings-system-audit-trail-defined-period.png' />
+
 ### Query with custom periods
 
 For detailed period settings, set the start date and end date in the <Cmd sid='auditTrail.filter.title' product='2' /> section under the <Cmd sid='common.datetime' product='2' /> option.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
 
 ## Filter settings
 
@@ -272,8 +286,6 @@ All activities recorded in the audit trail are organized by category. Click each
 * **Device Settings**: <Cmd sid='audit.setting.server.enrollment_device_list' product='2' />, <Cmd sid='audit.setting.server.fingerprint_format' product='2' />, <Cmd sid='audit.setting.server.support_mobile_credential' product='2' />, <Cmd sid='audit.setting.server.use_photo_log' product='2' />
 
 * **Licenses**: <Cmd sid='audit.setting.server.licenses' product='2' />
-
-* **Cloud settings**: <Cmd sid='audit.setting.cloud.use_cloud' product='2' />, <Cmd sid='audit.setting.cloud.server_address' product='2' />, <Cmd sid='audit.setting.cloud.sub_domain' product='2' />, <Cmd sid='audit.setting.cloud.email' product='2' />, <Cmd sid='audit.setting.cloud.http_port' product='2' />, <Cmd sid='audit.setting.cloud.version' product='2' />
 
 * **Default settings**: <Cmd sid='audit.setting.preference.language' product='2' />, <Cmd sid='audit.setting.preference.date_format' product='2' />, <Cmd sid='audit.setting.preference.time_format' product='2' />, <Cmd sid='audit.setting.preference.time_zone' product='2' />
 
