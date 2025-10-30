@@ -545,6 +545,12 @@
   "specs.general.certifications": {
     "message": "Certifications"
   },
+  "specs.general.supported_products": {
+    "message": "Supported products"
+  },
+  "specs.general.material": {
+    "message": "Material"
+  },
   "specs.storage": {
     "message": "Capacity"
   },
@@ -697,6 +703,36 @@
   },
   "specs.size_weight.bracket.weight_include": {
     "message": "(Including washers and bolts)"
+  },
+  "specs.power_supply": {
+    "message": "Power Supply"
+  },
+  "specs.power_supply.modelName": {
+    "message": "Model Name"
+  },
+  "specs.power_supply.vendor": {
+    "message": "Vendor"
+  },
+  "specs.power_supply.input": {
+    "message": "Input"
+  },
+  "specs.power_supply.output": {
+    "message": "Output"
+  },
+  "specs.backup_battery": {
+    "message": "Backup Battery"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "Model Name"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "Vendor"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "Voltage"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "Capacity"
   },
   "externalLinks.FaceStation2.desc": {
     "message": "IP Facial Authentication Terminal"

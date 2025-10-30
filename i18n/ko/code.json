@@ -545,6 +545,12 @@
   "specs.general.certifications": {
     "message": "인증"
   },
+  "specs.general.supported_products": {
+    "message": "지원 제품"
+  },
+  "specs.general.material": {
+    "message": "재질"
+  },
   "specs.storage": {
     "message": "저장 용량"
   },
@@ -697,6 +703,36 @@
   },
   "specs.size_weight.bracket.weight_include": {
     "message": "(와셔 및 볼트 포함)"
+  },
+  "specs.power_supply": {
+    "message": "전원 공급 장치"
+  },
+  "specs.power_supply.modelName": {
+    "message": "모델명"
+  },
+  "specs.power_supply.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.power_supply.input": {
+    "message": "Input"
+  },
+  "specs.power_supply.output": {
+    "message": "Output"
+  },
+  "specs.backup_battery": {
+    "message": "백업 배터리"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "모델명"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "전압"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "용량"
   },
   "externalLinks.FaceStation2.desc": {
     "message": "얼굴인증 출입근태 단말기"
