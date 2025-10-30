@@ -755,7 +755,6 @@ const sidebars = {
         'device/enclosure/getting-started',
         'device/enclosure/installation',
         'device/enclosure/product-specifications',
-        'device/enclosure/regulatory-information',
         'device/enclosure/appendices'
       ]
     }
