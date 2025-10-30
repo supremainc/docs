@@ -1037,7 +1037,7 @@ function Integration() {
 }
 function Home() {
     const { siteConfig } = (0,useDocusaurusContext/* ["default"] */.A)();
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Layout/* ["default"] */.A, {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Layout["default"], {
         title: `${siteConfig.title}`,
         description: `${siteConfig.tagline}`,
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("main", {

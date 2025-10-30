@@ -26,7 +26,7 @@ __webpack_require__.d(__webpack_exports__, {
 function DocsRoot(props) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_3__/* .HtmlClassNameProvider */.e3, {
         className: (0,clsx__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */.A)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_5__/* .ThemeClassNames.wrapper.docsPages */.G.wrapper.docsPages),
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_Layout__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */.A, {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
             children: (0,_docusaurus_renderRoutes__WEBPACK_IMPORTED_MODULE_6__/* .renderRoutes */.v)(props.route.routes)
         })
     });

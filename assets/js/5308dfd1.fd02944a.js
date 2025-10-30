@@ -50,7 +50,7 @@ function Backcover() {
     const qrtext = `${(0,Translate/* .translate */.T)({
         id: "theme.cover.qrCodetext"
     })}`;
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Layout/* ["default"] */.A, {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Layout["default"], {
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsxs)(Head/* ["default"] */.A, {
                 children: [
