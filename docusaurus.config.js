@@ -307,6 +307,16 @@ const config = {
                 type: 'doc',
                 label: 'Secure Module',
                 docId: 'device/securemodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Extended Module',
+                docId: 'device/extendedmodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Extended Module-SC',
+                docId: 'device/extendedmodule_sc/index'
               }
             ]
           },

@@ -332,7 +332,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     },
     {
       title: 'Extended Module',
-      url: '#',
+      url: '/device/extendedmodule',
       img: '/img/device/extended-module.png',
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
@@ -341,7 +341,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     },
     {
       title: 'Extended Module-SC',
-      url: '#',
+      url: '/device/extendedmodule_sc',
       img: '/img/device/extended-module-sc.png',
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",

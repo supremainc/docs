@@ -864,6 +864,48 @@ const sidebars = {
       ]
     }
   ],
+  extendedmodule: [
+    {
+      type: 'category',
+      label: 'Extended Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule/index',
+      },
+      items: [
+        'device/extendedmodule/safety-instructions',
+        'device/extendedmodule/getting-started',
+        'device/extendedmodule/installation',
+        'device/extendedmodule/product-specifications',
+        'device/extendedmodule/regulatory-information',
+        'device/extendedmodule/appendices'
+      ]
+    }
+  ],
+  extendedmodule_sc: [
+    {
+      type: 'category',
+      label: 'Extended Module-SC',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule_sc/index',
+      },
+      items: [
+        'device/extendedmodule_sc/safety-instructions',
+        'device/extendedmodule_sc/getting-started',
+        'device/extendedmodule_sc/installation',
+        'device/extendedmodule_sc/product-specifications',
+        'device/extendedmodule_sc/regulatory-information',
+        'device/extendedmodule_sc/appendices'
+      ]
+    }
+  ],
   facestationf2: [
     {
       type: 'category',
