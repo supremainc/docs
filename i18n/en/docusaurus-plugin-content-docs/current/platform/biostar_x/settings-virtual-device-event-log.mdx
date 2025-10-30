@@ -103,9 +103,9 @@ For more information on device groups, refer to [the following](settings-manage-
 
 Only the following event types can be recorded.
 
-* **Access granted**
+* **Access granted** (`4088`)
 
-* **Access Denied**
+* **Access Denied** (`6400`)
 
 ### API parameters
 
@@ -113,11 +113,44 @@ You must provide the following parameters when logging events.
 
 | Parameter  | Description                                       | Required |
 | ---------- | ------------------------------------------------- | -------- |
-| Event Type | Access Granted or Access Denied                   | Yes      |
-| Datetime   | Event occurrence time                             | Yes      |
-| Device ID  | Only registered virtual device IDs are allowed    | Yes      |
-| User ID    | User ID                                           | Yes      |
-| T&A key    | Only available for input with the specified value | Option   |
+| `dev_id`   | Only registered virtual device IDs are allowed    | Yes      |
+| `evt`      | Access Granted or Access Denied                   | Yes      |
+| `datetime` | Event occurrence time                             | Yes      |
+| `user_id`  | User ID                                           | Yes      |
+| `tna_key`  | Only available for input with the specified value | Option   |
+
+```json title='Request example'
+{
+    "packet_device_id" : 100003, // required
+    "is_virtual_device" : "true", // required
+    "events":[ //4088 access granted, 6400 access denied
+        {
+            "dev_id": 100003, // required
+            "evt": 6400, // required
+            "datetime": "2025-08-21T14:12:00Z", // required
+            "user_id": "2", // required
+            "tna_key": "1"
+        },
+        {
+            "dev_id": 100003,
+            "evt": 6400,
+            "datetime": "2025-08-21T14:13:01Z",
+            "user_id": "2",
+            "tna_key": "1"
+        }
+    ]
+}
+```
+
+```json title='Response example'
+{
+    "Response": {
+        "code": "0",
+        "link": "https://support.supremainc.com/en/support/home",
+        "message": "Success"
+    }
+}
+```
 
 :::info
 
