@@ -77,14 +77,6 @@ const toc = [{
   "id": "10-remote-access-feature-agreement",
   "level": 2
 }, {
-  "value": "Disclaimer of Warranties",
-  "id": "disclaimer-of-warranties",
-  "level": 3
-}, {
-  "value": "Limitation of Liability",
-  "id": "limitation-of-liability",
-  "level": 3
-}, {
   "value": "11. Refund Policy.",
   "id": "11-refund-policy",
   "level": 2
@@ -117,10 +109,15 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     h2: "h2",
-    h3: "h3",
     li: "li",
     p: "p",
     strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
@@ -204,50 +201,53 @@ function _createMdxContent(props) {
       children: "By using this feature, the user acknowledges and agrees to the risks associated with the use of this third-party service."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "This includes, within the scope set forth under the Disclaimer of Warranties and Limitation of Liability provisions of ngrok’s Terms of Service, that the liability of Suprema Inc. shall be limited to the same extent as that of ngrok. The user acknowledges and agrees to the applicability of such limitations of liability."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "disclaimer-of-warranties",
-      children: "Disclaimer of Warranties"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK AND THAT THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE.\""
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "NOTHING IN THESE TERMS SHALL EXCLUDE OR LIMIT NGROK's WARRANTY OR LIABILITY FOR LOSSES WHICH MAY NOT BE LAWFULLY EXCLUDED OR LIMITED BY APPLICABLE LAW."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "NGROK MAKES NO EXPRESS WARRANTIES AND DISCLAIMS ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE SERVICES, INCLUDING EXPRESS AND IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, NGROK DOES NOT REPRESENT OR WARRANT TO YOU THAT:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(A) YOUR USE OF THE SERVICES WILL MEET YOUR REQUIREMENTS, OR"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(B) YOUR USE OF THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR FREE FROM ERROR."
-        }), "\n"]
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://ngrok.com/tos",
+          children: "Full text of ngrok terms of service"
+        })
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "limitation-of-liability",
-      children: "Limitation of Liability"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "YOU EXPRESSLY UNDERSTAND AND AGREE THAT TO THE EXTENT PERMITTED BY APPLICABLE LAW, NGROK SHALL NOT BE LIABLE TO YOU UNDER BREACH OF CONTRACT, TORT, OR ANY OTHER LEGAL THEORY"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(A) FOR ERRORS IN THE NGROK SERVICES OR MATERIALS, LOSS OR INACCURACY OR CORRUPTION OF DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, OR LOSS OF PROFITS OR BUSINESS;"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(B) FOR ANY INDIRECT, EXEMPLARY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, WHETHER OR NOT NGROK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES;"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(C) FOR ANY MATTER BEYOND NGROK'S REASONABLE CONTROL; OR"
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "(D) FOR ANY AMOUNTS THAT, IN THE AGGREGATE, EXCEED THE GREATER OF (I) $100 OR (II) THE AMOUNT PAID OR PAYABLE BY YOU TO NGROK FOR THE NGROK SERVICES IN THE SIX (6) MONTHS PRIOR TO THE ACT THAT GAVE RISE TO THE LIABILITY."
-        }), "\n"]
-      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsx)(_components.tr, {
+          children: (0,jsx_runtime.jsx)(_components.th, {
+            style: {
+              textAlign: "left"
+            },
+            children: "Disclaimer of Warranties"
+          })
+        })
+      }), (0,jsx_runtime.jsx)(_components.tbody, {
+        children: (0,jsx_runtime.jsx)(_components.tr, {
+          children: (0,jsx_runtime.jsxs)(_components.td, {
+            style: {
+              textAlign: "left"
+            },
+            children: ["YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK AND THAT THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE.\"", (0,jsx_runtime.jsx)("br", {}), "NOTHING IN THESE TERMS SHALL EXCLUDE OR LIMIT NGROK's WARRANTY OR LIABILITY FOR LOSSES WHICH MAY NOT BE LAWFULLY EXCLUDED OR LIMITED BY APPLICABLE LAW.", (0,jsx_runtime.jsx)("br", {}), "NGROK MAKES NO EXPRESS WARRANTIES AND DISCLAIMS ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE SERVICES, INCLUDING EXPRESS AND IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.", (0,jsx_runtime.jsx)("br", {}), "WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, NGROK DOES NOT REPRESENT OR WARRANT TO YOU THAT:", (0,jsx_runtime.jsx)("br", {}), "(A) YOUR USE OF THE SERVICES WILL MEET YOUR REQUIREMENTS, OR", (0,jsx_runtime.jsx)("br", {}), "(B) YOUR USE OF THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR FREE FROM ERROR."]
+          })
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsx)(_components.tr, {
+          children: (0,jsx_runtime.jsx)(_components.th, {
+            style: {
+              textAlign: "left"
+            },
+            children: "Limitation of Liability"
+          })
+        })
+      }), (0,jsx_runtime.jsx)(_components.tbody, {
+        children: (0,jsx_runtime.jsx)(_components.tr, {
+          children: (0,jsx_runtime.jsxs)(_components.td, {
+            style: {
+              textAlign: "left"
+            },
+            children: ["YOU EXPRESSLY UNDERSTAND AND AGREE THAT TO THE EXTENT PERMITTED BY APPLICABLE LAW, NGROK SHALL NOT BE LIABLE TO YOU UNDER BREACH OF CONTRACT, TORT, OR ANY OTHER LEGAL THEORY", (0,jsx_runtime.jsx)("br", {}), "(A) FOR ERRORS IN THE NGROK SERVICES OR MATERIALS, LOSS OR INACCURACY OR CORRUPTION OF DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, OR LOSS OF PROFITS OR BUSINESS;", (0,jsx_runtime.jsx)("br", {}), "(B) FOR ANY INDIRECT, EXEMPLARY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, WHETHER OR NOT NGROK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES;", (0,jsx_runtime.jsx)("br", {}), "(C) FOR ANY MATTER BEYOND NGROK'S REASONABLE CONTROL; OR", (0,jsx_runtime.jsx)("br", {}), "(D) FOR ANY AMOUNTS THAT, IN THE AGGREGATE, EXCEED THE GREATER OF (I) $100 OR (II) THE AMOUNT PAID OR PAYABLE BY YOU TO NGROK FOR THE NGROK SERVICES IN THE SIX (6) MONTHS PRIOR TO THE ACT THAT GAVE RISE TO THE LIABILITY."]
+          })
+        })
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "11-refund-policy",
       children: "11. Refund Policy."
