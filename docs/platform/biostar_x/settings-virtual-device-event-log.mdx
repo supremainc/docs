@@ -105,9 +105,9 @@ keywords: [가상 장치, 이벤트 로그, API, 연동]
 
 다음 이벤트 유형만 기록할 수 있습니다.
 
-* **출입 허용** (Access granted)
+* **출입 허용** (Access granted: `4088`)
 
-* **출입 거부** (Access denied)
+* **출입 거부** (Access denied: `6400`)
 
 ### API Parameters
 
@@ -115,11 +115,44 @@ keywords: [가상 장치, 이벤트 로그, API, 연동]
 
 | 파라미터 | 설명 | 필수 여부 |
 |---------|------|----------|
-| Event Type | Access Granted 또는 Access Denied | 필수 |
-| Datetime | 이벤트 발생 시간 | 필수 |
-| Device ID | 등록된 가상 장치 ID만 허용 | 필수 |
-| User ID | 사용자 ID | 필수 |
-| T&A Key | 지정된 값으로만 입력 가능 | 선택 |
+| `dev_id` | 등록된 가상 장치 ID만 허용 | 필수 |
+| `evt` | Access Granted 또는 Access Denied | 필수 |
+| `datetime` | 이벤트 발생 시간 | 필수 |
+| `user_id` | 사용자 ID | 필수 |
+| `tna_key` | 지정된 값으로만 입력 가능 | 선택 |
+
+```json title='Request example'
+{
+    "packet_device_id" : 100003, // required
+    "is_virtual_device" : "true", // required
+    "events":[ //4088 access granted, 6400 access denied
+        {
+            "dev_id": 100003, // required
+            "evt": 6400, // required
+            "datetime": "2025-08-21T14:12:00Z", // required
+            "user_id": "2", // required
+            "tna_key": "1"
+        },
+        {
+            "dev_id": 100003,
+            "evt": 6400,
+            "datetime": "2025-08-21T14:13:01Z",
+            "user_id": "2",
+            "tna_key": "1"
+        }
+    ]
+}
+```
+
+```json title='Response example'
+{
+    "Response": {
+        "code": "0",
+        "link": "https://support.supremainc.com/en/support/home",
+        "message": "Success"
+    }
+}
+```
 
 :::info
 
