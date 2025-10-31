@@ -182,6 +182,14 @@ const toc = [{
   "id": "start-before",
   "level": 2
 }, {
+  "value": "Minimum requirements",
+  "id": "minimum-requirements",
+  "level": 3
+}, {
+  "value": "License",
+  "id": "license",
+  "level": 3
+}, {
   "value": "Upgrade installation guide",
   "id": "upgrade-install",
   "level": 2
@@ -191,6 +199,8 @@ function _createMdxContent(props) {
     a: "a",
     em: "em",
     h2: "h2",
+    h3: "h3",
+    hr: "hr",
     li: "li",
     ol: "ol",
     p: "p",
@@ -210,73 +220,86 @@ function _createMdxContent(props) {
       id: "start-before",
       children: "Before starting"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Before upgrading from BioStar 2 to ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["Check the following before upgrading from ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar 2"
+      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ", ensure the following:"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["You must contact your dealer to prepare at least one BioStar X license before upgrading to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If you are in an environment of BioStar 2 v2.9.11 or higher, you can upgrade to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["If you are using a version of BioStar 2 lower than v2.6.4, you must upgrade sequentially up to v2.9.11 before upgrading. For instructions on upgrading BioStar 2 step-by-step, refer to the ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar 2 Admin Guide"
-              }), "."]
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsxs)("div", {
+      className: "announcement",
+      children: [(0,jsx_runtime.jsx)(_components.h3, {
+        id: "minimum-requirements",
+        children: "Minimum requirements"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If you are in an environment of BioStar 2 v2.9.11 or higher, you can upgrade to ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["If you are using a version of BioStar 2 lower than v2.6.4, you must upgrade sequentially up to v2.9.11 before upgrading. For instructions on upgrading BioStar 2 step-by-step, refer to the ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "BioStar 2 Admin Guide"
+                }), "."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "You cannot upgrade on versions of BioStar 2 below v2.9.10."
+              }), "\n"]
             }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "You cannot upgrade on versions of BioStar 2 below v2.9.10."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If the following devices are connected to BioStar 2, the upgrade to ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " is not supported."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+              children: "XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net"
             }), "\n"]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["A different licensing policy applies when upgrading to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " compared to BioStar 2."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If the following devices are connected to BioStar 2, the upgrade to ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " is not supported."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net"
+      }), (0,jsx_runtime.jsx)(_components.hr, {}), (0,jsx_runtime.jsx)(_components.h3, {
+        id: "license",
+        children: "License"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["You must contact your dealer to prepare at least one BioStar X license before upgrading to ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["A different licensing policy applies when upgrading to ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " compared to BioStar 2."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "If you upgrade while having an Advanced or higher grade license of BioStar 2 AC license activated, the following service features and settings will be deleted."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Graphic Map"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Cloud"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["To use the BioStar 2 T&A service on ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), ", you must purchase the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X T&A"
+            }), " license separately."]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "If you upgrade while having an Advanced or higher grade license of BioStar 2 AC license activated, the following service features and settings will be deleted."
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Graphic Map"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Cloud"
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To use the BioStar 2 T&A service on ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), ", you must purchase the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X T&A"
-          }), " license separately."]
-        }), "\n"]
-      }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "upgrade-install",
       children: "Upgrade installation guide"

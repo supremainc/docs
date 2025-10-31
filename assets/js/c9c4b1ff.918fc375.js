@@ -182,6 +182,14 @@ const toc = [{
   "id": "start-before",
   "level": 2
 }, {
+  "value": "최소 요구 사항",
+  "id": "최소-요구-사항",
+  "level": 3
+}, {
+  "value": "라이선스",
+  "id": "라이선스",
+  "level": 3
+}, {
   "value": "업그레이드 설치 안내",
   "id": "upgrade-install",
   "level": 2
@@ -191,6 +199,8 @@ function _createMdxContent(props) {
     a: "a",
     em: "em",
     h2: "h2",
+    h3: "h3",
+    hr: "hr",
     li: "li",
     ol: "ol",
     p: "p",
@@ -212,71 +222,82 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["BioStar 2에서 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "로 업그레이드하기 전에 다음 사항을 확인하세요:"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "로 업그레이드하기 전에 대리점에 문의하여 최소 하나의 BioStar X 라이선스를 준비해야 합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar 2 v2.9.11 이상의 환경이라면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "로 업그레이드할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["BioStar 2 v2.6.4 이하 버전을 사용하고 있다면 v2.9.11까지 순차 업그레이드를 진행한 후 업그레이드할 수 있습니다. BioStar 2를 단계별로 업그레이드하는 방법은 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar 2 관리자 가이드"
-              }), "를 참고하세요."]
+      }), "로 업그레이드하기 전에 다음 사항을 확인하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)("div", {
+      className: "announcement",
+      children: [(0,jsx_runtime.jsx)(_components.h3, {
+        id: "최소-요구-사항",
+        children: "최소 요구 사항"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["BioStar 2 v2.9.11 이상의 환경이라면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "로 업그레이드할 수 있습니다."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["BioStar 2 v2.6.4 이하 버전을 사용하고 있다면 v2.9.11까지 순차 업그레이드를 진행한 후 업그레이드할 수 있습니다. BioStar 2를 단계별로 업그레이드하는 방법은 ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "BioStar 2 관리자 가이드"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "BioStar 2 v2.9.10 이하 버전에서는 업그레이드할 수 없습니다."
+              }), "\n"]
             }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "BioStar 2 v2.9.10 이하 버전에서는 업그레이드할 수 없습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["BioStar 2에 아래 장치가 연결되어 있다면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 업그레이드를 지원하지 않습니다."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+              children: "XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net"
             }), "\n"]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "로 업그레이드할 때 BioStar 2와는 다른 라이선스 정책이 적용됩니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar 2에 아래 장치가 연결되어 있다면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " 업그레이드를 지원하지 않습니다."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net"
+      }), (0,jsx_runtime.jsx)(_components.hr, {}), (0,jsx_runtime.jsx)(_components.h3, {
+        id: "라이선스",
+        children: "라이선스"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "로 업그레이드하기 전에 대리점에 문의하여 최소 하나의 BioStar X 라이선스를 준비해야 합니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "로 업그레이드할 때 BioStar 2와는 다른 라이선스 정책이 적용됩니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "BioStar 2 AC 라이선스 중 어드밴스(Advanced) 등급 이상의 라이선스가 활성화되어 있는 상태에서 업그레이드한다면 아래 서비스 기능 및 설정은 삭제됩니다."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "그래픽 맵(Graphic Map)"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "클라우드(Cloud)"
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["BioStar 2 T&A 서비스를 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "에서도 사용하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X T&A"
+            }), " 라이선스를 별도 구매해야 합니다."]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar 2 AC 라이선스 중 어드밴스(Advanced) 등급 이상의 라이선스가 활성화되어 있는 상태에서 업그레이드한다면 아래 서비스 기능 및 설정은 삭제됩니다."
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "그래픽 맵(Graphic Map)"
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "클라우드(Cloud)"
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar 2 T&A 서비스를 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), "에서도 사용하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X T&A"
-          }), " 라이선스를 별도 구매해야 합니다."]
-        }), "\n"]
-      }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "upgrade-install",
       children: "업그레이드 설치 안내"
