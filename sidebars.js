@@ -654,6 +654,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Release Notes',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x/release-notes'
+      },
       items: [
         'platform/biostar_x/release-notes/100'
       ]
