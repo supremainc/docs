@@ -122,12 +122,18 @@ jobs:
         echo "PDF_NAME_EN=${PDF_NAME_EN}" >> $GITHUB_ENV
         echo "FINAL_PDF_NAME_KO=${FINAL_PDF_NAME_KO}" >> $GITHUB_ENV
         echo "FINAL_PDF_NAME_EN=${FINAL_PDF_NAME_EN}" >> $GITHUB_ENV
+        echo "RN_NAME_KO=${RN_NAME_KO}" >> $GITHUB_ENV
+        echo "RN_NAME_EN=${RN_NAME_EN}" >> $GITHUB_ENV
+        echo "FINAL_RN_NAME_KO=${FINAL_RN_NAME_KO}" >> $GITHUB_ENV
+        echo "FINAL_RN_NAME_EN=${FINAL_RN_NAME_EN}" >> $GITHUB_ENV
         
         echo "✅ 환경변수 설정 완료:"
         echo "  🏷️ 태그명: ${RELEASE_NAME}"
         echo "  📝 릴리스 제목: ${RELEASE_TITLE}"
         echo "  📄 한국어 PDF: ${FINAL_PDF_NAME_KO}"
         echo "  📄 영어 PDF: ${FINAL_PDF_NAME_EN}"
+        echo "  📄 한국어 RN: ${FINAL_RN_NAME_KO}"
+        echo "  📄 영어 RN: ${FINAL_RN_NAME_EN}"
 
     - name: Create PDF output directory
       run: mkdir -p ./pdf
@@ -284,12 +290,9 @@ jobs:
 
         # 뷰어 설정 적용
         echo "⚙️ 한국어 릴리스 노트 PDF 뷰어 설정 적용..."
-        pdfcpu pagemode set "./pdf/${RN_NAME_KO}" UseOutlines
-        pdfcpu pagelayout set "./pdf/${RN_NAME_KO}" SinglePage
-        pdfcpu viewerpref set "./pdf/${RN_NAME_KO}" '{"FitWindow": true, "CenterWindow": true}'
-        
-        # 최종 파일명으로 변경
-        mv "./pdf/${RN_NAME_KO}" "./pdf/${FINAL_RN_NAME_KO}"
+        pdfcpu pagemode set "./pdf/${FINAL_RN_NAME_KO}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${FINAL_RN_NAME_KO}" SinglePage
+        pdfcpu viewerpref set "./pdf/${FINAL_RN_NAME_KO}" '{"FitWindow": true, "CenterWindow": true}'
         
         echo "✅ 한국어 릴리스 노트 PDF 처리 완료"
 
@@ -336,12 +339,9 @@ jobs:
 
         # 뷰어 설정 적용
         echo "⚙️ 영어 릴리스 노트 PDF 뷰어 설정 적용..."
-        pdfcpu pagemode set "./pdf/${RN_NAME_EN}" UseOutlines
-        pdfcpu pagelayout set "./pdf/${RN_NAME_EN}" SinglePage
-        pdfcpu viewerpref set "./pdf/${RN_NAME_EN}" '{"FitWindow": true, "CenterWindow": true}'
-
-        # 최종 파일명으로 변경
-        mv "./pdf/${RN_NAME_EN}" "./pdf/${FINAL_RN_NAME_EN}"
+        pdfcpu pagemode set "./pdf/${FINAL_RN_NAME_EN}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${FINAL_RN_NAME_EN}" SinglePage
+        pdfcpu viewerpref set "./pdf/${FINAL_RN_NAME_EN}" '{"FitWindow": true, "CenterWindow": true}'
 
         echo "✅ 영어 릴리스 노트 PDF 처리 완료"
 
@@ -349,7 +349,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "🗑️ 기존 릴리스 및 태그 정리 중: ${RELEASE_NAME}"
+        echo "� GitHub CLI 인증 확인..."
+        gh auth status
+        
+        echo "�🗑️ 기존 릴리스 및 태그 정리 중: ${RELEASE_NAME}"
         
         # 기존 릴리스 삭제 시도 (최대 3회 재시도)
         for i in {1..3}; do
@@ -378,14 +381,21 @@ jobs:
         echo "🆕 새로운 릴리스 생성 및 PDF 업로드 중..."
         
         # PDF 파일 존재 및 크기 확인
-        for PDF_FILE in "${FINAL_PDF_NAME_KO}" "${FINAL_PDF_NAME_EN}" "${FINAL_RN_NAME_KO}" "${FINAL_RN_NAME_EN}"; do
+        echo "📋 생성된 PDF 파일 확인 중..."
+        PDF_FILES=("${FINAL_PDF_NAME_KO}" "${FINAL_PDF_NAME_EN}" "${FINAL_RN_NAME_KO}" "${FINAL_RN_NAME_EN}")
+        
+        for PDF_FILE in "${PDF_FILES[@]}"; do
           if [ ! -f "./pdf/${PDF_FILE}" ]; then
             echo "❌ 오류: PDF 파일을 찾을 수 없습니다: ${PDF_FILE}"
+            echo "📁 현재 pdf 디렉토리 내용:"
+            ls -la ./pdf/
             exit 1
           fi
           FILE_SIZE=$(ls -lh "./pdf/${PDF_FILE}" | awk '{print $5}')
-          echo "📊 ${PDF_FILE} 크기: ${FILE_SIZE}"
+          echo "📊 ${PDF_FILE} - 크기: ${FILE_SIZE}"
         done
+        
+        echo "✅ 모든 PDF 파일 확인 완료"
         
         # Release Notes
         cat > release_notes.md << EOF
