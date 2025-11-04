@@ -320,6 +320,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'Device Manager',
+                docId: 'device/device_manager/index'
+              },
+              {
+                type: 'doc',
                 label: 'CoreStation Setup Manager',
                 docId: 'device/corestation_setup_manager/index'
               }

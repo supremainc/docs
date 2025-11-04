@@ -365,7 +365,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
   const defaultExternalLinks = [
     {
       title: 'Device Manager',
-      url: `#`,
+      url: '/device/device_manager',
       Svg: require('/img/device/device-manager.svg').default,
       height: '45px',
       desc: `${translate({
