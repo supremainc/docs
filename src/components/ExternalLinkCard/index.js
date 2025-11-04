@@ -375,7 +375,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
     },
     {
       title: 'CoreStation Setup Manager',
-      url: `#`,
+      url: '/device/corestation_setup_manager',
       Svg: require('/img/device/cs-setup-manager.svg').default,
       height: '45px',
       desc: `${translate({

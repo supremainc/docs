@@ -1273,6 +1273,25 @@ const sidebars = {
       ]
     }
   ],
+  corestation_setup_manager: [
+    {
+      type: 'category',
+      label: 'CoreStation Setup Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_setup_manager/index',
+      },
+      items: [
+        'device/corestation_setup_manager/getting-started',
+        'device/corestation_setup_manager/installation',
+        'device/corestation_setup_manager/settings',
+        'device/corestation_setup_manager/appendices',
+      ],
+    },
+  ]
 };
 
 export default sidebars;

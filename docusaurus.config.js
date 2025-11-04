@@ -317,6 +317,11 @@ const config = {
                 type: 'doc',
                 label: 'Extended Module-SC',
                 docId: 'device/extendedmodule_sc/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation Setup Manager',
+                docId: 'device/corestation_setup_manager/index'
               }
             ]
           },
