@@ -25,6 +25,9 @@ env:
   DOC_TYPE: "Administrator Guide"
   BASE_URL_KO: "https://docs.supremainc.com/platform/biostar_x"
   BASE_URL_EN: "https://docs.supremainc.com/en/platform/biostar_x"
+  RN_TYPE: "Release Notes"
+  RN_URL_KO: "https://docs.supremainc.com/platform/biostar_x/release-notes"
+  RN_URL_EN: "https://docs.supremainc.com/en/platform/biostar_x/release-notes"
 
 jobs:
   generate-pdf:
@@ -100,10 +103,15 @@ jobs:
         RELEASE_TITLE="BioStar X Administrator Guide v${{ github.event.inputs.version }}"
         
         # PDF 파일명 설정 (한국어/영어)
-        PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}.pdf"
-        PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}.pdf"
-        FINAL_PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}_Final.pdf"
-        FINAL_PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}_Final.pdf"
+        PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}_temp.pdf"
+        PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}_temp.pdf"
+        FINAL_PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}.pdf"
+        FINAL_PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}.pdf"
+        RN_NAME_KO="${PRODUCT_SAFE}_Release_Notes_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}_temp.pdf"
+        RN_NAME_EN="${PRODUCT_SAFE}_Release_Notes_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}_temp.pdf"
+        FINAL_RN_NAME_KO="${PRODUCT_SAFE}_Release_Notes_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}.pdf"
+        FINAL_RN_NAME_EN="${PRODUCT_SAFE}_Release_Notes_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}.pdf"
+
         
         # 환경변수로 저장
         echo "PRODUCT_SAFE=${PRODUCT_SAFE}" >> $GITHUB_ENV
@@ -151,7 +159,33 @@ jobs:
           --include-index
         
         echo "✅ 한국어 PDF 생성 완료"
+    
+    - name: Generate Korean Release Notes PDFs
+      run: |
+        echo "📄 한국어 릴리스 노트 PDF 생성 시작..."
 
+        # 한국어 프론트 커버 생성
+        echo "📄 한국어 프론트 커버 생성 중..."
+        node generate-cover-local.js \
+          --title="${PRODUCT_NAME}" \
+          --subtitle="${RN_TYPE}" \
+          --version="${{ github.event.inputs.version }}" \
+          --lang="한국어" \
+          --number="${{ github.event.inputs.document_number }}" \
+          --output="./pdf/front-rn-cover-ko.html"
+        
+        # 프론트 커버 HTML을 PDF로 변환
+        prince "./pdf/front-rn-cover-ko.html" -o "./pdf/front-rn-cover-ko.pdf"
+
+        # 한국어 릴리스 노트 PDF 생성
+        node generatepdf \
+          -u "${RN_URL_KO}" \
+          --prince-args="--page-size='a4' --style=./print.css --javascript" \
+          -o "./pdf/${RN_NAME_KO}" \
+          --dest ./pdf \
+          --include-index
+        
+        echo "✅ 한국어 릴리스 노트 PDF 생성 완료"
     - name: Generate English PDFs
       run: |
         echo "📄 영어 PDF 생성 시작..."
@@ -179,7 +213,33 @@ jobs:
           --include-index
         
         echo "✅ 영어 PDF 생성 완료"
+    
+    - name: Generate English Release Notes PDFs
+      run: |
+        echo "📄 영어 릴리스 노트 PDF 생성 시작..."
 
+        # 영어 프론트 커버 생성
+        echo "📄 영어 프론트 커버 생성 중..."
+        node generate-cover-local.js \
+          --title="${PRODUCT_NAME}" \
+          --subtitle="${RN_TYPE}" \
+          --version="${{ github.event.inputs.version }}" \
+          --lang="English" \
+          --number="${{ github.event.inputs.document_number }}" \
+          --output="./pdf/front-rn-cover-en.html"
+        
+        # 프론트 커버 HTML을 PDF로 변환
+        prince "./pdf/front-rn-cover-en.html" -o "./pdf/front-rn-cover-en.pdf"
+
+        # 영어 릴리스 노트 PDF 생성
+        node generatepdf \
+          -u "${RN_URL_EN}" \
+          --prince-args="--page-size='a4' --style=./print.css --javascript" \
+          -o "./pdf/${RN_NAME_EN}" \
+          --dest ./pdf \
+          --include-index
+        
+        echo "✅ 영어 릴리스 노트 PDF 생성 완료"
     - name: Process Korean PDFs
       run: |
         echo "🔧 한국어 PDF 처리 중..."
@@ -206,6 +266,33 @@ jobs:
         
         echo "✅ 한국어 PDF 처리 완료"
 
+    - name: Process Korean Release Notes PDFs
+      run: |
+        echo "🔧 한국어 릴리스 노트 PDF 처리 중..."
+        
+        # 주석 제거
+        if [ -f "./pdf/${RN_NAME_KO}" ]; then
+          pdfcpu annot remove -pages 1 "./pdf/${RN_NAME_KO}"
+        else
+          echo "❌ 오류: 한국어 릴리스 노트 PDF 파일을 찾을 수 없습니다"
+          exit 1
+        fi
+
+        # PDF 병합
+        echo "📎 한국어 릴리스 노트 PDF 병합 중..."
+        pdftk "./pdf/front-rn-cover-ko.pdf" "./pdf/${RN_NAME_KO}" "back-cover.pdf" cat output "./pdf/${FINAL_RN_NAME_KO}"
+
+        # 뷰어 설정 적용
+        echo "⚙️ 한국어 릴리스 노트 PDF 뷰어 설정 적용..."
+        pdfcpu pagemode set "./pdf/${RN_NAME_KO}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${RN_NAME_KO}" SinglePage
+        pdfcpu viewerpref set "./pdf/${RN_NAME_KO}" '{"FitWindow": true, "CenterWindow": true}'
+        
+        # 최종 파일명으로 변경
+        mv "./pdf/${RN_NAME_KO}" "./pdf/${FINAL_RN_NAME_KO}"
+        
+        echo "✅ 한국어 릴리스 노트 PDF 처리 완료"
+
     - name: Process English PDFs
       run: |
         echo "🔧 영어 PDF 처리 중..."
@@ -231,6 +318,32 @@ jobs:
         pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME_EN}" '{"FitWindow": true, "CenterWindow": true}'
         
         echo "✅ 영어 PDF 처리 완료"
+
+    - name: Process English Release Notes PDFs
+      run: |
+        echo "🔧 영어 릴리스 노트 PDF 처리 중..."
+        # 주석 제거
+        if [ -f "./pdf/${RN_NAME_EN}" ]; then
+          pdfcpu annot remove -pages 1 "./pdf/${RN_NAME_EN}"
+        else
+          echo "❌ 오류: 영어 릴리스 노트 PDF 파일을 찾을 수 없습니다"
+          exit 1
+        fi
+
+        # PDF 병합
+        echo "📎 영어 릴리스 노트 PDF 병합 중..."
+        pdftk "./pdf/front-rn-cover-en.pdf" "./pdf/${RN_NAME_EN}" "back-cover-en.pdf" cat output "./pdf/${FINAL_RN_NAME_EN}"
+
+        # 뷰어 설정 적용
+        echo "⚙️ 영어 릴리스 노트 PDF 뷰어 설정 적용..."
+        pdfcpu pagemode set "./pdf/${RN_NAME_EN}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${RN_NAME_EN}" SinglePage
+        pdfcpu viewerpref set "./pdf/${RN_NAME_EN}" '{"FitWindow": true, "CenterWindow": true}'
+
+        # 최종 파일명으로 변경
+        mv "./pdf/${RN_NAME_EN}" "./pdf/${FINAL_RN_NAME_EN}"
+
+        echo "✅ 영어 릴리스 노트 PDF 처리 완료"
 
     - name: Check and prepare release
       env:
@@ -265,7 +378,7 @@ jobs:
         echo "🆕 새로운 릴리스 생성 및 PDF 업로드 중..."
         
         # PDF 파일 존재 및 크기 확인
-        for PDF_FILE in "${FINAL_PDF_NAME_KO}" "${FINAL_PDF_NAME_EN}"; do
+        for PDF_FILE in "${FINAL_PDF_NAME_KO}" "${FINAL_PDF_NAME_EN}" "${FINAL_RN_NAME_KO}" "${FINAL_RN_NAME_EN}"; do
           if [ ! -f "./pdf/${PDF_FILE}" ]; then
             echo "❌ 오류: PDF 파일을 찾을 수 없습니다: ${PDF_FILE}"
             exit 1
@@ -276,7 +389,7 @@ jobs:
         
         # Release Notes
         cat > release_notes.md << EOF
-        # BioStar X Administrator Guide
+        # BioStar X Administrator Guide & Release Notes v${{ github.event.inputs.version }}
 
         **Version:** ${{ github.event.inputs.version }}
         **Document number:** ${{ github.event.inputs.document_number }}
@@ -284,8 +397,12 @@ jobs:
         **Create date:** $(date '+%Y-%m-%d %H:%M:%S UTC')
 
         ## 📥 Downloads
-        - 한국어: [${FINAL_PDF_NAME_KO}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_KO})
-        - English: [${FINAL_PDF_NAME_EN}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_EN})
+        - 한국어: 
+          - [${FINAL_PDF_NAME_KO}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_KO})
+          - [${FINAL_RN_NAME_KO}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_RN_NAME_KO})
+        - English: 
+          - [${FINAL_PDF_NAME_EN}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_EN})
+          - [${FINAL_RN_NAME_EN}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_RN_NAME_EN})
 
         ## 📄 Source URLs
         - 한국어: ${BASE_URL_KO}
@@ -301,7 +418,9 @@ jobs:
             --title "${RELEASE_TITLE}" \
             --notes-file release_notes.md \
             "./pdf/${FINAL_PDF_NAME_KO}" \
-            "./pdf/${FINAL_PDF_NAME_EN}"; then
+            "./pdf/${FINAL_PDF_NAME_EN}" \
+            "./pdf/${FINAL_RN_NAME_KO}" \
+            "./pdf/${FINAL_RN_NAME_EN}" \; then
             echo "✅ 릴리스 생성 및 PDF 업로드 완료 (시도 $i/3)"
             break
           else
@@ -326,4 +445,6 @@ jobs:
         echo "📝 릴리스 제목: ${RELEASE_TITLE}"
         echo "🏷️ 태그명: ${RELEASE_NAME}"
         echo "📄 한국어 PDF: ${FINAL_PDF_NAME_KO}"
+        echo "📄 한국어 RN: ${FINAL_RN_NAME_KO}"
         echo "📄 영어 PDF: ${FINAL_PDF_NAME_EN}"
+        echo "📄 영어 RN: ${FINAL_RN_NAME_EN}"
