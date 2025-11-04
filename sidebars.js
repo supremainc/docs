@@ -1286,11 +1286,13 @@ const sidebars = {
       },
       items: [
         'device/corestation_setup_manager/getting-started',
-        'device/corestation_setup_manager/installation',
+        'device/corestation_setup_manager/initial-setup',
+        'device/corestation_setup_manager/configuration',
+        'device/corestation_setup_manager/monitoring',
         'device/corestation_setup_manager/settings',
-        'device/corestation_setup_manager/appendices',
-      ],
-    },
+        'device/corestation_setup_manager/appendices'
+      ]
+    }
   ]
 };
 
