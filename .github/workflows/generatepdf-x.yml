@@ -430,7 +430,7 @@ jobs:
             "./pdf/${FINAL_PDF_NAME_KO}" \
             "./pdf/${FINAL_PDF_NAME_EN}" \
             "./pdf/${FINAL_RN_NAME_KO}" \
-            "./pdf/${FINAL_RN_NAME_EN}" \; then
+            "./pdf/${FINAL_RN_NAME_EN}"; then
             echo "✅ 릴리스 생성 및 PDF 업로드 완료 (시도 $i/3)"
             break
           else
