@@ -706,7 +706,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-appendices-mdx-b46.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_appendices_mdx_b46_namespaceObject = JSON.parse('{"id":"platform/biostar_x/appendices","title":"Appendices","description":"Includes legal notices contained in the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/appendices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/appendices","permalink":"/docs/en/platform/biostar_x/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","description":"Includes legal notices contained in the product.","keywords":["Disclaimers","Copyright","Open Source License","OSS"],"toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"License Policy","permalink":"/docs/en/platform/biostar_x/licensing"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_appendices_mdx_b46_namespaceObject = JSON.parse('{"id":"platform/biostar_x/appendices","title":"Appendices","description":"Includes legal notices contained in the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/appendices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/appendices","permalink":"/docs/en/platform/biostar_x/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"Appendices","description":"Includes legal notices contained in the product.","keywords":["Disclaimers","Copyright","Open Source License","OSS"],"toc_max_heading_level":3,"pagination_next":null,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"License Policy","permalink":"/docs/en/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -729,6 +729,7 @@ const frontMatter = {
 		'OSS'
 	],
 	toc_max_heading_level: 3,
+	pagination_next: null,
 	isTranslationMissing: false
 };
 const contentTitle = undefined;

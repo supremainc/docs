@@ -716,7 +716,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-appendices-mdx-900.json
-var site_docs_platform_biostar_x_appendices_mdx_900_namespaceObject = JSON.parse('{"id":"platform/biostar_x/appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","source":"@site/docs/platform/biostar_x/appendices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/appendices","permalink":"/docs/platform/biostar_x/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","keywords":["면책 조항","저작권","오픈 소스 라이선스","OSS"],"toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"}}')
+var site_docs_platform_biostar_x_appendices_mdx_900_namespaceObject = JSON.parse('{"id":"platform/biostar_x/appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","source":"@site/docs/platform/biostar_x/appendices.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/appendices","permalink":"/docs/platform/biostar_x/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"부록","description":"제품에 포함된 법적 고지 사항을 수록합니다.","keywords":["면책 조항","저작권","오픈 소스 라이선스","OSS"],"toc_max_heading_level":3,"pagination_next":null,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"라이선스 정책","permalink":"/docs/platform/biostar_x/licensing"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -739,6 +739,7 @@ const frontMatter = {
 		'OSS'
 	],
 	toc_max_heading_level: 3,
+	pagination_next: null,
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
