@@ -183,6 +183,9 @@ jobs:
         # 프론트 커버 HTML을 PDF로 변환
         prince "./pdf/front-rn-cover-ko.html" -o "./pdf/front-rn-cover-ko.pdf"
 
+        # 주석 제거
+        pdfcpu annot remove "./pdf/front-rn-cover-ko.pdf"
+
         # 한국어 릴리스 노트 PDF 생성
         node generatepdf \
           -u "${RN_URL_KO}" \
@@ -236,6 +239,9 @@ jobs:
         
         # 프론트 커버 HTML을 PDF로 변환
         prince "./pdf/front-rn-cover-en.html" -o "./pdf/front-rn-cover-en.pdf"
+        
+        # 주석 제거
+        pdfcpu annot remove "./pdf/front-rn-cover-en.pdf"
 
         # 영어 릴리스 노트 PDF 생성
         node generatepdf \
