@@ -587,6 +587,9 @@
   "specs.interface.rs485": {
     "message": "RS-485"
   },
+  "specs.interface.rs232c": {
+    "message": "RS-232C"
+  },
   "specs.interface.rs485_protocol": {
     "message": "RS-485 통신 프로토콜"
   },

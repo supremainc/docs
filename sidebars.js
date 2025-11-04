@@ -880,7 +880,6 @@ const sidebars = {
         'device/extendedmodule/getting-started',
         'device/extendedmodule/installation',
         'device/extendedmodule/product-specifications',
-        'device/extendedmodule/regulatory-information',
         'device/extendedmodule/appendices'
       ]
     }
@@ -901,7 +900,6 @@ const sidebars = {
         'device/extendedmodule_sc/getting-started',
         'device/extendedmodule_sc/installation',
         'device/extendedmodule_sc/product-specifications',
-        'device/extendedmodule_sc/regulatory-information',
         'device/extendedmodule_sc/appendices'
       ]
     }
