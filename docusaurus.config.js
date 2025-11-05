@@ -153,7 +153,8 @@ const config = {
         route: '/bsxapi',
         showNavLink: false, // optional, default is true
         configuration: {
-          url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest'
+          url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest',
+          hideModels: true
         }
       }
     ]
