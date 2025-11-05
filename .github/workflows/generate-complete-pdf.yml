@@ -192,11 +192,11 @@ jobs:
         
         # 병렬로 주석 제거 (백그라운드에서 실행)
         echo "🔧 PDF 주석 제거 중..."
-        pdfcpu annot remove "./pdf/front-cover.pdf" &
+        pdfcpu annot remove "./pdf/front-cover.pdf" Popup Text &
         FRONT_PID=$!
         
         if [ -f "./pdf/${MAIN_PDF_NAME}" ]; then
-          pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}" &
+          pdfcpu annot remove -pages 1 "./pdf/${MAIN_PDF_NAME}" Popup Text &
           MAIN_PID=$!
         else
           echo "❌ 오류: 메인 PDF 파일을 찾을 수 없습니다: ${MAIN_PDF_NAME}"

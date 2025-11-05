@@ -55,6 +55,10 @@ function getLocalizedSubtitle(subtitleCode, isKorean = true) {
         'AG': {
             ko: '관리자 가이드',
             en: 'Administrator Guide'
+        },
+        'RN': {
+            ko: 'Release Notes',
+            en: 'Release Notes'
         }
     };
 
