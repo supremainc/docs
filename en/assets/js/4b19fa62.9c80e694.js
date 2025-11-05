@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-release-notes-mdx-4b1.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_mdx_4b1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes","title":"BioStar X Release Notes","description":"This document summarizes the feature enhancements, bug fixes, and major changes applied to each version of BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/release-notes","permalink":"/docs/en/platform/biostar_x/release-notes","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes.mdx","tags":[],"version":"current","frontMatter":{"id":"release-notes","title":"BioStar X Release Notes","description":"This document summarizes the feature enhancements, bug fixes, and major changes applied to each version of BioStar X.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Appendices","permalink":"/docs/en/platform/biostar_x/appendices"},"next":{"title":"Version 1.0.0","permalink":"/docs/en/platform/biostar_x/release-notes/100"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_mdx_4b1_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes","title":"BioStar X Release Notes","description":"This document summarizes the feature improvements, bug fixes, and major changes applied to each version of BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/release-notes","permalink":"/docs/en/platform/biostar_x/release-notes","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes.mdx","tags":[],"version":"current","frontMatter":{"id":"release-notes","title":"BioStar X Release Notes","description":"This document summarizes the feature improvements, bug fixes, and major changes applied to each version of BioStar X.","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Appendices","permalink":"/docs/en/platform/biostar_x/appendices"},"next":{"title":"Version 1.0.0","permalink":"/docs/en/platform/biostar_x/release-notes/100"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 'release-notes',
 	title: 'BioStar X Release Notes',
-	description: 'This document summarizes the feature enhancements, bug fixes, and major changes applied to each version of BioStar X.',
+	description: 'This document summarizes the feature improvements, bug fixes, and major changes applied to each version of BioStar X.',
 	isTranslationMissing: false
 };
 const contentTitle = undefined;
@@ -48,7 +48,7 @@ function _createMdxContent(props) {
   if (!DocCardList) _missingMdxReference("DocCardList", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This document summarizes the feature enhancements, bug fixes, and major changes applied to each version of ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["This document summarizes the feature improvements, bug fixes, and major changes applied to each version of ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(DocCardList, {})]
