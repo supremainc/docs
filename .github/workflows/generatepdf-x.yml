@@ -177,7 +177,7 @@ jobs:
           --subtitle="${RN_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
           --lang="한국어" \
-          --number="${{ github.event.inputs.document_number }}" \
+          --number="301.00.BSX" \
           --output="./pdf/front-rn-cover-ko.html"
         
         # 프론트 커버 HTML을 PDF로 변환
@@ -206,7 +206,7 @@ jobs:
           --subtitle="${DOC_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
           --lang="English" \
-          --number="${{ github.event.inputs.document_number }}" \
+          --number="301.00.BSX" \
           --output="./pdf/front-cover-en.html"
         
         # 프론트 커버 HTML을 PDF로 변환
