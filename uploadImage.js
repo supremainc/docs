@@ -152,7 +152,7 @@ class ImageUploader {
             if (properties.metadata && properties.metadata.localMD5) {
                 const storedMD5 = properties.metadata.localMD5;
                 if (localMD5.toLowerCase() === storedMD5.toLowerCase()) {
-                    console.log(`   ⏭️ 동일한 파일 (메타데이터 MD5 일치): 업로드 건너뛰기`);
+                    // console.log(`   ⏭️ 동일한 파일 (메타데이터 MD5 일치): 업로드 건너뛰기`);
                     return false;
                 } else {
                     console.log(`   🔄 파일 변경됨 (메타데이터 MD5): 업로드 필요`);
