@@ -26,7 +26,7 @@ function CardItem({img, title, url, height, desc}) {
 
 function ExternalLinkBanner({Svg, title, url, desc, height}) {
   return (
-    <Link to={url} target='_blank' className={styles.externalLink}>
+    <Link to={url} className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
           <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
