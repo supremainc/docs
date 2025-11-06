@@ -29,6 +29,7 @@ node generatepdf -u "https://docs.supremainc.com/platform/biostar_x/release-note
 pdfcpu annot remove -pages 1 ./pdf/document.pdf Popup Text
 node generate-cover-local.js --title="BioStar X" --subtitle="RN" --version="1.0.0" --lang="한국어" --number="301.00.BSX" --output="./pdf/front-cover.html"
 prince "./pdf/front-cover.html" -o "./pdf/front-cover.pdf"
+pdfcpu annot remove -pages 1 ./pdf/front-cover.pdf Popup Text
 pdftk "./pdf/front-cover.pdf" "./pdf/document.pdf" "back-cover.pdf" cat output "./pdf/%PDF_NAME_KO%"
 
 pdfcpu pagemode set "./pdf/%PDF_NAME_KO%" UseOutlines
