@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7207"], {
-37720: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["7217"], {
+20817: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,27 +9,27 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_100_mdx_df3_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_release_notes_100_mdx_c91_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-release-notes-100-mdx-df3.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_100_mdx_df3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/100","title":"Version 1.0.0","description":"Release2025-11-07","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/100.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/100","permalink":"/docs/en/platform/biostar_x/release-notes/100","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/100.mdx","tags":[],"version":"current","frontMatter":{"id":"100","title":"Version 1.0.0","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X Release Notes","permalink":"/docs/en/platform/biostar_x/release-notes"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-release-notes-100-mdx-c91.json
+var site_docs_platform_biostar_x_release_notes_100_mdx_c91_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/100","title":"버전 1.0.0","description":"릴리스2025-11-07","source":"@site/docs/platform/biostar_x/release-notes/100.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/100","permalink":"/docs/platform/biostar_x/release-notes/100","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/100.mdx","tags":[],"version":"current","frontMatter":{"id":"100","title":"버전 1.0.0","hide_table_of_contents":true,"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X 릴리스 노트","permalink":"/docs/platform/biostar_x/release-notes"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/100.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/release-notes/100.mdx
 
 
 const frontMatter = {
 	id: 100,
-	title: 'Version 1.0.0',
+	title: '버전 1.0.0',
 	hide_table_of_contents: true,
 	isTranslationMissing: false
 };
-const contentTitle = 'Version 1.0.0 (Build No. 1.0.0.292)';
+const contentTitle = '버전 1.0.0 (빌드 번호 1.0.0.293)';
 
 const assets = {
 
@@ -38,8 +38,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "Initial developed",
-  "id": "initial-developed",
+  "value": "생성",
+  "id": "생성",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -55,14 +55,14 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "version-100-build-no-100292",
-        children: "Version 1.0.0 (Build No. 1.0.0.292)"
+        id: "버전-100-빌드-번호-100293",
+        children: "버전 1.0.0 (빌드 번호 1.0.0.293)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-11-07"]
+      children: ["릴리스", (0,jsx_runtime.jsx)(Separator, {}), "2025-11-07"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "initial-developed",
-      children: "Initial developed"
+      id: "생성",
+      children: "생성"
     })]
   });
 }
