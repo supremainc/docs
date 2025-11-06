@@ -135,11 +135,16 @@ const config = {
     [
       '@scalar/docusaurus', {
         label: 'API',
-        route: '/bsxapi',
+        route: '/api/bsxapi',
         showNavLink: false, // optional, default is true
         configuration: {
           url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest',
-          hideModels: true
+          defaultHttpClient: {
+            targetKey: 'shell',
+            clientKey: 'curl',
+          },
+          hideModels: true,
+          orderSchemaPropertiesBy: 'preserve'
         }
       }
     ]
@@ -286,6 +291,11 @@ const config = {
             label: 'How-to Articles',
             position: 'right',
             docId: 'how-to/index'
+          },
+          {
+            label: 'API',
+            position: 'right',
+            to: '/api/bsxapi'
           },
           {
             type: 'doc',
