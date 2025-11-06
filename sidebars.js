@@ -646,7 +646,22 @@ const sidebars = {
         'platform/biostar_x/licensing'
       ],
     },
-    'platform/biostar_x/appendices'
+    'platform/biostar_x/appendices',
+    {
+      type: 'html',
+      value: '<hr />'
+    },
+    {
+      type: 'category',
+      label: 'Release Notes',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x/release-notes'
+      },
+      items: [
+        'platform/biostar_x/release-notes/100'
+      ]
+    }
   ],
   legal: [
     {

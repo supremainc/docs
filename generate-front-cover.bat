@@ -8,7 +8,7 @@ echo ================================================
 
 REM 1. HTML 생성
 echo 📄 HTML 파일 생성 중...
-node generate-cover-local.js --title="BioStation 3" --subtitle="설치 가이드" --version="버전 1.08" --lang="한국어" --number="KO 101.00.853" --output="./pdf/front-cover.html"
+node generate-cover-local.js --title="BioStar X" --subtitle="RN" --version="1.0.0" --lang="English" --number="301.00.BSX" --output="./pdf/front-cover.html"
 
 if %ERRORLEVEL% NEQ 0 (
     echo ❌ HTML 생성 실패
