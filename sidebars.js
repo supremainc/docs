@@ -1286,7 +1286,7 @@ const sidebars = {
       },
       items: [
         'device/device_manager/getting-started',
-        'device/device_manager/select-device',
+        'device/device_manager/initial-setup',
         'device/device_manager/ip-device-settings',
         'device/device_manager/xpd2-settings',
         'device/device_manager/appendices'
