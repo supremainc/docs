@@ -815,6 +815,9 @@ footer {
     color: var(--ifm-color-cmd);
     position: relative;
   }
+  span.cmd.upper {
+    text-transform: uppercase;
+  }
   span.cmd, a {
     .tooltip {
       font-weight: 400;
