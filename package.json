@@ -59,6 +59,7 @@
     "dotenv": "^16.5.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
+    "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
     "hanspell": "^0.9.7",
     "image-size": "^2.0.2",
