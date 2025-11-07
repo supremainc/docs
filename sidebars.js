@@ -697,7 +697,7 @@ const sidebars = {
       ]
     }
   ],
-  corestation40: [
+  corestation: [
     {
       type: 'category',
       label: 'CoreStation',
@@ -784,7 +784,27 @@ const sidebars = {
       ]
     }
   ],
-  doorinterface24: [
+  enclosure: [
+    {
+      type: 'category',
+      label: 'Enclosure',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/enclosure/index',
+      },
+      items: [
+        'device/enclosure/safety-instructions',
+        'device/enclosure/getting-started',
+        'device/enclosure/installation',
+        'device/enclosure/product-specifications',
+        'device/enclosure/appendices'
+      ]
+    }
+  ],
+  doorinterface: [
     {
       type: 'category',
       label: 'Door Interface',
@@ -828,17 +848,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/doormodule/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/doormodule/index',
+      },
       items: [
-        // 'device/doormodule/safety-instructions',
-        // 'device/doormodule/getting-started',
-        // 'device/doormodule/installation',
-        // 'device/doormodule/product-specifications',
-        // 'device/doormodule/regulatory-information',
-        // 'device/doormodule/appendices',
+        'device/doormodule/safety-instructions',
+        'device/doormodule/getting-started',
+        'device/doormodule/installation',
+        'device/doormodule/product-specifications',
+        'device/doormodule/regulatory-information',
+        'device/doormodule/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -874,17 +894,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/inputmodule/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/inputmodule/index',
+      },
       items: [
-        // 'device/inputmodule/safety-instructions',
-        // 'device/inputmodule/getting-started',
-        // 'device/inputmodule/installation',
-        // 'device/inputmodule/product-specifications',
-        // 'device/inputmodule/regulatory-information',
-        // 'device/inputmodule/appendices',
+        'device/inputmodule/safety-instructions',
+        'device/inputmodule/getting-started',
+        'device/inputmodule/installation',
+        'device/inputmodule/product-specifications',
+        'device/inputmodule/regulatory-information',
+        'device/inputmodule/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -910,17 +930,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/outputmodule/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/outputmodule/index',
+      },
       items: [
-        // 'device/outputmodule/safety-instructions',
-        // 'device/outputmodule/getting-started',
-        // 'device/outputmodule/installation',
-        // 'device/outputmodule/product-specifications',
-        // 'device/outputmodule/regulatory-information',
-        // 'device/outputmodule/appendices',
+        'device/outputmodule/safety-instructions',
+        'device/outputmodule/getting-started',
+        'device/outputmodule/installation',
+        'device/outputmodule/product-specifications',
+        'device/outputmodule/regulatory-information',
+        'device/outputmodule/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -949,17 +969,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/securemodule/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/securemodule/index',
+      },
       items: [
-        // 'device/securemodule/safety-instructions',
-        // 'device/securemodule/getting-started',
-        // 'device/securemodule/installation',
-        // 'device/securemodule/product-specifications',
-        // 'device/securemodule/regulatory-information',
-        // 'device/securemodule/appendices',
+        'device/securemodule/safety-instructions',
+        'device/securemodule/getting-started',
+        'device/securemodule/installation',
+        'device/securemodule/product-specifications',
+        'device/securemodule/regulatory-information',
+        'device/securemodule/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -985,6 +1005,46 @@ const sidebars = {
             'device/securemodule/release-notes/100',
           ]
         },
+      ]
+    }
+  ],
+  extendedmodule: [
+    {
+      type: 'category',
+      label: 'Extended Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule/index',
+      },
+      items: [
+        'device/extendedmodule/safety-instructions',
+        'device/extendedmodule/getting-started',
+        'device/extendedmodule/installation',
+        'device/extendedmodule/product-specifications',
+        'device/extendedmodule/appendices'
+      ]
+    }
+  ],
+  extendedmodule_sc: [
+    {
+      type: 'category',
+      label: 'Extended Module-SC',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule_sc/index',
+      },
+      items: [
+        'device/extendedmodule_sc/safety-instructions',
+        'device/extendedmodule_sc/getting-started',
+        'device/extendedmodule_sc/installation',
+        'device/extendedmodule_sc/product-specifications',
+        'device/extendedmodule_sc/appendices'
       ]
     }
   ],
@@ -1064,33 +1124,33 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/facestation_2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/facestation_2/index',
+      },
       items: [
-        // 'device/facestation_2/safety-instructions',
-        // 'device/facestation_2/getting-started',
-        // 'device/facestation_2/installation',
-        // {
-        //   type: 'category',
-        //   label: '사용하기',
-        //   link: {
-        //     type: 'doc',
-        //     id: 'device/facestation_2/using-device',
-        //   },
-        //   items: [
-        //     'device/facestation_2/admin-menu',
-        //     'device/facestation_2/user',
-        //     'device/facestation_2/authentication',
-        //     'device/facestation_2/settings',
-        //     'device/facestation_2/event-log'
-        //   ]
-        // },
-        // 'device/facestation_2/troubleshooting',
-        // 'device/facestation_2/product-specifications',
-        // 'device/facestation_2/regulatory-information',
-        // 'device/facestation_2/appendices',
+        'device/facestation_2/safety-instructions',
+        'device/facestation_2/getting-started',
+        'device/facestation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/using-device',
+          },
+          items: [
+            'device/facestation_2/admin-menu',
+            'device/facestation_2/user',
+            'device/facestation_2/authentication',
+            'device/facestation_2/settings',
+            'device/facestation_2/event-log',
+          ],
+        },
+        'device/facestation_2/troubleshooting',
+        'device/facestation_2/product-specifications',
+        'device/facestation_2/regulatory-information',
+        'device/facestation_2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1135,18 +1195,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/bioentry_p2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_p2/index',
+      },
       items: [
-        // 'device/bioentry_p2/safety-instructions',
-        // 'device/bioentry_p2/getting-started',
-        // 'device/bioentry_p2/installation',
-        // 'device/bioentry_p2/troubleshooting',
-        // 'device/bioentry_p2/product-specifications',
-        // 'device/bioentry_p2/regulatory-information',
-        // 'device/bioentry_p2/appendices',
+        'device/bioentry_p2/safety-instructions',
+        'device/bioentry_p2/getting-started',
+        'device/bioentry_p2/installation',
+        'device/bioentry_p2/product-specifications',
+        'device/bioentry_p2/regulatory-information',
+        'device/bioentry_p2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1186,18 +1245,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/bioentry_r2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_r2/index',
+      },
       items: [
-        // 'device/bioentry_r2/safety-instructions',
-        // 'device/bioentry_r2/getting-started',
-        // 'device/bioentry_r2/installation',
-        // 'device/bioentry_r2/troubleshooting',
-        // 'device/bioentry_r2/product-specifications',
-        // 'device/bioentry_r2/regulatory-information',
-        // 'device/bioentry_r2/appendices',
+        'device/bioentry_r2/safety-instructions',
+        'device/bioentry_r2/getting-started',
+        'device/bioentry_r2/installation',
+        'device/bioentry_r2/product-specifications',
+        'device/bioentry_r2/regulatory-information',
+        'device/bioentry_r2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1230,17 +1288,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/bioentry_w2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w2/index',
+      },
       items: [
-        // 'device/bioentry_w2/safety-instructions',
-        // 'device/bioentry_w2/getting-started',
-        // 'device/bioentry_w2/installation',
-        // 'device/bioentry_w2/product-specifications',
-        // 'device/bioentry_w2/regulatory-information',
-        // 'device/bioentry_w2/appendices',
+        'device/bioentry_w2/safety-instructions',
+        'device/bioentry_w2/getting-started',
+        'device/bioentry_w2/installation',
+        'device/bioentry_w2/product-specifications',
+        'device/bioentry_w2/regulatory-information',
+        'device/bioentry_w2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1283,6 +1341,47 @@ const sidebars = {
         },
       ],
     },
+  ],
+  device_manager: [
+    {
+      type: 'category',
+      label: 'Device Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/device_manager/index',
+      },
+      items: [
+        'device/device_manager/getting-started',
+        'device/device_manager/initial-setup',
+        'device/device_manager/ip-device-settings',
+        'device/device_manager/xpd2-settings',
+        'device/device_manager/appendices'
+      ]
+    }
+  ],
+  corestation_setup_manager: [
+    {
+      type: 'category',
+      label: 'CoreStation Setup Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_setup_manager/index',
+      },
+      items: [
+        'device/corestation_setup_manager/getting-started',
+        'device/corestation_setup_manager/initial-setup',
+        'device/corestation_setup_manager/configuration',
+        'device/corestation_setup_manager/monitoring',
+        'device/corestation_setup_manager/settings',
+        'device/corestation_setup_manager/appendices'
+      ]
+    }
   ],
   bioentryw3: [
     {
@@ -1519,18 +1618,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/xpass_2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2/index',
+      },
       items: [
-        // 'device/xpass_2/safety-instructions',
-        // 'device/xpass_2/getting-started',
-        // 'device/xpass_2/installation',
-        // 'device/xpass_2/troubleshooting',
-        // 'device/xpass_2/product-specifications',
-        // 'device/xpass_2/regulatory-information',
-        // 'device/xpass_2/appendices',
+        'device/xpass_2/safety-instructions',
+        'device/xpass_2/getting-started',
+        'device/xpass_2/installation',
+        'device/xpass_2/product-specifications',
+        'device/xpass_2/regulatory-information',
+        'device/xpass_2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1568,18 +1666,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/xpass_d2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/xpass_d2/index',
+      },
       items: [
-        // 'device/xpass_d2/safety-instructions',
-        // 'device/xpass_d2/getting-started',
-        // 'device/xpass_d2/installation',
-        // 'device/xpass_d2/troubleshooting',
-        // 'device/xpass_d2/product-specifications',
-        // 'device/xpass_d2/regulatory-information',
-        // 'device/xpass_d2/appendices',
+        'device/xpass_d2/safety-instructions',
+        'device/xpass_d2/getting-started',
+        'device/xpass_d2/installation',
+        'device/xpass_d2/product-specifications',
+        'device/xpass_d2/regulatory-information',
+        'device/xpass_d2/appendices',
         {
           type: 'html',
           value: '<hr />'
@@ -1615,18 +1712,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       className: 'p-title',
-      // link: {
-      //   type: 'doc',
-      //   id: 'device/xpass_s2/index',
-      // },
+      link: {
+        type: 'doc',
+        id: 'device/xpass_s2/index',
+      },
       items: [
-        // 'device/xpass_s2/safety-instructions',
-        // 'device/xpass_s2/getting-started',
-        // 'device/xpass_s2/installation',
-        // 'device/xpass_s2/troubleshooting',
-        // 'device/xpass_s2/product-specifications',
-        // 'device/xpass_s2/regulatory-information',
-        // 'device/xpass_s2/appendices',
+        'device/xpass_s2/safety-instructions',
+        'device/xpass_s2/getting-started',
+        'device/xpass_s2/installation',
+        'device/xpass_s2/product-specifications',
+        'device/xpass_s2/regulatory-information',
+        'device/xpass_s2/appendices',
         {
           type: 'html',
           value: '<hr />'
