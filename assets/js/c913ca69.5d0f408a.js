@@ -29,7 +29,7 @@ const frontMatter = {
 	hide_table_of_contents: true,
 	isTranslationMissing: false
 };
-const contentTitle = '버전 1.0.0 (빌드 번호 1.0.0.293)';
+const contentTitle = '버전 1.0.0 (빌드 번호 1.0.0.294)';
 
 const assets = {
 
@@ -55,8 +55,8 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "버전-100-빌드-번호-100293",
-        children: "버전 1.0.0 (빌드 번호 1.0.0.293)"
+        id: "버전-100-빌드-번호-100294",
+        children: "버전 1.0.0 (빌드 번호 1.0.0.294)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["릴리스", (0,jsx_runtime.jsx)(Separator, {}), "2025-11-07"]
