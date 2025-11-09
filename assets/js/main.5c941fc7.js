@@ -35092,6 +35092,7 @@ __webpack_require__.d(__webpack_exports__, {
     },
     "path": "i18n"
   },
+  "headTags": [],
   "themes": [
     "@saucelabs/theme-github-codeblock",
     "@docusaurus/theme-mermaid"
@@ -35677,7 +35678,6 @@ __webpack_require__.d(__webpack_exports__, {
   ],
   "customFields": {},
   "scripts": [],
-  "headTags": [],
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|"
