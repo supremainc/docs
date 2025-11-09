@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import ConfigLocalized from './docusaurus.config.localized.json';
+import { ScalarOptions } from '@scalar/docusaurus'
 const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -146,6 +147,23 @@ const config = {
         anonymizeIP: true,
       },
     ],
+    [
+      '@scalar/docusaurus', {
+        label: 'API',
+        route: '/api/bsxapi',
+        showNavLink: false, // optional, default is true
+        configuration: {
+          url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest',
+          defaultHttpClient: {
+            targetKey: 'shell',
+            clientKey: 'curl',
+          },
+          hideModels: true,
+          defaultOpenAllTags: true,
+          orderSchemaPropertiesBy: 'preserve'
+        }
+      }
+    ]
   ],
   markdown: {
     mermaid: true,
@@ -289,6 +307,11 @@ const config = {
           //   position: 'right',
           //   docId: 'how-to/index'
           // },
+          {
+            label: 'API',
+            position: 'right',
+            to: '/api/bsxapi'
+          },
           {
             type: 'doc',
             label: 'Reference',
