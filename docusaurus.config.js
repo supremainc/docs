@@ -81,6 +81,13 @@ const config = {
         name: 'algolia-site-verification',
         content: '07FFA029DF50324E',
       }
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'naver-site-verification',
+        content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
+      }
     }
   ],
   themes: [
