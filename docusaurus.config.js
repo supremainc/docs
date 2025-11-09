@@ -75,6 +75,9 @@ const config = {
       },
     }
   },
+  headTags: [
+    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
     '@docusaurus/theme-mermaid'
