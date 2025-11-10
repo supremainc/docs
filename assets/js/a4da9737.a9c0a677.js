@@ -38,7 +38,6 @@ const assets = {
 
 };
 
-/*<Overview />*/
 
 
 const toc = [];
@@ -48,7 +47,8 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  };
+  }, {Overview} = _components;
+  if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "BioStation 3는 새로운 출입 경험을 제공하는 차세대 출입통제 솔루션입니다. 제품의 크기는 기존 대비 작아지고 보안 기능은 더욱 향상되어, 소규모 사무실부터 대형 건물까지 모든 출입문에 강력한 보안 시스템을 구축할 수 있습니다."
@@ -59,7 +59,7 @@ function _createMdxContent(props) {
         width: "1000",
         height: "452"
       })
-    }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -73,6 +73,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
