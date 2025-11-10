@@ -1,0 +1,44 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.1.0_190911)
+
+Release<Separator/>2019-09-18
+
+## New Features and Improvements
+
+---
+
+1. Support to the Mobile Credential (NFC, BLE).
+
+1. Added CSN mask for the unknown card type.
+
+    - Before: Cards other than MIFARE, iCLASS, DESFire, iCLASS Seos, FeliCa, ISO-15693 was recognized as CSN.
+
+    - After: User can select whether to recognize cards other than MIFARE, iCLASS, DESFire, iCLASS Seos, FeliCa, and ISO-15693.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The device recognizes the DESFire(Adv) card as a CSN if the device is restarted when the smart card layout set as DESFire (Adv).
+
+1. The LED indicator operates abnormally when the Device Manager app is disconnected.
+
+1. Changed the color of some of the status lights that previously worked in yellow to green.
+
+1. When using firmware V1.0.1 the connection to the I/O device that using the firmware version below is lost.
+
+    - DM-20 FW V1.1.2
+
+    - OM-120 FW V1.0.0
+
+    - Secure I/O 2 FW V1.2.1
+
+1. The master device intermittently reboots when upgrading the firmware of the slave device.
+
+</BugLists>

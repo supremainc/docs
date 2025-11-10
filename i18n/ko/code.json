@@ -380,6 +380,9 @@
   "theme.cover.qrCodetext": {
     "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
+  "theme.revision.badge": {
+    "message": "발생 버전"
+  },
   "index.search": {
     "message": "검색"
   },

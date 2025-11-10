@@ -108,8 +108,8 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            'platform/biostar_air/**/**.{md,mdx}',
-            'device/**/**.{md,mdx}'
+            // 'platform/biostar_air/**/**.{md,mdx}',
+            // 'device/**/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -201,8 +201,25 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            label: 'BioStar X',
+            type: 'dropdown',
+            label: 'Platforms',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
+          },
+          {
+            type: 'dropdown',
+            label: 'Devices',
             position: 'right',
             items: [
               {
@@ -335,6 +352,11 @@ const config = {
           {
             type: 'doc',
             label: 'How-to Articles',
+            position: 'right',
+            docId: 'how-to/index'
+          },
+          {
+            label: 'API',
             position: 'right',
             to: '/api/bsxapi'
           },

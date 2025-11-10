@@ -1,0 +1,44 @@
+---
+id: 111
+title: Firmware Version 1.1.1
+---
+
+# Firmware Version 1.1.1 (Build No. 1.1.1_180523)
+
+Release<Separator/>2018-06-20
+
+## New Features and Improvements
+
+---
+
+1. In a device with an LCD, the user name is displayed on the LCD when authentication is successful even when connected in slave mode.
+
+1. Changed the default for the input from Supervised Input to Normal.
+
+1. Support for connecting new devices.
+
+    - BioLite N2(BLN2-PAB), XPass D2(XPD2-GDB, XPD2-GKDB)
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. Problem where logs are duplicated by repeatedly attempting to input Manual Lock, Manual Unlock, Release, etc. to the door disconnected from the device.
+
+1. Issue where event logs and real-time logs are not uploaded normally to BioStar 2.
+
+1. Problem that relay state is not maintained when reconnecting a device connected by RS-485.
+
+1. Issue in which the door relay status operates as On when the device is reconnected after starting and ending the Schedule Unlock with the door relay device disconnected.
+
+1. Problem that the time zone is not initialized even if the factory reset is performed while secure communication and data encryption key are in use.
+
+1. Issue where if the authentication is successful when the device set as door relay is disconnected, the relay will operate according to previous value after reconnection of the device.
+
+1. Issue where the device restarts when authenticating with an unregistered fingerprint.
+
+1. Issue that are not initialized for the tamper, AC Fail, and Supervised input when the factory reset is performed.
+
+</BugLists>

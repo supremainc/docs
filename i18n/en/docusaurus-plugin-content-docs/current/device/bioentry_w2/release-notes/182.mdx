@@ -1,0 +1,50 @@
+---
+id: 182
+title: Firmware Version 1.8.2
+---
+
+# Firmware Version 1.8.2 (Build No. 1.8.2_241025)
+
+Release<Separator/>2024-11-01
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.1 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to not recognize SEOS configuration cards as CSN for 1 minute after device booting.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When the device is restarted with the **Primary Key** set only in the **Suprema Smart Card Layout** and the **Secondary Key** set only in the **Custom Smart Card Layout**, the device recognizes the Custom Smart Card as a CSN card. <Badge>1.8.0</Badge>
+
+1. Some devices fail to boot after a firmware upgrade. <Badge>1.5.0</Badge>
+
+1. Some cards are recognized differently from the settings in the **Suprema Smart Card** option. <Badge>1.4.1</Badge>
+
+1. **Custom Smart Card Layout** set through **Batch Edit** is not applied on the device detail page. <Badge>1.8.0</Badge>
+
+1. When the device log is full and a new event occurs, unintended logs are retrieved with the newly generated event. <Badge>1.7.0</Badge>
+
+1. When the **Time Synchronization with Server** option is disabled and the device time is changed, the device restarts abnormally. <Badge>1.0.0</Badge>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.7.1</Badge>
+
+1. DESFire smart cards with the **Custom Smart Card Layout** set to **Secondary Key** are recognized as CSN cards. <Badge>1.8.0</Badge>
+
+1. **Custom Smart Card** option does not appear on the device detail page when **RS-485** mode is set to **Slave**. <Badge>1.8.0</Badge>
+
+1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>1.8.0</Badge>
+
+</BugLists>

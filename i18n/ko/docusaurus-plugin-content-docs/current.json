@@ -298,5 +298,9 @@
   "sidebar.biostarx.category.방문자 신청 및 관리하기": {
     "message": "방문자 신청 및 관리하기",
     "description": "The label for category '방문자 신청 및 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostation3.category.Release Notes": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostation3"
   }
 }

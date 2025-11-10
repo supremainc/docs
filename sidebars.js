@@ -37,162 +37,162 @@ const sidebars = {
       ]
     }
   ],
-  // biostar_air: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioStar Air',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'platform/biostar_air/index',
-  //     },
-  //     items: [
-  //       {
-  //         type: 'category',
-  //         label: 'Overview',
-  //         items: [
-  //           'platform/biostar_air/what-is-biostar-air',
-  //           'platform/biostar_air/access-control-hardware-compatibility',
-  //           'platform/biostar_air/security-overview',
-  //           'platform/biostar_air/site-setup-networking',
-  //           'platform/biostar_air/biostar-air-migration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Site Management',
-  //         items: [
-  //           'platform/biostar_air/getting-started',
-  //           'platform/biostar_air/biostar-air-login',
-  //           {
-  //             type: 'category',
-  //             label: 'User Management',
-  //             items: [
-  //               'platform/biostar_air/managing-users',
-  //               'platform/biostar_air/adding-individual-users',
-  //               'platform/biostar_air/adding-users-in-bulk',
-  //               'platform/biostar_air/troubleshooting-adding-users-in-bulk',
-  //               'platform/biostar_air/user-card-types',
-  //               'platform/biostar_air/managing-user-groups',
-  //               'platform/biostar_air/managing-card-templates',
-  //               'platform/biostar_air/managing-adding-users',
-  //               'platform/biostar_air/linkpass-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Device Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-devices',
-  //               'platform/biostar_air/configuring-ta',
-  //               'platform/biostar_air/configuring-the-airfob-patch-and-tag',
-  //               'platform/biostar_air/configuring-the-sio2-secure-module',
-  //               'platform/biostar_air/how-to-upgrade-firmware',
-  //               'platform/biostar_air/biometric-readers-and-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Door Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-doors',
-  //               'platform/biostar_air/managing-door-and-device-groups',
-  //               'platform/biostar_air/managing-door-schedules',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Monitoring',
-  //             items: [
-  //               'platform/biostar_air/event-and-audit-logs',
-  //               'platform/biostar_air/monitoring-door-status',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Reports',
-  //             items: [
-  //               'platform/biostar_air/configuring-reports',
-  //               'platform/biostar_air/reports-time-attendance-reports',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Settings',
-  //             items: [
-  //               'platform/biostar_air/managing-administrators',
-  //               'platform/biostar_air/site-settings',
-  //               'platform/biostar_air/daylight-saving-time',
-  //               'platform/biostar_air/customizing-email-templates',
-  //               'platform/biostar_air/managing-sites-with-phone',
-  //               'platform/biostar_air/custom-wiegand-card-formats'
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Advanced Features',
-  //             items: [
-  //               'platform/biostar_air/managing-door-access',
-  //               'platform/biostar_air/managing-elevator-access',
-  //               'platform/biostar_air/managing-roll-call-fire-muster',
-  //               'platform/biostar_air/sip-intercom-for-biostation3'
-  //             ]
-  //           },
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Video Management',
-  //         items: [
-  //           'platform/biostar_air/ip-camera-support-and-configuration',
-  //           'platform/biostar_air/video-troubleshooting',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Using Mobile Credentials',
-  //         items: [
-  //           'platform/biostar_air/suprema-pass-app-overview',
-  //           'platform/biostar_air/opening-doors-with-mobile-credentials',
-  //           'platform/biostar_air/suprema-pass-app-advanced-features',
-  //           'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-  //           'platform/biostar_air/troubleshooting-suprema-pass-app',
-  //           'platform/biostar_air/location-services-issues',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Partners and Integrations',
-  //         items: [
-  //           'platform/biostar_air/intro-to-partner-portal',
-  //           'platform/biostar_air/biostar-air-partner-portal-detailed-use',
-  //           'platform/biostar_air/federated-sites',
-  //           'platform/biostar_air/integration-quickstart',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Hardware',
-  //         items: [
-  //           'platform/biostar_air/wiring-and-configuration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'html',
-  //         value: '<hr />'
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Release Notes',
-  //         items: [
-  //           'platform/biostar_air/release-notes/v2_10'
-  //         ]
-  //       }
-  //     ]
-  //   }
-  // ],
+  biostar_air: [
+    {
+      type: 'category',
+      label: 'BioStar Air',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_air/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Overview',
+          items: [
+            'platform/biostar_air/what-is-biostar-air',
+            'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/security-overview',
+            'platform/biostar_air/site-setup-networking',
+            'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Site Management',
+          items: [
+            'platform/biostar_air/getting-started',
+            'platform/biostar_air/biostar-air-login',
+            {
+              type: 'category',
+              label: 'User Management',
+              items: [
+                'platform/biostar_air/managing-users',
+                'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/adding-users-in-bulk',
+                'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+                'platform/biostar_air/user-card-types',
+                'platform/biostar_air/managing-user-groups',
+                'platform/biostar_air/managing-card-templates',
+                'platform/biostar_air/managing-adding-users',
+                'platform/biostar_air/linkpass-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Device Management',
+              items: [
+                'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/configuring-ta',
+                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/how-to-upgrade-firmware',
+                'platform/biostar_air/biometric-readers-and-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Door Management',
+              items: [
+                'platform/biostar_air/managing-registered-doors',
+                'platform/biostar_air/managing-door-and-device-groups',
+                'platform/biostar_air/managing-door-schedules',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Monitoring',
+              items: [
+                'platform/biostar_air/event-and-audit-logs',
+                'platform/biostar_air/monitoring-door-status',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Reports',
+              items: [
+                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/reports-time-attendance-reports',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Settings',
+              items: [
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/site-settings',
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/managing-sites-with-phone',
+                'platform/biostar_air/custom-wiegand-card-formats'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Advanced Features',
+              items: [
+                'platform/biostar_air/managing-door-access',
+                'platform/biostar_air/managing-elevator-access',
+                'platform/biostar_air/managing-roll-call-fire-muster',
+                'platform/biostar_air/sip-intercom-for-biostation3'
+              ]
+            },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Video Management',
+          items: [
+            'platform/biostar_air/ip-camera-support-and-configuration',
+            'platform/biostar_air/video-troubleshooting',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Using Mobile Credentials',
+          items: [
+            'platform/biostar_air/suprema-pass-app-overview',
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/location-services-issues',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Partners and Integrations',
+          items: [
+            'platform/biostar_air/intro-to-partner-portal',
+            'platform/biostar_air/biostar-air-partner-portal-detailed-use',
+            'platform/biostar_air/federated-sites',
+            'platform/biostar_air/integration-quickstart',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Hardware',
+          items: [
+            'platform/biostar_air/wiring-and-configuration',
+          ]
+        },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'Release Notes',
+          items: [
+            'platform/biostar_air/release-notes/v2_10'
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',
@@ -777,7 +777,35 @@ const sidebars = {
         'device/corestation_40/installation',
         'device/corestation_40/product-specifications',
         'device/corestation_40/regulatory-information',
-        'device/corestation_40/appendices'
+        'device/corestation_40/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/corestation_40/release-notes/index',
+          },
+          items: [
+            'device/corestation_40/release-notes/171',
+            'device/corestation_40/release-notes/161',
+            'device/corestation_40/release-notes/153',
+            'device/corestation_40/release-notes/152',
+            'device/corestation_40/release-notes/151',
+            'device/corestation_40/release-notes/141',
+            'device/corestation_40/release-notes/140',
+            'device/corestation_40/release-notes/131',
+            'device/corestation_40/release-notes/130',
+            'device/corestation_40/release-notes/120',
+            'device/corestation_40/release-notes/112',
+            'device/corestation_40/release-notes/111',
+            'device/corestation_40/release-notes/110',
+            'device/corestation_40/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -798,7 +826,24 @@ const sidebars = {
         'device/corestation_20/installation',
         'device/corestation_20/product-specifications',
         'device/corestation_20/regulatory-information',
-        'device/corestation_20/appendices'
+        'device/corestation_20/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/corestation_20/release-notes/index',
+          },
+          items: [
+            'device/corestation_20/release-notes/102',
+            'device/corestation_20/release-notes/101',
+            'device/corestation_20/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -822,48 +867,6 @@ const sidebars = {
       ]
     }
   ],
-  inputmodule: [
-    {
-      type: 'category',
-      label: 'Input Module',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/inputmodule/index',
-      },
-      items: [
-        'device/inputmodule/safety-instructions',
-        'device/inputmodule/getting-started',
-        'device/inputmodule/installation',
-        'device/inputmodule/product-specifications',
-        'device/inputmodule/regulatory-information',
-        'device/inputmodule/appendices'
-      ]
-    }
-  ],
-  outputmodule: [
-    {
-      type: 'category',
-      label: 'Output Module',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/outputmodule/index',
-      },
-      items: [
-        'device/outputmodule/safety-instructions',
-        'device/outputmodule/getting-started',
-        'device/outputmodule/installation',
-        'device/outputmodule/product-specifications',
-        'device/outputmodule/regulatory-information',
-        'device/outputmodule/appendices'
-      ]
-    }
-  ],
   doorinterface: [
     {
       type: 'category',
@@ -881,7 +884,23 @@ const sidebars = {
         'device/doorinterface/installation',
         'device/doorinterface/product-specifications',
         'device/doorinterface/regulatory-information',
-        'device/doorinterface/appendices'
+        'device/doorinterface/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/doorinterface/release-notes/index',
+          },
+          items: [
+            'device/doorinterface/release-notes/101',
+            'device/doorinterface/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -902,7 +921,107 @@ const sidebars = {
         'device/doormodule/installation',
         'device/doormodule/product-specifications',
         'device/doormodule/regulatory-information',
-        'device/doormodule/appendices'
+        'device/doormodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/doormodule/release-notes/index',
+          },
+          items: [
+            'device/doormodule/release-notes/122',
+            'device/doormodule/release-notes/121',
+            'device/doormodule/release-notes/120',
+            'device/doormodule/release-notes/115',
+            'device/doormodule/release-notes/114',
+            'device/doormodule/release-notes/113',
+            'device/doormodule/release-notes/112',
+            'device/doormodule/release-notes/1015',
+            'device/doormodule/release-notes/1014',
+            'device/doormodule/release-notes/1013',
+            'device/doormodule/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  inputmodule: [
+    {
+      type: 'category',
+      label: 'Input Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/inputmodule/index',
+      },
+      items: [
+        'device/inputmodule/safety-instructions',
+        'device/inputmodule/getting-started',
+        'device/inputmodule/installation',
+        'device/inputmodule/product-specifications',
+        'device/inputmodule/regulatory-information',
+        'device/inputmodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/inputmodule/release-notes/index',
+          },
+          items: [
+            'device/inputmodule/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  outputmodule: [
+    {
+      type: 'category',
+      label: 'Output Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/outputmodule/index',
+      },
+      items: [
+        'device/outputmodule/safety-instructions',
+        'device/outputmodule/getting-started',
+        'device/outputmodule/installation',
+        'device/outputmodule/product-specifications',
+        'device/outputmodule/regulatory-information',
+        'device/outputmodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/outputmodule/release-notes/index',
+          },
+          items: [
+            'device/outputmodule/release-notes/121',
+            'device/outputmodule/release-notes/120',
+            'device/outputmodule/release-notes/110',
+            'device/outputmodule/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -923,7 +1042,32 @@ const sidebars = {
         'device/securemodule/installation',
         'device/securemodule/product-specifications',
         'device/securemodule/regulatory-information',
-        'device/securemodule/appendices'
+        'device/securemodule/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/securemodule/release-notes/index',
+          },
+          items: [
+            'device/securemodule/release-notes/131',
+            'device/securemodule/release-notes/130',
+            'device/securemodule/release-notes/124',
+            'device/securemodule/release-notes/123',
+            'device/securemodule/release-notes/121',
+            'device/securemodule/release-notes/119',
+            'device/securemodule/release-notes/118',
+            'device/securemodule/release-notes/117',
+            'device/securemodule/release-notes/114',
+            'device/securemodule/release-notes/112',
+            'device/securemodule/release-notes/100',
+          ]
+        },
       ]
     }
   ],
@@ -1000,7 +1144,284 @@ const sidebars = {
         'device/facestation_f2/troubleshooting',
         'device/facestation_f2/product-specifications',
         'device/facestation_f2/regulatory-information',
-        'device/facestation_f2/appendices'
+        'device/facestation_f2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_f2/release-notes/index',
+          },
+          items: [
+            'device/facestation_f2/release-notes/221',
+            'device/facestation_f2/release-notes/220',
+            'device/facestation_f2/release-notes/214',
+            'device/facestation_f2/release-notes/213',
+            'device/facestation_f2/release-notes/212',
+            'device/facestation_f2/release-notes/211',
+            'device/facestation_f2/release-notes/210',
+            'device/facestation_f2/release-notes/203',
+            'device/facestation_f2/release-notes/202',
+            'device/facestation_f2/release-notes/114',
+            'device/facestation_f2/release-notes/112',
+            'device/facestation_f2/release-notes/111',
+            'device/facestation_f2/release-notes/105',
+            'device/facestation_f2/release-notes/104',
+            'device/facestation_f2/release-notes/103',
+            'device/facestation_f2/release-notes/102',
+            'device/facestation_f2/release-notes/101',
+            'device/facestation_f2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  facestation2: [
+    {
+      type: 'category',
+      label: 'FaceStation 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/facestation_2/index',
+      },
+      items: [
+        'device/facestation_2/safety-instructions',
+        'device/facestation_2/getting-started',
+        'device/facestation_2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/using-device',
+          },
+          items: [
+            'device/facestation_2/admin-menu',
+            'device/facestation_2/user',
+            'device/facestation_2/authentication',
+            'device/facestation_2/settings',
+            'device/facestation_2/event-log',
+          ],
+        },
+        'device/facestation_2/troubleshooting',
+        'device/facestation_2/product-specifications',
+        'device/facestation_2/regulatory-information',
+        'device/facestation_2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/facestation_2/release-notes/index',
+          },
+          items: [
+            'device/facestation_2/release-notes/155',
+            'device/facestation_2/release-notes/154',
+            'device/facestation_2/release-notes/153',
+            'device/facestation_2/release-notes/152',
+            'device/facestation_2/release-notes/151',
+            'device/facestation_2/release-notes/150',
+            'device/facestation_2/release-notes/142',
+            'device/facestation_2/release-notes/141',
+            'device/facestation_2/release-notes/140',
+            'device/facestation_2/release-notes/131',
+            'device/facestation_2/release-notes/130',
+            'device/facestation_2/release-notes/121',
+            'device/facestation_2/release-notes/120',
+            'device/facestation_2/release-notes/111',
+            'device/facestation_2/release-notes/110',
+            'device/facestation_2/release-notes/104',
+            'device/facestation_2/release-notes/103',
+            'device/facestation_2/release-notes/102',
+            'device/facestation_2/release-notes/101',
+            'device/facestation_2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryp2: [
+    {
+      type: 'category',
+      label: 'BioEntry P2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_p2/index',
+      },
+      items: [
+        'device/bioentry_p2/safety-instructions',
+        'device/bioentry_p2/getting-started',
+        'device/bioentry_p2/installation',
+        'device/bioentry_p2/product-specifications',
+        'device/bioentry_p2/regulatory-information',
+        'device/bioentry_p2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_p2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_p2/release-notes/152',
+            'device/bioentry_p2/release-notes/151',
+            'device/bioentry_p2/release-notes/144',
+            'device/bioentry_p2/release-notes/143',
+            'device/bioentry_p2/release-notes/142',
+            'device/bioentry_p2/release-notes/141',
+            'device/bioentry_p2/release-notes/140',
+            'device/bioentry_p2/release-notes/131',
+            'device/bioentry_p2/release-notes/130',
+            'device/bioentry_p2/release-notes/121',
+            'device/bioentry_p2/release-notes/120',
+            'device/bioentry_p2/release-notes/112',
+            'device/bioentry_p2/release-notes/111',
+            'device/bioentry_p2/release-notes/110',
+            'device/bioentry_p2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryr2: [
+    {
+      type: 'category',
+      label: 'BioEntry R2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_r2/index',
+      },
+      items: [
+        'device/bioentry_r2/safety-instructions',
+        'device/bioentry_r2/getting-started',
+        'device/bioentry_r2/installation',
+        'device/bioentry_r2/product-specifications',
+        'device/bioentry_r2/regulatory-information',
+        'device/bioentry_r2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_r2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_r2/release-notes/141',
+            'device/bioentry_r2/release-notes/140',
+            'device/bioentry_r2/release-notes/131',
+            'device/bioentry_r2/release-notes/130',
+            'device/bioentry_r2/release-notes/120',
+            'device/bioentry_r2/release-notes/111',
+            'device/bioentry_r2/release-notes/110',
+            'device/bioentry_r2/release-notes/100',
+          ]
+        },
+      ]
+    }
+  ],
+  bioentryw2: [
+    {
+      type: 'category',
+      label: 'BioEntry W2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w2/index',
+      },
+      items: [
+        'device/bioentry_w2/safety-instructions',
+        'device/bioentry_w2/getting-started',
+        'device/bioentry_w2/installation',
+        'device/bioentry_w2/product-specifications',
+        'device/bioentry_w2/regulatory-information',
+        'device/bioentry_w2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_w2/release-notes/index',
+          },
+          items: [
+            'device/bioentry_w2/release-notes/182',
+            'device/bioentry_w2/release-notes/181',
+            'device/bioentry_w2/release-notes/180',
+            'device/bioentry_w2/release-notes/171',
+            'device/bioentry_w2/release-notes/170',
+            'device/bioentry_w2/release-notes/163',
+            'device/bioentry_w2/release-notes/162',
+            'device/bioentry_w2/release-notes/161',
+            'device/bioentry_w2/release-notes/160',
+            'device/bioentry_w2/release-notes/150',
+            'device/bioentry_w2/release-notes/141',
+            'device/bioentry_w2/release-notes/140',
+            'device/bioentry_w2/release-notes/131',
+            'device/bioentry_w2/release-notes/130',
+            'device/bioentry_w2/release-notes/123',
+            'device/bioentry_w2/release-notes/122',
+            'device/bioentry_w2/release-notes/121',
+            'device/bioentry_w2/release-notes/120',
+            'device/bioentry_w2/release-notes/115',
+            'device/bioentry_w2/release-notes/114',
+            'device/bioentry_w2/release-notes/113',
+            'device/bioentry_w2/release-notes/112',
+            'device/bioentry_w2/release-notes/111',
+            'device/bioentry_w2/release-notes/110',
+            'device/bioentry_w2/release-notes/101',
+            'device/bioentry_w2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
+  device_manager: [
+    {
+      type: 'category',
+      label: 'Device Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/device_manager/index',
+      },
+      items: [
+        'device/device_manager/getting-started',
+        'device/device_manager/initial-setup',
+        'device/device_manager/ip-device-settings',
+        'device/device_manager/xpd2-settings',
+        'device/device_manager/appendices'
       ]
     }
   ],
@@ -1021,9 +1442,25 @@ const sidebars = {
         'device/bioentry_w3/installation',
         'device/bioentry_w3/product-specifications',
         'device/bioentry_w3/regulatory-information',
-        'device/bioentry_w3/appendices'
-      ]
-    }
+        'device/bioentry_w3/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/bioentry_w3/release-notes/index',
+          },
+          items: [
+            'device/bioentry_w3/release-notes/101',
+            'device/bioentry_w3/release-notes/100',
+          ]
+        },
+      ],
+    },
   ],
   biostation3: [
     {
@@ -1059,6 +1496,40 @@ const sidebars = {
         'device/biostation_3/product-specifications',
         'device/biostation_3/regulatory-information',
         'device/biostation_3/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3/release-notes/index',
+          },
+          items: [
+            'device/biostation_3/release-notes/141',
+            'device/biostation_3/release-notes/140',
+            'device/biostation_3/release-notes/131',
+            'device/biostation_3/release-notes/130',
+            'device/biostation_3/release-notes/121',
+            'device/biostation_3/release-notes/120',
+            'device/biostation_3/release-notes/111',
+            'device/biostation_3/release-notes/110',
+            'device/biostation_3/release-notes/102',
+            'device/biostation_3/release-notes/101',
+            'device/biostation_3/release-notes/100',
+          ]
+        },
+        // {
+        //   type: 'html',
+        //   value: '<hr />'
+        // },
+        // {
+        //   type: 'doc',
+        //   label: 'A&E',
+        //   id: 'device/biostation_3/ae/biostation3_ae',
+        // },
       ],
     },
   ],
@@ -1096,6 +1567,23 @@ const sidebars = {
         'device/biostation_2a/product-specifications',
         'device/biostation_2a/regulatory-information',
         'device/biostation_2a/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_2a/release-notes/index',
+          },
+          items: [
+            'device/biostation_2a/release-notes/111',
+            'device/biostation_2a/release-notes/110',
+            'device/biostation_2a/release-notes/100',
+          ]
+        },
       ],
     },
   ],
@@ -1133,6 +1621,179 @@ const sidebars = {
         'device/biolite_n2/product-specifications',
         'device/biolite_n2/regulatory-information',
         'device/biolite_n2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2/release-notes/index',
+          },
+          items: [
+            'device/biolite_n2/release-notes/162',
+            'device/biolite_n2/release-notes/161',
+            'device/biolite_n2/release-notes/160',
+            'device/biolite_n2/release-notes/150',
+            'device/biolite_n2/release-notes/142',
+            'device/biolite_n2/release-notes/141',
+            'device/biolite_n2/release-notes/140',
+            'device/biolite_n2/release-notes/132',
+            'device/biolite_n2/release-notes/131',
+            'device/biolite_n2/release-notes/130',
+            'device/biolite_n2/release-notes/120',
+            'device/biolite_n2/release-notes/110',
+            'device/biolite_n2/release-notes/102',
+            'device/biolite_n2/release-notes/101',
+            'device/biolite_n2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
+  xpass2: [
+    {
+      type: 'category',
+      label: 'XPass 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2/index',
+      },
+      items: [
+        'device/xpass_2/safety-instructions',
+        'device/xpass_2/getting-started',
+        'device/xpass_2/installation',
+        'device/xpass_2/product-specifications',
+        'device/xpass_2/regulatory-information',
+        'device/xpass_2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_2/release-notes/index',
+          },
+          items: [
+            'device/xpass_2/release-notes/150',
+            'device/xpass_2/release-notes/143',
+            'device/xpass_2/release-notes/142',
+            'device/xpass_2/release-notes/141',
+            'device/xpass_2/release-notes/132',
+            'device/xpass_2/release-notes/131',
+            'device/xpass_2/release-notes/124',
+            'device/xpass_2/release-notes/123',
+            'device/xpass_2/release-notes/122',
+            'device/xpass_2/release-notes/121',
+            'device/xpass_2/release-notes/120',
+            'device/xpass_2/release-notes/110',
+            'device/xpass_2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
+  xpassd2: [
+    {
+      type: 'category',
+      label: 'XPass D2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_d2/index',
+      },
+      items: [
+        'device/xpass_d2/safety-instructions',
+        'device/xpass_d2/getting-started',
+        'device/xpass_d2/installation',
+        'device/xpass_d2/product-specifications',
+        'device/xpass_d2/regulatory-information',
+        'device/xpass_d2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_d2/release-notes/index',
+          },
+          items: [
+            'device/xpass_d2/release-notes/182',
+            'device/xpass_d2/release-notes/181',
+            'device/xpass_d2/release-notes/180',
+            'device/xpass_d2/release-notes/172',
+            'device/xpass_d2/release-notes/171',
+            'device/xpass_d2/release-notes/170',
+            'device/xpass_d2/release-notes/160',
+            'device/xpass_d2/release-notes/150',
+            'device/xpass_d2/release-notes/142',
+            'device/xpass_d2/release-notes/141',
+            'device/xpass_d2/release-notes/140',
+          ]
+        },
+      ],
+    },
+  ],
+  xpasss2: [
+    {
+      type: 'category',
+      label: 'XPass S2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_s2/index',
+      },
+      items: [
+        'device/xpass_s2/safety-instructions',
+        'device/xpass_s2/getting-started',
+        'device/xpass_s2/installation',
+        'device/xpass_s2/product-specifications',
+        'device/xpass_s2/regulatory-information',
+        'device/xpass_s2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_s2/release-notes/index',
+          },
+          items: [
+            'device/xpass_s2/release-notes/244',
+            'device/xpass_s2/release-notes/243',
+            'device/xpass_s2/release-notes/242',
+            'device/xpass_s2/release-notes/241',
+            'device/xpass_s2/release-notes/240',
+            'device/xpass_s2/release-notes/231',
+            'device/xpass_s2/release-notes/230',
+            'device/xpass_s2/release-notes/226',
+            'device/xpass_s2/release-notes/225',
+            'device/xpass_s2/release-notes/223',
+            'device/xpass_s2/release-notes/221',
+            'device/xpass_s2/release-notes/220',
+            'device/xpass_s2/release-notes/213',
+            'device/xpass_s2/release-notes/212',
+            'device/xpass_s2/release-notes/202',
+          ]
+        },
       ],
     },
   ],
@@ -1170,191 +1831,37 @@ const sidebars = {
         'device/xstation_2/product-specifications',
         'device/xstation_2/regulatory-information',
         'device/xstation_2/appendices',
-      ],
-    },
-  ],
-  facestation2: [
-    {
-      type: 'category',
-      label: 'FaceStation 2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/facestation_2/index',
-      },
-      items: [
-        'device/facestation_2/safety-instructions',
-        'device/facestation_2/getting-started',
-        'device/facestation_2/installation',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
         {
           type: 'category',
-          label: '사용하기',
+          label: '릴리스 노트',
           link: {
             type: 'doc',
-            id: 'device/facestation_2/using-device',
+            id: 'device/xstation_2/release-notes/index',
           },
           items: [
-            'device/facestation_2/admin-menu',
-            'device/facestation_2/user',
-            'device/facestation_2/authentication',
-            'device/facestation_2/settings',
-            'device/facestation_2/event-log',
-          ],
+            'device/xstation_2/release-notes/131',
+            'device/xstation_2/release-notes/130',
+            'device/xstation_2/release-notes/123',
+            'device/xstation_2/release-notes/122',
+            'device/xstation_2/release-notes/121',
+            'device/xstation_2/release-notes/120',
+            'device/xstation_2/release-notes/114',
+            'device/xstation_2/release-notes/113',
+            'device/xstation_2/release-notes/112',
+            'device/xstation_2/release-notes/111',
+            'device/xstation_2/release-notes/110',
+            'device/xstation_2/release-notes/103',
+            'device/xstation_2/release-notes/102',
+            'device/xstation_2/release-notes/101',
+            'device/xstation_2/release-notes/100',
+          ]
         },
-        'device/facestation_2/troubleshooting',
-        'device/facestation_2/product-specifications',
-        'device/facestation_2/regulatory-information',
-        'device/facestation_2/appendices',
       ],
     },
-  ],
-  xpassd2: [
-    {
-      type: 'category',
-      label: 'XPass D2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/xpass_d2/index',
-      },
-      items: [
-        'device/xpass_d2/safety-instructions',
-        'device/xpass_d2/getting-started',
-        'device/xpass_d2/installation',
-        'device/xpass_d2/product-specifications',
-        'device/xpass_d2/regulatory-information',
-        'device/xpass_d2/appendices'
-      ]
-    }
-  ],
-  xpass2: [
-    {
-      type: 'category',
-      label: 'XPass 2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/xpass_2/index',
-      },
-      items: [
-        'device/xpass_2/safety-instructions',
-        'device/xpass_2/getting-started',
-        'device/xpass_2/installation',
-        'device/xpass_2/product-specifications',
-        'device/xpass_2/regulatory-information',
-        'device/xpass_2/appendices'
-      ]
-    }
-  ],
-  xpasss2: [
-    {
-      type: 'category',
-      label: 'XPass S2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/xpass_s2/index',
-      },
-      items: [
-        'device/xpass_s2/safety-instructions',
-        'device/xpass_s2/getting-started',
-        'device/xpass_s2/installation',
-        'device/xpass_s2/product-specifications',
-        'device/xpass_s2/regulatory-information',
-        'device/xpass_s2/appendices'
-      ]
-    }
-  ],
-  bioentryp2: [
-    {
-      type: 'category',
-      label: 'BioEntry P2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/bioentry_p2/index',
-      },
-      items: [
-        'device/bioentry_p2/safety-instructions',
-        'device/bioentry_p2/getting-started',
-        'device/bioentry_p2/installation',
-        'device/bioentry_p2/product-specifications',
-        'device/bioentry_p2/regulatory-information',
-        'device/bioentry_p2/appendices'
-      ]
-    }
-  ],
-  bioentryr2: [
-    {
-      type: 'category',
-      label: 'BioEntry R2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/bioentry_r2/index',
-      },
-      items: [
-        'device/bioentry_r2/safety-instructions',
-        'device/bioentry_r2/getting-started',
-        'device/bioentry_r2/installation',
-        'device/bioentry_r2/product-specifications',
-        'device/bioentry_r2/regulatory-information',
-        'device/bioentry_r2/appendices'
-      ]
-    }
-  ],
-  bioentryw2: [
-    {
-      type: 'category',
-      label: 'BioEntry W2',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/bioentry_w2/index',
-      },
-      items: [
-        'device/bioentry_w2/safety-instructions',
-        'device/bioentry_w2/getting-started',
-        'device/bioentry_w2/installation',
-        'device/bioentry_w2/product-specifications',
-        'device/bioentry_w2/regulatory-information',
-        'device/bioentry_w2/appendices'
-      ]
-    }
-  ],
-  device_manager: [
-    {
-      type: 'category',
-      label: 'Device Manager',
-      collapsed: false,
-      collapsible: false,
-      className: 'p-title',
-      link: {
-        type: 'doc',
-        id: 'device/device_manager/index',
-      },
-      items: [
-        'device/device_manager/getting-started',
-        'device/device_manager/initial-setup',
-        'device/device_manager/ip-device-settings',
-        'device/device_manager/xpd2-settings',
-        'device/device_manager/appendices'
-      ]
-    }
   ],
   corestation_setup_manager: [
     {

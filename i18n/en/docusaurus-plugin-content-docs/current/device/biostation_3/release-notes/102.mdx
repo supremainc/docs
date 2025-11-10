@@ -1,0 +1,42 @@
+---
+id: 102
+title: Firmware Version 1.0.2
+---
+
+# Firmware Version 1.0.2 (Build No. 1.0.2_230111)
+
+Release<Separator/>2023-01-20
+
+## New Features and Improvements
+
+---
+
+1. Supports a new SE processor and new firmware.
+
+    - Support downgrade to lower version firmware.
+
+1. Fixed incorrect **Partial Modify Fail (Server)** log occurred by changing user information from the server where the user does not exist on the device.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When using the relay of the master device for the door, the door does not open when authenticating from the device connected as a slave. <Badge>1.0.0</Badge>
+
+1. Face authentication does not work when set to low **Baud Rate** in **Serial Setting**. <Badge>1.0.0</Badge>
+
+1. Missing custom font files other than English and Korean. <Badge>1.0.0</Badge>
+
+1. When authenticating with face, the Wiegand port outputs an incorrect value as other user information that was previously authenticated with card. <Badge>1.0.0</Badge>
+
+1. Door Locked event occurs when input signal gets detected while configured to Arm/Disarm by input signal. <Badge>1.0.0</Badge>
+
+1. Modifying the authentication mode causes other previously set authentication modes to disappear. <Badge>1.0.0</Badge>
+
+1. The list number column and list column overlaps on the extension number screen. <Badge>1.0.0</Badge>
+
+1. When issuing a smartcard including a visual face template using the SDK, the card scan screen suddenly disappears. <Badge>1.0.0</Badge>
+
+</BugLists>
