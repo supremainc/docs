@@ -147,7 +147,6 @@ const config = {
             clientKey: 'curl',
           },
           hideModels: true,
-          defaultOpenAllTags: true,
           orderSchemaPropertiesBy: 'preserve'
         }
       }
