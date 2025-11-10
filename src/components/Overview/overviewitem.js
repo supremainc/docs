@@ -69,60 +69,69 @@ function OverviewLink({item, renderAll}) {
   const {siteConfig} = useDocusaurusContext();
   const href = findFirstSidebarItemLink(item);
 
-  if (!href) {
+  if (item.type === 'html') {
+    return null;
+  }
+  
+  // 릴리스 관련 항목은 렌더링하지 않음
+  if (item.label?.includes('릴리스') || item.label?.includes('Release')) {
     return null;
   }
 
-  if (item.href.indexOf('release-notes') === -1) { 
-    const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
-    const doc = useDocById(docId);
-    const docStyle = docId?.replace('platform/biostar_x/', '');
-    return (
-      <section className={styles.ovItem}>
-        <article className={clsx('margin-bottom--lg')}>
-          <Heading as='h2' className={styles.ovHeading}>
-            <Link to={item.href}>
-              <span className={clsx(styles.Heading, docStyle)}>{item.label}</span>
-              {item.type === 'category' ? (
-                <>
-                  <span className={styles.linkarrow}>→</span>
-                  <span className={styles.subItemslength}>
-                    {useCategoryItemsPlural()(item.items.length)}
-                  </span>
-                </>
-              ) : (
-                <span className={styles.linkarrow}>
-                  → {translate({
-                      id: 'theme.docs.overview.viewContent',
-                      message: "둘러보기"
-                    })}
-                </span>
-              )}
-            </Link>
-          </Heading>
-          
-          {item.type === 'category' ? (
-            <div className={styles.griddesc}>
-              {doc?.description && (
-                  <p dangerouslySetInnerHTML={{__html: doc.description}} />
-              )}
-              {item.type === 'category' && (
-                <>
-                  {renderSubItems(item.items, item.href, renderAll)}
-                </>
-              )}
-            </div>
+  const docId = item.href?.replace(siteConfig.baseUrl, '') ?? item.docId;
+  const doc = useDocById(docId);
+  const docStyle = docId?.replace(/platform\/(biostar_x|biostar_air)\//, '');
+
+  // 공통 헤딩 콘텐츠
+  const headingContent = (
+    <>
+      <span className={clsx(styles.Heading, docStyle)}>{item.label}</span>
+      {item.type === 'category' ? (
+        <>
+          <span className={styles.linkarrow}>→</span>
+          <span className={styles.subItemslength}>
+            {useCategoryItemsPlural()(item.items?.length || 0)}
+          </span>
+        </>
+      ) : (
+        <span className={styles.linkarrow}>
+          → {translate({
+              id: 'theme.docs.overview.viewContent',
+              message: "둘러보기"
+            })}
+        </span>
+      )}
+    </>
+  );
+
+  return (
+    <section className={styles.ovItem}>
+      <article className={clsx('margin-bottom--lg')}>
+        <Heading as='h2' className={styles.ovHeading}>
+          {item.href ? (
+            <Link to={item.href}>{headingContent}</Link>
           ) : (
-            <div className={styles.desc}>
-              {doc?.description && (
-                <p dangerouslySetInnerHTML={{__html: doc.description.replace(/Release(\d\d)/g, 'Release $1')}} />
-              )}
-            </div>
+            <span>{headingContent}</span>
           )}
-        </article>
-      </section>
-    );
-  }
+        </Heading>
+        
+        {item.type === 'category' ? (
+          <div className={styles.griddesc}>
+            {doc?.description && (
+                <p dangerouslySetInnerHTML={{__html: doc.description}} />
+            )}
+            {item.items && renderSubItems(item.items, item.href, renderAll)}
+          </div>
+        ) : (
+          <div className={styles.desc}>
+            {doc?.description && (
+              <p dangerouslySetInnerHTML={{__html: doc.description.replace(/Release(\d\d)/g, 'Release $1')}} />
+            )}
+          </div>
+        )}
+      </article>
+    </section>
+  );
 }
 
 export default function OverviewItem({item, renderAll}) {
