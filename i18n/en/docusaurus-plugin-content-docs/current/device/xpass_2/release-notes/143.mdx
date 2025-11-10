@@ -1,0 +1,62 @@
+---
+id: 143
+title: Firmware Version 1.4.3
+---
+
+# Firmware Version 1.4.3 (Build No. 1.4.3_250602)
+
+Release<Separator/>2025-06-04
+
+:::caution
+
+- The XP2-MAPB-H model cannot downgrade to firmware version v1.4.3 or lower.
+
+- The XP2-GKDPB model with hardware v1.2.0 or higher cannot downgrade firmware to lower than v1.4.3. The hardware version can be checked in the **DEVICE** menu of BioStar 2.
+
+- Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.3.1 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added new model.
+
+    - XP2-MAPB-H
+
+1. Supports **Keypad Backlight** configuration.
+
+    - XPass 2 (XP2-GKDPB) hardware v1.2.0 or higher, firmware v1.4.3 or higher.
+
+1. Added identification code to support recognition of the latest cards.
+
+    - DESFire EV3
+
+1. Supports SL1, SL3, and SL1/SL3 Mix Mode for security level compatibility with MIFARE Plus EV1 cards.
+
+    - SL1: Compatible mode with MIFARE Classic
+
+    - SL3: Advanced security mode based on AES
+
+1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
+
+1. Supports not logging events when the **Ignore Repeated Signals Duration** feature is activated.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.4.1</Badge>
+
+1. When using the BS2_GetDeviceCapabilities function in the SDK to get information supported by the device, the CustomClassicPlus and CustomDesFireEV1 are displayed as False though the device supports custom smart cards. <Badge>1.4.1</Badge>
+
+1. When authentication is successful using the **Secondary Key*\*, and the **Secondary Key** is then set to **Not Use**, authentication fails even if the **Primary Key** is valid. <Badge>1.0.0</Badge>
+
+1. Authentication fails with a 'period expired' message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
+
+</BugLists>

@@ -1,0 +1,46 @@
+---
+id: 171
+title: Firmware Version 1.7.1
+---
+
+# Firmware Version 1.7.1 (Build No. 1.7.1_240130)
+
+Release<Separator/>2024-02-06
+
+## New Features and Improvements
+
+---
+
+1. Supports **Wireless Door Lock**.
+
+1. Improved synchronization to complete if user enrollment fails when synchronizing multiple users to the device in BioStar 2.
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or higher)
+
+1. Supports new devices.
+
+    - BioStation 2a
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. When using **Server Matching**, **Card + Face** or **ID + Face** authentication fails on FaceStation 2 connected as a slave. <Badge>1.4.0</Badge>
+
+1. Resource file update fails on the device connected as a slave. <Badge>1.5.2</Badge>
+
+1. After authenticating with **ID + Face** on a device connected as a slave, the **ID Input** screen does not appear when the **ID** icon is touched. <Badge>1.0.0</Badge>
+
+1. Slave device that is set to be locked will not be locked if **Secure Tamper** occurs on the master device. <Badge>1.4.0</Badge>
+
+1. The settings of the connected IM-120 are not being applied. <Badge>1.6.1</Badge>
+
+1. Authentication fails when authenticating with a DESFire AoC while the device is connected as a slave. <Badge>1.0.0</Badge>
+
+1. Device abnormally restarts when changing the device's **Network** settings in BioStar 2. <Badge>1.0.0</Badge>
+
+1. When settings that are not supported are configured through the SDK, the device fails to boot properly. <Badge>1.0.0</Badge>
+
+</BugLists>

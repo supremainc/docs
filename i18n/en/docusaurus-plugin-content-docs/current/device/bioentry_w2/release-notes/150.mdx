@@ -1,0 +1,56 @@
+---
+id: 150
+title: Firmware Version 1.5.0
+---
+
+# Firmware Version 1.5.0 (Build No. 1.5.0_200722)
+
+Release<Separator/>2020-07-29
+
+## New Features and Improvements
+
+---
+
+1. Added feature to change device ID.
+
+1. Enhancement in the security of the device.
+
+    - Restrict unencrypted connections.
+
+    - Enhancement in the security of encryption keys.
+
+    - Encrypt and migrate user information.
+
+1. Improved Anti-passback zone to operate based on the door status.
+
+1. Improved the scheduled unlock zone function for each floor when controlling elevator.
+
+1. Supports new device.
+
+    - XPass D2 (Rev 2)
+
+1. Changed the color of LED indicator.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Improved the device to recognize unknown cards by selecting the card type options. (BEW2-OAP)
+
+1. OSDP Communication does not work normally if the value sent to the slave device is greater than the defined value.
+
+1. Device reboots or a timeout occurs when upgrading firmware or transferring user data during SSL secure communication.
+
+1. The event log of the device is not sent in the order in which it occurred.
+
+1. Issue that the option for card types is deactivated when the device is connected as a slave after the factory reset.
+
+1. Issue that the connection of the slave device is disconnected when the slave device is connected.
+
+1. Device reboots when there is no operation after connecting power.
+
+1. Device shows low reading performance with low frequency cards even when card is placed within an operating distance.
+
+</BugLists>

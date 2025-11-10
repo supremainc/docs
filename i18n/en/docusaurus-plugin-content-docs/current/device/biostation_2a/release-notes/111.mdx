@@ -1,0 +1,44 @@
+---
+id: 111
+title: Firmware Version 1.1.1
+---
+
+# Firmware Version 1.1.1 (Build No. 1.1.1_240319)
+
+Release<Separator/>2024-03-20
+
+## New Features and Improvements
+
+---
+
+1. Improved pop-up message displayed when searching with unenrolled information in the **Search User** feature.
+
+1. Improved pop-up message displayed when **Timed Anti PassBack** occurs.
+
+1. Improved duplicate fingerprint detection.
+
+1. Improved fingerprint capture quality.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. **Duress** fingerprint cannot be deleted when the user has two or fewer fingerprints, including **Duress** fingerprint stored in it. <Badge>1.0.0</Badge>
+
+1. When there is no firmware file on the USB connected to the device, pressing the arrow keys/OK button continuously in the **File List** of **FW Upgrade** causes the device to restart. <Badge>1.0.0</Badge>
+
+1. When network is repeatedly disconnected in an environment using a wireless network, RF card authentication will fail. <Badge>1.0.0</Badge>
+
+1. The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. <Badge>1.0.0</Badge>
+
+1. If the authentication message containing the user ID and Name exceeds a certain number of characters, the device will terminate abnormally. <Badge>1.0.0</Badge>
+
+1. If the number of fingerprints stored in the device exceeds the 1:N maximum, the **Finger** in **User Usage** count is displayed abnormally. <Badge>1.0.0</Badge>
+
+1. When using the BS2_GetDeviceCapabilities function in the SDK to get information supported by the device, the CustomClassicPlus and CustomDesFireEV1 are displayed as False though the device supports custom smart cards. <Badge>1.1.0</Badge>
+
+1. When **Relay** is set in the device menu, the door does not open when authenticating with a mobile card + fingerprint. <Badge>1.0.0</Badge>
+
+</BugLists>

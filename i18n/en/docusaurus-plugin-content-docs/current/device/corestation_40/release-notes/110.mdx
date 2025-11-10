@@ -1,0 +1,50 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.1.0_180317)
+
+Release<Separator/>2018-03-26
+
+## New Features and Improvements
+
+---
+
+1. Support Interlock zone.
+
+1. Support Reset without Network Settings.
+
+1. Support Daylight Saving Time setting.
+
+1. Improves Trigger & Action for duress finger.
+
+1. Improves to handle the encryption key of the important information stored in database differently from server to server.
+
+1. Support the secure tamper.
+
+1. Support ISO14443A 10 Byte CSN.
+
+1. Support connecting with BioLite N2, XPass D2.
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. Issue where RS-485 disconnect when changing home screen of the slave device to user's logo.
+
+1. Problem that the slave device is disconnected when the slave device finishes booting more slowly than the master device with the RS-485 encryption key set.
+
+1. Issue if the elevator is configured as a fire alarm zone, relay operation will be turned off when the alarm is released after the fire alarm.
+
+1. Fixed to retain previous rate when setting to the unsupported RS-485 rate.
+
+1. Problem that the duration of the supervised input behaves differently from the setting in Trigger & Action.
+
+1. Fixed to output the logs that the input information and the door open information of the intrusion sensor in the intrusion alarm zone.
+
+1. Problem that delay time of Action Signal Output is not applied in the slave device.
+
+</BugLists>

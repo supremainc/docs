@@ -1,0 +1,84 @@
+---
+id: 131
+title: Firmware Version 1.3.1
+---
+
+# Firmware Version 1.3.1 (Build No. 1.3.1_250120)
+
+Release<Separator/>2025-01-21
+
+:::caution
+
+XS2-APB, XS2-QAPB and XS2-OAPB types of X-Station 2 model support HID iClass card type through SE processor.
+
+For devices with the new SE processor, after upgrading the firmware to v1.1.4 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved QR authentication performance.
+
+1. Supports **Template on Mobile** BLE.
+
+1. Improved to get user update succeeded event log using the GetLogWithFilter function in the SDK.
+
+1. Improved to ensure that values set with osdp_comset are correctly applied on the device connected as a slave.
+
+1. Supports the **Auth Result Display Option** that allows you to select how the user ID and name are displayed on the authentication result screen of the device.
+
+    - **User ID Display**
+
+    - **User Name Display**
+
+1. Added an option to enable or disable the **Scramble Keypad**, which randomizes the position of numeric keys when entering a PIN.
+
+    - **AUTHENTICATION** → **Scramble Keypad**
+
+1. Improved the convenience of the authentication process in an environment using multi factor authentication with QR code + PIN.
+
+1. Improved RS-485 communication quality.
+
+1. Supports feature to set the baud rate of slave devices.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When the **Reset Time** for **Timed Anti PassBack** is set to 0, anti-passback does not work. <Badge>1.0.0</Badge>
+
+1. When a QR code containing unsupported characters is authenticated on the device, the User ID is displayed incorrectly in the EVENT LOG. <Badge>1.3.0</Badge>
+
+1. When a QR code with large data is authenticated on the device, the User ID is not displayed in the EVENT LOG. <Badge>1.0.0</Badge>
+
+1. When the device log is full and a new event occurs, unintended logs are retrieved with the newly generated event. <Badge>1.0.0</Badge>
+
+1. Calling the BS2_GetDeviceCapabilities function on a slave device connected via RS-485 outputs incorrect values. <Badge>1.0.0</Badge>
+
+1. When the device is restarted with the **Primary Key** set only in the **Suprema Smart Card Layout** and the **Secondary Key** set only in the **Custom Smart Card Layout**, the device recognizes the Custom Smart Card as a CSN card. <Badge>1.3.0</Badge>
+
+1. When authenticating with a barcode using the camera, the barcode is not authenticated, and only a beep sound plays. <Badge>1.0.0</Badge>
+
+1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>1.3.0</Badge>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.1.4</Badge>
+
+1. DESFire smart cards with the **Custom Smart Card Layout** set to **Secondary Key** are recognized as CSN cards. <Badge>1.3.0</Badge>
+
+1. The master device restarts abnormally after 31 slave devices are connected. <Badge>1.0.0</Badge>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>1.3.0</Badge>
+
+1. When a slave device supporting Template on Mobile is connected to a master device that does not support Template on Mobile, authenticating a card on the slave device causes the master device to restart. <Badge>1.0.0</Badge>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.2.0</Badge>
+
+</BugLists>

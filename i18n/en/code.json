@@ -380,6 +380,9 @@
   "theme.cover.qrCodetext": {
     "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
+  "theme.revision.badge":{
+    "message": "Affects version"
+  },
   "index.search": {
     "message": "Search"
   },
@@ -1017,5 +1020,8 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "Back to search",
     "description": "The back to search text for footer"
+  },
+  "externalLinks.peripheral.dm20.desc": {
+    "message": "Secure Multi Door I/O Module"
   }
 }

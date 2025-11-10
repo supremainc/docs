@@ -1,0 +1,84 @@
+---
+id: 140
+title: Firmware Version 1.4.0
+---
+
+# Firmware Version 1.4.0 (Build No. 1.4.0_190708)
+
+Release<Separator/>2019-07-12
+
+## Main Fixes
+
+1. When a door configured in a Scheduled Unlock Zone is opened by a Scheduled Unlock, the door is not locked if the zone is deleted.
+
+1. A code is added to prevent the authentication fails because the cache memory is broken.
+
+## New Features and Improvements
+
+---
+
+1. OSDP Standardization
+
+    - Improved to comply with OSDP V2.1.7 protocol when connecting with 3rd-party controllers.
+
+1. Supports Anti-Tailgating.
+
+1. Supports setting options for Wiegand authentication result output.
+
+    - User ID and Card ID
+
+1. Change the way new settings are applied when adding administrators using batch edit of devices.
+
+    - Existing: Overwrite a new setting to existing settings.
+
+    - Update: Add a new setting to existing settings.
+
+1. Increase of the number of administrators that can be added.
+
+1. Increase of the maximum number of floor levels.
+
+1. Supports options for selection by card type.
+
+1. Support to the Clear APB for each user.
+
+1. Supports checking module firmware version.
+
+1. Supports the latest version of I/O module Micom (V1.3.1).
+
+1. Support for connecting new devices.
+
+    - XPass 2(XP2-MDPB, XP2-GDPB, XP2-GKDPB)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The device recognizes the iCLASS Seos card as a CSN card.
+
+1. The output such as LED status indicator or buzzer is not supported for authentication failure due to Live Finger Detection (LFD).
+
+1. It does not respond to inputs from the slave device when booting the master device.
+
+1. Applies FA improvement algorithm.
+
+1. Start time is not applied in UTC when importing filtered logs using SDK.
+
+1. A user cannot access BioStar 1.93 when using the latest firmware.
+
+1. The device cannot recognize iCLASS cards issued by the first generation device.
+
+1. Supports unsupported devices (FaceStation 2, FaceLite).
+
+1. HID Prox cards are continously recognized.
+
+1. The title of the credential input screen is displayed differently on the master device and the slave device when using multiple authentication mode.
+
+    - Existing: master device (user ID, user name), slave device (user ID)
+
+    - Update: master device and slave device (user ID, user name)
+
+1. Relay works after reconnecting for authentication that occurred when elevator connection is disconnected.
+
+</BugLists>

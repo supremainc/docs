@@ -380,6 +380,9 @@
   "theme.cover.qrCodetext": {
     "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
+  "theme.revision.badge": {
+    "message": "발생 버전"
+  },
   "index.search": {
     "message": "검색"
   },
@@ -1017,5 +1020,8 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "검색으로 돌아가기",
     "description": "The back to search text for footer"
+  },
+  "externalLinks.peripheral.dm20.desc": {
+    "message": "다중 출입문 보안 I/O 모듈"
   }
 }

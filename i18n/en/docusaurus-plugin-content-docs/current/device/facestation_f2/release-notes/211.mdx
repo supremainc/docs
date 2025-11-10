@@ -1,0 +1,58 @@
+---
+id: 211
+title: Firmware Version 2.1.1
+---
+
+# Firmware Version 2.1.1 (Build No. 2.1.1_221130)
+
+Release<Separator/>2022-11-30
+
+:::caution
+
+For devices with the new SE processor, after upgrading the firmware to v2.1.0 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or higher)
+
+1. Improved face authentication speed.
+
+1. Improved **Face Detection Setting**
+
+    - **Detection Distance**, **Wide Search** option support.
+
+1. Enhancement in the upgrade package encryption.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. User ID information was not included when using the BS2_GetLogSmallBlobEx function in the SDK to load the event log for the device's mask detection and temperature measurement operation. <Badge>1.1.2</Badge>
+
+1. When authenticating on the device where **Mask Detection** is set and the mask detection method set to **Check After Authentication**, the Access Success (Check Only) event occurs. <Badge>2.0.1</Badge>
+
+1. In BioStar v2.9.x, a user transferred to the device having a blurry image as visual face credential gets enrolled normally. <Badge>2.0.3</Badge>
+
+1. Face gets enrolled normally even if a duplicate face exists on the device. <Badge>2.0.3</Badge>
+
+1. In the process of enrolling a face on the device, the scanned face image is tilted. <Badge>2.0.3</Badge>
+
+1. Improved the structure to prevent authentication fail caused by broken database or cache memory. <Badge>1.0.0</Badge>
+
+1. Door Locked event occurs when input signal gets detected while configured to Arm/Disarm by input signal. <Badge>1.0.0</Badge>
+
+1. When **Dynamic ROI** is activated on a device installed using the TCM-10 and the temperature is measured, the background behind the face is also detected and the temperature is measured higher than the actual temperature. <Badge>2.0.1</Badge>
+
+1. Face authentication suddenly does not work on a device that has been using face authentication for a certain period of time (about 50 days or more). <Badge>2.0.3</Badge>
+
+</BugLists>

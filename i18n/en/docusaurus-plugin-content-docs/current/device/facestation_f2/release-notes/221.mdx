@@ -1,0 +1,54 @@
+---
+id: 221
+title: Firmware Version 2.2.1
+---
+
+# Firmware Version 2.2.1 (Build No. 2.2.1_241204)
+
+Release<Separator/>2024-12-09
+
+:::caution
+
+For devices with the new SE processor, after upgrading the firmware to v2.1.0 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Changes to a new LCD screen.
+
+:::caution
+
+For devices with firmware v2.2.0 or earlier, be sure to upgrade the firmware to the latest version before replacing it with a new LCD display.
+
+The devices using the new LCD display cannot be downgraded to a version earlier than v2.2.1 after upgrading the firmware to v2.2.1 or higher.
+
+:::
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>2.2.0</Badge>
+
+1. When using **Thermal Camera** mode with the TCM10 connected, the face authentication screen is displayed abnormally. <Badge>2.0.1</Badge>
+
+1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>2.2.0</Badge>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>2.1.4</Badge>
+
+1. The **Mask All but First Letter** option in the **Auth Result Display Option** is not applied correctly. <Badge>2.2.0</Badge>
+
+1. After transferring more than 50,000 users with 1:N credentials to the device and then upgrading the firmware, the device freezes. <Badge>2.1.1</Badge>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>2.1.1</Badge>
+
+</BugLists>
