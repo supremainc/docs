@@ -1,0 +1,47 @@
+---
+id: product-specifications
+title: 제품 사양
+description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+keywords: [ 일반, 전원 공급 장치, 백업 배터리, 제품 치수 ]
+---
+
+제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+
+import specs from '@site/static/specs/encr_specs.json';
+
+{/* 일반 */}
+<SpecSection data={specs.enclosure.general} />
+
+{/* 전원 공급 장치 */}
+<SpecSection data={specs.enclosure.power_supply} />
+
+{/* 백업 배터리 */}
+<SpecSection data={specs.enclosure.backup_battery} />
+
+<PageBreak />
+
+## 크기 및 무게
+
+:::note
+
+* 단위: mm
+
+* 치수 공차는 ±0.3 mm입니다.
+
+:::
+
+<Image src='/img/device/encr-dimension.svg' width='85%' className='none' />
+
+:::info
+
+* 제품 사양은 성능 개선을 위해 예고 없이 변경될 수 있습니다.
+
+* 백업 배터리는 별매품입니다.
+
+:::
+
+:::caution
+
+백업 배터리는 12 VDC 사양과 7 Ah 이상의 제품을 사용하세요. 이 제품은 'ROCKET'사의 'ES7-12' 제품으로 테스트 되었으며, 'ES7-12'에 준하는 제품을 사용할 것을 권장합니다.
+
+:::

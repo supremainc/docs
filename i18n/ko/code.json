@@ -38,6 +38,15 @@
   "externalLinks.peripheral.sio2.desc": {
     "message": "출입문 보안 컨트롤 모듈"
   },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "확장형 통신 및 보안 모듈"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "모바일 기반 출입통제 장치 관리 애플리케이션"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "중앙집중형 출입통제 관리 웹서버"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
@@ -425,6 +434,9 @@
   "specs.credentials.rf_distance": {
     "message": "RF 인식 거리"
   },
+  "specs.credentials.multi_controller": {
+    "message": "다중 컨트롤러"
+  },
   "specs.credentials.mobile": {
     "message": "모바일"
   },
@@ -533,6 +545,12 @@
   "specs.general.certifications": {
     "message": "인증"
   },
+  "specs.general.supported_products": {
+    "message": "지원 제품"
+  },
+  "specs.general.material": {
+    "message": "재질"
+  },
   "specs.storage": {
     "message": "저장 용량"
   },
@@ -551,6 +569,9 @@
   "specs.storage.max_image_logs": {
     "message": "최대 이미지 로그 수"
   },
+  "specs.storage.max_card": {
+    "message": "최대 카드 수"
+  },
   "specs.interface": {
     "message": "인터페이스"
   },
@@ -565,6 +586,9 @@
   },
   "specs.interface.rs485": {
     "message": "RS-485"
+  },
+  "specs.interface.rs232c": {
+    "message": "RS-232C"
   },
   "specs.interface.rs485_protocol": {
     "message": "RS-485 통신 프로토콜"
@@ -682,6 +706,36 @@
   },
   "specs.size_weight.bracket.weight_include": {
     "message": "(와셔 및 볼트 포함)"
+  },
+  "specs.power_supply": {
+    "message": "전원 공급 장치"
+  },
+  "specs.power_supply.modelName": {
+    "message": "모델명"
+  },
+  "specs.power_supply.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.power_supply.input": {
+    "message": "Input"
+  },
+  "specs.power_supply.output": {
+    "message": "Output"
+  },
+  "specs.backup_battery": {
+    "message": "백업 배터리"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "모델명"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "전압"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "용량"
   },
   "externalLinks.FaceStation2.desc": {
     "message": "얼굴인증 출입근태 단말기"

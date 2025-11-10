@@ -38,6 +38,15 @@
   "externalLinks.peripheral.sio2.desc": {
     "message": "Access Door Security Control Module"
   },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "Scalable communication and security module"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "Mobile-based access control device management application"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "Centralized access control management web server"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
     "description": "The ARIA label for the breadcrumbs"
@@ -425,6 +434,9 @@
   "specs.credentials.rf_distance": {
     "message": "RF Read Range"
   },
+  "specs.credentials.multi_controller": {
+    "message": "Multi-Controller"
+  },
   "specs.credentials.mobile": {
     "message": "Mobile"
   },
@@ -533,6 +545,12 @@
   "specs.general.certifications": {
     "message": "Certifications"
   },
+  "specs.general.supported_products": {
+    "message": "Supported products"
+  },
+  "specs.general.material": {
+    "message": "Material"
+  },
   "specs.storage": {
     "message": "Capacity"
   },
@@ -551,6 +569,9 @@
   "specs.storage.max_image_logs": {
     "message": "Max. Image logs"
   },
+  "specs.storage.max_card": {
+    "message": "Max. Card"
+  },
   "specs.interface": {
     "message": "Interfaces"
   },
@@ -565,6 +586,9 @@
   },
   "specs.interface.rs485": {
     "message": "RS-485"
+  },
+  "specs.interface.rs232c": {
+    "message": "RS-232C"
   },
   "specs.interface.rs485_protocol": {
     "message": "RS-485 Communication Protocol"
@@ -682,6 +706,36 @@
   },
   "specs.size_weight.bracket.weight_include": {
     "message": "(Including washers and bolts)"
+  },
+  "specs.power_supply": {
+    "message": "Power Supply"
+  },
+  "specs.power_supply.modelName": {
+    "message": "Model Name"
+  },
+  "specs.power_supply.vendor": {
+    "message": "Vendor"
+  },
+  "specs.power_supply.input": {
+    "message": "Input"
+  },
+  "specs.power_supply.output": {
+    "message": "Output"
+  },
+  "specs.backup_battery": {
+    "message": "Backup Battery"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "Model Name"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "Vendor"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "Voltage"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "Capacity"
   },
   "externalLinks.FaceStation2.desc": {
     "message": "IP Facial Authentication Terminal"

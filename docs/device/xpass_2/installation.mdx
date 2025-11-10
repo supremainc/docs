@@ -1,0 +1,149 @@
+---
+id: installation
+title: 설치하기
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+:::info
+
+이 문서는 멀리언 타입을 기준으로 설치 방법을 설명합니다. 갱 박스 타입과 키패드 타입도 동일한 방법으로 설치하세요.
+
+:::
+
+1. 제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-xpd2.svg' className='none' width={300} alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Badge only>XP2-MDPB, XP2-MAPB, XP2-MAPB-H</Badge>
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-xpd2-mdb.png' className='none' width={300} />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 360 mm |
+    | 120 mm | 360 mm |
+    | 150 mm | 300 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-xpd2-mdb.png' className='none' width={300} />
+
+    </Column>
+    </Columns>
+
+    <Badge only>XP2-GDPB, XP2-GKDPB</Badge>
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-xpd2-gdb.png' className='none' width={300} />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 400 mm |
+    | 120 mm | 380 mm |
+    | 150 mm | 380 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-xpd2-gdb.png' className='none' width={300} />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device2-xpd2.svg' className='none' width={250} alone />
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device3-xpd2.svg' className='none' width={250} alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='초록색' />

@@ -104,15 +104,23 @@
 
 * 장치가 오작동할 수 있습니다.
 
+<Xclude product='extendedmodule,extendedmodule_sc'>
+
 **제품에 전원을 연결하기 전에 다시 한번 설명서를 확인하여 배선이 올바르게 되었는지 확인한 후 전원을 연결하세요**.
+
+</Xclude>
 
 **제품을 직사광선이나 자외선에 직접 노출된 장소에 설치하지 마세요**.
 
 * 제품 손상, 오작동 및 변색, 변형의 원인이 됩니다.
 
+<Xclude product='extendedmodule,extendedmodule_sc'>
+
 **전원 케이블 등을 통행 장소에 방치하지 마세요**.
 
 * 신체 상해 또는 제품 손상의 원인이 됩니다.
+
+</Xclude>
 
 **자석, TV, (CRT) 모니터, 스피커 등 자성이 강한 물체 주변에 설치하지 마세요**.
 
@@ -126,7 +134,7 @@
 
 </Include>
 
-<Xclude product='corestation_20,corestation_40,doorinterface'>
+<Xclude product='corestation_20,corestation_40,doorinterface,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
 
 **여러 대의 장치를 설치할 경우 최소 이격 거리를 확인하세요**.
 
@@ -134,13 +142,17 @@
 
 </Xclude>
 
+<Xclude product='extendedmodule,extendedmodule_sc'>
+
 **전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 슈프리마에서 판매하는 전원 어댑터를 사용할 것을 권장합니다**.
 
 * 적합한 전원을 사용하지 않을 경우 장치가 오작동할 수 있습니다.
 
 * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
 
-<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2'>
+</Xclude>
+
+<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
 
 **제품과 Secure I/O 2, 전기정(전기식 잠금 장치)은 반드시 개별 전원을 사용하세요**.
 
@@ -148,7 +160,7 @@
 
 </Xclude>
 
-<Include product='secure_io_2'>
+<Include product='securemodule'>
 
 **Secure I/O 2, 전기정(전기식 잠금 장치), 출입 통제 장치는 반드시 개별 전원을 사용하세요**.
 
@@ -156,7 +168,7 @@
 
 </Include>
 
-<Include product='biostation_2a,bioentry_w3,xstation_2'>
+<Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2'>
 
 **전원 장치와 PoE 전원을 함께 연결하지 마세요**.
 
@@ -180,7 +192,7 @@
 
 </Include>
 
-<Include product='xpass_2,xpass_d2,bioentry_w3'>
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2'>
 
 **완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
 
@@ -204,11 +216,15 @@
 
 * 고장의 원인이 됩니다.
 
+<Xclude product='enclosure,extendedmodule,extendedmodule_sc'>
+
 **제품의 펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요**.
 
 * 고장의 원인이 됩니다.
 
-<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface'>
+</Xclude>
+
+<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
 
 **비밀번호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요**.
 
@@ -216,7 +232,7 @@
 
 </Xclude>
 
-<Xclude product='bioentry_w3,xpass_d2'>
+<Xclude product='bioentry_w3,xpass_d2,bioentry_w2,extendedmodule,extendedmodule_sc'>
 
 **제품의 버튼(터치패드)을 무리하게 누르거나 날카로운 도구를 사용해 누르지 마세요**.
 
@@ -224,9 +240,13 @@
 
 </Xclude>
 
+<Xclude product='extendedmodule,extendedmodule_sc'>
+
 **제품을 {props.name} 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요**.
 
 * 고장의 원인이 됩니다.
+
+</Xclude>
 
 **제품을 청소할 때 주의하세요**.
 
@@ -246,7 +266,7 @@
 
 * 고장의 원인이 됩니다.
 
-<Xclude product='input_module,output_module,door_module,secure_io_2,corestation_20,doorinterface'>
+<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
 
 :::note
 

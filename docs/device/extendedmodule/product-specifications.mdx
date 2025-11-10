@@ -1,0 +1,20 @@
+---
+id: product-specifications
+title: 제품 사양
+description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+keywords: [ 일반, 인터페이스, 제품 치수 ]
+---
+
+제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+
+import specs from '@site/static/specs/extm_specs.json';
+
+{/* 일반 */}
+<SpecSection data={specs.extendedmodule.general} />
+
+{/* 인터페이스 */}
+<SpecSection data={specs.extendedmodule.interface} />
+
+## 크기 및 무게
+
+<Image src='/img/device/extm-dimension.svg' className='none' />

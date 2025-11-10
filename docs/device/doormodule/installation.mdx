@@ -1,0 +1,72 @@
+---
+id: installation
+title: 설치하기
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [설치, Door Interface, 장치]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 사용
+
+1. 제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    :::info
+
+    제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-mounting-bracket-fix-dm20.svg' className='none' width={250} alone />
+
+## 스페이서 사용
+
+제품을 장착할 위치에 스페이서와 고정용 나사를 이용하여 제품을 단단히 고정하세요.
+
+<Image src='/img/device/installation-mounting-spacer-fix-dm20.svg' className='none' width={500} alone />
+
+:::info
+
+제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## RS-485 연결
+
+<Image src='/img/device/installation-rs485-connection-dm20.png' width='65%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+* 제품과 함께 카드 리더 장치는 최대 31대까지 연결할 수 있으며, 지문 인식 장치는 최대 7대와 카드 리더 장치 24대와 조합하여 연결할 수 있습니다.
+
+* XPass 또는 XPass 2가 마스터 장치로 연결될 경우 카드 인증만 사용할 수 있습니다.
+
+:::
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />

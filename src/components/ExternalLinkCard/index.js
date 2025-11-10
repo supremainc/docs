@@ -26,7 +26,7 @@ function CardItem({img, title, url, height, desc}) {
 
 function ExternalLinkBanner({Svg, title, url, desc, height}) {
   return (
-    <Link to={url} target='_blank' className={styles.externalLink}>
+    <Link to={url} className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
           <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
@@ -150,7 +150,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'BioEntry W2',
-      url: '#',
+      url: `/device/bioentry_w2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
       desc: `${translate({
         id: "externalLinks.BioentryW2.desc",
@@ -170,7 +170,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     // },
     {
       title: 'BioEntry R2',
-      url: '#',
+      url: `/device/bioentry_r2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc"
@@ -202,7 +202,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass 2',
-      url: '#',
+      url: `/device/xpass_2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
@@ -211,7 +211,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass S2',
-      url: '#',
+      url: `/device/xpass_s2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpasss2.png',
       desc: `${translate({
         id: "externalLinks.XPassS2.desc",
@@ -257,8 +257,8 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       desc: 'Powerful Security, Flexible Expansion'
     },
     {
-      title: 'ENCR-10',
-      url: '#',
+      title: 'Enclosure',
+      url: '/device/enclosure',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/encr-10.png',
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
@@ -282,7 +282,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'Input Module',
-      url: '#',
+      url: '/device/inputmodule',
       img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
       height: '90px',
       desc: `${translate({
@@ -292,7 +292,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     },
     {
       title: 'Output Module',
-      url: '#',
+      url: '/device/outputmodule',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/om-120.png',
       height: '90px',
       desc: `${translate({
@@ -311,13 +311,41 @@ export function Peripheral({ productLinks: productLinksProp }) {
       })}`
     },
     {
+      title: 'Door Module',
+      url: '/device/doormodule',
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/dm-20.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.dm20.desc",
+        message: "다중 출입문 보안 I/O 모듈"
+      })}`
+    },
+    {
       title: 'Secure Module',
-      url: '#',
+      url: '/device/securemodule',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',
       height: '90px',
       desc: `${translate({
         id: "externalLinks.peripheral.sio2.desc",
         message: "출입문 보안 컨트롤 모듈"
+      })}`
+    },
+    {
+      title: 'Extended Module',
+      url: '/device/extendedmodule',
+      img: '/img/device/extended-module.png',
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
+      })}`
+    },
+    {
+      title: 'Extended Module-SC',
+      url: '/device/extendedmodule_sc',
+      img: '/img/device/extended-module-sc.png',
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
       })}`
     }
   ];
@@ -327,6 +355,41 @@ export function Peripheral({ productLinks: productLinksProp }) {
     <div className={clsx('container', styles.product, styles.grid)}>
       {productLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
+
+export function Apps({ externalLinks: externalLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultExternalLinks = [
+    {
+      title: 'Device Manager',
+      url: '/device/device_manager',
+      Svg: require('/img/device/device-manager.svg').default,
+      height: '45px',
+      desc: `${translate({
+        id: "externalLinks.apps.devicemanager.desc",
+        message: "모바일 기반 출입통제 장치 관리 애플리케이션"
+      })}`
+    },
+    {
+      title: 'CoreStation Setup Manager',
+      url: '/device/corestation_setup_manager',
+      Svg: require('/img/device/cs-setup-manager.svg').default,
+      height: '45px',
+      desc: `${translate({
+        id: "externalLinks.apps.setupmanager.desc",
+        message: "중앙집중형 출입통제 관리 웹서버"
+      })}`
+    }
+  ];
+  const externalLinks = externalLinksProp || defaultExternalLinks;
+
+  return (
+    <div className={clsx('container', styles.grid, styles.externalLinks)}>
+      {externalLinks.map((props, idx) => (
+        <ExternalLinkBanner key={idx} {...props} />
       ))}
     </div>
   );

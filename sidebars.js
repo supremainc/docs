@@ -760,7 +760,7 @@ const sidebars = {
       ]
     }
   ],
-  corestation40: [
+  corestation: [
     {
       type: 'category',
       label: 'CoreStation',
@@ -802,7 +802,69 @@ const sidebars = {
       ]
     }
   ],
-  doorinterface24: [
+  enclosure: [
+    {
+      type: 'category',
+      label: 'Enclosure',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/enclosure/index',
+      },
+      items: [
+        'device/enclosure/safety-instructions',
+        'device/enclosure/getting-started',
+        'device/enclosure/installation',
+        'device/enclosure/product-specifications',
+        'device/enclosure/appendices'
+      ]
+    }
+  ],
+  inputmodule: [
+    {
+      type: 'category',
+      label: 'Input Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/inputmodule/index',
+      },
+      items: [
+        'device/inputmodule/safety-instructions',
+        'device/inputmodule/getting-started',
+        'device/inputmodule/installation',
+        'device/inputmodule/product-specifications',
+        'device/inputmodule/regulatory-information',
+        'device/inputmodule/appendices'
+      ]
+    }
+  ],
+  outputmodule: [
+    {
+      type: 'category',
+      label: 'Output Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/outputmodule/index',
+      },
+      items: [
+        'device/outputmodule/safety-instructions',
+        'device/outputmodule/getting-started',
+        'device/outputmodule/installation',
+        'device/outputmodule/product-specifications',
+        'device/outputmodule/regulatory-information',
+        'device/outputmodule/appendices'
+      ]
+    }
+  ],
+  doorinterface: [
     {
       type: 'category',
       label: 'Door Interface',
@@ -820,6 +882,88 @@ const sidebars = {
         'device/doorinterface/product-specifications',
         'device/doorinterface/regulatory-information',
         'device/doorinterface/appendices'
+      ]
+    }
+  ],
+  doormodule: [
+    {
+      type: 'category',
+      label: 'Door Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doormodule/index',
+      },
+      items: [
+        'device/doormodule/safety-instructions',
+        'device/doormodule/getting-started',
+        'device/doormodule/installation',
+        'device/doormodule/product-specifications',
+        'device/doormodule/regulatory-information',
+        'device/doormodule/appendices'
+      ]
+    }
+  ],
+  securemodule: [
+    {
+      type: 'category',
+      label: 'Secure Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/securemodule/index',
+      },
+      items: [
+        'device/securemodule/safety-instructions',
+        'device/securemodule/getting-started',
+        'device/securemodule/installation',
+        'device/securemodule/product-specifications',
+        'device/securemodule/regulatory-information',
+        'device/securemodule/appendices'
+      ]
+    }
+  ],
+  extendedmodule: [
+    {
+      type: 'category',
+      label: 'Extended Module',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule/index',
+      },
+      items: [
+        'device/extendedmodule/safety-instructions',
+        'device/extendedmodule/getting-started',
+        'device/extendedmodule/installation',
+        'device/extendedmodule/product-specifications',
+        'device/extendedmodule/appendices'
+      ]
+    }
+  ],
+  extendedmodule_sc: [
+    {
+      type: 'category',
+      label: 'Extended Module-SC',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/extendedmodule_sc/index',
+      },
+      items: [
+        'device/extendedmodule_sc/safety-instructions',
+        'device/extendedmodule_sc/getting-started',
+        'device/extendedmodule_sc/installation',
+        'device/extendedmodule_sc/product-specifications',
+        'device/extendedmodule_sc/appendices'
       ]
     }
   ],
@@ -1087,27 +1231,152 @@ const sidebars = {
       ]
     }
   ],
-  // bioentryp2: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioEntry P2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/bioentry_p2/index',
-  //     },
-  //     items: [
-  //       'device/bioentry_p2/safety-instructions',
-  //       'device/bioentry_p2/getting-started',
-  //       'device/bioentry_p2/installation',
-  //       'device/bioentry_p2/product-specifications',
-  //       'device/bioentry_p2/regulatory-information',
-  //       'device/bioentry_p2/appendices'
-  //     ]
-  //   }
-  // ],
+  xpass2: [
+    {
+      type: 'category',
+      label: 'XPass 2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2/index',
+      },
+      items: [
+        'device/xpass_2/safety-instructions',
+        'device/xpass_2/getting-started',
+        'device/xpass_2/installation',
+        'device/xpass_2/product-specifications',
+        'device/xpass_2/regulatory-information',
+        'device/xpass_2/appendices'
+      ]
+    }
+  ],
+  xpasss2: [
+    {
+      type: 'category',
+      label: 'XPass S2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_s2/index',
+      },
+      items: [
+        'device/xpass_s2/safety-instructions',
+        'device/xpass_s2/getting-started',
+        'device/xpass_s2/installation',
+        'device/xpass_s2/product-specifications',
+        'device/xpass_s2/regulatory-information',
+        'device/xpass_s2/appendices'
+      ]
+    }
+  ],
+  bioentryp2: [
+    {
+      type: 'category',
+      label: 'BioEntry P2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_p2/index',
+      },
+      items: [
+        'device/bioentry_p2/safety-instructions',
+        'device/bioentry_p2/getting-started',
+        'device/bioentry_p2/installation',
+        'device/bioentry_p2/product-specifications',
+        'device/bioentry_p2/regulatory-information',
+        'device/bioentry_p2/appendices'
+      ]
+    }
+  ],
+  bioentryr2: [
+    {
+      type: 'category',
+      label: 'BioEntry R2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_r2/index',
+      },
+      items: [
+        'device/bioentry_r2/safety-instructions',
+        'device/bioentry_r2/getting-started',
+        'device/bioentry_r2/installation',
+        'device/bioentry_r2/product-specifications',
+        'device/bioentry_r2/regulatory-information',
+        'device/bioentry_r2/appendices'
+      ]
+    }
+  ],
+  bioentryw2: [
+    {
+      type: 'category',
+      label: 'BioEntry W2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w2/index',
+      },
+      items: [
+        'device/bioentry_w2/safety-instructions',
+        'device/bioentry_w2/getting-started',
+        'device/bioentry_w2/installation',
+        'device/bioentry_w2/product-specifications',
+        'device/bioentry_w2/regulatory-information',
+        'device/bioentry_w2/appendices'
+      ]
+    }
+  ],
+  device_manager: [
+    {
+      type: 'category',
+      label: 'Device Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/device_manager/index',
+      },
+      items: [
+        'device/device_manager/getting-started',
+        'device/device_manager/initial-setup',
+        'device/device_manager/ip-device-settings',
+        'device/device_manager/xpd2-settings',
+        'device/device_manager/appendices'
+      ]
+    }
+  ],
+  corestation_setup_manager: [
+    {
+      type: 'category',
+      label: 'CoreStation Setup Manager',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_setup_manager/index',
+      },
+      items: [
+        'device/corestation_setup_manager/getting-started',
+        'device/corestation_setup_manager/initial-setup',
+        'device/corestation_setup_manager/configuration',
+        'device/corestation_setup_manager/monitoring',
+        'device/corestation_setup_manager/settings',
+        'device/corestation_setup_manager/appendices'
+      ]
+    }
+  ]
 };
 
 export default sidebars;

@@ -1,0 +1,159 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-ber2.svg' className='none' width='80%' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry R2</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>드릴링 템플릿</Td>
+
+<Td>연결 케이블</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-ferrite-core.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>페라이트 코어</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>PVC 앵커 x2</Td>
+
+<Td>고정용 나사 x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>브래킷 고정용 나사(별 모양)</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Components_note from '../../common/_getting-started-components-note.mdx'
+
+<Components_note />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-ber2.png' className='none' width='60%' />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 파란색/하늘색 점멸: 정상 동작 상태
+
+  * 파란색/초록색 점멸:
+
+    * <Cmd sid='ui_012' product='dev' />를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+    * <Cmd sid='ui_205' product='dev' /> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+  * 초록색 점멸: 입력 대기 상태
+
+* **RF 카드 인식부**: 출입을 위해 RF 카드를 인식시키는 부분입니다.
+
+* **지문 인식부**: 출입을 위해 지문을 인식시키는 부분입니다.
+
+* **전원 (2핀)**: 전원 케이블을 연결합니다.
+
+* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+
+* **초기화 버튼**
+
+  * RS-485 연결을 초기화합니다. 자세한 내용은 [RS-485 연결 초기화](installation#rs485-reset)를 참고하세요.
+
+  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+## 케이블 및 커넥터
+
+### 전원
+
+<Image src='/img/device/cable-power-bidirect.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | PWR +VDC | 빨간색(흰띠) |
+| 2 | PWR GND | 검은색(흰띠) |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | 485 TRXP | 파란색 |
+| 2 | 485 TRXN | 노란색 |
+| 3 | 485 GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+{/* 올바른 지문 입력 방법 */}
+import Enroll_fingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enroll_fingerprint />
