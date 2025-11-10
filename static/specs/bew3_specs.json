@@ -94,9 +94,7 @@
         "lcd_type": {
           "label": "디스플레이",
           "label_id": "specs.general.lcd_type",
-          "value": {
-            "ko": "1.3\" PMOLED"
-          }
+          "value": "1.3\" PMOLED"
         },
         "led_type": {
           "label": "LED",
