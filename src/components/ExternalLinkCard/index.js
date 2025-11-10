@@ -333,7 +333,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module',
       url: '/device/extendedmodule',
-      img: '/img/device/extended-module.png',
+      img: require('@site/static/img/device/extended-module.png').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
@@ -342,7 +342,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module-SC',
       url: '/device/extendedmodule_sc',
-      img: '/img/device/extended-module-sc.png',
+      img: require('@site/static/img/device/extended-module-sc.png').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"

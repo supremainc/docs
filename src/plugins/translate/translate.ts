@@ -51,6 +51,7 @@ export async function translate(content: string, targetLanguage: string, isDescr
 - 검색하다 → get (not retrieve)
 - 수행하다 → performed (use only for mechanical/system actions, not human actions)
 - 자격 증명 등록 → enroll credentials (not "register credentials")
+  Credential 종류: Fingerprint, Face, Visual Face, Card, QR/Barcode
 - 설정 → Setting (not Configuration)
 
 ### Special Translation Rules:
