@@ -1,0 +1,31 @@
+---
+id: product-specifications
+title: 제품 사양
+description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+keywords: [일반, 인터페이스, 전기 규격, 제품 치수]
+---
+
+제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+
+import specs from '@site/static/specs/dm20_specs.json';
+
+{/* 일반 */}
+<SpecSection data={specs.doormodule.general} />
+
+{/* 인터페이스 */}
+<SpecSection data={specs.doormodule.interface} />
+
+{/* 전기 규격 */}
+<SpecSection data={specs.doormodule.power} />
+
+## 크기 및 무게
+
+:::note
+
+* 단위: mm
+
+* 치수 공차는 ±0.3 mm입니다.
+
+:::
+
+<Image src='/img/device/dm20-dimension.svg' width='80%' className='none' />

@@ -832,6 +832,9 @@ footer {
     color: var(--ifm-color-cmd);
     position: relative;
   }
+  span.cmd.upper {
+    text-transform: uppercase;
+  }
   span.cmd, a {
     .tooltip {
       font-weight: 400;
@@ -1178,6 +1181,9 @@ footer {
   img.ico[src*="ico-menu2.svg"],
   img.ico[src*="ico-search.svg"],
   img.ico[src*="ico-regulatory.svg"],
+  img.ico[src*="ico-option.svg"],
+  img.ico[src*="ico-password.svg"],
+  img.ico[src*="ico-check.svg"],
   img.ico[src*="ico-delete.svg"] {
     filter: invert(1);
   }

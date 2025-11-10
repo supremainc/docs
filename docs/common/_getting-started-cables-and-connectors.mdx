@@ -2,7 +2,9 @@
 
 ### 전원
 
-<Image src='/img/device/cable-power.svg' className='none' alone />
+<Xclude product='bioentry_p2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
+
+<Include product='bioentry_p2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
 
 <div className='overflow-x col3--10-20-70'>
 
@@ -62,7 +64,7 @@
 
 </Include>
 
-<Include product='facestation_f2,facestation_2'>
+<Include product='facestation_f2,facestation_2,bioentry_p2'>
 
 <Image src='/img/device/cable-input-4pin.svg' className='none' alone />
 
@@ -113,7 +115,7 @@
 
 </Include>
 
-<Include product='facestation_f2,facestation_2'>
+<Include product='facestation_f2,facestation_2,bioentry_p2'>
 
 ### Wiegand 입출력
 
@@ -127,6 +129,25 @@
 | 2 | WG D1 | 흰색 |
 | 3 | WG GND | 검은색 |
 | 4 | SH GND | 회색 |
+
+</div>
+
+</Include>
+
+<Include product='bioentry_p2'>
+
+### 이더넷
+
+<Image src='/img/device/cable-ethernet-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | ENET RXN | 노란색 |
+| 2 | ENET RXP | 초록색 |
+| 3 | ENET TXN | 빨간색 |
+| 4 | ENET TXP | 검은색 |
 
 </div>
 

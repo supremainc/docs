@@ -1,0 +1,89 @@
+---
+id: installation
+title: 설치하기
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [ 설치, 전원, RS-485, 릴레이, Supervised Input, 탬퍼, 함체, AUX ]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 제품 고정
+
+1. 제품을 장착할 위치에 스페이서를 고정용 나사로 고정하세요.
+
+1. 고정된 스페이서 위에 고정용 나사로 제품을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device-im120.svg' className='none' width={300} alone />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## RS-485 연결
+
+제품을 마스터 장치에 연결할 수 있습니다.
+
+<Image src='/img/device/installation-rs485-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG26 이상을 사용해야 하며, 모든 배선은 ANSI/NFPA 70 표준을 준수해야 합니다.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품은 종단 저항 스위치를 ON으로 설정하세요.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+## Supervised Input 연결
+
+화재 감지 센서, 열 감지 센서, 방범 센서, 출입문 센서, 퇴실 버튼 등을 연결할 수 있습니다. **SUPERVISED INPUT** 0\~11 단자는 회로에 흐르는 전압을 감지하여 장치의 단선, 단락, 켜짐, 꺼짐 상태를 모니터링할 수 있으며, 일반적인 Input으로 사용할 수도 있습니다.
+
+BioStar X에서 제품의 상태별 동작을 설정하고, 입력 상태를 모니터링할 수 있습니다.
+
+<Image src='/img/device/installation-supervised-input-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* 마스터 장치의 입력 포트와 연결된 장치에는 제품의 입력을 중복으로 연결하지 마세요.
+
+* 이 제품은 1㏀, 2.2㏀, 4.7㏀, 10㏀ 저항을 연결하여 사용할 수 있습니다. 연결할 입력 장치에 알맞는 저항을 연결한 뒤 BioStar X에서 저항 값을 동일하게 설정하세요.
+
+:::
+
+## 탬퍼 연결
+
+외부 요인에 의해 제품이 설치된 곳에서 분리될 경우 경보를 울리거나 이벤트 로그를 남길 수 있습니다.
+
+<Image src='/img/device/installation-tamper-connection-im120.png' width='80%' className='none' />
+
+<PageBreak />
+
+## 함체 설치 {#install-enclosure}
+
+물리적·전기적 보호를 위해 제품을 함체(ENCR-10) 내부에 설치할 수 있습니다. 함체에는 전원 상태 LED 보드, 전원 분배 보드, 전원 공급 장치, 탬퍼가 포함되어 있습니다. 함체는 별매품입니다.
+
+{/* ## IM120 함체 설치 */}
+import Install_enclosure_im120 from "../../common/_device-install-enclosure-im120.mdx";
+
+<Install_enclosure_im120 />
+
+:::info
+
+제품 설치에 대한 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+
+:::

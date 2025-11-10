@@ -73,9 +73,10 @@ import RelayConnectioin from "../../common/_device-indoor-module-relay-connectio
 
 <PageBreak />
 
-## Wiegand 입력 연결
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
-<Image src='/img/device/installation-wiegand-in-connection-cs40.png' width='60%' className='none' />
+<WiegandConnection />
 
 <PageBreak />
 
@@ -87,78 +88,27 @@ SUPERVISED INPUT 0 ~ 7 단자는 일반적인 입력으로 사용하거나 Super
 
 :::info
 
-SUPERVISED INPUT **Alarm** 단자는 1㏀, 2.2㏀, 4.7㏀, 10㏀ 저항을 연결하여 사용할 수 있습니다. 연결할 입력 장치에 알맞는 저항을 연결한 뒤 BioStar 2에서 저항 값을 동일하게 설정하세요.
+SUPERVISED INPUT **Alarm** 단자는 1㏀, 2.2㏀, 4.7㏀, 10㏀ 저항을 연결하여 사용할 수 있습니다. 연결할 입력 장치에 알맞는 저항을 연결한 뒤 BioStar X에서 저항 값을 동일하게 설정하세요.
 
 :::
 
 <PageBreak />
 
-## AUX 입력 연결
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
 
-전원 장애 감지기나 탬퍼를 AUX IN 단자에 연결할 수 있습니다.
-
-<Image src='/img/device/installation-aux-in-connection-cs40.png' width='100%' className='none' />
+<AuxConnection />
 
 <PageBreak />
-
 
 ## 함체 설치 {#install-enclosure}
 
 물리적·전기적 보호를 위해 CoreStation을 함체(ENCR-10) 내부에 설치할 수 있습니다. 함체에는 전원 상태 LED 보드, 전원 분배 보드, 전원 공급 장치, 탬퍼가 포함되어 있습니다. 함체는 별매품입니다.
 
-### 백업 배터리 고정
+{/* ## cs40 함체 설치 */}
+import Install_enclosure_cs40 from "../../common/_device-install-enclosure-cs40.mdx";
 
-배터리 벨크로 스트랩을 함체에 끼운 뒤 배터리를 고정하세요.
-
-<Image src='/img/device/installation-enclosure-battery.png' width='100%' className='none' alone />
-
-:::caution
-
-백업 배터리는 12 VDC 사양과 7 Ah 이상의 제품을 사용하세요. 이 제품은 'ROCKET'사의 'ES7-12' 제품으로 테스트되었으며, 'ES7-12'에 준하는 제품을 사용할 것을 권장합니다.
-
-:::
-
-:::info
-
-* 백업 배터리는 별매품입니다.
-
-* 백업 배터리의 크기 및 단자의 모양과 크기를 반드시 확인하세요. 백업 배터리의 크기가 권장 사양보다 클 경우 함체에 장착할 수 없거나 장착한 뒤 함체가 닫히지 않을 수 있습니다. 또한 단자의 모양 및 크기가 다를 경우 제공된 케이블을 사용해 배터리를 연결할 수 없습니다.
-
-  <Image src='/img/device/installation-enclosure-battery-size.png' className='none' />
-
-:::
-
-<PageBreak />
-
-### 제품 고정
-
-1. 함체에서 제품을 장착할 위치를 확인하세요.
-
-    <Image src='/img/device/installation-enclosure-fix01.svg' alone className='none' width='50%' />
-
-1. 장착할 위치에 맞추어 제품을 함체에 올린 뒤 고정용 나사로 고정하세요.
-
-    <Image src='/img/device/installation-enclosure-fix02.svg' alone className='none' width='50%' />
-
-### POWER / AUX IN 연결
-
-전원 장애를 막기 위해 무정전 전원 장치(UPS)를 연결하여 사용할 수 있으며, 전원 장애 감지기나 다른 장치의 접점 출력을 AUX IN 단자에 연결할 수 있습니다. 또한 탬퍼와 연결하여 외부 요인에 의해 함체가 열릴 경우 경보를 울리거나 이벤트 로그를 남길 수 있습니다.
-
-<Image src='/img/device/installation-enclosure-power-connection.svg' alone className='none' width='50%' />
-
-:::caution
-
-* 출입 통제 장치와 제품에 연결하는 전원은 반드시 분리하여 사용하세요.
-
-* 전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다.
-
-  * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
-
-* 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
-
-* 백업 배터리는 12 VDC 사양과 7 Ah 이상의 제품을 사용하세요. 이 제품은 'ROCKET'사의 'ES7-12' 제품으로 테스트 되었으며, 'ES7-12'에 준하는 제품을 사용할 것을 권장합니다.
-
-:::
+<Install_enclosure_cs40 />
 
 {/* ## 공장 초기화 {#factory-reset} */}
 import FactoryReset from "../../common/_cs-fatory-reset.mdx";

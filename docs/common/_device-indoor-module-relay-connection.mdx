@@ -16,6 +16,14 @@
 
 </Include>
 
+<Include product='inputmodule'>
+
+이 제품의 릴레이로 출입문 잠금 장치 또는 경보 장치를 제어할 수 있습니다. 연결할 장치의 가이드를 참고하여 릴레이를 NC 또는 NO로 연결하세요.
+
+<Image src='/img/device/installation-relay-im120.png' width='75%' className='none' />
+
+</Include>
+
 ### Fail Safe Lock
 
 Fail Safe Lock을 사용하려면 아래 그림과 같이 **NC** 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다.
@@ -28,9 +36,15 @@ Fail Safe Lock을 사용하려면 아래 그림과 같이 **NC** 릴레이를 �
 
 </Include>
 
-<Include product='corestation_40'>
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
 
 데드볼트(Deadbolt)나 도어 스트라이크(Door Strike) 설치 시 다이오드를 아래 그림과 같이 전원 입력 양단에 연결하세요. 다이오드 방향에 주의하여 반드시 Cathode(줄무늬 방향)를 전원의 + 부분에 연결하세요.
+
+</Include>
+
+<Include product='inputmodule'>
+
+마스터 장치의 릴레이 포트와 연결된 장치에는 이 제품의 릴레이를 중복으로 연결하지 마세요.
 
 </Include>
 
@@ -39,6 +53,12 @@ Fail Safe Lock을 사용하려면 아래 그림과 같이 **NC** 릴레이를 �
 <Include product='corestation_20,,doorinterface'><Image src='/img/device/installation-relay-fail-safe-lock-cs20.png' width='80%' className='none' /></Include>
 
 <Include product='corestation_40'><Image src='/img/device/installation-relay-fail-safe-lock-cs40.png' width='80%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-safe-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-safe-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-safe-lock-sio2.png' width='65%' className='none' /></Include>
 
 <Include product='corestation_20,doorinterface'>
 
@@ -68,9 +88,15 @@ Fail Secure Lock을 사용하려면 아래 그림과 같이 **NO** 릴레이를 
 
 </Include>
 
-<Include product='corestation_40'>
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
 
 데드볼트(Deadbolt)나 도어 스트라이크(Door Strike) 설치 시 다이오드를 아래 그림과 같이 전원 입력 양단에 연결하세요. 다이오드 방향에 주의하여 반드시 Cathode(줄무늬 방향)를 전원의 + 부분에 연결하세요.
+
+</Include>
+
+<Include product='inputmodule'>
+
+마스터 장치의 릴레이 포트와 연결된 장치에는 이 제품의 릴레이를 중복으로 연결하지 마세요.
 
 </Include>
 
@@ -79,6 +105,12 @@ Fail Secure Lock을 사용하려면 아래 그림과 같이 **NO** 릴레이를 
 <Include product='corestation_20,doorinterface'><Image src='/img/device/installation-relay-fail-secure-lock-cs20.png' width='80%' className='none' /></Include>
 
 <Include product='corestation_40'><Image src='/img/device/installation-relay-fail-secure-lock-cs40.png' width='80%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-secure-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-secure-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-secure-lock-sio2.png' width='65%' className='none' /></Include>
 
 <Include product='corestation_20,doorinterface'>
 

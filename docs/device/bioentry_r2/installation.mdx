@@ -1,0 +1,133 @@
+---
+id: installation
+title: 설치하기
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+1. 제공된 드릴링 템플릿을 이용하여 제품을 장착할 위치를 정하세요. 제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-bep2.png' className='none' alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-bep2.png' className='none' width='50%' />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 250 mm |
+    | 120 mm | 250 mm |
+    | 150 mm | 180 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-bep2.png' className='none' width='50%' />
+
+    </Column>
+    </Columns>
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device2-bep2.png' className='none' alone />
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device3-bep2.png' className='none' alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+## 전원 연결
+
+<Image src='/img/device/installation-power-connection-ber2.png' width='60%' className='none' />
+
+:::caution
+
+* 전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다.
+
+  * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
+
+* 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
+
+* Secure I/O 2, 전기정(전기식 잠금장치), 제품은 반드시 개별 전원을 사용하세요. 전원을 함께 연결하여 사용하면 장치가 오작동할 수 있습니다.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+* XPass 또는 XPass 2가 마스터 장치로 연결될 경우 카드 인증만 사용할 수 있습니다.
+
+:::
+
+## RS-485 연결 초기화 {#rs485-reset}
+
+1. 전원을 켜세요.
+
+1. 초기화 버튼을 1초 이상 누르세요. LED가 초록색으로 표시됩니다.
+
+1. 비프음이 울리면 RS-485 연결 초기화가 완료됩니다.
+
+:::info
+
+마스터 장치에 이미 연결된 장치를 다른 마스터 장치에 연결하려면 해당 장치의 RS-485 연결을 초기화해야 합니다.
+
+:::
+
+## RS-485 전송 속도 재설정
+
+원하는 통신 속도를 선택하여 설정할 수 있습니다.
+
+1. 전원을 켜세요.
+
+1. 초기화 버튼을 2초 이상 누르세요. 설정 모드로 진입하면 LED가 초록색으로 깜빡입니다.
+
+1. 장치의 LED가 초록색으로 깜빡일 때, 초기화 버튼을 원하는 횟수만큼 누르세요. 누른 횟수에 따라 전송 속도가 설정되며, LED 색상으로 설정된 속도를 확인할 수 있습니다.
+
+    <div className='overflow-x'>
+
+    | 누름 횟수 | 전송 속도 | LED 색상 |
+    | :--: | :--: | :--: |
+    | 1    | 9600      | 하늘색   |
+    | 2    | 19200     | 파란색   |
+    | 3    | 38400     | 보라색   |
+    | 4    | 57600     | 흰색     |
+    | 5    | 115200    | 빨간색   |
+
+    </div>
+
+1. 설정한 전송 속도의 LED 색상이 5초 동안 깜빡입니다. 비프음이 울리면 전송 속도 설정이 완료됩니다.
+
+:::info
+
+설정 모드 진입 후 초기화 버튼을 누르지 않으면 전송 속도가 자동으로 115200으로 설정됩니다.
+
+:::
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='초록색' />
