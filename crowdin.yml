@@ -54,7 +54,6 @@ files: [
       "/docs/common/bsx-license/*.mdx",
       "/docs/platform/biostar_x/opensourcelicenses.txt",
       "/docs/platform/biostar_air/**/*.mdx",
-      "/docs/device/**/*.mdx",
       "/docs/how-to/**/*.mdx",
       "/docs/reference/**/*.mdx",
     ]
