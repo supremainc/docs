@@ -141,13 +141,14 @@ const config = {
         route: '/api/bsxapi',
         showNavLink: false, // optional, default is true
         configuration: {
-          url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest',
+          url: 'https://registry.scalar.com/@suprema-co/apis/biostar-x-api/latest?format=json',
           defaultHttpClient: {
             targetKey: 'shell',
             clientKey: 'curl',
           },
           hideModels: true,
-          orderSchemaPropertiesBy: 'preserve'
+          orderSchemaPropertiesBy: 'preserve',
+          withDefaultFonts: false
         }
       }
     ]
