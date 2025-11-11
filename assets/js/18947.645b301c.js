@@ -502,8 +502,8 @@ function DocItemMetadata() {
     });
 }
 
-// EXTERNAL MODULE: ./src/theme/DocItem/Layout/index.js + 11 modules
-var Layout = __webpack_require__(92608);
+// EXTERNAL MODULE: ./src/theme/DocItem/Layout/index.js + 19 modules
+var Layout = __webpack_require__(59932);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.

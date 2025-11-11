@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5896"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["39704"], {
 21673: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -187,7 +187,7 @@ function _createMdxContent(props) {
         children: "Suprema Inc."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Address: 17F-5, Parkview Office Tower, 248, Jeongjail-ro, Seongnam-si, Gyeonggi-do, 13554, Republic of Korea"
+      children: "Address: 17F Parkview Tower, 248, Jeongjail-ro, Bundang- gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Tel: +82-31-783-4502 / Fax: +82-31-783-4503"
     })]
@@ -209,7 +209,7 @@ function MDXContent(props = {}) {
 
 
 }),
-86399: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+9294: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -218,13 +218,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_regulatory_information_mdx_7cc_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_regulatory_information_mdx_139_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-3-regulatory-information-mdx-7cc.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_regulatory_information_mdx_7cc_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/regulatory-information.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/regulatory-information","permalink":"/docs/en/device/bioentry_w3/regulatory-information","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/regulatory-information.mdx","tags":[],"version":"current","frontMatter":{"id":"regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","keywords":["Regulatory","License","FCC","CE"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"Product Specifications","permalink":"/docs/en/device/bioentry_w3/product-specifications"},"next":{"title":"Appendices","permalink":"/docs/en/device/bioentry_w3/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-regulatory-information-mdx-139.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_regulatory_information_mdx_139_namespaceObject = JSON.parse('{"id":"device/biostation_3/regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/regulatory-information.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/regulatory-information","permalink":"/docs/en/device/biostation_3/regulatory-information","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/regulatory-information.mdx","tags":[],"version":"current","frontMatter":{"id":"regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","keywords":["Regulatory","License","FCC","CE"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"Product Specifications","permalink":"/docs/en/device/biostation_3/product-specifications"},"next":{"title":"Appendices","permalink":"/docs/en/device/biostation_3/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -235,7 +235,7 @@ var _fcc_compliance_information = __webpack_require__(36452);
 var _ce = __webpack_require__(21673);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_more-information.mdx
 var _more_information = __webpack_require__(70771);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/regulatory-information.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/regulatory-information.mdx
 
 
 const frontMatter = {
@@ -261,16 +261,71 @@ const assets = {
 
 
 
-const toc = [..._fcc_compliance_information/* .toc */.RM, ..._ce/* .toc */.RM, ..._more_information/* .toc */.RM];
+const toc = [{
+  "value": "Regulatory &amp; Licenses",
+  "id": "regulatory--licenses",
+  "level": 2
+}, ..._fcc_compliance_information/* .toc */.RM, ..._ce/* .toc */.RM, ..._more_information/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
+    h2: "h2",
+    li: "li",
+    ol: "ol",
     p: "p",
+    strong: "strong",
+    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  };
+  }, {Image} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Provides information on regulations and certifications complied with by the product."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "regulatory--licenses",
+      children: "Regulatory & Licenses"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Licenses, regulatory certifications, and compliance marks can be view on the device."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "CE / FCC / IC / KC / UKCA / RCM / MIC / TELEC"
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["You can view ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Regulatory & Licenses"
+          }), " press the ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-regulatory.svg",
+            ico: true,
+            alone: true
+          }), " on the upper right corner of ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "DASHBOARD"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/bs3-regulatory-licenses.png"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["If the administrator has not been designated, the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "DASHBOARD"
+        }), " screen will be displayed when you press ", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/common/ico-menu.svg",
+          ico: true,
+          alone: true
+        }), "."]
+      })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_fcc_compliance_information/* ["default"] */.Ay, {
       name: "Class A"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
@@ -287,6 +342,9 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
