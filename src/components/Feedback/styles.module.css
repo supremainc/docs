@@ -12,15 +12,19 @@
 
 /* 초기 피드백 트리거 버튼 */
 .feedbackTrigger {
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 26px;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 3px 10px;
   margin: 0 0 0 0.5rem;
   background-color: var(--ifm-color-primary);
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  background-color: #A32343;
+  border-radius: 3px;
+  font-size: .7rem;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -108,15 +112,17 @@
 
 .feedbackButton:hover:not(:disabled) {
   border-color: var(--ifm-color-primary);
-  background-color: var(--ifm-color-cmd-lightest);
+  background-color: var(--ifm-color-primary);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
 .feedbackButton.active {
   border-color: var(--ifm-color-primary);
-  background-color: var(--ifm-color-cmd-lightest);
+  background-color: var(--ifm-color-primary);
   color: var(--ifm-color-primary-darkest);
+  color: #fff;
 }
 
 .feedbackButton:disabled {
@@ -173,7 +179,7 @@
 .feedbackTextarea:focus {
   outline: none;
   border-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 2px var(--ifm-color-cmd-lightest);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
 }
 
 .feedbackTextarea:disabled {
@@ -253,6 +259,11 @@
   transition: all 0.2s ease;
 }
 
+.cancelButton:hover:not(:disabled) {
+  border-color: var(--ifm-color-emphasis-500);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
 .cancelButton:disabled {
   cursor: not-allowed;
   opacity: 0.6;
@@ -280,8 +291,8 @@
   gap: 0.75rem;
   padding: 1.5rem;
   border-radius: 6px;
-  background-color: var(--ifm-feedback-success-bg);
-  color: var(--ifm-color-primary-darkest);
+  background-color: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darkest);
   text-align: center;
 }
 
@@ -292,7 +303,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-success);
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
@@ -421,7 +432,10 @@
 /* 빠른 제출 섹션 */
 .quickSubmitSection {
   margin: 1rem 0;
-  padding: 0;
+  /* padding: 1rem; */
+  /* background-color: var(--ifm-color-success-lightest);
+  border: 1px solid var(--ifm-color-success-light); */
+  border-radius: 6px;
 }
 
 .quickSubmitButton {
