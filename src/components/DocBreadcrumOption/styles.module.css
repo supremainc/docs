@@ -4,7 +4,7 @@
   margin-top: 2px;
 }
 
-.btnprint button {
+button.printbtn {
   width: fit-content;
   width: -moz-fit-content;
   min-width: 65px;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-.btnprint button::before {
+button.printbtn::before {
   content: ' ';
   position: relative;
   display: inline-block;

@@ -1020,5 +1020,85 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "Back to search",
     "description": "The back to search text for footer"
+  },
+  "feedback.components.sendFeedback": {
+    "message": "Send feedback",
+    "description": "The label of the button to send feedback"
+  },
+  "feedback.components.thanksForFeedback": {
+    "message": "Thank you for your feedback!",
+    "description": "The message displayed after the user has sent feedback"
+  },
+  "feedback.components.successSubtext": {
+    "message": "Your feedback is valuable for improving the documentation.",
+    "description": "The subtext displayed after the user has sent feedback"
+  },
+  "feedback.components.feedbackTitle": {
+    "message": "Did this page help you?",
+    "description": "The title of the feedback component"
+  },
+  "feedback.components.feedbackDescription": {
+    "message": "Your feedback is valuable for improving the documentation.",
+    "description": "The description of the feedback component"
+  },
+  "feedback.components.feedbackTypeGood": {
+    "message": "Helpful",
+    "description": "The label for the good feedback type"
+  },
+  "feedback.components.feedbackTypeBad": {
+    "message": "Needs improvement",
+    "description": "The label for the bad feedback type"
+  },
+  "feedback.components.quickSubmitButton.onGoing": {
+    "message": "Submitting...",
+    "description": "The label of the quick submit button when the feedback is being submitted"
+  },
+  "feedback.components.quickSubmitButton.idle": {
+    "message": "Quick submit (no additional comments)",
+    "description": "The label of the quick submit button when the feedback is idle"
+  },
+  "feedback.components.feedbackDetail": {
+    "message": "Please provide more details about your feedback.",
+    "description": "The label for the feedback detail textarea"
+  },
+  "feedback.components.required": {
+    "message": "(Required)",
+    "description": "Indicates that a form field is required"
+  },
+  "feedback.components.optional": {
+    "message": "(Optional)",
+    "description": "Indicates that a form field is optional"
+  },
+  "feedback.component.feedbackTextarea.negativePlaceholder": {
+    "message": "Please provide detailed information about any issues with the documentation so we can address them to your satisfaction.",
+    "description": "The placeholder for the feedback textarea when the user selected negative feedback"
+  },
+  "feedback.component.feedbackTextarea.positivePlaceholder": {
+    "message": "Please feel free to write any areas for improvement or additional comments.",
+    "description": "The placeholder for the feedback textarea when the user selected positive feedback"
+  },
+  "feedback.component.requiredNote": {
+    "message": "* Required",
+    "description": "Indicates that fields marked with * are required"
+  },
+  "feedback.components.errorMessage": {
+    "message": "An error occurred while submitting your feedback. Please try again later.",
+    "description": "The error message displayed when feedback submission fails" 
+  },
+  "feedback.components.validationError": {
+    "message": "Please provide detailed feedback on the areas that need improvement.",
+    "description": "The validation error message displayed when the feedback detail is missing for negative feedback"
+  },
+  "feedback.component.feedbackCompletedMessage": {
+    "message": "Feedback submitted",
+    "description": "The title of the feedback completed message"
+  },
+  "feedback.component.cancelButton.label": {
+    "message": "Cancel feedback input",
+    "description": "The label of the button to cancel feedback submission"
+  },
+  "feedback.component.privacyNote": {
+    "message": "Submitted feedback is used solely for the purpose of improving documentation<br/>and does not collect personally identifiable information.",
+    "description": "The privacy note displayed in the feedback form"
   }
 }
