@@ -253,11 +253,6 @@
   transition: all 0.2s ease;
 }
 
-.cancelButton:hover:not(:disabled) {
-  border-color: var(--ifm-color-emphasis-500);
-  background-color: var(--ifm-color-emphasis-100);
-}
-
 .cancelButton:disabled {
   cursor: not-allowed;
   opacity: 0.6;
@@ -285,8 +280,8 @@
   gap: 0.75rem;
   padding: 1.5rem;
   border-radius: 6px;
-  background-color: var(--ifm-color-success-lightest);
-  color: var(--ifm-color-success-darkest);
+  background-color: var(--ifm-feedback-success-bg);
+  color: var(--ifm-color-primary-darkest);
   text-align: center;
 }
 
@@ -297,7 +292,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: var(--ifm-color-success);
+  background-color: var(--ifm-color-primary);
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
@@ -427,8 +422,8 @@
 .quickSubmitSection {
   margin: 1rem 0;
   padding: 1rem;
-  background-color: var(--ifm-color-success-lightest);
-  border: 1px solid var(--ifm-color-success-light);
+  background-color: var(--ifm-feedback-success-bg);
+  border: 1px solid var(--ifm-feedback-success-bg);
   border-radius: 6px;
 }
 

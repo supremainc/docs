@@ -20,7 +20,7 @@ export default function FeedbackWidget({
   useEffect(() => {
     // SSR 환경에서 window 객체 접근 방지
     if (typeof window !== 'undefined') {
-      setCurrentPageUrl(window.location.href);
+      setCurrentPageUrl(decodeURIComponent(window.location.href));
     }
   }, []);
 
