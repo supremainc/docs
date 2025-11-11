@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
-
+import IcClose from '@site/static/img/menus/ico-close.svg';
 export default function FeedbackWidget({
   googleFormId,
   feedbackTypeEntryId,
@@ -184,7 +184,7 @@ export default function FeedbackWidget({
                 message: '취소'
               })}
               >
-              ×
+              <IcClose />
             </button>
             <p className={styles.feedbackDescription}>
               {translate({
