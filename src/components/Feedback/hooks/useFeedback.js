@@ -1,4 +1,12 @@
 import { useState, useCallback, useEffect } from 'react';
+import { 
+  FEEDBACK_CONFIG, 
+  FEEDBACK_TYPES, 
+  SUBMIT_STATUS,
+  createSubmitUrl,
+  getFeedbackText,
+  processDetailContent 
+} from '../constants';
 
 /**
  * 피드백 기능을 위한 공통 커스텀 훅
@@ -11,10 +19,10 @@ import { useState, useCallback, useEffect } from 'react';
  * @param {Function} config.onReset - 초기화 콜백
  */
 export function useFeedback({
-  googleFormId = '1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA',
-  feedbackTypeEntryId = 'entry.1129679087',
-  pageUrlEntryId = 'entry.23458126', 
-  detailEntryId = 'entry.1070297166',
+  googleFormId = FEEDBACK_CONFIG.GOOGLE_FORM_ID,
+  feedbackTypeEntryId = FEEDBACK_CONFIG.ENTRY_IDS.FEEDBACK_TYPE,
+  pageUrlEntryId = FEEDBACK_CONFIG.ENTRY_IDS.PAGE_URL, 
+  detailEntryId = FEEDBACK_CONFIG.ENTRY_IDS.DETAIL_CONTENT,
   onSuccess,
   onReset
 } = {}) {
@@ -22,7 +30,7 @@ export function useFeedback({
   const [feedbackType, setFeedbackType] = useState(null);
   const [detailText, setDetailText] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('idle');
+  const [submitStatus, setSubmitStatus] = useState(SUBMIT_STATUS.IDLE);
   const [currentPageUrl, setCurrentPageUrl] = useState('');
 
   // 페이지 URL 설정
@@ -35,14 +43,14 @@ export function useFeedback({
   // 피드백 선택 핸들러
   const handleFeedbackClick = useCallback((type) => {
     setFeedbackType(type);
-    setSubmitStatus('idle');
+    setSubmitStatus(SUBMIT_STATUS.IDLE);
   }, []);
 
   // 초기화 함수
   const resetFeedback = useCallback(() => {
     setFeedbackType(null);
     setDetailText('');
-    setSubmitStatus('idle');
+    setSubmitStatus(SUBMIT_STATUS.IDLE);
     onReset?.();
   }, [onReset]);
 
@@ -52,28 +60,22 @@ export function useFeedback({
       const formData = new FormData();
       
       // 피드백 유형
-      const feedbackTypeText = feedbackType === 'positive' ? '😊 Good' : '😫 Bad';
+      const feedbackTypeText = getFeedbackText(feedbackType);
       formData.append(feedbackTypeEntryId, feedbackTypeText);
       
       // 페이지 URL
       formData.append(pageUrlEntryId, currentPageUrl);
       
       // 상세 내용
-      const detailContent = detailText.trim();
-      if (!detailContent && feedbackType === 'negative') {
-        formData.append(detailEntryId, '구체적인 개선 사항은 작성되지 않았습니다.');
-      } else if (!detailContent && feedbackType === 'positive') {
-        formData.append(detailEntryId, '빠른 긍정 피드백 (추가 의견 없음)');
-      } else {
-        formData.append(detailEntryId, detailContent || '추가 의견 없음');
-      }
+      const processedContent = processDetailContent(detailText, feedbackType);
+      formData.append(detailEntryId, processedContent);
 
       // 필수 필드들
-      formData.append('fvv', '1');
-      formData.append('pageHistory', '0');
+      formData.append('fvv', FEEDBACK_CONFIG.FORM_FIELDS.FVV);
+      formData.append('pageHistory', FEEDBACK_CONFIG.FORM_FIELDS.PAGE_HISTORY);
 
       // Google Forms 제출 URL
-      const submitUrl = `https://docs.google.com/forms/d/e/${googleFormId}/formResponse`;
+      const submitUrl = createSubmitUrl(googleFormId);
 
       await fetch(submitUrl, {
         method: 'POST',
@@ -93,21 +95,21 @@ export function useFeedback({
     if (!feedbackType) return;
     
     // 부정 피드백인 경우 상세 내용 필수 검증
-    if (feedbackType === 'negative' && !detailText.trim()) {
-      setSubmitStatus('validation-error');
+    if (feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim()) {
+      setSubmitStatus(SUBMIT_STATUS.VALIDATION_ERROR);
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus(SUBMIT_STATUS.IDLE);
 
     const success = await submitToGoogleForms();
 
     if (success) {
-      setSubmitStatus('success');
+      setSubmitStatus(SUBMIT_STATUS.SUCCESS);
       onSuccess?.(feedbackType, detailText);
     } else {
-      setSubmitStatus('error');
+      setSubmitStatus(SUBMIT_STATUS.ERROR);
     }
 
     setIsSubmitting(false);

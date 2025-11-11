@@ -1,5 +1,6 @@
 import React from 'react';
 import { translate } from '@docusaurus/Translate';
+import { FEEDBACK_TYPES, TEXTAREA_CONFIG } from '../constants';
 
 /**
  * 피드백 버튼 컴포넌트
@@ -8,17 +9,21 @@ export function FeedbackButtons({
   feedbackType, 
   onFeedbackClick, 
   isSubmitting, 
-  className = '' 
+  styles,
+  buttonClassName = '',
+  containerClassName = ''
 }) {
   return (
-    <div className={className}>
+    <div className={containerClassName}>
       <button
-        className={`feedback-button ${feedbackType === 'positive' ? 'active' : ''}`}
-        onClick={() => onFeedbackClick('positive')}
+        className={`${styles?.feedbackButton || 'feedback-button'} ${
+          feedbackType === FEEDBACK_TYPES.POSITIVE ? (styles?.active || 'active') : ''
+        } ${buttonClassName}`}
+        onClick={() => onFeedbackClick(FEEDBACK_TYPES.POSITIVE)}
         disabled={isSubmitting}
         aria-label="Positive feedback: Good"
       >
-        <span className="icon">😊</span>
+        <span className={styles?.icon || 'icon'}>😊</span>
         <span>
           {translate({
             id: 'feedback.components.feedbackTypeGood',
@@ -28,12 +33,14 @@ export function FeedbackButtons({
       </button>
 
       <button
-        className={`feedback-button ${feedbackType === 'negative' ? 'active' : ''}`}
-        onClick={() => onFeedbackClick('negative')}
+        className={`${styles?.feedbackButton || 'feedback-button'} ${
+          feedbackType === FEEDBACK_TYPES.NEGATIVE ? (styles?.active || 'active') : ''
+        } ${buttonClassName}`}
+        onClick={() => onFeedbackClick(FEEDBACK_TYPES.NEGATIVE)}
         disabled={isSubmitting}
         aria-label="Negative feedback: Bad"
       >
-        <span className="icon">😫</span>
+        <span className={styles?.icon || 'icon'}>😫</span>
         <span>
           {translate({
             id: 'feedback.components.feedbackTypeBad',
@@ -54,17 +61,19 @@ export function FeedbackTextarea({
   onDetailTextChange,
   isSubmitting,
   submitStatus,
-  className = ''
+  styles,
+  className = '',
+  showCharacterCount = true
 }) {
   return (
     <div className={className}>
-      <label htmlFor="feedback-detail" className="textarea-label">
+      <label htmlFor="feedback-detail" className={styles?.textareaLabel || 'textarea-label'}>
         {translate({
           id: 'feedback.components.feedbackDetail',
           message: '평가에 대해 자세히 알려주세요.'
         })}
-        <span className="required">
-          {feedbackType === 'negative' 
+        <span className={styles?.required || 'required'}>
+          {feedbackType === FEEDBACK_TYPES.NEGATIVE 
             ? translate({
                 id: 'feedback.components.required',
                 message: '(필수)'
@@ -79,9 +88,9 @@ export function FeedbackTextarea({
       
       <textarea
         id="feedback-detail"
-        className="feedback-textarea"
+        className={styles?.feedbackTextarea || 'feedback-textarea'}
         placeholder={
-          feedbackType === 'negative' 
+          feedbackType === FEEDBACK_TYPES.NEGATIVE 
             ? translate({
                 id: 'feedback.component.feedbackTextarea.negativePlaceholder',
                 message: '문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다.'
@@ -94,25 +103,28 @@ export function FeedbackTextarea({
         value={detailText}
         onChange={(e) => onDetailTextChange(e.target.value)}
         disabled={isSubmitting}
-        rows={4}
-        maxLength={1000}
-        required={feedbackType === 'negative'}
+        rows={TEXTAREA_CONFIG.ROWS}
+        maxLength={TEXTAREA_CONFIG.MAX_LENGTH}
+        required={feedbackType === FEEDBACK_TYPES.NEGATIVE}
+        aria-describedby="feedback-privacy-note"
       />
 
-      <div className="character-count">
-        {detailText.length} / 1000
-        {feedbackType === 'negative' && detailText.trim().length === 0 && (
-          <span className="required-note">
-            {translate({
-              id: 'feedback.component.requiredNote',
-              message: '* 필수 입력'
-            })}
-          </span>
-        )}
-      </div>
+      {showCharacterCount && (
+        <div className={styles?.characterCount || 'character-count'}>
+          {detailText.length} / {TEXTAREA_CONFIG.MAX_LENGTH}
+          {feedbackType === FEEDBACK_TYPES.NEGATIVE && detailText.trim().length === 0 && (
+            <span className={styles?.requiredNote || 'required-note'}>
+              {translate({
+                id: 'feedback.component.requiredNote',
+                message: '* 필수 입력'
+              })}
+            </span>
+          )}
+        </div>
+      )}
 
       {submitStatus === 'validation-error' && (
-        <div className="error-message" role="alert">
+        <div className={styles?.errorMessage || 'error-message'} role="alert">
           {translate({
             id: 'feedback.components.validationError',
             message: '개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.'
@@ -126,17 +138,17 @@ export function FeedbackTextarea({
 /**
  * 성공 메시지 컴포넌트
  */
-export function SuccessMessage({ className = '' }) {
+export function SuccessMessage({ styles, className = '' }) {
   return (
-    <div className={`${className} success-message`}>
-      <span className="success-icon">✓</span>
+    <div className={`${styles?.successMessage || 'success-message'} ${className}`}>
+      <span className={styles?.successIcon || 'success-icon'}>✓</span>
       <p>
         {translate({
           id: 'feedback.components.thanksForFeedback',
           message: '피드백을 제출해 주셔서 감사합니다.'
         })}
       </p>
-      <p className="success-subtext">
+      <p className={styles?.successSubtext || 'success-subtext'}>
         {translate({
           id: 'feedback.components.successSubtext',
           message: '귀하의 의견은 문서 개선에 소중하게 활용됩니다.'
@@ -149,9 +161,9 @@ export function SuccessMessage({ className = '' }) {
 /**
  * 에러 메시지 컴포넌트
  */
-export function ErrorMessage({ className = '' }) {
+export function ErrorMessage({ styles, className = '' }) {
   return (
-    <div className={`${className} error-message`} role="alert">
+    <div className={`${styles?.errorMessage || 'error-message'} ${className}`} role="alert">
       {translate({
         id: 'feedback.components.errorMessage',
         message: '피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.'
@@ -169,31 +181,75 @@ export function SubmitButton({
   onClick,
   feedbackType,
   detailText,
-  className = ''
+  styles,
+  className = '',
+  children
 }) {
   const isDisabled = disabled || isSubmitting || 
-    (feedbackType === 'negative' && !detailText.trim());
+    (feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim());
 
   return (
     <button
-      className={`${className} submit-button`}
+      className={`${styles?.submitButton || 'submit-button'} ${className}`}
       onClick={onClick}
       disabled={isDisabled}
+      aria-label={isSubmitting ? translate({
+        id: 'feedback.components.quickSubmitButton.onGoing',
+        message: '제출 중...'
+      }) : translate({
+        id: 'feedback.component.feedbackCompletedMessage',
+        message: '피드백 제출'
+      })}
     >
-      {isSubmitting ? (
+      {children || (
         <>
-          <span className="spinner" aria-hidden="true"></span>
-          {translate({
-            id: 'feedback.components.quickSubmitButton.onGoing',
-            message: '제출 중...'
-          })}
+          {isSubmitting ? (
+            <>
+              <span className={styles?.spinner || 'spinner'} aria-hidden="true"></span>
+              {translate({
+                id: 'feedback.components.quickSubmitButton.onGoing',
+                message: '제출 중...'
+              })}
+            </>
+          ) : (
+            translate({
+              id: 'feedback.component.feedbackCompletedMessage',
+              message: '피드백 제출'
+            })
+          )}
         </>
-      ) : (
-        translate({
-          id: 'feedback.component.feedbackCompletedMessage',
-          message: '피드백 제출'
-        })
       )}
     </button>
+  );
+}
+
+/**
+ * 빠른 제출 버튼 컴포넌트 (긍정 피드백용)
+ */
+export function QuickSubmitButton({
+  isSubmitting,
+  onClick,
+  styles,
+  className = ''
+}) {
+  return (
+    <div className={styles?.quickSubmitSection || 'quick-submit-section'}>
+      <button
+        className={`${styles?.quickSubmitButton || 'quick-submit-button'} ${className}`}
+        onClick={onClick}
+        disabled={isSubmitting}
+      >
+        {isSubmitting 
+          ? translate({
+              id: 'feedback.components.quickSubmitButton.onGoing',
+              message: '제출 중...'
+            })
+          : translate({
+              id: 'feedback.components.quickSubmitButton.idle',
+              message: '빠른 제출 (추가 의견 없음)'
+            })
+        }
+      </button>
+    </div>
   );
 }

@@ -55,6 +55,15 @@ export const TIMING_CONFIG = {
   SUCCESS_DISPLAY_TIME: 3000 // 데스크탑용 표시 시간
 };
 
+// 상태 검증 함수들
+export const STATUS_CHECKS = {
+  isIdle: (status) => status === SUBMIT_STATUS.IDLE,
+  isSuccess: (status) => status === SUBMIT_STATUS.SUCCESS,
+  isError: (status) => status === SUBMIT_STATUS.ERROR,
+  isValidationError: (status) => status === SUBMIT_STATUS.VALIDATION_ERROR,
+  isSubmitting: (status, isSubmitting) => isSubmitting
+};
+
 /**
  * Google Forms 제출 URL 생성
  * @param {string} formId - Google Form ID
