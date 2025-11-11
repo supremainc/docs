@@ -44,7 +44,14 @@ function App() {
                 withDefaultFonts: false,
                 showToolbar: 'never',
                 layout: 'modern',
-                theme: 'alternate'
+                theme: 'alternate',
+                customCss: `
+              .t-doc__sidebar {--scalar-color-green: #00a400;--scalar-color-red: #fa383e;--scalar-color-yellow: #ffba00;--scalar-color-blue: #3578e5;--scalar-color-orange: #ff8d4d;--scalar-color-purple: #b191f9;}
+              .scalar-app .markdown ul, .scalar-app .markdown ol { padding-left: 1.6em;}
+              .scalar-app .markdown:before { content: none; }
+              .scalar-app .markdown ul ul li::before, .scalar-app .markdown ol > ul ul li::before { content: none}
+              .scalar-app .markdown table { display: table, width: 100%;}
+            `
             }
         })
     });
