@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral} from '@site/src/components/ExternalLinkCard';
+import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -154,6 +154,11 @@ export default function Home() {
           <Heading as='h2'>Peripherals</Heading>
         </div>
         <Peripheral />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>APPS</Heading>
+        </div>
+        <Apps />
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Developers</Heading>
