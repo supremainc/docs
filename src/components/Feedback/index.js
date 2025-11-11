@@ -309,7 +309,6 @@ export default function FeedbackWidget({
 
               {submitStatus === 'validation-error' && (
                 <div className={styles.errorMessage} role="alert">
-                  개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.
                   {translate({
                     id: 'feedback.components.validationError',
                     message: '개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.'
