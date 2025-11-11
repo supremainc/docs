@@ -1,6 +1,6 @@
 .feedbackWidget {
   position: absolute;
-  margin-top: 1rem;
+  margin-top: .8rem;
   padding: 1.5rem;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 8px;
@@ -421,10 +421,7 @@
 /* 빠른 제출 섹션 */
 .quickSubmitSection {
   margin: 1rem 0;
-  padding: 1rem;
-  background-color: var(--ifm-feedback-success-bg);
-  border: 1px solid var(--ifm-feedback-success-bg);
-  border-radius: 6px;
+  padding: 0;
 }
 
 .quickSubmitButton {
