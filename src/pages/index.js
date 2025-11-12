@@ -1,8 +1,15 @@
 import { Redirect } from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 export default function Redirect2Bsx() {
   const detectBrowserLanguage = () => {
+    // 서버 환경에서는 기본값 반환
+    if (!ExecutionEnvironment.canUseDOM) {
+      return 'ko';
+    }
+    
     const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
     
     for (const lang of browserLanguages) {
