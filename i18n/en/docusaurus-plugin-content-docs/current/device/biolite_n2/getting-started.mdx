@@ -1,0 +1,161 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioLite N2</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Drilling Template</Td>
+
+<Td>Shrink Tube</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>PVC Anchors x2</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Bracket Fixing Screw<br/>(Star Shaped)</Td>
+
+<Td>120 Ω Resistor</Td>
+
+<Td>Diode</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-bln2.png' className='none' width='30%' />
+
+* **Display**: Provides a UI for operation.
+
+* **Feature Button**: Used for attendance key, text modification, etc.
+
+* **Keypad**
+
+  * **0~9**: Used to input numbers or characters.
+
+  * **2**, **4**, **6**, **8**: Used to navigate to the desired item.
+
+* **OK Button**: Used to select attendance mode and save settings. If the work code is set, you can press and hold to change the user's work code.
+
+* **ESC Button**: Used to open the menu, go back to the previous screen, and cancel input.
+
+* **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **Cable**
+
+  Power / RS-485 / Ethernet / Relay / Wiegand Input/Output / Input
+
+* **Speaker**: Delivers sound.
+
+### Cable
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bln2.svg' className='none' width='70%' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin |    Name   |         Color         |
+| :-: | :-------: | :-------------------: |
+|  1  |  PWR +VDC |          Red          |
+|  2  |  PWR GND  |  Black (White Stripe) |
+|  3  |  485 TRXP |  Blue (White Stripe)  |
+|  4  |  485 TRXN | Yellow (Black Stripe) |
+|  5  |  485 GND  |  White (Black Stripe) |
+|  6  |  ENET RXN |         Yellow        |
+|  7  |  ENET RXP |         Green         |
+|  8  |  ENET TXN |          Red          |
+|  9  |  ENET TXP |         Black         |
+|  10 |   RLY NO  |  Gray (White Stripe)  |
+|  11 |  RLY COM  |  Green (White Stripe) |
+|  12 |   RLY NC  | Orange (White Stripe) |
+|  13 |   WG D0   |         Green         |
+|  14 |   WG D1   |         White         |
+|  15 | INPUT GND |          Gray         |
+|  16 |   INPUT1  |         Brown         |
+|  17 |   INPUT0  |         Purple        |
+
+</Column>
+</Columns>
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

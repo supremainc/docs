@@ -1,0 +1,49 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - Credentials
+  - General
+  - Face
+  - Capacity
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/xps2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xpasss2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xpasss2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.xpasss2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xpasss2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xpasss2.power} />
+
+{/* 크기 및 무게 */}
+
+## Dimensions and Weight
+
+<Image src='/img/device/xps2-dimension.png' className='none' width="80%" />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> The RF detection range may vary depending on the installation environment.
+
+:::

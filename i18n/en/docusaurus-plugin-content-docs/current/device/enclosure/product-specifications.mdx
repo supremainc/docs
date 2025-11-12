@@ -1,0 +1,54 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Power Supply
+  - Backup Battery
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/encr_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.enclosure.general} />
+
+{/* 전원 공급 장치 */}
+
+<SpecSection data={specs.enclosure.power_supply} />
+
+{/* 백업 배터리 */}
+
+<SpecSection data={specs.enclosure.backup_battery} />
+
+<PageBreak />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/encr-dimension.svg' width='85%' className='none' />
+
+:::info
+
+* Product specifications are subject to change without notice for performance improvement.
+
+* The backup battery is sold separately.
+
+:::
+
+:::caution
+
+Use a backup battery that is 12 VDC specification and 7 Ah or higher. This product has been tested with the 'ES7-12' product from 'ROCKET', and it is recommended to use products equivalent to 'ES7-12'.
+
+:::

@@ -1,0 +1,314 @@
+---
+id: settings
+title: Settings
+description: Provides instructions on how to set system and device configurations.
+keywords:
+  - Display
+  - Sound
+  - Network
+  - Device
+---
+
+Provides instructions on how to set system and device configurations.
+
+## Display & Sound
+
+You can change the display and sound settings of the device.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Cmd sid='ui_366' product='dev' /> and change the desired item.
+
+   <Image src='/img/device/xs2-displaysound.png' />
+
+   * <Cmd sid='ui_364' product='dev' />: You can choose items to display in the background of the home screen.
+
+   * <Cmd sid='ui_227' product='dev' />: You can select the language that will be displayed on the screen.
+
+   * <Cmd sid='ui_284' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. <Cmd sid='ui_284' product='dev' /> can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_284' product='dev' /> is enabled on the device.
+
+   * <Cmd sid='ui_184' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. <Cmd sid='ui_184' product='dev' /> can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_184' product='dev' /> is enabled on the device.
+
+   * <Cmd sid='ui_365' product='dev' />: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
+
+   * <Cmd sid='ui_131' product='dev' />: Set the time (sec) for the menu screen to disappear automatically. If there is no button input during a set time, the screen will return to the home screen.
+
+   * <Cmd sid='ui_135' product='dev' />: Set the time (sec) for a setting complete message or notification message to disappear automatically.
+
+   * <Cmd sid='ui_148' product='dev' />: Set the time (sec) to turn off the lighting of the screen.
+
+   * <Cmd sid='ui_251' product='dev' />: You can use voice guidance instead of notification tones.
+
+   * <Cmd sid='ui_153' product='dev' />: Set the volume.
+
+:::info
+
+For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+
+:::
+
+## Network
+
+You can change the network settings of the device, such as Ethernet, server, OSDP, etc.
+
+### Ethernet
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_252' product='dev' />.
+
+3. Change the desired item.
+
+   <Image src='/img/device/xs2-network-ethernet.png' />
+
+   * <Cmd sid='ui_012' product='dev' />: Set whether to use DHCP. By turning off DHCP settings, the user can modify <Cmd sid='ui_290' product='dev' />, <Cmd sid='ui_029' product='dev' />, <Cmd sid='ui_068' product='dev' />, <Cmd sid='ui_192' product='dev' />, <Cmd sid='ui_111' product='dev' />.
+
+   * <Cmd sid='ui_290' product='dev' />: Set the device's port.
+
+   * <Cmd sid='ui_029' product='dev' />: You can check the device's IP address. To modify, disable DHCP setting.
+
+   * <Cmd sid='ui_068' product='dev' />: You can check the device's gateway. To modify, disable DHCP setting.
+
+   * <Cmd sid='ui_192' product='dev' />: You can check the device's subnet mask. To modify, disable DHCP setting.
+
+   * <Cmd sid='ui_111' product='dev' />: Set the DNS server address.
+
+4. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+### Server
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />.
+
+3. Change the desired item.
+
+   <Image src='/img/device/xs2-network-server.png' />
+
+   * <Cmd sid='ui_283' product='dev' />: You can send a connection signal from the device to a server with the input information directly. When <Cmd sid='ui_283' product='dev' /> is enabled, the user can input <Cmd sid='ui_182' product='dev' />, <Cmd sid='ui_183' product='dev' />, and <Cmd sid='ui_189' product='dev' />.
+
+   * <Cmd sid='ui_182' product='dev' />: Enter the IP address of the PC on which BioStar X is installed.
+
+   * You can enter <Cmd sid='ui_183' product='dev' /> instead of <Cmd sid='ui_182' product='dev' />.
+
+   * <Cmd sid='ui_189' product='dev' />: Enter the port of the PC on which BioStar X is installed.
+
+4. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+### OSDP settings
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Cmd sid='ui_344' product='dev' /> and set the desired item in <Cmd sid='ui_039' product='dev' />.
+
+   <Image src='/img/device/xs2-network-osdp.png' />
+
+   * <Cmd sid='ui_049' product='dev' />: Select the RS-485 mode.
+
+   * <Cmd sid='ui_297' product='dev' />: Select the desired baud rate.
+
+   * <Cmd sid='ui_257' product='dev' />: When using <Cmd sid='ui_269' product='dev' />, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when <Cmd sid='ui_049' product='dev' /> mode is set to <Cmd sid='ui_088' product='dev' /> or <Cmd sid='ui_205' product='dev' />.
+
+3. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+## Device
+
+### License {#license}
+
+You can activate the device license or check <Cmd sid='ui_206' product='dev' /> and <Cmd sid='ui_292' product='dev' />.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Press <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_119' product='dev' />.
+
+3. To activate the device license, connect the USB containing the license to the device and select <Image src='/img/common/ico-add2.svg' ico alone />.
+
+   <Image src='/img/device/xs2-license.png' />
+
+4. Licenses that can be activated appear on the screen. Activate the desired license.
+
+   <Image src='/img/device/xs2-license1.png' />
+
+:::info
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
+
+:::
+
+### Relay
+
+You can set the input ports of <Cmd sid='ui_144' product='dev' /> and <Cmd sid='ui_015' product='dev' /> on the device.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_122' product='dev' />.
+
+   <Image src='/img/device/xs2-relay.png' />
+
+   * <Cmd sid='ui_122' product='dev' />: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure <Cmd sid='ui_144' product='dev' /> and <Cmd sid='ui_015' product='dev' />.
+
+   * <Cmd sid='ui_144' product='dev' />: Set the duration for the door to remain open when standard user authentication has been carried out.
+
+   * <Cmd sid='ui_015' product='dev' />: Select the input port connected to the exit button.
+
+   * Switch: Select the type of switch (<Cmd sid='ui_274' product='dev' />N/O or <Cmd sid='ui_035' product='dev' />N/C<Cmd sid='ui_036' product='dev' />) for the Exit Button's input port.
+
+### Date & Time {#date-time}
+
+You can set date and time. Set the date and time accurately in order to collect accurate log data.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_098' product='dev' />.
+
+3. Change the desired item.
+
+   <Image src='/img/device/xs2-datetime.png' />
+
+   * <Cmd sid='ui_098' product='dev' />: Check the current date and time. To modify it manually, disable <Cmd sid='ui_208' product='dev' />.
+
+   * <Cmd sid='ui_358' product='dev' />: Set the time reference of the current location.
+
+   * <Cmd sid='ui_208' product='dev' />: Synchronize the server and the time. If you wish to synchronize the server and the time, enable <Cmd sid='ui_208' product='dev' />.
+
+   * <Cmd sid='ui_097' product='dev' />: You can set the date format. You can select <Cmd sid='ui_062' product='dev' />, <Cmd sid='ui_033' product='dev' />, and <Cmd sid='ui_009' product='dev' />.
+
+   * <Cmd sid='ui_209' product='dev' />: You can set the time format. You can select <Cmd sid='ui_238' product='dev' /> and <Cmd sid='ui_005' product='dev' />.
+
+### Daylight saving time
+
+You can use the device by applying daylight saving time. Set the start and end time correctly.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_270' product='dev' />, then press <Image src='/img/common/ico-add2.svg' ico alone /> to add daylight savings time.
+
+3. Change the desired item.
+
+   <Image src='/img/device/xs2-dst.png' />
+
+   * <Cmd sid='ui_253' product='dev' />: You can view the name of the daylight savings time.
+
+   * <Cmd sid='ui_217' product='dev' /> / <Cmd sid='ui_218' product='dev' /> / <Cmd sid='ui_216' product='dev' /> / <Cmd sid='ui_215' product='dev' />: Set details of when daylight-saving time begins.
+
+   * <Cmd sid='ui_094' product='dev' /> / <Cmd sid='ui_095' product='dev' /> / <Cmd sid='ui_093' product='dev' /> / <Cmd sid='ui_092' product='dev' />: Set details of when daylight-saving time ends.
+
+4. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+### Device Information
+
+You can view the model name, device ID, serial number, device and firmware version, kernel, and MAC address.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_289' product='dev' />. You can check the information of <Cmd sid='ui_136' product='dev' />, <Cmd sid='ui_282' product='dev' />, <Cmd sid='ui_210' product='dev' />, <Cmd sid='ui_019' product='dev' />, <Cmd sid='ui_017' product='dev' />, <Cmd sid='ui_332' product='dev' />, <Cmd sid='ui_031' product='dev' />.
+
+   <Image src='/img/device/xs2-info.png' />
+
+### Memory information
+
+View the status of memory usage.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_134' product='dev' />. You can view the memory usage status of the device.
+
+   <Image src='/img/device/xs2-memory.png' />
+
+### USB memory
+
+Connect USB Memory and import user information to the device or export log and user information from the device. You can also upgrade the firmware.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_061' product='dev' />.
+
+3. Select the desired item and change the setting.
+
+   <Image src='/img/device/xs2-usb.png' />
+
+   * <Cmd sid='ui_063' product='dev' />: Import user information from the connected USB memory.
+
+   * <Cmd sid='ui_100' product='dev' />: Select information you wish to export to the connected USB memory.
+
+   * <Cmd sid='ui_353' product='dev' />: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+
+:::caution
+
+Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
+
+:::
+
+import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
+
+:::info
+
+<SupportedMemoryInfo />
+
+:::
+
+### Secure Tamper
+
+You can set whether to use security tamper. When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' />.
+
+3. Activate <Cmd sid='ui_150' product='dev' /> to delete data of all registered users, all logs, and secure keys when a temper event occurs.
+
+### Restart device
+
+The user can restart the device.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_286' product='dev' />.
+
+3. Press <Cmd sid='ui_367' product='dev' /> to restart the device. Press <Cmd sid='ui_321' product='dev' /> to return to the previous screen.
+
+### Restore default
+
+Device settings, network settings, and operator levels will be reset.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_089' product='dev' />.
+
+   * <Cmd sid='ui_304' product='dev' />: Initializes all settings stored on the device. Press <Cmd sid='ui_367' product='dev' /> to initialize all device settings. Press <Cmd sid='ui_321' product='dev' /> to return to the previous screen.
+
+   * <Cmd sid='ui_104' product='dev' />: Initializes all settings except for network settings. Press <Cmd sid='ui_367' product='dev' /> to initialize all settings except for network settings. Press <Cmd sid='ui_321' product='dev' /> to return to the previous screen.
+
+   * <Cmd sid='ui_072' product='dev' />: Deletes all information saved in the device and the root certificate, restoring settings to default.
+
+   * <Cmd sid='ui_121' product='dev' />: Deletes the root certificate saved in the device.
+
+3. If you proceed with <Cmd sid='ui_089' product='dev' />, the device will restart.
+
+:::info
+
+* When you reset, the operator level will be reset as well. After resetting, make sure to set the operator level again.
+
+* Language setting will not change after resetting.
+
+* The <Cmd sid='ui_072' product='dev' /> menu can be used when the root certificate is saved in the device.
+
+* The <Cmd sid='ui_121' product='dev' /> menu can be used only when the root certificate is saved in the device and an administrator has been designated.
+
+:::
+
+### User ID type
+
+Select the type of user ID to register to the device.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_168' product='dev' />.
+
+   * <Cmd sid='ui_200' product='dev' />: You can enter a user ID with numbers only.
+
+   * <Cmd sid='ui_237' product='dev' />: You can enter a user ID using alphanumeric characters and certain symbols `_` `-`.
+
+3. To save the settings, press <Cmd sid='ui_037' product='dev' />.

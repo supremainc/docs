@@ -1,0 +1,38 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/sio2_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.securemodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.securemodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.securemodule.power} />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/sio2-dimension.svg' width='85%' className='none' />

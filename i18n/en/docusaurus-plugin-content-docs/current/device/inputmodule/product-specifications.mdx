@@ -1,0 +1,57 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Capacity
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/im120_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.inputmodule.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.inputmodule.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.inputmodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.inputmodule.power} />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/im120-dimension.svg' width='90%' className='none' />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> Up to 10 events that occurred when the network connection was lost will be saved per port, and when there are more than 10 events, the events will be deleted in the order they occurred from the log.
+
+<Anno id='anno2'>2)</Anno> You can choose to use either Input or Supervised input.
+
+:::
+
+:::info
+
+Product specifications are subject to change without notice for performance improvement.
+
+:::

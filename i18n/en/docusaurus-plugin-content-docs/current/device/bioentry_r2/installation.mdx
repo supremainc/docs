@@ -1,0 +1,141 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords:
+  - Bracket
+  - Power
+  - Network
+  - Input
+  - Relay
+  - Standalone
+  - Secure I/O
+  - Wiegand
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the bracket and the product
+
+1. Determine the correct position to install the bracket using the provided drilling template. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   <Image src='/img/device/installation-device1-bep2.png' className='none' alone />
+
+   :::info
+
+   * If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   * To avoid RF interference, a minimum separation distance must be maintained.
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-bep2.png' className='none' width='50%' />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  250 mm  |
+   |     120 mm     |  250 mm  |
+   |     150 mm     |  180 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-bep2.png' className='none' width='50%' />
+
+   </Column>
+   </Columns>
+
+   :::
+
+2. Mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-device2-bep2.png' className='none' alone />
+
+3. Rotate the fixing screws to assemble the product with the bracket.
+
+   <Image src='/img/device/installation-device3-bep2.png' className='none' alone />
+
+   :::info
+
+   When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+   :::
+
+## Power supply connection
+
+<Image src='/img/device/installation-power-connection-ber2.png' width='60%' className='none' />
+
+:::caution
+
+* Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device.
+
+  * Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+* DO NOT extend the length of power cable when using the power adapter.
+
+* Use a separate power supply for Secure I/O 2, the electric lock, and the product respectively. If connecting and using the power supply to these devices together, the devices may malfunction.
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection.
+
+* If XPass or XPass 2 is connected to the master device, only card authentication can be used.
+
+:::
+
+## Initialize RS-485 connection {#rs485-reset}
+
+1. Power on.
+
+2. Press the reset button for more than 1 second. The LED appears green.
+
+3. When you hear a beep, the RS-485 connection initialization is complete.
+
+:::info
+
+If you want to connect a device already connected to the master device to another master device, you must initialize the RS-485 connection of that device.
+
+:::
+
+## Reset RS-485 transmission performance
+
+You can choose and set the desired communication performance.
+
+1. Power on.
+
+2. Press the reset button for more than 2 seconds. When you enter setting mode, the LED flashes green.
+
+3. When the device's LED flashes green, press the reset button as many times as desired. The transmission performance is set according to the number of presses, and you can check the set performance by the LED color.
+
+   <div className='overflow-x'>
+
+   | Number of presses | Transmission performance |  LED color |
+   | :---------------: | :----------------------: | :--------: |
+   |        1          |         9600             | Sky blue   |
+   |        2          |         19200            |   Blue     |
+   |        3          |         38400            |  Purple    |
+   |        4          |         57600            |  White     |
+   |        5          |         115200           |    Red     |
+
+   </div>
+
+4. The LED color of the set transmission performance flashes for 5 seconds. When you hear a beep, the transmission performance setting is complete.
+
+:::info
+
+If you do not press the reset button after entering setting mode, the transmission performance will automatically be set to 115200.
+
+:::
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='green' />

@@ -1,0 +1,97 @@
+---
+id: installation
+title: Installation
+description: Provides the complete process and connection examples required for product installation.
+keywords:
+  - Install
+  - Power
+  - RS-485
+  - Relay
+  - Supervised Input
+  - Tamper
+  - Enclosure
+  - AUX
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Product Fixation
+
+1. Secure the spacer with fixing screws at the location where the product will be mounted.
+
+2. Tighten the product onto the secured spacer using fixing screws.
+
+   <Image src='/img/device/installation-device-im120.svg' className='none' width={300} alone />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## RS-485 Connection
+
+You can connect the product to the master device.
+
+<Image src='/img/device/installation-rs485-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* Use AWG26 or larger for RS-485 cables, and all wiring must comply with ANSI/NFPA 70 standards.
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set the termination resistor switch ON for this product.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+## Supervised Input Connection
+
+You can connect fire detection sensors, heat detection sensors, burglar sensors, door sensors, exit buttons, etc. **SUPERVISED INPUT** Terminals 0~11 can detect voltage flowing through the circuit to monitor the device's short circuit, open circuit, on, and off states, and can also be used as general input.
+
+Set the actions based on the product's status in BioStar X and monitor the input status.
+
+<Image src='/img/device/installation-supervised-input-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* Do not connect the product's inputs in duplicate to the devices connected to the master device's input ports.
+
+* This product can connect resistors of 1kΩ, 2.2kΩ, 4.7kΩ, and 10kΩ. After connecting the appropriate resistor to the input device, set the resistor value the same in BioStar X.
+
+:::
+
+## Tamper Connection
+
+It can trigger an alarm or leave an event log if the product is detached from its installation due to external factors.
+
+<Image src='/img/device/installation-tamper-connection-im120.png' width='80%' className='none' />
+
+<PageBreak />
+
+## Enclosure installation {#install-enclosure}
+
+For physical and electrical protection, the product can be installed inside the enclosure (ENCR-10). The enclosure includes a power status LED board, power distribution board, power supply, and tamper. The enclosure is sold separately.
+
+{/* ## IM120 함체 설치 */}
+import Installenclosureim120 from "../../common/_device-install-enclosure-im120.mdx";
+
+<Installenclosureim120 />
+
+:::info
+
+For more detailed information on product installation, contact Suprema Technical Support Team (CS@suprema.co.kr).
+
+:::

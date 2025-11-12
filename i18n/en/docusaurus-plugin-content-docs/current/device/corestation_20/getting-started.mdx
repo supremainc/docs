@@ -1,0 +1,173 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3}><Image src='/img/device/component-device-cs20.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>Quick Guide</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>CoreStation 20</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Fixing Screw x6</Td>
+
+<Td>Diode x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## Name and function of each part
+
+<Columns className='partname'>
+<Column>
+
+<Magnify src='/img/device/product-part-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+</Column>
+<Column className='padding--l20'>
+
+| No. | Name                                                      |
+| :-: | --------------------------------------------------------- |
+|  1  | **AUX IN (0:2)** connection                               |
+|  2  | **RS-485** connection                                     |
+|  3  | **RS-485** termination resistor switch                    |
+|  4  | **SUPERVISED INPUT (3:5)** or **Input (3:5)** connection  |
+|  5  | **RELAY 2 (Alarm)** connection                            |
+|  6  | **OUTPUT (3:5)** connection                               |
+|  7  | **RS-485 1** termination resistor switch                  |
+|  8  | **WIEGAND 1** connection                                  |
+|  9  | **RS-485 1** connection                                   |
+|  10 | **RELAY 3 (Lock)** connection                             |
+|  11 | CoreStation 20 power connection (DC 12V / DC 24V IN)      |
+|  12 | **RESET** button                                          |
+|  13 | **ETHERNET** connection                                   |
+|  14 | **INIT** button                                           |
+|  15 | **RELAY 1 (Lock)** connection                             |
+|  16 | **WIEGAND 0** connection                                  |
+|  17 | **RS-485 0** connection                                   |
+|  18 | **RS-485 0** termination resistor switch                  |
+|  19 | **OUTPUT (0:2)** connection                               |
+|  20 | **RELAY 0 (Alarm)** connection                            |
+|  21 | **SUPERVISED INPUT (0:2)** or **Input (0:2)** connection  |
+
+</Column>
+</Columns>
+
+:::info
+
+* Press the **INIT** button for more than 2 seconds after initializing the product linked to the device to connect it to another device.
+
+* Press the **RESET** button to reboot the product.
+
+* You can use the product's reader power output (12 Vdc, up to 0.6 A / 24 Vdc, up to 0.3 A) as the power for the Wiegand device when connecting the product to the Wiegand device. You can connect two Wiegand devices consuming 0.3 A based on 12 Vdc power output.
+
+:::
+
+<PageBreak />
+
+### CoreStation 20 status LED
+
+The product's status can be checked at the STATUS located on the right side of the front of the product, displaying the status of Ethernet, RS-485, RS-485 0, RS-485 1, in order every second.
+
+| Item     | LED                     | Status                                                                    |
+| -------- | ----------------------- | ------------------------------------------------------------------------- |
+| Ethernet | Red/magenta blinking    | Static IP connection failed                                               |
+| ^        | Red/blue blinking       | Dynamic IP connection successful                                          |
+| ^        | Red/cyan blinking       | Static IP connection successful                                           |
+| ^        | Red/yellow blinking     | Waiting for dynamic IP connection                                         |
+| ^        | Red/red blinking        | Dynamic IP connection failed                                              |
+| RS-485   | Magenta/blue blinking   | Slave device normal                                                       |
+| ^        | Magenta/yellow blinking | Slave device disconnected                                                 |
+| ^        | Magenta/red blinking    | No slave device                                                           |
+| RS-485 0 | Yellow/blue blinking    | Slave device normal                                                       |
+| ^        | Yellow/yellow blinking  | Slave device disconnected                                                 |
+| ^        | Yellow/red blinking     | No slave device                                                           |
+| RS-485 1 | Green/blue blinking     | Slave device normal                                                       |
+| ^        | Green/yellow blinking   | Slave device disconnected                                                 |
+| ^        | Green/red blinking      | No slave device                                                           |
+| System   | White/gray blinking     | System lock (BioStar X's operational conditions and behavior) + Tamper on |
+| ^        | White/magenta blinking  | System lock (Device's operational conditions and behavior) + Tamper on    |
+| ^        | White/blue blinking     | Tamper on                                                                 |
+| ^        | White/cyan blinking     | BioStar X connection successful + Tamper on                               |
+| ^        | White/green blinking    | BioStar X connection successful                                           |
+| ^        | White/yellow blinking   | System lock (BioStar X's operational conditions and behavior)             |
+| ^        | White/red blinking      | System lock (Device's operational conditions and behavior)                |
+
+<PageBreak />
+
+### Installation example
+
+This product is designed for an enterprise-grade environment as a central access control system and can store information for up to 500,000 users.
+
+When integrated with BioStar X, both access control and attendance management can be utilized, providing various interfaces such as RS-485 (OSDP), Wiegand, supervised input, and AUX.
+
+<Image src='/img/device/installation-example-cs20.svg' width="70%" className='none' />
+
+<PageBreak />
+
+### System diagram
+
+This product supports three RS-485 ports, and by connecting the Door Interface in a daisy chain, up to 34 doors can be configured.
+
+<Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
+
+:::info
+
+* Up to 2 devices can be connected per port for RS-485 0 and RS-485 1.
+
+* If more than 3 devices are connected to a single RS-485 port, the desired device may not appear in the connectable list when searching for slave devices.
+
+* If using a SAM card on the CS-20P model, only slave devices directly connected to the reader port of the CS-20P can be used.
+
+* If you connect the Door Interface as a slave to the host port, even if the connection with CoreStation 20 is interrupted, the slave devices connected to the Door Interface can identify the Facility Code of the card through the offline mode dedicated Facility Code and unlock the door.
+
+:::
+
+<PageBreak />
+
+### Overall connection diagram
+
+<Magnify src='/img/device/system-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />

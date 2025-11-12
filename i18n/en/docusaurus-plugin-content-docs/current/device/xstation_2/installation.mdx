@@ -1,0 +1,126 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords:
+  - Bracket
+  - Power
+  - Network
+  - Input
+  - Relay
+  - Standalone
+  - Secure I/O
+  - Wiegand
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the bracket and the product
+
+:::info
+
+This document describes the installation method based on the shape of the XS2-QDPB and XS2-QAPB models. Install using the same method for the XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models.
+
+:::
+
+1. Determine the correct position to install the bracket using the provided drilling template. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   <Image src='/img/device/installation-device1-xs2.svg' className='none' alone />
+
+   :::info
+
+   * If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   * To avoid RF interference, a minimum separation distance must be maintained.
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xs2.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  500 mm  |
+   |     120 mm     |  400 mm  |
+   |     150 mm     |  300 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xs2.png' className='none' width='60%' />
+
+   </Column>
+   </Columns>
+
+   * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
+
+   :::
+
+2. After attaching the cable cover, turn the four screws fitted in the cover to fasten it securely and mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-device2-xs2.svg' className='none' alone />
+
+   :::info
+
+   IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating).
+
+   :::
+
+3. Rotate the fixing screws to assemble the product with the bracket.
+
+   <Image src='/img/device/installation-device3-xs2.svg' className='none' alone />
+
+   :::info
+
+   When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes product='BioStation 3' />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes product='BioStation 3' />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />

@@ -1,0 +1,134 @@
+---
+id: user
+title: User
+description: Describes how to register, edit, delete, and manage users.
+keywords:
+  - Enrollment
+  - Edit
+  - Delete
+  - Manage
+---
+
+Describes how to register, edit, delete, and manage users.
+
+## Registering user information {#registering-user-information}
+
+import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
+
+The user information including credentials can be registered.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Image src='/img/common/ico-add2.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />. The face registration wizard will start.
+
+   <Image src='/img/device/fs2-user-enroll-face.png' />
+
+3. Click <Cmd sid='ui_108' product='dev' /> to continue the face registration wizard. To skip, press <Cmd sid='ui_065' product='dev' /> and verify step **5**.
+
+4. If you pressed <Cmd sid='ui_108' product='dev' />, follow the instructions on the screen to register your face. Face registration consists of a total of 3 steps.
+
+   1. Front face registration
+
+      <Image src='/img/device/fs2-user-enroll-face1.svg' className='none' alone />
+
+   2. Move face up and down
+
+      <Image src='/img/device/fs2-user-enroll-face2.svg' className='none' alone />
+
+   3. Move face left and right
+
+      <Image src='/img/device/fs2-user-enroll-face3.svg' className='none' alone />
+
+   Using the face registration wizard will only register the user's face. After face registration is completed, you can select the user to set additional information.
+
+   :::note
+
+   **Please note the following when registering your face.**
+
+   <EnrollingFace />
+
+   :::
+
+5. If you pressed <Cmd sid='ui_065' product='dev' />, select the desired item and set it.
+
+   <Image src='/img/device/fs2-user-add.png' />
+
+   * <Image src='/img/common/ico-photo2.svg' ico alone />: You can register a user photo.
+
+   * **Name**: Enter the user name.
+
+   * **ID**: Enter a number between 1-4294967295 to register the user ID. If <Cmd sid='ui_168' product='dev' /> is set to <Cmd sid='ui_237' product='dev' />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+
+   * <Cmd sid='ui_228' product='dev' />: You can register a face for user authentication. Press <Image src='/img/common/ico-add2.svg' ico alone /> and follow the instructions on the screen to register your face. To register more faces, please click <Image src='/img/common/ico-add2.svg' ico alone />.
+
+   * <Cmd sid='ui_322' product='dev' />: You can enroll a card for user authentication. Press <Image src='/img/common/ico-add2.svg' ico alone /> and scan the card to assign it to the user in the RF card authentication section. To register more cards, click <Image src='/img/common/ico-add2.svg' ico alone />.
+
+   * <Cmd sid='ui_040' product='dev' />: You can enter the PIN you want to use. Enter the PIN you want to use, then confirm by entering the PIN again, and press <Cmd sid='ui_037' product='dev' />. To prevent leaks, input a PIN of 4 to 16 digits.
+
+   * <Cmd sid='ui_172' product='dev' />: You can select permissions to assign to the user.
+
+     :::info
+
+     Available menus vary according to the set user level.
+
+     * <Cmd sid='ui_075' product='dev' />: This is a general user level, and the menu is not available.
+
+     * <Cmd sid='ui_300' product='dev' />: You can use all menus.
+
+     * <Cmd sid='ui_194' product='dev' />: You can use the menus <Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_344' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+
+     * <Cmd sid='ui_171' product='dev' />: You can use the menus <Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+
+     :::
+
+   * <Cmd sid='ui_230' product='dev' />: You can select a group for the user's face. Face groups can only be used if <Cmd sid='ui_078' product='dev' /> is enabled and can only be registered in BioStar X.
+
+   * <Cmd sid='ui_320' product='dev' />: You can check the user's access group. Access groups can only be registered in BioStar X.
+
+   * <Cmd sid='ui_064' product='dev' />: You can set a personal authentication mode. Using personal authentication mode allows you to combine authentication methods including face authentication for each user. Otherwise, you can use the device’s basic authentication mode.
+
+6. Press <Cmd sid='ui_037' product='dev' /> to complete user information registration.
+
+## Modifying User Information
+
+User Management or Administrator can modify the registered user information. A card or face can be added, and PIN and level can be modified.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Image src='/img/common/ico-search.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
+
+3. Select your search terms. You can search for users using <Cmd sid='ui_299' product='dev' /> , <Cmd sid='ui_167' product='dev' /> , <Cmd sid='ui_253' product='dev' /> , <Cmd sid='ui_228' product='dev' /> , <Cmd sid='ui_322' product='dev' />.
+
+4. Select the user to modify.
+
+5. Refer to [the following](#registering-user-information) to modify the information and then press <Cmd sid='ui_037' product='dev' />.
+
+   * To delete a user, select <Image src='/img/common/ico-delete.svg' ico alone /> and then press <Cmd sid='ui_367' product='dev' />.
+
+:::info
+
+<Cmd sid='ui_320' product='dev' /> can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Delete All Users
+
+You can delete all registered users at once.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Image src='/img/common/ico-delete.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
+
+3. Select <Cmd sid='ui_303' product='dev' /> to check, then press <Cmd sid='ui_037' product='dev' />.
+
+4. To delete all users, press <Cmd sid='ui_367' product='dev' />.
+
+## View User Usage
+
+You can see the number of registered users, faces, and cards at a glance.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Click <Image src='/img/common/ico-info2.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />. User usage information appears.
+
+   <Image src='/img/device/fs2-user-usage.png' />

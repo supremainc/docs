@@ -1,0 +1,38 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/dm20_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.doormodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.doormodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.doormodule.power} />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/dm20-dimension.svg' width='80%' className='none' />

@@ -1,0 +1,51 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - Credentials
+  - General
+  - Face
+  - Capacity
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/bs2a_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.biostation2a.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.biostation2a.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.biostation2a.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.biostation2a.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.biostation2a.power} />
+
+## Dimensions and Weight
+
+<Image src='/img/device/bs2a-dimension.svg' className='none' />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
+
+<Anno id='anno2'>2)</Anno> RF recognition distance may vary depending on the installation environment.
+
+<Anno id='anno3'>3)</Anno> This is based on users registered without credentials.
+
+:::

@@ -1,0 +1,69 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - Credentials
+  - General
+  - Face
+  - Capacity
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/fsf2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestationf2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestationf2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestationf2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestationf2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestationf2.power} />
+
+## Dimensions and Weight
+
+<Badge only>FSF2-ODB</Badge>
+
+<Image src='/img/device/fsf2-odb-dimension.svg' className='none' />
+
+<Badge only>FSF2-DB, FSF2-AB</Badge>
+
+<Image src='/img/device/fsf2-dbadb-dimension.svg' className='none' />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5\~1.3 m.
+
+<Anno id='anno2'>2)</Anno> DESFire EV2/EV3 cards are supported by having backward compatibility of DESFire EV1 cards. CSN and smart card functions are compatible with BioStation 3.
+
+<Anno id='anno3'>3)</Anno> RF read range will vary depending on installation environment.
+
+<Anno id='anno4'>4)</Anno> This is based on users enrolled without credentials.
+
+:::
+
+:::info
+
+When the FaceStation F2 (FSF2-DB, FSF2-AB) is the master unit, biometric devices can be connected as slaves, allowing fingerprints to be authenticated using the slave device.
+
+* Max. Fingerprint Credentials (1:N): 100,000
+
+* Max. Fingerprint Credentials (1:1): 100,000
+
+:::

@@ -1,0 +1,183 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-mdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-mdb.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-device-xpd2-gdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gdb.svg' className='none' width={90} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass 2 Mullion Type (XP2-MDPB, XP2-MAPB, XP2-MAPB-H)</Td>
+
+<Td>Wall Bracket (XP2-MDPB,<br/>XP2-MAPB, XP2-MAPB-H)</Td>
+
+<Td>XPass 2 Gang Box Type (XP2-GDPB)</Td>
+
+<Td>Wall Bracket (XP2-GDPB)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-gkdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gkdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass 2 Keypad Type (XP2-GKDPB)</Td>
+
+<Td>Wall Bracket (XP2-GKDPB)</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+<Td>Shrink Tube</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-xp2.png' width='80%' className='none' />
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue/Cyan Blinking: Normal Operating Status
+
+  * Blue/Green Blinking: During network settings initialization
+
+  * Green Blinking: Waiting for Input Status
+
+  * Green/White Blinking: Connecting to the Suprema AirFob Pass (BLE) application
+
+  * White Blinking: Connecting to the Device Manager application
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **Mobile Access Card Recognition Area**: This is the part that recognizes mobile access cards for entry.
+
+* **Reset Button**
+
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
+
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
+
+* **Cable**
+
+  Power / RS-485 / Ethernet / Wiegand I/O / Input / Relay
+
+* **Keypad**: <Badge only>XP2-GKDPB</Badge> used to authenticate by directly entering the card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
+
+  * **0~9**: Used when entering numbers.
+
+  * <Image src='/img/common/ico-star.svg' ico alone />: Used to distinguish between FC code and ID when entering Wiegand Card ID.
+
+  * <Image src='/img/common/ico-pound.svg' ico alone />: Used to terminate input.
+
+### Cable
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xp2.png' className='none' width={600} alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin |    Name   |         Color         |
+| :-: | :-------: | :-------------------: |
+|  1  |  485 TRXP |  Blue (White Stripe)  |
+|  2  |  485 TRXN | Yellow (Black Stripe) |
+|  3  |  485 GND  |  White (Black Stripe) |
+|  4  |  ENET RXN |         Yellow        |
+|  5  |  ENET RXP |         Black         |
+|  6  |  ENET TXN |         Orange        |
+|  7  |  ENET TXP |         White         |
+|  8  |  ENET VB1 |          Red          |
+|  9  |  ENET VB1 |         Green         |
+|  10 |  ENET VB2 |          Blue         |
+|  11 |  ENET VB2 |         Brown         |
+|  12 |   WG GND  |         Black         |
+|  13 |   WG D1   |         White         |
+|  14 |   WG D0   |         Green         |
+|  15 |   INPUT0  |         Purple        |
+|  16 |   INPUT1  |         Brown         |
+|  17 | INPUT GND |          Gray         |
+|  18 |   RLY NO  |  Gray (White Stripe)  |
+|  19 |  RLY COM  |  Green (White Stripe) |
+|  20 |   RLY NC  | Orange (White Stripe) |
+|  21 |  PWR +VDC |          Red          |
+|  22 |  PWR GND  |  Black (White Stripe) |
+
+</Column>
+</Columns>

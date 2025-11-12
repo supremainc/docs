@@ -1,0 +1,44 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/om120_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.outputmodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.outputmodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.outputmodule.power} />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/om120-dimension.svg' width='90%' className='none' />
+
+:::info
+
+Product specifications are subject to change without notice for performance improvement.
+
+:::
