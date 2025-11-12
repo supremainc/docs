@@ -1215,7 +1215,7 @@ function Home() {
                 'en'
             ].includes(savedLanguage)) {
                 if (savedLanguage !== 'ko') {
-                    window.location.replace(`/docs/${savedLanguage}/`);
+                    window.location.replace('/docs/en/');
                     return;
                 }
                 return; // 한국어인 경우 그대로 유지
@@ -1240,7 +1240,7 @@ function Home() {
             if (detectedLanguage !== 'ko') {
                 localStorage.setItem('preferredLanguage', detectedLanguage);
                 localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
-                window.location.replace(`/docs/${detectedLanguage}/`);
+                window.location.replace('/docs/en/');
             } else {
                 // 한국어인 경우 localStorage에 저장
                 localStorage.setItem('preferredLanguage', 'ko');
