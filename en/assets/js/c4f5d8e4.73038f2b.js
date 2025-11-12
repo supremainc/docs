@@ -1240,7 +1240,7 @@ function Home() {
             if (detectedLanguage !== 'ko') {
                 localStorage.setItem('preferredLanguage', detectedLanguage);
                 localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
-                window.location.replace(`/${detectedLanguage}/`);
+                window.location.replace(`/docs/${detectedLanguage}/`);
             } else {
                 // 한국어인 경우 localStorage에 저장
                 localStorage.setItem('preferredLanguage', 'ko');
