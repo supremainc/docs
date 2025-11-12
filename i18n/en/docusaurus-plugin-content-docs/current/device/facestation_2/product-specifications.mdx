@@ -1,0 +1,61 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - Credentials
+  - General
+  - Face
+  - Capacity
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/fs2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestation2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestation2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestation2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestation2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestation2.power} />
+
+## Dimensions and Weight
+
+<Image src='/img/device/fs2-odpb-oapb-dimension.svg' className='none' />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
+
+<Anno id='anno2'>2)</Anno> RF recognition distance may vary depending on the installation environment.
+
+<Anno id='anno3'>3)</Anno> This is based on users registered without credentials.
+
+:::
+
+:::info
+
+When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
+
+* Maximum fingerprint credential count (1:N): 10,000
+
+* Max. Fingerprint Credentials (1:1): 100,000
+
+:::

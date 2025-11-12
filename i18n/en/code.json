@@ -380,7 +380,7 @@
   "theme.cover.qrCodetext": {
     "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
-  "theme.revision.badge":{
+  "theme.revision.badge": {
     "message": "Affects version"
   },
   "index.search": {
@@ -486,7 +486,7 @@
     "message": "General"
   },
   "specs.general.modelName": {
-    "message": "Model"
+    "message": "Model Name"
   },
   "specs.general.cpu": {
     "message": "CPU"
@@ -1022,14 +1022,14 @@
     "description": "The back to search text for footer"
   },
   "externalLinks.peripheral.dm20.desc": {
-    "message": "Secure Multi Door I/O Module"
+    "message": "Multi-door security I/O module"
   },
   "feedback.components.sendFeedback": {
     "message": "Send feedback",
     "description": "The label of the button to send feedback"
   },
   "feedback.components.thanksForFeedback": {
-    "message": "Thank you for your feedback!",
+    "message": "Thank you for your feedback.",
     "description": "The message displayed after the user has sent feedback"
   },
   "feedback.components.successSubtext": {
@@ -1037,7 +1037,7 @@
     "description": "The subtext displayed after the user has sent feedback"
   },
   "feedback.components.feedbackTitle": {
-    "message": "Did this page help you?",
+    "message": "Was this page helpful?",
     "description": "The title of the feedback component"
   },
   "feedback.components.feedbackDescription": {
@@ -1045,11 +1045,11 @@
     "description": "The description of the feedback component"
   },
   "feedback.components.feedbackTypeGood": {
-    "message": "Helpful",
+    "message": "Helpful.",
     "description": "The label for the good feedback type"
   },
   "feedback.components.feedbackTypeBad": {
-    "message": "Needs improvement",
+    "message": "Needs improvement.",
     "description": "The label for the bad feedback type"
   },
   "feedback.components.quickSubmitButton.onGoing": {
@@ -1086,7 +1086,7 @@
   },
   "feedback.components.errorMessage": {
     "message": "An error occurred while submitting your feedback. Please try again later.",
-    "description": "The error message displayed when feedback submission fails" 
+    "description": "The error message displayed when feedback submission fails"
   },
   "feedback.components.validationError": {
     "message": "Please provide detailed feedback on the areas that need improvement.",

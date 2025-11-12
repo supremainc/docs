@@ -1,0 +1,158 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords:
+  - Bracket
+  - Power
+  - Network
+  - Input
+  - Relay
+  - Standalone
+  - Secure I/O
+  - Wiegand
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the bracket and the product
+
+:::info
+
+This document explains the installation method based on the million type. Install the gang box type and keypad type in the same way.
+
+:::
+
+1. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   <Image src='/img/device/installation-device1-xpd2.svg' className='none' width={300} alone />
+
+   :::info
+
+   * If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   * To avoid RF interference, a minimum separation distance must be maintained.
+
+   <Badge only>XP2-MDPB, XP2-MAPB, XP2-MAPB-H</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-mdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  360 mm  |
+   |     120 mm     |  360 mm  |
+   |     150 mm     |  300 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-mdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   <Badge only>XP2-GDPB, XP2-GKDPB</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-gdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  400 mm  |
+   |     120 mm     |  380 mm  |
+   |     150 mm     |  380 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-gdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
+
+   :::
+
+2. Mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-device2-xpd2.svg' className='none' width={250} alone />
+
+3. Rotate the fixing screws to assemble the product with the bracket.
+
+   <Image src='/img/device/installation-device3-xpd2.svg' className='none' width={250} alone />
+
+   :::info
+
+   When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='green' />

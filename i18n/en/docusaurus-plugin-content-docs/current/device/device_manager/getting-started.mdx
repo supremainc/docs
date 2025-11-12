@@ -1,0 +1,60 @@
+---
+id: getting-started
+title: Getting Started
+description: Guidelines for minimum requirements for using Device Manager.
+keywords:
+  - Introduction
+  - Minimum requirements
+---
+
+Suprema Device Manager is a mobile application that allows configuration of Suprema's XPass D2, XPass 2, and BioEntry W3 using BLE communication.
+
+<Image src='/img/device/device-manager-system-diagram1.svg' className='none' width={650} alone />
+
+Administrators can connect to the server from a PC or set the device's network, server, RS-485 communication, card format, keypad settings, PIN, LED, and buzzer from a mobile device without physically disconnecting it, and can also use functions such as device restart, firmware upgrade, and device setting initialization.
+
+For XPass D2, values set once can be saved as a template for quick and easy application to multiple devices.
+
+:::info
+
+Using Suprema Device Manager allows on-site modification of the settings of XPass D2 configured with third-party controllers.
+
+<Image src='/img/device/device-manager-system-diagram2.svg' className='none' width={900} alone />
+
+:::
+
+## Minimum requirements
+
+### Mobile Device
+
+Check if the mobile device supports BLE communication.
+
+* Android 5.0 Lollipop or higher
+
+* iOS 9.0 or higher
+
+### Device and Firmware
+
+Check compatible devices and firmware versions.
+
+* XPass D2 firmware version 1.1.0 or higher
+
+* XPass 2
+
+  * XP2-MDPB, XP2-GDPB, XP2-GKDPB: firmware version 1.0.0 or higher
+
+  * XP2-MAPB: firmware version 1.4.1 or higher
+
+  * XP2-MAPB-H: firmware version 1.4.3 or higher
+
+* BioEntry W3 firmware version 1.0.1 or higher
+
+:::info
+
+* Compatible devices and firmware are subject to change.
+
+* If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. If you are using the device as a slave device, the firmware of the connected master device must also be the latest version compatible with BioStar X.7.0 or higher.
+
+* For more information about upgrading device firmware, please refer to [IP Device (Upgrade device firmware)](ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](xpd2-settings#device-firmware-upgrade), or the [BioStar X Administrator Manual](../../platform/biostar_x/settings-device-upgrade-firmware).
+
+:::

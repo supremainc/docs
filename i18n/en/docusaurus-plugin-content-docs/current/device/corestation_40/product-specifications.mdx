@@ -1,0 +1,68 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Interfaces
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/cs40_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.corestation.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.corestation.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.corestation.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.corestation.power} />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> This is based on users enrolled without credentials.
+
+<Anno id='anno2'>2)</Anno> Facial authentication is supported only by FaceStation 2 and FaceLite.
+
+<Anno id='anno3'>3)</Anno> You can choose between Input or Supervised input.
+
+:::
+
+:::info
+
+* Product specifications are subject to change without notice for performance improvement.
+
+* When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
+
+  * Max. Fingerprint Credentials (1:N): 100,000
+
+  * Maximum fingerprint credential count (1:1): 500,000
+
+* For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/).
+
+:::
+
+<PageBreak />
+
+## Dimensions and Weight
+
+:::note
+
+* Unit: mm
+
+* The dimensional tolerance is ±0.3 mm.
+
+:::
+
+<Image src='/img/device/cs40-dimension.png' width='60%' className='none' alone />

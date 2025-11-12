@@ -1,0 +1,159 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+:::caution
+
+Connection of the expansion module is not supported on standard firmware, so a separate custom firmware is required.
+
+:::
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-extm-sc.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pinmap-extm-sc.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Expansion Module</Td>
+
+<Td>Pin Map Label</Td>
+
+<Td>Fixing Screws x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>RS-232C Cable</Td>
+
+<Td>RS-485 Cable</Td>
+
+</Row>
+
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-usb-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-usb-4pin-short.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>USB Expansion Port Connection Cable (BioStation 3)</Td>
+
+<Td>USB Expansion Port Connection Cable (BioStation 2a)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-extm-sc.png' className='none' width='80%' />
+
+* **USB Expansion Port (5-pin)**: Connects the device to the expansion module.
+
+* **RS-485 (4-pin)**: Connect the RS-485 cable.
+
+* **RS-232C (4-pin)**: Connect the RS-232C cable.
+
+## Cables and connectors
+
+### RS-232C
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name    | Color  |
+| --- | ------- | ------ |
+| 1   | 232 TX  | Blue   |
+| 2   | 232 RX  | Yellow |
+| 3   | 232 GND | Black  |
+| 4   | SH GND  | Gray   |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name     | Color  |
+| --- | -------- | ------ |
+| 1   | 485 TRXP | Blue   |
+| 2   | 485 TRXN | Yellow |
+| 3   | 485 GND  | Black  |
+| 4   | SH GND   | Gray   |
+
+</div>
+
+### USB Expansion Port Connection Cable
+
+<Image src='/img/device/cable-usb-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name      | Color |
+| --- | --------- | ----- |
+| 1   | MAIN VBUS | Red   |
+| 2   | MAIN DM   | White |
+| 3   | MAIN DP   | Green |
+| 4   | NC        | *     |
+| 5   | MAIN GND  | Black |
+
+</div>
+
+## Installation example
+
+:::caution
+
+Connection of the expansion module is not supported on standard firmware, so a separate custom firmware is required.
+
+:::
+
+By equipping the Suprema device with an expansion module, you can additionally use RS-485 and RS-232C ports.
+
+The Suprema devices that can accommodate the expansion module are as follows.
+
+* BioStation 3
+
+* BioStation 2a
+
+<Image src='/img/device/installation-example-extm-sc.png' className='none' width='65%' />

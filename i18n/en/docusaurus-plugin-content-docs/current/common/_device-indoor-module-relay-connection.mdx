@@ -16,6 +16,14 @@ When using a magnetic lock, connect the lock power directly.
 
 </Include>
 
+<Include product='inputmodule'>
+
+You can control the entrance door locking mechanism or alarm system with the relay of this product. Refer to the guide of the device to be connected and connect the relay as NC or NO.
+
+<Image src='/img/device/installation-relay-im120.png' width='75%' className='none' />
+
+</Include>
+
 ### Fail Safe Lock
 
 In order to use the Fail Safe Lock, connect the **NC** relay as shown in the figure below. When the current flow is activated by the relay, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will lock.
@@ -28,9 +36,15 @@ Install a diode near both sides of the door lock wiring as shown in the figure t
 
 </Include>
 
-<Include product='corestation_40'>
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
 
 Connect a diode to both ends of the power input as shown in the figure below when installing a deadbolt or a door strike. Make sure to connect the Cathode (direction to the stripe) to the + part of the power while paying attention to the direction of the diode.
+
+</Include>
+
+<Include product='inputmodule'>
+
+Do not connect the relay of this product in duplicate to the device connected to the relay port of the master device.
 
 </Include>
 
@@ -39,6 +53,12 @@ Connect a diode to both ends of the power input as shown in the figure below whe
 <Include product='corestation_20,,doorinterface'><Image src='/img/device/installation-relay-fail-safe-lock-cs20.png' width='80%' className='none' /></Include>
 
 <Include product='corestation_40'><Image src='/img/device/installation-relay-fail-safe-lock-cs40.png' width='80%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-safe-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-safe-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-safe-lock-sio2.png' width='65%' className='none' /></Include>
 
 <Include product='corestation_20,doorinterface'>
 
@@ -68,9 +88,15 @@ Install a diode near both sides of the door lock wiring as shown in the figure t
 
 </Include>
 
-<Include product='corestation_40'>
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
 
 Connect a diode to both ends of the power input as shown in the figure below when installing a deadbolt or a door strike. Make sure to connect the Cathode (direction to the stripe) to the + part of the power while paying attention to the direction of the diode.
+
+</Include>
+
+<Include product='inputmodule'>
+
+Do not connect the relay of this product in duplicate to the device connected to the relay port of the master device.
 
 </Include>
 
@@ -79,6 +105,12 @@ Connect a diode to both ends of the power input as shown in the figure below whe
 <Include product='corestation_20,doorinterface'><Image src='/img/device/installation-relay-fail-secure-lock-cs20.png' width='80%' className='none' /></Include>
 
 <Include product='corestation_40'><Image src='/img/device/installation-relay-fail-secure-lock-cs40.png' width='80%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-secure-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-secure-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-secure-lock-sio2.png' width='65%' className='none' /></Include>
 
 <Include product='corestation_20,doorinterface'>
 

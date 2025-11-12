@@ -1,0 +1,137 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-im120.svg' className='none' height={300} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-im120.svg' className='none' height={300} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Input Module</Td>
+
+<Td>Drilling Template</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Fixing Screw x12</Td>
+
+<Td>Spacer x6</Td>
+
+<Td>Diode x2</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## Name and function of each part
+
+<Magnify src='/img/device/name-function-each-part-im120.svg' width='45%' zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | Name                                      |
+| :-: | ----------------------------------------- |
+|  1  | **RESET** button                          |
+|  2  | **INIT** button                           |
+|  3  | **SUPERVISED INPUT (9:11)** connection    |
+|  4  | **SUPERVISED INPUT (6:8)** connection     |
+|  5  | **RELAY 1** connection                    |
+|  6  | **TAMPER** or **AUX IN (0:1)** connection |
+|  7  | **RS-485** termination resistor switch    |
+|  8  | **RS-485** connection                     |
+|  9  | **POWER** connection (DC 12 or 24 V)      |
+|  10 | **RELAY 0** connection                    |
+|  11 | **SUPERVISED INPUT (3:5)** connection     |
+|  12 | **SUPERVISED INPUT (0:2)** connection     |
+
+:::info
+
+* Press the **INIT** button for more than 2 seconds after initializing the product linked to the device to connect it to another device.
+
+* Press the **RESET** button to reboot the product.
+
+:::
+
+<PageBreak />
+
+### LED Status Indicator
+
+You can check the product operating status by the color of the LED status indicator.
+
+| Item                        | LED             | Status                                                                         |
+| --------------------------- | --------------- | ------------------------------------------------------------------------------ |
+| **POWER**                   | Red Lit         | Power On                                                                       |
+| **STATUS**                  | Green Lit       | Connected status via secure session                                            |
+| ^                           | Blue Lit        | Not connected to the master device                                             |
+| ^                           | Pink Lit        | In the process of upgrading firmware                                           |
+| ^                           | Yellow Lit      | Communication error due to different key or packet loss in OSDP causing RS-485 |
+| ^                           | Sky Blue Lit    | Connected status without secure session                                        |
+| ^                           | Green Blinking  | Final input waiting status during configuration initialization                 |
+| ^                           | Green Lit       | Configuration initialization completed                                         |
+| **SUPERVISED INPUT (0~11)** | Red Lit         | Receiving input signal status                                                  |
+| **RELAY (0, 1)**            | Red Lit         | Relay Operation                                                                |
+| **RS-485 TX**               | Orange Blinking | In the process of transmitting RS-485 data                                     |
+| **RS-485 RX**               | Green Blinking  | In the process of receiving RS-485 data                                        |
+| **AUX IN (0, 1)**           | Orange Lit      | In the process of receiving AUX signal                                         |
+| **TAMPER**                  | Orange Lit      | Tamper action                                                                  |
+
+### Installation example
+
+This product supports immediate relay actions for input detected in real-time in conjunction with BioStar X, and can also perform relay actions or log data for inputs detected when disconnected from the master device.
+
+Supports 1-channel RS-485 for network with the master device, 12 channels of Supervised Input for detecting short circuits, on, off states, and 2-channel relay, 2-channel AUX input, and 1-channel tamper input.
+
+<Image src='/img/device/installation-example-im120.png' width="80%" className='none' />

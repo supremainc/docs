@@ -1,0 +1,152 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-xps2.png' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass S2</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Drilling Template</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>PVC Anchors x2</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Shrink Tube</Td>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+<Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+<Td>Quick Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-xps2.png' className='none' width="70%" />
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Pink: Processing
+
+  * Blue/Cyan Blinking: Normal Operating Status
+
+  * Red/Pink Flashing: Terminal Locked
+
+  * Blue/Red Flashing: Time Initialization State, Time Reset Needed
+
+  * Blue/Yellow Flashing: 
+
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
+
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
+
+  * Red Flashing: Product Initialization Error, Contact Manufacturer
+
+  * Yellow blinking: Waiting for an input.
+
+* **RF Card Recognition Part**: This is the part that recognizes RF cards for access.
+
+* **Reset Button**
+
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
+
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
+
+* **Network Status LED**: Indicates network connection status.
+
+### Cable
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xps2.png' width={550} className='none' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin |    Name   |            Color           |
+| :-: | :-------: | :------------------------: |
+|  1  |   WG GND  |            Black           |
+|  2  | INPUT GND |            Gray            |
+|  3  |  485 GND  |  White (with black stripe) |
+|  4  |   WG D0   |            Green           |
+|  5  |   WG D1   |            White           |
+|  6  |   INPUT0  |           Purple           |
+|  7  |   INPUT1  |            Brown           |
+|  8  |  485 TRXP |  Blue (with white stripe)  |
+|  9  |  485 TRXN | Yellow (with black stripe) |
+|  10 |  ENET TXN |             Red            |
+|  11 |  ENET TXP |            Black           |
+|  12 |  ENET RXN |           Yellow           |
+|  13 |  ENET RXP |            Green           |
+|  14 |  PWR GND  |    Black (White stripe)    |
+|  15 |   RLY NO  |  Gray (with white stripe)  |
+|  16 |  RLY COM  |  Green (with white stripe) |
+|  17 |   RLY NC  | Orange (with white stripe) |
+|  18 |  PWR +VDC |             Red            |
+
+</Column>
+</Columns>

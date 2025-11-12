@@ -1,0 +1,25 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - General
+  - Interfaces
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/extm_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.extendedmodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.extendedmodule.interface} />
+
+## Dimensions and Weight
+
+<Image src='/img/device/extm-dimension.svg' className='none' />

@@ -1,0 +1,65 @@
+---
+id: initial-setup
+title: Initial Setup of the Device
+description: Guidelines for initial procedures to use CoreStation Setup Manager.
+keywords:
+  - CoreStation
+  - Initial setup
+  - Certificate installation
+  - Administrator registration
+---
+
+CoreStation Setup Manager provides a web-based service. Therefore, after completing the wiring to build a centralized access control system using CoreStation, you can access CoreStation Setup Manager from any location via a web browser and check the connection status of CoreStation.
+
+If you are using CoreStation Setup Manager for the first time, connect CoreStation and proceed with the initial setup.
+
+1. Complete the cable connection to CoreStation.
+
+2. Please launch the web browser.
+
+   :::info
+
+   Use a web browser version 75 or higher of Chrome.
+
+   :::
+
+3. Enter the default IP address `https://169.254.0.1:3001` in the address input field of the web browser.
+
+4. Click **Download https certification** on the login screen. When accessing CoreStation Setup Manager for the first time, you need to install the certificate to use HTTPS correctly.
+
+   <Image src='/img/device/initial-main.png' width='80%' alone />
+
+5. Run the **cs_client.crt** file.
+
+6. When the **Open file** - **Security warning** window appears, click **Open**.
+
+7. In the **Certificate** window, click **Install certificate**. The **Certificate Import Wizard** will be launched.
+
+8. Click **Next** to continue.
+
+9. Select the certificate store and then click **Next** → **Finish** → **OK**.
+
+10. Enter your user ID and login password. The user ID and login password for the first access are both 'admin'.
+
+11. To register the administrator account, configure each item and click **OK**.
+
+    <Image src='/img/device/initial-setup-new-user.png' alone />
+
+    | Name                 | Feature description                                                                                                                                     |
+    | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **ID**               | The ID is automatically set to **0** and cannot be changed.                                                                                             |
+    | **Name**             | Enter the administrator's name.<br/>- A name of up to 48 characters can be entered.                                                                     |
+    | **Operator Level**   | The Operator Level is automatically set to **Administrator** and cannot be changed.                                                                     |
+    | **Login ID**         | Enter the login ID.<br/>- The login ID can be up to 32 characters long.                                                                                 |
+    | **Password**         | Enter the login password.<br/>- The login password should be a combination of alphanumeric characters and symbols, with a length of 7 to 32 characters. |
+    | **Confirm Password** | Re-enter the login password for confirmation.                                                                                                           |
+
+12. You will be redirected to the login screen. Log in with the registered administrator account.
+
+:::info
+
+* The administrator account can only be set up when accessing CoreStation Setup Manager for the first time, and only one user can be designated. Once registration is complete, the default user ID and login password used during the first access can no longer be used. Additionally, the administrator account can review and edit all settings, including factory initialization.
+
+* Starting from CoreStation Setup Manager version 1.01, the name of the **Level 1** administrator grade has been changed to **Administrator**, and **Level 2** to **Level 3** administrator accounts are no longer supported.
+
+:::

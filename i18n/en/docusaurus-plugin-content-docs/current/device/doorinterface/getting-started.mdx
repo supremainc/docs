@@ -1,0 +1,164 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3}><Image src='/img/device/component-device-di24.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>Quick Guide</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Door Interface</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Fixing Screw x6</Td>
+
+<Td>Diode x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## Name and function of each part
+
+<Columns className='partname'>
+<Column>
+
+<Magnify src='/img/device/product-part-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+</Column>
+<Column className='padding--l20'>
+
+| No. | Name                                                      |
+| :-: | --------------------------------------------------------- |
+|  1  | **AUX IN (0:2)** connection                               |
+|  2  | **RS-485** connection                                     |
+|  3  | **RS-485** termination resistor switch                    |
+|  4  | **SUPERVISED INPUT (3:5)** or **Input (3:5)** connection  |
+|  5  | **RELAY 2 (Alarm)** connection                            |
+|  6  | **OUTPUT (3:5)** connection                               |
+|  7  | **RS-485 1** termination resistor switch                  |
+|  8  | **WIEGAND 1** connection                                  |
+|  9  | **RS-485 1** connection                                   |
+|  10 | **RELAY 3 (Lock)** connection                             |
+|  11 | Power connection for Door Interface (DC 12V / DC 24V IN)  |
+|  12 | **RESET** button                                          |
+|  13 | **INIT** button                                           |
+|  14 | **RELAY 1 (Lock)** connection                             |
+|  15 | **WIEGAND 0** connection                                  |
+|  16 | **RS-485 0** connection                                   |
+|  17 | **RS-485 0** termination resistor switch                  |
+|  18 | **OUTPUT (0:2)** connection                               |
+|  19 | **RELAY 0 (Alarm)** connection                            |
+|  20 | **SUPERVISED INPUT (0:2)** or **Input (0:2)** connection  |
+
+</Column>
+</Columns>
+
+:::info
+
+* Press the **INIT** button for more than 2 seconds after initializing the product linked to the device to connect it to another device.
+
+* Press the **RESET** button to reboot the product.
+
+* You can use the product's reader power output (12 Vdc, up to 0.6 A / 24 Vdc, up to 0.3 A) as power for the reader when connecting the product to the reader. You can connect two readers consuming 0.3 A based on 12 Vdc power output.
+
+:::
+
+<PageBreak />
+
+### Door Interface status LED
+
+The product's status can be checked at the STATUS located on the right side of the front of the product, displaying the status of Ethernet, RS-485, RS-485 0, RS-485 1, in order every second.
+
+| Item     | LED                     | Status                                                                    |
+| -------- | ----------------------- | ------------------------------------------------------------------------- |
+| RS-485   | Magenta/blue blinking   | Master device normal                                                      |
+| ^        | Magenta/yellow blinking | Master device disconnected                                                |
+| RS-485 0 | Yellow/blue blinking    | Slave device normal                                                       |
+| ^        | Yellow/yellow blinking  | Slave device disconnected                                                 |
+| ^        | Yellow/red blinking     | No slave device                                                           |
+| RS-485 1 | Green/blue blinking     | Slave device normal                                                       |
+| ^        | Green/yellow blinking   | Slave device disconnected                                                 |
+| ^        | Green/red blinking      | No slave device                                                           |
+| System   | White/gray blinking     | System lock (BioStar X's operational conditions and behavior) + Tamper on |
+| ^        | White/magenta blinking  | System lock (Device's operational conditions and behavior) + Tamper on    |
+| ^        | White/blue blinking     | Tamper on                                                                 |
+| ^        | White/cyan blinking     | BioStar X connection successful + Tamper on                               |
+| ^        | White/green blinking    | BioStar X connection successful                                           |
+| ^        | White/yellow blinking   | System lock (BioStar X's operational conditions and behavior)             |
+| ^        | White/red blinking      | System lock (Device's operational conditions and behavior)                |
+
+<PageBreak />
+
+### Installation example
+
+This product can easily configure up to 2 access doors as an extension module.
+
+When integrated with BioStar X, both access control and attendance management can be utilized, providing various interfaces such as RS-485 (OSDP), Wiegand, supervised input, and AUX.
+
+<Image src='/img/device/installation-example-di24.svg' width="70%" className='none' />
+
+<PageBreak />
+
+### System diagram
+
+This product supports 3 RS-485 ports, and by daisy-chaining multiple Door Interfaces to the master device, you can configure up to 34 doors.
+
+<Image src='/img/device/system-configuration-di24.svg' width="100%" className='none' />
+
+:::info
+
+* Up to 2 devices can be connected per port for RS-485 0 and RS-485 1.
+
+* If more than 3 devices are connected to a single RS-485 port, the desired device may not appear in the connectable list when searching for slave devices.
+
+* When connecting the Door Interface as a slave to the host port of the master device, you can open access doors by identifying the facility code of the card through the Facility Code for Offline Mode, even if the connection with the master device is lost for the slave devices connected to the Door Interface.
+
+:::
+
+<PageBreak />
+
+### Overall connection diagram
+
+<Magnify src='/img/device/system-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />

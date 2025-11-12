@@ -1,0 +1,173 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords:
+  - Bracket
+  - Power
+  - Network
+  - Input
+  - Relay
+  - Standalone
+  - Secure I/O
+  - Wiegand
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the bracket and the product
+
+:::info
+
+This document explains the installation method based on the million type. Install the gang box type and keypad type in the same way.
+
+:::
+
+1. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   <Image src='/img/device/installation-device1-xpd2.svg' className='none' width={300} alone />
+
+   :::info
+
+   * If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   * To avoid RF interference, a minimum separation distance must be maintained.
+
+   <Badge only>XPD2-MDB</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-mdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  360 mm  |
+   |     120 mm     |  360 mm  |
+   |     150 mm     |  300 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-mdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   <Badge only>XPD2-GDB, XPD2-GKDB</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-gdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  400 mm  |
+   |     120 mm     |  380 mm  |
+   |     150 mm     |  380 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-gdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
+
+   :::
+
+2. Mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-device2-xpd2.svg' className='none' width={250} alone />
+
+3. Rotate the fixing screws to assemble the product with the bracket.
+
+   <Image src='/img/device/installation-device3-xpd2.svg' className='none' width={250} alone />
+
+   :::info
+
+   When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+   :::
+
+## Power supply connection
+
+This product can be used as an RFID card or mobile card reader by connecting to a master device or CoreStation.
+
+<Image src='/img/device/installation-power-connection-xpd2.png' width='60%' className='none' />
+
+:::caution
+
+* Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device.
+
+  * Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+* DO NOT extend the length of power cable when using the power adapter.
+
+:::
+
+## RS-485 Connection
+
+<Image src='/img/device/installation-rs485-connection-xpd2.png' width='53%' className='none' />
+
+:::info
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection.
+
+:::
+
+## Wiegand and other cable connections
+
+<Image src='/img/device/installation-wiegand-other-connection-xpd2.png' width='60%' className='none' />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='green' />
+
+## Reset RS-485 transmission performance
+
+You can choose and set the desired communication performance.
+
+1. Power on.
+
+2. Press the reset button for more than 2 seconds. When you enter setting mode, the LED flashes green.
+
+3. When the device's LED flashes green, press the reset button as many times as desired. The transmission performance is set according to the number of presses, and you can check the set performance by the LED color.
+
+   <div className='overflow-x'>
+
+   | Number of presses | Transmission performance |  LED color |
+   | :---------------: | :----------------------: | :--------: |
+   |        1          |         9600             | Sky blue   |
+   |        2          |         19200            |   Blue     |
+   |        3          |         38400            |  Purple    |
+   |        4          |         57600            |  White     |
+   |        5          |         115200           |    Red     |
+
+   </div>
+
+4. The LED color of the set transmission performance flashes for 5 seconds. When you hear a beep, the transmission performance setting is complete.
+
+:::info
+
+If you do not press the reset button after entering setting mode, the transmission performance will automatically be set to 115200.
+
+:::
