@@ -1200,6 +1200,49 @@ function Integration() {
 }
 function Home() {
     const { siteConfig } = (0,useDocusaurusContext/* ["default"] */.A)();
+    // 브라우저 언어 탐지 및 자동 리다이렉트
+    (0,react.useEffect)(()=>{
+        // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
+        const currentPath = window.location.pathname;
+        const isRootPath = currentPath === '/' || currentPath === '/index.html';
+        if (isRootPath) {
+            // localStorage에서 이전 언어 설정 확인
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && [
+                'ko',
+                'en'
+            ].includes(savedLanguage)) {
+                if (savedLanguage !== 'ko') {
+                    window.location.replace(`/${savedLanguage}/`);
+                    return;
+                }
+            }
+            // 브라우저 언어 탐지
+            const detectBrowserLanguage = ()=>{
+                const browserLanguages = navigator.languages || [
+                    navigator.language || navigator.userLanguage
+                ];
+                for (const lang of browserLanguages){
+                    const langCode = lang.toLowerCase().split('-')[0];
+                    if (langCode === 'en') {
+                        return 'en';
+                    } else if (langCode === 'ko') {
+                        return 'ko';
+                    }
+                }
+                return 'ko'; // 기본값
+            };
+            const detectedLanguage = detectBrowserLanguage();
+            // 탐지된 언어가 기본 언어(ko)가 아니고, 아직 언어별 경로로 접속하지 않은 경우 리다이렉트
+            if (detectedLanguage !== 'ko') {
+                localStorage.setItem('preferredLanguage', detectedLanguage);
+                window.location.replace(`/${detectedLanguage}/`);
+            } else {
+                // 한국어인 경우 localStorage에 저장
+                localStorage.setItem('preferredLanguage', 'ko');
+            }
+        }
+    }, []);
     return /*#__PURE__*/ (0,jsx_runtime.jsx)(Layout/* ["default"] */.A, {
         title: `${siteConfig.title}`,
         description: `${siteConfig.tagline}`,
