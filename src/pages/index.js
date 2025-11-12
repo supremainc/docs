@@ -136,17 +136,20 @@ export default function Home() {
     const isRootPath = currentPath === '/docs/' || currentPath === '/docs/index.html';
 
     if (isRootPath) {
-      // localStorage에서 이전 언어 설정 확인
+      // 사용자가 이미 언어를 선택했는지 확인
+      const hasUserSelectedLanguage = localStorage.getItem('userHasSelectedLanguage') === 'true';
       const savedLanguage = localStorage.getItem('preferredLanguage');
-      if (savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
-        console.log(window.location);
+      
+      // 사용자가 이미 언어를 선택한 적이 있다면 저장된 언어로 리다이렉트
+      if (hasUserSelectedLanguage && savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
         if (savedLanguage !== 'ko') { // 기본 언어가 아닌 경우만 리다이렉트
           window.location.replace(`/docs/${savedLanguage}/`);
           return;
         }
+        return; // 한국어인 경우 그대로 유지
       }
       
-      // 브라우저 언어 탐지
+      // 첫 방문자인 경우에만 브라우저 언어 탐지
       const detectBrowserLanguage = () => {
         const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
         
@@ -163,13 +166,15 @@ export default function Home() {
       
       const detectedLanguage = detectBrowserLanguage();
       
-      // 탐지된 언어가 기본 언어(ko)가 아니고, 아직 언어별 경로로 접속하지 않은 경우 리다이렉트
+      // 첫 방문 시에만 브라우저 언어에 따라 자동 리다이렉트
       if (detectedLanguage !== 'ko') {
         localStorage.setItem('preferredLanguage', detectedLanguage);
+        localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
         window.location.replace(`/${detectedLanguage}/`);
       } else {
         // 한국어인 경우 localStorage에 저장
         localStorage.setItem('preferredLanguage', 'ko');
+        localStorage.setItem('autoDetected', 'true');
       }
     }
   }, []);
