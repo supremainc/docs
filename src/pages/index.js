@@ -139,8 +139,9 @@ export default function Home() {
       // localStorage에서 이전 언어 설정 확인
       const savedLanguage = localStorage.getItem('preferredLanguage');
       if (savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
+        console.log(window.location);
         if (savedLanguage !== 'ko') { // 기본 언어가 아닌 경우만 리다이렉트
-          window.location.replace(`/${savedLanguage}/`);
+          window.location.replace(`/docs/${savedLanguage}/`);
           return;
         }
       }
