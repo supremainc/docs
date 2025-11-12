@@ -238,11 +238,11 @@ const config = {
                 label: 'BioEntry W2',
                 docId: 'device/bioentry_w2/index'
               },
-              // {
-              //   type: 'doc',
-              //   label: 'BioEntry P2',
-              //   docId: 'device/bioentry_p2/index'
-              // },
+              {
+                type: 'doc',
+                label: 'BioEntry P2',
+                docId: 'device/bioentry_p2/index'
+              },
               {
                 type: 'doc',
                 label: 'BioEntry R2',
