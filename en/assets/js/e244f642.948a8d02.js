@@ -60,7 +60,6 @@ function _createMdxContent(props) {
     admonition: "admonition",
     blockquote: "blockquote",
     code: "code",
-    em: "em",
     h2: "h2",
     li: "li",
     ol: "ol",
@@ -429,9 +428,7 @@ function _createMdxContent(props) {
             }), " will store image logs under the path where BioStar X is installed."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: "C:\\Program Files\\BioStar X\\imagelog\\"
-              })
+              children: "*C:\\Program Files\\BioStar X\\imagelog*"
             }), "\n"]
           }), "\n"]
         }), "\n"]

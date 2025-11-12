@@ -345,7 +345,7 @@ function _createMdxContent(props) {
               }), " ", (0,jsx_runtime.jsx)(_components.code, {
                 children: ";"
               }), " ", (0,jsx_runtime.jsx)("code", {
-                children: "\\`"
+                children: "`"
               })]
             }), "\n"]
           }), "\n"]
