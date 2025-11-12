@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
@@ -128,6 +128,51 @@ function Integration() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  
+  // 브라우저 언어 탐지 및 자동 리다이렉트
+  useEffect(() => {
+    // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
+    const currentPath = window.location.pathname;
+    const isRootPath = currentPath === '/' || currentPath === '/index.html';
+    
+    if (isRootPath) {
+      // localStorage에서 이전 언어 설정 확인
+      const savedLanguage = localStorage.getItem('preferredLanguage');
+      if (savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
+        if (savedLanguage !== 'ko') { // 기본 언어가 아닌 경우만 리다이렉트
+          window.location.replace(`/${savedLanguage}/`);
+          return;
+        }
+      }
+      
+      // 브라우저 언어 탐지
+      const detectBrowserLanguage = () => {
+        const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
+        
+        for (const lang of browserLanguages) {
+          const langCode = lang.toLowerCase().split('-')[0];
+          if (langCode === 'en') {
+            return 'en';
+          } else if (langCode === 'ko') {
+            return 'ko';
+          }
+        }
+        return 'ko'; // 기본값
+      };
+      
+      const detectedLanguage = detectBrowserLanguage();
+      
+      // 탐지된 언어가 기본 언어(ko)가 아니고, 아직 언어별 경로로 접속하지 않은 경우 리다이렉트
+      if (detectedLanguage !== 'ko') {
+        localStorage.setItem('preferredLanguage', detectedLanguage);
+        window.location.replace(`/${detectedLanguage}/`);
+      } else {
+        // 한국어인 경우 localStorage에 저장
+        localStorage.setItem('preferredLanguage', 'ko');
+      }
+    }
+  }, []);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
