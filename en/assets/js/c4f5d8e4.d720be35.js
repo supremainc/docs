@@ -1212,8 +1212,9 @@ function Home() {
                 'ko',
                 'en'
             ].includes(savedLanguage)) {
+                console.log(window.location);
                 if (savedLanguage !== 'ko') {
-                    window.location.replace(`/${savedLanguage}/`);
+                    window.location.replace(`/docs/${savedLanguage}/`);
                     return;
                 }
             }
