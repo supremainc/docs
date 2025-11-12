@@ -143,7 +143,7 @@ export default function Home() {
       // 사용자가 이미 언어를 선택한 적이 있다면 저장된 언어로 리다이렉트
       if (hasUserSelectedLanguage && savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
         if (savedLanguage !== 'ko') { // 기본 언어가 아닌 경우만 리다이렉트
-          window.location.replace(`/docs/${savedLanguage}/`);
+          window.location.replace('/docs/en/');
           return;
         }
         return; // 한국어인 경우 그대로 유지
@@ -170,7 +170,7 @@ export default function Home() {
       if (detectedLanguage !== 'ko') {
         localStorage.setItem('preferredLanguage', detectedLanguage);
         localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
-        window.location.replace(`/docs/${detectedLanguage}/`);
+        window.location.replace('/docs/en/');
       } else {
         // 한국어인 경우 localStorage에 저장
         localStorage.setItem('preferredLanguage', 'ko');
