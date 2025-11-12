@@ -795,7 +795,7 @@ function Apps({ externalLinks: externalLinksProp }) {
 }
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 79 modules
-var Layout = __webpack_require__(10584);
+var Layout = __webpack_require__(25275);
 ;// CONCATENATED MODULE: ./src/pages/index.module.css
 // extracted by css-extract-rspack-plugin
 /* ESM default export */ const index_module = ({"heroLayout":"heroLayout_anMo","heroBanner":"heroBanner_qdFl","banner":"banner_d9gt","section__banner":"section__banner_IdUe","banner__biostar":"banner__biostar_l3_x","banner__biostarh2":"banner__biostarh2_eMi9","banner__biostar__img":"banner__biostar__img_WPsw","containerRef":"containerRef_P_fM","integration":"integration_kp0j","integration__item":"integration__item_3nqr","paxton":"paxton_OBze","hero__title":"hero__title_sobY","buttons":"buttons_AeoN","hero__subtitle":"hero__subtitle_AUTZ","headsec":"headsec_hWdZ","appcontainer":"appcontainer_wsDi"});
@@ -1206,19 +1206,21 @@ function Home() {
         const currentPath = window.location.pathname;
         const isRootPath = currentPath === '/docs/' || currentPath === '/docs/index.html';
         if (isRootPath) {
-            // localStorage에서 이전 언어 설정 확인
+            // 사용자가 이미 언어를 선택했는지 확인
+            const hasUserSelectedLanguage = localStorage.getItem('userHasSelectedLanguage') === 'true';
             const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage && [
+            // 사용자가 이미 언어를 선택한 적이 있다면 저장된 언어로 리다이렉트
+            if (hasUserSelectedLanguage && savedLanguage && [
                 'ko',
                 'en'
             ].includes(savedLanguage)) {
-                console.log(window.location);
                 if (savedLanguage !== 'ko') {
                     window.location.replace(`/docs/${savedLanguage}/`);
                     return;
                 }
+                return; // 한국어인 경우 그대로 유지
             }
-            // 브라우저 언어 탐지
+            // 첫 방문자인 경우에만 브라우저 언어 탐지
             const detectBrowserLanguage = ()=>{
                 const browserLanguages = navigator.languages || [
                     navigator.language || navigator.userLanguage
@@ -1234,13 +1236,15 @@ function Home() {
                 return 'ko'; // 기본값
             };
             const detectedLanguage = detectBrowserLanguage();
-            // 탐지된 언어가 기본 언어(ko)가 아니고, 아직 언어별 경로로 접속하지 않은 경우 리다이렉트
+            // 첫 방문 시에만 브라우저 언어에 따라 자동 리다이렉트
             if (detectedLanguage !== 'ko') {
                 localStorage.setItem('preferredLanguage', detectedLanguage);
+                localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
                 window.location.replace(`/${detectedLanguage}/`);
             } else {
                 // 한국어인 경우 localStorage에 저장
                 localStorage.setItem('preferredLanguage', 'ko');
+                localStorage.setItem('autoDetected', 'true');
             }
         }
     }, []);

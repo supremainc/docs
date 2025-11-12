@@ -18,7 +18,7 @@ var bsxapi_namespaceObject = JSON.parse('{"openapi":"3.0.0","info":{"title":"Bio
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(96540);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 79 modules
-var Layout = __webpack_require__(10584);
+var Layout = __webpack_require__(25275);
 ;// CONCATENATED MODULE: ./src/pages/api/bsxapi/index.js
 
 

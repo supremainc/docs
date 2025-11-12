@@ -45,7 +45,7 @@ var useAlgoliaThemeConfig = __webpack_require__(52955);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-search-algolia/lib/client/useSearchResultUrlProcessor.js
 var useSearchResultUrlProcessor = __webpack_require__(71191);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 79 modules
-var Layout = __webpack_require__(10584);
+var Layout = __webpack_require__(25275);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
 var Heading = __webpack_require__(3381);
 ;// CONCATENATED MODULE: ./src/theme/SearchPage/styles.module.css

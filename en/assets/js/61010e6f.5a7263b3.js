@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
 /* ESM import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(96540);
-/* ESM import */var _theme_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10584);
+/* ESM import */var _theme_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25275);
 /* ESM import */var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97158);
 /* ESM import */var _styles_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(40004);
 /* ESM import */var _docusaurus_Head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25895);

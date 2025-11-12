@@ -30836,7 +30836,7 @@ var Head = __webpack_require__(25895);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/utils-common/lib/index.js
 var lib = __webpack_require__(13683);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 79 modules
-var Layout = __webpack_require__(10584);
+var Layout = __webpack_require__(25275);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/routeContext.js
 var routeContext = __webpack_require__(24561);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/theme-fallback/Error/index.js
@@ -32724,7 +32724,7 @@ function IconExternalLink({ width = 13.5, height = 13.5 }) {
 
 
 }),
-10584: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+25275: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 
 // EXPORTS
@@ -33888,16 +33888,11 @@ function IconLanguage({ width = 20, height = 20, ...props }) {
     });
 }
 
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/NavbarItem/LocaleDropdownNavbarItem/styles.module.css
+;// CONCATENATED MODULE: ./src/theme/NavbarItem/LocaleDropdownNavbarItem/styles.module.css
 // extracted by css-extract-rspack-plugin
-/* ESM default export */ const LocaleDropdownNavbarItem_styles_module = ({"iconLanguage":"iconLanguage_nlXk"});
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/NavbarItem/LocaleDropdownNavbarItem/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
+/* ESM default export */ const LocaleDropdownNavbarItem_styles_module = ({"iconLanguage":"iconLanguage_DSK9"});
+;// CONCATENATED MODULE: ./src/theme/NavbarItem/LocaleDropdownNavbarItem/index.js
+
 
 
 
@@ -33969,7 +33964,18 @@ function LocaleDropdownNavbarItem({ mobile, dropdownItemsBefore, dropdownItemsAf
             className: // eslint-disable-next-line no-nested-ternary
             locale === currentLocale ? // class name. This cannot be substituted with isActive, because the
             // target URLs contain `pathname://` and therefore are not NavLinks!
-            mobile ? 'menu__link--active' : 'dropdown__link--active' : ''
+            mobile ? 'menu__link--active' : 'dropdown__link--active' : '',
+            onClick: ()=>{
+                // 사용자가 명시적으로 언어를 선택했음을 기록
+                try {
+                    localStorage.setItem('preferredLanguage', locale);
+                    localStorage.setItem('userHasSelectedLanguage', 'true');
+                    localStorage.setItem('lastLanguageChangeTime', Date.now().toString());
+                } catch (e) {
+                    // localStorage를 사용할 수 없는 환경에서는 무시
+                    console.warn('Unable to save language preference:', e);
+                }
+            }
         };
     });
     const items = [
