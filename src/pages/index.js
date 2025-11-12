@@ -133,8 +133,8 @@ export default function Home() {
   useEffect(() => {
     // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
     const currentPath = window.location.pathname;
-    const isRootPath = currentPath === '/' || currentPath === '/index.html';
-    
+    const isRootPath = currentPath === '/docs/' || currentPath === '/docs/index.html';
+
     if (isRootPath) {
       // localStorage에서 이전 언어 설정 확인
       const savedLanguage = localStorage.getItem('preferredLanguage');
