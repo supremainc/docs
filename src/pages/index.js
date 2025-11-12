@@ -27,7 +27,7 @@ export default function Redirect2Bsx() {
       
   // 첫 방문 시에만 브라우저 언어에 따라 자동 리다이렉트
   if (detectedLanguage !== 'ko') {
-    return <Redirect to={`/en/platform/biostar_x`} />
+    return <Redirect to={`/en`} />
   } else {
     return <Redirect to='/platform/biostar_x' />
   }
