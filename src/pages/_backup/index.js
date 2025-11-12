@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
@@ -128,6 +128,57 @@ function Integration() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  
+  // 브라우저 언어 탐지 및 자동 리다이렉트
+  useEffect(() => {
+    // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
+    const currentPath = window.location.pathname;
+    const isRootPath = currentPath === '/' || currentPath === '/index.html';
+    
+    if (isRootPath) {
+      // 사용자가 이미 언어를 선택했는지 확인
+      const hasUserSelectedLanguage = localStorage.getItem('userHasSelectedLanguage') === 'true';
+      const savedLanguage = localStorage.getItem('preferredLanguage');
+      
+      // 사용자가 이미 언어를 선택한 적이 있다면 저장된 언어로 리다이렉트
+      if (hasUserSelectedLanguage && savedLanguage && ['ko', 'en'].includes(savedLanguage)) {
+        if (savedLanguage !== 'ko') { // 기본 언어가 아닌 경우만 리다이렉트
+          window.location.replace(`/${savedLanguage}/`);
+          return;
+        }
+        return; // 한국어인 경우 그대로 유지
+      }
+      
+      // 첫 방문자인 경우에만 브라우저 언어 탐지
+      const detectBrowserLanguage = () => {
+        const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
+        
+        for (const lang of browserLanguages) {
+          const langCode = lang.toLowerCase().split('-')[0];
+          if (langCode === 'en') {
+            return 'en';
+          } else if (langCode === 'ko') {
+            return 'ko';
+          }
+        }
+        return 'ko'; // 기본값
+      };
+      
+      const detectedLanguage = detectBrowserLanguage();
+      
+      // 첫 방문 시에만 브라우저 언어에 따라 자동 리다이렉트
+      if (detectedLanguage !== 'ko') {
+        localStorage.setItem('preferredLanguage', detectedLanguage);
+        localStorage.setItem('autoDetected', 'true'); // 자동 탐지되었음을 표시
+        window.location.replace(`/${detectedLanguage}/`);
+      } else {
+        // 한국어인 경우 localStorage에 저장
+        localStorage.setItem('preferredLanguage', 'ko');
+        localStorage.setItem('autoDetected', 'true');
+      }
+    }
+  }, []);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
