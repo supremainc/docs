@@ -51,7 +51,7 @@ files: [
       "/docs/platform/biostar_air/**/*.mdx",
       "/docs/how-to/**/*.mdx",
       "/docs/reference/**/*.mdx",
-      "/docs/**/release-notes/**/*.mdx"
+      "/docs/**/**/release-notes/**/*.mdx"
     ]
   }
 ]
