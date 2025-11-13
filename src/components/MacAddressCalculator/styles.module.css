@@ -1,0 +1,172 @@
+.calculator {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.inputSection {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-font-base-color);
+  font-size: 0.95rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.exampleButton,
+.clearButton,
+.copyButton {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.exampleButton {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.exampleButton:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.clearButton {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-base-color);
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+.copyButton {
+  background: var(--ifm-color-success);
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.copyButton:hover {
+  background: var(--ifm-color-success-dark);
+}
+
+.error {
+  color: var(--ifm-color-danger);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.resultContainer {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resultLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.macAddress {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.copyButton {
+  background: var(--ifm-color-success);
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.copyButton:hover {
+  background: var(--ifm-color-success-dark);
+  transform: translateY(-1px);
+}
+
+/* 다크 모드 대응 */
+[data-theme='dark'] .calculator {
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .resultContainer {
+  background: linear-gradient(135deg, #667eea33 0%, #764ba233 100%);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .calculator {
+    padding: 1rem;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .input {
+    min-width: 100%;
+  }
+
+  .macAddress {
+    font-size: 1.1rem;
+  }
+
+  .step {
+    padding: 0.75rem;
+  }
+}
