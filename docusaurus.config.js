@@ -462,10 +462,7 @@ const config = {
           indexName: 'markdown-index', // Markdown index for Ask AI
           apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
           appId: 'G6Y3H2PNC3',
-          assistantId: 'kyhdNEjfn9nK',
-          searchParameters: {
-            facetFilters: ['language:en'], // Optional: filter to specific language/version
-          },
+          assistantId: 'kyhdNEjfn9nK'
         }
       }
     })
