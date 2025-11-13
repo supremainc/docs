@@ -152,6 +152,32 @@ const config = {
         trackingID: 'G-98B2Y5C3H6',
         anonymizeIP: true,
       },
+    ],
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        // v2.0 API 구조로 수정
+        markdown: {
+          enableFiles: false
+        },
+        llmsTxt: {
+          siteTitle: 'Suprema Docs',
+          siteDescription: "Check out all of Suprema's products and BioStar related information here.",
+          enableLlmsFullTxt: true,
+          includeBlog: false,
+          includePages: true,
+          includeDocs: true,
+          includeVersionedDocs: false, // llms.txt에서는 기본값이 false
+          excludeRoutes: [
+            '/common/**',
+            '/_unused/**',
+            '/platform/biostar_air/**',
+            '/device/**',
+            '/products/**',
+          ],
+          autoSectionDepth: 2
+        }
+      },
     ]
   ],
   markdown: {
