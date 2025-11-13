@@ -99,6 +99,13 @@ const config = {
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
+        pages: {
+          exclude: [
+            '_backup/**.{js,jsx,ts,tsx,md,mdx}',
+            'cover/**.{js,jsx,ts,tsx,md,mdx}',
+            'back/**.{js,jsx,ts,tsx,md,mdx}',
+          ]
+        },
         blog: false,
         theme: {
           customCss: './src/css/custom.scss',
