@@ -1,0 +1,216 @@
+---
+id: settings-video-integration
+title: Integrate VMS
+description: This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.
+keywords:
+  - Video
+  - Integration
+  - Camera
+  - Settings
+---
+
+The **Video Management System** (VMS) is a video management system that integrates and manages video from multiple cameras, allowing for recording and playback. Integrating BioStar X with VMS allows you to manage access control and video security on a single platform.
+
+You can gain the following benefits through VMS integration.
+
+* **Real-time monitoring**: You can view real-time video from cameras connected to doors.
+
+* **Integrated event management**: You can understand security situations by linking access events with video.
+
+* **Efficient evidence collection**: You can quickly search and replay recorded video from specific points in time.
+
+* **Bookmark function**: You can add video tags to important event moments for easy retrieval and review.
+
+## Before start
+
+To integrate with the **Video Management System** (VMS), please check the following items.
+
+* The VMS integration feature is available through additional options for licenses above **Advanced**. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+* Make sure that the VMS server is correctly installed and configured. The VMS server must be in a state that can connect online with **BioStar X**.
+
+* Use a VMS that is compatible with **BioStar X**. You can use **BioStar X VMS** or the **Nx Witness v5.1.5** series of VMS.
+
+* Prepare the IP address, port number, and administrator account information of the VMS server. This information is needed to connect the VMS server with **BioStar X**.
+
+## VMS server integration settings
+
+Follow the steps below to integrate the VMS server with **BioStar X**.
+
+<Steps>
+<Step>
+
+### Install the certificate on the VMS server {#install-vms-certification}
+
+To play back recorded video from the VMS server, you must use HTTPS protocol. Generate an IP address-based certificate on the VMS server.
+
+:::note
+
+* Before installing the certificate, ensure that Open JDK 21 or higher is installed on the PC where VMS is installed.
+
+* When installing the VMS server and **BioStar X** on the same server, you will need to install a certificate.
+
+:::
+
+1. Navigate to the *C:\Program Files\BioStar X\third* path and run the command prompt.
+
+2. Execute the following command. 
+
+   <Tabs groupId='os' defaultValue='Windows'>
+   <TabItem value="Windows">
+   ```java
+   java -jar scaleUtil-1.0-all.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   <TabItem value="Linux">
+   ```java
+   java -jar scaleUtil-1.0-all.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   </Tabs>
+
+   * Enter the path where VMS is installed in the `<%VENDOR.NAME%>` section.
+
+   * Enter the IP address of the VMS server in the `{VMS_IP_ADDRESS}` section.
+
+   * The *ssl* path may vary depending on the installed VMS product.
+
+3. Check whether the certificate file (*.pem*) was created in the path where VMS is installed.
+
+4. Reboot the VMS server.
+
+:::info
+
+If VMS is installed on a different server than **BioStar X**, copy the *scaleUtil-1.0-all.jar* file to the VMS server and follow the previous steps.
+
+:::
+
+</Step>
+<Step>
+
+### Activate VMS integration
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />.
+
+3. If this is your first time accessing, log in with the **BioStar X** administrator account.
+
+   <Image src='/img/biostarx-settings-video-integration-login.png' />
+
+4. Set the <Cmd sid='video.setting.integration.title' product='2' /> option to <Cmd sid='common.use' product='2' />.
+
+   <Image src='/img/biostarx-settings-video-integration.png' />
+
+5. Enter the VMS server information.
+
+   * <Cmd sid='video.setting.integration.serverAddress' product='2' />: Enter the IP address of the VMS server.
+
+   * <Cmd sid='video.setting.integration.port' product='2' />: Enter the port number of the VMS server.
+
+   * <Cmd sid='video.setting.integration.loginId' product='2' />: Enter the administrator account ID of the VMS server.
+
+   * <Cmd sid='video.setting.integration.password' product='2' />: Enter the administrator account password of the VMS server.
+
+6. Once you have entered all the VMS server information, click the <Cmd sid='button.apply' product='2' /> button at the bottom right of the screen.
+
+:::info
+
+* If the integration with the VMS server fails and an error message appears, check the server address and administrator account information again. It is also necessary to check whether the VMS server is online and if network connections are blocked due to firewall settings.
+
+* For more information on the settings in the <Cmd sid='video.setting.tag.title' product='2' /> section, refer to [the following](#vms-event-bookmark).
+
+:::
+
+</Step>
+<Step>
+
+### Restart service
+
+The first time you integrate with the VMS server, **BioStar X** will automatically restart the service. If it does not automatically restart, follow the instructions below to manually restart the service.
+
+1. Click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows.
+
+2. In the **All Services** list, click the **Stop** button for the services below to stop them.
+
+   <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
+
+   * **BioStar X Unified Gateway Service**
+
+   * **BioStar X Core Web Service**
+
+3. When the status of the requested service changes from **Pending** to **Stopped**, click the **Start** button to restart the service.
+
+   <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
+
+</Step>
+<Step>
+
+### Check and configure cameras
+
+If the VMS server is integrated normally, you can check the connected cameras in the <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> menu. For more information, refer to the [the following](settings-videos-camera).
+
+</Step>
+</Steps>
+
+### Troubleshooting {#video-troubleshooting}
+
+If the following situations occur, you can install the certificate from the VMS server onto the client PC to resolve the issue.
+
+* When accessing **Video Management System** (VMS) through the browser, and a 'Not secure' warning appears
+
+* When real-time video plays on the <Cmd sid='shell.header.arena' /> page but recorded video does not play
+
+#### Certificate installation on client PC {#install-client-certification}
+
+1. Download the HTTPS certificate installer (*cert-register.zip*) from the login screen or <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> on the client PC where **BioStar X** is installed.
+
+2. Unzip the downloaded file and run **cert-register.exe** file. **Enrollment Certification** window will appears.
+
+3. Select **VMS** for **Target System** and enter the following information.
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' />
+
+   * **Server Address**: IP address of the VMS server
+
+   * **Port**: Port number of the VMS server
+
+4. Click the **Enrollment** button.
+
+5. Check the security warning message and click **Yes**.
+
+Restart the web browser and check if the recorded video from the VMS server plays normally on the <Cmd sid='shell.header.arena' /> page.
+
+## VMS event and bookmark settings {#vms-event-bookmark}
+
+You can transmit bookmark tags and event tag information to the integrated VMS server. At this point, you can choose to transmit event logs, door names, device names, and user IDs together. Select the desired options and click the <Cmd sid='button.apply' product='2' /> button at the bottom right of the screen.
+
+<Image src='/img/biostarx-settings-video-event-bookmark.png' />
+
+* <Cmd sid='common.language' product='2' />: Choose the language for the event and bookmark tags transmitted to the VMS server. You can select either Korean or English.
+
+* <Cmd sid='video.setting.tag.bookmark' product='2' />: Bookmark tags allow you to easily locate and review videos stored on the VMS server with designations and names for quick identification. Select the information to send with the bookmark tag.
+
+* <Cmd sid='video.setting.tag.event' product='2' />: You can transmit events that occurred at specific moments to the VMS server for logging. Select the information to send with the event tag.
+
+:::info
+
+* For more information on the bookmark function in VMS, refer to [the following link](https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html).
+
+* For more information on the event function in VMS, refer to [the following link](https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html).
+
+:::
+
+## Disconnect VMS server integration
+
+To disconnect the integrated VMS server, follow the steps below. Disconnecting VMS integration will delete all video settings, registered cameras, and rules.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />.
+
+3. Set the <Cmd sid='video.setting.integration.title' product='2' /> option to <Cmd sid='common.notUse' product='2' />.
+
+4. Click the <Cmd sid='button.apply' product='2' /> button at the bottom right of the screen.
+
+5. Check the contents of the message window and click the <Cmd sid='button.yes' product='2' /> button.

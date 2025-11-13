@@ -225,14 +225,242 @@
   },
   "sidebar.biostar_air.category.Reports": {
     "message": "보고서",
-    "description": "The label for category 보고서 in sidebar biostar_air"
+    "description": "The label for category Reports in sidebar biostar_air"
   },
   "sidebar.biostar_air.category.Advanced Features": {
     "message": "고급 기능",
-    "description": "The label for category 고급 기능 in sidebar biostar_air"
+    "description": "The label for category Advanced Features in sidebar biostar_air"
   },
   "sidebar.biostar_air.category.Release Notes": {
     "message": "릴리스 노트",
-    "description": "The label for category 릴리스 노트 in sidebar biostar_air"
+    "description": "The label for category Release Notes in sidebar biostar_air"
+  },
+  "sidebar.bsxplugins.category.BioStar X Plugins": {
+    "message": "BioStar X Plugins",
+    "description": "The label for category BioStar X Plugins in sidebar bsxplugins"
+  },
+  "sidebar.biostarx.category.비디오 설정하기": {
+    "message": "비디오 설정하기",
+    "description": "The label for category 비디오 설정하기 in sidebar biostarx"
+  },
+  "sidebar.corestation40.category.CoreStation": {
+    "message": "CoreStation",
+    "description": "The label for category CoreStation in sidebar corestation40"
+  },
+  "sidebar.corestation20.category.CoreStation 20": {
+    "message": "CoreStation 20",
+    "description": "The label for category CoreStation 20 in sidebar corestation20"
+  },
+  "sidebar.doorinterface24.category.Door Interface": {
+    "message": "Door Interface",
+    "description": "The label for category Door Interface in sidebar doorinterface24"
+  },
+  "sidebar.facestationf2.category.FaceStation F2": {
+    "message": "FaceStation F2",
+    "description": "The label for category FaceStation F2 in sidebar facestationf2"
+  },
+  "sidebar.facestationf2.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar facestationf2"
+  },
+  "sidebar.bioentryw3.category.BioEntry W3": {
+    "message": "BioEntry W3",
+    "description": "The label for category BioEntry W3 in sidebar bioentryw3"
+  },
+  "sidebar.bioliten2.category.BioLite N2": {
+    "message": "BioLite N2",
+    "description": "The label for category BioLite N2 in sidebar bioliten2"
+  },
+  "sidebar.bioliten2.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar bioliten2"
+  },
+  "sidebar.xstation2.category.X-Station 2": {
+    "message": "X-Station 2",
+    "description": "The label for category X-Station 2 in sidebar xstation2"
+  },
+  "sidebar.xstation2.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar xstation2"
+  },
+  "sidebar.biostarx.category.bsxDashboard": {
+    "message": "대시보드",
+    "description": "The label for category 대시보드 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.플러그인": {
+    "message": "플러그인",
+    "description": "The label for category 플러그인 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.근태 관리 사용하기": {
+    "message": "근태 관리 사용하기",
+    "description": "The label for category 근태 관리 사용하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.방문자 신청 및 관리하기": {
+    "message": "방문자 신청 및 관리하기",
+    "description": "The label for category 방문자 신청 및 관리하기 in sidebar biostarx"
+  },
+  "sidebar.biostation3.category.Release Notes": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostation3"
+  },
+  "sidebar.biostarx.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category Release Notes in sidebar biostarx"
+  },
+  "sidebar.corestation.category.CoreStation": {
+    "message": "CoreStation",
+    "description": "The label for category CoreStation in sidebar corestation"
+  },
+  "sidebar.corestation.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar corestation"
+  },
+  "sidebar.corestation20.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar corestation20"
+  },
+  "sidebar.enclosure.category.Enclosure": {
+    "message": "Enclosure",
+    "description": "The label for category Enclosure in sidebar enclosure"
+  },
+  "sidebar.doorinterface.category.Door Interface": {
+    "message": "Door Interface",
+    "description": "The label for category Door Interface in sidebar doorinterface"
+  },
+  "sidebar.doorinterface.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar doorinterface"
+  },
+  "sidebar.doormodule.category.Door Module": {
+    "message": "Door Module",
+    "description": "The label for category Door Module in sidebar doormodule"
+  },
+  "sidebar.doormodule.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar doormodule"
+  },
+  "sidebar.inputmodule.category.Input Module": {
+    "message": "Input Module",
+    "description": "The label for category Input Module in sidebar inputmodule"
+  },
+  "sidebar.inputmodule.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar inputmodule"
+  },
+  "sidebar.outputmodule.category.Output Module": {
+    "message": "Output Module",
+    "description": "The label for category Output Module in sidebar outputmodule"
+  },
+  "sidebar.outputmodule.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar outputmodule"
+  },
+  "sidebar.securemodule.category.Secure Module": {
+    "message": "Secure Module",
+    "description": "The label for category Secure Module in sidebar securemodule"
+  },
+  "sidebar.securemodule.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar securemodule"
+  },
+  "sidebar.extendedmodule.category.Extended Module": {
+    "message": "Extended Module",
+    "description": "The label for category Extended Module in sidebar extendedmodule"
+  },
+  "sidebar.extendedmodule_sc.category.Extended Module-SC": {
+    "message": "Extended Module-SC",
+    "description": "The label for category Extended Module-SC in sidebar extendedmodule_sc"
+  },
+  "sidebar.facestationf2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar facestationf2"
+  },
+  "sidebar.facestation2.category.FaceStation 2": {
+    "message": "FaceStation 2",
+    "description": "The label for category FaceStation 2 in sidebar facestation2"
+  },
+  "sidebar.facestation2.category.사용하기": {
+    "message": "사용하기",
+    "description": "The label for category 사용하기 in sidebar facestation2"
+  },
+  "sidebar.facestation2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar facestation2"
+  },
+  "sidebar.bioentryp2.category.BioEntry P2": {
+    "message": "BioEntry P2",
+    "description": "The label for category BioEntry P2 in sidebar bioentryp2"
+  },
+  "sidebar.bioentryp2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar bioentryp2"
+  },
+  "sidebar.bioentryr2.category.BioEntry R2": {
+    "message": "BioEntry R2",
+    "description": "The label for category BioEntry R2 in sidebar bioentryr2"
+  },
+  "sidebar.bioentryr2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar bioentryr2"
+  },
+  "sidebar.bioentryw2.category.BioEntry W2": {
+    "message": "BioEntry W2",
+    "description": "The label for category BioEntry W2 in sidebar bioentryw2"
+  },
+  "sidebar.bioentryw2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar bioentryw2"
+  },
+  "sidebar.device_manager.category.Device Manager": {
+    "message": "Device Manager",
+    "description": "The label for category Device Manager in sidebar device_manager"
+  },
+  "sidebar.bioentryw3.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar bioentryw3"
+  },
+  "sidebar.biostation3.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostation3"
+  },
+  "sidebar.biostation2a.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar biostation2a"
+  },
+  "sidebar.bioliten2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar bioliten2"
+  },
+  "sidebar.xpass2.category.XPass 2": {
+    "message": "XPass 2",
+    "description": "The label for category XPass 2 in sidebar xpass2"
+  },
+  "sidebar.xpass2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar xpass2"
+  },
+  "sidebar.xpassd2.category.XPass D2": {
+    "message": "XPass D2",
+    "description": "The label for category XPass D2 in sidebar xpassd2"
+  },
+  "sidebar.xpassd2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar xpassd2"
+  },
+  "sidebar.xpasss2.category.XPass S2": {
+    "message": "XPass S2",
+    "description": "The label for category XPass S2 in sidebar xpasss2"
+  },
+  "sidebar.xpasss2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar xpasss2"
+  },
+  "sidebar.xstation2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category 릴리스 노트 in sidebar xstation2"
+  },
+  "sidebar.corestation_setup_manager.category.CoreStation Setup Manager": {
+    "message": "CoreStation Setup Manager",
+    "description": "The label for category CoreStation Setup Manager in sidebar corestation_setup_manager"
   }
 }

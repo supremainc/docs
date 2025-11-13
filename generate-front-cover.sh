@@ -25,11 +25,11 @@ mkdir -p ./pdf
 # 1. HTML 생성
 echo "📄 HTML 파일 생성 중..."
 node generate-cover-local.js \
-    --title="BioStation 3" \
-    --subtitle="설치 가이드" \
-    --version="버전 1.08" \
-    --lang="한국어" \
-    --number="KO 101.00.853" \
+    --title="BioStar X" \
+    --subtitle="Administrator Guide" \
+    --version="1.0.0" \
+    --lang="English" \
+    --number="102.00.BSX" \
     --output="./pdf/front-cover.html"
 
 if [ $? -ne 0 ]; then

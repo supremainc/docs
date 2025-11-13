@@ -1,13 +1,13 @@
 ---
 id: set-permission
-title: Set user permissions
-description: This guide describes how to set user access permissions.
+title: Setting User Permissions
+description: This guide explains how to set the administrator privileges and access permissions for BioStar X users.
 keywords:
   - User
   - Permission
 ---
 
-This guide describes how to set user access permissions. This guide explains how to set user access permissions. Users can set which spaces they can access and what times they can access them through access permissions.
+According to the organization's security policy, you can differentiate user-specific operational privileges and access permissions for **BioStar X**. Restrict access to main menus through administrator levels and control access to physical spaces through access groups. You can also enhance security through IP address restrictions and multi-factor authentication.
 
 Go to the <Cmd sid='shell.header.user' /> page and set access permissions using the two methods below.
 
@@ -15,21 +15,53 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-The items that can be configured in the <Cmd sid='common.permission' product='2' /> section are as follows. Refer to the descriptions for each item to set appropriate user permissions.
+In the <Cmd sid='team.user.permission.title' /> section, the following items can be set. Refer to the descriptions for each item to set appropriate user permissions.
 
 <Image src='/img/biostarx-new-user-permission.png' />
 
-## Select operator level {#operatorLevel}
+## Select administrator level {#operatorLevel}
 
-Menu access will be limited based on operator level. Select the operator level in the <Cmd sid='common.permission' product='2' /> section under <Cmd sid='user.bioStarOperator' product='2' />. Please refer to the list below for the permission levels that can be assigned to users.
+The menus accessible will be limited based on the selected administrator level. Select the user's administrator level in the <Cmd sid='team.user.permission.title' /> section, under the <Cmd sid='user.bioStarOperator' product='2' /> item. Refer to the list below for the administrator levels that can be assigned to users.
 
 import AccountList from '../../common/_account-list.mdx';
 
 <AccountList />
 
+### Set login ID and password
+
+If you selected an administrator level, you must set the ID and password to be used when the user logs in to **BioStar X**.
+
+<Image src='/img/biostarx-new-user-permission-set-login.png' />
+
+:::info
+
+**Precautions when setting ID and password**
+
+* Set the ID to a combination of letters and numbers between 8 and 32 characters.
+
+* For more information on password policy configuration, refer to [the following](settings-system-security#password-policy-configuration).
+
+* Avoid using passwords that are vulnerable to security.
+
+  * Consecutive characters or numbers (e.g., abcd, 1234)
+
+  * Common words or patterns (e.g., qwerty, password)
+
+:::
+
+## Multi-Factor Authentication Setting {#multiFactorAuth}
+
+Enabling <Cmd sid='common.fingerprintLogin' product='2' /> allows users to log into **BioStar X** with added fingerprint authentication.
+
+:::info
+
+For more information about the multi-factor authentication settings, refer to [this document](login-with-mfa).
+
+:::
+
 ## Login settings with user IP address {#userIp}
 
-If you register a user IP address, you can log in to the PC only when the IP information matches the one registered to your account. This enhances security. Enter the user's IP address in the <Cmd sid='common.permission' product='2' /> section under <Cmd sid='user.ip' product='2' />.
+If you register a user IP address, you can log in to the PC only when the IP information matches the one registered to your account. This enhances security. Enter the user's IP address in the <Cmd sid='team.user.permission.userIp' /> field of the <Cmd sid='team.user.permission.title' /> section.
 
 :::info
 
@@ -37,21 +69,24 @@ If you register a user IP address, you can log in to the PC only when the IP inf
 
 * If the IP address is not registered, PC login will be allowed regardless of IP information.
 
-{/* * 클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다. */}
-
 :::
 
 ## Select access group {#accessGroup}
 
-Set the user's access group to restrict access by organization or department. Select an access group in the <Cmd sid='common.permission' product='2' /> section under <Cmd sid='team.user.permission.accessGroup' />.
+Set the user's access group to restrict access by organization or department. In the <Cmd sid='team.user.permission.title' /> section, select the access group from <Cmd sid='team.user.permission.accessGroup' />.
 
 :::info
 
-For more information about adding and managing access groups, refer to the [following](settings-access-control-manage-access-group).
+For more information about adding and managing access groups, refer to [the following](settings-access-control-manage-access-group).
 
 :::
 
 <NextStep>
+<NextItem to='set-user-advanced'>
+
+In the <Cmd sid='common.advanced' product='2' /> section, you can set the message to display on the device when the user accesses it or exclude that user from synchronization when linking with <Cmd sid='settings.activeDirectory.title' product='2' className='normal' />.
+
+</NextItem>
 <NextItem to='edit-user'>
 
 Check how to edit user information.

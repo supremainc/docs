@@ -12,6 +12,7 @@
   margin-left: 1rem;
   padding-left: 2rem;
   position: relative;
+  margin-top: 2rem;
 }
 
 .fdstep {
@@ -47,4 +48,10 @@
   display: flex;
   position: absolute;
   left: -1rem;
+}
+
+@media print {
+  .fdstep h4 {
+    margin-top: 0rem;
+  }
 }

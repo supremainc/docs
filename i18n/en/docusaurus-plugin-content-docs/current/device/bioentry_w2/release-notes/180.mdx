@@ -1,0 +1,54 @@
+---
+id: 180
+title: Firmware Version 1.8.0
+---
+
+# Firmware Version 1.8.0 (Build No. 1.8.0_231023)
+
+Release<Separator/>2023-10-23
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.1 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. XPass D2 new BLE (Bluetooth Low Energy) chip firmware (Build No. 1.7.0_220921) support.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Supports **Custom Smart Card Layout**.
+
+1. Added software based **Live Finger Detection**.
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or later)
+
+1. Improved synchronization to complete if user enrollment fails when synchronizing multiple users to the device in BioStar 2.
+
+1. Improved smartcard output byte order setting.
+
+    - When using Wiegand or OSDP output, it is improved to be affected by the smartcard output byte order when the Wiegand output information is set to send user ID.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When authenticating with a BLE mobile card running on iOS, authentication fails and the device restarts intermittently. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain MIFARE Classic cards. <Badge>1.0.0</Badge>
+
+1. Deleting all users included in an access group in BioStar 2 does not delete the access group from the device's user information. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain HID iCLASS Seos cards. <Badge>1.0.0</Badge>
+
+1. The device turns off when the user **Format Card** in BioStar 2. <Badge>1.0.0</Badge>
+
+</BugLists>

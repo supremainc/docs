@@ -1,0 +1,143 @@
+---
+id: installation
+title: Installation
+description: Provides the complete process and connection examples required for product installation.
+keywords:
+  - Install
+  - Door Interface
+  - Device
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Product Fixation
+
+Secure the product tightly with a fixing screw at the location to be mounted.
+
+<Image src='/img/device/device-fix-di24.svg' className='none' width={800} alone />
+
+<PageBreak />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+### Power-specific reader and lock power specifications
+
+| Power  | Reader (maximum current, number of devices) | Lock (maximum current, number of devices) |
+| ------ | ------------------------------------------- | ----------------------------------------- |
+| DC 12V | 600mA (300mA x 2)                           | 1.2A (600mA x 2)                          |
+| DC 24V | 300mA (150mA x 2)                           | 600mA (300mA x 2)                         |
+
+<PageBreak />
+
+### Maximum extension length by cable specification
+
+The distance that can be connected may vary depending on the cable specifications and installation environment used for power connection. If cable connections are made improperly it may cause the device to malfunction. This product supports both DC 12V and DC 24V power supplies, so check the maximum extension length according to each cable specification and connect the power correctly.
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>Cable Specification</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+</Row>
+<Row>
+
+<Th>Reader (300mA)</Th>
+
+<Th>Lock (600mA)</Th>
+
+<Th>Reader (150mA)</Th>
+
+<Th>Lock (300mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+<Td>1540 m</Td>
+<Td>770 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+<Td>960 m</Td>
+<Td>480 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+<Td>600 m</Td>
+<Td>300 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+<PageBreak />
+
+## RS-485 Connection
+
+This product supports 3 RS-485 ports, and by daisy-chaining multiple Door Interfaces to the master device, you can configure up to 34 doors.
+
+<Image src='/img/device/installation-rs485-connection-di24.svg' width='80%' className='none' />
+
+:::info
+
+* The maximum number of slave devices that can be connected to the product's RS-485 port is 4.
+
+* Up to 2 devices can be connected per port for RS-485 0 and RS-485 1.
+
+* If more than 3 devices are connected to a single RS-485 port, the desired device may not appear in the connectable list when searching for slave devices.
+
+* Use AWG26 or larger for RS-485 cables, and all wiring must comply with ANSI/NFPA 70 standards.
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set the termination resistor switch ON for this product.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />

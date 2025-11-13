@@ -1,0 +1,110 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-om120.svg' className='none' height={300} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-om120.svg' className='none' height={300} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Output Module</Td>
+
+<Td>Drilling Template</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode12.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Fixing Screw x12</Td>
+
+<Td>Spacer x6</Td>
+
+<Td>Diode x12</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## Name and function of each part
+
+<Magnify src='/img/device/name-function-each-part-om120.png' width='60%' zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+:::info
+
+* Press the **INIT** button for more than 2 seconds after initializing the product linked to the device to connect it to another device.
+
+* Press the **RESET** button to reboot the product.
+
+:::
+
+<PageBreak />
+
+### LED Status Indicator
+
+You can check the product operating status by the color of the LED status indicator.
+
+| Item              | LED             | Status                                                                         |
+| ----------------- | --------------- | ------------------------------------------------------------------------------ |
+| **POWER**         | Red Lit         | Power On                                                                       |
+| **STATUS**        | Green Lit       | Connected status via secure session                                            |
+| ^                 | Blue Lit        | Not connected to the master device                                             |
+| ^                 | Pink Lit        | In the process of upgrading firmware                                           |
+| ^                 | Yellow Lit      | Communication error due to different key or packet loss in OSDP causing RS-485 |
+| ^                 | Sky Blue Lit    | Connected status without secure session                                        |
+| **RELAY (0~11)**  | Red Lit         | Relay Operation                                                                |
+| **RS-485 TX**     | Orange Blinking | In the process of transmitting RS-485 data                                     |
+| **RS-485 RX**     | Green Blinking  | In the process of receiving RS-485 data                                        |
+| **AUX IN (0, 1)** | Orange Lit      | In the process of receiving AUX signal                                         |
+
+### Installation example
+
+This product is an extension module that controls access to building floors. By connecting to Suprema devices and BioStar X, one module can control 12 floors.
+
+When connected in an RS-485 daisy chain, up to 192 floors can be controlled per elevator.
+
+<Image src='/img/device/installation-example-om120.png' width="90%" className='none' />

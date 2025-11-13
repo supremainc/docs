@@ -1,0 +1,56 @@
+---
+id: 101
+title: Firmware Version 1.0.1
+---
+
+# Firmware Version 1.0.1 (Build No. 1.0.1_241024)
+
+Release<Separator/>2024-11-07
+
+## New Features and Improvements
+
+---
+
+1. Supports the **RTSP Video Resolution** feature of selecting the resolution of the video output from the device when using **RTSP**.
+
+1. Supports FeliCa card from **Custom Smart Card Layout**.
+
+1. Supports the **Auth Result Display Option** that allows you to select how the user ID and name are displayed on the authentication result screen of the device.
+
+    - **User ID Display**
+
+    - **User Name Display**
+
+1. Supports mobile application Device Manager, which allows setting up devices by connecting via BLE.
+
+    - Device Manager v1.2.0 or later
+
+1. Improved face anti-spoofing performance.
+
+    :::info
+
+    We recommend using the **Fake Detection** feature set to **Normal** in environments with strong sunlight.
+
+    :::
+
+1. Supports the **Require No Mask** option that allows rejecting authentication for users wearing a mask during face authentication.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When the **Reset Time** for **Timed Anti PassBack** is set to 0, anti-passback does not work. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain RF cards. <Badge>1.0.0</Badge>
+
+1. When the device's **Device** → **Server** setting gets inactive while the device is on the **Waiting Device** list of BioStar 2, the device still appears in the **Waiting Device** list, and the BioStar 2 connect icon is displayed at the top of the device. <Badge>1.0.0</Badge>
+
+1. The device freezes when the RS-485 mode on the device is set to **Not Use** using the SDK. <Badge>1.0.0</Badge>
+
+1. When the device is connected as a slave and the **Auth Timeout** is set to 20 seconds, an authentication error occurs if the card is repeatedly authenticated while waiting for facial authentication after card authentication. <Badge>1.0.0</Badge>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.0.0</Badge>
+
+</BugLists>

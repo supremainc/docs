@@ -1,27 +1,67 @@
 ---
 id: dashboard-adding-widget
 title: Add Widgets
-description: Add widgets to the dashboard to view the information you want.
+description: The dashboard is a customizable monitoring screen where users can freely arrange the information they want.
 keywords:
-  - DASHBOARD
+  - Dashboard
   - Widget
 ---
 
-Add widgets to the <Cmd>Dashboard</Cmd> to view the information you want.
+The **BioStar X** dashboard is a customizable monitoring screen where users can freely arrange the information they want. By adding various widgets, you can configure the key information of the access control system according to your work environment.
 
-1. On the <Cmd sid='shell.header.launcher' /> page, click the <Cmd>Dashboard</Cmd>.
+The types of widgets that can be added are as follows.
 
-2. Click <Cmd sid='reportApp.addWidget' product='2' />.
+* **Chart**: Visualize access event data in bar, line, or pie charts
 
-   :::info
+* **Counter**: Display the number of events per day/week in numbers
 
-   If widgets have already been added, click <IcSet2 /> to enter <Cmd sid='reportApp.dashboardSettings' product='2' />, and then click <Cmd sid='reportApp.addWidget' product='2' />.
+* **Real-time events**: Monitor all events occurring in **BioStar X** in real-time
 
-   :::
+* **Real-time access monitoring**: Display authentication success user information for specific devices in real-time
 
-3. Select the desired <Cmd sid='reportApp.widgetTypes' product='2' />, then enter or set the required fields, depending on the widget.
+* **System usage status**: Display registration status of users, devices, access points, etc. in numbers
 
-## Widget Types
+* **Door control**: Check the status of selected access points and control them remotely
+
+* **Text**: Place custom text such as announcements or widget titles
+
+You can gain the following advantages from the widgets placed on the dashboard.
+
+* **Customized configuration**: Select only the information needed for work and arrange it on one screen
+
+* **Real-time monitoring**: Instantly check access events and system status
+
+* **Intuitive visualization**: Visual representation of data through charts and counters
+
+* **Efficient management**: Improve work efficiency by integrating monitoring and control features
+
+## Add widgets {#add-widgets}
+
+You can add widgets to <Cmd sid='shell.header.dashboard' /> to check the information you want.
+
+1. Click <Cmd sid='shell.header.dashboard' /> in the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the <Cmd sid='reportApp.addWidget' product='2' /> button.
+
+   <Image src='/img/biostarx-dashboard-add-widget.png' />
+
+3. When the <Cmd sid='reportApp.addNewWidget' product='2' /> window appears, select the desired item in <Cmd sid='reportApp.widgetType' product='2' /> and enter or set the required fields.
+
+   <Image src='/img/biostarx-dashboard-add-widget-type.png' width={400} />
+
+4. Complete the widget settings and click the <Cmd sid='reportApp.apply' product='2' /> button.
+
+5. When the widget is created in the widget display area, adjust its size or place it in the desired location.
+
+6. Once you have completed all settings, click the <Cmd sid='reportApp.apply' product='2' /> button in the upper right corner of the screen.
+
+:::info
+
+If a widget has already been added, click the <IcSet2 /> icon in the upper right corner of the screen. Once you enter <Cmd sid='reportApp.dashboardSettings' product='2' /> mode, click the <Cmd sid='reportApp.addWidget' product='2' /> button.
+
+:::
+
+## Types of widgets {#widget-types}
 
 * The default widget size is set differently for each widget and is optimized to look best at the default.
 
@@ -29,7 +69,7 @@ Add widgets to the <Cmd>Dashboard</Cmd> to view the information you want.
 
   <Image src='/img/biostarx-adjust-win-size.png' caption />
 
-### Chart
+### Chart {#chart}
 
 Selecting desired chart data enables the display of the number of events that occurred in a chart.
 
@@ -43,13 +83,13 @@ Selecting desired chart data enables the display of the number of events that oc
 
 * <Cmd sid='reportApp.chartColorSchemes' product='2' />: Select the desired color among 5 color schemes.
 
-    :::info
+:::info
 
-  The charts shown when selecting <Cmd sid='reportApp.chartColorSchemes' product='2' /> are random values for preview, not actual values.
+The charts shown when selecting <Cmd sid='reportApp.chartColorSchemes' product='2' /> are random values for preview, not actual values.
 
-    :::
+:::
 
-### Counter
+### Counter {#bar}
 
 Selecting desired counter data enables the display of the number of events that occurred as a number.
 
@@ -59,9 +99,9 @@ Selecting desired counter data enables the display of the number of events that 
 
   * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
-### Text
+### Text {#text}
 
-In the widgets area of <Cmd>Dashboard</Cmd>, you can enter and place desired text. After creation, you can place it in the required location and use it as a title for a widget or as a notice.
+You can input and place the desired text in the widget area of <Cmd sid='shell.header.dashboard' />. After creation, you can place it in the required location and use it as a title for a widget or as a notice.
 
 <Image src='/img/common/biostarx-text.png' caption alone />
 
@@ -71,9 +111,9 @@ If you select the <Cmd sid='reportApp.widgetTypes.text.removeBackground' product
 
 :::
 
-### Real-time event
+### Real-time events {#realtime-events}
 
-Shows events occurring in BioStar X in real time. You can check events by filtering specific events, users, doors, and devices.
+Shows events occurring in **BioStar X** in real-time. You can check events by filtering specific events, users, doors, and devices.
 
 <Image src='/img/biostarx-real-time-event.png' caption />
 
@@ -85,11 +125,11 @@ Shows events occurring in BioStar X in real time. You can check events by filter
 
 :::info
 
-If you navigate to another page and subsequently return to the <Cmd>Dashboard</Cmd>, the list will be cleared, and events will be logged anew.
+If you navigate to another page and then return to <Cmd sid='shell.header.dashboard' />, the list will be cleared and events will be recorded again.
 
 :::
 
-### Real-time Access Monitoring
+### Real-time access monitoring {#real-time-access-monitoring}
 
 Select one device and display the profile photo and information (<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />) of the user who successfully authenticated to the selected device in real time.
 
@@ -107,7 +147,7 @@ Select one device and display the profile photo and information (<Cmd sid='repor
 
 :::
 
-### System Usage
+### System usage status {#system-usage-status}
 
 The various usage statuses of BioStar X are displayed in numbers.
 
@@ -117,7 +157,7 @@ The <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' /> that can be disp
 
 * <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
 
-### Door Control
+### Door control {#door-control}
 
 Select one door to check and control its status.
 
@@ -133,4 +173,12 @@ The name of the <Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> widg
 
 :::
 
-4. After completing the settings of the widget, click <Cmd sid='reportApp.apply' product='2' />, and the widget will be created in the widget area. Adjust it to the desired size and location, then click <Cmd sid='reportApp.apply' product='2' />, and the widget will be added to the <Cmd>Dashboard</Cmd>.
+## Set widget data refresh interval {#widget-refresh-interval}
+
+You can set the data refresh interval of widgets added to the dashboard.
+
+1. Click <Cmd sid='shell.header.dashboard' /> in the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click the <IcSet2 /> icon in the upper right corner of the screen.
+
+3. Once you enter <Cmd sid='reportApp.dashboardSettings' product='2' /> mode, set <Cmd sid='reportApp.autoRefreshInterval' product='2' /> in the general settings at the bottom of the screen.

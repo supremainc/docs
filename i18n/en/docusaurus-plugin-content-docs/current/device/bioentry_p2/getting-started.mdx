@@ -1,0 +1,149 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-bep2.svg' className='none' width='80%' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry P2</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Drilling Template</Td>
+
+<Td>Connection Cables</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+<Td>PVC Anchors x2</Td>
+
+<Td>Fixing Screws x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Bracket Fixing Screw<br/>(Star Shaped)</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-bep2.png' className='none' width='60%' />
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue/Cyan Blinking: Normal Operating Status
+
+  * Blue/Green blinking:
+
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
+
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
+
+    * When Initializing Network Settings
+
+  * Green Blinking: Waiting for Input Status
+
+* **RF Card Recognition Part**: This is the part that recognizes RF cards for access.
+
+* **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
+
+* **Power supply (2-pin)**: Connects the power supply cable.
+
+* **Relay (3-pin)**: Connect the Relay cable.
+
+* **Ethernet (4-pin)**: Connect the Ethernet cable.
+
+* **RS-485 (4-pin)**: Connect the RS-485 cable.
+
+* **Input (4-pin)**: Connect the input cable.
+
+* **Wiegand Input/Output (4-pin)**: Connect the Wiegand input/output cable.
+
+* **Reset Button**
+
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
+
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

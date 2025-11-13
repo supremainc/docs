@@ -1,11 +1,11 @@
 ---
 id: set-permission
 title: 사용자 권한 설정하기
-description: 사용자의 출입 권한 설정 방법을 안내합니다.
+description: BioStar X 사용자의 관리자 권한과 출입 권한을 설정하는 방법을 안내합니다.
 keywords: [ 사용자, 권한 ]
 ---
 
-사용자의 출입 권한 설정 방법을 안내합니다. 출입 권한을 통해 사용자가 어떤 공간을 출입할 수 있는지, 어떤 시간대에 출입할 수 있는지 등을 설정할 수 있습니다. 출입 권한은 사용자를 새로 추가하거나 수정할 때 설정할 수 있습니다.
+조직의 보안 정책에 따라 사용자별로 **BioStar X** 운영 권한과 출입 권한을 차별화하여 설정할 수 있습니다. 관리자 등급을 통해 주요 메뉴 접근을 제한하고, 출입 그룹을 통해 물리적 공간 접근을 제어할 수 있습니다. 또한 IP 주소 제한과 다중 인증을 통해 보안을 강화할 수 있습니다.
 
 <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> 페이지로 이동해, 아래 두 가지 방식으로 출입 권한을 설정할 수 있습니다.
 
@@ -13,35 +13,55 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-<Cmd sid='common.permission' product='2' /> 섹션에서 설정할 수 있는 항목은 아래와 같습니다. 각 항목에 대한 설명을 참고하여 적절한 사용자 권한을 설정하세요.
+<Cmd sid='team.user.permission.title' /> 섹션에서 설정할 수 있는 항목은 아래와 같습니다. 각 항목에 대한 설명을 참고하여 적절한 사용자 권한을 설정하세요.
 
 <Image src='/img/biostarx-new-user-permission.png' />
 
 
-## 권한 등급 선택 {#operatorLevel}
+## 관리자 등급 선택 {#operatorLevel}
 
-권한 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='common.permission' product='2' /> 섹션의 <Cmd sid='user.bioStarOperator' product='2' /> 항목에서 사용자의 권한 등급을 선택하세요. 사용자에게 할당할 수 있는 권한 등급은 아래 목록을 참고하세요.
+관리자 등급에 따라 접근할 수 있는 메뉴가 제한됩니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='user.bioStarOperator' product='2' /> 항목에서 사용자의 관리자 등급을 선택하세요. 사용자에게 할당할 수 있는 관리자 등급은 아래 목록을 참고하세요.
 
 import AccountList from '../../common/_account-list.mdx';
 
 <AccountList />
 
-## 다중 인증 설정 {#multiFactorAuth}
+### 로그인 아이디 및 비밀번호 설정
 
-<Cmd sid='team.user.permission.multiFactorAuth' />을 활성화하면 사용자가 **BioStar X**에 로그인할 때 지문 인증을 추가해 로그인할 수 있습니다.
+관리자 등급을 선택했다면 해당 사용자가 **BioStar X**에 로그인할 때 사용할 아이디와 비밀번호를 설정해야 합니다.
+
+<Image src='/img/biostarx-new-user-permission-set-login.png' />
 
 :::info
 
-* **다중 인증**(Multi-factor authentication, MFA)이란, 두 가지 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다. 다중 인증을 사용해 계정에 대한 보안을 강화할 수 있습니다.
+**아이디 및 비밀번호 설정 시 주의사항**
 
-* **다중 인증** 설정에 대한 자세한 내용은 [다음 문서](login-with-mfa)를 참고하세요.
+- 아이디는 영문, 숫자 조합으로 8\~32자 이내로 설정하세요.
+
+- 비밀번호 정책 설정에 대한 자세한 내용은 [다음 문서](settings-system-security#password-policy-configuration)를 참고하세요.
+
+- 보안상 취약한 비밀번호는 사용을 피하세요.
+
+  - 연속된 문자나 숫자(예, abcd, 1234)
+
+  - 일반적인 단어나 패턴(예, qwerty, password)
+
+:::
+
+## 다중 인증 설정 {#multiFactorAuth}
+
+<Cmd sid='common.fingerprintLogin' product='2' />을 활성화하면 사용자가 **BioStar X**에 로그인할 때 지문 인증을 추가해 로그인할 수 있습니다.
+
+:::info
+
+**다중 인증** 설정에 대한 자세한 내용은 [다음 문서](login-with-mfa)를 참고하세요.
 
 :::
 
 
 ## 사용자 IP 주소로 로그인 설정 {#userIp}
 
-사용자 IP 주소를 등록하면, 계정에 등록한 IP 정보와 일치할 경우에만 PC에 로그인할 수 있습니다. 이를 통해 보안을 강화할 수 있습니다. <Cmd sid='common.permission' product='2' /> 섹션의 <Cmd sid='user.ip' product='2' /> 항목에 사용자의 IP 주소를 입력하세요.
+사용자 IP 주소를 등록하면, 계정에 등록한 IP 정보와 일치할 경우에만 PC에 로그인할 수 있습니다. 이를 통해 보안을 강화할 수 있습니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.userIp' /> 항목에 사용자의 IP 주소를 입력하세요.
 
 :::info
 
@@ -49,14 +69,12 @@ import AccountList from '../../common/_account-list.mdx';
 
 * IP 주소를 등록하지 않으면 IP 정보와 관계없이 PC에 로그인할 수 있습니다.
 
-{/* * 클라우드를 사용할 때는 사용자 계정에 등록된 IP 주소와 PC의 IP 주소가 일치하지 않아도 접속할 수 있습니다. */}
-
 :::
 
 
 ## 출입 그룹 선택 {#accessGroup}
 
-사용자의 출입 그룹을 설정해 조직별, 부서별로 출입을 제한할 수 있습니다. <Cmd sid='common.permission' product='2' /> 섹션의 <Cmd sid='team.user.permission.accessGroup' /> 항목에서 출입 그룹을 선택하세요.
+사용자의 출입 그룹을 설정해 조직별, 부서별로 출입을 제한할 수 있습니다. <Cmd sid='team.user.permission.title' /> 섹션의 <Cmd sid='team.user.permission.accessGroup' /> 항목에서 출입 그룹을 선택하세요.
 
 :::info
 
@@ -67,7 +85,7 @@ import AccountList from '../../common/_account-list.mdx';
 <NextStep>
 <NextItem to='set-user-advanced'>
 
-<Cmd sid='common.advanced' product='2' /> 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 액티브 디렉토리 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다.
+<Cmd sid='common.advanced' product='2' /> 섹션에서 사용자 출입 시 장치에 표시할 메시지를 설정하거나 <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 연동 시 해당 사용자를 동기화에서 제외할 수 있습니다.
 
 </NextItem>
 <NextItem to='edit-user'>

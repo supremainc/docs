@@ -18,33 +18,33 @@ import specs from '@site/static/specs/bs3_specs.json';
 
 {/* 크리덴셜 */}
 
-<SpecSectioin data={specs.biostation3.credentials} />
+<SpecSection data={specs.biostation3.credentials} />
 
 {/* 일반 */}
 
-<SpecSectioin data={specs.biostation3.general} />
+<SpecSection data={specs.biostation3.general} />
 
 {/* 저장 용량 */}
 
-<SpecSectioin data={specs.biostation3.storage} />
+<SpecSection data={specs.biostation3.storage} />
 
 {/* 인터페이스 */}
 
-<SpecSectioin data={specs.biostation3.interface} />
+<SpecSection data={specs.biostation3.interface} />
 
 {/* 전기 규격 */}
 
-<SpecSectioin data={specs.biostation3.power} />
+<SpecSection data={specs.biostation3.power} />
 
-{/* 크기 및 무게 */}
+## Dimensions and Weight
 
-<SpecSizeWieght data={specs.biostation3.size_weight} />
+<Image src='/img/device/bs3-dimension.svg' className='none' />
 
 :::note
 
-<Anno id='anno1'>1)</Anno> The minimum face authentication distance shown is the default setting for the product, and the recommended face authentication distance is 0.6 to 1.0 m.
+<Anno id='anno1'>1)</Anno> The minimum facial authentication distance indicated is the default setting for the product, and the recommended facial authentication distance is 0.6~1.0 m.
 
-<Anno id='anno2'>2)</Anno> DESFire EV2/EV3 cards are supported by having backward compatibility of DESFire EV1 cards. CSN and smart card functions are compatible with the device.
+<Anno id='anno2'>2)</Anno> DESFire EV2/EV3 cards are supported by having backward compatibility of DESFire EV1 cards. CSN and smart card functions are compatible with BioStation 3.
 
 <Anno id='anno3'>3)</Anno> RF read range will vary depending on installation environment.
 
@@ -54,11 +54,13 @@ import specs from '@site/static/specs/bs3_specs.json';
 
 <Anno id='anno6'>6)</Anno> The number of users registered without having any credential data.
 
+<Anno id='anno7'>7)</Anno> Requires PoE+ (IEEE 802.3at, 30 W) or PoE++ (IEEE 802.3bt, 60~100 W) power. Standard PoE (IEEE 802.3af, 15.4 W) is not supported. Using standard PoE may cause devices to operate unstably or be permanently damaged. Before connecting the device, make sure your network switch or PoE injector supports PoE+ or PoE++.
+
 :::
 
 :::info
 
-If BioStation 3 is a master device and a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
+When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
 
 * Max. Fingerprint Credentials (1:N): 100,000
 

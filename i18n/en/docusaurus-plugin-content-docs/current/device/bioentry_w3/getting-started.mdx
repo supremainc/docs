@@ -18,13 +18,13 @@ Provides initial procedures for getting started with the device.
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/device/bew3-component-device.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/bew3-component-device.svg' className='none' height={220} alone /></Td>
 
-<Td><Image src='/img/device/bew3-component-bracket.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/bew3-component-bracket.svg' className='none' height={210} alone /></Td>
 
-<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-oss-guide.svg' alone /></Td>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
 
 </Row>
 <Row className='center'>
@@ -53,15 +53,12 @@ Provides initial procedures for getting started with the device.
 
 <Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
 
-<Td>
-<Image src='/img/device/component-resistor.svg' className='none' alone />
-<Image src='/img/device/component-resistor.svg' className='none' alone />
-</Td>
+<Td><Image src='/img/device/component-resistor2.svg' className='none' alone /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>Fixing Screw x2</Td>
+<Td>Fixing Screws x2</Td>
 
 <Td>Bracket Fixing Screw (Star Shaped)</Td>
 
@@ -75,20 +72,14 @@ Provides initial procedures for getting started with the device.
 </Tbody>
 </Table>
 
-:::info
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
-* Components may vary according to the installation environment.
+<Componentsnote />
 
-* When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+## Name and function of each part
 
-* For more details regarding the product, visit the Suprema website ([www.supremainc.com](https://www.supremainc.com)) and refer to the user guide.
-
-:::
-
-
-## Name and Function of Each Part
-
-<Image src='/img/device/bew3-product-part.png' className='none' />
+<Image src='/img/device/bew3-product-part.png' className='none' width="80%" />
 
 * **Visual camera**: Capture an actual face image.
 
@@ -108,78 +99,77 @@ Provides initial procedures for getting started with the device.
 
   * Blue/Green blinking:
 
-    * Fails to receive an IP address when <Cmd>DHCP</Cmd> is enabled.
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
 
-    * Disconnection with the master device when in <Cmd>Slave</Cmd> mode.
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
 
   * Red/Purple blinking: Device is locked.
 
   * Yellow blinking: Waiting for an input.
 
-* **Cable Connector**
+* **Cable**
 
-  Power cable / Ethernet connector / RS-485 cable / Wiegand input or output cable / Input cable / Relay output cable
+  Power / Ethernet / RS-485 / Wiegand input/output / Input / Relay
 
 * **Speaker**: Delivers sound.
 
 * **Reset Button**
 
-  * Resets the network configuration. For details, refer to the [Resetting Network Setting](installation#reset-network-settings).
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
 
-  * Deletes all data and certificate on the device and reset the settings. For details, refer to the [Restoring the Factory Defaults](installation#factory-reset).
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
 
 * **USB (Type-C) memory slot**: Connects the USB memory.
 
-
-### Cables and Connectors
+### Cable
 
 <Columns>
 <Column>
 
-<Image src='/img/device/bew3-cables-layout.png' alone width={500} className='none' />
+<Image src='/img/device/bew3-cables-layout.png' alone width={450} className='none' />
 
 </Column>
 <Column className='padding--l10'>
 
-| Pin | Name | Color |
-| :--: | :--: | :--: |
-| 1 | INPUT2 | Orange |
-| 2 | INPUT1 | Brown |
-| 3 | INPUT0 | Purple |
-| 4 | ETX+ | White |
-| 5 | ETX- | Orange |
-| 6 | ERX+ | Black |
-| 7 | ERX- | Yellow |
-| 8 | RS485_0 TRXN | Yellow (Black stripe) |
-| 9 | RS485_0 TRXP | Blue (White stripe) |
-| 10 | RS485_1 TRXN | Yellow |
-| 11 | RS485_1 TRXP | Blue |
-| 12 | PWR GND | Black (White stripe) |
-| 13 | PWR +VDC | Red |
-| 14 | VB2 | Brown |
-| 15 | VB2 | Blue |
-| 16 | VB1 | Green |
-| 17 | VB1 | Red |
-| 18 | GND | Black |
-| 19 | RELAY NO | Gray (White stripe) |
-| 20 | RELAY NC | Orange (White stripe) |
-| 21 | RELAY COM | Green (White stripe) |
-| 22 | GND | Black |
-| 23 | WGD OUT1 | White (Black stripe) |
-| 24 | WGD OUT0 | Green (Black stripe) |
-| 25 | WGD IN1 | White |
-| 26 | WGD IN0 | Green |
+| Pin |     Name     |         Color         |
+| :-: | :----------: | :-------------------: |
+|  1  |    INPUT2    |         Orange        |
+|  2  |    INPUT1    |         Brown         |
+|  3  |    INPUT0    |         Purple        |
+|  4  |     ETX+     |         White         |
+|  5  |     ETX-     |         Orange        |
+|  6  |     ERX+     |         Black         |
+|  7  |     ERX-     |         Yellow        |
+|  8  | RS485_0 TRXN | Yellow (black stripe) |
+|  9  | RS485_0 TRXP |  Blue (white stripe)  |
+|  10 | RS485_1 TRXN |         Yellow        |
+|  11 | RS485_1 TRXP |          Blue         |
+|  12 |    PWR GND   |  Black (white stripe) |
+|  13 |   PWR +VDC   |          Red          |
+|  14 |      VB2     |         Brown         |
+|  15 |      VB2     |          Blue         |
+|  16 |      VB1     |         Green         |
+|  17 |      VB1     |          Red          |
+|  18 |      GND     |         Black         |
+|  19 |   RELAY NO   |  Gray (white stripe)  |
+|  20 |   RELAY NC   | Orange (white stripe) |
+|  21 |   RELAY COM  |  Green (white stripe) |
+|  22 |      GND     |         Black         |
+|  23 |   WGD OUT1   |  White (black stripe) |
+|  24 |   WGD OUT0   |  Green (black stripe) |
+|  25 |    WGD IN1   |         White         |
+|  26 |    WGD IN0   |         Green         |
 
 </Column>
 </Columns>
 
 :::info
 
-There are several conductors of size of AWG 26 and they shall be covered by a common jacket or the equivalent when field wiring; and the lead shall not be spliced to a conductor larger than 18 AWG (0.82 mm2).
+There are various conductors of size AWG 26, which should be protected with standard sheathing or equivalent material when wiring. Also, ensure the lead does not contact conductors larger than 18 AWG (0.82 mm2).
 
 :::
 
-
+{/* 올바른 얼굴 등록 및 인증 방법 */}
 import FaceEnrollCaution from '../../common/_face-enrollment-authentication-method.mdx'
 
-<FaceEnrollCaution />
+<FaceEnrollCaution name='60~100 cm' />

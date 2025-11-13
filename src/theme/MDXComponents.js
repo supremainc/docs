@@ -19,20 +19,22 @@ import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
-import { StatusOK, StatusFail, StatusUpdating } from '@site/src/components/Status';
+import { StatusOK, StatusFail, StatusUpdating, StatusNormal } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
 import Separator from '@site/src/components/Separator';
 import Badge from '@site/src/components/Badge';
 import BugLists from '@site/src/components/BugLists';
 import Jira from '@site/src/components/Jira';
 import { Productpart, Callout, Item } from '@site/src/components/Productpart';
-import { SpecSectioin, SpecSizeWieght, Anno } from '@site/src/components/Specs';
+import { SpecSection, SpecSizeWieght, Anno } from '@site/src/components/Specs';
 import Faqs from '@site/src/components/Faqs';
 import { FaqsItems } from '@site/src/components/Faqs';
 import Calloutlists from '@site/src/components/Calloutlists';
 import DocLink from '@site/src/components/DocLink';
 import Treeview from '@site/src/components/Treeview';
 import YouTube from 'react-youtube';
+import PageBreak from '@site/src/components/Pagebreak';
+import Magnify from "@site/src/components/Magnify";
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -42,16 +44,19 @@ import IcCamera from '@site/static/img/menus/ico-camera.svg';
 import IcUpload from '@site/static/img/menus/ico-upload.svg';
 import IcTrash from '@site/static/img/menus/ico-trash.svg';
 import IcDown from '@site/static/img/menus/ico-down-arrow.svg';
+import IcUp from '@site/static/img/menus/ico-up-arrow.svg';
 import IcMoreB from '@site/static/img/menus/ico-more-black.svg';
 import IcMoreW from '@site/static/img/menus/ico-more-white.svg';
 import IcErr from '@site/static/img/menus/ico-err.svg';
 import IcNotsync from '@site/static/img/menus/ico-notsync.svg';
 import IcDoorClose from '@site/static/img/menus/ico-door-close.svg';
 import IcDoorOpen from '@site/static/img/menus/ico-door-open.svg';
+import IcDoorSensor from '@site/static/img/menus/ico-door-sensor.svg';
 import IcRelayLock from '@site/static/img/menus/ico-relay-lock.svg';
 import IcRelayUnlock from '@site/static/img/menus/ico-relay-unlock.svg';
 import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcDisarm from '@site/static/img/menus/ico-disarms.svg';
+import IcZone from '@site/static/img/menus/ico-zone.svg';
 import IcDisable from '@site/static/img/menus/ico-disable.svg';
 import IcFullscreen from '@site/static/img/menus/ico-fullscreen.svg';
 import IcRestorscreen from '@site/static/img/menus/ico-restorescreen.svg';
@@ -83,6 +88,7 @@ import IcEdit from '@site/static/img/menus/ico-edit.svg';
 import IcEdit2 from '@site/static/img/menus/ico-edit2.svg';
 import IcEditUL from '@site/static/img/menus/ico-edit-underline.svg';
 import IcTrash2 from '@site/static/img/menus/ico-trash2.svg';
+import IcRepTrash from '@site/static/img/menus/ico-report-trash.svg';
 import IcSet2 from '@site/static/img/menus/ico-setting2.svg';
 import IcTslot from '@site/static/img/menus/ico-timeslot-add.svg';
 import IcEraser from '@site/static/img/menus/ico-eraser.svg';
@@ -101,6 +107,23 @@ import IcDorder from '@site/static/img/menus/ico-dorder.svg';
 import IcCurP from '@site/static/img/menus/ico-cur-position.svg';
 import IcCamFail from '@site/static/img/menus/ico-camera-fail.svg';
 import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
+import IcMapmore from '@site/static/img/menus/ico-map-more.svg';
+import IcAlert from '@site/static/img/menus/ico-door-alert.svg';
+import IcVidLog from '@site/static/img/menus/ico-vid-log.svg';
+import IcReportVid from '@site/static/img/menus/ico-report-vidlog.svg';
+import IcViewAlert from '@site/static/img/menus/ico-view-alert.svg';
+import IcRepoEdit from '@site/static/img/menus/ico-report-edit.svg';
+import IcZoom from '@site/static/img/menus/ico-zoom.svg';
+import IcFLockDr from '@site/static/img/menus/ico-floor-locked-door.svg';
+import IcFUlockDr from '@site/static/img/menus/ico-floor-unlock-door.svg';
+import IcRCplay from '@site/static/img/menus/ico-app-rollcall-play.svg';
+import IcRCstop from '@site/static/img/menus/ico-app-rollcall-stop.svg';
+import IcRCdone from '@site/static/img/menus/ico-app-rollcall-done.svg';
+import IcRCinfo from '@site/static/img/menus/ico-app-rollcall-info.svg';
+import IcRCmemo from '@site/static/img/menus/ico-app-rollcall-memo.svg';
+import IcImgLog from '@site/static/img/menus/ico-imagelog.svg';
+import IcList from '@site/static/img/menus/ico-list.svg';
+import IcTnaExpand from '@site/static/img/menus/ico-tna-expand.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -133,15 +156,15 @@ export default {
     GlossaryAll,
     Num,
     StatusOK,
-    StatusFail, StatusUpdating,
+    StatusFail, StatusUpdating, StatusNormal,
     Overview,
     Separator,
     Badge,
     BugLists,
     Jira,
     Productpart, Callout, Item,
-    SpecSectioin, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube,
+    SpecSection, SpecSizeWieght, Anno,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify,
     IcSvTime, IcAccout, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
@@ -151,16 +174,17 @@ export default {
     IcTrash,
     IcTrash2,
     IcDown,
+    IcUp,
     IcMoreB,
     IcMoreW,
     IcErr,
     IcNotsync,
     IcDoorClose,
-    IcDoorOpen,
+    IcDoorOpen, IcDoorSensor,
     IcRelayLock,
     IcRelayUnlock,
     IcArm,
-    IcDisarm,
+    IcDisarm, IcZone,
     IcDisable,
     IcFullscreen,
     IcRestorscreen,
@@ -172,5 +196,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand
 }

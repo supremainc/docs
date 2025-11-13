@@ -7,7 +7,7 @@ keywords: [사용자 정보, 내보내기, 가져오기]
 
 사용자 정보를 내보내거나 가져오기를 통해 이전 버전 또는 다른 서버의 사용자 정보를 활용할 수 있습니다.
 
-## CSV 내보내기/가져오기 {#csv-exportimport}
+## CSV 내보내기/가져오기 {#csvexportimport}
 
 선택한 사용자 정보를 CSV 파일로 저장하거나, 저장된 CSV 파일을 불러올 수 있습니다. CSV 파일을 이용하여 간편하게 사용자 정보를 옮길 수 있습니다.
 
@@ -19,7 +19,7 @@ keywords: [사용자 정보, 내보내기, 가져오기]
 
 :::
 
-### CSV 내보내기 {#csv-export}
+### CSV 내보내기 {#csvexport}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
@@ -27,10 +27,14 @@ keywords: [사용자 정보, 내보내기, 가져오기]
 
 1. 화면 오른쪽 상단의 <IcMoreW /> 버튼을 클릭하고 <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />를 선택하세요.
 
+    <Image src='/img/biostarx-user-export-csv.png' />
+
+1. <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> 창이 나타나면 <Cmd sid='common.button.download' /> 버튼을 클릭하세요.
+
 1. 로컬의 원하는 경로에 CSV 파일을 저장하세요.
 
 
-### CSV 가져오기 {#import-csv}
+### CSV 가져오기 {#csvimport}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
@@ -38,15 +42,15 @@ keywords: [사용자 정보, 내보내기, 가져오기]
 
 1. 로컬에 저장된 CSV 파일을 선택하세요.
 
-1. <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.import.title' /> 창에서 <Cmd sid='user.list.csvImport.importStartRow' product='2' />을 설정하고 <Cmd sid='common.button.continue' /> 버튼을 클릭하세요.
+1. <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.import.title' /> 창에서 <Cmd sid='user.list.csvImport.importStartRow' />을 설정하고 <Cmd sid='common.button.next' /> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-user-import-01.png' />
 
 1. CSV 파일의 사용자 데이터 필드와 **BioStar X**의 사용자 데이터 필드가 자동으로 매핑되어 나타납니다. <Cmd sid='user.list.csvImport.reMapping' product='2' />을 클릭하면 이름이 동일한 필드끼리 재매핑됩니다.
 
-    <Image src='/img/biostarx-user-import-02.png' />
+    <Image src='/img/biostarx-user-import-02.png' width='50%' />
 
-1. **BioStar X**에 이미 사용자 ID가 등록된 사용자 데이터를 유지할 지 CSV 파일의 정보로 덮어쓰기할 지 선택하고 <Cmd sid='common.button.continue' />을 클릭하세요.
+1. **BioStar X**에 이미 사용자 ID가 등록된 사용자 데이터를 유지할 지 CSV 파일의 정보로 덮어쓰기할 지 선택하고 <Cmd sid='common.apply' />을 클릭하세요.
 
     <Image src='/img/biostarx-user-import-03.png' />
 
@@ -64,16 +68,16 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 * **BioStar X** QR은 CSV 가져오기를 통해 발급할 수 없습니다.
 
-* CSV 가져오기를 통해 사용자의 얼굴을 등록할 수 있습니다. 자세한 내용은 [다음 문서](enroll-credential-face#import-csv)를 참고하세요.
+* CSV 가져오기를 통해 사용자의 얼굴을 등록할 수 있습니다. 자세한 내용은 [다음 문서](batch-import-face#import-csv)를 참고하세요.
 
 * CSV 가져오기를 통해 사용자의 PIN을 등록할 수 있습니다. 자세한 내용은 [다음 문서](enroll-credential-pin)을 참고하세요.
 
-* 저장된 CSV 파일에 새로운 열을 추가하면 **BioStar X**에서 파일을 가져올 수 없습니다.
+* 저장된 CSV 파일에 매칭되지 않는 열을 추가하면 **BioStar X**에서 파일을 가져올 수 없습니다.
 
 :::
 
 
-## 데이터 파일 내보내기/가져오기 {#exportimport-data-file}
+## 데이터 파일 내보내기/가져오기 {#exportimportdatafile}
 
 외부 저장매체(USB)에 사용자 정보를 저장하여 **BioStar X**나 장치에서 가져올 수 있습니다. 최대 500,000명의 사용자 정보를 서버에서 장치로 옮기거나 장치에서 장치로 옮길 수 있습니다.
 
@@ -83,7 +87,7 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 * 서로 다른 지문 템플릿 형식을 사용할 경우 데이터를 가져올 수 없습니다. 예를 들어, 슈프리마 지문 템플릿 형식을 사용하는 장치에서 내보내기한 데이터를 ISO 지문 템플릿 형식을 사용하는 장치에서 가져올 수 없습니다.
 
-* FaceStation F2에서 얼굴 인식 사용자 데이터를 가져올 때 **BioStar X** 서버에 사진 올리기 또는 모바일 장치를 통해 등록한 얼굴 인식 데이터가 이미 존재할 경우 기존 데이터가 덮어씌워집니다.
+* 사용자 데이터를 가져올 때 **BioStar X** 서버에 등록한 지문과 얼굴 크리덴셜이 이미 존재할 경우 기존 데이터에 덮어씌워집니다.
 
 * 오래된 펌웨어 버전을 사용하는 장치의 데이터를 불러올 수 없습니다. 장치의 펌웨어를 호환하는 버전으로 업그레이드하세요. 
 
@@ -109,7 +113,7 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 :::
 
-### 데이터 내보내기 {#export-data}
+### 데이터 내보내기 {#exportdata}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
@@ -117,7 +121,11 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 1. 화면 오른쪽 상단의 <IcMoreW /> 버튼을 클릭하고 <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.dataFile' />을 선택하세요.
 
-1. <Cmd sid='team.menu.export.dataFile' /> 창에서 데이터 파일을 적용할 장치를 선택하고 <Cmd sid='common.button.confirm' /> 버튼을 클릭하세요.
+    <Image src='/img/biostarx-user-export-data.png' />
+
+1. <Cmd sid='team.menu.dialog.exprotDataFile.title' /> 창에서 데이터 파일을 적용할 장치를 선택하고 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
 1. 로컬의 원하는 경로에 데이터 파일을 저장하세요.
 
@@ -129,11 +137,13 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 :::
 
-### 데이터 가져오기 {#import-data}
+### 데이터 가져오기 {#importdata}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
 
 1. 화면 오른쪽 상단의 <IcMoreW /> 버튼을 클릭하고 <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.dataFile' />을 선택하세요.
+
+    <Image src='/img/biostarx-user-import-data.png' />
 
 1. 로컬에 저장된 데이터 파일(*.tgz*)을 선택하세요.
 

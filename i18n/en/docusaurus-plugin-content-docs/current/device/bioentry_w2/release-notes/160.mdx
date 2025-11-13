@@ -1,0 +1,42 @@
+---
+id: 160
+title: Firmware Version 1.6.0
+---
+
+# Firmware Version 1.6.0 (Build No. 1.6.0_200902)
+
+Release<Separator/>2020-09-10
+
+## New Features and Improvements
+
+---
+
+1. Supports Secure Boot.
+
+    - BEW2-OAPB, BEW2-OHPB, BEW2-ODPB
+
+1. Supports Mobile Access.
+
+    - BEW2-OAP, BEW2-OHP, BEW2-ODP: NFC
+
+    - BEW2-OAPB, BEW2-OHPB, BEW2-ODPB: BLE, NFC
+
+1. Separated event logs of Mobile Access cards and RFID cards.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. iCLASS card does not get read as a Wiegand card unless the iCLASS was also selected on the Smart Card mask.
+
+1. Device responded that it supports transparent mode by OSDP_PDCAP when connecting as slave while it does not support it.
+
+1. When using a static IP while DNS server address is configured, a reboot on the device causes communication problems between the server.
+
+1. Incorrect BitCount is sent if a user authenticates with AoC when the device is connected to a 3rd-party system via OSDP.
+
+1. If 31 slave devices are connected and one of the devices get disconnected, the master device will reboot.
+
+</BugLists>

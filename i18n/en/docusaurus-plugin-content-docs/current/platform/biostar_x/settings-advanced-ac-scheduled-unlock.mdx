@@ -1,51 +1,59 @@
 ---
 id: settings-advanced-ac-scheduled-unlock
-title: Scheduled Unlock Zone
-description: This guide describes how to set scheduled unlock zones. Scheduled unlock zones provide a feature to open doors at specific times.
+title: Scheduled Unlock
+description: Guidelines for schedule unlock settings. Schedule unlock provides the feature of opening doors at specific times.
 keywords:
   - Advanced access control
   - Scheduled Unlock
 ---
 
-This guide describes how to set scheduled unlock zones. Scheduled unlock zones provide a feature to open doors at specific times. This feature enhances access control and is useful for allowing access during certain time periods.
+Guidelines for schedule unlock settings. Schedule unlock provides the feature of opening doors at specific times. This feature enhances access control and is useful for allowing access during certain time periods.
 
 :::info
 
-Scheduled unlock zones only support <Cmd sid='zone.globalZone.local' product='2' /> mode.
+Schedule unlock supports only <Cmd sid='zone.globalZone.local' product='2' /> mode.
 
 :::
 
-## Register scheduled unlock zone {#addScheduledUnlockZone}
+## Register scheduled unlock {#addScheduledUnlockZone}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.advancedAc.root' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
 
 3. Click <Cmd sid='button.func.addZone' product='2' />.
 
 4. Select <Cmd sid='zone.scheduledUnlock' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the scheduled unlock zone to be added in the <Cmd sid='common.info' product='2' /> section.
+5. Enter the name of the schedule unlock feature to be added in the <Cmd sid='common.info' product='2' /> section.
 
-6. Set the details of the scheduled unlock zone in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to the [following](#setting).
+   <Image src='/img/biostarx-settings-adv-ac-add-schedule-unlock.png' />
+
+6. Set the details of the schedule unlock feature in the <Cmd sid='common.setting' product='2' /> section. For more information, refer to [the following](#setting).
 
 7. Select the access group that can start the scheduled unlock in the <Cmd sid='zone.forcedUnlock.firstManInTitle' product='2' /> section.
 
 8. After completing all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
-### Setting options guide {#setting}
+## Setting options guide {#setting}
 
-You can change the scheduled unlock zone settings.
+The details for schedule unlock settings are as follows.
 
-* <Cmd sid='zone.pause.activated' product='2' /> / <Cmd sid='zone.pause.deactivate' product='2' />: You can activate or temporarily deactivate the scheduled unlock zone settings.
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: You can activate or temporarily deactivate the settings.
 
-* <Cmd sid='zone.forcedUnlock.firstManIn' product='2' />: When set to <Cmd sid='zone.pause.activated' product='2' />, users belonging to the access group must authenticate according to the specified schedule to initiate the scheduled unlock.
+* <Cmd sid='zone.forcedUnlock.firstManIn' product='2' />: If set to <Cmd sid='zone.pause.activated' product='2' />, the <Cmd sid='zone.forcedUnlock.firstManInTitle' product='2' /> section will appear. Users from the selected user group in <Cmd sid='zone.forcedUnlock.firstManInGroups' product='2' /> must authenticate according to the specified schedule to start the schedule unlock.
 
-* <Cmd sid='zone.selectoption' product='2' />: You can designate a door or elevator as a scheduled unlock zone.
+* <Cmd sid='zone.selectoption' product='2' />: Select the door or elevator to which the schedule unlock feature will be applied.
 
-  * Selecting <Cmd sid='common.door' product='2' /> activates the list of doors. Select the doors to designate as a scheduled unlock zone. Multiple doors can be selected.
+  * Selecting <Cmd sid='common.door' product='2' /> activates the list of doors. Select the door to which the schedule unlock feature will be applied. Multiple doors can be selected.
 
-  * Selecting <Cmd sid='common.elevator' product='2' /> activates the list of elevators. Select the elevators to designate as a scheduled unlock zone. Multiple elevators can be selected.
+  * Selecting <Cmd sid='common.elevator' product='2' /> activates the list of elevators. Select the elevator to which the schedule unlock feature will be applied. Multiple elevators can be selected.
+
+  :::note
+
+  The <Cmd sid='zone.selectoption' product='2' /> option appears when an elevator is registered. If no elevators are registered, only the <Cmd sid='common.door' product='2' /> option will appear. For more information about elevator enrollment, refer to [the following](settings-elevators-add).
+
+  :::
 
 * <Cmd sid='common.schedule' product='2' />: Select a schedule. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
 
@@ -53,10 +61,10 @@ You can change the scheduled unlock zone settings.
 
 :::info
 
-* In <Cmd sid='zone.globalZone.local' product='2' /> mode, you can configure a scheduled unlock zone by selecting multiple doors.
+* In <Cmd sid='zone.globalZone.local' product='2' /> mode, you can select multiple doors to configure the schedule unlock feature.
 
-* If you select an elevator that already belongs to another scheduled unlock zone, you cannot configure duplicate settings on the same floor.
+* If you select an elevator that is already part of another schedule unlock setting, you cannot duplicate settings on the same floor.
 
-* For more information about schedule settings, refer to the [following](settings-schedule).
+* For more information about schedule settings, refer to [the following](settings-schedule).
 
 :::

@@ -1,26 +1,123 @@
 ---
 id: settings-server-https
-title: HTTPS 인증서 설정하기
-description: BioStar X를 HTTPS로 연결하려면 BioStar X가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다.
+title: HTTPS 인증서 설치하기
+description: BioStar X를 HTTPS로 연결하려면 BioStar X를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.
 keywords: [HTTPS, 인증서]
 ---
 
-BioStar X를 HTTPS로 연결하려면 BioStar X가 설치된 IP 주소를 등록하여 인증서를 설치해야 합니다. 올바른 네트워크 연결을 위해 BioStar X를 사용하기 전에 인증서를 설치하세요.
+**BioStar X**를 HTTPS로 연결하려면 **BioStar X**를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.
+
+## 인증서 설치가 필요한 경우
+
+HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하면 웹 브라우저에서 다음과 같은 보안 경고가 표시됩니다.
+
+<Image src='/img/biostarx-settings-server-not-secure.png' />
+
+이러한 경고는 브라우저가 서버의 신원을 확인할 수 없기 때문에 나타납니다. 인증서를 설치하면 브라우저가 **BioStar X** 서버를 신뢰하게 되어 보안 경고 없이 안전한 HTTPS 연결을 사용할 수 있습니다.
+
+## 인증서 설치
+
+올바른 네트워크 연결을 위해 **BioStar X**를 사용하기 전에 인증서를 설치하세요.
+
+1. **BioStar X** 로그인 페이지로 접속하세요.
+
+1. 화면 하단의 <Cmd sid='auth.httpsDownload' /> 링크를 클릭하세요.
+
+    <Image src='/img/biostarx-settings-server-login-down-https-cert.png' />
+
+1. *cert-register.zip* 파일을 로컬에 저장하세요.
+
+1. 다운로드한 파일의 압축을 해제하고, *cert-register.exe* 파일을 실행하세요. **Enroll Certificate** 프로그램이 실행됩니다.
+
+1. **Target System**을 **BioStar X**로 선택하고, **BioStar X**가 설치된 PC의 IP 주소를 **Server Address**에 입력한 뒤 **Enrollment** 버튼을 클릭하세요.
+
+    <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
+
+    :::note
+
+    **BioStar X**의 기본 포트 번호는 443입니다. 포트 번호를 변경했다면 **Port**에 변경한 포트 번호를 입력하세요.
+
+    :::
+
+1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
+
+웹 브라우저를 다시 시작한 뒤 등록한 IP 주소를 입력해 **BioStar X** 페이지로 이동하세요. 주소 표시줄 왼쪽의 아이콘을 클릭했을 때 **이 연결은 안전합니다** 메시지가 표시됩니다.
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+:::info
+
+**Enroll Certificate**에서 입력하는 IP 주소는 **BioStar X**에 설정된 IP 주소와 동일해야 합니다. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> 메뉴 경로의 <Cmd sid='setting.server.biostarIPAdress' product='2' /> 항목에서 확인할 수 있습니다.
+
+:::
+
+
+## 서버 설정에서 인증서 설치
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid="setting.https.https" product='2' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />를 클릭하세요.
 
 1. <Cmd sid="button.certDownload" product='2' />를 클릭하세요.
 
     <Image src='/img/biostarx-settings-server-https.png' className='none' />
 
-1. 다운로드한 파일의 압축을 해제한 뒤 **cert-register.exe** 파일을 실행하세요. **Enrollment Certification** 창이 나타납니다.
+1. *cert-register.zip* 파일을 로컬에 저장하세요.
+
+1. 다운로드한 파일의 압축을 해제한 뒤 **cert-register.exe** 파일을 실행하세요. **Enroll Certificate** 프로그램이 실행됩니다.
+
+1. **Target System**을 **BioStar X**로 선택하고, **BioStar X**가 설치된 PC의 IP 주소를 **Server Address**에 입력한 뒤 **Enrollment** 버튼을 클릭하세요.
 
     <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
 
-1. BioStar X가 설치된 PC의 IP 주소를 입력한 뒤 **Enrollment**를 클릭하세요.
+    :::note
+
+    **BioStar X**의 기본 포트 번호는 443입니다. 포트 번호를 변경했다면 **Port**에 변경한 포트 번호를 입력하세요.
+
+    :::
 
 1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
 
-1. 웹 브라우저를 다시 시작한 뒤 등록한 IP 주소를 입력하면 웹 브라우저의 주소 표시줄에 **안전함** 표시가 나타납니다.
+웹 브라우저를 다시 시작한 뒤 등록한 IP 주소를 입력해 **BioStar X** 페이지로 이동하세요. 주소 표시줄 왼쪽의 아이콘을 클릭했을 때 **이 연결은 안전합니다** 메시지가 표시됩니다.
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+
+## VMS 서버의 인증서 설치 {#vms-certification}
+
+아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다.
+
+* **Video Management System**(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때
+
+* <Cmd sid='shell.header.arena' /> 페이지에서 실시간 영상은 재생되나 녹화 영상이 재생되지 않을 때
+
+* VMS 서버와 **BioStar X**를 같은 서버에 설치할 때
+
+:::info
+
+* VMS 서버에 인증서를 설치하는 방법은 [다음 문서](settings-video-integration#install-vms-certification)를 참고하세요.
+
+* VMS 서버와 연동하는 기능은 기능 추가 옵션을 별도로 구매해야 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing)를 참고하세요.
+
+:::
+
+
+### 클라이언트 PC에서 인증서 설치 {#install-client-certification}
+
+1. **BioStar X**를 설치한 클라이언트 PC에서 로그인 화면 또는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />에서 HTTPS 인증서 설치 프로그램(*cert-register.zip*)을 다운로드하세요.
+
+1. 다운로드한 파일의 압축을 해제한 뒤 **cert-register.exe** 파일을 실행하세요. **Enroll Certificate** 프로그램이 실행됩니다.
+
+1. **Target System**을 **VMS**로 선택하고 다음 정보를 입력하세요.
+
+    <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+
+    - **Server Address**: VMS 서버의 IP 주소
+
+    - **Port**: VMS 서버의 포트 번호
+
+1. **Enrollment** 버튼을 클릭하세요.
+
+1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
+
+웹 브라우저를 다시 시작한 뒤 <Cmd sid='shell.header.arena' /> 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요.

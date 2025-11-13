@@ -6,6 +6,8 @@ import koLocale from './ko.json';
 import enLocale from './en.json';
 import xkoLocale from './x/ko.json';
 import xenLocale from './x/en.json';
+import devkoLocale from './device/ko.json';
+import devenLocale from './device/en.json';
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
 
@@ -16,6 +18,11 @@ const localeMap = {
   // 향후 다른 언어 추가 예시:
   // fr: frLocale,
   // es: esLocale,
+};
+
+const deviceLocaleMap = {
+  ko: devkoLocale,
+  en: devenLocale,
 };
 
 const xlocaleMap = {
@@ -53,20 +60,27 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
             .replace(' <br/><br/>', ' ')
             .replace('<br/><br/> ', ' ')
             .replace(' </br> ', ' ')
+            .replace(' <br />', ' ')
             .replace(' <br>', ' ')
             .replace('<br> ', ' ')
             .replace('<br/>', ' ')
             .replace(' <br> ', ' ')
+            .replace(' </br> ', ' ')
+            .replace('<br>', ' ')
+            .replace('</br>', ' ')
             .replace('&sol;', '/')
             .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
           : null;
       }
+    } else if (product === 'dev') {
+      const locale = deviceLocaleMap[currentLocale] || deviceLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
       // localeText = text ? text.replace('<br>', '') : null;
       const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+      localeText = locale[sid] ? locale[sid].replace('<br>', '').replace('{{value}}', 'N') : null;
     }
     
     if (tip) {

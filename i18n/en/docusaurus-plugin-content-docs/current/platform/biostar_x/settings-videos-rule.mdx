@@ -1,0 +1,173 @@
+---
+id: settings-videos-rule
+title: Set Video Rules
+description: This guide shows how to set video rules using VMS integrated with BioStar X.
+keywords:
+  - Camera
+  - Rules
+  - Settings
+---
+
+Rules are settings to send events and bookmarks to the VMS server by combining events that occur at the camera and door. Proper video rule settings enable the utilization of various security management features.
+
+* **Automatic bookmark creation**: Automatically create bookmarks when specific access events occur to easily find important videos.
+
+* **Efficient monitoring**: Monitor live footage from cameras connected to doors and check events instantly when they occur.
+
+* **Integrated event management**: Link access events and footage to comprehensively understand security situations.
+
+:::info
+
+The video rule feature is available with an **Advanced** license or higher through additional options. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::
+
+## Add rule {#add-camera-rule}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
+
+3. Click the <Cmd sid='video.addRule.button' product='2' /> button in the upper left of the screen.
+
+When the <Cmd sid='video.rule.addRule.title' product='2' /> screen appears, set the rules according to the following instructions. After completing all settings, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen to save.
+
+### Enter rule information
+
+In the <Cmd sid='video.rule.detail.information.title' product='2' /> section, enter the name and description of the new rule.
+
+<Image src='/img/biostarx-settings-video-add-rule-info.png' />
+
+:::info
+
+<Cmd sid='video.rule.detail.description' product='2' /> is optional. Use it to enter a simple description to easily understand the purpose or features of the rule.
+
+:::
+
+### Video log settings
+
+<Cmd sid='video.addRule.label.videoLog' product='2' /> is a feature that automatically records video before and after a specific event occurs. It preserves footage for a designated period to understand the context before and after events.
+
+<Image src='/img/biostarx-settings-video-add-rule-video-log.png' />
+
+* <Cmd sid='video.addRule.label.videoLog' product='2' />: Set the usage of <Cmd sid='video.addRule.label.videoLog' product='2' className='normal' /> in the current rule.
+
+  * <Cmd sid='video.addRule.label.enabled' product='2' />: Automatically records video from the time before and after events occur.
+
+  * <Cmd sid='video.addRule.label.disabled' product='2' />: Disables the <Cmd sid='video.addRule.label.videoLog' product='2' className='normal' /> feature.
+
+* <Cmd sid='video.addRule.label.videoLogLength' product='2' />: Set the range of footage to be recorded around ten seconds before and after the event. It can be set up to a maximum of 60 seconds.
+
+:::info
+
+The longer the set range of <Cmd sid='video.addRule.label.videoLogLength' product='2' />, the more storage space it may require. Consider system performance and storage capacity when setting an appropriate length.
+
+:::
+
+### Event settings to be recorded in VMS
+
+In the <Cmd sid='video.rule.detail.event.title' product='2' /> section, you can select the events to record on the VMS server and set whether to send bookmarks or events.
+
+<Image src='/img/biostarx-settings-video-add-rule-event.png' />
+
+* <Cmd sid='video.rule.detail.event.itemName' product='2' />: Select the type of event to be sent to the VMS server. When you select the desired event from the left event list, it will be added to the right list.
+
+* <Cmd sid='video.rule.detail.vmsBookmark.itemName' product='2' />: You can set whether to create a bookmark on the VMS server when the selected event in the event list occurs.
+
+* <Cmd sid='video.rule.detail.vmsEvent.itemName' product='2' />: You can set whether to create event records on the VMS server when the selected event in the event list occurs.
+
+:::info
+
+* Selecting events is not mandatory.
+
+* You can quickly find the desired event using the search field at the top of the left event list.
+
+* To remove an event from the right list, click the <IcTrash2 /> button.
+
+* You can set the language of the message when sending bookmarks and events to the VMS server. For more information, refer to [the following](settings-video-integration#vms-event-bookmark).
+
+::: 
+
+### Linking door and camera {#link-door-camera}
+
+In the <Cmd sid='video.rule.detail.doorCameraLinkage.title' product='2' /> section, you can link doors with cameras to send footage from the connected cameras along with events that occur at the doors to the VMS server. This allows you to easily view footage related to access events.
+
+<Image src='/img/biostarx-settings-video-add-rule-connect-door.png' />
+
+1. Click the <Cmd sid='button.addplus' product='2' /> button in the upper right.
+
+2. When the <Cmd sid='video.rule.detail.doorCameraLinkage.popup.title' product='2' /> window appears, select the door and then the associated camera.
+
+   <Image src='/img/biostarx-settings-video-add-rule-connect-door-add.png' />
+
+3. Once you have selected both the door and the camera, click the <Cmd sid='button.add' product='2' /> button.
+
+You can check the cameras linked to the door in the list.
+
+<Image src='/img/biostarx-settings-video-add-rule-connect-door-complete.png' />
+
+:::info
+
+* A single door can have up to four cameras added.
+
+* Doors included in a rule cannot be used in other rules.
+
+* To delete the linkage rule of doors and cameras, click the checkbox of the items you wish to delete in the list and click the <IcTrash2 /> <Cmd sid='button.delete' product='2' /> button in the upper right.
+
+* Cameras linked to doors can be viewed as a substructure of the doors in the <Cmd sid='shell.header.arena' /> page's door list. For more information, refer to [the following](check-door-status#door-tree-structure).
+
+* After completing all settings, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen to save.
+
+:::
+
+## Edit rule {#edit-rule}
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
+
+3. Click the rule you want to edit in the <Cmd sid='video.header.all.rules' product='2' /> list.
+
+4. When the rule editing screen appears, modify the desired items.
+
+5. To save the modified rule, click the <Cmd sid='button.apply' product='2' /> button in the lower right of the screen.
+
+:::info
+
+For detailed information on each section of the rule editing screen, refer to [the following](#add-camera-rule).
+
+:::
+
+## Delete rule
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
+
+3. Click the checkbox of the rule you want to delete in the <Cmd sid='video.header.all.rules' product='2' /> list. You can select one or more rules.
+
+4. Click the <IcTrash2 /> <Cmd sid='video.rule.delete' product='2' /> button in the upper right of the screen.
+
+5. Check the message and click the <Cmd sid='button.yes' product='2' /> button.
+
+## Column settings
+
+You can add or change the order of columns to display in the list, or set them to be hidden.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
+
+3. In the top right of the <Cmd sid='video.header.all.rules' product='2' /> list, click <IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' />.
+
+4. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, you can click the checkboxes of the columns you want to display to add or set them to be hidden. You can also change the order of columns via drag and drop.
+
+   <Image src='/img/biostarx-settings-video-column-layout.png' />
+
+5. Once you have changed all column settings, click the <Cmd sid='button.ok' product='2' /> button.
+
+:::info
+
+To initialize the column settings, click the <Cmd sid='columnSetting.button.defaultColumn' product='2' /> button.
+
+:::

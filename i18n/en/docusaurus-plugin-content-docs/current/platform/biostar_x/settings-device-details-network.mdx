@@ -12,7 +12,7 @@ keywords:
   - Intelligent Slave
 ---
 
-The <Cmd sid='device.info.network' product='2' /> section guides you through the network settings of the registered device. You can configure the device’s TCP/IP, RS-485, and server communication settings.
+Here are the network settings for the registered device. In the <Cmd sid='device.info.network' product='2' /> section, you can set the device's TCP/IP, RS-485, and server communication network.
 
 <Image src='/img/biostarx-setting-device-edit-network.png' />
 
@@ -30,17 +30,17 @@ In the <Cmd sid='device.info.tcpIpSetting' product='2' /> group, you can set the
 
 :::info
 
-For more information about IP address settings during device registration, refer to the [following](settings-adding-devices#setipaddress).
+For more information about IP address settings during device registration, refer to [the following](settings-adding-devices#setipaddress).
 
 :::
 
 ### Dynamic IP settings
 
-To configure the device to use a dynamic IP, select the <Cmd sid='device.info.useDhcp' product='2' /> group. The device will automatically receive an IP address from the DHCP server, which may change.
+To set the device to use dynamic IP, click the checkbox for the <Cmd sid='device.info.useDhcp' product='2' /> option. The device will automatically receive an IP address from the DHCP server, which may change. In this case, the IP address of the device may change.
 
 ### Static IP settings
 
-To set a static IP address for the device, deselect the <Cmd sid='device.info.useDhcp' product='2' /> group. You can enter the following network information:
+To set the device's IP address statically, uncheck the checkbox for the <Cmd sid='device.info.useDhcp' product='2' /> option. You can enter the device's network information in the details below. 
 
 * <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the OSDP address of the device. This should be a number between 0 and 126.
 
@@ -92,7 +92,7 @@ To set a static IP address for the device, deselect the <Cmd sid='device.info.us
 
 ## Wireless LAN settings
 
-In the <Cmd sid='device.info.wlan' product='2' /> group, you can enable or disable the device's wireless LAN settings. Select or deselect the <Cmd sid='device.info.enable' product='2' /> option. Detailed settings are available in the device's user guide.
+In the <Cmd sid='device.info.wlan' product='2' /> group, you can enable or disable the device's wireless LAN settings. Detailed settings are available in the device's user guide.
 
 :::info
 
@@ -190,7 +190,9 @@ The <Cmd sid='device.info.osdpAuthResult' product='2' /> option is enabled when 
 
 In the <Cmd sid='device.info.intelligentPD' product='2' /> group, when a user authenticates using a fingerprint in an environment where Suprema devices are connected to third-party controllers, the authentication result is sent as Open Supervised Device Protocol (OSDP) card data to support numerous 1:1 or 1:N matching.
 
-* <Cmd sid='device.info.ipdUseFailCode' product='2' />: When using the intelligent slave, if an exception occurs such as authentication failure, enter the exception code in decimal (0~18446744073709551615) or hexadecimal (0~FFFFFFFFFFFFFFFF) format to record an accurate log. Hexadecimal can be input using numbers or letters.
+* <Cmd sid='device.info.ipdUseFailCode' product='2' />: When using the intelligent slave, if an exception occurs such as authentication failure, enter the exception code in decimal (0-18446744073709551615) or hexadecimal (0-FFFFFFFFFFFFFFFF) format to record an accurate log. Hexadecimal can be input using numbers or letters.
+
+  <Image src='/img/biostarx-setting-device-edit-network-exception-code.png' />
 
 * <Cmd sid='device.info.ipdCardFormat' product='2' />: You can output the card ID or user ID upon successful authentication.
 

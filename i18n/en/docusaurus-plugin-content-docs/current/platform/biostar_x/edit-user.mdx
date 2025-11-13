@@ -1,54 +1,65 @@
 ---
 id: edit-user
 title: Edit User Information
-description: Edit user information and change permissions.
+description: Guide the process of modifying the information of individual users or multiple users and changing access permissions.
 keywords:
   - User
   - User group
 ---
 
-This guide describes how to edit user information and change permissions. You can edit the user's basic information, change access permissions, and update credentials.
+Guide how to modify the information of registered users. Modify basic information, access permissions, or credentials of individual users or batch modify the information of multiple users.
 
 :::info
 
-The user with the initial ID of `1` cannot be edited.
+A user with the original ID of `1` cannot be modified by other administrators. Only the user logged in to this account can modify their own information.
 
 :::
 
-## Edit User Information {#user-information-modification}
+## Edit user information {#user-information-modification}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Select the user to edit from the user list.
 
-3. If the user's profile information is displayed on the right side of the screen, click the <Cmd sid='team.user.preview.button.seeMore' /> button.
+3. Double-click the user or click the <Cmd sid='team.user.preview.button.seeMore' /> button when the user's profile information appears on the right side of the screen. 
 
 4. A window for editing user information appears.
 
-5. Edit the desired fields and click the <Cmd sid='common.save' /> button at the top right of the screen.
+   <Image src='/img/biostarx-edit-user-screen.png' />
+
+5. Modify the desired items.
+
+6. To modify credential items, click the <IcEdit /> button, and to delete, click the <IcClose /> button.
+
+   <Image src='/img/biostarx-edit-user-credentials.png' />
+
+7. To save changes, click the <Cmd sid='common.save' /> button in the upper right corner of the screen.
 
 :::info
 
-* For more information about each field in the <Cmd sid='team.user.information' /> section, refer to the [following](add-user-basic-info).
+* For more information about each field in the <Cmd sid='team.user.information' /> section, refer to [the following](add-user-basic-info).
 
-* For more information about each field in the <Cmd sid='team.user.credential.title' /> section, refer to the [following](enroll-credential).
+* For more information about each field in the <Cmd sid='team.user.credential.title' /> section, refer to [the following](enroll-credential).
 
-* For more information about each field in the <Cmd sid='team.user.permission.title' /> section, refer to the [following](set-permission).
+* For more information about each field in the <Cmd sid='team.user.permission.title' /> section, refer to [the following](set-permission).
 
 * You can enter the user's personal message in the <Cmd sid='common.advanced' product='2' /> section.
-  :::
 
-## Batch Edit User Information {#user-information-collective-modification}
+:::
+
+## Batch edit user information {#user-information-collective-modification}
 
 You can edit the information or access permissions of multiple users at once. This feature is useful when setting the same access permissions or groups for multiple users.
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click the checkbox to the left of the user you want to edit in the user list. You can select more than one user.
+2. Click the checkbox to the left of the user you want to edit in the user list. Select two or more users.
 
-3. Click the <Cmd sid='common.batchEdit' /> button at the top right of the screen.
+3. Click <Cmd sid='common.batchEdit' /> at the top right of the screen.
 
-4. Edit the desired information when the <Cmd sid='common.batchEdit' /> screen appears.
+   <Image src='/img/biostarx-batch-edit-users.png' />
+
+4. When the <Cmd sid='common.batchEdit' /> screen appears, click the checkbox for the item you want and make modifications.
 
    <Image src='/img/biostarx-edit-user-batch-edit.png' />
 

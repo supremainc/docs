@@ -1,7 +1,7 @@
 ---
 id: user-group-manage
 title: Manage User Groups
-description: Utilize user groups to enhance security, management efficiency, and scalability while optimizing access control operations.
+description: Enhance management efficiency, scalability by leveraging user groups and optimize access control operations.
 keywords:
   - User
   - Group
@@ -40,15 +40,21 @@ Create groups to efficiently manage multiple users. By registering a name such a
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. In the <Cmd sid='team.tree.userGroup' /> tab of left sidebar on the screen, select and right-click on <Cmd>All Users</Cmd>.
+2. In the left sidebar of the screen, select <Cmd sid='team.user.tree.userGroupRootName' /> from the <Cmd sid='team.tree.userGroup' /> tab and right-click.
+
+   <Image src='/img/biostarx-user-group-add.png' />
 
 3. Click <Cmd sid='arena.tree.contextMenu.addNewGroup' /> in the popup menu.
 
 4. When the group is created, enter your desired group name.
 
+   <Image src='/img/biostarx-user-group-add-input.png' />
+
 ### Create lower group {#creating-a-lower-group}
 
 1. In the <Cmd sid='team.tree.userGroup' /> tab of the left sidebar on the screen, select the parent group and right-click.
+
+   <Image src='/img/biostarx-user-sub-group-add.png' />
 
 2. Click <Cmd sid='arena.tree.contextMenu.addNewGroup' /> in the popup menu.
 
@@ -56,7 +62,9 @@ Create groups to efficiently manage multiple users. By registering a name such a
 
 :::info
 
-You must select a parent group when creating a sub-group, and you can create up to 8 levels.
+* You must select a parent group when creating a sub-group, and you can create up to 8 levels.
+
+* You can set a group as a subgroup of the target group by dragging the group to another group. Moving a group to <Cmd sid='team.user.tree.userGroupRootName' /> can set it as the top-level group.
 
 :::
 
@@ -67,6 +75,8 @@ You can change the name of the group to which the user belongs. It is recommende
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Select the group you want to rename from the <Cmd sid='team.tree.userGroup' /> list of the left sidebar and right-click.
+
+   <Image src='/img/biostarx-user-group-rename.png' />
 
 3. Click <Cmd sid='arena.tree.contextMenu.renameGroup' /> in the popup menu.
 
@@ -90,26 +100,24 @@ You can delete the group to which the user belongs.
 
 3. Click <Cmd sid='arena.tree.contextMenu.deleteGroup' /> in the popup menu.
 
+   <Image src='/img/biostarx-user-group-remove.png' />
+
 4. When the confirm message appears, click the <Cmd sid='team.user.tree.dialog.delete.yes' /> button.
 
 In the <Cmd sid='team.tree.userGroup' /> list, confirm that the selected group has been deleted.
 
-## Group search {#group-search}
+## View users by group {#viewgroupuser}
 
-Use the search feature to quickly find a specific group among many user groups.
+You can see users belonging to the user group. In the <Cmd sid='shell.header.user' /> page, select the desired user group from the left sidebar. Users from the selected user group will be displayed in the list.
 
-1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+<Image src='/img/biostarx-user-group-select-group-user.png' />
 
-2. Enter the name of the group or relevant keywords in the search input field at the top of the <Cmd sid='team.tree.userGroup' /> list.
+## Expand/collapse group list
 
-3. User groups matching the search term entered will be displayed in the list.
+You can expand or collapse the user group list. In the <Cmd sid='team.tree.userGroup' /> tab, select <Cmd sid='team.user.tree.userGroupRootName' /> and right-click. In the popup menu, click <Cmd sid='team.expandAll' /> or <Cmd sid='team.collapseAll' />.
 
-:::info
+<Image src='/img/biostarx-user-group-expand-collapse.png' />
 
-* You can search by entering only a part of the group name in the search input field.
+If there are subgroups within the group, you can expand or collapse them. Select the parent group and right-click. In the popup menu, click <Cmd sid='common.tree.contextMenu.expandBelow' /> or <Cmd sid='common.tree.contextMenu.collapseBelow' />.
 
-* Search terms are case-insensitive.
-
-* If there are no search results, check the search terms you entered or try using different keywords.
-
-:::
+<Image src='/img/biostarx-user-sub-group-expand-collapse.png' />

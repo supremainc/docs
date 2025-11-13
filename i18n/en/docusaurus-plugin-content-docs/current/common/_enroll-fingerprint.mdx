@@ -1,10 +1,26 @@
-## How to enroll a fingerprint
+<Xclude product='facestation_f2,xstation_2'>
 
-In order to improve the fingerprint authentication rate, register the fingerprint correctly. BioStation 2a can recognize a fingerprint even if the angle and position of a user’s fingerprint input change. If you enroll the fingerprint with attention to the following matters, the authentication rate can be improved.
+## Correct fingerprint input method {#cautions-enrolling-fingers}
+
+</Xclude>
+
+<Include product='facestation_f2'>
+
+## Correct fingerprint input method <Badge only>FSF2-ODB</Badge> {#cautions-enrolling-fingers}
+
+</Include>
+
+<Include product='xstation_2'>
+
+## Correct fingerprint input method <Badge only>XS2-ODPB, XS2-OAPB</Badge> {#cautions-enrolling-fingers}
+
+</Include>
+
+In order to improve the fingerprint authentication rate, enroll the fingerprint correctly. This product can authenticate fingerprints even if the user's fingerprint input angle and position change. If you enroll the fingerprint with attention to the following matters, the authentication rate can be improved.
 
 ### Selecting a finger for fingerprint input
 
-<Image src='/img/device/fingerprint-selection.svg' className='none' />
+<Image src='/img/device/fingerprint-selection.svg' className='none' alone />
 
 * In preparation for the case that the fingerprint of a specific finger cannot be used, for example if the user is lifting a load with one hand or a finger gets hurt, up to 10 fingerprints for each user can be enrolled.
 
@@ -16,17 +32,43 @@ In order to improve the fingerprint authentication rate, register the fingerprin
 
 ### Fingerprint enroll method
 
-1. When a message saying “Scan 1st finger” is displayed on the screen for enrolling the fingerprint, place the finger with the fingerprint you wish to enroll on the fingerprint sensor and press the finger gently for better authentication.
+<Include product='bioentry_r2,bioentry_w2,bioentry_p2'>
 
-<Image src='/img/device/fingerprint-register.svg' className='none' />
+1. Place the finger you want to enroll on the fingerprint recognition unit and gently press it so that the fingerprint is authenticated well.
 
-1. When the re-input screen is displayed after a beep sound, scan the fingerprint of the enrolled finger again. (scan the fingerprint of a finger to be enrolled twice)
+</Include>
 
-:::note
+<Include product='xstation_2,biostation_l2,biostation_2,biostation_a2,biolite_n2,facestation_f2'>
 
-**Cautions for enrolling a fingerprint** {#cautions-enrolling-fingerprint}
+1. When the screen displays "Please input your fingerprint," place the finger you want to enroll on the fingerprint recognition unit and gently press it so that the fingerprint is authenticated well.
+
+</Include>
+
+<Include product='biostation_2a'>
+
+1. When the screen displays "Please input your first fingerprint," place the finger you want to enroll on the fingerprint recognition unit and gently press it so that the fingerprint is authenticated well.
+
+</Include>
+
+<Image src='/img/device/fingerprint-register.svg' className='none' alone />
+
+<Include product='bioentry_r2,bioentry_w2,bioentry_p2'>
+
+2. After the "beep" sound, scan the fingerprint of the enrolled finger again. (scan the fingerprint of a finger to be enrolled twice)
+
+</Include>
+
+<Include product='xstation_2,biostation_l2,biostation_2,biostation_a2,biolite_n2,facestation_f2,biostation_2a'>
+
+2. When the re-input screen is displayed after a beep sound, scan the fingerprint of the enrolled finger again. (scan the fingerprint of a finger to be enrolled twice)
+
+</Include>
+
+#### Cautions for fingerprint enrollment {#cautions-enrolling-fingerprint}
 
 When a fingerprint is recognized, it is compared with the initially enrolled fingerprint, so the initial fingerprint enroll is the most important. Pay attention to the following matters when enrolling the fingerprint.
+
+<Image src='/img/device/fingerprint-authentication.svg' className='none' alone />
 
 * Place the finger deep enough to contact with the sensor completely.
 
@@ -38,18 +80,14 @@ When a fingerprint is recognized, it is compared with the initially enrolled fin
 
 * If you make the finger upright so that the contact area with the sensor is decreased or the angle of finger is warped, fingerprint authentication may not be performed.
 
-<Image src='/img/device/fingerprint-authentication.svg' className='none' />
+#### If fingerprint authentication does not work well
 
-**When the fingerprint recognition fails**
-
-BioStation 2a can recognize a fingerprint regardless of a change in season or finger condition. However, the authentication rate may vary according to the external environment or fingerprint input method. If the fingerprint authentication cannot be done smoothly, it is recommended to take the following measures.
+This product can authenticate fingerprints regardless of seasonal changes or changes in the condition of the fingers. However, the authentication rate may vary according to the external environment or fingerprint input method. If the fingerprint authentication cannot be done smoothly, it is recommended to take the following measures.
 
 * If the finger is smeared with water or sweat, dry off the finger and then scan the finger.
 
 * If the finger is too dry, blow your breath on the fingertips and then scan the finger.
 
-* If the finger has a cut, register the fingerprint of another finger.
+* If the finger has a cut, enroll the fingerprint of another finger.
 
-* The initially enrolled fingerprint often may have not been scanned correctly, so enroll the fingerprint again according to [Cautions for enrolling a fingerprint](#cautions-enrolling-fingerprint).
-
-:::
+* Since the initially enrolled fingerprint is often not input correctly, please re-enroll the fingerprint according to the [cautions for fingerprint enrollment](#cautions-enrolling-fingerprint).

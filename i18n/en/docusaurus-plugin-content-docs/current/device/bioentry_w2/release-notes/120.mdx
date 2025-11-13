@@ -1,0 +1,82 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_180317)
+
+Release<Separator/>2018-03-26
+
+## New Features and Improvements
+
+---
+
+1. Output signal setting for Wiegand reader control.
+
+1. Improves that invalid values can not be entered in the authentication mode, AuthTimeout, MsgTimeout, ScanTimeout, and MatchingTimeout.
+
+1. Support fingerprint enrollment on slave device.
+
+1. Support the intrusion alarm zone, Muster zone and the ethernet zone.
+
+    - Ethernet zone: The zone master role is performed by a master device, not the BioStar 2 server, and establishes the zone using Ethernet communication between the devices.
+
+1. Performs the Access on Card (AoC) matching when connected to a master device as a slave device.
+
+1. Support SEOS smart cards (Elite Key).
+
+1. Improves performance of SEOS smart card RF reading.
+
+1. Improves user transfer speed.
+
+1. Improves log search within device.
+
+1. User Operator cannot change another user's Operator Level as Administrator.
+
+1. Support Reset without Network Settings.
+
+1. Support Daylight Saving Time setting.
+
+1. Improves Trigger & Action for duress finger.
+
+1. Support Private Authentication on AoC.
+
+1. Improves to handle the encryption key of the important information stored in database differently from server to server.
+
+1. Support One Device Mode(Legacy).
+
+1. Added a message asking whether to delete the fingerprint in the database after completing AoC issuance.
+
+1. Support the secure tamper.
+
+1. Support ISO14443A 10 Byte CSN.
+
+1. Support connecting with BioEntry R2, BioEntry P2, BioLite N2, XPass D2.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Problem trying to forward commands related to Config during connection after searching RS-485 slave device.
+
+1. Problem not working in 256 bit Wiegand format.
+
+1. Problem with reading mobile smart cards on Galaxy S4.
+
+1. Galaxy S5 NFC is recognized as a CSN card when authenticating with NFC and the authentication fails.
+
+1. Issue where the device can not read HID Prox II card.
+
+1. Issue where the fingerprint sensor does not work.
+
+1. Fixed that Hard APB authentication failure notification is distinguished from general authentication failure notification.
+
+1. Problem that the user ID type in the slave device can not be set in alphanumeric characters.
+
+1. Issue that does not work when template size is set to 384 bytes when issuing NFC card.
+
+1. iCLASS 2K card can not be issued as a smart card.
+
+</BugLists>

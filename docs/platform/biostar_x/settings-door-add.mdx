@@ -53,7 +53,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 <Image src='/img/biostarx-setting-door-adding-info.png' />
 
-* <Cmd sid='common.name' product='2' />: 출입문의 이름을 입력하세요. 출입문의 위치를 특정할 수 있는 이름을 입력하면 편리하게 관리할 수 있습니다.
+* <Cmd sid='common.name' product='2' />: 출입문의 이름을 입력하세요. 편리한 관리를 위해 특정할 수 있는 이름을 입력하세요.
 
 * <Cmd sid='common.group' product='2' />: 출입문 그룹을 선택하세요.
 
@@ -91,7 +91,7 @@ keywords: [출입문, 보안, 출입 통제]
 
   :::note
 
-  <Cmd sid='timedAPB.title' product='2' />이 활성화되어 있다면 이 옵션은 사용할 수 없습니다.
+  <Cmd sid='timedAPB.title' product='2' />이 활성화되어 있다면 <Cmd sid='door.apbUseDoorSensor' product='2' /> 옵션은 사용할 수 없습니다.
 
   :::
 
@@ -145,7 +145,7 @@ keywords: [출입문, 보안, 출입 통제]
 
   :::info
 
-  * 재실 인원 제한 구역에 설정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
+  * 재실 인원 제한 설정에 구정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
     <Cmd sid='zone.occupancy.title' product='2' /> 설정에 대한 자세한 내용은 [다음 문서](settings-advanced-ac)를 참고하세요.
 
@@ -188,6 +188,8 @@ keywords: [출입문, 보안, 출입 통제]
 
 사용자가 출입 인증 후 동일한 장치에서 다시 인증을 시도할 때, 안티패스백 기능이 작동하여 즉시 재인증할 수 없습니다. <Cmd sid='timedAPB.title' product='2' /> 섹션에서는 안티패스백 기능의 초기화 시간을 설정하여 사용자의 빈번한 입실을 효과적으로 제한할 수 있습니다.
 
+<Image src='/img/biostarx-setting-door-adding-time-litmit-apb.png' />
+
 * <Cmd sid='timedAPB.field' product='2' />: 시간 제한 안티패스백 기능을 사용할 장치를 선택하세요.
 
 * <Cmd sid='door.resetTime' product='2' />: 안티패스백 기능이 초기화될 때까지의 시간을 설정하세요. 입력 단위는 분(min)이며 기본값은 10분입니다. 최대 60분까지 설정할 수 있습니다.
@@ -196,7 +198,9 @@ keywords: [출입문, 보안, 출입 통제]
 
 ### 알람 설정 {#alarm}
 
-<Cmd sid='door.alarm' product='2' /> 섹션에서는 출입문이 강제로 열리거나, 열린 채로 방치되었거나 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 막을 수 있습니다. 원하는 항목에서 <Cmd sid='button.addplus' product='2' /> 버튼을 클릭해 알람을 설정하세요.
+<Cmd sid='door.alarm' product='2' /> 섹션에서는 출입문이 강제로 열리거나, 열린 채로 방치되었거나 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 막을 수 있습니다. 알람을 추가할 항목에서 <Cmd sid='button.addplus' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-setting-door-adding-alarm.png' />
 
 * <Cmd sid='door.heldOpen' product='2' />: 출입문이 열린 채로 방치되었을 때 알람 동작을 설정하세요.
 
@@ -204,7 +208,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 * <Cmd sid='door.forcedOpen' product='2' />: 강제로 출입문이 열렸을 때 알람 동작을 설정하세요.
 
-* <Cmd sid='door.antiPassBack' product='2' />: 안티패스백 위반이 발생했을 때 알람 동작을 설정하세요.
+* <Cmd sid='door.antiPassBack' product='2' /> / <Cmd sid='timedAPB.title' product='2' />: 안티패스백 또는 시간 제한 안티패스백 위반이 발생했을 때 알람 동작을 설정하세요.
 
 :::info
 

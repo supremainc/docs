@@ -1,0 +1,96 @@
+---
+id: tna-rule-shift-day
+title: 일일 근무 규칙 설정하기
+description: 24 시간을 기준으로 시간에 따라 시간 규칙을 다르게 적용하여 근무 규칙을 생성할 수 있습니다.
+keywords: [근무 시간, 일일 근무 규칙]
+---
+
+24시간을 기준으로 시간에 따라 시간 규칙을 다르게 적용하여 근무 규칙을 생성할 수 있습니다. 고정 근무, 유연 근무, 유동 근무를 선택할 수 있으며, 하루 시작 시간, 시간 반올림 규칙 등을 설정할 수 있습니다.
+
+## <Cmd sid='shift.addShift' product='2' className='bold' />
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.shift' product='2' />을 클릭하세요.
+
+1. <Cmd sid='shift.addShift' product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-shift-day.png' />
+
+1. <Cmd sid='shift.addShift' product='2' /> 화면이 나타나면 각 항목을 설정하세요.
+
+:::info
+
+* 설정을 저장하려면 화면 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+* 이어서 주간 근무 규칙을 추가하려면 <Cmd sid='payCode.applyAndAddShift' product='2' /> 버튼을 클릭하세요.
+
+* 설정을 저장한 후 다른 <Cmd sid='tab.shift' product='2' />을 추가하려면 <Cmd sid='ta.apply_add_another' product='2' /> 버튼을 클릭하세요.
+
+:::
+
+## 설정 옵션 안내
+
+근무 규칙 종류에 따라 <Cmd sid='shift.type.fixed' product='2' />, <Cmd sid='shift.type.flexible' product='2' />, <Cmd sid='shift.type.floating' product='2' /> 중 하나를 선택할 수 있습니다. 선택한 근무 규칙 종류에 따라 설정 옵션이 다를 수 있습니다.
+
+### <Cmd sid='shift.type.fixed' product='2' className='normal' />
+
+정해진 시간에 출근과 퇴근을 하는 근무 규칙입니다. <Cmd sid='tab.shift' product='2' className='normal' />의 이름과 설명을 입력하고 <Cmd sid='form.type' product='2' />를 <Cmd sid='shift.type.fixed' product='2' />로 선택하세요.
+
+<Image src='/img/biostarx-tna-shift-day-adding-fixed.png' />
+
+import Shift from '../../common/_tna-rule-shift-settings.mdx';
+
+<Shift type='fixed' />
+
+:::info
+
+* <Cmd sid='payCode.countAsAttendance' product='2' />로 설정된 시간 규칙은 <Cmd sid='tab.shift' product='2' className='normal' />에 하나만 추가할 수 있습니다.
+
+* <Cmd sid='payCode.accumulateTowardOvertime' product='2' />로 설정된 시간 규칙은 <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, <Cmd sid='shift.rounding' product='2' />을 설정할 수 있습니다.
+
+:::
+
+
+### 유연 근무
+
+하루 근무 시간을 설정하고 하루 시작 시간을 기준으로 출근 및 퇴근 시간을 유연하게 조정하는 근무 규칙입니다. <Cmd sid='tab.shift' product='2' className='normal' />의 이름과 설명을 입력하고 <Cmd sid='form.type' product='2' />를 <Cmd sid='shift.type.flexible' product='2' />로 선택하세요.
+
+<Image src='/img/biostarx-tna-shift-day-adding-flexible.png' />
+
+<Shift type='flexible' />
+
+:::info
+
+<Cmd sid='payCode.accumulateTowardOvertime' product='2' />로 설정된 시간 규칙은 추가할 수 없습니다.
+
+:::
+
+
+### 유동 근무
+
+출근 및 퇴근 시간을 자유롭게 설정할 수 있는 근무 규칙입니다. <Cmd sid='tab.shift' product='2' className='normal' />의 이름과 설명을 입력하고 <Cmd sid='form.type' product='2' />를 <Cmd sid='shift.type.floating' product='2' />로 선택하세요.
+
+<Image src='/img/biostarx-tna-shift-day-adding-floating.png' />
+
+<Shift type='floating' />
+
+:::info
+
+* 근무조는 최대 5개의 시간 슬롯으로 구성할 수 있습니다. <Cmd sid='button.addplus' product='2' /> 버튼을 클릭하여 시간 슬롯을 추가하세요.
+
+* 부재를 설정할 때 <Cmd sid='shift.timeSegmentSet.default' product='2' /> 옵션을 선택해야 합니다. <Cmd sid='shift.timeSegmentSet.default' product='2' />은 근무조로 구성한 시간 슬롯 중 선택할 수 있습니다.
+
+  <Image src='/img/biostarx-tna-shift-day-adding-floating-timesegment.png' />
+
+* <Cmd sid='payCode.accumulateTowardOvertime' product='2' />로 설정된 시간 규칙은 <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, <Cmd sid='shift.rounding' product='2' />을 설정할 수 있습니다.
+
+:::
+
+<NextStep>
+<NextItem to='tna-rule-shift-schedule'>
+
+설정된 하루 단위의 근무 규칙으로 주간 근무 규칙을 설정할 수 있습니다. 주별, 일별 주간 근무 규칙을 설정할 수 있습니다.
+
+</NextItem>
+</NextStep>

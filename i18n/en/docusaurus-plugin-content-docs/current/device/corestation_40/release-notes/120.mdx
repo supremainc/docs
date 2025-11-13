@@ -1,0 +1,64 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_181112)
+
+Release<Separator/>2018-11-29
+
+## Important Bug Fix
+
+1. A code is added to prevent the authentication fails because the cache memory is broken.
+
+## New Features and Improvements
+
+---
+
+1. Improves the data protection.
+
+    - Increase the items to encrypt the data.
+
+    - Support to setting the period for storing the personal information.
+
+1. Change the maximum value of the interval and width for the Wiegand Input.
+
+1. Support to the number of users, fingerprints, faces, and cards in Manage Users in Device.
+
+1. If the data transmission fails when communicating with OSDP, it is transmitted again.
+
+1. The site key is initialized if a secure tamper event occurs.
+
+1. If an administrator has registered, modified, or deleted a user, the event log shows whether the editing was done on the server or on the device.
+
+1. Support to the creation of up to 2048 Access Levels and Access Groups.
+
+1. Support to DESFire/DESFire EV1 Advanced option.
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. A slave device that supports an iCLASS Seos card does not properly read the iCLASS Seos card.
+
+1. The device restarts if more than 8 outputs are set.
+
+1. Modified that if the same key is not sent to the slave device when the RS-485 primary key is set up on the master device, the master device sends it again.
+
+1. If the user uses the BS_GetLogBlob command to get the door ID, the door ID is not output normally.
+
+1. When physically disconnecting the RS-485 connection of the slave device and connecting another slave device to the same port, the connection status is displayed by the information of the slave device that was connected before.
+
+1. Improves I/O module Input and Output process.
+
+1. Modified the firmware of that slave device so that it cannot be upgraded when a device not supported by the master device is connected as a slave.
+
+1. The relays operate differently from the previous status if the slave device is reconnected.
+
+1. The authentication result value is sent from the Wiegand port even though any Wiegand reader is not connected.
+
+1. The alarm can be released in the Floors status after a fire alarm occurs when the elevator is configured as a Fire Alarm Zone.
+
+</BugLists>

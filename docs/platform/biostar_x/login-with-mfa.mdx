@@ -9,8 +9,6 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
 :::info
 
-* **다중 인증**(Multi-factor authentication, MFA)이란, 두 가지 이상의 인증 절차를 통해 사용자를 인증하는 방식입니다.
-
 * <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용하려는 사용자는 지문 정보를 등록하고, 아이디 및 비밀번호, 권한 등급을 모두 설정해야 합니다.
 
 * <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용하려면 **BioStar X** 클라이언트 PC에 다중 인증 로그인을 지원하는 지문 스캐너를 연결해야 합니다. 지문 스캐너로 지원하는 장치는 아래 목록을 참고하세요.
@@ -21,9 +19,9 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
   * BioMini Slim 2
 
-* 액티브 디렉터리 서버 계정으로 <Cmd sid='biostar.login' product='2' /> 옵션을 사용한다면 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용할 수 없습니다.
+* <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 계정으로 <Cmd sid='biostar.login' product='2' /> 옵션을 사용한다면 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 사용할 수 없습니다.
 
-* <Cmd sid='team.user.permission.multiFactorAuth' />을 설정한 사용자는 BioStar X AC 이외의 BioStar X 서비스에 등록할 수 없습니다.
+* <Cmd sid='team.user.permission.multiFactorAuth' />을 설정한 관리자는 출입 통제 이외의 **BioStar X** 서비스(근태 관리 및 비디오)에 최초 인증할 수 없습니다. 해당 서비스를 사용하려면 <Cmd sid='team.user.permission.multiFactorAuth' /> 설정을 해제한 후 로그인하세요. 이후 다시 <Cmd sid='team.user.permission.multiFactorAuth' /> 설정을 활성화할 수 있습니다.
 
 :::
 
@@ -31,12 +29,12 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
 * 전체 관리자(ID 1번) 계정에 다중 인증 기능을 설정한 후, 지문 인증 기능을 사용할 수 없게 되면 해당 계정으로 더 이상 로그인할 수 없으므로 주의하세요.
 
-* 지문 인증을 사용해 로그인할 수 없다면 [슈프리마 기술지원팀](https://support.supremainc.com)으로 문의하세요.
+* 지문 인증을 사용해 로그인할 수 없다면 [슈프리마 기술 지원팀](https://support.supremainc.com)으로 문의하세요.
 
 :::
 
 
-## 다중 인증 설정 {#multi-factor-authentication-setting}
+## 다중 인증 설정 {#multifactorauthenticationsetting}
 
 <Cmd sid='team.user.permission.multiFactorAuth' />을 설정하려면 다음 단계를 따르세요.
 
@@ -46,26 +44,16 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
     또는 사용자를 선택하고 오른쪽 화면에 표시되는 프로필에서 <Cmd sid='team.user.preview.button.seeMore' /> 버튼을 클릭하세요.
 
-1. 사용자 프로필 화면이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 항목을 <Cmd sid='common.use' />으로 설정하세요.
+1. 사용자 프리뷰 화면이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='common.fingerprintLogin' product='2' /> 항목을 <Cmd sid='common.use' />으로 설정하세요.
 
     <Image src='/img/biostarx-edit-user-mfa-use.png' />
-
-1. 로그인 아이디와 비밀번호를 입력하세요.
 
 1. 화면 오른쪽 상단의 <Cmd sid='common.save' /> 버튼을 클릭하세요.
 
 다중 인증 설정을 완료합니다.
 
-:::info
 
-비밀번호는 연속되는 문자, 키보드 문자 또는 숫자를 입력할 수 없습니다.
-
-> 예, abcd, qwerty, 0123456
-
-:::
-
-
-## 다중 인증 일괄 설정 {#multi-factor-authentication-batch-set}
+## 다중 인증 일괄 설정 {#multifactorauthenticationbatchset}
 
 :::note
 
@@ -87,7 +75,7 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
 1. 화면 오른쪽 상단의 <Cmd sid='common.batchEdit' /> 버튼을 클릭하세요.
 
-1. 일괄 편집 창이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='team.user.permission.multiFactorAuth' /> 옵션의 체크박스를 클릭하고 <Cmd sid='common.use' />으로 설정하세요.
+1. 일괄 편집 창이 나타나면 <Cmd sid='team.user.permission.title' /> 섹션에서 <Cmd sid='common.fingerprintLogin' product='2' /> 옵션의 체크박스를 클릭하고 <Cmd sid='common.use' />으로 설정하세요.
 
     <Image src='/img/biostarx-batch-edit-user-mfa-use.png' />
 
@@ -97,17 +85,19 @@ keywords: [ 로그인, MFA, 다중 인증, 멀티팩터 인증 ]
 
 :::info
 
-선택한 사용자 중 <Cmd sid='team.user.permission.multiFactorAuth' /> 기능을 활성화하는 데 필요한 조건을 만족하지 않는 사용자는 팝업 메시지에 <Cmd sid='user.batchedit.popup.notavailableuser' product='2' /> 목록을 통해 확인할 수 있습니다. 설정에 필요한 조건을 확인하고 다시 시도하세요.
+선택한 사용자 중 <Cmd sid='common.fingerprintLogin' product='2' /> 기능을 활성화하는 데 필요한 조건을 만족하지 않는 사용자는 팝업 메시지에 <Cmd sid='user.batchedit.popup.notavailableuser' product='2' /> 목록을 통해 확인할 수 있습니다. 설정에 필요한 조건을 확인하고 다시 시도하세요.
 
 :::
 
-## 다중 인증으로 로그인 {#login-with-multi-factor-authentication}
+## 다중 인증으로 로그인 {#loginwithmultifactorauthentication}
 
 1. 웹 브라우저를 통해 **BioStar X** 로그인 화면으로 접속하세요.
 
-1. 사용자 아이디와 비밀번호를 입력해 로그인하세요.
+1. 사용자 아이디와 비밀번호를 입력한 후 <Cmd sid='auth.login' /> 버튼을 클릭하세요.
 
 1. 지문 입력 화면이 나타나면 지문 스캐너를 통해 지문을 스캔하세요.
+
+    <Image src='/img/biostarx-mfa-login-scan-fingerprint.png' />
 
 로그인을 완료합니다.
 

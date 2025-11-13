@@ -1,0 +1,38 @@
+{
+  "extendedmodule": {
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "ip_rating": {
+          "label": "IP 등급",
+          "label_id": "specs.general.ip_rating",
+          "label_link": "../../reference/glossary#ip_rating",
+          "value": "IP65"
+        }
+      }
+    },
+    "interface": {
+      "label": "인터페이스",
+      "label_id": "specs.interface",
+      "items": {
+        "rs485": {
+          "label": "RS-485",
+          "label_id": "specs.interface.rs485",
+          "value": {
+            "ko": "1채널",
+            "en": "1 ch"
+          }
+        },
+        "rs232c": {
+          "label": "RS-232C",
+          "label_id": "specs.interface.rs232c",
+          "value": {
+            "ko": "1채널",
+            "en": "1 ch"
+          }
+        }
+      }
+    }
+  }
+}

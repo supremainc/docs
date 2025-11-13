@@ -11,13 +11,13 @@ keywords:
 
 Describes how to register, edit, delete, and manage users.
 
-## Registering User Information {#registering-user-information}
+## Registering user information {#registering-user-information}
 
 The user information including credentials can be registered.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>USER</Cmd> → <Image src='/img/common/ico-info.svg' ico alone />.User usage information appears.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> and set the desired item. User usage information appears.
 
    <Image src='/img/device/bs3-user-add.png' className='none' />
 
@@ -25,55 +25,55 @@ The user information including credentials can be registered.
 
    * **Name**: Enter the user name.
 
-   * **ID**: Enter a number between 1 and 4294967295 to register as the user ID. If <Cmd>User ID Type</Cmd> set to <Cmd>Alphanumeric</Cmd>, a combination of alphanumeric characters and symbols `_` `-` can be used for the ID. Up to 32 characters can be input.
+   * **ID**: You can enroll a user ID by entering a number from 1 to 4294967295. If <Cmd sid='ui_168' product='dev' /> is set to <Cmd sid='ui_237' product='dev' />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * <Cmd>Face</Cmd>: Enroll a face for user authentication. Press <Cmd>Face</Cmd> → <Cmd>Next</Cmd> and enroll a face according to the instructions on the screen. To add more faces, press <Image src='/img/common/ico-add.svg' ico alone />. Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
+   * <Cmd sid='ui_228' product='dev' />: You can enroll a face for user authentication. Press <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and follow the instructions on the screen to enroll your face. To add more faces, press <Image src='/img/common/ico-add.svg' ico alone />. Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
 
-   * <Cmd>Card / QR Code</Cmd>: Enroll a card for user authentication. Press <Cmd>Card / QR Code</Cmd> → <Cmd>Next</Cmd> and scan the card that will be assigned to the user. To enroll an additional card, press <Cmd>Card / QR Code</Cmd> → <Image src='/img/common/ico-add.svg' ico alone />.
+   * <Cmd sid='ui_323' product='dev' />: You can enroll a card for user authentication. Press <Cmd sid='ui_323' product='dev' /> → <Cmd sid='ui_108' product='dev' />, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, press <Cmd sid='ui_323' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />.
 
-   * <Cmd>PIN</Cmd>: Enter the PIN you wish to use. Click <Cmd>PIN</Cmd> → <Cmd>Next</Cmd> to register the PIN to use. Enter the PIN again for confirmation and press <Cmd>OK</Cmd>. Enter a number between 8 and 16 digits to prevent leaking.
+   * <Cmd sid='ui_040' product='dev' />: You can enter the PIN you want to use. Press <Cmd sid='ui_040' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and enter the PIN you want to use. For confirmation, enter the PIN once more and then press <Cmd sid='ui_037' product='dev' />. Please enter an 8-16 digit number for the PIN to prevent leakage.
 
-   * <Cmd>Operator Level</Cmd>: Select the level you wish to assign to a user.
+   * <Cmd sid='ui_172' product='dev' />: You can select permissions to assign to the user.
 
-       :::info
+     :::info
 
-       Available menus vary according to the set user level.
+     Available menus vary according to the set user level.
 
-     * <Cmd>None</Cmd>: This is the general user level and menus cannot be accessed.
+     * <Cmd sid='ui_075' product='dev' />: This is a general user level, and the menu is not available.
 
-     * <Cmd>Administrator</Cmd>: All menus can be accessed.
+     * <Cmd sid='ui_300' product='dev' />: You can use all menus.
 
-     * <Cmd>Configuration</Cmd>: <Cmd>AUTHENTICATION</Cmd>, <Cmd>DISPLAY & SOUND</Cmd>, <Cmd>DEVICE</Cmd>, <Cmd>NETWORK</Cmd> and <Cmd>EVENT LOG</Cmd> menus can be accessed.
+     * <Cmd sid='ui_194' product='dev' />: You can use the menus <Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_103' product='dev' />, <Cmd sid='ui_255' product='dev' />.
 
-     * <Cmd>User Management</Cmd>: <Cmd>USER</Cmd> and <Cmd>EVENT LOG</Cmd> menus can be accessed.
+     * <Cmd sid='ui_171' product='dev' />: You can use the menus <Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' />.
 
-       :::
+     :::
 
-   * <Cmd>Period</Cmd>: Set an expiry date to use the user account.
+   * <Cmd sid='ui_250' product='dev' />: You can set the duration for using the user account.
 
-   * <Cmd>Extended Private Auth Mode</Cmd>: Change the authentication method according to the user. You can set extended private auth mode. This mode allows you to combine user authentication methods, including both faces. Otherwise, you can use the device’s basic authentication mode.
+   * <Cmd sid='ui_371' product='dev' />: You can set the extended personal authentication mode. This mode allows you to combine user authentication methods, including both faces. Otherwise, you can use the device’s basic authentication mode.
 
-3. To complete the registration of user information, press <Cmd>Save</Cmd>.
+3. Press <Cmd sid='ui_295' product='dev' /> to complete the registration of user information.
 
-### Enrolling User Faces {#enrolling-user-faces}
+### Enrolling user faces {#enrolling-user-faces}
 
 import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>USER</Cmd> → <Image src='/img/common/ico-add.svg' ico alone />.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />.
 
-3. Select <Cmd>Face</Cmd> → <Cmd>Next</Cmd>.
+3. Press <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' />.
 
 4. Adjust a distance between the face and screen and look straight at the camera of the device.
 
-5. Once your face is captured successfully, press <Cmd>OK</Cmd> → <Cmd>Save</Cmd>. To retake a photo, press <Cmd>Re-Shot</Cmd>.
+5. After the shooting is complete, press <Cmd sid='ui_367' product='dev' /> → <Cmd sid='ui_295' product='dev' />. To retake your face picture, press <Cmd sid='ui_294' product='dev' />.
 
    :::info
 
    * The visual face data of BioStation 3 are not compatible with face templates of FaceStation 2 or FaceLite.
 
-   * You can enroll visual face not only directly from BioStation 3 but from the BioStar 2 by uploading photos or importing CSV files. You can also enroll visual face with your smartphone via a link sent from BioStar 2. To learn more about how to enroll visual face for each method, refer to the BioStar 2 Administrator Guide.
+   * Face information for BioStation 3 can also be batch enrolled by uploading a photo in BioStar X or importing a CSV file, not just on the device. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Manual](../../platform/biostar_x/enroll-credential-face).
 
    * To use a Visual Face feature correctly, take a picture by following instructions below.
 
@@ -87,19 +87,19 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>USER</Cmd> → <Image src='/img/common/ico-search.svg' ico alone />.
+2. Click <Image src='/img/common/ico-search.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
 
-3. Select your search terms. You can search for a user by <Cmd>All</Cmd>, <Cmd>User ID</Cmd>, <Cmd>Name</Cmd>, <Cmd>Face</Cmd> and <Cmd>Card</Cmd>.
+3. Select your search terms. You can search for users using <Cmd sid='ui_299' product='dev' /> , <Cmd sid='ui_167' product='dev' /> , <Cmd sid='ui_253' product='dev' /> , <Cmd sid='ui_228' product='dev' /> , <Cmd sid='ui_322' product='dev' />.
 
 4. Select the user to modify.
 
-5. Modify the information by referring to [Registering User Information](#registering-user-information) and press <Cmd>OK</Cmd>.
+5. Refer to [the following](#registering-user-information) to modify the information and then press <Cmd sid='ui_037' product='dev' />.
 
-   * To delete a user, select <Image src='/img/common/ico-delete.svg' ico alone /> and then press <Cmd>OK</Cmd>.
+   * To delete a user, select <Image src='/img/common/ico-delete.svg' ico alone /> and then press <Cmd sid='ui_367' product='dev' />.
 
 :::info
 
-The <Cmd>Access Group</Cmd> can be registered in BioStar 2. For detailed contents regarding registering an access group, refer to the BioStar 2 Administrator Guide.
+<Cmd sid='ui_320' product='dev' /> can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 :::
 
@@ -109,11 +109,11 @@ You can delete all registered users at once.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>USER</Cmd> → <Image src='/img/common/ico-delete.svg' ico alone />.
+2. Select <Image src='/img/common/ico-delete.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
 
-3. Check <Cmd>Delete All</Cmd> to delete all registered users and press <Cmd>OK</Cmd>.
+3. Select <Cmd sid='ui_303' product='dev' /> to check, then press <Cmd sid='ui_037' product='dev' />.
 
-4. When you press <Cmd>OK</Cmd>, all registered users will be deleted.
+4. To delete all users, press <Cmd sid='ui_367' product='dev' />.
 
 ## View User Usage
 
@@ -121,6 +121,6 @@ You can see the number of registered users, faces, and cards at a glance.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>USER</Cmd> → <Image src='/img/common/ico-add.svg' ico alone />, and choose a credential you want to enroll.<br/> User usage information appears.
+2. Press <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-info.svg' ico alone />. User usage information appears.
 
    <Image src='/img/device/bs3-user-usage.png' />

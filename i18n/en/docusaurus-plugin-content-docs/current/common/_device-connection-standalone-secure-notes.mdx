@@ -1,0 +1,49 @@
+:::info
+
+* The device can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device.
+
+<Include product='biostation_3,facestation_f2,facestation_2'>
+
+* If a fingerprint authentication device is configured as a slave device in {props.product}, you cannot add another {props.product} as a slave device.
+
+* If the fingerprint authentication device is the master device, {props.product} cannot be added as a slave device.
+
+* When you connect {props.product} as a slave device while {props.product} is the master device, only one {props.product} can be added as a slave device.
+
+* When {props.product} is the master device and another {props.product} is connected to it as a slave device, you can connect one additional Secure I/O 2 and DM-20 each.
+
+* When {props.product} is the master device and another {props.product} is connected to it as a slave device, you cannot connect additional OM-120.
+
+</Include>
+
+<Include product='biostation_3,facestation_f2'>
+
+* {props.product} cannot be used as a slave device when {props.product_2} is the master device, and vice versa.
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2'>
+
+* If XPass or XPass 2 is connected to the master device, only card authentication can be used.
+
+</Include>
+
+<Include product='xpass_2'>
+
+* If you use this product as the master device, the slave device can only use card authentication.
+
+* This product can connect up to 31 devices to a single master device.
+
+</Include>
+
+<Xclude product='xpass_2'>
+
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+
+* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+
+</Xclude>
+
+* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+
+:::

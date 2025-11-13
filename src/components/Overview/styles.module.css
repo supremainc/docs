@@ -67,5 +67,11 @@
   }
   .ovMoreitems {
   font-size: .7rem;
-}
+  }
+  .overviewItems {
+    padding-bottom: 0 !important;
+  }
+  .overviewItems article {
+    margin-bottom: 0 !important;
+  }
 }

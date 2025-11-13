@@ -1,0 +1,102 @@
+---
+id: user
+title: User
+description: Describes how to register, edit, delete, and manage users.
+keywords:
+  - Enrollment
+  - Edit
+  - Delete
+  - Manage
+---
+
+Describes how to register, edit, delete, and manage users.
+
+## Registering user information {#registering-user-information}
+
+You can register user information including fingerprints.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_173' product='dev' /> and then press **6**.
+
+   <Image src='/img/device/bln2-user-add.png' />
+
+3. Select the desired item and press **4** or **6** to set it. Press **OK** to register user information.
+
+   * You can enter a user ID by inputting a number from 1 to 4294967294 with <Cmd sid='ui_020' product='dev' />. If <Cmd sid='ui_168' product='dev' /> is set to <Cmd sid='ui_237' product='dev' />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+
+   * <Cmd sid='ui_253' product='dev' />: You can enter a username using numeric and function buttons.
+
+   * <Cmd sid='ui_312' product='dev' />: You can enroll a fingerprint for user authentication. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint once more. Select the fingerprint to be deleted and press **4** to delete the fingerprint, or press **6** to scan the fingerprint again. To add more fingerprints, select <Cmd sid='ui_001' product='dev' /> and then press **6**.
+
+   * <Cmd sid='ui_322' product='dev' />: You can enroll a card for user authentication. Scan the card to be assigned to the user at the RF card recognition unit.
+
+   * <Cmd sid='ui_040' product='dev' />: You can enter the PIN you want to use. After entering the desired PIN, enter the PIN again for confirmation. To prevent leaks, input a PIN of 4 to 16 digits.
+
+   * <Cmd sid='ui_172' product='dev' />: You can select permissions to assign to the user.
+
+     :::info
+
+     Available menus vary according to the set user level.
+
+     * <Cmd sid='ui_273' product='dev' />: This is a regular user level and cannot access the menu.
+
+     * <Cmd sid='ui_300' product='dev' />: You can use all menus.
+
+     * <Cmd sid='ui_194' product='dev' />: You can use the menus <Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_344' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+
+     * <Cmd sid='ui_171' product='dev' />: You can use the menus <Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+
+     :::
+
+   * <Cmd sid='ui_213' product='dev' />: You can set the date to start using the user account.
+
+   * <Cmd sid='ui_129' product='dev' />: You can set the date to stop using the user account.
+
+   * <Cmd sid='ui_002' product='dev' />: You can set the security level for 1:1 authentication.
+
+   * <Cmd sid='ui_363' product='dev' />: You can select the fingerprint number to be used as a threat fingerprint. At least 2 fingerprints must be enrolled to use this function.
+
+   * <Cmd sid='ui_064' product='dev' />: You can change the authentication method for each user.
+
+4. Press **OK** to save the settings.
+
+## Modifying User Information
+
+User Management or Administrator can modify the registered user information. You can add the user's fingerprint or card and modify the PIN and permissions.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_170' product='dev' /> and then press **6**.
+
+3. Select your search terms. You can search for users using <Cmd sid='ui_137' product='dev' />, <Cmd sid='ui_020' product='dev' />, <Cmd sid='ui_253' product='dev' />, <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />.
+
+   <Image src='/img/device/bln2-user-search.png' />
+
+4. Select the user you want to modify and then press **6**. Refer to [Registering User Information](#registering-user-information) to modify the information.
+
+   * To delete a user, select **4** and then press **OK**.
+
+:::info
+
+<Cmd sid='ui_320' product='dev' /> can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Delete All Users
+
+You can delete all registered users at once.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_302' product='dev' /> and then press **6**.
+
+3. Press **OK** to delete all registered users.
+
+## View User Usage
+
+You can view the number of enrolled users, fingerprints, and cards at a glance.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_175' product='dev' /> and then press **6**. User usage information appears.

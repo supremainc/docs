@@ -26,6 +26,27 @@
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "CoreStation 전용 함체"
   },
+  "externalLinks.peripheral.im120.desc": {
+    "message": "다중 입력 확장 모듈"
+  },
+  "externalLinks.peripheral.om120.desc": {
+    "message": "다중 출력 제어 모듈"
+  },
+  "externalLinks.peripheral.di24.desc": {
+    "message": "확장 가능한 제어, 끊김 없는 출입"
+  },
+  "externalLinks.peripheral.sio2.desc": {
+    "message": "출입문 보안 컨트롤 모듈"
+  },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "확장형 통신 및 보안 모듈"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "모바일 기반 출입통제 장치 관리 애플리케이션"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "중앙집중형 출입통제 관리 웹서버"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
@@ -359,6 +380,9 @@
   "theme.cover.qrCodetext": {
     "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
   },
+  "theme.revision.badge": {
+    "message": "발생 버전"
+  },
   "index.search": {
     "message": "검색"
   },
@@ -404,11 +428,17 @@
   "specs.credentials.biometrics.face": {
     "message": "얼굴"
   },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "지문"
+  },
   "specs.credentials.rfcard": {
     "message": "RF 카드"
   },
   "specs.credentials.rf_distance": {
     "message": "RF 인식 거리"
+  },
+  "specs.credentials.multi_controller": {
+    "message": "다중 컨트롤러"
   },
   "specs.credentials.mobile": {
     "message": "모바일"
@@ -431,8 +461,32 @@
   "specs.credentials.biometrics.face.live_face_detection": {
     "message": "위조 얼굴 검출"
   },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "이미지 크기"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "이미지 비트 심도"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "해상도"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "템플릿"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "추출 / 매치"
+  },
+  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+    "message": "센서 인증"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "위조 지문 검출"
+  },
   "specs.general": {
     "message": "일반"
+  },
+  "specs.general.modelName": {
+    "message": "모델명"
   },
   "specs.general.cpu": {
     "message": "CPU"
@@ -448,6 +502,9 @@
   },
   "specs.general.led_type": {
     "message": "LED"
+  },
+  "specs.general.led_type.multiColor": {
+    "message": "다중 색상"
   },
   "specs.general.lcd_resolution": {
     "message": "화면 해상도"
@@ -467,8 +524,20 @@
   "specs.general.storage_humidity": {
     "message": "보관 습도"
   },
+  "specs.general.operating_condition": {
+    "message": "동작 환경 조건"
+  },
   "specs.general.camera": {
     "message": "카메라"
+  },
+  "specs.general.camera_type": {
+    "message": "카메라 종류"
+  },
+  "specs.general.camera_resolution": {
+    "message": "카메라 해상도"
+  },
+  "specs.general.camera_angle": {
+    "message": "카메라 각도"
   },
   "specs.general.ip_rating": {
     "message": "IP 등급"
@@ -478,6 +547,12 @@
   },
   "specs.general.certifications": {
     "message": "인증"
+  },
+  "specs.general.supported_products": {
+    "message": "지원 제품"
+  },
+  "specs.general.material": {
+    "message": "재질"
   },
   "specs.storage": {
     "message": "저장 용량"
@@ -497,6 +572,9 @@
   "specs.storage.max_image_logs": {
     "message": "최대 이미지 로그 수"
   },
+  "specs.storage.max_card": {
+    "message": "최대 카드 수"
+  },
   "specs.interface": {
     "message": "인터페이스"
   },
@@ -512,6 +590,9 @@
   "specs.interface.rs485": {
     "message": "RS-485"
   },
+  "specs.interface.rs232c": {
+    "message": "RS-232C"
+  },
   "specs.interface.rs485_protocol": {
     "message": "RS-485 통신 프로토콜"
   },
@@ -521,6 +602,15 @@
   "specs.interface.input": {
     "message": "Input"
   },
+  "specs.interface.output": {
+    "message": "Output"
+  },
+  "specs.interface.supervised": {
+    "message": "Supervised 입력"
+  },
+  "specs.interface.auxInput": {
+    "message": "AUX 입력"
+  },
   "specs.interface.ttl_input": {
     "message": "TTL 입력"
   },
@@ -528,6 +618,9 @@
     "message": "릴레이"
   },
   "specs.interface.poe": {
+    "message": "PoE"
+  },
+  "specs.interface.poe_plus": {
     "message": "PoE+"
   },
   "specs.interface.interphone": {
@@ -543,7 +636,16 @@
     "message": "USB 확장 포트"
   },
   "specs.interface.tamper": {
-    "message": "템퍼"
+    "message": "탬퍼"
+  },
+  "specs.interface.samSlot": {
+    "message": "SAM 카드 슬롯"
+  },
+  "specs.interface.led": {
+    "message": "LED"
+  },
+  "specs.interface.beep": {
+    "message": "Beep"
   },
   "specs.power": {
     "message": "전기 규격"
@@ -551,14 +653,29 @@
   "specs.power.power": {
     "message": "전원"
   },
+  "specs.power.power_output": {
+    "message": "전원 출력"
+  },
+  "specs.power.powerSupply": {
+    "message": "전원 장치 (SMPS) AC INPUT"
+  },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
+  },
+  "specs.power.led_beep_input_vih": {
+    "message": "LED, Beep 입력 VIH"
   },
   "specs.power.switch_input_vil": {
     "message": "스위치 입력 VIL"
   },
+  "specs.power.led_beep_input_vil": {
+    "message": "LED, Beep 입력 VIL"
+  },
   "specs.power.switch_pullup": {
     "message": "스위치 풀업 저항"
+  },
+  "specs.power.led_beep_pullup": {
+    "message": "LED, Beep 풀업 저항"
   },
   "specs.power.wiegand_voh": {
     "message": "Wiegand 출력 VOH"
@@ -567,10 +684,13 @@
     "message": "Wiegand 출력 VOL"
   },
   "specs.power.wiegand_pullup": {
-    "message": "Wiegnad 출력 풀업 저항"
+    "message": "Wiegand 출력 풀업 저항"
   },
   "specs.power.relay": {
     "message": "릴레이"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
     "message": "크기 및 무게"
@@ -589,6 +709,36 @@
   },
   "specs.size_weight.bracket.weight_include": {
     "message": "(와셔 및 볼트 포함)"
+  },
+  "specs.power_supply": {
+    "message": "전원 공급 장치"
+  },
+  "specs.power_supply.modelName": {
+    "message": "모델명"
+  },
+  "specs.power_supply.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.power_supply.input": {
+    "message": "Input"
+  },
+  "specs.power_supply.output": {
+    "message": "Output"
+  },
+  "specs.backup_battery": {
+    "message": "백업 배터리"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "모델명"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "공급 업체"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "전압"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "용량"
   },
   "externalLinks.FaceStation2.desc": {
     "message": "얼굴인증 출입근태 단말기"
@@ -624,7 +774,7 @@
   },
   "theme.SearchPage.algoliaLabel": {
     "message": "Algolia로 검색",
-    "description": "The ARIA label for Algolia mention"
+    "description": "The description label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
     "message": "검색 결과가 없습니다.",
@@ -655,15 +805,15 @@
   },
   "theme.SearchModal.startScreen.noRecentSearchesText": {
     "message": "최근 검색어 없음",
-    "description": "The text when no recent searches"
+    "description": "The text when there are no recent searches"
   },
   "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
     "message": "이 검색어를 저장",
-    "description": "The label for save recent search button"
+    "description": "The title for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
     "message": "이 검색어를 최근 검색어에서 삭제",
-    "description": "The label for remove recent search button"
+    "description": "The title for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
     "message": "즐겨찾기",
@@ -671,63 +821,63 @@
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
     "message": "이 검색어를 즐겨찾기에서 삭제",
-    "description": "The label for remove favorite search button"
+    "description": "The title for remove favorite search button"
   },
   "theme.SearchModal.errorScreen.titleText": {
     "message": "결과를 불러올 수 없음",
-    "description": "The title for error screen of search modal"
+    "description": "The title for error screen"
   },
   "theme.SearchModal.errorScreen.helpText": {
     "message": "인터넷 연결을 다시 확인하시기 바랍니다.",
-    "description": "The help text for error screen of search modal"
+    "description": "The help text for error screen"
   },
   "theme.SearchModal.footer.selectText": {
     "message": "로 선택",
-    "description": "The explanatory text of the action for the enter key"
+    "description": "The select text for footer"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
     "message": "엔터 키",
-    "description": "The ARIA label for the Enter key button that makes the selection"
+    "description": "The ARIA label for select key in footer"
   },
   "theme.SearchModal.footer.navigateText": {
     "message": "로 이동",
-    "description": "The explanatory text of the action for the Arrow up and Arrow down key"
+    "description": "The navigate text for footer"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
     "message": "화살표 위 키",
-    "description": "The ARIA label for the Arrow up key button that makes the navigation"
+    "description": "The ARIA label for navigate up key in footer"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
     "message": "화살표 아래 키",
-    "description": "The ARIA label for the Arrow down key button that makes the navigation"
+    "description": "The ARIA label for navigate down key in footer"
   },
   "theme.SearchModal.footer.closeText": {
     "message": "로 종료",
-    "description": "The explanatory text of the action for Escape key"
+    "description": "The close text for footer"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
     "message": "Esc 키",
-    "description": "The ARIA label for the Escape key button that close the modal"
+    "description": "The ARIA label for close key in footer"
   },
   "theme.SearchModal.footer.searchByText": {
     "message": "검색 제공",
-    "description": "The text explain that the search is making by Algolia"
+    "description": "The 'Powered by' text for footer"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
     "message": "검색 결과 없음",
-    "description": "The text explains that there are no results for the following search"
+    "description": "The text when there are no results"
   },
   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
     "message": "다른 추천 검색어",
-    "description": "The text for the suggested query when no results are found for the following search"
+    "description": "The text for suggested query"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
     "message": "검색 결과가 없는 것이 오류라고 생각되십니까?",
-    "description": "The text for the question where the user thinks there are missing results"
+    "description": "The text for reporting missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
     "message": "알려주시기 바랍니다.",
-    "description": "The text for the link to report missing results"
+    "description": "The link text for reporting missing results"
   },
   "theme.SearchModal.placeholder": {
     "message": "문서 검색",
@@ -744,5 +894,214 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.mslogin.buttonText": {
+    "message": "🔑 Microsoft 계정으로 로그인",
+    "description": "The text for the login button"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "필드 상세"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "가능한 값"
+  },
+  "theme.typedefstruct.value": {
+    "message": "값"
+  },
+  "theme.typedefstruct.description": {
+    "message": "설명"
+  },
+  "theme.typedefstruct.references": {
+    "message": "참고"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "관련 구조체"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.SearchModal.searchBox.placeholderText": {
+    "message": "문서 검색",
+    "description": "The placeholder text for the main search input field"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAi": {
+    "message": "다른 질문하기...",
+    "description": "The placeholder text when in AI question mode"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+    "message": "답변 중...",
+    "description": "The placeholder text for search box when AI is streaming an answer"
+  },
+  "theme.SearchModal.searchBox.enterKeyHint": {
+    "message": "검색",
+    "description": "The hint for the search box enter key text"
+  },
+  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+    "message": "입력",
+    "description": "The hint for the Ask AI search box enter key text"
+  },
+  "theme.SearchModal.searchBox.searchInputLabel": {
+    "message": "검색",
+    "description": "The ARIA label for search input"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The text for back to keyword search button"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The ARIA label for back to keyword search button"
+  },
+  "theme.SearchModal.startScreen.recentConversationsTitle": {
+    "message": "최근 대화",
+    "description": "The title for recent conversations"
+  },
+  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+    "message": "이 대화를 기록에서 삭제",
+    "description": "The title for remove recent conversation button"
+  },
+  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+    "message": "AI에게 질문: ",
+    "description": "The placeholder text for Ask AI input"
+  },
+  "theme.SearchModal.askAiScreen.disclaimerText": {
+    "message": "답변은 AI가 생성하며 오류가 있을 수 있습니다. 응답을 확인해주세요.",
+    "description": "The disclaimer text for AI answers"
+  },
+  "theme.SearchModal.askAiScreen.relatedSourcesText": {
+    "message": "관련 출처",
+    "description": "The text for related sources"
+  },
+  "theme.SearchModal.askAiScreen.thinkingText": {
+    "message": "생각 중...",
+    "description": "The text when AI is thinking"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonText": {
+    "message": "복사",
+    "description": "The text for copy button"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+    "message": "복사됨!",
+    "description": "The text for copy button when copied"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonTitle": {
+    "message": "복사",
+    "description": "The title for copy button"
+  },
+  "theme.SearchModal.askAiScreen.likeButtonTitle": {
+    "message": "좋아요",
+    "description": "The title for like button"
+  },
+  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+    "message": "싫어요",
+    "description": "The title for dislike button"
+  },
+  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+    "message": "피드백 감사합니다!",
+    "description": "The text for thanks for feedback"
+  },
+  "theme.SearchModal.askAiScreen.preToolCallText": {
+    "message": "검색 중...",
+    "description": "The text before tool call"
+  },
+  "theme.SearchModal.askAiScreen.duringToolCallText": {
+    "message": "검색 중: ",
+    "description": "The text during tool call"
+  },
+  "theme.SearchModal.askAiScreen.afterToolCallText": {
+    "message": "검색 완료: ",
+    "description": "The text after tool call"
+  },
+  "theme.SearchModal.footer.submitQuestionText": {
+    "message": "질문 제출",
+    "description": "The submit question text for footer"
+  },
+  "theme.SearchModal.footer.backToSearchText": {
+    "message": "검색으로 돌아가기",
+    "description": "The back to search text for footer"
+  },
+  "externalLinks.peripheral.dm20.desc": {
+    "message": "다중 출입문 보안 I/O 모듈"
+  },
+  "feedback.components.sendFeedback": {
+    "message": "피드백 보내기",
+    "description": "The label of the button to send feedback"
+  },
+  "feedback.components.thanksForFeedback": {
+    "message": "피드백을 제출해 주셔서 감사합니다.",
+    "description": "The message displayed after the user has sent feedback"
+  },
+  "feedback.components.successSubtext": {
+    "message": "귀하의 의견은 문서 개선에 소중하게 활용됩니다.",
+    "description": "The subtext displayed after the user has sent feedback"
+  },
+  "feedback.components.feedbackTitle": {
+    "message": "이 페이지가 도움이 되었나요?",
+    "description": "The title of the feedback component"
+  },
+  "feedback.components.feedbackDescription": {
+    "message": "귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.",
+    "description": "The description of the feedback component"
+  },
+  "feedback.components.feedbackTypeGood": {
+    "message": "도움이 되었습니다.",
+    "description": "The label for the good feedback type"
+  },
+  "feedback.components.feedbackTypeBad": {
+    "message": "개선이 필요합니다.",
+    "description": "The label for the bad feedback type"
+  },
+  "feedback.components.quickSubmitButton.onGoing": {
+    "message": "제출 중...",
+    "description": "The label of the quick submit button when the feedback is being submitted"
+  },
+  "feedback.components.quickSubmitButton.idle": {
+    "message": "빠른 제출 (추가 의견 없음)",
+    "description": "The label of the quick submit button when the feedback is idle"
+  },
+  "feedback.components.feedbackDetail": {
+    "message": "평가에 대해 자세히 알려주세요.",
+    "description": "The label for the feedback detail textarea"
+  },
+  "feedback.components.required": {
+    "message": "(필수)",
+    "description": "Indicates that a form field is required"
+  },
+  "feedback.components.optional": {
+    "message": "(선택사항)",
+    "description": "Indicates that a form field is optional"
+  },
+  "feedback.component.feedbackTextarea.negativePlaceholder": {
+    "message": "문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다.",
+    "description": "The placeholder for the feedback textarea when the user selected negative feedback"
+  },
+  "feedback.component.feedbackTextarea.positivePlaceholder": {
+    "message": "개선이 필요한 부분이나 추가 의견을 자유롭게 작성해 주세요.",
+    "description": "The placeholder for the feedback textarea when the user selected positive feedback"
+  },
+  "feedback.component.requiredNote": {
+    "message": "* 필수 입력",
+    "description": "Indicates that fields marked with * are required"
+  },
+  "feedback.components.errorMessage": {
+    "message": "피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
+    "description": "The error message displayed when feedback submission fails" 
+  },
+  "feedback.components.validationError": {
+    "message": "개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.",
+    "description": "The validation error message displayed when the feedback detail is missing for negative feedback"
+  },
+  "feedback.component.feedbackCompletedMessage": {
+    "message": "피드백 제출",
+    "description": "The title of the feedback completed message"
+  },
+  "feedback.component.cancelButton.label": {
+    "message": "피드백 입력 취소",
+    "description": "The label of the button to cancel feedback submission"
+  },
+  "feedback.component.privacyNote": {
+    "message": "제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.",
+    "description": "The privacy note displayed in the feedback form"
   }
 }

@@ -18,44 +18,83 @@ Click the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. You can
 
 <div className='col2--20-80 overflow-x'>
 
-|              Status Icon             | Description                                                                                                             |
-| :----------------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
-|              <StatusOK/>             | The device or camera is connected.                                                                                      |
-|            <StatusFail />            | The device or camera is off or disconnected.                                                                            |
-| <IcErr width='35px' height='35px' /> | There is a communication server error or the connection is lost. Click this icon to see detailed messages in a tooltip. |
+|               Status Icon               | Description                        |
+| :-------------------------------------: | ---------------------------------- |
+|               <StatusOK/>               | The device is connected properly.  |
+|              <StatusFail />             | The device is off or disconnected. |
+|  <IcCamOk width='auto' height='35px'/>  | The camera is connected.           |
+| <IcCamFail width='auto' height='35px'/> | The camera is off or disconnected. |
 
 </div>
 
-## Detailed view
+## Device control
 
-### Device detailed view
+Select the desired device from the list on the left sidebar and right-click. You can select the desired feature from the popup menu.
 
-Double-click the device you wish to see detailed information for in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. The detailed information of the device will appear on the right side of the screen.
+<Image src='/img/biostarx-monitoring-device-popup.png' />
 
-You can view the device's ID, group, model name, uptime, IP address, and other details. The <Cmd sid='arena.recentEvent' /> list at the bottom shows recent events in reverse chronological order.
+### Reconnect device
 
-### Camera detailed view
-
-To view detailed information about a camera, select the camera in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar and right-click. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu.
-
-## Playing camera video
-
-To place the camera video on a video tile and monitor it in real-time, double-click the camera you want to play video from in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. 
+If the device is off or disconnected, click <Cmd sid='arena.tree.contextMenu.reconnect' /> in the popup menu. When the device reconnects, the status icon changes to <StatusOK/>.
 
 :::info
 
-* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears.
-
-* For detailed information on how to control the video and the tools displayed on the video, refer to the [following](monitoring-video).
+The <Cmd sid='arena.tree.contextMenu.reconnect' /> feature is not supported for devices connected via <Cmd sid='device.info.deviceToServerConnection' product='2' /> option. For more information on registering devices, refer to [the following](settings-adding-devices#setipaddress).
 
 :::
+
+### Restart device
+
+To restart the device, click <Cmd sid='arena.tree.contextMenu.reboot' /> in the popup menu. 
+
+### Lock device
+
+* To lock the device, click <Cmd sid='arena.tree.contextMenu.deviceLock' /> in the popup menu. A message will appear at the top of the screen indicating that the device lock is in progress. When the lock is completed, the message will disappear.
+
+* To unlock the device, click <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> in the popup menu. A message will appear at the top of the screen indicating that the device unlock is in progress. When the unlock is completed, the message will disappear.
+
+### Stop action
+
+To stop an ongoing action, click <Cmd sid='arena.tree.contextMenu.stopAction' /> in the popup menu. A success message for stopping the action will appear at the top of the screen. When the action stop is completed, the message will disappear.
+
+### Device detailed view
+
+To view detailed information about the device, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Or double-click the device. The detailed information of the device will appear on the right side of the screen.
+
+<Image src='/img/biostarx-monitoring-device-details.png' />
+
+You can view the device's ID, group, model name, uptime, IP address, and other details. The <Cmd sid='arena.recentEvent' /> list at the bottom shows recent events in reverse chronological order.
+
+## Camera control
+
+Select the desired camera from the list on the left sidebar and right-click. You can select the desired feature from the popup menu.
+
+<Image src='/img/biostarx-monitoring-camera-popup.png' />
+
+### Playing camera video
+
+To place the camera video in the video tile and monitor in real-time, click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu.
 
 :::note
 
 Adding camera video to video tiles can also be done in the following ways:
 
-* Select the camera to play video from and right-click. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu.
+* Double-click the camera to play the video from the camera in the left sidebar. 
 
 * You can also add video by dragging and dropping the camera into the video tile area.
 
 :::
+
+:::info
+
+* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears.
+
+* For detailed information on how to control the video and the tools displayed on the video, refer to [the following](monitoring-video).
+
+:::
+
+### Camera detailed view
+
+To view the camera details, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. You can check the camera's group, description, ID, and IP address.
+
+<Image src='/img/biostarx-monitoring-camera-details.png' />

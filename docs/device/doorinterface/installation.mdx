@@ -1,0 +1,141 @@
+---
+id: installation
+title: 설치하기
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [설치, Door Interface, 장치]
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 제품 고정
+
+장착할 위치에 고정용 나사로 제품을 단단히 고정하세요.
+
+<Image src='/img/device/device-fix-di24.svg' className='none' width={800} alone />
+
+<PageBreak />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+### 전원별 리더 및 락 전력 사양
+
+| 전원 | 리더(최대 전류, 장치 수) | 락(최대 전류, 장치 수) |
+| --- | --- | --- |
+| DC 12V | 600mA (300mA x 2개) | 1.2A (600mA x 2개) |
+| DC 24V | 300mA (150mA x 2개) | 600mA (300mA x 2개) |
+
+<PageBreak />
+
+### 케이블 규격별 최대 연장 길이
+
+전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 이 제품은 DC 12V, DC 24V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>케이블 규격</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+</Row>
+<Row>
+
+<Th>리더(300mA)</Th>
+
+<Th>락(600mA)</Th>
+
+<Th>리더(150mA)</Th>
+
+<Th>락(300mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+<Td>1540 m</Td>
+<Td>770 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+<Td>960 m</Td>
+<Td>480 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+<Td>600 m</Td>
+<Td>300 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+<PageBreak />
+
+
+## RS-485 연결
+
+이 제품은 3개의 RS-485 포트를 지원하며, 마스터 장치에 여러대의 Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+
+<Image src='/img/device/installation-rs485-connection-di24.svg' width='80%' className='none' />
+
+:::info
+
+* 제품의 RS-485 포트에 연결할 수 있는 최대 슬레이브 장치 수는 4대입니다.
+
+* RS-485 0 및 RS-485 1 포트에는 포트당 최대 2대의 장치를 연결할 수 있습니다.
+
+* RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
+
+* RS-485 케이블은 AWG26 이상을 사용해야 하며, 모든 배선은 ANSI/NFPA 70 표준을 준수해야 합니다.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품은 종단 저항 스위치를 ON으로 설정하세요.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />

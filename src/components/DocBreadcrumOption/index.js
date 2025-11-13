@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import FeedbackWidget from '@site/src/components/Feedback';
 
 const DocuementButton = () => {
   const [isClient, setIsClient] = useState(false);
@@ -48,13 +49,20 @@ const DocuementButton = () => {
 
   return (
     <div className={styles.btnprint}>
-      <button onClick={handleButtonClick} disabled={!isClient}>
+      <button onClick={handleButtonClick} disabled={!isClient} className={styles.printbtn}>
         PDF
       </button>
 
-      <button onClick={gotoFeedback} className={styles.feedback__button} disabled={!isClient}>
+      {/* <button onClick={gotoFeedback} className={styles.feedback__button} disabled={!isClient}>
         Feedback
-      </button>
+      </button> */}
+
+      <FeedbackWidget
+        googleFormId="1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA"
+        feedbackTypeEntryId="entry.1129679087"
+        pageUrlEntryId="entry.23458126"
+        detailEntryId="entry.1070297166"
+      />
     </div>
   );
 };

@@ -1,0 +1,71 @@
+[
+  {
+    "name": "All Entry Door Groups",
+    "children": [
+      {
+        "name": "Entry Door Group A",
+        "type": "door-group",
+        "children": [
+          {
+            "name": "Door",
+            "type": "door-device",
+            "children": [
+              {
+                "name": "Door sensor",
+                "type": "door-sensor"
+              },
+              {
+                "name": "Door relay",
+                "type": "door-relay"
+              },
+              {
+                "name": "Arming status",
+                "type": "door-arm"
+              },
+              {
+                "name": "Camera",
+                "type": "door-camera"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "All Elevator Groups",
+    "type": "elevator",
+    "children": [
+      {
+        "name": "Elevator Group B",
+        "type": "elevator-group",
+        "children": [
+          {
+            "name": "Elevator 1",
+            "type": "elevator-device",
+            "children": [
+              {
+                "name": "Elevator 1 - 1st Floor",
+                "type": "elevator-floor"
+              },
+              {
+                "name": "Elevator 1 - 2nd Floor",
+                "type": "elevator-floor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "All Advanced ACs",
+    "type": "access-control",
+    "children": [
+      {
+        "name": "Access Control Settings",
+        "type": "access-zone"
+      }
+    ]
+  }
+]

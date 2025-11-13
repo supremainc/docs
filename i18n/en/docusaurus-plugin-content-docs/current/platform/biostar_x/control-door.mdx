@@ -13,15 +13,23 @@ This guide describes how to control doors. You can lock the door for a certain p
 
 * You can monitor access situations in real-time through the camera connected to the door.
 
-* Keep the door locked to enhance security so that only authorized users can enter.
-
-* Use the [Anti Passback](../../reference/glossary#apb) feature to prevent unauthorized access and allows for accurate management of access records.
+* The [anti-passback](../../reference/glossary#apb) feature prevents unauthorized access and accurately manages access logs.
 
 Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. Select the door you want to control and right-click. You can select the desired feature from the popup menu.
 
-## Door Open {#door-open}
+<Image src='/img/biostarx-monitoring-door-popup.png' />
 
-The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the popup menu and select the desired option.
+:::info
+
+* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the status of the access door. This feature can be enabled in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> menu path under the <Cmd sid='common.general' product='2' /> section.
+
+* The <Cmd sid='arena.tree.contextMenu.openVideo' /> option is linked with the VMS and requires integration with the access door and camera to be used. Additionally, this feature can be used through purchase of add-on options with an **advanced** license or higher. For more information about the license policy, refer to [the following](licensing).
+
+:::
+
+## Door open {#door-open}
+
+The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the popup menu and select the desired option. 
 
 * <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Unlocks the door once.
 
@@ -29,17 +37,19 @@ The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMen
 
 * <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Unlocks the door regardless of time.
 
+When the access door opens, the access door relay icon changes from <IcRelayLock /> to <IcRelayUnlock /> status.
+
 :::tip
 
 The door can be temporarily opened for the convenience of external guests when they visit. After opening the door, be sure to switch to <Cmd sid='arena.tree.contextMenu.normalize' /> mode.
 
 :::
 
-## Door Normalize {#door-unlock}
+## Door normalize {#door-unlock}
 
 Changing the door to <Cmd sid='arena.tree.contextMenu.normalize' /> status will allow only authorized users to access. Click <Cmd sid='arena.tree.contextMenu.normalize' /> in the popup menu.
 
-## Door Lock {#door-lock}
+## Door lock {#door-lock}
 
 Changing the door to <Cmd sid='arena.tree.contextMenu.lock' /> status will prevent anyone from access. Click <Cmd sid='arena.tree.contextMenu.lock' /> in the popup menu and select the desired option.
 
@@ -47,53 +57,73 @@ Changing the door to <Cmd sid='arena.tree.contextMenu.lock' /> status will preve
 
 * <Cmd sid='arena.tree.contextMenu.lockPermanent' />: Changes the door to a locked state regardless of time.
 
-## Check Door Camera {#door-camera}
+## Check door camera {#door-camera}
 
-You can check the camera connected to the door. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu. The video of the selected camera will be added to the video tile in the <Cmd sid='shell.header.arena' /> section.
+You can check the camera connected to the door. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu. You can add and play footage from the selected camera in the video tile section of <Cmd sid='shell.header.arena' />.
 
-<Image src='/img/monitoring-door-control-open-video.png' alt='Open video' />
+<Image src='/img/monitoring-door-control-open-video.png' />
 
-While a video is selected, you can control the door through the <Cmd sid='arena.map.doorControl' /> tool.
+Or select the desired camera and click the right mouse button. Click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu to add and play footage from the selected camera.
 
-<Image src='/img/monitoring-door-control.png' alt='Door control' />
+<Image src='/img/monitoring-door-camera-control-open-video.png' />
 
 :::info
 
-* The <Cmd sid='arena.map.doorControl' /> tool requires the door to be connected to a camera in order to be used. The selected camera cannot be used unless it is connected to the door.
+* If there is more than one camera connected to the access door, the first connected camera appears in the video tile.
 
 * Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears. {/* In this case, add a tab to the screen and click <Cmd sid='arena.tree.contextMenu.openVideo' /> again. */}
 
-* For more information about video monitoring, refer to the [following](monitoring-video).
+* For more information about video monitoring, refer to [the following](monitoring-video).
+
+* This feature is available with additional options on the **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::
 
-## Clear Alarm {#alarm-reset}
+## Clear alarm {#alarm-reset}
 
-You can deactivate the alarm that occurred at the door. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. An alarm message appears at the top right of the screen.
+You can deactivate the alarm that occurred at the door. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. An alarm message appears in the upper right corner of the screen.
 
 ## Clear Anti Pass Back {#apb-reset}
 
-When an anti-passback violation occurs, you can clear the APB alarm. 
+You can deactivate the APB alarm when an anti-passback violation occurs. 
 
 1. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the popup menu. 
 
-2. When the <Cmd sid='arena.tree.contextMenu.clearApb' /> window appears, check the list of users who violated the anti-passback.
+2. When the <Cmd sid='arena.tree.contextMenu.clearApb' /> window appears, check the list of users who have violated anti-passback.
+
+   <Image src='/img/monitoring-door-monitoring-disable-apb.png' />
 
 3. Select a user and click the <Cmd sid='common.apply' /> button.
 
-A completion message appears at the top right of the screen.
+A completion message appears in the upper right corner of the screen.
 
 :::info
 
 * <Glossary termid='apb'/>
 
-* For more information about how to set up **anti-passback** on the door, refer to the [following](settings-door-add#antipassback).
+* For more information on how to set up **anti-passback** at the door, refer to [the following](settings-door-add#antipassback).
 
 :::
 
-## View Details {#detail-view}
+## Set or unset the alarm
+
+If the door is set to security, you can set or disable the security. Click <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> in the popup menu.
+
+<Image src='/img/biostarx-monitoring-door-arm-status.png' />
+
+An access door in alarm status changes the alarm status icon from <IcDisarm /> to <IcArm />. At this time, the <IcArm /> icon is also applied to the corresponding access control setting.
+
+:::info
+
+This feature can be used by purchasing additional options with an **advanced** license or higher, or with an **enterprise** license or higher. For more information about the license policy, refer to [the following](licensing).
+
+:::
+
+## View details {#detail-view}
 
 You can check detailed information about the door and the event history. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Detailed information and event history for the door appear on the right side of the screen.
+
+<Image src='/img/biostarx-monitoring-door-view-details.png' />
 
 * **Door Detail Information**: You can check the name, location, status, and information of connected sub-devices of the door.
 
@@ -101,6 +131,6 @@ You can check detailed information about the door and the event history. Click <
 
 :::info
 
-For more information about each item in the door's details section, refer to the [following](settings-door-add).
+For more information about each item in the door's details section, refer to [the following](settings-door-add).
 
 :::

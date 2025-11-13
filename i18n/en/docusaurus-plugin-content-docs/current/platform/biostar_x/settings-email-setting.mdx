@@ -1,21 +1,19 @@
 ---
 id: settings-email-setting
 title: Email Setting
-description: You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
+description: You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
 keywords:
   - Email Setting
-  - Visual Face
+  - Face enrollment
 ---
 
-You can set contents such as title, company name, company logo, and contact of email that will send users a visual face mobile enrollment link or issue a QR/barcode.
+You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
 
 :::info
 
-{/* * 이메일 정보를 설정하기 전에 클라우드를 먼저 활성화하세요. The Cloud will be available when the Standard or higher license is activated. For more information about Cloud, refer to the [following](#). */}
+* You must register the user's email address in the user information to send the mobile link for face enrollment or issue a QR/Barcode. For more information about user information, refer to the [following](add-user-basic-info).
 
-* Enter user's email address in the user information to use visual face mobile enrollment or Secure QR. For more information about user information, refer to the [following](add-user-basic-info).
-
-* The devices that can use **Visual Face** are as follows.
+* The devices that can perform **facial authentication** are as follows.
 
   * FaceStation F2, BioStation 3, BioEntry W3
 
@@ -39,49 +37,31 @@ You can set contents such as title, company name, company logo, and contact of e
 
 3. Edit the necessary fields.
 
+4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+
 ## Set up email content {#email-contents-setting}
 
 Enter the SMTP server information for sending emails.
 
 <Image src='/img/biostarx-settings-email-contents.png' className='none' />
 
-* <Cmd sid="common.emailContent.smtp" product='2' />: Set the SMTP(Simple Mail Transfer Protocol) for sending emails.
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+* <Cmd sid="common.emailContent.smtp" product='2' />: Set the SMTP(Simple Mail Transfer Protocol) for sending emails. Click <Cmd sid='button.smtpSetting' product='2' /> to open the <Cmd sid="common.emailContent.smtp" product='2' /> settings window.
 
   <Image src='/img/biostarx-settings-email-smtp-option.png' className='none' />
 
-  * <Cmd sid="setting.triggerAction.smtpServer" product='2' />: Enter the SMTP server name.
+  <EmailSmtpOptions />
 
-  * <Cmd sid="common.description" product='2' />: Enter the description.
+* To check if there are any issues with the SMTP settings, enter the email address to receive the email and click <Cmd sid="button.smtpSettingTest" product='2' />.
 
-  * <Cmd sid="setting.triggerAction.portDefault25" product='2' />: Enter the port number of the SMTP server. Check it on the settings screen of the email service to use as SMTP.
+## Set up mobile link for face enrollment
 
-  * <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />: Enter the SMTP server address. Email Service Provider.com', and you can check it on the settings screen of email to use as an SMTP.
+Set to <Cmd sid="common.use" product='2' /> to send a facial enrollment mobile link to the user via email.
 
-  * <Cmd sid="common.userName" product='2' />: Enter the account of the SMTP service.
+<Image src='/img/biostarx-settings-email-visual-face.png' />
 
-  * <Cmd sid="common.password" product='2' />: Enter the password of the SMTP service.
-
-  * <Cmd sid="setting.triggerAction.securityType" product='2' />: Select security type.
-
-  * <Cmd sid="setting.triggerAction.sender" product='2' />: Enter the email address of the sender.
-
-  :::info
-
-  * For more information about SMTP information, contact your system administrator.
-
-  * When using the SMTP server as an email account with two-factor authentication and change the password of the account, note the following: Once you set up two-factor authentication, the SMTP password is the same as the app password generated using two-factor authentication, not the password of the email account. At this time, if the password of the email account is changed, the app password is automatically deleted, and the SMTP password is no longer available. When changing the password for the email account, regenerate the app password and then set the SMTP password again.
-
-  :::
-
-* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: Enter an email address to receive the test email and click <Cmd sid="button.smtpSettingTest" product='2' />.
-
-## Visual face mobile enrollment
-
-To use the visual face mobile enrollment set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to send the visual face mobile enrollment link to users.
-
-<Image src='/img/biostarx-settings-email-visual-face.png' className='none' />
-
-* <Cmd sid="common.emailContent.title" product='2' />: Enter the title of the email.
+* <Cmd sid="common.emailContent.title" product='2' />: Enter the subject line of the email to send the mobile link for face enrollment.
 
 * <Cmd sid="common.emailContent.companyName" product='2' />: Enter the company name.
 
@@ -97,7 +77,7 @@ To use the visual face mobile enrollment set it as <Cmd sid="common.use" product
 
 * <Cmd sid="common.emailContent.adminContact" product='2' />: Enter the contact information of the person in charge.
 
-* <Cmd sid="printOption.footer" product='2' />: Enter the content to notify the user who is enrolling the visual face, such as a legal notice. It appears at the bottom of the email.
+* <Cmd sid="printOption.footer" product='2' />: Enter the content to be notified to users enrolling their face, such as legal notices. It will be displayed at the bottom of the email sent with the mobile link for face enrollment.
 
   :::info
 
@@ -107,7 +87,7 @@ To use the visual face mobile enrollment set it as <Cmd sid="common.use" product
 
 ## QR/Barcode setting
 
-To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />. If you set it as <Cmd sid="common.notUse" product='2' />, it will be unable to issue the QR/Barcode to users via email.
+To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />.
 
 <Image src='/img/biostarx-settings-email-qr.png' className='none' />
 
@@ -126,5 +106,3 @@ To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />. If you set
   :::
 
 * <Cmd sid="common.emailContent.adminContact" product='2' />: Enter the contact information of the person in charge.
-
-4. Click <Cmd sid="button.apply" product='2' /> to save the settings.

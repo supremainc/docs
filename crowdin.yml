@@ -30,13 +30,9 @@ files: [
     "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
     "escape_special_characters": 0,
     "ignore": [
-      "/docs/reference/glossary.mdx",
       "/docs/legal/*.mdx",
       "/docs/_unused/*.mdx",
       "/docs/common/_apache-license.mdx",
-      "/docs/common/_ce.mdx",
-      "/docs/common/_disclaimers-copyright-notice.mdx",
-      "/docs/common/_fcc-compliance-information.mdx",
       "/docs/common/_gnu-general-public-license.mdx",
       "/docs/common/_gnu-lesser-general-public-license.mdx",
       "/docs/common/_mit-open-source-license.mdx",
@@ -44,11 +40,18 @@ files: [
       "/docs/common/_openssl-license.mdx",
       "/docs/common/_original-ssleay-license.mdx",
       "/docs/common/_register-device-license.mdx",
-      "/docs/common/_safety-instructions.mdx",
       "/docs/common/_sil-open-font-license.mdx",
-      "/docs/common/_troubleshooting.mdx",
       "/docs/common/_boringssl-license.mdx",
-      "/docs/common/_ios-license.mdx"
+      "/docs/common/_ios-license.mdx",
+      "/docs/common/_android-license.mdx",
+      "/docs/common/_airfob-portal-site-type.mdx",
+      "/docs/common/_biostarair-customer-notice.mdx",
+      "/docs/common/bsx-license/*.mdx",
+      "/docs/platform/biostar_x/opensourcelicenses.txt",
+      "/docs/platform/biostar_air/**/*.mdx",
+      "/docs/how-to/**/*.mdx",
+      "/docs/reference/**/*.mdx",
+      "/docs/*/*/release-notes/*.mdx",
     ]
   }
 ]

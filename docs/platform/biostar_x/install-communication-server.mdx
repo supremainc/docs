@@ -5,7 +5,7 @@ description: 커뮤니케이션 서버 설치 과정을 안내합니다.
 keywords: [커뮤니케이션 서버, 설치하기]
 ---
 
-이 문서에서는 **BioStar X**의 **커뮤니케이션(Communication) 서버**를 설치하는 방법을 안내합니다. 
+이 문서에서는 **BioStar X**의 **커뮤니케이션(Communications) 서버** 설치 방법을 안내합니다. 
 
 커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다.
 
@@ -16,6 +16,8 @@ keywords: [커뮤니케이션 서버, 설치하기]
 * 커뮤니케이션 서버는 **BioStar X** 서버와 같은 서버에 설치할 수 없습니다.
 
 * 커뮤니케이션 서버는 64비트 운영 체제에서만 설치할 수 있습니다. 시스템 최소 요구 사항에 대한 자세한 내용은 [다음 문서](system-requirements#communication-server)를 참고하세요.
+
+* 커뮤니케이션 서버를 설치하고 연결하려면 멀티 커뮤니케이션 서버 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 ### 설치 전 확인 사항 {#check-before-install}
 
@@ -29,15 +31,23 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
 아래에 커뮤니케이션 서버 설치 시 입력해야 하는 정보가 나와 있습니다. 각 항목을 확인하고 준비하세요.
 
+<Image src='/img/biostarx-cumm-server-matching.png' />
+
 <div className='table-fixed'>
 
 | BioStar X Service Manager | 커뮤니케이션 서버 설치 시 입력 정보 |
 | -- | -- |
+| <Cmd>BioStar X Core Service</Cmd> → <Cmd>RPC Port</Cmd> | **BioStar X Server gRPC Port for Communication** |
 | <Cmd>BioStar X Coordinator Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Coordinator Service Port for Communication** |
 | <Cmd>BioStar X Cache Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Cache Service Client for Communication** |
-| <Cmd>BioStar X Server (Main)</Cmd> → <Cmd>gRPC Server Port</Cmd> | BioStar X Server gRPC **BioStar X Server gRPC Port for Communication** |
 
 </div>
+
+:::info
+
+<Cmd>SERVICE SETTINGS</Cmd>에 대한 자세한 내용은 [다음 문서](service-settings)를 참고하세요.
+
+:::
 
 
 ## 설치 안내 {#install-guide}
@@ -52,6 +62,10 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
     <Image src='/img/biostarx-install-select-language.png' />
 
+1. 설치를 계속하려면 <Cmd code='biostar2.install.agree' className='bold'/>를 선택하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-install-comm-server-license-agree.png' />
+
 1. 커뮤니케이션 서버를 설치할 경로를 설정하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-install-comm-server-set-path.png' />
@@ -64,9 +78,15 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
     <Image src='/img/biostarx-install-comm-server-select-component.png' />
 
-1. **BioStar X** 서버의 IP 주소를 입력하고, **BioStar X** 서버와 연결하기 위해 각 항목을 입력하세요. 설정을 완료하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요. 자세한 내용은 [다음 문서](#check-before-install)를 참고하세요.
+1. **BioStar X** 서버의 IP 주소와 포트 번호를 입력하고, **BioStar X** 서버와 연결하기 위해 각 항목을 입력하세요. 설정을 완료하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-install-comm-server-settings.png' />
+
+    :::note
+
+    각 입력 항목에 대한 자세한 내용은 [다음 문서](#check-before-install)를 참고하세요.
+
+    :::
 
 1. 통신을 위한 포트를 설정하고 <Cmd code='biostar2.install.next' className='bold'/> 버튼을 클릭하세요.
 
@@ -76,7 +96,7 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
     <Image src='/img/biostarx-install-comm-server-install-step.png' />
 
-1. 설치 완료 메시지를 확인하고 <Cmd code='biostar2.install.finish' className='bold'/> 버튼을 클릭하세요.
+1. 설치 완료 메시지를 확인하고 <Cmd code='biostar2.install.complete' className='bold'/> 버튼을 클릭하세요.
 
     <Image src='/img/biostarx-install-comm-server-complete.png' />
 
@@ -85,12 +105,34 @@ keywords: [커뮤니케이션 서버, 설치하기]
 
 ## 설치 후 확인 사항 {#check-after-install}
 
-커뮤니케이션 서버 설치를 완료하면 **BioStar X** 메인 서버에서 커뮤니케이션 서버와 연결되었는지 확인할  수 있습니다.
+커뮤니케이션 서버 설치를 완료하면 **BioStar X Service Manager**를 통해 메인 서버와 커뮤니케이션 서버를 연결해야 합니다.
 
 1. Windows에서 <Start/> → **BioStar X** → **BioStar X Service Manager**를 클릭하세요. 
 
 1. <Cmd>BioStar X Service Manager</Cmd> 창이 나타납니다.
 
-1. 화면 왼쪽 사이드바에서 <Cmd>COMMUNICATION SERVERS</Cmd> 메뉴를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd>COMMUNICATIONS</Cmd> 메뉴를 클릭하세요.
 
-1. 커뮤니케이션 서버 목록에서 설치한 커뮤니케이션 서버의 <Cmd>Server Status</Cmd> 열이 <Cmd>Connected</Cmd> 상태인지 확인하세요.
+    <Image src='/img/common/biostarx-sm-cluster-main-01.png' alone />
+
+1. 화면 오른쪽 상단의 <Cmd>Add Communication Server</Cmd> 버튼을 클릭하세요.
+
+1. <Cmd>Add Communication Server</Cmd> 창이 나타나면 설치한 커뮤니케이션 서버의 IP 주소와 일치하는 항목의 체크박스를 클릭하고, <Cmd>Database</Cmd> 열에서 사용할 데이터베이스를 선택하세요.
+
+    <Image src='/img/common/biostarx-sm-cluster-main-03.png' alone />
+
+1. <Cmd>Add</Cmd> 버튼을 클릭하세요.
+
+커뮤니케이션 서버 목록에서 추가한 커뮤니케이션 서버의 <Cmd>Server Status</Cmd> 열이 <Cmd>Connected</Cmd> 상태인지 확인하세요.
+
+<Image src='/img/common/biostarx-sm-cluster-main-04.png' alone />
+
+:::info
+
+* <Cmd>COMMUNICATIONS</Cmd> 메뉴는 멀티 커뮤니케이션 서버 라이선스를 활성화했을 때 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+
+* 커뮤니케이션 서버를 삭제하려면 목록에서 삭제할 서버의 체크박스를 클릭하고 화면 오른쪽 상단의 <Cmd>Delete Commnunication Server</Cmd> 버튼을 클릭하세요.
+
+* 커뮤니케이션 서버를 추가했을 때 메인 서버의 부하를 줄이기 위해 커뮤니케이션 서버와 연동할 보조 데이터베이스를 추가할 수 있습니다. 보조 데이터베이스 추가에 대한 자세한 내용은 [다음 문서](add-sub-db)를 참고하세요.
+
+:::

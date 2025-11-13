@@ -1,0 +1,60 @@
+---
+id: tna-rule-shift-paycode
+title: Set Time Code
+description: This guides the configuration of time codes used for working hour calculations.
+keywords:
+  - Work hours
+  - Time code
+---
+
+This guides the configuration of <Cmd sid='tab.payCode' product='2' className='normal' /> settings used for working hour calculations. You can set standard time codes, overtime time codes, and leave time codes. Each <Cmd sid='tab.payCode' product='2' className='normal' /> can be used with different hourly weights.
+
+## <Cmd sid='payCode.addPayCode' product='2' className='bold' />
+
+1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.payCode' product='2' /> on the left sidebar.
+
+3. Click the <Cmd sid='payCode.addPayCode' product='2' /> button.
+
+   <Image src='/img/biostarx-tna-shift-paycode.png' />
+
+4. When the <Cmd sid='payCode.addPayCode' product='2' /> screen appears, configure each item.
+
+:::info
+
+* Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+* To add <Cmd sid='tab.shift' product='2' className='normal' />, click the <Cmd sid='payCode.applyAndAddShift' product='2' /> button.
+
+* After saving the settings, click the <Cmd sid='ta.apply_add_another' product='2' /> button to add another <Cmd sid='tab.payCode' product='2' />.
+
+:::
+
+## Setting options guide
+
+<Image src='/img/biostarx-tna-shift-paycode-adding.png' />
+
+* <Cmd sid='form.name' product='2' />: Enter the name of the <Cmd sid='tab.payCode' product='2' className='normal' />.
+
+* <Cmd sid='form.description' product='2' />: Enter a description for the <Cmd sid='tab.payCode' product='2' className='normal' />.
+
+* <Cmd sid='form.type' product='2' />: Select the type of <Cmd sid='tab.payCode' product='2' className='normal' />.
+
+  * <Cmd sid='payCode.countAsAttendance' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for normal attendance.
+
+  * <Cmd sid='payCode.accumulateTowardOvertime' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for overtime.
+
+  * <Cmd sid='payCode.trackOnLeaveManagement' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for leaves, business trips, etc.
+
+* Set the hourly weight according to <Cmd sid='tab.payCode' product='2' />. **1** is the base weight, and if set to **2**, the configured <Cmd sid='tab.payCode' product='2' className='normal' /> will calculate working hours as double per hour.
+
+* <Cmd sid='payCode.color' product='2' />: Set the color to distinguish the <Cmd sid='tab.payCode' product='2' className='normal' />.
+
+<NextStep>
+<NextItem to='tna-rule-shift-day'>
+
+You can set daily working rules based on a 24-hour period. Working rules include time rule settings based on time, daily start time settings, and time rounding rules.
+
+</NextItem>
+</NextStep>

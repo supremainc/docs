@@ -3,7 +3,7 @@ id: settings-access-control-manage-floor-level
 title: Manage Floor Levels
 description: Set floor levels using the configured elevator and floor information.
 keywords:
-  - Layer
+  - Floor
   - Floor levels
   - Elevator
 ---
@@ -12,41 +12,45 @@ This guide describes how to set floor levels using the configured elevator and f
 
 :::info
 
-You can only use the <Cmd sid='ag.floorLevel.title' product='2' /> tab and <Cmd sid='ac.al.main.addFloorlevel.button' product='2' /> button with a license of **Advanced** or higher. For more information about the license policy, refer to the [following](licensing).
+You can only use the <Cmd sid='ag.floorLevel.title' product='2' /> tab and <Cmd sid='ac.al.main.addFloorlevel.button' product='2' /> button with a license of **Advanced** or higher. For more information about the license policy, refer to [the following](licensing).
 
 :::
 
 ## Before start {#beforeStart}
 
-You must set up the elevator before enrolling floor levels. For more information about elevator enrollment, refer to the [following](settings-elevators-add).
+* You must set up the elevator before enrolling floor levels. For more information about elevator enrollment, refer to [the following](settings-elevators-add).
 
-## Enroll floor levels {#addFloorLevel}
+* You can define the time to apply to the floor grade in advance through schedule settings. For more information about schedule settings, refer to [the following](settings-schedule).
+
+## Register floor levels {#addFloorLevel}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.accessControl.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessControl.root' /> on the left sidebar.
 
 3. Click <Cmd sid='ac.al.main.addFloorlevel.button' product='2' />.
+
+   <Image src='/img/biostarx-settings-access-floor-level.png' />
 
 4. In the <Cmd sid='ac.al.addFloorlevel.top' product='2' /> screen, enter <Cmd sid='common.name' product='2' /> and <Cmd sid='common.description' product='2' />.
 
    <Image src='/img/biostarx-settings-add-access-floor-level.png' />
 
-5. Select the elevator to apply the access level from the <Cmd sid='ac.al.list.column.elevator' product='2' /> items.
+5. Select the elevator to apply to the floor grade in the <Cmd sid='ac.al.list.column.elevator' product='2' /> item.
 
-6. Select the floor to apply the access level from the <Cmd sid='ac.al.list.column.floorName' product='2' /> items.
+6. Select the floor to apply to the floor grade in the <Cmd sid='ac.al.list.column.floorName' product='2' /> item.
 
-7. Select the schedule to apply the access level in the <Cmd sid='common.schedule' product='2' /> field.
+7. Select the schedule to apply to the floor grade in the <Cmd sid='common.schedule' product='2' /> item.
 
-8. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to enroll the floor level.
+8. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to register the floor level.
 
 :::info
 
-* If the desired access level is not available, you will need to register a new access level. For more information about registering access levels, refer to the [following](settings-access-control-manage-access-level).
+* If the desired access level is not available, you will need to register a new access level. For more information about registering access levels, refer to [the following](settings-access-control-manage-access-level).
 
-* If the desired elevator is not available, you need to enroll a new elevator. For more information about elevator enrollment, refer to the [following](settings-elevators-add).
+* If the desired elevator is not available, you need to register a new elevator. For more information about elevator enrollment, refer to [the following](settings-elevators-add).
 
-* If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one. For more information about schedule settings, refer to the [following](settings-schedule).
+* If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one. For more information about schedule settings, refer to [the following](settings-schedule).
 
 * To delete added items, click <IcTrash2 />.
 
@@ -61,6 +65,8 @@ You must set up the elevator before enrolling floor levels. For more information
 2. Click <Cmd sid='setting.menu.accessControl.root' /> in the left sidebar.
 
 3. Click the <Cmd sid='ag.floorLevel.title' product='2' /> tab.
+
+   <Image src='/img/biostarx-settings-access-floor-level-tab.png' />
 
 4. Click the floor level you want to edit from the floor level list.
 
@@ -79,3 +85,5 @@ You must set up the elevator before enrolling floor levels. For more information
 4. Click the checkbox of the floor level you want to delete from the floor level list.
 
 5. Click <Cmd sid='ac.al.main.deleteFloorlevel.button' product='2' /> at the top right of the screen.
+
+<Image src='/img/biostarx-settings-access-delete-floor-level.png' />

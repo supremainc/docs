@@ -1,19 +1,25 @@
 * <Cmd sid='setting.account.administrator' product='2' />: 모든 메뉴를 사용할 수 있는 관리자 등급입니다.
 
-* <Cmd sid='setting.account.userOperator' product='2' />: <Cmd sid='shell.header.user' />와 <Cmd sid='shell.header.setting' /> 메뉴만 사용할 수 있는 등급입니다.
+* <Cmd sid='setting.account.userOperator' product='2' />: <Cmd sid='shell.header.user' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
 
-* <Cmd sid='setting.account.monitoringOperator' product='2' />: <Cmd sid='shell.header.arena' />과 <Cmd sid='shell.header.setting' /> 메뉴를 사용할 수 있습니다. <Cmd sid='shell.header.dashboard' />, <Cmd sid='shell.header.user' />, <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.setting' /> 메뉴는 **보기** 권한만 가집니다.
+* <Cmd sid='setting.account.monitoringOperator' product='2' />: <Cmd sid='shell.header.arena' />과 <Cmd sid='shell.header.data' />, <Cmd sid='shell.header.dashboard' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
 
-* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> 메뉴를 사용할 수 있으며 사용자 메뉴는 **보기** 권한만 가집니다.
+* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
 
-* <Cmd sid='setting.account.visitorOperator' product='2' />: <Cmd sid='common.gnb.visitor' product='2' /> 메뉴만 사용할 수 있는 등급입니다.
-
-* <Cmd sid='setting.account.user' product='2' />: 사용자 본인의 정보와 근태 정보만 확인할 수 있는 등급입니다.
+* <Cmd sid='setting.account.visitorOperator' product='2' />: <Cmd sid='common.gnb.visitor' product='2' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
 
 :::info
+
+<Include pages='set-permission'>
+
+* 관리자 등급을 설정하지 않으려면 <Cmd sid='common.selectNone' />을 선택하세요. 이 경우 해당 사용자는 **BioStar X**에 로그인할 수 없습니다.
+
+</Include>
 
 * 사전 정의된 사용자 권한 외 새로운 사용자 권한을 추가하려면 [다음 문서](settings-adding-custom-account)를 참고하세요.
 
 * 기본 제공하는 계정의 권한은 수정하거나 삭제할 수 없습니다.
+
+* <Cmd sid='setting.account.taOperator' product='2' /> 및 <Cmd sid='setting.account.visitorOperator' product='2' /> 등급은 별도의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
 :::

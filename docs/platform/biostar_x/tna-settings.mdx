@@ -1,0 +1,88 @@
+---
+id: tna-settings
+title: 근태 관리 설정하기
+description: 근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다.
+keywords: [근태, 설정]
+---
+
+근태 관리에 사용할 장치를 등록하거나 알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다. CSV 내보내기로 근태 보고서를 내보낼 때 문서의 구분자를 설정할 수도 있습니다.
+
+## 근태 관리 설정 진입
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.tna' />를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <IcSet /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-tna-access-btn.png' />
+
+1. 각 항목을 설정하세요.
+
+<Image src='/img/biostarx-tna-settings.png' />
+
+
+## 근태 관리 설정 항목
+
+### <Cmd sid='setting.devices' product='2' className='normal' />
+
+근태 관리할 수 있는 장치 목록입니다. 근태 관리 장치로 등록하려면 원하는 장치를 선택한 후 <Cmd sid='setting.register' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-tna-settings-unregister-list.png' />
+
+### <Cmd sid='setting.registerDevices' product='2' className='normal' />
+
+현재 사용 중인 근태 관리 장치 목록입니다. 
+
+* 등록을 해제하려면 원하는 장치를 선택한 뒤 <Cmd sid='setting.unregister' product='2' /> 버튼을 클릭하세요.
+
+  <Image src='/img/biostarx-tna-settings-register-list.png' />
+
+* 등록한 장치의 근태 설정을 편집하려면 <Cmd sid='setting.setting' product='2' /> 버튼을 클릭하세요. 근태 설정에 대한 자세한 내용은 [다음 문서](settings-device-details-advanced#attendance-management)를 참고하세요.
+
+  <Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+  <Cmd sid='setting.typeCode' product='2' />은 <Cmd sid='device.tna.eventKey' product='2' />와 근태 이벤트 종류를 매핑하는 설정입니다. 근태 이벤트 종류는 아래와 같습니다.
+
+  - <Cmd sid='PUNCH_TYPE_CHECK_IN' product='2' />
+
+  - <Cmd sid='PUNCH_TYPE_CHECK_OUT' product='2' />
+
+  - <Cmd sid='PUNCH_TYPE_BREAK_START' product='2' />
+
+  - <Cmd sid='PUNCH_TYPE_BREAK_END' product='2' />
+
+  - <Cmd sid='PUNCH_TYPE_MEAL_START' product='2' />
+
+  - <Cmd sid='PUNCH_TYPE_MEAL_END' product='2' />
+
+:::info
+
+* 장치와 연결된 상태에서만 장치의 근태 설정을 편집할 수 있습니다.
+
+* <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> 메뉴에서 등록한 장치를 삭제하면, 등록된 근태 관리 장치도 자동 삭제됩니다.
+
+:::
+
+
+### <Cmd sid='setting.triggerAction.senderInfor' product='2' className='normal' /> {#senderInfo}
+
+알림 이메일을 발신할 때 사용할 발신자 정보를 설정할 수 있습니다. <Cmd sid='button.edit' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-tna-settings-sender-info.png' />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+<EmailSmtpOptions />
+
+
+### <Cmd sid='setting.export' product='2' className='normal' />
+
+<Cmd sid='button.downloadToCsv' product='2' /> 기능으로 근태 보고서를 내보낼 때 문서의 구분자를 선택할 수 있습니다.
+
+<Image src='/img/biostarx-tna-settings-export-csv.png' />
+
+
+### <Cmd sid='tna.settings.punchlogs.optionTitle' product='2' className='normal' />
+
+근태 기록을 저장할 기간을 설정할 수 있습니다. <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> 옵션을 <Cmd sid='common.active' product='2' />으로 설정하고 기간을 입력하세요. 설정을 저장하려면 <Cmd sid='tna.settings.apply' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-tna-settings-save-period.png' />

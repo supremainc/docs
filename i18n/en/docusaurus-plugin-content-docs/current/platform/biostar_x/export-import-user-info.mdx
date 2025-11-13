@@ -10,19 +10,19 @@ keywords:
 
 You can utilize user information from a previous version or a different server by exporting or importing user data.
 
-## CSV export/import {#csv-exportimport}
+## CSV export/import {#csvexportimport}
 
 Save selected user information as a CSV file, or load saved CSV files. This allows for easy transfer of user information using CSV files.
 
 :::info
 
-* If there are custom user fields not added to **BioStar X**, the CSV file cannot be imported correctly. Refer to the [following](settings-server-server#user-and-device-management) for instructions on adding custom user fields.
+* If there are custom user fields not added to **BioStar X**, the CSV file cannot be imported correctly. For more information on adding custom user fields, refer to [the following](settings-server-server#custom-field).
 
 * If user information is entered in a language other than English or Korean, save the CSV file in UTF-8 format.
 
 :::
 
-### CSV export {#csv-export}
+### CSV export {#csvexport}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -30,9 +30,13 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 3. Click the <IcMoreW /> button in the upper right corner of the screen and select <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />.
 
-4. Save the CSV file to your desired location on your local path.
+   <Image src='/img/biostarx-user-export-csv.png' />
 
-### CSV import {#import-csv}
+4. Click the <Cmd sid='common.button.download' /> button when the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> window appears.
+
+5. Save the CSV file to your desired location on your local path.
+
+### CSV import {#csvimport}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -40,15 +44,15 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 3. Select the CSV file saved locally.
 
-4. In the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.import.title' /> window, set the <Cmd>Start import at row</Cmd> and click the <Cmd sid='common.button.continue' /> button.
+4. Set <Cmd sid='user.list.csvImport.importStartRow' /> in the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.import.title' /> window and click the <Cmd sid='common.button.next' /> button.
 
    <Image src='/img/biostarx-user-import-01.png' />
 
-5. User data fields from the CSV file will automatically map to user data fields in **BioStar X**. Click <Cmd>ReMap</Cmd> to remap fields with the same names.
+5. User data fields from the CSV file will automatically map to user data fields in **BioStar X**. Click <Cmd sid='user.list.csvImport.reMapping' product='2' /> to remap fields with the same name.
 
-   <Image src='/img/biostarx-user-import-02.png' />
+   <Image src='/img/biostarx-user-import-02.png' width='50%' />
 
-6. Select whether to maintain existing user data or overwrite it with the CSV file information for users with an already registered user ID in **BioStar X**, then click <Cmd sid='common.button.continue' />.
+6. Choose whether to keep user data already registered with user IDs in **BioStar X** or to overwrite it with the information from the CSV file and click <Cmd sid='common.apply' />.
 
    <Image src='/img/biostarx-user-import-03.png' />
 
@@ -66,15 +70,15 @@ If an error occurs while importing information from the CSV file, you can review
 
 * **BioStar X** QR cannot be issued through CSV import.
 
-* User facial data can be registered through CSV import. For more information, refer to the [following](enroll-credential-face#import-csv).
+* User facial data can be enrolled through CSV import. For more information, refer to [the following](batch-import-face#import-csv).
 
-* User PINs can be registered through CSV import. For more information, refer to the [following](enroll-credential-pin).
+* User PINs can be enrolled through CSV import. For more information, refer to [the following](enroll-credential-pin).
 
-* Adding new columns to the saved CSV file will prevent **BioStar X** from importing the file.
+* If you add columns that do not match the saved CSV file, you cannot import the file into **BioStar X**.
 
 :::
 
-## Data file export/import {#exportimport-data-file}
+## Data file export/import {#exportimportdatafile}
 
 User information can be stored on external storage (USB) for import into **BioStar X** or devices. Up to 500,000 user records can be transferred from the server to devices or between devices.
 
@@ -84,7 +88,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 * Data cannot be imported if different fingerprint template formats are used. For example, data exported from devices using the Suprema fingerprint template format cannot be imported into devices using the ISO fingerprint template format.
 
-* When importing facial authentication user data from FaceStation F2, if facial authentication data is already present in **BioStar X** server from uploaded photos or mobile devices, the existing data will be overwritten.
+* When importing user data, if fingerprint and face credentials stored on the **BioStar X** server already exist, it will be overwritten by the existing data.
 
 * Data cannot be imported from devices with outdated firmware versions. Upgrade the device firmware to a compatible version. 
 
@@ -109,7 +113,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 :::
 
-### Data export {#export-data}
+### Data export {#exportdata}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -117,7 +121,11 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 3. Click <IcMoreW /> in the top right corner of the screen, then select <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.dataFile' />.
 
-4. In the <Cmd sid='team.menu.export.dataFile' /> window, select the device to which the data file will be applied and click <Cmd sid='common.button.confirm' />.
+   <Image src='/img/biostarx-user-export-data.png' />
+
+4. Select the device to apply the data file in the <Cmd sid='team.menu.dialog.exprotDataFile.title' /> window and click the <Cmd sid='common.apply' /> button.
+
+   <Image src='/img/biostarx-user-export-data-select-device.png' />
 
 5. Save the data file in your desired local path.
 
@@ -129,11 +137,13 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 :::
 
-### Data import {#import-data}
+### Data import {#importdata}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <IcMoreW /> in the top right corner of the screen, then select <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.dataFile' />.
+
+   <Image src='/img/biostarx-user-import-data.png' />
 
 3. Select the data file (*.tgz*) saved locally.
 

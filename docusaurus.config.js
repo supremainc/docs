@@ -10,6 +10,7 @@ const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
+const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -34,7 +35,7 @@ function getLocalizedConfigValue(key) {
 const config = {
   title: getLocalizedConfigValue('title'),
   tagline: getLocalizedConfigValue('tagline'),
-  favicon: 'https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=wiki:favicon.ico',
+  favicon: 'https://supremainc.com/ko/asset/images/common/Website_favicon.png',
   // Set the production url of your site here
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -50,7 +51,8 @@ const config = {
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'log',
+  onDuplicateRoutes: 'warn',
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -70,8 +72,26 @@ const config = {
       },
     }
   },
+  headTags: [
+    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '07FFA029DF50324E',
+      }
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'naver-site-verification',
+        content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
+      }
+    }
+  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-mermaid'
   ],
   presets: [
     [
@@ -87,9 +107,18 @@ const config = {
           exclude: [
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
-            '**/_*.{md,mdx}'
+            '**/_*.{md,mdx}',
+            'platform/biostar_air/**/**.{md,mdx}',
+            'device/**/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
+        },
+        pages: {
+          exclude: [
+            '_backup/**.{js,jsx,ts,tsx,md,mdx}',
+            'cover/**.{js,jsx,ts,tsx,md,mdx}',
+            'back/**.{js,jsx,ts,tsx,md,mdx}',
+          ]
         },
         blog: false,
         theme: {
@@ -99,7 +128,12 @@ const config = {
           lastmod: 'date',
           changefreq: 'daily',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          ignorePatterns: [
+            '/tags/**',
+            'back/**',
+            'cover/**',
+            'products/**'
+          ]
         },
         svgr: {
           svgrConfig: {
@@ -110,10 +144,46 @@ const config = {
     ]
   ],
   plugins: [
+    // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
+    // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
-    [ 'docusaurus-plugin-image-zoom', {}]
+    [ 'docusaurus-plugin-image-zoom', {}],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-98B2Y5C3H6',
+        anonymizeIP: true,
+      },
+    ],
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        // v2.0 API 구조로 수정
+        markdown: {
+          enableFiles: false
+        },
+        llmsTxt: {
+          siteTitle: 'Suprema Docs',
+          siteDescription: "Check out all of Suprema's products and BioStar related information here.",
+          enableLlmsFullTxt: true,
+          includeBlog: false,
+          includePages: true,
+          includeDocs: true,
+          includeVersionedDocs: false, // llms.txt에서는 기본값이 false
+          excludeRoutes: [
+            '/common/**',
+            '/_unused/**',
+            '/platform/biostar_air/**',
+            '/device/**',
+            '/products/**',
+          ],
+          autoSectionDepth: 2
+        }
+      },
+    ]
   ],
   markdown: {
+    mermaid: true,
     parseFrontMatter: async (params) => {
       // Reuse the default parser
       const result = await params.defaultParseFrontMatter(params);
@@ -133,6 +203,9 @@ const config = {
         result.frontMatter.isTranslationMissing = !isI18n;
       }
       return result;
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
     }
   },
   themeConfig:
@@ -150,50 +223,176 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'img/suprema-logo.svg',
-          srcDark: 'img/suprema-logo-white.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
+          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Platforms',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStar X',
-                docId: 'platform/biostar_x/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioStar Air',
-                docId: 'platform/biostar_air/index'
-              }
-            ]
-          },
-          {
-            type: 'dropdown',
-            label: 'Devices',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStation 3',
-                docId: 'device/biostation_3/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioEntry W3',
-                docId: 'device/bioentry_w3/index'
-              }
-            ]
-          },
-          {
             type: 'doc',
-            label: 'How-to Articles',
+            label: 'BioStar X',
             position: 'right',
-            docId: 'how-to/index'
+            docId: 'platform/biostar_x/index'
+          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Platforms',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar X',
+          //       docId: 'platform/biostar_x/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar Air',
+          //       docId: 'platform/biostar_air/index'
+          //     }
+          //   ]
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Devices',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioEntry W3',
+          //       docId: 'device/bioentry_w3/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStation 2a',
+          //       docId: 'device/biostation_2a/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStation 3',
+          //       docId: 'device/biostation_3/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'FaceStation F2',
+          //       docId: 'device/facestation_f2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'FaceStation 2',
+          //       docId: 'device/facestation_2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioLite N2',
+          //       docId: 'device/biolite_n2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioEntry W2',
+          //       docId: 'device/bioentry_w2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioEntry P2',
+          //       docId: 'device/bioentry_p2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioEntry R2',
+          //       docId: 'device/bioentry_r2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'X-Station 2',
+          //       docId: 'device/xstation_2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'XPass 2',
+          //       docId: 'device/xpass_2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'XPass S2',
+          //       docId: 'device/xpass_s2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'XPass D2',
+          //       docId: 'device/xpass_d2/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'CoreStation',
+          //       docId: 'device/corestation_40/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'CoreStation 20',
+          //       docId: 'device/corestation_20/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Enclosure',
+          //       docId: 'device/enclosure/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Input Module',
+          //       docId: 'device/inputmodule/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Output Module',
+          //       docId: 'device/outputmodule/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Door Interface',
+          //       docId: 'device/doorinterface/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Door Module',
+          //       docId: 'device/doormodule/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Secure Module',
+          //       docId: 'device/securemodule/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Extended Module',
+          //       docId: 'device/extendedmodule/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Extended Module-SC',
+          //       docId: 'device/extendedmodule_sc/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Device Manager',
+          //       docId: 'device/device_manager/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'CoreStation Setup Manager',
+          //       docId: 'device/corestation_setup_manager/index'
+          //     }
+          //   ]
+          // },
+          // {
+          //   type: 'doc',
+          //   label: 'How-to Articles',
+          //   position: 'right',
+          //   docId: 'how-to/index'
+          // },
+          {
+            label: 'API',
+            position: 'right',
+            to: '/api/bsxapi'
           },
           {
             type: 'doc',
@@ -221,7 +420,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'img/suprema-logo-bottom.svg',
+          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
           width: '173px',
         },
         links: [
@@ -233,10 +432,12 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python' ]
+        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ],
+        theme: prismThemes.github,
+        darkTheme: prismThemes.vsDark,
       },
       zoom: {
-        selector: '.markdown :not(em, div) > img:not(.ico)',
+        selector: '.markdown :not(em, div) > img:not(.ico):not(.useMap)',
         background: {
           light: 'rgb(255, 255, 255)',
           dark: 'rgb(50, 50, 50)'
@@ -245,20 +446,26 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: '11LXF9EJH7',
-        apiKey: '4882650c3591013a4db2f9211c31c4f4',
-        indexName: 'supremaincio',
+        appId: 'G6Y3H2PNC3',
+        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+        indexName: 'SPDocs',
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
           attributesToSnippet: [
-            'content:20', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
+            'content:35', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
           ],
           snippetEllipsisText: '…'
         },
         searchPagePath: 'search',
+        askAi: {
+          indexName: 'markdown-index', // Markdown index for Ask AI
+          apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+          appId: 'G6Y3H2PNC3',
+          assistantId: 'kyhdNEjfn9nK'
+        }
       }
-    }),
+    })
 };
 
 export default config;

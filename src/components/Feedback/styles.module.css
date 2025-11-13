@@ -1,0 +1,461 @@
+.feedbackWidget {
+  position: absolute;
+  margin-top: .8rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background-color: var(--ifm-background-surface-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.3s ease;
+  right: 0;
+}
+
+/* 초기 피드백 트리거 버튼 */
+.feedbackTrigger {
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 26px;
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 0 0 0 0.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  background-color: #A32343;
+  border-radius: 3px;
+  font-size: .7rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feedbackTrigger:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.feedbackTrigger:active {
+  transform: translateY(0);
+}
+
+.feedbackHeader {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.feedbackTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-content);
+  padding-right: 2rem; /* 닫기 버튼 공간 확보 */
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.feedbackDescription {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--ifm-color-content-secondary);
+}
+
+.feedbackButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .feedbackButtons {
+    flex-direction: column;
+  }
+}
+
+.feedbackButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feedbackButton:hover:not(:disabled) {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.feedbackButton.active {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-darkest);
+  color: #fff;
+}
+
+.feedbackButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.feedbackExpanded {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textareaLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-content);
+}
+
+.feedbackTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedbackTextarea:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.feedbackTextarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.characterCount {
+  text-align: right;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.feedbackActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cancelButton {
+  padding: 0.625rem 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--ifm-color-content);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  border-color: var(--ifm-color-emphasis-500);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.cancelButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.privacyNote {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0.75rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ifm-color-content-secondary);
+}
+
+.privacyNote strong {
+  color: var(--ifm-color-content);
+}
+
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background-color: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darkest);
+  text-align: center;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-success);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.successMessage p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.successSubtext {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  color: var(--ifm-color-success-dark) !important;
+}
+
+.errorMessage {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-left: 3px solid var(--ifm-color-danger);
+  border-radius: 4px;
+  background-color: var(--ifm-color-danger-lightest);
+  color: var(--ifm-color-danger-darkest);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.requiredNote {
+  color: var(--ifm-color-danger);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* 피드백 선택 후 중간 단계 스타일 */
+.feedbackSelected {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.selectedMessage {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-content);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selectedActions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .selectedActions {
+    flex-direction: column;
+  }
+}
+
+.expandButton {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-background);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expandButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+.expandButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitQuickButton {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  border: 2px solid var(--ifm-color-secondary);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--ifm-color-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitQuickButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-secondary);
+  color: var(--ifm-color-secondary-contrast-background);
+}
+
+.submitQuickButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: var(--ifm-color-emphasis-600);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+/* 빠른 제출 섹션 */
+.quickSubmitSection {
+  margin: 1rem 0;
+  /* padding: 1rem; */
+  /* background-color: var(--ifm-color-success-lightest);
+  border: 1px solid var(--ifm-color-success-light); */
+  border-radius: 6px;
+}
+
+.quickSubmitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--ifm-color-success);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quickSubmitButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-success-dark);
+}
+
+.quickSubmitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -65,55 +65,79 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 웹 기반 사용자 인터페이스를 담당하는 서비스입니다.
 
-* <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트
+<Image src='/img/common/biostarx-sm-cws.png' alone />
 
-* <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트
+* <Cmd>HTTPS Port</Cmd>: 웹 인터페이스 접속 포트 (기본값: 5002)
 
-* <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트
+* <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트 (기본값: 9310)
+
+* <Cmd>CloudNgrok Port</Cmd>: 클라우드 터널링 서비스 통신 포트 (기본값: 52000)
 
 ### BioStar X Core Service {#biostar-x-core-service}
 
 시스템의 핵심 기능과 외부 API 통신을 처리하는 메인 서비스입니다.
 
-* <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트
+<Image src='/img/common/biostarx-sm-core-s.png' alone />
 
-* <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트
+* <Cmd>WebSocket Port</Cmd>: 실시간 양방향 통신을 위한 웹소켓 포트 (기본값: 9002)
 
-* <Cmd>API Port</Cmd>: REST API 통신 포트
+* <Cmd>API Port</Cmd>: REST API 통신 포트 (기본값: 9010)
+
+* <Cmd>WebServerFastCgi Port</Cmd>: FastCGI 프로토콜 기반 웹서버 통신 포트 (기본값: 9000)
+
+* <Cmd>Rpc Port</Cmd>: 원격 프로시저 호출(RPC) 통신 포트 (기본값: 51218)
 
 ### Unified Gateway Service {#unified-gateway-service}
 
-역방향 프록시(Reverse Proxy) 방식을 통해 BioStar X 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
+역방향 프록시(Reverse Proxy) 방식을 통해 **BioStar X** 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
 
-* <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트
+<Image src='/img/common/biostarx-sm-ugs.png' alone />
+
+* <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트 (기본값: 443)
 
 ### BioStar X Coordinator Service {#biostar-x-coordinator-service}
 
 분산 시스템의 구성 정보 관리, 서비스 상태 모니터링 및 서비스 간 동기화를 담당하는 서비스입니다.
 
-* <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트
+<Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
+* <Cmd>Client Port</Cmd>: 클라이언트 연결을 위한 통신 포트 (기본값: 21810)
+
+:::info
+
+* <Cmd>Client Port</Cmd> 값을 변경하면, **Windows Services**(*services.msc*)에서 **BioStar X Coordinator Service** 서비스를 찾아 수동으로 재시작하세요.
+
+* **BioStar X Coordinator Service** 서비스를 재시작한 후 **BioStar X Service Manager** → **SERVICES** 메뉴에서 모든 서비스를 재시작하세요. 
+
+  화면 오른쪽 상단의 <Cmd>Stop All</Cmd> 버튼을 클릭하세요. 모든 서비스가 중지된 후 <Cmd>Start All</Cmd> 버튼이 활성화되면 버튼을 클릭하세요.
+
+:::
 
 ### BioStar X Server (Main) {#biostar-x-server-(main)}
 
 시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다.
 
+<Image src='/img/common/biostarx-sm-server.png' alone />
+
 * <Cmd>Server Address</Cmd>: 메인 서버의 IP 주소
 
-* <Cmd>SSL Server Port</Cmd>: SSL 보안 암호화 통신 포트
+* <Cmd>Server Port</Cmd>: 일반 서버 통신 포트 (기본값: 51212)
 
-* <Cmd>Server Port</Cmd>: 일반 서버 통신 포트
+* <Cmd>SSL Server Port</Cmd>: SSL 보안 암호화 통신 포트 (기본값: 51213)
 
-* <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트
+* <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트 (기본값: 51219)
 
 ### BioStar X Cache Service {#biostar-x-cache-service}
 
 자주 사용되는 데이터를 메모리에 저장하여 시스템의 데이터 처리 속도와 성능을 향상시키는 서비스입니다.
 
-* <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트
+<Image src='/img/common/biostarx-sm-cache-s.png' alone />
 
-* <Cmd>Discovery Port</Cmd>: 분산 캐시 노드 자동 발견을 위한 포트
+* <Cmd>Client Port</Cmd>: 캐시 서비스 클라이언트 연결 포트 (기본값: 10800)
 
-* <Cmd>Communication Port</Cmd>: 캐시 노드 간 내부 통신 포트
+* <Cmd>Communication Port</Cmd>: 캐시 노드 간 내부 통신 포트 (기본값: 47500)
+
+* <Cmd>Discovery Port</Cmd>: 분산 캐시 노드 자동 발견을 위한 포트 (기본값: 47100)
 
 <NextStep>
 <NextItem to='change-port'>

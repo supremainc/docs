@@ -1,0 +1,75 @@
+---
+id: installation
+title: Installation
+description: Provides the complete process and connection examples required for product installation.
+keywords:
+  - Install
+  - Door Interface
+  - Device
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Use bracket
+
+1. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   :::info
+
+   If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   :::
+
+2. Mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-mounting-bracket-fix-dm20.svg' className='none' width={250} alone />
+
+## Use spacer
+
+Secure the product tightly using spacers and fixing screws at the position where the product will be mounted.
+
+<Image src='/img/device/installation-mounting-spacer-fix-dm20.svg' className='none' width={500} alone />
+
+:::info
+
+If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## RS-485 Connection
+
+<Image src='/img/device/installation-rs485-connection-dm20.png' width='65%' className='none' />
+
+:::info
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection.
+
+* You can connect up to 31 card readers with the product, and up to 7 biometric devices can be connected in combination with 24 card readers.
+
+* If XPass or XPass 2 is connected to the master device, only card authentication can be used.
+
+:::
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />

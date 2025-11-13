@@ -1,0 +1,227 @@
+---
+id: authentication
+title: Certifications
+description: Describes the supported authentication methods and authentication procedures.
+keywords:
+  - Authentication mode
+  - Operation
+  - PIN
+  - Fingerprint
+  - T&A (Time and Attendance)
+---
+
+Describes the supported authentication methods and authentication procedures.
+
+## Authentication mode
+
+Set the authentication mode. You can use <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_323' product='dev' />, and <Cmd sid='ui_020' product='dev' /> in combination for authentication modes, and you can also set a schedule for each authentication mode.
+
+:::info
+
+Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB products.
+
+:::
+
+### Registering auth mode {#registering-auth-mode}
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Select <Image src='/img/common/ico-add2.svg' ico alone />.
+
+4. Pressing <Image src='/img/common/ico-add1.svg' ico alone /> will display the credential that can be added on the screen. Select the credentials to add. Press the <Image src='/img/common/ico-cancel.svg' ico alone /> while the credential is added, and the added credential will be deleted.
+
+   <Image src='/img/device/xs2-auth-authmode.png' />
+
+5. After setting the desired authentication mode, set <Cmd sid='ui_203' product='dev' />.
+
+   <div className='overflow-x'>
+
+   |    Category    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   |   Fingerprint  | * <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode uses only fingerprint.- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+   | Card / QR Code | * <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: This mode uses only card / QR code authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode requires authentication via card/QR code followed by fingerprint authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code. |
+   |       ID       | * <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode requires entering an ID followed by fingerprint authentication.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both fingerprint authentication and PIN entry after entering an ID.                                                                                                                                                                                       |
+
+   </div>
+
+   :::info
+
+   * <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
+
+   * For more information about <Cmd sid='ui_203' product='dev' /> settings, refer to [the following](../../platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+
+   * To use <Cmd sid='ui_043' product='dev' /> authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, <Cmd sid='ui_043' product='dev' /> must be activated in <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' />, and a separate device license is required. For more information, refer to [License](settings#license).
+
+   :::
+
+6. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+### Modifying auth mode
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Select the authentication mode to modify.
+
+4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press <Cmd sid='ui_037' product='dev' />.
+
+### Delete auth mode
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Press <Image src='/img/common/ico-delete.svg' ico alone /> and select the authentication mode to delete. You can select multiple options.
+
+4. To delete the selected item, press <Cmd sid='ui_037' product='dev' />.
+
+## Operation
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired item in <Cmd sid='ui_265' product='dev' />.
+
+   <Image src='/img/device/xs2-auth.png' />
+
+   * <Cmd sid='ui_260' product='dev' />: If authentication is not completed within the set time, authentication will fail. It can be set to 3 to 20 seconds.
+
+   * <Cmd sid='ui_185' product='dev' />: When server matching is set, the device does not perform user authentication; BioStar X performs user authentication. It can be used when the device has too much user information or when the device is installed outside.
+
+   :::info
+
+   If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](../../platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+
+   :::
+
+## PIN
+
+Set whether to use the scramble keypad when entering passwords.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, set whether to use <Cmd sid='ui_040' product='dev' /> in <Cmd sid='ui_204' product='dev' />.
+
+   <Image src='/img/device/xs2-auth1.png' />
+
+   * <Cmd sid='ui_204' product='dev' />: The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks.
+
+## Auth result display option
+
+You can set the auth result display option.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired items in <Cmd sid='ui_259' product='dev' />.
+
+   <Image src='/img/device/xs2-auth2.png' />
+
+   * <Cmd sid='ui_169' product='dev' />: You can select how the user ID is displayed on the authentication results screen of the device.
+
+     * <Cmd sid='ui_307' product='dev' />: Show all user IDs.
+
+     * <Cmd sid='ui_316' product='dev' />: Show only the first character of the user ID.
+
+     * <Cmd sid='ui_357' product='dev' />: Do not display the user ID.
+
+   * <Cmd sid='ui_177' product='dev' />: You can select how the user name is displayed on the authentication results screen of the device.
+
+     * <Cmd sid='ui_307' product='dev' />: Show all user names.
+
+     * <Cmd sid='ui_316' product='dev' />: Show only the first character of the user name.
+
+     * <Cmd sid='ui_357' product='dev' />: Do not display the user name.
+
+## QR/Barcode Authentication Options
+
+You can set QR/Barcode authentication.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, enable <Cmd sid='ui_043' product='dev' /> in <Cmd sid='ui_044' product='dev' />.
+
+<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+
+<Image src='/img/device/xs2-auth3.png' />
+
+* **QR/Barcode**: You can choose whether to use QR/Barcode authentication.
+
+* **QR/Barcode Scan Wait Time**: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 4 to 10 seconds.
+
+* **Card Authentication via QR**: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user.
+
+<Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
+
+<Image src='/img/device/xs2-auth3-1.png' />
+
+* **QR/Barcode**: You can choose whether to use QR/Barcode authentication.
+
+* **Camera Wait Time**: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 3 to 20 seconds. Can only be set when **QR/Barcode** is enabled.
+
+* **Motion Sensor Sensitivity**: Set the sensitivity that detects movement around the device. Can only be set when **QR/Barcode** is enabled.
+
+* **Card Authentication via QR**: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user. Can only be set when **QR/Barcode** is enabled.
+
+:::info
+
+To use <Cmd sid='ui_043' product='dev' /> authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, <Cmd sid='ui_043' product='dev' /> must be activated in <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' />, and a separate device license is required. For more information, refer to [License](settings#license).
+
+:::
+
+## Fingerprint settings <Badge only>XS2-ODPB, XS2-OAPB</Badge>
+
+You can change the settings for fingerprint authentication.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired items in <Cmd sid='ui_312' product='dev' />.
+
+   <Image src='/img/device/xs2-auth4.png' />
+
+   * <Cmd sid='ui_149' product='dev' />: You can set the security level for 1:N authentication.
+
+   * <Cmd sid='ui_130' product='dev' />: You can set the waiting time when matching fingerprints. If authentication is not completed within the set time, authentication fails.
+
+   * <Cmd sid='ui_254' product='dev' />: You can view the original image when scanning fingerprints.
+
+   * <Cmd sid='ui_197' product='dev' />: You can set the sensitivity of the fingerprint recognition sensor. Set the sensitivity higher to obtain precise fingerprint information.
+
+   * <Cmd sid='ui_003' product='dev' />: You can set the speed of fingerprint authentication. When you select <Cmd sid='ui_275' product='dev' />, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+
+   * <Cmd sid='ui_342' product='dev' />: You can set the fingerprint template format. <Cmd sid='ui_057' product='dev' /> is set by default, and if the template format is changed, all previously saved fingerprints cannot be used, so be careful when changing.
+
+     :::info
+
+     Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
+
+     :::
+
+   * <Cmd sid='ui_198' product='dev' />: When set to <Cmd sid='ui_277' product='dev' />, the fingerprint sensor activates recognizing the user's finger. When set to <Cmd sid='ui_362' product='dev' />, the sensor is always on even when not scanning fingerprints.
+
+   * <Cmd sid='ui_249' product='dev' />: You can set the counterfeit fingerprint check grade. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+
+   * <Cmd sid='ui_116' product='dev' />: You can check the quality of scanned fingerprints to save high-quality fingerprint information. By activating this, users are notified if the fingerprint quality is low to help them scan fingerprints correctly.
+
+   * <Cmd sid='ui_118' product='dev' />: You can check for duplicate fingerprints during fingerprint enrollment.
+
+## Attendance Mode
+
+You can set how to register T&A mode.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired item in <Cmd sid='ui_083' product='dev' />.
+
+   <Image src='/img/device/xs2-auth5.png' />
+
+   * <Cmd sid='ui_083' product='dev' />: You can set how to use attendance mode.
+
+   * <Cmd sid='ui_086' product='dev' />: You can register attendance events. To register attendance events, select <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> and set the icons to be displayed on the screen, <Cmd sid='ui_085' product='dev' />, and <Cmd sid='ui_203' product='dev' />.
+
+   * <Cmd sid='ui_082' product='dev' />: You can set it so that users must select attendance events when authenticating. This can be used when <Cmd sid='ui_083' product='dev' /> is set to <Cmd sid='ui_199' product='dev' />.
+
+   * <Cmd sid='ui_081' product='dev' />: You can set it to use only the attendance events selected by the administrator. This can be used when <Cmd sid='ui_083' product='dev' /> is set to <Cmd sid='ui_071' product='dev' />.
+
+   * <Cmd sid='ui_279' product='dev' />: You can choose whether to use job codes.

@@ -1,116 +1,120 @@
 ---
 id: control-zone
-title: Control Zones
-description: Control the zone and check the detailed information.
+title: Control Advanced Access Control
+description: Control advanced access control and check detailed information.
 keywords:
   - Monitoring
-  - Zone
+  - Advanced access control
 ---
 
-This guide describes how to control zones. With the features provided, you can respond quickly to issues and manage the zone efficiently.
+This guides how to control doors or devices set with advanced access control. The features provided enable quick responses and efficient management in case of issues.
 
 1. Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen.
 
-2. In the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar, go to <Cmd sid='arena.tree.door.allZones' />. 
+2. Move to <Cmd sid='arena.tree.door.title' /> tab under the left sidebar on the screen and select <Cmd sid='arena.tree.door.allZones' />. 
 
-3. Select the desired zone and right-click. You can select the desired feature from the popup menu.
+3. Select the configured advanced access control and right-click. You can select the desired feature from the popup menu.
+
+<Image src='/img/biostarx-monitoring-door-zone-popup.png' />
 
 :::info
 
-The features provided differ depending on the type of zone. The types of zones are as follows.
+The features offered vary depending on the type of advanced access control. The types of advanced access control are as follows.
 
-* **Anti-Passback** zone
+* **Anti-Passback**
 
-* Fire alarm zone
+* Fire Alarm
 
-* Schedule lock/unlock zone
+* Scheduled Lock/Unlock
 
-* Intrusion Alarm Zone
+* Intrusion Alarm
 
-* Interlock zone
+* Interlock
 
-* Muster Zone
+* Muster
 
-* Occupancy limit zone
+* Occupancy Limit
 
-For more information about how to set up the zone, refer to the [following](settings-advanced-ac).
+* Roll Call
+
+For more information on each advanced access control, refer to [the following](settings-advanced-ac).
 
 :::
 
-## Clear Anti Pass Back {#apb-release}
+## Clear anti pass back {#apb-release}
 
-You can clear the APB alarm in the **Anti-Passback** zone. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the popup menu. A completion message appears at the top right of the screen.
+You can clear the APB alarm for the door or device set to **Anti-Passback**. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the popup menu. A completion message appears at the top of the screen.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.clearApb' /> feature is only available in **Anti-Passback** zones.
+* The <Cmd sid='arena.tree.contextMenu.clearApb' /> feature is only available for **Anti-Passback**.
 
-* For more information about how to set up **anti-passback** in the zone, refer to the [following](settings-advanced-ac-apb).
+* For more information about **Anti-Passback** settings, refer to [the following](settings-advanced-ac-apb).
 
-* For more information about **Anti-Passback**, refer to the [following](../../reference/glossary#apb).
+* For more information about **Anti-Passback**, refer to [the following](../../reference/glossary#apb).
 
 :::
 
-## Clear Alarm {#alarm}
+## Clear alarm {#alarm}
 
-You can deactivate the alarm that occurred in this zone. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. A completion message appears at the top right of the screen.
+You can clear the alarm that occurred at the door or device. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. A completion message appears at the top of the screen.
 
 :::info
 
-The <Cmd sid='arena.tree.contextMenu.clearAlarm' /> feature cannot be used in occupancy limit zone.
+<Cmd sid='arena.tree.contextMenu.clearAlarm' /> cannot be used in the occupancy limit feature.
 
 :::
 
-## Activate/Deactivate Zone {#zone-revitalizationdisabled}
+## Activate/Deactivate {#zone-revitalizationdisabled}
 
-You can activate a zone or deactivate an unused zone. The deactivated area is indicated by the <IcDisable width='20px' height='20px' /> icon. Click <Cmd sid='arena.tree.contextMenu.enable' /> or <Cmd sid='arena.tree.contextMenu.disable' /> in the popup menu.
+You can activate advanced access control or disable unused features. Deactivated advanced access control displays the <IcDisable width='20px' height='20px' /> icon. Click <Cmd sid='arena.tree.contextMenu.enable' /> or <Cmd sid='arena.tree.contextMenu.disable' /> in the popup menu.
 
-## Control Security Zone {#security-zone-control}
+## Security/Disarm {#security-zone-control}
 
-You can control the security status of the security zone. Click <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> in the popup menu.
+You can set or clear the security for the door or device. Click <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> in the popup menu.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.arm' /> and <Cmd sid='arena.tree.contextMenu.disarm' /> features are only available in security zones.
+* <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> can only be used on advanced access control set for security.
 
-* For more information about how to set up the intrusion alarm zone, refer to the [following](settings-advanced-ac-intrusion-alarm).
+* For more information on security settings, refer to [the following](settings-advanced-ac-intrusion-alarm).
 
 :::
 
-## View Muster Zone Report {#confirmation-of-muster-reports}
+## View muster report {#confirmation-of-muster-reports}
 
-To view a report for a muster zone, click <Cmd sid='arena.tree.contextMenu.musterReport' />. When the new window opens, you will be taken to a page where you can check the report for the muster zone.
+To check the report on musters, click <Cmd sid='arena.tree.contextMenu.musterReport' />. In the new window, you can check user entry and exit times and whether the stay time has exceeded through the user list and devices set with the muster feature.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.musterReport' /> feature is only available in the muster zone.
+* The <Cmd sid='arena.tree.contextMenu.musterReport' /> feature is only available in musters.
 
-* For more information about how to set up the muster zone, refer to the [following](settings-advanced-ac-muster).
+* For more information about the muster feature, refer to [the following](settings-advanced-ac-muster).
 
 :::
 
-## Monitor Occupancy Limit Zone {#monitoring-of-restrictions-on-the-number-of-people}
+## Monitoring occupancy limit {#monitoring-of-restrictions-on-the-number-of-people}
 
-You can check the status of an occupancy zone. Click <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> in the popup menu. When a new window opens, you will be taken to a page that monitors occupancy limit zone.
+You can check the status of devices set with the occupancy limit feature. Click <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> in the popup menu. In the new window, go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> menu. You can check the status in the <Cmd sid='zone.occupancy.title' product='2' /> list.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> feature is only available in occupancy limit zones.
+* The <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> feature is only available for items set with the occupancy limit feature.
 
-* For more information about how to set up the occupancy limit zone, refer to the [following](settings-advanced-ac-occupancy).
+* For more information on the occupancy limit settings, refer to [the following](settings-advanced-ac-occupancy).
 
 :::
 
-## View Details {#detail-view}
+## View details {#detail-view}
 
-You can check detailed information about the zone and the event history. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Detailed information and event history for the zone appear on the right side of the screen.
+You can check detailed information and event occurrence history of advanced access control. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Detailed information and event occurrence history are displayed in the right panel of the screen.
 
-* **Zone Details**: You can check the name, location, status information, and more for the zone.
+* **Detailed Information**: You can check the name and status of the advanced access control feature, device information, etc.
 
-* <Cmd sid='arena.recentEvent' />: You can check the recent event list that occurred in the selected zone.
+* <Cmd sid='arena.recentEvent' />: You can check the list of recent events occurred in the selected advanced access control.
 
 :::info
 
-For more information about each item in the zone's details section, refer to the [following](settings-advanced-ac).
+For more information on each item in the advanced access control details section, refer to [the following](settings-advanced-ac).
 
 :::

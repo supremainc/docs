@@ -1,0 +1,132 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-im120.svg' className='none' height={300} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-im120.svg' className='none' height={300} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Input Module</Td>
+
+<Td>드릴링 템플릿</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>고정용 나사 x12</Td>
+
+<Td>스페이서 x6</Td>
+
+<Td>다이오드 x2</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## 각 부분의 명칭 및 기능
+
+<Magnify src='/img/device/name-function-each-part-im120.svg' width='45%' zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | 이름 |
+| :--: | -- |
+| 1 | **RESET** 버튼 |
+| 2 | **INIT** 버튼 |
+| 3 | **SUPERVISED INPUT (9:11)** 연결 |
+| 4 | **SUPERVISED INPUT (6:8)** 연결 |
+| 5 | **RELAY 1** 연결 |
+| 6 | **TAMPER** 또는 **AUX IN (0:1)** 연결 |
+| 7 | **RS-485** 종단 저항 스위치 |
+| 8 | **RS-485** 연결 |
+| 9 | **POWER** 연결 (DC 12 또는 24 V) |
+| 10 | **RELAY 0** 연결 |
+| 11 | **SUPERVISED INPUT (3:5)** 연결 |
+| 12 | **SUPERVISED INPUT (0:2)** 연결 |
+
+:::info
+
+* 장치와 연동된 제품을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
+
+* 제품을 재부팅하려면 **RESET** 버튼을 누르세요.
+
+:::
+
+<PageBreak />
+
+### LED 상태 표시등
+
+LED 상태 표시등의 색상으로 제품 작동 상태를 확인할 수 있습니다.
+
+| 항목 | LED | 상태 |
+| -- | -- | -- |
+| **POWER** | 빨간색 점등 | 전원 켜짐 |
+| **STATUS** | 초록색 점등 | 보안 세션을 이용하여 연결된 상태 |
+| ^ | 파란색 점등 | 마스터 장치와 연결되지 않은 상태 |
+| ^ | 분홍색 점등 | 펌웨어 업그레이드를 진행 중인 상태 |
+| ^ | 노란색 점등 | 암호키가 다르거나 OSDP 패킷 유실로 RS-485 통신 오류가 발생한 상태 |
+| ^ | 하늘색 점등 | 보안 세션을 이용하지 않고 연결된 상태 |
+| ^ | 초록색 점멸 | 설정 초기화 진행 시 최종 입력 대기 상태 |
+| ^ | 초록색 점등 | 설정 초기화 완료 |
+| **SUPERVISED INPUT (0~11)** | 빨간색 점등 | 입력 신호를 수신 중인 상태 |
+| **RELAY (0, 1)** | 빨간색 점등 | 릴레이 동작 |
+| **RS-485 TX** | 주황색 점멸 | RS-485 데이터를 송신 중인 상태 |
+| **RS-485 RX** | 초록색 점멸 | RS-485 데이터를 수신 중인 상태 |
+| **AUX IN (0, 1)** | 주황색 점등 | AUX 신호를 수신 중인 상태 |
+| **TAMPER** | 주황색 점등 | 탬퍼 동작 |
+
+### 설치 예제
+
+이 제품은 BioStar X와 연동하여 실시간으로 감지된 입력에 대해 즉각적인 릴레이 동작을 지원하며, 마스터 장치와의 연결이 끊긴 상태에서 감지된 입력에 대해서도 릴레이를 동작시키거나 로그를 남길 수 있습니다.
+
+마스터 장치와의 네트워크를 위한 1채널 RS-485, 단선, 단락, 켜짐, 꺼짐 상태를 감지할 수 있는 12채널의 Supervised Input, 2채널 릴레이, 2채널 AUX 입력과 1채널 탬퍼 입력을 지원합니다.
+
+<Image src='/img/device/installation-example-im120.png' width="80%" className='none' />

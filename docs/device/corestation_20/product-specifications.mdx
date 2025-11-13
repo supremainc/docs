@@ -1,0 +1,52 @@
+---
+id: product-specifications
+title: 제품 사양
+description: 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+keywords: [일반, 인터페이스, 전기 규격, 제품 치수]
+---
+
+제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+
+import specs from '@site/static/specs/cs20_specs.json';
+
+{/* 일반 */}
+<SpecSection data={specs.corestation20.general} />
+
+{/* 저장 용량 */}
+<SpecSection data={specs.corestation20.storage} />
+
+{/* 인터페이스 */}
+<SpecSection data={specs.corestation20.interface} />
+
+{/* 전기 규격 */}
+<SpecSection data={specs.corestation20.power} />
+
+:::note
+
+<Anno id='anno1'>1)</Anno> Input 또는 Supervised 입력 중 선택하여 사용할 수 있습니다.
+
+<Anno id='anno2'>2)</Anno> PoE+ (IEEE 802.3at, 30 W) 또는 PoE++ (IEEE 802.3bt, 60~100 W) 전원이 필요합니다. 표준 PoE (IEEE 802.3af, 15.4 W)는 지원하지 않습니다. 표준 PoE를 사용할 경우 장치가 불안정하게 동작하거나 영구적으로 손상될 수 있습니다. 장치를 연결하기 전에 네트워크 스위치 또는 PoE 인젝터가 PoE+ 또는 PoE++를 지원하는지 반드시 확인하세요.
+
+:::
+
+:::info
+
+* 제품 사양은 성능 개선을 위해 예고 없이 변경될 수 있습니다.
+
+* 제품이나 문제 해결을 위한 자세한 정보는 [다음 링크](https://kb.supremainc.com/knowledge/)를 참고하세요.
+
+:::
+
+<PageBreak />
+
+## 크기 및 무게
+
+:::note
+
+* 단위: mm
+
+* 치수 공차는 ±0.3 mm입니다.
+
+:::
+
+<Image src='/img/device/cs20-dimension.png' width='50%' className='none' alone />

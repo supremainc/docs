@@ -1,0 +1,183 @@
+{
+  "bioentryr2": {
+    "credentials": {
+      "label": "크리덴셜",
+      "label_id": "specs.credentials",
+      "items": {
+        "biometrics": {
+          "label": "바이오 인식",
+          "label_id": "specs.credentials.biometrics",
+          "type": "biometric",
+          "items": {
+            "fingerprint": {
+              "label": "지문",
+              "label_id": "specs.credentials.biometrics.fingerprint",
+              "type": "fingerprint",
+              "items": {
+                "image_dimension": {
+                  "label": "이미지 크기",
+                  "label_id": "specs.credentials.biometrics.fingerprint.image_dimension",
+                  "value": {
+                    "ko": "272 x 320 픽셀",
+                    "en": "272 x 320 pixels"
+                  }
+                },
+                "image_bit_depth": {
+                  "label": "이미지 비트 심도",
+                  "label_id": "specs.credentials.biometrics.fingerprint.image_bit_depth",
+                  "value": {
+                    "ko": "8비트, 256 회색조",
+                    "en": "8 bits, 256 gray scale"
+                  }
+                },
+                "resolution": {
+                  "label": "해상도",
+                  "label_id": "specs.credentials.biometrics.fingerprint.resolution",
+                  "value": "500 dpi"
+                },
+                "template": {
+                  "label": "템플릿",
+                  "label_id": "specs.credentials.biometrics.fingerprint.template",
+                  "value": "SUPREMA / ISO19794-2 / ANSI-378"
+                },
+                "extractor_matcher": {
+                  "label": "추출 / 매치",
+                  "label_id": "specs.credentials.biometrics.fingerprint.extractor_matcher",
+                  "value": {
+                    "ko": "MINEX 인증 및 호환",
+                    "en": "MINEX certified and compliant"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "rfcard": {
+          "label": "RF 카드",
+          "label_id": "specs.credentials.rfcard",
+          "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa"
+        },
+        "rf_distance": {
+          "label": "RF 인식 거리",
+          "label_id": "specs.credentials.rf_distance",
+          "value": "MIFARE/DESFire: 50 mm, EM/Felica: 30 mm",
+          "annotation_label": "anno2"
+        },
+        "mobile": {
+          "label": "모바일",
+          "label_id": "specs.credentials.mobile",
+          "value": "NFC"
+        }
+      }
+    },
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "cpu": {
+          "label": "CPU",
+          "label_id": "specs.general.cpu",
+          "value": "1.0 GHz"
+        },
+        "memory": {
+          "label": "메모리",
+          "label_id": "specs.general.memory",
+          "value": "32 MB Flash + 32 MB RAM"
+        },
+        "crypto_chip": {
+          "label": "크립토 칩",
+          "label_id": "specs.general.crypto_chip",
+          "value": true
+        },
+        "led_type": {
+          "label": "LED",
+          "label_id": "specs.general.led_type",
+          "value": {
+            "ko": "다중 색상",
+            "en": "Multi-color"
+          }
+        },
+        "sound": {
+          "label": "소리",
+          "label_id": "specs.general.sound",
+          "value": {
+            "ko": "멀티톤 버저",
+            "en": "Multi-tone Buzzer"
+          }
+        },
+        "operating_temp": {
+          "label": "동작 온도",
+          "label_id": "specs.general.operating_temp",
+          "value": "-20 °C ~ 50 °C"
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": "-40 °C ~ 70 °C"
+        },
+        "operating_humidity": {
+          "label": "동작 습도",
+          "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 80 %, 비응축",
+            "en": "0 % ~ 80 %, non-condensing"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 90 %, 비응축",
+            "en": "0 % ~ 90 %, non-condensing"
+          }
+        },
+        "certifications": {
+          "label": "인증",
+          "label_id": "specs.general.certifications",
+          "value": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE"
+        }
+      }
+    },
+    "interface": {
+      "label": "인터페이스",
+      "label_id": "specs.interface",
+      "items": {
+        "rs485": {
+          "label": "RS-485",
+          "label_id": "specs.interface.rs485",
+          "value": {
+            "ko": "1채널 슬레이브",
+            "en": "1 ch Slave"
+          }
+        },
+        "rs485_protocol": {
+          "label": "RS-485 통신 프로토콜",
+          "label_id": "specs.interface.rs485_protocol",
+          "value": {
+            "ko": "OSDP V2 호환",
+            "en": "OSDP V2 compliant"
+          }
+        },
+        "tamper": {
+          "label": "탬퍼",
+          "label_id": "specs.interface.tamper",
+          "value": true
+        }
+      }
+    },
+    "power": {
+      "label": "전기 규격",
+      "label_id": "specs.power",
+      "items": {
+        "power": {
+          "label": "전원",
+          "label_id": "specs.power.power",
+          "value": {
+            "ko": [ "전압: 12 Vdc", "전류: 최대 0.2 A" ],
+            "en": [ "Voltage: 12 Vdc", "Current: Max. 0.2 A" ]
+          }
+        }
+      }
+    }
+  }
+}

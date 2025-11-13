@@ -24,7 +24,7 @@ Provides initial procedures for getting started with the device.
 
 <Td><Image src='/img/device/component-drilling-template-bs3.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/device/component-quick-guide.svg' alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
 
 <Td><Image src='/img/device/component-connection-cables-bs3.svg' className='none' alone /></Td>
 
@@ -74,15 +74,12 @@ Provides initial procedures for getting started with the device.
 </Tbody>
 </Table>
 
-:::info
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
-* Components may vary according to the installation environment.
+<Componentsnote />
 
-* When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
-
-:::
-
-## Name and Function of Each Part
+## Name and function of each part
 
 <Image src='/img/device/name-function-each-part-bs3.png' className='none' width='60%' />
 
@@ -108,9 +105,9 @@ Provides initial procedures for getting started with the device.
 
   * Blue/Green blinking:
 
-    * Fails to receive an IP address when <Cmd>DHCP</Cmd> is enabled.
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
 
-    * Disconnection with the master device when in <Cmd>Slave</Cmd> mode.
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
 
   * Red/Purple blinking: Device is locked.
 
@@ -120,7 +117,7 @@ Provides initial procedures for getting started with the device.
 
 * **Ethernet**: Connect the Ethernet cable.
 
-* **Input (5-pin)**: Connect the Input cable.
+* **Input (5-pin)**: Connect the input cable.
 
 * **USB expansion port (5-pin)**: Connect other accessory products.
 
@@ -136,101 +133,17 @@ Provides initial procedures for getting started with the device.
 
 * **USB (Type-C) memory slot**: Connects the USB memory.
 
-## Cables and Connectors
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
 
-### Power supply
+<CablesandConnectors />
 
-<Image src='/img/device/cable-power.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name     | Color                |
-| --- | -------- | -------------------- |
-| 1   | PWR +VDC | Red (White stripe)   |
-| 2   | PWR GND  | Black (White stripe) |
-
-</div>
-
-### Relay
-
-<Image src='/img/device/cable-relay-3pin.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name    | Color  |
-| --- | ------- | ------ |
-| 1   | RLY NO  | White  |
-| 2   | RLY COM | Blue   |
-| 3   | RLY NC  | Orange |
-
-</div>
-
-### RS-485
-
-<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name     | Color  |
-| --- | -------- | ------ |
-| 1   | 485 TRXP | Blue   |
-| 2   | 485 TRXN | Yellow |
-| 3   | 485 GND  | Black  |
-| 4   | SH GND   | Gray   |
-
-</div>
-
-### Input
-
-<Image src='/img/device/cable-input-5pin.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name    | Color  |
-| --- | ------- | ------ |
-| 1   | INPUT0 | Red    |
-| 2   | INPUT1 | Yellow |
-| 3   | INPUT2 | Orange |
-| 4   | INPUT GND | Black  |
-| 5   | SH GND  | Gray   |
-
-</div>
-
-### Wiegand Input
-
-<Image src='/img/device/cable-wiegand-4pin.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name   | Color |
-| --- | ------ | ----- |
-| 1   | WG D0  | Green |
-| 2   | WG D1  | White |
-| 3   | WG GND | Black |
-| 4   | SH GND | Gray  |
-
-</div>
-
-### Wiegand Output
-
-<Image src='/img/device/cable-wiegand-4pin.svg' className='none' alone />
-
-<div className='overflow-x col3--10-20-70'>
-
-| Pin | Name   | Color |
-| --- | ------ | ----- |
-| 1   | WG D0  | Green |
-| 2   | WG D1  | White |
-| 3   | WG GND | Black |
-| 4   | SH GND | Gray  |
-
-</div>
-
+{/* 올바른 얼굴 등록 및 인증 방법 */}
 import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
 
-<DocumentA />
+<DocumentA name='60~100 cm' />
 
-## Note for QR Code Usage and Device License
+## Note for QR code usage and device license
 
 ### How to scan a QR code
 
@@ -238,15 +151,13 @@ You can issue a QR code to a user and use it as an authentication method. Scan t
 
 <Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
 
-* Keep 30 ~ 40 cm of distance between the device’s camera and the QR code.
+* Keep the distance between the device's camera and the QR code at 30~40 cm.
 
 * Position the QR code in the center of the scan screen of the device.
 
 * When authenticating with the QR code downloaded to your smartphone, adjust the brightness of your smartphone so that the device can read the QR code clearly.
 
-* If do not follow the instructions on the screen, it may take a long time to scan the QR code, or it may fail.
-
-### Notes for Device License
+### Notes for device license
 
 * Using the QR Code authentication requires a separate device license. Contact the place of purchase to issue a device license.
 
@@ -254,96 +165,7 @@ You can issue a QR code to a user and use it as an authentication method. Scan t
 
 * Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
 
-## Master Admin Settings
+{/* 마스터 관리자 설정하기 */}
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
 
-The <Cmd>Master Admin</Cmd> feature is designed to enhance device security by strengthening overall administrator privileges and preventing unauthorized access and configuration changes. With this feature, you must **register a Master Admin** on the device, and only registered Master Admins can access the administrator menu and change device settings.
-
-:::note
-
-**What is a Master Admin?**
-
-* If you use the device without setting up a Master Admin, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator.
-
-* The Master Admin cannot be deleted directly, and they are deleted only through <Cmd>Factory Reset</Cmd>.
-
-:::
-
-### Registering Master Admin on a New Device
-
-For new devices, registering a Master Admin is mandatory. If you do not register a Master Admin, device usage will be restricted.
-
-:::info
-
-* On new devices, the <Cmd>Master Admin</Cmd> registration screen appears upon initial boot. You cannot proceed to the next screen unless you register a <Cmd>Master Admin</Cmd>.
-
-* Even if you assign an overall device administrator via BioStar 2, you must register a <Cmd>Master Admin</Cmd> to use all device functions.
-
-* The new device cannot be downgraded to a lower version.
-
-:::
-
-1. When you boot a new device for the first time, the <Cmd>Master Admin</Cmd> registration screen appears.
-
-    <Image src='/img/how-to/setting-master-admin-1.png' width='300px' />
-
-1. To register a <Cmd>Master Admin</Cmd>, you must enroll at least two types of credentials. Select and enroll your preferred two credential types.
-
-    <Image src='/img/how-to/setting-master-admin-2.png' width='300px' />
-
-    Credentials that can be enrolled for <Cmd>Master Admin</Cmd> are as follows:
-
-    <Table>
-      <Tbody>
-      <Row>
-        <Th>Credential Type</Th>
-        <Th>Max Quantity</Th>
-        <Th>Details</Th>
-      </Row>
-      <Row>
-        <Td>Card</Td>
-        <Td>Up to 4</Td>
-        <Td>Supports CSN and Wiegand type only<br/>No duplicate enrollment within the same type</Td>
-      </Row>
-      <Row>
-        <Td>Face</Td>
-        <Td>Up to 2</Td>
-        <Td>Available only on devices with the same algorithm</Td>
-      </Row>
-      <Row>
-        <Td>Fingerprint</Td>
-        <Td>Up to 2</Td>
-        <Td>-</Td>
-      </Row>
-      <Row>
-        <Td>PIN</Td>
-        <Td>1</Td>
-        <Td>Minimum 8 digits</Td>
-      </Row>
-      </Tbody>
-    </Table>
-
-    :::note
-
-    **Enrollment Conditions:**
-
-    * At least two different types of credentials must be enrolled.
-
-    * The same conditions apply to both new and upgraded devices.
-
-    * All credentials supported by the device can be used for authentication.
-
-    :::
-
-1. After enrolling at least two types of credentials, press the <Cmd>Complete</Cmd> button to finish <Cmd>Master Admin</Cmd> registration.
-
-    <Image src='/img/how-to/setting-master-admin-3.png' width='300px' />
-
-### Additional Information
-
-* **Manual Device Hash Key Change**
-
-  When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding.
-
-* **RS-485 Biometric Image Transmission Restriction**
-
-  Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
+<Masteradminsettings />

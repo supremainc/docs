@@ -1,0 +1,218 @@
+---
+id: ip-device-settings
+title: Set Up IP Device
+description: You can change the settings of the IP device.
+keywords:
+  - IP device
+  - Network
+  - Server
+  - RS-485
+  - Others
+  - LED/Buzzer
+  - Device Settings
+  - Device connection
+  - Firmware upgrade
+  - Restart device
+  - Initialize settings
+  - Change password
+---
+
+You can change the settings of the IP device. You can change settings quickly and conveniently compared to changing settings via the management program on a PC or using command cards.
+
+:::info
+
+Some settings may not apply if the device's firmware version is low. To apply all settings, please refer to [the following](#device-firmware-upgrade) to upgrade the firmware.
+
+:::
+
+## Change device settings
+
+You can change the device's network, server, RS-485, LED and buzzer, and other settings.
+
+:::info
+
+Biometric devices only support network and server settings.
+
+:::
+
+1. Enable Bluetooth on your mobile device and run Suprema Device Manager.
+
+2. Select the IP device from the main screen.
+
+3. Check the device ID to select the device from the list of connectable devices, or bring the mobile device closer to the device to connect.
+
+4. After setting the device password, press <Cmd sid='ui_367' product='dev' />. To display the entered password on the screen, press <Image src='/img/common/ico-password.svg' ico />.
+
+   :::info
+
+   * The device password can be set to a number of 6~32 characters.
+
+   * Be careful not to lose the device password. If you lose the device password, you must initialize the device to connect to it.
+
+   :::
+
+5. After setting each item, press <Cmd sid='ui_288' product='dev' /> to save.
+
+### Network settings
+
+<Image src='/img/device/ip-device-network.png' width={250} />
+
+* <Cmd sid='ui_355' product='dev' />: Enter the port that the device will use.
+
+* <Cmd sid='ui_012' product='dev' />: Enable this to allow the device to use dynamic IP. If you enable this option, you cannot enter network information manually.
+
+* <Cmd sid='ui_029' product='dev' />, <Cmd sid='ui_068' product='dev' />, <Cmd sid='ui_191' product='dev' />: Enter the network information for the device.
+
+* <Cmd sid='ui_013' product='dev' />: Enter the DNS server address.
+
+### Server
+
+<Image src='/img/device/ip-device-server.png' width={250} />
+
+* <Cmd sid='ui_188' product='dev' />: You can set the server communication method. To search and connect the device from the server, select <Cmd sid='ui_181' product='dev' />. To set the server information to connect the device, select <Cmd sid='ui_281' product='dev' />.
+
+* <Cmd sid='ui_182' product='dev' />: Enter the server's IP address.
+
+* <Cmd sid='ui_183' product='dev' />: Enter the server's domain address.
+
+* <Cmd sid='ui_189' product='dev' />: Enter the server's port.
+
+### RS-485
+
+<Image src='/img/device/ip-device-rs485.png' width={250} />
+
+* <Cmd sid='ui_050' product='dev' />: Set the RS-485 mode.
+
+* <Cmd sid='ui_298' product='dev' />: Set the RS-485 transmission speed.
+
+### Others
+
+<Image src='/img/device/ip-device-others.png' width={250} />
+
+* <Cmd sid='ui_132' product='dev' />: You can check the memory usage status.
+
+* <Cmd sid='ui_150' product='dev' />: If a tamper event occurs on the device, it can be set to delete all stored user information, logs, and security keys. To use the security tamper feature, activate it.
+
+### LED / Buzzer
+
+<Image src='/img/device/device-manager-led-buzzer.png' width={250} />
+
+* <Cmd sid='ui_272' product='dev' />: You can set the colors displayed on the device LED during normal operation.
+
+* <Cmd sid='ui_325' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays when scanning a card.
+
+* <Cmd sid='ui_262' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
+
+* <Cmd sid='ui_263' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
+
+:::info
+
+* LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
+
+* <Image src='/img/common/ico-cancel2.svg' ico />Selecting this slot will skip displaying the color set for that slot and display the color set for the next slot.
+
+:::
+
+## Connect device {#connect-device}
+
+You can search for and connect to installed IP devices nearby. When connected to Suprema Device Manager, you can upgrade the device's firmware, restart the device, initialize settings, initialize device settings excluding network settings, change the administrator password, and use various features.
+
+1. Enable Bluetooth on your mobile device and run Suprema Device Manager.
+
+2. Select the IP device from the main screen. A list of connectable devices will appear.
+
+   <Image src='/img/device/ip-device-connect.png' width={250} />
+
+3. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
+
+4. Enter the connection password. To display the entered password on the screen, press <Image src='/img/common/ico-password.svg' ico />.
+
+5. Press <Cmd sid='ui_367' product='dev' /> to complete the device connection.
+
+:::info
+
+<Cmd sid='ui_291' product='dev' />: At the top of the device list screen, press <IcFilter/> to set it to display only the desired devices in the list.
+
+:::
+
+## Upgrade device firmware {#device-firmware-upgrade}
+
+You can easily upgrade the device's firmware.
+
+:::info
+
+* To upgrade the firmware, you need to download the firmware file to your mobile device. The latest firmware can be downloaded from the [Suprema Download Center](https://download.supremainc.com/).
+
+* During the firmware upgrade, keep the distance between the device and mobile device within 1m.
+
+:::
+
+1. Refer to [connect device](#connect-device) to connect to the device for firmware upgrade.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_018' product='dev' />.
+
+   <Image src='/img/device/ip-device-fwupgrade.png' width={250} />
+
+3. Select the firmware from the path where the firmware file is saved. The firmware upgrade is in progress.
+
+4. Press <Cmd sid='ui_367' product='dev' /> to complete the firmware upgrade.
+
+## Restart device
+
+You can restart the device.
+
+1. Refer to [connect device](#connect-device) to connect to the device to restart.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_287' product='dev' />.
+
+   <Image src='/img/device/ip-device-restart.png' width={250} />
+
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the <Cmd sid='ui_276' product='dev' /> feature. For detailed configuration instructions, refer to [app settings](initial-setup#app-settings).
+
+## Initialize settings
+
+You can initialize device settings.
+
+1. Refer to [connect device](#connect-device) to connect to the device to initialize the settings.
+
+2. <Image src='/img/common/ico-option.svg' ico /> → Press <Cmd sid='ui_195' product='dev' />.
+
+   <Image src='/img/device/ip-device-restore-default.png' width={250} />
+
+3. If you initialize the device, all settings applied to the device will be restored to factory defaults. Press <Cmd sid='ui_367' product='dev' /> to continue.
+
+## Initialize device settings excluding network
+
+You can initialize device settings excluding network settings.
+
+1. Refer to [connect device](#connect-device) to connect to the device to initialize device settings excluding network settings.
+
+2. <Image src='/img/common/ico-option.svg' ico /> → Press <Cmd sid='ui_105' product='dev' />.
+
+   <Image src='/img/device/ip-device-restore-default-network.png' width={250} />
+
+3. If you initialize device settings excluding network, the remaining settings excluding the network will be initialized. Press <Cmd sid='ui_367' product='dev' /> to continue.
+
+## Change device password
+
+You can change the device's password.
+
+1. Refer to [connect device](#connect-device) to connect to the device to change password.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_156' product='dev' />.
+
+   <Image src='/img/device/ip-device-change-password.png' width={250} />
+
+3. Enter the current password and the new password you will use.
+
+   <Image src='/img/device/device-manager-change-password.png' width={250} />
+
+4. Press <Cmd sid='ui_367' product='dev' /> to complete the password change.
+
+:::info
+
+* The device password can be set to a number of 6~32 characters.
+
+* Be careful not to lose the device password. If you lose the device password, you must initialize the device to connect to it.
+
+:::

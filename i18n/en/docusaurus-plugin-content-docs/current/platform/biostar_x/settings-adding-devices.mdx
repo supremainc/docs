@@ -1,7 +1,7 @@
 ---
 id: settings-adding-devices
 title: Register Device
-description: This guide decripte how to register a device in BioStar X.
+description: This guide describes how to register a device in BioStar X.
 keywords:
   - Device
   - Add device
@@ -19,9 +19,9 @@ This guide explains how to register a device in **BioStar X**. Registering a dev
 
 * If the user ID type on **BioStar X** differs from the device, change the device settings according to **BioStar X**’s user ID configuration.
 
-* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, refer to the [following](settings-server-server#user-and-device-management).
+* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information on details, refer to [the following](settings-server-server#userid-type).
 
-* To register the device and set details, refer to the [following](settings-adding-devices).
+* Refer to [the following](settings-device-details) to register a device and configure its details.
 
 :::
 
@@ -29,7 +29,9 @@ This guide explains how to register a device in **BioStar X**. Registering a dev
 
 Check the following before registering the device.
 
-* Set access levels, access groups, and floor levels for access control. For more information, refer to the [following](settings-access-control).
+* Set access levels, access groups, and floor levels for access control. For more information, refer to [the following](settings-access-control).
+
+* Create a group to manage devices efficiently. Refer to [the following](settings-manage-device-group) for more information.
 
 ## Quick registration {#quickadd-device}
 
@@ -37,15 +39,17 @@ Devices on the same network as **BioStar X** can be automatically searched and r
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.device.root' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
 
 3. Click <Cmd sid='device.searchDevice' product='2' /> in the device list.
+
+   <Image src='/img/biostarx-setting-device-search-device.png' />
 
 4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be registered will be displayed. If the desired device is not in the list, click <Cmd sid='button.search' product='2' /> in the top right corner.
 
    <Image src='/img/biostarx-setting-add-device.png' />
 
-5. Select the devices to register or uncheck those you do not want to register.
+5. Select the devices to register from the device list or deselect devices to not register.
 
 6. To change the name of the device to be registered, click <IcEdit /> in the <Cmd sid='device.info.name' product='2' /> column and make the change.
 
@@ -63,7 +67,7 @@ The added devices will appear in the device list. Select the added device and cl
 
 :::info
 
-Devices for which the IP address is unavailable or needs to be changed can be modified by clicking <Cmd sid='button.setIp' product='2' />. For more information, refer to the [following](##setipaddress).
+Devices for which the IP address is unavailable or needs to be changed can be modified by clicking <Cmd sid='button.setIp' product='2' />. Refer to [the following](#setipaddress) for more information.
 
 :::
 
@@ -105,9 +109,11 @@ You can specify the IP address and port number of a specific device to registrer
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.device.root' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
 
 3. Click <Cmd sid='button.func.advancedSearch' product='2' /> in the device list.
+
+   <Image src='/img/biostarx-setting-device-adv-search-device.png' />
 
 4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be registered.
 

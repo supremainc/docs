@@ -11,7 +11,19 @@ You can monitor and control camera videos linked to doors, areas, and devices in
 
 :::info
 
-**Video Tile** is the area in the center of the screen where the camera video appears. It is an interface component that allows simultaneous placement and monitoring of multiple camera videos. Users can resize or reposition the video in the video tile and close or switch to full screen as needed.
+* **Video Tile** is the area in the center of the screen where the camera video appears. It is an interface component that allows simultaneous placement and monitoring of multiple camera videos. Users can resize or reposition the video in the video tile and close or switch to full screen as needed.
+
+  <Image src='/img/biostarx-monitoring-video-tiles.png' width='70%' />
+
+* For information on how to integrate with VMS and add and manage cameras, refer to [the following](settings-videos).
+
+* If a load error occurs when playing back recordings from VMS, install the certificate on the VMS server, and install the VMS server's certificate on the client PC. For more information, refer to the followings.
+
+  * [Install the certificate on the VMS server](settings-video-integration#install-vms-certification)
+
+  * [Install the VMS server certificate on the client PC](settings-video-integration#video-troubleshooting)
+
+* Video monitoring is available with additional options for **Advanced** licenses and higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
 
 :::
 
@@ -27,13 +39,13 @@ You can add camera videos to the video tile for monitoring. The video tile is lo
 
 The selected camera video can be placed in the video tile in the center of the screen.
 
-<Image src='/img/monitoring-door-control-open-video.png' alt='Open video' />
+<Image src='/img/monitoring-door-control-open-video.png' />
 
 :::info
 
-* You can also add videos by dragging and dropping a camera from the door list in the sidebar to the video tile area.
+* You can also select cameras from the list in the sidebar and drag and drop them into the video tile area.
 
-  <Image src='/img/monitoring-door-control-open-video-drag-drop.png' alt='Drag and drop' />
+  <Image src='/img/monitoring-door-control-open-video-drag-drop.png' />
 
 * Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears. {/* In this case, add a tab to the screen and click <Cmd sid='arena.tree.contextMenu.openVideo' /> again. */}
 
@@ -41,65 +53,75 @@ The selected camera video can be placed in the video tile in the center of the s
 
 ## Control video {#control-video}
 
-The videos placed in the video tile are played in real-time by default. You can pause the video or review video from the past using the video playback tools.
+The videos placed in the video tile are played in real-time by default. You can adjust the playback of the video or view recordings from the past using the playback tools.
 
-<Image src='/img/monitoring-video-player.png' alt='Player' />
+<Image src='/img/monitoring-video-player.png' alone />
 
-* <Num num='1' />: Name of the camera device.
+<Calloutlists>
 
-* <Num num='2' />: Button to play the video in full screen (<IcFullscreen/>) or exclude it from the video tile (<IcClose/>).
+1. This is the name of the camera device.
 
-* <Num num='3' />: Slider to adjust the playback position of the video. Dragging the slider allows you to view past video.
+2. This is a button that allows you to play the video in full screen (<Image src='/img/menus/ico-fullscreen.svg' ico alone />) or exclude it from the video tile (<Image src='/img/menus/ico-close.svg' ico alone />).
 
-* <Num num='4' /> <IcPlay/> / <IcPause/>: Click the button to play or pause the video.
+3. This is a slider that allows you to adjust the playback position of the video. Dragging the slider allows you to view past video.
 
-* <Num num='5' />: Icon indicating that the current video is being played in real-time.
+4. To play or pause the video, click the <Image src='/img/menus/ico-play.svg' ico alone /> or <Image src='/img/menus/ico-pause.svg' ico alone /> button.
+
+5. This icon indicates that the current video is being played in real-time. To switch back to live video when playing back video from the past, click this icon.
+
+</Calloutlists>
 
 ## Door control tool {#door-control-tool}
 
-After adding a video, use the <Cmd sid='arena.map.doorControl' /> tool for additional actions. Selecting a camera linked to the door activates the <Cmd sid='arena.map.doorControl' /> tool, allowing you to open, lock, unlock, or clear alarms for the door.
+After adding a video, use the <Cmd sid='arena.map.doorControl' /> tool for additional actions. Selecting the camera linked to the door from the video tile activates the <Cmd sid='arena.map.doorControl' /> tool that can control the door. You can use functions such as open or lock the door, unlock, and disable the alarm.
 
 <Image src='/img/monitoring-door-control.png' alt='Door control' />
 
 :::info
 
-* This feature requires a camera to be linked to the door.
+* The <Cmd sid='arena.map.doorControl' /> tool can be used when there is nothing open in the right panel. If the detailed information is open in the right panel, use it while it is closed.
 
-* For more information about the features available in the <Cmd sid='arena.map.doorControl' /> tool, refer to the [following](control-door).
+* This feature requires a camera to be linked to the door. For information on linking doors and cameras, refer to [the following](settings-videos-rule).
+
+* For more information about the features available in the <Cmd sid='arena.map.doorControl' /> tool, refer to [the following](control-door).
 
 :::
 
 ## Check video alarm {#check-the-video-alarm}
 
-When an alarm state is triggered for one of the doors linked to the camera, an alarm icon appears on the video. The alarm icon appears for 3 seconds before disappearing and reappearing. All alarms linked to the door must be cleared for the alarm icon to disappear.
+When an alarm state is triggered for one of the doors linked to the camera, an alarm icon appears on the video. All alarms linked to the door must be cleared for the alarm icon to disappear.
 
 <Image src='/img/monitoring-video-alarm.png' alt='alarm' />
 
 To clear the door alarm, right-click on the door in the list and click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the popup menu. Alternatively, click <Cmd sid='arena.map.doorControl' /> tool, then click <Cmd sid='arena.tree.contextMenu.clearAlarm' />.
 
-A success or failure message will appear at the top of the selected video.
+<Image src='/img/biostarx-monitoring-camera-clear-alarm.png' />
+
+A success or failure message will appear at the top of the screen.
+
+<Image src='/img/biostarx-monitoring-camera-clear-alarm-success.png' />
 
 :::info
 
-For more information about the <Cmd sid='arena.eventTable.event' /> section at the bottom of the screen, refer to the [following](monitoring-event).
+For more information about the <Cmd sid='arena.eventTable.event' /> section at the bottom of the screen, refer to [the following](monitoring-event).
 
 :::
 
 ## Check video log {#check-video-log}
 
-When a specific event occurs at a door set by rules, the corresponding event item in the <Cmd sid='arena.eventTable.title' /> section will display a video log icon.
+When a specific event occurs at a door set by a rule, the corresponding event item in the <Cmd sid='arena.eventTable.title' /> section list will display a video log (<IcVidLog />) icon. Clicking on the event item with the video log icon will show detailed information on the right side of the screen, allowing you to view video from the time the specific event occurred. You can check the video of the time a specific event occurred.
 
-Clicking on the event item with the video log icon will show detailed information on the right side of the screen, allowing you to view video from the time the specific event occurred.
+<Image src='/img/biostarx-monitoring-camera-event-video-log.png' />
 
 :::info
 
-* The video log icon is displayed only when a camera is linked to the door.
+* The video log icon is displayed only when a camera is linked to the door. For information on linking cameras and doors, refer to [the following](settings-videos-rule).
 
 * The first connected camera is prioritized for playback based on event setting rules. To view the video on a larger screen, double-click on it.
 
 * You can link up to 4 cameras to a door and can click the camera button at the bottom of the video to play the desired camera's video. If only one camera is linked, the camera button will not be displayed.
 
-* For more information about the <Cmd sid='arena.eventTable.event' /> section at the bottom of the screen, refer to the [following](monitoring-event).
+* For more information about the <Cmd sid='arena.eventTable.event' /> section at the bottom of the screen, refer to [the following](monitoring-event).
 
 :::
 
@@ -111,17 +133,17 @@ You can resize the video placed in the video tile or reposition it as desired. A
 
 1. Click on the video whose size you want to change to activate the frame of the selected video.
 
-   <Image src='/img/monitoring-video-adjust-size-01.png' alt='Video Selection' />
+   <Image src='/img/monitoring-video-adjust-size-01.png' alone />
 
 2. Hover the mouse cursor over the edges of the frame to change the cursor shape to one that can resize.
 
 3. Click on a corner and drag to the desired size. 
 
-   <Image src='/img/monitoring-video-adjust-size-02.png' alt='Adjust Video Size' />
+   <Image src='/img/monitoring-video-adjust-size-02.png' alone />
 
 You can resize the video proportionally to the size of the placed tile. Conversely, you can also reduce the size of the video.
 
-<Image src='/img/monitoring-video-adjust-size-03.png' alt='Adjust video size' />
+<Image src='/img/monitoring-video-adjust-size-03.png' alone />
 
 ### Enlarge video size {#video-size-enlargement}
 
@@ -133,7 +155,7 @@ To enlarge the video to the entire size of the video tile, double-click on the v
 
 Click on the video to move and drag it to the desired location. You can change the position of the selected video.
 
-<Image src='/img/monitoring-video-move-position.png' alt='Change Video Position' />
+<Image src='/img/monitoring-video-move-position.png' alone />
 
 {/* 크기를 늘린 영상은 이동되지 않습니다. ??? */}
 
@@ -142,14 +164,14 @@ Click on the video to move and drag it to the desired location. You can change t
 <Columns>
 <Column>
 
-<Image src='/img/monitoring-video-fullscreen.png' alt='Full Screen' />
+<Image src='/img/monitoring-video-fullscreen.png' alone />
 
 </Column>
-<Column>
+<Column className='padding--l10'>
 
 To view the video in full screen, click <IcFullscreen /> at the upper right corner of the video.
 
-To exit full screen, click <IcRestorscreen/> at the upper right of the screen, or press the <kbd>ESC</kbd> key.
+To exit full screen, click the <IcRestorscreen/> button at the top right of the screen. Or press the <kbd>ESC</kbd> key on the keyboard.
 
 </Column>
 </Columns>
@@ -159,10 +181,10 @@ To exit full screen, click <IcRestorscreen/> at the upper right of the screen, o
 <Columns>
 <Column>
 
-<Image src='/img/monitoring-video-close.png' alt='Close video' />
+<Image src='/img/monitoring-video-close.png' alone />
 
 </Column>
-<Column>
+<Column className='padding--l10'>
 
 To close the video placed in the video tile, click <IcClose /> at the upper right of the video.
 
@@ -171,4 +193,6 @@ To close the video placed in the video tile, click <IcClose /> at the upper righ
 
 ## Close all videos {#close-all-video}
 
-To close all videos placed in the video tile, click <IcMoreB/> at the upper right corner of the screen. In the popup menu, click <Cmd>Close All</Cmd>.
+To close all videos placed in the video tile, click <IcMoreB/> at the upper right corner of the screen. Click <Cmd sid='arena.monitoring.contextMenu.closeAll' /> in the popup menu.
+
+<Image src='/img/biostarx-monitoring-video-close-all.png' />

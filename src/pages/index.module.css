@@ -91,6 +91,18 @@ a.banner {
   }
 }
 
+@media screen and (max-width: 520px) {
+  .hero__title {
+    font-size: 3em !important;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .hero__title {
+    font-size: 2em !important;
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;

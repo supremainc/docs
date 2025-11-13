@@ -1,0 +1,156 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioLite N2</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>드릴링 템플릿</Td>
+
+<Td>수축 튜브</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>PVC 앵커 x2</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>브래킷 고정용 나사(별 모양)</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>다이오드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-bln2.png' className='none' width='30%' />
+
+* **디스플레이**: 동작을 위한 UI를 제공합니다.
+
+* **기능 버튼**: 근태 키, 문자 변경 등에 사용합니다.
+
+* **키패드**
+
+  * **0\~9**: 숫자 또는 문자를 입력할 때 사용합니다.
+
+  * **2**, **4**, **6**, **8**: 원하는 항목으로 이동할 때 사용합니다.
+
+* **OK 버튼**: 근태 모드 선택 및 설정을 저장할 때 사용합니다. 작업 코드가 설정되어 있다면 길게 눌러서 사용자의 작업 코드를 변경할 수 있습니다.
+
+* **ESC 버튼**: 메뉴 열기, 이전 화면으로 이동, 입력을 취소할 때 사용합니다.
+
+* **지문 인식부**: 출입을 위해 지문을 인식시키는 부분입니다.
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **케이블**
+
+  전원 / RS-485 / 이더넷 / 릴레이 / Wiegand 입출력 / Input
+
+* **스피커**: 소리를 들을 수 있습니다.
+
+### 케이블
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bln2.svg' className='none' width='70%' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | PWR +VDC | 빨간색 |
+| 2 | PWR GND | 검은색 (흰띠) |
+| 3 | 485 TRXP | 파란색 (흰띠) |
+| 4 | 485 TRXN | 노란색 (검은띠) |
+| 5 | 485 GND | 흰색 (검은띠) |
+| 6 | ENET RXN | 노란색 |
+| 7 | ENET RXP | 초록색 |
+| 8 | ENET TXN | 빨간색 |
+| 9 | ENET TXP | 검은색 |
+| 10 | RLY NO | 회색 (흰띠) |
+| 11 | RLY COM | 초록색 (흰띠) |
+| 12 | RLY NC | 주황색 (흰띠) |
+| 13 | WG D0 | 초록색 |
+| 14 | WG D1 | 흰색 |
+| 15 | INPUT GND | 회색 |
+| 16 | INPUT1 | 갈색 |
+| 17 | INPUT0 | 보라색 |
+
+</Column>
+</Columns>
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

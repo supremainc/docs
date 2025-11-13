@@ -1,5 +1,5 @@
 {
-  "biostation3": {
+  "bioentryw3": {
     "credentials": {
       "label": "크리덴셜",
       "label_id": "specs.credentials",
@@ -54,7 +54,7 @@
             },
             "model2": {
               "label": "BEW3-APWB",
-              "value": "12125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno2"
             }
           }
@@ -62,7 +62,7 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire/EM/iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
+          "value": "MIFARE/DESFire/EM/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -94,9 +94,7 @@
         "lcd_type": {
           "label": "디스플레이",
           "label_id": "specs.general.lcd_type",
-          "value": {
-            "ko": "1.3\" PMOLED"
-          }
+          "value": "1.3\" PMOLED"
         },
         "led_type": {
           "label": "LED",
@@ -140,7 +138,12 @@
         "camera": {
           "label": "카메라",
           "label_id": "specs.general.camera",
-          "value": "2 MP 2 EA"
+          "value": {
+            "ko": [ "적외선: 2M 픽셀", "비주얼: 2M 픽셀" ],
+            "en": [ "IR: 2M pixels", "Visual: 2M pixels" ],
+            "es": [ "IR: 2M píxeles", "Visual: 2M píxeles" ],
+            "jp": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
+          }
         },
         "ip_rating": {
           "label": "IP 등급",
@@ -211,6 +214,11 @@
             "en": "Supported (10/100 Mbps, auto MDI/MDI-X)"
           }
         },
+        "network_protocol": {
+          "label": "네트워크 프로토콜",
+          "label_id": "specs.interface.network_protocol",
+          "value": "TCP, UDP"
+        },
         "rs485": {
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
@@ -252,7 +260,7 @@
           }
         },
         "poe": {
-          "label": "PoE+",
+          "label": "PoE",
           "label_id": "specs.interface.poe",
           "type": "model",
           "items": {
@@ -353,7 +361,7 @@
           }
         },
         "wiegand_pullup": {
-          "label": "Wiegnad 출력 풀업 저항",
+          "label": "Wiegand 출력 풀업 저항",
           "label_id": "specs.power.wiegand_pullup",
           "value": {
             "ko": "1 kΩ으로 내부 풀업",

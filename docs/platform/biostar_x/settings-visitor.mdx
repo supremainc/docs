@@ -1,6 +1,6 @@
 ---
 id: settings-visitor
-title: 방문자 설정
+title: 방문자 설정하기
 description: 방문자 관리를 위해 방문처와 방문 PC를 구성할 수 있으며, 방문자를 위한 출입 약관 및 안내 문구를 설정할 수 있습니다. 또한 커스텀 방문자 필드를 이용해 방문자에게 요구할 정보를 직접 추가할 수도 있습니다.
 keywords: [방문자 관리, 커스텀 필드]
 ---
@@ -9,19 +9,24 @@ keywords: [방문자 관리, 커스텀 필드]
 
 :::info
 
-* <Cmd sid="common.visitor" product='2' /> 설정은 방문자 라이선스를 활성화했을 때 나타납니다.
+* <Cmd sid="common.visitor" product='2' /> 설정은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
 
-* <Cmd sid="common.visitor" product='2' /> 메뉴를 사용하려면 <Cmd sid="setting.server.automaticUserSync" product='2' /> 또는 <Cmd sid="setting.server.serverMatching.use" product='2' /> 옵션을 활성화해야 합니다.
+* <Cmd sid="common.visitor" product='2' /> 메뉴를 사용하려면 <Cmd sid="setting.server.automaticUserSync" product='2' /> 또는 <Cmd sid="setting.server.serverMatching.use" product='2' /> 옵션을 활성화해야 합니다. 자세한 내용은 [다음 문서](settings-server-server)를 참고하세요.
 
 :::
+
+## 방문 설정 {#settings-visitor}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid="common.visitor" product='2' />를 클릭하세요.
 
-1. 각 항목을 설정하세요.
+1. 다음 안내에 따라 방문자 설정을 구성하세요.
 
-## 방문처 설정하기
+<Steps>
+<Step>
+
+### 방문처 설정 {#settings-visitor-site}
 
 각 방문처의 방문 신청용 또는 방문자 관리용 PC에서 사용할 출입 그룹과 카드 사용 여부를 설정할 수 있습니다. 카드를 사용할 경우 카드 종류 및  데이터 형식도 설정할 수 있습니다.
 
@@ -29,13 +34,19 @@ keywords: [방문자 관리, 커스텀 필드]
 
 * <Cmd sid="setting.server.custom_field.configure.th.name" product='2' />: 방문처의 이름을 입력할 수 있습니다.
 
-    :::info
+  :::info
 
-    * 방문처 이름은 최대 48자까지 입력할 수 있습니다.
+  * 방문처 이름은 최대 48자까지 입력할 수 있습니다.
 
-    :::
+  :::
 
 * <Cmd sid="visitor.accessGroup" product='2' />: 방문자에게 할당할 출입 그룹을 선택할 수 있습니다.
+
+  :::info
+
+  방문자를 위한 출입 그룹을 미리 설정해 놓으면 관리가 용이합니다. 출입 그룹 설정에 대한 자세한 내용은 [다음 문서](settings-access-control-manage-access-group)를 참고하세요.
+
+  :::
 
 * <Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' />: 카드 사용 여부를 선택할 수 있습니다.
 
@@ -43,9 +54,12 @@ keywords: [방문자 관리, 커스텀 필드]
 
 * <Cmd sid="user.cardEnrol.cardFormat" product='2' />: 카드 데이터를 읽는 형식을 설정할 수 있습니다. <Cmd sid="user.cardEnrol.cardFormat" product='2' />은 <Cmd sid="user.cardType" product='2' />를 <Cmd sid="user.cardEnrol.cardTypeWiegand" product='2' />로 설정할 경우에만 활성화됩니다.
 
-방문처 설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요.
+방문처 설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' /> 버튼을 클릭하세요.
 
-## 방문 PC 설정하기
+</Step>
+<Step>
+
+### 방문 PC 설정 {#settings-visitor-pc}
 
 방문 신청용 또는 방문자 관리용 PC를 설정할 수 있습니다.
 
@@ -59,6 +73,8 @@ keywords: [방문자 관리, 커스텀 필드]
 
 * <Cmd sid="visitor.site" product='2' />: 해당 방문 PC에서 방문을 관리할 방문처를 선택하세요.
 
+방문 PC 설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요.
+
 :::info
 
 * 방문 PC 이름은 최대 48자까지 입력할 수 있습니다.
@@ -69,19 +85,36 @@ keywords: [방문자 관리, 커스텀 필드]
 
 :::
 
-방문 PC 설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요.
+</Step>
+<Step>
 
-* <Cmd sid="visitor.link.visitPCKIOSK" product='2' />: 방문 신청용 PC의 바탕 화면에 방문 신청 페이지 바로가기 아이콘을 생성할 수 있습니다. 방문자신청 페이지 바로가기 URL을 방문 신청용 PC의 바탕 화면에 끌어다 놓으세요.
-
-## 방문 PC 선택하기
+### 방문 PC 선택 {#settings-visitor-assign-pc}
 
 <Cmd sid="visitor.pc.setting" product='2' />에서 설정한 PC를 선택하여 사용 중인 PC에 할당할 수 있습니다.
 
 <Image src='/img/biostarx-settings-visitor-visit-pc-select.png' className='none' />
 
-설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요.
+설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요. 
 
-## 약관 & 방문자 설정하기
+</Step>
+<Step>
+
+### 방문자 신청 페이지 바로가기 {#settings-visitor-pc-link}
+
+방문 신청용 PC의 바탕 화면에 방문 신청 페이지 바로가기 아이콘을 생성할 수 있습니다. <Cmd sid="visitor.link.visitPCKIOSK" product='2' /> 항목의 URL 주소를 바탕 화면에 끌어다 놓으세요.
+
+<Image src='/img/biostarx-settings-visitor-page-shortcut.png' />
+
+웹 브라우저에서 URL 주소로 접속하면 방문 신청 페이지를 확인할 수 있습니다.
+
+<Image src='/img/biostarx-settings-visitor-welcome-screen.png' />
+
+</Step>
+
+</Steps>
+
+
+## 약관 & 방문자 설정하기 {#settings-visitor-terms}
 
 방문자 출입 약관, 개인정보 처리 방침, 안내 문구 등 방문자 관련 주요 설정을 관리할 수 있습니다.
 
@@ -89,45 +122,46 @@ keywords: [방문자 관리, 커스텀 필드]
 
 * **출입 이용 약관**: 출입에 대한 이용 약관 및 약관 동의 문구를 입력할 수 있습니다. <IcEdit />을 클릭해 입력 필드를 활성화한 뒤 이용 약관 및 약관 동의 문구를 입력하세요.
 
-    :::info
+  :::info
 
-    * 출입 약관은 최대 65,535자까지 입력할 수 있습니다.
+  * 출입 약관은 최대 65,535자까지 입력할 수 있습니다.
 
-    * 약관 동의 문구는 최대 64자까지 입력할 수 있습니다.
+  * 약관 동의 문구는 최대 64자까지 입력할 수 있습니다.
 
-    :::
+  :::
 
 * **개인 정보 처리 방침**: 방문자가 방문 시 제공한 개인 정보에 대한 처리 방침 및 해당 방침에 대한 동의 문구를 입력할 수 있습니다. <IcEdit />을 클릭해 입력 필드를 활성화한 뒤 개인 정보 처리 방침 및 해당 방침에 대한 동의 문구를 입력하세요.
 
-    :::info
+  :::info
 
-    * 개인 정보 처리 방침은 최대 65,535자까지 입력할 수 있습니다.
+  * 개인 정보 처리 방침은 최대 65,535자까지 입력할 수 있습니다.
 
-    * 개인 정보 처리 방침에 대한 동의 문구는 최대 64자까지 입력할 수 있습니다.
+  * 개인 정보 처리 방침에 대한 동의 문구는 최대 64자까지 입력할 수 있습니다.
 
-    :::
+  :::
 
 * <Cmd sid="visitor.periodKeepSensitive" product='2' />: 방문자가 방문 시 제공한 개인 정보에 대한 보관 기간을 설정할 수 있습니다. <IcEdit />을 클릭해 입력 필드를 활성화한 뒤 개인 정보 보관 기간을 일 단위로 입력하세요.
 
-    :::info
+  :::info
 
-    * 개인 및 민감 정보 보관 기간이 만료된 방문자 목록은 <Cmd sid="common.visitor" product='2' /> 메뉴에서 삭제할 수 있습니다.
+  * 개인 및 민감 정보 보관 기간이 만료된 방문자 목록은 <Cmd sid="common.visitor" product='2' /> 메뉴에서 삭제할 수 있습니다.
 
-    :::
+  :::
 
 * <Cmd sid="visitor.guideAfterRegister" product='2' />: 방문 신청 완료 시 팝업 화면으로 표시할 안내 문구를 입력할 수 있습니다. <IcEdit />을 클릭해 입력 필드를 활성화한 뒤 안내 문구를 입력하세요.
 
-    :::info
+  :::info
 
-    * 방문 신청 완료 시 안내 문구는 최대 65,535자까지 입력할 수 있습니다.
+  * 방문 신청 완료 시 안내 문구는 최대 65,535자까지 입력할 수 있습니다.
 
-    * 안내 문구를 입력하지 않을 경우 방문 신청 완료 시 안내 문구 팝업 화면이 출력되지 않습니다.
+  * 안내 문구를 입력하지 않을 경우 방문 신청 완료 시 안내 문구 팝업 화면이 출력되지 않습니다.
 
-    :::
+  :::
 
 * <Cmd sid="visitor.defaultActivePeriod" product='2' />: 방문자의 출입에 대한 허가 기간을 설정할 수 있습니다. <IcEdit />을 클릭해 입력 필드를 활성화한 뒤 방문자 기본 출입 허가 기간을 일 단위로 입력하세요.
 
-## 커스텀 방문자 필드 설정하기
+
+## 커스텀 방문자 필드 설정하기 {#settings-visitor-custom-field}
 
 방문자의 부가 정보를 입력할 필드를 추가할 수 있으며, 추가된 필드는 방문 신청 화면에 나타납니다.
 
@@ -141,6 +175,8 @@ keywords: [방문자 관리, 커스텀 필드]
 
 * <Cmd sid="setting.server.custom_field.configure.th.data" product='2' />:선택 상자 목록에 표시할 선택지를 입력하세요. 각 항목은 세미 콜론(;) 기호로 구분합니다. 데이터는 <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />을 <Cmd sid="setting.server.custom_field.type.combobox" product='2' />로 설정한 경우에만 활성화됩니다.
 
+설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' /> 버튼을 클릭하세요.
+
 :::info
 
 * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />로 추가된 커스텀 방문자 필드에는 숫자와 문자를 입력할 수 있습니다.
@@ -150,5 +186,3 @@ keywords: [방문자 관리, 커스텀 필드]
 * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />로 추가된 커스텀 방문자 필드는 방문자가 항목을 선택할 수 있습니다. 커스텀 방문자 필드를 설정할 때 데이터에 **Option 1**; **Option 2**; **Option 3**; **Option 4**를 입력하세요.
 
 :::
-
-설정을 저장하려면 <Cmd sid="visitor.setting.button.apply" product='2' />을 클릭하세요.

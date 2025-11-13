@@ -7,7 +7,7 @@ keywords: [라이선스]
 
 슈프리마에서 발급한 <Cmd sid="setting.server.license.device" product='2' />를 활성화하여 라이선스에 해당하는 특정 기능을 사용하세요.
 
-<Cmd sid="setting.server.license.device" product='2' />는 **BioStar X** 및 USB 메모리를 이용하여 장치에 활성화할 수 있습니다.
+<Cmd sid="setting.server.license.device" product='2' />는 **BioStar X** 및 USB 메모리를 이용하여 장치의 라이선스를 활성화할 수 있습니다.
 
 :::info
 
@@ -26,7 +26,7 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
 * 유효한 장치 라이선스 파일을 준비하세요. 장치 라이선스 파일은 구입처에 문의하세요.
 
-* 대상 장치가 **BioStar X**에 등록되어 있는지 확인하세요.
+* 대상 장치가 **BioStar X**에 등록되어 있는지 확인하세요. 장치 등록에 대한 자세한 내용은 [다음 문서](settings-adding-devices)를 참고하세요.
 
 
 ## 장치 라이선스 적용 {#apply-device-license}
@@ -35,11 +35,15 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.license.root' /> → <Cmd sid="setting.server.license.device" product='2' />를 클릭하세요.
 
-1. <Cmd sid="user.list.csvImport.browse" product='2' /> 버튼을 클릭하고 장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오세요.
+1. <Cmd sid="user.list.csvImport.browse" product='2' /> 버튼을 클릭하세요.
+
+    <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+1. 장치 라이선스가 저장된 경로에서 장치 라이선스 파일을 불러오세요.
 
 1. 불러온 라이선스에 해당하는 정보가 <Cmd sid="setting.server.license.name" product='2' />, <Cmd sid="setting.server.license.device.count" product='2' />, <Cmd sid="setting.server.license.device.list" product='2' /> 항목에 표시됩니다.
 
-    <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+    <Image src='/img/biostarx-settings-license-device-license-loaded.png' />
 
 1. <Cmd sid="setting.server.license.device.list" product='2' />을 확인하고, 장치 라이선스를 활성화하려면 <Cmd sid="setting.server.license.button.activate" product='2' /> 버튼을 클릭하세요. 
 
@@ -98,7 +102,13 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
   * <Cmd sid="setting.server.license.device.status" product='2' />: 장치의 현재 상태입니다. <Cmd sid="setting.server.license.device.list.normal" product='2' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
 
-    * <Cmd sid="setting.server.license.device.list.normal" product='2' />, <Cmd sid="setting.server.license.device.list.disconnected" product='2' />, <Cmd sid="setting.server.license.device.list.notSupported" product='2' />, <Cmd sid="setting.server.license.device.list.unregistered" product='2' />
+    - <Cmd sid="setting.server.license.device.list.normal" product='2' />, <Cmd sid="setting.server.license.device.list.disconnected" product='2' />, <Cmd sid="setting.server.license.device.list.notSupported" product='2' />, <Cmd sid="setting.server.license.device.list.unregistered" product='2' />
+
+    :::note
+
+    장치가 라이선스의 기능을 지원하지 않는 모델이거나 펌웨어 버전이 낮으면 <Cmd sid='setting.server.license.device.status' product='2' />가 <Cmd sid='setting.server.license.device.list.notSupported' product='2' />으로 표시됩니다. 해당 기능의 지원 모델과 펌웨어 버전을 확인하세요.
+
+    :::
 
   * <Cmd sid="setting.server.license.status" product='2' />: 라이선스 활성화 여부입니다. <Cmd sid="setting.server.license.device.list.notActivated" product='2' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
 

@@ -1,14 +1,14 @@
 ---
 id: settings-manage-account
 title: Manage Operation Permissions
-description: This guide describes how to assign operator permissions and add and configure custom permissions to enrolled users.
+description: This guide describes how to assign operator permissions and add and configure custom permissions to registered users.
 keywords:
   - Account
   - Operating permission
   - Custom permission
 ---
 
-This guide describes how to assign operator permissions and add and configure custom permissions to enrolled users. Operator permissions control the tasks a user can perform on **Biostar X**. **Custom permissions** allow the setting of additional permissions beyond the default operator permissions.
+This guide describes how to assign operator permissions and add and configure custom permissions to registered users. Operator permissions control the tasks a user can perform on **Biostar X**. **Custom permissions** allow the setting of additional permissions beyond the default operator permissions.
 
 ## Check permission types
 
@@ -26,9 +26,11 @@ Guide on granting operator permissions to general users.
 
 2. Click <Cmd sid='setting.menu.account.root' /> on the left sidebar.
 
-3. Click the desired account type from the account list.
+3. Click the desired item from the account list.
 
 4. Click <Cmd sid='button.plusAdd' product='2' /> in the <Cmd sid='settings.account.addUser' product='2' /> option.
+
+   <Image src='/img/biostarx-settings-account-add-permission.png' caption />
 
 5. Select the user to whom you want to grant operator permissions from the user list.
 
@@ -38,7 +40,7 @@ Guide on granting operator permissions to general users.
 
 * If it’s difficult to find users due to their quantity, click <IcSearch /> to search and select the desired user.
 
-* Operator permissions can also be granted when adding or modifying user information. Please refer to the [following](set-permission) for details.
+* Operator permissions can also be granted when adding or modifying user information. Please refer to [the following](set-permission) for details.
 
 * If permissions have already been set when adding or modifying user information, they will be included in the <Cmd sid='settings.account.addUser' product='2' /> option.
 
@@ -56,11 +58,13 @@ Guide on excluding operator permissions granted to users.
 
 4. Click <IcTrash2 /> for the user from whom you wish to exclude permissions in the <Cmd sid='settings.account.addUser' product='2' /> option.
 
+   <Image src='/img/biostarx-settings-account-exclude-permission.png' caption />
+
 5. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
 
 ## Checking operator permission details
 
-Clicking an account in the account list under the <Cmd sid='setting.menu.account.root' /> menu allows you to view detailed operator permissions for that account.
+Click the account in the account list in the <Cmd sid='setting.menu.account.root' /> menu to view the details of the operational permissions for that account.
 
 * <Cmd sid='common.name' product='2' />: The name of the selected operator permission.
 
@@ -70,14 +74,14 @@ Clicking an account in the account list under the <Cmd sid='setting.menu.account
 
 * <Cmd sid='settings.account.menu.setting' product='2' />: Can view the permissions granted to access the menu.
 
-* <Cmd sid='settings.account.addUser' product='2' />: Can view users granted permissions.
-
   * <Cmd sid='common.editRead' product='2' />: Grants permission to add, edit, or delete items in the menu.
 
   * <Cmd sid='common.read' product='2' />: Grants permission to enter the menu and only view the settings.
 
+* <Cmd sid='settings.account.addUser' product='2' />: Can view users granted permissions.
+
 :::info
 
-For methods to grant permissions to specific users, refer to the [following](#addUserPermission).
+For methods to grant permissions to specific users, refer to [the following](#addUserPermission).
 
 :::

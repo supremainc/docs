@@ -1,0 +1,160 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bew2.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bew2.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry W2</Td>
+
+<Td>벽걸이용 브래킷</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>수축 튜브</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>브래킷 고정용 나사(별 모양)</Td>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-bew2.png' className='none' width='60%' />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 파란색/하늘색 점멸: 정상 동작 상태
+
+  * 파란색/초록색 점멸:
+
+    * <Cmd sid='ui_012' product='dev' />를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+    * <Cmd sid='ui_205' product='dev' /> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+    * 네트워크 설정 초기화 시
+
+  * 초록색 점멸: 입력 대기 상태
+
+  * 초록색/흰색 점멸: 슈프리마 Airfob Pass (BLE) 애플리케이션과 연결 중인 상태
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **지문 인식부**: 출입을 위해 지문을 인식시키는 부분입니다.
+
+* **초기화 버튼**
+
+  * 네트워크 설정을 초기화합니다. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings)를 참고하세요.
+
+  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+* **네트워크 상태 LED**: 네트워크 연결 상태를 표시합니다.
+
+* **케이블**
+
+  전원 / 이더넷 + PoE / RS-485 / Wiegand 입출력 / Input / 릴레이
+
+### 케이블
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bew2.svg' alone width={550} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | RLY NO | 회색 (흰 띠) |
+| 2 | RLY COM | 초록색 (흰 띠) |
+| 3 | RLY NC | 주황색 (흰 띠) |
+| 4 | VB2 | 파란색/갈색 |
+| 5 | VB1 | 빨간색/초록색 |
+| 6 | WG D0 | 초록색 |
+| 7 | WG D1 | 흰색 |
+| 8 | WG GND | 검은색 |
+| 9 | INPUT1 | 갈색 |
+| 10 | INPUT0 | 보라색 |
+| 11 | PWR +VDC | 빨간색 |
+| 12 | Not Connected | 분홍색 |
+| 13 | PWR GND | 검은색 (흰 띠) |
+| 14 | 485 TRXN | 노란색 (검은 띠) |
+| 15 | 485 TRXP | 파란색 (흰 띠) |
+| 16 | 485 GND | 흰색 (검은 띠) |
+| 17 | ENET TXP | 흰색 |
+| 18 | ENET TXN | 주황색 |
+| 19 | ENET RXP | 검은색 |
+| 20 | ENET RXN | 노란색 |
+
+</Column>
+</Columns>
+
+:::info
+
+AWG 26 크기의 도체는 여러 가지가 있으며, 배선할 때 일반적인 피복이나 동등한 재질로 보호되어야 합니다. 또한, 리드선이 18 AWG (0.82 mm2) 보다 큰 도체에 접촉하지 않도록 주의하세요.
+
+:::
+
+{/* ## 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

@@ -18,7 +18,7 @@ Before running the face migration feature, check the following items.
 
 **What is face migration?**
 
-It is a feature that generates two types of face templates from user images already stored on the BioStar X server. To synchronize faces as templates only during user synchronization, <Cmd>Face Migration</Cmd> must be performed.
+It is a feature that generates two types of face templates from user images already stored on the BioStar X server. To synchronize only the template for facial authentication during user synchronization, proceed with <Cmd sid='team.menu.faceMigration' />.
 
 :::
 
@@ -36,11 +36,13 @@ Please refer to the list below for the devices that can synchronize the face wit
 
 <summary>**Notice on FaceStation F2 v1.x.x Firmware Support Discontinuation**</summary>
 
-If you are using firmware version 1.x.x of FaceStation F2, you cannot use the facial migration feature of **BioStar X**. Upgrade the FaceStation F2 to the latest firmware. The latest firmware can be downloaded from the [Suprema Download Center](https://download.supremainc.com/).
+**BioStar X** optimized synchronization performance by changing to send only templates when synchronizing the user's face to the device. Therefore, support for the FaceStation F2 v1.x.x firmware, which can only extract templates from the device, will be discontinued. If you are currently using FaceStation F2 firmware version 1.x.x, upgrade to the latest firmware to use **BioStar X** with FaceStation F2.
+
+The latest firmware can be downloaded from the [Suprema Download Center](https://download.supremainc.com/).
 
 </details>
 
-### Notes on Face Template Types
+### Notes on face template types
 
 Differences in face template types for FaceStation F2, BioStation 3, and BioEntry W3.
 
@@ -52,7 +54,7 @@ Differences in face template types for FaceStation F2, BioStation 3, and BioEntr
 
 * **Synchronization Time Between Devices with Different Face Template Types**
 
-  Before performing <Cmd>Face Migration</Cmd>, if BioStation 3 or BioEntry W3 is added to an environment using only FaceStation F2, synchronization will require extracting NPU-type templates from actual images due to differing template types. This process may take a significant amount of time, depending on the number of faces enrolled on the server.
+  Before proceeding with <Cmd sid='team.menu.faceMigration' />, if you synchronize by adding BioStation 3 or BioEntry W3 to an environment that only used FaceStation F2, the template type will differ, and the NPU type template will be extracted from the image, which may take considerable time depending on the number of faces enrolled on the server.
 
 * **Face Enrollment Recommendations in BioStar X**
 
@@ -60,7 +62,7 @@ Differences in face template types for FaceStation F2, BioStation 3, and BioEntr
 
 :::
 
-### Device Related Notices
+### Device related notices
 
 The user data file exported from **BioStar X** contains only templates without images, so the user data file cannot be imported into FaceStation F2 and BioStation 3 that are using existing firmware.
 
@@ -80,13 +82,17 @@ When using FaceStation F2 or BioStation 3, it is recommended to upgrade to the l
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Select the <IcMoreW/> button at the top right of the screen and click the <Cmd>Face Migration</Cmd> button.
+2. Select the <IcMoreW/> button at the top right of the screen and click the <Cmd sid='team.menu.faceMigration' /> button.
 
-3. After checking the warning pop-up message, click <Cmd sid='common.button.ok' />.
+   <Image src='/img/biostarx-user-face-migration.png' />
+
+3. Check the contents of the warning popup and click <Cmd sid='common.button.continue' />.
+
+   <Image src='/img/biostarx-user-face-migration-warning.png' width='60%' />
 
 Proceeding with face migration. When face migration is complete, a result pop-up will appear. It will show the total number of faces enrolled, as well as the number of faces that were successfully migrated and those that failed.
 
-* After a successful migration, sync the user information to the device to apply the changes. For more information about how to send user information to the device, refer to the [following](transfer-user-info-to-device).
+* After a successful migration, sync the user information to the device to apply the changes. For more information about how to send user information to the device, refer to [the following](transfer-user-info-to-device).
 
 * If face migration fails, you can download a list of failed users as a CSV file. To delete all faces that failed migration, click the <Cmd sid='common.delete' /> button.
 
@@ -100,6 +106,6 @@ Proceeding with face migration. When face migration is complete, a result pop-up
 
 * For approximately 1,000 faces, the process takes about 18 minutes, although this may vary depending on server performance.
 
-* For more information about how to save only the template without saving the user's facial image to the server, refer to the [following](settings-server-server#storevisualfaceimage).
+* For more information about how to save only the template without saving the user's facial image to the server, refer to [the following](settings-server-server#storevisualfaceimage).
 
 :::

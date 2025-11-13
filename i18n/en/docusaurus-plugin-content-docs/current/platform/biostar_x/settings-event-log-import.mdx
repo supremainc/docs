@@ -8,11 +8,11 @@ keywords:
   - Import
 ---
 
-You can import the device logs to the **BioStar X** server to check events. This feature can be used if the <Cmd sid='setting.server.logUploadType' product='2' /> option is manually set in the <Cmd sid='setting.server' product='2' /> settings.
+You can import the logs of the device to the **BioStar X** server to check events. This feature is available when the <Cmd sid='setting.server.logUploadType' product='2' /> option is set to <Cmd sid='common.manual' product='2' /> in the <Cmd sid='setting.server' product='2' /> settings.
 
 :::info
 
-For more information about the <Cmd sid='setting.server.logUploadType' product='2' /> option, refer to the [following](settings-server-server#general).
+For more information on the <Cmd sid='setting.server.logUploadType' product='2' /> option, refer to [the following](settings-server-server#basic-setting).
 
 :::
 
@@ -20,15 +20,17 @@ For more information about the <Cmd sid='setting.server.logUploadType' product='
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> from the left sidebar.
+2. Click <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> in the left sidebar of the screen.
 
-3. Select the period for importing logs under <Cmd>Update Log from Devices</Cmd>.
+3. Select the period for fetching logs in <Cmd sid='setting.eventLogImport.UpdateLog.label' />.
 
-   * <Cmd sid='monitoring.updateLog.latest' product='2' />: Import logs from the date after the last saved logs to the **BioStar X** server.
+   <Image src='/img/biostarx-settings-event-log-from-device.png' />
 
-   * <Cmd sid='monitoring.updateLog.all' product='2' />: Import all logs from the device.
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.SinceLast' product='2' />: Imports logs since the date of the last log saved to the **BioStar X** server.
 
-   * Set period (<Cmd sid='monitoring.updateLog.from' product='2' /> / <Cmd sid='monitoring.updateLog.to' product='2' />): Choose the start and end dates for the logs to import.
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.All' product='2' />: Imports all logs from the device.
+
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.UserDefined' product='2' />: You can select the start and end dates to import logs.
 
 4. Click the <Cmd sid='button.updateLog' product='2' /> button to import the logs.
 
@@ -38,9 +40,11 @@ You can load event logs stored on an external storage device (USB) into **BioSta
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> from the left sidebar.
+2. Click <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> in the left sidebar of the screen.
 
-3. Click the button in the <Cmd sid='menu.dataImport' product='2' /> item.
+3. Click the <Cmd sid='button.browse' product='2' /> button for the <Cmd sid='menu.dataImport' product='2' /> item.
+
+   <Image src='/img/biostarx-settings-event-log-import-data.png' />
 
 4. Select the data file (*.tgz*) saved locally.
 

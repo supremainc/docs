@@ -1,27 +1,87 @@
 ---
 id: settings-system-daylight-saving-time
 title: Daylight Saving Time
-description: Daylight Saving Time (DST) is a function that adjusts the time to better utilize natural daylight.
+description: You can set Daylight Saving Time (DST) to automatically adjust system time to local legal time.
 keywords:
   - Daylight Saving Time
 ---
 
-<Cmd sid='common.dst' product='2' /> (DST) is a function that adjusts the time to better utilize natural daylight.
-
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
-
-2. In the left sidebar, click the <Cmd sid="setting.systemSecurity" product='2' />.
-
-3. Click <Cmd sid="button.plusAdd" product='2' />.
-
-4. You can set the <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' /> up to 10 times.
-
-   <Image src='/img/biostarx-settings-system-daylight-saving-time.png' className='none' />
-
-5. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+Set Daylight Saving Time (DST) to automatically adjust system time to local legal time. This ensures the accuracy of access logs and prevents time synchronization issues with other systems.
 
 :::info
 
-You cannot edit or delete a daylight saving time that is already in use.
+Set Daylight Saving Time in the following cases.
+
+* If you operate the system in countries or regions that adopt Daylight Saving Time
+
+* If you need to record accurate access times integrated with attendance management systems
+
+* If you manage a consolidated security system operating across multiple time zones
 
 :::
+
+## Add daylight saving time
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> on the left sidebar.
+
+3. Click <Cmd sid="button.plusAdd" product='2' />.
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time-init.png' />
+
+4. Set each item and click <Cmd sid="button.add" product='2' />.
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time.png' className='none' />
+
+5. Click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen to save the added settings.
+
+:::info
+
+* The current Daylight Saving Time settings cannot be modified or deleted. You can check the current Daylight Saving Time settings in <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> menu. 
+
+* For more information on applying the added Daylight Saving Time settings to the system, refer to [the following](settings-preferences#language-timezone).
+
+:::
+
+## Edit daylight saving time
+
+:::info
+
+The currently used settings cannot be modified. To modify, first uncheck the selection in <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> menu under <Cmd sid='preference.languageTimezone' product='2' /> section.
+
+:::
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> on the left sidebar.
+
+3. Click the <IcEdit /> button for the item you want to modify from the Daylight Saving Time list.
+
+4. When the <Cmd sid='setting.dst.alert.edit.title' product='2' /> window appears, modify the desired item.
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time-edit.png' />
+
+5. When you finish editing, click <Cmd sid='button.edit' product='2' />.
+
+6. Click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen to save the modified settings.
+
+:::info
+
+For more information on applying Daylight Saving Time settings to the system, refer to [the following](settings-preferences#language-timezone).
+
+:::
+
+## Delete daylight saving time
+
+Delete the unused Daylight Saving Time settings.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> on the left sidebar.
+
+3. Click the <IcTrash2 /> button for the item you want to delete from the Daylight Saving Time list.
+
+4. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
+
+5. Click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen to save the deleted settings.

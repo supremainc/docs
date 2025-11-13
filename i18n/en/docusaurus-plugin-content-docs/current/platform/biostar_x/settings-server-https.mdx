@@ -1,28 +1,122 @@
 ---
 id: settings-server-https
-title: HTTPS
-description: In order to connect BioStar X through HTTPS, it is necessary to register the IP address where BioStar X is installed and install the certificate.
+title: Install HTTPS Certificate
+description: To connect BioStar X via HTTPS, you must register the IP address of the server where BioStar X is installed to install the certificate.
 keywords:
   - HTTPS
   - Certificate
 ---
 
-In order to connect BioStar X through HTTPS, it is necessary to register the IP address where BioStar X is installed and install the certificate. For correct network connection, install the certificate before using BioStar X.
+To connect **BioStar X** via HTTPS, you must register the IP address of the server where **BioStar X** is installed to install the certificate.
+
+## When certificate installation is required
+
+If you access **BioStar X** without the HTTPS certificate installed, a security warning like the following will appear in your web browser.
+
+<Image src='/img/biostarx-settings-server-not-secure.png' />
+
+These warnings appear because the browser cannot verify the identity of the server. Installing the certificate will make the browser trust the **BioStar X** server, allowing for a secure HTTPS connection without security warnings.
+
+## Certificate installation
+
+Install the certificate before using **BioStar X** for correct network connectivity.
+
+1. Access the **BioStar X** login page.
+
+2. Click the <Cmd sid='auth.httpsDownload' /> link at the bottom of the screen.
+
+   <Image src='/img/biostarx-settings-server-login-down-https-cert.png' />
+
+3. Save the *cert-register.zip* file locally.
+
+4. Extract the downloaded file and run the *cert-register.exe* file. The **Enroll Certificate** program runs.
+
+5. Select **BioStar X** for **Target System**, enter the IP address of the PC where **BioStar X** is installed in **Server Address**, and click **Enrollment**.
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
+
+   :::note
+
+   The default port number for **BioStar X** is 443. If you changed the port number, enter the new port number in **Port**.
+
+   :::
+
+6. Check the security warning message and click **Yes**.
+
+Restart the web browser and enter the registered IP address to navigate to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** will appear.
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+:::info
+
+The IP address entered in **Enroll Certificate** must be the same as the IP address set in **BioStar X**. You can check it in the menu path <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> under <Cmd sid='setting.server.biostarIPAdress' product='2' />.
+
+:::
+
+## Certificate installation in server settings
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. In the left sidebar, click the <Cmd sid="setting.https.https" product='2' />.
+2. Click <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> in the left sidebar of the screen.
 
 3. Click <Cmd sid="button.certDownload" product='2' />.
 
    <Image src='/img/biostarx-settings-server-https.png' className='none' />
 
-4. Unzip the downloaded file and run **cert-register.exe** file. **Enrollment Certification** window will appears.
+4. Save the *cert-register.zip* file locally.
+
+5. Unzip the downloaded file and run **cert-register.exe** file. The **Enroll Certificate** program runs.
+
+6. Select **BioStar X** for **Target System**, enter the IP address of the PC where **BioStar X** is installed in **Server Address**, and click **Enrollment**.
 
    <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
 
-5. Enter the IP address of the PC where BioStar X is installed and click **Enrollment**.
+   :::note
 
-6. Check the security warning message and click **Yes**.
+   The default port number for **BioStar X** is 443. If you changed the port number, enter the new port number in **Port**.
 
-7. When you restart the web browser and enter the registered IP address, **Secure** will appear on the address bar of the web browser.
+   :::
+
+7. Check the security warning message and click **Yes**.
+
+Restart the web browser and enter the registered IP address to navigate to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** will appear.
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+## Certificate installation for VMS server {#vms-certification}
+
+If the following situations occur, you can install the certificate from the VMS server onto the client PC to resolve the issue.
+
+* When accessing **Video Management System** (VMS) through the browser, and a 'Not secure' warning appears
+
+* When real-time video plays on the <Cmd sid='shell.header.arena' /> page but recorded video does not play
+
+* When installing the VMS server and **BioStar X** on the same server
+
+:::info
+
+* Refer to [the following](settings-video-integration#install-vms-certification) for how to install the certificate on the VMS server.
+
+* The function to integrate with the VMS server must be purchased separately in an additional options package. For more information about the license policy, refer to [the following](licensing).
+
+:::
+
+### Certificate installation on client PC {#install-client-certification}
+
+1. Download the HTTPS certificate installer (*cert-register.zip*) from the login screen or <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> on the client PC where **BioStar X** is installed.
+
+2. Unzip the downloaded file and run **cert-register.exe** file. The **Enroll Certificate** program runs.
+
+3. Select **VMS** for **Target System** and enter the following information.
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+
+   * **Server Address**: IP address of the VMS server
+
+   * **Port**: Port number of the VMS server
+
+4. Click the **Enrollment** button.
+
+5. Check the security warning message and click **Yes**.
+
+Restart the web browser and check if the recorded video from the VMS server plays normally on the <Cmd sid='shell.header.arena' /> page.

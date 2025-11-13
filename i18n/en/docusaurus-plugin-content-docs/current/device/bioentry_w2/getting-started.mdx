@@ -1,0 +1,165 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bew2.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bew2.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry W2</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Shrink Tube</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>Bracket Fixing Screw<br/>(Star Shaped)</Td>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-bew2.png' className='none' width='60%' />
+
+* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue/Cyan Blinking: Normal Operating Status
+
+  * Blue/Green blinking:
+
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
+
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
+
+    * When Initializing Network Settings
+
+  * Green Blinking: Waiting for Input Status
+
+  * Green/White Blinking: Connecting to Suprema Airfob Pass (BLE) Application
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
+
+* **Reset Button**
+
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
+
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
+
+* **Network Status LED**: Indicates network connection status.
+
+* **Cable**
+
+  Power / Ethernet + PoE / RS-485 / Wiegand Input/Output / Input / Relay
+
+### Cable
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bew2.svg' alone width={550} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin |      Name     |         Color         |
+| :-: | :-----------: | :-------------------: |
+|  1  |     RLY NO    |  Gray (white stripe)  |
+|  2  |    RLY COM    |  Green (white stripe) |
+|  3  |     RLY NC    | Orange (white stripe) |
+|  4  |      VB2      |       Blue/Brown      |
+|  5  |      VB1      |       Red/Green       |
+|  6  |     WG D0     |         Green         |
+|  7  |     WG D1     |         White         |
+|  8  |     WG GND    |         Black         |
+|  9  |     INPUT1    |         Brown         |
+|  10 |     INPUT0    |         Purple        |
+|  11 |    PWR +VDC   |          Red          |
+|  12 | Not Connected |          Pink         |
+|  13 |    PWR GND    |  Black (white stripe) |
+|  14 |    485 TRXN   | Yellow (black stripe) |
+|  15 |    485 TRXP   |  Blue (white stripe)  |
+|  16 |    485 GND    |  White (black stripe) |
+|  17 |    ENET TXP   |         White         |
+|  18 |    ENET TXN   |         Orange        |
+|  19 |    ENET RXP   |         Black         |
+|  20 |    ENET RXN   |         Yellow        |
+
+</Column>
+</Columns>
+
+:::info
+
+There are various conductors of size AWG 26, which should be protected with standard sheathing or equivalent material when wiring. Also, ensure the lead does not contact conductors larger than 18 AWG (0.82 mm2).
+
+:::
+
+{/* ## 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

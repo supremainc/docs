@@ -1,0 +1,154 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+:::caution
+
+확장 모듈의 연결은 일반 펌웨어에서 지원되지 않으므로 별도의 커스텀 펌웨어가 필요합니다.
+
+:::
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-extm-sc.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pinmap-extm-sc.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>확장 모듈</Td>
+
+<Td>핀맵 라벨</Td>
+
+<Td>고정용 나사 x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>RS-232C 케이블</Td>
+
+<Td>RS-485 케이블</Td>
+
+</Row>
+
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-usb-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-usb-4pin-short.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>USB 확장 포트 연결 케이블 (BioStation 3)</Td>
+
+<Td>USB 확장 포트 연결 케이블 (BioStation 2a)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-extm-sc.png' className='none' width='80%' />
+
+* **USB 확장 포트 (5핀)**: 장치와 확장 모듈을 연결합니다.
+
+* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+
+* **RS-232C (4핀)**: RS-232C 케이블을 연결합니다.
+
+## 케이블 및 커넥터
+
+### RS-232C
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | 232 TX | 파란색 |
+| 2 | 232 RX | 노란색 |
+| 3 | 232 GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | 485 TRXP | 파란색 |
+| 2 | 485 TRXN | 노란색 |
+| 3 | 485 GND | 검은색 |
+| 4 | SH GND | 회색 |
+
+</div>
+
+### USB 확장 포트 연결 케이블
+
+<Image src='/img/device/cable-usb-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | MAIN VBUS | 빨간색 |
+| 2 | MAIN DM | 흰색 |
+| 3 | MAIN DP | 초록색 |
+| 4 | NC | - |
+| 5 | MAIN GND | 검은색 |
+
+</div>
+
+## 설치 예제
+
+:::caution
+
+확장 모듈의 연결은 일반 펌웨어에서 지원되지 않으므로 별도의 커스텀 펌웨어가 필요합니다.
+
+:::
+
+슈프리마 장치에 확장 모듈을 장착하면 추가적으로 RS-485와 RS-232C 포트를 사용할 수 있습니다.
+
+확장 모듈을 장착할 수 있는 슈프리마 장치는 다음과 같습니다.
+
+* BioStation 3
+
+* BioStation 2a
+
+<Image src='/img/device/installation-example-extm-sc.png' className='none' width='65%' />

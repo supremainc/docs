@@ -1,75 +1,88 @@
 ---
 id: settings-system-system-backup
 title: System Backup
-description: The System Backup menu backs up important information such as BioStar X's database, various settings, key values, etc.
+description: You can back up key information such as the database of **BioStar X**, various settings, and keys using the system backup menu.
 keywords:
   - System Backup
+  - backup
+  - Automatic backup
+  - Manual backup
+  - Data protection
+  - Restore
 ---
 
-The <Cmd sid="common.backup" product='2' /> menu backs up important information such as BioStar X's database, various settings, key values, etc.
+You can back up key information such as the database of **BioStar X**, various settings, and keys. Use the <Cmd sid="common.backup" product='2' /> feature to prevent data loss on the server or when transferring to a new PC.
+
+The supported backup methods are as follows.
+
+* **Manual Backup**: The user manually creates the backup file.
+
+* **Automatic Backup**: The system automatically creates backup files at predefined intervals.
 
 :::info
 
-If the MSSQL database and BioStar X are installed on different PCs, BioStar X System Backup and Restore cannot be used.
+* When restoring **BioStar X** from a backup file created on a previous PC to a new PC, you need to reissue the license.
+
+* If the SQL Server database and **BioStar X** are installed on different servers, you cannot use **BioStar X** system backup and restore.
+
+* For more information on system restore, refer to [the following](settings-system-system-restore).
 
 :::
 
+## Manual backup
+
+Users can create backup files manually.
+
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. General
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' /> on the left sidebar of the screen.
 
-3. Edit the necessary fields.
+3. In the <Cmd sid='common.backup.general' product='2' /> section, set the path to save the backup file and the maximum number of backup files.
 
-## General
+   <Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
 
-Set the necessary items for <Cmd sid="common.backup" product='2' />.
+   * <Cmd sid='backup.filePath' product='2' />: Enter the path to save the backup file. Enter a directory path that has already been created for the save path.
 
-<Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
+   * <Cmd sid='backup.numberFileToKeep' product='2' />: Set the maximum number of backup files.
 
-* <Cmd sid="backup.filePath" product='2' />: Set the path to save the backup file.
+4. To create a backup file, click the <Cmd sid="backup.backupNow" product='2' /> button.
 
-    :::info
+Backup files are saved in *zip* format at the path specified in the <Cmd sid='backup.filePath' product='2' /> option. The file name is generated in the format `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Here, `YYYYMMDD` represents the backup date, and `HHMMSS` represents the backup time.
 
-    The save path must be set to a directory that has already been created.
+:::info
 
-    :::
+* If the maximum number of backups are exceeded, the oldest backup files are automatically deleted.
 
-* <Cmd sid="backup.numberFileToKeep" product='2' />: Set the maximum number of backup files.
+* <Cmd sid="backup.numberFileToKeep" product='2' />, only numbers between 1 and 100 are entered.
 
-    :::info
+:::
 
-  * If the maximum number of backups are exceeded, the oldest backup files are automatically deleted.
+## Automatic backup settings
 
-  * <Cmd sid="backup.numberFileToKeep" product='2' />, only numbers between 1 and 100 are entered.
+When you set automatic backup, the system creates backup files at predefined intervals.
 
-    :::
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-* <Cmd sid="backup.backupNow" product='2' />: To back up manually, click <Cmd sid="backup.backupNow" product='2' />.
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' /> on the left sidebar of the screen.
 
-## Automatic System Backup
+3. In the <Cmd sid='common.backup.autoBackup' product='2' /> section, select the <Cmd sid='common.backup.frequency' product='2' /> option.
 
-Set the system to back up automatically.
+   <Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
 
-<Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
+   * <Cmd sid="backup.daily" product='2' />: Automatically backs up daily. Set the backup time in the <Cmd sid='backup.time' product='2' /> option.
 
-* <Cmd sid="common.backup.frequency" product='2' />: Select the automatic system backup frequency as <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />.
+   * <Cmd sid="backup.weekly" product='2' />: Automatically backs up weekly. Set the day to automatically back up in the <Cmd sid='backup.day' product='2' /> option, and set the backup time in the <Cmd sid='backup.time' product='2' /> option.
 
-* <Cmd sid="backup.day" product='2' />: When <Cmd sid="common.backup.frequency" product='2' /> is set to <Cmd sid="backup.weekly" product='2' />, set the day of the week to automatically system backup.
-
-* <Cmd sid="backup.date" product='2' />: When <Cmd sid="common.backup.frequency" product='2' /> is set to <Cmd sid="backup.monthly" product='2' />, set the date of the month to automatically system backup.
-
-    :::info
-
-    When set to the 29th, 30th, or 31st, automatic system backup will not run for months without the corresponding date.
-
-    :::
-
-* <Cmd sid="backup.time" product='2' />: Set the time to automatically system backup.
-
-    :::info
-
-    Based on the time zone set in BioStar X.
-
-    :::
+   * <Cmd sid="backup.monthly" product='2' />: Automatically backs up monthly. Set the date for automatic backup in the <Cmd sid='backup.date' product='2' /> option, and set the backup time in the <Cmd sid='backup.time' product='2' /> option.
 
 4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+
+Backup files are saved in *zip* format at the path specified in the <Cmd sid='common.backup.general' product='2' /> section's <Cmd sid='backup.filePath' product='2' /> option. The file name is generated in the format `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Here, `YYYYMMDD` represents the backup date, and `HHMMSS` represents the backup time.
+
+:::info
+
+* If you select the automatic backup frequency as <Cmd sid="backup.monthly" product='2' /> and set the date to 29, 30, or 31, automatic backups will not occur in months without that date.
+
+* The time is based on the standard time zone set in <Cmd sid='setting.menu.preferences.root' />. For more information on setting the time zone, refer to [the following](settings-preferences#language-timezone).
+
+:::

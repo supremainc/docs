@@ -1,95 +1,176 @@
 ---
 id: check-door-status
 title: Check Door Status
-description: Describes how to check the status of doors and how to respond to various situations.
+description: You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
 keywords:
   - Monitoring
   - Door
 ---
 
-Accurately determining the status of door and related equipment is key to the security system. This document provides guidance on how to check the status of the device and how to respond in case of errors. This helps administrators quickly grasp the operating status of each device through the indicated icons and detailed descriptions, and respond swiftly in case of issues.
+You can monitor the status of the entrance door in real-time to operate the security system reliably. Check the abnormal status of the device assigned to the entrance door at a glance through the status icon provided in <Cmd sid='shell.header.arena' /> and respond immediately when a problem occurs.
 
-Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. In the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar, you can check the status of each door and the connected slave devices.
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. You can check the status of each entrance door in the <Cmd sid='arena.tree.door.title' /> tab located in the left sidebar of the screen.
 
-## Checking Door Status {#check-the-door-status}
+## Before start
 
-Check the door status to verify that the door is operating normally. Refer to the following for door status.
+Ensure that the devices connected to the door are correctly configured. It is important to check if the device is connected to the network and updated with the latest firmware. In case of an issue, it is advisable to first check the power status and network connection of the device.
+
+:::info
+
+* For more information about adding and configuring devices, refer to [the following](settings-manage-devices).
+
+* For more information about adding and configuring doors, refer to [the following](settings-manage-door).
+
+* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the status of the access door. This feature can be enabled in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> menu path under the <Cmd sid='common.general' product='2' /> section.
+
+* The feature to connect cameras to the door through the VMS server is available as an additional option with an **Advanced** license or higher. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+
+:::
+
+## Learn about the tree structure {#door-tree-structure}
+
+The tree structure in the <Cmd sid='arena.tree.door.title' /> tab of the left sidebar is organized as follows.
+
+import Doortree from './door-tree.json';
+
+<Treeview data={Doortree} />
+
+:::info
+
+* For more information about adding and configuring devices, refer to [the following](settings-manage-devices).
+
+* For more information about adding and configuring doors, refer to [the following](settings-manage-door).
+
+* For more information about adding and configuring elevators, refer to [the following](settings-manage-elevators).
+
+* For more information on advanced access control settings, refer to [the following](settings-advanced-ac).
+
+* To link the door and the camera, refer to [the following](settings-videos-rule).
+
+:::
+
+## Check status
+
+### Check connection errors and alarms {#check-the-error-status}
+
+You can check the status of the door or elevator to verify proper operation. Refer to the information below for the status of each icon.
 
 <div className='col2--20-80 overflow-x'>
 
-|                Status Icon               | Description                                                      |
-| :--------------------------------------: | ---------------------------------------------------------------- |
-|   <IcErr width='35px' height='35px' />   | There is a communication server error or the connection is lost. |
-| <IcNotsync width='35px' height='35px' /> | Synchronization error occurred.                                  |
+|               Status Icon              | Description                                                                                                                                                                                                           |
+| :------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  <IcErr width='35px' height='35px' />  | Displays device abnormal statuses such as disconnection, communication server errors, and synchronization errors.                                                                                                     |
+| <IcAlert width='40px' height='40px' /> | Displays the status when entrance door alarms (forced door opening, prolonged door opening, APB, fire alarms, emergency openings) or AI video analysis alarms (loitering detection, intrusion detection, etc.) occur. |
 
 </div>
 
 :::tip
 
-Click a status icon to view detailed information in a tooltip. Clicking the link of the error message displayed in the tooltip will take you to the list of devices connected to the door.
+Click a status icon to view detailed information in a tooltip. Click the link in the tooltip error message to navigate to the list of devices connected to the door or elevator.
 
-<Image src='/img/monitoring-door-status-tooltip.png' alt='Tooltip message'/>
+<Image src='/img/monitoring-door-status-tooltip.png' />
 
-Right-click on the device and select the <Cmd>Reconnect</Cmd> or <Cmd>Restart</Cmd> option.
+Right-click on the device and select the <Cmd sid='arena.tree.contextMenu.reconnect' /> or <Cmd sid='arena.tree.contextMenu.reboot' /> option.
 
-<Image src='/img/monitoring-door-status-tooltip-device.png' alt='Device list' />
+<Image src='/img/monitoring-door-status-tooltip-device.png' />
 
 :::
 
-## Checking Door Open/Lock Status {#open-the-doorlock-confirmation}
+:::info
 
-Check whether the door is open using the door sensor. Refer to the following for door sensor status.
+* Alarms occurring from the door or elevator can be configured through the following settings.
+
+  * [Door alarm settings](settings-door-add#alarm)
+
+  * [Elevator alarm settings](settings-elevators-add#alarm)
+
+  * [Advanced access control settings](settings-advanced-ac)
+
+* You can connect the entrance door and the camera in video rules to set alarms. For more information on video rule settings, refer to [the following](settings-videos-rule).
+
+* When linked with the VMS server, AI event alarms for videos can be sent to **BioStar X**. For more information, refer to the manual for the VMS server.
+
+* For more information on acknowledging alarms, refer to [the following](monitoring-event#acknowledge-alarm-and-record-action).
+
+:::
+
+### Checking door lock status {#check-the-door-lock}
+
+You can check the locking status of the door through the door relay status. Refer to the following for the status of the door relay.
 
 <div className='col2--20-80 overflow-x'>
 
-|                 Status Icon                | Description         |
-| :----------------------------------------: | ------------------- |
-| <IcDoorClose width='35px' height='35px' /> | The door is closed. |
-|  <IcDoorOpen width='auto' height='40px' /> | The door is open.   |
+|                  Status Icon                 | Description                  |
+| :------------------------------------------: | ---------------------------- |
+|  <IcRelayLock width='auto' height='35px' />  | The entrance door is locked. |
+| <IcRelayUnlock width='auto' height='40px' /> | The door is open.            |
 
 </div>
 
-## Checking Door Lock Status {#check-the-door-lock}
-
-Check the lock status of the door using the relay status. Refer to the following for the status of the door relay.
-
-<div className='col2--20-80 overflow-x'>
-
-|                  Status Icon                 | Description         |
-| :------------------------------------------: | ------------------- |
-|  <IcRelayLock width='auto' height='35px' />  | The door is closed. |
-| <IcRelayUnlock width='auto' height='40px' /> | The door is open.   |
-
-</div>
-
-## Checking Camera Status {#check-the-camera-status}
+### Checking camera status {#check-the-camera-status}
 
 Check the camera status to verify that the camera is operating normally. Refer to the following for camera status.
 
 <div className='col2--20-80 overflow-x'>
 
-|   Status Icon  | Description                        |
-| :------------: | ---------------------------------- |
-|   <StatusOK/>  | The camera is connected.           |
-| <StatusFail /> | The camera is off or disconnected. |
+|               Status Icon               | Description                        |
+| :-------------------------------------: | ---------------------------------- |
+|  <IcCamOk width='auto' height='35px'/>  | The camera is connected.           |
+| <IcCamFail width='auto' height='35px'/> | The camera is off or disconnected. |
 
 </div>
 
-## Checking Security Status {#check-the-security-status}
+### Checking arming status {#check-the-security-status}
 
-Check the security status of the door. 
+You can check the security status of the entrance door or advanced access control settings. 
 
 <div className='col2--20-80 overflow-x'>
 
-|               Status Icon              | Description                  |
-| :------------------------------------: | ---------------------------- |
-|   <IcArm width='auto' height='35px'/>  | The security is activated.   |
-| <IcDisarm width='auto' height='35px'/> | The security is deactivated. |
+|                Status Icon               | Description                                                                       |
+| :--------------------------------------: | --------------------------------------------------------------------------------- |
+| <IcDisable width='auto' height='30px' /> | This is the icon for inactive settings. Inactive settings do not generate alarms. |
+|    <IcArm width='auto' height='35px'/>   | The door is armed.                                                                |
+|  <IcDisarm width='auto' height='35px'/>  | The door is disarmed.                                                             |
 
 </div>
 
 :::info
 
-The security status is displayed only when the door is set to Intrusion Alarm Zone.
+The security status is displayed only when the entrance door is set to **guard**. For more information on security settings, refer to [the following](settings-advanced-ac-intrusion-alarm).
 
 :::
+
+### Check elevator status
+
+You can check the floor access control status via the elevator.
+
+<div className='col2--20-80 overflow-x'>
+
+|                 Status Icon                | Description                                           |
+| :----------------------------------------: | ----------------------------------------------------- |
+| <StatusNormal width='auto' height='35px'/> | The corresponding floor is locked via the elevator.   |
+|   <StatusOK width='auto' height='35px'/>   | The corresponding floor is unlocked via the elevator. |
+
+</div>
+
+## Expand/collapse group list
+
+You can expand or collapse the list through the top-level group or sub-group. 
+
+<Image src='/img/biostarx-monitoring-group-expand-collapse.png' />
+
+### Top-level group
+
+1. In the <Cmd sid='arena.tree.door.title' /> tab, select <Cmd sid='arena.tree.door.allDoorGroups' /> or <Cmd sid='arena.tree.door.allElevatorGroups' />, <Cmd sid='arena.tree.door.allZones' /> and right-click.
+
+2. Choose <Cmd sid='arena.tree.expandAll' /> or <Cmd sid='arena.tree.collapseAll' /> from the popup menu. 
+
+All sub-lists can be expanded or collapsed based on the selected top-level group.
+
+### Sub-group
+
+1. To expand or collapse the list of sub-groups in each top-level group, select the sub-group and right-click. 
+
+2. Select <Cmd sid='arena.tree.contextMenu.expandBelow' /> or <Cmd sid='arena.tree.contextMenu.collapseBelow' /> option from the popup menu. 
+
+You can expand or collapse the list of the selected sub-group.

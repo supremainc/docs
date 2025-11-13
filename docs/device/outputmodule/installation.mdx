@@ -1,0 +1,71 @@
+---
+id: installation
+title: 설치하기
+description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [ 설치, 전원, RS-485, 릴레이, AUX, 함체, 탬퍼 ]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 제품 고정
+
+1. 제품을 장착할 위치에 스페이서를 고정용 나사로 고정하세요.
+
+1. 고정된 스페이서 위에 고정용 나사로 제품을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device-om120.svg' className='none' width='30%' alone />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## RS-485 연결
+
+<Image src='/img/device/installation-rs485-connection-om120.png' width='70%' className='none' />
+
+:::info
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품은 종단 저항 스위치를 ON으로 설정하세요.
+
+* 이 제품은 하나의 마스터 장치에 최대 31대까지 연결할 수 있습니다.
+
+:::
+
+## 릴레이 연결
+
+<Image src='/img/device/installation-relay-om120.png' className='none' width='70%' />
+
+:::info
+
+* 릴레이를 연결하는 방법은 엘리베이터 종류마다 다를 수 있습니다. 자세한 사항은 엘리베이터 시공사에 문의하세요.
+
+* 각 릴레이 출력은 제어 패널과 층 버튼에 올바르게 연결되어야 합니다.
+
+:::
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+## 함체 설치 {#install-enclosure}
+
+물리적·전기적 보호를 위해 제품을 함체(ENCR-10) 내부에 설치할 수 있습니다. 함체에는 전원 상태 LED 보드, 전원 분배 보드, 전원 공급 장치, 탬퍼가 포함되어 있습니다. 함체는 별매품입니다.
+
+{/* ## OM120 함체 설치 */}
+import InstallEnclosureOM120 from "../../common/_device-install-enclosure-om120.mdx";
+
+<InstallEnclosureOM120 />
+
+:::info
+
+제품 설치에 대한 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+
+:::

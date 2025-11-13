@@ -1,13 +1,13 @@
 ---
 id: settings-device-details-advanced
 title: Advanced Settings
-description: In the Advanced Settings section, configure Device Management, Display/Sound, Operating Conditions, and Actions.
+description: In the Advanced Settings section, configure Master Administrator, Device Management, Display/Sound, Operating Conditions, and Actions.
 keywords:
   - Device
   - advanced
 ---
 
-This section provides guidance on configuring items in the <Cmd sid='device.info.advanced' product='2' /> settings. You can manage administrator permissions, attendance events, screen and sound settings, operation conditions and actions, image logs, Wiegand, security tampering, and other various advanced features. Apply settings suitable for your environment to effectively manage the device.
+This section provides guidance on configuring items in the <Cmd sid='device.info.advanced' product='2' /> settings. You can check how to configure various advanced features such as Master Administrator, administrator permission management, attendance events, screen and sound, operating conditions and actions, image logs, Wiegand, security tamper, and the meaning of each option. Apply settings suitable for your environment to effectively manage the device.
 
 :::info
 
@@ -17,13 +17,90 @@ This section provides guidance on configuring items in the <Cmd sid='device.info
 
 :::
 
+## Add master administrator {#master-administrator}
+
+<Cmd sid='device.masterAdmin.title' product='2' /> feature enhances the overall administrator permissions of the device to improve security and prevent unauthorized access and settings changes. A new device must register a Master Administrator through this feature, and only the registered Master Administrator can enter the administrator menu and change settings.
+
+Select two types of desired credentials to enroll from the <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.administrator' product='2' /> <Cmd sid='device.masterAdmin.title' product='2' /> menu.
+
+<Image src='/img/biostarx-setting-device-adv-admin-master-admin.png' />
+
+The credentials that can be enrolled as <Cmd sid='device.masterAdmin.title' product='2' /> are as follows:
+
+| Credential Type | Number of Enrollments | Conditions                                                                              |
+| --------------- | :-------------------: | --------------------------------------------------------------------------------------- |
+| card            |        Up to 4        | Supports only CSN and Wiegand types, and cannot enrollmnet duplicates of the same type. |
+| Face            |        Up to 2        | Can only enroll on devices equipped with the same algorithm.                            |
+| Fingerprint     |        Up to 2        | *                                                                                       |
+| PIN             |           1           | Must enter at least 8 digits.                                                           |
+
+* To change the enrolled credential, click the <IcEdit /> button to the right of that credential.
+
+* To delete the enrolled credential, click the <IcTrash2 /> button to the right of that credential.
+
+:::note
+
+**Enrollment conditions**
+
+* You must enroll at least two types of credentials.
+
+* The same conditions apply to both new devices and firmware upgrade devices.
+
+* All credentials supported by the device can be used as authentication means.
+
+:::
+
+:::info
+
+* This feature is only available on Suprema products that support user interfaces via LCD screens.
+
+* Existing devices that have been upgraded will not show the <Cmd sid='device.masterAdmin.title' product='2' /> menu in BioStar 2's device settings.
+
+* Existing devices that have been upgraded do not provide <Cmd sid='device.masterAdmin.title' product='2' /> settings, however, you can enhance the overall administrator permissions to improve device security using the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option. For more information about how to set <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />, refer to [the following](#two-step-authentication).
+
+* For more information about devices and firmware versions that support this feature, refer to [the following](../../how-to/master-admin).
+
+:::
+
+## Two-step authentication setting {#two-step-authentication}
+
+Existing devices that have been upgraded do not provide <Cmd sid='device.masterAdmin.title' product='2' /> settings, however, you can enhance the overall administrator permissions to improve device security using the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option.
+
+<Image src='/img/biostarx-setting-device-adv-two-step.png' />
+
+If you set the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option to <Cmd sid='common.use' product='2' />, you must use two or more credentials for overall administrator authentication on the device. For example, if both a card and PIN are enrolled, you must scan the card and enter the PIN to authenticate successfully during overall administrator authentication.
+
+:::info
+
+If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed. Enroll two types of credentials for all administrators and try again.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+:::caution
+
+If the overall administrator is not set on the device, the following popup message will appear. Add administrators for all permissions in <Cmd sid='device.info.advanced' product='2' /> →  <Cmd sid='device.info.administrator' product='2' />.
+
+<Image src='/img/biostarx-setting-device-adv-warning-admin.png' />
+
+:::
+
+:::warning
+
+If you activate <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> and then delete all administrators' credentials to less than two types, you will not be able to access the administrator menu on the device when unable to connect to **BioStar X**. Therefore, you need to be particularly careful when deleting administrator credentials.
+
+:::
+
 ## Add administrators {#administrator}
 
 In the <Cmd sid='device.info.administrator' product='2' /> group, you can manage the device's administrators by permission level.
 
 <Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
 
-To add an administrator by permission level, click the <IcAdd /> <Cmd sid='common.add' product='2' /> button. Refer to the permissions for each level below.
+To add an administrator by permission level, click the <Cmd sid='button.plusAdd' product='2' /> button. When the user list appears, select the desired user. You can also search for the desired user by clicking the <IcSearch /> button in the user list.
+
+Refer to the permissions for each level below.
 
 <div className='table-fixed'>
 
@@ -38,6 +115,8 @@ To add an administrator by permission level, click the <IcAdd /> <Cmd sid='commo
 :::info
 
 * Up to 1,000 administrators can be added. The number of administrators that can be added may vary depending on the device firmware version.
+
+* To search for the registered user, click the <IcSearch /> button in <Cmd sid='device.info.admin.searchTitle' product='2' />.
 
 * **Device Settings** allows changes to settings for screen and sound, network, RS-485, etc.
 
@@ -81,11 +160,13 @@ The <Cmd sid='device.info.tna' product='2' /> group allows you to change attenda
 
   * <Cmd sid='device.tna.schedule' product='2' />: You can set a schedule for automatic changes when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.bySchedule' product='2' />.
 
+    <Image src='/img/biostarx-setting-device-edit-advanced-tna-auto.png' />
+
 :::info
 
-* Devices without an LCD screen can set attendance modes to <Cmd sid='device.tna.mode.fixed' product='2' /> and <Cmd sid='device.tna.mode.bySchedule' product='2' /> and can register fixed attendance events or attendance events that change according to a pre-set schedule. Supported device types include BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2.
+* Devices without an LCD screen can set attendance modes to <Cmd sid='device.tna.mode.fixed' product='2' /> and <Cmd sid='device.tna.mode.bySchedule' product='2' /> and can register fixed attendance events or attendance events that change according to a pre-set schedule. The supported devices are BioEntry P2, BioEntry W2, XPass D2, XPass 2.
 
-* For more information about setting new schedules, refer to the [following](settings-schedule).
+* For more information about setting new schedules, refer to [the following](settings-schedule).
 
 :::
 
@@ -95,27 +176,17 @@ You can change settings related to the device's screen and sound. Available opti
 
 <details>
 
-<summary>BioEntry P2, BioEntry W2, BioLite Net, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2</summary>
-
-* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+<summary>BioEntry P2, BioEntry W2, XPass D2, XPass 2</summary>
 
 * <Cmd sid='device.info.sound' product='2' />: You can turn the sound on or off.
 
-* <Cmd sid='device.info.menuTimeout' product='2' />: Set the time it takes to switch from the menu screen to the idle screen.
-
-* <Cmd sid='device.info.backlightTimeout' product='2' />: Set the time before the screen light automatically turns off.
-
-* <Cmd sid='device.info.msgTimeout' product='2' />: Set the time before messages automatically disappear.
-
 * <Cmd sid='device.info.ledBuzzer' product='2' />: Select and set the event items that will activate the LED or buzzer.
 
-* <Cmd sid='device.info.keypadBackLight' product='2' />: You can turn the keypad backlight on or off. When this option is activated, the light behind the keypad turns on, making it easier to identify keys in dark environments.
+* <Cmd sid='device.info.keypadBackLight' product='2' />: You can turn the keypad backlight on or off. When this option is activated, the light behind the keypad turns on, making it easier to identify keys in dark environments. You can easily identify keys even in dark environments.
 
 :::note
 
-* The <Cmd sid='device.info.language' product='2' />, <Cmd sid='device.info.menuTimeout' product='2' />, <Cmd sid='device.info.backlightTimeout' product='2' />, <Cmd sid='device.info.msgTimeout' product='2' /> options are supported by the BioLite Net model.
-
-* The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on XPass D2 hardware V02M and firmware version 1.7.1 or higher.
+The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on XPass D2 hardware V02M and firmware version 1.7.1 or higher.
 
 :::
 
@@ -157,7 +228,7 @@ You can change settings related to the device's screen and sound. Available opti
 
   :::
 
-* <Cmd sid='device.info.volume' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
 
   :::note
 
@@ -185,7 +256,9 @@ You can change settings related to the device's screen and sound. Available opti
 
 * <Cmd sid='device.info.msgTimeout' product='2' />: Set the time before messages automatically disappear.
 
-* <Cmd sid='device.info.useScreenSaver' product='2' />: Reduces unnecessary power consumption by reducing LCD screen brightness when the device is not in use.
+* <Cmd sid='device.info.serverPrivateMsg' product='2' />: Set whether to use a private message that will be displayed on the screen when the user authenticates.
+
+* <Cmd sid='device.info.useScreenSaver' product='2' />: Reduces unnecessary power consumption by reducing LCD screen brightness when the device is not in use. If this feature is not enabled, even if the <Cmd sid='device.info.useScreenSaver' product='2' /> option is enabled on the device, authentication success messages will not be displayed.
 
   :::note
 
@@ -213,7 +286,7 @@ You can change settings related to the device's screen and sound. Available opti
 
   :::
 
-* <Cmd sid='device.info.volume' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
 
   :::note
 
@@ -245,7 +318,7 @@ You can select predefined events or add custom conditions.
 
 * When <Cmd sid='triggerAction.trigger' product='2' /> is set to <Cmd sid='triggerAction.event' product='2' />, you can select only one event from the event list.
 
-* When selecting the <Cmd sid='triggerAction.input' product='2' /> or <Cmd sid='triggerAction.break_glass' product='2' /> options to set custom conditions, if your desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' />. For more information about schedule settings, refer to the [following](settings-schedule).
+* When selecting the <Cmd sid='triggerAction.input' product='2' /> or <Cmd sid='triggerAction.break_glass' product='2' /> options to set custom conditions, if your desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' />. For more information about schedule settings, refer to [the following](settings-schedule).
 
 * If the desired event name is not available when selecting the <Cmd sid='triggerAction.break_glass' product='2' /> option to set custom conditions, click <Cmd sid='triggerAction.addNewBreakGlassEvent' product='2' />. When this event occurs, the event name will be displayed in the event log and real-time log.
 
@@ -279,7 +352,7 @@ In the <Cmd sid='common.imageLog' product='2' /> group, you can set image log ev
 
 * This feature is supported by the BioStation A2, FaceStation 2, FaceStation F2, X-Station 2, and BioStation 3 models.
 
-* For more information about the default settings of image logs, refer to the [following](settings-device-image-log).
+* For more information about the default settings of image logs, refer to [the following](settings-device-image-log).
 
 :::
 
@@ -289,9 +362,13 @@ In the <Cmd>Wiegand</Cmd> group, you can configure input and output details rela
 
 <Image src='/img/biostarx-setting-device-edit-advanced-wiegand.png' />
 
+* <Cmd sid='device.info.wiegandInOut' product='2' />: Select the input and output mode.
+
 * <Cmd sid='device.info.wiegandOutPulseWidth' product='2' />: Set the pulse width for the Wiegand signal.
 
 * <Cmd sid='device.card.wiegand.inOutFormat' product='2' />: Change the Wiegand format designated for the device.
+
+* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />: Set the pulse interval for the Wiegand signal.
 
 * <Cmd sid='device.card.wiegand.out' product='2' />: Configure the Wiegand signal output mode.
 
@@ -299,15 +376,11 @@ In the <Cmd>Wiegand</Cmd> group, you can configure input and output details rela
 
   * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Send CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
 
-* <Cmd sid='device.info.wiegandInOut' product='2' />: Select the input and output mode.
-
-* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />: Set the pulse interval for the Wiegand signal.
-
 * <Cmd sid='device.card.wiegand.outputInfo' product='2' />: Select the information that will be output to the device during authentication.
 
 :::info
 
-For more information about Wiegand format settings, refer to the [following](settings-credential-wiegand-format).
+For more information about Wiegand format settings, refer to [the following](settings-credential-wiegand-format).
 
 :::
 

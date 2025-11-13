@@ -1,5 +1,6 @@
 import React, {cloneElement} from 'react';
 import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
 import {
   useScrollPositionBlocker,
   useTabs,
@@ -93,19 +94,26 @@ function TabContent({lazy, children, selectedValue}) {
   }
   return (
     <div className="margin-top--md">
-      {childTabs.map((tabItem, i) => (
-        <div key={i} hidden={tabItem.props.value !== selectedValue}>
-          <h4 className="tab-label">{tabItem.props.label}</h4>
-          {tabItem}
-        </div>
-      ))}
+      {childTabs.map((tabItem, i) =>
+        cloneElement(tabItem, {
+          key: i,
+          hidden: tabItem.props.value !== selectedValue,
+        }),
+      )}
     </div>
   );
 }
 function TabsComponent(props) {
   const tabs = useTabs(props);
   return (
-    <div className={clsx('tabs-container', styles.tabList)}>
+    <div
+      className={clsx(
+        ThemeClassNames.tabs.container,
+        // former name kept for backward compatibility
+        // see https://github.com/facebook/docusaurus/pull/4086
+        'tabs-container',
+        styles.tabList,
+      )}>
       <TabList {...tabs} {...props} />
       <TabContent {...tabs} {...props} />
     </div>

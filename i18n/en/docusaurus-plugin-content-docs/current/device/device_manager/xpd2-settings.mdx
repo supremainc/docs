@@ -1,0 +1,451 @@
+---
+id: xpd2-settings
+title: Set Up XPass D2
+description: You can configure settings to apply to XPass D2 as a template and then directly apply them to individual devices.
+keywords:
+  - XPass D2
+  - Template
+  - Device search
+  - Device connection
+  - Firmware upgrade
+  - Restart device
+  - Administrator password
+---
+
+You can configure settings to apply to XPass D2 as a template and then directly apply them to individual devices. You can apply settings much faster than by accessing the management program on a PC or using command cards.
+
+:::info
+
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+
+:::
+
+## Add template {#template-add}
+
+You can set RS-485 communication, card format, keypad settings, PIN, LED, and buzzer before adding them as a template. Adding a template allows you to quickly and easily apply settings without configuring each individual device every time.
+
+1. Run the Suprema Device Manager on your mobile device.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_338' product='dev' /> → <Image src='/img/common/ico-add.svg' ico />.
+
+   <Image src='/img/device/xpd2-template-management-add.png' className='none' width={540} />
+
+4. Select the device model for which you want to create the template.
+
+5. After configuring each item, click <Cmd sid='ui_295' product='dev' /> to save the template.
+
+:::info
+
+You can add up to 100 templates.
+
+:::
+
+### Set template name and administrator password
+
+<Image src='/img/device/xpd2-template-name-pw.png' width={250} />
+
+* <Cmd sid='ui_341' product='dev' />: Enter the desired template name.
+
+* <Cmd sid='ui_074' product='dev' />: Enter the administrator password.
+
+:::info
+
+* The administrator password can be set to 6~32 digits.
+
+* Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
+
+* For more information on changing the administrator password, refer to [changing the administrator password](#admin-password-change).
+
+:::
+
+### Interfaces
+
+<Image src='/img/device/xpd2-template-interface.png' width={250} />
+
+* <Cmd sid='ui_038' product='dev' />: Set the OSDP address to be used in communication between the device and the master device. Can be set to numbers from 0~126.
+
+* <Cmd sid='ui_298' product='dev' />: Set the RS-485 transmission speed.
+
+### Certifications
+
+<Image src='/img/device/xpd2-template-auth-cardtype.png' width={250} />
+
+* <Cmd sid='ui_328' product='dev' />: You can set the type of card to be used by the device.
+
+  * <Cmd sid='ui_008' product='dev' />: You can select the CSN card type and set the byte order.
+
+  * <Cmd sid='ui_201' product='dev' />: You can select the types of smart cards issued by Suprema.
+
+  * <Cmd sid='ui_333' product='dev' />: You can select the types of smart cards issued by third parties.
+
+  * <Cmd sid='ui_139' product='dev' />: You can set the mobile card type.
+
+:::info
+
+When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). <Cmd sid='ui_030' product='dev' /> processes the card's serial number (CSN) from small byte to large byte order when saving it.
+
+:::
+
+### Wiegand card format
+
+<Image src='/img/device/xpd2-template-wiegand-card.png' width={250} />
+
+* <Cmd sid='ui_354' product='dev' />: You can set the Wiegand card format to be specified for the device. The card data is processed according to the set format.
+
+  * <Cmd sid='ui_179' product='dev' />: If the desired format is not available, you can click <IcAdd/> to add a new Wiegand format.
+
+    <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
+
+    * <Cmd sid='ui_253' product='dev' />: Enter the name of the desired Wiegand format.
+
+    * <Cmd sid='ui_318' product='dev' />: Enter the total number of bits.
+
+    * <Cmd sid='ui_024' product='dev' />: Enter the start and end bits of the ID you wish to use. <Image src='/img/common/ico-add3.svg' ico /> You can press <Cmd sid='ui_319' product='dev' /> to add an ID field.
+
+    * <Cmd sid='ui_350' product='dev' />: Enter the position of the parity field and the start and end bits you wish to use. <Image src='/img/common/ico-add3.svg' ico /> You can press <Cmd sid='ui_319' product='dev' /> to add a parity field.
+
+      :::info
+
+      To add a parity field, enter the total bits.
+
+      :::
+
+* <Cmd sid='ui_352' product='dev' />: You can set the pulse width of the Wiegand signal.
+
+* <Cmd sid='ui_351' product='dev' />: You can set the pulse interval of the Wiegand signal.
+
+### Suprema smart card layout
+
+<Image src='/img/device/xpd2-template-suprema-card.png' width={250} />
+
+* <Cmd sid='ui_151' product='dev' />: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
+
+* <Cmd sid='ui_032' product='dev' />: You can set up MIFARE cards.
+
+  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to Crypto-1 or AES-128.
+
+  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+
+  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+
+  * <Cmd sid='ui_214' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
+
+* <Cmd sid='ui_010' product='dev' />: You can set up DESFire cards.
+
+  * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESCire can be configured.
+
+  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+
+  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+
+  * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESCire can be configured.
+
+  * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESCire can be configured.
+
+  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
+
+* <Cmd sid='ui_202' product='dev' />: You can set the byte order for smart card output.
+
+:::info
+
+* To use <Cmd sid='ui_011' product='dev' />, please accurately enter the information for <Cmd sid='ui_224' product='dev' />, <Cmd sid='ui_225' product='dev' />, <Cmd sid='ui_348' product='dev' />, <Cmd sid='ui_349' product='dev' />, <Cmd sid='ui_223' product='dev' />, <Cmd sid='ui_347' product='dev' />, <Cmd sid='ui_222' product='dev' />.
+
+* <Cmd sid='ui_224' product='dev' />, <Cmd sid='ui_348' product='dev' /> can only accept up to 32 bytes of hexadecimal.
+
+* When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). <Cmd sid='ui_030' product='dev' /> processes the card's serial number (CSN) from small byte to large byte order when saving it.
+
+:::
+
+### Custom smart card layout
+
+<Image src='/img/device/xpd2-template-custom-card.png' width={250} />
+
+* <Cmd sid='ui_151' product='dev' />: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
+
+* <Cmd sid='ui_032' product='dev' />: You can set up MIFARE cards.
+
+  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to Crypto-1 or AES-128.
+
+  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+
+  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+
+  * <Cmd sid='ui_154' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
+
+  * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
+
+  * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
+
+* <Cmd sid='ui_010' product='dev' />: You can set up DESFire cards.
+
+  * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESCire can be configured.
+
+  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+
+  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+
+  * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESCire can be configured.
+
+  * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESCire can be configured.
+
+  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
+
+  * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
+
+  * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
+
+* <Cmd sid='ui_146' product='dev' />: You can set the byte order for smart card output.
+
+:::info
+
+* To use <Cmd sid='ui_011' product='dev' />, please accurately enter the information for <Cmd sid='ui_224' product='dev' />, <Cmd sid='ui_225' product='dev' />, <Cmd sid='ui_348' product='dev' />, <Cmd sid='ui_349' product='dev' />, <Cmd sid='ui_223' product='dev' />, <Cmd sid='ui_347' product='dev' />, <Cmd sid='ui_222' product='dev' />.
+
+* <Cmd sid='ui_224' product='dev' />, <Cmd sid='ui_348' product='dev' /> can only accept up to 32 bytes of hexadecimal.
+
+* When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). <Cmd sid='ui_030' product='dev' /> processes the card's serial number (CSN) from small byte to large byte order when saving it.
+
+:::
+
+### Keypad settings
+
+<Image src='/img/device/xpd2-template-keypad.png' width={250} />
+
+* <Cmd sid='ui_335' product='dev' />: You can set whether to use the keypad. When the keypad is activated, you can authenticate by entering the card ID using the keypad.
+
+* <Cmd sid='ui_219' product='dev' />: Each time you press a key while entering the card ID on the keypad, the value will be sent.
+
+* <Cmd sid='ui_306' product='dev' />: When entering the card ID on the keypad, all keys need to be pressed, and then press the `#` key to send the entire value at once.
+
+* <Cmd sid='ui_327' product='dev' />: When the device's authentication mode is set to card + PIN, pressing the card will activate the LED to prompt the user to enter the PIN.
+
+* <Cmd sid='ui_147' product='dev' />: You can turn the keypad backlight on or off.
+
+:::info
+
+* <Cmd sid='ui_336' product='dev' /> is only displayed on the template setting screen of the XPD2-GKDB device.
+
+* <Cmd sid='ui_147' product='dev' /> is only supported on XPD2-GKDB hardware V02M and firmware version v1.7.1 or higher.
+
+* Values entered through the keypad are transmitted in 4-bit units by default. Card IDs entered through the keypad are sent in the same format as the Wiegand card format.
+
+:::
+
+### Others
+
+<Image src='/img/device/xpd2-template-others.png' width={250} />
+
+* <Cmd sid='ui_150' product='dev' />: You can set it so that when a tamper event occurs in the device, the security key stored in the device will be deleted. To use the security tamper feature, activate it.
+
+### LED / Buzzer
+
+<Image src='/img/device/device-manager-led-buzzer.png' width={250} />
+
+* <Cmd sid='ui_272' product='dev' />: You can set the colors displayed on the device LED during normal operation.
+
+* <Cmd sid='ui_325' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays when scanning a card.
+
+* <Cmd sid='ui_262' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
+
+* <Cmd sid='ui_263' product='dev' />: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
+
+:::info
+
+* LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
+
+* <Image src='/img/common/ico-cancel2.svg' ico />Selecting this slot will skip displaying the color set for that slot and display the color set for the next slot.
+
+:::
+
+## Apply template
+
+The added templates can be applied uniformly to multiple devices via BLE communication.
+
+:::info
+
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+
+:::
+
+1. Enable Bluetooth on your mobile device and run Suprema Device Manager.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_343' product='dev' />. A list of available templates will appear.
+
+   <Image src='/img/device/xpd2-template-choose-select.png' className='none' width={540} />
+
+4. Select the desired template from the list of templates.
+
+5. Click <Cmd sid='ui_212' product='dev' /> to continue.
+
+   <Image src='/img/device/xpd2-template-choose-select-start.png' width={250} />
+
+6. Make sure the back of your mobile device touches the device to which you want to apply the template.
+
+7. Once the template application is complete, click <Cmd sid='ui_367' product='dev' />.
+
+:::info
+
+* Settings changed using Suprema Device Manager are only applied to the device and will not be synchronized with the server.
+
+* If the device is connected to the master device or if the Wiegand output settings have changed, it cannot be connected to Suprema Device Manager with the main key. To connect with Suprema Device Manager, you must initialize the device.
+
+:::
+
+## Manage templates
+
+### Edit template
+
+1. Run the Suprema Device Manager on your mobile device.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_338' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-select.png' className='none' width={540} />
+
+4. Select the template you want to edit from the list of templates.
+
+5. Refer to [add template](#template-add) to edit the template.
+
+6. To save the changed settings, click <Cmd sid='ui_295' product='dev' />; to save as a new template, click <Cmd sid='ui_178' product='dev' />.
+
+### Delete template
+
+1. Run the Suprema Device Manager on your mobile device.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_338' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-select.png' className='none' width={540} />
+
+4. Select the template you wish to delete from the list of templates.
+
+5. To delete the template, click <Image src='/img/common/ico-delete.svg' ico /> → <Cmd sid='ui_367' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-select-del.png' width={250} />
+
+### Export template
+
+You can export templates for XPass D2 settings from the app.
+
+1. Run the Suprema Device Manager on your mobile device.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_338' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-export1.png' className='none' width={840} />
+
+4. At the top of the template list screen, click <Image src='/img/common/ico-menu1.svg' ico /> and select <Cmd sid='ui_339' product='dev' />.
+
+5. Select the template to export, then click <Image src='/img/common/ico-check.svg' ico />.
+
+   <Image src='/img/device/xpd2-template-management-export2.png' width={250} />
+
+:::info
+
+Templates will be saved in the *DeviceManager_TemplateFiles* folder created in the same location as the Suprema Device Manager application installation file.
+
+:::
+
+### Import template
+
+You can import templates for XPass D2 settings into the app.
+
+1. Run the Suprema Device Manager on your mobile device.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_338' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-import.png' className='none' width={840} />
+
+4. At the top of the template list screen, click <Image src='/img/common/ico-menu1.svg' ico /> and select <Cmd sid='ui_337' product='dev' />.
+
+5. Select the template you want to import from the folder where the templates are stored.
+
+:::info
+
+Templates will be saved in the *DeviceManager_TemplateFiles* folder created in the same location as the Suprema Device Manager application installation file.
+
+:::
+
+## Search and connect device {#device-search-connect}
+
+You can search for and connect to XPass D2 installed nearby. By connecting to Suprema Device Manager, you can upgrade the firmware of the device or use features such as restarting the device or changing the template password.
+
+1. Enable Bluetooth on your mobile device and run Suprema Device Manager.
+
+2. Select XPass D2 on the main screen.
+
+3. Click <Cmd sid='ui_285' product='dev' />. A list of connectable devices will appear.
+
+   <Image src='/img/device/xpd2-template-search-device-select.png' className='none' width={540} />
+
+4. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
+
+5. Enter the connection password. To display the entered password on the screen, press <Image src='/img/common/ico-password.svg' ico />.
+
+6. Press <Cmd sid='ui_367' product='dev' /> to complete the device connection.
+
+## Upgrade device firmware {#device-firmware-upgrade}
+
+You can easily upgrade the device's firmware.
+
+:::info
+
+* To upgrade the firmware, you need to download the firmware file to your mobile device. The latest firmware can be downloaded from the [Suprema Download Center](https://download.supremainc.com/).
+
+* During the firmware upgrade, keep the distance between the device and mobile device within 1m.
+
+:::
+
+1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to upgrade the firmware.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_018' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-fwupgrade.png' width={250} />
+
+3. Select the firmware from the path where the firmware file is saved. The firmware upgrade is in progress.
+
+4. Press <Cmd sid='ui_367' product='dev' /> to complete the firmware upgrade.
+
+## Restart device
+
+You can restart the device.
+
+1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to restart.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_287' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-restart.png' width={250} />
+
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the <Cmd sid='ui_276' product='dev' /> feature. For detailed configuration instructions, refer to [app settings](initial-setup#app-settings).
+
+## Change admin password {#admin-password-change}
+
+You can change the admin password of the template.
+
+1. Refer to [device search and connect](#device-search-connect) to connect to the device with the template where you want to change the password.
+
+2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_156' product='dev' />.
+
+   <Image src='/img/device/xpd2-template-management-password.png' width={250} />
+
+3. Enter the current password and the new password you will use.
+
+   <Image src='/img/device/device-manager-change-password.png' width={250} />
+
+4. Press <Cmd sid='ui_367' product='dev' /> to complete the password change.
+
+:::info
+
+* The administrator password can be set to 6~32 digits.
+
+* Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
+
+:::

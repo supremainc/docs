@@ -14,13 +14,13 @@ Describes the supported authentication methods and authentication procedures.
 
 ## Authentication mode
 
-Set the authentication mode. You can make a combination of <Cmd>Face</Cmd>, <Cmd>PIN</Cmd>, <Cmd>Card / QR Code</Cmd>, or <Cmd>ID</Cmd> and you can also set a schedule for each authentication mode.
+Set the authentication mode. You can use <Cmd sid='ui_228' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_323' product='dev' />, and <Cmd sid='ui_020' product='dev' /> in combination as authentication modes, and you can set the schedule for each authentication mode.
 
-### Registering Auth Mode {#registering-auth-mode}
+### Registering auth mode {#registering-auth-mode}
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
 3. Press <Image src='/img/common/ico-add.svg' ico alone />.
 
@@ -28,89 +28,89 @@ Set the authentication mode. You can make a combination of <Cmd>Face</Cmd>, <Cmd
 
    <Image src='/img/device/bs3-authmode.png' />
 
-5. Set the authentication mode as desired and configure the <Cmd>Schedule</Cmd>.
+5. After setting the desired authentication mode, set <Cmd sid='ui_203' product='dev' />.
 
    <div className='overflow-x'>
 
-   |    Category    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-   | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   |      Face      | * <Image src='/img/common/ico-authmode-face.png' ico alone />: Mode to use a face only.<br/>- <Image src='/img/common/ico-authmode-face.png' ico alone /> + <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to authenticate with a face and then enter PIN.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-   | Card / QR Code | * <Image src='/img/common/ico-authmode-card.png' ico alone />: Mode to use a card / QR code only.<br/>- <Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone />: Mode to authenticate with a card / QR code and then authenticate with a face.<br/>- <Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to authenticate with a card / QR code and then enter PIN.<br/>- <Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone /> / <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to authenticate with a card / QR code and then authenticate with a face or enter PIN.<br/>- <Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone /> + <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to authenticate with a card / QR code and then use both face authentication and PIN input. |
-   |       ID       | * <Image src='/img/common/ico-authmode-id.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone />: Mode to enter ID and then authenticate with a face.<br/>- <Image src='/img/common/ico-authmode-id.png' ico alone /> + <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to enter ID and then enter PIN.<br/>- <Image src='/img/common/ico-authmode-id.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone /> / <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to enter ID and then authenticate with a face or enter PIN.<br/>- <Image src='/img/common/ico-authmode-id.png' ico alone /> + <Image src='/img/common/ico-authmode-face.png' ico alone /> + <Image src='/img/common/ico-authmode-pin.png' ico alone />: Mode to enter ID and then use both face authentication and PIN input.                                                                                                                                                                                                                       |
+   |    Category    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+   | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   |      Face      | * <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode uses only facial authentication.<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires facial authentication followed by PIN entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   | Card / QR Code | * <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: This mode uses only card / QR code authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode requires card / QR code authentication followed by facial authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by either facial authentication or PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both facial authentication and PIN entry after card / QR code authentication. |
+   |       ID       | * <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode requires ID entry followed by facial authentication.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by either facial authentication or PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both facial authentication and PIN entry after ID entry.                                                                                                                                                                                                                       |
 
    </div>
 
    :::info
 
-   * The <Cmd>Schedule</Cmd> can be set in BioStar 2. If there is no set schedule, only <Cmd>Always</Cmd> can be selected.
+   * <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
 
-   * For detailed contents regarding setting a <Cmd>Schedule</Cmd>, refer to the BioStar 2 Administrator Guide.
+   * For more information about <Cmd sid='ui_203' product='dev' /> settings, refer to [the following](../../platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
 
-   * To use <Cmd>QR Code</Cmd> authentication, <Cmd>QR Authentication</Cmd> must be activated in <Cmd>AUTHENTICATION</Cmd> → <Cmd>Operation</Cmd>, and a separate device license is required. For more information, refer to [License](settings#license).
+   * To use <Cmd sid='ui_042' product='dev' /> authentication, <Cmd sid='ui_256' product='dev' /> must be clicked and <Cmd sid='ui_265' product='dev' /> must have <Cmd sid='ui_041' product='dev' /> activated, and a separate device license is required. For more information, refer to [License](settings#license).
 
    :::
 
-6. To save the settings, press <Cmd>OK</Cmd>.
+6. To save the settings, press <Cmd sid='ui_037' product='dev' />.
 
-### Modifying Auth Mode
+### Modifying auth mode
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
 3. Select the authentication mode to modify.
 
-4. Modify the authentication mode by referring to [Registering Auth Mode](#registering-auth-mode) and press <Cmd>OK</Cmd>.
+4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press <Cmd sid='ui_037' product='dev' />.
 
-### Delete Auth Mode
+### Delete auth mode
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Auth Mode</Cmd>.
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
 3. Press <Image src='/img/common/ico-delete.svg' ico alone /> and select the authentication mode to delete. You can select multiple options.
 
-4. To delete the selected option, press <Cmd>OK</Cmd>.
+4. To delete the selected item, press <Cmd sid='ui_037' product='dev' />.
 
 ## Operation
 
-### Server Matching
+### Server matching
 
 You can set up server matching.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> and activate <Cmd>Server Matching (Card, ID)</Cmd> in <Cmd>Operation</Cmd>.
+2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> in <Cmd sid='ui_187' product='dev' />.
 
    <Image src='/img/device/bs3-auth-option.png' />
 
-   * <Cmd>Server Matching (Card, ID)</Cmd>: When this option is activated, it performs user authentication matching in BioStar 2, not in the device. It can be used when the device has too much user information or when the device is installed outside.
+   * <Cmd sid='ui_187' product='dev' />: When server matching is set, user authentication is performed by BioStar X without the device performing user authentication. It can be used when the device has too much user information or when the device is installed outside.
 
    :::info
 
-   * <Cmd>Server Matching</Cmd> is only available for card and ID options.
+   * <Cmd sid='ui_185' product='dev' /> can only use cards and IDs.
 
-   * When you use the <Cmd>Server Matching</Cmd> option, you need to activate the option in both Biostar 2 and the device. Refer to the Administrator Guide of BioStar 2 to learn how to set the server matching settings in BioStar 2.
+   * If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](../../platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
 
    :::
 
-### QR Authentication
+### QR authentication
 
 You can activate QR code authentication.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> and activate <Cmd>QR Authentication</Cmd> in <Cmd>Operation</Cmd>.
+2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> for <Cmd sid='ui_041' product='dev' />.
 
    <Image src='/img/device/bs3-auth-option-qr.png' />
 
-   * <Cmd>QR Authentication</Cmd>: Set whether to use QR Code authentication through the device's camera.
+   * <Cmd sid='ui_041' product='dev' />: Set whether to use QR code authentication through the device's camera.
 
-   * <Cmd>Use QR as Card</Cmd>: Allows authentication with a QR code of the same data as the issued CSN card or Wiegand card. It can be set only when <Cmd>QR Authentication</Cmd> is activated.
+   * <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when <Cmd sid='ui_041' product='dev' /> is activated.
 
    :::info
 
-   Using the <Cmd>QR Authentication</Cmd> requires a separate device license. For more information, refer to [License](settings#license).
+   A separate device license is required to use <Cmd sid='ui_041' product='dev' />. For more information, refer to [License](settings#license).
 
    :::
 
@@ -120,37 +120,37 @@ Set whether to use the scramble keypad when entering passwords.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd>, and set whether to use the <Cmd>Scramble Keypad</Cmd> in the <Cmd>PIN</Cmd>.
+2. After pressing <Cmd sid='ui_256' product='dev' />, set whether to use <Cmd sid='ui_040' product='dev' /> in <Cmd sid='ui_204' product='dev' />.
 
    <Image src='/img/device/bs3-pin.png' />
 
-   * <Cmd>Scramble Keypad</Cmd>: When entering a password, the positions of the number keys are randomly shuffled to prevent password leakage.
+   * <Cmd sid='ui_204' product='dev' />: The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks.
 
-## Auth Result Display Option
+## Auth result display option
 
 You can set the auth result display option.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> and set the desired item in the <Cmd>Auth Result Display Option</Cmd>.
+2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired items in <Cmd sid='ui_259' product='dev' />.
 
    <Image src='/img/device/bs3-auth-result-display-option.png' />
 
-   * <Cmd>User ID Display</Cmd>: You can select how the user ID is displayed on the authentication result screen of the device.
+   * <Cmd sid='ui_169' product='dev' />: You can select how the user ID is displayed on the authentication results screen of the device.
 
-     * <Cmd>Display All</Cmd>: Displays the entire user ID.
+     * <Cmd sid='ui_307' product='dev' />: Show all user IDs.
 
-     * <Cmd>Mask All but First Letter</Cmd>: Displays only the first letter of the user ID.
+     * <Cmd sid='ui_316' product='dev' />: Show only the first character of the user ID.
 
-     * <Cmd>Hide All</Cmd>: Do not display the user ID.
+     * <Cmd sid='ui_357' product='dev' />: Do not display the user ID.
 
-   * <Cmd>User Name Display</Cmd>: You can select how the user name is displayed on the authentication result screen of the device.
+   * <Cmd sid='ui_177' product='dev' />: You can select how the user name is displayed on the authentication results screen of the device.
 
-     * <Cmd>Display All</Cmd>: Displays the entire user name.
+     * <Cmd sid='ui_307' product='dev' />: Show all user names.
 
-     * <Cmd>Mask All but First Letter</Cmd>: Displays only the first letter of the user name.
+     * <Cmd sid='ui_316' product='dev' />: Show only the first character of the user name.
 
-     * <Cmd>Hide All</Cmd>: Do not display the user name.
+     * <Cmd sid='ui_357' product='dev' />: Do not display the user name.
 
 ## Face
 
@@ -158,25 +158,25 @@ You can change the configuration for facial authentication.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>Face</Cmd>.
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_228' product='dev' />.
 
 3. Change the desired item.
 
    <Image src='/img/device/bs3-auth.png' />
 
-   * <Cmd>Motion Sensor</Cmd>: Set the sensitivity for detecting motion near the device. If <Cmd>Motion Sensor</Cmd> is set to <Cmd>Off</Cmd>, tap the screen to authenticate the face.
+   * <Cmd sid='ui_140' product='dev' />: Set the sensitivity to detect motion around the device. When <Cmd sid='ui_140' product='dev' /> is set to <Cmd sid='ui_091' product='dev' />, touch the screen to authenticate your face.
 
-   * <Cmd>Enroll Timeout</Cmd>: If a face is not enrolled during the set time, the face enrollment will be canceled.
+   * <Cmd sid='ui_115' product='dev' />: If the face is not enrolled within the set time, the face registration will be canceled.
 
-   * <Cmd>Auth Timeout</Cmd>: If the authentication is not completed during the set time, the authentication will fail.
+   * <Cmd sid='ui_260' product='dev' />: If authentication is not completed within the set time, authentication fails.
 
-   * <Cmd>Duplicate Check</Cmd>: When enrolling a face, you can check duplicates.
+   * <Cmd sid='ui_117' product='dev' />: You can check for duplicate faces during face registration.
 
-   * <Cmd>Face Detect Setting</Cmd>: Set the face authentication area by adjusting the size and position of the detected area.
+   * <Cmd sid='ui_229' product='dev' />: Set the position and size of the area where the device detects faces during face authentication.
 
-       :::info
+     :::info
 
-       It is recommended to maintain the default values of options under <Cmd>Face Detect Setting</Cmd>. The default values of each option are as follows:
+     For optimal performance, it is recommended to use default settings for the sub-options of <Cmd sid='ui_229' product='dev' />. The default values of each option are as follows:
 
      * Maximum Head Pose Angle: 15
 
@@ -184,71 +184,71 @@ You can change the configuration for facial authentication.
 
      * Wide Search: Deactivated
 
-       :::
+     :::
 
-   * <Cmd>ToM Enrollment</Cmd>: Enabling <Cmd>ToM Enrollment</Cmd> can be enrolled the <Cmd>Template on Mobile</Cmd> issued by BioStar 2. <Cmd>Template on Mobile</Cmd> is a Mobile Access card in which the user’s biometric templates can be stored so you can still use biometric authentication although your biometric information is not stored in BioStar 2 server, Airfob Portal, or device.
+   * <Cmd sid='ui_060' product='dev' />: By activating <Cmd sid='ui_060' product='dev' />, you can enroll the <Cmd sid='ui_340' product='dev' /> issued by BioStar X. <Cmd sid='ui_340' product='dev' /> allows biometric authentication without storing user data on the BioStar X server, Airfob Portal, or device by storing the user's biometric template on a mobile access card.
 
-       :::info
+     :::info
 
-     For detailed contents regarding <Cmd>Template on Mobile</Cmd>, refer to the BioStar 2 Administrator Guide.
+     For more information about <Cmd sid='ui_340' product='dev' />, refer to [the following](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile) BioStar X Administrator Manual.
 
-       :::
+     :::
 
-   * <Cmd>Store Visual Face Image</Cmd>: Set whether to store both the actual image and the template in the visual face or to store only the template without storing the actual image. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
+   * <Cmd sid='ui_157' product='dev' />: You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
 
-       :::info
+     :::info
 
-       After disabling this setting, use BioStar 2 v2.9.7 or higher.
+     After deactivating this setting, please connect and use with BioStar X version 2.9.7 or higher.
 
-       :::
+     :::
 
-   * <Cmd>Security Level</Cmd>: Set the security level for 1:N authentication.
+   * <Cmd sid='ui_149' product='dev' />: You can set the security level for 1:N authentication.
 
-   * <Cmd>Operation Mode</Cmd>: Set the operation mode of the device when the face is authenticated.
+   * <Cmd sid='ui_278' product='dev' />: You can set the operating mode of the device for face authentication.
 
-     * <Cmd>Fusion Matching</Cmd>: Use both visual and infrared cameras to increase the face authentication accuracy.
+     * <Cmd sid='ui_359' product='dev' />: Both visual and infrared matching work to increase the accuracy of face authentication.
 
-     * <Cmd>Fast Matching</Cmd>: The device authenticates users who pass an access point without a pause within the authentication distance.
+     * <Cmd sid='ui_159' product='dev' />: Users can perform rapid authentication while walking within the device's authentication range.
 
-   * <Cmd>Fake Detection</Cmd>: The device prevents user authentication using fake faces, such as photos. It is available when <Cmd>Operation Mode</Cmd> is set to <Cmd>Fusion Matching</Cmd>.
+   * <Cmd sid='ui_247' product='dev' />: You can prevent user authentication with spoofed faces such as photos. Activated when <Cmd sid='ui_278' product='dev' /> is set to <Cmd sid='ui_359' product='dev' />.
 
-       :::info
+     :::info
 
      * Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test.
 
-     * We recommend using the <Cmd>Fake Detection</Cmd> feature set to <Cmd>Normal</Cmd> in environments with strong sunlight.
+     * In strong sunlight, it is recommended to use the <Cmd sid='ui_247' product='dev' /> function as <Cmd sid='ui_152' product='dev' />.
 
-       :::
+     :::
 
-   * <Cmd>Advanced Settings</Cmd>: Set the settings of the face authentication, such as mask detection.
+   * <Cmd sid='ui_070' product='dev' />: You can change advanced settings for facial authentication, such as mask detection.
 
-     * <Cmd>Mask Detection</Cmd>: Set the mask detection mode to detect whether a user is wearing a mask or not.
+     * <Cmd sid='ui_123' product='dev' />: You can set whether to use mask detection.
 
-     * <Cmd>Detection Mode</Cmd>: Set the method for verifying whether a mask is being worn. This is activated when the <Cmd>Mask Detection</Cmd> is set to <Cmd>Enabled</Cmd>.
+     * <Cmd sid='ui_067' product='dev' />: You can set the method to check if a mask is worn. This will be activated if set to <Cmd sid='ui_123' product='dev' />.
 
-       :::info
+     :::info
 
-     * <Cmd>Require Mask (Hard)</Cmd>: Users not wearing a mask will be denied authentication and a mask non-compliance event logs.
+     * <Cmd sid='ui_127' product='dev' />: Users without masks will be denied authentication, and non-mask wearing events will be logged.
 
-     * <Cmd>Require Mask (Soft)</Cmd>: Users not wearing a mask can be authenticated, but a mask non-compliance event logs.
+     * <Cmd sid='ui_126' product='dev' />: Users without masks can still authenticate, but non-mask wearing events will be logged.
 
-     * <Cmd>Require No Mask</Cmd>: Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to <Cmd>Check Before Authentication</Cmd>.
+     * <Cmd sid='ui_125' product='dev' />: Only users without masks can authenticate, and if this mode is used, the mask verification mode will be fixed to <Cmd sid='ui_369' product='dev' />.
 
-       :::
+     :::
 
-   * <Cmd>Mask Detection Level</Cmd>: Set the sensitivity to detect wearing a mask. This is activated when the <Cmd>Mask Detection</Cmd> is set to <Cmd>Enabled</Cmd>.
+   * <Cmd sid='ui_124' product='dev' />: Set the sensitivity for detecting mask usage. This will be activated if set to <Cmd sid='ui_123' product='dev' />.
 
-   * <Cmd>Check Mode</Cmd>: Set the check mode depending on the usage.
+   * <Cmd sid='ui_368' product='dev' />: Set the confirmation mode according to the purpose of the device.
 
-       :::info
+     :::info
 
-     * <Cmd>Check After Authentication</Cmd>: Authenticate and then detect whether the user is wearing a mask.
+     * <Cmd sid='ui_267' product='dev' />: After authentication, check whether the user is wearing a mask.
 
-     * <Cmd>Check Before Authentication</Cmd>: Detect whether the user is wearing a mask and then authenticates.
+     * <Cmd sid='ui_369' product='dev' />: Authenticate after checking whether the user is wearing a mask.
 
-     * <Cmd>Check Only</Cmd>: Detect whether a user is wearing a mask without authentication. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+     * <Cmd sid='ui_370' product='dev' />: The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication.
 
-       :::
+     :::
 
 ## T&A (Time and Attendance)
 
@@ -256,18 +256,18 @@ You can set how to register T&A mode.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd>AUTHENTICATION</Cmd> → <Cmd>T&A</Cmd>.
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_079' product='dev' />.
 
 3. Change the desired item.
 
    <Image src='/img/device/bs3-auth2.png' />
 
-   * <Cmd>T&A Mode</Cmd>: Set the method to use T&A mode.
+   * <Cmd sid='ui_083' product='dev' />: You can set how to use attendance mode.
 
-   * <Cmd>T&A Code</Cmd>: You can register T&A events. Select <Cmd>T&A Code</Cmd> → <Image src='/img/common/ico-add.svg' ico alone /> to register a T&A event and set an icon, <Cmd>T&A Event Name</Cmd> and <Cmd>Schedule</Cmd>.
+   * <Cmd sid='ui_086' product='dev' />: You can register attendance events. To register attendance events, select <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> and then set the icon to display on the screen, <Cmd sid='ui_085' product='dev' />, and <Cmd sid='ui_203' product='dev' />.
 
-   * <Cmd>T&A Required</Cmd>: Set to require a user to select a T&A event when authenticating. This option can be used when <Cmd>T&A Mode</Cmd> is set to <Cmd>By User</Cmd>.
+   * <Cmd sid='ui_082' product='dev' />: You can set it so that users must select attendance events when authenticating. This can be used when <Cmd sid='ui_083' product='dev' /> is set to <Cmd sid='ui_199' product='dev' />.
 
-   * <Cmd>Fixed T&A Key</Cmd>: Set to use only a T&A event selected by the administrator. This option can be used when <Cmd>T&A Mode</Cmd> is set to <Cmd>Fixed</Cmd>.
+   * <Cmd sid='ui_081' product='dev' />: You can set it to use only the attendance events selected by the administrator. This can be used when <Cmd sid='ui_083' product='dev' /> is set to <Cmd sid='ui_071' product='dev' />.
 
-   * <Cmd>Job Code</Cmd>: Select whether to use <Cmd>Job Code</Cmd>.
+   * <Cmd sid='ui_279' product='dev' />: You can choose whether to use job codes.

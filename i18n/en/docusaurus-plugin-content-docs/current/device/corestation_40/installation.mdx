@@ -1,0 +1,118 @@
+---
+id: installation
+title: Installation
+description: Provides the complete process and connection examples required for product installation.
+keywords:
+  - Install
+  - CoreStation
+  - Device
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Product Fixation
+
+1. Secure the spacer with fixing screws at the location where the product will be mounted.
+
+2. Tighten the product onto the secured spacer using fixing screws.
+
+   <Image src='/img/device/device-fix-cs40.svg' className='none' width={400} alone />
+
+3. Remove the discharge prevention film attached to the RTC battery.
+
+   <Image src='/img/device/device-remove-film-cs40.png' className='none' width={350} alone />
+
+:::info
+
+* The RTC (Real Time Clock) battery is used to keep accurate time even when the product's power is off.
+
+* The RTC battery capacity is 226mAh, and the expected lifespan may vary depending on the installation environment and usage method. When replacing the RTC battery, please adhere to CR2032.
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+<PageBreak />
+
+## RS-485 Connection
+
+This product supports five RS-485 ports, and a single RS-485 port can connect up to 31 devices.
+
+<Image src='/img/device/installation-rs485-connection-cs40.png' width='75%' className='none' />
+
+:::info
+
+* The total number of RS-485 devices connected to the product must not exceed 64.
+
+* Use AWG26 or larger for RS-485 cables, and all wiring must comply with ANSI/NFPA 70 standards.
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set the termination resistor switch ON for this product.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+<PageBreak />
+
+## Door sensor and exit button
+
+The SUPERVISED INPUT 0 ~ 7 terminals can be set to be used as general inputs or as Supervised Inputs.
+
+<Image src='/img/device/installation-door-senser-rte-connection-cs40.png' width='70%' className='none' />
+
+:::info
+
+The SUPERVISED INPUT **Alarm** port can be used by connecting 1 kΩ, 2.2 kΩ, 4.7 kΩ, or 10 kΩ resistors. After connecting the appropriate resistor to the input device, set the resistor value the same in BioStar X.
+
+:::
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+<PageBreak />
+
+## Enclosure installation {#install-enclosure}
+
+For physical and electrical protection, the CoreStation can be installed inside the enclosure (ENCR-10). The enclosure includes a power status LED board, power distribution board, power supply, and tamper. The enclosure is sold separately.
+
+{/* ## cs40 함체 설치 */}
+import Installenclosurecs40 from "../../common/_device-install-enclosure-cs40.mdx";
+
+<Installenclosurecs40 />
+
+{/* ## 공장 초기화 {#factory-reset} */}
+import FactoryReset from "../../common/_cs-fatory-reset.mdx";
+
+<FactoryReset />

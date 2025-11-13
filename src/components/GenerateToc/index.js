@@ -12,7 +12,7 @@ export default function GenerateTOC({ className, device, ...props }) {
 
   useEffect(() => {
     // 페이지가 렌더링된 후에 TOC를 생성합니다.
-    const headers = document.querySelectorAll('h2:not(.margin-bottom--lg h2), h3:not(.margin-bottom--lg h3), h4:not(.margin-bottom--lg h4)');
+    const headers = document.querySelectorAll('h2:not(.padding--lg h2, .margin-bottom--lg h2), h3:not(.padding--lg h3, .margin-bottom--lg h2), h4:not(.padding--lg h4, .margin-bottom--lg h2)');
     const collectedToc = Array.from(headers).map(header => ({
       value: header.innerText,
       id: header.id,

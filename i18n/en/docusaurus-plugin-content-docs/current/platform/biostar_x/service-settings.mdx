@@ -1,0 +1,149 @@
+---
+id: service-settings
+title: Service Settings
+description: In the Service Settings of BioStar X Service Manager, you can configure and manage the core services of the system.
+keywords:
+  - Service Settings
+  - Service Manager
+  - BioStar X
+---
+
+In the <Cmd>Service Settings</Cmd> menu of <Cmd>BioStar X Service Manager</Cmd>, you can configure and manage the core services of the system. Each service is configured independently, and you can check network ports and version information.
+
+<Cmd>Service Settings</Cmd> consists of the following major services.
+
+* <Cmd>BioStar X Core Web Service</Cmd>: Web interface service
+
+* <Cmd>BioStar X Core Service</Cmd>: Core system functionalities and API communication service
+
+* <Cmd>Unified Gateway Service</Cmd>: Reverse proxy-based integrated gateway service
+
+* <Cmd>BioStar X Coordinator Service</Cmd>: Management of distributed system configuration information and service synchronization
+
+* <Cmd>BioStar X Server (Main)</Cmd>: Main server service
+
+* <Cmd>BioStar X Cache Service</Cmd>: Data caching and enhanced system performance
+
+## Situations where configuration changes are needed {#when-to-change}
+
+You may need to change the service settings in the following situations.
+
+* **Resolving port conflicts**: When another application uses the same port and causes conflicts
+
+* **Compliance with security policies**: When only specific ports are allowed according to the organization's network security policy
+
+* **Firewall settings**: When you need to change to ports allowed by your corporate firewall
+
+* **Server environment changes**: When changing the server IP address or network configuration
+
+* **Performance optimization**: When separation of ports is needed for traffic distribution or load balancing
+
+## How to change settings {#how-to-change}
+
+1. Click the <Cmd>SERVICE SETTINGS</Cmd> menu in <Cmd>BioStar X Service Manager</Cmd>.
+
+2. Go to the section of the service you want to change.
+
+3. Modify the required port number or address.
+
+4. To apply changes, click the <Cmd>Apply</Cmd> button in the upper right corner of the screen.
+
+:::note
+
+After changing the service settings, restart the related services to apply the changes.
+
+:::
+
+:::caution
+
+When changing port numbers, make sure there are no conflicts with other services or applications.
+
+:::
+
+## Service composition {#service-composition}
+
+### BioStar X Core Web Service {#biostar-x-core-web-service}
+
+This service is responsible for the web-based user interface.
+
+<Image src='/img/common/biostarx-sm-cws.png' alone />
+
+* <Cmd>HTTPS Port</Cmd>: Web interface access port (default: 5002)
+
+* <Cmd>WebServerThrift Port</Cmd>: Web server communication port based on the Thrift protocol (default: 9310)
+
+* <Cmd>CloudNgrok Port</Cmd>: Cloud tunneling service communication port (default: 52000)
+
+### BioStar X Core Service {#biostar-x-core-service}
+
+This is the main service that handles core functionalities of the system and external API communications.
+
+<Image src='/img/common/biostarx-sm-core-s.png' alone />
+
+* <Cmd>WebSocket Port</Cmd>: WebSocket port for real-time bidirectional communication (default: 9002)
+
+* <Cmd>API Port</Cmd>: REST API communication port (default: 9010)
+
+* <Cmd>WebServerFastCgi Port</Cmd>: Web server communication port based on FastCGI protocol (default: 9000)
+
+* <Cmd>Rpc Port</Cmd>: Remote Procedure Call (RPC) communication port (default: 51218)
+
+### Unified Gateway Service {#unified-gateway-service}
+
+Efficiently process requests to the **BioStar X** server through reverse proxy, improve the security vulnerabilities of iframes, and minimize SSL certificate errors.
+
+<Image src='/img/common/biostarx-sm-ugs.png' alone />
+
+* <Cmd>HTTPS Port</Cmd>: Integrated gateway HTTPS communication port (default: 443)
+
+### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+
+This service is responsible for managing configuration information of the distributed system, monitoring service status, and synchronizing services.
+
+<Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
+* <Cmd>Client Port</Cmd>: Communication port for client connections (default: 21810)
+
+:::info
+
+* Change the value of <Cmd>Client Port</Cmd>, then manually restart the **BioStar X Coordinator Service** in **Windows Services**(*services.msc*).
+
+* After restarting the **BioStar X Coordinator Service**, go to **BioStar X Service Manager** → **SERVICES** and restart all services. 
+
+  Click <Cmd>Stop All</Cmd> in the top right corner of the screen. After all services are stopped, when the <Cmd>Start All</Cmd> button is enabled, click the button.
+
+:::
+
+### BioStar X Server (Main) {#biostar-x-server-(main)}
+
+This is the core service that serves as the main server of the system.
+
+<Image src='/img/common/biostarx-sm-server.png' alone />
+
+* <Cmd>Server Address</Cmd>: IP address of the main server
+
+* <Cmd>Server Port</Cmd>: General server communication port (default: 51212)
+
+* <Cmd>SSL Server Port</Cmd>: SSL secure encrypted communication port (default: 51213)
+
+* <Cmd>gRPC Server Port</Cmd>: High-performance communication port based on gRPC protocol (default: 51219)
+
+### BioStar X Cache Service {#biostar-x-cache-service}
+
+This service improves the system's data processing speed and performance by storing frequently used data in memory.
+
+<Image src='/img/common/biostarx-sm-cache-s.png' alone />
+
+* <Cmd>Client Port</Cmd>: Cache service client connection port (default: 10800)
+
+* <Cmd>Communication Port</Cmd>: Internal communication port between cache nodes (default: 47500)
+
+* <Cmd>Discovery Port</Cmd>: Port for automatic discovery of distributed cache nodes (default: 47100)
+
+<NextStep>
+<NextItem to='change-port'>
+
+Learn step-by-step how to change the default port (443) of **BioStar X**.
+
+</NextItem>
+</NextStep>

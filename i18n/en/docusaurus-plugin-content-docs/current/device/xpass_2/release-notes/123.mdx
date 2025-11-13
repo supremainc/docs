@@ -1,0 +1,48 @@
+---
+id: 123
+title: Firmware Version 1.2.3
+---
+
+# Firmware Version 1.2.3 (Build No. 1.2.3_210518)
+
+Release<Separator/>2021-05-24
+
+## New Features and Improvements
+
+---
+
+1. Upgraded to the 1.1.1i version of OpenSSL.
+
+1. Intelligent Slave Support
+
+    - Intelligent Slave: A function that enables 1:1 or 1:N matching directly from the Suprema device and transmits the authentication result as OSDP card data to the third-party controller.
+
+1. The transmission power level for Bluetooth Low Energy (BLE) has been adjusted.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. If 31 slave devices were connected and one of the devices got disconnected, the master device rebooted. <Badge>1.0.0</Badge>
+
+1. Incorrect BitCount was sent if a user authenticated with AoC when the device was connected to a 3rd-party system via OSDP. <Badge>1.0.0</Badge>
+
+1. When using a static IP while the DNS server address was configured, a reboot on the device caused communication problems between the server and the device. <Badge>1.0.0</Badge>
+
+1. It failed to reconnect to the slave device after downgrading its firmware version to 1.1.0. <Badge>1.0.0</Badge>
+
+1. Device responded that it supported transparent mode by OSDP_PDCAP when connecting as a slave while it did not support it. <Badge>1.0.0</Badge>
+
+1. When calling the BS2_ResetConfigExceptNetInfo API from the BioStar 2 Device SDK, a 'Timeout' error occurred. <Badge>1.0.0</Badge>
+
+1. The OSDP LED Temporary command did not work properly. <Badge>1.0.0</Badge>
+
+1. The network reset on the first use was needed to use OSDP default keys to communicate. (for devices released with the firmware version 1.2.0 or later) <Badge>1.2.0</Badge>
+
+1. It was able to communicate using default keys after changing the key settings when the device was connected to a 3rd-party device via OSDP. <Badge>1.0.0</Badge>
+
+1. Secure communication was not available by using the default key after downgrading firmware to version 1.1.0 or below which does not support encryption. <Badge>1.2.0</Badge>
+
+</BugLists>

@@ -12,6 +12,7 @@ import DimenW from '@site/static/img/common/ico-w.svg';
 import DimenH from '@site/static/img/common/ico-h.svg';
 import DimenD from '@site/static/img/common/ico-d.svg';
 import Face from '@site/static/img/menus/spec-credential-face.svg';
+import Fingerprint from '@site/static/img/menus/spec-credential-finger.svg';
 
 const glossaryMap = {
   ko: glossary_ko,
@@ -52,12 +53,12 @@ function SupportedType({ supported, annot }) {
 
 function Description({ contents }) {
   return (
-    <>{contents}</>
+    <p dangerouslySetInnerHTML={{ __html: contents }} />
   )
 }
 
 
-export function SpecSectioin({data}) {
+export function SpecSection({data}) {
   const specs = data.items;
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const glossary = glossaryMap[currentLocale] || glossary_en;
@@ -97,11 +98,17 @@ export function SpecSectioin({data}) {
                           {subitem.type === 'face' && (
                             <Face width='80' height='80' />
                           )}
+                          {subitem.type === 'fingerprint' && (
+                            <Fingerprint width='80' height='80' />
+                          )}
                         </div>
                         <div className={clsx(styles.column, styles.small_l2)}>
-                          <p><strong>
-                            {translate({id: subitem.label_id})}
-                          </strong></p>
+                          <p>
+                            <strong>
+                              {translate({id: subitem.label_id})}
+                            </strong>
+                            {subitem.badge && <span className='badge only'>{subitem.badge}</span>}
+                          </p>
                           {subitem.items && (
                             <ul>
                               {Object.values(subitem.items).map((subsubitem) => (
@@ -134,9 +141,15 @@ export function SpecSectioin({data}) {
               <div className={styles.techspecsBody}>
                 {Object.values(item.items).map((subitem, subindex) => (
                     <div key={subindex} className={styles.row}>
-                      <div className={clsx(styles.column, styles.small_l1)}>
-                        {subitem.label}
-                      </div>
+                      {subitem.label_id ? (
+                        <div className={clsx(styles.column, styles.small_l1)}>
+                          {translate({id: subitem.label_id})}
+                        </div>
+                      ) : (
+                        <div className={clsx(styles.column, styles.small_l1)} dangerouslySetInnerHTML={{__html: subitem.label}} />
+                      )
+                      }
+                      
                       <div className={clsx(styles.column, styles.small_l2)}>
                         <DescObj contents={subitem.value} />
                       </div>
@@ -183,15 +196,13 @@ function DescObj( {contents} ) {
   // console.log(typeof contents[currentLocale]);
   if (typeof contents[currentLocale] === 'string') {
     return (
-      <>{contents[currentLocale]}</>
+      <p dangerouslySetInnerHTML={{__html: contents[currentLocale]}} />
     )
   } else if (typeof contents[currentLocale] === 'object') {
     return (
       <ul>
         {Object.values(contents[currentLocale]).map((item, index) => (
-          <li key={index}>
-            {item}
-          </li>
+          <li key={index} dangerouslySetInnerHTML={{__html: item}} />
         ))}
       </ul>
     )
@@ -207,7 +218,7 @@ function DescObj( {contents} ) {
     )
   } else if (typeof contents === 'boolean') {
     return (
-      <SupportedType suppported={contents} />
+      <SupportedType supported={contents} />
     )
   } else if (typeof contents[currentLocale] === 'undefined') {
     return (
@@ -241,16 +252,18 @@ export function SpecSizeWieght({data}) {
                 <ul>
                   {item.size && (
                     <li>
-                      {translate({id: 'specs.size_weight.size'})}:&nbsp;
-                      <span className={styles.size}>
-                        <DimenW /> {item.size.width}mm
-                        × <DimenH /> {item.size.height}mm
-                        {item.size.depth && (
-                          <>
-                            &nbsp;x <DimenD /> {item.size.depth}mm
-                          </>
-                        )}
-                      </span>
+                      {translate({id: 'specs.size_weight.size'})}:
+                      <ul>
+                        <li>
+                          <span className={styles.size}><DimenW /> {item.size.width}mm</span>
+                        </li>
+                        <li>
+                          <span className={styles.size}><DimenH /> {item.size.height}mm</span>
+                        </li>
+                        <li>
+                          <span className={styles.size}><DimenD /> {item.size.depth}mm</span>
+                        </li>
+                      </ul>
                     </li>
                   )}
                   <li>

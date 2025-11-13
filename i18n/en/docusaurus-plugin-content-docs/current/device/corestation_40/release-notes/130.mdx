@@ -1,0 +1,72 @@
+---
+id: 130
+title: Firmware Version 1.3.0
+---
+
+# Firmware Version 1.3.0 (Build No. 1.3.0_190626)
+
+Release<Separator/>2019-07-12
+
+## Important Bug Fix
+
+1. When a door configured in a Scheduled Unlock Zone is opened by a Scheduled Unlock, the door is not locked if the zone is deleted.
+
+1. A code is added to prevent the authentication fails because the cache memory is broken.
+
+## New Features and Improvements
+
+---
+
+1. Supports Anti-Tailgating.
+
+1. Change the way new settings are applied when adding administrators using batch edit of devices.
+
+    - Existing: Overwrite a new setting to existing settings.
+
+    - Update: Add a new setting to existing settings.
+
+1. Increase of the number of administrators that can be added.
+
+1. Increase of the maximum number of floor levels.
+
+1. Support to the Clear APB for each user.
+
+1. Supports checking module firmware version.
+
+1. Support for connecting new devices.
+
+    - XPass 2(XP2-MDPB, XP2-GDPB, XP2-GKDPB)
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. The device does not send the Seos config to the slave device even though the slave device supports iCLASS Seos card.
+
+1. Applies FA improvement algorithm.
+
+1. Start time is not applied in UTC when importing filtered logs using SDK.
+
+1. Fixed mask error of DesFireCardConfig.
+
+1. Supports unsupported devices (FaceStation 2, FaceLite).
+
+1. The door operates as the Scheduled Unlock when restarting the master device while the door is configured to the Scheduled Unlock and Manual Lock.
+
+1. The master device is rebooted if deleting the zone while disconnected with the slave device.
+
+1. The title of the credential input screen is displayed differently on the master device and the slave device when using multiple authentication mode.
+
+    - Existing: master device (user ID, user name), slave device (user ID)
+
+    - Update: master device and slave device (user ID, user name)
+
+1. Relay works after reconnecting for authentication that occurred when elevator connection is disconnected.
+
+1. When an alarm occurs in the interlock zone, the alarm does not clear even though restarting the master device.
+
+1. Even though the fingerprint templates are set differently on the server and the device, the fingerprint enrollment succeeds in the slave device.
+
+</BugLists>

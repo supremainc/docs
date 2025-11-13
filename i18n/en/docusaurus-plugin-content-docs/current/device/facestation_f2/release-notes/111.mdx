@@ -1,0 +1,82 @@
+---
+id: 111
+title: Firmware Version 1.1.1
+---
+
+# Firmware Version 1.1.1 (Build No. 1.1.1_210623)
+
+Release<Separator/>2021-06-25
+
+## New Features and Improvements
+
+---
+
+1. Improved Visual Face algorithms
+
+    - The new visual face algorithm is not compatible with visual face templates registered in firmware Version 1.0.5 or earlier. When upgrading firmware from version 1.0.5 or earlier to version 1.1.0 or later, migration to extract the previously registered face templates is performed, which may take up to 10 hours depending on the number of registered users.
+
+    - AoC with face data issued by version 1.0.5 or earlier is not compatible with devices with firmware version 1.1.0 or later.
+
+    - When upgrading the firmware to version 1.1.0 or later, it is not able to downgrade to version 1.0.5 or earlier.
+
+1. Occupancy limit zone support
+
+1. Improved usability of the Suprema Thermal Camera.
+
+    - Added voice guidance for temperature measurement distance and user movement
+
+    - Improved the user interface for the ROI guide area.
+
+    - Classified the display of the guide area according to its ROI setting.
+
+    - Changed the default value for ROI Settings from Dynamic ROI to Default ROI
+
+    - Added a guidance message when the temperature measurement failed.
+
+1. Renamed the lighting brightness control feature and added the 'Not Use' option.
+
+    - Changed the option name from 'Ambient Brightness' to 'LED Brightness'.
+
+    - Improved turning off the light of the device by adding the 'Not Use' option.
+
+    - Removed the 'Auto' option.
+
+1. Improved manually turning the secure tamper on or off even when the default hash key is set.
+
+1. Changed the face authentication time interval to 2.5 seconds.
+
+1. Improved to prevent errors from occurring upon decompressing a file that is 2GB or larger after the file has been split and then compressed upon exporting to a USB.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The RS-485 communication did not work properly when connecting the device to a third-party controller after activating the Secure Communication mode. <Badge>1.0.5 or earlier</Badge>
+
+1. The brightness of the screen increased and this state persisted when the face authentication failed due to an environment that was too bright, too dark, or backlit. <Badge>1.0.4 or earlier</Badge>
+
+1. The Suprema Thermal Camera did not work properly after upgrading the firmware to version 1.0.4 or later. <Badge>1.0.4 or earlier</Badge>
+
+1. There was a difference in the time taken depending on whether the user was registered when exporting logs to a USB. <Badge>1.1.0 or earlier</Badge>
+
+1. The administrator menu was not displayed intermittently when the authentication mode was set to ID+PIN. <Badge>1.0.5 or earlier</Badge>
+
+1. The screen was abnormally displayed when the second user authentication was successful on a slave device with dual authentication. <Badge>1.1.0 or earlier</Badge>
+
+1. After being disconnected from BioStar 2, an incorrect pop-up message was displayed until they were reconnected. <Badge>1.0.5 or earlier</Badge>
+
+1. The duress authentication logs did not occur in order according to the set authentication mode. <Badge>1.0.5 or earlier</Badge>
+
+1. The relay operated as Off (Lock) after setting the scheduled unlock zone in the elevator and rebooting the master device. <Badge>1.1.0 or earlier</Badge>
+
+1. All files in the database were deleted after exporting them to a USB. <Badge>1.0.5 or earlier</Badge>
+
+1. Improved the Visual Face matching algorithm. <Badge>1.1.0 or earlier</Badge>
+
+    - Improved authentication performance when wearing masks.
+
+    - Improved the facial authentication algorithm for glasses-wearers.
+
+</BugLists>

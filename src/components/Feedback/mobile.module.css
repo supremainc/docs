@@ -1,0 +1,330 @@
+/* 모바일에서만 표시 (640px 이하) */
+.feedbackWidget {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .feedbackWidget {
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid var(--ifm-color-emphasis-300);
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    background-color: var(--ifm-color-nextstep-background);
+  }
+
+  .feedbackTitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--main-circle-color);
+    text-align: center;
+    float: none;
+  }
+
+  .selectFeedback {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    float: none;
+  }
+
+  .feedbackButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-width: 120px;
+    background-color: var(--feedback-button-bg);
+    border: 2px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    color: var(--ifm-color-content);
+    margin-left: 0;
+  }
+
+  .feedbackButton:hover {
+    border-color: var(--ifm-color-primary);
+    background-color: var(--ifm-color-emphasis-100);
+  }
+
+  .feedbackButton.selected {
+    border-color: var(--ifm-color-primary);
+    background-color: var(--ifm-color-primary-lightest);
+    cursor: default;
+  }
+
+  .feedbackButton .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* 모달 스타일 */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .modalContent {
+    background-color: var(--ifm-color-nextstep-background);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    margin-bottom: 1.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ifm-color-content);
+    margin: 0;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--ifm-color-emphasis-600);
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .closeButton:hover {
+    color: var(--ifm-color-content);
+  }
+
+  .modalBody {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .modalDescription {
+    color: var(--ifm-color-emphasis-700);
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .selectedFeedback {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .quickSubmitSection {
+    text-align: center;
+  }
+
+  .quickSubmitButton {
+    background-color: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+  }
+
+  .quickSubmitButton:hover:not(:disabled) {
+    background-color: var(--ifm-color-primary-dark);
+  }
+
+  .quickSubmitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .feedbackForm {
+    margin-top: 1rem;
+  }
+
+  .textareaLabel {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--ifm-color-content);
+    font-size: 0.9rem;
+  }
+
+  .required {
+    color: var(--ifm-color-danger);
+    font-weight: normal;
+    margin-left: 0.25rem;
+  }
+
+  .feedbackTextarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--ifm-color-content);
+    background-color: var(--ifm-background-color);
+    resize: vertical;
+    min-height: 100px;
+    box-sizing: border-box;
+  }
+
+  .feedbackTextarea:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+  }
+
+  .characterCount {
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-600);
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .requiredNote {
+    color: var(--ifm-color-danger);
+    float: left;
+  }
+
+  .modalActions {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .submitButton {
+    flex: 1;
+    background-color: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .submitButton:hover:not(:disabled) {
+    background-color: var(--ifm-color-primary-dark);
+  }
+
+  .submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .cancelButton {
+    background-color: var(--ifm-color-emphasis-200);
+    color: var(--ifm-color-content);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .cancelButton:hover:not(:disabled) {
+    background-color: var(--ifm-color-emphasis-300);
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .successMessage {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .successIcon {
+    display: block;
+    font-size: 3rem;
+    color: var(--ifm-color-success);
+    margin-bottom: 1rem;
+  }
+
+  .successMessage p {
+    margin: 0.5rem 0;
+    color: var(--ifm-color-content);
+  }
+
+  .successSubtext {
+    font-size: 0.9rem;
+    color: var(--ifm-color-emphasis-700);
+  }
+
+  .errorMessage {
+    background-color: var(--ifm-color-danger-contrast-background);
+    border: 1px solid var(--ifm-color-danger);
+    color: var(--ifm-color-danger-contrast-foreground);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .modalFooter {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--ifm-color-emphasis-200);
+    background-color: var(--ifm-color-emphasis-100);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .privacyNote {
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-600);
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+/* 데스크톱에서는 완전히 숨김 */
+@media (min-width: 641px) {
+  .feedbackWidget {
+    display: none !important;
+  }
+}

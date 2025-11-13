@@ -1,0 +1,178 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-mdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-mdb.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-device-xpd2-gdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gdb.svg' className='none' width={90} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass 2 멀리언 타입 (XP2-MDPB, XP2-MAPB, XP2-MAPB-H)</Td>
+
+<Td>벽걸이용 브래킷 (XP2-MDPB,<br/>XP2-MAPB, XP2-MAPB-H)</Td>
+
+<Td>XPass 2 갱 박스 타입 (XP2-GDPB)</Td>
+
+<Td>벽걸이용 브래킷 (XP2-GDPB)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-gkdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gkdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass 2 키패드 타입 (XP2-GKDPB)</Td>
+
+<Td>벽걸이용 브래킷 (XP2-GKDPB)</Td>
+
+<Td>고정용 나사 x2</Td>
+
+<Td>브래킷 고정용 나사 (별 모양)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>수축 튜브</Td>
+
+<Td>퀵 가이드</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-xp2.png' width='80%' className='none' />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+  * 초록색: 인증 성공
+
+  * 빨간색: 인증 실패
+
+  * 파란색/하늘색 점멸: 정상 동작 상태
+
+  * 파란색/초록색 점멸: 네트워크 설정 초기화 시
+
+  * 초록색 점멸: 입력 대기 상태
+
+  * 초록색/흰색 점멸: 슈프리마 AirFob Pass (BLE) 애플리케이션과 연결 중인 상태
+
+  * 흰색 점멸: Device Manager 애플리케이션과 연결 중인 상태
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **모바일 출입카드 인식부**: 출입을 위해 모바일 출입카드를 인식시키는 부분입니다.
+
+* **초기화 버튼**
+
+  * 네트워크 설정을 초기화합니다. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings)를 참고하세요.
+
+  * 장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
+
+* **케이블**
+
+  전원 / RS-485 / 이더넷 / Wiegand 입출력 / Input / 릴레이
+
+* **키패드**: <Badge only>XP2-GKDPB</Badge> 카드 ID를 직접 입력하여 인증할 때 사용합니다. 직접 입력 방식으로 인증하려면 BioStar X에서 인증 방법 설정을 변경하세요.
+
+  * **0\~9**: 숫자를 입력할 때 사용합니다.
+
+  * <Image src='/img/common/ico-star.svg' ico alone />: Wiegand 카드 ID를 입력할 때 FC 코드와 ID를 구분하기 위해 사용합니다.
+
+  * <Image src='/img/common/ico-pound.svg' ico alone />: 입력을 종료할 때 사용합니다.
+
+### 케이블
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xp2.png' className='none' width={600} alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: |
+| 1 | 485 TRXP | 파란색 (흰띠) |
+| 2 | 485 TRXN | 노란색 (검은띠) |
+| 3 | 485 GND | 흰색 (검은띠) |
+| 4 | ENET RXN | 노란색 |
+| 5 | ENET RXP | 검은색 |
+| 6 | ENET TXN | 주황색 |
+| 7 | ENET TXP | 흰색 |
+| 8 | ENET VB1 | 빨간색 |
+| 9 | ENET VB1 | 초록색 |
+| 10 | ENET VB2 | 파란색 |
+| 11 | ENET VB2 | 갈색 |
+| 12 | WG GND | 검은색 |
+| 13 | WG D1 | 흰색 |
+| 14 | WG D0 | 초록색 |
+| 15 | INPUT0 | 보라색 |
+| 16 | INPUT1 | 갈색 |
+| 17 | INPUT GND | 회색 |
+| 18 | RLY NO | 회색 (흰띠) |
+| 19 | RLY COM | 녹색 (흰띠) |
+| 20 | RLY NC | 주황색 (흰띠) |
+| 21 | PWR +VDC | 빨간색 |
+| 22 | PWR GND | 검은색 (흰띠) |
+
+</Column>
+</Columns>

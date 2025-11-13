@@ -1,0 +1,189 @@
+---
+id: authentication
+title: Certifications
+description: Describes the supported authentication methods and authentication procedures.
+keywords:
+  - Authentication mode
+  - Operation
+  - PIN
+  - Face
+  - T&A (Time and Attendance)
+---
+
+Describes the supported authentication methods and authentication procedures.
+
+## Authentication mode
+
+Set the authentication mode. You can combine <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_322' product='dev' />, and <Cmd sid='ui_020' product='dev' /> for authentication mode, and you can also set schedules for each authentication mode.
+
+### Fingerprint authentication mode
+
+You can set schedules for each authentication method that uses fingerprints.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_315' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-auth-authmode.png' />
+
+3. Select the desired item and press <IcFw />/<IcBw /> to set the schedule.
+
+   * <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone />: Mode that uses only fingerprints.
+
+   * <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that authenticates using fingerprints followed by entering PIN.
+
+4. Press **OK** to save the settings.
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
+
+* For more information about <Cmd sid='ui_203' product='dev' /> settings, refer to [the following](../../platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+
+:::
+
+### Card Authentication Mode
+
+You can set schedules for each authentication method that uses cards.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_326' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-auth-authmode1.png' />
+
+3. Select the desired item and press <IcFw />/<IcBw /> to set the schedule.
+
+   * <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone />: Mode that uses only cards.
+
+   * <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone />: Mode that authenticates using cards followed by fingerprints.
+
+   * <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that authenticates using cards followed by entering PIN.
+
+   * <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that authenticates using cards followed by either fingerprints or entering PIN.
+
+   * <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that uses both fingerprint authentication and PIN entry after using a card.
+
+4. Press **OK** to save the settings.
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
+
+* For more information about <Cmd sid='ui_203' product='dev' /> settings, refer to [the following](../../platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+
+:::
+
+### ID Authentication Mode
+
+You can set schedules for each authentication method that uses IDs.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_023' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-auth-authmode2.png' />
+
+3. Select the desired item and press <IcFw />/<IcBw /> to set the schedule.
+
+   * <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone />: Mode that authenticates using ID followed by fingerprints.
+
+   * <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that authenticates using ID followed by entering PIN.
+
+   * <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that authenticates using ID followed by either fingerprints or entering PIN.
+
+   * <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />: Mode that uses both ID authentication and PIN entry after using a fingerprint.
+
+4. Press **OK** to save the settings.
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
+
+* For more information about <Cmd sid='ui_203' product='dev' /> settings, refer to [the following](../../platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+
+:::
+
+## Attendance Mode
+
+You can set how to register T&A mode.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_083' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-auth.png' />
+
+3. Select the desired item and press <IcFw />/<IcBw /> to change the settings.
+
+   * <Cmd sid='ui_083' product='dev' />: You can set how to use attendance mode.
+
+   * <Cmd sid='ui_084' product='dev' />: You can check attendance events.
+
+   * <Cmd sid='ui_082' product='dev' />: You can set it so that users must select attendance events when authenticating.
+
+   * <Cmd sid='ui_279' product='dev' />: You can choose whether to use job codes.
+
+4. Press **OK** to save the settings.
+
+## Server matching
+
+You can set up server matching. When server matching is used, authentication is performed on BioStar X without authentication on the device. It can be used when the device has too much user information or when the device is installed outside.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_190' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-server-matching.png' />
+
+3. Press <IcFw />/<IcBw /> to change the settings.
+
+4. Press **OK** to save the settings.
+
+:::info
+
+* You can only use <Cmd sid='ui_190' product='dev' /> with <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />, and <Cmd sid='ui_020' product='dev' />.
+
+* If using <Cmd sid='ui_190' product='dev' />, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](../../platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+
+:::
+
+## Fingerprint Settings
+
+You can change the settings for fingerprint authentication.
+
+1. Press <Image src='/img/common/ico-menu1.svg' ico alone /> and authenticate with the administrator credential.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_314' product='dev' /> and then press **OK**.
+
+   <Image src='/img/device/bs2a-fingerprint.png' />
+
+3. Select the desired item and press <IcFw />/<IcBw /> to change the settings.
+
+   * <Cmd sid='ui_149' product='dev' />: You can set the security level for 1:N authentication.
+
+   * <Cmd sid='ui_130' product='dev' />: You can set the waiting time when matching fingerprints. If authentication is not completed within the set time, authentication fails.
+
+   * <Cmd sid='ui_254' product='dev' />: You can view the original image when scanning fingerprints.
+
+   * <Cmd sid='ui_197' product='dev' />: You can set the sensitivity of the fingerprint recognition sensor. Set the sensitivity higher to obtain precise fingerprint information.
+
+   * <Cmd sid='ui_249' product='dev' />: You can set the counterfeit fingerprint check grade. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+
+   * <Cmd sid='ui_003' product='dev' />: You can set the speed of fingerprint authentication. When you select <Cmd sid='ui_275' product='dev' />, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+
+   * <Cmd sid='ui_342' product='dev' />: You can set the fingerprint template format. <Cmd sid='ui_057' product='dev' /> is set by default, and if the template format is changed, all previously saved fingerprints cannot be used, so be careful when changing.
+
+     :::info
+
+     Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
+
+     :::
+
+   * <Cmd sid='ui_198' product='dev' />: When set to <Cmd sid='ui_277' product='dev' />, the fingerprint sensor activates recognizing the user's finger. When set to <Cmd sid='ui_362' product='dev' />, the sensor is always on even when not scanning fingerprints.
+
+   * <Cmd sid='ui_116' product='dev' />: You can check the quality of scanned fingerprints to save high-quality fingerprint information. By activating this, users are notified if the fingerprint quality is low to help them scan fingerprints correctly.
+
+   * <Cmd sid='ui_118' product='dev' />: You can check for duplicate fingerprints during fingerprint enrollment.
+
+4. Press **OK** to save the settings.

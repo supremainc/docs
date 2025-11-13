@@ -1,0 +1,159 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3}><Image src='/img/device/component-device-di24.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>퀵 가이드</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Door Interface</Td>
+
+<Td>오픈소스라이선스 가이드</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>고정용 나사 x6</Td>
+
+<Td>다이오드 x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## 각 부분의 명칭 및 기능
+
+<Columns className='partname'>
+<Column>
+
+<Magnify src='/img/device/product-part-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+</Column>
+<Column className='padding--l20'>
+
+| No. | 이름 |
+| :--: | -- |
+| 1 | **AUX IN (0:2)** 연결 |
+| 2 | **RS-485** 연결 |
+| 3 | **RS-485** 종단 저항 스위치 |
+| 4 | **SUPERVISED INPUT (3:5)** 또는 **Input (3:5)** 연결  |
+| 5 | **RELAY 2 (Alarm)** 연결 |
+| 6 | **OUTPUT (3:5)** 연결 |
+| 7 | **RS-485 1** 종단 저항 스위치 |
+| 8 | **WIEGAND 1** 연결 |
+| 9 | **RS-485 1** 연결 |
+| 10 | **RELAY 3 (Lock)** 연결 |
+| 11 | Door Interface 전원 연결 (DC 12V / DC 24V IN) |
+| 12 | **RESET** 버튼  |
+| 13 | **INIT** 버튼 |
+| 14 | **RELAY 1 (Lock)** 연결 |
+| 15 | **WIEGAND 0** 연결 |
+| 16 | **RS-485 0** 연결 |
+| 17 | **RS-485 0** 종단 저항 스위치 |
+| 18 | **OUTPUT (0:2)** 연결 |
+| 19 | **RELAY 0 (Alarm)** 연결 |
+| 20 | **SUPERVISED INPUT (0:2)** 또는 **Input (0:2)** 연결 |
+
+</Column>
+</Columns>
+
+:::info
+
+* 장치와 연동된 제품을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
+
+* 제품을 재부팅하려면 **RESET** 버튼을 누르세요.
+
+* 제품과 리더를 연결할 때 리더의 전원으로 제품의 리더 전원 출력(12 Vdc 기준, 최대 0.6 A / 24 Vdc 기준, 최대 0.3 A)을 사용할 수 있습니다. 12 Vdc 전원 출력 기준, 0.3 A를 소모하는 리더를 2대 연결할 수 있습니다.
+
+:::
+
+<PageBreak />
+
+### Door Interface 상태 LED
+
+제품의 상태는 제품 전면부의 오른쪽에 위치한 STATUS로 확인할 수 있으며, 이더넷, RS-485, RS-485 0, RS-485 1, 시스템의 상태를 1초씩 순서대로 보여줍니다.
+
+| 항목 | LED | 상태 |
+|---|---|---|
+| RS-485 | 자홍색/파란색 점멸 | 마스터 장치 정상 |
+| ^ | 자홍색/노란색 점멸 | 마스터 장치 연결 해제 |
+| RS-485 0 | 노란색/파란색 점멸 | 슬레이브 장치 정상 |
+| ^ | 노란색/노란색 점멸 | 슬레이브 장치 연결 해제 |
+| ^ | 노란색/빨간색 점멸 | 슬레이브 장치 없음 |
+| RS-485 1 | 초록색/파란색 점멸 | 슬레이브 장치 정상 |
+| ^ | 초록색/노란색 점멸 | 슬레이브 장치 연결 해제 |
+| ^ | 초록색/빨간색 점멸 | 슬레이브 장치 없음 |
+| 시스템 | 흰색/회색 점멸 | 시스템 잠금 (BioStar X의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 흰색/자홍색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| ^ | 흰색/파란색 점멸 | 탬퍼 켜짐 |
+| ^ | 흰색/하늘색 점멸 | BioStar X 연결 성공 + 탬퍼 켜짐 |
+| ^ | 흰색/초록색 점멸 | BioStar X 연결 성공 |
+| ^ | 흰색/노란색 점멸 | 시스템 잠금 (BioStar X의 작업 조건 및 동작) |
+| ^ | 흰색/빨간색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) |
+
+<PageBreak />
+
+### 설치 예제
+
+이 제품은 출입문 확장 모듈로 최대 2개의 출입문을 간편하게 구성할 수 있습니다.
+
+BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
+
+<Image src='/img/device/installation-example-di24.svg' width="70%" className='none' />
+
+<PageBreak />
+
+### 시스템 구성도
+
+이 제품은 3개의 RS-485 포트를 지원하며, 마스터 장치에 여러대의 Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+
+<Image src='/img/device/system-configuration-di24.svg' width="100%" className='none' />
+
+:::info
+
+* RS-485 0 및 RS-485 1 포트에는 포트당 최대 2대의 장치를 연결할 수 있습니다.
+
+* RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
+
+* 마스터 장치의 호스트 포트에 Door Interface를 슬레이브로 연결하면 마스터 장치와의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다.
+
+:::
+
+<PageBreak />
+
+### 전체 연결 구성도
+
+<Magnify src='/img/device/system-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />

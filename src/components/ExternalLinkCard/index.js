@@ -26,7 +26,7 @@ function CardItem({img, title, url, height, desc}) {
 
 function ExternalLinkBanner({Svg, title, url, desc, height}) {
   return (
-    <Link to={url} target='_blank' className={styles.externalLink}>
+    <Link to={url} className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
           <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
@@ -110,7 +110,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     },
     {
       title: 'FaceStation F2',
-      url: '#',
+      url: '/device/facestation_f2',
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",
@@ -119,38 +119,38 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '85px'
     },
     {
-      title: 'FaceStation 2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/facestation2.png',
-      desc: `${translate({
-        id: "externalLinks.FaceStation2.desc",
-        message: "얼굴인증 출입근태 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'BioStation L2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/biostationl2.png',
-      desc: `${translate({
-        id: "externalLinks.BioStationL2.desc",
-        message: "지문인식 출입근태 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
       title: 'BioLite N2',
-      url: '#',
+      url: `/device/biolite_n2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
       desc: `${translate({
         id: "externalLinks.BioLiteN2.desc",
-        message: "옥외형 지문인식 출입근태 장치"
+        message: "옥외형 지문 인식 출입·근태 장치"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'X-Station 2',
+      url: `/device/xstation_2`,
+      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'FaceStation 2',
+      url: `/device/facestation_2`,
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/facestation2.png',
+      desc: `${translate({
+        id: "externalLinks.FaceStation2.desc",
+        message: "얼굴 인증 출입근태 단말기"
       })}`,
       height: '90px'
     },
     {
       title: 'BioEntry W2',
-      url: '#',
+      url: `/device/bioentry_w2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryw2.png',
       desc: `${translate({
         id: "externalLinks.BioentryW2.desc",
@@ -158,32 +158,22 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       height: '90px'
     },
-    {
-      title: 'BioEntry P2',
-      url: '#',
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
-      desc: `${translate({
-        id: "externalLinks.BioentryP2.desc",
-        message: "콤팩트 지문인식 단말기"
-      })}`,
-      height: '90px'
-    },
+    // {
+    //   title: 'BioEntry P2',
+    //   url: `/device/bioentry_p2`,
+    //   img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
+    //   desc: `${translate({
+    //     id: "externalLinks.BioentryP2.desc",
+    //     message: "콤팩트 지문인식 단말기"
+    //   })}`,
+    //   height: '90px'
+    // },
     {
       title: 'BioEntry R2',
-      url: '#',
+      url: `/device/bioentry_r2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'X-Station 2',
-      url: '#',
-      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
-      desc: `${translate({
-        id: "externalLinks.XStation2.desc",
-        message: "차세대 모바일 출입인증 단말기"
       })}`,
       height: '90px'
     }
@@ -204,7 +194,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'X-Station 2',
-      url: '#',
+      url: `/device/xstation_2`,
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
@@ -212,7 +202,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass 2',
-      url: '#',
+      url: `/device/xpass_2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
@@ -221,7 +211,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass S2',
-      url: '#',
+      url: `/device/xpass_s2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpasss2.png',
       desc: `${translate({
         id: "externalLinks.XPassS2.desc",
@@ -230,20 +220,11 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     },
     {
       title: 'XPass D2',
-      url: '#',
+      url: `/device/xpass_d2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc: `${translate({
         id: "externalLinks.XPass2.desc",
       })}`,
-    },
-    {
-      title: 'Airfob Patch',
-      url: '#',
-      img: 'https://supremainc.com/en/asset/images/thumbnail/Airfob Patch.png',
-      desc: `${translate({
-        id: "externalLinks.Aiirfobpatch.desc",
-        message: "모바일 출입카드 변환장치"
-      })}`
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -262,7 +243,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
   const defaultProductLinks = [
     {
       title: 'CoreStation',
-      url: '#',
+      url: '/device/corestation_40',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/corestation.png',
       desc: `${translate({
         id: "externalLinks.CoreStation.desc",
@@ -271,13 +252,13 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     },
     {
       title: 'CoreStation 20',
-      url: '#',
+      url: '/device/corestation_20',
       img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
       desc: 'Powerful Security, Flexible Expansion'
     },
     {
-      title: 'ENCR-10',
-      url: '#',
+      title: 'Enclosure',
+      url: '/device/enclosure',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/encr-10.png',
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
@@ -291,6 +272,124 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     <div className={clsx('container', styles.product, styles.grid)}>
       {productLinks.map((props, idx) => (
         <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
+
+export function Peripheral({ productLinks: productLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultProductLinks = [
+    {
+      title: 'Input Module',
+      url: '/device/inputmodule',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.im120.desc",
+        message: "다중 입력 확장 모듈"
+      })}`
+    },
+    {
+      title: 'Output Module',
+      url: '/device/outputmodule',
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/om-120.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.om120.desc",
+        message: "다중 출력 제어 모듈"
+      })}`
+    },
+    {
+      title: 'Door Interface',
+      url: '/device/doorinterface',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20250512100138876.webp',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.di24.desc",
+        message: "확장 가능한 제어, 끊김 없는 출입"
+      })}`
+    },
+    {
+      title: 'Door Module',
+      url: '/device/doormodule',
+      img: 'https://www.supremainc.com/ko/asset/images/thumbnail/dm-20.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.dm20.desc",
+        message: "다중 출입문 보안 I/O 모듈"
+      })}`
+    },
+    {
+      title: 'Secure Module',
+      url: '/device/securemodule',
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/secureio2.png',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.sio2.desc",
+        message: "출입문 보안 컨트롤 모듈"
+      })}`
+    },
+    {
+      title: 'Extended Module',
+      url: '/device/extendedmodule',
+      img: require('@site/static/img/device/extended-module.png').default,
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
+      })}`
+    },
+    {
+      title: 'Extended Module-SC',
+      url: '/device/extendedmodule_sc',
+      img: require('@site/static/img/device/extended-module-sc.png').default,
+      desc: `${translate({
+        id: "externalLinks.peripheral.extendedmodule.desc",
+        message: "확장형 통신 및 보안 모듈"
+      })}`
+    }
+  ];
+  const productLinks = productLinksProp || defaultProductLinks;
+
+  return (
+    <div className={clsx('container', styles.product, styles.grid)}>
+      {productLinks.map((props, idx) => (
+        <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
+
+export function Apps({ externalLinks: externalLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultExternalLinks = [
+    {
+      title: 'Device Manager',
+      url: '/device/device_manager',
+      Svg: require('/img/device/device-manager.svg').default,
+      height: '45px',
+      desc: `${translate({
+        id: "externalLinks.apps.devicemanager.desc",
+        message: "모바일 기반 출입통제 장치 관리 애플리케이션"
+      })}`
+    },
+    {
+      title: 'CoreStation Setup Manager',
+      url: '/device/corestation_setup_manager',
+      Svg: require('/img/device/cs-setup-manager.svg').default,
+      height: '45px',
+      desc: `${translate({
+        id: "externalLinks.apps.setupmanager.desc",
+        message: "중앙집중형 출입통제 관리 웹서버"
+      })}`
+    }
+  ];
+  const externalLinks = externalLinksProp || defaultExternalLinks;
+
+  return (
+    <div className={clsx('container', styles.grid, styles.externalLinks)}>
+      {externalLinks.map((props, idx) => (
+        <ExternalLinkBanner key={idx} {...props} />
       ))}
     </div>
   );

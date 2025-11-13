@@ -1,0 +1,99 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3}><Image src='/img/device/component-device-dm20.svg' className='none' height={300} alone /></Td>
+<Td><Image src='/img/device/component-wall-bracket-dm20.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>벽걸이용 브래킷</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Door Module</Td>
+
+<Td>120 Ω 저항</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-pvc-anchors4.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-fixing-screws4.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-spacer4.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>PVC 앵커 x4</Td>
+
+<Td>고정용 나사 x4</Td>
+
+<Td>스페이서 x4</Td>
+
+<Td>다이오드 x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## 각 부분의 명칭 및 기능
+
+<Magnify src='/img/device/name-function-each-part-dm20.png' width={800} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+:::info
+
+* 장치와 연동된 제품을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
+
+* 제품을 재부팅하려면 **RESET** 버튼을 누르세요.
+
+* Supervised Input을 사용할 때 아래 LED 상태를 참고하세요.
+
+  * 주황색: 단락
+
+  * 빨간색: 합선
+
+  * 초록색: On
+
+  * 꺼짐: Off
+
+:::
+
+<PageBreak />
+
+### 설치 예제
+
+이 제품은 다양한 입출력과 Wiegand 연결을 지원하며, 슈프리마 장치와 타사 장치를 연동하여 확장성을 높일 수 있습니다.
+
+Supervised Input도 사용할 수 있으며 Supervised Input은 단락, 합선, On, Off 상태를 확인할 수 있습니다.
+
+<Image src='/img/device/installation-example-dm20.png' width="60%" className='none' />
