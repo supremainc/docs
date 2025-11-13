@@ -115,7 +115,9 @@ const config = {
         },
         pages: {
           exclude: [
-            '_backup/**.{js,jsx,ts,tsx,md,mdx}'
+            '_backup/**.{js,jsx,ts,tsx,md,mdx}',
+            'cover/**.{js,jsx,ts,tsx,md,mdx}',
+            'back/**.{js,jsx,ts,tsx,md,mdx}',
           ]
         },
         blog: false,
