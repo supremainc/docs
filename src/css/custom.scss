@@ -1516,12 +1516,12 @@ footer {
       ol {
         li {
           p:has(svg) {
-            padding-left: unset;
+            padding-left: unset !important;
           }
           p {
             svg {
-              position: relative;
-              left: unset;
+              position: relative !important;
+              left: unset !important;
             }
           }
         }
