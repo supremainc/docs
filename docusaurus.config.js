@@ -152,8 +152,6 @@ const config = {
           excludeRoutes: [
             '/common/**',
             '/_unused/**',
-            '/platform/biostar_air/**',
-            '/device/**',
             '/products/**',
           ],
           autoSectionDepth: 2
