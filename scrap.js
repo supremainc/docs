@@ -22,13 +22,23 @@ async function parseSitemap(sitemapXml) {
     const urls = result.urlset.url.map((urlObj) => urlObj.loc[0]);
     // 제외할 URL 목록
     const excludeUrls = [
-      'https://supremainc.github.io/docs/',
-      'https://supremainc.github.io/docs/search',
-      'https://supremainc.github.io/docs/legal/disclaimers',
-      'https://supremainc.github.io/docs/legal/eula',
-      'https://supremainc.github.io/docs/legal/open-source-licenses',
-      'https://supremainc.github.io/docs/reference/glossary',
-      'https://supremainc.github.io/docs/platform/biostar_x/toc'
+      'https://docs.supremainc.com/',
+      'https://docs.supremainc.com/search',
+      'https://docs.supremainc.com/legal/disclaimers',
+      'https://docs.supremainc.com/legal/eula',
+      'https://docs.supremainc.com/legal/open-source-licenses',
+      'https://docs.supremainc.com/reference/glossary',
+      'https://docs.supremainc.com/api/bsxapi',
+      'https://docs.supremainc.com/reference/compares/fingerprint-devices-funcs',
+      'https://docs.supremainc.com/reference/compares/fingerprint-devices-specs',
+      'https://docs.supremainc.com/reference/compares/face-devices-funcs',
+      'https://docs.supremainc.com/reference/compares/face-devices-specs',
+      'https://docs.supremainc.com/reference/compares/rfid-devices-funcs',
+      'https://docs.supremainc.com/reference/compares/rfid-devices-specs',
+      'https://docs.supremainc.com/reference/compares/finger-rfid-devices-funcs',
+      'https://docs.supremainc.com/reference/compares/finger-rfid-devices-specs',
+      'https://docs.supremainc.com/reference/compares/controller-devices-funcs',
+      'https://docs.supremainc.com/reference/compares/controller-devices-specs',
     ];
 
     // 제외할 URL 필터링
@@ -77,7 +87,7 @@ async function fetchAndParseUrl(url) {
 
 // 4. 메인 로직
 async function main() {
-  const sitemapUrl = 'https://supremainc.github.io/docs/sitemap.xml';
+  const sitemapUrl = 'https://docs.supremainc.com/sitemap.xml';
 
   console.log('Fetching sitemap...');
   const sitemapXml = await fetchSitemap(sitemapUrl);
