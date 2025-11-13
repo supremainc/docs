@@ -200,20 +200,6 @@
                   "Lock: Max. 0.6 A (0.3 A x 2)"
                 ]
               }
-            },
-            "poe": {
-              "label": "PoE+ (12V out)",
-              "label_id": "specs.power.poe12vout",
-              "value": {
-                "ko": [
-                  "리더: 최대 0.6 A (0.3 A x 2개)",
-                  "락: 최대 0.6 A (0.6 A x 1개)"
-                ],
-                "en": [
-                  "Reader: Max. 0.6 A (0.3 A x 2)",
-                  "Lock: Max. 0.6 A (0.6 A x 1)"
-                ]
-              }
             }
           }
         },
