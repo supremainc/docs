@@ -7,9 +7,6 @@
 
 - [Suprema Docs](/docs/en/): Check out all of Suprema's products and BioStar related information here.
 - [Suprema Docs](/docs/en/api/bsxapi)
-- [Suprema Docs](/docs/en/back)
-- [Suprema](/docs/en/cover)
-- [BioStar X](/docs/en/cover/biostarx)
 - [BioEntry P2](/docs/en/device/bioentry_p2): BioEntry P2 is a compact access control device based on Suprema's next-generation biometric technology and security platform. Equipped with a class-leading 1.0GHz CPU, it offers ultra-fast authentication performance and rapid boot speed, while applying Suprema's latest fingerprint recognition algorithm for enhanced performance. Additionally, using multi-RFID card technology that can read both 125kHz and 13.56MHz frequencies, it can recognize various standards such as MIFARE, HID iCLASS, DESFire, FeliCa, HID Prox, and EM with a single device. Designed in a mullion-type, the BioEntry P2 can be perfectly installed in narrow spaces such as door frames.
 - [Appendices](/docs/en/device/bioentry_p2/appendices): Includes legal notices contained in the product.
 - [Getting Started](/docs/en/device/bioentry_p2/getting-started): Provides initial procedures for getting started with the device.
