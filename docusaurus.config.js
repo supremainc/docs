@@ -126,7 +126,40 @@ const config = {
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
-    [ 'docusaurus-plugin-image-zoom', {}]
+    [ 'docusaurus-plugin-image-zoom', {}],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-98B2Y5C3H6',
+        anonymizeIP: true,
+      },
+    ],
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        // v2.0 API 구조로 수정
+        markdown: {
+          enableFiles: false
+        },
+        llmsTxt: {
+          siteTitle: 'Suprema Docs',
+          siteDescription: "Check out all of Suprema's products and BioStar related information here.",
+          enableLlmsFullTxt: true,
+          includeBlog: false,
+          includePages: true,
+          includeDocs: true,
+          includeVersionedDocs: false, // llms.txt에서는 기본값이 false
+          excludeRoutes: [
+            '/common/**',
+            '/_unused/**',
+            '/platform/biostar_air/**',
+            '/device/**',
+            '/products/**',
+          ],
+          autoSectionDepth: 2
+        }
+      },
+    ]
   ],
   markdown: {
     mermaid: true,
