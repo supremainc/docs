@@ -68,7 +68,7 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
 1. <Cmd sid='ui_256' product='dev' />을 누른 뒤 <Cmd sid='ui_185' product='dev' />을 활성화하세요.
 
-    * <Badge only>FSF2-ODB</Badge> <Cmd sid='ui_186' product='dev' />
+    * <Badge only>FSF2-ODB</Badge>: <Cmd sid='ui_186' product='dev' />
 
     * <Badge only>FSF2-DB, FSF2-AB</Badge>: <Cmd sid='ui_187' product='dev' />
 
@@ -129,7 +129,7 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
       :::info
 
-      이 설정을 비활성화한 후에는 BioStar X v2.9.7 이상에 연결하여 사용하세요.
+      이 설정을 비활성화한 후에는 BioStar 2 v2.9.7 이상에 연결하여 사용하세요.
 
       :::
 
@@ -205,7 +205,7 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
   <Column className='text--center'>
   <Image src='/img/device/auth-roi2.png' width={200} alone />
 
-  ROI X(%), ROI Y(%), ROI 폭(%), ROI 높이(%) 값을 각각 40, 15, 70, 40으로 변경한 경우
+  ROI X(%), ROI Y(%), ROI 폭(%), ROI 높이(%)<br/>값을 각각 40, 15, 70, 40으로 변경한 경우
 
   </Column>
   </Columns>
@@ -261,30 +261,29 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
 1. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_312' product='dev' />을 선택하세요.
 
-1. 원하는 항목을 변경할 수 있습니다.
+1. 원하는 항목을 변경하세요.
 
-<Image src='/img/device/auth-fingerprint.png' width={300} />
+    <Image src='/img/device/auth-fingerprint.png' width={300} />
 
-* <Cmd sid='ui_149' product='dev' />: 1:N 인증을 위한 보안 등급을 설정할 수 있습니다.
+    * <Cmd sid='ui_149' product='dev' />: 1:N 인증을 위한 보안 등급을 설정할 수 있습니다.
 
-* <Cmd sid='ui_130' product='dev' />: 지문 매칭 시 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다.
+    * <Cmd sid='ui_130' product='dev' />: 지문 매칭 시 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다.
 
-* <Cmd sid='ui_254' product='dev' />: 지문을 스캔했을 때 원본 이미지를 볼 수 있습니다.
+    * <Cmd sid='ui_254' product='dev' />: 지문을 스캔했을 때 원본 이미지를 볼 수 있습니다.
 
-* <Cmd sid='ui_197' product='dev' />: 지문 인식 센서의 민감도를 설정할 수 있습니다. 센서 감도를 높여 정밀한 지문 정보를 얻으려면 센서 감도를 높게 설정하세요.
+    * <Cmd sid='ui_197' product='dev' />: 지문 인식 센서의 민감도를 설정할 수 있습니다. 센서 감도를 높여 정밀한 지문 정보를 얻으려면 센서 감도를 높게 설정하세요.
 
-* <Cmd sid='ui_003' product='dev' />: 지문 인증 속도를 설정할 수 있습니다. 자동을 선택하면 장치에 등록된 총 지문 템플릿의 개수에 따라 인증 속도가 설정됩니다.
+    * <Cmd sid='ui_003' product='dev' />: 지문 인증 속도를 설정할 수 있습니다. 자동을 선택하면 장치에 등록된 총 지문 템플릿의 개수에 따라 인증 속도가 설정됩니다.
 
-* <Cmd sid='ui_342' product='dev' />: 지문 템플릿 형식을 설정할 수 있습니다. <Cmd sid='ui_057' product='dev' />가 기본으로 설정되어 있으며, 템플릿 형식을 변경할 경우 이전에 저장된 모든 지문을 사용할 수 없으므로 변경 시 유의하세요.
+    * <Cmd sid='ui_342' product='dev' />: 지문 템플릿 형식을 설정할 수 있습니다. <Cmd sid='ui_057' product='dev' />가 기본으로 설정되어 있으며, 템플릿 형식을 변경할 경우 이전에 저장된 모든 지문을 사용할 수 없으므로 변경 시 유의하세요.
 
-* <Cmd sid='ui_198' product='dev' />: <Cmd sid='ui_277' product='dev' />으로 설정하면 지문 센서가 사용자의 손가락을 인식하여 켜집니다. <Cmd sid='ui_362' product='dev' />으로 설정하면 지문을 스캔하지 않을 때에도 항상 센서가 켜져 있습니다.
+    * <Cmd sid='ui_198' product='dev' />: <Cmd sid='ui_277' product='dev' />으로 설정하면 지문 센서가 사용자의 손가락을 인식하여 켜집니다. <Cmd sid='ui_362' product='dev' />으로 설정하면 지문을 스캔하지 않을 때에도 항상 센서가 켜져 있습니다.
 
-* <Cmd sid='ui_249' product='dev' />: 위조 지문 검사 등급을 설정할 수 있습니다. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다.
+    * <Cmd sid='ui_249' product='dev' />: 위조 지문 검사 등급을 설정할 수 있습니다. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다.
 
-* <Cmd sid='ui_116' product='dev' />: 높은 품질의 지문 정보를 저장하기 위해 스캔한 지문의 품질을 검사할 수 있습니다. 활성화하면 지문 품질이 낮을 경우 사용자에게 알려주어 지문을 올바르게 스캔하도록 도와줍니다.
+    * <Cmd sid='ui_116' product='dev' />: 높은 품질의 지문 정보를 저장하기 위해 스캔한 지문의 품질을 검사할 수 있습니다. 활성화하면 지문 품질이 낮을 경우 사용자에게 알려주어 지문을 올바르게 스캔하도록 도와줍니다.
 
-* <Cmd sid='ui_118' product='dev' />: 지문 등록 시 중복 지문 여부를 검사할 수 있습니다.
-
+    * <Cmd sid='ui_118' product='dev' />: 지문 등록 시 중복 지문 여부를 검사할 수 있습니다.
 
 ## 근태
 
@@ -296,18 +295,17 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
 1. 원하는 항목을 설정하세요.
 
-<Image src='/img/device/auth-tna.png' width={300} />
+    <Image src='/img/device/auth-tna.png' width={300} />
 
-* <Cmd sid='ui_083' product='dev' />: 근태 모드를 사용할 방법을 설정할 수 있습니다.
+    * <Cmd sid='ui_083' product='dev' />: 근태 모드를 사용할 방법을 설정할 수 있습니다.
 
-* <Cmd sid='ui_086' product='dev' />: 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone />을 선택한 뒤 화면에 표시할 아이콘, 근태 이벤트 이름, 스케줄을 설정하세요.
+    * <Cmd sid='ui_086' product='dev' />: 근태 이벤트를 등록할 수 있습니다. 근태 이벤트를 등록하려면 <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone />을 선택한 뒤 화면에 표시할 아이콘, 근태 이벤트 이름, 스케줄을 설정하세요.
 
-* <Cmd sid='ui_082' product='dev' />: 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. <Cmd sid='ui_083' product='dev' />를 <Cmd sid='ui_199' product='dev' />으로 설정했을 때 사용할 수 있습니다.
+    * <Cmd sid='ui_082' product='dev' />: 사용자가 인증할 때 근태 이벤트를 반드시 선택하도록 설정할 수 있습니다. <Cmd sid='ui_083' product='dev' />를 <Cmd sid='ui_199' product='dev' />으로 설정했을 때 사용할 수 있습니다.
 
-* <Cmd sid='ui_081' product='dev' />: 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. <Cmd sid='ui_083' product='dev' />를 <Cmd sid='ui_071' product='dev' />으로 설정했을 때 사용할 수 있습니다.
+    * <Cmd sid='ui_081' product='dev' />: 관리자가 선택한 근태 이벤트만 사용하도록 설정할 수 있습니다. <Cmd sid='ui_083' product='dev' />를 <Cmd sid='ui_071' product='dev' />으로 설정했을 때 사용할 수 있습니다.
 
-* <Cmd sid='ui_279' product='dev' />: 작업 코드 사용 여부를 선택할 수 있습니다.
-
+    * <Cmd sid='ui_279' product='dev' />: 작업 코드 사용 여부를 선택할 수 있습니다.
 
 ## 인증 결과 표시 옵션
 
@@ -319,20 +317,20 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
 1. <Cmd sid='ui_259' product='dev' />에서 원하는 항목을 설정하세요.
 
-<Image src='/img/device/auth-result-display-option.png' width={300} />
+    <Image src='/img/device/auth-result-display-option.png' width={300} />
 
-* <Cmd sid='ui_169' product='dev' />: 장치의 인증 결과 화면에서 사용자 ID가 표시되는 방법을 선택할 수 있습니다.
+    * <Cmd sid='ui_169' product='dev' />: 장치의 인증 결과 화면에서 사용자 ID가 표시되는 방법을 선택할 수 있습니다.
 
-  * <Cmd sid='ui_307' product='dev' />: 사용자 ID를 모두 표시합니다.
+      * <Cmd sid='ui_307' product='dev' />: 사용자 ID를 모두 표시합니다.
 
-  * <Cmd sid='ui_316' product='dev' />: 사용자 ID의 첫 문자만 표시합니다.
+      * <Cmd sid='ui_316' product='dev' />: 사용자 ID의 첫 문자만 표시합니다.
 
-  * <Cmd sid='ui_357' product='dev' />: 사용자 ID를 표시하지 않습니다.
+      * <Cmd sid='ui_357' product='dev' />: 사용자 ID를 표시하지 않습니다.
 
-* <Cmd sid='ui_177' product='dev' />: 장치의 인증 결과 화면에서 사용자 이름이 표시되는 방법을 선택할 수 있습니다.
+    * <Cmd sid='ui_177' product='dev' />: 장치의 인증 결과 화면에서 사용자 이름이 표시되는 방법을 선택할 수 있습니다.
 
-  * <Cmd sid='ui_307' product='dev' />: 사용자 이름을 모두 표시합니다.
+      * <Cmd sid='ui_307' product='dev' />: 사용자 이름을 모두 표시합니다.
 
-  * <Cmd sid='ui_316' product='dev' />: 사용자 이름의 첫 문자만 표시합니다.
+      * <Cmd sid='ui_316' product='dev' />: 사용자 이름의 첫 문자만 표시합니다.
 
-  * <Cmd sid='ui_357' product='dev' />: 사용자 이름을 표시하지 않습니다.
+      * <Cmd sid='ui_357' product='dev' />: 사용자 이름을 표시하지 않습니다.
