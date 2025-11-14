@@ -53,7 +53,7 @@
               "annotation_value": "anno2"
             },
             "model2": {
-              "label": "BEW3-APWB",
+              "label": "BEW3-APB",
               "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno2"
             }
@@ -269,7 +269,7 @@
               "value": false
             },
             "model2": {
-              "label": "BEW3-APWB",
+              "label": "BEW3-APB",
               "value": {
                 "ko": "지원 (IEEE 802.3af 호환)",
                 "en": "Supported (IEEE 802.3af compliant)"
@@ -375,38 +375,6 @@
             "2 A @ 30 VDC Resistive load",
             "1 A @ 30 VDC Inductive load"
           ]
-        }
-      }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bew3-device-dimension.svg",
-          "size": {
-            "width": "50",
-            "height": "160",
-            "depth": "34.15"
-          },
-          "weight": [
-            "BEW3-DB: 283g",
-            "BEW3-APWB: 291g"
-          ]
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bew3-bracket-front-dimension.svg",
-          "size": {
-            "width": "39.4",
-            "height": "153.2"
-          },
-          "weight": "36g",
-          "weight_include": true
         }
       }
     }

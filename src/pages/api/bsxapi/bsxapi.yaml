@@ -99,8 +99,7 @@ servers:
         default: 127.0.0.1
         description: BioStar X server hostname and port
 security:
-  - ApiKeyAuth: []
-  - BearerAuth: []
+  - SessionAuth: []
 tags:
   - name: Authorization
   - name: Access Group
@@ -357,6 +356,16 @@ paths:
       responses:
         '200':
           description: Successful response
+          headers:
+            bs-session-id:
+              schema:
+                type: string
+              description: Session ID for authenticating subsequent API requests
+              example: c52127fea7f645149083d04d89ad68e5
+            Content-Type:
+              schema:
+                type: string
+              example: application/json;charset=UTF-8
           content:
             application/json:
               schema:
@@ -517,13 +526,6 @@ paths:
         - Placing "/" at the end of the endpoint
       requestBody:
         content: {}
-      parameters:
-        - name: bs-session-id
-          in: header
-          schema:
-            type: string
-          description: BioStar 2's session id. Generated on successful login.
-          example: '{{bsid}}'
       responses:
         '200':
           description: OK
@@ -606,9 +608,6 @@ paths:
         
         - Placing "/" at the end of the endpoint
         - `name` is a required and unique parameter
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -775,9 +774,6 @@ paths:
         This API is used to view all available Access Groups.
 
         By default the result will be sorted ascending by `id`.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       responses:
         '200':
           description: OK
@@ -1069,9 +1065,6 @@ paths:
         
         - Using id which doesn't exist
         - Using value other than number
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: id
           in: query
@@ -1172,9 +1165,6 @@ paths:
         - v2.9.9:
 
           Trailing slashes (/) at the end of this endpoint are no longer supported.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -1322,9 +1312,6 @@ paths:
         - Using value other than number
         
         - Placing "/" at the end of the endpoint
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: id
           in: path
@@ -1487,9 +1474,6 @@ paths:
         **Known Errors:**
 
         - Repeating the same value on parameter with multiple options
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -1619,9 +1603,6 @@ paths:
         - Using value other than number
             
         - Placing "/" at the end of the endpoint
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: id
           in: path
@@ -1735,9 +1716,6 @@ paths:
         - `name` is a required and unique parameter
 
         - Duplicate id on doors instance
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -1922,9 +1900,6 @@ paths:
       operationId: updateBackupConfig
       description: >-
         This API is used to modify BioStar X backup configuration.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2029,9 +2004,6 @@ paths:
         It is possible to use a custom wiegand format.
         
         To create a custom format, you can edit the provided formats which is between id number 5 to 14.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2224,9 +2196,6 @@ paths:
         This API is used to create BioStar X QR.
         
         **NOTE**: This API will return error if the card_id already exists in the database. Use Check [Card Availability](#checkCardAvailability) API to validate.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2361,9 +2330,6 @@ paths:
       operationId: addToBlacklist
       description: >-
         This API is used to add a card to blacklist.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2463,9 +2429,6 @@ paths:
       operationId: createCardMobileCredentials
       description: >-
         This API is used to create Mobile Card.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2515,9 +2478,6 @@ paths:
         - SMTP is set
         
         - User email field is filled
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2537,9 +2497,6 @@ paths:
       operationId: createSendEmail
       description: >-
         This API is used to send Visual Face mobile enrollment link.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2577,9 +2534,6 @@ paths:
         - User groups may be created in up to 8 levels.
         
         - Up to 48 characters may be entered for a user group name.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2617,9 +2571,6 @@ paths:
       operationId: searchUserGroupsearch
       description: >-
         This API is used to list User Group(s) which are specified in the request body.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: false
         content:
@@ -2639,9 +2590,6 @@ paths:
       operationId: updateUserGroup
       description: |-
         This API is used to update a User Group.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -2950,9 +2898,6 @@ paths:
         - Use an adequate security level. If 1:1 Security Level is too high, the fingerprint authentication rate may be too low or the false rejection rate (FRR) may be too high
         
         - For best fingerprint scanning quality, make sure to cover the entire surface of the fingerprint sensor with the finger
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3023,9 +2968,6 @@ paths:
         - Response.code could be `0` (Overall success), `1` (Partial success), `8` (Overall failed)
 
         - For error code meanings, refer to `[BioStar X Install Path]\nginx\html\resources\messages_en`
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3150,9 +3092,6 @@ paths:
         }
 
         ```
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3208,9 +3147,6 @@ paths:
         - Requires `adv=mode1` query parameter to enable advanced search functionality
 
         - Only user data is removed from devices, not from the BioStar X database
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3323,9 +3259,6 @@ paths:
         - Supports both encrypted and unencrypted field searches
 
         - Access group search format: "1,2,3" or "*" (any Access Group) or "void" (no Access Group)
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3385,9 +3318,6 @@ paths:
         - At least one parameter must exist
             
         - Using unavailable `user_group_id` will show empty response
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3470,10 +3400,6 @@ paths:
         2. Get the filename from the export response
         
         3. Use the filename as the path parameter in this download API
-
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: csv_filename
           in: path
@@ -3561,9 +3487,6 @@ paths:
         2. Get the generated filename from the response
         
         3. Use the filename with `/download/{csv_filename}` to download the actual CSV file
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: id
           in: query
@@ -3658,9 +3581,6 @@ paths:
 
         To enter user information in a language other than English or Korean,
         save the CSV file in UTF-8 format.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3726,9 +3646,6 @@ paths:
             
         - Be sure that the device is selected correctly. Otherwise, the device
         cannot recognize the data file.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: id
           in: query
@@ -3806,9 +3723,6 @@ paths:
         Use POST `/api/attachments` to upload the file (*.tgz*) to the BioStar 2 server.
 
         Use the resulting filename on the response as value on the BODY parameter.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -3851,9 +3765,6 @@ paths:
         - PDF: For printable reports with consistent formatting
         
         - SVG: For web display and scalable graphics
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         description: Report configuration and user data criteria
@@ -3988,9 +3899,6 @@ paths:
         Example:
 
         \[ {condition 1}, {condition 2}, .. \]
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         description: Search criteria and pagination settings for audit trail logs
@@ -4025,9 +3933,6 @@ paths:
 
 
         This API is available starting from BioStar 2 version 2.9.8.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         description: Private message data to set for the user
@@ -4070,9 +3975,6 @@ paths:
         This API is used to delete User Private Message.
 
         This API is available starting from BioStar 2 version 2.9.8.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: userId
           in: path
@@ -4097,9 +3999,6 @@ paths:
         This API is used to fetch User Private Message.
 
         This API is available starting from BioStar 2 version 2.9.8.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: userId
           in: path
@@ -4140,9 +4039,6 @@ paths:
 
         After receiving the response, convert the Base64 data on key `document`
         to file type specified on key `mimetype`.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       parameters:
         - name: UserID
           in: path
@@ -4361,9 +4257,6 @@ paths:
       operationId: createDeviceGroup
       description: >-
         This API is used to create new device group.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         content:
           application/json:
@@ -4451,9 +4344,6 @@ paths:
 
 
         It will return HTTP 200 and shows message result: true on success, HTTP 500 and shows message result: false on failure.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         description: Fingerprint templates and verification options
@@ -4525,9 +4415,6 @@ paths:
 
         If fingerprint available, it will return server error (HTTP 500) with
         response showing message "Failed to identify fingerprint.".
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         content:
           application/json:
@@ -6300,9 +6187,6 @@ paths:
         - Password with 3 or more subsequent letter or number
 
         - Start and expiry date difference is more than 30 years
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -6352,9 +6236,6 @@ paths:
         
         
         The API works by query users based on adv_criteria object, then apply new value based on input in User object.
-      security:
-        - ApiKeyAuth: []
-        - BearerAuth: []
       requestBody:
         required: true
         content:
@@ -12263,16 +12144,11 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   securitySchemes:
-    ApiKeyAuth:
+    SessionAuth:
       type: apiKey
       in: header
-      name: X-API-Key
-      description: API key for BioStar X authentication
-    BearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: JWT token for BioStar X authentication
+      name: bs-session-id
+      description: BioStar X's session id. Generated on successful login.
   schemas:
     EventImportInput:
       type: object
