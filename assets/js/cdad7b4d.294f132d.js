@@ -19,7 +19,10 @@ var bsxapi_namespaceObject = JSON.parse('{"openapi":"3.0.0","info":{"title":"Bio
 var react = __webpack_require__(96540);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 79 modules
 var Layout = __webpack_require__(25275);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(25895);
 ;// CONCATENATED MODULE: ./src/pages/api/bsxapi/index.js
+
 
 
 
@@ -31,29 +34,70 @@ function App() {
     const [spec, setSpec] = (0,react.useState)({
         ...bsxapi_namespaceObject
     });
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Layout/* ["default"] */.A, {
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(dist/* .ApiReferenceReact */.B, {
-            configuration: {
-                content: spec,
-                defaultHttpClient: {
-                    targetKey: 'shell',
-                    clientKey: 'curl'
-                },
-                hideModels: true,
-                orderSchemaPropertiesBy: 'preserve',
-                withDefaultFonts: false,
-                showToolbar: 'never',
-                layout: 'modern',
-                theme: 'alternate',
-                customCss: `
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(Layout/* ["default"] */.A, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)(Head/* ["default"] */.A, {
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("title", {
+                        children: "BioStar X API | Suprema Docs"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        name: "description",
+                        content: "Suprema BioStar X API is a JSON-based API for managing users, access groups, doors, devices, and more. Comprehensive API documentation with examples for access control and biometric authentication systems."
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        property: "og:title",
+                        content: "BioStar X API - Suprema Docs"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        property: "og:description",
+                        content: "Suprema BioStar X API documentation - JSON-based API for access control, user management, device control, and biometric authentication."
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        property: "og:type",
+                        content: "website"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        name: "keywords",
+                        content: "BioStar X API, Suprema API, Access Control API, Biometric API, JSON API, REST API, User Management API, Device Control API"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        name: "twitter:card",
+                        content: "summary_large_image"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        name: "twitter:title",
+                        content: "BioStar X API - Suprema Docs"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("meta", {
+                        name: "twitter:description",
+                        content: "Suprema BioStar X API documentation - JSON-based API for access control and biometric authentication."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(dist/* .ApiReferenceReact */.B, {
+                configuration: {
+                    content: spec,
+                    defaultHttpClient: {
+                        targetKey: 'shell',
+                        clientKey: 'curl'
+                    },
+                    hideModels: true,
+                    orderSchemaPropertiesBy: 'preserve',
+                    withDefaultFonts: false,
+                    showToolbar: 'never',
+                    layout: 'modern',
+                    theme: 'alternate',
+                    customCss: `
               .t-doc__sidebar {--scalar-color-green: #00a400;--scalar-color-red: #fa383e;--scalar-color-yellow: #ffba00;--scalar-color-blue: #3578e5;--scalar-color-orange: #ff8d4d;--scalar-color-purple: #b191f9;}
               .scalar-app .markdown ul, .scalar-app .markdown ol { padding-left: 1.6em;}
               .scalar-app .markdown:before { content: none; }
               .scalar-app .markdown ul ul li::before, .scalar-app .markdown ol > ul ul li::before { content: none}
               .scalar-app .markdown table { display: table, width: 100%;}
             `
-            }
-        })
+                }
+            })
+        ]
     });
 }
 /* ESM default export */ const bsxapi = (App);

@@ -15,7 +15,7 @@ Check out all of Suprema's products and BioStar related information here.
 
 ---
 
-### Suprema Docs
+### BioStar X API
 
 [Skip to main content](#__docusaurus_skipToContent_fallback)
 

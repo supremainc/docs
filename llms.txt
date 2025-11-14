@@ -5,7 +5,7 @@
 
 ## Api
 
-- [Suprema Docs](/docs/api/bsxapi)
+- [BioStar X API](/docs/api/bsxapi): Suprema BioStar X API is a JSON-based API for managing users, access groups, doors, devices, and more. Comprehensive API documentation with examples for access control and biometric authentication systems.
 
 ## Device
 
