@@ -10,6 +10,8 @@ import devkoLocale from './device/ko.json';
 import devenLocale from './device/en.json';
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
+import air_ko from './air/ko.json';
+import air_en from './air/en.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -25,6 +27,11 @@ const deviceLocaleMap = {
   en: devenLocale,
 };
 
+const airLocaleMap = {
+  ko: air_ko,
+  en: air_en,
+};
+
 const xlocaleMap = {
   ko: xkoLocale,
   en: xenLocale,
@@ -32,6 +39,8 @@ const xlocaleMap = {
   // fr: frLocale,
   // es: esLocale,
 };
+
+
 
 const glossaryMap = {
   ko: glossary_ko,
@@ -75,6 +84,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
     } else if (product === 'dev') {
       const locale = deviceLocaleMap[currentLocale] || deviceLocaleMap.en;
       localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+    } else if (product === 'air') {
+      const locale = airLocaleMap[currentLocale] || airLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
