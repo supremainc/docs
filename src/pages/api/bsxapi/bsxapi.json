@@ -22,7 +22,7 @@
       }
     }
   ],
-  "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
+  "security": [{ "SessionAuth": [] }],
   "tags": [
     { "name": "Authorization" },
     {
@@ -144,6 +144,17 @@
         "responses": {
           "200": {
             "description": "Successful response",
+            "headers": {
+              "bs-session-id": {
+                "schema": { "type": "string" },
+                "description": "Session ID for authenticating subsequent API requests",
+                "example": "c52127fea7f645149083d04d89ad68e5"
+              },
+              "Content-Type": {
+                "schema": { "type": "string" },
+                "example": "application/json;charset=UTF-8"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/UserResponse" },
@@ -282,15 +293,6 @@
         "operationId": "logout",
         "description": "This API is used to Logout from the current session. There are no body parameter on this endpoint.\nIt is required to have `bs-session-id` key on the header, the value generated on successful login.\n**Known errors:**\n- Placing \"/\" at the end of the endpoint",
         "requestBody": { "content": {} },
-        "parameters": [
-          {
-            "name": "bs-session-id",
-            "in": "header",
-            "schema": { "type": "string" },
-            "description": "BioStar 2's session id. Generated on successful login.",
-            "example": "{{bsid}}"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -362,7 +364,6 @@
         "summary": "Create New Access Group",
         "operationId": "createAccessGroup",
         "description": "This request is used to make a new Access Group (AG).\n\n**Note:** If BioStar X does not have license for Elevator module, skip the floor_levels parameter or set it to an empty string.\n\n**Known errors:**\n- Placing \"/\" at the end of the endpoint - `name` is a required and unique parameter",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -534,7 +535,6 @@
         "summary": "List All Access Group",
         "operationId": "listAccessGroup",
         "description": "This API is used to view all available Access Groups.\n\nBy default the result will be sorted ascending by `id`.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "responses": {
           "200": {
             "description": "OK",
@@ -882,7 +882,6 @@
         "summary": "Delete an Access Group",
         "operationId": "deleteAccessGroup",
         "description": "Delete an Access Group specified by the **id** query parameter.\n\n**Note:** The id parameter is required and must be a valid access group ID.\n\nTo get an Access Group's id, you can use `GET /api/access_groups` to view all available Access Groups.\n\n**Known errors:**\n- Using id which doesn't exist - Using value other than number",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -969,7 +968,6 @@
         "summary": "List All Access Group v2",
         "operationId": "searchAccessGroups",
         "description": "This API is used to see all Access Groups. It provides more concise response rather than the previous (`GET /api/access_groups`) and parameters to filter the response.\n\n**Known errors:**\n- Empty body\n- Input other than number on limit parameter\n- Input without key:value pair (name:val or id:val) on order_by parameter\n\n**Changes:**\n- v2.9.9:\n\n  Trailing slashes (/) at the end of this endpoint are no longer supported.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -1113,7 +1111,6 @@
         "summary": "View an Access Group",
         "operationId": "viewAccessGroup",
         "description": "To view an Access Group with id {id} or :id   {id} or :id are markers for replacing with the required value.\n\n**Known errors:**\n- Using id which doesn't exist\n- Using value other than number\n- Placing \"/\" at the end of the endpoint",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -1277,7 +1274,6 @@
         "summary": "Update an Access Group",
         "operationId": "updateAccessGroup",
         "description": "Update an existing Access Group by replacing it with new data.\n\n**Notes:**\n- To add/delete multiple, repeat the braces (see users example)\n    \n- When you add/update data, it will remove any previous data and add the one that you input.  \n    \n    Ex: If parameter description have value, and on update this parameter value is left empty, then the previous value will be removed.\n    \n- To skip a record from updating, either skip the parameter or fill the current data on the update field.\n    \n- When updating an AG, parameter `user_group` need to be filled if existing User Group want to be retained. If this parameter is left empty, the existing User Group(s) in the AG that should be still there will not be there.\n\n**Known Errors:**\n- Repeating the same value on parameter with multiple options",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -1405,7 +1401,6 @@
         "summary": "View List of Users from an Access Group",
         "operationId": "getAccessGroupUsers",
         "description": "To view user information only from AG with id {id}\n**Known errors:**\n- Using id which doesn't exist will return success but show no record\n    \n- Using value other than number\n    \n- Placing \"/\" at the end of the endpoint",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -1503,7 +1498,6 @@
         "summary": "Create New Access Level",
         "operationId": "createAccessLevel",
         "description": "Create a new Access Level (AL) with doors and schedule configuration.\n\n**Important Notes:**\n- Access level items link doors with schedules\n- Multiple doors can be assigned to the same schedule\n- Each door can only appear once in the access level items\n\n**Known errors:**\n- Placing \"/\" at the end of the endpoint\n- `name` is a required and unique parameter\n- Duplicate id on doors instance",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -1682,7 +1676,6 @@
         "summary": "Update Backup Configuration",
         "operationId": "updateBackupConfig",
         "description": "This API is used to modify BioStar X backup configuration.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -1805,7 +1798,6 @@
         "summary": "Update Wiegand Formats",
         "operationId": "updateWiegandFormat",
         "description": "It is possible to use a custom wiegand format.\nTo create a custom format, you can edit the provided formats which is between id number 5 to 14.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2008,7 +2000,6 @@
         "summary": "Create BioStar X QR",
         "operationId": "createCard",
         "description": "This API is used to create BioStar X QR.\n**NOTE**: This API will return error if the card_id already exists in the database. Use Check [Card Availability](#checkCardAvailability) API to validate.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2160,7 +2151,6 @@
         "summary": "Blacklist Card",
         "operationId": "addToBlacklist",
         "description": "This API is used to add a card to blacklist.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2276,7 +2266,6 @@
         "summary": "Create Mobile Card",
         "operationId": "createCardMobileCredentials",
         "description": "This API is used to create Mobile Card.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2323,7 +2312,6 @@
         "summary": "Send BioStar X QR by Email",
         "operationId": "createSendEmailQr",
         "description": "This API is used to send BioStar X QR by email.\n\nBefore using this API, make sure that:\n- SMTP is set\n- User email field is filled",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2346,7 +2334,6 @@
         "summary": "Send Visual Face by Email",
         "operationId": "createSendEmail",
         "description": "This API is used to send Visual Face mobile enrollment link.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2381,7 +2368,6 @@
         "summary": "Create User Group",
         "operationId": "createUserGroup",
         "description": "This API is used to create a new User Group.\n\n\n**Note:**\n\n- User groups may be created in up to 8 levels.\n\n- Up to 48 characters may be entered for a user group name.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2425,7 +2411,6 @@
         "summary": "Search User Groups by ID",
         "operationId": "searchUserGroupsearch",
         "description": "This API is used to list User Group(s) which are specified in the request body.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": false,
           "content": {
@@ -2448,7 +2433,6 @@
         "summary": "Update User Group",
         "operationId": "updateUserGroup",
         "description": "This API is used to update a User Group.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2776,7 +2760,6 @@
         "summary": "Update User Fingerprint Credentials",
         "operationId": "updateUserFingerprint",
         "description": "This API is used to update fingerprint data on a User.\n\nUse `POST /api/devices/{dev_id}/scan_fingerprint` to enroll fingerprint.\nUse `POST /api/server_matching/identify_finger` to check whether the fingerprint already recorded or not.\n\n**Important Notes:**\n- Raw data for template0 and template1 available after enrolling a fingerprint\n- Fingerprint(s) used for regular access should not be registered as duress fingerprint\n- If the fingerprint authentication rate is low, delete the existing fingerprint information and add a new fingerprint\n- Use an adequate security level. If 1:1 Security Level is too high, the fingerprint authentication rate may be too low or the false rejection rate (FRR) may be too high\n- For best fingerprint scanning quality, make sure to cover the entire surface of the fingerprint sensor with the finger",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2833,7 +2816,6 @@
         "summary": "User: Bulk Update",
         "operationId": "updateUserBulk",
         "description": "This API is used for updating user information in bulk.\n\nThe difference of this API and `/api/users?id=1+2+3` is that this API can update different data of many users at the same time.\n\n**Warning:** The maximum number of users that can be modified in a single API call is **100**.\n\n**Response Codes:**\n- **ret_code** presents BioStar X response code for modifying each user\n- Response.code could be `0` (Overall success), `1` (Partial success), `8` (Overall failed)\n- For error code meanings, refer to `[BioStar X Install Path]\\nginx\\html\\resources\\messages_en`",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2943,7 +2925,6 @@
         "summary": "Send User Data to Device",
         "operationId": "exportUserExport",
         "description": "This API is used to send user data to a device.\nFor example when you want to send user John data after credential update to FaceStation F2.\n**Notes:**\n- Set `adv=mode1` on Query Parameter to enable advanced search compatibility. This parameter is optional. When not used, it will use the previous capability.\n- Maximum of 100 users can be processed in a single request\n- Request Body with Advanced Search example (see **Batch Edit with Advanced Search** for `adv_criteria` details)\n\n```json\n{\n  \"DeviceCollection\" : {\n    \"rows\" : [ {\n      \"id\" : \"50362288\"\n    } ]\n  },\n  \"adv_criteria\" : {\n    \"limit\" : 50,\n    \"order_by\" : \"user_id:false\",\n    \"user_group_ids\" : [ 1014 ],\n    \"user_id\" : \"8\",\n    \"user_email\" : \"support@supremainc.com\"\n  }\n}\n```",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -2998,7 +2979,6 @@
         "summary": "Delete User(s) From Device (Advanced Search)",
         "operationId": "createUserRemove",
         "description": "This API is used to delete user data from device(s) based on Advanced Search query results.\nUsers matching the advanced search criteria will have their data removed from the specified devices.\n**Notes:**\n- Requires `adv=mode1` query parameter to enable advanced search functionality\n- Only user data is removed from devices, not from the BioStar X database",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -3098,7 +3078,6 @@
         "summary": "Advanced Search",
         "operationId": "searchUserAdvanceSearch",
         "description": "This API is used to fetch user information via advanced search.\n\nSupports flexible searching across multiple user fields including personal information, group membership, access levels, and custom fields.\n**Notes:**\n- To search users without documents, use `\"user_custom_field_#\": \"No\"` for specific custom fields\n- To search users with documents, use `\"user_custom_field_#\": \"Yes\"` for specific custom fields  \n- `user_operator_level_id` values: `-1` (None), `0` (All), or specific ID\n- Supports both encrypted and unencrypted field searches\n- Access group search format: \"1,2,3\" or \"*\" (any Access Group) or \"void\" (no Access Group)",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -3165,7 +3144,6 @@
         "summary": "List All User v2",
         "operationId": "searchUserSearch",
         "description": "This API is used to list all users recorded on Bio Star X.\n\n**Known errors:**\n- At least one parameter must exist\n    \n- Using unavailable `user_group_id` will show empty response",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -3216,7 +3194,6 @@
         "summary": "Download CSV File",
         "operationId": "downloadCsvFilename",
         "description": "This API is used to download exported CSV files from BioStar X Server.\n\nSupports downloading both user-related CSV files and events-related CSV files. The system automatically detects the file type based on the filename pattern.\n\n**Supported File Types:**\n- **User CSV files**: Generated from `POST /api/users/csv_export`\n- **Events CSV files**: Generated from `POST /api/events/export`\n\n**Usage:**\n1. Export data using the appropriate API (`csv_export` for users, `export` for events)\n2. Get the filename from the export response\n3. Use the filename as the path parameter in this download API",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "csv_filename",
@@ -3280,7 +3257,6 @@
         "summary": "Export User Data as CSV (File Upload Example)",
         "operationId": "exportUserCsvExport",
         "description": "This API is used to export user data as CSV file with customizable columns and headers.\nSupports exporting user information including custom fields and file upload information. The exported CSV file can be downloaded using the `/download/{csv_filename}` endpoint.\n\n**Features:**\n- Customizable column selection and headers\n- Support for custom fields including file upload fields\n- Advanced search criteria integration\n- Flexible user selection (specific IDs, all users, or search results)\n\n**Usage Flow:**\n1. Call this API with desired query parameters and criteria\n2. Get the generated filename from the response\n3. Use the filename with `/download/{csv_filename}` to download the actual CSV file",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -3348,7 +3324,6 @@
         "summary": "Import User Data from CSV",
         "operationId": "importUserCsvImport",
         "description": "This API is used to import User Data from a .csv file to the BioStar X database.\n\nTo run this API successfully, it is imperative to run POST `/api/attachments` first to upload the *.csv* file to the server install path.\n\nAfter *.csv* file got uploaded to the server, put the filename value from the above API to the uri and fileName parameter on this API.\n\nFields listed on Query parameter are also used for field mapping between *.csv* file and BioStar X database.\n\nFor example field user_id on Query:headers (*.csv*) will be matched with the first field of Query:columns (BioStar X). To change this mapping, adjust the sequence on Query:headers as desired (eg. exchange field department with user_id so the value of department will be used on user_id on BioStar X).\n\nTo skip a field from mapping, put empty string (\"\") on the intended field.\n\nIf there's no issue on the import process, the API will shows \"Success\" response.  \nIf there's issue (duplicate email, etc.), the response will show that the \"Request is successful but partially\" and will include a filename which contain records that caused the errors which can be downloaded by using GET `/download/:csv_filename`\n\nIf the CSV file to import contains data for custom user fields and the fields do not exist on the server, then the data for the fields will be ignored during the import process.\n\nTo enter user information in a language other than English or Korean, save the CSV file in UTF-8 format.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -3371,7 +3346,6 @@
         "summary": "Data File Export",
         "operationId": "exportUserDataExport",
         "description": "You can store the data file on external storage (USB) and import to BioStar X or device. Up to 500,000 users can be moved from server to device or from device to device.\n\n- The exported data file from devices using older firmware version cannot be imported into BioStar X. Make sure always use the latest version of firmware.\n    \n- If you use BioStar 2.8.10 or later, data exported from the previous version of BioStar 2 cannot be imported.\n    \n- If you use BioStar 2.8.10 or later, it is impossible to read data from a device that are using older firmware version. Upgrade the device’s firmware to a compatible version. Compatible devices and firmware versions are as follows:\n    \n    - BioStation 2 FW 1.9.0 or later > device_type: 8\n        \n    - BioStation A2 FW 1.8.0 or later > device_type: 9\n        \n    - FaceStation 2 FW 1.4.0 or later > device_type: 10\n        \n    - FaceStation F2 FW 1.0.0 or later > device_type: 29\n        \n    - X-Station 2 FW 1.0.0 or later > device_type: 32\n        \n- If the fingerprint template format is different, the data file cannot be imported. For example, the data file exported from a device which uses the Suprema fingerprint template format cannot be imported into a device which uses the ISO fingerprint template format.\n    \n- When importing user data with visual faces enrolled from FaceStation F2, the existing data will be retained if there are already visual face data enrolled on BioStar 2 via Upload Image or a mobile device.\n- The exported data file includes the profile photo, user ID, name, period, access group, PIN, auth. mode, credentials (face, fingerprint, card, mobile access card, visual face, BioStar 2 QR, QR/Barcode), 1:1 security level.\n    \n- You can export visual face data directly registered from the device only. It is not possible to export the data registered with the other methods, such as image file upload, CSV import, and mobile devices.\n    \n- Be sure that the device is selected correctly. Otherwise, the device cannot recognize the data file.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -3429,7 +3403,6 @@
         "summary": "Data File Import",
         "operationId": "importUserDataImport",
         "description": "You can store the data file on external storage (USB) and import to BioStar 2 or device. Up to 500,000 users can be moved from server to device or from device to device.\n\n* The exported data file from devices using older firmware version cannot be imported into BioStar 2. Make sure always use the latest version of firmware.\n* If you use BioStar 2.8.10 or later, data exported from the previous version of BioStar 2 cannot be imported.\n* If you use BioStar 2.8.10 or later, it is impossible to read data from a device that are using older firmware version. Upgrade the device’s firmware to a compatible version. Compatible devices and firmware versions are as follows:\n    \n    * BioStation 2 FW 1.9.0 or later > device_type: 8\n    \n    * BioStation A2 FW 1.8.0 or later > device_type: 9\n    \n    * FaceStation 2 FW 1.4.0 or later > device_type: 10\n    \n    * FaceStation F2 FW 1.0.0 or later > device_type: 29\n    \n    * X-Station 2 FW 1.0.0 or later > device_type: 32\n\n* If the fingerprint template format is different, the data file cannot be imported. For example, the data file exported from a device which uses the Suprema fingerprint template format cannot be imported into a device which uses the ISO fingerprint template format.\n* When importing user data with visual faces enrolled from FaceStation F2, the existing data will be retained if there are already visual face data enrolled on BioStar 2 via Upload Image or a mobile device.\n\nSelect the desired file (*.tgz*) and then click Open.\n\nA success message will appear on the screen when import successfully.\nUse POST `/api/attachments` to upload the file (*.tgz*) to the BioStar 2 server.\nUse the resulting filename on the response as value on the BODY parameter.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -3452,7 +3425,6 @@
         "summary": "Export User(s) as PDF/SVG with Advanced Search",
         "operationId": "createUserReport",
         "description": "Generate customizable user reports in PDF or SVG format using Advanced Search criteria.\n\n**Prerequisites:**\n- Valid Advanced Search criteria must be provided\n- User must have appropriate permissions to generate reports\n\n**Report Configuration:**\n- Display fields can be customized to show specific user data columns\n- Supports various formatting options (page size, orientation, headers)\n- Includes pagination and footer customization options\n\n**Output Formats:**\n- PDF: For printable reports with consistent formatting\n- SVG: For web display and scalable graphics",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "description": "Report configuration and user data criteria",
@@ -3619,7 +3591,6 @@
         "summary": "Audit Search",
         "operationId": "searchAuditSearch",
         "description": "This API is used to view Audit Trail logs.\n\nIt is possible to use multiple conditions in a request. Separate each condition using comma (,).\n\nExample:\n\\[ {condition 1}, {condition 2}, .. \\]",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "description": "Search criteria and pagination settings for audit trail logs",
@@ -3660,7 +3631,6 @@
         "summary": "Create/Update User Private Message",
         "operationId": "createUserPhrase",
         "description": "This API is used to create or update User Private Message.\n\nThis API is available starting from BioStar 2 version 2.9.8.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "description": "Private message data to set for the user",
@@ -3709,7 +3679,6 @@
         "summary": "Delete User Private Message",
         "operationId": "deleteUserPhrase",
         "description": "This API is used to delete User Private Message.\n\nThis API is available starting from BioStar 2 version 2.9.8.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "userId",
@@ -3736,7 +3705,6 @@
         "summary": "Fetch User Private Message",
         "operationId": "getUserPhrase",
         "description": "This API is used to fetch User Private Message.\n\nThis API is available starting from BioStar 2 version 2.9.8.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "userId",
@@ -3779,7 +3747,6 @@
         "summary": "Download File from File Upload Custom Field",
         "operationId": "getUserDocument",
         "description": "This API is used to download the file which contained in a File Upload Custom Field.\n\nThis API is available starting from BioStar 2 v2.9.8.\n\nAfter receiving the response, convert the Base64 data on key `document` to file type specified on key `mimetype`.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "parameters": [
           {
             "name": "UserID",
@@ -4025,7 +3992,6 @@
         "summary": "Create New Device Group",
         "operationId": "createDeviceGroup",
         "description": "This API is used to create new device group.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "content": {
             "application/json": {
@@ -4123,7 +4089,6 @@
         "summary": "Verify Fingerprint Scan",
         "operationId": "createDeviceVerifyFingerprint",
         "description": "This API is used to compare 2 fingerprint scan to determine whether it's the same finger or not.\n\nAs shown on the example, it is applied on `template0` and `template1` where `template0` is the 1st scan of the finger and `template1` is the 2nd scan.\n\nTo get the value for these parameters, use `POST /api/devices/:dev_id/scan_fingerprint` two times. The first scan for `template0` and second scan for `template1`.\n\nIt will return HTTP 200 and shows message result: true on success, HTTP 500 and shows message result: false on failure.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "description": "Fingerprint templates and verification options",
@@ -4192,7 +4157,6 @@
         "summary": "Verify Duplicate Fingerprint",
         "operationId": "createServerMatchingidentifyFinger",
         "description": "This API is used to verify duplicate fingerprint.\n\nIf fingerprint already exist, it will return success (HTTP 200) and response will show the user which currently using the fingerprint.\n\nUse the result of `POST /api/devices/:dev_id/scan_fingerprint` for the value of parameter template (either the 1st or 2nd scan).\n\nIf fingerprint available, it will return server error (HTTP 500) with response showing message \"Failed to identify fingerprint.\".",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "content": {
             "application/json": {
@@ -6242,7 +6206,6 @@
         "summary": "05 Create New User",
         "operationId": "createUser",
         "description": "After preparing available user_id and credential(s), use this API to create a new user using the basic configuration.\n\nFor applying configuration beyond this, such as credential(s) or custom fields, refer to the subsequent example.\n\nWhen Setting > Server is set to Number, you can make use of endpoint `/api/users/next_user_id` to automatically get the next user_id.\n\n**Known validation errors:**\n- `name` is more than 48 characters\n- Using single quote on name\n- Duplicate `user_id`, `email`, or `login_id`\n- Empty required fields\n- Using non-existent user_group_id\n- Password with 3 or more subsequent letter or number\n- Start and expiry date difference is more than 30 years",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -6284,7 +6247,6 @@
         "summary": "Batch Edit with Advanced Search",
         "operationId": "updateUser",
         "description": "By adding `adv=mode1` on Query Parameter, Batch Edit feature can works with Advanced Search result.\n\nThe API works by query users based on adv_criteria object, then apply new value based on input in User object.",
-        "security": [{ "ApiKeyAuth": [] }, { "BearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -12619,17 +12581,11 @@
   },
   "components": {
     "securitySchemes": {
-      "ApiKeyAuth": {
+      "SessionAuth": {
         "type": "apiKey",
         "in": "header",
-        "name": "X-API-Key",
-        "description": "API key for BioStar X authentication"
-      },
-      "BearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT",
-        "description": "JWT token for BioStar X authentication"
+        "name": "bs-session-id",
+        "description": "BioStar X's session id. Generated on successful login."
       }
     },
     "schemas": {
