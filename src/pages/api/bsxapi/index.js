@@ -2,6 +2,7 @@ import { ApiReferenceReact } from '@scalar/api-reference-react';
 import BsxApi from './bsxapi.json';
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import '@scalar/api-reference-react/style.css'
 import './theme.css'
 
@@ -10,6 +11,17 @@ function App() {
 
   return (
     <Layout>
+      <Head>
+        <title>BioStar X API | Suprema Docs</title>
+        <meta name="description" content="Suprema BioStar X API is a JSON-based API for managing users, access groups, doors, devices, and more. Comprehensive API documentation with examples for access control and biometric authentication systems." />
+        <meta property="og:title" content="BioStar X API - Suprema Docs" />
+        <meta property="og:description" content="Suprema BioStar X API documentation - JSON-based API for access control, user management, device control, and biometric authentication." />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content="BioStar X API, Suprema API, Access Control API, Biometric API, JSON API, REST API, User Management API, Device Control API" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BioStar X API - Suprema Docs" />
+        <meta name="twitter:description" content="Suprema BioStar X API documentation - JSON-based API for access control and biometric authentication." />
+      </Head>
         <ApiReferenceReact
           configuration={{
             content: spec,
