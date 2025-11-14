@@ -12,7 +12,10 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.2 GHz Octa-core"
+          "value": {
+            "ko": "1.4 GHz 옥타코어",
+            "en": "1.2 GHz Octa-core"
+          }
         },
         "memory": {
           "label": "메모리",

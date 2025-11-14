@@ -109,17 +109,7 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "type": "model",
-          "items": {
-            "model1": {
-              "label": "FSF2-DB, FSF2-AB",
-              "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm"
-            },
-            "model2": {
-              "label": "FSF2-ODB",
-              "value": "EM/MIFARE/DESFire: 50 mm, Felica: 30 mm"
-            }
-          },
+          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -349,8 +339,8 @@
           "label": "Wiegand",
           "label_id": "specs.interface.wiegand",
           "value": {
-            "ko": "1채널 입력, 1채널 출력 (선택 가능)",
-            "en": "1 ch Input, 1 ch Output (Selectable)"
+            "ko": "1채널 입력/출력 (선택 가능)",
+            "en": "1 ch Input / 1 ch Output (Selectable)"
           }
         },
         "input": {
