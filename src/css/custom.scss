@@ -364,6 +364,14 @@ footer {
 }
 // Zoom 스타일
 
+.redocusaurus {
+  display: none;
+}
+
+body[data-rh] .redocusaurus {
+  display: block;
+}
+
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
