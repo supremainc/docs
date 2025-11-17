@@ -141,9 +141,23 @@ const config = {
           },
         },
       }),
-    ]
+    ],
+    [
+      'redocusaurus',
+      {
+        specs: [{
+          spec: './openapi/bsxapi-with-samples.yaml',
+          route: '/api/bsxapi',
+        }],
+        theme: {
+          primaryColor: '#3578e5',
+        },
+      }
+    ],
   ],
   plugins: [
+    // Redocusaurus Prism 주입 문제 해결 플러그인
+    [ './src/plugins/fix-prism', {} ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
@@ -180,7 +194,7 @@ const config = {
           autoSectionDepth: 2
         }
       },
-    ]
+    ],
   ],
   markdown: {
     mermaid: true,
@@ -432,7 +446,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ],
+        additionalLanguages: [ ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

@@ -1,0 +1,15 @@
+extends:
+  - recommended
+
+rules:
+  no-unused-components: error
+
+theme:
+  # See https://redocly.com/docs/redoc/config/
+  openapi:
+    disableSearch: false
+    # See https://redocly.com/docs/api-reference-docs/configuration/theming/
+    theme:
+      colors:
+        primary:
+          main: '#3578e5'
