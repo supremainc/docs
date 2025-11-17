@@ -1172,7 +1172,6 @@ footer {
         }
       }
     }
-
   }
 }
 
@@ -1510,6 +1509,21 @@ footer {
       &.row {
         a.padding--lg {
           color: var(--ifm-color-content) !important;
+        }
+      }
+    }
+    .svg-none-style {
+      ol {
+        li {
+          p:has(svg) {
+            padding-left: unset !important;
+          }
+          p {
+            svg {
+              position: relative !important;
+              left: unset !important;
+            }
+          }
         }
       }
     }

@@ -59,7 +59,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 <Columns className='partname'>
 <Column>
 
-<Magnify src='/img/device/product-part-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+<Magnify src='/img/device/product-part-cs20.png' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
 
 </Column>
 <Column className='padding--l20'>
@@ -123,7 +123,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 | RS-485 1 | 초록색/파란색 점멸 | 슬레이브 장치 정상 |
 | ^ | 초록색/노란색 점멸 | 슬레이브 장치 연결 해제 |
 | ^ | 초록색/빨간색 점멸 | 슬레이브 장치 없음 |
-| 시스템 | 흰색/회색 점멸 | 시스템 잠금 (BioStar X의 작업 조건 및 동작) + 탬퍼 켜짐 |
+| 시스템 | 흰색/흰색 점멸 | 시스템 잠금 (BioStar X의 작업 조건 및 동작) + 탬퍼 켜짐 |
 | ^ | 흰색/자홍색 점멸 | 시스템 잠금 (장치의 작업 조건 및 동작) + 탬퍼 켜짐 |
 | ^ | 흰색/파란색 점멸 | 탬퍼 켜짐 |
 | ^ | 흰색/하늘색 점멸 | BioStar X 연결 성공 + 탬퍼 켜짐 |
@@ -139,7 +139,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Suprevised input, AUX와 같은 다양한 인터페이스를 제공합니다.
 
-<Image src='/img/device/installation-example-cs20.svg' width="70%" className='none' />
+<Image src='/img/device/installation-example-cs20.png' width="70%" className='none' />
 
 <PageBreak />
 
@@ -147,7 +147,7 @@ BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 �
 
 이 제품은 3개의 RS-485 포트를 지원하며, Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
 
-<Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
+<Image src='/img/device/system-configuration-cs20.png' className='none' />
 
 :::info
 
@@ -155,9 +155,9 @@ BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 �
 
 * RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
 
-* CS-20P 모델에 SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리더 포트에 직접 연결된 슬레이브 장치만 사용할 수 있습니다.
-
 * Door Interface를 호스트 포트에 슬레이브로 연결하면 CoreStation 20과의 연결이 끊어지더라도 Door Interface에 연결된 슬레이브 장치에서 오프라인 모드 전용 시설 코드(Facility Code for Offline Mode)를 통해 카드의 시설 코드(Facility Code)를 식별하여 출입문을 열 수 있습니다.
+
+* <Badge only>CS-20P</Badge> SAM 카드를 장착하여 사용 중인 경우 CS-20P의 리더 포트에 직접 연결된 슬레이브 장치만 사용할 수 있습니다.
 
 :::
 
@@ -165,4 +165,4 @@ BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 �
 
 ### 전체 연결 구성도
 
-<Magnify src='/img/device/system-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+<Magnify src='/img/device/system-cs20.svg' width='80%' zoomFactor={.4} mgWidth={500} mgHeight={500} />
