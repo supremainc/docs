@@ -7,44 +7,67 @@ keywords: [user management, BioStar Air, adding users]
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 서비스 개요 {#feature-overview}
-
 관리자는 개별 사용자를 BioStar Air에 추가하고, 자격 증명과 액세스 등급을 지정하여 원활한 사이트 출입을 관리할 수 있습니다. 사용자는 유형에 따라 모바일 또는 RFID, 웹 기반 인증을 받을 수 있습니다.
 
 <CustomerNote />
 
-## User Management 메뉴로 이동 {#navigating-to-user-management}
+:::tip
 
-개별 사용자를 추가하세요.
-
-1. BioStar Air 포털에서 **User Management**로 이동하세요.
-
-1. **Users**를 클릭하면 사용자 목록이 나타납니다.
-
-1. **Add User** 버튼을 클릭하세요.
+새로운 사용자 추가에 대한 전체 과정을 단계별로 안내하는 다음 동영상을 참고하세요.
 
 <YouTube videoId="FTgpsYPlP8k" />
 
+:::
 
-## 사용자 정보 입력 {#filling-user-information}
 
-새로운 사용자를 추가할 때 다음 항목을 입력하세요.
+## 사용자 추가 {#addingUsers}
 
-* **User ID**: 특정 ID를 할당하거나 시스템이 순차적으로 생성하도록 허용할 수 있습니다.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />로 이동하세요.
 
-* **Language**: 사용자의 기본 언어를 선택합니다 (English, Korean, Japanese, Dutch, Spanish, 또는 Portuguese).
+1. 사용자 목록이 나타납니다.
 
-* **User Group**: 사용자를 관련 그룹에 할당합니다.
+1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='add_user_btn' product='air' />를 클릭하세요.
 
-* **Name**: 사용자의 전체 이름을 입력합니다 (필수).
+<Image src='/img/air/bsair-gettingstarted-user-group-mng-add-user.png' />
 
-* **Additional Information**(optional): 직책, 부서 및 주소를 입력하세요.
+<Cmd sid='add_user_form_header' product='air' /> 창이 나타나면 각 섹션마다 필요한 정보를 입력하고 설정하세요. 모든 섹션의 필수 항목을 설정하고 오른쪽 하단의 <Cmd sid='add_user_card_activate_btn' product='air' /> 버튼을 클릭하세요.
 
-* **Contact Information**: Provide an email or mobile phone number for the invitation.
 
-### 프로필 이미지 업로드 {#uploading-a-profile-picture}
+### 사용자 정보 입력 {#userInformation}
 
-1. **Upload**를 클릭하고 이미지 파일을 선택하세요.
+새롭게 추가하는 사용자에 대한 기본 정보를 입력하세요.
+
+<Image src='/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png' />
+
+* <Cmd sid='user_form_input1' product='air' />: 특정 아이디를 직접 입력하거나 시스템이 순차적으로 생성하도록 허용할 수 있습니다.
+
+* <Cmd sid='user_form_input3' product='air' />: 사용자의 기본 언어를 선택하세요.
+
+* <Cmd sid='user_form_input5' product='air' />: 사용자가 속할 그룹을 선택하세요.
+
+* <Cmd sid='user_form_input2' product='air' />: 사용자의 전체 이름을 입력하세요. 
+
+* <Cmd sid='user_form_input18' product='air' />: 사용자의 직함을 입력하세요.
+
+* <Cmd sid='user_form_input4' product='air' />: 사용자가 속한 부서 이름을 입력하세요.
+
+* <Cmd sid='user_form_input11' product='air' />: 사용자의 프로필 이미지를 업로드할 수 있습니다. 자세한 내용은 [다음 문서](#uploadProfileImage)를 참고하세요.
+
+:::info
+
+* <span className='require'>\*</span> 표시는 필수 입력 항목입니다.
+
+* 사용자의 이메일과 전화번호는 <Cmd sid='credential_detail' product='air' /> 섹션의 <Cmd sid='user_form_input8' product='air' /> 항목에서 입력할 수 있습니다.
+
+:::
+
+### 프로필 이미지 업로드 {#uploadProfileImage}
+
+1. 프로필 이미지 영역에 마우스를 오버하고 플러스 버튼을 클릭하세요.
+
+    <Image src='/img/air/bsair-upload-profile-image.png' />
+
+1. 로컬에 저장된 이미지 파일을 선택하세요.
 
 1. 사용 가능한 도구를 사용하여 이미지를 조정하세요.
 

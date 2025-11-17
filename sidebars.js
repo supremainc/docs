@@ -66,14 +66,21 @@ const sidebars = {
         {
           type: 'category',
           label: 'Site Management',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/site-management',
+          },
           items: [
             'platform/biostar_air/getting-started',
             'platform/biostar_air/biostar-air-login',
             {
               type: 'category',
               label: 'User Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/managing-users',
+              },
               items: [
-                'platform/biostar_air/managing-users',
                 'platform/biostar_air/adding-individual-users',
                 'platform/biostar_air/adding-users-in-bulk',
                 'platform/biostar_air/troubleshooting-adding-users-in-bulk',
