@@ -51,9 +51,12 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Overview',
+          label: 'BioStar Air란?',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/what-is-biostar-air',
+          },
           items: [
-            'platform/biostar_air/what-is-biostar-air',
             'platform/biostar_air/access-control-hardware-compatibility',
             'platform/biostar_air/security-overview',
             'platform/biostar_air/site-setup-networking',
