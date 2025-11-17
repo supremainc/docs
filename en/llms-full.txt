@@ -67061,9 +67061,10 @@ BioStar Air is a fully cloud-native access control solution built by Suprema, th
 
 This comprehensive user guide provides step-by-step instructions for setting up, configuring, and managing your BioStar Air access control system. Whether you're an administrator managing multiple sites, a system integrator implementing solutions, or an end user accessing facilities, this guide covers everything you need to know.
 
-#### Overview→5 items
+#### [BioStar Air란?→4 items](/docs/en/platform/biostar_air/what-is-biostar-air)
 
-* [What is BioStar Air?](/docs/en/platform/biostar_air/what-is-biostar-air)
+BioStar Air is a cloud-based access control solution that offers a range of features to enhance security and streamline management.
+
 * [Access Control Hardware Compatibility](/docs/en/platform/biostar_air/access-control-hardware-compatibility)
 * [Security Overview](/docs/en/platform/biostar_air/security-overview)
 * [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking)
