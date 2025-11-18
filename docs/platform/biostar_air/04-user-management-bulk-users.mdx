@@ -7,106 +7,172 @@ keywords: [사용자 관리, BioStar Air, 대량 사용자]
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 기능 개요 {#feature-overview}
-
 BioStar Air는 관리자가 CSV 파일을 사용하여 여러 사용자를 한 번에 추가할 수 있습니다. 이 기능은 직원 온보딩, 사이트 업그레이드 또는 임시 출입 요구 사항을 효율적으로 처리하는 데 유용합니다.
-
-<YouTube videoId="gOi2nP0Ag5o" />
 
 <CustomerNote />
 
-## 사용자 관리로 이동 {#navigating-to-bulk-user-upload}
+:::tip
 
-여러 사용자를 일괄 추가할 수 있습니다.
+여러 사용자를 일괄 추가하는 전체 과정을 단계별로 안내하는 다음 동영상을 참고하세요.
 
-1. BioStar Air 포털에서 **User Management**로 이동하세요.
+<YouTube videoId="gOi2nP0Ag5o" />
 
-1. **Users**를 클릭하면 사용자 목록이 나타납니다.
+:::
 
-1. **Download CSV Template** 버튼을 클릭하세요.
+## CSV 템플릿 다운로드 {#downloadCSVTemplate}
+
+다음 안내에 따라 CSV 템플릿 파일을 다운로드하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />로 이동하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' />를 클릭하세요.
+
+    <Image src='/img/air/bsair-add-bulk-import-user.png' />
+
+1. <Cmd sid='user_actions_import_title' product='air' /> 패널이 나타나면 <Cmd sid='user_actions_import_download_btn_text' product='air' /> 버튼을 클릭하세요.
+
+    <Image src='/img/air/bsair-add-bulk-import-user-download-csv-template.png' />
+
+1. CSV 템플릿 파일(*biostar-import-user-csv-example.csv*)을 로컬에 저장하세요.
 
 
 ## CSV 파일 준비 {#preparing-the-csv-file}
 
-CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보를 입력하세요. 주요 필드는 다음과 같습니다.
+CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보를 입력하세요. 
 
-* **User Group ID**: BioStar Air 포털의 **User Group** 화면에서 이 정보를 가져옵니다.
+### 주요 입력 필드 {#keyInputFields}
 
-* **Access Level ID**: BioStar Air 포털의 **Access Levels** 화면에서 이 정보를 가져옵니다. *Full access*는 항상 **1**로 설정됩니다.
+입력할 주요 필드는 아래와 같습니다.
 
-* **Email Address**: 이메일을 통해 초대장을 발송하는 경우 필수입니다.
+* <Cmd sid='user_csv_example_header11' product='air' className='bold' />: <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' />에서 그룹 아이디를 확인할 수 있습니다.
 
-* **Mobile Phone Number**: 모바일을 통해 초대장을 발송하는 경우 필수입니다.
+  <Image src='/img/air/bsair-user-group-list-check-ids.png' />
 
-:::info
+* <Cmd sid='user_csv_example_header12' product='air' className='bold' /> : <Cmd sid='access_menu' product='air' /> → <Cmd sid='access_levels_submenu' product='air' />에서 출입 레벨 아이디를 확인할 수 있습니다. <Cmd sid='full_access' product='air' className='bold' />은 항상 **1**로 설정됩니다. 쉼표(`,`)를 구분자로 여러 출입 레벨을 지정할 수 있습니다.
 
-이메일 주소와 전화 번호는 중복되면 안됩니다. 중복된 값은 업로드 오류가 발생할 수 있습니다.
+  <Image src='/img/air/bsair-ac-level-list-check-ids.png' />
+
+* <Cmd sid='user_csv_example_header7' product='air' className='bold' />: 이메일을 통해 초대장을 발송한다면 필수로 입력하세요.
+
+* <Cmd sid='user_csv_example_header8' product='air' className='bold' />: 모바일 SMS를 통해 초대장을 발송한다면 필수로 입력하세요.
+
+:::caution
+
+<Cmd sid='user_csv_example_header7' product='air' className='bold' />과 <Cmd sid='user_csv_example_header8' product='air' className='bold' />는 중복되면 안됩니다. 중복된 값을 입력하고 CSV 파일을 업로드하면 오류가 발생할 수 있습니다.
 
 :::
 
 ### 커스텀 Wiegand 형식 지원
 
-* 시설 코드, 세그먼트, 패리티 비트 등 **모든 Wiegand 형식을 자유롭게 구성**할 수 있습니다.
+* 시설 코드, 세그먼트, 패리티 비트 등의 정보를 포함한 **모든 Wiegand 형식을 자유롭게 구성**할 수 있습니다.
 
 * HID Corporate 1000 및 iClass SE, SEOS 형식을 지원합니다.
 
-* **CSV 업로드 템플릿**:
+* **CSV 템플릿**
 
-  * 각 정의된 형식(사용자 정의 또는 기본)은 별도의 열로 표시됩니다.
+  * 각 정의된 형식(사용자 정의 또는 기본)은 CSV 파일에서 별도의 열로 표시됩니다.
 
-  * **예시**:
+    > <Cmd sid='rf_card_data_format_option_1' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_2' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_3' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_4' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_5' product='air' className='bold' />
 
-    * 시설 코드가 있는 경우: *1234567-100-'Main Office Card'* (CardID-FacilityCode-'CardName')
+  * 여러 항목을 단일 필드에 입력할 때는 슬래시(`/`)로 구분하세요.
 
-    * 여러 세그먼트가 있는 경우: *12-3456-78-'Lab Entry Card'*
-
-  * 여러 항목을 단일 필드에 입력할 때는 `/`로 구분합니다.
-
-  * 카드 이름 주위에는 작은 따옴표 `'`를 사용할 수 있습니다. 큰 따옴표 `"`를 사용하면 오류가 발생하므로 피해야 합니다.
+  * 카드 이름 주위에는 작은 따옴표(`'`)를 사용할 수 있습니다. 큰 따옴표(`"`)를 사용하면 오류가 발생할 수 있습니다.
 
     > ✅ 'CardName' | ❌ "CardName"
 
+  :::note
+
+  **예시**
+
+  * 시설 코드가 있는 경우: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
+
+  * 여러 세그먼트가 있는 경우: *12-3456-78-'Lab Entry Card'*
+
+  :::
+
 ### 여러 카드 지원
 
-* 사용자당 최대 8개의 카드를 할당할 수 있습니다. (CSN 또는 Wiegand)
+* 사용자당 최대 8개의 CSN 또는 Wiegand 카드 형식을 할당할 수 있습니다.
 
-* CSV 업로드 형식:
+* **CSV 템플릿**
 
-  * 단일 카드: CSN을 입력합니다.
+  * 단일 카드는 CSN 카드 번호를 입력합니다.
 
-  * 여러 카드: CSN을 `/`로 구분합니다.
+  * 여러 카드를 등록할 때는 CSN 카드 번호를 슬래시(`/`)로 구분하세요.
 
-  * 카드 이름 지정 형식: *CSN-'Card Name'*
+:::note
 
-    > 예, *1234567-'Main Entry'* / *7654321-'Back Door'*
+**카드 이름 지정 형식**: `CSN`-`'Card Name'`
+
+예시: *1234567-'Main Entry'* / *7654321-'Back Door'*
+
+:::
 
 
 ## CSV 파일 업로드 {#uploading-the-csv-file}
 
-CSV 파일을 준비가 완료되면 업로드하세요.
+CSV 파일 준비를 완료하면 업로드하세요.
 
-1. 파일을 **Upload CSV** 창으로 드래그 앤 드롭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />로 이동하세요.
 
-1. 정확성을 확인하려면 미리보기 창에서 열 데이터를 검토하세요.
+1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' />를 클릭하세요.
 
-1. 데이터에 문제가 없다면 업로드하세요.
+    <Image src='/img/air/bsair-add-bulk-import-user.png' />
+
+1. <Cmd sid='user_actions_import_title' product='air' /> 패널이 나타나면 <Cmd sid='face_register_upload_csv_text_select_file' product='air' /> 버튼을 클릭하세요.
+
+    <Image src='/img/air/bsair-add-bulk-import-user-select-csv.png' />
+
+1. 앞서 준비한 CSV 파일을 선택하세요.
+
+    :::note
+
+    사용자의 프로필 이미지가 준비되어 있다면 <Cmd sid='face_register_upload_face_photo' product='air' /> 옵션을 활성화하세요. 자세한 내용은 [다음 문서](#uploadProfileImages)를 참고하세요.
+
+    :::
+
+1. 화면 오른쪽 하단의 <Cmd sid='new_popup_import_users_btn_next' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='user_actions_import_data_preview' product='air' /> 섹션에서 첫번째 열의 데이터 정확성을 검토하세요.
+
+    <Image src='/img/air/bsair-add-bulk-import-user-csv-data-preview.png' />
+
+1. 데이터에 문제가 없다면 오른쪽 하단의 <Cmd sid='user_actions_import_btn' product='air' /> 버튼을 클릭하세요.
+
+업로드를 완료하면 다음 화면에서 사용자의 이미지를 불러오거나 모바일 카드를 일괄로 발급할 수 있습니다. 원하는 작업을 선택하세요.
+
+<Image src='/img/air/bsair-add-bulk-import-user-csv-complete.png' />
+
+:::info
+
+* CSV 파일 이름에는 쉼표(`,`)를 제외한 특수 문자를 사용할 수 없습니다.
+
+* 업로드할 수 있는 CSV 파일의 최대 크기는 **5MB**입니다.
+
+* <Cmd sid='user_actions_import_title' product='air' /> 패널의 <Cmd sid='user_actions_import_upload_text' product='air' /> 필드에 CSV 파일을 드래그 앤 드롭하여 업로드할 수도 있습니다.
+
+:::
 
 ### CSV 가져오기 검증
 
-CSV 업로드 프로세스가 개선되어 **행별 오류 피드백**을 제공하므로 문제 해결이 더 쉬워졌습니다.
+CSV 업로드 프로세스가 개선되어 **행별 오류 피드백**을 제공하므로 문제 해결이 더 쉬워졌습니다. 업로드 중 오류가 발생하면 오류 내용을 확인할 수 있는 상세 보고서를 제공합니다. 보고서를 다운로드하려면 <Cmd sid='user_actions_import_download_btn_text' product='air' /> 버튼을 클릭하세요.
+
+<Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
 
-## 사용자 프로필 이미지 업로드 {#uploading-user-profile-images}
+## 사용자 프로필 이미지 업로드 {#uploadProfileImages}
 
-프로필 이미지는 CSV 파일과 함께 자동으로 업로드할 수 있습니다.
+프로필 이미지는 CSV 파일과 함께 자동으로 업로드하거나 나중에 수동으로 일괄 업로드할 수 있습니다.
 
-1. 각 이미지 파일 이름이 CSV 파일의 사용자 아이디와 일치하는지 확인하세요. 
+<Image src='/img/air/bsair-add-bulk-import-user-with-face-photo.png' />
 
-   > 예, *601.jpg*는 사용자 아이디 **601**에 해당합니다.
+1. CSV 파일의 <Cmd sid='user_csv_example_header1' product='air' className='bold' /> 열과 일치하는 프로필 이미지 파일을 준비하세요.
 
-1. 모든 이미지를 선택하고 **Bulk User Images** 업로드 영역으로 드래그하세요.
+    예, *601.jpg* 파일은 사용자 아이디 **601**에 해당합니다.
 
-1. 이미지가 CSV 업로드 시점에 준비되지 않았다면 **Image Upload** 버튼을 사용하여 나중에 추가할 수 있습니다.
+1. <Cmd sid='user_actions_import_title' product='air' /> 패널에서 CSV 파일을 업로드 후 <Cmd sid='face_register_upload_face_photo' product='air' /> 옵션을 활성화하세요.
+
+1. <Cmd sid='face_register_upload_face_photo_select_folder' product='air' /> 버튼을 클릭한 후 프로필 이미지가 저장된 폴더를 선택하세요.
 
 :::note
 
@@ -115,6 +181,14 @@ CSV 업로드 프로세스가 개선되어 **행별 오류 피드백**을 제공
 * 지원되는 형식: *.jpg*, *.png*
 
 * 파일 크기 제한: **1MB per image**
+
+:::
+
+:::tip
+
+프로필 이미지가 CSV 파일을 업로드할 때 준비되지 않았다면 사용자 목록의 <Cmd sid='image_upload_action' product='air' />(<IcAirUpface />) 기능을 사용하여 나중에 추가할 수 있습니다.
+
+<Image src='/img/air/bsair-add-bulk-import-user-profile-images.png' />
 
 :::
 
