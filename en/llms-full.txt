@@ -67070,7 +67070,9 @@ BioStar Air is a cloud-based access control solution that offers a range of feat
 * [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking)
 * [BioStar Air Migration](/docs/en/platform/biostar_air/biostar-air-migration)
 
-#### Site Management→9 items
+#### [Site Management→9 items](/docs/en/platform/biostar_air/site-management)
+
+BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
 
 * [Getting Started](/docs/en/platform/biostar_air/getting-started)
 * [BioStar Air Login](/docs/en/platform/biostar_air/biostar-air-login)
@@ -71423,6 +71425,83 @@ The BioStation 3 has been tested and confirmed to work well with the following p
 * Linphone
 
 * Linhome
+
+
+---
+
+### 사이트 관리
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air에서 **사이트**는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
+
+다음 제공하는 문서를 통해 BioStar Air 포털에서 사이트를 효과적으로 관리하는 방법을 알아보세요.
+
+#### [Getting Started→ <!-- -->Read more](/docs/en/platform/biostar_air/getting-started)
+
+Learn how to set up your first BioStar Air site by adding administrators, registering devices, creating doors, configuring access rights, and managing users step by step.
+
+#### [BioStar Air Login→ <!-- -->Read more](/docs/en/platform/biostar_air/biostar-air-login)
+
+Learn how to use the Site Selector feature to manage multiple BioStar Air sites with a single email address and streamline your login process.
+
+#### [User Management→8 items](/docs/en/platform/biostar_air/managing-users)
+
+Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.
+
+* [Adding Individual Users](/docs/en/platform/biostar_air/adding-individual-users)
+* [Adding Users in Bulk](/docs/en/platform/biostar_air/adding-users-in-bulk)
+* [Troubleshooting Adding Users in Bulk](/docs/en/platform/biostar_air/troubleshooting-adding-users-in-bulk)
+* [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
+* [Managing User Groups](/docs/en/platform/biostar_air/managing-user-groups)
+* [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates)
+* [Managing and Adding Users in the BioStar Air App](/docs/en/platform/biostar_air/managing-adding-users)
+* [LinkPass Credentials](/docs/en/platform/biostar_air/linkpass-credentials)
+
+#### Device Management→6 items
+
+* [Managing Registered Devices](/docs/en/platform/biostar_air/managing-registered-devices)
+* [Configuring Time & Attendance (T\&A)](/docs/en/platform/biostar_air/configuring-ta)
+* [Configuring the Airfob Patch and Tag](/docs/en/platform/biostar_air/configuring-the-airfob-patch-and-tag)
+* [Configuring the SIO2 Secure Module](/docs/en/platform/biostar_air/configuring-the-sio2-secure-module)
+* [How to Upgrade Firmware](/docs/en/platform/biostar_air/how-to-upgrade-firmware)
+* [Biometric Readers and Credentials](/docs/en/platform/biostar_air/biometric-readers-and-credentials)
+
+#### Door Management→3 items
+
+* [Managing Registered Doors](/docs/en/platform/biostar_air/managing-registered-doors)
+* [Managing Door & Device Groups](/docs/en/platform/biostar_air/managing-door-and-device-groups)
+* [Managing Door Schedules](/docs/en/platform/biostar_air/managing-door-schedules)
+
+#### Monitoring→2 items
+
+* [Event Logs and Audit Logs](/docs/en/platform/biostar_air/event-and-audit-logs)
+* [Monitoring Door Status](/docs/en/platform/biostar_air/monitoring-door-status)
+
+#### Reports→2 items
+
+* [Configuring Reports](/docs/en/platform/biostar_air/configuring-reports)
+* [Time and Attendance Reports](/docs/en/platform/biostar_air/reports-time-attendance-reports)
+
+#### Settings→6 items
+
+* [Managing Administrators](/docs/en/platform/biostar_air/managing-administrators)
+* [Site Settings](/docs/en/platform/biostar_air/site-settings)
+* [Daylight Saving Time (DST) Configuration](/docs/en/platform/biostar_air/daylight-saving-time)
+* [Customizing Email Templates](/docs/en/platform/biostar_air/customizing-email-templates)
+* [Managing Sites with your Phone](/docs/en/platform/biostar_air/managing-sites-with-phone)
+* [Custom Wiegand Card Formats](/docs/en/platform/biostar_air/custom-wiegand-card-formats)
+
+#### Advanced Features→4 items
+
+* [Managing Door Access](/docs/en/platform/biostar_air/managing-door-access)
+* [Managing Elevator Access](/docs/en/platform/biostar_air/managing-elevator-access)
+* [Managing Roll Call & Fire Muster](/docs/en/platform/biostar_air/managing-roll-call-fire-muster)
+* [SIP Intercom for BioStation 3](/docs/en/platform/biostar_air/sip-intercom-for-biostation3)
 
 
 ---
