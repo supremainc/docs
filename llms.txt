@@ -5,58 +5,7 @@
 
 ## Api
 
-- [BioStar X API (1.0.0)](/docs/api/bsxapi): ## Overview
-
-Suprema BioStar X API is a JSON-based API. All requests are made to endpoints beginning with [https://server_ip|domain_name[:port]/api](https://server_ip|domain_name:port/api)
-
-The API can be used to perform almost any operation. Following are a few examples of what can be done with Suprema BioStar X API:
-
-- Manage User data
-    
-- Manage Access Group data
-    
-- Manage Doors data
-    
-- Assign an Access Group to one or multiple User
-    
-- Assign a User with one or multiple Access Group
-    
-- Manage Devices
-    
-- And many more...
-    
-
-All requests must be secure (https).
-
-## General Information
-
-To call the API, BioStar X is mainly using HTTP Methods `GET`, `POST`, `PUT`, and `DELETE`.
-
-- `GET` is used to retrieve data from the server at the specified resource. For example, if you want to retrieve the User data with /users endpoint, then by making a `GET` request to the endpoint should result with the list of all available users.
-    
-- `POST` request is used to send data to the server to create or  a resource. The data sent to the server is stored on the body of the HTTP request.
-    
-- `PUT` is similar to `POST` in that it creates or s a resource. The difference between them is that when calling the same `PUT` requests multiple times it will have the same result. While calling a `POST` request repeatedly will create the same resource multiple times.
-    
-- `DELETE` is used to delete resources at the specified endpoint.
-    
-
-There are four parameter location that’s being used on Suprema BioStar X API:
-
-- PATH parameter is located on the URL, usually on the end of an endpoint. For example in /items/{ItemID}, the PATH parameter is ItemID.
-    
-- BODY. An array of string values will be located on the BODY of the HTTP request. The request body needs to be in JSON format.
-    
-- QUERY. Similar to the PATH parameter, QUERY parameter is also located on the URL, the difference is QUERY parameter will be located after a question mark. Example: /items?id=###, the QUERY parameter is id.
-    
-- HEADER. Custom headers that are expected as part of the request.
-    
-
-Path templating refers to the usage of template expressions, delimited by curly braces ({}), to mark a section of a URL path as replaceable using path parameters. Example: [https://127.0.0.1:4433/api/some_api/{id](https://127.0.0.1:4433/api/some_api/%7Bid)}  
-Above example shows that the required value will be placed on {id}
-## Release Notes
-**2025-09-30**
-- Initial version
+- [BioStar X API (1.0.0)](/docs/api/bsxapi): BioStar X REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints.
 
 ## Device
 

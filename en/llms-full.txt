@@ -476,7 +476,7 @@ Search...
 
 [API docs by Redocly](https://redocly.com/redoc/)
 
-Download OpenAPI specification<!-- -->:[Download](https://supremainc.github.io/docs/en/redocusaurus/plugin-redoc-0.yaml)
+Download OpenAPI specification<!-- -->:[Download](https://supremainc.github.io/docs/en/redocusaurus/bsxapi.yaml)
 
 Suprema Inc.
 
@@ -654,27 +654,27 @@ Expand all  Collapse all
 "name": "Administrator",
 "description": "this is a permission for Administrator",
 "filter": {
-"UserGroup": [
-"1"
-],
-"DeviceGroup": [
-"1"
-],
-"DoorGroup": [
-"1"
-],
-"ElevatorGroup": [
-"1"
-],
-"ZoneType": [
-"-1"
-],
-"AccessGroup": [
-"0"
-],
-"GraphicMapGroup": [
-"1"
-]
+"UserGroup": {
+"0": "1"
+},
+"DeviceGroup": {
+"0": "1"
+},
+"DoorGroup": {
+"0": "1"
+},
+"ElevatorGroup": {
+"0": "1"
+},
+"ZoneType": {
+"0": "-1"
+},
+"AccessGroup": {
+"0": "0"
+},
+"GraphicMapGroup": {
+"0": "1"
+}
 },
 "module": {
 "Dashboard": {
@@ -726,82 +726,82 @@ Expand all  Collapse all
 "write": "true"
 }
 },
-"device": [
-{
+"device": {
+"0": {
 "id": "542071155"
 },
-{
+"1": {
 "id": "543720368"
 },
-{
+"2": {
 "id": "939257394"
 }
-],
-"user": [
-{
+},
+"user": {
+"0": {
 "id": "1"
 },
-{
+"1": {
 "id": "2"
 },
-{
+"2": {
 "id": "3"
 },
-{
+"3": {
 "id": "4"
 },
-{
+"4": {
 "id": "5"
 },
-{
+"5": {
 "id": "6"
 },
-{
+"6": {
 "id": "7"
 },
-{
+"7": {
 "id": "20"
 },
-{
+"8": {
 "id": "21"
 },
-{
+"9": {
 "id": "22"
 },
-{
+"10": {
 "id": "23"
 },
-{
+"11": {
 "id": "24"
 },
-{
+"12": {
 "id": "25"
 },
-{
+"13": {
 "id": "26"
 },
-{
+"14": {
 "id": "27"
 },
-{
+"15": {
 "id": "28"
 },
-{
+"16": {
 "id": "29"
 },
-{
+"17": {
 "id": "30"
 },
-{
+"18": {
 "id": "31"
 },
-{
+"19": {
 "id": "32"
 },
-{
+"20": {
 "id": "33"
 }
-]
+}
 },
 "inherited": "false",
 "user_group_id": {
@@ -820,22 +820,22 @@ Expand all  Collapse all
 "fingerprint_template_count": "0",
 "face_count": "0",
 "card_count": "0",
-"access_groups": [
-{
+"access_groups": {
+"0": {
 "id": "1",
 "name": "Meeting Room 1 AG"
 },
-{
+"1": {
 "id": "2",
 "name": "Meeting Room 2 AG"
 },
-{
+"2": {
 "id": "22",
 "name": "Building Access"
 }
-],
-"user_custom_fields": [
-{
+},
+"user_custom_fields": {
+"0": {
 "user_id": {
 "user_id": "1",
 "name": "Administrator"
@@ -847,7 +847,7 @@ Expand all  Collapse all
 "order": "1"
 }
 },
-{
+"1": {
 "user_id": {
 "user_id": "1",
 "name": "Administrator"
@@ -859,7 +859,7 @@ Expand all  Collapse all
 "order": "2"
 }
 }
-],
+},
 "need_to__pw": "false"
 },
 "Response": {
@@ -1070,27 +1070,27 @@ Expand all  Collapse all
 "AccessGroup": {
 "name": "ac_grp2",
 "description": "",
-"users": [
-{
+"users": {
+"0": {
 "user_id": 1
 }
-],
-"user_groups": [
-{
+},
+"user_groups": {
+"0": {
 "id": 1
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": 2
 }
-],
-"floor_levels": [
-{
+},
+"floor_levels": {
+"0": {
 "id": "32769",
 "name": "floor_test"
 }
-]
+}
 }
 }`
 
@@ -1112,16 +1112,16 @@ Expand all  Collapse all
 "name": "Test1"
 },
 "DeviceResponse": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": "40059001",
 "code": "0"
 },
-{
+"1": {
 "id": "40059002",
 "code": "0"
 }
-],
+},
 "result": "true"
 },
 "Response": {
@@ -1209,24 +1209,24 @@ Expand all  Collapse all
 `{
 "AccessGroupCollection": {
 "total": "3",
-"rows": [
-{
+"rows": {
+"0": {
 "id": "1",
 "name": "Adminstrative",
 "description": "Administrative access group",
-"users": [
-{
+"users": {
+"0": {
 "name": "RB",
 "user_id": "2"
 },
-{
+"1": {
 "name": "AM",
 "user_id": "3"
 }
-],
+},
 "user_count": "2",
-"user_groups": [
-{
+"user_groups": {
+"0": {
 "id": "1005",
 "name": "Administrative",
 "description": "Administrative user group",
@@ -1239,28 +1239,28 @@ Expand all  Collapse all
 "face_count": "0",
 "user_count": "241"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": "1",
 "name": "Administrative Employee",
 "description": "Access level for Administrative Employee"
 }
-]
+}
 },
-{
+"1": {
 "id": "2",
 "name": "Executive",
 "description": "Executive access group",
-"users": [
-{
+"users": {
+"0": {
 "name": "Sib Steketee",
 "user_id": "60014"
 }
-],
+},
 "user_count": "1",
-"user_groups": [
-{
+"user_groups": {
+"0": {
 "id": "1004",
 "name": "Executive",
 "description": "Executive user group",
@@ -1273,22 +1273,22 @@ Expand all  Collapse all
 "face_count": "0",
 "user_count": "15"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": "2",
 "name": "Executive",
 "description": "Access level for Executive"
 }
-]
+}
 },
-{
+"2": {
 "id": "3",
 "name": "Test1",
 "description": "Test access group with floor levels",
 "user_count": "0",
-"user_groups": [
-{
+"user_groups": {
+"0": {
 "id": "1005",
 "name": "Administrative",
 "description": "Administrative user group",
@@ -1301,23 +1301,23 @@ Expand all  Collapse all
 "face_count": "0",
 "user_count": "241"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": "3",
 "name": "All Access",
 "description": "Access level for All Access"
 }
-],
-"floor_levels": [
-{
+},
+"floor_levels": {
+"0": {
 "id": "32769",
 "name": "FL1",
 "description": "First floor"
 }
-]
 }
-]
+}
+}
 },
 "Response": {
 "code": "0",
@@ -1520,81 +1520,81 @@ Expand all  Collapse all
 `{
 "AccessGroupCollection": {
 "total": 3,
-"rows": [
-{
+"rows": {
+"0": {
 "id": 1,
 "name": "Administrative",
-"users": [
-{
+"users": {
+"0": {
 "user_id": "2",
 "name": "RB"
 },
-{
+"1": {
 "user_id": "3",
 "name": "AM"
 }
-],
-"user_groups": [
-{
+},
+"user_groups": {
+"0": {
 "id": 1005,
 "name": "Administrative"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": 1,
 "name": "Administrative Employee"
 }
-],
-"floor_levels": [ ]
 },
-{
+"floor_levels": { }
+},
+"1": {
 "id": 2,
 "name": "Executive",
-"users": [
-{
+"users": {
+"0": {
 "user_id": "60014",
 "name": "Sib Steketee"
 }
-],
-"user_groups": [
-{
+},
+"user_groups": {
+"0": {
 "id": 1004,
 "name": "Executive"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": 2,
 "name": "Executive"
 }
-],
-"floor_levels": [ ]
 },
-{
+"floor_levels": { }
+},
+"2": {
 "id": 12,
 "name": "Test1",
-"users": [ ],
-"user_groups": [
-{
+"users": { },
+"user_groups": {
+"0": {
 "id": 1005,
 "name": "Administrative"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": 3,
 "name": "All Access"
 }
-],
-"floor_levels": [
-{
+},
+"floor_levels": {
+"0": {
 "id": 32769,
 "name": "FL1"
 }
-]
 }
-]
+}
+}
 },
 "Response": {
 "code": "0",
@@ -1697,19 +1697,19 @@ Expand all  Collapse all
 "id": "1",
 "name": "Administrative",
 "description": "Administrative access group",
-"users": [
-{
+"users": {
+"0": {
 "name": "RB",
 "user_id": "2"
 },
-{
+"1": {
 "name": "AM",
 "user_id": "3"
 }
-],
+},
 "user_count": "2",
-"user_groups": [
-{
+"user_groups": {
+"0": {
 "id": "1005",
 "name": "Administrative",
 "description": "Administrative user group",
@@ -1722,14 +1722,14 @@ Expand all  Collapse all
 "face_count": "0",
 "user_count": "241"
 }
-],
-"access_levels": [
-{
+},
+"access_levels": {
+"0": {
 "id": "1",
 "name": "Administrative Employee",
 "description": "Access level for Administrative Employee"
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -1880,43 +1880,43 @@ Expand all  Collapse all
 "AccessGroup": {
 "name": "Meeting Room Name",
 "description": "MR Description",
-"access_levels": [
-{
+"access_levels": {
+"0": {
 "id": 1
 }
-],
-"user_groups": [
-{
+},
+"user_groups": {
+"0": {
 "id": 1
 }
-],
-"users": [
-{
+},
+"users": {
+"0": {
 "user_id": 17
 },
-{
+"1": {
 "user_id": 9932
 },
-{
+"2": {
 "user_id": 2
 }
-],
-"new_users": [
-{
+},
+"new_users": {
+"0": {
 "user_id": 1
 }
-],
-"delete_users": [
-{
+},
+"delete_users": {
+"0": {
 "user_id": 17
 },
-{
+"1": {
 "user_id": 9932
 },
-{
+"2": {
 "user_id": 2
 }
-]
+}
 }
 }`
 
@@ -2028,20 +2028,20 @@ Expand all  Collapse all
 `{
 "UserCollection": {
 "total": "3",
-"rows": [
-{
+"rows": {
+"0": {
 "user_id": "2",
 "name": "RB"
 },
-{
+"1": {
 "user_id": "3",
 "name": "AM"
 },
-{
+"2": {
 "user_id": "61000",
 "name": "JJ"
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -2156,21 +2156,21 @@ Expand all  Collapse all
 "AccessLevel": {
 "name": "Access Level Name",
 "description": "Access Level Description",
-"access_level_items": [
-{
-"doors": [
-{
+"access_level_items": {
+"0": {
+"doors": {
+"0": {
 "id": 75
 },
-{
+"1": {
 "id": 80
 }
-],
+},
 "schedule_id": {
 "id": "1"
 }
 }
-]
+}
 }
 }`
 
@@ -2333,36 +2333,36 @@ Expand all  Collapse all
 "AccessLevel": {
 "name": "Test Update",
 "description": "Update",
-"access_level_items": [
-{
+"access_level_items": {
+"0": {
 "id": 126,
-"doors": [
-{
+"doors": {
+"0": {
 "id": 75
 },
-{
+"1": {
 "id": 80
 }
-],
+},
 "schedule_id": {
 "id": 1
 }
 },
-{
+"1": {
 "id": 128,
-"doors": [
-{
+"doors": {
+"0": {
 "id": 75
 },
-{
+"1": {
 "id": 79
 }
-],
+},
 "schedule_id": {
 "id": 2
 }
 }
-]
+}
 }
 }`
 
@@ -2867,22 +2867,22 @@ Expand all  Collapse all
 "description": "Custom Wiegand format description",
 "length": 32,
 "use_facility_code": true,
-"id_fields": [
-"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAAAA=",
-"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf///4="
-],
-"parity_fields": [
-"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=",
-"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE="
-],
-"parity_types": [
-1,
-2
-],
-"parity_positions": [
-0,
-31
-]
+"id_fields": {
+"0": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAAAA=",
+"1": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf///4="
+},
+"parity_fields": {
+"0": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=",
+"1": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE="
+},
+"parity_types": {
+"0": 1,
+"1": 2
+},
+"parity_positions": {
+"0": 0,
+"1": 31
+}
 }
 }`
 
@@ -4080,12 +4080,12 @@ Expand all  Collapse all
 "SmartCard": {
 "user_id": {
 "user_id": 8,
-"fingerprint_templates": [
-{
+"fingerprint_templates": {
+"0": {
 "finger_index": 0
 }
-],
-"visual_face_templates": [ ]
+},
+"visual_face_templates": { }
 },
 "card_id": {
 "card_id": 8,
@@ -4199,11 +4199,11 @@ Expand all  Collapse all
 "SmartCard": {
 "user_id": {
 "user_id": 1,
-"fingerprint_templates": [
-{
+"fingerprint_templates": {
+"0": {
 "finger_index": 0
 }
-]
+}
 },
 "card_id": {
 "card_id": 102,
@@ -4458,7 +4458,7 @@ Expand all  Collapse all
 "user_name": "e",
 "user_operator_level_id": "0",
 "user_group_id": 1,
-"user_group_ids": [ ],
+"user_group_ids": { },
 "user_custom_field_1": "string",
 "user_custom_field_2": "string",
 "user_custom_field_3": "string",
@@ -4775,10 +4775,10 @@ Copy
 Expand all  Collapse all
 
 `{
-"user_group_id_list": [
-"1004",
-"21109"
-]
+"user_group_id_list": {
+"0": "1004",
+"1": "21109"
+}
 }`
 
 #### [](#tag/User-Groups/operation/updateUserGroup)Update User Group<!-- -->
@@ -5611,9 +5611,9 @@ Expand all  Collapse all
 "user_id": "11",
 "order_by": "user_id:false",
 "user_group_id": 1,
-"user_group_ids": [
-1121
-],
+"user_group_ids": {
+"0": 1121
+},
 "user_name": "John",
 "user_email": "abc@gmail.com",
 "user_phone": "123-456-7890",
@@ -5910,9 +5910,9 @@ Expand all  Collapse all
 "user_id": "11",
 "order_by": "user_id:false",
 "user_group_id": 1,
-"user_group_ids": [
-1121
-],
+"user_group_ids": {
+"0": 1121
+},
 "user_name": "John",
 "user_email": "abc@gmail.com",
 "user_phone": "123-456-7890",
@@ -6074,11 +6074,11 @@ Expand all  Collapse all
 {
 "column": "user_id",
 "operator": 2,
-"values": [
-1,
-2,
-4
-]
+"values": {
+"0": 1,
+"1": 2,
+"2": 4
+}
 }
 ],
 "orders": [
@@ -6201,11 +6201,11 @@ Expand all  Collapse all
 {
 "column": "user_id",
 "operator": 2,
-"values": [
-1,
-2,
-4
-]
+"values": {
+"0": 1,
+"1": 2,
+"2": 4
+}
 }
 ],
 "orders": [
@@ -6339,9 +6339,9 @@ Expand all  Collapse all
 "user_id": "11",
 "order_by": "user_id:false",
 "user_group_id": 1,
-"user_group_ids": [
-1121
-],
+"user_group_ids": {
+"0": 1121
+},
 "user_name": "John",
 "user_email": "abc@gmail.com",
 "user_phone": "123-456-7890",
@@ -6902,42 +6902,42 @@ Expand all  Collapse all
 "Query": {
 "offset": 0,
 "group_by": 1,
-"columns": [
-"user_id",
-"name",
-"email",
-"user_group_id",
-"access_groups",
-"start_datetime",
-"expiry_datetime",
-"operator_level",
-"fingerprint_template_count",
-"face_count",
-"visual_face_count",
-"card_count",
-"have_pin",
-"qr_count",
-"mobile_count",
-"disabled"
-],
-"headers": [
-"ID",
-"Name",
-"Email",
-"Group",
-"Access Group",
-"Start datetime",
-"End datetime",
-"Operator Level",
-"Fingerprint",
-"Face",
-"Visual Face",
-"Card",
-"PIN",
-"QR/Barcode",
-"Mobile Access Card",
-"Status"
-]
+"columns": {
+"0": "user_id",
+"1": "name",
+"2": "email",
+"3": "user_group_id",
+"4": "access_groups",
+"5": "start_datetime",
+"6": "expiry_datetime",
+"7": "operator_level",
+"8": "fingerprint_template_count",
+"9": "face_count",
+"10": "visual_face_count",
+"11": "card_count",
+"12": "have_pin",
+"13": "qr_count",
+"14": "mobile_count",
+"15": "disabled"
+},
+"headers": {
+"0": "ID",
+"1": "Name",
+"2": "Email",
+"3": "Group",
+"4": "Access Group",
+"5": "Start datetime",
+"6": "End datetime",
+"7": "Operator Level",
+"8": "Fingerprint",
+"9": "Face",
+"10": "Visual Face",
+"11": "Card",
+"12": "PIN",
+"13": "QR/Barcode",
+"14": "Mobile Access Card",
+"15": "Status"
+}
 },
 "adv_criteria": {
 "limit": 1000,
@@ -7090,69 +7090,69 @@ Expand all  Collapse all
 "import_option": 1
 },
 "Query": {
-"headers": [
-"user_id",
-"name",
-"department",
-"user_title",
-"phone",
-"email",
-"user_group",
-"start_datetime",
-"expiry_datetime",
-"csn",
-"",
-"",
-"",
-"qr",
-"26 bit SIA Standard-H10301",
-"HID 37 bit-H10302",
-"",
-"",
-"",
-"Purpose",
-"License Plate Number",
-"Hello",
-"Hair Color",
-"Hair Color 2",
-"",
-"",
-""
-],
-"columns": [
-"user_id",
-"name",
-"department",
-"user_title",
-"phone",
-"email",
-"user_group",
-"start_datetime",
-"expiry_datetime",
-"csn",
-"mobile_start_datetime",
-"mobile_expiry_datetime",
-"csn_mobile",
-"qr",
-"26 bit SIA Standard-H10301",
-"HID 37 bit-H10302",
-"HID 37 bit-H10304",
-"HID Corporate 1000",
-"HID Corporate 1000 48bit",
-"face_image_file1",
-"face_image_file2",
-"pin",
-"login_id",
-"access_groups",
-"fingerprint_template_count",
-"face_count",
-"visual_face_count",
-"card_count",
-"have_pin",
-"qr_count",
-"mobile_count",
-"disabled"
-]
+"headers": {
+"0": "user_id",
+"1": "name",
+"2": "department",
+"3": "user_title",
+"4": "phone",
+"5": "email",
+"6": "user_group",
+"7": "start_datetime",
+"8": "expiry_datetime",
+"9": "csn",
+"10": "",
+"11": "",
+"12": "",
+"13": "qr",
+"14": "26 bit SIA Standard-H10301",
+"15": "HID 37 bit-H10302",
+"16": "",
+"17": "",
+"18": "",
+"19": "Purpose",
+"20": "License Plate Number",
+"21": "Hello",
+"22": "Hair Color",
+"23": "Hair Color 2",
+"24": "",
+"25": "",
+"26": ""
+},
+"columns": {
+"0": "user_id",
+"1": "name",
+"2": "department",
+"3": "user_title",
+"4": "phone",
+"5": "email",
+"6": "user_group",
+"7": "start_datetime",
+"8": "expiry_datetime",
+"9": "csn",
+"10": "mobile_start_datetime",
+"11": "mobile_expiry_datetime",
+"12": "csn_mobile",
+"13": "qr",
+"14": "26 bit SIA Standard-H10301",
+"15": "HID 37 bit-H10302",
+"16": "HID 37 bit-H10304",
+"17": "HID Corporate 1000",
+"18": "HID Corporate 1000 48bit",
+"19": "face_image_file1",
+"20": "face_image_file2",
+"21": "pin",
+"22": "login_id",
+"23": "access_groups",
+"24": "fingerprint_template_count",
+"25": "face_count",
+"26": "visual_face_count",
+"27": "card_count",
+"28": "have_pin",
+"29": "qr_count",
+"30": "mobile_count",
+"31": "disabled"
+}
 }
 }`
 
@@ -7529,115 +7529,115 @@ Expand all  Collapse all
 "Query": {
 "collection_name": "UserCollection",
 "object": "query",
-"orders": [
-{
+"orders": {
+"0": {
 "column": "user_id",
 "descending": "false"
 }
-]
+}
 },
-"display_fields": [
-{
+"display_fields": {
+"0": {
 "name": "user_id",
 "display_name": "ID",
 "display_type": "string",
 "width": 5
 },
-{
+"1": {
 "name": "name",
 "display_name": "Name",
 "display_type": "string",
 "width": 9
 },
-{
+"2": {
 "name": "email",
 "display_name": "Email",
 "display_type": "string",
 "width": 12
 },
-{
+"3": {
 "name": "user_group_id.name",
 "display_name": "Group",
 "display_type": "string",
 "width": 9
 },
-{
+"4": {
 "name": "access_groups",
 "display_name": "Access Group",
 "display_type": "objects",
 "width": 9
 },
-{
+"5": {
 "name": "start_datetime",
 "display_name": "Start datetime",
 "display_type": "string",
 "width": 7
 },
-{
+"6": {
 "name": "expiry_datetime",
 "display_name": "End datetime",
 "display_type": "string",
 "width": 7
 },
-{
+"7": {
 "name": "operator_level",
 "display_name": "Operator Level",
 "display_type": "string",
 "width": 9
 },
-{
+"8": {
 "name": "fingerprint_template_count",
 "display_name": "Fingerprint",
 "display_type": "string",
 "width": 4
 },
-{
+"9": {
 "name": "face_count",
 "display_name": "Face",
 "display_type": "string",
 "width": 4
 },
-{
+"10": {
 "name": "visual_face_count",
 "display_name": "Visual Face",
 "display_type": "string",
 "width": 4
 },
-{
+"11": {
 "name": "card_count",
 "display_name": "Card",
 "display_type": "string",
 "width": 4
 },
-{
+"12": {
 "name": "have_pin",
 "display_name": "PIN",
 "display_type": "string",
 "width": 4
 },
-{
+"13": {
 "name": "qr_count",
 "display_name": "QR/Barcode",
 "display_type": "string",
 "width": 4
 },
-{
+"14": {
 "name": "mobile_count",
 "display_name": "Mobile Access Card",
 "display_type": "string",
 "width": 4
 },
-{
+"15": {
 "name": "disabled",
 "display_name": "Status",
 "display_type": "enum",
 "width": 2,
-"enum": [
-"false=",
-"true=Inactive"
-]
+"enum": {
+"0": "false=",
+"1": "true=Inactive"
 }
-],
+}
+},
 "name": "All Users",
 "show_title_every_page": false,
 "group_by_page_break": false,
@@ -7650,7 +7650,7 @@ Expand all  Collapse all
 },
 "adv_criteria": {
 "limit": 1000,
-"user_group_ids": [ ],
+"user_group_ids": { },
 "user_group_id": 1,
 "user_operator_level_id": 0,
 "order_by": "user_id:false"
@@ -8136,15 +8136,15 @@ Expand all  Collapse all
 },
 "UserAndGroupCollection": {
 "total": 10135,
-"rows": [
-{
+"rows": {
+"0": {
 "id": "userGroup-1",
 "name": "All",
 "disabled": false,
 "original_id": "1",
 "last_child": false
 },
-{
+"1": {
 "id": "userGroup-11241",
 "name": "Empty Users",
 "disabled": true,
@@ -8152,7 +8152,7 @@ Expand all  Collapse all
 "parent_id": "userGroup-1",
 "last_child": true
 },
-{
+"2": {
 "id": "userGroup-11024",
 "name": "Kumahira",
 "disabled": false,
@@ -8160,7 +8160,7 @@ Expand all  Collapse all
 "parent_id": "userGroup-1",
 "last_child": false
 },
-{
+"3": {
 "id": "user-9932",
 "name": "asdfsdfdsfa",
 "disabled": false,
@@ -8170,7 +8170,7 @@ Expand all  Collapse all
 "user_group": "Kumahira",
 "last_child": true
 },
-{
+"4": {
 "id": "user-9937",
 "name": "bobby",
 "disabled": false,
@@ -8180,7 +8180,7 @@ Expand all  Collapse all
 "user_group": "Kumahira",
 "last_child": true
 },
-{
+"5": {
 "id": "user-9938",
 "name": "Hildegaard",
 "disabled": false,
@@ -8190,7 +8190,7 @@ Expand all  Collapse all
 "user_group": "Kumahira",
 "last_child": true
 }
-]
+}
 }
 }`
 
@@ -8371,9 +8371,9 @@ Expand all  Collapse all
 "user_id": "11",
 "order_by": "user_id:false",
 "user_group_id": 1,
-"user_group_ids": [
-1121
-],
+"user_group_ids": {
+"0": 1121
+},
 "user_name": "John",
 "user_email": "abc@gmail.com",
 "user_phone": "123-456-7890",
@@ -8962,12 +8962,12 @@ Expand all  Collapse all
 "SmartCard": {
 "user_id": {
 "user_id": 8,
-"fingerprint_templates": [
-{
+"fingerprint_templates": {
+"0": {
 "finger_index": 0
 }
-],
-"visual_face_templates": [ ]
+},
+"visual_face_templates": { }
 },
 "card_id": {
 "card_id": 8,
@@ -9769,7 +9769,7 @@ Expand all  Collapse all
 "schedule_id": {
 "id": 1
 },
-"operators": [ ],
+"operators": { },
 "enable_card_Id_from_keypad": false
 }
 ]
@@ -9812,7 +9812,7 @@ Expand all  Collapse all
 "device_private_message": false,
 "server_private_message": false,
 "use_screen_saver": false,
-"sounds": [ ]
+"sounds": { }
 },
 "system": {
 "timezone": 28800,
@@ -9839,8 +9839,8 @@ Expand all  Collapse all
 "wiegand_csn_id": {
 "id": "-1"
 },
-"wiegand_cards": [ ],
-"wiegand_inputs": [ ]
+"wiegand_cards": { },
+"wiegand_inputs": { }
 },
 "tna": {
 "mode": "1",
@@ -9861,7 +9861,7 @@ Expand all  Collapse all
 "supervised_inputs": ""
 },
 "event_filter": {
-"rows": [ ],
+"rows": { },
 "total": "0"
 },
 "voip": {
@@ -9876,7 +9876,7 @@ Expand all  Collapse all
 "mode": "0",
 "exit_button": "0"
 },
-"phonebook_list": [ ]
+"phonebook_list": { }
 },
 "barcode": {
 "use_barcode": false,
@@ -9939,7 +9939,7 @@ Expand all  Collapse all
 "intelligentPDSupported": "0"
 },
 "imageLogEventInfo": {
-"imageLogEventItems": [ ]
+"imageLogEventItems": { }
 },
 "use_image_log": false,
 "dst1": "0",
@@ -10107,24 +10107,24 @@ Expand all  Collapse all
 `{
 "DeviceCollection": {
 "total": 2,
-"rows": [
-{
+"rows": {
+"0": {
 "id": "538152248"
 },
-{
+"1": {
 "id": "538152254"
 }
-]
+}
 },
 "ResourceDataCollection": {
 "total": 1,
 "type": "2",
-"rows": [
-{
+"rows": {
+"0": {
 "slot": 0,
 "data": "iVBORw0KGgoAAAANSUhEUgAAAtAAAALg8gAAAABJRU5ErkJggg=="
 }
-]
+}
 }
 }`
 
@@ -11716,8 +11716,8 @@ Expand all  Collapse all
 `{
 "UserCollection": {
 "total": "0",
-"rows": [
-{
+"rows": {
+"0": {
 "user_id": "44004",
 "name": "John Doe",
 "updated_count": "2",
@@ -11731,42 +11731,42 @@ Expand all  Collapse all
 "security_level": "0",
 "private_operation_modes": "",
 "credentials": {
-"visualFaces": [
-{
+"visualFaces": {
+"0": {
 "template_ex_normalized_image": "/9j/4AAQSkZJRgABAQAAAQABAAD...",
 "index": "0",
-"template": [
-{
+"template": {
+"0": {
 "template_ex": "AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB3hoF9....",
 "credential_bin_type": "5"
 },
-{
+"1": {
 "template_ex": "AAADABEBywGIALIAZAcF/SBiVHcAAJkAAAAAAAAAAAB5h399....",
 "credential_bin_type": "5"
 },
-{
+"2": {
 "template_ex": "AAADAOcAyQGJALAAZA4J9ChYNXkAAJMAAAAAAAAAAAB3h4B+g4B....",
 "credential_bin_type": "5"
 },
-{
+"3": {
 "template_ex": "AAADAOEAfAGyANsAY+j+DStRTmQAAIcAAAAAAAAAAAB1h39+f3....",
 "credential_bin_type": "5"
 }
-],
+},
 "flag": "1"
 }
-]
 }
 }
-]
+}
+}
 },
 "DeviceResponse": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": "538152248",
 "code": "0"
 }
-],
+},
 "result": "true"
 },
 "Response": {
@@ -13012,11 +13012,11 @@ Expand all  Collapse all
 
 `{
 "DoorCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 35
 }
-]
+}
 }
 }`
 
@@ -13099,21 +13099,21 @@ Expand all  Collapse all
 "AntiPassBackConfig": {
 "Door": {
 "DoorCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 35
 }
-]
+}
 }
 },
-"User": [
-{
+"User": {
+"0": {
 "user_id": "10"
 },
-{
+"1": {
 "user_id": "12"
 }
-],
+},
 "UserType": 2
 },
 "target": "users:,[object Object],[object Object]"
@@ -13475,18 +13475,18 @@ Expand all  Collapse all
 "TimedAntiPassBackConfig": {
 "Door": {
 "DoorCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 30
 }
-]
+}
 }
 },
-"User": [
-{
+"User": {
+"0": {
 "user_id": "1"
 }
-],
+},
 "UserType": 2
 },
 "target": "users:,[object Object]"
@@ -13506,12 +13506,12 @@ Expand all  Collapse all
 
 `{
 "DeviceResponse": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": "50335900",
 "code": "0"
 }
-],
+},
 "result": "true"
 },
 "Response": {
@@ -13600,11 +13600,11 @@ Expand all  Collapse all
 
 `{
 "DoorCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 35
 }
-]
+}
 }
 }`
 
@@ -13750,9 +13750,9 @@ Expand all  Collapse all
 `{
 "root_id": 1,
 "max_recursion_depth": 7,
-"collapsed_node_ids": [
-2
-]
+"collapsed_node_ids": {
+"0": 2
+}
 }`
 
 #### [](#tag/Elevator-Groups)Elevator Groups
@@ -13891,8 +13891,8 @@ Expand all  Collapse all
 },
 "isElevatorGroups": true,
 "depth": 1,
-"sync_device_groups": [ ],
-"sync_devices": [ ],
+"sync_device_groups": { },
+"sync_devices": { },
 "inherited": true,
 "iconCls": "elevatorGroupIcon",
 "text": "New Elevator Group 2",
@@ -14180,8 +14180,8 @@ Expand all  Collapse all
 },
 "isElevatorGroups": true,
 "depth": 1,
-"sync_device_groups": [ ],
-"sync_devices": [ ],
+"sync_device_groups": { },
+"sync_devices": { },
 "inherited": true,
 "iconCls": "elevatorGroupIcon",
 "text": "New Elevator Group 2",
@@ -14417,14 +14417,14 @@ Expand all  Collapse all
 "id": 6,
 "name": "New Elevator Group 2"
 },
-"reader_devices": [
-{
+"reader_devices": {
+"0": {
 "device_id": {
 "id": "544140034",
 "name": "BioEntry W2 544140034 (192.168.1.24)"
 }
 }
-],
+},
 "control_device_id": {
 "id": "544140034",
 "name": "BioEntry W2 544140034 (192.168.1.24)",
@@ -14433,8 +14433,8 @@ Expand all  Collapse all
 "name": "BioEntry W2"
 }
 },
-"floors": [
-{
+"floors": {
+"0": {
 "name": "Odds - 1",
 "elevator_device_id": {
 "device_id": {
@@ -14445,7 +14445,7 @@ Expand all  Collapse all
 },
 "order": 0
 },
-{
+"1": {
 "name": "Odds - 2",
 "elevator_device_id": {
 "device_id": {
@@ -14456,7 +14456,7 @@ Expand all  Collapse all
 },
 "order": 1
 },
-{
+"2": {
 "name": "Odds - 3",
 "elevator_device_id": {
 "device_id": {
@@ -14467,7 +14467,7 @@ Expand all  Collapse all
 },
 "order": 2
 },
-{
+"3": {
 "name": "Odds - 4",
 "elevator_device_id": {
 "device_id": {
@@ -14478,16 +14478,16 @@ Expand all  Collapse all
 },
 "order": 3
 }
-],
-"module_devices": [
-{
+},
+"module_devices": {
+"0": {
 "device_id": {
 "id": "788930600",
 "name": "OM-120 788930600"
 }
 }
-],
-"trigger_actions": [ ],
+},
+"trigger_actions": { },
 "active_timeout": "10",
 "dual_authentication": {
 "device": 0,
@@ -14496,7 +14496,7 @@ Expand all  Collapse all
 "schedule_id": {
 "id": "1"
 },
-"approval_groups": [ ]
+"approval_groups": { }
 },
 "tamper_device": {
 "device_id": { },
@@ -14891,7 +14891,7 @@ Expand all  Collapse all
 }
 }
 ],
-"trigger_actions": [ ],
+"trigger_actions": { },
 "active_timeout": "10",
 "dual_authentication": {
 "device": 0,
@@ -14900,7 +14900,7 @@ Expand all  Collapse all
 "schedule_id": {
 "id": "1"
 },
-"approval_groups": [ ]
+"approval_groups": { }
 },
 "tamper_device": {
 "device_id": { },
@@ -15473,11 +15473,11 @@ Expand all  Collapse all
 
 `{
 "ElevatorCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 32770
 }
-]
+}
 }
 }`
 
@@ -15883,12 +15883,12 @@ Expand all  Collapse all
 "FloorLevel": {
 "name": "aaaax",
 "description": "aaaa",
-"floor_level_items": [
-{
+"floor_level_items": {
+"0": {
 "elevator_id": {
 "id": 32769,
-"floors": [
-{
+"floors": {
+"0": {
 "id": 5,
 "elevator_device_id": {
 "device_id": {
@@ -15898,17 +15898,17 @@ Expand all  Collapse all
 },
 "index": 4
 }
-]
+}
 },
 "schedule_id": {
 "id": 1
 }
 },
-{
+"1": {
 "elevator_id": {
 "id": 32769,
-"floors": [
-{
+"floors": {
+"0": {
 "id": 4,
 "elevator_device_id": {
 "device_id": {
@@ -15918,13 +15918,13 @@ Expand all  Collapse all
 },
 "index": 3
 }
-]
+}
 },
 "schedule_id": {
 "id": 1
 }
 }
-]
+}
 }
 }`
 
@@ -16089,12 +16089,12 @@ Expand all  Collapse all
 "FloorLevel": {
 "name": "aaaaxxxx",
 "description": "aaaa",
-"floor_level_items": [
-{
+"floor_level_items": {
+"0": {
 "elevator_id": {
 "id": 32769,
-"floors": [
-{
+"floors": {
+"0": {
 "id": 5,
 "elevator_device_id": {
 "device_id": {
@@ -16104,17 +16104,17 @@ Expand all  Collapse all
 },
 "index": 4
 }
-]
+}
 },
 "schedule_id": {
 "id": 1
 }
 },
-{
+"1": {
 "elevator_id": {
 "id": 32769,
-"floors": [
-{
+"floors": {
+"0": {
 "id": 4,
 "elevator_device_id": {
 "device_id": {
@@ -16124,13 +16124,13 @@ Expand all  Collapse all
 },
 "index": 3
 }
-]
+}
 },
 "schedule_id": {
 "id": 1
 }
 }
-]
+}
 }
 }`
 
@@ -16383,27 +16383,27 @@ Expand all  Collapse all
 "Schedule": {
 "name": "Daily",
 "description": "DDD",
-"daily_schedules": [
-{
+"daily_schedules": {
+"0": {
 "day_index": 0,
-"time_segments": [
-{
+"time_segments": {
+"0": {
 "start_time": 0,
 "end_time": 1380
 }
-]
+}
 },
-{
+"1": {
 "day_index": 1,
-"time_segments": [
-{
+"time_segments": {
+"0": {
 "start_time": 1260,
 "end_time": 1320
 }
-]
 }
-],
-"holiday_schedules": [ ],
+}
+},
+"holiday_schedules": { },
 "days_of_iteration": 2,
 "start_date": "2022-04-26T00:00:00.00Z",
 "use_daily_iteration": true
@@ -16662,27 +16662,27 @@ Expand all  Collapse all
 "Schedule": {
 "name": "Daily",
 "description": "DDD",
-"daily_schedules": [
-{
+"daily_schedules": {
+"0": {
 "day_index": 0,
-"time_segments": [
-{
+"time_segments": {
+"0": {
 "start_time": 0,
 "end_time": 1380
 }
-]
+}
 },
-{
+"1": {
 "day_index": 1,
-"time_segments": [
-{
+"time_segments": {
+"0": {
 "start_time": 1260,
 "end_time": 1320
 }
-]
 }
-],
-"holiday_schedules": [ ],
+}
+},
+"holiday_schedules": { },
 "days_of_iteration": 2,
 "start_date": "2022-04-26T00:00:00.00Z",
 "use_daily_iteration": true
@@ -16849,16 +16849,16 @@ Expand all  Collapse all
 "HolidayGroup": {
 "name": "Idul Fitri 2022",
 "description": "Idul Fitri for year 2022",
-"holidays": [
-{
+"holidays": {
+"0": {
 "repeat_interval": 0,
 "start_date": "2022-05-02T00:00:00.00Z"
 },
-{
+"1": {
 "repeat_interval": 0,
 "start_date": "2022-05-03T00:00:00.00Z"
 }
-]
+}
 }
 }`
 
@@ -16958,16 +16958,16 @@ Expand all  Collapse all
 "HolidayGroup": {
 "name": "Idul Fitri 2022",
 "description": "Idul Fitri for year 2022",
-"holidays": [
-{
+"holidays": {
+"0": {
 "repeat_interval": 0,
 "start_date": "2022-05-02T00:00:00.00Z"
 },
-{
+"1": {
 "repeat_interval": 0,
 "start_date": "2022-05-03T00:00:00.00Z"
 }
-]
+}
 }
 }`
 
@@ -17205,28 +17205,28 @@ Expand all  Collapse all
 },
 "trigger": {
 "source_type": 3,
-"event_types": [
-{
+"event_types": {
+"0": {
 "code": 41472
 },
-{
+"1": {
 "code": 38912
 }
-],
-"zones": [
-{
+},
+"zones": {
+"0": {
 "id": "32794"
 },
-{
+"1": {
 "id": "32793"
 }
-]
+}
 },
 "action": {
 "email_action_id": {
-"receipients": [
-"aaa@aaa.com"
-]
+"receipients": {
+"0": "aaa@aaa.com"
+}
 },
 "smtp_id": {
 "id": 1
@@ -17338,26 +17338,26 @@ Expand all  Collapse all
 },
 "trigger": {
 "source_type": 2,
-"event_types": [
-{
+"event_types": {
+"0": {
 "code": 21504
 }
-],
-"doors": [
-{
+},
+"doors": {
+"0": {
 "id": 5
 },
-{
+"1": {
 "id": 32
 }
-]
+}
 },
 "action": {
 "email_action_id": {
-"receipients": [
-"agni@oxx.id",
-"you@axx.id"
-]
+"receipients": {
+"0": "agni@oxx.id",
+"1": "you@axx.id"
+}
 },
 "smtp_id": {
 "id": 1
@@ -17563,18 +17563,18 @@ Expand all  Collapse all
 "is_quick_action": "N",
 "trigger": {
 "source_type": 2,
-"event_types": [
-{
+"event_types": {
+"0": {
 "code": 22016
 }
-],
-"devices": [ ],
-"doors": [
-{
+},
+"devices": { },
+"doors": {
+"0": {
 "id": 1
 }
-],
-"zones": [ ]
+},
+"zones": { }
 },
 "action": {
 "device_action_id": {
@@ -17587,22 +17587,22 @@ Expand all  Collapse all
 "relay_index": 0
 },
 "email_action_id": {
-"receipients": [
-"abc@xyz.co",
-"abe@xyz.co"
-]
+"receipients": {
+"0": "abc@xyz.co",
+"1": "abe@xyz.co"
+}
 },
 "smtp_id": {
 "id": 1
 },
-"door_action": [
-{
+"door_action": {
+"0": {
 "door_id": {
 "id": 1
 },
 "door_signal": 346
 }
-]
+}
 }
 }
 }`
@@ -17641,9 +17641,9 @@ Expand all  Collapse all
 }
 },
 "email_action_id": {
-"receipients": [
-"wawe@test.com"
-]
+"receipients": {
+"0": "wawe@test.com"
+}
 },
 "smtp_id": {
 "id": 1
@@ -17898,18 +17898,18 @@ Expand all  Collapse all
 "is_quick_action": "N",
 "trigger": {
 "source_type": 2,
-"event_types": [
-{
+"event_types": {
+"0": {
 "code": 22016
 }
-],
-"devices": [ ],
-"doors": [
-{
+},
+"devices": { },
+"doors": {
+"0": {
 "id": 1
 }
-],
-"zones": [ ]
+},
+"zones": { }
 },
 "action": {
 "device_action_id": {
@@ -17922,22 +17922,22 @@ Expand all  Collapse all
 "relay_index": 0
 },
 "email_action_id": {
-"receipients": [
-"abc1@xyz.co",
-"abe2@xyz.co"
-]
+"receipients": {
+"0": "abc1@xyz.co",
+"1": "abe2@xyz.co"
+}
 },
 "smtp_id": {
 "id": 1
 },
-"door_action": [
-{
+"door_action": {
+"0": {
 "door_id": {
 "id": 1
 },
 "door_signal": 346
 }
-]
+}
 }
 }
 }`
@@ -18098,9 +18098,9 @@ Expand all  Collapse all
 }
 },
 "email_action_id": {
-"receipients": [
-"abc@xyz.co"
-]
+"receipients": {
+"0": "abc@xyz.co"
+}
 },
 "smtp_id": {
 "id": 1,
@@ -18603,35 +18603,35 @@ Copy
 Expand all  Collapse all
 
 `{
-"QuickActions": [
-{
+"QuickActions": {
+"0": {
 "name": "qa 1",
 "description": "sfsf",
 "confirm_before_run": "Y",
-"operator_level_ids": [
-2,
-3
-],
-"trigger_action_ids": [
-3
-],
+"operator_level_ids": {
+"0": 2,
+"1": 3
+},
+"trigger_action_ids": {
+"0": 3
+},
 "order_number": 1
 },
-{
+"1": {
 "name": "qa 2",
 "description": "dsfsdf",
 "confirm_before_run": "Y",
-"operator_level_ids": [
-1,
-254
-],
-"trigger_action_ids": [
-4
-],
+"operator_level_ids": {
+"0": 1,
+"1": 254
+},
+"trigger_action_ids": {
+"0": 4
+},
 "order_number": 2,
 "id": 1
 }
-]
+}
 }`
 
 ##### <!-- -->Response samples<!-- -->
@@ -19134,8 +19134,8 @@ Expand all  Collapse all
 "https_port": "3012",
 "ngrok_port": "52002"
 },
-"licenses": [
-{
+"licenses": {
+"0": {
 "product_type": "1",
 "name": "biostar_def",
 "available": {
@@ -19148,27 +19148,27 @@ Expand all  Collapse all
 },
 "activated": "true"
 },
-{
+"1": {
 "product_type": "2",
 "name": "biostar_std",
 "activated": "false"
 },
-{
+"2": {
 "product_type": "3",
 "name": "biostar_tna",
 "activated": "false"
 },
-{
+"3": {
 "product_type": "4",
 "name": "biostar2_basic",
 "activated": "false"
 },
-{
+"4": {
 "product_type": "5",
 "name": "biostar2_std",
 "activated": "false"
 },
-{
+"5": {
 "product_type": "6",
 "name": "biostar2_adv",
 "available": {
@@ -19183,42 +19183,42 @@ Expand all  Collapse all
 "customer": "Oddbit",
 "expires_on": "permanent"
 },
-{
+"6": {
 "product_type": "7",
 "name": "biostar2_pro",
 "activated": "false"
 },
-{
+"7": {
 "product_type": "8",
 "name": "biostar2_ent",
 "activated": "false"
 },
-{
+"8": {
 "product_type": "9",
 "name": "biostar2_video",
 "activated": "false"
 },
-{
+"9": {
 "product_type": "10",
 "name": "biostar2_visitor",
 "activated": "false"
 },
-{
+"10": {
 "product_type": "11",
 "name": "biostar2_tna_std",
 "activated": "false"
 },
-{
+"11": {
 "product_type": "12",
 "name": "biostar2_tna_adv",
 "activated": "false"
 },
-{
+"12": {
 "product_type": "13",
 "name": "biostar2_tna_pro",
 "activated": "false"
 }
-],
+},
 "mobile": {
 "use_mobile_credential": "1",
 "email": "agni@supremainc.com",
@@ -19241,12 +19241,12 @@ Expand all  Collapse all
 "WSS": "none"
 }
 },
-"server_ip_list": [
-{
+"server_ip_list": {
+"0": {
 "ip": "192.168.1.5",
 "version": "v4"
 }
-],
+},
 "use_alphanumeric": "false",
 "is_set_new_administrator_password": "false",
 "ischanged_db_data_encryption": "false",
@@ -19372,33 +19372,33 @@ Expand all  Collapse all
 
 `{
 "CustomFieldCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "order": 5,
 "name": "text input box",
 "type": 0,
 "enable": true
 },
-{
+"1": {
 "order": 2,
 "name": "number input",
 "type": 1,
 "enable": true
 },
-{
+"2": {
 "order": 3,
 "name": "combo box",
 "type": 2,
 "data": "abc; def",
 "enable": true
 },
-{
+"3": {
 "order": 4,
 "name": "file upload",
 "type": 3,
 "enable": true
 }
-]
+}
 }
 }`
 
@@ -19534,33 +19534,33 @@ Expand all  Collapse all
 
 `{
 "CustomFieldCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 1,
 "order": 1,
 "name": "text input box",
 "type": 0
 },
-{
+"1": {
 "id": 2,
 "order": 2,
 "name": "number input",
 "type": 1
 },
-{
+"2": {
 "id": 3,
 "order": 3,
 "name": "combo box",
 "type": 2,
 "data": "abc; def"
 },
-{
+"3": {
 "id": 4,
 "order": 4,
 "name": "file upload",
 "type": 3
 }
-]
+}
 }
 }`
 
@@ -19707,40 +19707,40 @@ Expand all  Collapse all
 `{
 "CustomFieldCollection": {
 "total": 5,
-"rows": [
-{
+"rows": {
+"0": {
 "id": 1,
 "name": "combo box 1",
 "type": 2,
 "order": 1,
 "data": "1; 2; 3"
 },
-{
+"1": {
 "id": 3,
 "name": "number input",
 "type": 1,
 "order": 2
 },
-{
+"2": {
 "id": 4,
 "name": "combo box 2",
 "type": 2,
 "order": 3,
 "data": "Option 1; Option 2"
 },
-{
+"3": {
 "id": 5,
 "name": "file upload",
 "type": 3,
 "order": 4
 },
-{
+"4": {
 "id": 2,
 "name": "text input box",
 "type": 0,
 "order": 5
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -20490,31 +20490,31 @@ Expand all  Collapse all
 "allUserGroup": true,
 "dn": "DC=domain,DC=com",
 "lastSyncVersion": 0,
-"userGroups": [
-{
+"userGroups": {
+"0": {
 "id": 0,
 "dn": "oddtest.id",
 "name": "oddtest.id",
 "objectGuid": "oddtest.id",
-"children": [
-{
+"children": {
+"0": {
 "id": 1,
 "dn": "OU=Domain Controllers,DC=oddtest,DC=id",
 "name": "Domain Controllers",
 "objectGuid": "0921243F0254453F3F3F72273F4F7C",
-"children": [ ],
+"children": { },
 "isGroup": true
 }
-],
+},
 "isGroup": true
 }
-],
-"userGroupFilters": [
-{
+},
+"userGroupFilters": {
+"0": {
 "id": 10,
 "name": "Guests"
 }
-]
+}
 }`
 
 #### [](#tag/Active-Directory/operation/getAdusergroupfiltersetting)View AD User Group Filter List<!-- -->
@@ -20599,183 +20599,183 @@ Expand all  Collapse all
 },
 "Collection": {
 "total": 1,
-"rows": [
-{
+"rows": {
+"0": {
 "allUserGroup": false,
 "dn": "supremabss.onmicrosoft.com",
 "lastSyncVersion": 0,
-"userGroups": [
-{
+"userGroups": {
+"0": {
 "id": 0,
 "dn": "supremabss.onmicrosoft.com",
 "name": "supremabss.onmicrosoft.com",
 "objectGuid": "supremabss.onmicrosoft.com",
 "filter": false,
-"children": [
-{
+"children": {
+"0": {
 "id": 1,
 "dn": "OU=A,DC=supremabss.onmicrosoft.com",
 "name": "A",
 "objectGuid": "e1dd535c-76ce-4181-9f3b-869eea61b0b1",
 "filter": true,
-"children": [
-{
+"children": {
+"0": {
 "id": 2,
 "dn": "OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "B",
 "objectGuid": "9745e0df-1723-4c42-8ea5-febb02865f28",
 "filter": true,
-"children": [
-{
+"children": {
+"0": {
 "id": 3,
 "dn": "OU=C,OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "C",
 "objectGuid": "8754dd0a-d1a6-455d-8ffc-04357322ff1e",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 3,
 "isGroup": true
 }
-],
+},
 "depth": 2,
 "isGroup": true
 }
-],
+},
 "depth": 1,
 "isGroup": true
 },
-{
+"1": {
 "id": 4,
 "dn": "OU=Test3,DC=supremabss.onmicrosoft.com",
 "name": "Test3",
 "objectGuid": "77952318-d550-4616-b516-6a65c3f44b57",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 },
-{
+"2": {
 "id": 5,
 "dn": "OU=Test4,DC=supremabss.onmicrosoft.com",
 "name": "Test4",
 "objectGuid": "cffad5c5-afe5-4029-a44e-4f67ba96baf9",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 },
-{
+"3": {
 "id": 6,
 "dn": "OU=Test9,DC=supremabss.onmicrosoft.com",
 "name": "Test9",
 "objectGuid": "ea407a19-c769-4db5-b4f6-c8e2ba28fc70",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 }
-],
+},
 "depth": 0,
 "isGroup": true
 }
-],
-"userGroupFilters": [
-{
+},
+"userGroupFilters": {
+"0": {
 "id": 1,
 "dn": "OU=A,DC=supremabss.onmicrosoft.com",
 "name": "A",
 "objectGuid": "e1dd535c-76ce-4181-9f3b-869eea61b0b1",
 "filter": true,
-"children": [
-{
+"children": {
+"0": {
 "id": 2,
 "dn": "OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "B",
 "objectGuid": "9745e0df-1723-4c42-8ea5-febb02865f28",
 "filter": true,
-"children": [
-{
+"children": {
+"0": {
 "id": 3,
 "dn": "OU=C,OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "C",
 "objectGuid": "8754dd0a-d1a6-455d-8ffc-04357322ff1e",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 3,
 "isGroup": true
 }
-],
+},
 "depth": 2,
 "isGroup": true
 }
-],
+},
 "depth": 1,
 "isGroup": true
 },
-{
+"1": {
 "id": 2,
 "dn": "OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "B",
 "objectGuid": "9745e0df-1723-4c42-8ea5-febb02865f28",
 "filter": true,
-"children": [
-{
+"children": {
+"0": {
 "id": 3,
 "dn": "OU=C,OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "C",
 "objectGuid": "8754dd0a-d1a6-455d-8ffc-04357322ff1e",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 3,
 "isGroup": true
 }
-],
+},
 "depth": 2,
 "isGroup": true
 },
-{
+"2": {
 "id": 3,
 "dn": "OU=C,OU=B,OU=A,DC=supremabss.onmicrosoft.com",
 "name": "C",
 "objectGuid": "8754dd0a-d1a6-455d-8ffc-04357322ff1e",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 3,
 "isGroup": true
 },
-{
+"3": {
 "id": 4,
 "dn": "OU=Test3,DC=supremabss.onmicrosoft.com",
 "name": "Test3",
 "objectGuid": "77952318-d550-4616-b516-6a65c3f44b57",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 },
-{
+"4": {
 "id": 5,
 "dn": "OU=Test4,DC=supremabss.onmicrosoft.com",
 "name": "Test4",
 "objectGuid": "cffad5c5-afe5-4029-a44e-4f67ba96baf9",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 },
-{
+"5": {
 "id": 6,
 "dn": "OU=Test9,DC=supremabss.onmicrosoft.com",
 "name": "Test9",
 "objectGuid": "ea407a19-c769-4db5-b4f6-c8e2ba28fc70",
 "filter": true,
-"children": [ ],
+"children": { },
 "depth": 1,
 "isGroup": true
 }
-]
 }
-]
+}
+}
 }
 }`
 
@@ -20862,20 +20862,20 @@ Copy
 
 Expand all  Collapse all
 
-`[
-{
+`{
+"0": {
 "columnm": "usrid",
 "adcolumnm": "initials",
 "use": "true",
 "columnmdescription": "User ID"
 },
-{
+"1": {
 "columnm": "nm",
 "adcolumnm": "displayName",
 "use": "true",
 "columnmdescription": "User Name"
 }
-]`
+}`
 
 #### [](#tag/Active-Directory/operation/createSyncadserver)Synchronize<!-- -->
 
@@ -21065,8 +21065,8 @@ Expand all  Collapse all
 `{
 "ADServerSettingCollection": {
 "total": 1,
-"rows": [
-{
+"rows": {
+"0": {
 "serverAddress": "192.111.22.3",
 "userName": "test",
 "password": "test1!",
@@ -21081,9 +21081,9 @@ Expand all  Collapse all
 "adEnable": "0",
 "syncEvtCheck": false,
 "resetSync": false,
-"targetUserIds": [ ]
+"targetUserIds": { }
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -21175,40 +21175,40 @@ Expand all  Collapse all
 `{
 "ADUsrMappingCollection": {
 "total": 9,
-"rows": [
-{
+"rows": {
+"0": {
 "columnm": "userID",
 "adcolumnm": "none"
 },
-{
+"1": {
 "columnm": "userName",
 "adcolumnm": "displayName"
 },
-{
+"2": {
 "columnm": "email",
 "adcolumnm": "mail"
 },
-{
+"3": {
 "columnm": "phone",
 "adcolumnm": "businessPhones"
 },
-{
+"4": {
 "columnm": "expiry_datetime",
 "adcolumnm": "employeeLeaveDateTime"
 },
-{
+"5": {
 "columnm": "department",
 "adcolumnm": "department"
 },
-{
+"6": {
 "columnm": "user_title",
 "adcolumnm": "jobTitle"
 },
-{
+"7": {
 "columnm": "usergroup",
 "adcolumnm": "memberOf"
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -21294,38 +21294,38 @@ Expand all  Collapse all
 `{
 "List<String>": {
 "total": 286,
-"rows": [
-{
+"rows": {
+"0": {
 "seq": 208,
 "adcolumnm": "aboutMe",
 "adtype": "E"
 },
-{
+"1": {
 "seq": 209,
 "adcolumnm": "accountEnabled",
 "adtype": "E"
 },
-{
+"2": {
 "seq": 1,
 "adcolumnm": "accountExpires",
 "adtype": "A"
 },
-{
+"3": {
 "seq": 2,
 "adcolumnm": "accountNameHistory",
 "adtype": "A"
 },
-{
+"4": {
 "seq": 3,
 "adcolumnm": "aCSPolicyName",
 "adtype": "A"
 },
-{
+"5": {
 "seq": 4,
 "adcolumnm": "adminCount",
 "adtype": "A"
 }
-]
+}
 },
 "Response": {
 "code": "0",
@@ -21335,38 +21335,38 @@ Expand all  Collapse all
 },
 "ADColumnCollection": {
 "total": 286,
-"rows": [
-{
+"rows": {
+"0": {
 "seq": 208,
 "adcolumnm": "aboutMe",
 "adtype": "E"
 },
-{
+"1": {
 "seq": 209,
 "adcolumnm": "accountEnabled",
 "adtype": "E"
 },
-{
+"2": {
 "seq": 1,
 "adcolumnm": "accountExpires",
 "adtype": "A"
 },
-{
+"3": {
 "seq": 2,
 "adcolumnm": "accountNameHistory",
 "adtype": "A"
 },
-{
+"4": {
 "seq": 3,
 "adcolumnm": "aCSPolicyName",
 "adtype": "A"
 },
-{
+"5": {
 "seq": 4,
 "adcolumnm": "adminCount",
 "adtype": "A"
 }
-]
+}
 }
 }`
 
@@ -23090,22 +23090,22 @@ Expand all  Collapse all
 `{
 "packet_device_id": 100001,
 "is_virtual_device": true,
-"events": [
-{
+"events": {
+"0": {
 "dev_id": 100001,
 "evt": 6400,
 "datetime": "2025-10-30T15:12:00Z",
 "user_id": "2",
 "tna_key": "1"
 },
-{
+"1": {
 "dev_id": 100001,
 "evt": 6400,
 "datetime": "2025-10-30T15:13:01Z",
 "user_id": "2",
 "tna_key": "1"
 }
-]
+}
 }`
 
 ##### <!-- -->Response samples<!-- -->
@@ -23229,11 +23229,11 @@ Expand all  Collapse all
 "MobileCollection": {
 "mobile": {
 "user_id": "ALL",
-"card_id": [
-"1",
-"2",
-"3"
-],
+"card_id": {
+"0": "1",
+"1": "2",
+"2": "3"
+},
 "param": {
 "UserIDs": "ALL",
 "query": {
@@ -23257,12 +23257,12 @@ Copy
 Expand all  Collapse all
 
 `{
-"failedUsers": [ ],
-"failedCards": [ ],
-"mobileUsers": [
-"3",
-"4"
-],
+"failedUsers": { },
+"failedCards": { },
+"mobileUsers": {
+"0": "3",
+"1": "4"
+},
 "status": 0,
 "errorMessage": "",
 "Response": {
@@ -23508,63 +23508,63 @@ Expand all  Collapse all
 `{
 "MobileCollection": {
 "mobile": {
-"user_id": [
-"3"
-],
-"name": [
-"test2"
-],
-"title": [
-null
-],
-"department": [
-null
-],
-"phone": [
-null
-],
-"email": [
-"test2@suprema.com"
-],
-"portraitData": [
-null
-],
-"card_id": [
-"2"
-],
-"startDate": [
-1703563320000
-],
-"endDate": [
-1703649720000
-],
-"startTime": [
-978274800000
-],
-"endTime": [
-1924959540000
-],
-"issueCount": [
-1
-],
-"duressMask": [
-null
-],
-"useAlphanumericID": [
-0
-],
-"cardAuthModeEx": [
-21
-],
-"pin": [
-null
-],
-"accessGroupId": [
-null
-],
-"mobileCardType": [
-"4"
-]
+"user_id": {
+"0": "3"
+},
+"name": {
+"0": "test2"
+},
+"title": {
+"0": null
+},
+"department": {
+"0": null
+},
+"phone": {
+"0": null
+},
+"email": {
+"0": "test2@suprema.com"
+},
+"portraitData": {
+"0": null
+},
+"card_id": {
+"0": "2"
+},
+"startDate": {
+"0": 1703563320000
+},
+"endDate": {
+"0": 1703649720000
+},
+"startTime": {
+"0": 978274800000
+},
+"endTime": {
+"0": 1924959540000
+},
+"issueCount": {
+"0": 1
+},
+"duressMask": {
+"0": null
+},
+"useAlphanumericID": {
+"0": 0
+},
+"cardAuthModeEx": {
+"0": 21
+},
+"pin": {
+"0": null
+},
+"accessGroupId": {
+"0": null
+},
+"mobileCardType": {
+"0": "4"
+}
 }
 }
 }`
@@ -23701,8 +23701,8 @@ Expand all  Collapse all
 
 `{
 "CardCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": 11,
 "card_id": 1234,
 "user_id": 12,
@@ -23714,7 +23714,7 @@ Expand all  Collapse all
 "type": 4
 }
 },
-{
+"1": {
 "id": 12,
 "card_id": 5678,
 "user_id": 13,
@@ -23726,7 +23726,7 @@ Expand all  Collapse all
 "type": 4
 }
 },
-{
+"2": {
 "id": 15,
 "card_id": 2222,
 "user_id": 16,
@@ -23738,7 +23738,7 @@ Expand all  Collapse all
 "type": 4
 }
 }
-],
+},
 "total": 3
 },
 "Response": {
@@ -24161,22 +24161,22 @@ Expand all  Collapse all
 `{
 "Query": {
 "limit": 51,
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "datetime",
 "operator": 3,
-"values": [
-"2021-01-27T16:00:00.000Z",
-"2022-01-28T15:59:59.000Z"
-]
+"values": {
+"0": "2021-01-27T16:00:00.000Z",
+"1": "2022-01-28T15:59:59.000Z"
 }
-],
-"orders": [
-{
+}
+},
+"orders": {
+"0": {
 "column": "datetime",
 "descending": false
 }
-]
+}
 }
 }`
 
@@ -24283,39 +24283,39 @@ Expand all  Collapse all
 
 `{
 "Query": {
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "datetime",
 "operator": 3,
-"values": [
-"2022-01-27T16:00:00.000Z",
-"2022-01-28T15:59:59.000Z"
-]
+"values": {
+"0": "2022-01-27T16:00:00.000Z",
+"1": "2022-01-28T15:59:59.000Z"
 }
-],
+}
+},
 "offset": 0,
-"columns": [
-"datetime",
-"door_id.name",
-"device_id.id",
-"device_id.name",
-"user_group_id",
-"user_id",
-"temperature",
-"event_type_id",
-"tna_key"
-],
-"headers": [
-"Date",
-"Door",
-"Device ID",
-"Device",
-"User Group",
-"User",
-"Temperature",
-"Event",
-"TNA Key"
-]
+"columns": {
+"0": "datetime",
+"1": "door_id.name",
+"2": "device_id.id",
+"3": "device_id.name",
+"4": "user_group_id",
+"5": "user_id",
+"6": "temperature",
+"7": "event_type_id",
+"8": "tna_key"
+},
+"headers": {
+"0": "Date",
+"1": "Door",
+"2": "Device ID",
+"3": "Device",
+"4": "User Group",
+"5": "User",
+"6": "Temperature",
+"7": "Event",
+"8": "TNA Key"
+}
 }
 }`
 
@@ -24397,22 +24397,22 @@ Expand all  Collapse all
 
 `{
 "Query": {
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "event_id.datetime",
 "operator": 3,
-"values": [
-"2023-02-02T00:00:00.00Z",
-"2023-02-03T00:00:00.00Z"
-]
+"values": {
+"0": "2023-02-02T00:00:00.00Z",
+"1": "2023-02-03T00:00:00.00Z"
 }
-],
-"orders": [
-{
+}
+},
+"orders": {
+"0": {
 "column": "event_id.datetime",
 "descending": true
 }
-]
+}
 }
 }`
 
@@ -24719,16 +24719,16 @@ Expand all  Collapse all
 "Query": {
 "offset": 0,
 "limit": 5,
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "DATE",
 "operator": 3,
-"values": [
-"2024-02-17T16:00:00.000Z",
-"2024-03-18T15:59:59.000Z"
-]
+"values": {
+"0": "2024-02-17T16:00:00.000Z",
+"1": "2024-03-18T15:59:59.000Z"
 }
-],
+}
+},
 "total": false
 }
 }`
@@ -25212,36 +25212,36 @@ Expand all  Collapse all
 `{
 "Query": {
 "offset": 0,
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "DATE",
 "operator": 3,
-"values": [
-"2024-02-17T16:00:00.000Z",
-"2024-03-18T15:59:59.000Z"
-]
+"values": {
+"0": "2024-02-17T16:00:00.000Z",
+"1": "2024-03-18T15:59:59.000Z"
 }
-],
-"columns": [
-"DATE",
-"USRID",
-"PERM",
-"IP",
-"MENU",
-"TARGET",
-"METHOD",
-"CONTENT"
-],
-"headers": [
-"Datetime",
-"User",
-"Operator Level",
-"IP",
-"Category",
-"Target",
-"Action",
-"Modification"
-]
+}
+},
+"columns": {
+"0": "DATE",
+"1": "USRID",
+"2": "PERM",
+"3": "IP",
+"4": "MENU",
+"5": "TARGET",
+"6": "METHOD",
+"7": "CONTENT"
+},
+"headers": {
+"0": "Datetime",
+"1": "User",
+"2": "Operator Level",
+"3": "IP",
+"4": "Category",
+"5": "Target",
+"6": "Action",
+"7": "Modification"
+}
 }
 }`
 
@@ -25373,16 +25373,16 @@ Expand all  Collapse all
 "is_global": 0,
 "enable": 1,
 "inter_lock": {
-"doors": [
-{
+"doors": {
+"0": {
 "id": 2
 },
-{
+"1": {
 "id": 3
 }
-],
-"sensor_inputs": [
-{
+},
+"sensor_inputs": {
+"0": {
 "device": {
 "id": 546091003
 },
@@ -25391,9 +25391,9 @@ Expand all  Collapse all
 "normal_open": 0,
 "input_type": "input"
 }
-],
-"alarm_actions": [
-{
+},
+"alarm_actions": {
+"0": {
 "input_event_id": 41472,
 "output_type": 3,
 "output_device_id": {
@@ -25402,7 +25402,7 @@ Expand all  Collapse all
 },
 "output_buzzer_volume": 1
 }
-]
+}
 }
 }
 }`
@@ -25557,11 +25557,11 @@ Expand all  Collapse all
 "AntiPassBackConfig": {
 "Zone": {
 "ZoneCollection": {
-"rows": [
-{
+"rows": {
+"0": {
 "id": "32774"
 }
-]
+}
 }
 },
 "UserType": 1
@@ -25710,23 +25710,23 @@ Expand all  Collapse all
 "enable": 1,
 "status": 64,
 "muster": {
-"access_groups": [
-{
+"access_groups": {
+"0": {
 "id": "1"
 }
-],
-"entry_devices": [
-{
+},
+"entry_devices": {
+"0": {
 "id": "731"
 }
-],
-"exit_devices": [
-{
+},
+"exit_devices": {
+"0": {
 "id": "729"
 }
-],
+},
 "time_limit": "1200",
-"alarm_actions": [ ]
+"alarm_actions": { }
 }
 }
 }`
@@ -25991,12 +25991,12 @@ Expand all  Collapse all
 "status": 0,
 "occupancy_detail": {
 "limit_count": 100,
-"entry_devices": [
-"543720368"
-],
-"exit_devices": [
-"542353521"
-],
+"entry_devices": {
+"0": "543720368"
+},
+"exit_devices": {
+"0": "542353521"
+},
 "almost_full_alert_setting": {
 "level": 1,
 "step_1": 95,
@@ -26248,12 +26248,12 @@ Expand all  Collapse all
 "status": 0,
 "occupancy_detail": {
 "limit_count": 100,
-"entry_devices": [
-"543720368"
-],
-"exit_devices": [
-"542353521"
-],
+"entry_devices": {
+"0": "543720368"
+},
+"exit_devices": {
+"0": "542353521"
+},
 "almost_full_alert_setting": {
 "level": 1,
 "step_1": 95,
@@ -26825,9 +26825,9 @@ Copy
 Expand all  Collapse all
 
 `{
-"ids": [
-32784
-]
+"ids": {
+"0": 32784
+}
 }`
 
 #### [](#tag/Occupancy-Limit/operation/updateZonesOccupancyDisable)Occupancy: Disable<!-- -->
@@ -26897,9 +26897,9 @@ Copy
 Expand all  Collapse all
 
 `{
-"ids": [
-32784
-]
+"ids": {
+"0": 32784
+}
 }`
 
 #### [](#tag/Occupancy-Limit/operation/updateZonesOccupancyEnable)Occupancy: Enable<!-- -->
@@ -26969,9 +26969,9 @@ Copy
 Expand all  Collapse all
 
 `{
-"ids": [
-32784
-]
+"ids": {
+"0": 32784
+}
 }`
 
 #### [](#tag/Event-Log)Event Log
@@ -27129,29 +27129,29 @@ Expand all  Collapse all
 `{
 "Query": {
 "limit": 5,
-"conditions": [
-{
+"conditions": {
+"0": {
 "column": "datetime",
 "operator": 3,
-"values": [
-"2022-05-31T16:05:00.000Z",
-"2022-06-30T15:58:00.000Z"
-]
+"values": {
+"0": "2022-05-31T16:05:00.000Z",
+"1": "2022-06-30T15:58:00.000Z"
+}
 },
-{
+"1": {
 "column": "device_id",
 "operator": 0,
-"values": [
-"543308153"
-]
+"values": {
+"0": "543308153"
 }
-],
-"orders": [
-{
+}
+},
+"orders": {
+"0": {
 "column": "datetime",
 "descending": true
 }
-]
+}
 }
 }`
 
