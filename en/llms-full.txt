@@ -77153,13 +77153,13 @@ Info
 | **Maps**                                                                                                                                         | ❌               | ❌      | ❌        | ✔️       | ✔️         | ✔️      |
 | **Video**                                                                                                                                        | ❌               | ❌      | ❌        | Add on   | Add on     | Add on  |
 | [**Advanced Access Control**](#package)<br />*(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)* | ❌               | ❌      | ❌        | Add on   | ✔️         | ✔️      |
-| [**Upgradable**](#license-upgrade)<br />*(Door/User/Admin)*                                                                                      | User, admin only | ❌      | ❌        | Add on   | Add on     | Add on  |
+| [**Upgradable**](#license-upgrade)<br />*(Door/User/Admin)*                                                                                      | User, admin only | ❌      | Add on    | Add on   | Add on     | Add on  |
 
 The **Device Manager** license is required for customers using third-party software or third-party systems who wish to efficiently manage Suprema devices through **BioStar X**.
 
 #### Capacity Upgrade[​](#capacity-upgrade "Direct link to Capacity Upgrade")
 
-License upgrades are available for holders of **Advanced**, **Enterprise**, and **Elite** licenses. License holders of the **Device Manager** can only purchase User Upgrades.
+License upgrades are available for holders of **Essential**, **Advanced**, **Enterprise**, and **Elite** licenses. License holders of the **Device Manager** can only purchase User Upgrades.
 
 |               | Number |
 | ------------- | ------ |
@@ -77171,18 +77171,18 @@ License upgrades are available for holders of **Advanced**, **Enterprise**, and 
 
 The following items can be purchased individually and can be additionally applied to **Advance**, **Enterprise**, and **Elite** license tiers.
 
-| Feature                               | License Type                                   | Remarks                                                                                                                                                                                                               |
-| ------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Multi Communication Server Init**   | Basic License                                  | Basic license – Includes 1 server. An annual maintenance contract is required for support.                                                                                                                            |
-| **Multi Communication Server Add-on** | Additional Server                              | Applied when an additional server is added.                                                                                                                                                                           |
-| **GIS Map**                           | System                                         | You can use the GIS map to set up areas, facilities, and floors.                                                                                                                                                      |
-| **Video**                             | Camera                                         | Applies when using a Video Management System (VMS) not provided by Suprema.                                                                                                                                           |
-| **Server Matching**                   | ID, Card, Fingerprint, IR-Face Server Matching | Server Matching method compares the entered ID, card, fingerprint, and IR face from the device to the credentials stored inside the server database. An annual maintenance contract is required for advanced support. |
-| **Visitor**                           | System                                         | Administrators and operators can track or control visitor access.                                                                                                                                                     |
-| **Attendance Management** (T\&A)      | Standard                                       | Supports up to 500 users.                                                                                                                                                                                             |
-|                                       | Enterprise                                     | There is no limit on the number of users.                                                                                                                                                                             |
-| **Directory Integration**             | System                                         | An annual maintenance contract is required for advanced support.                                                                                                                                                      |
-| **Roll Call**                         | System                                         | \*                                                                                                                                                                                                                    |
+| Feature                               | License Type          | Remarks                                                                                                                                                                                                      |
+| ------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Multi Communication Server Init**   | Basic License         | Basic license – Includes 1 server. An annual maintenance contract is required for support.                                                                                                                   |
+| **Multi Communication Server Add-on** | Additional Server     | Applied when an additional server is added.                                                                                                                                                                  |
+| **GIS Map**                           | System                | You can use the GIS map to set up areas, facilities, and floors.                                                                                                                                             |
+| **Video**                             | Camera                | Applies when using a Video Management System (VMS) not provided by Suprema.                                                                                                                                  |
+| **Server Matching**                   | ID, Card, Fingerprint | Server matching method compares the entered ID, card, and fingerprint from the device to the credentials stored inside the server database. An annual maintenance contract is required for advanced support. |
+| **Visitor**                           | System                | Administrators and operators can track or control visitor access.                                                                                                                                            |
+| **Attendance Management** (T\&A)      | Standard              | Supports up to 500 users.                                                                                                                                                                                    |
+|                                       | Enterprise            | There is no limit on the number of users.                                                                                                                                                                    |
+| **Directory Integration**             | System                | An annual maintenance contract is required for advanced support.                                                                                                                                             |
+| **Roll Call**                         | System                | \*                                                                                                                                                                                                           |
 
 Not all cameras connected to the VMS need to be integrated with BioStar X. For example, even if the VMS supports 32 cameras, users only need to purchase a license for the specific camera that they want to integrate with **BioStar X**, and there is no need to purchase a license for all cameras.
 
