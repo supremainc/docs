@@ -1633,6 +1633,7 @@ const sidebars = {
             id: 'device/biolite_n2/release-notes/index',
           },
           items: [
+            'device/biolite_n2/release-notes/170',
             'device/biolite_n2/release-notes/162',
             'device/biolite_n2/release-notes/161',
             'device/biolite_n2/release-notes/160',
