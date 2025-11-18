@@ -2796,8 +2796,8 @@
     "height": 745
   },
   "/img/common/logo-osdp-verified.png": {
-    "width": 278,
-    "height": 259
+    "width": 298,
+    "height": 278
   },
   "/img/common/monitoring-map-area-tree-example.png": {
     "width": 400,
@@ -3299,6 +3299,18 @@
     "width": 2126,
     "height": 2563
   },
+  "/img/device/device-fix-cs20.png": {
+    "width": 725,
+    "height": 774
+  },
+  "/img/device/device-fix-cs40.png": {
+    "width": 626,
+    "height": 704
+  },
+  "/img/device/device-fix-di24.png": {
+    "width": 724,
+    "height": 775
+  },
   "/img/device/device-manager-app-setting.png": {
     "width": 2360,
     "height": 1964
@@ -3316,8 +3328,8 @@
     "height": 1964
   },
   "/img/device/device-remove-film-cs40.png": {
-    "width": 500,
-    "height": 332
+    "width": 401,
+    "height": 291
   },
   "/img/device/di24-main.png": {
     "width": 1200,
@@ -3699,9 +3711,17 @@
     "width": 1065,
     "height": 903
   },
+  "/img/device/installation-example-cs20.png": {
+    "width": 817,
+    "height": 944
+  },
   "/img/device/installation-example-cs40.png": {
     "width": 899,
     "height": 677
+  },
+  "/img/device/installation-example-di24.png": {
+    "width": 823,
+    "height": 943
   },
   "/img/device/installation-example-dm20.png": {
     "width": 812,
@@ -3954,6 +3974,10 @@
   "/img/device/installation-power-connection-xs2.png": {
     "width": 979,
     "height": 486
+  },
+  "/img/device/installation-recommended-fsf2.png": {
+    "width": 596,
+    "height": 785
   },
   "/img/device/installation-relay-fail-safe-lock-bep2.png": {
     "width": 1043,
@@ -4256,8 +4280,8 @@
     "height": 325
   },
   "/img/device/installation-wall1-fsf2.png": {
-    "width": 600,
-    "height": 246
+    "width": 448,
+    "height": 212
   },
   "/img/device/installation-wall1-xpd2-gdb.png": {
     "width": 472,
@@ -4296,8 +4320,8 @@
     "height": 402
   },
   "/img/device/installation-wall2-fsf2.png": {
-    "width": 600,
-    "height": 488
+    "width": 498,
+    "height": 406
   },
   "/img/device/installation-wall2-xpd2-gdb.png": {
     "width": 499,
@@ -4459,10 +4483,6 @@
     "width": 962,
     "height": 631
   },
-  "/img/device/name-function-each-part-bew3.png": {
-    "width": 1152,
-    "height": 490
-  },
   "/img/device/name-function-each-part-bln2.png": {
     "width": 341,
     "height": 864
@@ -4532,8 +4552,8 @@
     "height": 452
   },
   "/img/device/product-part-cs20.png": {
-    "width": 1518,
-    "height": 2533
+    "width": 599,
+    "height": 931
   },
   "/img/device/securemodule-main.png": {
     "width": 1000,
@@ -4550,6 +4570,14 @@
   "/img/device/settings-webserver-network.png": {
     "width": 800,
     "height": 250
+  },
+  "/img/device/system-configuration-cs20.png": {
+    "width": 970,
+    "height": 860
+  },
+  "/img/device/system-configuration-di24.png": {
+    "width": 1183,
+    "height": 874
   },
   "/img/device/tcm10-fs2.png": {
     "width": 47,
@@ -7136,8 +7164,8 @@
     "height": 480
   },
   "/img/en/device/bew3-product-part.png": {
-    "width": 1130,
-    "height": 581
+    "width": 1165,
+    "height": 629
   },
   "/img/en/device/bln2-auth-authmode.png": {
     "width": 200,
@@ -7707,9 +7735,17 @@
     "width": 475,
     "height": 236
   },
+  "/img/en/device/installation-example-cs20.png": {
+    "width": 788,
+    "height": 933
+  },
   "/img/en/device/installation-example-cs40.png": {
     "width": 909,
     "height": 694
+  },
+  "/img/en/device/installation-example-di24.png": {
+    "width": 800,
+    "height": 941
   },
   "/img/en/device/installation-example-dm20.png": {
     "width": 746,
@@ -8176,8 +8212,8 @@
     "height": 297
   },
   "/img/en/device/installation-wall1-fsf2.png": {
-    "width": 600,
-    "height": 246
+    "width": 446,
+    "height": 212
   },
   "/img/en/device/installation-wall1-xpd2-gdb.png": {
     "width": 470,
@@ -8212,8 +8248,8 @@
     "height": 338
   },
   "/img/en/device/installation-wall2-fsf2.png": {
-    "width": 600,
-    "height": 488
+    "width": 504,
+    "height": 399
   },
   "/img/en/device/installation-wall2-xpd2-gdb.png": {
     "width": 502,
@@ -8402,6 +8438,14 @@
   "/img/en/device/name-function-each-part-xs2.png": {
     "width": 779,
     "height": 878
+  },
+  "/img/en/device/system-configuration-cs20.png": {
+    "width": 965,
+    "height": 849
+  },
+  "/img/en/device/system-configuration-di24.png": {
+    "width": 1178,
+    "height": 866
   },
   "/img/en/device/xpd2-template-auth-cardtype.png": {
     "width": 998,
