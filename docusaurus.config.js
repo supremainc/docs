@@ -133,7 +133,8 @@ const config = {
       {
         specs: [{
           spec: './openapi/bsxapi-with-samples.yaml',
-          route: '/api/bsxapi',
+          // route: '/api/bsxapi',
+          id: 'bsxapi',
         }],
         theme: {
           primaryColor: '#3578e5',
