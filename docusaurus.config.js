@@ -161,7 +161,13 @@ const config = {
       {
         // v2.0 API 구조로 수정
         markdown: {
-          enableFiles: false
+          enableFiles: false,
+          // relativePaths: true,
+          // includeBlog: false,
+          // includePages: false,
+          // includeDocs: true,
+          // includeVersionedDocs: false,
+          // excludeRoutes: ['/platform/biostar_air/**', '/device/**'],
         },
         llmsTxt: {
           siteTitle: 'Suprema Docs',
