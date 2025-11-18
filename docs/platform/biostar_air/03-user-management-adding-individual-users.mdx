@@ -78,7 +78,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ### 사용자 종류 선택 {#selecting-user-type}
 
-<Cmd sid='credential_detail' product='air' /> 섹션에서 추가하는 사용자가 일반 사용자인지, 임시로 방문하는 사용자인지 선택하세요.
+<Cmd sid='credential_detail' product='air' /> 섹션에서 추가하는 사용자가 일반 사용자인지, 임시로 방문하는 사용자인지 선택하세요. 사용자 종류에 따라 발급할 수 있는 크리덴셜 종류가 달라집니다.
 
 * <Cmd sid='user_regular_card_type' product='air' />: 조직 또는 시설의 정규 구성원으로서 장기적이고 지속적인 출입 권한이 필요한 사용자입니다. 모든 크리덴셜 유형을 발급할 수 있습니다.
 
@@ -99,7 +99,8 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ### 크리덴셜 발급 {#issuingCredentials}
 
-<Cmd sid='credential_detail' product='air' /> 섹션에서 관리자는 사용자에게 출입 인증 수단으로 할당할 크리덴셜 종류를 선택할 수 있습니다. 각 크리덴셜 종류에는 활성화 또는 비활성화할 수 있는 토글 스위치가 있습니다.
+사용자 정보를 입력한 후, <Cmd sid='credential_detail' product='air' /> 섹션에서 
+출입 인증 수단으로 사용할 크리덴셜을 설정하세요. 각 크리덴셜에는 활성화 또는 비활성화할 수 있는 토글 스위치가 있습니다.
 
 * <Cmd sid='card_type_mobile' product='air' />: Suprema Pass 모바일 앱을 출입 인증 수단으로 사용할 수 있습니다. 관리자는 카드 ID 번호를 편집할 수 있습니다.
 
@@ -142,7 +143,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ### 초대 링크 전송 {#sendingInvitationLink}
 
-사용자에게 Suprema Pass 앱과 모바일 출입 카드를 다운로드할 수 있는 초대 링크를 이메일로 보낼 수 있습니다. 이메일 주소(필수)와 휴대폰 번호(선택 사항)를 입력하세요.
+<Cmd sid='card_type_mobile' product='air' /> 또는 <Cmd sid='user_form_input20' product='air' />를 사용하는 사용자에게 Suprema Pass 앱 다운로드 링크를 이메일로 전송할 수 있습니다. 이메일 주소(필수)와 휴대폰 번호(선택 사항)를 입력하세요.
 
 <Image src='/img/air/bsair-add-user-credential-credential-type-invite-link.png' />
 
@@ -194,7 +195,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 * 크리덴셜을 즉시 발급하고 활성화하려면 <Cmd sid='add_user_card_activate_btn' product='air' /> 버튼을 클릭하세요.
 
 
-## 사용자 정보 수정 {#editUserDetails}
+## 사용자 수정 {#editUserDetails}
 
 추가한 사용자의 세부 정보를 수정하려면 다음 단계를 따르세요.
 
