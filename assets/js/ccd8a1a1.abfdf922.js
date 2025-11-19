@@ -93,7 +93,7 @@ const assets = {
 
 
 const toc = [..._biostarair_customer_notice/* .toc */.RM, {
-  "value": "사용자 그룹 만들기",
+  "value": "그룹 만들기",
   "id": "creatingUserGroup",
   "level": 2
 }, {
@@ -107,6 +107,14 @@ const toc = [..._biostarair_customer_notice/* .toc */.RM, {
 }, {
   "value": "그룹 해제 또는 이동",
   "id": "disableGroup",
+  "level": 2
+}, {
+  "value": "그룹 이름 수정",
+  "id": "editGroupName",
+  "level": 2
+}, {
+  "value": "그룹 삭제",
+  "id": "deleteGroup",
   "level": 2
 }, {
   "value": "사용자 그룹 이해하기",
@@ -135,9 +143,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcAirGroup, Image, YouTube} = _components;
+  }, {Cmd, IcAirEdit, IcAirGroup, IcAirRemove, Image, YouTube} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAirEdit) _missingMdxReference("IcAirEdit", true);
   if (!IcAirGroup) _missingMdxReference("IcAirGroup", true);
+  if (!IcAirRemove) _missingMdxReference("IcAirRemove", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!YouTube) _missingMdxReference("YouTube", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -152,7 +162,7 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "creatingUserGroup",
-      children: "사용자 그룹 만들기"
+      children: "그룹 만들기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "새로운 사용자 그룹을 만드세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -191,7 +201,19 @@ function _createMdxContent(props) {
             product: "air"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["경고 메시지가 나타나면 내용 확인 후 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_group_yes_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "그룹을 삭제하더라도 해당 그룹에 속한 사용자는 삭제되지 않습니다. 사용자는 그룹에서 해제될 뿐입니다."
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "creatingSubgroup",
       children: "하위 그룹 만들기"
@@ -373,6 +395,81 @@ function _createMdxContent(props) {
         sid: "user_table_column5",
         product: "air"
       }), " 열에서 사용자의 그룹 변경 사항을 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "editGroupName",
+      children: "그룹 이름 수정"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "이미 만들어진 사용자 그룹의 이름을 수정할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_groups_submenu",
+            product: "air"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 그룹 목록에서 수정할 그룹의 체크 박스를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["사용자 그룹 목록 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirEdit, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-group-edit.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "edit_user_group_btn",
+            product: "air"
+          }), " 창이 나타나면 그룹 이름을 수정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-group-edit-popup.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["수정한 내용을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "그룹 이름 수정은 한 개의 그룹만 선택했을 때 수정할 수 있습니다."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "deleteGroup",
+      children: "그룹 삭제"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용하지 않는 사용자 그룹이 있다면 삭제할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_groups_submenu",
+            product: "air"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "사용자 그룹 목록에서 삭제할 그룹의 체크박스를 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["사용자 그룹 목록 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirRemove, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-group-remove.png"
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "understanding-user-group-totals",
       children: "사용자 그룹 이해하기"

@@ -706,7 +706,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 세부 정보에서 ", (0,jsx_runtime.jsx)(IcAirRemove, {}), " 버튼을 클릭하세요."]
+          children: ["사용자 세부 정보에서 ", (0,jsx_runtime.jsx)("span", {
+            className: "air-remove",
+            children: (0,jsx_runtime.jsx)(IcAirRemove, {})
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-details-remove.png"
         }), "\n"]
