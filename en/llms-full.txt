@@ -67109,6 +67109,10 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 
 * [E200 QR Scanner - Wiring and Configuration](/docs/en/platform/biostar_air/wiring-and-configuration)
 
+#### 문제 해결→1 item
+
+* [Troubleshooting Adding Users in Bulk](/docs/en/platform/biostar_air/troubleshooting-adding-users-in-bulk)
+
 
 ---
 
@@ -71449,13 +71453,12 @@ Learn how to set up your first BioStar Air site by adding administrators, regist
 
 Learn how to use the Site Selector feature to manage multiple BioStar Air sites with a single email address and streamline your login process.
 
-#### [User Management→8 items](/docs/en/platform/biostar_air/managing-users)
+#### [User Management→7 items](/docs/en/platform/biostar_air/managing-users)
 
 Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.
 
 * [Adding Individual Users](/docs/en/platform/biostar_air/adding-individual-users)
 * [Adding Users in Bulk](/docs/en/platform/biostar_air/adding-users-in-bulk)
-* [Troubleshooting Adding Users in Bulk](/docs/en/platform/biostar_air/troubleshooting-adding-users-in-bulk)
 * [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
 * [Managing User Groups](/docs/en/platform/biostar_air/managing-user-groups)
 * [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates)
