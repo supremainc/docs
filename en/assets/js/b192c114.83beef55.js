@@ -136,9 +136,15 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["If you changed the port number to 450, enter ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "https://{ip_address}:450"
-          }), " in the address bar."]
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If you changed the port number to 450, enter ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "https://{ip_address}:450"
+            }), " in the address bar."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Support for changing the port may vary depending on certain services."
+          }), "\n"]
         }), "\n"]
       })
     })]

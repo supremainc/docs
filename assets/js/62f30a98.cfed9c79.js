@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["22189"], {
-74729: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["60989"], {
+5627: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,24 +9,24 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_service_settings_mdx_6ef_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_service_settings_mdx_62f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-service-settings-mdx-6ef.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_service_settings_mdx_6ef_namespaceObject = JSON.parse('{"id":"platform/biostar_x/service-settings","title":"Service Settings","description":"In the Service Settings of BioStar X Service Manager, you can configure and manage the core services of the system.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/service-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/service-settings","permalink":"/docs/en/platform/biostar_x/service-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/service-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"service-settings","title":"Service Settings","description":"In the Service Settings of BioStar X Service Manager, you can configure and manage the core services of the system.","keywords":["Service Settings","Service Manager","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Start and Stop Server","permalink":"/docs/en/platform/biostar_x/manage-server"},"next":{"title":"Change the Port","permalink":"/docs/en/platform/biostar_x/change-port"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-service-settings-mdx-62f.json
+var site_docs_platform_biostar_x_service_settings_mdx_62f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/service-settings","title":"서비스 설정","description":"BioStar X Service Manager의 Service Settings에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다.","source":"@site/docs/platform/biostar_x/service-settings.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/service-settings","permalink":"/docs/platform/biostar_x/service-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/service-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"service-settings","title":"서비스 설정","description":"BioStar X Service Manager의 Service Settings에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다.","keywords":["Service Settings","Service Manager","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서버 시작 및 종료","permalink":"/docs/platform/biostar_x/manage-server"},"next":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/service-settings.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/service-settings.mdx
 
 
 const frontMatter = {
 	id: 'service-settings',
-	title: 'Service Settings',
-	description: 'In the Service Settings of BioStar X Service Manager, you can configure and manage the core services of the system.',
+	title: '서비스 설정',
+	description: 'BioStar X Service Manager의 Service Settings에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다.',
 	keywords: [
 		'Service Settings',
 		'Service Manager',
@@ -43,15 +43,15 @@ const assets = {
 
 
 const toc = [{
-  "value": "Situations where configuration changes are needed",
+  "value": "설정 변경이 필요한 상황",
   "id": "when-to-change",
   "level": 2
 }, {
-  "value": "How to change settings",
+  "value": "설정 변경 방법",
   "id": "how-to-change",
   "level": 2
 }, {
-  "value": "Service composition",
+  "value": "서비스 구성",
   "id": "service-composition",
   "level": 2
 }, {
@@ -99,135 +99,143 @@ function _createMdxContent(props) {
   if (!NextStep) _missingMdxReference("NextStep", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
-        children: "Service Settings"
-      }), " menu of ", (0,jsx_runtime.jsx)(Cmd, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
         children: "BioStar X Service Manager"
-      }), ", you can configure and manage the core services of the system. Each service is configured independently, and you can check network ports and version information."]
+      }), "의 ", (0,jsx_runtime.jsx)(Cmd, {
+        children: "Service Settings"
+      }), " 메뉴에서는 시스템의 핵심 서비스들을 구성하고 관리할 수 있습니다. 각 서비스는 독립적으로 설정되며, 네트워크 포트와 버전 정보를 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(Cmd, {
         children: "Service Settings"
-      }), " consists of the following major services."]
+      }), "는 아래의 주요 서비스로 구성됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Core Web Service"
-          }), ": Web interface service"]
+          }), ": 웹 인터페이스 서비스"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Core Service"
-          }), ": Core system functionalities and API communication service"]
+          }), ": 시스템 핵심 기능 및 API 통신 서비스"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Unified Gateway Service"
-          }), ": Reverse proxy-based integrated gateway service"]
+          }), ": 역방향 프록시 기반 통합 게이트웨이 서비스"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Coordinator Service"
-          }), ": Management of distributed system configuration information and service synchronization"]
+          }), ": 분산 시스템 구성 정보 관리 및 서비스 간 동기화"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Server (Main)"
-          }), ": Main server service"]
+          }), ": 메인 서버 서비스"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Cache Service"
-          }), ": Data caching and enhanced system performance"]
+          }), ": 데이터 캐싱 및 시스템 성능 향상"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "when-to-change",
-      children: "Situations where configuration changes are needed"
+      children: "설정 변경이 필요한 상황"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You may need to change the service settings in the following situations."
+      children: "다음과 같은 상황에서 서비스 설정을 변경해야 할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Resolving port conflicts"
-          }), ": When another application uses the same port and causes conflicts"]
+            children: "포트 충돌 해결"
+          }), ": 다른 애플리케이션이 동일한 포트를 사용하여 충돌이 발생할 때"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Compliance with security policies"
-          }), ": When only specific ports are allowed according to the organization's network security policy"]
+            children: "보안 정책 준수"
+          }), ": 조직의 네트워크 보안 정책에 따라 특정 포트 범위만 허용될 때"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Firewall settings"
-          }), ": When you need to change to ports allowed by your corporate firewall"]
+            children: "방화벽 설정"
+          }), ": 기업 방화벽에서 허용하는 포트로 변경해야 할 때"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Server environment changes"
-          }), ": When changing the server IP address or network configuration"]
+            children: "서버 환경 변경"
+          }), ": 서버 IP 주소 변경이나 네트워크 구성 변경 시"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Performance optimization"
-          }), ": When separation of ports is needed for traffic distribution or load balancing"]
+            children: "성능 최적화"
+          }), ": 트래픽 분산이나 로드 밸런싱을 위한 포트 분리가 필요할 때"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "how-to-change",
-      children: "How to change settings"
+      children: "설정 변경 방법"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
-            children: "SERVICE SETTINGS"
-          }), " menu in ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "BioStar X Service Manager"
-          }), "."]
+          }), "에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: "SERVICE SETTINGS"
+          }), " 메뉴를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Go to the section of the service you want to change."
+          children: "변경하려는 서비스 섹션으로 이동하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Modify the required port number or address."
+          children: "필요한 포트 번호나 주소를 수정하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["To apply changes, click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["변경사항을 적용하려면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
             children: "Apply"
-          }), " button in the upper right corner of the screen."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "After changing the service settings, restart the related services to apply the changes."
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "서비스 설정을 변경한 후 변경 사항을 적용하려면 관련 서비스를 재시작하세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "일부 서비스에 따라 포트 변경을 지원하지 않을 수 있습니다."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "When changing port numbers, make sure there are no conflicts with other services or applications."
+        children: "포트 번호 변경 시 다른 서비스나 애플리케이션과 충돌이 발생하지 않도록 주의하세요."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "service-composition",
-      children: "Service composition"
+      children: "서비스 구성"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostar-x-core-web-service",
       children: "BioStar X Core Web Service"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This service is responsible for the web-based user interface."
+      children: "웹 기반 사용자 인터페이스를 담당하는 서비스입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-cws.png",
       alone: true
@@ -236,26 +244,20 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "HTTPS Port"
-          }), ": Web interface access port (default: 5002)"]
+          }), ": 웹 인터페이스 접속 포트 (기본값: 5002)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "WebServerThrift Port"
-          }), ": Web server communication port based on the Thrift protocol (default: 9310)"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            children: "CloudNgrok Port"
-          }), ": Cloud tunneling service communication port (default: 52000)"]
+          }), ": Thrift 프로토콜 기반 웹서버 통신 포트 (기본값: 9310)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostar-x-core-service",
       children: "BioStar X Core Service"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This is the main service that handles core functionalities of the system and external API communications."
+      children: "시스템의 핵심 기능과 외부 API 통신을 처리하는 메인 서비스입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-core-s.png",
       alone: true
@@ -264,34 +266,34 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "WebSocket Port"
-          }), ": WebSocket port for real-time bidirectional communication (default: 9002)"]
+          }), ": 실시간 양방향 통신을 위한 웹소켓 포트 (기본값: 9002)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "API Port"
-          }), ": REST API communication port (default: 9010)"]
+          }), ": REST API 통신 포트 (기본값: 9010)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "WebServerFastCgi Port"
-          }), ": Web server communication port based on FastCGI protocol (default: 9000)"]
+          }), ": FastCGI 프로토콜 기반 웹서버 통신 포트 (기본값: 9000)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Rpc Port"
-          }), ": Remote Procedure Call (RPC) communication port (default: 51218)"]
+          }), ": 원격 프로시저 호출(RPC) 통신 포트 (기본값: 51218)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "unified-gateway-service",
       children: "Unified Gateway Service"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Efficiently process requests to the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["역방향 프록시(Reverse Proxy) 방식을 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " server through reverse proxy, improve the security vulnerabilities of iframes, and minimize SSL certificate errors."]
+      }), " 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-ugs.png",
       alone: true
@@ -299,13 +301,13 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           children: "HTTPS Port"
-        }), ": Integrated gateway HTTPS communication port (default: 443)"]
+        }), ": 통합 게이트웨이 HTTPS 통신 포트 (기본값: 443)"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostar-x-coordinator-service",
       children: "BioStar X Coordinator Service"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This service is responsible for managing configuration information of the distributed system, monitoring service status, and synchronizing services."
+      children: "분산 시스템의 구성 정보 관리, 서비스 상태 모니터링 및 서비스 간 동기화를 담당하는 서비스입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-coordinator-s.png",
       alone: true
@@ -313,38 +315,38 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           children: "Client Port"
-        }), ": Communication port for client connections (default: 21810)"]
+        }), ": 클라이언트 연결을 위한 통신 포트 (기본값: 21810)"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Change the value of ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               children: "Client Port"
-            }), ", then manually restart the ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X Coordinator Service"
-            }), " in ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " 값을 변경하면, ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Windows Services"
             }), "(", (0,jsx_runtime.jsx)(_components.em, {
               children: "services.msc"
-            }), ")."]
+            }), ")에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Coordinator Service"
+            }), " 서비스를 찾아 수동으로 재시작하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["After restarting the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X Coordinator Service"
-            }), ", go to ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " 서비스를 재시작한 후 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X Service Manager"
             }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "SERVICES"
-            }), " and restart all services."]
+            }), " 메뉴에서 모든 서비스를 재시작하세요."]
           }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
               children: "Stop All"
-            }), " in the top right corner of the screen. After all services are stopped, when the ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " 버튼을 클릭하세요. 모든 서비스가 중지된 후 ", (0,jsx_runtime.jsx)(Cmd, {
               children: "Start All"
-            }), " button is enabled, click the button."]
+            }), " 버튼이 활성화되면 버튼을 클릭하세요."]
           }), "\n"]
         }), "\n"]
       })
@@ -352,7 +354,7 @@ function _createMdxContent(props) {
       id: "biostar-x-server-(main)",
       children: "BioStar X Server (Main)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This is the core service that serves as the main server of the system."
+      children: "시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-server.png",
       alone: true
@@ -361,32 +363,32 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Server Address"
-          }), ": IP address of the main server"]
+          }), ": 메인 서버의 IP 주소"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Server Port"
-          }), ": General server communication port (default: 51212)"]
+          }), ": 일반 서버 통신 포트 (기본값: 51212)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "SSL Server Port"
-          }), ": SSL secure encrypted communication port (default: 51213)"]
+          }), ": SSL 보안 암호화 통신 포트 (기본값: 51213)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "gRPC Server Port"
-          }), ": High-performance communication port based on gRPC protocol (default: 51219)"]
+          }), ": gRPC 프로토콜 기반 고성능 통신 포트 (기본값: 51219)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostar-x-cache-service",
       children: "BioStar X Cache Service"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This service improves the system's data processing speed and performance by storing frequently used data in memory."
+      children: "자주 사용되는 데이터를 메모리에 저장하여 시스템의 데이터 처리 속도와 성능을 향상시키는 서비스입니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/common/biostarx-sm-cache-s.png",
       alone: true
@@ -395,28 +397,28 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Client Port"
-          }), ": Cache service client connection port (default: 10800)"]
+          }), ": 캐시 서비스 클라이언트 연결 포트 (기본값: 10800)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Communication Port"
-          }), ": Internal communication port between cache nodes (default: 47500)"]
+          }), ": 캐시 노드 간 내부 통신 포트 (기본값: 47500)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             children: "Discovery Port"
-          }), ": Port for automatic discovery of distributed cache nodes (default: 47100)"]
+          }), ": 분산 캐시 노드 자동 발견을 위한 포트 (기본값: 47100)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(NextStep, {
       children: (0,jsx_runtime.jsx)(NextItem, {
         to: "change-port",
         children: (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Learn step-by-step how to change the default port (443) of ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), "의 기본 포트(443)를 변경하는 방법을 단계별로 알아보세요."]
         })
       })
     })]

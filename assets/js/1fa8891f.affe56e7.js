@@ -136,9 +136,15 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["포트 번호를 450으로 변경했다면 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "https://{ip_address}:450"
-          }), "을 입력하세요."]
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["포트 번호를 450으로 변경했다면 주소 표시줄에 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "https://{ip_address}:450"
+            }), "을 입력하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "일부 서비스에 따라 포트 변경을 지원하지 않을 수 있습니다."
+          }), "\n"]
         }), "\n"]
       })
     })]

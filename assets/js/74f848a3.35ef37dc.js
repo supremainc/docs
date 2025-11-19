@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["84619"], {
-25215: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["87533"], {
+80011: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_licensing_mdx_74f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-licensing-mdx-ebf.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/en/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","keywords":["License"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/ui-settings"},"next":{"title":"Appendices","permalink":"/docs/en/platform/biostar_x/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-licensing-mdx-74f.json
+var site_docs_platform_biostar_x_licensing_mdx_74f_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","source":"@site/docs/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"라이선스 정책","description":"모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.","keywords":["라이선스"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"설정","permalink":"/docs/platform/biostar_x/ui-settings"},"next":{"title":"부록","permalink":"/docs/platform/biostar_x/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/licensing.mdx
 
 
 const frontMatter = {
 	id: 'licensing',
-	title: 'License Policy',
-	description: 'This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.',
+	title: '라이선스 정책',
+	description: '모듈형 구조로 설계된 BioStar X의 라이선스 정책에 대한 자세한 내용을 안내합니다.',
 	keywords: [
-		'License'
+		'라이선스'
 	],
 	isTranslationMissing: false
 };
@@ -42,24 +42,24 @@ const assets = {
 
 
 const toc = [{
-  "value": "Base License",
+  "value": "기본 라이선스",
   "id": "base-license",
   "level": 2
 }, {
-  "value": "Capacity Upgrade",
+  "value": "라이선스 업그레이드",
   "id": "capacity-upgrade",
   "level": 2
 }, {
-  "value": "Feature add-ons",
+  "value": "기능 추가 옵션 (Feature Add-ons)",
   "id": "features-add-ons",
   "level": 2
 }, {
-  "value": "Package",
+  "value": "패키지(Package)",
   "id": "package",
   "level": 2
 }, {
-  "value": "Device License",
-  "id": "device-license",
+  "value": "장치 라이선스",
+  "id": "장치-라이선스",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -86,24 +86,24 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " is the next generation access control software developed as a successor to ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar 2"
-      }), ". Supports various deployment environments of today and the future through an enhanced system architecture, expanded features, and a more flexible licensing model."]
+      }), "의 후속 버전으로 개발된 차세대 출입통제 소프트웨어입니다. 향상된 시스템 아키텍처와 확장된 기능, 그리고 더욱 유연한 라이선스 모델을 통해 현재와 미래의 다양한 구축 환경을 지원합니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " offers a total of five scalable license levels ranging from ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Starter"
-      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
-      }), ", allowing you to choose according to various environments from small businesses to large corporate settings. Designed in a modular structure, it can add a variety of optional features such as video integration, mobile access, and multi-server support."]
+      }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "스타터"
+      }), "부터 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), "까지 총 다섯 가지 확장 가능한 라이선스 등급을 제공하며, 소규모 사업장부터 대규모 기업 환경까지 다양한 환경에 맞춰 선택할 수 있습니다. 모듈형 구조로 설계되어 비디오 연동, 모바일 출입, 멀티 서버 지원 등 다양한 옵션 기능을 추가할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "base-license",
-      children: "Base License"
+      children: "기본 라이선스"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "The basic license"
-      }), " is an essential component for activating and operating the system. This license serves as a foundation for applying additional features or upgrades."]
+        children: "기본 라이선스"
+      }), "는 시스템을 활성화하고 운영하기 위한 필수 구성 요소입니다. 이 라이선스는 추가 기능이나 업그레이드를 적용할 수 있는 기반 역할을 합니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -115,39 +115,39 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Device Manager"
+              children: "디바이스 매니저(Device Manager)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Starter"
+              children: "스타터(Starter)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Essential"
+              children: "에센셜(Essential)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Advanced"
+              children: "어드밴스(Advanced)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Enterprise"
+              children: "엔터프라이즈(Enterprise)"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Elite"
+              children: "엘리트(Elite)"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Number of Doors"
+                children: "최대 출입문 수"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -183,7 +183,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Users"
+                children: "최대 사용자 수"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -219,7 +219,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Operators"
+                children: "최대 관리자 수"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -253,10 +253,12 @@ function _createMdxContent(props) {
               children: "100"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "맵"
+              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Maps"
-              })
+              }), ")"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -289,10 +291,12 @@ function _createMdxContent(props) {
               children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "비디오"
+              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Video"
-              })
+              }), ")"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -329,7 +333,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#package",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "Advanced Access Control"
+                  children: "고급 출입 통제"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
                 children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)"
@@ -373,13 +377,13 @@ function _createMdxContent(props) {
                   children: "Upgradable"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Door/User/Admin)"
+                children: "(출입문/사용자/관리자)"
               })]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "User, admin only"
+              children: "사용자, 관리자만 해당"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -412,27 +416,27 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Device Manager"
-        }), " license is required for customers using third-party software or third-party systems who wish to efficiently manage Suprema devices through ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "디바이스 매니저"
+        }), " 라이선스는 타사 소프트웨어 또는 타사 시스템을 사용하는 고객이 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), "."]
+        }), "를 통해 슈프리마의 장치를 효율적으로 관리하고자 할 때 필요한 라이선스입니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "capacity-upgrade",
-      children: "Capacity Upgrade"
+      children: "라이선스 업그레이드"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["License upgrades are available for holders of ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Essential"
+      children: ["라이선스 업그레이드는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "에센셜"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
-      }), " licenses. License holders of the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Device Manager"
-      }), " can only purchase User Upgrades."]
+        children: "엔터프라이즈"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), " 등급의 라이선스 보유자에게 제공합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "디바이스 매니저"
+      }), " 라이선스 보유자는 사용자 업그레이드(User Upgrades)만 구매할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
@@ -445,7 +449,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Number"
+            children: "수"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -454,7 +458,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Door"
+            children: "출입문"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -466,7 +470,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "User"
+            children: "사용자"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -478,7 +482,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Administrator"
+            children: "관리자"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -489,125 +493,127 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "features-add-ons",
-      children: "Feature add-ons"
+      children: "기능 추가 옵션 (Feature Add-ons)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The following items can be purchased individually and can be additionally applied to ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advance"
+      children: ["다음 항목은 개별적으로 구매할 수 있으며, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
-      }), " license tiers."]
+        children: "엔터프라이즈"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), " 라이선스 등급에 추가 적용할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "cols3--20-20-60 overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
         children: [(0,jsx_runtime.jsx)(_components.thead, {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "Feature"
+              children: "기능"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "License Type"
+              children: "라이선스 유형"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Remarks"
+              children: "비고"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Multi Communication Server Init"
+                children: "멀티 커뮤니케이션 서버 Init"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Basic License"
+              children: "기본 라이선스"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Basic license – Includes 1 server. An annual maintenance contract is required for support."
+              children: "기본 라이선스 – 1대의 서버 포함됩니다. 지원을 위해 연간 유지보수 계약이 필요합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Multi Communication Server Add-on"
+                children: "멀티 커뮤니케이션 서버 Add-on"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Additional Server"
+              children: "추가 서버"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Applied when an additional server is added."
+              children: "서버 1대 추가 시 적용됩니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "GIS Map"
+                children: "GIS 지도"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "You can use the GIS map to set up areas, facilities, and floors."
+              children: "GIS 지도를 이용해 구역(Area) 및 시설(Facility), 층(Floor)을 설정할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Video"
+                children: "비디오"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Camera"
+              children: "카메라"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Applies when using a Video Management System (VMS) not provided by Suprema."
+              children: "슈프리마에서 제공하지 않는 Video Management System(VMS) 사용 시 적용됩니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Server Matching"
+                children: "서버 매칭"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "ID, Card, Fingerprint"
+              children: "ID, 카드, 지문"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Server matching method compares the entered ID, card, and fingerprint from the device to the credentials stored inside the server database. An annual maintenance contract is required for advanced support."
+              children: "장치에 저장된 ID, 카드와 지문 정보를 서버 데이터베이스에 저장된 크리덴셜과 비교하는 서버 매칭 방식입니다. 고급 지원을 위해 유지보수 계약이 필요합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Visitor"
+                children: "방문자"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Administrators and operators can track or control visitor access."
+              children: "관리자 및 운영자가 방문자 출입을 추적하거나 제어할 수 있습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
               rowSpan: "2",
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Attendance Management"
-              }), " (T&A)"]
+                children: "근태 관리"
+              }), "(T&A)"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "Standard"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Supports up to 500 users."
+              children: "최대 500명의 사용자를 지원합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "Enterprise"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "There is no limit on the number of users."
+              children: "사용자 수에 제한이 없습니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Directory Integration"
+                children: "디렉토리 연동"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "An annual maintenance contract is required for advanced support."
+              children: "고급 지원을 위해 유지보수 계약이 필요합니다."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "인원 점검"
+              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Roll Call"
-              })
+              }), ")"]
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "시스템"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "*"
+              children: "-"
             })]
           })]
         })]
@@ -615,146 +621,162 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Not all cameras connected to the VMS need to be integrated with BioStar X. For example, even if the VMS supports 32 cameras, users only need to purchase a license for the specific camera that they want to integrate with ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["VMS에 연결된 모든 카메라를 반드시 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), ", and there is no need to purchase a license for all cameras."]
+        }), "와 연동할 필요는 없습니다. 예를 들어, VMS가 32개의 카메라를 지원하더라도, 사용자는 실제로 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "와 연동하려는 특정 카메라에 대해서만 라이선스를 구매하면 되며, 전체 카메라에 대한 라이선스 구매는 필요하지 않습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The following items can be purchased individually and can be added regardless of the basic license."
+      children: "다음 항목은 개별로 구매할 수 있으며 기본 라이선스와 상관없이 추가할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Feature"
+            children: "기능"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "License Type"
+            children: "라이선스 유형"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Remarks"
+            children: "비고"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Mobile App"
+              children: "모바일 앱"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "시스템"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Event log API"
+              children: "이벤트 로그 API"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "시스템"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting."
+            children: "시스템이 외부 API를 통해 이벤트 로그를 수신하고 기록할 수 있습니다. 이를 통해 타사 애플리케이션이나 서비스가 중앙 집중식 로깅 및 보고를 위해 출입 통제 시스템에 이벤트 데이터를 직접 추가할 수 있습니다."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Remote Access"
+              children: "리모트 액세스"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "시스템"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["Provides a secure tunnel feature that allows access to the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["외부 네트워크에서 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " server from an external network. ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " 서버에 접속할 수 있는 보안 터널 기능을 제공합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " also serves as a gateway for external network access to mobile and API.", (0,jsx_runtime.jsx)("br", {}), "Required for using ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " 모바일 및 API의 외부 네트워크 접근을 위한 게이트웨이 역할도 수행합니다.", (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.menu.sendFaceMobileEnrollLink"
-            }), " feature."]
+            }), " 기능 사용에 필요합니다."]
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X Plugin"
+              children: "사용자 리모트 액세스"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "시스템"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["사용자의 ngrok 서비스 계정을 사용해 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "를 터널링합니다. 이를 통해 외부 네트워크에서도 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "로 접속할 수 있습니다."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X 플러그인"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "시스템"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["외부 플러그인 통합을 지원합니다. 시스템당 최대 10개의 사용자 정의 플러그인을 사용할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "plugins",
-              children: "the following"
-            }), "."]
+              children: "다음 문서"
+            }), "를 참고하세요."]
           })]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "package",
-      children: "Package"
+      children: "패키지(Package)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The following items can be purchased individually from ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advance"
+      children: ["다음 항목은 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "어드밴스"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Elite"
-      }), " license tiers."]
+        children: "엔터프라이즈"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), " 라이선스 등급에서 개별적으로 구매할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Advanced Access Control"
-        }), ": A package of advanced access control features - Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator Control, and Interlock."]
+          children: "고급 출입 통제"
+        }), ": 안티패스백(Global Anti-Passback) 및 화재 경보(Global Fire Alarm), 경비(Intrusion Alarm), 소집(Mustering), 인원 제한(Occupancy Limit), 엘리베이터, 인터락(Interlock) 등의 고급 출입 통제 기능을 사용할 수 있는 패키지입니다."]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "device-license",
-      children: "Device License"
+      id: "장치-라이선스",
+      children: "장치 라이선스"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Device licenses can be purchased individually and can be added regardless of the basic license. Device licenses are issued based on the serial number (S/N). This feature can only be activated on devices that require a license."
+      children: "장치 라이선스는 개별로 구매할 수 있으며, 기본 라이선스와 상관없이 추가할 수 있습니다. 장치 라이선스는 일련 번호(S/N)를 기준으로 발급됩니다. 라이선스가 필요한 장치에서만 해당 기능을 활성화할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Feature"
+            children: "기능"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "License Type"
+            children: "라이선스 유형"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Supported models"
+            children: "지원 모델"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Remarks"
+            children: "비고"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Face Server Matching"
+              children: "얼굴 서버 매칭"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Device"
+            children: "장치"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "An annual maintenance contract is required for advanced support."
+            children: "고급 지원을 위해 유지보수 계약이 필요합니다."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Camera QR"
+              children: "카메라 QR"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Device"
+            children: "장치"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "X-Station 2 (no QR reading sensor), BioStation 3"
+            children: "X-Station 2(QR 판독 센서 없음), BioStation 3"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Wireless Lock"
+              children: "무선 잠금"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Device"
+            children: "장치"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "CoreStation 40"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "*"
+            children: "-"
           })]
         })]
       })]

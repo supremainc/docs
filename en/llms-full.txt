@@ -74100,6 +74100,8 @@ Info
 
 * If you changed the port number to 450, enter `https://{ip_address}:450` in the address bar.
 
+* Support for changing the port may vary depending on certain services.
+
 
 ---
 
@@ -77188,12 +77190,13 @@ Not all cameras connected to the VMS need to be integrated with BioStar X. For e
 
 The following items can be purchased individually and can be added regardless of the basic license.
 
-| Feature              | License Type | Remarks                                                                                                                                                                                                                                                       |
-| -------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mobile App**       | System       | \*                                                                                                                                                                                                                                                            |
-| **Event log API**    | System       | The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting.                                              |
-| **Remote Access**    | System       | Provides a secure tunnel feature that allows access to the **BioStar X** server from an external network. **BioStar X** also serves as a gateway for external network access to mobile and API.<br />Required for using Send Face Mobile Enroll Link feature. |
-| **BioStar X Plugin** | System       | Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to [the following](/docs/en/platform/biostar_x/plugins).                                                                             |
+| Feature                    | License Type | Remarks                                                                                                                                                                                                                                                       |
+| -------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mobile App**             | System       | \*                                                                                                                                                                                                                                                            |
+| **Event log API**          | System       | The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting.                                              |
+| **Remote Access**          | System       | Provides a secure tunnel feature that allows access to the **BioStar X** server from an external network. **BioStar X** also serves as a gateway for external network access to mobile and API.<br />Required for using Send Face Mobile Enroll Link feature. |
+| **External Remote Access** | System       | Tunneling **BioStar X** using the user’s ngrok service account. This allows access to **BioStar X** from an external network.                                                                                                                                 |
+| **BioStar X Plugin**       | System       | Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to [the following](/docs/en/platform/biostar_x/plugins).                                                                             |
 
 #### Package[​](#package "Direct link to Package")
 
@@ -78602,7 +78605,9 @@ You may need to change the service settings in the following situations.
 
 4. To apply changes, click the Apply button in the upper right corner of the screen.
 
-After changing the service settings, restart the related services to apply the changes.
+* Restart the related service to apply the changes after changing the service setting.
+
+* Support for changing the port may vary depending on certain services.
 
 Caution
 
@@ -78619,8 +78624,6 @@ This service is responsible for the web-based user interface.
 * HTTPS Port: Web interface access port (default: 5002)
 
 * WebServerThrift Port: Web server communication port based on the Thrift protocol (default: 9310)
-
-* CloudNgrok Port: Cloud tunneling service communication port (default: 52000)
 
 ##### BioStar X Core Service[​](#biostar-x-core-service "Direct link to BioStar X Core Service")
 
