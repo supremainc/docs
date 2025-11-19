@@ -447,6 +447,9 @@ footer {
     padding: 1.5rem;
     border-top: .5pt solid var(--ifm-color-border);
     border-bottom: .5pt solid var(--ifm-color-border);
+    h2:first-of-type {
+      padding-top: 0;
+    }
   }
 
   pre.license {
