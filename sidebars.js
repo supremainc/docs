@@ -1533,6 +1533,58 @@ const sidebars = {
       ],
     },
   ],
+  xpassq2: [
+    {
+      type: 'category',
+      label: 'XPass Q2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_q2/index',
+      },
+      items: [
+        'device/xpass_q2/safety-instructions',
+        'device/xpass_q2/getting-started',
+        'device/xpass_q2/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_q2/using-device',
+          },
+          items: [
+            'device/xpass_q2/admin-menu',
+            'device/xpass_q2/user',
+            'device/xpass_q2/authentication',
+            'device/xpass_q2/settings',
+            'device/xpass_q2/event-log',
+          ],
+        },
+        'device/xpass_q2/troubleshooting',
+        'device/xpass_q2/product-specifications',
+        'device/xpass_q2/regulatory-information',
+        'device/xpass_q2/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_q2/release-notes/index',
+          },
+          items: [
+            'device/xpass_q2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
   biostation2a: [
     {
       type: 'category',
