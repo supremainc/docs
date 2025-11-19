@@ -1,6 +1,6 @@
 ---
 id: troubleshooting-adding-users-in-bulk
-title: 일괄 사용자 추가 문제 해결하기
+title: 일괄 사용자 추가 문제
 description: BioStar Air 포털을 사용하여 사용자를 일괄 추가할 때 발생하는 일반적인 문제를 해결하는 방법을 알아보세요.
 keywords: [문제 해결, 대량 사용자, BioStar Air]
 ---
@@ -11,31 +11,36 @@ keywords: [문제 해결, 대량 사용자, BioStar Air]
 
 v2.10부터 BioStar Air는 잘못된 항목이 포함된 CSV 파일을 업로드할 경우 검증 보고서를 반환합니다. 오류를 수정한 후 파일을 다시 업로드하세요.
 
+<Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
+
 :::
 
 ## CSV 파일 준비
 
-<Steps>
-<Step>
+### CSV 템플릿 다운로드
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />로 이동하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' />를 클릭하세요.
+
+1. <Cmd sid='user_actions_import_title' product='air' /> 패널이 나타나면 <Cmd sid='user_actions_import_download_btn_text' product='air' /> 버튼을 클릭하세요.
+
+1. CSV 템플릿 파일(*biostar-import-user-csv-example.csv*)을 로컬에 저장하세요.
+
 
 ### CSV 템플릿의 정확한 형식 사용
 
-* 관리 포털에서 템플릿을 다운로드하세요.
-
-  **User Management** → **Users** → **+ Add User** → **Import Users** → **Download**
-
 * **열(column)을 수동으로 추가하거나 삭제하지 마세요**. 예기치 않은 열(column)이 있다면 오류가 발생할 수 있습니다.
 
-* 추가 필드(예: 직원 ID 또는 부서)를 포함해야 한다면, **User Template Settings**로 이동하여 해당 필드를 추가합니다. 추가하면 다운로드한 CSV 파일에 자동으로 나타납니다.
+* 추가 필드(예: 직원 ID 또는 부서)를 포함해야 한다면, <Cmd sid='user_setting_templ_action' product='air' /> 기능을 이용해 해당 필드를 추가하세요. 필드를 추가하면 다운로드한 CSV 파일에 해당 열이 자동으로 포함됩니다.
 
-</Step>
-<Step>
+각 열의 요구 사항을 참고하여 데이터를 올바르게 입력하세요.
 
-### 사용자 아이디
+#### <Cmd sid='user_csv_example_header1' product='air' className='normal' />
 
 * 각 사용자의 고유한 숫자 ID입니다.
 
-* 이 열을 **비워둘 수 있으며** 시스템에서 자동으로 값을 할당합니다.
+* <Cmd sid='user_csv_example_header1' product='air' className='bold' /> 열은 **비워둘 수 있으며** 시스템에서 자동으로 값을 할당합니다.
 
 * 사용자 아이디를 직접 작성하는 경우
 
@@ -43,64 +48,55 @@ v2.10부터 BioStar Air는 잘못된 항목이 포함된 CSV 파일을 업로드
 
   * **고유한 값**을 사용하세요.
 
-  * **문자, 공백, 하이픈 또는 특수 문자를 포함하지 마십시오**
+  * 문자, 공백, 하이픈 또는 특수 문자를 포함하지 마세요.
 
-:::note
+:::caution
 
-**중요**
-
-회사별 (문자를 포함한) 직원 ID를 사용하려 한다면 **User Key** 필드를 사용하지 마세요. 대신 **User Template Settings**을 사용해 별도의 커스텀 사용자 필드를 만드세요.
+문자를 포함한 회사별 직원 ID를 사용하려 한다면 <Cmd sid='user_csv_example_header1' product='air' className='bold' /> 필드를 사용하지 마세요. 대신 <Cmd sid='user_setting_templ_action' product='air' /> 기능을 사용해 별도의 커스텀 사용자 필드를 만드세요.
 
 :::
 
-</Step>
-<Step>
+#### <Cmd sid='user_csv_example_header7' product='air' className='normal' />
 
-### 이메일 주소
+* 유효한 이메일 형식을 사용하세요. [유효성 검사 수식](#excelFormulas)을 참고하여 이메일 형식을 검증할 수 있습니다.
 
-* 유효한 이메일 형식을 따라야 합니다. 아래 [유효성 검사 수식](#excel-formulas)을 참고하세요.
+  * 공백은 포함할 수 없습니다.
 
-  * 공백 없음
+  * 골뱅이 문자(`@`, at sign)를 포함해야 합니다.
 
-  * `@` 포함
+  * 도메인에는 마침표(`.`) 및 최상위 도메인을 포함해야 합니다.
 
-  * 도메인에 `.` 및 최상위 도메인 포함(example.com, gmail.com, suprema.co.kr)
+    > 예시: example.com, gmail.com, suprema.co.kr
 
-  * 주소 뒤에 추가 마침표 없음
+  * 주소 뒤에 추가 마침표가 없어야 합니다.
 
-  * 특수 문자 또는 숨겨진 문자 없음
+  * 특수 문자 또는 숨겨진 문자가 없어야 합니다.
 
   * 이메일 주소여야 합니다. '제공하지 않음' 또는 '제공되지 않음'과 같은 오류가 발생할 수 있습니다.
 
-* **고유해야 합니다**. 파일 내 또는 기존 사용자 간에 중복을 허용하지 않습니다.
+* 이메일 주소는 **고유해야 합니다**. 파일 내 또는 기존 사용자 간에 중복을 허용하지 않습니다.
 
-* 아래 크리덴셜을 발급받는다면 이메일 주소는 필수입니다.
+* 아래 크리덴셜을 발급받는다면 이메일 주소는 필수로 입력해야 합니다.
 
-  * Mobile credential
+  * <Cmd sid='card_type_mobile' product='air' />
 
-  * LinkPass
+  * <Cmd sid='card_type_option3' product='air' />
 
-  * QR code credential
+  * <Cmd sid='card_type_option4' product='air' />
 
-* 사용자가 RFID 카드만 가지고 있다면 이메일 주소는 필요하지 않습니다.
+* RFID 카드만 가지고 있는 사용자는 이메일 주소를 입력할 필요가 없습니다.
 
-</Step>
-<Step>
+#### <Cmd sid='user_csv_example_header8' product='air' className='normal' />
 
-### 전화번호
-
-* SMS를 통해 크리덴셜을 전달하지 않는다면 선택 사항입니다.
+* 모바일 SMS를 통해 크리덴셜을 전달하지 않는다면 선택 사항입니다.
 
 * 이메일 주소와 마찬가지로 **고유해야** 하며, 파일 내 또는 기존 사용자 간에 중복을 허용하지 않습니다.
 
 * 크리덴셜 전달을 전달할 때는 이메일을 권장합니다. SMS 메시지는 추가 요금이 발생합니다.
 
-</Step>
-<Step>
+#### 날짜 (<Cmd sid='user_csv_example_header5' product='air' className='normal' /> / <Cmd sid='user_csv_example_header6' product='air' className='normal' />)
 
-### 날짜
-
-모든 날짜(예: 발급일 또는 만료일)는 아래와 같은 정확한 형식을 따라야 합니다.
+모든 날짜 필드는 아래와 같은 정확한 형식을 따라야 합니다.
 
 ```plaintext
 YYYY-MM-DDTHH:MM:SS.sssZ
@@ -111,15 +107,13 @@ Example:
 
 'Z'를 누락하거나, 대시(`—`) 대신 슬래시(`/`)를 사용하거나, 시간을 생략하는 등 사소한 차이도 업로드를 실패할 수 있습니다.
 
-</Step>
-<Step>
 
-### 크리덴셜 요구 사항
+#### 크리덴셜 요구 사항
 
-| 크리덴셜 형식          | 이메일 또는 전화번호 필요? |
+| 크리덴셜 형식          | 이메일 또는 전화번호 |
 | ---------------------- | ------------------------ |
-| RFID Only              | 아니요.                       |
-| Mobile / LinkPass / QR | 예, 하나가 필요합니다.    |
+| <Cmd sid='card_type_rf' product='air' /> Only              | 아니요.                       |
+| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | 예, 하나가 필요합니다.    |
 
 * 크리덴셜은 이메일 주소 또는 전화번호로 전달되어야 합니다.
 
@@ -127,17 +121,18 @@ Example:
 
 * 이메일은 무료입니다. SMS는 요금이 부과됩니다.
 
-</Step>
-</Steps>
 
-
-## 사전 검증을 위한 엑셀 수식 {#excel-formulas}
+## 사전 검증을 위한 엑셀 수식 {#excelFormulas}
 
 데이터를 업로드하기 전에 **helper columns**에서 다음 수식을 사용하여 데이터를 확인할 것을 권장합니다.
+
+### 이메일 또는 전화번호 중복 검증
 
 ```excel-formula title="Detect Duplicate Emails or Phone Numbers"
 =IF(E2="", "", IF(COUNTIF(E$2:E2, E2)>1, "Duplicate", "First Occurrence"))
 ```
+
+### 날짜 형식 검증
 
 ```excel-formula title="Validate ISO 8601 Date Format (Column Q)"
 =IF(Q2="", "", IF(AND(LEN(Q2)=24, 
@@ -150,6 +145,8 @@ Example:
   ISNUMBER(VALUE(MID(Q2,21,3))), RIGHT(Q2,1)="Z"), 
   "Valid", "Invalid"))
 ```
+
+### 이메일 형식 검증
 
 ```excel-formula title="Validate Email Format (Column E)"
 =IF(TRIM(E2)="", "", IF(AND(
@@ -173,12 +170,10 @@ Example:
 
 * 날짜 및 이메일 형식이 위에 지정된 대로 정확합니까?
 
-:::note
+:::info
 
-**참고**
+* 서비스팀은 파일 수정 서비스를 제공하지 않습니다. 파일이 업로드되지 않으면 위의 검증 도구를 사용하여 문제를 파악하고 해결하세요.
 
-서비스팀은 파일 수정 서비스를 제공하지 않습니다. 파일이 업로드되지 않으면 위의 검증 도구를 사용하여 문제를 파악하고 해결하세요.
-
-이 가이드는 서비스 팀의 수동 문제 해결 없이도 업로드를 성공적으로 완료할 수 있도록 돕기 위해 작성되었습니다.
+* 이 문서는 서비스 팀의 수동 문제 해결 없이도 업로드를 성공적으로 완료할 수 있도록 돕기 위해 작성되었습니다.
 
 :::

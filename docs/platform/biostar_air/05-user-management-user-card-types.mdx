@@ -1,58 +1,81 @@
 ---
 id: user-card-types
-title: 사용자 카드 및 크리덴셜 유형
-description: BioStar Air의 모바일 카드, QR 코드, 일반 사용자를 위한 RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 유형에 대해 안내합니다.
+title: 사용자 카드 및 크리덴셜 종류
+description: BioStar Air에서 일반 사용자를 위한 모바일 카드, QR 코드, RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 종류에 대해 안내합니다.
 keywords: [사용자 관리, BioStar Air, 사용자 카드 유형]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 기능 개요 {#feature-overview}
+BioStar Air 2.6 버전 이상부터 사용자 관리를 개선하기 위해 두 가지 사용자 유형이 도입했습니다.
 
-BioStar Air 2.6 버전부터 사용자 관리를 개선하기 위해 두 가지 사용자 유형이 도입했습니다.
+* <Cmd sid='user_regular_card_type' product='air' />: 조직 또는 시설의 정규 구성원으로서 장기적이고 지속적인 출입 권한이 필요한 사용자입니다. 모든 크리덴셜 유형을 발급할 수 있습니다.
 
-* **Regular Users**: 모바일, RFID, 얼굴 인증, PIN 옵션 등 영구 크리덴셜을 갖춘 장기 사용자입니다.
+* <Cmd sid='user_temporary_card_type' product='air' />: 단기적이고 제한적인 출입 권한이 필요한 방문자 또는 비정규 구성원입니다. 게스트, 외부 방문객, 단기 계약자, 배송 기사 등이 해당될 수 있습니다. QR 코드와 링크 패스(LinkPass)를 포함한 <Cmd sid='user_form_input20' product='air' /> 크리덴셜만 발급할 수 있습니다.
 
-* **Temporary Users**: 임시 웹 기반 크리덴셜을 받는 임시 사용자입니다.
+:::info
 
-<YouTube videoId="xTxIzG-30S0" />
+사용자 추가 및 수정 시 크리덴셜 발급에 대한 자세한 내용은 [다음 문서](adding-individual-users#issuingCredentials)를 참고하세요.
+
+:::
 
 <CustomerNote />
 
+:::tip
+
+사용자 및 카드 종류에 대한 동영상 가이드를 시청하려면 아래 영상을 참고하세요.
+
+<YouTube videoId="xTxIzG-30S0" />
+
+:::
 
 ## 일반 사용자 카드 유형 {#regular-user-card-typs}
 
-일반 사용자는 아래와 같은 크리덴셜을 발급받을 수 있습니다.
+일반 사용자에게 발급할 수 있는 크리덴셜 종류는 아래와 같습니다.
 
-### 모바일 카드 {#mobile-card}
+:::info
 
-* 고유한 **Card ID**가 자동 할당되지만 수동 설정할 수도 있습니다.
+Suprema Pass 앱을 통해 모바일 크리데션 사용 방법은 [다음 문서](suprema-pass-app-overview)를 참고하세요.
+
+:::
+
+### <Cmd sid='card_type_mobile' product='air' className='normal' /> {#mobileCard}
+
+* 고유한 **카드 아이디**가 자동 할당되지만 수동 설정할 수도 있습니다.
 
 * **Airfob Tag** 또는 **Airfob Patch**를 사용한다면, 모바일 카드 번호를 카드 일련 번호로 사용하여 기존 출입 통제 시스템과 통합할 수 있습니다.
 
 * 이전 시스템과의 호환성을 위해 모바일 카드 아이디는 이전 사이트의 RF 카드 번호와 일치할 수 있습니다.
 
-### QR 코드 {#qr-code}
+### <Cmd sid='card_type_rf' product='air' className='normal' /> {#rfCard}
+
+* 사용자당 최대 8개의 RFID 카드를 추가할 수 있습니다.
+
+* 여러 카드가 할당될 때 관리를 간소화하기 위해 <Cmd sid='rf_card_type' product='air' />(CSN 또는 Wiegand), <Cmd sid='wiegand_card_id' product='air' />, 및 <Cmd sid='rf_card_name' product='air' />을 구성할 수 있습니다.
+
+* 연결된 슈프리마 장치를 사용하여 기존 RFID 카드를 스캔하려면 <Cmd sid='newest_rf_card_text_device' product='air' /> 항목에서 리더기를 선택하세요.
+
+* 기존 RF 카드에 **CSN** (카드 일련 번호)이 있다면, CSN을 수동으로 입력할 수 있습니다.
+
+### <Cmd sid='card_type_option3' product='air' className='normal' /> {#qrCode}
 
 * 일반 사용자는 모바일 카드의 **QR 코드**를 사용할 수 있습니다.
 
 * QR 코드는 모바일 카드 인터페이스의 버튼을 눌러 사용할 수 있습니다.
 
-### RF 카드 {#rf-card}
+### <Cmd sid='card_type_option4' product='air' className='normal' /> {#linkPass}
 
-* 사용자당 최대 8개의 RFID 카드를 추가할 수 있습니다.
+* 사용자의 이메일 또는 휴대전화 번호로 웹 링크를 전달합니다.
 
-* 여러 카드가 할당될 때 관리를 간소화하기 위해 **Card Type** (CSN 또는 Wiegand), **Card ID number**, 및 **Card Name**을 구성할 수 있습니다.
-
-* 연결된 Suprema 리더기를 사용하여 기존 RFID 카드를 스캔하려면 **Scan with Reader**를 클릭하고 리더기를 선택하세요.
-
-* 기존 RF 카드에 **CSN** (카드 일련 번호)이 있다면, CSN을 수동으로 입력할 수 있습니다.
+* 사용자는 전달받은 링크를 웹 브라우저에서 열고, <Cmd sid='web_card_preview_button1' product='air' /> 버튼을 클릭해 출입할 수 있습니다.
 
 ### 얼굴 인증 {#face}
 
 * 사용자당 최대 2개의 얼굴 프로필 이미지를 추가할 수 있습니다.
 
-* 연결된 리더기 또는 이미지 업로드를 통해 등록하거나, 이메일 링크를 전송해 모바일 기기의 카메라로 사진을 찍어 등록할 수 있습니다.
+* 연결된 리더기 또는 이미지 업로드를 통해 등록할 수 있습니다.
+
+* 사용자에게 이메일 링크를 전송한 후 모바일 기기의 카메라로 사진을 찍어 등록할 수 있습니다.
 
 ### PIN {#pin}
 
@@ -63,7 +86,7 @@ BioStar Air 2.6 버전부터 사용자 관리를 개선하기 위해 두 가지 
 
 임시 사용자는 모바일 또는 RFID 카드를 받지 않습니다. 대신, 앱 다운로드가 필요 없는 **웹 기반 크리덴셜**을 발급할 수 있습니다. 사용할 수 있는 옵션은 아래와 같습니다.
 
-### 웹 QR 코드 {#web-qr-code}
+### <Cmd sid='card_type_option3' product='air' className='normal' /> {#TempQrCode}
 
 * 이메일 또는 문자 메시지를 통해 전달합니다.
 
@@ -71,19 +94,17 @@ BioStar Air 2.6 버전부터 사용자 관리를 개선하기 위해 두 가지 
 
 * 보안을 강화하기 위해 5분마다 업데이트되는 **동적 QR 코드**(Dynamic QR Code)를 사용합니다.
 
-### Link Pass {#link-pass}
+### <Cmd sid='card_type_option4' product='air' className='normal' /> {#TempLinkPass}
 
-* 웹 브라우저에서 버튼을 클릭하면 출입을 허용합니다.
-
-* 이메일 또는 문자 메시지를 통해 전달됩니다.
+이메일 또는 문자 메시지를 통해 웹 링크를 사용자에게 전달합니다. 사용자는 웹 브라우저에서 <Cmd sid='web_card_preview_button1' product='air' /> 버튼을 클릭하면 출입할 수 있습니다.
 
 
-## 출입 등급 관리 {#managing-access-levels}
+## 출입 레벨 관리 {#managing-access-levels}
 
-일반 사용자이든 임시 사용자이든 관계없이 **출입 등급**을 설정해 크리덴셜이 허용되는 위치를 제어해야 합니다.
+일반 사용자이든 임시 사용자이든 관계없이 **출입 레벨**을 설정해 크리덴셜이 허용되는 위치를 제어해야 합니다.
 
-:::info
+:::caution
 
-임시 사용자라면, 제한된 출입 등급을 신중하게 할당하여 무제한 출입 권한이 부여된 자격 증명을 받지 않도록 해야 합니다.
+임시 사용자라면 제한된 출입 레벨을 신중하게 할당하고, 무제한 출입 권한이 부여된 자격 증명을 부여하지 않도록 주의하세요.
 
 :::
