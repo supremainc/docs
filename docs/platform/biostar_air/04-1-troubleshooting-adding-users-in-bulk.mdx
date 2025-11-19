@@ -126,9 +126,13 @@ Example:
 
 데이터를 업로드하기 전에 **helper columns**에서 다음 수식을 사용하여 데이터를 확인할 것을 권장합니다.
 
+### 이메일 또는 전화번호 중복 검증
+
 ```excel-formula title="Detect Duplicate Emails or Phone Numbers"
 =IF(E2="", "", IF(COUNTIF(E$2:E2, E2)>1, "Duplicate", "First Occurrence"))
 ```
+
+### 날짜 형식 검증
 
 ```excel-formula title="Validate ISO 8601 Date Format (Column Q)"
 =IF(Q2="", "", IF(AND(LEN(Q2)=24, 
@@ -141,6 +145,8 @@ Example:
   ISNUMBER(VALUE(MID(Q2,21,3))), RIGHT(Q2,1)="Z"), 
   "Valid", "Invalid"))
 ```
+
+### 이메일 형식 검증
 
 ```excel-formula title="Validate Email Format (Column E)"
 =IF(TRIM(E2)="", "", IF(AND(
@@ -164,12 +170,10 @@ Example:
 
 * 날짜 및 이메일 형식이 위에 지정된 대로 정확합니까?
 
-:::note
+:::info
 
-**참고**
+* 서비스팀은 파일 수정 서비스를 제공하지 않습니다. 파일이 업로드되지 않으면 위의 검증 도구를 사용하여 문제를 파악하고 해결하세요.
 
-서비스팀은 파일 수정 서비스를 제공하지 않습니다. 파일이 업로드되지 않으면 위의 검증 도구를 사용하여 문제를 파악하고 해결하세요.
-
-이 가이드는 서비스 팀의 수동 문제 해결 없이도 업로드를 성공적으로 완료할 수 있도록 돕기 위해 작성되었습니다.
+* 이 문서는 서비스 팀의 수동 문제 해결 없이도 업로드를 성공적으로 완료할 수 있도록 돕기 위해 작성되었습니다.
 
 :::
