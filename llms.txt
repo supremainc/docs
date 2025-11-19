@@ -529,7 +529,7 @@
 - [감도 설정하기](/docs/platform/biostar_air/suprema-pass-app-sensitivity-settings): Suprema Pass 앱에서 블루투스 인식 감도를 조정하여 의도치 않은 인증 방지, 인식 거리 개선, Apple Pay 간섭 문제 해결 방법을 안내합니다.
 - [일괄 사용자 추가 문제](/docs/platform/biostar_air/troubleshooting-adding-users-in-bulk): BioStar Air 포털을 사용하여 사용자를 일괄 추가할 때 발생하는 일반적인 문제를 해결하는 방법을 알아보세요.
 - [문제 해결 - 내 모바일 카드가 작동하지 않아요.](/docs/platform/biostar_air/troubleshooting-suprema-pass-app): Suprema Pass 앱에서 모바일 카드 인증 문제, Bluetooth 및 위치 권한 문제, 연결 실패 해결 방법을 안내합니다.
-- [사용자 카드 및 크리덴셜 종류](/docs/platform/biostar_air/user-card-types): BioStar Air에서 일반 사용자를 위한 모바일 카드, QR 코드, RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 종류에 대해 안내합니다.
+- [사용자 카드 및 크리덴셜 종류](/docs/platform/biostar_air/user-card-types): BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.
 - [카메라가 녹화된 비디오 재생을 지원하는지 확인하기](/docs/platform/biostar_air/video-troubleshooting): BioStar Air에서 비디오 재생 문제 해결 및 ONVIF Profile G 지원 여부, 코덱 호환성, SD 카드 포맷 문제 해결 방법을 안내합니다.
 - [BioStar Air란?](/docs/platform/biostar_air/what-is-biostar-air): BioStar Air는 보안을 강화하고 관리를 간소화하는 다양한 기능을 제공하는 클라우드 기반 출입 통제 솔루션입니다.
 - [E200 QR Scanner 배선 및 구성](/docs/platform/biostar_air/wiring-and-configuration): 최적의 성능을 위해 BioStar Air 장치의 배선 및 구성 방법을 안내합니다.

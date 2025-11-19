@@ -264,7 +264,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "admin_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "를 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-setting-admin.png"
             }), "\n"]
@@ -311,7 +311,7 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device_submenu",
             product: "air"
-          }), "로 이동하세요."]
+          }), "를 클릭하세요."]
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-gettingstarted-device-mng.png"
         }), (0,jsx_runtime.jsxs)(_components.ul, {
@@ -343,7 +343,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-mng.png"
             }), "\n"]
@@ -395,7 +395,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_groups_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-group-mng.png"
             }), "\n"]
@@ -448,7 +448,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "holiday_groups_submenu",
                 product: "air"
-              }), "으로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-holiday-group-mng.png"
             }), "\n"]
@@ -498,7 +498,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "schedules_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-schedule.png"
             }), "\n"]
@@ -542,7 +542,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_levels_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-access-level-mng.png"
             }), "\n"]
@@ -586,7 +586,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_groups_submenu",
                 product: "air"
-              }), "으로 이동하세요."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng.png"
             }), "\n"]
@@ -621,7 +621,7 @@ function _createMdxContent(props) {
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_submenu",
                 product: "air"
-              }), "로 이동하세요."]
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

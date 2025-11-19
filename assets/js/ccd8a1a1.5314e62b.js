@@ -92,48 +92,42 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "기능 개요",
-  "id": "feature-overview",
-  "level": 2
-}, ..._biostarair_customer_notice/* .toc */.RM, {
-  "value": "사용자 그룹으로 이동",
-  "id": "navigating-to-user-groups",
+const toc = [..._biostarair_customer_notice/* .toc */.RM, {
+  "value": "사용자 그룹 만들기",
+  "id": "creatingUserGroup",
   "level": 2
 }, {
-  "value": "사용자 그룹 만들기",
-  "id": "creating-a-user-group",
+  "value": "하위 그룹 만들기",
+  "id": "creatingSubgroup",
   "level": 2
 }, {
   "value": "그룹에 사용자 할당하기",
   "id": "assigning-users-to-a-group",
   "level": 2
 }, {
-  "value": "하위 그룹 만들기",
-  "id": "creating-subgroups",
+  "value": "그룹 해제 또는 이동",
+  "id": "disableGroup",
   "level": 2
-}, {
-  "value": "하위 그룹 만들기",
-  "id": "to-create-a-subgroup:",
-  "level": 3
-}, {
-  "value": "하위 그룹에 사용자 할당하기",
-  "id": "assigning-users-to-a-subgroup:",
-  "level": 3
 }, {
   "value": "사용자 그룹 이해하기",
   "id": "understanding-user-group-totals",
   "level": 2
 }, {
+  "value": "사용자 그룹 구성",
+  "id": "사용자-그룹-구성",
+  "level": 3
+}, {
   "value": "사용자는 여러 사용자 그룹에 포함할 수 있나요?",
   "id": "can-a-user-belong-to-multiple-user-groups",
-  "level": 2
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
     blockquote: "blockquote",
     h2: "h2",
     h3: "h3",
+    hr: "hr",
     li: "li",
     ol: "ol",
     p: "p",
@@ -141,171 +135,250 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {YouTube} = _components;
+  }, {Cmd, IcAirGroup, Image, YouTube} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAirGroup) _missingMdxReference("IcAirGroup", true);
+  if (!Image) _missingMdxReference("Image", true);
   if (!YouTube) _missingMdxReference("YouTube", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "feature-overview",
-      children: "기능 개요"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air의 관리자는 사용자 그룹을 통해 부서, 역할 또는 기타 분류를 기준으로 사용자를 분류할 수 있습니다. 이를 통해 출입 통제를 보다 효율적으로 구성하고 관리할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsx)(YouTube, {
-      videoId: "sNxu5pQuOsI"
-    }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "navigating-to-user-groups",
-      children: "사용자 그룹으로 이동"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 그룹을 관리하세요."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar Air 포털에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "User Management"
-          }), "로 이동합니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "User Groups"
-          }), "을 클릭하고 기존 그룹을 확인하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["여기에서 사용자 그룹을 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "추가"
-          }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "편집"
-          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "삭제"
-          }), "할 수 있습니다."]
-        }), "\n"]
-      }), "\n"]
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "BioStar Air에서 관리자는 사용자 그룹을 통해 부서, 역할 또는 기타 분류를 기준으로 사용자를 분류할 수 있습니다. 이를 통해 출입 통제를 보다 효율적으로 구성하고 관리할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "tip",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "사용자 그룹 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요."
+      }), (0,jsx_runtime.jsx)(YouTube, {
+        videoId: "sNxu5pQuOsI"
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "creating-a-user-group",
+      id: "creatingUserGroup",
       children: "사용자 그룹 만들기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "새로운 사용자 그룹을 만드세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Add User Group"
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_groups_submenu",
+            product: "air"
           }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "그룹 이름을 입력하세요."
-        }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "예, 법무팀"
-          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-gettingstarted-user-group-mng.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["그룹을 생성하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "OK"
-          }), "를 클릭하세요."]
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_user_group_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_user_group_popup_title",
+            product: "air"
+          }), " 창이 나타나면 사용자 그룹 이름을 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-gettingstarted-user-group-mng-add.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["그룹을 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "creatingSubgroup",
+      children: "하위 그룹 만들기"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["하위 그룹을 사용해 사용자 그룹을 더 세부적으로 분류할 수 있습니다. 하지만 하위 그룹은 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "계층적이지 않습니다"
+      }), ". 즉, 하위 그룹의 사용자는 상위 그룹에 자동으로 포함되지 않습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_groups_submenu",
+            product: "air"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_user_group_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_user_group_popup_title",
+            product: "air"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_sub_group_text",
+            product: "air"
+          }), " 옵션을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-sub-group-popup.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "select_group_placeholder",
+            product: "air"
+          }), "에서 상위 그룹을 선택하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_subgroup_name_input",
+            product: "air"
+          }), "에 그룹 이름을 입력하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["하위 그룹을 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "생성된 하위 그룹은 사용자 그룹 목록에서 상위 그룹 아래에 들여쓰기되어 표시됩니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-user-sub-group-list.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "assigning-users-to-a-group",
       children: "그룹에 사용자 할당하기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 그룹이 생성되면 사용자를 추가할 수 있습니다."
+      children: "사용자 그룹을 생성한 후 사용자를 추가하세요."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "User Management"
-          }), " 아래의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Users"
-          }), "로 이동하세요."]
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_submenu",
+            product: "air"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "할당할 사용자를 선택하세요."
+          children: "사용자 목록에서 앞서 생성한 그룹에 할당할 사용자의 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Manage Group"
-          }), "을 클릭하세요."]
+          children: ["사용자 목록 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirGroup, {}), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-group-assign.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 그룹을 선택하고 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "OK"
-          }), "를 클릭하세요."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "manage_user_groups_header",
+            product: "air"
+          }), " 창이 나타나면 사용자를 할당할 상위 그룹 또는 하위 그룹을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-user-group-assign-popup.png",
+          width: "50%"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["선택을 완료하고 그룹 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "User Groups"
-      }), " 인터페이스로 돌아가면 각 그룹의 사용자 수가 업데이트된 것을 확인할 수 있습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "creating-subgroups",
-      children: "하위 그룹 만들기"
+      children: ["사용자 목록의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "user_table_column5",
+        product: "air"
+      }), " 열에서 사용자가 새 그룹에 할당된 것을 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-user-group-assign-result.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["하위 그룹을 사용하면 사용자 그룹 내에서 더 세부적으로 분류할 수 있습니다. 하지만 하위 그룹은 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "계층적이지 않습니다"
-      }), ". 즉, 하위 그룹의 사용자는 상위 그룹에 자동으로 포함되지 않습니다."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "to-create-a-subgroup:",
-      children: "하위 그룹 만들기"
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "user_groups_submenu",
+        product: "air"
+      }), "으로 돌아가면 해당 그룹의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "user_groups_table_col2",
+        product: "air"
+      }), "가 업데이트된 것을 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "disableGroup",
+      children: "그룹 해제 또는 이동"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자를 그룹에서 해제하거나 다른 그룹으로 이동할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "user_submenu",
+            product: "air"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "상위 그룹을 선택하세요."
+          children: "사용자 목록에서 그룹에서 해제하거나 이동할 사용자의 체크박스를 클릭하세요."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "그룹 이동 시에는 동일한 그룹의 사용자를 선택한 후 진행하세요."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Add Subgroup"
-          }), "을 클릭하고 이름을 입력하세요."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "예: 민사팀"
+          children: ["사용자 목록 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirGroup, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "manage_user_groups_header",
+            product: "air"
+          }), " 창이 나타나면 다음 중 하나를 수행하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "그룹을 해제할 때는 선택된 그룹의 체크박스를 비활성화하세요."
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "그룹을 이동할 때는 선택된 그룹의 체크박스를 활성화하고, 이동할 그룹을 선택하세요."
+            }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["하위 그룹을 생성하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "OK"
-          }), "를 클릭하세요."]
+          children: ["그룹 설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "assigning-users-to-a-subgroup:",
-      children: "하위 그룹에 사용자 할당하기"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "User Management"
-          }), " 아래의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Users"
-          }), "로 이동하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "할당할 사용자를 선택하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Manage Group"
-          }), "을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["상위 그룹 아래의 하위 그룹을 선택하고 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "OK"
-          }), "를 클릭하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자 목록의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "user_table_column5",
+        product: "air"
+      }), " 열에서 사용자의 그룹 변경 사항을 확인할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "understanding-user-group-totals",
       children: "사용자 그룹 이해하기"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "사용자-그룹-구성",
+      children: "사용자 그룹 구성"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "사용자 그룹은 계층적으로 구성되어 있지 않습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -324,13 +397,11 @@ function _createMdxContent(props) {
           children: "하위 그룹을 선택하면 해당 하위 그룹에 할당된 사용자만 표시됩니다."
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "can-a-user-belong-to-multiple-user-groups",
       children: "사용자는 여러 사용자 그룹에 포함할 수 있나요?"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "네"
-      }), ". BioStar Air의 사용자는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["BioStar Air의 사용자는 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "여러 사용자 그룹"
       }), "의 구성원이 될 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -338,7 +409,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "그룹별로 사용자 목록을 필터링하여 액세스 등급을 빠르게 관리할 수 있습니다."
+          children: "그룹별로 사용자 목록을 필터링하여 출입 레벨을 빠르게 관리할 수 있습니다."
         }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "예, 인사부"
@@ -346,7 +417,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "여러 부서를 아우르는 상황에 맞는 그룹을 만듭니다."
+          children: "여러 부서를 아우르는 상황에 맞는 그룹을 만들 수 있습니다."
         }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "예, 남자 탈의실"

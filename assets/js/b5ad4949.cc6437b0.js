@@ -179,7 +179,7 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "로 이동하세요."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -447,7 +447,7 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "로 이동하세요."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

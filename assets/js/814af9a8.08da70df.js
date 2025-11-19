@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-05-user-management-user-card-types-mdx-814.json
-var site_docs_platform_biostar_air_05_user_management_user_card_types_mdx_814_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air에서 일반 사용자를 위한 모바일 카드, QR 코드, RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 종류에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/05-user-management-user-card-types.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-card-types","permalink":"/docs/platform/biostar_air/user-card-types","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/05-user-management-user-card-types.mdx","tags":[],"version":"current","sidebarPosition":5,"frontMatter":{"id":"user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air에서 일반 사용자를 위한 모바일 카드, QR 코드, RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 종류에 대해 안내합니다.","keywords":["사용자 관리","BioStar Air","사용자 카드 유형"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-users-in-bulk"},"next":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-user-groups"}}')
+var site_docs_platform_biostar_air_05_user_management_user_card_types_mdx_814_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","source":"@site/docs/platform/biostar_air/05-user-management-user-card-types.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-card-types","permalink":"/docs/platform/biostar_air/user-card-types","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/05-user-management-user-card-types.mdx","tags":[],"version":"current","sidebarPosition":5,"frontMatter":{"id":"user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","keywords":["사용자 관리","BioStar Air","사용자 카드 유형"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-users-in-bulk"},"next":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-user-groups"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -75,7 +75,7 @@ var _biostarair_customer_notice = __webpack_require__(20993);
 const frontMatter = {
 	id: 'user-card-types',
 	title: '사용자 카드 및 크리덴셜 종류',
-	description: 'BioStar Air에서 일반 사용자를 위한 모바일 카드, QR 코드, RF 카드, 임시 사용자를 위한 웹 기반 자격 증명 등 사용자 카드 종류에 대해 안내합니다.',
+	description: 'BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.',
 	keywords: [
 		'사용자 관리',
 		'BioStar Air',
