@@ -732,6 +732,10 @@ body[data-rh] .redocusaurus {
     }
   }
   
+  blockquote {
+    margin-top: .5rem;
+  }
+
   // ul ul, ul ol, ol ol, ol ul {
   //   margin: 1rem 0;
   // }
@@ -940,6 +944,9 @@ body[data-rh] .redocusaurus {
   }
   span.require {
     color: #ff274e;
+  }
+  span.air-remove {
+    color: #EE94A5
   }
 
   pre * {
