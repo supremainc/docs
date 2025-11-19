@@ -72399,6 +72399,8 @@ As long as your wiring is correct and your Suprema reader has an active network 
 
 This document provides various features and configuration methods of **BioStar X**. We provide extensive and diverse guidance to help you make the most out of all the features of **BioStar X**. Follow the step-by-step guide to easily and quickly implement **BioStar X**.
 
+![](/docs/en/img/common/bsx-main_2n.jpg)
+
 ***
 
 #### [Overview→2 items](/docs/en/platform/biostar_x/overview)

@@ -61,8 +61,10 @@ function _createMdxContent(props) {
     strong: "strong",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Overview} = _components;
+  }, {Image, Overview, PageBreak} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   if (!Overview) _missingMdxReference("Overview", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "welcome-to-the-biostar-x-user-guide",
@@ -81,7 +83,10 @@ function _createMdxContent(props) {
       }), ". Follow the step-by-step guide to easily and quickly implement ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/bsx-main_2n.jpg",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }
 function MDXContent(props = {}) {

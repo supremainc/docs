@@ -61,8 +61,10 @@ function _createMdxContent(props) {
     strong: "strong",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Overview} = _components;
+  }, {Image, Overview, PageBreak} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   if (!Overview) _missingMdxReference("Overview", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
       id: "biostar-x-사용자-가이드-문서에-오신-것을-환영합니다",
@@ -81,7 +83,10 @@ function _createMdxContent(props) {
       }), "의 모든 기능을 최대한 활용할 수 있도록 도와드립니다. 단계별 안내를 따라 쉽고 빠르게 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
       }), "를 도입해보세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/common/bsx-main_2n.jpg",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(Overview, {})]
   });
 }
 function MDXContent(props = {}) {
