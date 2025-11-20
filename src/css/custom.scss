@@ -932,14 +932,33 @@ footer {
   span.air-remove {
     color: #EE94A5
   }
+  span.rect {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+  }
+  span.green {
+    border-color: #22A992;
+    color: #22A992;
+    background-color: #E9F9F5;
+  }
 
   pre * {
     font-family: 'Noto Sans Coptic';
   }
   // Column width
+  .columns:has(h2) {
+    margin-top: 2rem;
+  }
   .columns {
     .col {
       height: fit-content;
+      h2 {
+        padding-top: 0;
+      }
       ul li {
         margin-top: 0;
       }
@@ -976,6 +995,9 @@ footer {
     }
     .padding--l20 {
       padding-left: 20px !important;
+    }
+    .padding--l40 {
+      padding-left: 40px !important;
     }
   }
 
