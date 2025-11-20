@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-07-user-management-managing-card-templates-mdx-d26.json
-var site_docs_platform_biostar_air_07_user_management_managing_card_templates_mdx_d26_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-card-templates","title":"카드 템플릿 관리하기","description":"BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/07-user-management-managing-card-templates.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-card-templates","permalink":"/docs/platform/biostar_air/managing-card-templates","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/07-user-management-managing-card-templates.mdx","tags":[],"version":"current","sidebarPosition":7,"frontMatter":{"id":"managing-card-templates","title":"카드 템플릿 관리하기","description":"BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.","keywords":["카드 템플릿","BioStar Air","사용자 관리"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-user-groups"},"next":{"title":"BioStar Air 앱에서 사용자 관리 및 추가하기","permalink":"/docs/platform/biostar_air/managing-adding-users"}}')
+var site_docs_platform_biostar_air_07_user_management_managing_card_templates_mdx_d26_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-card-templates","title":"카드 템플릿 관리하기","description":"BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/07-user-management-managing-card-templates.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-card-templates","permalink":"/docs/platform/biostar_air/managing-card-templates","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/07-user-management-managing-card-templates.mdx","tags":[],"version":"current","sidebarPosition":7,"frontMatter":{"id":"managing-card-templates","title":"카드 템플릿 관리하기","description":"BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.","keywords":["카드 템플릿","BioStar Air","사용자 관리"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-user-groups"},"next":{"title":"모바일 앱에서 사용자 관리하기","permalink":"/docs/platform/biostar_air/managing-adding-users"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -302,6 +302,13 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-user-mobile-card-template-card-config-font.png",
               width: "80%"
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "app_display_theme",
+                product: "air"
+              }), "에서 다크 모드 또는 라이트 모드를 선택할 수 있습니다."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
