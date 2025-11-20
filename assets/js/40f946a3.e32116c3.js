@@ -142,6 +142,19 @@ function _createMdxContent(props) {
               children: "다음 문서"
             }), "를 참고하세요."]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치를 등록하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "디바이스 매니저"
+            }), " 이상의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {

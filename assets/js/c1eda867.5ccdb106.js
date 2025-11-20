@@ -125,6 +125,16 @@ function _createMdxContent(props) {
               docId: "platform/biostar_x/settings-device-details"
             }), "\n"]
           }), "\n"]
+        }), (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["장치를 등록하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "디바이스 매니저"
+            }), " 이상의 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "licensing",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h2, {

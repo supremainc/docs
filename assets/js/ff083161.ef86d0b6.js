@@ -242,6 +242,10 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "Mac 운영체제에서 제공하는 부트 캠프의 Windows 가상 환경은 지원하지 않습니다."
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다. 더 많은 장치를 연결하려면 커뮤니케이션 서버를 추가하세요."
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -398,6 +402,11 @@ function _createMdxContent(props) {
             })]
           })]
         })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "client",

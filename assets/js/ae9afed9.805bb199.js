@@ -582,6 +582,21 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "로그인 실패 사유"
+            }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "audit.system.loginfailedfingerprint",
+              product: "2"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "audit.system.loginfailedidpw",
+              product: "2"
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "audit.system.loginfailedip",
+              product: "2"
+            })]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "로그인 실패 횟수 초과"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.maximum_invalid_attempts",

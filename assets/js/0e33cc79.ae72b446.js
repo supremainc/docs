@@ -91,6 +91,11 @@ function _createMdxContent(props) {
       }), " 설치 방법을 안내합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다."
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "start-before",
       children: "시작하기 전에"
