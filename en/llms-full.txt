@@ -71459,10 +71459,10 @@ Learn how to manage users in BioStar Air Portal, perform bulk operations, add an
 
 * [Adding Individual Users](/docs/en/platform/biostar_air/adding-individual-users)
 * [Adding Users in Bulk](/docs/en/platform/biostar_air/adding-users-in-bulk)
-* [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
 * [Managing User Groups](/docs/en/platform/biostar_air/managing-user-groups)
 * [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates)
 * [Managing and Adding Users in the BioStar Air App](/docs/en/platform/biostar_air/managing-adding-users)
+* [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
 * [LinkPass Credentials](/docs/en/platform/biostar_air/linkpass-credentials)
 
 #### Device Management→6 items

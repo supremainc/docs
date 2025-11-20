@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-05-user-management-user-card-types-mdx-814.json
-var site_docs_platform_biostar_air_05_user_management_user_card_types_mdx_814_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","source":"@site/docs/platform/biostar_air/05-user-management-user-card-types.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-card-types","permalink":"/docs/platform/biostar_air/user-card-types","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/05-user-management-user-card-types.mdx","tags":[],"version":"current","sidebarPosition":5,"frontMatter":{"id":"user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","keywords":["사용자 관리","BioStar Air","사용자 카드 유형"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-users-in-bulk"},"next":{"title":"사용자 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-user-groups"}}')
+var site_docs_platform_biostar_air_05_user_management_user_card_types_mdx_814_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","source":"@site/docs/platform/biostar_air/05-user-management-user-card-types.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-card-types","permalink":"/docs/platform/biostar_air/user-card-types","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/05-user-management-user-card-types.mdx","tags":[],"version":"current","sidebarPosition":5,"frontMatter":{"id":"user-card-types","title":"사용자 카드 및 크리덴셜 종류","description":"BioStar Air 2.6 버전 이상에서 지원하는 사용자 유형(일반/임시)과 각 유형별 크리덴셜을 안내합니다. 일반 사용자는 Mobile Card, RF Card, QR 코드, LinkPass, Face, PIN을, 임시 사용자는 웹 기반 Dynamic QR 코드와 LinkPass를 사용할 수 있습니다.","keywords":["사용자 관리","BioStar Air","사용자 카드 유형"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"모바일 앱에서 사용자 관리하기","permalink":"/docs/platform/biostar_air/managing-adding-users"},"next":{"title":"링크패스 크리덴셜","permalink":"/docs/platform/biostar_air/linkpass-credentials"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -283,6 +283,14 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭해 출입할 수 있습니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["링크패스 크리덴셜에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "linkpass-credentials",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "face",
       children: "얼굴 인증"
@@ -347,6 +355,14 @@ function _createMdxContent(props) {
         sid: "web_card_preview_button1",
         product: "air"
       }), " 버튼을 클릭하면 출입할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["링크패스 크리덴셜에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "linkpass-credentials",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "managing-access-levels",
       children: "출입 레벨 관리"

@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-08-user-management-managing-and-adding-users-mdx-ca7.json
-var site_docs_platform_biostar_air_08_user_management_managing_and_adding_users_mdx_ca7_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-adding-users","title":"모바일 앱에서 사용자 관리하기","description":"BioStar Air 모바일 앱을 통해 사용자 관리 및 일괄 작업 수행, 새 사용자 추가 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/08-user-management-managing-and-adding-users.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-adding-users","permalink":"/docs/platform/biostar_air/managing-adding-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/08-user-management-managing-and-adding-users.mdx","tags":[],"version":"current","sidebarPosition":8,"frontMatter":{"id":"managing-adding-users","title":"모바일 앱에서 사용자 관리하기","description":"BioStar Air 모바일 앱을 통해 사용자 관리 및 일괄 작업 수행, 새 사용자 추가 방법을 안내합니다.","keywords":["사용자 관리","BioStar Air","모바일 앱"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"카드 템플릿 관리하기","permalink":"/docs/platform/biostar_air/managing-card-templates"},"next":{"title":"LinkPass 크리덴셜","permalink":"/docs/platform/biostar_air/linkpass-credentials"}}')
+var site_docs_platform_biostar_air_08_user_management_managing_and_adding_users_mdx_ca7_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-adding-users","title":"모바일 앱에서 사용자 관리하기","description":"BioStar Air 모바일 앱을 통해 사용자 관리 및 일괄 작업 수행, 새 사용자 추가 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/08-user-management-managing-and-adding-users.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-adding-users","permalink":"/docs/platform/biostar_air/managing-adding-users","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/08-user-management-managing-and-adding-users.mdx","tags":[],"version":"current","sidebarPosition":8,"frontMatter":{"id":"managing-adding-users","title":"모바일 앱에서 사용자 관리하기","description":"BioStar Air 모바일 앱을 통해 사용자 관리 및 일괄 작업 수행, 새 사용자 추가 방법을 안내합니다.","keywords":["사용자 관리","BioStar Air","모바일 앱"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"카드 템플릿 관리하기","permalink":"/docs/platform/biostar_air/managing-card-templates"},"next":{"title":"사용자 카드 및 크리덴셜 종류","permalink":"/docs/platform/biostar_air/user-card-types"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -489,7 +489,8 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(Column, {
         className: "width--40",
         children: (0,jsx_runtime.jsx)(Image, {
-          src: "/img/air/bsair-app-mng-user-group.png"
+          src: "/img/air/bsair-app-mng-user-group.png",
+          className: "none"
         })
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "padding--l40",
