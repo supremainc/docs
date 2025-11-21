@@ -832,6 +832,7 @@
   "audit.menu.setting.face_group": "Face Group Matching",
   "audit.menu.setting.holiday_group": "Holiday",
   "audit.menu.setting.image_filter": "Image Log",
+  "audit.menu.setting.ir_face_group": "IR Face Group Matching",
   "audit.menu.setting.mobileCredential": "Mobile Credential",
   "audit.menu.setting.output_signal": "Output Signal",
   "audit.menu.setting.permission": "Account",
@@ -4491,10 +4492,14 @@
   "setting.lastUpdateVersionForUserSync": "User synchronization version",
   "setting.maxBackdateMonthForEventSync": "Event synchronization period",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
   "setting.menu.remoteAccessExternal.root": "External Remote Access",
 >>>>>>> origin/bsx@1.0.0(2)
+=======
+  "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
+>>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "setting.mobileCredentail.setting_complete": "Do you want to complete the mobile access setup?",
   "setting.mobileCredential.addDeviceSuccess": "Succeeded to transfer mobile credential certificate to selected devices.",
   "setting.mobileCredential.allDeleteDevice": "Mobile credential certificates loaded on all devices will be deleted. The mobile credential will not work after proceeding.",
@@ -5474,7 +5479,7 @@
   "user.credential.IRFace": "IR Face",
   "user.credential.barcode": "QR/Barcode",
   "user.credential.cardEnroll.smartCard.mobile": "Enroll Mobile Card",
-  "user.credential.face": "Face",
+  "user.credential.face": "IR Face / Face",
   "user.credential.list.assignedList.registered": "Registered Card",
   "user.credential.list.smartCard.mobileAoC": "Access on Card(Mobile)",
   "user.credential.list.smartCard.mobileSC": "Secure Credential Card(Mobile)",

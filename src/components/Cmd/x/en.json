@@ -21,7 +21,11 @@
   "auth.passwordChange.newPassword": "New Password",
   "auth.passwordChange.confirmNewPassword": "Confirm New Password",
   "auth.passwordChange.currentPassword": "Current Password",
+<<<<<<< HEAD
   "auth.passwordChange.invalidPassword": "Invalid Password",
+=======
+  "auth.passwordChange.success": "Password has been changed.",
+>>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "data.pageTitle": "BioStar X",
   "data.all": "All",
   "data.object": "Object",
@@ -289,6 +293,10 @@
   "data.video.status.disconnect": "No Signal",
   "data.video.status.remoteAccess": "Video playback is not available when connected through Remote Access.",
   "data.video.status.noRecording": "No recording",
+  "data.printReason": "Print Reason",
+  "data.exportReason": "Export Reason",
+  "data.csvExport": "CSV Export",
+  "data.csvConfirm": "Please click Download to export the CSV file.",
   "alertHistory.memo": "Memo",
   "alertHistory.status_1": "Acknowledged",
   "alertHistory.status_0": "Unacknowledged",
@@ -911,6 +919,12 @@
   "team.user.period.today": "Today",
   "team.user.detail.ip": "Login Allowed IP",
   "team.user.detail.title": "Title",
+<<<<<<< HEAD
+=======
+  "team.user.detail.customfield.file.tooltip": "Maximum file size: 1MB\nFilename length: Min 1 char Max 120 char\nAllowed filename characters: alphanumeric, underscore ( _ ) and hyphen ( - ). Only use dot/period ( . ) for separating base file name and extension.",
+  "team.user.detail.customfield.file.maxSize": "Maximum file size is 1MB",
+  "team.user.detail.deviceDisplayMessage": "Device Display Message",
+>>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "team.userTemplate.title": "User Template",
   "team.userTemplate.newTemplate": "New User Template",
   "team.userTemplate.id": "ID",
@@ -953,9 +967,9 @@
   "team.menu.faceMigration": "Face Migration",
   "team.menu.columnLayout": "Column Layout",
   "team.menu.print": "Print",
+  "team.menu.printReason": "Print Reason",
   "team.menu.dialog.exprotDataFile.title": "Data File Export",
   "team.menu.feedback.invalidUsers": "User must be selected.",
-  "team.menu.printReason": "Print Reason",
   "team.csv.list.userField": "User Data Field",
   "team.csv.list.userDataField": "Column in CSV File",
   "team.csv.partialError": "CSV import completed with some errors. Please refer to the failure detail report to review the fields with errors.",
@@ -982,6 +996,11 @@
   "user.list.csvImport.importStartRow": "Start import at row",
   "user.list.visualFileImport.duplicateUser": "If Face Exists",
   "tema.user.list.advSearchTitle": "Search Result ({0})",
+<<<<<<< HEAD
+=======
+  "ACB_ERROR_CODE.124": "Invalid Password",
+  "ACB_ERROR_CODE.237": "Modifications to the Administrator account with User ID 1 are not allowed.",
+>>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "ACB_ERROR_CODE.343": "Duplicate Device ID.",
   "ACB_ERROR_CODE.599": "There are items under this group. Groups cannot be deleted with child items. Please try again after removing them first.",
   "ACB_ERROR_CODE.655": "Access group name contains special characters that cannot be used. Please exclude /.",
@@ -1112,6 +1131,7 @@
   "setting.menu.preferences.root": "Preferences",
   "setting.menu.idScanner.root": "ID Scanner",
   "setting.menu.remoteAccess.root": "Remote Access",
+  "setting.menu.remoteAccessExternal.root": "External Remote Access",
   "setting.area.table.title": "All Areas",
   "setting.area.table.selectArea": "Selected Items",
   "setting.area.table.action.newArea": "New Area",
@@ -1233,6 +1253,7 @@
   "setting.remoteAccess.dialog.content.noTunneling": "The tunneling service will be disabled. Do you want to continue?",
   "setting.remoteAccess.dialog.content.overview1": "YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK AND THAT THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE.\"\nNOTHING IN THESE TERMS SHALL EXCLUDE OR LIMIT NGROK's WARRANTY OR LIABILITY FOR LOSSES WHICH MAY NOT BE LAWFULLY EXCLUDED OR LIMITED BY APPLICABLE LAW.\nNGROK MAKES NO EXPRESS WARRANTIES AND DISCLAIMS ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE SERVICES, INCLUDING EXPRESS AND IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, NGROK DOES NOT REPRESENT OR WARRANT TO YOU THAT: \n(A) YOUR USE OF THE SERVICES WILL MEET YOUR REQUIREMENTS, \nOR (B) YOUR USE OF THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR FREE FROM ERROR.",
   "setting.remoteAccess.dialog.content.overview2": "YOU EXPRESSLY UNDERSTAND AND AGREE THAT TO THE EXTENT PERMITTED BY APPLICABLE LAW, NGROK SHALL NOT BE LIABLE TO YOU UNDER BREACH OF CONTRACT, TORT, OR ANY OTHER LEGAL THEORY\n(A) FOR ERRORS IN THE NGROK SERVICES OR MATERIALS, LOSS OR INACCURACY OR CORRUPTION OF DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, OR LOSS OF PROFITS OR BUSINESS; \n(B) FOR ANY INDIRECT, EXEMPLARY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, WHETHER OR NOT NGROK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES; \n(C) FOR ANY MATTER BEYOND NGROK'S REASONABLE CONTROL; OR \n(D) FOR ANY AMOUNTS THAT, IN THE AGGREGATE, EXCEED THE GREATER OF (I) $100 OR (II) THE AMOUNT PAID OR PAYABLE BY YOU TO NGROK FOR THE NGROK SERVICES IN THE SIX (6) MONTHS PRIOR TO THE ACT THAT GAVE RISE TO THE LIABILITY.",
+  "setting.remoteAccess.dialog.concurrentWarning": "Remote Access is already in use, so the External Remote Access settings cannot be saved.",
   "setting.remoteAccess.button.confirmation": "I have read and agree to the above.",
   "setting.remoteAccess.button.agree": "Agree",
   "setting.remoteAccess.validation.hostUrl": "Invalid format. Please enter a valid Host URL.",
@@ -1724,5 +1745,24 @@
   "mbl.long.pressed.warning": "Long press to manually change status.",
   "mbl.note": "Note",
   "mbl.rollcall.already.ended.by.another.operator": "The Roll Call has already been ended by another operator.",
+<<<<<<< HEAD
   "mbl.permission.with.code": "Permission Denied. ({0})"
+=======
+  "mbl.permission.with.code": "Permission Denied. ({0})",
+  "mbl.door.search.placeholder": "{value1} displayed of total {value2}",
+  "mbl.auth.password.confirm.title": "Confirm password",
+  "mbl.remember.password": "Remember username and password",
+  "mbl.input.error.user.required": "User is required",
+  "mbl.input.error.password.required": "Password is required",
+  "mbl.input.error.password.match": "Password doesn''t match",
+  "mbl.service.information": "Service Information",
+  "mbl.changes.confirmation": "Changes Confirmation",
+  "mbl.biometrics.login.title": "Biometrics Login",
+  "mbl.biometrics.information": "Biometrics Information",
+  "mbl.biometrics.locked.out": "We''ve temporarily paused this action because there were too many attempts. Please try again in 30 seconds.",
+  "mbl.biometrics.authenticate.to.continue": "Authenticate to continue",
+  "mbl.biometrics.confirmation.dialog": "Confirmation using Biometrics",
+  "mbl.auto.login": "Auto Login",
+  "mbl.app.setting.title": "App Setting"
+>>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
 }
