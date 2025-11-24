@@ -690,6 +690,9 @@
     "message": "릴레이"
   },
   "specs.power.poe12vout": {
+    "message": "PoE (12V 출력)"
+  },
+  "specs.power.poe_plus12vout": {
     "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
