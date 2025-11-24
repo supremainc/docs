@@ -59,12 +59,12 @@ To play back recorded video from the VMS server, you must use HTTPS protocol. Ge
    <Tabs groupId='os' defaultValue='Windows'>
    <TabItem value="Windows">
    ```java
-   java -jar scaleUtil-1.0-all.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
    ```
    </TabItem>
    <TabItem value="Linux">
    ```java
-   java -jar scaleUtil-1.0-all.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
    ```
    </TabItem>
    </Tabs>
