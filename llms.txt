@@ -563,6 +563,7 @@
 - [출입 카드 등록하기](/docs/platform/biostar_x/enroll-credential-card): 사용자에게 CSN, Wiegand, 스마트 카드를 등록하는 과정을 안내합니다.
 - [얼굴 등록하기](/docs/platform/biostar_x/enroll-credential-face): 출입을 위한 인증 수단으로 사용자의 얼굴을 등록해 사용할 수 있습니다. 얼굴 등록은 사용자의 얼굴을 카메라로 촬영한 인증 수단입니다.
 - [지문 등록하기](/docs/platform/biostar_x/enroll-credential-fingerprint): 출입을 위한 인증 수단으로 사용자의 지문을 등록해 사용할 수 있습니다. 지문 인증을 지원하는 장치를 통해 사용자의 지문 정보를 등록하세요.
+- [IR 페이스 등록하기](/docs/platform/biostar_x/enroll-credential-ir-face): 출입을 위한 인증 수단으로 사용자의 얼굴을 등록해 사용할 수 있습니다. IR 페이스 등록은 사용자의 얼굴을 적외선 카메라로 촬영한 인증 수단입니다.
 - [모바일 출입 카드 등록하기](/docs/platform/biostar_x/enroll-credential-mobile): 슈프리마의 에어팝 포털(Airfob Portal)과 연동하여 모바일 출입 카드를 사용하면, 사용자에게 모바일 출입 카드를 발급할 수 있습니다.
 - [PIN 등록하기](/docs/platform/biostar_x/enroll-credential-pin): 사용자에게 PIN을 개별 등록하거나 CSV 가져오기를 통해 일괄 등록하는 과정을 안내합니다.
 - [QR/Barcode 등록하기](/docs/platform/biostar_x/enroll-credential-qrbarcode): BioStar X QR 생성 및 외부 발급 QR/Barcode를 사용자 인증 수단으로 등록하는 과정을 안내합니다.

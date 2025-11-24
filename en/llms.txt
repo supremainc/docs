@@ -548,6 +548,7 @@
 - [Enroll Access Card](/docs/en/platform/biostar_x/enroll-credential-card): Guide users on how to enroll CSN, Wiegand, and smart cards.
 - [Enroll Face](/docs/en/platform/biostar_x/enroll-credential-face): You can enroll the user's face as a means of authentication for access control. Facial enrollment is an authentication method that captures the user's face with a camera.
 - [Enroll Fingerprint](/docs/en/platform/biostar_x/enroll-credential-fingerprint): You can enroll the user's fingerprint as a means of authentication for access control. Enroll the user's fingerprint information through a device that supports fingerprint authentication.
+- [IR 페이스 등록하기](/docs/en/platform/biostar_x/enroll-credential-ir-face): 출입을 위한 인증 수단으로 사용자의 얼굴을 등록해 사용할 수 있습니다. IR 페이스 등록은 사용자의 얼굴을 적외선 카메라로 촬영한 인증 수단입니다.
 - [Enroll Mobile Access Cards](/docs/en/platform/biostar_x/enroll-credential-mobile): Integrating with Suprema's Airfob Portal enables issuing mobile access cards to users.
 - [Enroll PIN](/docs/en/platform/biostar_x/enroll-credential-pin): Guide users on how to individually enroll a PIN or bulk enroll via CSV import.
 - [Enroll QR/Barcode](/docs/en/platform/biostar_x/enroll-credential-qrbarcode): Guide to registering BioStar X QR generation and external issuance QR/Barcode as user authentication methods.
