@@ -229,7 +229,7 @@ function _createMdxContent(props) {
                 children: (0,jsx_runtime.jsx)(_components.pre, {
                   children: (0,jsx_runtime.jsx)(_components.code, {
                     className: "language-java",
-                    children: "java -jar scaleUtil-1.0-all.jar vmsCertCreate \"C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\<%VENDOR.NAME%>\\<%VENDOR.NAME%> Media Server\\ssl\" {VMS_IP_ADDRESS}\n"
+                    children: "java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate \"C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\<%VENDOR.NAME%>\\<%VENDOR.NAME%> Media Server\\ssl\" {VMS_IP_ADDRESS}\n"
                   })
                 })
               }), (0,jsx_runtime.jsx)(TabItem, {
@@ -237,7 +237,7 @@ function _createMdxContent(props) {
                 children: (0,jsx_runtime.jsx)(_components.pre, {
                   children: (0,jsx_runtime.jsx)(_components.code, {
                     className: "language-java",
-                    children: "java -jar scaleUtil-1.0-all.jar vmsCertCreate \"/opt/<%VENDOR.NAME%>/mediaserver/var/ssl\" {VMS_IP_ADDRESS}\n"
+                    children: "java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate \"/opt/<%VENDOR.NAME%>/mediaserver/var/ssl\" {VMS_IP_ADDRESS}\n"
                   })
                 })
               })]
