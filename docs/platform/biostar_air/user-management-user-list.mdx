@@ -1,0 +1,111 @@
+---
+id: user-management-user-list
+title: 사용자 관리하기 
+description: 사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.
+keywords: [BioStar Air, 사용자 관리, 사용자 목록]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+<CustomerNote />
+
+## 사용자 목록
+
+사용자 목록에서는 BioStar Air에 등록된 모든 사용자를 한눈에 확인할 수 있습니다. 각 사용자의 세부 정보를 보고, 필터링 및 정렬 기능을 활용하여 특정 사용자를 쉽게 찾을 수 있습니다. 또한, 사용자 목록에서 직접 사용자 편집, 삭제, 그룹 할당 등의 작업을 수행할 수 있습니다.
+
+<Image src='/img/air/bsair-user-list-overview.png' />
+
+화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요. 
+
+### 사용자 목록 정보
+
+사용자 목록의 테이블에서 제공하는 정보는 아래와 같습니다.
+
+* <Cmd sid='user_table_column8' product='air' />: 사용자가 일반 사용자인지 임시 사용자인지 나타냅니다. 일반 및 임시 사용자에 대한 자세한 내용은 [다음 문서](user-card-types)를 참고하세요.
+
+* <Cmd sid='user_table_column1' product='air' />: 사용자의 이름입니다.
+
+* <Cmd sid='user_info_id' product='air' />: 사용자의 고유 아이디입니다.
+
+* <Cmd sid='user_table_column2' product='air' />: 사용자에게 발급한 크리덴셜을 나타냅니다. 크리덴셜의 종류에 대한 자세한 내용은 [다음 문서](user-card-types)를 참고하세요.
+
+* <Cmd sid='user_table_column3' product='air' />: 사용자에게 발급한 크리덴셜의 유효 기간입니다.
+
+* <Cmd sid='user_table_column4' product='air' />: 해당 사용자의 활성화 또는 비활성화 상태를 나타냅니다.
+
+* <Cmd sid='user_table_column5' product='air' />: 사용자가 속한 그룹입니다. 사용자 그룹에 대한 자세한 내용은 [다음 문서](managing-user-groups)를 참고하세요.
+
+* <Cmd sid='user_table_column6' product='air' />: 사용자에게 할당한 출입 레벨입니다. 출입 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* <Cmd sid='user_table_column7' product='air' />: 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+### 사용자 목록 기능
+
+사용자 목록 상단에서 제공하는 기능은 아래와 같습니다.
+
+* <IcAirGroup />: 선택한 사용자에게 그룹을 할당하거나 제외, 이동할 수 있습니다. 사용자 그룹 관리에 대한 자세한 내용은 [다음 문서](managing-user-groups)를 참고하세요.
+
+* 
+
+
+## 사용자 수정 {#editUserDetails}
+
+사용자의 세부 정보를 수정하거나 크리덴셜을 변경하려면 다음 단계를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 사용자 목록에서 수정할 사용자를 클릭하세요.
+
+    <Image src='/img/air/bsair-user-list.png' />
+
+1. 사용자 세부 정보 오른쪽 상단의 <IcAirEdit /> 버튼을 클릭하세요.
+
+    <Image src='/img/air/bsair-user-details.png' />
+
+1. <Cmd sid='user_edit_header' product='air' /> 창이 나타나면 필요한 세부 정보를 수정하세요.
+
+    <Image src='/img/air/bsair-user-details-edit-info.png' />
+
+1. 수정을 완료하면 오른쪽 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 사용자 삭제 {#deleteUser}
+
+:::caution
+
+삭제한 사용자는 복구할 수 없습니다. 삭제하기 전에 반드시 확인하세요.
+
+:::
+
+### 개별 사용자 삭제 {#deleteSingleUser}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 사용자 목록에서 삭제할 사용자를 클릭하세요.
+
+    <Image src='/img/air/bsair-user-list.png' />
+
+1. 사용자 세부 정보에서 <span className='air-remove'><IcAirRemove /></span> 버튼을 클릭하세요.
+
+    <Image src='/img/air/bsair-user-details-remove.png' />
+
+1. 경고 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+### 여러 사용자 삭제 {#deleteMultipleUsers}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 사용자 목록에서 삭제할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
+
+    <Image src='/img/air/bsair-user-list-multi-select.png' />
+
+1. 화면 왼쪽 상단의 <IcAirMore /> → <Cmd sid='delete_action' product='air' />를 클릭하세요.
+
+    <Image src='/img/air/bsair-user-list-multi-select-remove-opt.png' />
+
+1. 경고 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+
+
+
+## 사용자 활성화

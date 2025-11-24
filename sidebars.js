@@ -82,6 +82,7 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/user-management-user-list',
                 'platform/biostar_air/adding-users-in-bulk',
                 'platform/biostar_air/managing-user-groups',
                 'platform/biostar_air/managing-card-templates',
