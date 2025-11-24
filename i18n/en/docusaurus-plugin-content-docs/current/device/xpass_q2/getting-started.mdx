@@ -1,0 +1,161 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpq2.svg' className='none' width={110} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpq2.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass Q2</Td>
+
+<Td>Wall Bracket</Td>
+
+<Td>Quick Guide</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-connection-cables-xpq2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Connection Cables</Td>
+
+<Td>Fixing Screws x2</Td>
+
+<Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+<Td>Diode</Td>
+
+<Td>120 Ω Resistor</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src='/img/device/name-function-each-part-xpq2.png' className='none' width='60%' />
+
+* **LED Indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue: Normal operation.
+
+  * Blue/Green blinking:
+
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
+
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
+
+  * Red/Purple blinking: Device is locked.
+
+  * Yellow blinking: Waiting for an input.
+
+* **LED light**: The LED turns on automatically when motion is detected near the QR/Barcode scanner.
+
+* **QR/Barcode scanner**: Scans QR/Barcode credentials for access.
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **USB (Type-C) Memory Slot**: Connects the USB memory.
+
+* **Reset Button**
+
+  * Initializes network settings. For more information on initializing network settings, refer to [the following](installation#reset-network-settings).
+
+  * Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to [the following](installation#factory-reset).
+
+* **Ethernet**: Connect the Ethernet cable.
+
+* **RS-485 (4-pin)**: Connect the RS-485 cable.
+
+* **Input (5-pin)**: Connect the input cable.
+
+* **Relay (3-pin)**: Connect the Relay cable.
+
+* **Power supply (2-pin)**: Connects the power supply cable.
+
+* **USB expansion port (5-pin)**: Connect other accessory products.
+
+* **Wiegand Input/Output (4-pin)**: Connect the Wiegand input/output cable.
+
+* **Reader power output (3-pin)**: Connect the reader power output cable.
+
+* **Lock power output (3-pin)**: Connect the lock power output cable.
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+## Notes on QR/Barcode and Device License
+
+### Correct QR/Barcode Authentication Method {#how-to-scan-qrbarcode}
+
+You can issue a QR/barcode to the user for use as a means of authentication. Scan the QR/Barcode as instructed to improve recognition.
+
+<Image src='/img/device/qr-scanning-xpq2.svg' className='none' width={300} alone />
+
+* Keep a distance of 5–20 cm between the device7s scanner and the QR/Barcode.
+
+* Position the QR/Barcode in the center of the scanner.
+
+* If authenticating with a QR/barcode downloaded to a mobile device, adjust the brightness of the mobile device to ensure the screen is clearly visible.
+
+* QR/Barcode scanning may take longer or fail if the position, distance, or lighting is inadequate.
+
+### Notes for device license
+
+* A separate device license is required to use QR/barcode authentication. Contact the place of purchase to issue a device license.
+
+* The device license file is an encrypted file and cannot be modified arbitrarily.
+
+* Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.

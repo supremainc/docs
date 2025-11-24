@@ -249,172 +249,172 @@ const config = {
           width: '120px',
         },
         items: [
-          {
-            type: 'doc',
-            label: 'BioStar X',
-            position: 'right',
-            docId: 'platform/biostar_x/index'
-          },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Platforms',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar X',
-          //       docId: 'platform/biostar_x/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar Air',
-          //       docId: 'platform/biostar_air/index'
-          //     }
-          //   ]
-          // },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Devices',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry W3',
-          //       docId: 'device/bioentry_w3/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStation 2a',
-          //       docId: 'device/biostation_2a/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStation 3',
-          //       docId: 'device/biostation_3/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'FaceStation F2',
-          //       docId: 'device/facestation_f2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'FaceStation 2',
-          //       docId: 'device/facestation_2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioLite N2',
-          //       docId: 'device/biolite_n2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry W2',
-          //       docId: 'device/bioentry_w2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry P2',
-          //       docId: 'device/bioentry_p2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioEntry R2',
-          //       docId: 'device/bioentry_r2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'X-Station 2',
-          //       docId: 'device/xstation_2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'XPass Q2',
-          //       docId: 'device/xpass_q2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'XPass 2',
-          //       docId: 'device/xpass_2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'XPass D2',
-          //       docId: 'device/xpass_d2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'XPass S2',
-          //       docId: 'device/xpass_s2/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'CoreStation 20',
-          //       docId: 'device/corestation_20/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'CoreStation',
-          //       docId: 'device/corestation_40/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Enclosure',
-          //       docId: 'device/enclosure/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Door Interface',
-          //       docId: 'device/doorinterface/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Input Module',
-          //       docId: 'device/inputmodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Output Module',
-          //       docId: 'device/outputmodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Door Module',
-          //       docId: 'device/doormodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Secure Module',
-          //       docId: 'device/securemodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Extended Module',
-          //       docId: 'device/extendedmodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Extended Module-SC',
-          //       docId: 'device/extendedmodule_sc/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Device Manager',
-          //       docId: 'device/device_manager/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'CoreStation Setup Manager',
-          //       docId: 'device/corestation_setup_manager/index'
-          //     }
-          //   ]
-          // },
           // {
           //   type: 'doc',
-          //   label: 'How-to Articles',
+          //   label: 'BioStar X',
           //   position: 'right',
-          //   docId: 'how-to/index'
+          //   docId: 'platform/biostar_x/index'
           // },
+          {
+            type: 'dropdown',
+            label: 'Platforms',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
+          },
+          {
+            type: 'dropdown',
+            label: 'Devices',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'BioEntry W3',
+                docId: 'device/bioentry_w3/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStation 2a',
+                docId: 'device/biostation_2a/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStation 3',
+                docId: 'device/biostation_3/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation F2',
+                docId: 'device/facestation_f2/index'
+              },
+              {
+                type: 'doc',
+                label: 'FaceStation 2',
+                docId: 'device/facestation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioLite N2',
+                docId: 'device/biolite_n2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioEntry W2',
+                docId: 'device/bioentry_w2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioEntry P2',
+                docId: 'device/bioentry_p2/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioEntry R2',
+                docId: 'device/bioentry_r2/index'
+              },
+              {
+                type: 'doc',
+                label: 'X-Station 2',
+                docId: 'device/xstation_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass Q2',
+                docId: 'device/xpass_q2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass 2',
+                docId: 'device/xpass_2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass D2',
+                docId: 'device/xpass_d2/index'
+              },
+              {
+                type: 'doc',
+                label: 'XPass S2',
+                docId: 'device/xpass_s2/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation 20',
+                docId: 'device/corestation_20/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation',
+                docId: 'device/corestation_40/index'
+              },
+              {
+                type: 'doc',
+                label: 'Enclosure',
+                docId: 'device/enclosure/index'
+              },
+              {
+                type: 'doc',
+                label: 'Door Interface',
+                docId: 'device/doorinterface/index'
+              },
+              {
+                type: 'doc',
+                label: 'Input Module',
+                docId: 'device/inputmodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Output Module',
+                docId: 'device/outputmodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Door Module',
+                docId: 'device/doormodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Secure Module',
+                docId: 'device/securemodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Extended Module',
+                docId: 'device/extendedmodule/index'
+              },
+              {
+                type: 'doc',
+                label: 'Extended Module-SC',
+                docId: 'device/extendedmodule_sc/index'
+              },
+              {
+                type: 'doc',
+                label: 'Device Manager',
+                docId: 'device/device_manager/index'
+              },
+              {
+                type: 'doc',
+                label: 'CoreStation Setup Manager',
+                docId: 'device/corestation_setup_manager/index'
+              }
+            ]
+          },
+          {
+            type: 'doc',
+            label: 'How-to Articles',
+            position: 'right',
+            docId: 'how-to/index'
+          },
           {
             label: 'API',
             position: 'right',
