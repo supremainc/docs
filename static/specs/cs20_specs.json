@@ -195,7 +195,7 @@
           "value": {
             "ko": [
               "CS-20: 미지원",
-              "CS-20P: 지원 (IEEE 802.3at compliant)"
+              "CS-20P: 지원 (IEEE 802.3at 호환)"
             ],
             "en": [
               "CS-20: Not supported",
@@ -262,9 +262,9 @@
                 ]
               }
             },
-            "poe": {
-              "label": "PoE+ (12V out)",
-              "label_id": "specs.power.poe12vout",
+            "poe_plus12vout": {
+              "label": "PoE+ (12V 출력)",
+              "label_id": "specs.power.poe_plus12vout",
               "value": {
                 "ko": [
                   "리더: 최대 0.6 A (0.3 A x 2개)",
