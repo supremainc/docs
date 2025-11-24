@@ -108,8 +108,8 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            'platform/biostar_air/**/**.{md,mdx}',
-            'device/**/**.{md,mdx}'
+            // 'platform/biostar_air/**/**.{md,mdx}',
+            // 'device/**/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -329,13 +329,13 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'XPass 2',
-          //       docId: 'device/xpass_2/index'
+          //       label: 'XPass Q2',
+          //       docId: 'device/xpass_q2/index'
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'XPass S2',
-          //       docId: 'device/xpass_s2/index'
+          //       label: 'XPass 2',
+          //       docId: 'device/xpass_2/index'
           //     },
           //     {
           //       type: 'doc',
@@ -344,8 +344,8 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'CoreStation',
-          //       docId: 'device/corestation_40/index'
+          //       label: 'XPass S2',
+          //       docId: 'device/xpass_s2/index'
           //     },
           //     {
           //       type: 'doc',
@@ -354,8 +354,18 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
+          //       label: 'CoreStation',
+          //       docId: 'device/corestation_40/index'
+          //     },
+          //     {
+          //       type: 'doc',
           //       label: 'Enclosure',
           //       docId: 'device/enclosure/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Door Interface',
+          //       docId: 'device/doorinterface/index'
           //     },
           //     {
           //       type: 'doc',
@@ -366,11 +376,6 @@ const config = {
           //       type: 'doc',
           //       label: 'Output Module',
           //       docId: 'device/outputmodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Door Interface',
-          //       docId: 'device/doorinterface/index'
           //     },
           //     {
           //       type: 'doc',

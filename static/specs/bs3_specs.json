@@ -307,7 +307,7 @@
             "model2": {
               "label": "BS3-APWB",
               "value": {
-                "ko": "지원 (IEEE 802.3at compliant)",
+                "ko": "지원 (IEEE 802.3at 호환)",
                 "en": "Supported (IEEE 802.3at compliant)"
               }
             }

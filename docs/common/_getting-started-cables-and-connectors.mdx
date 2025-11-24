@@ -2,9 +2,9 @@
 
 ### 전원
 
-<Xclude product='bioentry_p2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
+<Xclude product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
 
-<Include product='bioentry_p2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
+<Include product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
 
 <div className='overflow-x col3--10-20-70'>
 
@@ -46,7 +46,7 @@
 
 ### Input
 
-<Include product='biostation_3,biostation_2a'>
+<Include product='biostation_3,biostation_2a,xpass_q2'>
 
 <Image src='/img/device/cable-input-5pin.svg' className='none' alone />
 
@@ -115,7 +115,7 @@
 
 </Include>
 
-<Include product='facestation_f2,facestation_2,bioentry_p2'>
+<Include product='facestation_f2,facestation_2,bioentry_p2,xpass_q2'>
 
 ### Wiegand 입출력
 
@@ -148,6 +148,24 @@
 | 2 | ENET RXP | 초록색 |
 | 3 | ENET TXN | 빨간색 |
 | 4 | ENET TXP | 검은색 |
+
+</div>
+
+</Include>
+
+<Include product='xpass_q2'>
+
+### 리더, 락 전원 출력
+
+<Image src='/img/device/cable-dcout.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | DC OUT | 빨간색 (검은 띠) |
+| 2 | DC GND | 검은색 |
+| 3 | DC GND | 회색 |
 
 </div>
 

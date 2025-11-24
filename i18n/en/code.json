@@ -690,6 +690,9 @@
     "message": "Relay"
   },
   "specs.power.poe12vout": {
+    "message": "PoE (12V out)"
+  },
+  "specs.power.poe_plus12vout": {
     "message": "PoE+ (12V out)"
   },
   "specs.size_weight": {
