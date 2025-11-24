@@ -82287,16 +82287,6 @@ Wiegand 형식 설정에 대한 자세한 내용은 [다음 문서](/docs/platfo
 
   * BioStation 2 펌웨어 1.2.0 이상
 
-  * BioLite Net 펌웨어 2.2.0 이상
-
-  * BioEntry Plus 펌웨어 2.2.0 이상
-
-  * BioEntry W 펌웨어 2.2.0 이상
-
-  * XPass 펌웨어 2.2.0 이상
-
-  * XPass S2 펌웨어 2.2.0 이상
-
   * BioLite N2 펌웨어 1.0.0 이상
 
   * XPass D2 펌웨어 1.0.0 이상
@@ -82820,16 +82810,6 @@ DNS 서버 주소를 입력할 수 있는 장치와 펌웨어 버전 보기
 
 * BioStation 2 펌웨어 1.2.0 이상
 
-* BioLite Net 펌웨어 2.2.0 이상
-
-* BioEntry Plus 펌웨어 2.2.0 이상
-
-* BioEntry W 펌웨어 2.2.0 이상
-
-* XPass 펌웨어 2.2.0 이상
-
-* XPass S2 펌웨어 2.2.0 이상
-
 * FaceStation 2 펌웨어 1.0.0 이상
 
 * BioLite N2 펌웨어 1.0.0 이상
@@ -82895,16 +82875,6 @@ DNS 서버 주소를 입력할 수 있는 장치와 펌웨어 버전 보기
 * FaceStation F2 펌웨어 1.0.0 이상
 
 * BioLite N2 펌웨어 1.0.0 이상
-
-* BioLite Net 펌웨어 2.2.0 이상
-
-* BioEntry Plus 펌웨어 2.2.0 이상
-
-* BioEntry W 펌웨어 2.2.0 이상
-
-* XPass 펌웨어 2.2.0 이상
-
-* XPass S2 펌웨어 2.2.0 이상
 
 * XPass 2 펌웨어 1.0.0 이상
 
@@ -85963,8 +85933,6 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * BioStar X Mobile 1.0.0 이상
 
-* XPass S2: XPS2M-V2 펌웨어 2.4 이상
-
 * BioStation 2: BS2-OMPW, BS2-OIPW 펌웨어 1.4 이상, 1.8 이하
 
 * BioStation A2: BSA2-OMPW, BSA2-OIPW 펌웨어 1.3 이상, 1.7.1 이하
@@ -88016,7 +87984,7 @@ SQL Server 라이선스에 대한 자세한 내용은 [Microsoft SQL Server 라�
 
 * LCD 화면을 지원하지 않는 장치는 근태 모드를 자동 변경과 고정으로 설정할 수 있습니다. 고정된 근태 이벤트를 등록하거나 미리 설정된 스케줄에 따라 변경되는 근태 이벤트를 등록할 수 있습니다.
 
-* 자동 변경과 고정 모드를 지원하는 장치 모델은 BioEntry P2, BioEntry W2, BioEntry Plus, BioEntry W, XPass, XPass S2, XPass D2, XPass 2입니다.
+* 자동 변경과 고정 모드를 지원하는 장치 모델은 BioEntry P2, BioEntry W2, XPass D2, XPass 2입니다.
 
 * 설정 메뉴에 대한 자세한 내용은 [다음 문서](/docs/platform/biostar_x/tna-settings)를 참고하세요.
 
