@@ -126,7 +126,7 @@
 
 * 고장의 원인이 됩니다.
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,xpass_q2'>
 
 **제품을 벽면에 설치할 경우 실리콘 등으로 제품 주위를 밀봉하지 마세요**.
 
@@ -168,7 +168,7 @@
 
 </Include>
 
-<Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2'>
+<Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2,xpass_q2'>
 
 **전원 장치와 PoE 전원을 함께 연결하지 마세요**.
 
@@ -184,7 +184,7 @@
 
 </Include>
 
-<Include product='biostation_3,biostation_2a,xstation_2,facestation_f2'>
+<Include product='biostation_3,biostation_2a,xstation_2,facestation_f2,xpass_q2'>
 
 **IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다. 완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
 
@@ -224,7 +224,7 @@
 
 </Xclude>
 
-<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
+<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
 
 **비밀번호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요**.
 
@@ -232,7 +232,7 @@
 
 </Xclude>
 
-<Xclude product='bioentry_w3,xpass_d2,bioentry_w2,extendedmodule,extendedmodule_sc'>
+<Xclude product='bioentry_w3,xpass_d2,bioentry_w2,extendedmodule,extendedmodule_sc,xpass_q2'>
 
 **제품의 버튼(터치패드)을 무리하게 누르거나 날카로운 도구를 사용해 누르지 마세요**.
 
@@ -240,13 +240,21 @@
 
 </Xclude>
 
-<Xclude product='extendedmodule,extendedmodule_sc'>
+<Xclude product='extendedmodule,extendedmodule_sc,xpass_q2'>
 
 **제품을 {props.name} 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요**.
 
 * 고장의 원인이 됩니다.
 
 </Xclude>
+
+<Include product='xpass_q2'>
+
+**제품을 {props.name} 이내에서 사용하고 너무 낮거나 높은 온도에서 보관하지 마세요**. **PoE 전원을 사용할 경우에는 {props.name2} 이내에서만 사용하세요**.
+
+* 고장의 원인이 됩니다.
+
+</Include>
 
 **제품을 청소할 때 주의하세요**.
 

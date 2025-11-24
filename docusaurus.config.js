@@ -240,6 +240,12 @@ const config = {
           width: '120px',
         },
         items: [
+          // {
+          //   type: 'doc',
+          //   label: 'BioStar X',
+          //   position: 'right',
+          //   docId: 'platform/biostar_x/index'
+          // },
           {
             type: 'dropdown',
             label: 'Platforms',
@@ -314,13 +320,13 @@ const config = {
               },
               {
                 type: 'doc',
-                label: 'XPass 2',
-                docId: 'device/xpass_2/index'
+                label: 'XPass Q2',
+                docId: 'device/xpass_q2/index'
               },
               {
                 type: 'doc',
-                label: 'XPass S2',
-                docId: 'device/xpass_s2/index'
+                label: 'XPass 2',
+                docId: 'device/xpass_2/index'
               },
               {
                 type: 'doc',
@@ -329,8 +335,8 @@ const config = {
               },
               {
                 type: 'doc',
-                label: 'CoreStation',
-                docId: 'device/corestation_40/index'
+                label: 'XPass S2',
+                docId: 'device/xpass_s2/index'
               },
               {
                 type: 'doc',
@@ -339,8 +345,18 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'CoreStation',
+                docId: 'device/corestation_40/index'
+              },
+              {
+                type: 'doc',
                 label: 'Enclosure',
                 docId: 'device/enclosure/index'
+              },
+              {
+                type: 'doc',
+                label: 'Door Interface',
+                docId: 'device/doorinterface/index'
               },
               {
                 type: 'doc',
@@ -351,11 +367,6 @@ const config = {
                 type: 'doc',
                 label: 'Output Module',
                 docId: 'device/outputmodule/index'
-              },
-              {
-                type: 'doc',
-                label: 'Door Interface',
-                docId: 'device/doorinterface/index'
               },
               {
                 type: 'doc',

@@ -462,5 +462,9 @@
   "sidebar.corestation_setup_manager.category.CoreStation Setup Manager": {
     "message": "CoreStation Setup Manager",
     "description": "The label for category 'CoreStation Setup Manager' in sidebar 'corestation_setup_manager'"
+  },
+  "sidebar.xpassq2.category.XPass Q2": {
+    "message": "XPass Q2",
+    "description": "The label for category 'XPass Q2' in sidebar 'xpassq2'"
   }
 }

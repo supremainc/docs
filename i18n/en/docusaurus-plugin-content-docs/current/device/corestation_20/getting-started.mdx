@@ -64,7 +64,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 <Columns className='partname'>
 <Column>
 
-<Magnify src='/img/device/product-part-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+<Magnify src='/img/device/product-part-cs20.png' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
 
 </Column>
 <Column className='padding--l20'>
@@ -128,7 +128,7 @@ The product's status can be checked at the STATUS located on the right side of t
 | RS-485 1 | Green/blue blinking     | Slave device normal                                                       |
 | ^        | Green/yellow blinking   | Slave device disconnected                                                 |
 | ^        | Green/red blinking      | No slave device                                                           |
-| System   | White/gray blinking     | System lock (BioStar X's operational conditions and behavior) + Tamper on |
+| System   | White/white blinking    | System lock (BioStar X's operational conditions and behavior) + Tamper on |
 | ^        | White/magenta blinking  | System lock (Device's operational conditions and behavior) + Tamper on    |
 | ^        | White/blue blinking     | Tamper on                                                                 |
 | ^        | White/cyan blinking     | BioStar X connection successful + Tamper on                               |
@@ -144,7 +144,7 @@ This product is designed for an enterprise-grade environment as a central access
 
 When integrated with BioStar X, both access control and attendance management can be utilized, providing various interfaces such as RS-485 (OSDP), Wiegand, supervised input, and AUX.
 
-<Image src='/img/device/installation-example-cs20.svg' width="70%" className='none' />
+<Image src='/img/device/installation-example-cs20.png' width="70%" className='none' />
 
 <PageBreak />
 
@@ -152,7 +152,7 @@ When integrated with BioStar X, both access control and attendance management ca
 
 This product supports three RS-485 ports, and by connecting the Door Interface in a daisy chain, up to 34 doors can be configured.
 
-<Image src='/img/device/system-configuration-cs20.svg' width="70%" className='none' />
+<Image src='/img/device/system-configuration-cs20.png' className='none' />
 
 :::info
 
@@ -160,9 +160,9 @@ This product supports three RS-485 ports, and by connecting the Door Interface i
 
 * If more than 3 devices are connected to a single RS-485 port, the desired device may not appear in the connectable list when searching for slave devices.
 
-* If using a SAM card on the CS-20P model, only slave devices directly connected to the reader port of the CS-20P can be used.
-
 * If you connect the Door Interface as a slave to the host port, even if the connection with CoreStation 20 is interrupted, the slave devices connected to the Door Interface can identify the Facility Code of the card through the offline mode dedicated Facility Code and unlock the door.
+
+* <Badge only>CS-20P</Badge> Use only slave devices directly connected to the CS-20P reader port when a SAM card is installed.
 
 :::
 
@@ -170,4 +170,4 @@ This product supports three RS-485 ports, and by connecting the Door Interface i
 
 ### Overall connection diagram
 
-<Magnify src='/img/device/system-cs20.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+<Magnify src='/img/device/system-cs20.svg' width='80%' zoomFactor={.4} mgWidth={500} mgHeight={500} />

@@ -690,6 +690,9 @@
     "message": "Relay"
   },
   "specs.power.poe12vout": {
+    "message": "PoE (12V out)"
+  },
+  "specs.power.poe_plus12vout": {
     "message": "PoE+ (12V out)"
   },
   "specs.size_weight": {
@@ -1025,83 +1028,66 @@
     "message": "Multi-door security I/O module"
   },
   "feedback.components.sendFeedback": {
-    "message": "Send feedback",
-    "description": "The label of the button to send feedback"
+    "message": "Send feedback"
   },
   "feedback.components.thanksForFeedback": {
-    "message": "Thank you for your feedback.",
-    "description": "The message displayed after the user has sent feedback"
+    "message": "Thank you for your feedback!"
   },
   "feedback.components.successSubtext": {
-    "message": "Your feedback is valuable for improving the documentation.",
-    "description": "The subtext displayed after the user has sent feedback"
+    "message": "Your feedback is valuable for improving the documentation."
   },
   "feedback.components.feedbackTitle": {
-    "message": "Was this page helpful?",
-    "description": "The title of the feedback component"
+    "message": "Was this page helpful?"
   },
   "feedback.components.feedbackDescription": {
-    "message": "Your feedback is valuable for improving the documentation.",
-    "description": "The description of the feedback component"
+    "message": "Your feedback is valuable for improving the documentation."
   },
   "feedback.components.feedbackTypeGood": {
-    "message": "Helpful.",
-    "description": "The label for the good feedback type"
+    "message": "Helpful."
   },
   "feedback.components.feedbackTypeBad": {
-    "message": "Needs improvement.",
-    "description": "The label for the bad feedback type"
+    "message": "Needs improvement."
   },
   "feedback.components.quickSubmitButton.onGoing": {
-    "message": "Submitting...",
-    "description": "The label of the quick submit button when the feedback is being submitted"
+    "message": "Submitting..."
   },
   "feedback.components.quickSubmitButton.idle": {
-    "message": "Quick submit (no additional comments)",
-    "description": "The label of the quick submit button when the feedback is idle"
+    "message": "Quick submit (no additional comments)"
   },
   "feedback.components.feedbackDetail": {
-    "message": "Please provide more details about your feedback.",
-    "description": "The label for the feedback detail textarea"
+    "message": "Please provide more details about your feedback."
   },
   "feedback.components.required": {
-    "message": "(Required)",
-    "description": "Indicates that a form field is required"
+    "message": "(Required)"
   },
   "feedback.components.optional": {
-    "message": "(Optional)",
-    "description": "Indicates that a form field is optional"
+    "message": "(Optional)"
   },
   "feedback.component.feedbackTextarea.negativePlaceholder": {
-    "message": "Please provide detailed information about any issues with the documentation so we can address them to your satisfaction.",
-    "description": "The placeholder for the feedback textarea when the user selected negative feedback"
+    "message": "Please provide detailed information about any issues with the documentation so we can address them to your satisfaction."
   },
   "feedback.component.feedbackTextarea.positivePlaceholder": {
-    "message": "Please feel free to write any areas for improvement or additional comments.",
-    "description": "The placeholder for the feedback textarea when the user selected positive feedback"
+    "message": "Please feel free to write any areas for improvement or additional comments."
   },
   "feedback.component.requiredNote": {
-    "message": "* Required",
-    "description": "Indicates that fields marked with * are required"
+    "message": "* Required"
   },
   "feedback.components.errorMessage": {
-    "message": "An error occurred while submitting your feedback. Please try again later.",
-    "description": "The error message displayed when feedback submission fails"
+    "message": "An error occurred while submitting your feedback. Please try again later."
   },
   "feedback.components.validationError": {
-    "message": "Please provide detailed feedback on the areas that need improvement.",
-    "description": "The validation error message displayed when the feedback detail is missing for negative feedback"
+    "message": "Please provide detailed feedback on the areas that need improvement."
   },
   "feedback.component.feedbackCompletedMessage": {
-    "message": "Feedback submitted",
-    "description": "The title of the feedback completed message"
+    "message": "Feedback submitted"
   },
   "feedback.component.cancelButton.label": {
-    "message": "Cancel feedback input",
-    "description": "The label of the button to cancel feedback submission"
+    "message": "Cancel feedback input"
   },
   "feedback.component.privacyNote": {
-    "message": "Submitted feedback is used solely for the purpose of improving documentation<br/>and does not collect personally identifiable information.",
-    "description": "The privacy note displayed in the feedback form"
+    "message": "Submitted feedback is used solely for the purpose of improving documentation<br/>and does not collect personally identifiable information."
+  },
+  "externalLinks.XPassQ2.desc": {
+    "message": "Access control supporting card and QR/Barcode authentication"
   }
 }

@@ -690,6 +690,9 @@
     "message": "릴레이"
   },
   "specs.power.poe12vout": {
+    "message": "PoE (12V 출력)"
+  },
+  "specs.power.poe_plus12vout": {
     "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
@@ -1083,5 +1086,8 @@
   },
   "feedback.component.privacyNote": {
     "message": "제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다."
+  },
+  "externalLinks.XPassQ2.desc": {
+    "message": "카드 및 QR/바코드 인증 지원 출입 통제 장치"
   }
 }

@@ -14,7 +14,7 @@ Provides the complete installation procedures and connection examples required f
 
 Secure the product tightly with a fixing screw at the location to be mounted.
 
-<Image src='/img/device/device-fix-cs20.svg' className='none' width={800} alone />
+<Image src='/img/device/device-fix-cs20.png' className='none' width='50%' alone />
 
 <PageBreak />
 
@@ -114,7 +114,7 @@ import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 This product supports three RS-485 ports, and by connecting the Door Interface in a daisy chain, up to 34 doors can be configured.
 
-<Image src='/img/device/installation-rs485-connection-cs20.png' width='60%' className='none' />
+<Image src='/img/device/installation-rs485-connection-cs20.png' width='55%' className='none' />
 
 :::info
 
@@ -130,7 +130,7 @@ This product supports three RS-485 ports, and by connecting the Door Interface i
 
 * It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
 
-* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set the termination resistor switch ON for this product.
+* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set this product's termination resistor switch to ON.
 
 :::
 
@@ -160,15 +160,15 @@ import AuxConnection from "../../common/_device-aux-connection.mdx";
 
 <AuxConnection />
 
-## SAM Card Slot (Supported only by CS-20P model)
+## SAM card slot <Badge only>CS-20P</Badge>
 
 You can use a SAM (Secure Access Module) card.
 
-<Image src='/img/device/installation-sam-slot-connection-cs20.png' width='60%' className='none' />
+<Image src='/img/device/installation-sam-slot-connection-cs20.png' width='40%' className='none' />
 
 :::info
 
-If using a SAM card on the CS-20P model, only slave devices directly connected to the reader port of the CS-20P can be used.
+<Badge only>CS-20P</Badge> Use only slave devices directly connected to the CS-20P reader port when a SAM card is installed.
 
 :::
 

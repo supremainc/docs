@@ -87,12 +87,6 @@ export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
-      title: 'BioStation 3',
-      url: `/device/biostation_3`,
-      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
-      desc: 'The New Door Access Experience'
-    },
-    {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
@@ -109,6 +103,12 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '90px'
     },
     {
+      title: 'BioStation 3',
+      url: `/device/biostation_3`,
+      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
+      desc: 'The New Door Access Experience'
+    },
+    {
       title: 'FaceStation F2',
       url: '/device/facestation_f2',
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
@@ -119,32 +119,22 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       height: '85px'
     },
     {
-      title: 'BioLite N2',
-      url: `/device/biolite_n2`,
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
-      desc: `${translate({
-        id: "externalLinks.BioLiteN2.desc",
-        message: "옥외형 지문 인식 출입·근태 장치"
-      })}`,
-      height: '90px'
-    },
-    {
-      title: 'X-Station 2',
-      url: `/device/xstation_2`,
-      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
-      desc: `${translate({
-        id: "externalLinks.XStation2.desc",
-        message: "차세대 모바일 출입인증 단말기"
-      })}`,
-      height: '90px'
-    },
-    {
       title: 'FaceStation 2',
       url: `/device/facestation_2`,
       img: 'https://www.supremainc.com/ko/asset/images/thumbnail/facestation2.png',
       desc: `${translate({
         id: "externalLinks.FaceStation2.desc",
         message: "얼굴 인증 출입근태 단말기"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'BioLite N2',
+      url: `/device/biolite_n2`,
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioliten2.png',
+      desc: `${translate({
+        id: "externalLinks.BioLiteN2.desc",
+        message: "옥외형 지문 인식 출입·근태 장치"
       })}`,
       height: '90px'
     },
@@ -158,22 +148,32 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       height: '90px'
     },
-    // {
-    //   title: 'BioEntry P2',
-    //   url: `/device/bioentry_p2`,
-    //   img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
-    //   desc: `${translate({
-    //     id: "externalLinks.BioentryP2.desc",
-    //     message: "콤팩트 지문인식 단말기"
-    //   })}`,
-    //   height: '90px'
-    // },
+    {
+      title: 'BioEntry P2',
+      url: `/device/bioentry_p2`,
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryp2.png',
+      desc: `${translate({
+        id: "externalLinks.BioentryP2.desc",
+        message: "콤팩트 지문인식 단말기"
+      })}`,
+      height: '90px'
+    },
     {
       title: 'BioEntry R2',
       url: `/device/bioentry_r2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc"
+      })}`,
+      height: '90px'
+    },
+    {
+      title: 'X-Station 2',
+      url: `/device/xstation_2`,
+      img: 'https://supremainc.com/en/asset/images/common/xStation2_OAPB_v2.png',
+      desc: `${translate({
+        id: "externalLinks.XStation2.desc",
+        message: "차세대 모바일 출입인증 단말기"
       })}`,
       height: '90px'
     }
@@ -193,6 +193,15 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'XPass Q2',
+      url: `/device/xpass_q2`,
+      img: '#',
+      desc: `${translate({
+        id: "externalLinks.XPassQ2.desc",
+        message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
+      })}`
+    },
+    {
       title: 'X-Station 2',
       url: `/device/xstation_2`,
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
@@ -210,6 +219,14 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       })}`
     },
     {
+      title: 'XPass D2',
+      url: `/device/xpass_d2`,
+      img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
+      desc: `${translate({
+        id: "externalLinks.XPass2.desc",
+      })}`,
+    },
+    {
       title: 'XPass S2',
       url: `/device/xpass_s2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpasss2.png',
@@ -217,14 +234,6 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
         id: "externalLinks.XPassS2.desc",
         message: "IP RFID 출입통제 단말기"
       })}`
-    },
-    {
-      title: 'XPass D2',
-      url: `/device/xpass_d2`,
-      img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
-      desc: `${translate({
-        id: "externalLinks.XPass2.desc",
-      })}`,
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -242,6 +251,12 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'CoreStation 20',
+      url: '/device/corestation_20',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
+      desc: 'Powerful Security, Flexible Expansion'
+    },
+    {
       title: 'CoreStation',
       url: '/device/corestation_40',
       img: 'https://supremainc.com/ko/asset/images/thumbnail/corestation.png',
@@ -249,12 +264,6 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
         id: "externalLinks.CoreStation.desc",
         message: "지능형 바이오인식 컨트롤러"
       })}`
-    },
-    {
-      title: 'CoreStation 20',
-      url: '/device/corestation_20',
-      img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
-      desc: 'Powerful Security, Flexible Expansion'
     },
     {
       title: 'Enclosure',
@@ -281,6 +290,16 @@ export function Peripheral({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'Door Interface',
+      url: '/device/doorinterface',
+      img: 'https://www.supremainc.com/images/upload/products/EN/20250512100138876.webp',
+      height: '90px',
+      desc: `${translate({
+        id: "externalLinks.peripheral.di24.desc",
+        message: "확장 가능한 제어, 끊김 없는 출입"
+      })}`
+    },
+    {
       title: 'Input Module',
       url: '/device/inputmodule',
       img: 'https://www.supremainc.com/images/upload/products/EN/20220103105515875.png',
@@ -298,16 +317,6 @@ export function Peripheral({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.peripheral.om120.desc",
         message: "다중 출력 제어 모듈"
-      })}`
-    },
-    {
-      title: 'Door Interface',
-      url: '/device/doorinterface',
-      img: 'https://www.supremainc.com/images/upload/products/EN/20250512100138876.webp',
-      height: '90px',
-      desc: `${translate({
-        id: "externalLinks.peripheral.di24.desc",
-        message: "확장 가능한 제어, 끊김 없는 출입"
       })}`
     },
     {
