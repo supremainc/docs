@@ -827,7 +827,6 @@
   "audit.menu.setting.face_group": "얼굴그룹매칭",
   "audit.menu.setting.holiday_group": "휴일",
   "audit.menu.setting.image_filter": "이미지로그",
-  "audit.menu.setting.ir_face_group": "IR 페이스 그룹 매칭",
   "audit.menu.setting.mobileCredential": "모바일 크리덴셜",
   "audit.menu.setting.output_signal": "신호설정",
   "audit.menu.setting.permission": "계정",
@@ -4488,6 +4487,7 @@
   "setting.maxBackdateMonthForEventSync": "이벤트 동기화 기간",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "setting.menu.credential.irFaceGroupMatching": "IR 페이스 그룹 매칭",
   "setting.menu.remoteAccessExternal.root": "사용자 리모트 액세스",
@@ -4495,6 +4495,8 @@
 =======
   "setting.menu.credential.irFaceGroupMatching": "IR 페이스 그룹 매칭",
 >>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
+=======
+>>>>>>> 4b698987da (AB#84: v1.0.0(2) IR 페이스 크리덴셜 추가에 따른 문서 및 이미지 업데이트)
   "setting.mobileCredentail.setting_complete": "모바일 출입 카드 설정을 완료 하시겠습니까?",
   "setting.mobileCredential.addDeviceSuccess": "모바일 크리덴셜 인증서가 장치로 전송되었습니다.",
   "setting.mobileCredential.allDeleteDevice": "모든 장치에서 모바일 크리덴셜 인증서가 삭제되며, 이후에는 장치에서 모바일 크리덴셜을 사용할 수 없습니다. 계속하시겠습니까?",
@@ -5474,7 +5476,7 @@
   "user.credential.IRFace": "IR 페이스",
   "user.credential.barcode": "QR/바코드",
   "user.credential.cardEnroll.smartCard.mobile": "모바일 카드 발급",
-  "user.credential.face": "IR 페이스 / 얼굴",
+  "user.credential.face": "얼굴",
   "user.credential.list.assignedList.registered": "등록 카드",
   "user.credential.list.smartCard.mobileAoC": "억세스 온 카드(모바일)",
   "user.credential.list.smartCard.mobileSC": "보안 크리덴셜 카드(모바일)",
