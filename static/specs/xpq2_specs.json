@@ -36,7 +36,8 @@
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
           "value": true,
-          "annotation_label": "anno3"
+          "annotation_label": "anno3",
+          "annotation_value": "anno4"
         }
       }
     },
@@ -133,14 +134,14 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "100,000",
-          "annotation_value": "anno4"
+          "annotation_value": "anno5"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
-            "ko": "카드: 100,000",
-            "en": "Card: 100,000"
+            "ko": "카드: 200,000",
+            "en": "Card: 200,000"
           }
         },
         "max_credentials_1on1": {
