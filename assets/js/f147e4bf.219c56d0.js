@@ -48,11 +48,13 @@ function _createMdxContent(props) {
     ol: "ol",
     p: "p",
     strong: "strong",
+    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Calloutlists, Cmd, IcHelp, IcInfo, IcLogout, IcSvTime, Image} = _components;
+  }, {Calloutlists, Cmd, IcAccount, IcHelp, IcInfo, IcLogout, IcSvTime, Image} = _components;
   if (!Calloutlists) _missingMdxReference("Calloutlists", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAccount) _missingMdxReference("IcAccount", true);
   if (!IcHelp) _missingMdxReference("IcHelp", true);
   if (!IcInfo) _missingMdxReference("IcInfo", true);
   if (!IcLogout) _missingMdxReference("IcLogout", true);
@@ -136,6 +138,35 @@ function _createMdxContent(props) {
             }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "의 도움말 페이지로 이동할 수 있는 링크 버튼입니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(IcAccount, {
+              width: "26",
+              height: "26"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "계정"
+            }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.menu.preferences.root"
+            }), " 메뉴로 이동하거나 현재 로그인한 사용자의 비밀번호를 변경할 수 있습니다."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "setting.menu.preferences.root"
+                }), " 메뉴에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "settings-preferences",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["현재 로그인한 사용자의 비밀번호 변경에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "set-permission#changeLoginUserPassword",
+                  children: "다음 문서"
+                }), "를 참고하세요."]
+              }), "\n"]
+            }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

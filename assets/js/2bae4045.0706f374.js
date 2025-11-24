@@ -284,6 +284,10 @@ const toc = [..._enter_user_page/* .toc */.RM, {
   "id": "로그인-아이디-및-비밀번호-설정",
   "level": 3
 }, {
+  "value": "로그인 사용자 비밀번호 변경",
+  "id": "changeLoginUserPassword",
+  "level": 3
+}, {
   "value": "다중 인증 설정",
   "id": "multiFactorAuth",
   "level": 2
@@ -303,13 +307,15 @@ function _createMdxContent(props) {
     h2: "h2",
     h3: "h3",
     li: "li",
+    ol: "ol",
     p: "p",
     strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image, NextItem, NextStep} = _components;
+  }, {Cmd, IcAccount, Image, NextItem, NextStep} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAccount) _missingMdxReference("IcAccount", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
@@ -383,6 +389,51 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "changeLoginUserPassword",
+      children: "로그인 사용자 비밀번호 변경"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["사용자는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "에 로그인한 후 본인의 비밀번호를 변경할 수 있습니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "에 로그인하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcAccount, {
+            width: "26",
+            height: "26"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-account-popup.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["드롭다운 메뉴에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "auth.passwordChange.title"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "auth.passwordChange.title",
+            product: "2"
+          }), " 창이 나타나면 현재 비밀번호와 새 비밀번호를 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-change-pw.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["모든 항목을 입력했으면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.button.change"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multiFactorAuth",
       children: "다중 인증 설정"

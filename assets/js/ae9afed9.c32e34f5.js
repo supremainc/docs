@@ -492,6 +492,18 @@ function _createMdxContent(props) {
             product: "2"
           }), "를 클릭하세요."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["CSV 내보내기 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "auditTrail.export.reason",
+            product: "2"
+          }), "(선택 사항)을 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "button.download",
+            product: "2"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-settings-system-audit-trail-export-csv.png"
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
@@ -1433,6 +1445,15 @@ function _createMdxContent(props) {
               product: "2"
             }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.mobileCredential.notUse",
+              product: "2"
+            })]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "감사 추적"
+            }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "audit.setting.audit.csv_export",
               product: "2"
             })]
           }), "\n"]

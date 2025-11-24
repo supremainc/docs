@@ -154,7 +154,7 @@ function _createMdxContent(props) {
         sid: "shell.header.launcher"
       }), " 화면을 확인할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/biostarx-main-launcher.png",
+      src: "/img/biostarx-launcher.png",
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",

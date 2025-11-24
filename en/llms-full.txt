@@ -81917,7 +81917,7 @@ Info
 
 #### Facial authentication settings[​](#facial-authentication-settings "Direct link to Facial authentication settings")
 
-In the Face group, you can configure details related to the device's facial authentication.
+In the IR Face / Face group, you can configure details related to the device's facial authentication.
 
 ![](/docs/en/img/en/biostarx-setting-device-detail-face.png)
 

@@ -663,6 +663,22 @@ function _createMdxContent(props) {
       }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-data-custom-report-export.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "auditTrail.export.reason",
+          product: "2"
+        }), "는 필수 입력 항목이 아닙니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.menu.export.exportReason"
+        }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "shell.header.setting"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.root"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.auditTrail"
+        }), "에서 기록을 확인할 수 있습니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "리포트-인쇄",
       children: "리포트 인쇄"
@@ -678,6 +694,22 @@ function _createMdxContent(props) {
       src: "/img/biostarx-data-custom-report-print.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "웹 브라우저의 새 탭을 통해 인쇄 미리보기 화면이 나타납니다. 화면 오른쪽 상단의 인쇄 버튼을 클릭하면 인쇄를 시작할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "auditTrail.export.reason",
+          product: "2"
+        }), "는 필수 입력 항목이 아닙니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.menu.export.exportReason"
+        }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "shell.header.setting"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.root"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.auditTrail"
+        }), "에서 기록을 확인할 수 있습니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "리포트-삭제",
       children: "리포트 삭제"

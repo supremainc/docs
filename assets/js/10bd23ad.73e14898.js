@@ -145,15 +145,34 @@ function _createMdxContent(props) {
             sid: "team.menu.export.csv"
           }), " ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.export.title"
-          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 창이 나타나면, ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.export.exportReason"
+          }), "(선택 사항)를 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.button.download"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/biostarx-user-export-csv-popup.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "로컬의 원하는 경로에 CSV 파일을 저장하세요."
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.menu.export.exportReason"
+        }), "는 필수 입력 항목이 아닙니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "team.menu.export.exportReason"
+        }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "shell.header.setting"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.root"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.auditTrail"
+        }), "에서 기록을 확인할 수 있습니다."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "csvimport",
       children: "CSV 가져오기"
@@ -372,11 +391,17 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.dialog.exprotDataFile.title"
-          }), " 창에서 데이터 파일을 적용할 장치를 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "common.apply"
-          }), " 버튼을 클릭하세요."]
+          }), " 창에서 데이터 파일을 적용할 장치를 선택하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-export-data-select-device.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "team.menu.export.exportReason"
+          }), "(선택 사항)를 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "common.apply"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -393,6 +418,20 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "데이터 파일을 적용할 장치를 정확하게 선택하지 않으면 해당 장치에서 데이터 파일을 인식할 수 없습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.menu.export.exportReason"
+            }), "는 필수 입력 항목이 아닙니다. ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "team.menu.export.exportReason"
+            }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "shell.header.setting"
+            }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.menu.system.root"
+            }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.menu.system.auditTrail"
+            }), "에서 기록을 확인할 수 있습니다."]
           }), "\n"]
         }), "\n"]
       })
