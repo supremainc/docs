@@ -487,6 +487,13 @@ body[data-rh] .redocusaurus {
     margin-right: 10px;
   }
 
+  .enroll-credential-ir-face::before {
+    content: url(./img/icon_credential_ir_face.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
   .enroll-credential-face::before {
     content: url(./img/icon_credential_face.png);
     width: 20px;
