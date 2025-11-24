@@ -68,7 +68,7 @@ import IcFilter2 from '@site/static/img/menus/ico-filter2.svg';
 import IcMove from '@site/static/img/menus/ico-move.svg';
 import IcBack from '@site/static/img/menus/ico-back.svg';
 import IcSvTime from '@site/static/img/menus/ico-serverTime.svg';
-import IcAccout from '@site/static/img/menus/ico-account.svg';
+import IcAccount from '@site/static/img/menus/ico-account.svg';
 import IcHelp from '@site/static/img/menus/ico-help.svg';
 import IcAibtn from '@site/static/img/menus/ico-aibtn.svg';
 import IcAdvSearch from '@site/static/img/menus/ico-adv-search.svg';
@@ -165,7 +165,7 @@ export default {
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
     Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify,
-    IcSvTime, IcAccout, IcHelp, IcAibtn,
+    IcSvTime, IcAccount, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
     IcClose,
