@@ -115,6 +115,7 @@
 - [Firmware Version 1.6.0 (Build No. 1.6.0_230602)](/docs/en/device/biolite_n2/release-notes/160): Release2023-06-08
 - [Firmware Version 1.6.1 (Build No. 1.6.1_240628)](/docs/en/device/biolite_n2/release-notes/161): Release2024-07-10
 - [Firmware Version 1.6.2 (Build No. 1.6.2_241113)](/docs/en/device/biolite_n2/release-notes/162): Release2024-11-14
+- [Firmware Version 1.7.0 (Build No. 1.7.0_251027)](/docs/en/device/biolite_n2/release-notes/170): Release2025-10-29
 - [Safety Instructions](/docs/en/device/biolite_n2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
 - [Settings](/docs/en/device/biolite_n2/settings): Provides instructions on how to set system and device configurations.
 - [Troubleshooting](/docs/en/device/biolite_n2/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
@@ -405,6 +406,13 @@
 - [Firmware Version 1.8.1 (Build No. 1.8.1_250520)](/docs/en/device/xpass_d2/release-notes/181): Release2025-05-21
 - [Firmware Version 1.8.2 (Build No. 1.8.2_250916)](/docs/en/device/xpass_d2/release-notes/182): Release2025-09-22
 - [Safety Instructions](/docs/en/device/xpass_d2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [XPass Q2](/docs/en/device/xpass_q2): Access control device that supports card and QR/Barcode authentication.
+- [Appendices](/docs/en/device/xpass_q2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/xpass_q2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xpass_q2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xpass_q2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xpass_q2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Safety Instructions](/docs/en/device/xpass_q2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
 - [XPass S2](/docs/en/device/xpass_s2): XPass S2 is a network-based access control terminal that provides high-efficiency and high-performance access security features. It is applicable not only to small and medium-sized enterprises but also to large corporations and large workplaces, and it has excellent durability with an IP65-rated waterproof and dustproof design. Additionally, it is equipped with an adaptive heater, allowing use in a wide range of environments from -35°C to 65°C.
 - [Appendices](/docs/en/device/xpass_s2/appendices): Includes legal notices contained in the product.
 - [Getting Started](/docs/en/device/xpass_s2/getting-started): Provides initial procedures for getting started with the device.

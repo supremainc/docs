@@ -117,6 +117,7 @@
 - [펌웨어 버전 1.6.0 (빌드 번호 1.6.0_230602)](/docs/device/biolite_n2/release-notes/160): 릴리즈2023-06-08
 - [펌웨어 버전 1.6.1 (빌드 번호 1.6.1_240628)](/docs/device/biolite_n2/release-notes/161): 릴리즈2024-07-10
 - [펌웨어 버전 1.6.2 (빌드 번호 1.6.2_241113)](/docs/device/biolite_n2/release-notes/162): 릴리즈2024-11-14
+- [펌웨어 버전 1.7.0 (빌드 번호 1.7.0_251027)](/docs/device/biolite_n2/release-notes/170): 릴리즈2025-10-29
 - [안전을 위한 주의 사항](/docs/device/biolite_n2/safety-instructions): 장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.
 - [설정](/docs/device/biolite_n2/settings): 시스템 및 장치 설정 방법을 안내합니다.
 - [문제 해결](/docs/device/biolite_n2/troubleshooting): 장치 사용 중 발생할 수 있는 문제에 대한 점검 사항과 기본 해결 방법을 제공합니다.
@@ -407,6 +408,13 @@
 - [펌웨어 버전 1.8.1 (빌드 번호 1.8.1_250520)](/docs/device/xpass_d2/release-notes/181): 릴리즈2025-05-21
 - [펌웨어 버전 1.8.2 (빌드 번호 1.8.2_250916)](/docs/device/xpass_d2/release-notes/182): 릴리즈2025-09-22
 - [안전을 위한 주의 사항](/docs/device/xpass_d2/safety-instructions): 장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.
+- [XPass Q2](/docs/device/xpass_q2): 카드 및 QR/바코드 인증을 지원하는 출입 통제 장치입니다.
+- [부록](/docs/device/xpass_q2/appendices): 제품에 포함된 법적 고지 사항을 수록합니다.
+- [시작하기](/docs/device/xpass_q2/getting-started): 장치 사용을 위한 초기 절차를 안내합니다.
+- [설치하기](/docs/device/xpass_q2/installation): 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+- [제품 사양](/docs/device/xpass_q2/product-specifications): 제품에 대한 크기, 기능, 성능 등 주요 사양 정보를 제공합니다.
+- [규제 인증 정보](/docs/device/xpass_q2/regulatory-information): 제품이 준수하는 규제 및 인증 관련 정보를 제공합니다.
+- [안전을 위한 주의 사항](/docs/device/xpass_q2/safety-instructions): 장치 설치 및 사용 전 반드시 숙지해야 할 안전 관련 지침을 제공합니다.
 - [XPass S2](/docs/device/xpass_s2): XPass S2는 고효율·고성능의 출입 보안 기능을 제공하는 네트워크 기반 출입통제 단말기입니다. 중소형 기업뿐만 아니라 대기업 및 대규모 사업장에서도 활용이 가능하며, IP65 등급의 방수·방진 설계로 탁월한 내구성을 갖춘 제품입니다. 또한, 자동 조절 히터(Adaptive Heater)를 탑재하여 -35°C에서 65°C까지 폭넓은 환경에서 사용할 수 있습니다.
 - [부록](/docs/device/xpass_s2/appendices): 제품에 포함된 법적 고지 사항을 수록합니다.
 - [시작하기](/docs/device/xpass_s2/getting-started): 장치 사용을 위한 초기 절차를 안내합니다.
