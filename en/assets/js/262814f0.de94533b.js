@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["24263"], {
-11641: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["49025"], {
+11206: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,13 +9,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_reference_smartcardissue_mdx_e09_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-reference-smartcardissue-mdx-e09.json
-var site_docs_reference_smartcardissue_mdx_e09_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"슈프리마 스마트 카드 발급 안내","description":"이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다.","source":"@site/docs/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"슈프리마 스마트 카드 발급 안내","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"사양 비교","permalink":"/docs/reference/compares/controller-devices-specs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-262.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/en/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Compare Specifications","permalink":"/docs/en/reference/compares/controller-devices-specs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -581,12 +581,12 @@ function ResponsiveImageMap({ src, alt, className, mapName, areas, originalWidth
     });
 }
 
-;// CONCATENATED MODULE: ./docs/reference/smartcardissue.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
 
 
 const frontMatter = {
 	id: 'smartcardissue',
-	title: '슈프리마 스마트 카드 발급 안내',
+	title: 'How to Issue Suprema Smart Cards',
 	toc_max_heading_level: 3,
 	isTranslationMissing: false
 };
@@ -601,27 +601,27 @@ const assets = {
 
 
 const toc = [{
-  "value": "구조체 관계도",
-  "id": "구조체-관계도",
+  "value": "Structure Relationship Diagram",
+  "id": "structure-relationship-diagram",
   "level": 2
 }, {
-  "value": "구조 계층",
-  "id": "구조-계층",
+  "value": "Structure Hierarchy",
+  "id": "structure-hierarchy",
   "level": 2
 }, {
-  "value": "CRC 계산 및 검증",
+  "value": "CRC Calculation and Validation",
   "id": "crc",
   "level": 2
 }, {
-  "value": "hdrCRC, cardCRC란?",
+  "value": "What are hdrCRC and cardCRC?",
   "id": "hdrcrc-cardcrc",
   "level": 3
 }, {
-  "value": "CRC 계산 방법",
+  "value": "How to Calculate CRC",
   "id": "crc-calculation",
   "level": 3
 }, {
-  "value": "검증 방법",
+  "value": "How to Validate",
   "id": "crc-validation",
   "level": 3
 }];
@@ -643,60 +643,60 @@ function _createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "이 문서는 서드파티 업체가 슈프리마의 BioStar 플랫폼과 호환되는 스마트 카드를 발급하기 위한 기술 가이드입니다."
+      children: "This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "카드 데이터 구조"
-          }), ": SCC(Secure Credential Card)와 AOC(Access on Card) 발급에 필요한 데이터 구조"]
+            children: "Card data structure"
+          }), ": Data structure required for the issuance of SCC (Secure Credential Card) and AOC (Access on Card)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "구조체 명세"
-          }), ": 카드 발급 시 준수해야 하는 필드별 상세 요구사항"]
+            children: "Structure specification"
+          }), ": Detailed requirements for each field that must be complied with during card issuance"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "데이터 무결성"
-          }), ": CRC 검증을 통한 카드 데이터 품질 보장 방법"]
+            children: "Data integrity"
+          }), ": Method for ensuring the quality of card data through CRC validation"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "구현 참조"
-          }), ": 각 구조체 간의 관계와 올바른 데이터 설정 방법"]
+            children: "Implementation reference"
+          }), ": Relationships between structures and how to correctly set data"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 문서에 따라 발급된 스마트 카드는 슈프리마의 모든 BioStar 호환 장치에서 정상 동작합니다."
+      children: "Smart cards issued according to this document operate normally on all BioStar compatible devices from Suprema."
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "스마트 카드를 발급하기 전에 아래 사항을 확인하세요."
+        children: "Check the following before issuing smart cards."
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "호환 장치"
-            }), ": BioStar 지원 모든 슈프리마 장치"]
+              children: "Compatible devices"
+            }), ": All Suprema devices supported by BioStar"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "카드 유형"
-            }), ": SCC(Secure Credential Card), AOC(Access on Card)"]
+              children: "Card types"
+            }), ": SCC (Secure Credential Card), AOC (Access on Card)"]
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구조체-관계도",
-      children: "구조체 관계도"
+      id: "structure-relationship-diagram",
+      children: "Structure Relationship Diagram"
     }), "\n", (0,jsx_runtime.jsx)(ResponsiveImageMap, {
       src: "/img/common/smartcardapi-structure.png",
-      alt: "SmartCard API 구조체 관계도",
+      alt: "SmartCard API structure relationship diagram",
       className: "useMap",
       mapName: "imgmap2025813133616",
       originalWidth: 2072,
@@ -725,50 +725,50 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "이미지의 구조체를 클릭하면 해당 구조체의 상세 정보로 이동합니다."
+        children: "Clicking on the structure in the image will take you to the details of that structure."
       })
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "page-break"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구조-계층",
-      children: "구조 계층"
+      id: "structure-hierarchy",
+      children: "Structure Hierarchy"
     }), "\n", (0,jsx_runtime.jsx)(TypedefStruct, {
       name: "BS2SmartCardData",
-      description: "SmartCard의 모든 데이터를 포함하는 복합 구조체입니다.",
+      description: "Composite structure containing all data of SmartCard.",
       category: "Smart Card",
       size: "1656",
       hierarchy: [{
         name: "BS2SmartCardData",
         type: "composite struct",
         size: 1656,
-        description: "SmartCard 전체 데이터 컨테이너",
+        description: "Container for all SmartCard data",
         children: [{
           name: "BS2SmartCardHeader",
           type: "struct",
           size: 16,
-          description: "SmartCard 헤더 구조체",
+          description: "SmartCard header structure",
           children: [{
-            name: "체크섬 영역",
-            description: "체크섬 영역은 카드 데이터의 무결성을 검증하는 데 사용합니다. 자세한 내용은 <a href='#crc'>다음 문서</a>를 참고하세요.",
+            name: "Checksum Area",
+            description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
             children: [{
               name: "hdrCRC",
               type: "uint16_t",
               size: 2,
-              description: "카드 헤더 체크섬 값입니다. (cardCRC - reserved)"
+              description: "Checksum value of the card header. (cardCRC - reserved)"
             }, {
               name: "cardCRC",
               type: "uint16_t",
               size: 2,
-              description: "카드 데이터 체크섬 값입니다. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
+              description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
             }]
           }, {
-            name: "카드 메타데이터",
-            description: "카드 유형 및 템플릿 정보",
+            name: "Card Metadata",
+            description: "Card type and template information",
             children: [{
               name: "cardType",
               type: "BS2_CARD_TYPE",
               size: 1,
-              description: "카드 유형의 코드 값입니다.",
+              description: "Code value of card type.",
               constants: [{
                 value: "0x02",
                 description: "Secure Credential Card (SCC)"
@@ -780,197 +780,197 @@ function _createMdxContent(props) {
               name: "numOfTemplate",
               type: "uint8_t",
               size: 1,
-              description: "지문 템플릿의 개수입니다. Access on Card (AOC) 카드 구조상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 지문 템플릿을 저장하려면, <code>numOfFaceTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
-              notes: ["최대 4개의 지문 템플릿을 지원합니다. 지문 템플릿 데이터 영역에 대한 자세한 내용은 <a href='#bs2smartcardcredentials'>다음 문서</a>를 참고하세요."]
+              description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
+              notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."]
             }, {
               name: "templateSize",
               type: "uint16_t",
               size: 2,
-              description: "지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384바이트로 고정되어 있습니다. BioStar 2에서 스마트 카드를 사용하려면 기본값은 300바이트이며, 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300바이트 이상으로 설정하는 것을 권장합니다.",
-              notes: ["300바이트로 설정 시 384바이트 크기의 배열에 300바이트를 복사하고 나머지 84바이트는 0으로 패딩해야 합니다.", "MIFARE 1K Classic 카드에 2개의 지문을 저장하려면 각 템플릿을 300바이트로 설정해야 합니다."]
+              description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
+              notes: ["When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.", "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."]
             }, {
               name: "issueCount",
               type: "uint16_t",
               size: 2,
-              description: "스마트 카드 발급 회차입니다. 카드 ID와 발급 회차를 조합하여 블랙리스트를 관리하므로 발급 회차를 정확히 관리해야 합니다. 카드 재발급 시 발급 회차를 1씩 증가시켜야 합니다."
+              description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
             }, {
               name: "duressMask",
               type: "uint8_t",
               size: 1,
-              description: "협박 지문 유무 마스크 값입니다."
+              description: "Mask for whether there is a duress fingerprint."
             }, {
               name: "numOfFaceTemplate",
               type: "uint8_t",
               size: 1,
-              description: "얼굴 템플릿 수를 나타냅니다. 지문과 얼굴이 갖는 기본 템플릿(지문:384, 얼굴:552)의 크기가 다르지만, 이 경우에도 변함없이 <code>BS2SmartCardCredentials</code>의 <code>templateData</code>의 전체 크기를 고려하여 저장하면 됩니다. AOC 카드 구조 상 템플릿은 <code>BS2SmartCardCredentials</code>에 저장됩니다. 그리고 여기에는 지문 또는 얼굴을 선택적으로 저장해야 합니다. 지문과 얼굴이 함께 저장되지 않으므로 AOC 카드에 얼굴 템플릿을 저장하려면, <code>numOfTemplate</code>은 반드시 <code>0</code>으로 설정되어야 합니다.",
-              notes: ["최대 1개의 얼굴 템플릿을 지원합니다."]
+              description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
+              notes: ["Supports up to 1 face template."]
             }, {
               name: "reserved",
               type: "uint8_t[1]",
               size: 1,
-              description: "예약된 공간입니다."
+              description: "Reserved."
             }]
           }, {
-            name: "인증 설정",
-            description: "카드 인증 모드 및 옵션",
+            name: "Authentication Settings",
+            description: "Card authentication modes and options",
             children: [{
               name: "cardAuthMode",
               type: "uint8_t",
               size: 1,
-              description: "개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
-              notes: ["<b>Visual Face</b> 기반은 <code>cardAuthModeEx</code>를 사용하세요."],
+              description: "Uses the authentication mode stored on the card instead of the one set on the device.",
+              notes: ["<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."],
               constants: [{
                 value: "2",
-                description: "카드 인증만 사용"
+                description: "Card authentication only"
               }, {
                 value: "3",
-                description: "카드와 지문 인증 사용"
+                description: "Card and fingerprint authentication"
               }, {
                 value: "4",
-                description: "카드와 PIN 인증 사용"
+                description: "Card and PIN authentication"
               }, {
                 value: "5",
-                description: "카드 인증 후 지문이나 PIN 인증 사용"
+                description: "Fingerprint or PIN authentication after card authentication"
               }, {
                 value: "6",
-                description: "카드, 지문, PIN 인증 사용"
+                description: "Card, fingerprint, and PIN authentication"
               }, {
                 value: "254",
-                description: "사용할 수 없음"
+                description: "Not usable"
               }, {
                 value: "255",
-                description: "정의되지 않음(시스템에 정의된 모드로 동작)"
+                description: "Undefined (operates in a mode defined by the system)"
               }]
             }, {
               name: "cardAuthModeEx",
               type: "uint8_t",
               size: 1,
-              description: "<span class='badge'>SDK v2.7.1 or later</span> <b>Visual Face</b> 기반 카드 인증 모드 설정값입니다. 개인 인증 모드로 장치에 설정된 인증 모드가 아닌 카드에 저장된 인증 모드를 사용하게 됩니다.",
-              notes: ["슈프리마 장치는 FaceStation F2, BioStation 3, BioEntry W3 모델에서 지원합니다.", "모든 장치에 일관되게 적용하려면 <code>cardAuthMode</code>, <code>cardAuthModeEx</code> 모두를 설정해야 합니다. 지원하는 장치를 확인하세요."],
+              description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
+              notes: ["Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.", "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."],
               constants: [{
                 value: "21",
-                description: "카드"
+                description: "Card"
               }, {
                 value: "22",
-                description: "카드 + 얼굴"
+                description: "Card + Face"
               }, {
                 value: "23",
-                description: "카드 + 지문"
+                description: "Card + Fingerprint"
               }, {
                 value: "24",
-                description: "카드 + PIN"
+                description: "Card + PIN"
               }, {
                 value: "26",
-                description: "카드 + 얼굴 또는 PIN"
+                description: "Card + Face or PIN"
               }, {
                 value: "27",
-                description: "카드 + 지문 또는 PIN"
+                description: "Card + Fingerprint or PIN"
               }, {
                 value: "28",
-                description: "카드 + 얼굴 또는 지문 또는 PIN"
+                description: "Card + Face or Fingerprint or PIN"
               }, {
                 value: "30",
-                description: "카드 + 얼굴 + PIN"
+                description: "Card + Face + PIN"
               }, {
                 value: "32",
-                description: "카드 + 지문 + PIN"
+                description: "Card + Fingerprint + PIN"
               }, {
                 value: "33",
-                description: "카드 + 얼굴 또는 지문 + PIN"
+                description: "Card + Face or Fingerprint + PIN"
               }, {
                 value: "254",
-                description: "사용할 수 없음"
+                description: "Not usable"
               }, {
                 value: "255",
-                description: "정의되지 않음(시스템 정의 모드)"
+                description: "Undefined (system-defined mode)"
               }]
             }, {
               name: "useAlphanumericID",
               type: "uint8_t",
               size: 1,
-              description: "영숫자(Alphanumeric) ID를 사용할지 결정하는 플래그(flag)입니다."
+              description: "Flag indicating whether to use Alphanumeric ID."
             }]
           }]
         }, {
           name: "cardID",
           type: "uint8_t[BS2_CARD_DATA_SIZE]",
           size: 32,
-          description: "단말기에서 사용할 카드 식별자입니다. <b>Access on Card(AOC)</b>는 배열의 32byte를 Card ID로 사용하고, <b>Secure Credential Card(SCC)</b>는 배열의 24byte를 Card ID로 사용합니다. <b>Secure Credential Card(SCC)</b>는 32byte를 Card ID(24 bytes)로, issueCount(4byte) 그리고 Time Stamp(4byte)로 채워져야 합니다. 또한, <code>BS2UserBlob</code> 구조체의 cardObjs array가 SC Card로 채워야 하며, SC Card 발급 시마다 <code>cardObjs</code>를 업데이트해야 합니다.",
+          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
           children: [{
             name: "cardID: Access on Card (AOC)",
             type: "bytes[0-31]",
             size: 32,
-            description: "AOC: 전체 32바이트 사용"
+            description: "AOC: Uses the entire 32 bytes."
           }, {
             name: "cardID: Secure Credential Card (SCC)",
             type: "bytes[0-31]",
             size: 32,
-            description: "SCC: 카드 ID(32바이트)",
+            description: "SCC: Card ID (32 bytes)",
             children: [{
               name: "cardID (SCC)",
               type: "bytes[0-23]",
               size: 24,
-              description: "SCC: 카드 ID(24바이트)"
+              description: "SCC: Card ID (24 bytes)"
             }, {
               name: "issueCount (SCC)",
               type: "bytes[24-27]",
               size: 4,
-              description: "SCC: 발급 횟수"
+              description: "SCC: Issue count"
             }, {
               name: "timeStamp (SCC)",
               type: "bytes[28-31]",
               size: 4,
-              description: "SCC: 발급 시간"
+              description: "SCC: Issue time"
             }]
           }]
         }, {
           name: "BS2SmartCardCredentials",
           type: "struct",
           size: 1568,
-          description: "PIN 코드나 생체 인증 템플릿이 저장되어 있는 인증 데이터 영역입니다.",
+          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
           children: [{
             name: "pin",
             type: "uint8_t[BS2_PIN_HASH_SIZE]",
             size: 32,
-            description: "PIN 코드 해시값입니다. PIN 코드를 직접 해시하지 말고 BioStar 2 SDK의 해시 함수를 사용하여 장치와 동일한 해시 알고리즘으로 생성해야 합니다.",
-            notes: ["PIN 코드는 서드파티 툴에서 사용할 수 없습니다."]
+            description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
+            notes: ["PIN codes cannot be used in third-party tools."]
           }, {
             name: "templateData",
             type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
             size: 1536,
-            description: "지문 또는 얼굴 템플릿 데이터 영역으로 최대 4개의 지문 템플릿, 최대 1개의 얼굴 템플릿을 저장할 수 있습니다.",
+            description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
             children: [{
-              name: "지문 템플릿",
-              description: "최대 4개의 지문 템플릿을 저장할 수 있습니다.",
+              name: "Fingerprint Templates",
+              description: "Supports up to 4 fingerprint templates.",
               children: [{
                 name: "Template 1",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "첫 번째 지문 템플릿"
+                description: "First fingerprint template"
               }, {
                 name: "Template 2",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "두 번째 지문 템플릿"
+                description: "Second fingerprint template"
               }, {
                 name: "Template 3",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "세 번째 지문 템플릿"
+                description: "Third fingerprint template"
               }, {
                 name: "Template 4",
                 type: "uint8_t[384]",
                 size: 384,
-                description: "네 번째 지문 템플릿"
+                description: "Fourth fingerprint template"
               }]
             }, {
-              name: "얼굴 템플릿",
-              description: "최대 1개의 얼굴 템플릿을 552 사이즈로 저장할 수 있습니다.",
+              name: "Face Template",
+              description: "Supports up to 1 face template with size 552.",
               children: [{
                 name: "Template 1",
                 type: "uint8_t[552]",
                 size: 552,
-                description: "얼굴 템플릿"
+                description: "Face template"
               }]
             }]
           }]
@@ -978,22 +978,22 @@ function _createMdxContent(props) {
           name: "BS2AccessOnCardData",
           type: "struct",
           size: 40,
-          description: "AOC 카드에서 사용하는 영역으로 출입 그룹 정보를 가지고 있습니다.",
+          description: "Area used in AOC cards that contains access group information.",
           children: [{
             name: "accessGroupID",
             type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
             size: 32,
-            description: "출입 그룹 ID 리스트입니다. 각 그룹은 1부터 65535까지의 ID를 가질 수 있으며, 최대 16개의 그룹을 지원합니다.",
+            description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
             children: [{
               name: "Group ID 1",
               type: "uint16_t",
               size: 2,
-              description: "첫 번째 출입 그룹"
+              description: "First access group"
             }, {
               name: "Group ID 2",
               type: "uint16_t",
               size: 2,
-              description: "두 번째 출입 그룹"
+              description: "Second access group"
             }, {
               name: "...",
               type: "uint16_t",
@@ -1003,71 +1003,71 @@ function _createMdxContent(props) {
               name: "Group ID 16",
               type: "uint16_t",
               size: 2,
-              description: "마지막 출입 그룹"
+              description: "Last access group"
             }]
           }, {
-            name: "시간 제한",
-            description: "출입 가능 시간 범위입니다.",
+            name: "Time Restrictions",
+            description: "Time range for access permissions.",
             children: [{
               name: "startTime",
               type: "BS2_DATETIME",
               size: 4,
-              description: "사용자 인증이 가능한 시작 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
+              description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
             }, {
               name: "endTime",
               type: "BS2_DATETIME",
               size: 4,
-              description: "사용자 인증이 가능한 마지막 시간이며, <code>0</code>일 경우 제한이 없습니다. Unix timestamp 형식으로 초 단위입니다."
+              description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
             }]
           }]
         }]
       }]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "crc",
-      children: "CRC 계산 및 검증"
+      children: "CRC Calculation and Validation"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이터에 각각 CRC-16 CCITT 체크섬(", (0,jsx_runtime.jsx)(_components.code, {
+      children: ["CRC-16 CCITT checksums (", (0,jsx_runtime.jsx)(_components.code, {
         children: "hdrCRC"
       }), ", ", (0,jsx_runtime.jsx)(_components.code, {
         children: "cardCRC"
-      }), ")을 사용합니다."]
+      }), ") are used for the header and card data respectively, to ensure the integrity of SmartCard data."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "hdrcrc-cardcrc",
-      children: "hdrCRC, cardCRC란?"
+      children: "What are hdrCRC and cardCRC?"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.code, {
             children: "hdrCRC"
-          }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "BS2SmartCardHeader"
-          }), "의 ", (0,jsx_runtime.jsx)(_components.code, {
+          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the ", (0,jsx_runtime.jsx)(_components.code, {
             children: "cardCRC"
-          }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
             children: "reserved"
-          }), "까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
+          }), " (14 bytes total) of ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "BS2SmartCardHeader"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.code, {
             children: "cardCRC"
-          }), ": ", (0,jsx_runtime.jsx)(_components.code, {
+          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from ", (0,jsx_runtime.jsx)(_components.code, {
             children: "cardType"
-          }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
             children: "BS2SmartCardData.accessOnData"
-          }), "까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다."]
+          }), " (total card data excluding the header)."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "crc-calculation",
-      children: "CRC 계산 방법"
+      children: "How to Calculate CRC"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.a, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://kb.supremainc.com/bs2sdk/doku.php",
         children: "BioStar 2 SDK"
-      }), "에서는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " provides the ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BS2_ComputeCRC16CCITT"
-      }), " 함수를 제공합니다. 아래는 사용 예시입니다."]
+      }), " function. Below is an example of its use."]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-csharp",
@@ -1081,45 +1081,45 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardType"
-            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
               children: "accessOnData"
-            }), "까지 계산합니다."]
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), "는 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), "부터 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
               children: "reserved"
-            }), "까지 계산합니다."]
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["반드시 ", (0,jsx_runtime.jsx)(_components.code, {
+            children: ["Always calculate ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " first, set it in the header, then calculate ", (0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), "를 계산해야 합니다."]
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "crc-validation",
-      children: "검증 방법"
+      children: "How to Validate"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요."
+      children: "To validate the integrity of card data when reading, do the following:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "카드에서 읽은 데이터로 CRC 재계산"
+          children: "Recalculate CRC using data read from the card."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "저장된 CRC 값과 계산된 CRC 값 비교"
+          children: "Compare the stored CRC value with the calculated CRC value."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
@@ -1132,49 +1132,49 @@ function _createMdxContent(props) {
       type: "note",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "CRC 계산 시 주의사항"
+          children: "Cautions for CRC Calculation"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "계산 순서"
-            }), ": 반드시 ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "Calculation Order"
+            }), ": Calculate ", (0,jsx_runtime.jsx)(_components.code, {
               children: "cardCRC"
-            }), "를 먼저 계산한 후 헤더에 설정하고, 그 다음 ", (0,jsx_runtime.jsx)(_components.code, {
+            }), " first, set it in the header, and then calculate ", (0,jsx_runtime.jsx)(_components.code, {
               children: "hdrCRC"
-            }), "를 계산해야 합니다."]
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "구조체 정렬"
-            }), ": CRC 계산 범위가 정확히 일치해야 하며, 구조체 패딩이나 정렬에 주의하세요."]
+              children: "Structure Alignment"
+            }), ": Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "초기값"
-            }), ": CRC-16 CCITT는 0x1021 다항식, ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "초기값 0xFFFF"
-            }), "를 사용합니다."]
+              children: "Initial Value"
+            }), ": CRC-16 CCITT uses polynomial 0x1021 and ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "initial value 0xFFFF"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "SDK 함수"
-            }), ": ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "SDK Function"
+            }), ": The ", (0,jsx_runtime.jsx)(_components.code, {
               children: "BS2_ComputeCRC16CCITT"
-            }), " 함수는 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " function is provided in the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://kb.supremainc.com/bs2sdk/doku.php",
               children: "BioStar 2 SDK"
-            }), "에서 제공됩니다."]
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "데이터 순서"
-            }), ": 입력 데이터는 바이트 단위 Little Endian으로 처리됩니다."]
+              children: "Data Order"
+            }), ": Input data is processed in little-endian byte order."]
           }), "\n"]
         }), "\n"]
       })]
@@ -4437,7 +4437,7 @@ const SvgIcoFlelevfl = ({
 })))));
 /* ESM default export */ const ico_flelevfl = (SvgIcoFlelevfl);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-close.svg
-var ico_door_close_g, ico_door_close_defs;
+var ico_door_close_path, ico_door_close_path2;
 function ico_door_close_extends() { return ico_door_close_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_door_close_extends.apply(null, arguments); }
 
 const SvgIcoDoorClose = ({
@@ -4453,22 +4453,15 @@ const SvgIcoDoorClose = ({
   "aria-labelledby": titleId
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
-}, title) : null, ico_door_close_g || (ico_door_close_g = /*#__PURE__*/react.createElement("g", {
-  clipPath: "url(#a)"
-}, /*#__PURE__*/react.createElement("path", {
-  fill: "#D9D9D9",
-  d: "M2 1h12v14H2z"
-}), /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
+}, title) : null, ico_door_close_path || (ico_door_close_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#298DFF",
+  d: "M2.01 13.825V2.175a1 1 0 0 1 .3-.873c.116-.113.258-.199.414-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874m9.584-6.99v2.33Z"
+})), ico_door_close_path2 || (ico_door_close_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
   strokeLinecap: "round",
   strokeLinejoin: "round",
   d: "M11.594 6.835v2.33m-9.583 4.66V2.175a1 1 0 0 1 .3-.873c.115-.113.257-.199.413-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874"
-}))), ico_door_close_defs || (ico_door_close_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-  id: "a"
-}, /*#__PURE__*/react.createElement("path", {
-  fill: "#fff",
-  d: "M0 0h16v16H0z"
-})))));
+})));
 /* ESM default export */ const ico_door_close = (SvgIcoDoorClose);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-sensor.svg
 var ico_door_sensor_path, ico_door_sensor_path2;
@@ -4569,7 +4562,7 @@ const SvgIcoArms = ({
 })));
 /* ESM default export */ const ico_arms = (SvgIcoArms);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-elevator.svg
-var ico_elevator_path, ico_elevator_path2;
+var ico_elevator_path, ico_elevator_path2, ico_elevator_path3, ico_elevator_path4;
 function ico_elevator_extends() { return ico_elevator_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_elevator_extends.apply(null, arguments); }
 
 const SvgIcoElevator = ({
@@ -4586,17 +4579,23 @@ const SvgIcoElevator = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_elevator_path || (ico_elevator_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M10 4h4a.884.884 0 0 1 1 1v10a.885.885 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zv12Zm7 5v2Z"
+  fill: "#3974FF",
+  d: "M10 4h4a.884.884 0 0 1 1 1v10a.883.883 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zv12Z"
 })), ico_elevator_path2 || (ico_elevator_path2 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
+  stroke: "#000",
   strokeLinecap: "round",
   strokeLinejoin: "round",
-  d: "M10 4h4a.884.884 0 0 1 1 1v10a.885.885 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zm0 0v12m7-7v2"
+  d: "M10 4h4a.884.884 0 0 1 1 1v10a.883.883 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zm0 0v12"
+})), ico_elevator_path3 || (ico_elevator_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "#B8D4FF",
+  d: "M17 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0z"
+})), ico_elevator_path4 || (ico_elevator_path4 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  d: "M17.5 8.5a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"
 })));
 /* ESM default export */ const ico_elevator = (SvgIcoElevator);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-zone.svg
-var ico_zone_path, ico_zone_path2, ico_zone_path3, ico_zone_path4, _path5;
+var ico_zone_path, ico_zone_path2, ico_zone_path3, ico_zone_path4, _path5, _path6, _path7, _path8;
 function ico_zone_extends() { return ico_zone_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_zone_extends.apply(null, arguments); }
 
 const SvgIcoZone = ({
@@ -4613,27 +4612,32 @@ const SvgIcoZone = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_zone_path || (ico_zone_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M10 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
+  fill: "#0057A2",
+  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.056.3.15.263.128.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
 })), ico_zone_path2 || (ico_zone_path2 = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M9.8 13.8q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.91 4.91 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55q.491.444 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45 1.6 1.6 0 0 1 .2-.5q.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4m1 6.3q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.128.5.3a1.08 1.08 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35-.9.1-1.9.15-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25c.222-.205.476-.373.75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
+  stroke: "#57B1FF",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.056.3.15.263.128.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
 })), ico_zone_path3 || (ico_zone_path3 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.128.5.3a1.08 1.08 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35-.9.1-1.9.15-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25c.222-.205.476-.373.75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8m2.8 0q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.91 4.91 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55q.491.444 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45 1.6 1.6 0 0 1 .2-.5q.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
+  fill: "red",
+  stroke: "#000",
+  d: "M14.4 5.05a5.1 5.1 0 0 0-.8-1.15A5.1 5.1 0 0 0 10 2.5a5.04 5.04 0 0 0-3.3 1.15l-.05.05a1.6 1.6 0 0 1-.25.2 5.2 5.2 0 0 0-.95 1.45A5 5 0 0 0 5 7.5v.15A4.73 4.73 0 0 0 6.4 11q.363.37.8.65l.4.3q.16.055.3.15.13.068.25.15.16.056.3.15l.3.2q.21.164.4.35.061.067.1.15.143.19.25.4a2 2 0 0 1 .165.455q.012.026.035.045a.374.374 0 0 0 .6 0 .14.14 0 0 0 .05-.1 2 2 0 0 0 .15-.4q.107-.21.25-.4a.33.33 0 0 1 .15-.15q.15-.2.35-.35.181-.09.35-.2a.6.6 0 0 1 .25-.15q.14-.095.3-.15a.6.6 0 0 1 .25-.15 6.5 6.5 0 0 0 1.2-.95A4.75 4.75 0 0 0 15 7.5v-.2a5 5 0 0 0-.6-2.25ZM12 7.5a1.98 1.98 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a1.92 1.92 0 0 1 .6-1.4 1.82 1.82 0 0 1 1.4-.6 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4Z"
 })), ico_zone_path4 || (ico_zone_path4 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.127.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
+  fill: "#CE2000",
+  d: "M14.9 7.15v.15a4.86 4.86 0 0 1-1.45 3.3A4.8 4.8 0 0 1 10 12a4.9 4.9 0 0 1-2.6-.7 5.6 5.6 0 0 1-.85-.7 4.69 4.69 0 0 1-1.4-3.45V7a4.4 4.4 0 0 1 .3-1.65A5 5 0 0 0 5 7.5v.15A4.73 4.73 0 0 0 6.4 11q.363.37.8.65l.4.3q.16.055.3.15.13.068.25.15.16.055.3.15l.3.2q.21.164.4.35.061.067.1.15.143.19.25.4a2 2 0 0 1 .165.455q.012.026.035.045a.374.374 0 0 0 .6 0 .14.14 0 0 0 .05-.1q.097-.192.15-.4.107-.21.25-.4a.33.33 0 0 1 .15-.15q.15-.2.35-.35.181-.09.35-.2a.6.6 0 0 1 .25-.15 1.3 1.3 0 0 1 .3-.15.6.6 0 0 1 .25-.15 6.5 6.5 0 0 0 1.2-.95A4.75 4.75 0 0 0 15 7.5v-.2a5 5 0 0 0-.6-2.25 4.44 4.44 0 0 1 .5 2.1m-3.15 1.9a2.46 2.46 0 0 0 .75-1.8 2.3 2.3 0 0 0-.75-1.75A2.3 2.3 0 0 0 10 4.75a2.3 2.3 0 0 0-1.75.75 2.3 2.3 0 0 0-.75 1.75 2.46 2.46 0 0 0 .75 1.8 2.37 2.37 0 0 0 1.75.7 2.37 2.37 0 0 0 1.75-.7M12 7.5a1.98 1.98 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a1.92 1.92 0 0 1 .6-1.4 1.82 1.82 0 0 1 1.4-.6 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
 })), _path5 || (_path5 = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M9.8 13.8q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.9 4.9 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55 8 8 0 0 0 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45q.056-.267.2-.5.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
+  fill: "#FF3B00",
+  d: "M14.4 5.05a5.1 5.1 0 0 0-.8-1.15A5.1 5.1 0 0 0 10 2.5a5.04 5.04 0 0 0-3.3 1.15l-.05.05a1.6 1.6 0 0 1-.25.2 5.2 5.2 0 0 0-.95 1.45A4.4 4.4 0 0 0 5.15 7v.15a4.69 4.69 0 0 0 1.4 3.45q.39.391.85.7a4.9 4.9 0 0 0 2.6.7 4.8 4.8 0 0 0 3.45-1.4 4.86 4.86 0 0 0 1.45-3.3v-.15a4.44 4.44 0 0 0-.5-2.1m-.4 1.8v.25a4.05 4.05 0 0 1-1.15 2.6A3.98 3.98 0 0 1 10 10.85 3.8 3.8 0 0 1 7.2 9.7 3.95 3.95 0 0 1 6 7.1v-.25a3.73 3.73 0 0 1 1.2-2.8A3.62 3.62 0 0 1 9.65 2.9q.172-.045.35-.05a3.9 3.9 0 0 1 2.85 1.2A3.8 3.8 0 0 1 14 6.85"
+})), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
+  fill: "#FF4F19",
+  d: "M12.85 9.7A4.05 4.05 0 0 0 14 7.1a3.85 3.85 0 0 0-1.15-2.55A3.9 3.9 0 0 0 10 3.35a3.73 3.73 0 0 0-2.8 1.2A3.76 3.76 0 0 0 6 7.1c.06.986.489 1.914 1.2 2.6a3.81 3.81 0 0 0 2.8 1.15 3.98 3.98 0 0 0 2.85-1.15m-.35-2.45a2.45 2.45 0 0 1-.75 1.8 2.37 2.37 0 0 1-1.75.7 2.37 2.37 0 0 1-1.75-.7 2.46 2.46 0 0 1-.75-1.8 2.3 2.3 0 0 1 .75-1.75A2.3 2.3 0 0 1 10 4.75a2.3 2.3 0 0 1 1.75.75 2.3 2.3 0 0 1 .75 1.75"
+})), _path7 || (_path7 = /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "M11.4 8.95A1.98 1.98 0 0 0 12 7.5a1.92 1.92 0 0 0-.6-1.4 1.82 1.82 0 0 0-1.4-.6 1.82 1.82 0 0 0-1.4.6A1.92 1.92 0 0 0 8 7.5a1.98 1.98 0 0 0 .6 1.45 1.9 1.9 0 0 0 1.4.55 1.9 1.9 0 0 0 1.4-.55"
+})), _path8 || (_path8 = /*#__PURE__*/react.createElement("path", {
+  fill: "#FF7B52",
+  d: "M14 7.1v-.25a3.8 3.8 0 0 0-1.15-2.8A3.9 3.9 0 0 0 10 2.85a1.5 1.5 0 0 0-.35.05A3.62 3.62 0 0 0 7.2 4.05 3.73 3.73 0 0 0 6 6.85v.25a3.76 3.76 0 0 1 1.2-2.55 3.73 3.73 0 0 1 2.8-1.2 3.9 3.9 0 0 1 2.85 1.2c.69.676 1.1 1.586 1.15 2.55"
 })));
 /* ESM default export */ const ico_zone = (SvgIcoZone);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera-ok.svg
@@ -6415,7 +6419,7 @@ const SvgIcoCalendar = ({
 })));
 /* ESM default export */ const ico_calendar = (SvgIcoCalendar);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-copy2.svg
-var ico_copy2_path, ico_copy2_path2, ico_copy2_path3, ico_copy2_path4, ico_copy2_path5, _path6;
+var ico_copy2_path, ico_copy2_path2, ico_copy2_path3, ico_copy2_path4, ico_copy2_path5, ico_copy2_path6;
 function ico_copy2_extends() { return ico_copy2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_copy2_extends.apply(null, arguments); }
 
 const SvgIcoCopy2 = ({
@@ -6446,7 +6450,7 @@ const SvgIcoCopy2 = ({
 })), ico_copy2_path5 || (ico_copy2_path5 = /*#__PURE__*/react.createElement("path", {
   fill: "#333",
   d: "M9.035 6V1h1l4 4v1z"
-})), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
+})), ico_copy2_path6 || (ico_copy2_path6 = /*#__PURE__*/react.createElement("path", {
   fill: "#fff",
   d: "m12.535 5-2.5-2.5V5z"
 })));

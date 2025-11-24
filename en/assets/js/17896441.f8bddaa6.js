@@ -4519,7 +4519,7 @@ const SvgIcoFlelevfl = ({
 })))));
 /* ESM default export */ const ico_flelevfl = (SvgIcoFlelevfl);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-close.svg
-var ico_door_close_g, ico_door_close_defs;
+var ico_door_close_path, ico_door_close_path2;
 function ico_door_close_extends() { return ico_door_close_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_door_close_extends.apply(null, arguments); }
 
 const SvgIcoDoorClose = ({
@@ -4535,22 +4535,15 @@ const SvgIcoDoorClose = ({
   "aria-labelledby": titleId
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
-}, title) : null, ico_door_close_g || (ico_door_close_g = /*#__PURE__*/react.createElement("g", {
-  clipPath: "url(#a)"
-}, /*#__PURE__*/react.createElement("path", {
-  fill: "#D9D9D9",
-  d: "M2 1h12v14H2z"
-}), /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
+}, title) : null, ico_door_close_path || (ico_door_close_path = /*#__PURE__*/react.createElement("path", {
+  fill: "#298DFF",
+  d: "M2.01 13.825V2.175a1 1 0 0 1 .3-.873c.116-.113.258-.199.414-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874m9.584-6.99v2.33Z"
+})), ico_door_close_path2 || (ico_door_close_path2 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
   strokeLinecap: "round",
   strokeLinejoin: "round",
   d: "M11.594 6.835v2.33m-9.583 4.66V2.175a1 1 0 0 1 .3-.873c.115-.113.257-.199.413-.25s.322-.064.484-.042h9.583a1.09 1.09 0 0 1 .899.292 1.003 1.003 0 0 1 .3.874v11.649a1 1 0 0 1-.3.873 1.086 1.086 0 0 1-.898.291H3.207a1.09 1.09 0 0 1-.898-.29 1.003 1.003 0 0 1-.3-.874"
-}))), ico_door_close_defs || (ico_door_close_defs = /*#__PURE__*/react.createElement("defs", null, /*#__PURE__*/react.createElement("clipPath", {
-  id: "a"
-}, /*#__PURE__*/react.createElement("path", {
-  fill: "#fff",
-  d: "M0 0h16v16H0z"
-})))));
+})));
 /* ESM default export */ const ico_door_close = (SvgIcoDoorClose);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-door-sensor.svg
 var ico_door_sensor_path, ico_door_sensor_path2;
@@ -4651,7 +4644,7 @@ const SvgIcoArms = ({
 })));
 /* ESM default export */ const ico_arms = (SvgIcoArms);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-elevator.svg
-var ico_elevator_path, ico_elevator_path2;
+var ico_elevator_path, ico_elevator_path2, ico_elevator_path3, ico_elevator_path4;
 function ico_elevator_extends() { return ico_elevator_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_elevator_extends.apply(null, arguments); }
 
 const SvgIcoElevator = ({
@@ -4668,17 +4661,23 @@ const SvgIcoElevator = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_elevator_path || (ico_elevator_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M10 4h4a.884.884 0 0 1 1 1v10a.885.885 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zv12Zm7 5v2Z"
+  fill: "#3974FF",
+  d: "M10 4h4a.884.884 0 0 1 1 1v10a.883.883 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zv12Z"
 })), ico_elevator_path2 || (ico_elevator_path2 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
+  stroke: "#000",
   strokeLinecap: "round",
   strokeLinejoin: "round",
-  d: "M10 4h4a.884.884 0 0 1 1 1v10a.885.885 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zm0 0v12m7-7v2"
+  d: "M10 4h4a.884.884 0 0 1 1 1v10a.883.883 0 0 1-1 1H6a.885.885 0 0 1-1-1V5a.884.884 0 0 1 1-1zm0 0v12"
+})), ico_elevator_path3 || (ico_elevator_path3 = /*#__PURE__*/react.createElement("path", {
+  fill: "#B8D4FF",
+  d: "M17 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0z"
+})), ico_elevator_path4 || (ico_elevator_path4 = /*#__PURE__*/react.createElement("path", {
+  stroke: "#000",
+  d: "M17.5 8.5a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"
 })));
 /* ESM default export */ const ico_elevator = (SvgIcoElevator);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-zone.svg
-var ico_zone_path, ico_zone_path2, ico_zone_path3, ico_zone_path4, _path5;
+var ico_zone_path, ico_zone_path2, ico_zone_path3, ico_zone_path4, _path5, _path6, _path7, _path8;
 function ico_zone_extends() { return ico_zone_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_zone_extends.apply(null, arguments); }
 
 const SvgIcoZone = ({
@@ -4695,27 +4694,32 @@ const SvgIcoZone = ({
 }, props), title ? /*#__PURE__*/react.createElement("title", {
   id: titleId
 }, title) : null, ico_zone_path || (ico_zone_path = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M10 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
+  fill: "#0057A2",
+  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.056.3.15.263.128.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
 })), ico_zone_path2 || (ico_zone_path2 = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  d: "M9.8 13.8q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.91 4.91 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55q.491.444 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45 1.6 1.6 0 0 1 .2-.5q.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4m1 6.3q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.128.5.3a1.08 1.08 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35-.9.1-1.9.15-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25c.222-.205.476-.373.75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
+  stroke: "#57B1FF",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.056.3.15.263.128.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
 })), ico_zone_path3 || (ico_zone_path3 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.128.5.3a1.08 1.08 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35-.9.1-1.9.15-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25c.222-.205.476-.373.75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8m2.8 0q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.91 4.91 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55q.491.444 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45 1.6 1.6 0 0 1 .2-.5q.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
+  fill: "red",
+  stroke: "#000",
+  d: "M14.4 5.05a5.1 5.1 0 0 0-.8-1.15A5.1 5.1 0 0 0 10 2.5a5.04 5.04 0 0 0-3.3 1.15l-.05.05a1.6 1.6 0 0 1-.25.2 5.2 5.2 0 0 0-.95 1.45A5 5 0 0 0 5 7.5v.15A4.73 4.73 0 0 0 6.4 11q.363.37.8.65l.4.3q.16.055.3.15.13.068.25.15.16.056.3.15l.3.2q.21.164.4.35.061.067.1.15.143.19.25.4a2 2 0 0 1 .165.455q.012.026.035.045a.374.374 0 0 0 .6 0 .14.14 0 0 0 .05-.1 2 2 0 0 0 .15-.4q.107-.21.25-.4a.33.33 0 0 1 .15-.15q.15-.2.35-.35.181-.09.35-.2a.6.6 0 0 1 .25-.15q.14-.095.3-.15a.6.6 0 0 1 .25-.15 6.5 6.5 0 0 0 1.2-.95A4.75 4.75 0 0 0 15 7.5v-.2a5 5 0 0 0-.6-2.25ZM12 7.5a1.98 1.98 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a1.92 1.92 0 0 1 .6-1.4 1.82 1.82 0 0 1 1.4-.6 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4Z"
 })), ico_zone_path4 || (ico_zone_path4 = /*#__PURE__*/react.createElement("path", {
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M13 13.8q.59.097 1.15.3a.4.4 0 0 0 .15.05l.4.1q.16.055.3.15.263.127.5.3a1.09 1.09 0 0 1 .5.8q0 .7-1.3 1.3a2 2 0 0 0-.4.15q-.64.21-1.3.35a31 31 0 0 1-1.9.15q-.55.05-1.1.05h-.4q-.55 0-1.05-.05a12 12 0 0 1-1.55-.2 6.3 6.3 0 0 1-1.2-.3h-.05Q4 16.3 4 15.5q0-.154.05-.3a.6.6 0 0 1 .15-.25 2.9 2.9 0 0 1 .75-.5q.25-.1.55-.25a1 1 0 0 0 .3-.05A4.6 4.6 0 0 1 7 13.8"
+  fill: "#CE2000",
+  d: "M14.9 7.15v.15a4.86 4.86 0 0 1-1.45 3.3A4.8 4.8 0 0 1 10 12a4.9 4.9 0 0 1-2.6-.7 5.6 5.6 0 0 1-.85-.7 4.69 4.69 0 0 1-1.4-3.45V7a4.4 4.4 0 0 1 .3-1.65A5 5 0 0 0 5 7.5v.15A4.73 4.73 0 0 0 6.4 11q.363.37.8.65l.4.3q.16.055.3.15.13.068.25.15.16.055.3.15l.3.2q.21.164.4.35.061.067.1.15.143.19.25.4a2 2 0 0 1 .165.455q.012.026.035.045a.374.374 0 0 0 .6 0 .14.14 0 0 0 .05-.1q.097-.192.15-.4.107-.21.25-.4a.33.33 0 0 1 .15-.15q.15-.2.35-.35.181-.09.35-.2a.6.6 0 0 1 .25-.15 1.3 1.3 0 0 1 .3-.15.6.6 0 0 1 .25-.15 6.5 6.5 0 0 0 1.2-.95A4.75 4.75 0 0 0 15 7.5v-.2a5 5 0 0 0-.6-2.25 4.44 4.44 0 0 1 .5 2.1m-3.15 1.9a2.46 2.46 0 0 0 .75-1.8 2.3 2.3 0 0 0-.75-1.75A2.3 2.3 0 0 0 10 4.75a2.3 2.3 0 0 0-1.75.75 2.3 2.3 0 0 0-.75 1.75 2.46 2.46 0 0 0 .75 1.8 2.37 2.37 0 0 0 1.75.7 2.37 2.37 0 0 0 1.75-.7M12 7.5a1.98 1.98 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a1.92 1.92 0 0 1 .6-1.4 1.82 1.82 0 0 1 1.4-.6 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
 })), _path5 || (_path5 = /*#__PURE__*/react.createElement("path", {
-  fill: "#686868",
-  stroke: "#AAA",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  d: "M9.8 13.8q.1.15.2.15a.2.2 0 0 0 .2-.15.2.2 0 0 0 .1-.2c.156-.297.358-.567.6-.8q.252-.253.55-.45h.05l1-.5q.544-.346 1-.8A4.85 4.85 0 0 0 15 7.5a4.9 4.9 0 0 0-1.5-3.6 8 8 0 0 0-1-.75 1.3 1.3 0 0 1-.35-.25A5.7 5.7 0 0 0 10 2.5a5.1 5.1 0 0 0-2.1.4q-.19.143-.4.25-.545.346-1.05.75A5 5 0 0 0 5 7.5a4.94 4.94 0 0 0 1.45 3.55 8 8 0 0 0 1.05.8l1 .5q.3.2.65.45c.213.234.383.505.5.8a.32.32 0 0 0 .15.2M12 7.5a1.97 1.97 0 0 1-.6 1.45 1.9 1.9 0 0 1-1.4.55 1.9 1.9 0 0 1-1.4-.55A1.98 1.98 0 0 1 8 7.5a2 2 0 0 1 .05-.45q.056-.267.2-.5.147-.247.35-.45a1.64 1.64 0 0 1 .95-.55h.15a1 1 0 0 1 .3-.05 1.82 1.82 0 0 1 1.4.6 1.92 1.92 0 0 1 .6 1.4"
+  fill: "#FF3B00",
+  d: "M14.4 5.05a5.1 5.1 0 0 0-.8-1.15A5.1 5.1 0 0 0 10 2.5a5.04 5.04 0 0 0-3.3 1.15l-.05.05a1.6 1.6 0 0 1-.25.2 5.2 5.2 0 0 0-.95 1.45A4.4 4.4 0 0 0 5.15 7v.15a4.69 4.69 0 0 0 1.4 3.45q.39.391.85.7a4.9 4.9 0 0 0 2.6.7 4.8 4.8 0 0 0 3.45-1.4 4.86 4.86 0 0 0 1.45-3.3v-.15a4.44 4.44 0 0 0-.5-2.1m-.4 1.8v.25a4.05 4.05 0 0 1-1.15 2.6A3.98 3.98 0 0 1 10 10.85 3.8 3.8 0 0 1 7.2 9.7 3.95 3.95 0 0 1 6 7.1v-.25a3.73 3.73 0 0 1 1.2-2.8A3.62 3.62 0 0 1 9.65 2.9q.172-.045.35-.05a3.9 3.9 0 0 1 2.85 1.2A3.8 3.8 0 0 1 14 6.85"
+})), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
+  fill: "#FF4F19",
+  d: "M12.85 9.7A4.05 4.05 0 0 0 14 7.1a3.85 3.85 0 0 0-1.15-2.55A3.9 3.9 0 0 0 10 3.35a3.73 3.73 0 0 0-2.8 1.2A3.76 3.76 0 0 0 6 7.1c.06.986.489 1.914 1.2 2.6a3.81 3.81 0 0 0 2.8 1.15 3.98 3.98 0 0 0 2.85-1.15m-.35-2.45a2.45 2.45 0 0 1-.75 1.8 2.37 2.37 0 0 1-1.75.7 2.37 2.37 0 0 1-1.75-.7 2.46 2.46 0 0 1-.75-1.8 2.3 2.3 0 0 1 .75-1.75A2.3 2.3 0 0 1 10 4.75a2.3 2.3 0 0 1 1.75.75 2.3 2.3 0 0 1 .75 1.75"
+})), _path7 || (_path7 = /*#__PURE__*/react.createElement("path", {
+  fill: "#000",
+  d: "M11.4 8.95A1.98 1.98 0 0 0 12 7.5a1.92 1.92 0 0 0-.6-1.4 1.82 1.82 0 0 0-1.4-.6 1.82 1.82 0 0 0-1.4.6A1.92 1.92 0 0 0 8 7.5a1.98 1.98 0 0 0 .6 1.45 1.9 1.9 0 0 0 1.4.55 1.9 1.9 0 0 0 1.4-.55"
+})), _path8 || (_path8 = /*#__PURE__*/react.createElement("path", {
+  fill: "#FF7B52",
+  d: "M14 7.1v-.25a3.8 3.8 0 0 0-1.15-2.8A3.9 3.9 0 0 0 10 2.85a1.5 1.5 0 0 0-.35.05A3.62 3.62 0 0 0 7.2 4.05 3.73 3.73 0 0 0 6 6.85v.25a3.76 3.76 0 0 1 1.2-2.55 3.73 3.73 0 0 1 2.8-1.2 3.9 3.9 0 0 1 2.85 1.2c.69.676 1.1 1.586 1.15 2.55"
 })));
 /* ESM default export */ const ico_zone = (SvgIcoZone);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-camera-ok.svg
@@ -6497,7 +6501,7 @@ const SvgIcoCalendar = ({
 })));
 /* ESM default export */ const ico_calendar = (SvgIcoCalendar);
 ;// CONCATENATED MODULE: ./static/img/menus/ico-copy2.svg
-var ico_copy2_path, ico_copy2_path2, ico_copy2_path3, ico_copy2_path4, ico_copy2_path5, _path6;
+var ico_copy2_path, ico_copy2_path2, ico_copy2_path3, ico_copy2_path4, ico_copy2_path5, ico_copy2_path6;
 function ico_copy2_extends() { return ico_copy2_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, ico_copy2_extends.apply(null, arguments); }
 
 const SvgIcoCopy2 = ({
@@ -6528,7 +6532,7 @@ const SvgIcoCopy2 = ({
 })), ico_copy2_path5 || (ico_copy2_path5 = /*#__PURE__*/react.createElement("path", {
   fill: "#333",
   d: "M9.035 6V1h1l4 4v1z"
-})), _path6 || (_path6 = /*#__PURE__*/react.createElement("path", {
+})), ico_copy2_path6 || (ico_copy2_path6 = /*#__PURE__*/react.createElement("path", {
   fill: "#fff",
   d: "m12.535 5-2.5-2.5V5z"
 })));
