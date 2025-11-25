@@ -25,7 +25,41 @@ Check out all of Suprema's products and BioStar related information here.
 
 [**Docs**](/docs/en/)
 
-[BioStar X](/docs/en/platform/biostar_x)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
+[Platforms](#)
+
+* [BioStar X](/docs/en/platform/biostar_x)
+* [BioStar Air](/docs/en/platform/biostar_air)
+
+[Devices](#)
+
+* [BioEntry W3](/docs/en/device/bioentry_w3)
+* [BioStation 2a](/docs/en/device/biostation_2a)
+* [BioStation 3](/docs/en/device/biostation_3)
+* [FaceStation F2](/docs/en/device/facestation_f2)
+* [FaceStation 2](/docs/en/device/facestation_2)
+* [BioLite N2](/docs/en/device/biolite_n2)
+* [BioEntry W2](/docs/en/device/bioentry_w2)
+* [BioEntry P2](/docs/en/device/bioentry_p2)
+* [BioEntry R2](/docs/en/device/bioentry_r2)
+* [X-Station 2](/docs/en/device/xstation_2)
+* [XPass Q2](/docs/en/device/xpass_q2)
+* [XPass 2](/docs/en/device/xpass_2)
+* [XPass D2](/docs/en/device/xpass_d2)
+* [XPass S2](/docs/en/device/xpass_s2)
+* [CoreStation 20](/docs/en/device/corestation_20)
+* [CoreStation](/docs/en/device/corestation_40)
+* [Enclosure](/docs/en/device/enclosure)
+* [Door Interface](/docs/en/device/doorinterface)
+* [Input Module](/docs/en/device/inputmodule)
+* [Output Module](/docs/en/device/outputmodule)
+* [Door Module](/docs/en/device/doormodule)
+* [Secure Module](/docs/en/device/securemodule)
+* [Extended Module](/docs/en/device/extendedmodule)
+* [Extended Module-SC](/docs/en/device/extendedmodule_sc)
+* [Device Manager](/docs/en/device/device_manager)
+* [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager)
+
+[How-to Articles](/docs/en/how-to)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
 
 Search
 
@@ -93812,7 +93846,41 @@ if (readCard.header.hdrCRC != calculatedHdrCRC) {
 
 [**Docs**](/docs/en/)
 
-[BioStar X](/docs/en/platform/biostar_x)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
+[Platforms](#)
+
+* [BioStar X](/docs/en/platform/biostar_x)
+* [BioStar Air](/docs/en/platform/biostar_air)
+
+[Devices](#)
+
+* [BioEntry W3](/docs/en/device/bioentry_w3)
+* [BioStation 2a](/docs/en/device/biostation_2a)
+* [BioStation 3](/docs/en/device/biostation_3)
+* [FaceStation F2](/docs/en/device/facestation_f2)
+* [FaceStation 2](/docs/en/device/facestation_2)
+* [BioLite N2](/docs/en/device/biolite_n2)
+* [BioEntry W2](/docs/en/device/bioentry_w2)
+* [BioEntry P2](/docs/en/device/bioentry_p2)
+* [BioEntry R2](/docs/en/device/bioentry_r2)
+* [X-Station 2](/docs/en/device/xstation_2)
+* [XPass Q2](/docs/en/device/xpass_q2)
+* [XPass 2](/docs/en/device/xpass_2)
+* [XPass D2](/docs/en/device/xpass_d2)
+* [XPass S2](/docs/en/device/xpass_s2)
+* [CoreStation 20](/docs/en/device/corestation_20)
+* [CoreStation](/docs/en/device/corestation_40)
+* [Enclosure](/docs/en/device/enclosure)
+* [Door Interface](/docs/en/device/doorinterface)
+* [Input Module](/docs/en/device/inputmodule)
+* [Output Module](/docs/en/device/outputmodule)
+* [Door Module](/docs/en/device/doormodule)
+* [Secure Module](/docs/en/device/securemodule)
+* [Extended Module](/docs/en/device/extendedmodule)
+* [Extended Module-SC](/docs/en/device/extendedmodule_sc)
+* [Device Manager](/docs/en/device/device_manager)
+* [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager)
+
+[How-to Articles](/docs/en/how-to)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
 
 Search
 
