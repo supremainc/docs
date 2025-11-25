@@ -2605,7 +2605,7 @@
   },
   "/img/common/biostarx-sm-cws.png": {
     "width": 1000,
-    "height": 293
+    "height": 261
   },
   "/img/common/biostarx-sm-plugins-add-new.png": {
     "width": 1000,
@@ -2690,6 +2690,10 @@
   "/img/common/biostarx-tutoria-service-manager-services-stop.png": {
     "width": 1200,
     "height": 495
+  },
+  "/img/common/bsx-main_2n.jpg": {
+    "width": 1200,
+    "height": 540
   },
   "/img/common/cardpresso-new-card-template.png": {
     "width": 1500,
@@ -2911,6 +2915,10 @@
     "width": 1000,
     "height": 452
   },
+  "/img/device/bln2-Administrator-two-step-auth.png": {
+    "width": 200,
+    "height": 160
+  },
   "/img/device/bln2-auth-authmode.png": {
     "width": 200,
     "height": 160
@@ -2951,6 +2959,30 @@
     "width": 200,
     "height": 160
   },
+  "/img/device/bln2-master-admin-edit.png": {
+    "width": 208,
+    "height": 174
+  },
+  "/img/device/bln2-master-admin-error-message.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/device/bln2-master-admin-setting-credential1.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/device/bln2-master-admin-setting-credential2.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/device/bln2-master-admin-setting-main.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/device/bln2-master-admin.png": {
+    "width": 200,
+    "height": 160
+  },
   "/img/device/bln2-menu.png": {
     "width": 200,
     "height": 160
@@ -2976,6 +3008,10 @@
     "height": 160
   },
   "/img/device/bs2a-add-dst.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-Administrator-two-step-auth.png": {
     "width": 320,
     "height": 240
   },
@@ -3032,6 +3068,30 @@
     "height": 240
   },
   "/img/device/bs2a-key-menu.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-master-admin-edit.png": {
+    "width": 320,
+    "height": 244
+  },
+  "/img/device/bs2a-master-admin-error-message.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-master-admin-setting-credential1.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-master-admin-setting-credential2.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-master-admin-setting-main.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/device/bs2a-master-admin.png": {
     "width": 320,
     "height": 240
   },
@@ -3571,6 +3631,10 @@
     "width": 1170,
     "height": 725
   },
+  "/img/device/installation-automatic-door-xpq2.png": {
+    "width": 1154,
+    "height": 770
+  },
   "/img/device/installation-automatic-door-xps2.png": {
     "width": 1129,
     "height": 631
@@ -3787,6 +3851,10 @@
     "width": 1008,
     "height": 506
   },
+  "/img/device/installation-input-connection-xpq2.png": {
+    "width": 1097,
+    "height": 615
+  },
   "/img/device/installation-input-connection-xs2.png": {
     "width": 906,
     "height": 526
@@ -3794,6 +3862,10 @@
   "/img/device/installation-input-door-connection-xps2.png": {
     "width": 1043,
     "height": 503
+  },
+  "/img/device/installation-lock-power-connection-xpq2.png": {
+    "width": 990,
+    "height": 505
   },
   "/img/device/installation-network-direct-connection-bep2.png": {
     "width": 960,
@@ -3838,6 +3910,10 @@
   "/img/device/installation-network-direct-connection-xp2.png": {
     "width": 1002,
     "height": 429
+  },
+  "/img/device/installation-network-direct-connection-xpq2.png": {
+    "width": 917,
+    "height": 449
   },
   "/img/device/installation-network-direct-connection-xps2.png": {
     "width": 1023,
@@ -3890,6 +3966,10 @@
   "/img/device/installation-network-hub-connection-xp2.png": {
     "width": 1004,
     "height": 484
+  },
+  "/img/device/installation-network-hub-connection-xpq2.png": {
+    "width": 1171,
+    "height": 455
   },
   "/img/device/installation-network-hub-connection-xps2.png": {
     "width": 1016,
@@ -3967,6 +4047,10 @@
     "width": 998,
     "height": 525
   },
+  "/img/device/installation-power-connection-xpq2.png": {
+    "width": 816,
+    "height": 504
+  },
   "/img/device/installation-power-connection-xps2.png": {
     "width": 969,
     "height": 366
@@ -3974,6 +4058,10 @@
   "/img/device/installation-power-connection-xs2.png": {
     "width": 979,
     "height": 486
+  },
+  "/img/device/installation-reader-power-connection-xpq2.png": {
+    "width": 988,
+    "height": 501
   },
   "/img/device/installation-recommended-fsf2.png": {
     "width": 596,
@@ -4038,6 +4126,10 @@
   "/img/device/installation-relay-fail-safe-lock-xp2.png": {
     "width": 1008,
     "height": 499
+  },
+  "/img/device/installation-relay-fail-safe-lock-xpq2.png": {
+    "width": 1113,
+    "height": 665
   },
   "/img/device/installation-relay-fail-safe-lock-xps2.png": {
     "width": 952,
@@ -4106,6 +4198,10 @@
   "/img/device/installation-relay-fail-secure-lock-xp2.png": {
     "width": 1012,
     "height": 476
+  },
+  "/img/device/installation-relay-fail-secure-lock-xpq2.png": {
+    "width": 1116,
+    "height": 666
   },
   "/img/device/installation-relay-fail-secure-lock-xps2.png": {
     "width": 955,
@@ -4191,6 +4287,10 @@
     "width": 907,
     "height": 939
   },
+  "/img/device/installation-sio2-connection-xpq2.png": {
+    "width": 1000,
+    "height": 696
+  },
   "/img/device/installation-sio2-connection-xps2.png": {
     "width": 1209,
     "height": 703
@@ -4234,6 +4334,10 @@
   "/img/device/installation-standalone-connection-xp2.png": {
     "width": 925,
     "height": 689
+  },
+  "/img/device/installation-standalone-connection-xpq2.png": {
+    "width": 973,
+    "height": 877
   },
   "/img/device/installation-standalone-connection-xps2.png": {
     "width": 1114,
@@ -4291,6 +4395,10 @@
     "width": 459,
     "height": 244
   },
+  "/img/device/installation-wall1-xpq2.png": {
+    "width": 446,
+    "height": 256
+  },
   "/img/device/installation-wall1-xs2.png": {
     "width": 448,
     "height": 227
@@ -4330,6 +4438,10 @@
   "/img/device/installation-wall2-xpd2-mdb.png": {
     "width": 496,
     "height": 418
+  },
+  "/img/device/installation-wall2-xpq2.png": {
+    "width": 480,
+    "height": 398
   },
   "/img/device/installation-wall2-xs2.png": {
     "width": 490,
@@ -4386,6 +4498,10 @@
   "/img/device/installation-wiegand-inout-connection-xp2.png": {
     "width": 728,
     "height": 436
+  },
+  "/img/device/installation-wiegand-inout-connection-xpq2.png": {
+    "width": 1105,
+    "height": 570
   },
   "/img/device/installation-wiegand-inout-connection-xs2.png": {
     "width": 832,
@@ -4538,6 +4654,10 @@
   "/img/device/name-function-each-part-xpd2.png": {
     "width": 1188,
     "height": 899
+  },
+  "/img/device/name-function-each-part-xpq2.png": {
+    "width": 712,
+    "height": 935
   },
   "/img/device/name-function-each-part-xps2.png": {
     "width": 1146,
@@ -7679,6 +7799,10 @@
     "width": 1112,
     "height": 699
   },
+  "/img/en/device/installation-automatic-door-xpq2.png": {
+    "width": 1141,
+    "height": 756
+  },
   "/img/en/device/installation-automatic-door-xps2.png": {
     "width": 1130,
     "height": 629
@@ -7807,6 +7931,10 @@
     "width": 1000,
     "height": 492
   },
+  "/img/en/device/installation-input-connection-xpq2.png": {
+    "width": 1095,
+    "height": 609
+  },
   "/img/en/device/installation-input-connection-xs2.png": {
     "width": 902,
     "height": 523
@@ -7814,6 +7942,10 @@
   "/img/en/device/installation-input-door-connection-xps2.png": {
     "width": 1039,
     "height": 487
+  },
+  "/img/en/device/installation-lock-power-connection-xpq2.png": {
+    "width": 986,
+    "height": 499
   },
   "/img/en/device/installation-network-hub-connection-bep2.png": {
     "width": 1059,
@@ -7854,6 +7986,10 @@
   "/img/en/device/installation-network-hub-connection-xp2.png": {
     "width": 1001,
     "height": 478
+  },
+  "/img/en/device/installation-network-hub-connection-xpq2.png": {
+    "width": 1169,
+    "height": 449
   },
   "/img/en/device/installation-network-hub-connection-xps2.png": {
     "width": 1024,
@@ -7923,6 +8059,10 @@
     "width": 1016,
     "height": 535
   },
+  "/img/en/device/installation-power-connection-xpq2.png": {
+    "width": 872,
+    "height": 499
+  },
   "/img/en/device/installation-power-connection-xps2.png": {
     "width": 969,
     "height": 365
@@ -7930,6 +8070,10 @@
   "/img/en/device/installation-power-connection-xs2.png": {
     "width": 984,
     "height": 492
+  },
+  "/img/en/device/installation-reader-power-connection-xpq2.png": {
+    "width": 986,
+    "height": 502
   },
   "/img/en/device/installation-relay-fail-safe-lock-bep2.png": {
     "width": 1142,
@@ -7986,6 +8130,10 @@
   "/img/en/device/installation-relay-fail-safe-lock-xp2.png": {
     "width": 998,
     "height": 487
+  },
+  "/img/en/device/installation-relay-fail-safe-lock-xpq2.png": {
+    "width": 1107,
+    "height": 656
   },
   "/img/en/device/installation-relay-fail-safe-lock-xps2.png": {
     "width": 958,
@@ -8050,6 +8198,10 @@
   "/img/en/device/installation-relay-fail-secure-lock-xp2.png": {
     "width": 998,
     "height": 461
+  },
+  "/img/en/device/installation-relay-fail-secure-lock-xpq2.png": {
+    "width": 1109,
+    "height": 660
   },
   "/img/en/device/installation-relay-fail-secure-lock-xps2.png": {
     "width": 957,
@@ -8131,6 +8283,10 @@
     "width": 918,
     "height": 925
   },
+  "/img/en/device/installation-sio2-connection-xpq2.png": {
+    "width": 991,
+    "height": 691
+  },
   "/img/en/device/installation-sio2-connection-xps2.png": {
     "width": 1213,
     "height": 674
@@ -8170,6 +8326,10 @@
   "/img/en/device/installation-standalone-connection-xp2.png": {
     "width": 959,
     "height": 722
+  },
+  "/img/en/device/installation-standalone-connection-xpq2.png": {
+    "width": 967,
+    "height": 874
   },
   "/img/en/device/installation-standalone-connection-xps2.png": {
     "width": 1099,
@@ -8223,6 +8383,10 @@
     "width": 471,
     "height": 251
   },
+  "/img/en/device/installation-wall1-xpq2.png": {
+    "width": 450,
+    "height": 259
+  },
   "/img/en/device/installation-wall1-xs2.png": {
     "width": 453,
     "height": 228
@@ -8258,6 +8422,10 @@
   "/img/en/device/installation-wall2-xpd2-mdb.png": {
     "width": 490,
     "height": 413
+  },
+  "/img/en/device/installation-wall2-xpq2.png": {
+    "width": 479,
+    "height": 399
   },
   "/img/en/device/installation-wall2-xs2.png": {
     "width": 484,
@@ -8310,6 +8478,10 @@
   "/img/en/device/installation-wiegand-inout-connection-xp2.png": {
     "width": 696,
     "height": 422
+  },
+  "/img/en/device/installation-wiegand-inout-connection-xpq2.png": {
+    "width": 1102,
+    "height": 565
   },
   "/img/en/device/installation-wiegand-inout-connection-xs2.png": {
     "width": 816,
@@ -8430,6 +8602,10 @@
   "/img/en/device/name-function-each-part-xpd2.png": {
     "width": 1227,
     "height": 920
+  },
+  "/img/en/device/name-function-each-part-xpq2.png": {
+    "width": 766,
+    "height": 941
   },
   "/img/en/device/name-function-each-part-xps2.png": {
     "width": 1115,
