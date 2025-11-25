@@ -743,23 +743,23 @@ const sidebars = {
         'reference/smartcardissue'
       ]
     }
-  ]
-  // howto: [
-  //   {
-  //     type: 'category',
-  //     label: 'How-to Articles',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'how-to/index',
-  //     },
-  //     items: [
-  //       'how-to/master-admin',
-  //     ]
-  //   }
-  // ],
+  ],
+  howto: [
+    {
+      type: 'category',
+      label: 'How-to Articles',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'how-to/index',
+      },
+      items: [
+        'how-to/master-admin',
+      ]
+    }
+  ],
   // corestation: [
   //   {
   //     type: 'category',
