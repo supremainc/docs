@@ -2715,15 +2715,9 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "케이블 제조사 및 제품별 저항치 차이에 따라 실제 최대 연장 길이는 달라질 수 있습니다."
       })
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "BioStation 3",
-      product_2: "FaceStation F2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "BioStation 3",
-      product_2: "FaceStation F2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
       name: "초록색"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "펌웨어-업그레이드",
       children: "펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -2721,15 +2721,9 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "The actual maximum extension length can vary depending on the resistance of the cable manufacturer and model."
       })
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "BioStation 3",
-      product_2: "FaceStation F2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "BioStation 3",
-      product_2: "FaceStation F2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
       name: "green"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "firmware-upgrade",
       children: "Firmware upgrade"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -805,9 +805,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image, Row, Table, Tbody, Td} = _components;
+  }, {Cmd, Image, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
   if (!Tbody) _missingMdxReference("Tbody", true);
@@ -1071,7 +1072,7 @@ function _createMdxContent(props) {
           }), ": 락 전원 출력 케이블을 연결합니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_cables_and_connectors/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_cables_and_connectors/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "qr바코드-및-장치-라이선스에-대한-참고-사항",
       children: "QR/바코드 및 장치 라이선스에 대한 참고 사항"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
