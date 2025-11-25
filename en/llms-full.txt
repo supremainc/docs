@@ -25,41 +25,7 @@ Check out all of Suprema's products and BioStar related information here.
 
 [**Docs**](/docs/en/)
 
-[Platforms](#)
-
-* [BioStar X](/docs/en/platform/biostar_x)
-* [BioStar Air](/docs/en/platform/biostar_air)
-
-[Devices](#)
-
-* [BioEntry W3](/docs/en/device/bioentry_w3)
-* [BioStation 2a](/docs/en/device/biostation_2a)
-* [BioStation 3](/docs/en/device/biostation_3)
-* [FaceStation F2](/docs/en/device/facestation_f2)
-* [FaceStation 2](/docs/en/device/facestation_2)
-* [BioLite N2](/docs/en/device/biolite_n2)
-* [BioEntry W2](/docs/en/device/bioentry_w2)
-* [BioEntry P2](/docs/en/device/bioentry_p2)
-* [BioEntry R2](/docs/en/device/bioentry_r2)
-* [X-Station 2](/docs/en/device/xstation_2)
-* [XPass Q2](/docs/en/device/xpass_q2)
-* [XPass 2](/docs/en/device/xpass_2)
-* [XPass D2](/docs/en/device/xpass_d2)
-* [XPass S2](/docs/en/device/xpass_s2)
-* [CoreStation 20](/docs/en/device/corestation_20)
-* [CoreStation](/docs/en/device/corestation_40)
-* [Enclosure](/docs/en/device/enclosure)
-* [Door Interface](/docs/en/device/doorinterface)
-* [Input Module](/docs/en/device/inputmodule)
-* [Output Module](/docs/en/device/outputmodule)
-* [Door Module](/docs/en/device/doormodule)
-* [Secure Module](/docs/en/device/securemodule)
-* [Extended Module](/docs/en/device/extendedmodule)
-* [Extended Module-SC](/docs/en/device/extendedmodule_sc)
-* [Device Manager](/docs/en/device/device_manager)
-* [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager)
-
-[How-to Articles](/docs/en/how-to)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
+[BioStar X](/docs/en/platform/biostar_x)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
 
 Search
 
@@ -27964,7 +27930,7 @@ Info
 
 * **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
@@ -27974,7 +27940,7 @@ Info
 
 * **Input (4-pin)**: Connect the input cable.
 
-* **Wiegand Input/Output (4-pin)**: Connect the Wiegand input/output cable.
+* **Wiegand Input/Output (4-pin)**: Connect the Wiegand Input/Output cable.
 
 * **Reset Button**
 
@@ -28035,7 +28001,7 @@ Info
 
 <!-- -->
 
-##### Wiegand input and output[​](#wiegand-input-and-output "Direct link to Wiegand input and output")
+##### Wiegand Input and Output[​](#wiegand-input-and-output "Direct link to Wiegand Input and Output")
 
 ![](/docs/en/img/device/cable-wiegand-4pin.svg)
 
@@ -29889,7 +29855,7 @@ Info
 
 * **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 * **RS-485 (4-pin)**: Connect the RS-485 cable.
 
@@ -33190,7 +33156,7 @@ Info
 
 * **Cable**
 
-  Power / Ethernet / RS-485 / Wiegand input/output / Input / Relay
+  Power / Ethernet / RS-485 / Wiegand Input/Output / Input / Relay
 
 * **Speaker**: Delivers sound.
 
@@ -37815,9 +37781,9 @@ Info
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **USB expansion port (5-pin)**: Connect other accessory products.
+* **USB Expansion Port (5-pin)**: Connect other accessory products.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 <!-- -->
 
@@ -39696,7 +39662,7 @@ You can register user information that includes biometric authentication data.
 
    * Security level: You can set the security level for 1:1 authentication.
 
-   * Duress: Choose this option to enroll with a coercive fingerprint. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
+   * Duress: Select to enroll a duress fingerprint. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
 
    * Private Auth Mode: You can change the authentication method for each user. Select the desired item and change the setting with the / buttons.
 
@@ -40289,7 +40255,7 @@ Info
 
 * **Input (5-pin)**: Connect the input cable.
 
-* **USB expansion port (5-pin)**: Connect other accessory products.
+* **USB Expansion Port (5-pin)**: Connect other accessory products.
 
 * **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
 
@@ -40299,7 +40265,7 @@ Info
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 * **USB (Type-C) Memory Slot**: Connects the USB memory.
 
@@ -43453,7 +43419,7 @@ You can connect the product to a hub using a general type CAT-5 cable.
 
 This product has automatic MDI/MDIX functionality, so you can connect directly to a PC using a standard CAT-5e cable.
 
-CS-20P supports PoE+, which supplies power through an Ethernet cable. When using PoE+, only one Lock connection is supported.
+CS-20P Supports PoE+, which supplies power through an Ethernet cable. When using PoE+, only one Lock connection is supported.
 
 <!-- -->
 
@@ -51010,7 +50976,7 @@ Info
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 * **Ethernet**: Connect the Ethernet cable.
 
@@ -51071,7 +51037,7 @@ Info
 
 <!-- -->
 
-##### Wiegand input and output[​](#wiegand-input-and-output "Direct link to Wiegand input and output")
+##### Wiegand Input and Output[​](#wiegand-input-and-output "Direct link to Wiegand Input and Output")
 
 ![](/docs/en/img/device/cable-wiegand-4pin.svg)
 
@@ -54355,7 +54321,7 @@ Info
 
 * **Input (4-pin)**: Connect the input cable.
 
-* **Wiegand Input/Output (4-pin)**: Connect the Wiegand input/output cable.
+* **Wiegand Input/Output (4-pin)**: Connect the Wiegand Input/Output cable.
 
 * **RS-485 (4-pin)**: Connect the RS-485 cable.
 
@@ -54363,7 +54329,7 @@ Info
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
 * **SAM Card Slot**: A SAM card can be used.
 
@@ -54422,7 +54388,7 @@ Info
 
 <!-- -->
 
-##### Wiegand input and output[​](#wiegand-input-and-output "Direct link to Wiegand input and output")
+##### Wiegand Input and Output[​](#wiegand-input-and-output "Direct link to Wiegand Input and Output")
 
 ![](/docs/en/img/device/cable-wiegand-4pin.svg)
 
@@ -56957,7 +56923,7 @@ You can register user information that includes biometric authentication data.
 
    * Face: You can register a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To enroll more faces, click ![](/docs/en/img/common/ico-add2.svg). Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
 
-   * Fingerprint: You can register a fingerprint for FSF2-ODB user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
+   * Fingerprint: FSF2-ODB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
 
    * Card: You can enroll a card for user authentication. Press Card → Next and scan the card to assign to the user in the RF card authentication section. To enroll more cards, click ![](/docs/en/img/common/ico-add2.svg).
 
@@ -56979,7 +56945,7 @@ You can register user information that includes biometric authentication data.
 
    * Period: You can set the duration for using the user account.
 
-   * Select to enroll a threat fingerprint for FSF2-ODB. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
+   * Duress: FSF2-ODB Select to enroll a duress fingerprint. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
 
    * Extended Private Auth Mode: You can set the extended personal authentication mode. Using the extended personal authentication mode, you can combine methods of authentication including face and fingerprint for each user. Otherwise, you can use the device’s basic authentication mode.
 
@@ -59890,7 +59856,7 @@ Info
 
   Power / RS-485 / Ethernet / Wiegand I/O / Input / Relay
 
-* **Keypad**: XP2-GKDPB used to authenticate by directly entering the card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
+* **Keypad**: XP2-GKDPB Used to authenticate by directly entering the Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
 
   * **0~9**: Used when entering numbers.
 
@@ -61632,7 +61598,7 @@ Info
 
   Power / RS-485 / Wiegand Output / LED Input / Beep Input / Tamper
 
-* **Keypad**: Used to authenticate by directly entering the XPD2-GKDB Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
+* **Keypad**: XPD2-GKDB Used to authenticate by directly entering the Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
 
   * **0~9**: Used when entering numbers.
 
@@ -62720,9 +62686,9 @@ Info
 
   * Yellow blinking: Waiting for an input.
 
-* **LED light**: The LED turns on automatically when motion is detected near the QR/Barcode scanner.
+* **LED Light**: The LED turns on automatically when motion is detected near the QR/Barcode scanner.
 
-* **QR/Barcode scanner**: Scans QR/Barcode credentials for access.
+* **QR/Barcode Scanner**: Scans QR/Barcode credentials for access.
 
 * **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
 
@@ -62742,15 +62708,15 @@ Info
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
-* **USB expansion port (5-pin)**: Connect other accessory products.
+* **USB Expansion Port (5-pin)**: Connect other accessory products.
 
-* **Wiegand Input/Output (4-pin)**: Connect the Wiegand input/output cable.
+* **Wiegand Input/Output (4-pin)**: Connect the Wiegand Input/Output cable.
 
-* **Reader power output (3-pin)**: Connect the reader power output cable.
+* **Reader Power Output (3-pin)**: Connect the reader power output cable.
 
-* **Lock power output (3-pin)**: Connect the lock power output cable.
+* **Lock Power Output (3-pin)**: Connect the lock power output cable.
 
 <!-- -->
 
@@ -62806,7 +62772,7 @@ Info
 
 <!-- -->
 
-##### Wiegand input and output[​](#wiegand-input-and-output "Direct link to Wiegand input and output")
+##### Wiegand Input and Output[​](#wiegand-input-and-output "Direct link to Wiegand Input and Output")
 
 ![](/docs/en/img/device/cable-wiegand-4pin.svg)
 
@@ -62819,7 +62785,7 @@ Info
 
 <!-- -->
 
-##### Reader/lock power output[​](#readerlock-power-output "Direct link to Reader/lock power output")
+##### Reader/Lock Power Output[​](#readerlock-power-output "Direct link to Reader/Lock Power Output")
 
 ![](/docs/en/img/device/cable-dcout.svg)
 
@@ -62837,7 +62803,7 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 
 ![](/docs/en/img/device/qr-scanning-xpq2.svg)
 
-* Keep a distance of 5–20 cm between the device7s scanner and the QR/Barcode.
+* Keep a distance of 5–20 cm between the device’s scanner and the QR/Barcode.
 
 * Position the QR/Barcode in the center of the scanner.
 
@@ -62984,12 +62950,12 @@ Caution
 
 The distance that can be connected may vary depending on the cable specifications and installation environment used for power connection. If cable connections are made improperly it may cause the device to malfunction. The product supports DC 12 V, DC 24 V, and PoE. Check the maximum extension length for each cable gauge and connect the power correctly.
 
-| Cable Specification | DC 12V          |              | DC 24V          |               | PoE (12 V output) |   |
-| ------------------- | --------------- | ------------ | --------------- | ------------- | ----------------- | - |
-|                     | Reader (500 mA) | Lock (1.2 A) | Reader (250 mA) | Lock (600 mA) | Reader (500 mA)   |   |
-| 14 AWG              | 190 m           | 95 m         | 770 m           | 385 m         | 190 m             |   |
-| 16 AWG              | 120 m           | 60 m         | 480 m           | 240 m         | 120 m             |   |
-| 18 AWG              | 75 m            | 35 m         | 300 m           | 150 m         | 75 m              |   |
+| Cable Specification | DC 12V          |              | DC 24V          |               | PoE (12V Output) |   |
+| ------------------- | --------------- | ------------ | --------------- | ------------- | ---------------- | - |
+|                     | Reader (500 mA) | Lock (1.2 A) | Reader (250 mA) | Lock (600 mA) | Reader (500 mA)  |   |
+| 14 AWG              | 190 m           | 95 m         | 770 m           | 385 m         | 190 m            |   |
+| 16 AWG              | 120 m           | 60 m         | 480 m           | 240 m         | 120 m            |   |
+| 18 AWG              | 75 m            | 35 m         | 300 m           | 150 m         | 75 m             |   |
 
 Info
 
@@ -63053,7 +63019,7 @@ You can connect to the hub using a standard CAT-5e cable.
 
   Certain non-standard hubs/switches may not support automatic MDI/MDIX.
 
-* XPQ2-APB supports PoE that supplies power via Ethernet cable.
+* XPQ2-APB Supports PoE that supplies power via Ethernet cable.
 
 <!-- -->
 
@@ -65721,9 +65687,9 @@ Info
 
 * **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
 
-* **QR/Barcode Recognition Unit**: XS2-QDPB, XS2-QAPB This is the part that recognizes QR/barcode for entry.
+* **QR/Barcode Recognition Unit**: XS2-QDPB, XS2-QAPB Scans QR/Barcode credentials for access.
 
-* **Fingerprint Recognition Unit**: XS2-ODPB, XS2-OAPB This is the part that recognizes fingerprints for entry.
+* **Fingerprint Recognition Unit**: XS2-ODPB, XS2-OAPB The part that recognizes the fingerprint for access.
 
 * **Cable Connector**: Connects the cable.
 
@@ -67962,7 +67928,7 @@ You can register user information that includes biometric authentication data.
 
    * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * Fingerprint: You can enroll a fingerprint for user authentication for XS2-ODPB, XS2-OAPB. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
+   * Fingerprint: XS2-ODPB, XS2-OAPB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
 
    * Card / QR Code: You can enroll a card for user authentication. Press Card / QR Code → Next, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, click ![](/docs/en/img/common/ico-add2.svg).
 
@@ -67984,7 +67950,7 @@ You can register user information that includes biometric authentication data.
 
    * Period: You can set the duration for using the user account.
 
-   * Duress: Select to enroll a threatening fingerprint for XS2-ODPB, XS2-OAPB. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
+   * Duress: XS2-ODPB, XS2-OAPB Select to enroll a duress fingerprint. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
 
    * Private Auth Mode: You can change the authentication method for each user.
 
@@ -80191,7 +80157,7 @@ Info
 
 * When filtering conditions are applied, the  icon color in the header column changes to blue.
 
-##### Removing filters[​](#remove-filter "Direct link to Removing filters")
+##### Remove filters[​](#removefilter "Direct link to Remove filters")
 
 You can clear the applied filter conditions.
 
@@ -80209,7 +80175,7 @@ Info
 
 * When filtering conditions are cleared, the icon color in the header column will revert to its original state.
 
-#### Clearing the event list[​](#clear-event-list "Direct link to Clearing the event list")
+#### Clear the event list[​](#cleareventlist "Direct link to Clear the event list")
 
 In the Event section, you can clear events. Click  in the upper right corner of the Event section and select Clear Event from the popup menu. If there are many unnecessary events accumulated in the event list, you can use the Clear Event feature to clean up.
 
@@ -80229,7 +80195,7 @@ The Ignore All button is displayed only when two or more alarm events occur.
 
 Enter actions regarding the alarm event in the message input field. You can enter up to 500 characters. Enter actions and click the Acknowledge button. Records acknowledgement and actions regarding the alarm event. The alarm message window will close.
 
-##### Pending acknowledgment of alarm event[​](#defer-alarm-event-acknowledgment "Direct link to Pending acknowledgment of alarm event")
+##### Pending acknowledgment of alarm event[​](#deferalarmeventacknowledgment "Direct link to Pending acknowledgment of alarm event")
 
 You can also defer acknowledgement of the alarm event by clicking the Ignore button. Actions taken can be recorded. The alarm message window will close. Deferred alarm events are displayed in the event list as Active status, and the Acknowledge button can be used.
 
@@ -93846,41 +93812,7 @@ if (readCard.header.hdrCRC != calculatedHdrCRC) {
 
 [**Docs**](/docs/en/)
 
-[Platforms](#)
-
-* [BioStar X](/docs/en/platform/biostar_x)
-* [BioStar Air](/docs/en/platform/biostar_air)
-
-[Devices](#)
-
-* [BioEntry W3](/docs/en/device/bioentry_w3)
-* [BioStation 2a](/docs/en/device/biostation_2a)
-* [BioStation 3](/docs/en/device/biostation_3)
-* [FaceStation F2](/docs/en/device/facestation_f2)
-* [FaceStation 2](/docs/en/device/facestation_2)
-* [BioLite N2](/docs/en/device/biolite_n2)
-* [BioEntry W2](/docs/en/device/bioentry_w2)
-* [BioEntry P2](/docs/en/device/bioentry_p2)
-* [BioEntry R2](/docs/en/device/bioentry_r2)
-* [X-Station 2](/docs/en/device/xstation_2)
-* [XPass Q2](/docs/en/device/xpass_q2)
-* [XPass 2](/docs/en/device/xpass_2)
-* [XPass D2](/docs/en/device/xpass_d2)
-* [XPass S2](/docs/en/device/xpass_s2)
-* [CoreStation 20](/docs/en/device/corestation_20)
-* [CoreStation](/docs/en/device/corestation_40)
-* [Enclosure](/docs/en/device/enclosure)
-* [Door Interface](/docs/en/device/doorinterface)
-* [Input Module](/docs/en/device/inputmodule)
-* [Output Module](/docs/en/device/outputmodule)
-* [Door Module](/docs/en/device/doormodule)
-* [Secure Module](/docs/en/device/securemodule)
-* [Extended Module](/docs/en/device/extendedmodule)
-* [Extended Module-SC](/docs/en/device/extendedmodule_sc)
-* [Device Manager](/docs/en/device/device_manager)
-* [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager)
-
-[How-to Articles](/docs/en/how-to)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
+[BioStar X](/docs/en/platform/biostar_x)[API](/docs/en/api/bsxapi)[Reference](/docs/en/reference)[Legal](/docs/en/legal/disclaimers)
 
 Search
 
