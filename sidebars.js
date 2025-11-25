@@ -581,6 +581,7 @@ const sidebars = {
             'platform/biostar_x/settings-visitor',
             'platform/biostar_x/settings-diretory-integration',
             'platform/biostar_x/settings-remote-access',
+            'platform/biostar_x/settings-external-remote-access',
             'platform/biostar_x/settings-virtual-device-event-log'
           ]
         },
