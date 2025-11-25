@@ -47,12 +47,17 @@ module.exports = function () {
                                         
                                         const userAgent = window.navigator.userAgent;
                                         const isAlgolia = userAgent.includes('Algolia Crawler');
+                                        const isJSDOM = userAgent.includes('jsdom');
                                         
                                         if (isAlgolia) {
                                             console.log('Algolia Crawler detected - Authentication disabled');
                                         }
                                         
-                                        return isAlgolia;
+                                        if (isJSDOM) {
+                                            console.log('JSDOM (PDF generation) detected - Authentication disabled');
+                                        }
+                                        
+                                        return isAlgolia || isJSDOM;
                                     }
                                     
                                     // 브라우저 호환성 체크
