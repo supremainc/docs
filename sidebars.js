@@ -95,6 +95,7 @@ const sidebars = {
               type: 'category',
               label: 'Device Management',
               items: [
+                'platform/biostar_air/register-device',
                 'platform/biostar_air/managing-registered-devices',
                 'platform/biostar_air/configuring-ta',
                 'platform/biostar_air/configuring-the-airfob-patch-and-tag',
