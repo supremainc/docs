@@ -69098,7 +69098,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [시작하기](/docs/platform/biostar_air/getting-started)
 * [사이트 선택(Site Selector)](/docs/platform/biostar_air/biostar-air-login)
 * [사용자 관리](/docs/platform/biostar_air/managing-users)
-* [장치 관리](/docs/platform/biostar_air/managing-registered-devices)
+* [장치 관리](/docs/platform/biostar_air/register-device)
 * [출입문 관리](/docs/platform/biostar_air/managing-registered-doors)
 * [모니터링](/docs/platform/biostar_air/event-and-audit-logs)
 * [보고서](/docs/platform/biostar_air/configuring-reports)
@@ -73447,6 +73447,35 @@ BioStar Air 모바일 앱에서는 각 출입문에 대한 아래 세부 정보�
 
 ---
 
+### 장치 등록하기
+
+BioStar Air 모바일 앱을 사용하여 장치를 등록할 수 있습니다. 장치 등록은 BLE 방식으로 이루어지며, 등록된 장치는 BioStar Air 플랫폼에서 관리할 수 있습니다.
+
+![](/docs/img/air/bsair-register-device-step.png)
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+2. 장치 카드를 탭하세요.
+
+3. 화면 오른쪽 상단의  버튼을 탭하세요.
+
+4. 장치 검색 화면에서 등록하려는 장치의 등록 버튼을 탭하세요.
+
+5. 장치 등록 창이 나타나면 확인 버튼을 탭하세요.
+
+장치 목록으로 돌아가 추가된 장치를 확인하세요.
+
+알아두기
+
+* 웹 포털에서는 장치를 등록할 수 없습니다. 장치는 반드시 BioStar Air 모바일 앱을 통해 등록해야 합니다.
+
+* 장치를 등록할 때는 장치와 모바일 기기가 가까운 거리에 있어야 하며, 모바일 기기의 블루투스 기능이 활성화되어 있어야 합니다.
+
+* 등록한 장치를 출입문으로 설정하지 않으려면 장치 등록 창에서 이 장치로 출입문 만들기 옵션을 해제하세요.
+
+
+---
+
 ### BioStar Air 2.10 릴리스 노트
 
 2025년 8월 12일
@@ -73776,8 +73805,9 @@ BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증�
 * [사용자 카드 및 크리덴셜 종류](/docs/platform/biostar_air/user-card-types)
 * [링크패스 크리덴셜](/docs/platform/biostar_air/linkpass-credentials)
 
-#### 장치 관리→6 문서
+#### 장치 관리→7 문서
 
+* [장치 등록하기](/docs/platform/biostar_air/register-device)
 * [등록 장치 관리하기](/docs/platform/biostar_air/managing-registered-devices)
 * [근태 관리(T\&A) 설정하기](/docs/platform/biostar_air/configuring-ta)
 * [Airfob 패치(Patch)와 태그(Tag) 구성하기](/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag)

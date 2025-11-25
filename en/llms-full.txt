@@ -69106,7 +69106,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [Getting Started](/docs/en/platform/biostar_air/getting-started)
 * [BioStar Air Login](/docs/en/platform/biostar_air/biostar-air-login)
 * [User Management](/docs/en/platform/biostar_air/managing-users)
-* [Device Management](/docs/en/platform/biostar_air/managing-registered-devices)
+* [Device Management](/docs/en/platform/biostar_air/register-device)
 * [Door Management](/docs/en/platform/biostar_air/managing-registered-doors)
 * [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
@@ -73158,6 +73158,41 @@ To open a door with the long-press method:
 
 ---
 
+### 장치 등록하기
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air 모바일 앱을 사용하여 장치를 등록할 수 있습니다. 장치 등록은 BLE 방식으로 이루어지며, 등록된 장치는 BioStar Air 플랫폼에서 관리할 수 있습니다.
+
+![](/docs/en/img/en/air/bsair-register-device-step.png)
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+2. Devices 카드를 탭하세요.
+
+3. 화면 오른쪽 상단의  버튼을 탭하세요.
+
+4. 장치 검색 화면에서 등록하려는 장치의 Register 버튼을 탭하세요.
+
+5. 장치 등록 창이 나타나면 OK 버튼을 탭하세요.
+
+장치 목록으로 돌아가 추가된 장치를 확인하세요.
+
+Info
+
+* 웹 포털에서는 장치를 등록할 수 없습니다. 장치는 반드시 BioStar Air 모바일 앱을 통해 등록해야 합니다.
+
+* 장치를 등록할 때는 장치와 모바일 기기가 가까운 거리에 있어야 하며, 모바일 기기의 블루투스 기능이 활성화되어 있어야 합니다.
+
+* 등록한 장치를 출입문으로 설정하지 않으려면 장치 등록 창에서 이 장치로 출입문 만들기 옵션을 해제하세요.
+
+
+---
+
 ### BioStar Air 2.10 – Release Highlights
 
 August 12, 2025
@@ -73495,8 +73530,9 @@ Learn how to manage users in BioStar Air Portal, perform bulk operations, add an
 * [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
 * [LinkPass Credentials](/docs/en/platform/biostar_air/linkpass-credentials)
 
-#### Device Management→6 items
+#### Device Management→7 items
 
+* [장치 등록하기](/docs/en/platform/biostar_air/register-device)
 * [Managing Registered Devices](/docs/en/platform/biostar_air/managing-registered-devices)
 * [Configuring Time & Attendance (T\&A)](/docs/en/platform/biostar_air/configuring-ta)
 * [Configuring the Airfob Patch and Tag](/docs/en/platform/biostar_air/configuring-the-airfob-patch-and-tag)

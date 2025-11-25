@@ -525,6 +525,7 @@
 - [사용자 관리하기](/docs/platform/biostar_air/managing-users): BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증명(모바일 카드, RFID, 얼굴 인식, PIN, 웹 카드)을 추가 및 구성, 액세스 등급 설정, 사용자 그룹 관리, 유효 기간 구성 방법을 안내합니다.
 - [출입문 상태 모니터링](/docs/platform/biostar_air/monitoring-door-status): BioStar Air에서 웹 포털과 모바일 앱을 사용하여 실시간 출입문 상태를 모니터링하고, 잠금을 원격으로 제어하며, 출입문 접근을 관리하는 방법을 안내합니다.
 - [모바일 크리덴셜로 출입문 열기](/docs/platform/biostar_air/opening-doors-with-mobile-credentials): Bluetooth 및 NFC 태그 기능이 있는 슈프리마 패스 모바일 크리덴셜을 사용하여 문을 여는 방법, 포그라운드 및 백그라운드 모드 구성 방법, 핸즈프리 출입 기능 사용 방법을 안내합니다.
+- [장치 등록하기](/docs/platform/biostar_air/register-device): BioStar Air 모바일 앱을 통해 장치 등록 방법을 안내합니다.
 - [BioStar Air 2.10 릴리스 노트](/docs/platform/biostar_air/release-notes/v2_10): BioStar Air v2.10 릴리스 노트
 - [근태 보고서](/docs/platform/biostar_air/reports-time-attendance-reports): BioStar Air에서 기본적인 근태 보고서를 구성하는 방법을 안내합니다. 현장 근무 시간 추적, CSV 내보내기 옵션, API 통합 기능을 지원합니다.
 - [보안 체계](/docs/platform/biostar_air/security-overview): BioStar Air의 포괄적인 보안 조치에 대해 알아보세요. 종단 간 암호화, ISO 27001 인증, 모바일 자격 증명 보호 및 취약성 관리 관행이 포함되어 있습니다.
