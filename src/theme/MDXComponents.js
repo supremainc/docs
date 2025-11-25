@@ -140,6 +140,10 @@ import IcAirFaceLink from '@site/static/img/menus/ico-air-face-link.svg';
 import IcAirFilterReset from '@site/static/img/menus/ico-air-filter-reset.svg';
 import IcAirUtemplate from '@site/static/img/menus/ico-air-user-template.svg';
 import IcAirReport from '@site/static/img/menus/ico-air-report.svg';
+import IcAirFilter from '@site/static/img/menus/ico-air-filter.svg';
+import IcAirActive from '@site/static/img/menus/ico-air-active.svg';
+import IcAirReissue from '@site/static/img/menus/ico-air-reissue.svg';
+import IcAirSuspend from '@site/static/img/menus/ico-air-suspend.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -212,5 +216,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport,
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend
 }

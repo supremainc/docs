@@ -17,7 +17,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요. 
 
-### 사용자 목록 정보
+### 사용자 정보
 
 사용자 목록의 테이블에서 제공하는 정보는 아래와 같습니다.
 
@@ -39,33 +39,62 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 * <Cmd sid='user_table_column7' product='air' />: 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
-### 사용자 목록 기능
+### 필터링 {#userFiltering}
+
+사용자 목록의 상단 헤더 영역에서 필털이 기능을 이용할 수 있습니다. 헤더 영역의 <IcAirFilter /> 버튼을 클릭하면 원하는 조건을 설정할 수 있습니다.
+
+<Image src='/img/air/bsair-user-list-user-filtering.png' />
+
+:::info
+
+적용한 필터 조건을 초기화하려면 사용자 목록 상단의 <IcAirFilterReset /> 버튼을 클릭하세요.
+
+:::
+
+### 추가 기능
 
 사용자 목록 상단에서 제공하는 기능은 아래와 같습니다.
 
-* <IcAirGroup width='26px' height='26px' />: 선택한 사용자에게 그룹을 할당하거나 제외, 이동할 수 있습니다. 사용자 그룹 관리에 대한 자세한 내용은 [다음 문서](managing-user-groups)를 참고하세요.
+* <IcAirGroup width='24px' height='24px' />: 선택한 사용자에게 그룹을 할당하거나 제외, 이동할 수 있습니다. 사용자 그룹 관리에 대한 자세한 내용은 [다음 문서](managing-user-groups)를 참고하세요.
 
-* <IcAirLock width='26px' height='26px' />: 선택한 사용자의 출입 레벨을 변경할 수 있습니다. 출입 레벨 관리에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+* <IcAirLock width='24px' height='24px' />: 선택한 사용자의 출입 레벨을 변경할 수 있습니다. 출입 레벨 관리에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
   <Image src='/img/air/bsair-user-list-tool-aclevel.png' />
 
-* <IcAirMtag width='26px' height='26px' />: 선택한 사용자에게 대기 시간 없이 연속으로 모바일 카드를 태그할 수 있도록 설정할 수 있습니다. 슈프리마 패스 앱은 2.9.0 버전 이상에서 지원합니다.
-
+* <IcAirMtag width='24px' height='24px' />: 선택한 사용자에게 대기 시간 없이 연속으로 모바일 카드를 태그할 수 있도록 설정할 수 있습니다. 슈프리마 패스 앱은 2.9.0 버전 이상에서 지원합니다.
   <Image src='/img/air/bsair-user-list-tool-mobile-tag.png' />
 
-* <IcAirUtemplate width='26px' height='26px' />: 선택한 사용자에게 사용자 템플릿을 적용할 수 있습니다. 기본 설정된 사용자 정보 외에 필요한 다른 정보를 추가할 수 있습니다.
+* <IcAirUtemplate width='24px' height='24px' />: 선택한 사용자에게 사용자 템플릿을 적용할 수 있습니다. 기본 설정된 사용자 정보 외에 필요한 다른 정보를 추가할 수 있습니다.
 
-  <Image src='/img/air/bsair-user-list-user-template.png' />
+  <Image src='/img/air/bsair-user-list-user-template.png' width='43%' />
 
-* <IcAirDown width='26px' height='26px' />
+* <IcAirDown width='24px' height='24px' />: 선택한 사용자 정보를 PDF 또는 CSV 파일로 내보낼 수 있습니다.
 
-* <IcAirUpface width='26px' height='26px' />
+* <IcAirUpface width='24px' height='24px' />: 사용자 이미지를 일괄 업로드할 수 있습니다. 업로드하는 이미지 파일의 이름은 사용자 아이디와 일치해야 합니다.
 
-* <IcAirFaceLink width='26px' height='26px' />
+  예, 601.jpg 파일은 사용자 아이디 601에 해당합니다.
 
-* <IcAirFilterReset width='26px' height='26px' />
+  :::note
 
-* <IcAirReport width='26px' height='26px' />
+  **파일 형식 요구사항**
+
+  * 지원되는 형식: *.jpg*, *.jpeg*, *.png*
+
+  * 파일 크기 제한: 이미지당 **1MB**
+
+  :::
+
+* <IcAirFaceLink width='26px' height='26px' />: 선택한 사용자에게 얼굴 등록 링크를 이메일 또는 문자 메시지로 전송할 수 있습니다. 사용자가 링크를 클릭해 웹 페이지에서 얼굴을 등록하면, 얼굴 인증을 통해 출입할 수 있는 권한이 부여됩니다.
+
+  :::note
+
+  이메일과 휴대폰 번호가 등록되어 있지 않은 사용자에게는 링크를 전송할 수 없습니다.
+
+  :::
+
+* <IcAirFilterReset width='26px' height='26px' />: 사용자 목록에 적용된 필터를 초기화합니다. 이 기능은 필터링이 적용된 상태에서 사용할 수 있습니다. 필터링 적용 방법에 대한 자세한 내용은 [다음 문서](#userFiltering)를 참고하세요.
+
+* <IcAirReport width='26px' height='26px' />: 사용자 리포트를 설정할 수 있습니다. 리포트를 생성을 완료하면 관리자의 이메일로 전송됩니다. 리포트 설정에 대한 자세한 내용은 [다음 문서](#userReportSettings)를 참고하세요.
 
 ## 사용자 수정 {#editUserDetails}
 
@@ -88,6 +117,44 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 1. 수정을 완료하면 오른쪽 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
 
+## 사용자 상태 관리 {#manageUserStatus}
+
+사용자의 출입 권한을 활성화하거나 일시 정지할 수 있습니다. 또한 크리덴셜을 재발급할 수도 있습니다.
+
+### 개별 사용자
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 사용자 목록에서 상태를 변경할 사용자를 클릭하세요.
+
+1. 사용자 세부 정보 상단에서 원하는 기능을 선택하세요.
+
+<Image src='/img/air/bsair-user-details-manage-status.png' />
+
+* <IcAirActive width='24px' height='24px' />: 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
+
+* <IcAirReissue width='24px' height='24px' />: 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
+
+* <IcAirSuspend width='24px' height='24px' />: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+
+
+### 일괄 작업
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 사용자 목록에서 상태를 변경할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <IcAirMore /> 버튼을 클릭하고 팝업 메뉴에서 원하는 작업을 선택하세요.
+
+<Image src='/img/air/bsair-user-list-multi-user-batch-action.png' />
+
+* <Cmd sid='user_activate_action' product='air' />: 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
+
+* <Cmd sid='user_reactivate_action' product='air' />: 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
+
+* <Cmd sid='suspend_action' product='air' />: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+
+
 ## 사용자 삭제 {#deleteUser}
 
 :::caution
@@ -96,7 +163,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 :::
 
-### 개별 사용자 삭제 {#deleteSingleUser}
+### 개별 사용자 {#deleteSingleUser}
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
 
@@ -110,7 +177,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 1. 경고 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
 
-### 여러 사용자 삭제 {#deleteMultipleUsers}
+### 일괄 삭제 {#deleteMultipleUsers}
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
 
@@ -125,6 +192,26 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 1. 경고 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
 
 
+## 사용자 리포트 설정 {#userReportSettings}
 
+사용자 리포트를 생성하여 관리자의 이메일로 전송할 수 있습니다. 
 
-## 사용자 활성화
+1. 사용자 목록 상단의 <IcAirReport /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
+
+    <Image src='/img/air/bsair-user-report-setting.png' />
+
+1. 리포트에 포함할 항목을 선택하세요.
+
+1. 생성한 리포트를 저장하려면 <Cmd sid='report_form_text_add' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_form_text_title' product='air' />이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다.
+
+<Image src='/img/air/bsair-user-report-setting-list.png' />
+
+:::info
+
+<Cmd sid='report_form_text_title' product='air' />에서 생성된 리포트를 수정하거나 다운로드, 삭제할 수 있습니다.
+
+:::
