@@ -63529,7 +63529,7 @@ Card: 200,000
 
 Max. Credentials (1:1)
 
-Card: 100,000
+Card: 200,000
 
 Max. Text logs
 
@@ -63595,24 +63595,31 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. TBD A
-* Voltage/Current: 24 Vdc / Max. TBD A
+12 Vdc
+
+* DC OUT not used Current: Max. 0.5 A
+* DC OUT used Current: Max. 2.6 A
+
+24 Vdc
+
+* DC OUT not used Current: Max. 0.3 A
+* DC OUT used Current: Max. 1.4 A
 
 Power Output
 
 12 Vdc
 
-* Reader: Max. 0.5 A (1 unit)
-* Lock: Max. 1.2 A (1 unit)
+* Reader: Max. 0.5 A
+* Lock: Max. 1.2 A
 
 24 Vdc
 
-* Reader: Max. 0.25 A (1 unit)
-* Lock: Max. 0.6 A (1 unit)
+* Reader: Max. 0.25 A
+* Lock: Max. 0.6 A
 
 PoE (12V out)
 
-* Reader: Max. 0.5 A (1 unit)
+* Reader: Max. 0.5 A
 
 Switch Input VIH
 

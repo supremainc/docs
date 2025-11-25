@@ -148,8 +148,8 @@
           "label": "최대 크리덴셜 수 (1:1)",
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
-            "ko": "카드: 100,000",
-            "en": "Card: 100,000"
+            "ko": "카드: 200,000",
+            "en": "Card: 200,000"
           }
         },
         "max_text_logs": {
@@ -261,9 +261,34 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 TBD A", "전압/전류: 24 Vdc / 최대 TBD A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. TBD A", "Voltage/Current: 24 Vdc / Max. TBD A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": [
+                  "DC OUT 미사용 시 전류: 최대 0.5 A",
+                  "DC OUT 사용 시 전류: 최대 2.6 A"
+                ],
+                "en": [
+                  "DC OUT not used Current: Max. 0.5 A",
+                  "DC OUT used Current: Max. 2.6 A"
+                ]
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": [
+                  "DC OUT 미사용 시 전류: 최대 0.3 A",
+                  "DC OUT 사용 시 전류: 최대 1.4 A"
+                ],
+                "en": [
+                  "DC OUT not used Current: Max. 0.3 A",
+                  "DC OUT used Current: Max. 1.4 A"
+                ]
+              }
+            }
           }
         },
         "power_output": {
@@ -275,12 +300,12 @@
               "label": "12 Vdc",
               "value": {
                 "ko": [
-                  "리더: 최대 0.5 A (1개)",
-                  "락: 최대 1.2 A (1개)"
+                  "리더: 최대 0.5 A",
+                  "락: 최대 1.2 A"
                 ],
                 "en": [
-                  "Reader: Max. 0.5 A (1 unit)",
-                  "Lock: Max. 1.2 A (1 unit)"
+                  "Reader: Max. 0.5 A",
+                  "Lock: Max. 1.2 A"
                 ]
               }
             },
@@ -288,12 +313,12 @@
               "label": "24 Vdc",
               "value": {
                 "ko": [
-                  "리더: 최대 0.25 A (1개)",
-                  "락: 최대 0.6 A (1개)"
+                  "리더: 최대 0.25 A",
+                  "락: 최대 0.6 A"
                 ],
                 "en": [
-                  "Reader: Max. 0.25 A (1 unit)",
-                  "Lock: Max. 0.6 A (1 unit)"
+                  "Reader: Max. 0.25 A",
+                  "Lock: Max. 0.6 A"
                 ]
               }
             },
@@ -302,10 +327,10 @@
               "label_id": "specs.power.poe12vout",
               "value": {
                 "ko": [
-                  "리더: 최대 0.5 A (1개)"
+                  "리더: 최대 0.5 A"
                 ],
                 "en": [
-                  "Reader: Max. 0.5 A (1 unit)"
+                  "Reader: Max. 0.5 A"
                 ]
               }
             }
