@@ -39079,7 +39079,7 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
-**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. It is recommended to use an enclosure when installed outdoors with full exposure\*\*.
+**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
 
@@ -42309,7 +42309,7 @@ Used to provide notes or additional information while using the product.
 
 * Devices may malfunction.
 
-**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. It is recommended to use an enclosure when installed outdoors with full exposure\*\*.
+**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
 
@@ -56501,7 +56501,7 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
-**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. It is recommended to use an enclosure when installed outdoors with full exposure\*\*.
+**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
 
@@ -63872,7 +63872,7 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
-**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. It is recommended to use an enclosure when installed outdoors with full exposure\*\*.
+**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
 
@@ -67498,7 +67498,7 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
-**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. It is recommended to use an enclosure when installed outdoors with full exposure\*\*.
+**To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
 
@@ -73482,11 +73482,12 @@ Learn how to set up your first BioStar Air site by adding administrators, regist
 
 Learn how to use the Site Selector feature to manage multiple BioStar Air sites with a single email address and streamline your login process.
 
-#### [User Management→7 items](/docs/en/platform/biostar_air/managing-users)
+#### [User Management→8 items](/docs/en/platform/biostar_air/managing-users)
 
 Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.
 
 * [Adding Individual Users](/docs/en/platform/biostar_air/adding-individual-users)
+* [사용자 관리하기](/docs/en/platform/biostar_air/user-management-user-list)
 * [Adding Users in Bulk](/docs/en/platform/biostar_air/adding-users-in-bulk)
 * [Managing User Groups](/docs/en/platform/biostar_air/managing-user-groups)
 * [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates)
@@ -74263,6 +74264,209 @@ Regardless of whether a user is regular or temporary, **access levels** must be 
 Info
 
 For temporary users, carefully assign limited access levels to ensure they do not receive credentials with unrestricted access.
+
+
+---
+
+### 사용자 관리하기
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
+
+#### 사용자 목록[​](#사용자-목록 "Direct link to 사용자 목록")
+
+사용자 목록에서는 BioStar Air에 등록된 모든 사용자를 한눈에 확인할 수 있습니다. 각 사용자의 세부 정보를 보고, 필터링 및 정렬 기능을 활용하여 특정 사용자를 쉽게 찾을 수 있습니다. 또한, 사용자 목록에서 직접 사용자 편집, 삭제, 그룹 할당 등의 작업을 수행할 수 있습니다.
+
+![](/docs/en/img/en/air/bsair-user-list-overview.png)
+
+화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+##### 사용자 정보[​](#사용자-정보 "Direct link to 사용자 정보")
+
+사용자 목록의 테이블에서 제공하는 정보는 아래와 같습니다.
+
+* User Type: 사용자가 일반 사용자인지 임시 사용자인지 나타냅니다. 일반 및 임시 사용자에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
+
+* Name: 사용자의 이름입니다.
+
+* ID: 사용자의 고유 아이디입니다.
+
+* Credential Type: 사용자에게 발급한 크리덴셜을 나타냅니다. 크리덴셜의 종류에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
+
+* Valid Through: 사용자에게 발급한 크리덴셜의 유효 기간입니다.
+
+* User Status: 해당 사용자의 활성화 또는 비활성화 상태를 나타냅니다.
+
+* User Group: 사용자가 속한 그룹입니다. 사용자 그룹에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/managing-user-groups)를 참고하세요.
+
+* Access Level: 사용자에게 할당한 출입 레벨입니다. 출입 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+* Floor level: 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+##### 필터링[​](#userFiltering "Direct link to 필터링")
+
+사용자 목록의 상단 헤더 영역에서 필털이 기능을 이용할 수 있습니다. 헤더 영역의  버튼을 클릭하면 원하는 조건을 설정할 수 있습니다.
+
+![](/docs/en/img/en/air/bsair-user-list-user-filtering.png)
+
+Info
+
+적용한 필터 조건을 초기화하려면 사용자 목록 상단의  버튼을 클릭하세요.
+
+##### 추가 기능[​](#추가-기능 "Direct link to 추가 기능")
+
+사용자 목록 상단에서 제공하는 기능은 아래와 같습니다.
+
+* : 선택한 사용자에게 그룹을 할당하거나 제외, 이동할 수 있습니다. 사용자 그룹 관리에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/managing-user-groups)를 참고하세요.
+
+* : 선택한 사용자의 출입 레벨을 변경할 수 있습니다. 출입 레벨 관리에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+
+  ![](/docs/en/img/en/air/bsair-user-list-tool-aclevel.png)
+
+* : 선택한 사용자에게 대기 시간 없이 연속으로 모바일 카드를 태그할 수 있도록 설정할 수 있습니다. 슈프리마 패스 앱은 2.9.0 버전 이상에서 지원합니다.
+
+  ![](/docs/en/img/en/air/bsair-user-list-tool-mobile-tag.png)
+
+* : 선택한 사용자에게 사용자 템플릿을 적용할 수 있습니다. 기본 설정된 사용자 정보 외에 필요한 다른 정보를 추가할 수 있습니다.
+
+  ![](/docs/en/img/en/air/bsair-user-list-user-template.png)
+
+* : 선택한 사용자 정보를 PDF 또는 CSV 파일로 내보낼 수 있습니다.
+
+* : 사용자 이미지를 일괄 업로드할 수 있습니다. 업로드하는 이미지 파일의 이름은 사용자 아이디와 일치해야 합니다.
+
+  예, 601.jpg 파일은 사용자 아이디 601에 해당합니다.
+
+  **파일 형식 요구사항**
+
+  * 지원되는 형식: *.jpg*, *.jpeg*, *.png*
+
+  * 파일 크기 제한: 이미지당 **1MB**
+
+* : 선택한 사용자에게 얼굴 등록 링크를 이메일 또는 문자 메시지로 전송할 수 있습니다. 사용자가 링크를 클릭해 웹 페이지에서 얼굴을 등록하면, 얼굴 인증을 통해 출입할 수 있는 권한이 부여됩니다.
+
+  이메일과 휴대폰 번호가 등록되어 있지 않은 사용자에게는 링크를 전송할 수 없습니다.
+
+* : 사용자 목록에 적용된 필터를 초기화합니다. 이 기능은 필터링이 적용된 상태에서 사용할 수 있습니다. 필터링 적용 방법에 대한 자세한 내용은 [다음 문서](#userFiltering)를 참고하세요.
+
+* : 사용자 리포트를 설정할 수 있습니다. 리포트를 생성을 완료하면 관리자의 이메일로 전송됩니다. 리포트 설정에 대한 자세한 내용은 [다음 문서](#userReportSettings)를 참고하세요.
+
+#### 사용자 수정[​](#editUserDetails "Direct link to 사용자 수정")
+
+사용자의 세부 정보를 수정하거나 크리덴셜을 변경하려면 다음 단계를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+2. 사용자 목록에서 수정할 사용자를 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-list.png)
+
+3. 사용자 세부 정보 오른쪽 상단의  버튼을 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-details.png)
+
+4. Edit User 창이 나타나면 필요한 세부 정보를 수정하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-details-edit-info.png)
+
+5. 수정을 완료하면 오른쪽 하단의 Save 버튼을 클릭하세요.
+
+#### 사용자 상태 관리[​](#manageUserStatus "Direct link to 사용자 상태 관리")
+
+사용자의 출입 권한을 활성화하거나 일시 정지할 수 있습니다. 또한 크리덴셜을 재발급할 수도 있습니다.
+
+##### 개별 사용자[​](#개별-사용자 "Direct link to 개별 사용자")
+
+1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+2. 사용자 목록에서 상태를 변경할 사용자를 클릭하세요.
+
+3. 사용자 세부 정보 상단에서 원하는 기능을 선택하세요.
+
+![](/docs/en/img/en/air/bsair-user-details-manage-status.png)
+
+* : 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
+
+* : 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
+
+* : 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+
+##### 일괄 작업[​](#일괄-작업 "Direct link to 일괄 작업")
+
+1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+2. 사용자 목록에서 상태를 변경할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
+
+3. 화면 왼쪽 상단의  버튼을 클릭하고 팝업 메뉴에서 원하는 작업을 선택하세요.
+
+![](/docs/en/img/en/air/bsair-user-list-multi-user-batch-action.png)
+
+* Activate: 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
+
+* Reissue: 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
+
+* Suspend: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+
+#### 사용자 삭제[​](#deleteUser "Direct link to 사용자 삭제")
+
+Caution
+
+삭제한 사용자는 복구할 수 없습니다. 삭제하기 전에 반드시 확인하세요.
+
+##### 개별 사용자[​](#deleteSingleUser "Direct link to 개별 사용자")
+
+1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+2. 사용자 목록에서 삭제할 사용자를 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-list.png)
+
+3. 사용자 세부 정보에서  버튼을 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-details-remove.png)
+
+4. 경고 메시지 창이 나타나면 OK 버튼을 클릭하세요.
+
+##### 일괄 삭제[​](#deleteMultipleUsers "Direct link to 일괄 삭제")
+
+1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+
+2. 사용자 목록에서 삭제할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
+
+   ![](/docs/en/img/en/air/bsair-user-list-multi-select.png)
+
+3. 화면 왼쪽 상단의  → Delete를 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-list-multi-select-remove-opt.png)
+
+4. 경고 메시지 창이 나타나면 OK 버튼을 클릭하세요.
+
+#### 사용자 리포트 설정[​](#userReportSettings "Direct link to 사용자 리포트 설정")
+
+사용자 리포트를 생성하여 관리자의 이메일로 전송할 수 있습니다.
+
+1. 사용자 목록 상단의  버튼을 클릭하세요.
+
+2. Report Settings 창이 나타나면 리포트 이름을 입력하세요.
+
+   ![](/docs/en/img/en/air/bsair-user-report-setting.png)
+
+3. 리포트에 포함할 항목을 선택하세요.
+
+4. 생성한 리포트를 저장하려면 Add Report 버튼을 클릭하세요.
+
+5. Report List이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다.
+
+![](/docs/en/img/en/air/bsair-user-report-setting-list.png)
+
+Info
+
+Report List에서 생성된 리포트를 수정하거나 다운로드, 삭제할 수 있습니다.
 
 
 ---

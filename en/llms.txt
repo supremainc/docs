@@ -523,6 +523,7 @@
 - [Troubleshooting Adding Users in Bulk](/docs/en/platform/biostar_air/troubleshooting-adding-users-in-bulk): Learn how to troubleshoot common issues when adding users in bulk using the BioStar Air Portal.
 - [Troubleshooting - My Mobile Card Isn't Working](/docs/en/platform/biostar_air/troubleshooting-suprema-pass-app): Learn how to troubleshoot mobile card authentication issues, fix Bluetooth and location permission problems, and resolve connection failures in the Suprema Pass app.
 - [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types): Comprehensive guide to user card types including mobile cards, QR codes, RF cards for regular users and web-based credentials for temporary users in BioStar Air.
+- [사용자 관리하기](/docs/en/platform/biostar_air/user-management-user-list): 사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.
 - [Checking if a Camera Supports Recorded Video Playback](/docs/en/platform/biostar_air/video-troubleshooting): Learn how to troubleshoot video playback issues, verify ONVIF Profile G support, check codec compatibility, and resolve SD card formatting problems in BioStar Air.
 - [What is BioStar Air?](/docs/en/platform/biostar_air/what-is-biostar-air): BioStar Air is a cloud-based access control solution that offers a range of features to enhance security and streamline management.
 - [E200 QR Scanner - Wiring and Configuration](/docs/en/platform/biostar_air/wiring-and-configuration): Learn how to wire and configure BioStar Air devices for optimal performance.
