@@ -148,8 +148,8 @@
           "label": "최대 크리덴셜 수 (1:1)",
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
-            "ko": "카드: 100,000",
-            "en": "Card: 100,000"
+            "ko": "카드: 200,000",
+            "en": "Card: 200,000"
           }
         },
         "max_text_logs": {
