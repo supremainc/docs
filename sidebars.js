@@ -1551,21 +1551,6 @@ const sidebars = {
         'device/xpass_q2/product-specifications',
         'device/xpass_q2/regulatory-information',
         'device/xpass_q2/appendices',
-        // {
-        //   type: 'html',
-        //   value: '<hr />'
-        // },
-        // {
-        //   type: 'category',
-        //   label: '릴리스 노트',
-        //   link: {
-        //     type: 'doc',
-        //     id: 'device/xpass_q2/release-notes/index',
-        //   },
-        //   items: [
-        //     'device/xpass_q2/release-notes/100',
-        //   ]
-        // },
       ],
     },
   ],
