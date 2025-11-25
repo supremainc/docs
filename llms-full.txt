@@ -75073,14 +75073,14 @@ BioStar X의 설정 페이지에서 설정할 수 있는 다양한 기능을 안
 * [이미지 로그 설정하기](/docs/platform/biostar_x/settings-device-image-log)
   [ <!-- -->20 문서](/docs/platform/biostar_x/how-to-guide-settings)
 
-#### [고급 설정→8 문서](/docs/platform/biostar_x/how-to-guide-advanced-settings)
+#### [고급 설정→9 문서](/docs/platform/biostar_x/how-to-guide-advanced-settings)
 
 어드밴스(Advanced) 이상의 라이선스를 활성화했을 때 사용할 수 있는 고급 설정 기능을 안내합니다.
 
 * [엘리베이터 관리하기](/docs/platform/biostar_x/settings-manage-elevators)
 * [고급 출입 통제 설정하기](/docs/platform/biostar_x/settings-advanced-ac)
 * [비디오 설정하기](/docs/platform/biostar_x/settings-videos)
-  [ <!-- -->8 문서](/docs/platform/biostar_x/how-to-guide-advanced-settings)
+  [ <!-- -->9 문서](/docs/platform/biostar_x/how-to-guide-advanced-settings)
 
 #### [플러그인→2 문서](/docs/platform/biostar_x/plugins)
 
@@ -77670,7 +77670,7 @@ BioStar X의 다양한 사용 현황을 숫자로 나타냅니다.
 
 나타낼 수 있는 시스템 사용 현황은 다음과 같습니다.
 
-* 사용자, 카드, 지문, 얼굴, 페이스, QR/바코드, 모바일 액세스, 장치, 출입문, 구역, 출입 그룹, 사용자 그룹, 장치 그룹, IR 페이스
+* 사용자, 카드, 지문, 얼굴, 페이스, QR/바코드, 모바일 액세스, 장치, 출입문, 고급 출입 통제, 출입 그룹, 사용자 그룹, 장치 그룹, IR 페이스
 
 ##### 출입문 제어[​](#door-control "출입문 제어에 대한 직접 링크")
 
@@ -78068,7 +78068,7 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 알아두기
 
-는 필수 입력 항목이 아닙니다. 내보내기 사유는 설정 → 시스템 → 감사 추적에서 기록을 확인할 수 있습니다.
+내보내기 사유는 필수 입력 항목이 아닙니다. 내보내기 사유는 설정 → 시스템 → 감사 추적에서 기록을 확인할 수 있습니다.
 
 ##### 리포트 인쇄[​](#리포트-인쇄 "리포트 인쇄에 대한 직접 링크")
 
@@ -78080,7 +78080,7 @@ PC와 연결된 프린터로 리포트를 인쇄하려면 출력 버튼을 클�
 
 알아두기
 
-는 필수 입력 항목이 아닙니다. 내보내기 사유는 설정 → 시스템 → 감사 추적에서 기록을 확인할 수 있습니다.
+내보내기 사유는 필수 입력 항목이 아닙니다. 내보내기 사유는 설정 → 시스템 → 감사 추적에서 기록을 확인할 수 있습니다.
 
 ##### 리포트 삭제[​](#리포트-삭제 "리포트 삭제에 대한 직접 링크")
 
@@ -78528,7 +78528,7 @@ CSV 파일로 가져오기 기능을 사용하거나 여러 명의 사용자 얼
 
 #### 장치로 등록[​](#enrolldevice "장치로 등록에 대한 직접 링크")
 
-크리덴셜 섹션에서 + 얼굴 버튼을 클릭하세요. 얼굴 등록 창이 나타나면 각 항목을 설정하고 등록 버튼을 클릭하세요.
+크리덴셜 섹션에서 + 얼굴 버튼을 클릭하세요. IR 페이스 등록 창이 나타나면 각 항목을 설정하고 등록 버튼을 클릭하세요.
 
 ![](/docs/img/biostarx-new-user-credential-face.png)
 
@@ -78700,7 +78700,7 @@ PC에 연결된 웹캠으로 사진을 촬영하고, 촬영된 사진으로 사�
 
 #### 장치로 등록[​](#enrolldevice "장치로 등록에 대한 직접 링크")
 
-크리덴셜 섹션에서 IR 페이스 버튼을 클릭하세요. IR 페이스 등록 창이 나타나면 각 항목을 설정하고 등록 버튼을 클릭하세요.
+크리덴셜 섹션에서 + IR 페이스 버튼을 클릭하세요. IR 페이스 등록 창이 나타나면 각 항목을 설정하고 등록 버튼을 클릭하세요.
 
 ![](/docs/img/biostarx-new-user-credential-ir-face.png)
 
@@ -79341,7 +79341,11 @@ Microsoft Entra ID와 BioStar X를 연동하여 사용자를 동기화하고 관
 
 #### [리모트 액세스 설정하기→ <!-- -->둘러보기](/docs/platform/biostar_x/settings-remote-access)
 
-ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.
+ngrok 서비스를 통해 리모트 액세스 설정 방법을 안내합니다.
+
+#### [사용자 리모트 액세스 설정하기→ <!-- -->둘러보기](/docs/platform/biostar_x/settings-external-remote-access)
+
+ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.
 
 #### [가상 장치 이벤트 로그 연동하기→ <!-- -->둘러보기](/docs/platform/biostar_x/settings-virtual-device-event-log)
 
@@ -84627,7 +84631,7 @@ Wiegand 형식 설정에 대한 자세한 내용은 [다음 문서](/docs/platfo
 
 #### 얼굴 인증 설정[​](#얼굴-인증-설정 "얼굴 인증 설정에 대한 직접 링크")
 
-얼굴 그룹에서는 장치의 얼굴 인증에 대한 세부 사항을 설정할 수 있습니다.
+IR 페이스 / 얼굴 그룹에서는 장치의 얼굴 인증에 대한 세부 사항을 설정할 수 있습니다.
 
 ![](/docs/img/biostarx-setting-device-detail-face.png)
 
@@ -86580,6 +86584,131 @@ Active Directory 서버의 사용자 아이디로 로그인하도록 설정하�
 
 ---
 
+### 사용자 리모트 액세스 설정하기
+
+사용자 리모트 액세스는 **사용자 소유의 ngrok 계정**으로 외부 네트워크에서 내부 네트워크로 접속할 수 있는 기능입니다. 이 기능을 사용하면 방화벽 설정이나 포트 포워딩 없이도 원격지에서 **BioStar X** 서버에 접속할 수 있습니다.
+
+알아두기
+
+* 사용자 리모트 액세스 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](/docs/platform/biostar_x/licensing#features-add-ons)를 참고하세요.
+
+* 사용자 리모트 액세스 기능을 사용하려면 ngrok의 **Pay-as-you-go** 플랜을 구독해야 합니다. ngrok 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
+
+  ngrok의 **Free** 또는 **Hobbyist** 플랜에서는 밴드 폭 제한, 동시 터널 제한 등으로 인해 안정적인 리모트 액세스 연결이 어려울 수 있습니다.
+
+사용자 리모트 액세스 VS 리모트 액세스
+
+* 리모트 액세스 기능은 라이선스 구매를 통해서 사용자에게 ngrok 슈프리마 사이트의 bot 계정, 엔드포인트를 제공하여 외부 네트워크에서의 연결을 지원하는 기능입니다. 리모트 액세스 기능에 대한 자세한 내용은 [다음 문서](/docs/platform/biostar_x/settings-remote-access)를 참고하세요.
+
+* 반면, 사용자 리모트 액세스 기능은 사용자가 소유한 ngrok 계정을 통해 외부 네트워크에서 내부 네트워크로의 연결을 지원하는 기능입니다. 사용자는 직접 ngrok 계정을 생성하고, ngrok 설정 정보를 입력해야 합니다.
+
+주의
+
+* 리모트 액세스(Remote Access) 기능은 제3자 서비스인 ngrok의 터널링 서비스를 통해 제공됩니다. 기능 사용 전 반드시 [Remote Access 기능 사용 동의](/docs/legal/eula#remote-access-agreement) 약관을 확인하세요.
+
+* BioStar X는 단순히 ngrok API를 호출하여 연결을 지원할 뿐, 인터넷 연결의 보안성, 안전성, 연속성은 ngrok 서비스에 전적으로 의존합니다. 따라서 본 기능 사용 중 발생할 수 있는 보안 사고, 데이터 손실, 시스템 침해 등에 대하여 슈프리마는 어떠한 책임도 지지 않습니다.
+
+#### 언제 사용하나요?[​](#언제-사용하나요 "언제 사용하나요?에 대한 직접 링크")
+
+다음과 같은 상황에서 리모트 액세스 기능을 사용하세요.
+
+* 현재 소유한 ngrok 계정이 있으면서, 외부 네트워크에서 사내 **BioStar X** 서버에 접속해야 할 때
+
+* 방화벽이나 NAT 환경으로 인해 직접 접속이 어려운 경우
+
+* 복잡한 네트워크 설정 없이 간편하게 원격 접속을 구성하고 싶을 때
+
+* 임시로 외부 접속 권한을 제공해야 하는 경우
+
+#### 시작하기 전에[​](#시작하기-전에 "시작하기 전에에 대한 직접 링크")
+
+##### ngrok 계정 및 플랜 준비[​](#ngrok-계정-및-플랜-준비 "ngrok 계정 및 플랜 준비에 대한 직접 링크")
+
+* ngrok 계정을 준비하세요. ngrok 계정이 없다면 [다음 링크](https://dashboard.ngrok.com/signup)에서 계정을 생성하세요.
+
+* ngrok 플랜을 구독하세요. 사용자 리모트 액세스 기능은 ngrok의 **Pay-as-you-go** 플랜 이상에서 안정적인 연결이 가능합니다. 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
+
+##### Authtoken 확인[​](#authtoken-확인 "Authtoken 확인에 대한 직접 링크")
+
+ngrok 대시보드에서 **Authtoken**을 확인하세요. **Getting Started** → **Your Authtoken** 메뉴에서 확인할 수 있습니다.
+
+##### 엔드 포인트 URL 준비[​](#엔드-포인트-url-준비 "엔드 포인트 URL 준비에 대한 직접 링크")
+
+ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+
+1. ngrok 대시보드에 로그인하세요.
+
+2. 왼쪽 사이드바에서 **Universal Gateway** → **Endpoints & Traffic Policy** 메뉴를 클릭하세요.
+
+3. 화면 오른쪽 상단의 **New Endpoint** 버튼을 클릭하세요.
+
+4. **Cloud Endpoint**를 선택하세요.
+
+   ![](/docs/img/common/biostarx-settings-external-remote-access-ngrok-select.png)
+
+5. **Bindings**에서 **Public**을 선택하고 **Create Cloud Endpoint** 버튼을 클릭하세요.
+
+   ![](/docs/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint.png)
+
+6. **Traffic Policy** 탭을 클릭하고 **Code** 탭으로 전환하세요.
+
+7. `on_http_request.actions.config.url` 값을 확인하세요. 엔드포인트 URL 끝에 `.internal`을 추가하여 내부 트래픽 라우팅을 설정하세요.
+
+   ![](/docs/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png)
+
+   예: `your-name.bsx.ngrok.app` → `your-name.bsx.ngrok.app.internal`
+
+8. 설정을 완료한 후 화면 우측 상단의 **Save** 버튼을 클릭하세요.
+
+알아두기
+
+`.internal` 도메인은 ngrok의 내부 네트워크 라우팅을 위한 특수 도메인입니다. 이를 통해 외부 요청이 내부 **BioStar X** 서버로 안전하게 전달됩니다.
+
+#### 사용자 리모트 액세스 설정[​](#-설정 "-설정에 대한 직접 링크")
+
+##### 라이선스 활성화[​](#라이선스-활성화 "라이선스 활성화에 대한 직접 링크")
+
+1. **BioStar X** 관리자 아이디로 로그인하세요.
+
+2. 런처 페이지에서 설정을 클릭하세요.
+
+3. 화면 왼쪽 사이드바에서 라이선스 → BioStar X 라이선스를 클릭하세요.
+
+4. 슈프리마에서 전달한 사용자 리모트 액세스 라이선스 키와 관리자 이름을 입력하고 활성화 버튼을 클릭하세요.
+
+알아두기
+
+라이선스 등록에 대한 자세한 내용은 [다음 문서](/docs/platform/biostar_x/settings-license-biostar-x-license)를 참고하세요.
+
+##### 사용자 리모트 액세스 활성화[​](#-활성화 "-활성화에 대한 직접 링크")
+
+1. **BioStar X** 관리자 아이디로 로그인하세요.
+
+2. 런처 페이지에서 설정을 클릭하세요.
+
+3. 화면 왼쪽 사이드바에서 사용자 리모트 액세스를 클릭하세요.
+
+4. ngrok 리모트 액세스 섹션에서 리모트 액세스 옵션을 사용으로 변경하세요.
+
+![](/docs/img/biostarx-settings-external-remote-access.png)
+
+##### ngrok 설정 정보 입력[​](#ngrok-설정-정보-입력 "ngrok 설정 정보 입력에 대한 직접 링크")
+
+사용자의 ngrok 설정 정보를 입력하세요.
+
+* 인증 토큰: **Authtoken**을 입력하세요.
+
+* URL: 엔드포인트 URL을 입력하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+
+모든 정보를 입력한 후 확인 버튼을 클릭하세요. 경고 메시지 창이 나타나면 내용을 확인하고 동의 버튼을 클릭하세요.
+
+#### 엔드포인트 URL 접속[​](#엔드포인트-url-접속 "엔드포인트 URL 접속에 대한 직접 링크")
+
+설정을 완료하고 URL 항목에 입력한 엔드포인트 URL을 통해 외부 네트워크에서 **BioStar X** 서버에 접속할 수 있는지 확인하세요.
+
+
+---
+
 ### 라이선스 활성화하기
 
 **BioStar X** 라이선스 및 장치 라이선스를 활성화할 수 있습니다.
@@ -88435,7 +88564,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 2. 섹션 오른쪽의  → CSV 내보내기를 클릭하세요.
 
-3. CSV 내보내기 창이 나타나면 <!-- -->(선택 사항)을 입력하고 다운로드 버튼을 클릭하세요.
+3. CSV 내보내기 창이 나타나면 내보내기 사유(선택 사항)을 입력하고 다운로드 버튼을 클릭하세요.
 
    ![](/docs/img/biostarx-settings-system-audit-trail-export-csv.png)
 
@@ -88469,7 +88598,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * **로그아웃**: 로그아웃
 
-* **로그인 실패 사유**: <!-- -->, <!-- -->,
+* **로그인 실패 사유**: 로그인 실패 (지문), 로그인 실패 (ID+비밀번호), 로그인 실패 (허용되지 않은 IP)
 
 * **로그인 실패 횟수 초과**: 로그인 실패 횟수 초과
 
@@ -88477,7 +88606,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * **기본 정보**: 이름, 사용자 ID, 로그인 ID, 이메일, 전화번호
 
-* **인증 정보**: 비밀번호, PIN, 지문, 얼굴, 카드
+* **인증 정보**: 비밀번호, PIN, 지문, IR 페이스, 카드
 
 * **권한 및 그룹**: 관리자등급, 출입그룹, 사용자 그룹, 개인인증모드
 
@@ -88521,7 +88650,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * **장치 기본 설정**: 이름, 장치그룹, 표준 시간대
 
-* **인증 설정**: 인증, 지문, 얼굴, 카드
+* **인증 설정**: 인증, 지문, IR 페이스, 카드
 
 * **인터페이스 설정**: 화면/소리, 이미지로그, 이미지로그
 
@@ -88539,7 +88668,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 **고급 출입 통제**
 
-* **고급 출입 통제 기본 설정**: 이름, 설명, 구역 종류, 활성/비활성, 모드
+* **고급 출입 통제 기본 설정**: 이름, 설명, 고급 출입 통제 종류, 활성/비활성, 모드
 
 * **안티패스백**: 안티패스백, APB 초기화, 안티패스백 초기화
 
@@ -88575,7 +88704,7 @@ HTTPS 인증서가 설치되지 않은 상태에서 **BioStar X**에 접속하�
 
 * **모바일 크리덴셜**: 사용, 사용 안함
 
-* **감사 추적**:
+* **감사 추적**: CSV 내보내기
 
 **고급 보안 설정**
 

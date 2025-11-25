@@ -660,6 +660,7 @@
 - [엘리베이터 정보 수정하기](/docs/platform/biostar_x/settings-elevators-edit-info): 등록된 엘리베이터의 설정 정보를 수정하는 방법을 안내합니다.
 - [이메일 설정하기](/docs/platform/biostar_x/settings-email-setting): 사용자에게 얼굴 등록 모바일 링크를 전송하거나 QR/바코드를 발급할 이메일의 제목, 회사 이름, 회사 로고, 연락처와 같은 정보를 설정할 수 있습니다.
 - [이벤트 로그 가져오기](/docs/platform/biostar_x/settings-event-log-import): 이벤트 로그를 가져오는 방법에 대한 설명입니다.
+- [사용자 리모트 액세스 설정하기](/docs/platform/biostar_x/settings-external-remote-access): ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.
 - [라이선스 활성화하기](/docs/platform/biostar_x/settings-license): BioStar X 라이선스 및 장치 라이선스를 활성화할 수 있습니다.
 - [BioStar X 라이선스](/docs/platform/biostar_x/settings-license-biostar-x-license): 구매한 BioStar X 라이선스를 활성화할 수 있습니다.
 - [장치 라이선스](/docs/platform/biostar_x/settings-license-device-license): 슈프리마에서 발급한 장치 라이선스를 활성화하면 라이선스에 해당하는 특정 기능을 사용할 수 있습니다.
@@ -675,7 +676,7 @@
 - [층 구성하기](/docs/platform/biostar_x/settings-map-manage-floor): 구역과 시설을 구성하기 전에 층을 구성하세요. 층 이미지에 출입문과 카메라를 배치해 시각적으로 확인할 수 있습니다.
 - [맵 관리하기](/docs/platform/biostar_x/settings-map-management): 층, 시설, 구역을 설정하고 관리하는 방법을 안내합니다.
 - [기본 설정 구성하기](/docs/platform/biostar_x/settings-preferences): BioStar X를 처음 설치하거나 사용 환경을 변경할 때 언어 및 시간대, 날짜/시간 형식, 알림음 설정 방법을 안내합니다.
-- [리모트 액세스 설정하기](/docs/platform/biostar_x/settings-remote-access): ngrok 서비스를 통해 리모트 액세스를 설정하는 방법을 안내합니다.
+- [리모트 액세스 설정하기](/docs/platform/biostar_x/settings-remote-access): ngrok 서비스를 통해 리모트 액세스 설정 방법을 안내합니다.
 - [스케줄 설정하기](/docs/platform/biostar_x/settings-schedule): 출입 및 휴일 스케줄을 설정하여 출입 통제와 근태 관리를 효율적으로 운영하세요.
 - [서버 설정하기](/docs/platform/biostar_x/settings-server): BioStar X 서버의 기본 정보, 사용자 및 장치 관리, 자동 업그레이드, HTTPS 인증서 등 서버 운영에 필요한 다양한 설정 방법을 안내합니다.
 - [HTTPS 인증서 설치하기](/docs/platform/biostar_x/settings-server-https): BioStar X를 HTTPS로 연결하려면 BioStar X를 설치한 서버의 IP 주소를 등록하여 인증서를 설치해야 합니다.

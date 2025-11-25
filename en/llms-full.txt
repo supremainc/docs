@@ -74754,14 +74754,14 @@ This guides you through various features that can be configured on the settings 
 * [Image Log Settings](/docs/en/platform/biostar_x/settings-device-image-log)
   [ <!-- -->20 items](/docs/en/platform/biostar_x/how-to-guide-settings)
 
-#### [Advanced Settings→8 items](/docs/en/platform/biostar_x/how-to-guide-advanced-settings)
+#### [Advanced Settings→9 items](/docs/en/platform/biostar_x/how-to-guide-advanced-settings)
 
 Guide for advanced settings feature available when activating a license of Advanced or higher.
 
 * [Managing Elevators](/docs/en/platform/biostar_x/settings-manage-elevators)
 * [Advanced Access Control Settings](/docs/en/platform/biostar_x/settings-advanced-ac)
 * [Video Settings](/docs/en/platform/biostar_x/settings-videos)
-  [ <!-- -->8 items](/docs/en/platform/biostar_x/how-to-guide-advanced-settings)
+  [ <!-- -->9 items](/docs/en/platform/biostar_x/how-to-guide-advanced-settings)
 
 #### [Plugin→2 items](/docs/en/platform/biostar_x/plugins)
 
@@ -77351,7 +77351,7 @@ The image above is an example screen and may differ from the actual screen.
 
 The System Usage that can be displayed is as follows:
 
-* Total Users, Total Cards, Total Fingerprints, Total Faces, Total Faces, Total QR/Barcode, Total Mobile Access, Total Devices, Total Doors, Total Zones, Total Access Groups, Total User Groups, Total Device Groups
+* Total Users, Total Cards, Total Fingerprints, Total Faces, Total Faces, Total QR/Barcode, Total Mobile Access, Total Devices, Total Doors, Total Advanced ACs, Total Access Groups, Total User Groups, Total Device Groups
 
 ##### Door control[​](#door-control "Direct link to Door control")
 
@@ -78201,7 +78201,7 @@ You can use the import from CSV feature or enroll multiple users' faces at once,
 
 #### Enroll by device[​](#enrolldevice "Direct link to Enroll by device")
 
-Click + Face in the Credential section. When the Enroll Face window appears, set each item and click Enroll.
+Click + Face in the Credential section. When the Enroll IR Face window appears, set each item and click Enroll.
 
 ![](/docs/en/img/en/biostarx-new-user-credential-face.png)
 
@@ -78379,7 +78379,7 @@ This page is currently being translated. We will complete the translation as soo
 
 #### 장치로 등록[​](#enrolldevice "Direct link to 장치로 등록")
 
-Credential 섹션에서 IR Face 버튼을 클릭하세요. Enroll IR Face 창이 나타나면 각 항목을 설정하고 Enroll 버튼을 클릭하세요.
+Credential 섹션에서 + IR Face 버튼을 클릭하세요. Enroll IR Face 창이 나타나면 각 항목을 설정하고 Enroll 버튼을 클릭하세요.
 
 ![](/docs/en/img/en/biostarx-new-user-credential-ir-face.png)
 
@@ -79011,6 +79011,10 @@ This document provides guidance on synchronizing and managing users by integrati
 #### [Set up Remote Access→ <!-- -->Read more](/docs/en/platform/biostar_x/settings-remote-access)
 
 This guide explains how to set up remote access via the ngrok service.
+
+#### [사용자 리모트 액세스 설정하기→ <!-- -->Read more](/docs/en/platform/biostar_x/settings-external-remote-access)
+
+ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.
 
 #### [Integrate Virtual Device Event Log→ <!-- -->Read more](/docs/en/platform/biostar_x/settings-virtual-device-event-log)
 
@@ -86249,6 +86253,137 @@ Info
 
 ---
 
+### 사용자 리모트 액세스 설정하기
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+External Remote Access는 **사용자 소유의 ngrok 계정**으로 외부 네트워크에서 내부 네트워크로 접속할 수 있는 기능입니다. 이 기능을 사용하면 방화벽 설정이나 포트 포워딩 없이도 원격지에서 **BioStar X** 서버에 접속할 수 있습니다.
+
+Info
+
+* External Remote Access 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/licensing#features-add-ons)를 참고하세요.
+
+* External Remote Access 기능을 사용하려면 ngrok의 **Pay-as-you-go** 플랜을 구독해야 합니다. ngrok 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
+
+  ngrok의 **Free** 또는 **Hobbyist** 플랜에서는 밴드 폭 제한, 동시 터널 제한 등으로 인해 안정적인 리모트 액세스 연결이 어려울 수 있습니다.
+
+External Remote Access VS Remote Access
+
+* Remote Access 기능은 라이선스 구매를 통해서 사용자에게 ngrok 슈프리마 사이트의 bot 계정, 엔드포인트를 제공하여 외부 네트워크에서의 연결을 지원하는 기능입니다. Remote Access 기능에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/settings-remote-access)를 참고하세요.
+
+* 반면, External Remote Access 기능은 사용자가 소유한 ngrok 계정을 통해 외부 네트워크에서 내부 네트워크로의 연결을 지원하는 기능입니다. 사용자는 직접 ngrok 계정을 생성하고, ngrok 설정 정보를 입력해야 합니다.
+
+Caution
+
+* 리모트 액세스(Remote Access) 기능은 제3자 서비스인 ngrok의 터널링 서비스를 통해 제공됩니다. 기능 사용 전 반드시 [Remote Access 기능 사용 동의](/docs/en/legal/eula#remote-access-agreement) 약관을 확인하세요.
+
+* BioStar X는 단순히 ngrok API를 호출하여 연결을 지원할 뿐, 인터넷 연결의 보안성, 안전성, 연속성은 ngrok 서비스에 전적으로 의존합니다. 따라서 본 기능 사용 중 발생할 수 있는 보안 사고, 데이터 손실, 시스템 침해 등에 대하여 슈프리마는 어떠한 책임도 지지 않습니다.
+
+#### 언제 사용하나요?[​](#언제-사용하나요 "Direct link to 언제 사용하나요?")
+
+다음과 같은 상황에서 리모트 액세스 기능을 사용하세요.
+
+* 현재 소유한 ngrok 계정이 있으면서, 외부 네트워크에서 사내 **BioStar X** 서버에 접속해야 할 때
+
+* 방화벽이나 NAT 환경으로 인해 직접 접속이 어려운 경우
+
+* 복잡한 네트워크 설정 없이 간편하게 원격 접속을 구성하고 싶을 때
+
+* 임시로 외부 접속 권한을 제공해야 하는 경우
+
+#### 시작하기 전에[​](#시작하기-전에 "Direct link to 시작하기 전에")
+
+##### ngrok 계정 및 플랜 준비[​](#ngrok-계정-및-플랜-준비 "Direct link to ngrok 계정 및 플랜 준비")
+
+* ngrok 계정을 준비하세요. ngrok 계정이 없다면 [다음 링크](https://dashboard.ngrok.com/signup)에서 계정을 생성하세요.
+
+* ngrok 플랜을 구독하세요. External Remote Access 기능은 ngrok의 **Pay-as-you-go** 플랜 이상에서 안정적인 연결이 가능합니다. 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
+
+##### Authtoken 확인[​](#authtoken-확인 "Direct link to Authtoken 확인")
+
+ngrok 대시보드에서 **Authtoken**을 확인하세요. **Getting Started** → **Your Authtoken** 메뉴에서 확인할 수 있습니다.
+
+##### 엔드 포인트 URL 준비[​](#엔드-포인트-url-준비 "Direct link to 엔드 포인트 URL 준비")
+
+ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+
+1. ngrok 대시보드에 로그인하세요.
+
+2. 왼쪽 사이드바에서 **Universal Gateway** → **Endpoints & Traffic Policy** 메뉴를 클릭하세요.
+
+3. 화면 오른쪽 상단의 **New Endpoint** 버튼을 클릭하세요.
+
+4. **Cloud Endpoint**를 선택하세요.
+
+   ![](/docs/en/img/common/biostarx-settings-external-remote-access-ngrok-select.png)
+
+5. **Bindings**에서 **Public**을 선택하고 **Create Cloud Endpoint** 버튼을 클릭하세요.
+
+   ![](/docs/en/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint.png)
+
+6. **Traffic Policy** 탭을 클릭하고 **Code** 탭으로 전환하세요.
+
+7. `on_http_request.actions.config.url` 값을 확인하세요. 엔드포인트 URL 끝에 `.internal`을 추가하여 내부 트래픽 라우팅을 설정하세요.
+
+   ![](/docs/en/img/en/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png)
+
+   예: `your-name.bsx.ngrok.app` → `your-name.bsx.ngrok.app.internal`
+
+8. 설정을 완료한 후 화면 우측 상단의 **Save** 버튼을 클릭하세요.
+
+Info
+
+`.internal` 도메인은 ngrok의 내부 네트워크 라우팅을 위한 특수 도메인입니다. 이를 통해 외부 요청이 내부 **BioStar X** 서버로 안전하게 전달됩니다.
+
+#### External Remote Access 설정[​](#-설정 "Direct link to -설정")
+
+##### 라이선스 활성화[​](#라이선스-활성화 "Direct link to 라이선스 활성화")
+
+1. **BioStar X** 관리자 아이디로 로그인하세요.
+
+2. Launcher 페이지에서 Settings을 클릭하세요.
+
+3. 화면 왼쪽 사이드바에서 License → BioStar X License를 클릭하세요.
+
+4. 슈프리마에서 전달한 External Remote Access 라이선스 키와 관리자 이름을 입력하고 Activate 버튼을 클릭하세요.
+
+Info
+
+라이선스 등록에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/settings-license-biostar-x-license)를 참고하세요.
+
+##### External Remote Access 활성화[​](#-활성화 "Direct link to -활성화")
+
+1. **BioStar X** 관리자 아이디로 로그인하세요.
+
+2. Launcher 페이지에서 Settings을 클릭하세요.
+
+3. 화면 왼쪽 사이드바에서 External Remote Access를 클릭하세요.
+
+4. Remote Access with ngrok 섹션에서 Remote Access 옵션을 Use으로 변경하세요.
+
+![](/docs/en/img/en/biostarx-settings-external-remote-access.png)
+
+##### ngrok 설정 정보 입력[​](#ngrok-설정-정보-입력 "Direct link to ngrok 설정 정보 입력")
+
+사용자의 ngrok 설정 정보를 입력하세요.
+
+* Authtoken: **Authtoken**을 입력하세요.
+
+* URL: 엔드포인트 URL을 입력하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+
+모든 정보를 입력한 후 Apply 버튼을 클릭하세요. 경고 메시지 창이 나타나면 내용을 확인하고 Agree 버튼을 클릭하세요.
+
+#### 엔드포인트 URL 접속[​](#엔드포인트-url-접속 "Direct link to 엔드포인트 URL 접속")
+
+설정을 완료하고 URL 항목에 입력한 엔드포인트 URL을 통해 외부 네트워크에서 **BioStar X** 서버에 접속할 수 있는지 확인하세요.
+
+
+---
+
 ### Activate License
 
 You can activate **BioStar X** license and device licenses.
@@ -88142,7 +88277,7 @@ All activities recorded in the audit trail are organized by category. Click each
 
 * **Basic Info**: Name, User ID, Login ID, Email, Phone
 
-* **Authentication Information**: Password, PIN, Fingerprint Template, Face, Cards
+* **Authentication Information**: Password, PIN, Fingerprint Template, IR Face, Cards
 
 * **Permissions and Groups**: Account Level, Access Groups, User Group, Private Auth Modes
 
@@ -88186,7 +88321,7 @@ All activities recorded in the audit trail are organized by category. Click each
 
 * **Device Basic Settings**: Name, Device Group, Time Zone
 
-* **Authentication Settings**: Authentication, Fingerprint, Face, Card
+* **Authentication Settings**: Authentication, Fingerprint, IR Face, Card
 
 * **Interface Settings**: Display, Image Log, Image Log
 
@@ -88204,7 +88339,7 @@ All activities recorded in the audit trail are organized by category. Click each
 
 **Advanced Access Control**
 
-* **Advanced Access Control Basic Settings**: Name, Description, Zone Type, Active/Inactive, Mode
+* **Advanced Access Control Basic Settings**: Name, Description, Advanced AC Type, Active/Inactive, Mode
 
 * **Anti-passback**: APB, Clear APB, Clear APB
 

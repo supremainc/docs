@@ -645,6 +645,7 @@
 - [Edit Elevator Information](/docs/en/platform/biostar_x/settings-elevators-edit-info): This guide describes how to edit the setting information of the registered elevator.
 - [Email Setting](/docs/en/platform/biostar_x/settings-email-setting): You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
 - [Import Event Logs](/docs/en/platform/biostar_x/settings-event-log-import): Learn how to import event logs.
+- [사용자 리모트 액세스 설정하기](/docs/en/platform/biostar_x/settings-external-remote-access): ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.
 - [Activate License](/docs/en/platform/biostar_x/settings-license): Activate BioStar X license and device license.
 - [BioStar X License](/docs/en/platform/biostar_x/settings-license-biostar-x-license): You can activate the purchased BioStar X license.
 - [Device License](/docs/en/platform/biostar_x/settings-license-device-license): Activating a device license issued by Suprema allows using specific features corresponding to the license.
