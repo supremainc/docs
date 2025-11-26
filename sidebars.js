@@ -482,6 +482,7 @@ const sidebars = {
                 'platform/biostar_x/settings-credential-wiegand-format',
                 'platform/biostar_x/settings-credential-smart-format',
                 'platform/biostar_x/settings-credential-mobile-access-card',
+                'platform/biostar_x/settings-credential-ir-face-group-matching'
               ]
             },
             'platform/biostar_x/settings-card-printer',
