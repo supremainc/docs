@@ -4805,6 +4805,7 @@
   "setting.sever.secure.comm.use.catution.msg": "When secure communication is on, the access to the devices can be limited. The limitations must be fully understood before proceeding. You can find the details from the manual . When changing the secure comm. option, it could take several minutes to reconnect the devices.<br>Do you want to continue?",
   "setting.systemBackup.change.comm.msg": "It only backs up the main database, so data from any databases added afterward will not be included in the backup.",
   "setting.systemBackup.change.msg": "Backup files can only be restored on a PC configured with the same IP address.<br>Do you want to continue?",
+  "setting.systemBackup.change.msgSecond": "Changes made after this backup was initiated will not be included in the backup file. Do you want to continue?",
   "setting.systemBackup.isrunning.msg": "A backup that has previously been started is still in progress.<br>Please try again when the previous backup is done.",
   "setting.systemBackup.outofrange.cycle": "Number of Backup Files to Keep can only be set between 1~100.",
   "setting.systemBackup.outofrange.month": "Date can only be set between 1~31.",
