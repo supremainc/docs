@@ -13,7 +13,7 @@ const decodeUnicode = (str) => {
 };;
 
 if (!process.argv[2] || !process.argv[3]) {
-  console.log('.properties 또는 .json 파일을 입력하세요. e.g. node locale2json message_ko.properties ko.json');
+  console.log('.properties 또는 .json 파일을 입력하세요. e.g. node locale2json messages_ko.properties ko.json');
 } else {
   const propertiesFile = process.argv[2];
   const exportFile = process.argv[3];
