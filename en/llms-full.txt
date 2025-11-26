@@ -79190,14 +79190,14 @@ Learn how to import event logs.
 
 Set the types of alert and messages to appear on the screen when events occur in the device, door, or area.
 
-#### [Manage Credentials→4 items](/docs/en/platform/biostar_x/settings-credential-manage)
+#### [Manage Credentials→5 items](/docs/en/platform/biostar_x/settings-credential-manage)
 
 This guide describes how to manage credentials for access authentication.
 
 * [Manage Cards](/docs/en/platform/biostar_x/settings-credential-card-manage)
 * [Set Wiegand Card Format](/docs/en/platform/biostar_x/settings-credential-wiegand-format)
 * [Set Smart Card Format](/docs/en/platform/biostar_x/settings-credential-smart-format)
-  [ <!-- -->4 items](/docs/en/platform/biostar_x/settings-credential-manage)
+  [ <!-- -->5 items](/docs/en/platform/biostar_x/settings-credential-manage)
 
 #### [Card Printer→ <!-- -->Read more](/docs/en/platform/biostar_x/settings-card-printer)
 
@@ -83071,6 +83071,55 @@ To delete a card from the Unassigned Card list, first remove the card from the D
 
 ---
 
+### IR 페이스 그룹 매칭 설정하기
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+IR Face Group Matching은 사용자 그룹을 기반으로 매칭 그룹을 설정하여 사용자를 인증하는 기능입니다. 이 기능을 사용하면 특정 사용자 그룹에 속한 사용자만 IR 페이스 인증을 통해 출입을 허용할 수 있습니다.
+
+1. Launcher 페이지에서 Settings을 클릭하세요.
+
+2. 화면 왼쪽 사이드바에서 Credential → IR Face Group Matching를 클릭하세요.
+
+3. Group Matching 옵션을 Use으로 변경하세요.
+
+   ![](/docs/en/img/en/biostarx-settings-credential-irface-group-match.png)
+
+4. Group Matching Device Settings에서 + Add 버튼을 클릭하세요.
+
+5. Group Matching Device Settings 창이 나타나면 원하는 장치를 선택하고 Add 버튼을 클릭하세요.
+
+   FaceStation 2 모델만 선택할 수 있습니다.
+
+6. Matching Group Settings에서 + Add 버튼을 클릭하세요.
+
+7. Group Name 및 User Group 항목을 설정하세요.
+
+8. 설정을 저장하려면 화면 오른쪽 하단의 Apply 버튼을 클릭하세요.
+
+Info
+
+* 최대 10개의 매칭 그룹을 생성할 수 있습니다.
+
+* 그룹당 최대 3,000개의 IR 페이스 템플릿을 포함할 수 있습니다.
+
+* 하나의 매칭 그룹에 여러 개의 사용자 그룹을 설정할 수 있습니다.
+
+* 매칭 그룹의 전체 IR 페이스 템플릿 수는 5,000개를 초과할 수 없습니다.
+
+* 사용자 그룹에 포함된 IR 페이스 템플릿이 3,000 개를 초과하면 매칭 그룹으로 설정할 수 없습니다.
+
+* 이 기능은 FaceStation 2 모델만 지원합니다.
+
+* 그룹 매칭 기능을 비활성화하려면 이미 설정된 장치와 그룹 설정을 모두 삭제해야 합니다.
+
+
+---
+
 ### Manage Credentials
 
 This guide describes how to manage credentials for access authentication. You can check card issuance status, user possession, and blacklist, and set card formats. You can also check how to set up mobile access cards.
@@ -83090,6 +83139,10 @@ This guide describes how to manage credentials for access authentication. You ca
 #### [📄️<!-- --> <!-- -->Manage Mobile Access Cards](/docs/en/platform/biostar_x/settings-credential-mobile-access-card)
 
 [This guide describes how to manage mobile access cards for users in BioStar X by integrating Airfob Portal.](/docs/en/platform/biostar_x/settings-credential-mobile-access-card)
+
+#### [📄️<!-- --> <!-- -->IR 페이스 그룹 매칭 설정하기](/docs/en/platform/biostar_x/settings-credential-ir-face-group-matching)
+
+[사용자 그룹을 기반으로 매칭 그룹을 설정하여 사용자를 인증하는 IR 페이스 그룹 매칭 기능을 안내합니다.](/docs/en/platform/biostar_x/settings-credential-ir-face-group-matching)
 
 
 ---
@@ -86265,7 +86318,7 @@ External Remote Access는 **사용자 소유의 ngrok 계정**으로 외부 네�
 
 Info
 
-* External Remote Access 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/licensing#features-add-ons)를 참고하세요.
+* External Remote Access 기능은 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/licensing#features-add-ons)를 참고하세요.
 
 * External Remote Access 기능을 사용하려면 ngrok의 **Pay-as-you-go** 플랜을 구독해야 합니다. ngrok 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
 

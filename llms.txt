@@ -632,6 +632,7 @@
 - [경보 설정하기](/docs/platform/biostar_x/settings-alert): 장치, 출입문, 구역에 이벤트가 발생했을 경우 화면에 표시할 경보 종류와 메시지를 설정할 수 있습니다.
 - [카드 인쇄하기](/docs/platform/biostar_x/settings-card-printer): BioStar X와 cardPresso를 연동하여 사용자가 원하는 디자인의 카드를 인쇄할 수 있습니다.
 - [카드 관리하기](/docs/platform/biostar_x/settings-credential-card-manage): 카드 발급 상태 확인, Wiegand 카드 데이터 형식 변경, CSN 모바일 카드 삭제 이력 관리 방법을 안내합니다.
+- [IR 페이스 그룹 매칭 설정하기](/docs/platform/biostar_x/settings-credential-ir-face-group-matching): 사용자 그룹을 기반으로 매칭 그룹을 설정하여 사용자를 인증하는 IR 페이스 그룹 매칭 기능을 안내합니다.
 - [크리덴셜 관리하기](/docs/platform/biostar_x/settings-credential-manage): 출입 인증을 위한 크리덴셜 관리 방법을 안내합니다.
 - [모바일 출입 카드 관리하기](/docs/platform/biostar_x/settings-credential-mobile-access-card): 에어팝 포털(Airfob Portal)을 연동하여 BioStar X에서 사용자에게 모바일 출입 카드를 관리하는 방법을 안내합니다.
 - [스마트 카드 형식 설정하기](/docs/platform/biostar_x/settings-credential-smart-format): MIFARE, iCLASS, DESFire, iCLASS Seos와 같은 스마트 카드의 레이아웃을 설정할 수 있습니다.

@@ -617,6 +617,7 @@
 - [Alert Settings](/docs/en/platform/biostar_x/settings-alert): Set the types of alert and messages to appear on the screen when events occur in the device, door, or area.
 - [Card Printer](/docs/en/platform/biostar_x/settings-card-printer): You can print cards with the desired design by integrating BioStar X and cardPresso.
 - [Manage Cards](/docs/en/platform/biostar_x/settings-credential-card-manage): This guide explains how to check card issuance status, change Wiegand card data format, and manage the deletion history for CSN mobile cards.
+- [IR 페이스 그룹 매칭 설정하기](/docs/en/platform/biostar_x/settings-credential-ir-face-group-matching): 사용자 그룹을 기반으로 매칭 그룹을 설정하여 사용자를 인증하는 IR 페이스 그룹 매칭 기능을 안내합니다.
 - [Manage Credentials](/docs/en/platform/biostar_x/settings-credential-manage): This guide describes how to manage credentials for access authentication.
 - [Manage Mobile Access Cards](/docs/en/platform/biostar_x/settings-credential-mobile-access-card): This guide describes how to manage mobile access cards for users in BioStar X by integrating Airfob Portal.
 - [Set Smart Card Format](/docs/en/platform/biostar_x/settings-credential-smart-format): Set layout of smart cards such as MIFARE, iCLASS, DESFire, iCLASS Seos.
