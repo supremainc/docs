@@ -378,12 +378,32 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "printOption.printReason",
+            product: "2"
+          }), "(선택 사항)를 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "team.menu.print"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "브라우저를 통해 열리는 PDF 또는 SVG 파일을 인쇄할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "printOption.printReason",
+          product: "2"
+        }), "는 필수 입력 항목이 아닙니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "printOption.printReason",
+          product: "2"
+        }), "는 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "shell.header.setting"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.root"
+        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "setting.menu.system.auditTrail"
+        }), "에서 기록을 확인할 수 있습니다."]
+      })
     })]
   });
 }

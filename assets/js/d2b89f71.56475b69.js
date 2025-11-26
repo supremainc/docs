@@ -837,18 +837,37 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.serverMatching.fastMode",
-            product: "2"
-          }), ": 지문 매칭 속도를 조절할 수 있습니다."]
+        children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.fingerPrint",
+          product: "2"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.serverMatching.fastMode",
+                product: "2"
+              }), ": 지문 매칭 속도를 조절할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "setting.server.serverMatching.securityLevel",
+                product: "2"
+              }), ": 지문에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.server.serverMatching.securityLevel",
-            product: "2"
-          }), ": 지문에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다."]
+        children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "common.face",
+          product: "2"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "setting.server.serverMatching.securityLevel",
+              product: "2"
+            }), ": IR 페이스에 대한 서버 매칭 보안 레벨을 설정할 수 있습니다. 보안 등급이 높을 수록 본인 거부율(FRR)이 증가합니다."]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
