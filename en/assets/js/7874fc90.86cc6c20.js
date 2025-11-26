@@ -896,7 +896,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "0~9"
+                children: "0-9"
               }), ": Used to input numbers or characters."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

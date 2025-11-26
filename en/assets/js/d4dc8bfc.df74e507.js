@@ -107,7 +107,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Anno, {
           id: "anno1",
           children: "1)"
-        }), " The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5~1.3 m."]
+        }), " The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5-1.3 m."]
       }), (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Anno, {
           id: "anno2",

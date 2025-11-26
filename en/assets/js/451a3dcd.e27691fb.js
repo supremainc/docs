@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["65206"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["84969"], {
 12683: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -61,7 +61,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-75855: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+23578: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -70,20 +70,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_d_2_getting_started_mdx_cb0_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_2_getting_started_mdx_451_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-d-2-getting-started-mdx-cb0.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_d_2_getting_started_mdx_cb0_namespaceObject = JSON.parse('{"id":"device/xpass_d2/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_d2/getting-started.mdx","sourceDirName":"device/xpass_d2","slug":"/device/xpass_d2/getting-started","permalink":"/docs/en/device/xpass_d2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_d2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"xpassd2","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/xpass_d2/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/xpass_d2/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-2-getting-started-mdx-451.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_2_getting_started_mdx_451_namespaceObject = JSON.parse('{"id":"device/xpass_2/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_2/getting-started.mdx","sourceDirName":"device/xpass_2","slug":"/device/xpass_2/getting-started","permalink":"/docs/en/device/xpass_2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"xpass2","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/xpass_2/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/xpass_2/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_getting-started-components-note.mdx
 var _getting_started_components_note = __webpack_require__(12683);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_d2/getting-started.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_2/getting-started.mdx
 
 
 const frontMatter = {
@@ -191,13 +191,13 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "XPass D2 Mullion Type (XPD2-MDB)"
+            children: "XPass 2 Mullion Type (XP2-MDPB, XP2-MAPB, XP2-MAPB-H)"
+          }), (0,jsx_runtime.jsxs)(Td, {
+            children: ["Wall Bracket (XP2-MDPB,", (0,jsx_runtime.jsx)("br", {}), "XP2-MAPB, XP2-MAPB-H)"]
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Wall Bracket (XPD2-MDB)"
+            children: "XPass 2 Gang Box Type (XP2-GDPB)"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "XPass D2 Gang Box Type (XPD2-GDB)"
-          }), (0,jsx_runtime.jsx)(Td, {
-            children: "Wall Bracket (XPD2-GDB)"
+            children: "Wall Bracket (XP2-GDPB)"
           })]
         })]
       }), (0,jsx_runtime.jsxs)(Tbody, {
@@ -233,19 +233,28 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "XPass D2 Keypad Type (XPD2-GKDB)"
+            children: "XPass 2 Keypad Type (XP2-GKDPB)"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Wall Bracket (XPD2-GKDB)"
+            children: "Wall Bracket (XP2-GKDPB)"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "Fixing Screws x2"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "Bracket Fixing Screw (Star Shaped)"
           })]
         })]
-      }), (0,jsx_runtime.jsxs)(Tbody, {
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(Table, {
+      className: "component",
+      children: (0,jsx_runtime.jsxs)(Tbody, {
         children: [(0,jsx_runtime.jsxs)(Row, {
           className: "center white",
           children: [(0,jsx_runtime.jsx)(Td, {
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/device/component-diode1.svg",
+              className: "none",
+              alone: true
+            })
+          }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/component-resistor.svg",
               className: "none",
@@ -273,6 +282,8 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
+            children: "Diode"
+          }), (0,jsx_runtime.jsx)(Td, {
             children: "120 Ω Resistor"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "Shrink Tube"
@@ -282,12 +293,12 @@ function _createMdxContent(props) {
             children: "Open Source Software Guide"
           })]
         })]
-      })]
+      })
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_components_note/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "name-and-function-of-each-part",
       children: "Name and function of each part"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/name-function-each-part-xpd2.png",
+      src: "/img/device/name-function-each-part-xp2.png",
       width: "80%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -340,13 +351,26 @@ function _createMdxContent(props) {
           }), ": This is the part that recognizes mobile access cards for entry."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.strong, {
             children: "Reset Button"
-          }), ": Deletes all stored information and certificates and initializes the settings. For more information on factory initialization, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "installation#factory-reset",
-            children: "the following"
-          }), "."]
+          })
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["Initializes network settings. For more information on initializing network settings, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "installation#reset-network-settings",
+                children: "the following"
+              }), "."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["Deletes all information and certificates stored on the device and initializes the settings. For more information on factory initialization, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+                href: "installation#factory-reset",
+                children: "the following"
+              }), "."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -354,7 +378,7 @@ function _createMdxContent(props) {
             children: "Cable"
           })
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Power / RS-485 / Wiegand Output / LED Input / Beep Input / Tamper"
+          children: "Power / RS-485 / Ethernet / Wiegand I/O / Input / Relay"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -362,13 +386,13 @@ function _createMdxContent(props) {
             children: "Keypad"
           }), ": ", (0,jsx_runtime.jsx)(Badge, {
             only: true,
-            children: "XPD2-GKDB"
+            children: "XP2-GKDPB"
           }), " Used to authenticate by directly entering the Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "0~9"
+                children: "0-9"
               }), ": Used when entering numbers."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -396,9 +420,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsx)(Column, {
         children: (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/cables-layout-xpd2.png",
+          src: "/img/device/cables-layout-xp2.png",
           className: "none",
-          width: 500,
+          width: 600,
           alone: true
         })
       }), (0,jsx_runtime.jsx)(Column, {
@@ -434,12 +458,12 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "PWR +VDC"
+                children: "485 TRXP"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "Red"
+                children: "Blue (White Stripe)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -447,23 +471,6 @@ function _createMdxContent(props) {
                   textAlign: "center"
                 },
                 children: "2"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "GND"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "Black (White Stripe)"
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "3"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
@@ -480,17 +487,34 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
+                children: "3"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "485 GND"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "White (Black Stripe)"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
                 children: "4"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "485 TRXP"
+                children: "ENET RXN"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "Blue (White Stripe)"
+                children: "Yellow"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -502,7 +526,75 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "WG D0"
+                children: "ENET RXP"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Black"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "6"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET TXN"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Orange"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "7"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET TXP"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "White"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "8"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET VB1"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Red"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "9"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET VB1"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
@@ -514,7 +606,58 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "6"
+                children: "10"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET VB2"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Blue"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "11"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "ENET VB2"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Brown"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "12"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "WG GND"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Black"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "13"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
@@ -531,46 +674,29 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "7"
+                children: "14"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "LED RED"
+                children: "WG D0"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "Orange"
+                children: "Green"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "8"
+                children: "15"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "LED GRN"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "Brown"
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "9"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "BEEP"
+                children: "INPUT0"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
@@ -582,17 +708,119 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "10"
+                children: "16"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
-                children: "TMPR"
+                children: "INPUT1"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Brown"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "17"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "INPUT GND"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 style: {
                   textAlign: "center"
                 },
                 children: "Gray"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "18"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "RLY NO"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Gray (White Stripe)"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "19"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "RLY COM"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Green (White Stripe)"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "20"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "RLY NC"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Orange (White Stripe)"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "21"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "PWR +VDC"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Red"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "22"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "PWR GND"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "Black (White Stripe)"
               })]
             })]
           })]

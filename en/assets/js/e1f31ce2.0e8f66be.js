@@ -122,7 +122,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_020",
                 product: "dev"
-              }), ": Enter a number from 1~4294967295 to enroll a user ID. If ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Enter a number from 1-4294967295 to enroll a user ID. If ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_168",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {

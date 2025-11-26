@@ -1547,7 +1547,7 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "0~9"
+                children: "0-9"
               }), ": Input numbers/characters, select menus"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

@@ -34888,7 +34888,7 @@ Info
 
 * **Keypad**
 
-  * **0~9**: Used to input numbers or characters.
+  * **0-9**: Used to input numbers or characters.
 
   * **2**, **4**, **6**, **8**: Used to navigate to the desired item.
 
@@ -37757,7 +37757,7 @@ Info
 
 * **Number/Menu/ESC Button**
 
-  * **0~9**: Input numbers/characters, select menus
+  * **0-9**: Input numbers/characters, select menus
 
   * ![](/docs/en/img/common/ico-menu1.svg): Enter menu
 
@@ -39666,7 +39666,7 @@ You can register user information that includes biometric authentication data.
 
 3. Select the desired item and press the  button. After configuring the item, press **OK** to register user information.
 
-   * ID: Enter a number from 1~4294967295 to enroll a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * ID: Enter a number from 1-4294967295 to enroll a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
    * Name: You can enter the user name using the numeric buttons. Press the / buttons to select letters or numbers, and press **F1**/**F2** to see more characters.
 
@@ -55366,7 +55366,7 @@ FSF2-DB, FSF2-AB
 
 ![](/docs/en/img/en/device/fsf2-dbadb-dimension.svg)
 
-[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5~1.3 m.
+[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5-1.3 m.
 
 [2)](#anno2_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -59892,7 +59892,7 @@ Info
 
 * **Keypad**: XP2-GKDPB Used to authenticate by directly entering the Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
 
-  * **0~9**: Used when entering numbers.
+  * **0-9**: Used when entering numbers.
 
   * ![](/docs/en/img/common/ico-star.svg): Used to distinguish between FC code and ID when entering Wiegand Card ID.
 
@@ -61634,7 +61634,7 @@ Info
 
 * **Keypad**: XPD2-GKDB Used to authenticate by directly entering the Card ID. To authenticate using direct input mode, change the authentication method settings in BioStar X.
 
-  * **0~9**: Used when entering numbers.
+  * **0-9**: Used when entering numbers.
 
   * ![](/docs/en/img/common/ico-star.svg): Used to distinguish between FC code and ID when entering Wiegand Card ID.
 
@@ -75985,7 +75985,7 @@ You may obtain the source code for three years after our last shipment of this p
 
 If you want to obtain the source code in the physical medium, the cost of performing such distribution may be charged. This offer is valid to anyone in receipt of this information.
 
-Open-source licenses and the corresponding license terms for open-source software contained in this product are as follows: [link](/docs/en/assets/files/opensourcelicenses-bf4ce7619fc5783107b30538aef10ae4.txt)
+Open-source licenses and the corresponding license terms for open-source software contained in this product are as follows: [link](/docs/en/assets/files/opensourcelicenses-2546151466266a49dc788fcdac870762.txt)
 
 
 ---
@@ -87492,7 +87492,7 @@ Remote access via ngrok allows secure access to internal networks from external 
 
 Info
 
-* The remote access feature is available as an additional option for **Advanced** licenses and above. For more information on licensing policy, refer to [the following](/docs/en/platform/biostar_x/licensing#features-add-ons).
+* The remote access feature is available as an additional option. For more information on licensing policy, refer to [the following](/docs/en/platform/biostar_x/licensing#features-add-ons).
 
 * When purchasing the remote access license, Suprema generates a bot account, endpoint, and license document for remote access use on the ngrok Suprema site.
 
@@ -89565,7 +89565,7 @@ Info
 
 * You can log multiple event logs for a single virtual device at once with a single API call.
 
-* For more information on using API, refer to [the following](/docs/en/api/bsxapi#tag/virtual-device--event-import).
+* For more information on using API, refer to [the following](/docs/en/api/bsxapi#tag/Virtual-Device-and-Event-Import).
 
 #### Retrieve event log[​](#retrieve-event-log "Direct link to Retrieve event log")
 

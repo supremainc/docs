@@ -141,7 +141,7 @@ function _createMdxContent(props) {
       id: "1-grant-of-license",
       children: "1. Grant of License."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Conditioned upon your compliance with the terms and conditions of this Agreement, Company grants you a non-exclusive, non-transferable, revocable license  to Execute (as defined herein) one copy of the Software on a computer (\"Computer\") in connection with your compatible hardware products (\"Hardware Product\"), solely for your internal business purposes. Company reserves all rights in the Software not expressly granted to you in this Agreement.  For purposes of this Agreement, \"Execute\" and \"Execution\" means to load, install, and run the Software in order to benefit from its functionality as designed by Company."
+      children: "Conditioned upon your compliance with the terms and conditions of this Agreement, Company grants you a non-exclusive, non-transferable, revocable license to Execute (as defined herein) one copy of the Software on a computer (\"Computer\") in connection with your compatible hardware products (\"Hardware Product\"), solely for your internal business purposes. Company reserves all rights in the Software not expressly granted to you in this Agreement. For purposes of this Agreement, \"Execute\" and \"Execution\" means to load, install, and run the Software in order to benefit from its functionality as designed by Company."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "2-restrictions",
       children: "2. Restrictions."

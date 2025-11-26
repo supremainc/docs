@@ -96,9 +96,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The remote access feature is available as an additional option for ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Advanced"
-            }), " licenses and above. For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["The remote access feature is available as an additional option. For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "licensing#features-add-ons",
               children: "the following"
             }), "."]

@@ -95,9 +95,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["리모트 액세스(Remote Access) 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "어드밴스"
-            }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["리모트 액세스(Remote Access) 기능은 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "licensing#features-add-ons",
               children: "다음 문서"
             }), "를 참고하세요."]
