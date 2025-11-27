@@ -71,9 +71,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["문서의 안내에 따라 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " 서버에 설정된 IP 주소를 변경하기 전에, ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " 서버에 설정된 IP 주소를 변경하는 명령어를 실행하기 전에, ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
         }), " 서버의 IP 주소를 먼저 변경하세요. 서버의 IP 주소를 변경하지 않고 안내하는 절차를 진행하면 시스템에 문제가 발생할 수 있습니다."]
       })
@@ -103,7 +103,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["커뮤니케이션 서버를 설치한 경우, 커뮤니케이션 서버에 설정된 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버 IP 주소도 변경해야 합니다. 커뮤니케이션 서버에서 아래 명령어를 실행하세요. BioStar X 서버의 인증서가 커뮤니케이션 서버에 등록됩니다."]
+      }), " 서버 IP 주소도 변경해야 합니다. 커뮤니케이션 서버에서 아래 명령어를 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버의 인증서가 커뮤니케이션 서버에 등록됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-bash",
