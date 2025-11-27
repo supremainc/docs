@@ -259,6 +259,63 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 3. Activate <Cmd sid='ui_150' product='dev' /> to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
+{/*
+
+### Master Admin
+
+You can change the authentication method of the Master Admin.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_128' product='dev' />.
+
+3. Configure the desired authentication methods.
+
+   <div className='grid-container'>
+
+   <Image src='/img/device/xs2-master-admin.png' />
+
+   <Image src='/img/device/xs2-master-admin-setting-credential2.png' />
+
+   </div>
+
+:::info
+
+* You must enroll at least two types of credentials.
+
+* This feature is available only on new devices running firmware v#.#.# or later.
+
+:::
+
+### Administrator two-step authentication {#admin-2-step-authentication}
+
+Devices upgraded to firmware version 1.4.0 do not provide <Cmd sid='ui_128' product='dev' /> settings, but you can enhance the security of the device by strengthening the administrator's permissions through the <Cmd sid='ui_073' product='dev' /> option.
+
+1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_073' product='dev' />.
+
+   <Image src='/img/device/xs2-administrator-two-step-auth.png' />
+
+:::info
+
+* <Cmd sid='ui_073' product='dev' /> becomes available after upgrading the firmware to v#.#.# or later, and after upgrading to v#.#.# or later, you cannot downgrade to a lower version.
+
+* The first step of authentication is default unless the <Cmd sid='ui_073' product='dev' /> option is enabled.
+
+* If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed. Enroll two types of credentials for all administrators and try again.
+
+  <Image src='/img/how-to/error-two-step-authentication.png' className='none' width='300px' />
+
+:::
+
+:::caution
+
+If you delete all administrators' credentials to below type 2 after enabling <Cmd sid='ui_073' product='dev' />, you will no longer have access to the administrator menu without being able to connect to BioStar X. Therefore, you need to be particularly careful when deleting administrator credentials.
+
+:::
+*/}
+
 ### Restart device
 
 The user can restart the device.
