@@ -247,7 +247,8 @@ const sidebars = {
             'platform/biostar_x/service-settings',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
-            'platform/biostar_x/add-sub-db'
+            'platform/biostar_x/add-sub-db',
+            'platform/biostar_x/change-ip-address'
           ]
         },
         'platform/biostar_x/ui-launcher',
