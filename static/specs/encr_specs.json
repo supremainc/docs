@@ -83,9 +83,15 @@
         "output": {
           "label": "Output",
           "label_id": "specs.power_supply.output",
-          "value": {
-            "ko": [ "DC 전압: 13.8 VDC", "정격 전류: 11.6 A", "정격 전력: 160 W" ],
-            "en": [ "DC Voltage: 13.8 VDC", "Rated Current: 11.6 A", "Rated Power: 160 W" ]
+          "type": "model",
+          "items": {
+            "138vdc": {
+              "label": "13.8 Vdc",
+              "value": {
+                "ko": [ "정격 전류: 11.6 A", "정격 전력: 160 W" ],
+                "en": [ "Rated Current: 11.6 A", "Rated Power: 160 W" ]
+              }
+            }
           }
         }
       }
