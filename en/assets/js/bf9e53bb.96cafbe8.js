@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-ip-address-mdx-bf9.json
-var site_docs_platform_biostar_x_change_ip_address_mdx_bf9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-ip-address","title":"IP 주소 변경하기","description":"BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-ip-address.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-ip-address","permalink":"/docs/platform/biostar_x/change-ip-address","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-ip-address.mdx","tags":[],"version":"current","frontMatter":{"id":"change-ip-address","title":"IP 주소 변경하기","description":"BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.","keywords":["IP 주소 변경","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"보조 데이터베이스 추가하기","permalink":"/docs/platform/biostar_x/add-sub-db"},"next":{"title":"런처","permalink":"/docs/platform/biostar_x/ui-launcher"}}')
+var site_docs_platform_biostar_x_change_ip_address_mdx_bf9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-ip-address","title":"IP 주소 변경하기","description":"BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/change-ip-address.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-ip-address","permalink":"/docs/en/platform/biostar_x/change-ip-address","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-ip-address.mdx","tags":[],"version":"current","frontMatter":{"id":"change-ip-address","title":"IP 주소 변경하기","description":"BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.","keywords":["IP 주소 변경","BioStar X"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Add Auxiliary Database","permalink":"/docs/en/platform/biostar_x/add-sub-db"},"next":{"title":"Launcher","permalink":"/docs/en/platform/biostar_x/ui-launcher"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'IP 주소 변경',
 		'BioStar X'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -101,9 +101,9 @@ function _createMdxContent(props) {
       id: "change_ip_address_extension",
       children: "커뮤니케이션 서버에서 IP 주소 변경"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["커뮤니케이션 서버를 설치한 경우, 커뮤니케이션 서버와 연결된 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["커뮤니케이션 서버를 설치한 경우, 커뮤니케이션 서버에 설정된 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " 서버의 IP 주소도 변경해야 합니다. 커뮤니케이션 서버에서 아래 명령어를 실행하세요."]
+      }), " 서버 IP 주소도 변경해야 합니다. 커뮤니케이션 서버에서 아래 명령어를 실행하세요. BioStar X 서버의 인증서가 커뮤니케이션 서버에 등록됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-bash",
