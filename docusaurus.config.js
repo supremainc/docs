@@ -453,7 +453,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ ],
+        additionalLanguages: [ 'powershell', 'bash' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },
