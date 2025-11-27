@@ -6,7 +6,6 @@
 ## En
 
 - [Suprema Docs](/docs/en/): Check out all of Suprema's products and BioStar related information here.
-- [BioStar X API (1.0.0)](/docs/en/api/bsxapi): BioStar X REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints.
 - [BioEntry P2](/docs/en/device/bioentry_p2): BioEntry P2 is a compact access control device based on Suprema's next-generation biometric technology and security platform. Equipped with a class-leading 1.0GHz CPU, it offers ultra-fast authentication performance and rapid boot speed, while applying Suprema's latest fingerprint recognition algorithm for enhanced performance. Additionally, using multi-RFID card technology that can read both 125kHz and 13.56MHz frequencies, it can recognize various standards such as MIFARE, HID iCLASS, DESFire, FeliCa, HID Prox, and EM with a single device. Designed in a mullion-type, the BioEntry P2 can be perfectly installed in narrow spaces such as door frames.
 - [Appendices](/docs/en/device/bioentry_p2/appendices): Includes legal notices contained in the product.
 - [Getting Started](/docs/en/device/bioentry_p2/getting-started): Provides initial procedures for getting started with the device.
@@ -537,6 +536,7 @@
 - [Batch Enroll Faces](/docs/en/platform/biostar_x/batch-import-face): Learn how to batch enroll users' faces.
 - [Before Start](/docs/en/platform/biostar_x/before-start): This guide covers what you need to know before starting BioStar X.
 - [Change the Database](/docs/en/platform/biostar_x/change-db): Change the database setting.
+- [IP 주소 변경하기](/docs/en/platform/biostar_x/change-ip-address): BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.
 - [Change the Port](/docs/en/platform/biostar_x/change-port): Guide to change the port when the default port (443) of BioStar X is unavailable.
 - [Check Door Status](/docs/en/platform/biostar_x/check-door-status): You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
 - [Check Network Priority](/docs/en/platform/biostar_x/check-ethernet): Instructions for checking and setting the server's network priority before installing BioStar X.

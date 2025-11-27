@@ -3,10 +3,6 @@
 > Check out all of Suprema's products and BioStar related information here.
 
 
-## Api
-
-- [BioStar X API (1.0.0)](/docs/api/bsxapi): BioStar X REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints.
-
 ## Device
 
 - [BioEntry P2](/docs/device/bioentry_p2): BioEntry P2는 슈프리마의 차세대 바이오인식 기술과 보안 플랫폼에 기반한 콤팩트 출입통제 장치입니다. 동급 최고의 1.0GHz CPU를 탑재하여 초고속 인증 성능과 신속한 구동 속도를 갖췄으며 슈프리마의 최신 지문 인식 알고리즘을 적용하여 더욱 향상된 성능을 제공합니다. 또한, 125kHz와 13.56MHz 주파수를 동시에 읽을 수 있는 멀티 RFID 카드 기술을 이용하여 MIFARE, HID iCLASS, DESFire, FeliCa, HID Prox, EM과 같은 다양한 표준의 카드를 하나의 장치에서 인식할 수 있습니다. Mullion-type으로 디자인된 BioEntry P2는 문틀과 같은 좁은 공간에도 완벽한 설치가 가능한 제품입니다.
@@ -552,6 +548,7 @@
 - [얼굴 일괄 등록하기](/docs/platform/biostar_x/batch-import-face): 사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.
 - [시작하기 전에](/docs/platform/biostar_x/before-start): BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.
 - [데이터베이스 변경하기](/docs/platform/biostar_x/change-db): 데이터베이스 설정을 변경할 수 있습니다.
+- [IP 주소 변경하기](/docs/platform/biostar_x/change-ip-address): BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.
 - [포트 변경하기](/docs/platform/biostar_x/change-port): BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.
 - [출입문 상태 확인하기](/docs/platform/biostar_x/check-door-status): 출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.
 - [네트워크 우선순위 확인하기](/docs/platform/biostar_x/check-ethernet): BioStar X를 설치하기 전에 서버의 네트워크 우선순위를 확인하고 설정하는 방법을 안내합니다.
