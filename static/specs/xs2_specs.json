@@ -378,9 +378,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 0.8 A", "전압/전류: 24 Vdc / 최대 0.5 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 0.8 A", "Voltage/Current: 24 Vdc / Max. 0.5 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.8 A",
+                "en": "Current: Max. 0.8 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.5 A",
+                "en": "Current: Max. 0.5 A"
+              }
+            }
           }
         },
         "switch_input_vih": {
@@ -410,7 +423,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {
@@ -418,7 +431,7 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "More than 4.8 V"
+            "en": "Min. 4.8 V"
           }
         },
         "wiegand_vol": {
@@ -426,7 +439,7 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Less than 0.2 V"
+            "en": "Max. 0.2 V"
           }
         },
         "wiegand_pullup": {

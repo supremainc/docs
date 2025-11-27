@@ -165,9 +165,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc/최대 2.8 A", "전압/전류: 24 Vdc/최대 1.4 A" ],
-            "en": [ "Voltage / Current: 12 Vdc / Max. 2.8 A", "Voltage / Current: 24 Vdc / Max. 1.4 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 2.8 A",
+                "en": "Current: Max. 2.8 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.4 A",
+                "en": "Current: Max. 1.4 A"
+              }
+            }
           }
         },
         "power_output": {
