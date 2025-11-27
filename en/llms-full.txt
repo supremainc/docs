@@ -48616,7 +48616,7 @@ Caution
 
 #### IP 주소 변경[​](#change_ip_address "Direct link to IP 주소 변경")
 
-터미널 환경에서 **BioStar X**를 설치한 경로로 이동해 아래 명령어를 실행하세요. `{change_to_IP_address}` 부분에 변경할 IP 주소를 입력하세요. 주요 설정 파일의 IP 주소를 변경하고 인증서를 재발급합니다.
+명령 프롬프트(CMD)에서 **BioStar X**를 설치한 경로로 이동해 아래 명령어를 실행하세요. `{change_to_IP_address}` 부분에 변경할 IP 주소를 입력하세요. 주요 설정 파일의 IP 주소를 변경하고 인증서를 재발급합니다.
 
 ```
 cd C:\Program Files\BioStar X
@@ -48632,7 +48632,7 @@ biostar-server.exe change_serverIP 192.168.0.xxx
 
 #### 커뮤니케이션 서버에서 IP 주소 변경[​](#change_ip_address_extension "Direct link to 커뮤니케이션 서버에서 IP 주소 변경")
 
-커뮤니케이션 서버를 설치한 경우, 커뮤니케이션 서버에 설정된 **BioStar X** 서버 IP 주소도 변경해야 합니다. 커뮤니케이션 서버에서 아래 명령어를 실행하세요. **BioStar X** 서버의 인증서가 커뮤니케이션 서버에 등록됩니다.
+커뮤니케이션 서버를 설치한 경우, 커뮤니케이션 서버에 설정된 **BioStar X** 서버 IP 주소도 변경해야 합니다. 커뮤니케이션 서버의 명령 프롬프트(CMD)에서 아래 명령어를 실행하세요. **BioStar X** 서버의 인증서가 커뮤니케이션 서버에 등록됩니다.
 
 ```
 cd C:\Program Files\BioStar X Communication Server\third\cert
