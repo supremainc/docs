@@ -1,26 +1,12 @@
 "use strict";
 (self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["21105"], {
-4487: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
+20993: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ user_management_user_list_frontMatter),
-  toc: () => (/* binding */ user_management_user_list_toc),
-  "default": () => (/* binding */ user_management_user_list_MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ user_management_user_list_contentTitle)
+  Ay: () => (MDXContent),
+  RM: () => (toc)
 });
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-user-management-user-list-mdx-310.json
-var site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/en/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","keywords":["BioStar Air","사용자 관리","사용자 목록"],"isTranslationMissing":true},"sidebar":"biostar_air","previous":{"title":"Adding Individual Users","permalink":"/docs/en/platform/biostar_air/adding-individual-users"},"next":{"title":"Adding Users in Bulk","permalink":"/docs/en/platform/biostar_air/adding-users-in-bulk"}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/common/_biostarair-customer-notice.mdx
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -35,34 +21,58 @@ function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
     p: "p",
-    ...(0,lib/* .useMDXComponents */.R)(),
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
   };
-  return (0,jsx_runtime.jsx)(_components.admonition, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
     type: "note",
-    children: (0,jsx_runtime.jsx)(_components.p, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다."
     })
   });
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
-    ...(0,lib/* .useMDXComponents */.R)(),
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
   };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
     ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
       ...props
     })
   }) : _createMdxContent(props);
 }
 
 
+
+}),
+32034: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-user-management-user-list-mdx-310.json
+var site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","keywords":["BioStar Air","사용자 관리","사용자 목록"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-individual-users"},"next":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-users-in-bulk"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(84429);
+// EXTERNAL MODULE: ./docs/common/_biostarair-customer-notice.mdx
+var _biostarair_customer_notice = __webpack_require__(20993);
 ;// CONCATENATED MODULE: ./docs/platform/biostar_air/user-management-user-list.mdx
 
 
-const user_management_user_list_frontMatter = {
+const frontMatter = {
 	id: 'user-management-user-list',
 	title: '사용자 관리하기',
 	description: '사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.',
@@ -71,9 +81,9 @@ const user_management_user_list_frontMatter = {
 		'사용자 관리',
 		'사용자 목록'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
-const user_management_user_list_contentTitle = undefined;
+const contentTitle = undefined;
 
 const assets = {
 
@@ -82,7 +92,7 @@ const assets = {
 
 
 
-const user_management_user_list_toc = [...toc, {
+const toc = [..._biostarair_customer_notice/* .toc */.RM, {
   "value": "사용자 목록",
   "id": "사용자-목록",
   "level": 2
@@ -130,8 +140,12 @@ const user_management_user_list_toc = [...toc, {
   "value": "사용자 리포트 설정",
   "id": "userReportSettings",
   "level": 2
+}, {
+  "value": "사용자 검색",
+  "id": "searchUsers",
+  "level": 2
 }];
-function user_management_user_list_createMdxContent(props) {
+function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
@@ -165,7 +179,7 @@ function user_management_user_list_createMdxContent(props) {
   if (!IcAirUtemplate) _missingMdxReference("IcAirUtemplate", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(MDXContent, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    children: [(0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "사용자-목록",
       children: "사용자 목록"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -674,20 +688,27 @@ function user_management_user_list_createMdxContent(props) {
           product: "air"
         }), "에서 생성된 리포트를 수정하거나 다운로드, 삭제할 수 있습니다."]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "searchUsers",
+      children: "사용자 검색"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "사용자 목록 오른쪽 상단의 검색 입력 필드를 통해 특정 사용자를 빠르게 찾을 수 있습니다. 사용자 이름, 아이디, 전화번호를 기준으로 검색할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-user-list-search.png"
     })]
   });
 }
-function user_management_user_list_MDXContent(props = {}) {
+function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   };
   return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
     ...props,
-    children: (0,jsx_runtime.jsx)(user_management_user_list_createMdxContent, {
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
       ...props
     })
-  }) : user_management_user_list_createMdxContent(props);
+  }) : _createMdxContent(props);
 }
 function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
