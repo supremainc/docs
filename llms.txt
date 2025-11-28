@@ -548,7 +548,6 @@
 - [얼굴 일괄 등록하기](/docs/platform/biostar_x/batch-import-face): 사용자의 얼굴을 일괄 등록할 수 있는 방법을 안내합니다.
 - [시작하기 전에](/docs/platform/biostar_x/before-start): BioStar X를 시작하기 전에 알아야 할 내용을 안내합니다.
 - [데이터베이스 변경하기](/docs/platform/biostar_x/change-db): 데이터베이스 설정을 변경할 수 있습니다.
-- [IP 주소 변경하기](/docs/platform/biostar_x/change-ip-address): BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.
 - [포트 변경하기](/docs/platform/biostar_x/change-port): BioStar X의 기본 포트(443)를 사용할 수 없을 때 포트를 변경하는 방법을 안내합니다.
 - [출입문 상태 확인하기](/docs/platform/biostar_x/check-door-status): 출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.
 - [네트워크 우선순위 확인하기](/docs/platform/biostar_x/check-ethernet): BioStar X를 설치하기 전에 서버의 네트워크 우선순위를 확인하고 설정하는 방법을 안내합니다.

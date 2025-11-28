@@ -536,7 +536,6 @@
 - [Batch Enroll Faces](/docs/en/platform/biostar_x/batch-import-face): Learn how to batch enroll users' faces.
 - [Before Start](/docs/en/platform/biostar_x/before-start): This guide covers what you need to know before starting BioStar X.
 - [Change the Database](/docs/en/platform/biostar_x/change-db): Change the database setting.
-- [IP 주소 변경하기](/docs/en/platform/biostar_x/change-ip-address): BioStar X를 설치하고 IP 주소를 변경하는 방법을 안내합니다.
 - [Change the Port](/docs/en/platform/biostar_x/change-port): Guide to change the port when the default port (443) of BioStar X is unavailable.
 - [Check Door Status](/docs/en/platform/biostar_x/check-door-status): You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
 - [Check Network Priority](/docs/en/platform/biostar_x/check-ethernet): Instructions for checking and setting the server's network priority before installing BioStar X.
