@@ -189,17 +189,17 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
-    * When Initializing Network Settings
+    * When Initializing Network Settings.
 
-  * Green blinking: Waiting for Input Status
+  * Green blinking: Waiting for input.
 
 * **RF Card Recognition Part**: This is the part that recognizes RF cards for access.
 
@@ -733,9 +733,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -785,9 +785,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -882,7 +882,7 @@ Biometric
 
   :
 
-  8 bits, 256 gray scale
+  8 bits, 256 grayscale
 
 * Resolution
 
@@ -1041,8 +1041,9 @@ Supported
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.2 A
+12 Vdc
+
+Current: Max. 0.2 A
 
 Switch Input VIH
 
@@ -1055,15 +1056,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -2116,15 +2117,15 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
-  * Green blinking: Waiting for Input Status
+  * Green blinking: Waiting for input.
 
 * **RF Card Recognition Part**: This is the part that recognizes RF cards for access.
 
@@ -2376,7 +2377,7 @@ Biometric
 
   :
 
-  8 bits, 256 gray scale
+  8 bits, 256 grayscale
 
 * Resolution
 
@@ -2480,8 +2481,9 @@ Supported
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.2 A
+12 Vdc
+
+Current: Max. 0.2 A
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
@@ -3095,17 +3097,17 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
-    * When Initializing Network Settings
+    * When Initializing Network Settings.
 
-  * Green blinking: Waiting for Input Status
+  * Green blinking: Waiting for input.
 
   * Green/White blinking: Connecting to Suprema Airfob Pass (BLE) Application
 
@@ -3624,9 +3626,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -3676,9 +3678,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -3783,7 +3785,7 @@ Biometric
 
   :
 
-  8 bits, 256 gray scale
+  8 bits, 256 grayscale
 
 * Resolution
 
@@ -3966,8 +3968,9 @@ Supported
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.5 A
+12 Vdc
+
+Current: Max. 0.5 A
 
 Switch Input VIH
 
@@ -3980,15 +3983,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -4007,7 +4010,9 @@ Relay
 
 [2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
 
-[3)](#anno3_dest) UL safety standards - access control (destructive attack - level 2 / line security - level 2 / durability - level 1 / standby power - level 1)
+[3)](#anno3_dest) UL Safety Standard - Access Control Device
+
+* Destructive attack - Level 2 / Line security - Level 2 / Endurance - Level 1 / Standby power- Level 1
 
 [4)](#anno4_dest) This is based on users enrolled without credentials.
 
@@ -5417,17 +5422,17 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue: Normal operation.
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
   * Red/Purple blinking: Device is locked.
 
-  * Yellow blinking: Waiting for an input.
+  * Green blinking: Waiting for input.
 
 * **Cable**
 
@@ -5924,9 +5929,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -5976,9 +5981,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -6133,7 +6138,7 @@ BEW3-APB
 
 RF Read Range[](#anno3)
 
-MIFARE/DESFire/EM/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm
+EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm
 
 Mobile
 
@@ -6296,8 +6301,13 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. 1.0 A
-* Voltage/Current: 24 Vdc / Max. 0.6 A
+12 Vdc
+
+Current: Max. 1.0 A
+
+24 Vdc
+
+Current: Max. 0.6 A
 
 Switch Input VIH
 
@@ -6310,15 +6320,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -7199,9 +7209,13 @@ Info
 
 <!-- -->
 
-1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press OK to start registration.
+<!-- -->
 
-   ![](/docs/en/img/en/device/bln2-master-admin-setting-main.png)
+<!-- -->
+
+1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press **OK** to start enrollment.
+
+![](/docs/en/img/en/device/bln2-master-admin-setting-main.png)
 
 <!-- -->
 
@@ -7210,6 +7224,8 @@ Info
    <!-- -->
 
    ![](/docs/en/img/en/device/bln2-master-admin-setting-credential1.png)
+
+   <!-- -->
 
    <!-- -->
 
@@ -7232,9 +7248,13 @@ Info
 
 <!-- -->
 
-3. Enroll two or more types of credentials, select OK, and press OK to complete Master Admin registration.
+<!-- -->
 
-   ![](/docs/en/img/en/device/bln2-master-admin-setting-credential2.png)
+<!-- -->
+
+3. After enrolling two or more types of credentials, press **OK** to complete Master Admin enrollment.
+
+![](/docs/en/img/en/device/bln2-master-admin-setting-credential2.png)
 
 <!-- -->
 
@@ -7683,9 +7703,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -7735,9 +7755,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -7790,7 +7810,7 @@ Biometric
 
   :
 
-  8 bits, 256 gray scale
+  8 bits, 256 grayscale
 
 * Resolution
 
@@ -7982,7 +8002,9 @@ Supported
 
 Power
 
-Voltage/Current: 12 Vdc / Max. 0.4 A
+12 Vdc
+
+Current: Max. 0.4 A
 
 Switch Input VIH
 
@@ -7995,15 +8017,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -9258,7 +9280,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 2. Select Device → Admin 2-step Authentication.
 
-   ![](/docs/en/img/en/device/bln2-Administrator-two-step-auth.png)
+   ![](/docs/en/img/en/device/bln2-administrator-two-step-auth.png)
 
 Info
 
@@ -10028,13 +10050,13 @@ Info
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
   * Red/Purple blinking: Device is locked.
 
-  * Yellow blinking: Waiting for an input.
+  * Yellow blinking: Waiting for input.
 
 * **Fingerprint Recognition Unit**: The part that recognizes the fingerprint for access.
 
@@ -10170,17 +10192,23 @@ Info
 
 <!-- -->
 
-1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press OK to start registration.
+<!-- -->
 
-   ![](/docs/en/img/en/device/bs2a-master-admin-setting-main.png)
+1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press **OK** to start enrollment.
 
-2) At least two different types of credentials must be enrolled to register Master Admin. Select and enroll two desired credentials.
+<!-- -->
+
+![](/docs/en/img/en/device/bs2a-master-admin-setting-main.png)
+
+2. At least two different types of credentials must be enrolled to register Master Admin. Select and enroll two desired credentials.
 
    <!-- -->
 
    <!-- -->
 
    ![](/docs/en/img/en/device/bs2a-master-admin-setting-credential1.png)
+
+   <!-- -->
 
    The credentials that can be enrolled for Master Admin are as follows.
 
@@ -10203,9 +10231,13 @@ Info
 
 <!-- -->
 
-3. Enroll two or more types of credentials, select OK, and press OK to complete Master Admin registration.
+<!-- -->
 
-   ![](/docs/en/img/en/device/bs2a-master-admin-setting-credential2.png)
+3. After enrolling two or more types of credentials, press **OK** to complete Master Admin enrollment.
+
+<!-- -->
+
+![](/docs/en/img/en/device/bs2a-master-admin-setting-credential2.png)
 
 ##### Notices[​](#notices "Direct link to Notices")
 
@@ -10658,9 +10690,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -10710,9 +10742,9 @@ Info
 
 - If XPass or XPass 2 is connected to the master device, only card authentication can be used.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -10767,7 +10799,7 @@ Biometric
 
   :
 
-  8 bits, 256 gray scale
+  8 bits, 256 grayscale
 
 * Resolution
 
@@ -10961,8 +10993,13 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. 0.8 A
-* Voltage/Current: 24 Vdc / Max. 0.4 A
+12 Vdc
+
+Current: Max. 0.8 A
+
+24 Vdc
+
+Current: Max. 0.4 A
 
 Switch Input VIH
 
@@ -10975,15 +11012,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -11559,7 +11596,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 2. Select Device → Admin 2-step Authentication.
 
-   ![](/docs/en/img/en/device/bs2a-Administrator-two-step-auth.png)
+   ![](/docs/en/img/en/device/bs2a-administrator-two-step-auth.png)
 
 Info
 
@@ -12516,13 +12553,13 @@ Info
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
   * Red/Purple blinking: Device is locked.
 
-  * Yellow blinking: Waiting for an input.
+  * Yellow blinking: Waiting for input.
 
 * **Speaker**: Delivers sound.
 
@@ -12652,7 +12689,11 @@ Info
 
 1. When the new device is booted for the first time, the Master Admin registration screen will appear.
 
-   ![](/docs/en/img/en/how-to/setting-master-admin-1.png)
+![](/docs/en/img/en/how-to/setting-master-admin-1.png)
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -12661,6 +12702,8 @@ Info
 2. At least two different types of credentials must be enrolled to register Master Admin. Select and enroll two desired credentials.
 
    ![](/docs/en/img/en/how-to/setting-master-admin-2.png)
+
+   <!-- -->
 
    <!-- -->
 
@@ -12685,7 +12728,11 @@ Info
 
 3) After enrolling two or more types of credentials, press the Complete button to complete the registration of Master Admin.
 
-   ![](/docs/en/img/en/how-to/setting-master-admin-3.png)
+![](/docs/en/img/en/how-to/setting-master-admin-3.png)
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -13197,9 +13244,9 @@ Info
   <!-- -->
   is the master device, and vice versa.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -13265,9 +13312,9 @@ Info
   <!-- -->
   is the master device, and vice versa.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -13531,8 +13578,13 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. 1 A
-* Voltage/Current: 24 Vdc / Max. 0.7 A
+12 Vdc
+
+Current: Max. 1 A
+
+24 Vdc
+
+Current: Max. 0.7 A
 
 Switch Input VIH
 
@@ -13545,15 +13597,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -16043,8 +16095,13 @@ SAM Slot
 
 Power
 
-* Voltage / Current: 12 Vdc / Max. 2.8 A
-* Voltage / Current: 24 Vdc / Max. 1.4 A
+12 Vdc
+
+Current: Max. 2.8 A
+
+24 Vdc
+
+Current: Max. 1.4 A
 
 Power Output
 
@@ -17234,7 +17291,7 @@ Power
 
 CoreStation
 
-Voltage: 12 Vdc, Current: Max. 3 A
+Voltage: 12 Vdc / Current: Max. 3 A
 
 Power Supply (SMPS) AC INPUT
 
@@ -17242,8 +17299,9 @@ Power Supply (SMPS) AC INPUT
 
 Power Output
 
-* Voltage: 12 Vdc
-* Current: Max. 1.5 A
+12 Vdc
+
+Current: Max. 1.5 A
 
 Switch Input VIH
 
@@ -19875,8 +19933,13 @@ AUX Input
 
 Power
 
-* Voltage / Current: 12 Vdc / Max. 2.8 A
-* Voltage / Current: 24 Vdc / Max. 1.4 A
+12 Vdc
+
+Current: Max. 2.8 A
+
+24 Vdc
+
+Current: Max. 1.4 A
 
 Power Output
 
@@ -20645,8 +20708,9 @@ Wiegand
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 3.1 A
+12 Vdc
+
+Current: Max. 3.1 A
 
 Relay
 
@@ -21583,7 +21647,8 @@ Input
 
 Output
 
-* DC Voltage: 13.8 VDC
+13.8 Vdc
+
 * Rated Current: 11.6 A
 * Rated Power: 160 W
 
@@ -23842,9 +23907,9 @@ Info
 
 - When <!-- -->FaceStation 2<!-- --> is the master device and another <!-- -->FaceStation 2<!-- --> is connected to it as a slave device, you cannot connect additional OM-120.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -23902,9 +23967,9 @@ Info
 
 - When <!-- -->FaceStation 2<!-- --> is the master device and another <!-- -->FaceStation 2<!-- --> is connected to it as a slave device, you cannot connect additional OM-120.
 
-* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+* The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-* A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+* Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 - For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -24124,8 +24189,9 @@ Supported
 
 Power
 
-* Voltage: 24 Vdc
-* Current: Max. 1.2 A
+24 Vdc
+
+Current: Max. 1.2 A
 
 Switch Input VIH
 
@@ -24138,15 +24204,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -27216,9 +27282,9 @@ Info
   <!-- -->
   is the master device, and vice versa.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -27284,9 +27350,9 @@ Info
   <!-- -->
   is the master device, and vice versa.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -27409,7 +27475,7 @@ FSF2-ODB
 
 RF Read Range[](#anno3)
 
-EM/MIFARE/DESFire/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm
+EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm
 
 Mobile
 
@@ -27564,8 +27630,13 @@ Supported
 
 Power
 
-* Voltage / Current: 12 Vdc / Max. 2.1 A
-* Voltage / Current: 24 Vdc / Max. 1 A
+12 Vdc
+
+Current: Max. 2.1 A
+
+24 Vdc
+
+Current: Max. 1 A
 
 Switch Input VIH
 
@@ -27578,15 +27649,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -29970,8 +30041,13 @@ Tamper
 
 Power
 
-* Voltage / Current: 12 Vdc / Max. 0.2 A
-* Voltage / Current: 24 Vdc / Max. 0.1 A
+12 Vdc
+
+Current: Max. 0.2 A
+
+24 Vdc
+
+Current: Max. 0.1 A
 
 Switch Input VIH
 
@@ -30723,8 +30799,9 @@ Relay
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.6 A
+12 Vdc
+
+Current: Max. 0.6 A
 
 Switch Input VIH
 
@@ -31450,8 +31527,9 @@ Relay
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.5 A
+12 Vdc
+
+Current: Max. 0.5 A
 
 Relay
 
@@ -32107,11 +32185,11 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking: During network settings initialization
 
-  * Green blinking: Waiting for Input Status
+  * Green blinking: Waiting for input.
 
   * Green/White blinking: Connecting to the Suprema AirFob Pass (BLE) application
 
@@ -32555,9 +32633,9 @@ Info
 
 - If you use this product as the master device, the slave device can only use card authentication.
 
-- This product can connect up to 31 devices to a single master device.
+* Connect up to 31 slave devices to a master device.
 
-* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 <!-- -->
 
@@ -32605,9 +32683,9 @@ Info
 
 - If you use this product as the master device, the slave device can only use card authentication.
 
-- This product can connect up to 31 devices to a single master device.
+* Connect up to 31 slave devices to a master device.
 
-* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 <!-- -->
 
@@ -32846,8 +32924,13 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. 0.5 A
-* Voltage/Current: 24 Vdc / Max. 0.3 A
+12 Vdc
+
+Current: Max. 0.5 A
+
+24 Vdc
+
+Current: Max. 0.3 A
 
 Switch Input VIH
 
@@ -32860,15 +32943,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -33853,11 +33936,11 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking: During network settings initialization
 
-  * Green blinking: Waiting for Input Status
+  * Green blinking: Waiting for input.
 
   * Green/White blinking: Connecting to the Suprema AirFob Pass (BLE) application
 
@@ -34146,8 +34229,9 @@ Supported
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.3 A
+12 Vdc
+
+Current: Max. 0.3 A
 
 LED, Beep Input VIH
 
@@ -34160,15 +34244,15 @@ Max.: 1 V
 
 LED, Beep Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -34949,17 +35033,17 @@ Info
 
   * Red: Authentication failure.
 
-  * Blue: Normal operation.
+  * Blue/Cyan blinking: Normal operation.
 
   * Blue/Green blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
   * Red/Purple blinking: Device is locked.
 
-  * Yellow blinking: Waiting for an input.
+  * Green blinking: Waiting for input.
 
 * **LED Light**: The LED turns on automatically when motion is detected near the QR/Barcode scanner.
 
@@ -35078,7 +35162,7 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 
 ![](/docs/en/img/device/qr-scanning-xpq2.svg)
 
-* Keep a distance of 5–20 cm between the device’s scanner and the QR/Barcode.
+* Keep a distance of 5-15 cm between the device’s scanner and the QR/Barcode.
 
 * Position the QR/Barcode in the center of the scanner.
 
@@ -35088,7 +35172,7 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 
 ##### Notes for device license[​](#notes-for-device-license "Direct link to Notes for device license")
 
-* A separate device license is required to use QR/barcode authentication. Contact the place of purchase to issue a device license.
+* Using additional QR/Barcode authentication methods requires a separate device license. Contact the place of purchase to issue a device license.
 
 * The device license file is an encrypted file and cannot be modified arbitrarily.
 
@@ -35512,9 +35596,9 @@ Info
 
 - When this product operates as a master, only card or QR/Barcode authentication is available on the slave.
 
-- A master device can control 31 slave devices.
+* Connect up to 31 slave devices to a master device.
 
-* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 <!-- -->
 
@@ -35562,9 +35646,9 @@ Info
 
 - When this product operates as a master, only card or QR/Barcode authentication is available on the slave.
 
-- A master device can control 31 slave devices.
+* Connect up to 31 slave devices to a master device.
 
-* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 <!-- -->
 
@@ -35725,8 +35809,8 @@ Multi-tone Buzzer
 
 Operating Temperature
 
-* DC Power: -20 ℃ ~ 60 ℃
-* PoE Power: -20 ℃ ~ 50 ℃
+* DC Power: -20 °C ~ 60 °C
+* PoE Power: -20 °C ~ 50 °C
 
 Storage Temperature
 
@@ -35760,7 +35844,7 @@ CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC
 
 Max. User
 
-100,000
+200,000
 
 [](#anno5)
 
@@ -35873,15 +35957,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -35904,7 +35988,7 @@ Relay
 
 * Supported QR/barcode types: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417
 
-[4)](#anno4_dest) A Camera QR license is required to recognize a wider range of QR/barcodes. For more information on device licenses, refer to [the following](/docs/en/platform/biostar_x/settings-license-device-license).
+[4)](#anno4_dest) Camera QR license is required to use more types of QR/Barcode authentication. For more information on device licenses, refer to [the following](/docs/en/platform/biostar_x/settings-license-device-license).
 
 * Barcode types supported by the Camera QR license: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
 
@@ -36338,7 +36422,7 @@ Info
 
   * Pink: Processing
 
-  * Blue/Cyan blinking: Normal Operating Status
+  * Blue/Cyan blinking: Normal operation.
 
   * Red/Pink blinking: Terminal Locked
 
@@ -36346,13 +36430,13 @@ Info
 
   * Blue/Yellow blinking:
 
-    * When setting DHCP to use, unable to retrieve IP address
+    * When setting DHCP to use, unable to retrieve IP address.
 
-    * When in Slave mode, the connection to the master device is disconnected
+    * When in Slave mode, the connection to the master device is disconnected.
 
   * Red blinking: Product Initialization Error, Contact Manufacturer
 
-  * Yellow blinking: Waiting for an input.
+  * Yellow blinking: Waiting for input.
 
 * **RF Card Recognition Part**: This is the part that recognizes RF cards for access.
 
@@ -36758,6 +36842,16 @@ Suprema’s standalone intelligent readers contain internal relays that can dire
 
 <!-- -->
 
+Info
+
+* Connect up to 31 slave devices to a master device.
+
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
+
+<!-- -->
+
+<!-- -->
+
 #### Connecting to Secure I/O 2[​](#connecting-to-secure-io-2 "Direct link to Connecting to Secure I/O 2")
 
 Secure I/O 2 is an I/O device, can be connected to the product with the RS-485 cable. Security can be maintained even if the connection between the product and Secure I/O 2 has been lost or the power supply to the product has been shut off due to external factors.
@@ -36790,9 +36884,15 @@ Secure I/O 2 is an I/O device, can be connected to the product with the RS-485 c
 
 <!-- -->
 
-* This product can connect up to 31 devices to a single master device.
-
 ![](/docs/en/img/en/device/installation-sio2-connection-xps2.png)
+
+<!-- -->
+
+Info
+
+* Connect up to 31 slave devices to a master device.
+
+- For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 <!-- -->
 
@@ -36971,9 +37071,7 @@ Input
 
 Relay
 
-* 1 Relay
-* Voltage: Max. 24 Vdc
-* Current: Typ. 0.5 A, Max. 1.0 A
+1 Relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)
 
 Tamper
 
@@ -36985,8 +37083,9 @@ Supported
 
 Power
 
-* Voltage: 12 Vdc
-* Current: Max. 0.4 A
+12 Vdc
+
+Current: Max. 0.4 A
 
 <!-- -->
 
@@ -38018,6 +38117,8 @@ Info
 
 <!-- -->
 
+<!-- -->
+
 #### Correct fingerprint input method XS2-ODPB, XS2-OAPB[​](#cautions-enrolling-fingers "Direct link to cautions-enrolling-fingers")
 
 In order to improve the fingerprint authentication rate, enroll the fingerprint correctly. This product can authenticate fingerprints even if the user's fingerprint input angle and position change. If you enroll the fingerprint with attention to the following matters, the authentication rate can be improved.
@@ -38120,7 +38221,7 @@ XS2-ODPB, XS2-OAPB
 
 ##### Notes for device license[​](#notes-for-device-license "Direct link to Notes for device license")
 
-* A separate device license is required to use QR/barcode authentication. Contact the place of purchase to issue a device license.
+* Using additional QR/Barcode authentication methods requires a separate device license. Contact the place of purchase to issue a device license.
 
 * The device license file is an encrypted file and cannot be modified arbitrarily.
 
@@ -38137,11 +38238,11 @@ Provides the complete installation procedures and connection examples required f
 
 Info
 
-This document describes the installation method based on the shape of the XS2-QDPB and XS2-QAPB models. Install using the same method for the XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models.
+This document explains the installation method based on the XS2-ODPB and XS2-OAPB form factor. Install the XS2-DPB, XS2-APB, XS2-QDPB, and XS2-QAPB models in the same way.
 
 1. Determine the correct position to install the bracket using the provided drilling template. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
 
-   ![](/docs/en/img/device/installation-device1-xs2.svg)
+   ![](/docs/en/img/device/installation-device1-xs2.png)
 
    Info
 
@@ -38163,7 +38264,7 @@ This document describes the installation method based on the shape of the XS2-QD
 
 2. After attaching the cable cover, turn the four screws fitted in the cover to fasten it securely and mount the product on the fixed bracket.
 
-   ![](/docs/en/img/device/installation-device2-xs2.svg)
+   ![](/docs/en/img/device/installation-device2-xs2.png)
 
    Info
 
@@ -38171,7 +38272,7 @@ This document describes the installation method based on the shape of the XS2-QD
 
 3. Rotate the fixing screws to assemble the product with the bracket.
 
-   ![](/docs/en/img/device/installation-device3-xs2.svg)
+   ![](/docs/en/img/device/installation-device3-xs2.png)
 
    Info
 
@@ -38505,9 +38606,9 @@ Info
 
 * The device can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -38555,9 +38656,9 @@ Info
 
 * The device can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device.
 
-- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the fingerprint authentication performance.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 
-- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- Connect up to 31 slave devices to a master device. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
 
 * For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
@@ -38847,8 +38948,13 @@ Supported
 
 Power
 
-* Voltage/Current: 12 Vdc / Max. 0.8 A
-* Voltage/Current: 24 Vdc / Max. 0.5 A
+12 Vdc
+
+Current: Max. 0.8 A
+
+24 Vdc
+
+Current: Max. 0.5 A
 
 Switch Input VIH
 
@@ -38861,15 +38967,15 @@ Max.: 1 V
 
 Switch Pull-up Resistance
 
-4.7 kΩ (The input ports are pulled up with 4.7 kΩ)
+4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)
 
 Wiegand Output VOH
 
-More than 4.8 V
+Min. 4.8 V
 
 Wiegand Output VOL
 
-Less than 0.2 V
+Max. 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -40068,6 +40174,8 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 2. Select Device.
 
 3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a temper event occurs.
+
+<!-- -->
 
 ##### Restart device[​](#restart-device "Direct link to Restart device")
 

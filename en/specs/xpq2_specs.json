@@ -80,8 +80,8 @@
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
           "value": {
-            "ko": [ "DC 전원: -20 ℃ ~ 60 ℃", "PoE 전원: -20 ℃ ~ 50 ℃" ],
-            "en": [ "DC Power: -20 ℃ ~ 60 ℃", "PoE Power: -20 ℃ ~ 50 ℃" ]
+            "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
+            "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ]
           }
         },
         "storage_temp": {
@@ -133,7 +133,7 @@
         "max_users": {
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
-          "value": "100,000",
+          "value": "200,000",
           "annotation_value": "anno5"
         },
         "max_credentials_1n": {
@@ -363,7 +363,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {
@@ -371,7 +371,7 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "More than 4.8 V"
+            "en": "Min. 4.8 V"
           }
         },
         "wiegand_vol": {
@@ -379,7 +379,7 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Less than 0.2 V"
+            "en": "Max. 0.2 V"
           }
         },
         "wiegand_pullup": {

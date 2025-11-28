@@ -160,8 +160,8 @@
           "label": "릴레이",
           "label_id": "specs.interface.relay",
           "value": {
-            "ko": ["1개", "전압: 최대 24 Vdc", "전류: 0.5 A, 최대 1.0 A" ],
-            "en": ["1 Relay", "Voltage: Max. 24 Vdc", "Current: Typ. 0.5 A, Max. 1.0 A"]
+            "ko": "1개 (전압: 최대 24 Vdc / 전류: 0.5 A, 최대 1.0 A)",
+            "en": "1 Relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)"
           }
         },
         "tamper": {
@@ -178,9 +178,15 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압: 12 Vdc", "전류: 최대 0.4 A" ],
-            "en": [ "Voltage: 12 Vdc", "Current: Max. 0.4 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.4 A",
+                "en": "Current: Max. 0.4 A"
+              }
+            }
           }
         }
       }

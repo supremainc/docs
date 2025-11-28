@@ -233,8 +233,8 @@
             "corestation": {
               "label": "CoreStation",
               "value": {
-                "ko": "전압: 12 Vdc, 전류: 최대 3 A",
-                "en": "Voltage: 12 Vdc, Current: Max. 3 A"
+                "ko": "전압: 12 Vdc / 전류: 최대 3 A",
+                "en": "Voltage: 12 Vdc / Current: Max. 3 A"
               }
             },
             "powerSupply": {
@@ -247,15 +247,15 @@
         "power_output": {
           "label": "전원 출력",
           "label_id": "specs.power.power_output",
-          "value": {
-            "ko": [
-              "전압: 12 Vdc",
-              "전류: 최대 1.5 A"
-            ],
-            "en": [
-              "Voltage: 12 Vdc",
-              "Current: Max. 1.5 A"
-            ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.5 A",
+                "en": "Current: Max. 1.5 A"
+              }
+            }
           }
         },
         "switch_input_vih": {

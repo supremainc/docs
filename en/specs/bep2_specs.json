@@ -27,7 +27,7 @@
                   "label_id": "specs.credentials.biometrics.fingerprint.image_bit_depth",
                   "value": {
                     "ko": "8비트, 256 회색조",
-                    "en": "8 bits, 256 gray scale"
+                    "en": "8 bits, 256 grayscale"
                   }
                 },
                 "resolution": {
@@ -261,9 +261,15 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압: 12 Vdc", "전류: 최대 0.2 A" ],
-            "en": [ "Voltage: 12 Vdc", "Current: Max. 0.2 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.2 A",
+                "en": "Current: Max. 0.2 A"
+              }
+            }
           }
         },
         "switch_input_vih": {
@@ -287,7 +293,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {
@@ -295,7 +301,7 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "More than 4.8 V"
+            "en": "Min. 4.8 V"
           }
         },
         "wiegand_vol": {
@@ -303,7 +309,7 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Less than 0.2 V"
+            "en": "Max. 0.2 V"
           }
         },
         "wiegand_pullup": {
