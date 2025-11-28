@@ -51189,13 +51189,19 @@ Info
 
    ![](/docs/en/img/en/biostarx-user-export-data-select-device.png)
 
-5. Save the data file in your desired local path.
+5. Save the data file in your desired local path. The file name is generated in the format `BioStarX_YYYYMMDD_HHMMSS.tgz`.
 
 Info
 
 * The data file export includes user profile photos, IDs, names, validity periods, access groups, PINs, private authentication modes, credentials (face, fingerprint, card, mobile card, face, QR/Barcode), and one-to-one security level information.
 
 * Selecting the incorrect device to apply the data file may cause it to be unrecognized by that device.
+
+Caution
+
+To import files exported from **BioStar X** into devices, you must rename the file as follows so that the device can recognize it. The file name format will be adjusted to be automatically recognized through future device firmware updates.
+
+***BioStarX**\_YYYYMMDD\_HHMMSS.tgz* → ***BioStar2**\_YYYYMMDD\_HHMMSS.tgz*
 
 ##### Import data[​](#importdata "Direct link to Import data")
 
