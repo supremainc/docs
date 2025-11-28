@@ -127,13 +127,21 @@ User information can be stored on external storage (USB) for import into **BioSt
 
    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
-5. Save the data file in your desired local path.
+5. Save the data file in your desired local path. The file name is generated in the format `BioStarX_YYYYMMDD_HHMMSS.tgz`.
 
 :::info
 
 * The data file export includes user profile photos, IDs, names, validity periods, access groups, PINs, private authentication modes, credentials (face, fingerprint, card, mobile card, face, QR/Barcode), and one-to-one security level information.
 
 * Selecting the incorrect device to apply the data file may cause it to be unrecognized by that device.
+
+:::
+
+:::caution
+
+To import files exported from **BioStar X** into devices, you must rename the file as follows so that the device can recognize it. The file name format will be adjusted to be automatically recognized through future device firmware updates.
+
+*<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
 
 :::
 
