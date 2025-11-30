@@ -1052,6 +1052,7 @@
   "audit.zone.unlock": "수동 개방",
   "audit.zone.zone_type": "고급 출입 통제 종류",
   "auditTrail.content": "변경 내용",
+  "auditTrail.export.downloadMessage": "다운로드 버튼을 클릭하여 CSV 파일을 받으세요.",
   "auditTrail.export.reason": "내보내기 사유",
   "auditTrail.filter.one_month": "최근 1개월",
   "auditTrail.filter.three_month": "최근 3개월",
