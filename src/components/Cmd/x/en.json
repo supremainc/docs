@@ -1239,6 +1239,10 @@
   "setting.userDevice.useridType.change.msg": "Limitations and restrictions when User ID Type is set to Alphanumeric<br> - BioLite Net, BioEntry Plus, and BioEntry W does not support Alphanumeric User ID <br> - All user information will be deleted from Xpass and Xpass S2, and it will restore to factory default settings except the network configurations.<br>Continue?",
   "setting.systemBackup.change.msg": "Backup files can only be restored on a PC configured with the same IP address.\nDo you want to continue?",
   "setting.systemBackup.change.comm.msg": "It only backs up the main database, so data from any databases added afterward will not be included in the backup.",
+<<<<<<< HEAD
+=======
+  "setting.systemBackup.change.msgSecond": "Changes made after this backup was initiated will not be included in the backup file. Do you want to continue?",
+>>>>>>> 90a9b53eca (AB#84: v1.0.0(2) update locale)
   "setting.systemBackup.restore.complete.comm.msg": "Please start the communications servers from Service Manager before using BioStar X.",
   "setting.remoteAccess.section.title": "Remote Access with ngrok",
   "setting.remoteAccess.field.ngrokUserId": "ngrok User ID",

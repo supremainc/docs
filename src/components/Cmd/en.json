@@ -1059,6 +1059,11 @@
   "audit.zone.unlock": "Unlock",
   "audit.zone.zone_type": "Advanced AC Type",
   "auditTrail.content": "Modification",
+<<<<<<< HEAD
+=======
+  "auditTrail.export.downloadMessage": "Please click Download to export the CSV file.",
+  "auditTrail.export.reason": "Export Reason",
+>>>>>>> 90a9b53eca (AB#84: v1.0.0(2) update locale)
   "auditTrail.filter.one_month": "Last 1 Month",
   "auditTrail.filter.three_month": "Last 3 Months",
   "auditTrail.filter.title": "Filter",
