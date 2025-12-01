@@ -33,7 +33,7 @@
                 "RELAY - 12개",
                 "RS-485 TX - 1개",
                 "RS-485 RX - 1개",
-                "AUX IN - 2개"
+                "AUX IN: 2개"
               ]
             }
           }
@@ -104,7 +104,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "12개",
-            "en": "12 Relays"
+            "en": "12 relays"
           }
         }
       }

@@ -350,7 +350,7 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "Min. 4.8 V"
+            "en": "More than 4.8 V"
           }
         },
         "wiegand_vol": {
@@ -358,7 +358,7 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Max. 0.2 V"
+            "en": "Less than 0.2 V"
           }
         },
         "wiegand_pullup": {

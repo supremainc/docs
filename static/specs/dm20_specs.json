@@ -29,7 +29,7 @@
               "label_id": "specs.general.led_type.multiColor",
               "value": [
                 "POWER - 1개",
-                "RELAY - 4개",
+                "RELAY: 4개",
                 "INPUT - 4개",
                 "SUPERVISED INPUT - 4개",
                 "OUTPUT - 6개",
@@ -121,7 +121,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 Relays"
+            "en": "4 relays"
           }
         },
         "wiegand": {
