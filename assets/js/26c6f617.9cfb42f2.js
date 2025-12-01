@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-28-device-management-configuring-the-airfob-patch-and-tag-mdx-26c.json
-var site_docs_platform_biostar_air_28_device_management_configuring_the_airfob_patch_and_tag_mdx_26c_namespaceObject = JSON.parse('{"id":"platform/biostar_air/configuring-the-airfob-patch-and-tag","title":"Airfob 패치(Patch)와 태그(Tag) 구성하기","description":"기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 Airfob 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/28-device-management-configuring-the-airfob-patch-and-tag.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/configuring-the-airfob-patch-and-tag","permalink":"/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/28-device-management-configuring-the-airfob-patch-and-tag.mdx","tags":[],"version":"current","sidebarPosition":28,"frontMatter":{"id":"configuring-the-airfob-patch-and-tag","title":"Airfob 패치(Patch)와 태그(Tag) 구성하기","description":"기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 Airfob 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.","keywords":["Airfob","Patch","Tag","configuration"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"근태 관리(T&A) 설정하기","permalink":"/docs/platform/biostar_air/configuring-ta"},"next":{"title":"SIO2 보안 모듈 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"}}')
+var site_docs_platform_biostar_air_28_device_management_configuring_the_airfob_patch_and_tag_mdx_26c_namespaceObject = JSON.parse('{"id":"platform/biostar_air/configuring-the-airfob-patch-and-tag","title":"에어팝 패치(Patch)와 태그(Tag) 구성하기","description":"기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 에어팝 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/28-device-management-configuring-the-airfob-patch-and-tag.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/configuring-the-airfob-patch-and-tag","permalink":"/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/28-device-management-configuring-the-airfob-patch-and-tag.mdx","tags":[],"version":"current","sidebarPosition":28,"frontMatter":{"id":"configuring-the-airfob-patch-and-tag","title":"에어팝 패치(Patch)와 태그(Tag) 구성하기","description":"기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 에어팝 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.","keywords":["Airfob","Patch","Tag","configuration"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"근태 관리(T&A) 설정하기","permalink":"/docs/platform/biostar_air/configuring-ta"},"next":{"title":"SIO2 보안 모듈 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -74,8 +74,8 @@ var _biostarair_customer_notice = __webpack_require__(20993);
 
 const frontMatter = {
 	id: 'configuring-the-airfob-patch-and-tag',
-	title: 'Airfob 패치(Patch)와 태그(Tag) 구성하기',
-	description: '기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 Airfob 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.',
+	title: '에어팝 패치(Patch)와 태그(Tag) 구성하기',
+	description: '기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 에어팝 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.',
 	keywords: [
 		'Airfob',
 		'Patch',
@@ -98,24 +98,16 @@ const toc = [{
   "id": "device-overview",
   "level": 2
 }, ..._biostarair_customer_notice/* .toc */.RM, {
-  "value": "호환성",
-  "id": "compatibility",
-  "level": 2
-}, {
-  "value": "기능성",
-  "id": "functionality",
-  "level": 2
-}, {
   "value": "구성 단계",
-  "id": "configuration-steps",
+  "id": "configurationSteps",
   "level": 2
 }, {
   "value": "앱 실행",
-  "id": "access-the-app",
+  "id": "accessApp",
   "level": 3
 }, {
   "value": "장치 설정으로 이동",
-  "id": "navigate-to-device-settings",
+  "id": "navigateToDeviceSettings",
   "level": 3
 }, {
   "value": "BLE 모드 활성화",
@@ -136,15 +128,21 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
     h2: "h2",
     h3: "h3",
     li: "li",
+    ol: "ol",
     p: "p",
     strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Step, Steps} = _components;
+  }, {Cmd, Column, Columns, Image, Step, Steps} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Column) _missingMdxReference("Column", true);
+  if (!Columns) _missingMdxReference("Columns", true);
+  if (!Image) _missingMdxReference("Image", true);
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
@@ -152,76 +150,103 @@ function _createMdxContent(props) {
       id: "device-overview",
       children: "장치 개요"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Airfob Patch 및 Tag 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다."
+      children: "에어팝 패치 및 태그 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Airfob Patch"
+            children: "에어팝 패치"
           }), ": 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Airfob Tag"
+            children: "에어팝 태그"
           }), ": 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "에어팝 패치 및 태그 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환되지 않습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "에어팝 패치 및 태그 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "compatibility",
-      children: "호환성"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "두 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환하지 않습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "functionality",
-      children: "기능성"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "configuration-steps",
+      id: "configurationSteps",
       children: "구성 단계"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요."
+      children: "에어팝 패치 또는 태그를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요."
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "access-the-app",
+          id: "accessApp",
           children: "앱 실행"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["모바일 기기에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BioStar Air"
-              }), " 앱을 실행하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Tag 또는 Patch 장치를 등록한 사이트에 로그인하세요."
-            }), "\n"]
-          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(Columns, {
+          children: [(0,jsx_runtime.jsx)(Column, {
+            className: "width--20",
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/air/bsair-device-aifob-login-app.png"
+            })
+          }), (0,jsx_runtime.jsx)(Column, {
+            className: "padding--l10",
+            children: (0,jsx_runtime.jsxs)(_components.ol, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: ["모바일 기기에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+                    children: "BioStar Air"
+                  }), " 앱을 실행하세요."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                  children: "에어팝 패치 또는 태그 장치를 등록한 사이트에 로그인하세요."
+                }), "\n"]
+              }), "\n"]
+            })
+          })]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "navigate-to-device-settings",
+          id: "navigateToDeviceSettings",
           children: "장치 설정으로 이동"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["메뉴 바에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Access Point"
-              }), "를 탭하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["등록된 장치 목록을 확인하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Device"
-              }), "를 선택하세요."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "구성할 Patch 또는 Tag 장치를 선택하세요."
-            }), "\n"]
-          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(Columns, {
+          children: [(0,jsx_runtime.jsx)(Column, {
+            className: "width--20",
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/air/bsair-device-aifob-app-device.png"
+            })
+          }), (0,jsx_runtime.jsx)(Column, {
+            className: "padding--l10",
+            children: (0,jsx_runtime.jsxs)(_components.ol, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(_components.strong, {
+                    children: "BioStar Air"
+                  }), " 앱 초기 화면에서 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "site_setting_tab_management",
+                    product: "air"
+                  }), "를 탭하세요."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: ["등록된 장치 목록을 확인하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "devices_card",
+                    product: "air"
+                  }), "를 탭하세요."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                  children: "장치 목록에서 에어팝 패치 또는 태그 장치를 선택하세요."
+                }), "\n"]
+              }), "\n"]
+            })
+          })]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
@@ -234,8 +259,8 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["앱에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "BLE Mode"
+              children: ["앱에서 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "BLE 모드"
               }), "를 활성화하세요."]
             }), "\n"]
           }), "\n"]
@@ -249,7 +274,7 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Card ID Output Method"
-              }), "로 스크롤하고 ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), "로 스크롤하여 이동하고 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Edit"
               }), "를 탭하세요."]
             }), "\n"]
@@ -301,9 +326,10 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["모바일 기기를 장치 근처에 두고 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Save"
-              }), "를 눌러 선택 내용을 확인하세요."]
+              children: ["모바일 기기를 장치 근처에 두고 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "save_btn",
+                product: "air"
+              }), " 버튼을 탭하고 선택 내용을 확인하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -312,8 +338,6 @@ function _createMdxContent(props) {
           }), "\n"]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 단계를 따르면 Airfob Patch 및 Tag 장치가 특정 출입 통제 요구 사항을 충족하도록 올바르게 구성할 수 있습니다."
     })]
   });
 }

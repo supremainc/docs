@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-30-devices-configuring-the-sio-2-secure-module-mdx-fe4.json
-var site_docs_platform_biostar_air_30_devices_configuring_the_sio_2_secure_module_mdx_fe4_namespaceObject = JSON.parse('{"id":"platform/biostar_air/configuring-the-sio2-secure-module","title":"SIO2 보안 모듈 구성하기","description":"출입 통제 시스템의 보안을 강화하기 위해 SIO2 보안 모듈을 구성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/30-devices-configuring-the-sio2-secure-module.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/configuring-the-sio2-secure-module","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/30-devices-configuring-the-sio2-secure-module.mdx","tags":[],"version":"current","sidebarPosition":30,"frontMatter":{"id":"configuring-the-sio2-secure-module","title":"SIO2 보안 모듈 구성하기","description":"출입 통제 시스템의 보안을 강화하기 위해 SIO2 보안 모듈을 구성하는 방법을 안내합니다.","keywords":["SIO2","보안 모듈","구성"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Airfob 패치(Patch)와 태그(Tag) 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag"},"next":{"title":"펌웨어 업그레이드","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware"}}')
+var site_docs_platform_biostar_air_30_devices_configuring_the_sio_2_secure_module_mdx_fe4_namespaceObject = JSON.parse('{"id":"platform/biostar_air/configuring-the-sio2-secure-module","title":"SIO2 보안 모듈 구성하기","description":"출입 통제 시스템의 보안을 강화하기 위해 SIO2 보안 모듈을 구성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/30-devices-configuring-the-sio2-secure-module.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/configuring-the-sio2-secure-module","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/30-devices-configuring-the-sio2-secure-module.mdx","tags":[],"version":"current","sidebarPosition":30,"frontMatter":{"id":"configuring-the-sio2-secure-module","title":"SIO2 보안 모듈 구성하기","description":"출입 통제 시스템의 보안을 강화하기 위해 SIO2 보안 모듈을 구성하는 방법을 안내합니다.","keywords":["SIO2","보안 모듈","구성"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"에어팝 패치(Patch)와 태그(Tag) 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag"},"next":{"title":"펌웨어 업그레이드","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -92,11 +92,7 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "개요",
-  "id": "overview",
-  "level": 2
-}, ..._biostarair_customer_notice/* .toc */.RM, {
+const toc = [..._biostarair_customer_notice/* .toc */.RM, {
   "value": "BioStar Air 포털에서 SIO2 활성화",
   "id": "how-to-activate-sio2-in-the-biostar-air-portal",
   "level": 2
@@ -127,23 +123,24 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
     li: "li",
+    ol: "ol",
     p: "p",
     strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Step, Steps} = _components;
+  }, {Cmd, StatusOK, Step, Steps} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!StatusOK) _missingMdxReference("StatusOK", true);
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "overview",
-      children: "개요"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "SIO2 보안 모듈"
       }), "은 슈프리마 또는 Airfob 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -154,13 +151,13 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "SIO2 보안 모듈"
-        }), "의 정확한 설치 지침은 박스에 포함된 배선 다이어그램을 참고하세요. 환경에 따라 설치 방식이 다를 수 있으므로 지역 슈프리마 대리점의 전문적인 지원을 요청하세요."]
+        }), "의 정확한 설치 지침은 제품 패키지에 포함된 배선 다이어그램을 참고하세요. 환경에 따라 설치 방식이 다를 수 있으므로 슈프리마 대리점의 전문적인 지원을 요청하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "how-to-activate-sio2-in-the-biostar-air-portal",
       children: "BioStar Air 포털에서 SIO2 활성화"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
+      type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "SIO2를 설치하고 BioStar Air 포털에서 설정을 변경하지 않으면 작동하지 않을 수 있습니다."
       })
@@ -186,26 +183,29 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "check-device-connection",
           children: "장치 연결 확인"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
+        }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.a, {
+                href: "https://admin.biostarair.com/",
                 children: "BioStar Air 포털"
               }), "에 접속하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Device Management"
-              }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Registered Devices"
-              }), "로 이동하세요."]
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_menu",
+                product: "air"
+              }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_submenu",
+                product: "air"
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["장치에 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "녹색 상태"
-              }), "가 표시되어 연결이 완료되었는지 확인하세요."]
+              children: ["장치 목록에서 해당 장치가 ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "녹색"
+              }), "(", (0,jsx_runtime.jsx)(StatusOK, {}), ")으로 표시되어 연결이 완료되었는지 확인하세요."]
             }), "\n"]
           }), "\n"]
         })]
@@ -213,18 +213,20 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "assign-sio2-to-a-door",
           children: "SIO2를 출입문에 할당"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
+        }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Door Management"
-              }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Registered Door"
-              }), "로 이동하세요."]
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door_menu",
+                product: "air"
+              }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door_submenu",
+                product: "air"
+              }), "을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "장치가 연결된 출입문을 찾으세요. 장치가 등록되면 출입문을 자동 생성합니다."
+              children: "목록에서 장치가 연결된 출입문을 클릭하세요. 장치가 등록하면 출입문을 자동 생성합니다."
             }), "\n"]
           }), "\n"]
         })]
@@ -232,18 +234,22 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "enable-sio2",
           children: "SIO2 활성화"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
+        }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Assign Devices"
-              }), " 영역에서 팝업 화면이 나타납니다."]
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "edit_door.title",
+                product: "air"
+              }), " 패널이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+                children: "보조 장치"
+              }), " 섹션으로 이동하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "SIO2"
-              }), "를 활성화하하세요."]
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "add_doors.sio2",
+                product: "air"
+              }), " 옵션을 활성화하세요."]
             }), "\n"]
           }), "\n"]
         })]

@@ -41964,7 +41964,7 @@ CSV 업로드와 관련하여 문제가 발생한다면, 일반적인 문제를 
 
 ---
 
-### 바이오메트릭 리더기와 크리덴션
+### 바이오메트릭 리더기와 크리덴셜
 
 #### 기능 개요[​](#feature-overview "기능 개요에 대한 직접 링크")
 
@@ -42517,53 +42517,55 @@ BioStar Air는 교대 근무 및 휴식 시간을 기록하여 기본적인 **�
 
 ---
 
-### Airfob 패치(Patch)와 태그(Tag) 구성하기
+### 에어팝 패치(Patch)와 태그(Tag) 구성하기
 
 #### 장치 개요[​](#device-overview "장치 개요에 대한 직접 링크")
 
-Airfob Patch 및 Tag 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다.
+에어팝 패치 및 태그 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다.
 
-* **Airfob Patch**: 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다.
+* **에어팝 패치**: 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다.
 
-* **Airfob Tag**: 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다.
+* **에어팝 태그**: 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다.
+
+알아두기
+
+* 에어팝 패치 및 태그 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환되지 않습니다.
+
+* 에어팝 패치 및 태그 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다.
 
 2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
 
-#### 호환성[​](#compatibility "호환성에 대한 직접 링크")
+#### 구성 단계[​](#configurationSteps "구성 단계에 대한 직접 링크")
 
-두 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환하지 않습니다.
+에어팝 패치 또는 태그를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요.
 
-#### 기능성[​](#functionality "기능성에 대한 직접 링크")
+##### 앱 실행[​](#accessApp "앱 실행에 대한 직접 링크")
 
-이 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다.
+![](/docs/img/air/bsair-device-aifob-login-app.png)
 
-#### 구성 단계[​](#configuration-steps "구성 단계에 대한 직접 링크")
+1. 모바일 기기에서 **BioStar Air** 앱을 실행하세요.
 
-Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요.
+2. 에어팝 패치 또는 태그 장치를 등록한 사이트에 로그인하세요.
 
-##### 앱 실행[​](#access-the-app "앱 실행에 대한 직접 링크")
+##### 장치 설정으로 이동[​](#navigateToDeviceSettings "장치 설정으로 이동에 대한 직접 링크")
 
-* 모바일 기기에서 **BioStar Air** 앱을 실행하세요.
+![](/docs/img/air/bsair-device-aifob-app-device.png)
 
-* Tag 또는 Patch 장치를 등록한 사이트에 로그인하세요.
+1. **BioStar Air** 앱 초기 화면에서 하단의 관리를 탭하세요.
 
-##### 장치 설정으로 이동[​](#navigate-to-device-settings "장치 설정으로 이동에 대한 직접 링크")
+2. 등록된 장치 목록을 확인하려면 장치를 탭하세요.
 
-* 메뉴 바에서 **Access Point**를 탭하세요.
-
-* 등록된 장치 목록을 확인하려면 **Device**를 선택하세요.
-
-* 구성할 Patch 또는 Tag 장치를 선택하세요.
+3. 장치 목록에서 에어팝 패치 또는 태그 장치를 선택하세요.
 
 ##### BLE 모드 활성화[​](#enable-ble-mode "BLE 모드 활성화에 대한 직접 링크")
 
 * 모바일 기기를 장치에 가까이 가져가세요.
 
-* 앱에서 **BLE Mode**를 활성화하세요.
+* 앱에서 BLE 모드를 활성화하세요.
 
 ##### 카드 ID 출력 방법 설정[​](#set-card-id-output-method "카드 ID 출력 방법 설정에 대한 직접 링크")
 
-* **Card ID Output Method**로 스크롤하고 **Edit**를 탭하세요.
+* **Card ID Output Method**로 스크롤하여 이동하고 **Edit**를 탭하세요.
 
 * **User Card ID** 옆에 있는 **Select**를 탭하세요.
 
@@ -42579,18 +42581,14 @@ Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단�
 
 ##### 설정 저장[​](#save-your-settings "설정 저장에 대한 직접 링크")
 
-* 모바일 기기를 장치 근처에 두고 **Save**를 눌러 선택 내용을 확인하세요.
+* 모바일 기기를 장치 근처에 두고 저장 버튼을 탭하고 선택 내용을 확인하세요.
 
 * 업데이트 완료 메시지가 나타납니다.
-
-이 단계를 따르면 Airfob Patch 및 Tag 장치가 특정 출입 통제 요구 사항을 충족하도록 올바르게 구성할 수 있습니다.
 
 
 ---
 
 ### SIO2 보안 모듈 구성하기
-
-#### 개요[​](#overview "개요에 대한 직접 링크")
 
 **SIO2 보안 모듈**은 슈프리마 또는 Airfob 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. **RS485 케이블**을 통해 리더기와 통신하며, 암호화된 통신을 통해 보안 위반을 방지합니다.
 
@@ -42598,9 +42596,11 @@ Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단�
 
 주의
 
-**SIO2 보안 모듈**의 정확한 설치 지침은 박스에 포함된 배선 다이어그램을 참고하세요. 환경에 따라 설치 방식이 다를 수 있으므로 지역 슈프리마 대리점의 전문적인 지원을 요청하세요.
+**SIO2 보안 모듈**의 정확한 설치 지침은 제품 패키지에 포함된 배선 다이어그램을 참고하세요. 환경에 따라 설치 방식이 다를 수 있으므로 슈프리마 대리점의 전문적인 지원을 요청하세요.
 
 #### BioStar Air 포털에서 SIO2 활성화[​](#how-to-activate-sio2-in-the-biostar-air-portal "BioStar Air 포털에서 SIO2 활성화에 대한 직접 링크")
+
+알아두기
 
 SIO2를 설치하고 BioStar Air 포털에서 설정을 변경하지 않으면 작동하지 않을 수 있습니다.
 
@@ -42612,23 +42612,25 @@ SIO2를 설치하고 BioStar Air 포털에서 설정을 변경하지 않으면 �
 
 ##### 장치 연결 확인[​](#check-device-connection "장치 연결 확인에 대한 직접 링크")
 
-* **BioStar Air 포털**에 접속하세요.
+1. [BioStar Air 포털](https://admin.biostarair.com/)에 접속하세요.
 
-* **Device Management** → **Registered Devices**로 이동하세요.
+2. 화면 왼쪽 사이드바에서 장치 관리 → 등록된 장치를 클릭하세요.
 
-* 장치에 **녹색 상태**가 표시되어 연결이 완료되었는지 확인하세요.
+3. 장치 목록에서 해당 장치가 **녹색**(
+
+   )으로 표시되어 연결이 완료되었는지 확인하세요.
 
 ##### SIO2를 출입문에 할당[​](#assign-sio2-to-a-door "SIO2를 출입문에 할당에 대한 직접 링크")
 
-* **Door Management** → **Registered Door**로 이동하세요.
+1. 화면 왼쪽 사이드바에서 출입문 관리 → 등록된 출입문을 클릭하세요.
 
-* 장치가 연결된 출입문을 찾으세요. 장치가 등록되면 출입문을 자동 생성합니다.
+2. 목록에서 장치가 연결된 출입문을 클릭하세요. 장치가 등록하면 출입문을 자동 생성합니다.
 
 ##### SIO2 활성화[​](#enable-sio2 "SIO2 활성화에 대한 직접 링크")
 
-* **Assign Devices** 영역에서 팝업 화면이 나타납니다.
+1. 출입문 수정 패널이 나타나면 보조 장치 섹션으로 이동하세요.
 
-* **SIO2**를 활성화하하세요.
+2. SIO2 옵션을 활성화하세요.
 
 ##### 릴레이 및 센서 구성[​](#configure-relay-and-sensors "릴레이 및 센서 구성에 대한 직접 링크")
 
@@ -46443,10 +46445,10 @@ BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증�
 * [등록 장치 관리하기](/docs/platform/biostar_air/managing-registered-devices)
 * [장치 그룹 관리하기](/docs/platform/biostar_air/manage-device-group)
 * [근태 관리(T\&A) 설정하기](/docs/platform/biostar_air/configuring-ta)
-* [Airfob 패치(Patch)와 태그(Tag) 구성하기](/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag)
+* [에어팝 패치(Patch)와 태그(Tag) 구성하기](/docs/platform/biostar_air/configuring-the-airfob-patch-and-tag)
 * [SIO2 보안 모듈 구성하기](/docs/platform/biostar_air/configuring-the-sio2-secure-module)
 * [펌웨어 업그레이드](/docs/platform/biostar_air/how-to-upgrade-firmware)
-* [바이오메트릭 리더기와 크리덴션](/docs/platform/biostar_air/biometric-readers-and-credentials)
+* [바이오메트릭 리더기와 크리덴셜](/docs/platform/biostar_air/biometric-readers-and-credentials)
 
 #### 출입문 관리→3 문서
 

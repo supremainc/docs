@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-biometric-readers-and-credentials-mdx-c7e.json
-var site_docs_platform_biostar_air_biometric_readers_and_credentials_mdx_c7e_namespaceObject = JSON.parse('{"id":"platform/biostar_air/biometric-readers-and-credentials","title":"바이오메트릭 리더기와 크리덴션","description":"BioStar Air에서 바이오메트릭 리더기 등록 및 구성 방법, 얼굴 인증 크리덴셜 등록 방법, BioStation 3 및 BioEntry W3 장치에 대한 단일 또는 이중 인증을 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/biometric-readers-and-credentials.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/biometric-readers-and-credentials","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/biometric-readers-and-credentials.mdx","tags":[],"version":"current","frontMatter":{"id":"biometric-readers-and-credentials","title":"바이오메트릭 리더기와 크리덴션","description":"BioStar Air에서 바이오메트릭 리더기 등록 및 구성 방법, 얼굴 인증 크리덴셜 등록 방법, BioStation 3 및 BioEntry W3 장치에 대한 단일 또는 이중 인증을 설정 방법을 안내합니다.","keywords":["biometric readers","credentials","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"펌웨어 업그레이드","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware"},"next":{"title":"등록 출입문 관리하기","permalink":"/docs/platform/biostar_air/managing-registered-doors"}}')
+var site_docs_platform_biostar_air_biometric_readers_and_credentials_mdx_c7e_namespaceObject = JSON.parse('{"id":"platform/biostar_air/biometric-readers-and-credentials","title":"바이오메트릭 리더기와 크리덴셜","description":"BioStar Air에서 바이오메트릭 리더기 등록 및 구성 방법, 얼굴 인증 크리덴셜 등록 방법, BioStation 3 및 BioEntry W3 장치에 대한 단일 또는 이중 인증을 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/biometric-readers-and-credentials.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/biometric-readers-and-credentials","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/biometric-readers-and-credentials.mdx","tags":[],"version":"current","frontMatter":{"id":"biometric-readers-and-credentials","title":"바이오메트릭 리더기와 크리덴셜","description":"BioStar Air에서 바이오메트릭 리더기 등록 및 구성 방법, 얼굴 인증 크리덴셜 등록 방법, BioStation 3 및 BioEntry W3 장치에 대한 단일 또는 이중 인증을 설정 방법을 안내합니다.","keywords":["biometric readers","credentials","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"펌웨어 업그레이드","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware"},"next":{"title":"등록 출입문 관리하기","permalink":"/docs/platform/biostar_air/managing-registered-doors"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -25,7 +25,7 @@ var lib = __webpack_require__(84429);
 
 const frontMatter = {
 	id: 'biometric-readers-and-credentials',
-	title: '바이오메트릭 리더기와 크리덴션',
+	title: '바이오메트릭 리더기와 크리덴셜',
 	description: 'BioStar Air에서 바이오메트릭 리더기 등록 및 구성 방법, 얼굴 인증 크리덴셜 등록 방법, BioStation 3 및 BioEntry W3 장치에 대한 단일 또는 이중 인증을 설정 방법을 안내합니다.',
 	keywords: [
 		'biometric readers',
