@@ -297,6 +297,14 @@
           "label_id": "specs.interface.usb_ext",
           "value": true
         },
+        "poe": {
+          "label": "PoE",
+          "label_id": "specs.interface.poe",
+          "value": {
+            "ko": "지원 (IEEE 802.3af 호환)",
+            "en": "Supported (IEEE 802.3af compliant)"
+          }
+        },
         "tamper": {
           "label": "탬퍼",
           "label_id": "specs.interface.tamper",
@@ -364,7 +372,7 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "Min. 4.8 V"
+            "en": "More than 4.8 V"
           }
         },
         "wiegand_vol": {
@@ -372,7 +380,7 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Max. 0.2 V"
+            "en": "Less than 0.2 V"
           }
         },
         "wiegand_pullup": {

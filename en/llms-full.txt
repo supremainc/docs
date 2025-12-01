@@ -1060,11 +1060,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -1077,6 +1077,8 @@ Relay
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/bep2-dimension.svg)
+
+***
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -2488,6 +2490,8 @@ Current: Max. 0.2 A
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/ber2-dimension.svg)
+
+***
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -3987,11 +3991,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -4005,6 +4009,8 @@ Relay
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/bew2-dimension.svg)
+
+***
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -6324,11 +6330,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -6339,13 +6345,13 @@ Relay
 * 2 A @ 30 VDC Resistive load
 * 1 A @ 30 VDC Inductive load
 
-<!-- -->
-
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/bew3-dimension.png)
 
-[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting of the product, and the recommended facial authentication distance is 0.6 to 1.0 m.
+***
+
+[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting for the product, and the recommended facial authentication distance is 0.6-1.0 m.
 
 [2)](#anno2_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -8021,11 +8027,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -8039,6 +8045,8 @@ Relay
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/bln2-dimension.svg)
+
+***
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -10983,6 +10991,10 @@ USB Expansion Port
 
 Supported
 
+PoE
+
+Supported (IEEE 802.3af compliant)
+
 Tamper
 
 Supported
@@ -11016,11 +11028,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -11034,6 +11046,8 @@ Relay
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/bs2a-dimension.svg)
+
+***
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -13601,11 +13615,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -13620,7 +13634,9 @@ Relay
 
 ![](/docs/en/img/en/device/bs3-dimension.svg)
 
-[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting for the product, and the recommended facial authentication distance is 0.6~1.0 m.
+***
+
+[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting for the product, and the recommended facial authentication distance is 0.6-1.0 m.
 
 [2)](#anno2_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
@@ -15516,7 +15532,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/device/product-part-cs20.png)
+![](/docs/en/img/device/product-part-cs20.svg)
 
 | No. | Name                                                     |
 | --- | -------------------------------------------------------- |
@@ -15989,8 +16005,8 @@ Supported
 
 LED
 
-* POWER - RED single-color
-* STATUS - Multi-color
+* POWER: RED single-color
+* STATUS: Multi-color
 
 Operating Temperature
 
@@ -16059,7 +16075,7 @@ Wiegand
 
 Relay
 
-4 Relays
+4 relays
 
 Input
 
@@ -16133,23 +16149,21 @@ Relay
 
 5 A @ 30 VDC Resistive load
 
+#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
+
+The dimensional tolerance is ±0.3 mm.
+
+![](/docs/en/img/en/device/cs20-dimension.svg)
+
+***
+
 [1)](#anno1_dest) You can select between Input or Supervised input.
 
 [2)](#anno2_dest) Requires PoE+ (IEEE 802.3at, 30 W) or PoE++ (IEEE 802.3bt, 60~100 W) power. Standard PoE (IEEE 802.3af, 15.4 W) is not supported. Using standard PoE may cause devices to operate unstably or be permanently damaged. Before connecting the device, make sure your network switch or PoE injector supports PoE+ or PoE++.
 
 Info
 
-* Product specifications are subject to change without notice for performance improvement.
-
-* For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/).
-
-#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
-
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
-
-![](/docs/en/img/en/device/cs20-dimension.png)
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -17166,7 +17180,7 @@ CS-40
 
 CPU
 
-1.2 GHz Octa-core
+1.4 GHz Octa-core
 
 Memory
 
@@ -17180,12 +17194,12 @@ LED
 
 Multi-color
 
-* STATUS - 2ea
-* HOST RS-485 TX - 1ea
-* HOST RS-485 RX - 1ea
-* SUPERVISED INPUT - 8ea
-* RELAY - 4ea
-* AUX IN - 2ea
+* STATUS: 2ea
+* HOST RS-485 TX: 1ea
+* HOST RS-485 RX: 1ea
+* SUPERVISED INPUT: 8ea
+* RELAY: 4ea
+* AUX IN: 2ea
 
 Operating Temperature
 
@@ -17263,7 +17277,7 @@ Wiegand
 
 Relay
 
-4 Relays
+4 relays
 
 Input
 
@@ -17316,6 +17330,14 @@ Relay
 
 5 A @ 30 VDC Resistive load
 
+#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
+
+The dimensional tolerance is ±0.3 mm.
+
+![](/docs/en/img/en/device/cs40-dimension.svg)
+
+***
+
 [1)](#anno1_dest) This is based on users enrolled without credentials.
 
 [2)](#anno2_dest) Facial authentication is supported only by FaceStation 2 and FaceLite.
@@ -17332,15 +17354,7 @@ Info
 
   * Maximum fingerprint credential count (1:1): 500,000
 
-* For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/).
-
-#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
-
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
-
-![](/docs/en/img/device/cs40-dimension.png)
+* For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_corestation\&s%5B%5D=corestation/).
 
 
 ---
@@ -19854,8 +19868,8 @@ Supported
 
 LED
 
-* POWER - RED single-color
-* STATUS - Multi-color
+* POWER: RED single-color
+* STATUS: Multi-color
 
 Operating Temperature
 
@@ -19907,7 +19921,7 @@ Wiegand
 
 Relay
 
-4 Relays
+4 relays
 
 Input
 
@@ -19966,19 +19980,19 @@ Relay
 
 5 A @ 30 VDC Resistive load
 
+#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
+
+The dimensional tolerance is ±0.3 mm.
+
+![](/docs/en/img/en/device/di24-dimension.svg)
+
+***
+
 [1)](#anno1_dest) You can select between Input or Supervised input.
 
 Info
 
 Product specifications are subject to change without notice for performance improvement.
-
-#### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
-
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
-
-![](/docs/en/img/en/device/di24-dimension.svg)
 
 
 ---
@@ -20643,7 +20657,7 @@ LED
 Multi-color
 
 * POWER - 1개
-* RELAY - 4개
+* RELAY: 4개
 * INPUT - 4개
 * SUPERVISED INPUT - 4개
 * OUTPUT - 6개
@@ -20696,7 +20710,7 @@ Output
 
 Relay
 
-4 Relays
+4 relays
 
 Wiegand
 
@@ -20719,9 +20733,7 @@ Relay
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
+The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/dm20-dimension.svg)
 
@@ -21674,9 +21686,7 @@ Capacity
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
+The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/encr-dimension.svg)
 
@@ -24208,11 +24218,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -27653,11 +27663,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -29968,7 +29978,7 @@ Multi-color
 * RS-485 RX - 1개
 * SUPERVISED INPUT - 12개
 * RELAY - 2개
-* AUX IN - 2개
+* AUX IN: 2개
 * TAMPER - 1개
 
 Operating Temperature
@@ -30025,7 +30035,7 @@ OSDP V2 compliant
 
 Relay
 
-2 Relays
+2 relays
 
 AUX Input
 
@@ -30059,9 +30069,7 @@ Relay
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
+The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/im120-dimension.svg)
 
@@ -30751,7 +30759,7 @@ Multi-color
 * RELAY - 12개
 * RS-485 TX - 1개
 * RS-485 RX - 1개
-* AUX IN - 2개
+* AUX IN: 2개
 
 Operating Temperature
 
@@ -30791,7 +30799,7 @@ AUX Input
 
 Relay
 
-12 Relays
+12 relays
 
 <!-- -->
 
@@ -30813,9 +30821,7 @@ Relay
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
+The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/om120-dimension.svg)
 
@@ -31519,7 +31525,7 @@ Input
 
 Relay
 
-1 Relays
+1 relay
 
 <!-- -->
 
@@ -31538,9 +31544,7 @@ Relay
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-* Unit: mm
-
-* The dimensional tolerance is ±0.3 mm.
+The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/sio2-dimension.svg)
 
@@ -32947,11 +32951,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -34248,11 +34252,11 @@ LED, Beep Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -35961,11 +35965,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 
@@ -37086,8 +37090,6 @@ Power
 12 Vdc
 
 Current: Max. 0.4 A
-
-<!-- -->
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
@@ -38971,11 +38973,11 @@ Switch Pull-up Resistance
 
 Wiegand Output VOH
 
-Min. 4.8 V
+More than 4.8 V
 
 Wiegand Output VOL
 
-Max. 0.2 V
+Less than 0.2 V
 
 Wiegand Output Pull-up Resistance
 

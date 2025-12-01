@@ -29,12 +29,12 @@
           "label_id": "specs.general.led_type",
           "value": {
             "ko": [
-              "POWER - 빨간색 단일 색상",
-              "STATUS - 다중 색상"
+              "POWER: 빨간색 단일 색상",
+              "STATUS: 다중 색상"
             ],
             "en": [
-              "POWER - RED single-color",
-              "STATUS - Multi-color"
+              "POWER: RED single-color",
+              "STATUS: Multi-color"
             ]
           }
         },
@@ -120,7 +120,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 Relays"
+            "en": "4 relays"
           }
         },
         "input": {
