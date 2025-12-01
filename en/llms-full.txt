@@ -58793,7 +58793,7 @@ Caution
 
 * BioStar X는 단순히 ngrok API를 호출하여 연결을 지원할 뿐, 인터넷 연결의 보안성, 안전성, 연속성은 ngrok 서비스에 전적으로 의존합니다. 따라서 본 기능 사용 중 발생할 수 있는 보안 사고, 데이터 손실, 시스템 침해 등에 대하여 슈프리마는 어떠한 책임도 지지 않습니다.
 
-#### 언제 사용하나요?[​](#언제-사용하나요 "Direct link to 언제 사용하나요?")
+#### 언제 사용하나요?[​](#whenShoulduseit "Direct link to 언제 사용하나요?")
 
 다음과 같은 상황에서 리모트 액세스 기능을 사용하세요.
 
@@ -58805,21 +58805,41 @@ Caution
 
 * 임시로 외부 접속 권한을 제공해야 하는 경우
 
-#### 시작하기 전에[​](#시작하기-전에 "Direct link to 시작하기 전에")
+#### 시작하기 전에[​](#beforeStart "Direct link to 시작하기 전에")
 
-##### ngrok 계정 및 플랜 준비[​](#ngrok-계정-및-플랜-준비 "Direct link to ngrok 계정 및 플랜 준비")
+##### 네트워크 설정 확인[​](#checkNetworksettings "Direct link to 네트워크 설정 확인")
+
+External Remote Access 기능을 사용하려면 **BioStar X** 서버와 ngrok 간의 통신이 필요합니다. 서버의 방화벽 설정에서 다음을 확인하세요.
+
+* **인바운드 규칙**: **BioStar X**가 사용 중인 포트(기본값: **443**)에 대한 인바운드 트래픽 허용
+
+* **아웃바운드 규칙**: ngrok 서비스와의 통신을 위한 아웃바운드 트래픽 허용 (포트: **443**)
+
+방화벽 설정에서 이 규칙들이 활성화되어 있지 않으면 ngrok 연결에 실패할 수 있습니다.
+
+##### ngrok 계정 및 플랜 준비[​](#prepareNgrokAccount "Direct link to ngrok 계정 및 플랜 준비")
 
 * ngrok 계정을 준비하세요. ngrok 계정이 없다면 [다음 링크](https://dashboard.ngrok.com/signup)에서 계정을 생성하세요.
 
 * ngrok 플랜을 구독하세요. External Remote Access 기능은 ngrok의 **Pay-as-you-go** 플랜 이상에서 안정적인 연결이 가능합니다. 플랜에 대한 자세한 내용은 [다음 링크](https://ngrok.com/pricing)를 참고하세요.
 
-##### Authtoken 확인[​](#authtoken-확인 "Direct link to Authtoken 확인")
+##### Authtoken 확인[​](#verifyAuthtoken "Direct link to Authtoken 확인")
 
-ngrok 대시보드에서 **Authtoken**을 확인하세요. **Getting Started** → **Your Authtoken** 메뉴에서 확인할 수 있습니다.
+ngrok 대시보드에서 **Authtoken**을 확인하세요. **Authtoken**은 **BioStar X**가 ngrok 서비스에 인증할 때 필요한 고유한 인증키입니다.
 
-##### 엔드 포인트 URL 준비[​](#엔드-포인트-url-준비 "Direct link to 엔드 포인트 URL 준비")
+1. ngrok 대시보드에 로그인하세요.
 
-ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+2. 왼쪽 사이드바에서 **Getting Started** → **Your Authtoken** 메뉴를 클릭하세요.
+
+3. **Authtoken** 값을 복사하세요.
+
+Caution
+
+**Authtoken**은 민감한 인증 정보입니다. 타인과 공유하지 않도록 주의하세요.
+
+##### 엔드 포인트 URL 준비[​](#prepareTheEndpointUrl "Direct link to 엔드 포인트 URL 준비")
+
+ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-name.ngrok.app` 형식입니다.
 
 1. ngrok 대시보드에 로그인하세요.
 
@@ -58849,9 +58869,9 @@ Info
 
 `.internal` 도메인은 ngrok의 내부 네트워크 라우팅을 위한 특수 도메인입니다. 이를 통해 외부 요청이 내부 **BioStar X** 서버로 안전하게 전달됩니다.
 
-#### External Remote Access 설정[​](#-설정 "Direct link to -설정")
+#### External Remote Access 설정[​](#lesscmd-sid'setting.menu.remoteaccessexternal.root'-classname'normal'-greater-settings "Direct link to lesscmd-sid'setting.menu.remoteaccessexternal.root'-classname'normal'-greater-settings")
 
-##### 라이선스 활성화[​](#라이선스-활성화 "Direct link to 라이선스 활성화")
+##### 라이선스 활성화[​](#licenseActivation "Direct link to 라이선스 활성화")
 
 1. **BioStar X** 관리자 아이디로 로그인하세요.
 
@@ -58865,7 +58885,7 @@ Info
 
 라이선스 등록에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_x/settings-license-biostar-x-license)를 참고하세요.
 
-##### External Remote Access 활성화[​](#-활성화 "Direct link to -활성화")
+##### External Remote Access 활성화[​](#enableRemoteAccessExternal "Direct link to enableRemoteAccessExternal")
 
 1. **BioStar X** 관리자 아이디로 로그인하세요.
 
@@ -58877,7 +58897,7 @@ Info
 
 ![](/docs/en/img/en/biostarx-settings-external-remote-access.png)
 
-##### ngrok 설정 정보 입력[​](#ngrok-설정-정보-입력 "Direct link to ngrok 설정 정보 입력")
+##### ngrok 설정 정보 입력[​](#enterNgrokConfigurationInformation "Direct link to ngrok 설정 정보 입력")
 
 사용자의 ngrok 설정 정보를 입력하세요.
 
@@ -58887,7 +58907,7 @@ Info
 
 모든 정보를 입력한 후 Apply 버튼을 클릭하세요. 경고 메시지 창이 나타나면 내용을 확인하고 Agree 버튼을 클릭하세요.
 
-#### 엔드포인트 URL 접속[​](#엔드포인트-url-접속 "Direct link to 엔드포인트 URL 접속")
+#### 엔드포인트 URL 접속[​](#endpointUrlAccess "Direct link to 엔드포인트 URL 접속")
 
 설정을 완료하고 URL 항목에 입력한 엔드포인트 URL을 통해 외부 네트워크에서 **BioStar X** 서버에 접속할 수 있는지 확인하세요.
 

@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-external-remote-access-mdx-ef3.json
-var site_docs_platform_biostar_x_settings_external_remote_access_mdx_ef3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-external-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-external-remote-access","permalink":"/docs/en/platform/biostar_x/settings-external-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-external-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","keywords":["사용자 리모트 액세스","ngrok"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Set up Remote Access","permalink":"/docs/en/platform/biostar_x/settings-remote-access"},"next":{"title":"Integrate Virtual Device Event Log","permalink":"/docs/en/platform/biostar_x/settings-virtual-device-event-log"}}')
+var site_docs_platform_biostar_x_settings_external_remote_access_mdx_ef3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-external-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-external-remote-access","permalink":"/docs/platform/biostar_x/settings-external-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-external-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","keywords":["사용자 리모트 액세스","ngrok"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리모트 액세스 설정하기","permalink":"/docs/platform/biostar_x/settings-remote-access"},"next":{"title":"가상 장치 이벤트 로그 연동하기","permalink":"/docs/platform/biostar_x/settings-virtual-device-event-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자 리모트 액세스',
 		'ngrok'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -43,43 +43,47 @@ const assets = {
 
 const toc = [{
   "value": "언제 사용하나요?",
-  "id": "언제-사용하나요",
+  "id": "whenShoulduseit",
   "level": 2
 }, {
   "value": "시작하기 전에",
-  "id": "시작하기-전에",
+  "id": "beforeStart",
   "level": 2
 }, {
+  "value": "네트워크 설정 확인",
+  "id": "checkNetworksettings",
+  "level": 3
+}, {
   "value": "ngrok 계정 및 플랜 준비",
-  "id": "ngrok-계정-및-플랜-준비",
+  "id": "prepareNgrokAccount",
   "level": 3
 }, {
   "value": "Authtoken 확인",
-  "id": "authtoken-확인",
+  "id": "verifyAuthtoken",
   "level": 3
 }, {
   "value": "엔드 포인트 URL 준비",
-  "id": "엔드-포인트-url-준비",
+  "id": "prepareTheEndpointUrl",
   "level": 3
 }, {
   "value": "<Cmd class=\"normal\"></Cmd> 설정",
-  "id": "-설정",
+  "id": "lesscmd-sid'setting.menu.remoteaccessexternal.root'-classname'normal'-greater-settings",
   "level": 2
 }, {
   "value": "라이선스 활성화",
-  "id": "라이선스-활성화",
+  "id": "licenseActivation",
   "level": 3
 }, {
   "value": "<Cmd class=\"normal\"></Cmd> 활성화",
-  "id": "-활성화",
+  "id": "enableRemoteAccessExternal",
   "level": 3
 }, {
   "value": "ngrok 설정 정보 입력",
-  "id": "ngrok-설정-정보-입력",
+  "id": "enterNgrokConfigurationInformation",
   "level": 3
 }, {
   "value": "엔드포인트 URL 접속",
-  "id": "엔드포인트-url-접속",
+  "id": "endpointUrlAccess",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -194,7 +198,7 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "언제-사용하나요",
+      id: "whenShoulduseit",
       children: "언제 사용하나요?"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "다음과 같은 상황에서 리모트 액세스 기능을 사용하세요."
@@ -219,10 +223,42 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "시작하기-전에",
+      id: "beforeStart",
       children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "ngrok-계정-및-플랜-준비",
+      id: "checkNetworksettings",
+      children: "네트워크 설정 확인"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
+        sid: "setting.menu.remoteAccessExternal.root",
+        className: "normal"
+      }), " 기능을 사용하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " 서버와 ngrok 간의 통신이 필요합니다. 서버의 방화벽 설정에서 다음을 확인하세요."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "인바운드 규칙"
+          }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "가 사용 중인 포트(기본값: ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "443"
+          }), ")에 대한 인바운드 트래픽 허용"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "아웃바운드 규칙"
+          }), ": ngrok 서비스와의 통신을 위한 아웃바운드 트래픽 허용 (포트: ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "443"
+          }), ")"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "방화벽 설정에서 이 규칙들이 활성화되어 있지 않으면 ngrok 연결에 실패할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "prepareNgrokAccount",
       children: "ngrok 계정 및 플랜 준비"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -246,22 +282,49 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "authtoken-확인",
+      id: "verifyAuthtoken",
       children: "Authtoken 확인"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["ngrok 대시보드에서 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Authtoken"
       }), "을 확인하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Getting Started"
-      }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Your Authtoken"
-      }), " 메뉴에서 확인할 수 있습니다."]
+        children: "Authtoken"
+      }), "은 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "가 ngrok 서비스에 인증할 때 필요한 고유한 인증키입니다."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "ngrok 대시보드에 로그인하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Getting Started"
+          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Your Authtoken"
+          }), " 메뉴를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Authtoken"
+          }), " 값을 복사하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Authtoken"
+        }), "은 민감한 인증 정보입니다. 타인과 공유하지 않도록 주의하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "엔드-포인트-url-준비",
+      id: "prepareTheEndpointUrl",
       children: "엔드 포인트 URL 준비"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "your-name.bsx.ngrok.app"
+        children: "your-name.ngrok.app"
       }), " 형식입니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -345,7 +408,7 @@ function _createMdxContent(props) {
         }), " 서버로 안전하게 전달됩니다."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "-설정",
+      id: "lesscmd-sid'setting.menu.remoteaccessexternal.root'-classname'normal'-greater-settings",
       children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.remoteAccessExternal.root",
         className: "normal"
@@ -353,7 +416,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "라이선스-활성화",
+          id: "licenseActivation",
           children: "라이선스 활성화"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -400,7 +463,7 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsxs)(_components.h3, {
-          id: "-활성화",
+          id: "enableRemoteAccessExternal",
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.remoteAccessExternal.root",
             className: "normal"
@@ -442,7 +505,7 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "ngrok-설정-정보-입력",
+          id: "enterNgrokConfigurationInformation",
           children: "ngrok 설정 정보 입력"
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "사용자의 ngrok 설정 정보를 입력하세요."
@@ -474,7 +537,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "엔드포인트-url-접속",
+      id: "endpointUrlAccess",
       children: "엔드포인트 URL 접속"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["설정을 완료하고 ", (0,jsx_runtime.jsx)(Cmd, {
