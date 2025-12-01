@@ -97,6 +97,7 @@ const sidebars = {
               items: [
                 'platform/biostar_air/register-device',
                 'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/manage-device-group',
                 'platform/biostar_air/configuring-ta',
                 'platform/biostar_air/configuring-the-airfob-patch-and-tag',
                 'platform/biostar_air/configuring-the-sio2-secure-module',

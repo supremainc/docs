@@ -1,0 +1,97 @@
+---
+id: manage-device-group
+title: 장치 그룹 관리하기
+description: 장치를 그룹으로 묶어 효율적으로 관리하는 방법을 안내합니다.
+keywords: [장치 그룹, 장치 관리, BioStar Air]
+---
+
+BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리할 수 있습니다. 장치 그룹을 사용하면 동일한 설정을 여러 장치에 일괄 적용하거나, 특정 그룹의 장치 상태를 쉽게 모니터링할 수 있습니다.
+
+## 장치 그룹 만들기
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_groups_submenu' product='air' />을 클릭하세요.
+
+    <Image src='/img/air/bsair-device-mng-group-init.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='device_group_btn_add' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='device_group_title_add_popup_overlay' product='air' /> 창이 나타나면 그룹 이름을 입력하세요.
+
+    <Image src='/img/air/bsair-device-mng-group-add-group.png' />
+
+    :::note
+
+    특정 그룹의 하위 그룹으로 장치 그룹을 생성하려면 <Cmd sid='add_sub_group_text' product='air' /> 옵션을 클릭하고, 상위 그룹을 선택하세요.
+
+    :::
+
+1. <Cmd sid='device_group_label_add_device' product='air' />에서 그룹에 추가할 장치를 선택하세요.
+
+1. 장치를 모두 선택했다면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+장치 그룹 목록에서 새로 생성된 그룹과 해당 그룹에 속한 장치의 개수를 확인할 수 있습니다. 장치 그룹 목록의 그룹을 클릭하면 해당 그룹에 속한 장치를 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-device-mng-group-list.png' />
+
+
+## 장치 그룹 이름 변경
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_groups_submenu' product='air' />을 클릭하세요.
+
+1. 장치 목록에서 이름을 변경하려는 장치 그룹의 체크박스를 클릭하세요.
+
+1. 장치 목록 상단의 <IcAirEdit /> 버튼을 클릭하세요.
+
+1. <Cmd sid='device_group_title_edit_popup_overlay' product='air' /> 창이 나타나면 새 그룹 이름을 입력하세요.
+
+    <Image src='/img/air/bsair-device-mng-edit-group.png' />
+
+1. 변경한 그룹 이름을 저장하려면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+
+## 장치 그룹 삭제
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_groups_submenu' product='air' />을 클릭하세요.
+
+1. 장치 목록에서 삭제하려는 장치 그룹의 체크박스를 클릭하세요.
+
+1. 장치 목록 상단의 <IcAirRemove /> 버튼을 클릭하세요.
+
+1. 경고 메시지 창이 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+장치 그룹 목록에서 선택한 장치 그룹이 삭제됩니다. 해당 그룹의 하위 그룹까지 모두 삭제됩니다. 그룹을 삭제하더라도 장치는 삭제되지 않고 그룹에 포함되지 않습니다.
+
+
+## 장치 목록에서 그룹 관리 {#device_group_in_device_list}
+
+장치 목록에서 개별 장치를 선택하여 장치 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='devices_submenu' product='air' />을 클릭하세요.
+
+1. 장치 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요.
+
+1. 장치 목록 상단의 <IcAirGroup /> 버튼을 클릭하세요.
+
+1. <Cmd sid='manage_device_group_title' product='air' /> 창이 나타나면 선택한 장치를 그룹에 추가하거나 제거하세요.
+
+    <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
+
+    <Cmd sid='manage_device_group_title_two' product='air' />의 체크박스 상태는 아래와 같은 의미를 가집니다.
+
+    * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />: 선택한 장치를 그룹에서 제거합니다.
+
+    * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />: 선택한 장치 중 일부가 그룹에 포함된 상태입니다.
+
+    * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />: 선택한 장치를 그룹에 추가합니다.
+
+1. 변경한 내용을 저장하려면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='manage_device_group_title' product='air' /> 창에서 다른 그룹을 선택하면 선택한 장치는 해당 그룹으로 이동합니다.
+
+* 장치는 그룹에 중복으로 속할 수 있습니다. 하나의 장치를 여러 그룹에 할당할 수 있습니다.
+
+* 변경한 내용을 초기화하려면 <Cmd sid='device_btn_reset' product='air' /> 버튼을 클릭하세요.
+
+:::

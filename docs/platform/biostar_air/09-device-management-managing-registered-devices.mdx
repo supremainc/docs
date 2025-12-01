@@ -1,11 +1,11 @@
 ---
 id: managing-registered-devices
 title: 등록 장치 관리하기
-description: BioStar Air에서 호환되는 슈프리마 리더 장치를 관리, 업데이트 및 구성하는 방법을 안내합니다.
-keywords: [장치 관리, BioStar Air, 등록 장치]
+description: BioStar Air 포털에서 등록된 슈프리마 장치의 연결 상태를 확인하고, 생체 인증, 카드 설정, 네트워크, 펌웨어 등 세부 설정을 구성하는 방법을 안내합니다. 개별 장치 관리 및 대량 작업을 통해 효율적으로 여러 장치를 관리할 수 있습니다.
+keywords: [장치 관리, 장치 설정, BioStar Air, 생체 인증, 카드 설정, 펌웨어 업데이트, 네트워크 설정]
 ---
 
-BioStar Air 포털과 모바일 앱을 사용하면 관리자가 호환되는 슈프리마 장치를 관리 및 업데이트, 구성할 수 있습니다.
+BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링하고 세부 설정을 구성할 수 있습니다. 생체 인증, 카드 인증, 네트워크, 펌웨어 업데이트 등 다양한 기능을 개별 또는 일괄로 관리하여 보안 시스템을 효과적으로 운영할 수 있습니다.
 
 :::info
 
@@ -79,7 +79,7 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
 
-1. 장치 목록에서 수정할 장치를 선택하세요.
+1. 장치 목록에서 수정할 장치를 클릭하세요.
 
 1. <Cmd sid='device_edit_title' product='air' /> 창이 나타납니다.
 
@@ -88,6 +88,8 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 1. 장치의 세부 정보 또는 설정을 수정하세요.
 
 1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+각 섹션별 세부 정보 수정 및 설정 옵션에 대한 자세한 내용은 아래를 참고하세요.
 
 
 ### <Cmd sid='device_edit_device_info' product='air' className='normal' /> {#deviceInfo}
@@ -154,7 +156,7 @@ XPass 2와 X-Station 2 장치에서는 카드 설정이 <Cmd sid='device_edit_de
 
   :::info
 
-  * EM4100 카드 형식은 BioStation 3 및 BioEntry W3 장치에 해당하며, 2025년 말에 더 많은 장치에서 지원할 예정입니다.
+  * EM4100 카드 형식은 BioStation 3 및 BioEntry W3 장치에 해당하며, 2025년 후반에 더 많은 장치에서 지원할 예정입니다.
 
   * HID Prox 카드 형식은 장치에 따라 지원하지 않을 수 있습니다.
 
@@ -273,7 +275,7 @@ WLAN 설정이 표시될 수 있지만 현재 활성화되어 있지 않습니�
 
 :::info
 
-얼굴이 아닌 자격 증명을 사용할 때는 주로 '이전'과 '이후'가 중요합니다.
+얼굴이 아닌 크리덴셜을 사용할 때는 주로 '이전'과 '이후'가 중요합니다.
 
 :::
 
@@ -291,7 +293,7 @@ WLAN 설정이 표시될 수 있지만 현재 활성화되어 있지 않습니�
 
 * <Cmd sid='device_edit_tna_mode_option5' product='air' />: 선택한 근태 이벤트만 사용할 수 있습니다.
 
-* <Cmd sid='device_edit_tna_mode_option6' product='air' />: 모바일 자격 증명을 제시할 때 슈프리마 패스 앱에서 근태 이벤트를 선택할 수 있습니다.
+* <Cmd sid='device_edit_tna_mode_option6' product='air' />: 모바일 크리덴셜을 제시할 때 슈프리마 패스 앱에서 근태 이벤트를 선택할 수 있습니다.
 
 ### <Cmd sid='device_bs3_sound_label' product='air' className='normal' /> {#device_bs3_sound_label}
 
@@ -303,7 +305,7 @@ WLAN 설정이 표시될 수 있지만 현재 활성화되어 있지 않습니�
 
 #### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
 
-* <Cmd sid='device_bs3_sound_label3' product='air' />: 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다.
+* <Cmd sid='device_bs3_sound_label3' product='air' />: 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불필요한 전력 소모를 줄일 수 있습니다.
 
 * <Cmd sid='device_bs3_sound_label4' product='air' />: 화면의 조명을 항상 켜두거나 비활성화 후 어두워지도록 설정할 수 있습니다.
 
@@ -321,7 +323,7 @@ WLAN 설정이 표시될 수 있지만 현재 활성화되어 있지 않습니�
 
   :::note
 
-  <Cmd sid='audit_action_update' product='air' /> 버튼을 클릭하고 저장하면 이미지 또는 공지 사항이 편집 화면에 나타나지 않지만 기기에는 계속 표시됩니다.
+  <Cmd sid='audit_action_update' product='air' /> 버튼을 클릭하고 저장하면 이미지 또는 공지 사항이 편집 화면에 나타나지 않으나 장치에는 계속 표시됩니다.
 
   :::
 
@@ -421,7 +423,7 @@ RTSP 스트리밍 기능은 BioStation 3 장치에서만 지원합니다.
 :::
 
 
-### <Cmd sid='new_layout_nav_title_sensitivity' product='air' /> {#rssiSensitivity}
+### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
 
 출입문 잠금을 해제하기 위해 모바일 기기와 장치가 얼마나 가까이 있어야 하는지 RSSI 값을 조정할 수 있습니다.
 
@@ -442,7 +444,7 @@ RTSP 스트리밍 기능은 BioStation 3 장치에서만 지원합니다.
 
   :::warning
 
-  온라인 상태의 장치만 영구적으로 삭제할 수 있입니다. 장치가 오프라인이라면, 다른 사이트에 추가하기 전에 BioStar Air 모바일 앱에서 먼저 삭제하세요.
+  온라인 상태의 장치만 영구적으로 삭제할 수 있입니다. 장치가 오프라인이라면, 다른 사이트에 추가하기 전에 BioStar Air 모바일 앱에서 먼저 삭제하세요. 모바일 앱에서 장치 삭제 방법에 대한 자세한 내용은 [다음 문서](#removingDevice)를 참고하세요.
 
   :::
 
@@ -460,9 +462,13 @@ RTSP 스트리밍 기능은 BioStation 3 장치에서만 지원합니다.
 
 * <IcAirCloud width='24px' height='24px' />: 장치 목록에서 선택한 장치에서 서버로 생체 인증 템플릿을 동기화할 수 있습니다.
 
-* <span className='air-device'><IcAirGroup width='24px' height='24px' /></span>: 장치 목록에서 선택한 장치를 그룹에 할당할 수 있습니다.
+* <span className='air-device'><IcAirGroup width='24px' height='24px' /></span>: 장치 목록에서 선택한 장치를 그룹에 할당할 수 있습니다. 장치 그룹 관리에 대한 자세한 내용은 [다음 문서](manage-device-group)를 참고하세요.
 
-* <IcAirByte width='24px' height='24px' />: 장치 목록에서 선택한 장치의 RF 카드 바이트 순서를 MSB / LSB 간 전환할 수 있습니다.
+* <IcAirByte width='24px' height='24px' />: 장치 목록에서 선택한 장치의 RF 카드 바이트 순서를 <Cmd>MSB</Cmd> 또는 <Cmd>LSB</Cmd>로 전환할 수 있습니다.
+
+  * <Cmd>MSB</Cmd>: 카드 데이터를 처리할 때 큰 바이트 단위에서 작은 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 왼쪽에서 오른쪽으로 순차 저장합니다.
+
+  * <Cmd>LSB</Cmd>: 카드 데이터를 처리할 때 작은 바이트 단위에서 큰 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 저장합니다.
 
 * <IcAirDset width='24px' height='24px' />: 독립 실행 모드에서 원래 설정된 장치의 설정을 가져올 수 있습니다.
 
