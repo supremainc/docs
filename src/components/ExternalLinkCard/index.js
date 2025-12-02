@@ -44,7 +44,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
     {
-      title: 'BioStar2 Device SDK',
+      title: 'BioStar Device SDK',
       url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${currentLocale}:start`,
       Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
       height: '45px',
