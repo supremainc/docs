@@ -406,9 +406,9 @@ function _createMdxContent(props) {
           src: "/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["예: ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "your-name.bsx.ngrok.app"
+            children: "your-name.ngrok.app"
           }), " → ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "your-name.bsx.ngrok.app.internal"
+            children: "your-name.ngrok.app.internal"
           })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -543,7 +543,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.remoteAccess.field.hostURL"
               }), ": 엔드포인트 URL을 입력하세요. URL은 ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "your-name.bsx.ngrok.app"
+                children: "your-name.ngrok.app"
               }), " 형식입니다."]
             }), "\n"]
           }), "\n"]

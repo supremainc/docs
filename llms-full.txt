@@ -59377,7 +59377,7 @@ ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-na
 
    ![](/docs/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png)
 
-   예: `your-name.bsx.ngrok.app` → `your-name.bsx.ngrok.app.internal`
+   예: `your-name.ngrok.app` → `your-name.ngrok.app.internal`
 
 8. 설정을 완료한 후 화면 우측 상단의 **Save** 버튼을 클릭하세요.
 
@@ -59419,7 +59419,7 @@ ngrok 대시보드에서 엔드포인트 URL을 설정하세요. URL은 `your-na
 
 * 인증 토큰: **Authtoken**을 입력하세요.
 
-* URL: 엔드포인트 URL을 입력하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+* URL: 엔드포인트 URL을 입력하세요. URL은 `your-name.ngrok.app` 형식입니다.
 
 모든 정보를 입력한 후 확인 버튼을 클릭하세요. 경고 메시지 창이 나타나면 내용을 확인하고 동의 버튼을 클릭하세요.
 
