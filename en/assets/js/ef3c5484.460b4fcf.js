@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-external-remote-access-mdx-ef3.json
-var site_docs_platform_biostar_x_settings_external_remote_access_mdx_ef3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-external-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-external-remote-access","permalink":"/docs/platform/biostar_x/settings-external-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-external-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","keywords":["사용자 리모트 액세스","ngrok"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"리모트 액세스 설정하기","permalink":"/docs/platform/biostar_x/settings-remote-access"},"next":{"title":"가상 장치 이벤트 로그 연동하기","permalink":"/docs/platform/biostar_x/settings-virtual-device-event-log"}}')
+var site_docs_platform_biostar_x_settings_external_remote_access_mdx_ef3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-external-remote-access.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-external-remote-access","permalink":"/docs/en/platform/biostar_x/settings-external-remote-access","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-external-remote-access.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-external-remote-access","title":"사용자 리모트 액세스 설정하기","description":"ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.","keywords":["사용자 리모트 액세스","ngrok"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Set up Remote Access","permalink":"/docs/en/platform/biostar_x/settings-remote-access"},"next":{"title":"Integrate Virtual Device Event Log","permalink":"/docs/en/platform/biostar_x/settings-virtual-device-event-log"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -31,7 +31,7 @@ const frontMatter = {
 		'사용자 리모트 액세스',
 		'ngrok'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -195,6 +195,16 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
             children: "BioStar X는 단순히 ngrok API를 호출하여 연결을 지원할 뿐, 인터넷 연결의 보안성, 안전성, 연속성은 ngrok 서비스에 전적으로 의존합니다. 따라서 본 기능 사용 중 발생할 수 있는 보안 사고, 데이터 손실, 시스템 침해 등에 대하여 슈프리마는 어떠한 책임도 지지 않습니다."
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), "는 보안상 이유로 ngrok 실행 파일(", (0,jsx_runtime.jsx)(_components.code, {
+              children: "ngrok.exe"
+            }), ")의 유효성을 검사합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " 패키지에 포함된 파일만 사용 가능하며, 외부에서 다운로드한 ngrok 실행 파일을 임의로 사용할 수 없습니다. 승인되지 않은 파일을 사용하면 정상적으로 작동하지 않을 수 있습니다."]
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -257,6 +267,16 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "방화벽 설정에서 이 규칙들이 활성화되어 있지 않으면 ngrok 연결에 실패할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["ngrok은 HTTPS 엔드포인트의 경우 포트 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "443"
+        }), "으로만 트래픽을 수신합니다. ngrok 도메인에서 사용하는 포트는 변경할 수 없습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://ngrok.com/docs/faq/faq#can-i-choose-a-different-port-to-receive-traffic-on-my-ngrok-domains",
+          children: "다음 링크"
+        }), "를 참고하세요."]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "prepareNgrokAccount",
       children: "ngrok 계정 및 플랜 준비"

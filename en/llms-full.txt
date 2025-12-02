@@ -58793,6 +58793,8 @@ Caution
 
 * BioStar X는 단순히 ngrok API를 호출하여 연결을 지원할 뿐, 인터넷 연결의 보안성, 안전성, 연속성은 ngrok 서비스에 전적으로 의존합니다. 따라서 본 기능 사용 중 발생할 수 있는 보안 사고, 데이터 손실, 시스템 침해 등에 대하여 슈프리마는 어떠한 책임도 지지 않습니다.
 
+* **BioStar X**는 보안상 이유로 ngrok 실행 파일(`ngrok.exe`)의 유효성을 검사합니다. **BioStar X** 패키지에 포함된 파일만 사용 가능하며, 외부에서 다운로드한 ngrok 실행 파일을 임의로 사용할 수 없습니다. 승인되지 않은 파일을 사용하면 정상적으로 작동하지 않을 수 있습니다.
+
 #### 언제 사용하나요?[​](#whenShoulduseit "Direct link to 언제 사용하나요?")
 
 다음과 같은 상황에서 리모트 액세스 기능을 사용하세요.
@@ -58816,6 +58818,10 @@ External Remote Access 기능을 사용하려면 **BioStar X** 서버와 ngrok �
 * **아웃바운드 규칙**: ngrok 서비스와의 통신을 위한 아웃바운드 트래픽 허용 (포트: **443**)
 
 방화벽 설정에서 이 규칙들이 활성화되어 있지 않으면 ngrok 연결에 실패할 수 있습니다.
+
+Info
+
+ngrok은 HTTPS 엔드포인트의 경우 포트 **443**으로만 트래픽을 수신합니다. ngrok 도메인에서 사용하는 포트는 변경할 수 없습니다. 자세한 내용은 [다음 링크](https://ngrok.com/docs/faq/faq#can-i-choose-a-different-port-to-receive-traffic-on-my-ngrok-domains)를 참고하세요.
 
 ##### ngrok 계정 및 플랜 준비[​](#prepareNgrokAccount "Direct link to ngrok 계정 및 플랜 준비")
 
