@@ -721,7 +721,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["다음 항목은 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "어드밴스"
-      }), " 라이선스 등급에서 추가 옵션으로 구매할 수 있습니다."]
+      }), " 라이선스 등급에서 추가 옵션으로 구매할 수 있으며, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엔터프라이즈"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "엘리트"
+      }), " 라이선스 등급에서는 기본 포함됩니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
