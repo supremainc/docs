@@ -702,13 +702,17 @@ function _createMdxContent(props) {
       id: "package",
       children: "Package"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The following items can be purchased individually from ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advance"
-      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["The following items can be purchased as add-ons from the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Advanced"
+      }), " license tier, and are included by default in ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Elite"
       }), " license tiers."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The following item can be purchased individually for ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Advanced"
+      }), " license tier."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
