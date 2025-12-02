@@ -7,7 +7,7 @@ keywords: [SIO2, 보안 모듈, 구성]
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-**SIO2 보안 모듈**은 슈프리마 또는 Airfob 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. **RS485 케이블**을 통해 리더기와 통신하며, 암호화된 통신을 통해 보안 위반을 방지합니다.
+**SIO2 보안 모듈**은 슈프리마 또는 에어팝 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. **RS485 케이블**을 통해 리더기와 통신하며, 암호화된 통신을 통해 보안 위반을 방지합니다.
 
 <CustomerNote />
 
@@ -19,6 +19,8 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 
 ## BioStar Air 포털에서 SIO2 활성화 {#how-to-activate-sio2-in-the-biostar-air-portal}
+
+SIO2 보안 모듈을 정상 통합시키고 출입 통제 시스템의 보안을 강화하려면 다음 단계를 따라 <Cmd sid='add_doors.sio2' product='air' /> 옵션을 활성화하세요.
 
 :::info
 
@@ -64,35 +66,37 @@ SIO2를 설치하고 BioStar Air 포털에서 설정을 변경하지 않으면 �
 
 1. <Cmd sid='add_doors.sio2' product='air' /> 옵션을 활성화하세요.
 
+<Image src='/img/air/bsair-door-mng-edit-door-sio2-enable.png' />
+
 </Step>
 <Step>
 
 ### 릴레이 및 센서 구성 {#configure-relay-and-sensors}
 
-* **Door Relay**의 경우 **Relay 0**을 선택하세요.
+<Image src='/img/air/bsair-door-mng-edit-door-sio2-settings.png' caption />
+
+* <Cmd sid='add_doors.door_relay' product='air' />는 **Relay 0**을 선택하세요.
 
   :::note
 
-  SIO2 모듈에는 하나의 Door Relay 포트만 있습니다.
+  SIO2 모듈에는 하나의 출입문 릴레이 포트만 있습니다.
 
   :::
 
-* **Door Sensor**의 경우 Door Sensor가 연결된 SIO2의 입력 포트 번호를 선택하세요.
+* <Cmd sid='device_editable_fields_door_sensor' product='air' />는 연결된 SIO2의 입력 포트 번호를 선택하세요.
 
-* **Exit Button**이 연결되어 있다면 SIO2의 해당 입력 포트를 선택하세요.
+* <Cmd sid='device_editable_fields_exit_btn' product='air' />이 연결되어 있다면 SIO2의 해당 입력 포트를 선택하세요.
 
-* 다른 유형의 출구 장치를 사용한다면 **Exit Devices**를 선택하세요.
+* 다른 유형의 출구 장치를 사용한다면 <Cmd sid='door_product_column3' product='air' />를 선택하세요.
 
 </Step>
 <Step>
 
 ### 설정 저장 {#save-the-settings}
 
-* 설정을 적용하려면 **Save** 버튼을 클릭하세요.
+* 설정을 적용하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
 * 이제 SIO2 보안 모듈이 정상 작동합니다.
 
 </Step>
 </Steps>
-
-이 단계를 따르면 SIO2 보안 모듈을 정상 통합시키고 출입 통제 시스템의 보안을 강화할 수 있습니다.
