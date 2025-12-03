@@ -72,6 +72,14 @@
                     "en": "MINEX certified and compliant"
                   }
                 },
+                "sensor_certificates": {
+                  "label": "센서 인증",
+                  "label_id": "specs.credentials.biometrics.fingerprint.sensor_certificates",
+                  "value": {
+                    "ko": "FBI PIV 및 FBI Mobile ID FAP20",
+                    "en": "FBI PIV and FBI Mobile ID FAP20"
+                  }
+                },
                 "live_fingerprint_detection": {
                   "label": "위조 지문 검출",
                   "label_id": "specs.credentials.biometrics.fingerprint.live_fingerprint_detection",
@@ -90,18 +98,13 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "FSF2-DB",
+              "label": "FSF2-DB, FSF2-ODB",
               "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
               "annotation_value": "anno2"
             },
             "model2": {
               "label": "FSF2-AB",
               "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-              "annotation_value": "anno2"
-            },
-            "model3": {
-              "label": "FSF2-ODB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa",
               "annotation_value": "anno2"
             }
           }
@@ -143,7 +146,7 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "7\" IPS 컬러 LCD",
-            "en": "7\" color IPS LCD"
+            "en": "7\" IPS color LCD"
           }
         },
         "lcd_resolution": {
@@ -356,7 +359,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "usb": {

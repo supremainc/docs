@@ -291,7 +291,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "poe_plus": {
