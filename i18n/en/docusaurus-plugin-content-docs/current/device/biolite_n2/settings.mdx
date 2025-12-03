@@ -173,6 +173,60 @@ Device settings, network settings, and operator levels will be reset.
 
 :::
 
+### Master Admin
+
+You can change the authentication method of the Master Admin.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_128' product='dev' />.
+
+3. Configure the desired authentication methods.
+
+   <div className='grid-container'>
+
+   <Image src='/img/device/bln2-master-admin.png' width='100%' />
+
+   <Image src='/img/device/bln2-master-admin-edit.png' width='100%' />
+
+   </div>
+
+:::info
+
+* You must enroll at least two types of credentials.
+
+* Available only on new devices with firmware v1.7.0 or later.
+
+:::
+
+### Administrator two-step authentication {#admin-2-step-authentication}
+
+Devices upgraded to firmware version 1.4.0 do not provide <Cmd sid='ui_128' product='dev' /> settings, but you can enhance the security of the device by strengthening the administrator's permissions through the <Cmd sid='ui_073' product='dev' /> option.
+
+1. Press **ESC** and authenticate as an administrator.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_073' product='dev' />.
+
+   <Image src='/img/device/bln2-administrator-two-step-auth.png' />
+
+:::info
+
+* <Cmd sid='ui_073' product='dev' /> is available after upgrading the firmware to v1.7.0 or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
+
+* The first step of authentication is default unless the <Cmd sid='ui_073' product='dev' /> option is enabled.
+
+* If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed. Enroll two types of credentials for all administrators and try again.
+
+  <Image src='/img/device/bln2-master-admin-error-message.png' />
+
+:::
+
+:::caution
+
+If you delete all administrators' credentials to below type 2 after enabling <Cmd sid='ui_073' product='dev' />, you will no longer have access to the administrator menu without being able to connect to BioStar X. Therefore, you need to be particularly careful when deleting administrator credentials.
+
+:::
+
 ### User ID type
 
 Select the type of user ID to register to the device.

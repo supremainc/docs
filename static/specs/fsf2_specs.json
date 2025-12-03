@@ -72,6 +72,14 @@
                     "en": "MINEX certified and compliant"
                   }
                 },
+                "sensor_certificates": {
+                  "label": "센서 인증",
+                  "label_id": "specs.credentials.biometrics.fingerprint.sensor_certificates",
+                  "value": {
+                    "ko": "FBI PIV 및 FBI Mobile ID FAP20",
+                    "en": "FBI PIV and FBI Mobile ID FAP20"
+                  }
+                },
                 "live_fingerprint_detection": {
                   "label": "위조 지문 검출",
                   "label_id": "specs.credentials.biometrics.fingerprint.live_fingerprint_detection",
@@ -90,7 +98,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "FSF2-DB",
+              "label": "FSF2-DB, FSF2-ODB",
               "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
               "annotation_value": "anno2"
             },
@@ -98,28 +106,13 @@
               "label": "FSF2-AB",
               "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno2"
-            },
-            "model3": {
-              "label": "FSF2-ODB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa",
-              "annotation_value": "anno2"
             }
           }
         },
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "type": "model",
-          "items": {
-            "model1": {
-              "label": "FSF2-DB, FSF2-AB",
-              "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm"
-            },
-            "model2": {
-              "label": "FSF2-ODB",
-              "value": "EM/MIFARE/DESFire: 50 mm, Felica: 30 mm"
-            }
-          },
+          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -153,7 +146,7 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "7\" IPS 컬러 LCD",
-            "en": "7\" color IPS LCD"
+            "en": "7\" IPS color LCD"
           }
         },
         "lcd_resolution": {
@@ -349,8 +342,8 @@
           "label": "Wiegand",
           "label_id": "specs.interface.wiegand",
           "value": {
-            "ko": "1채널 입력, 1채널 출력 (선택 가능)",
-            "en": "1 ch Input, 1 ch Output (Selectable)"
+            "ko": "1채널 입력/출력 (선택 가능)",
+            "en": "1 ch Input / 1 ch Output (Selectable)"
           }
         },
         "input": {
@@ -366,7 +359,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "usb": {
@@ -388,9 +381,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc/최대 2.1 A", "전압/전류: 24 Vdc/최대 1 A" ],
-            "en": [ "Voltage / Current: 12 Vdc / Max. 2.1 A", "Voltage / Current: 24 Vdc / Max. 1 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 2.1 A",
+                "en": "Current: Max. 2.1 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 1 A",
+                "en": "Current: Max. 1 A"
+              }
+            }
           }
         },
         "switch_input_vih": {
@@ -420,7 +426,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {

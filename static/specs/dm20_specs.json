@@ -27,15 +27,26 @@
             "multiColor": {
               "label": "다중 색상",
               "label_id": "specs.general.led_type.multiColor",
-              "value": [
-                "POWER - 1개",
-                "RELAY - 4개",
-                "INPUT - 4개",
-                "SUPERVISED INPUT - 4개",
-                "OUTPUT - 6개",
-                "RS-485 - 2개",
-                "RUN - 1개"
-              ]
+              "value": {
+                "ko": [
+                  "POWER: 1개",
+                  "RELAY: 4개",
+                  "INPUT: 4개",
+                  "SUPERVISED INPUT: 4개",
+                  "OUTPUT: 6개",
+                  "RS-485: 2개",
+                  "RUN: 1개"
+                ],
+                "en": [
+                  "POWER: 1ea",
+                  "RELAY: 4ea",
+                  "INPUT: 4ea",
+                  "SUPERVISED INPUT: 4ea",
+                  "OUTPUT: 6ea",
+                  "RS-485: 2ea",
+                  "RUN: 1ea"
+                ]
+              }
             }
           }
         },
@@ -100,14 +111,6 @@
             "en": "4 ch"
           }
         },
-        "supervised": {
-          "label": "Supervised 입력",
-          "label_id": "specs.interface.supervised",
-          "value": {
-            "ko": "4채널",
-            "en": "4 ch"
-          }
-        },
         "output": {
           "label": "Output",
           "label_id": "specs.interface.output",
@@ -116,12 +119,20 @@
             "en": "6 ch"
           }
         },
+        "supervised": {
+          "label": "Supervised 입력",
+          "label_id": "specs.interface.supervised",
+          "value": {
+            "ko": "4채널",
+            "en": "4 ch"
+          }
+        },
         "relay": {
           "label": "릴레이",
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 Relays"
+            "en": "4 relays"
           }
         },
         "wiegand": {
@@ -141,9 +152,15 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압: 12 Vdc", "전류: 최대 3.1 A" ],
-            "en": [ "Voltage: 12 Vdc", "Current: Max. 3.1 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 3.1 A",
+                "en": "Current: Max. 3.1 A"
+              }
+            }
           }
         },
         "relay": {

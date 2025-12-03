@@ -364,6 +364,22 @@ footer {
 }
 // Zoom 스타일
 
+.redocusaurus {
+  display: none;
+  // div[role='search'] {
+  //   position: fixed;
+  //   top: 60px;
+  //   background: #fff;
+  // }
+  // .scrollbar-container {
+  //   top: 100px;
+  // }
+}
+
+body[data-rh] .redocusaurus {
+  display: block;
+}
+
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
@@ -1172,7 +1188,6 @@ footer {
         }
       }
     }
-
   }
 }
 
@@ -1510,6 +1525,21 @@ footer {
       &.row {
         a.padding--lg {
           color: var(--ifm-color-content) !important;
+        }
+      }
+    }
+    .svg-none-style {
+      ol {
+        li {
+          p:has(svg) {
+            padding-left: unset !important;
+          }
+          p {
+            svg {
+              position: relative !important;
+              left: unset !important;
+            }
+          }
         }
       }
     }

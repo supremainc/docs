@@ -10,7 +10,7 @@ keywords:
 
 You can utilize user information from a previous version or a different server by exporting or importing user data.
 
-## CSV export/import {#csvexportimport}
+## Export or import CSV {#csvexportimport}
 
 Save selected user information as a CSV file, or load saved CSV files. This allows for easy transfer of user information using CSV files.
 
@@ -22,7 +22,7 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 :::
 
-### CSV export {#csvexport}
+### Export CSV {#csvexport}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -36,7 +36,7 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 5. Save the CSV file to your desired location on your local path.
 
-### CSV import {#csvimport}
+### Import CSV {#csvimport}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -78,7 +78,7 @@ If an error occurs while importing information from the CSV file, you can review
 
 :::
 
-## Data file export/import {#exportimportdatafile}
+## Export or import data files {#exportimportdatafile}
 
 User information can be stored on external storage (USB) for import into **BioStar X** or devices. Up to 500,000 user records can be transferred from the server to devices or between devices.
 
@@ -113,7 +113,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 :::
 
-### Data export {#exportdata}
+### Export data {#exportdata}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -127,7 +127,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
-5. Save the data file in your desired local path.
+5. Save the data file in your desired local path. The file name is generated in the format `BioStarX_YYYYMMDD_HHMMSS.tgz`.
 
 :::info
 
@@ -137,7 +137,15 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 :::
 
-### Data import {#importdata}
+:::caution
+
+To import files exported from **BioStar X** into devices, you must rename the file as follows so that the device can recognize it. The file name format will be adjusted to be automatically recognized through future device firmware updates.
+
+*<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
+
+:::
+
+### Import data {#importdata}
 
 1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
 

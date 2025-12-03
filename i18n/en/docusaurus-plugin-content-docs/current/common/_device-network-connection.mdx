@@ -4,7 +4,17 @@
 
 #### LAN connection (connecting to a hub)
 
+<Include product='bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2'>
+
+You can connect the product to a hub using a general type CAT-5 cable.
+
+</Include>
+
+<Include product='bioentry_p2,xpass_2,xpass_q2'>
+
 You can connect to the hub using a standard CAT-5e cable.
+
+</Include>
 
 <Include product='biostation_3'><Image src='/img/device/installation-network-hub-connection-bs3.png' width='75%' className='none' /></Include>
 
@@ -14,13 +24,13 @@ You can connect to the hub using a standard CAT-5e cable.
 
 <Include product='facestation_f2'><Image src='/img/device/installation-network-hub-connection-fsf2.png' width='75%' className='none' /></Include>
 
-<Include product='corestation_20'><Image src='/img/device/installation-network-hub-connection-cs20.png' width='75%' className='none' /></Include>
+<Include product='corestation_20'><Image src='/img/device/installation-network-hub-connection-cs20.png' width='65%' className='none' /></Include>
 
-<Include product='corestation_40'><Image src='/img/device/installation-network-hub-connection-cs40.png' width='75%' className='none' /></Include>
+<Include product='corestation_40'><Image src='/img/device/installation-network-hub-connection-cs40.png' width='65%' className='none' /></Include>
 
 <Include product='biolite_n2'><Image src='/img/device/installation-network-hub-connection-bln2.png' width='70%' className='none' /></Include>
 
-<Include product='xstation_2'><Image src='/img/device/installation-network-hub-connection-xs2.png' width='70%' className='none' /></Include>
+<Include product='xstation_2'><Image src='/img/device/installation-network-hub-connection-xs2.png' width='65%' className='none' /></Include>
 
 <Include product='facestation_2'><Image src='/img/device/installation-network-hub-connection-fs2.png' width='65%' className='none' /></Include>
 
@@ -29,6 +39,8 @@ You can connect to the hub using a standard CAT-5e cable.
 <Include product='xpass_2'><Image src='/img/device/installation-network-hub-connection-xp2.png' width='65%' className='none' /></Include>
 
 <Include product='xpass_s2'><Image src='/img/device/installation-network-hub-connection-xps2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-network-hub-connection-xpq2.png' width='75%' className='none' /></Include>
 
 <Include product='bioentry_w2'>
 
@@ -40,13 +52,19 @@ Use a PSE hub to supply power via PoE.
 
 #### LAN connection (connecting to a PC directly)
 
-<Xclude product='corestation_20,bioentry_p2,xpass_2,xpass_s2'>
+<Include product='bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2'>
 
-This product has automatic MDI/MDIX functionality, so you can connect directly to a PC using a crossover cable or a standard straight CAT-5e cable.
+This device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable.
 
-</Xclude>
+</Include>
 
-<Include product='bioentry_p2,xpass_2,xpass_s2'>
+<Include product='xpass_s2'>
+
+The product supports auto MDI/MDIX, allowing direct connection to a PC with a standard CAT-5 cable.
+
+</Include>
+
+<Include product='bioentry_p2,xpass_2,corestation_40,corestation_20'>
 
 This product has automatic MDI/MDIX functionality, so you can connect directly to a PC using a standard CAT-5e cable.
 
@@ -54,9 +72,21 @@ This product has automatic MDI/MDIX functionality, so you can connect directly t
 
 <Include product='corestation_20'>
 
-* This product has automatic MDI/MDIX functionality, so you can connect directly to a PC using a standard CAT-5e cable.
+<Badge only>CS-20P</Badge> Supports PoE+, which supplies power through an Ethernet cable. When using PoE+, only one Lock connection is supported.
 
-* (CS-20P model only) Supports PoE+ that supplies power via Ethernet cable. When using PoE+, only one Lock connection is supported.
+</Include>
+
+<Include product='xpass_q2'>
+
+* This device features automatic MDI/MDIX, so it can connect directly to a PC using either a cross cable or a standard straight CAT-5e cable.
+
+  :::caution
+
+  Certain non-standard hubs/switches may not support automatic MDI/MDIX.
+
+  :::
+
+* <Badge only>XPQ2-APB</Badge> Supports PoE that supplies power via Ethernet cable.
 
 </Include>
 
@@ -66,15 +96,15 @@ This product has automatic MDI/MDIX functionality, so you can connect directly t
 
 <Include product='biostation_2a'><Image src='/img/device/installation-network-direct-connection-bs2a.png' width='60%' className='none' alone /></Include>
 
-<Include product='facestation_f2'><Image src='/img/device/installation-network-direct-connection-fsf2.png' width='60%' className='none' alone /></Include>
+<Include product='facestation_f2'><Image src='/img/device/installation-network-direct-connection-fsf2.png' width='65%' className='none' alone /></Include>
 
-<Include product='corestation_20'><Image src='/img/device/installation-network-direct-connection-cs20.png' width='75%' className='none' alone /></Include>
+<Include product='corestation_20'><Image src='/img/device/installation-network-direct-connection-cs20.png' width='60%' className='none' alone /></Include>
 
-<Include product='corestation_40'><Image src='/img/device/installation-network-direct-connection-cs40.png' width='85%' className='none' alone /></Include>
+<Include product='corestation_40'><Image src='/img/device/installation-network-direct-connection-cs40.png' width='75%' className='none' alone /></Include>
 
 <Include product='biolite_n2'><Image src='/img/device/installation-network-direct-connection-bln2.png' width='70%' className='none' alone /></Include>
 
-<Include product='xstation_2'><Image src='/img/device/installation-network-direct-connection-xs2.png' width='70%' className='none' alone /></Include>
+<Include product='xstation_2'><Image src='/img/device/installation-network-direct-connection-xs2.png' width='65%' className='none' alone /></Include>
 
 <Include product='facestation_2'><Image src='/img/device/installation-network-direct-connection-fs2.png' width='70%' className='none' alone /></Include>
 
@@ -85,6 +115,8 @@ This product has automatic MDI/MDIX functionality, so you can connect directly t
 <Include product='xpass_2'><Image src='/img/device/installation-network-direct-connection-xp2.png' width='65%' className='none' alone /></Include>
 
 <Include product='xpass_s2'><Image src='/img/device/installation-network-direct-connection-xps2.png' width='70%' className='none' alone /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-network-direct-connection-xpq2.png' width='60%' className='none' alone /></Include>
 
 <Include product='biostation_3,facestation_f2,facestation_2'>
 

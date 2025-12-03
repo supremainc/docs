@@ -67,7 +67,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-DPB, XS2-QDPB, XS2-ODPB",
+              "label": "XS2-DPB, XS2-QDPB,<br/>XS2-ODPB",
               "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
               "annotation_value": "anno1"
             },
@@ -348,7 +348,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "usb": {
@@ -378,9 +378,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 0.8 A", "전압/전류: 24 Vdc / 최대 0.5 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 0.8 A", "Voltage/Current: 24 Vdc / Max. 0.5 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.8 A",
+                "en": "Current: Max. 0.8 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.5 A",
+                "en": "Current: Max. 0.5 A"
+              }
+            }
           }
         },
         "switch_input_vih": {
@@ -410,7 +423,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {

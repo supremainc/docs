@@ -1,0 +1,284 @@
+---
+id: installation
+title: Installation
+description: Provides the complete installation procedures and connection examples required for the device.
+keywords:
+  - Bracket
+  - Power
+  - Network
+  - Input
+  - Relay
+  - Standalone
+  - Secure I/O
+  - Wiegand
+---
+
+Provides the complete installation procedures and connection examples required for the device.
+
+## Fixing the bracket and the product
+
+1. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
+
+   <Image src='/img/device/installation-device1-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   * If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw.
+
+   * To avoid RF interference, a minimum separation distance must be maintained.
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpq2.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :------------: | :------: |
+   |     100 mm     |  270 mm  |
+   |     120 mm     |  250 mm  |
+   |     150 mm     |  170 mm  |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpq2.png' className='none' width='60%' />
+
+   </Column>
+   </Columns>
+
+   * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
+
+   :::
+
+2. Tighten the four screws securing the cable cover.
+
+   <Image src='/img/device/installation-device2-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating).
+
+   :::
+
+3. Mount the product on the fixed bracket.
+
+   <Image src='/img/device/installation-device3-xpq2.svg' className='none' width='35%' alone />
+
+4. Rotate the fixing screws to assemble the product with the bracket.
+
+   <Image src='/img/device/installation-device4-xpq2.svg' className='none' width='15%' alone />
+
+   :::info
+
+   When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## Connect reader and lock power
+
+### Connect reader power
+
+<Image src='/img/device/installation-reader-power-connection-xpq2.png' className='none' width='65%' />
+
+### Connect lock power
+
+<Image src='/img/device/installation-lock-power-connection-xpq2.png' className='none' width='65%' />
+
+### Power-specific reader and lock power specifications
+
+<div className='overflow-x'>
+
+|     Power     | Maximum reader current | Maximum lock current |
+| :-----------: | :--------------------: | :------------------: |
+|     DC 12V    |         500 mA         |         1.2 A        |
+|     DC 24V    |         250 mA         |        600 mA        |
+| PoE (12V out) |         500 mA         |     Not supported    |
+
+</div>
+
+### Maximum extension length by cable specification
+
+The distance that can be connected may vary depending on the cable specifications and installation environment used for power connection. If cable connections are made improperly it may cause the device to malfunction. The product supports DC 12 V, DC 24 V, and PoE. Check the maximum extension length for each cable gauge and connect the power correctly.
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>Cable Specification</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+<Th colspan={2}>PoE (12V Output)</Th>
+
+</Row>
+<Row>
+
+<Th>Reader (500 mA)</Th>
+
+<Th>Lock (1.2 A)</Th>
+
+<Th>Reader (250 mA)</Th>
+
+<Th>Lock (600 mA)</Th>
+
+<Th>Reader (500 mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>190 m</Td>
+<Td>95 m</Td>
+<Td>770 m</Td>
+<Td>385 m</Td>
+<Td>190 m</Td>
+
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>120 m</Td>
+<Td>60 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>75 m</Td>
+<Td>35 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+:::info
+
+The actual maximum extension length can vary depending on the resistance of the cable manufacturer and model.
+
+:::
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+<PageBreak />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='green' />
+
+## Firmware upgrade
+
+You can connect a USB memory stick to upgrade the firmware.
+
+1. Save the firmware file to a USB memory stick for upgrade.
+
+   :::info
+
+   It is recommended to save only one firmware file on the USB memory stick for the upgrade.
+
+   :::
+
+2. Connect the USB memory stick to the device.
+
+   :::info
+
+   Authentication is temporarily suspended while the USB memory is being read.
+
+   :::
+
+3. When the LED/buzzer indicates an authentication request, authenticate with an administrator credential.
+
+   :::info
+
+   * Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the [BioStar X Administrator Manual](../../platform/biostar_x/set-permission).
+
+   * Only one authentication attempt is allowed per USB memory insertion.
+
+   * If authentication fails, the LED/buzzer indicates the failure and USB reading ends. Disconnect the USB memory and reconnect it to the device.
+
+   :::
+
+4. After successful administrator authentication, the device performs a firmware upgrade and indicates the upgrade with the LED.
+
+   :::info
+
+   If the firmware file is missing or corrupted, the upgrade does not proceed and the LED/buzzer indicates failure.
+
+   :::
+
+5. The device restarts automatically after the firmware upgrade is complete.
+
+:::caution
+
+Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
+
+:::

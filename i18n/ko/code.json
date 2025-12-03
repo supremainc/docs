@@ -690,6 +690,9 @@
     "message": "릴레이"
   },
   "specs.power.poe12vout": {
+    "message": "PoE (12V 출력)"
+  },
+  "specs.power.poe_plus12vout": {
     "message": "PoE+ (12V 출력)"
   },
   "specs.size_weight": {
@@ -1025,83 +1028,66 @@
     "message": "다중 출입문 보안 I/O 모듈"
   },
   "feedback.components.sendFeedback": {
-    "message": "피드백 보내기",
-    "description": "The label of the button to send feedback"
+    "message": "피드백 보내기"
   },
   "feedback.components.thanksForFeedback": {
-    "message": "피드백을 제출해 주셔서 감사합니다.",
-    "description": "The message displayed after the user has sent feedback"
+    "message": "피드백을 제출해 주셔서 감사합니다."
   },
   "feedback.components.successSubtext": {
-    "message": "귀하의 의견은 문서 개선에 소중하게 활용됩니다.",
-    "description": "The subtext displayed after the user has sent feedback"
+    "message": "귀하의 의견은 문서 개선에 소중하게 활용됩니다."
   },
   "feedback.components.feedbackTitle": {
-    "message": "이 페이지가 도움이 되었나요?",
-    "description": "The title of the feedback component"
+    "message": "이 페이지가 도움이 되었나요?"
   },
   "feedback.components.feedbackDescription": {
-    "message": "귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.",
-    "description": "The description of the feedback component"
+    "message": "귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다."
   },
   "feedback.components.feedbackTypeGood": {
-    "message": "도움이 되었습니다.",
-    "description": "The label for the good feedback type"
+    "message": "도움이 되었습니다."
   },
   "feedback.components.feedbackTypeBad": {
-    "message": "개선이 필요합니다.",
-    "description": "The label for the bad feedback type"
+    "message": "개선이 필요합니다."
   },
   "feedback.components.quickSubmitButton.onGoing": {
-    "message": "제출 중...",
-    "description": "The label of the quick submit button when the feedback is being submitted"
+    "message": "제출 중..."
   },
   "feedback.components.quickSubmitButton.idle": {
-    "message": "빠른 제출 (추가 의견 없음)",
-    "description": "The label of the quick submit button when the feedback is idle"
+    "message": "빠른 제출 (추가 의견 없음)"
   },
   "feedback.components.feedbackDetail": {
-    "message": "평가에 대해 자세히 알려주세요.",
-    "description": "The label for the feedback detail textarea"
+    "message": "평가에 대해 자세히 알려주세요."
   },
   "feedback.components.required": {
-    "message": "(필수)",
-    "description": "Indicates that a form field is required"
+    "message": "(필수)"
   },
   "feedback.components.optional": {
-    "message": "(선택사항)",
-    "description": "Indicates that a form field is optional"
+    "message": "(선택사항)"
   },
   "feedback.component.feedbackTextarea.negativePlaceholder": {
-    "message": "문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다.",
-    "description": "The placeholder for the feedback textarea when the user selected negative feedback"
+    "message": "문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다."
   },
   "feedback.component.feedbackTextarea.positivePlaceholder": {
-    "message": "개선이 필요한 부분이나 추가 의견을 자유롭게 작성해 주세요.",
-    "description": "The placeholder for the feedback textarea when the user selected positive feedback"
+    "message": "개선이 필요한 부분이나 추가 의견을 자유롭게 작성해 주세요."
   },
   "feedback.component.requiredNote": {
-    "message": "* 필수 입력",
-    "description": "Indicates that fields marked with * are required"
+    "message": "* 필수 입력"
   },
   "feedback.components.errorMessage": {
-    "message": "피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
-    "description": "The error message displayed when feedback submission fails" 
+    "message": "피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요."
   },
   "feedback.components.validationError": {
-    "message": "개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.",
-    "description": "The validation error message displayed when the feedback detail is missing for negative feedback"
+    "message": "개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요."
   },
   "feedback.component.feedbackCompletedMessage": {
-    "message": "피드백 제출",
-    "description": "The title of the feedback completed message"
+    "message": "피드백 제출"
   },
   "feedback.component.cancelButton.label": {
-    "message": "피드백 입력 취소",
-    "description": "The label of the button to cancel feedback submission"
+    "message": "피드백 입력 취소"
   },
   "feedback.component.privacyNote": {
-    "message": "제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.",
-    "description": "The privacy note displayed in the feedback form"
+    "message": "제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다."
+  },
+  "externalLinks.XPassQ2.desc": {
+    "message": "카드 및 QR/바코드 인증 지원 출입 통제 장치"
   }
 }

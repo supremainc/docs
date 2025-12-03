@@ -115,7 +115,9 @@ const config = {
         },
         pages: {
           exclude: [
-            '_backup/**.{js,jsx,ts,tsx,md,mdx}'
+            '_backup/**.{js,jsx,ts,tsx,md,mdx}',
+            'cover/**.{js,jsx,ts,tsx,md,mdx}',
+            'back/**.{js,jsx,ts,tsx,md,mdx}',
           ]
         },
         blog: false,
@@ -139,9 +141,24 @@ const config = {
           },
         },
       }),
-    ]
+    ],
+    [
+      'redocusaurus',
+      {
+        specs: [{
+          spec: './openapi/bsxapi-with-samples.yaml',
+          // route: '/api/bsxapi',
+          id: 'bsxapi',
+        }],
+        theme: {
+          primaryColor: '#3578e5',
+        },
+      }
+    ],
   ],
   plugins: [
+    // Redocusaurus Prism 주입 문제 해결 플러그인
+    [ './src/plugins/fix-prism', {} ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
@@ -152,7 +169,39 @@ const config = {
         trackingID: 'G-98B2Y5C3H6',
         anonymizeIP: true,
       },
-    ]
+    ],
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        // v2.0 API 구조로 수정
+        markdown: {
+          enableFiles: false,
+          // relativePaths: true,
+          // includeBlog: false,
+          // includePages: false,
+          // includeDocs: true,
+          // includeVersionedDocs: false,
+          // excludeRoutes: ['/platform/biostar_air/**', '/device/**'],
+        },
+        llmsTxt: {
+          siteTitle: 'Suprema Docs',
+          siteDescription: "Check out all of Suprema's products and BioStar related information here.",
+          enableLlmsFullTxt: true,
+          includeBlog: false,
+          includePages: false,
+          includeDocs: true,
+          includeVersionedDocs: false, // llms.txt에서는 기본값이 false
+          excludeRoutes: [
+            '/common/**',
+            '/_unused/**',
+            '/platform/biostar_air/**',
+            '/device/**',
+            '/products/**',
+          ],
+          autoSectionDepth: 2
+        }
+      },
+    ],
   ],
   markdown: {
     mermaid: true,
@@ -280,13 +329,13 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'XPass 2',
-          //       docId: 'device/xpass_2/index'
+          //       label: 'XPass Q2',
+          //       docId: 'device/xpass_q2/index'
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'XPass S2',
-          //       docId: 'device/xpass_s2/index'
+          //       label: 'XPass 2',
+          //       docId: 'device/xpass_2/index'
           //     },
           //     {
           //       type: 'doc',
@@ -295,8 +344,8 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
-          //       label: 'CoreStation',
-          //       docId: 'device/corestation_40/index'
+          //       label: 'XPass S2',
+          //       docId: 'device/xpass_s2/index'
           //     },
           //     {
           //       type: 'doc',
@@ -305,8 +354,18 @@ const config = {
           //     },
           //     {
           //       type: 'doc',
+          //       label: 'CoreStation',
+          //       docId: 'device/corestation_40/index'
+          //     },
+          //     {
+          //       type: 'doc',
           //       label: 'Enclosure',
           //       docId: 'device/enclosure/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Door Interface',
+          //       docId: 'device/doorinterface/index'
           //     },
           //     {
           //       type: 'doc',
@@ -317,11 +376,6 @@ const config = {
           //       type: 'doc',
           //       label: 'Output Module',
           //       docId: 'device/outputmodule/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'Door Interface',
-          //       docId: 'device/doorinterface/index'
           //     },
           //     {
           //       type: 'doc',
@@ -404,7 +458,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'ini', 'sql', 'excel-formula', 'python', 'csharp', 'c', 'http', 'java' ],
+        additionalLanguages: [ ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },
@@ -430,7 +484,12 @@ const config = {
           snippetEllipsisText: '…'
         },
         searchPagePath: 'search',
-        askAi: 'kyhdNEjfn9nK'
+        askAi: {
+          indexName: 'markdown-index', // Markdown index for Ask AI
+          apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+          appId: 'G6Y3H2PNC3',
+          assistantId: 'kyhdNEjfn9nK'
+        }
       }
     })
 };

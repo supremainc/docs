@@ -1533,6 +1533,27 @@ const sidebars = {
   //     ],
   //   },
   // ],
+  // xpassq2: [
+  //   {
+  //     type: 'category',
+  //     label: 'XPass Q2',
+  //     collapsed: false,
+  //     collapsible: false,
+  //     className: 'p-title',
+  //     link: {
+  //       type: 'doc',
+  //       id: 'device/xpass_q2/index',
+  //     },
+  //     items: [
+  //       'device/xpass_q2/safety-instructions',
+  //       'device/xpass_q2/getting-started',
+  //       'device/xpass_q2/installation',
+  //       'device/xpass_q2/product-specifications',
+  //       'device/xpass_q2/regulatory-information',
+  //       'device/xpass_q2/appendices',
+  //     ],
+  //   },
+  // ],
   // biostation2a: [
   //   {
   //     type: 'category',
@@ -1633,6 +1654,7 @@ const sidebars = {
   //           id: 'device/biolite_n2/release-notes/index',
   //         },
   //         items: [
+  //           'device/biolite_n2/release-notes/170',
   //           'device/biolite_n2/release-notes/162',
   //           'device/biolite_n2/release-notes/161',
   //           'device/biolite_n2/release-notes/160',

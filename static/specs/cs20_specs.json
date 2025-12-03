@@ -29,12 +29,12 @@
           "label_id": "specs.general.led_type",
           "value": {
             "ko": [
-              "POWER - 빨간색 단일 색상",
-              "STATUS - 다중 색상"
+              "POWER: 빨간색 단일 색상",
+              "STATUS: 다중 색상"
             ],
             "en": [
-              "POWER - RED single-color",
-              "STATUS - Multi-color"
+              "POWER: RED single-color",
+              "STATUS: Multi-color"
             ]
           }
         },
@@ -152,7 +152,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 Relays"
+            "en": "4 relays"
           }
         },
         "input": {
@@ -195,7 +195,7 @@
           "value": {
             "ko": [
               "CS-20: 미지원",
-              "CS-20P: 지원 (IEEE 802.3at compliant)"
+              "CS-20P: 지원 (IEEE 802.3at 호환)"
             ],
             "en": [
               "CS-20: Not supported",
@@ -226,9 +226,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc/최대 2.8 A", "전압/전류: 24 Vdc/최대 1.4 A" ],
-            "en": [ "Voltage / Current: 12 Vdc / Max. 2.8 A", "Voltage / Current: 24 Vdc / Max. 1.4 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 2.8 A",
+                "en": "Current: Max. 2.8 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.4 A",
+                "en": "Current: Max. 1.4 A"
+              }
+            }
           }
         },
         "power_output": {
@@ -262,9 +275,9 @@
                 ]
               }
             },
-            "poe": {
-              "label": "PoE+ (12V out)",
-              "label_id": "specs.power.poe12vout",
+            "poe_plus12vout": {
+              "label": "PoE+ (12V 출력)",
+              "label_id": "specs.power.poe_plus12vout",
               "value": {
                 "ko": [
                   "리더: 최대 0.6 A (0.3 A x 2개)",

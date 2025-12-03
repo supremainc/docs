@@ -2,9 +2,9 @@
 
 ### Power
 
-<Xclude product='bioentry_p2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
+<Xclude product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
 
-<Include product='bioentry_p2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
+<Include product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
 
 <div className='overflow-x col3--10-20-70'>
 
@@ -29,6 +29,8 @@
 
 </div>
 
+<PageBreak />
+
 ### RS-485
 
 <Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
@@ -46,7 +48,7 @@
 
 ### Input
 
-<Include product='biostation_3,biostation_2a'>
+<Include product='biostation_3,biostation_2a,xpass_q2'>
 
 <Image src='/img/device/cable-input-5pin.svg' className='none' alone />
 
@@ -80,6 +82,8 @@
 </div>
 
 </Include>
+
+<PageBreak />
 
 <Include product='biostation_3,biostation_2a'>
 
@@ -115,9 +119,9 @@
 
 </Include>
 
-<Include product='facestation_f2,facestation_2,bioentry_p2'>
+<Include product='facestation_f2,facestation_2,bioentry_p2,xpass_q2'>
 
-### Wiegand input and output
+### Wiegand Input and Output
 
 <Image src='/img/device/cable-wiegand-4pin.svg' className='none' alone />
 
@@ -148,6 +152,24 @@
 | 2   | ENET RXP | Green  |
 | 3   | ENET TXN | Red    |
 | 4   | ENET TXP | Black  |
+
+</div>
+
+</Include>
+
+<Include product='xpass_q2'>
+
+### Reader/Lock Power Output
+
+<Image src='/img/device/cable-dcout.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Name   | Color              |
+| --- | ------ | ------------------ |
+| 1   | DC OUT | Red (black stripe) |
+| 2   | DC GND | Black              |
+| 3   | DC GND | Gray               |
 
 </div>
 

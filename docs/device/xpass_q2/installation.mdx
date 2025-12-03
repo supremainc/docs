@@ -1,0 +1,275 @@
+---
+id: installation
+title: 설치하기
+description: 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+keywords: [브래킷, 전원, 네트워크, 입력, 릴레이, 독립형, Secure I/O, Wiegand]
+---
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+1. 제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-xpq2.svg' className='none' width='20%' alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-xpq2.png' className='none' width='60%' />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 270 mm |
+    | 120 mm | 250 mm |
+    | 150 mm | 170 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-xpq2.png' className='none' width='60%' />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 케이블 커버에 끼워져 있는 4개의 나사를 돌려 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device2-xpq2.svg' className='none' width='20%' alone />
+
+    :::info
+
+    IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다.
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device3-xpq2.svg' className='none' width='35%' alone />
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device4-xpq2.svg' className='none' width='15%' alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## 리더, 락 전원 연결
+
+### 리더 전원 연결
+
+<Image src='/img/device/installation-reader-power-connection-xpq2.png' className='none' width='65%' />
+
+### 락(출입문 잠금 장치) 전원 연결
+
+<Image src='/img/device/installation-lock-power-connection-xpq2.png' className='none' width='65%' />
+
+### 전원별 리더 및 락 전력 사양
+
+<div className='overflow-x'>
+
+| 전원 | 리더 최대 전류 | 락 최대 전류 |
+| :--: | :--: | :--: |
+| DC 12V | 500 mA | 1.2 A |
+| DC 24V | 250 mA | 600 mA |
+| PoE (12V 출력) | 500 mA | 지원하지 않음 |
+
+</div>
+
+### 케이블 규격별 최대 연장 길이
+
+전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 이 제품은 DC 12V, DC 24V, PoE 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>케이블 규격</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+<Th colspan={2}>PoE (12V 출력)</Th>
+
+</Row>
+<Row>
+
+<Th>리더 (500 mA)</Th>
+
+<Th>락 (1.2 A)</Th>
+
+<Th>리더 (250 mA)</Th>
+
+<Th>락 (600 mA)</Th>
+
+<Th>리더 (500 mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>190 m</Td>
+<Td>95 m</Td>
+<Td>770 m</Td>
+<Td>385 m</Td>
+<Td>190 m</Td>
+
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>120 m</Td>
+<Td>60 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>75 m</Td>
+<Td>35 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+:::info
+
+케이블 제조사 및 제품별 저항치 차이에 따라 실제 최대 연장 길이는 달라질 수 있습니다.
+
+:::
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+<PageBreak />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='초록색' />
+
+## 펌웨어 업그레이드
+
+장치에 USB 메모리를 연결하여 펌웨어를 업그레이드할 수 있습니다.
+
+1. USB 메모리에 업그레이드할 펌웨어 파일을 저장하세요.
+
+    :::info
+
+    USB 메모리에는 펌웨어 파일을 하나만 저장하여 업그레이드하는 것을 권장합니다.
+
+    :::
+
+1. 장치에 USB 메모리를 연결하세요.
+
+    :::info
+
+    USB 메모리를 읽는 동안 출입 인증 기능이 일시적으로 중단됩니다.
+
+    :::
+
+1. 인증 요청을 알리는 LED/버저가 동작하면 관리자 권한 인증 수단으로 인증하세요.
+
+    :::info
+
+    * BioStar X에서 장치에 관리자를 등록하세요. 장치에 관리자가 등록되어 있지 않을 경우 펌웨어 업그레이드를 진행할 수 없습니다. 관리자 등록 방법에 대한 자세한 내용은 [BioStar X 관리자 설명서](../../platform/biostar_x/set-permission)를 참고하세요.
+
+    * 인증 시도는 USB 메모리 삽입당 1회만 가능합니다.
+
+    * 인증 실패 시, 실패를 알리는 LED/버저가 동작한 후 USB 읽기 상태가 종료됩니다. USB 메모리를 분리한 후 장치에 다시 연결하세요.
+
+    :::
+
+1. 관리자 인증에 성공하면 장치는 펌웨어 업그레이드를 수행하며, 업그레이드 중임을 LED로 표시합니다.
+
+    :::info
+
+    펌웨어 파일이 없거나 손상된 경우 업그레이드는 진행되지 않으며, 실패 상태를 LED/버저로 표시합니다.
+
+    :::
+
+1. 펌웨어 업그레이드가 완료되면 장치가 자동으로 재시작됩니다.
+
+:::caution
+
+펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요. 고장의 원인이 됩니다.
+
+:::

@@ -12,7 +12,10 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.2 GHz Octa-core"
+          "value": {
+            "ko": "1.4 GHz 옥타코어",
+            "en": "1.4 GHz Octa-core"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -34,20 +37,20 @@
               "label_id": "specs.general.led_type.multiColor",
               "value": {
                 "ko": [
-                  "STATUS - 2개",
-                  "HOST RS-485 TX - 1개",
-                  "HOST RS-485 RX - 1개",
-                  "SUPERVISED INPUT - 8개",
-                  "RELAY - 4개",
-                  "AUX IN - 2개"
+                  "STATUS: 2개",
+                  "HOST RS-485 TX: 1개",
+                  "HOST RS-485 RX: 1개",
+                  "SUPERVISED INPUT: 8개",
+                  "RELAY: 4개",
+                  "AUX IN: 2개"
                 ],
                 "en": [
-                  "STATUS - 2ea",
-                  "HOST RS-485 TX - 1ea",
-                  "HOST RS-485 RX - 1ea",
-                  "SUPERVISED INPUT - 8ea",
-                  "RELAY - 4ea",
-                  "AUX IN - 2ea"
+                  "STATUS: 2ea",
+                  "HOST RS-485 TX: 1ea",
+                  "HOST RS-485 RX: 1ea",
+                  "SUPERVISED INPUT: 8ea",
+                  "RELAY: 4ea",
+                  "AUX IN: 2ea"
                 ]
               }
             }
@@ -179,7 +182,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 Relays"
+            "en": "4 relays"
           }
         },
         "input": {
@@ -230,8 +233,8 @@
             "corestation": {
               "label": "CoreStation",
               "value": {
-                "ko": "전압: 12 Vdc, 전류: 최대 3 A",
-                "en": "Voltage: 12 Vdc, Current: Max. 3 A"
+                "ko": "전압: 12 Vdc / 전류: 최대 3 A",
+                "en": "Voltage: 12 Vdc / Current: Max. 3 A"
               }
             },
             "powerSupply": {
@@ -244,15 +247,15 @@
         "power_output": {
           "label": "전원 출력",
           "label_id": "specs.power.power_output",
-          "value": {
-            "ko": [
-              "전압: 12 Vdc",
-              "전류: 최대 1.5 A"
-            ],
-            "en": [
-              "Voltage: 12 Vdc",
-              "Current: Max. 1.5 A"
-            ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.5 A",
+                "en": "Current: Max. 1.5 A"
+              }
+            }
           }
         },
         "switch_input_vih": {

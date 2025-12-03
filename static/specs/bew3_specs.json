@@ -53,7 +53,7 @@
               "annotation_value": "anno2"
             },
             "model2": {
-              "label": "BEW3-APWB",
+              "label": "BEW3-APB",
               "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
               "annotation_value": "anno2"
             }
@@ -62,7 +62,7 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire/EM/HID iCLASS: 50 mm, FeliCa/HID Prox: 30 mm",
+          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -256,7 +256,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "poe": {
@@ -269,7 +269,7 @@
               "value": false
             },
             "model2": {
-              "label": "BEW3-APWB",
+              "label": "BEW3-APB",
               "value": {
                 "ko": "지원 (IEEE 802.3af 호환)",
                 "en": "Supported (IEEE 802.3af compliant)"
@@ -309,9 +309,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc / 최대 1.0 A", "전압/전류: 24 Vdc / 최대 0.6 A" ],
-            "en": [ "Voltage/Current: 12 Vdc / Max. 1.0 A", "Voltage/Current: 24 Vdc / Max. 0.6 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.0 A",
+                "en": "Current: Max. 1.0 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.6 A",
+                "en": "Current: Max. 0.6 A"
+              }
+            }
           }
         },
         "switch_input_vih": {
@@ -341,7 +354,7 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
           }
         },
         "wiegand_voh": {
@@ -375,38 +388,6 @@
             "2 A @ 30 VDC Resistive load",
             "1 A @ 30 VDC Inductive load"
           ]
-        }
-      }
-    },
-    "size_weight": {
-      "label": "크기 및 무게",
-      "label_id": "specs.size_weight",
-      "type": "size_weight",
-      "items": {
-        "device": {
-          "label": "장치",
-          "label_id": "specs.size_weight.device",
-          "product_img": "/img/device/bew3-device-dimension.svg",
-          "size": {
-            "width": "50",
-            "height": "160",
-            "depth": "34.15"
-          },
-          "weight": [
-            "BEW3-DB: 283g",
-            "BEW3-APWB: 291g"
-          ]
-        },
-        "bracket": {
-          "label": "브라켓",
-          "label_id": "specs.size_weight.bracket",
-          "product_img": "/img/device/bew3-bracket-front-dimension.svg",
-          "size": {
-            "width": "39.4",
-            "height": "153.2"
-          },
-          "weight": "36g",
-          "weight_include": true
         }
       }
     }

@@ -87,15 +87,15 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
   * Covering or blocking the microphone may interfere with voice transmission.
 
-* **Infrared camera**: Capture the infrared face image.
+* **Infrared Camera**: Capture the infrared face image.
 
-* **Visual camera**: Capture an actual face image.
+* **Visual Camera**: Capture an actual face image.
 
 * **Display**: Provides a UI for operation.
 
 * **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
 
-* **LED indicator**: Indicates the operational status of the device with the color of the LED.
+* **LED Indicator**: Indicates the operational status of the device with the color of the LED.
 
   * Green: Authentication success.
 
@@ -105,13 +105,13 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
   * Blue/Green blinking:
 
-    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address
+    * When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address.
 
-    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected
+    * When in <Cmd sid='ui_205' product='dev' /> mode, the connection to the master device is disconnected.
 
   * Red/Purple blinking: Device is locked.
 
-  * Yellow blinking: Waiting for an input.
+  * Yellow blinking: Waiting for input.
 
 * **Speaker**: Delivers sound.
 
@@ -119,7 +119,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 * **Input (5-pin)**: Connect the input cable.
 
-* **USB expansion port (5-pin)**: Connect other accessory products.
+* **USB Expansion Port (5-pin)**: Connect other accessory products.
 
 * **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
 
@@ -129,14 +129,19 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 * **Relay (3-pin)**: Connect the Relay cable.
 
-* **Power supply (2-pin)**: Connects the power supply cable.
+* **Power Supply (2-pin)**: Connects the power supply cable.
 
-* **USB (Type-C) memory slot**: Connects the USB memory.
+* **USB (Type-C) Memory Slot**: Connects the USB memory.
 
 {/* 케이블 및 커넥터 */}
 import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
 
 <CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
 
 {/* 올바른 얼굴 등록 및 인증 방법 */}
 import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
@@ -164,8 +169,3 @@ You can issue a QR code to a user and use it as an authentication method. Scan t
 * The device license file is an encrypted file and cannot be modified arbitrarily.
 
 * Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
-
-{/* 마스터 관리자 설정하기 */}
-import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
-
-<Masteradminsettings />

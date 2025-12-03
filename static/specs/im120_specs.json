@@ -27,16 +27,28 @@
             "multiColor": {
               "label": "다중 색상",
               "label_id": "specs.general.led_type.multiColor",
-              "value": [
-                "POWER - 1개",
-                "STATUS - 1개",
-                "RS-485 TX - 1개",
-                "RS-485 RX - 1개",
-                "SUPERVISED INPUT - 12개",
-                "RELAY - 2개",
-                "AUX IN - 2개",
-                "TAMPER - 1개"
-              ]
+              "value": {
+                "ko": [
+                  "POWER: 1개",
+                  "STATUS: 1개",
+                  "RS-485 TX: 1개",
+                  "RS-485 RX: 1개",
+                  "SUPERVISED INPUT: 12개",
+                  "RELAY: 2개",
+                  "AUX IN: 2개",
+                  "TAMPER: 1개"
+                ],
+                "en": [
+                  "POWER: 1ea",
+                  "STATUS: 1ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "SUPERVISED INPUT: 12ea",
+                  "RELAY: 2ea",
+                  "AUX IN: 2ea",
+                  "TAMPER: 1ea"
+                ]
+              }
             }
           }
         },
@@ -130,7 +142,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "2개",
-            "en": "2 Relays"
+            "en": "2 relays"
           }
         },
         "auxInput": {
@@ -158,9 +170,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압/전류: 12 Vdc/최대 0.2 A", "전압/전류: 24 Vdc/최대 0.1 A" ],
-            "en": [ "Voltage / Current: 12 Vdc / Max. 0.2 A", "Voltage / Current: 24 Vdc / Max. 0.1 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.2 A",
+                "en": "Current: Max. 0.2 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.1 A",
+                "en": "Current: Max. 0.1 A"
+              }
+            }
           }
         },
         "switch_input_vih": {

@@ -27,13 +27,22 @@
             "multiColor": {
               "label": "다중 색상",
               "label_id": "specs.general.led_type.multiColor",
-              "value": [
-                "POWER - 1개",
-                "RS-485 TX - 1개",
-                "RS-485 RX - 1개",
-                "INPUT - 2개",
-                "RELAY - 1개"
-              ]
+              "value": {
+                "ko": [
+                  "POWER: 1개",
+                  "RS-485 TX: 1개",
+                  "RS-485 RX: 1개",
+                  "INPUT: 2개",
+                  "RELAY: 1개"
+                ],
+                "en": [
+                  "POWER: 1ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "INPUT: 2ea",
+                  "RELAY: 1ea"
+                ]
+              }
             }
           }
         },
@@ -103,7 +112,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relays"
+            "en": "1 relay"
           }
         }
       }
@@ -115,9 +124,15 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
-          "value": {
-            "ko": [ "전압: 12 Vdc", "전류: 최대 0.5 A" ],
-            "en": [ "Voltage: 12 Vdc", "Current: Max. 0.5 A" ]
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.5 A",
+                "en": "Current: Max. 0.5 A"
+              }
+            }
           }
         },
         "relay": {
