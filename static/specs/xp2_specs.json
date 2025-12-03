@@ -28,21 +28,7 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "type": "model",
-          "items": {
-            "model1": {
-              "label": "XP2-MDPB, XP2-GDPB, XP2-GKDPB",
-              "value": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm"
-            },
-            "model2": {
-              "label": "XP2-MAPB",
-              "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm"
-            },
-            "model3": {
-              "label": "XP2-MAPB-H",
-              "value": "EM/HID iCLASS: 50 mm, HID Prox: 30 mm"
-            }
-          },
+          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -221,7 +207,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "poe": {

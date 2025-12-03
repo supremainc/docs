@@ -27,14 +27,24 @@
             "multiColor": {
               "label": "다중 색상",
               "label_id": "specs.general.led_type.multiColor",
-              "value": [
-                "POWER - 1개",
-                "STATUS - 1개",
-                "RELAY - 12개",
-                "RS-485 TX - 1개",
-                "RS-485 RX - 1개",
-                "AUX IN: 2개"
-              ]
+              "value": {
+                "ko": [
+                  "POWER: 1개",
+                  "STATUS: 1개",
+                  "RELAY: 12개",
+                  "RS-485 TX: 1개",
+                  "RS-485 RX: 1개",
+                  "AUX IN: 2개"
+                ],
+                "en": [
+                  "POWER: 1ea",
+                  "STATUS: 1ea",
+                  "RELAY: 12ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "AUX IN: 2ea"
+                ]
+              }
             }
           }
         },
