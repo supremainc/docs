@@ -94,6 +94,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'Device Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-device',
+              },
               items: [
                 'platform/biostar_air/register-device',
                 'platform/biostar_air/managing-registered-devices',
