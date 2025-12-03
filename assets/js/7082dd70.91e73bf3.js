@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-how-to-upgrade-firmware-mdx-708.json
-var site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject = JSON.parse('{"id":"platform/biostar_air/how-to-upgrade-firmware","title":"펌웨어 업그레이드","description":"웹 포털과 모바일 앱을 통해 장치 펌웨어를 일괄 또는 개별적으로 업그레이드하는 방법을 안내합니다. BioStar Air의 버전 확인 및 문제 해결 팁도 포함되어 있습니다.","source":"@site/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/how-to-upgrade-firmware","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-upgrade-firmware","title":"펌웨어 업그레이드","description":"웹 포털과 모바일 앱을 통해 장치 펌웨어를 일괄 또는 개별적으로 업그레이드하는 방법을 안내합니다. BioStar Air의 버전 확인 및 문제 해결 팁도 포함되어 있습니다.","keywords":["firmware","upgrade","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"SIO2 보안 모듈 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"},"next":{"title":"바이오메트릭 리더기와 크리덴셜","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"}}')
+var site_docs_platform_biostar_air_how_to_upgrade_firmware_mdx_708_namespaceObject = JSON.parse('{"id":"platform/biostar_air/how-to-upgrade-firmware","title":"펌웨어 업그레이드","description":"웹 포털과 모바일 앱을 통해 장치 펌웨어를 일괄 또는 개별적으로 업그레이드하는 방법을 안내합니다. BioStar Air의 버전 확인 및 문제 해결 팁도 포함되어 있습니다.","source":"@site/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/how-to-upgrade-firmware","permalink":"/docs/platform/biostar_air/how-to-upgrade-firmware","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/how-to-upgrade-firmware.mdx","tags":[],"version":"current","frontMatter":{"id":"how-to-upgrade-firmware","title":"펌웨어 업그레이드","description":"웹 포털과 모바일 앱을 통해 장치 펌웨어를 일괄 또는 개별적으로 업그레이드하는 방법을 안내합니다. BioStar Air의 버전 확인 및 문제 해결 팁도 포함되어 있습니다.","keywords":["firmware","upgrade","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"SIO2 보안 모듈 구성하기","permalink":"/docs/platform/biostar_air/configuring-the-sio2-secure-module"},"next":{"title":"바이오인식 장치와 크리덴셜","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -249,7 +249,31 @@ function _createMdxContent(props) {
             product: "air"
           }), " 버튼을 클릭하세요."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["메시지 창이 나타나면 내용을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "btn_ok",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "펌웨어 업그레이드는 5~10분 정도 소요될 수 있으며, 장치를 사용할 수 없습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치의 전원을 끄지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "펌웨어 업그레이드를 완료한 후 장치는 자동 재시작합니다."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "upgradingFirmwareViaMobileApp",
       children: "모바일 앱"
@@ -280,13 +304,38 @@ function _createMdxContent(props) {
             product: "air"
           }), " 버튼을 탭하세요."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["최신 펌웨어 버전을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "btn_ok",
+            product: "air"
+          }), " 버튼을 탭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["메시지 창이 나타나면 내용을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "btn_ok",
+            product: "air"
+          }), " 버튼을 탭하세요."]
+        }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "2.9"
-      }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "2.10"
-      }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "펌웨어 업그레이드는 5~10분 정도 소요될 수 있으며, 장치를 사용할 수 없습니다."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치의 전원을 끄지 마세요."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "펌웨어 업그레이드를 완료한 후 장치는 자동 재시작합니다."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "additionalNotes",
       children: "참고 사항"

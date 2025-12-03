@@ -571,18 +571,18 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "device_editable_fields_use_dhcp",
-          product: "air"
-        }), ": 장치가 IP 주소를 자동으로 가져오도록 설정할 수 있습니다."]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["네트워크 설정을 수동으로 구성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "device_editable_fields_use_dhcp",
-        product: "air"
-      }), " 옵션을 비활성화하고 다음 필드를 입력하세요."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_editable_fields_use_dhcp",
+            product: "air"
+          }), ": 장치가 IP 주소를 자동으로 가져오도록 설정할 수 있습니다."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["네트워크 설정을 수동으로 구성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_editable_fields_use_dhcp",
+            product: "air"
+          }), " 옵션을 비활성화하고 다음 필드를 입력하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(Cmd, {
           sid: "device_editable_fields_ip_address",
           product: "air"
@@ -839,45 +839,54 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["토글 스위치를 클릭해 ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "new_layout_nav_title_tna",
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "new_device_edit_tna_toogle",
             product: "air"
-          }), " 기능을 켜거나 끌 수 있습니다."]
+          }), ": 토글 스위치를 클릭해 근태 관리 기능을 켜거나 끌 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device_edit_tna_mode_option2",
+            sid: "device_edit_tna_mode_label",
             product: "air"
-          }), ": 화면에 근태 키 표시해 인증 시, 사용자가 근태 이벤트를 선택할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device_edit_tna_mode_option3",
-            product: "air"
-          }), ": 설정한 스케줄에 따라 근태 이벤트가 자동으로 변경됩니다. 근태 이벤트에서 적용할 스케줄을 선택할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device_edit_tna_mode_option4",
-            product: "air"
-          }), ": 사용자가 마지막으로 사용한 근태 이벤트를 계속 사용할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device_edit_tna_mode_option5",
-            product: "air"
-          }), ": 선택한 근태 이벤트만 사용할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "device_edit_tna_mode_option6",
-            product: "air"
-          }), ": 모바일 크리덴셜을 제시할 때 슈프리마 패스 앱에서 근태 이벤트를 선택할 수 있습니다."]
+          }), ": 원하는 근태 모드를 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_edit_tna_mode_option2",
+                product: "air"
+              }), ": 화면에 근태 키 표시해 인증 시, 사용자가 근태 이벤트를 선택할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_edit_tna_mode_option3",
+                product: "air"
+              }), ": 설정한 스케줄에 따라 근태 이벤트가 자동으로 변경됩니다. 근태 이벤트에서 적용할 스케줄을 선택할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_edit_tna_mode_option4",
+                product: "air"
+              }), ": 사용자가 마지막으로 사용한 근태 이벤트를 계속 사용할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_edit_tna_mode_option5",
+                product: "air"
+              }), ": 선택한 근태 이벤트만 사용할 수 있습니다."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_edit_tna_mode_option6",
+                product: "air"
+              }), ": 모바일 크리덴셜을 제시할 때 슈프리마 패스 앱에서 근태 이벤트를 선택할 수 있습니다."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -919,13 +928,13 @@ function _createMdxContent(props) {
             sid: "device_bs3_sound_label4",
             product: "air"
           }), ": 화면의 조명을 항상 켜두거나 비활성화 후 어두워지도록 설정할 수 있습니다."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "device_bs3_sound_backlight",
-              product: "air"
-            }), ": 화면 조명이 자동으로 꺼지는 시간을 설정할 수 있습니다."]
-          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_bs3_sound_backlight",
+            product: "air"
+          }), ": 화면 조명이 자동으로 꺼지는 시간을 설정할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1100,6 +1109,13 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_intercom_txt_use_intercom",
+            product: "air"
+          }), ": IP 인터폰 기능을 활성화하거나 비활성화할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device_intercom_txt_sip_server_transport",
