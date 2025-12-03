@@ -92,42 +92,31 @@ const assets = {
 
 
 
-const toc = [{
-  "value": "기능 개요",
-  "id": "feature-overview",
-  "level": 2
-}, ..._biostarair_customer_notice/* .toc */.RM, {
-  "value": "펌웨어 업그레이드",
-  "id": "navigating-to-the-feature",
+const toc = [..._biostarair_customer_notice/* .toc */.RM, {
+  "value": "BioStar Air 포털",
+  "id": "biostar-air-포털",
   "level": 2
 }, {
-  "value": "단계별 사용 안내",
-  "id": "step-by-step-instructions",
-  "level": 2
-}, {
-  "value": "웹 포털에서 다수의 장치 펌웨어 업그레이드",
-  "id": "upgrading-firmware-in-bulk-via-web-portal",
+  "value": "개별 장치의 펌웨어 업그레이드",
+  "id": "upgradingFirmwareAdeviceViaWebPortal",
   "level": 3
 }, {
-  "value": "웹 포털에서 개별 장치의 펌웨어 업그레이드",
-  "id": "upgrading-firmware-for-an-individual-device-via-web-portal",
+  "value": "일괄 펌웨어 업그레이드",
+  "id": "upgradingFirmwareInBulkViaWebPortal",
   "level": 3
 }, {
-  "value": "모바일 앱에서 펌웨어 업그레이드",
-  "id": "upgrading-firmware-via-biostar-air-mobile-app",
-  "level": 3
-}, {
-  "value": "공통 이슈 및 고려사항",
-  "id": "common-issues-considerations",
+  "value": "모바일 앱",
+  "id": "upgradingFirmwareViaMobileApp",
   "level": 2
 }, {
-  "value": "장치 관리 더 알아보기",
-  "id": "learn-more-about-device-management",
+  "value": "참고 사항",
+  "id": "additionalNotes",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    admonition: "admonition",
     h2: "h2",
     h3: "h3",
     li: "li",
@@ -137,174 +126,179 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Image, YouTube} = _components;
+  }, {Cmd, IcAirFw, Image, StatusOK} = _components;
+  if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!IcAirFw) _missingMdxReference("IcAirFw", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!YouTube) _missingMdxReference("YouTube", true);
+  if (!StatusOK) _missingMdxReference("StatusOK", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "feature-overview",
-      children: "기능 개요"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar Air의 펌웨어를 업그레이드하여 장치의 성능을 향상시키고 보안을 강화하며 새로운 기능을 활용할 수 있습니다. 이 과정은 간단하며 BioStar Air 웹 포털이나 BioStar Air 모바일 앱을 통해 실행할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "navigating-to-the-feature",
-      children: "펌웨어 업그레이드"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "웹 포털을 통해 펌웨어를 업그레이드할 수 있습니다."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      id: "biostar-air-포털",
+      children: "BioStar Air 포털"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.a, {
+        href: "https://admin.biostarair.com",
+        children: "BioStar Air"
+      }), " 포털에 로그인한 후 다음 단계를 따라 펌웨어를 업그레이드하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "upgradingFirmwareAdeviceViaWebPortal",
+      children: "개별 장치의 펌웨어 업그레이드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
-            href: "https://admin.biostarair.com",
-            children: "admin.biostarair.com"
-          }), "로 이동하여 로그인하세요."]
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_submenu",
+            product: "air"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 목록에서 펌웨어 업그레이드할 장치를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Management"
-          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
-          }), "로 이동하세요."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_edit_title",
+            product: "air"
+          }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_edit_device_info",
+            product: "air"
+          }), " 섹션으로 이동하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "firmware_update_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-device-mng-fw-upgrade.png",
+          caption: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "2.9"
+          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "2.10"
+          }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "upgradingFirmwareInBulkViaWebPortal",
+      children: "일괄 펌웨어 업그레이드"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_submenu",
+            product: "air"
+          }), "를 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치 목록의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_fw_column",
+            product: "air"
+          }), " 열에서 각 장치의 현재 버전을 확인하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치를 펌웨어 버전별로 정렬하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_fw_column",
+            product: "air"
+          }), " 열의 오른쪽에 있는 화살표 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-device-mng-list-fw-column-align.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "업그레이드할 각 장치 왼쪽의 체크박스를 클릭하세요."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "note",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["2025년 8월 기준 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "2.9"
+            }), " 버전 이하가 설치된 장치가 구형 버전입니다."]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirFw, {
+            width: "24px",
+            height: "24px"
+          }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-device-mng-list-fw-update.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "update_fw_text",
+            product: "air"
+          }), " 창이 나타나면 최신 펌웨어 버전을 선택하고 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "btn_ok",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "step-by-step-instructions",
-      children: "단계별 사용 안내"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-in-bulk-via-web-portal",
-      children: "웹 포털에서 다수의 장치 펌웨어 업그레이드"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
-            href: "https://admin.biostarair.com",
-            children: "admin.biostarair.com"
-          }), "로 로그인하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Management"
-          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
-          }), "로 이동하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["각 장치의 현재 버전을 확인하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Firmware"
-          }), " 열(왼쪽에서 두 번째)을 찾으세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "열 제목 옆의 화살표 버튼을 사용하여 장치를 펌웨어 버전별로 정렬하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["구형 펌웨어 버전(2025년 8월 기준 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.9"
-          }), " 버전 이하)을 실행 중인 장치를 선택하려면 왼쪽의 확인란을 선택하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "화면 상단의 도구 모음에서 톱니바퀴 아이콘을 클릭하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["아이콘 위에 마우스를 올려 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Update Firmware"
-          }), "라고 표시되는지 확인하고 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["리더기에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.9"
-          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.10"
-          }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw-list.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-for-an-individual-device-via-web-portal",
-      children: "웹 포털에서 개별 장치의 펌웨어 업그레이드"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Registered Devices"
-          }), " 목록에서 장치 이름을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Edit Device"
-          }), " 화면에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Device Info"
-          }), " 섹션으로 스크롤하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Firmware Update"
-          }), " 버튼을 클릭하세요."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["리더기에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.9"
-          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.10"
-          }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/air-device-management-upgrade-fw-edit-device.png",
-      alone: true
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "upgrading-firmware-via-biostar-air-mobile-app",
-      children: "모바일 앱에서 펌웨어 업그레이드"
+      id: "upgradingFirmwareViaMobileApp",
+      children: "모바일 앱"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air 앱을 사용하여 iOS 또는 안드로이드 환경에서 펌웨어를 업그레이드하는 과정은 웹 포털과 유사합니다."
+      children: "iOS 또는 안드로이드 환경의 모바일 기기에서 BioStar Air 앱을 사용하여 펌웨어를 업그레이드하는 과정을 안내합니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-mobile-device-fw-update.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 목록으로 이동하여 장치의 펌웨어 버전을 확인하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "devices_card",
+            product: "air"
+          }), " 카드를 탭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "구형 버전을 실행 중인 장치를 선택하고 펌웨어 업데이트 옵션을 선택하세요."
+          children: "장치 목록에서 펌웨어 업그레이드할 장치를 탭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["리더기에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.9"
-          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "2.10"
-          }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "firmware_update_btn",
+            product: "air"
+          }), " 버튼을 탭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["장치에 따라 최신 펌웨어 버전 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "2.9"
+      }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "2.10"
+      }), " 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "common-issues-considerations",
-      children: "공통 이슈 및 고려사항"
+      id: "additionalNotes",
+      children: "참고 사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["펌웨어 업데이트하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "장치는 온라인 상태"
-          }), "여야 합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Product"
-          }), " 열에서 장치 상태를 확인하세요. 장치 이미지 옆에 녹색 점이 표시되면 온라인 상태입니다."]
+          }), "여야 합니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "device_product_column",
+            product: "air"
+          }), " 열에서 장치 상태를 확인하세요. 장치 이미지 옆에 녹색 점(", (0,jsx_runtime.jsx)(StatusOK, {}), ")이 표시되면 온라인 상태입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -321,13 +315,14 @@ function _createMdxContent(props) {
           }), "에 실행하기를 권장합니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "learn-more-about-device-management",
-      children: "장치 관리 더 알아보기"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "다음 제공하는 영상을 통해 BioStar Air의 장치 관리 기능을 더 자세히 알아보세요."
-    }), "\n", (0,jsx_runtime.jsx)(YouTube, {
-      videoId: "lpMPkMyjr-c"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["장치 관리에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "managing-registered-devices",
+          children: "다음 문서"
+        }), "를 참고하세요."]
+      })
     })]
   });
 }

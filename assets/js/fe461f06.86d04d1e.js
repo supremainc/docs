@@ -134,8 +134,9 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, StatusOK, Step, Steps} = _components;
+  }, {Cmd, Image, StatusOK, Step, Steps} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Image) _missingMdxReference("Image", true);
   if (!StatusOK) _missingMdxReference("StatusOK", true);
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
@@ -143,7 +144,7 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "SIO2 보안 모듈"
-      }), "은 슈프리마 또는 Airfob 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "은 슈프리마 또는 에어팝 리더기와 릴레이 사이의 중개 역할을 하여 출입 통제 시스템의 보안을 강화합니다. ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "RS485 케이블"
       }), "을 통해 리더기와 통신하며, 암호화된 통신을 통해 보안 위반을 방지합니다."]
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -156,6 +157,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "how-to-activate-sio2-in-the-biostar-air-portal",
       children: "BioStar Air 포털에서 SIO2 활성화"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["SIO2 보안 모듈을 정상 통합시키고 출입 통제 시스템의 보안을 강화하려면 다음 단계를 따라 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "add_doors.sio2",
+        product: "air"
+      }), " 옵션을 활성화하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
@@ -252,41 +258,50 @@ function _createMdxContent(props) {
               }), " 옵션을 활성화하세요."]
             }), "\n"]
           }), "\n"]
+        }), (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-door-mng-edit-door-sio2-enable.png"
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "configure-relay-and-sensors",
           children: "릴레이 및 센서 구성"
+        }), (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-door-mng-edit-door-sio2-settings.png",
+          caption: true
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Door Relay"
-              }), "의 경우 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "add_doors.door_relay",
+                product: "air"
+              }), "는 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Relay 0"
               }), "을 선택하세요."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "note",
               children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "SIO2 모듈에는 하나의 Door Relay 포트만 있습니다."
+                children: "SIO2 모듈에는 하나의 출입문 릴레이 포트만 있습니다."
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Door Sensor"
-              }), "의 경우 Door Sensor가 연결된 SIO2의 입력 포트 번호를 선택하세요."]
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_editable_fields_door_sensor",
+                product: "air"
+              }), "는 연결된 SIO2의 입력 포트 번호를 선택하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Exit Button"
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "device_editable_fields_exit_btn",
+                product: "air"
               }), "이 연결되어 있다면 SIO2의 해당 입력 포트를 선택하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["다른 유형의 출구 장치를 사용한다면 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Exit Devices"
+              children: ["다른 유형의 출구 장치를 사용한다면 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "door_product_column3",
+                product: "air"
               }), "를 선택하세요."]
             }), "\n"]
           }), "\n"]
@@ -298,8 +313,9 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["설정을 적용하려면 ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Save"
+              children: ["설정을 적용하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "save_btn",
+                product: "air"
               }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -309,8 +325,6 @@ function _createMdxContent(props) {
           }), "\n"]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 단계를 따르면 SIO2 보안 모듈을 정상 통합시키고 출입 통제 시스템의 보안을 강화할 수 있습니다."
     })]
   });
 }
