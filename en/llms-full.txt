@@ -41544,7 +41544,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [Getting Started](/docs/en/platform/biostar_air/getting-started)
 * [BioStar Air Login](/docs/en/platform/biostar_air/biostar-air-login)
 * [User Management](/docs/en/platform/biostar_air/managing-users)
-* [Device Management](/docs/en/platform/biostar_air/register-device)
+* [Device Management](/docs/en/platform/biostar_air/manage-device)
 * [Door Management](/docs/en/platform/biostar_air/managing-registered-doors)
 * [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
@@ -43809,6 +43809,55 @@ Q.Why Does My Phone Randomly Ask Me to Agree to Location Services?
 
 ---
 
+### 장치 관리
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air의 장치 관리는 등록부터 운영까지 모든 단계를 포괄합니다. 모바일 앱에서 장치를 등록하고, 웹 포털에서 네트워크, 인증, 펌웨어 등 세부 설정을 구성하며, 장치를 그룹으로 관리하여 대규모 배포를 효율화할 수 있습니다.
+
+생체 인식 기능, 근태 관리, 보안 모듈 구성 등 고급 기능으로 조직의 요구에 맞게 시스템을 커스터마이징할 수 있습니다.
+
+***
+
+#### [📄️<!-- --> <!-- -->장치 등록하기](/docs/en/platform/biostar_air/register-device)
+
+[BioStar Air 모바일 앱을 통해 장치 등록 방법을 안내합니다.](/docs/en/platform/biostar_air/register-device)
+
+#### [📄️<!-- --> <!-- -->Managing Registered Devices](/docs/en/platform/biostar_air/managing-registered-devices)
+
+[Learn how to manage, update, and configure compatible Suprema readers in BioStar Air.](/docs/en/platform/biostar_air/managing-registered-devices)
+
+#### [📄️<!-- --> <!-- -->장치 그룹 관리하기](/docs/en/platform/biostar_air/manage-device-group)
+
+[장치를 그룹으로 묶어 효율적으로 관리하는 방법을 안내합니다.](/docs/en/platform/biostar_air/manage-device-group)
+
+#### [📄️<!-- --> <!-- -->Configuring Time & Attendance (T\&A)](/docs/en/platform/biostar_air/configuring-ta)
+
+[Learn how to configure Time & Attendance settings, enable mobile T\&A tracking, assign T\&A to devices, and export attendance logs in BioStar Air.](/docs/en/platform/biostar_air/configuring-ta)
+
+#### [📄️<!-- --> <!-- -->Configuring the Airfob Patch and Tag](/docs/en/platform/biostar_air/configuring-the-airfob-patch-and-tag)
+
+[Learn how to configure Airfob Patch and Tag devices, set up BLE mode, and customize card ID output methods for upgrading existing access control systems to BioStar Air.](/docs/en/platform/biostar_air/configuring-the-airfob-patch-and-tag)
+
+#### [📄️<!-- --> <!-- -->Configuring the SIO2 Secure Module](/docs/en/platform/biostar_air/configuring-the-sio2-secure-module)
+
+[Learn how to configure the SIO2 Secure Module for enhanced security in your access control system.](/docs/en/platform/biostar_air/configuring-the-sio2-secure-module)
+
+#### [📄️<!-- --> <!-- -->How to Upgrade Firmware](/docs/en/platform/biostar_air/how-to-upgrade-firmware)
+
+[Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.](/docs/en/platform/biostar_air/how-to-upgrade-firmware)
+
+#### [📄️<!-- --> <!-- -->Biometric Readers and Credentials](/docs/en/platform/biostar_air/biometric-readers-and-credentials)
+
+[Learn how to register and configure biometric readers, enroll facial recognition credentials, and set up single or two-factor authentication for BioStation 3 and BioEntry W3 devices in BioStar Air.](/docs/en/platform/biostar_air/biometric-readers-and-credentials)
+
+
+---
+
 ### 장치 그룹 관리하기
 
 **Not translated**
@@ -46061,7 +46110,9 @@ Learn how to manage users in BioStar Air Portal, perform bulk operations, add an
 * [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types)
 * [LinkPass Credentials](/docs/en/platform/biostar_air/linkpass-credentials)
 
-#### Device Management→8 items
+#### [Device Management→8 items](/docs/en/platform/biostar_air/manage-device)
+
+BioStar Air에서 장치 생명주기를 관리하는 모든 방법을 안내합니다. 장치 등록부터 세부 설정 구성, 그룹 관리, 펌웨어 업그레이드, 그리고 생체 인식 및 보안 모듈 구성까지 장치를 효율적으로 운영하는 전체 과정을 다룹니다.
 
 * [장치 등록하기](/docs/en/platform/biostar_air/register-device)
 * [Managing Registered Devices](/docs/en/platform/biostar_air/managing-registered-devices)
