@@ -6348,7 +6348,7 @@ Wiegand 출력 풀업 저항
 
 #### 크기 및 무게[​](#크기-및-무게 "크기 및 무게에 대한 직접 링크")
 
-![](/docs/img/device/bew3-dimension.png)
+![](/docs/img/device/bew3-dimension.svg)
 
 ***
 
@@ -20411,7 +20411,7 @@ Door Module은 암호화된 통신을 통해 최대 2개의 출입문을 통제�
 
 #### 각 부분의 명칭 및 기능[​](#각-부분의-명칭-및-기능 "각 부분의 명칭 및 기능에 대한 직접 링크")
 
-![](/docs/img/device/name-function-each-part-dm20.png)
+![](/docs/img/device/name-function-each-part-dm20.svg)
 
 알아두기
 
@@ -20661,13 +20661,13 @@ LED
 
 다중 색상
 
-* POWER - 1개
+* POWER: 1개
 * RELAY: 4개
-* INPUT - 4개
-* SUPERVISED INPUT - 4개
-* OUTPUT - 6개
-* RS-485 - 2개
-* RUN - 1개
+* INPUT: 4개
+* SUPERVISED INPUT: 4개
+* OUTPUT: 6개
+* RS-485: 2개
+* RUN: 1개
 
 동작 온도
 
@@ -20705,13 +20705,13 @@ Input
 
 4채널
 
-Supervised 입력
-
-4채널
-
 Output
 
 6채널
+
+Supervised 입력
+
+4채널
 
 릴레이
 
@@ -27490,6 +27490,14 @@ Wiegand 입력 또는 출력 장치로 사용
 
   MINEX 인증 및 호환
 
+* 센서 인증
+
+  <!-- -->
+
+  :
+
+  FBI PIV 및 FBI Mobile ID FAP20
+
 * 위조 지문 검출
 
   <!-- -->
@@ -27500,17 +27508,13 @@ Wiegand 입력 또는 출력 장치로 사용
 
 RF 카드
 
-FSF2-DB
+FSF2-DB, FSF2-ODB
 
 125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa
 
 FSF2-AB
 
 125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa, iCLASS SE/SR/Seos
-
-FSF2-ODB
-
-125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa
 
 RF 인식 거리[](#anno3)
 
@@ -29999,14 +30003,14 @@ LED
 
 다중 색상
 
-* POWER - 1개
-* STATUS - 1개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
-* SUPERVISED INPUT - 12개
-* RELAY - 2개
+* POWER: 1개
+* STATUS: 1개
+* RS-485 TX: 1개
+* RS-485 RX: 1개
+* SUPERVISED INPUT: 12개
+* RELAY: 2개
 * AUX IN: 2개
-* TAMPER - 1개
+* TAMPER: 1개
 
 동작 온도
 
@@ -30530,7 +30534,7 @@ Output Module은 12개의 릴레이 출력을 사용할 수 있는 다중 출력
 
 #### 각 부분의 명칭 및 기능[​](#각-부분의-명칭-및-기능 "각 부분의 명칭 및 기능에 대한 직접 링크")
 
-![](/docs/img/device/name-function-each-part-om120.png)
+![](/docs/img/device/name-function-each-part-om120.svg)
 
 알아두기
 
@@ -30783,11 +30787,11 @@ LED
 
 다중 색상
 
-* POWER - 1개
-* STATUS - 1개
-* RELAY - 12개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
+* POWER: 1개
+* STATUS: 1개
+* RELAY: 12개
+* RS-485 TX: 1개
+* RS-485 RX: 1개
 * AUX IN: 2개
 
 동작 온도
@@ -31512,11 +31516,11 @@ LED
 
 다중 색상
 
-* POWER - 1개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
-* INPUT - 2개
-* RELAY - 1개
+* POWER: 1개
+* RS-485 TX: 1개
+* RS-485 RX: 1개
+* INPUT: 2개
+* RELAY: 1개
 
 동작 온도
 
@@ -32817,17 +32821,7 @@ XP2-MAPB-H
 
 RF 인식 거리[](#anno2)
 
-XP2-MDPB, XP2-GDPB, XP2-GKDPB
-
-EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm
-
-XP2-MAPB
-
 EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm
-
-XP2-MAPB-H
-
-EM/HID iCLASS: 50 mm, HID Prox: 30 mm
 
 모바일
 
@@ -37148,7 +37142,7 @@ Input
 
 #### 크기 및 무게[​](#크기-및-무게 "크기 및 무게에 대한 직접 링크")
 
-![](/docs/img/device/xps2-dimension.png)
+![](/docs/img/device/xps2-dimension.svg)
 
 ***
 
@@ -38810,7 +38804,11 @@ Wiegand 입력 또는 출력 장치로 사용
 
 RF 카드
 
-XS2-DPB, XS2-QDPB, XS2-ODPB
+XS2-DPB, XS2-QDPB,
+
+<br />
+
+XS2-ODPB
 
 125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno1), FeliCa
 

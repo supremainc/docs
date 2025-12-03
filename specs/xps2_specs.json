@@ -161,7 +161,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개 (전압: 최대 24 Vdc / 전류: 0.5 A, 최대 1.0 A)",
-            "en": "1 Relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)"
+            "en": "1 relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)"
           }
         },
         "tamper": {

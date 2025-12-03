@@ -1029,7 +1029,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 Tamper
 
@@ -3956,7 +3956,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 PoE
 
@@ -6273,7 +6273,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 PoE
 
@@ -6347,7 +6347,7 @@ Relay
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-![](/docs/en/img/en/device/bew3-dimension.png)
+![](/docs/en/img/en/device/bew3-dimension.svg)
 
 ***
 
@@ -7996,7 +7996,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 Tamper
 
@@ -10981,7 +10981,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 USB
 
@@ -13554,7 +13554,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 PoE+[](#anno7)
 
@@ -15620,7 +15620,7 @@ Info
 
 ##### Overall connection diagram[​](#overall-connection-diagram "Direct link to Overall connection diagram")
 
-![](/docs/en/img/device/system-cs20.svg)
+![](/docs/en/img/en/device/system-cs20.svg)
 
 
 ---
@@ -17352,7 +17352,7 @@ Info
 
   * Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 100,000
 
-  * Maximum fingerprint credential count (1:1): 500,000
+  * Max. Fingerprint Credentials (1:1): 500,000
 
 * For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_corestation\&s%5B%5D=corestation/).
 
@@ -19606,7 +19606,7 @@ Info
 
 ##### Overall connection diagram[​](#overall-connection-diagram "Direct link to Overall connection diagram")
 
-![](/docs/en/img/device/system-di24.svg)
+![](/docs/en/img/en/device/system-di24.svg)
 
 
 ---
@@ -20406,7 +20406,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/device/name-function-each-part-dm20.png)
+![](/docs/en/img/en/device/name-function-each-part-dm20.svg)
 
 Info
 
@@ -20656,13 +20656,13 @@ LED
 
 Multi-color
 
-* POWER - 1개
-* RELAY: 4개
-* INPUT - 4개
-* SUPERVISED INPUT - 4개
-* OUTPUT - 6개
-* RS-485 - 2개
-* RUN - 1개
+* POWER: 1ea
+* RELAY: 4ea
+* INPUT: 4ea
+* SUPERVISED INPUT: 4ea
+* OUTPUT: 6ea
+* RS-485: 2ea
+* RUN: 1ea
 
 Operating Temperature
 
@@ -20700,13 +20700,13 @@ Input
 
 4 ch
 
-Supervised Input
-
-4 ch
-
 Output
 
 6 ch
+
+Supervised Input
+
+4 ch
 
 Relay
 
@@ -21347,7 +21347,7 @@ Info
 
 ##### Inside[​](#inside "Direct link to Inside")
 
-![](/docs/en/img/device/name-function-each-part-inside-encr.png)
+![](/docs/en/img/en/device/name-function-each-part-inside-encr.png)
 
 Info
 
@@ -24179,7 +24179,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 Intercom
 
@@ -24247,7 +24247,7 @@ Info
 
 When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
 
-* Maximum fingerprint credential count (1<!-- -->:N<!-- -->): 10,000
+* Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 10,000
 
 * Max. Fingerprint Credentials (1:1): 100,000
 
@@ -27461,6 +27461,14 @@ Biometric
 
   MINEX certified and compliant
 
+* Sensor Certificates
+
+  <!-- -->
+
+  :
+
+  FBI PIV and FBI Mobile ID FAP20
+
 * Live Fingerprint Detection
 
   <!-- -->
@@ -27471,17 +27479,13 @@ Biometric
 
 RF Card
 
-FSF2-DB
+FSF2-DB, FSF2-ODB
 
 125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa
 
 FSF2-AB
 
 125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa, iCLASS SE/SR/Seos
-
-FSF2-ODB
-
-125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno2), FeliCa
 
 RF Read Range[](#anno3)
 
@@ -27509,7 +27513,7 @@ Supported
 
 Display
 
-7" color IPS LCD
+7" IPS color LCD
 
 Display Resolution
 
@@ -27624,7 +27628,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 USB
 
@@ -29972,14 +29976,14 @@ LED
 
 Multi-color
 
-* POWER - 1개
-* STATUS - 1개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
-* SUPERVISED INPUT - 12개
-* RELAY - 2개
-* AUX IN: 2개
-* TAMPER - 1개
+* POWER: 1ea
+* STATUS: 1ea
+* RS-485 TX: 1ea
+* RS-485 RX: 1ea
+* SUPERVISED INPUT: 12ea
+* RELAY: 2ea
+* AUX IN: 2ea
+* TAMPER: 1ea
 
 Operating Temperature
 
@@ -30501,7 +30505,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/device/name-function-each-part-om120.png)
+![](/docs/en/img/en/device/name-function-each-part-om120.svg)
 
 Info
 
@@ -30754,12 +30758,12 @@ LED
 
 Multi-color
 
-* POWER - 1개
-* STATUS - 1개
-* RELAY - 12개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
-* AUX IN: 2개
+* POWER: 1ea
+* STATUS: 1ea
+* RELAY: 12ea
+* RS-485 TX: 1ea
+* RS-485 RX: 1ea
+* AUX IN: 2ea
 
 Operating Temperature
 
@@ -31289,7 +31293,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/device/name-function-each-part-sio2.png)
+![](/docs/en/img/en/device/name-function-each-part-sio2.png)
 
 Info
 
@@ -31481,11 +31485,11 @@ LED
 
 Multi-color
 
-* POWER - 1개
-* RS-485 TX - 1개
-* RS-485 RX - 1개
-* INPUT - 2개
-* RELAY - 1개
+* POWER: 1ea
+* RS-485 TX: 1ea
+* RS-485 RX: 1ea
+* INPUT: 2ea
+* RELAY: 1ea
 
 Operating Temperature
 
@@ -32780,17 +32784,7 @@ XP2-MAPB-H
 
 RF Read Range[](#anno2)
 
-XP2-MDPB, XP2-GDPB, XP2-GKDPB
-
-EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm
-
-XP2-MAPB
-
 EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm
-
-XP2-MAPB-H
-
-EM/HID iCLASS: 50 mm, HID Prox: 30 mm
 
 Mobile
 
@@ -32912,7 +32906,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 PoE
 
@@ -35894,7 +35888,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 PoE
 
@@ -37075,7 +37069,7 @@ Input
 
 Relay
 
-1 Relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)
+1 relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)
 
 Tamper
 
@@ -37093,7 +37087,7 @@ Current: Max. 0.4 A
 
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
-![](/docs/en/img/en/device/xps2-dimension.png)
+![](/docs/en/img/en/device/xps2-dimension.svg)
 
 [1)](#anno1_dest) The RF detection range may vary depending on the installation environment.
 
@@ -38749,7 +38743,11 @@ Biometric
 
 RF Card
 
-XS2-DPB, XS2-QDPB, XS2-ODPB
+XS2-DPB, XS2-QDPB,
+
+<br />
+
+XS2-ODPB
 
 125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3[](#anno1), FeliCa
 
@@ -38930,7 +38928,7 @@ Input
 
 Relay
 
-1 Relay
+1 relay
 
 USB
 

@@ -67,7 +67,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-DPB, XS2-QDPB, XS2-ODPB",
+              "label": "XS2-DPB, XS2-QDPB,<br/>XS2-ODPB",
               "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
               "annotation_value": "anno1"
             },
@@ -348,7 +348,7 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 Relay"
+            "en": "1 relay"
           }
         },
         "usb": {
