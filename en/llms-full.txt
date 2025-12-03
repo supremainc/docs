@@ -1082,7 +1082,11 @@ Relay
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -2495,7 +2499,11 @@ Current: Max. 0.2 A
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -4014,13 +4022,17 @@ Relay
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
 
 [3)](#anno3_dest) UL Safety Standard - Access Control Device
 
 * Destructive attack - Level 2 / Line security - Level 2 / Endurance - Level 1 / Standby power- Level 1
 
-[4)](#anno4_dest) This is based on users enrolled without credentials.
+[4)](#anno4_dest) Based on users enrolled without credentials.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -6357,7 +6369,11 @@ Relay
 
 [3)](#anno3_dest) RF read range will vary depending on installation environment.
 
-[4)](#anno4_dest) This is based on users enrolled without credentials.
+[4)](#anno4_dest) Based on users enrolled without credentials.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -7217,11 +7233,9 @@ Info
 
 <!-- -->
 
-<!-- -->
-
 1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press **OK** to start enrollment.
 
-![](/docs/en/img/en/device/bln2-master-admin-setting-main.png)
+   ![](/docs/en/img/en/device/bln2-master-admin-setting-main.png)
 
 <!-- -->
 
@@ -7256,11 +7270,9 @@ Info
 
 <!-- -->
 
-<!-- -->
-
 3. After enrolling two or more types of credentials, press **OK** to complete Master Admin enrollment.
 
-![](/docs/en/img/en/device/bln2-master-admin-setting-credential2.png)
+   ![](/docs/en/img/en/device/bln2-master-admin-setting-credential2.png)
 
 <!-- -->
 
@@ -8050,7 +8062,11 @@ Relay
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -10204,11 +10220,9 @@ Info
 
 1. When the new device is booted for the first time, the Master Admin registration screen will appear. Press **OK** to start enrollment.
 
-<!-- -->
+   ![](/docs/en/img/en/device/bs2a-master-admin-setting-main.png)
 
-![](/docs/en/img/en/device/bs2a-master-admin-setting-main.png)
-
-2. At least two different types of credentials must be enrolled to register Master Admin. Select and enroll two desired credentials.
+2) At least two different types of credentials must be enrolled to register Master Admin. Select and enroll two desired credentials.
 
    <!-- -->
 
@@ -10243,9 +10257,7 @@ Info
 
 3. After enrolling two or more types of credentials, press **OK** to complete Master Admin enrollment.
 
-<!-- -->
-
-![](/docs/en/img/en/device/bs2a-master-admin-setting-credential2.png)
+   ![](/docs/en/img/en/device/bs2a-master-admin-setting-credential2.png)
 
 ##### Notices[​](#notices "Direct link to Notices")
 
@@ -11051,9 +11063,13 @@ Relay
 
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
 
-[3)](#anno3_dest) This is based on users registered without credentials.
+[3)](#anno3_dest) Based on users enrolled without credentials.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -12703,9 +12719,7 @@ Info
 
 1. When the new device is booted for the first time, the Master Admin registration screen will appear.
 
-![](/docs/en/img/en/how-to/setting-master-admin-1.png)
-
-<!-- -->
+   ![](/docs/en/img/en/how-to/setting-master-admin-1.png)
 
 <!-- -->
 
@@ -12742,9 +12756,7 @@ Info
 
 3) After enrolling two or more types of credentials, press the Complete button to complete the registration of Master Admin.
 
-![](/docs/en/img/en/how-to/setting-master-admin-3.png)
-
-<!-- -->
+   ![](/docs/en/img/en/how-to/setting-master-admin-3.png)
 
 <!-- -->
 
@@ -13648,15 +13660,17 @@ Relay
 
 [6)](#anno6_dest) The number of users registered without having any credential data.
 
-[7)](#anno7_dest) Requires PoE+ (IEEE 802.3at, 30 W) or PoE++ (IEEE 802.3bt, 60~100 W) power. Standard PoE (IEEE 802.3af, 15.4 W) is not supported. Using standard PoE may cause devices to operate unstably or be permanently damaged. Before connecting the device, make sure your network switch or PoE injector supports PoE+ or PoE++.
+[7)](#anno7_dest) Requires PoE+ (IEEE 802.3at, 30 W) or PoE++ (IEEE 802.3bt, 60-100 W) power. Standard PoE (IEEE 802.3af, 15.4 W) is not supported. Using standard PoE may cause devices to operate unstably or be permanently damaged. Before connecting the device, make sure your network switch or PoE injector supports PoE+ or PoE++.
 
 Info
 
-When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
+* Product specifications are subject to change without notice for performance improvement.
 
-* Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 100,000
+* When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
 
-* Max. Fingerprint Credentials (1:1): 100,000
+  * Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 100,000
+
+  * Max. Fingerprint Credentials (1:1): 100,000
 
 
 ---
@@ -15532,7 +15546,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/device/product-part-cs20.svg)
+![](/docs/en/img/en/device/product-part-cs20.svg)
 
 | No. | Name                                                     |
 | --- | -------------------------------------------------------- |
@@ -17354,7 +17368,7 @@ Info
 
   * Max. Fingerprint Credentials (1:1): 500,000
 
-* For detailed information on the product or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_corestation\&s%5B%5D=corestation/).
+* For detailed information on products or troubleshooting, refer to [the following link](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_corestation\&s%5B%5D=corestation/).
 
 
 ---
@@ -20737,6 +20751,12 @@ The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/dm20-dimension.svg)
 
+***
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
+
 
 ---
 
@@ -21690,6 +21710,8 @@ The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/encr-dimension.svg)
 
+***
+
 Info
 
 * Product specifications are subject to change without notice for performance improvement.
@@ -22236,6 +22258,12 @@ RS-232C
 
 ![](/docs/en/img/en/device/extm-dimension.svg)
 
+***
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
+
 
 ---
 
@@ -22755,6 +22783,12 @@ RS-232C
 #### Dimensions and Weight[​](#dimensions-and-weight "Direct link to Dimensions and Weight")
 
 ![](/docs/en/img/en/device/extm-sc-dimension.svg)
+
+***
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -24237,19 +24271,23 @@ Relay
 
 ![](/docs/en/img/en/device/fs2-odpb-oapb-dimension.svg)
 
+***
+
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
 
-[3)](#anno3_dest) This is based on users registered without credentials.
+[3)](#anno3_dest) Based on users enrolled without credentials.
 
 Info
 
-When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
+* Product specifications are subject to change without notice for performance improvement.
 
-* Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 10,000
+* When this product is a master device, connecting a device with a fingerprint sensor as a slave allows authentication of fingerprints using the slave device.
 
-* Max. Fingerprint Credentials (1:1): 100,000
+  * Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 10,000
+
+  * Max. Fingerprint Credentials (1:1): 100,000
 
 
 ---
@@ -27692,21 +27730,25 @@ FSF2-DB, FSF2-AB
 
 ![](/docs/en/img/en/device/fsf2-dbadb-dimension.svg)
 
-[1)](#anno1_dest) The minimum facial authentication distance indicated is the default setting, and the recommended facial authentication distance is 0.5-1.3 m.
+***
+
+[1)](#anno1_dest) The specified minimum facial authentication distance is the product's default setting, and the recommended facial authentication distance is 0.5-1.3 m.
 
 [2)](#anno2_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
 [3)](#anno3_dest) RF read range will vary depending on installation environment.
 
-[4)](#anno4_dest) This is based on users enrolled without credentials.
+[4)](#anno4_dest) Based on users enrolled without credentials.
 
 Info
 
-When FSF2-DB, FSF2-AB is the master, a slave equipped with a fingerprint sensor authenticates fingerprints.
+* Product specifications are subject to change without notice for performance improvement.
 
-* Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 100,000
+* When FSF2-DB, FSF2-AB is the master, a slave equipped with a fingerprint sensor authenticates fingerprints.
 
-* Max. Fingerprint Credentials (1:1): 100,000
+  * Max. Fingerprint Credentials (1<!-- -->:N<!-- -->): 100,000
+
+  * Max. Fingerprint Credentials (1:1): 100,000
 
 
 ---
@@ -30077,6 +30119,8 @@ The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/im120-dimension.svg)
 
+***
+
 [1)](#anno1_dest) Up to 10 events that occurred when the network connection was lost will be saved per port, and when there are more than 10 events, the events will be deleted in the order they occurred from the log.
 
 [2)](#anno2_dest) You can choose to use either Input or Supervised input.
@@ -30829,6 +30873,8 @@ The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/om120-dimension.svg)
 
+***
+
 Info
 
 Product specifications are subject to change without notice for performance improvement.
@@ -31551,6 +31597,12 @@ Relay
 The dimensional tolerance is ±0.3 mm.
 
 ![](/docs/en/img/en/device/sio2-dimension.svg)
+
+***
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -32970,9 +33022,15 @@ XP2-GDPB, XP2-GKDPB
 
 ![](/docs/en/img/en/device/xp2-g-dimension.svg)
 
+***
+
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -34266,9 +34324,15 @@ XPD2-GDB, XPD2-GKDB
 
 ![](/docs/en/img/en/device/xpd2-gkdb-dimension.svg)
 
+***
+
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -35978,19 +36042,25 @@ Relay
 
 ![](/docs/en/img/en/device/xpq2-dimension.svg)
 
+***
+
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
 
-[3)](#anno3_dest) Supports 2D barcodes including QR codes.
+[3)](#anno3_dest) Supports 2D barcodes, including QR Code.
 
 * Supported QR/barcode types: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417
 
-[4)](#anno4_dest) Camera QR license is required to use more types of QR/Barcode authentication. For more information on device licenses, refer to [the following](/docs/en/platform/biostar_x/settings-license-device-license).
+[4)](#anno4_dest) Camera QR license is required to use more diverse QR/barcode authentication. For more information on device licenses, refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/settings-license-device-license).
 
 * Barcode types supported by the Camera QR license: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
 
-[5)](#anno5_dest) Based on registered users without credentials.
+[5)](#anno5_dest) Based on users registered without credentials.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -37089,7 +37159,13 @@ Current: Max. 0.4 A
 
 ![](/docs/en/img/en/device/xps2-dimension.svg)
 
+***
+
 [1)](#anno1_dest) The RF detection range may vary depending on the installation environment.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---
@@ -39000,15 +39076,21 @@ XS2-ODPB, XS2-OAPB
 
 ![](/docs/en/img/en/device/xs2-odpb-oapb-dimension.svg)
 
+***
+
 [1)](#anno1_dest) DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
 
-[2)](#anno2_dest) RF recognition distance may vary depending on the installation environment.
+[2)](#anno2_dest) RF read range will vary depending on installation environment.
 
-[3)](#anno3_dest) Supports QR/barcode consisting of up to 32 ASCII code strings.
+[3)](#anno3_dest) Supports QR/barcodes composed of up to 32 ASCII characters.
 
-[4)](#anno4_dest) Requires a separate device license.
+[4)](#anno4_dest) A separate device license is required.
 
-[5)](#anno5_dest) Based on registered users without credentials.
+[5)](#anno5_dest) Based on users registered without credentials.
+
+Info
+
+Product specifications are subject to change without notice for performance improvement.
 
 
 ---

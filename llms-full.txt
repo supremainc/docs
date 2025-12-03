@@ -7222,11 +7222,9 @@ ID를 사용하는 인증 방법마다 사용할 스케줄을 설정할 수 있�
 
 <!-- -->
 
-<!-- -->
-
 1. 새 장치를 최초 부팅하면 마스터 관리자 등록 화면이 나타납니다. **OK**를 눌러 등록을 시작하세요.
 
-![](/docs/img/device/bln2-master-admin-setting-main.png)
+   ![](/docs/img/device/bln2-master-admin-setting-main.png)
 
 <!-- -->
 
@@ -7261,11 +7259,9 @@ ID를 사용하는 인증 방법마다 사용할 스케줄을 설정할 수 있�
 
 <!-- -->
 
-<!-- -->
-
 3. 두 종류 이상의 크리덴셜을 등록한 후, **OK**를 누르면 마스터 관리자 등록이 완료됩니다.
 
-![](/docs/img/device/bln2-master-admin-setting-credential2.png)
+   ![](/docs/img/device/bln2-master-admin-setting-credential2.png)
 
 <!-- -->
 
@@ -10207,11 +10203,9 @@ ID를 사용하는 인증 방법마다 사용할 스케줄을 설정할 수 있�
 
 1. 새 장치를 최초 부팅하면 마스터 관리자 등록 화면이 나타납니다. **OK**를 눌러 등록을 시작하세요.
 
-<!-- -->
+   ![](/docs/img/device/bs2a-master-admin-setting-main.png)
 
-![](/docs/img/device/bs2a-master-admin-setting-main.png)
-
-2. 마스터 관리자를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요.
+2) 마스터 관리자를 등록하기 위해 최소 두 종류 이상의 크리덴셜을 등록해야 합니다. 원하는 크리덴셜 두 종류를 선택하여 등록하세요.
 
    <!-- -->
 
@@ -10246,9 +10240,7 @@ ID를 사용하는 인증 방법마다 사용할 스케줄을 설정할 수 있�
 
 3. 두 종류 이상의 크리덴셜을 등록한 후, **OK**를 누르면 마스터 관리자 등록이 완료됩니다.
 
-<!-- -->
-
-![](/docs/img/device/bs2a-master-admin-setting-credential2.png)
+   ![](/docs/img/device/bs2a-master-admin-setting-credential2.png)
 
 ##### 안내 사항[​](#안내-사항 "안내 사항에 대한 직접 링크")
 
@@ -12704,9 +12696,7 @@ QR코드 인증을 설정할 수 있습니다.
 
 1. 새 장치를 최초 부팅하면 마스터 관리자 등록 화면이 나타납니다.
 
-![](/docs/img/how-to/setting-master-admin-1.png)
-
-<!-- -->
+   ![](/docs/img/how-to/setting-master-admin-1.png)
 
 <!-- -->
 
@@ -12743,9 +12733,7 @@ QR코드 인증을 설정할 수 있습니다.
 
 3) 두 종류 이상의 크리덴셜을 등록한 후, 완료 버튼을 누르면 마스터 관리자 등록이 완료됩니다.
 
-![](/docs/img/how-to/setting-master-admin-3.png)
-
-<!-- -->
+   ![](/docs/img/how-to/setting-master-admin-3.png)
 
 <!-- -->
 
