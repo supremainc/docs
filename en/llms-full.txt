@@ -6885,7 +6885,7 @@ You can set schedules for each authentication method that uses fingerprints.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → Auth Mode → Fingerprint Mode.
+2. Press **6** after selecting AUTHENTICATION → Auth Mode → Fingerprint Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6909,7 +6909,7 @@ You can set schedules for each authentication method that uses cards.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → Auth Mode → Card Mode.
+2. Press **6** after selecting AUTHENTICATION → Auth Mode → Card Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6939,7 +6939,7 @@ You can set schedules for each authentication method that uses IDs.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → Auth Mode → ID Mode.
+2. Press **6** after selecting AUTHENTICATION → Auth Mode → ID Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6967,7 +6967,7 @@ You can set how to register T\&A mode.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → T\&A Mode.
+2. Press **6** after selecting AUTHENTICATION → <!-- -->.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6975,11 +6975,11 @@ You can set how to register T\&A mode.
 
    * T\&A Event: You can check attendance events.
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * : Set how to use time and attendance mode.
 
    * T\&A Required: Require users to select a time and attendance event during authentication. Setting On allows you to require selecting a time and attendance event when authenticating.
 
-   * T\&A Fixed: You can configure to use only time and attendance events selected by an administrator. Available when T\&A Mode is set to Fixed.
+   * T\&A Fixed: You can configure to use only time and attendance events selected by an administrator. Available when <!-- -->is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -6995,7 +6995,7 @@ You can change the settings for fingerprint authentication.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → Fingerprint.
+2. Press **6** after selecting AUTHENTICATION → Fingerprint.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -7009,9 +7009,9 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Sensitivity: Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information.
 
-   * Fake Fingerprint Detected: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+   * Live Finger Detection: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
 
-   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Automatic, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Auto, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
 
    * Template Format: Set the fingerprint template format. The default is SUPREMA. Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution.
 
@@ -7033,7 +7033,7 @@ You can set up server matching. When server matching is used, authentication is 
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication → Server Matching.
+2. Press **6** after selecting AUTHENTICATION → Server Matching.
 
    ![](/docs/en/img/en/device/bln2-auth4.png)
 
@@ -7053,7 +7053,7 @@ You can set the auth result display option.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting Authentication.
+2. Press **6** after selecting AUTHENTICATION.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
@@ -7088,7 +7088,7 @@ Set conditions to search logs.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Event Log → Search and press **6**.
+2. Select EVENT LOG → Search and press **6**.
 
 3. Select the desired item and press **6** to change the setting.
 
@@ -7104,7 +7104,7 @@ You can delete all saved logs.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Event Log → Delete All Logs and press **6**.
+2. Select EVENT LOG → Delete All Logs and press **6**.
 
 3. Press **OK** to delete all logs. Press **ESC** to cancel.
 
@@ -7114,7 +7114,7 @@ You can check the status of log usage.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Event Log → Log Usage and press **6**.
+2. Select EVENT LOG → Log Usage and press **6**.
 
 3. You can check the log usage of the device.
 
@@ -8150,6 +8150,10 @@ Tel: +82-31-783-4502 / Fax: +82-31-783-4503
 
 ### BioLite N2 Release Notes
 
+#### [📄️<!-- --> <!-- -->Firmware Version 1.7.0](/docs/en/device/biolite_n2/release-notes/170)
+
+[Release2025-10-29](/docs/en/device/biolite_n2/release-notes/170)
+
 #### [📄️<!-- --> <!-- -->Firmware Version 1.6.2](/docs/en/device/biolite_n2/release-notes/162)
 
 [Release2024-11-14](/docs/en/device/biolite_n2/release-notes/162)
@@ -9152,7 +9156,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Date & Time and press **6**.
+2. Select DEVICE → Date & Time and press **6**.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -9178,7 +9182,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Daylight Saving Time and press **6**.
+2. Select DEVICE → Daylight Saving Time and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
@@ -9196,15 +9200,15 @@ You can set the input ports of Open Time and Exit Button on the device. Useful w
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Relay Port and press **6**.
+2. Select DEVICE → Relay and press **6**.
 
-   * Relay Port: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
+   * Relay: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or Normally ClosedN/CNormally Open) for the Exit Button's input port.
+   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
 
 3. Press **OK** to save the settings.
 
@@ -9214,7 +9218,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Device Info and press **6**. You can check the information of Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC.
+2. Select DEVICE → Device Info and press **6**. You can check the information of Model Name, Device ID, Serial No., HW, FW, Kernel, MAC.
 
 3. Press **ESC** to return to the previous screen.
 
@@ -9224,7 +9228,7 @@ View the status of memory usage.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Memory Usage and press **6**. You can view the memory usage status of the device.
+2. Select DEVICE → Memory Usage and press **6**. You can view the memory usage status of the device.
 
 3. Press **ESC** to return to the previous screen.
 
@@ -9234,7 +9238,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Secure Tamper and press **4** or **6** to change settings.
+2. Select DEVICE → Secure Tamper and press **4** or **6** to change settings.
 
 3. Press **OK** to save the settings.
 
@@ -9244,7 +9248,7 @@ The user can restart the device.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Restart Device and press **6**.
+2. Select DEVICE → Restart Device and press **6**.
 
 3. Press **OK** to restart the device. Press **ESC** to cancel.
 
@@ -9254,7 +9258,7 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Restore Default and press **6**.
+2. Select DEVICE → Restore Default and press **6**.
 
    * Reset All Settings: Initializes all settings saved on the device. Press **OK** to initialize all device settings. Press **ESC** to return to the previous screen.
 
@@ -9282,7 +9286,7 @@ You can change the authentication method of the Master Admin.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Master Admin.
+2. Select DEVICE → Master Admin.
 
 3. Configure the desired authentication methods.
 
@@ -9302,7 +9306,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → Admin 2-step Authentication.
+2. Select DEVICE → Admin 2-step Authentication.
 
    ![](/docs/en/img/en/device/bln2-administrator-two-step-auth.png)
 
@@ -9326,7 +9330,7 @@ Select the type of user ID to register to the device.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Device → User ID Type and press **4** or **6** to change settings.
+2. Select DEVICE → User ID Type and press **4** or **6** to change settings.
 
    * Number: You can enter a user ID with numbers only.
 
@@ -9342,13 +9346,13 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Network → TCP/IP and press **6**.
+2. Select NETWORK → TCP/IP and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
    ![](/docs/en/img/en/device/bln2-network-ethernet.png)
 
-   * Port: You can set the ports of the device.
+   * PORT: You can set the ports of the device.
 
    * DHCP: Set whether to use DHCP. If DHCP setting is disabled, the user can modify IP Address, Gateway, and Subnet Mask.
 
@@ -9366,7 +9370,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Network → Server and press **6**.
+2. Select NETWORK → Server and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
@@ -9386,7 +9390,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select Network → RS485 and press **6**.
+2. Select NETWORK → RS485 and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
@@ -9448,7 +9452,7 @@ Q.Suddenly fingerprint authentication cannot be done.
 
 Q.The fingerprint sensor does not turn on.
 
-* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTH → Fingerprint → Sensor Mode and then select Always On.
+* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTHENTICATION → Fingerprint → Sensor Mode and then select Always On.
 
 ##### Door lock[​](#doorlock)
 
@@ -9488,7 +9492,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select User Role → Add User and then press **6**.
+2. Select USER → Add User and then press **6**.
 
    ![](/docs/en/img/en/device/bln2-user-add.png)
 
@@ -9504,23 +9508,23 @@ You can register user information that includes biometric authentication data.
 
    * PIN: You can enter the PIN you want to use. After entering the desired PIN, enter the PIN again for confirmation. To prevent leaks, input a PIN of 4 to 16 digits.
 
-   * User Level: You can select permissions to assign to the user.
+   * Operator Level: You can select permissions to assign to the user.
 
      Info
 
      Available menus vary according to the set user level.
 
-     * User: This is a regular user level and cannot access the menu.
+     * Normal User: This is a regular user level and cannot access the menu.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Communication, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Management: You can use the menus USER, EVENT LOG.
 
    * Start Date: You can set the date to start using the user account.
 
-   * Expiry date: You can set the date to stop using the user account.
+   * Expiration Date: You can set the date to stop using the user account.
 
    * 1:1 Security Level: You can set the security level for 1:1 authentication.
 
@@ -9536,7 +9540,7 @@ User Management or Administrator can modify the registered user information. You
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select User Role → Search User and then press **6**.
+2. Select USER → Search User and then press **6**.
 
 3. Select your search terms. You can search for users using All, ID, Name, Fingerprint, Card.
 
@@ -9548,7 +9552,7 @@ User Management or Administrator can modify the registered user information. You
 
 Info
 
-Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -9556,7 +9560,7 @@ You can delete all registered users at once.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select User Role → Delete All Users and then press **6**.
+2. Select USER → Delete All Users and then press **6**.
 
 3. Press **OK** to delete all registered users.
 
@@ -9566,7 +9570,7 @@ You can view the number of enrolled users, fingerprints, and cards at a glance.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select User Role → User Usage and then press **6**. User usage information appears.
+2. Select USER → User Usage and then press **6**. User usage information appears.
 
 
 ---
@@ -9680,7 +9684,7 @@ Press the **OK** button to display the key menu screen. You can enter by pressin
 
 * ID: ID authentication can be performed as set in ID.
 
-* T\&A Mode: You can select attendance events to authenticate.
+* T\&A: You can select attendance events to authenticate.
 
 * Job Code: You can select the user's work code.
 
@@ -9806,7 +9810,7 @@ You can set schedules for each authentication method that uses fingerprints.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → Auth Mode → Finger and then press **OK**.
+2. Select AUTHENTICATION → Auth Mode → Finger and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-auth-authmode.png)
 
@@ -9830,7 +9834,7 @@ You can set schedules for each authentication method that uses cards.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → Auth Mode → Card and then press **OK**.
+2. Select AUTHENTICATION → Auth Mode → Card and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-auth-authmode1.png)
 
@@ -9860,7 +9864,7 @@ You can set schedules for each authentication method that uses IDs.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → Auth Mode → ID and then press **OK**.
+2. Select AUTHENTICATION → Auth Mode → ID and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-auth-authmode2.png)
 
@@ -9888,13 +9892,13 @@ You can set how to register T\&A mode.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → T\&A Mode and then press **OK**.
+2. Select AUTHENTICATION → T\&A and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-auth.png)
 
 3. Select the desired item and press / to change the settings.
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A: Set how to use time and attendance mode.
 
    * T\&A Event: You can check attendance events.
 
@@ -9910,7 +9914,7 @@ You can set up server matching. When server matching is used, authentication is 
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → Server Matching and then press **OK**.
+2. Select AUTHENTICATION → Server Matching and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-server-matching.png)
 
@@ -9930,7 +9934,7 @@ You can change the settings for fingerprint authentication.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Authentication → Fingerprint and then press **OK**.
+2. Select AUTHENTICATION → Fingerprint and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-fingerprint.png)
 
@@ -9944,9 +9948,9 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Sensitivity: Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information.
 
-   * Fake Fingerprint Detected: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+   * Live Finger Detection: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
 
-   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Automatic, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Auto, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
 
    * Template Format: Set the fingerprint template format. The default is SUPREMA. Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution.
 
@@ -9975,7 +9979,7 @@ Set conditions to search logs.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Event Log → Search and then press **OK**.
+2. Select EVENT LOG → Search and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-eventlog.png)
 
@@ -9989,7 +9993,7 @@ You can delete all saved logs.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Event Log → Delete All and then press **OK**.
+2. Select EVENT LOG → Delete All and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-eventlog1.png)
 
@@ -10001,7 +10005,7 @@ You can check the status of log usage.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Event Log → Log Usage and then press **OK**. You can check the log usage of the device.
+2. Select EVENT LOG → Log Usage and then press **OK**. You can check the log usage of the device.
 
    ![](/docs/en/img/en/device/bs2a-eventlog2.png)
 
@@ -11464,13 +11468,13 @@ You can change the display and sound settings of the device.
 
    * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
-   * Server Private\</br>Message: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private\</br>Message can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private\</br>Message is enabled on the device.
+   * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
    * Backlight Timeout: Set the time (sec) to turn off the lighting of the screen.
 
    * Menu Timeout: Set the time (sec) for the menu screen to disappear automatically. If there is no button input during a set time, the screen will return to the home screen.
 
-   * Message Timeout: Set the time (sec) for a setting complete message or notification message to disappear automatically.
+   * Msg Timeout: Set the time (sec) for a setting complete message or notification message to disappear automatically.
 
    * Voice Instruction: You can use voice guidance instead of notification tones.
 
@@ -11490,7 +11494,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Date & Time and then press **OK**.
+2. Select DEVICE → Date & Time and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-datetime.png)
 
@@ -11520,7 +11524,7 @@ Connect USB Memory and import user information to the device or export log and u
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → USB Memory and then press **OK**.
+2. Select DEVICE → USB Memory and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-usb.png)
 
@@ -11530,7 +11534,7 @@ Connect USB Memory and import user information to the device or export log and u
 
    * Import: Import user information from the connected USB memory. Select the item and then press **OK**.
 
-   * Firmware Upgrade: If the firmware file is saved on the connected USB memory, you can press **OK** to upgrade the firmware.
+   * FW Upgrade: If the firmware file is saved on the connected USB memory, you can press **OK** to upgrade the firmware.
 
 Caution
 
@@ -11560,7 +11564,7 @@ The user can restart the device.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Restart Device and then press **OK**.
+2. Select DEVICE → Restart Device and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-restart.png)
 
@@ -11572,7 +11576,7 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Initialize and then press **OK**.
+2. Select DEVICE → Restore Default and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-restore-default.png)
 
@@ -11586,7 +11590,7 @@ Device settings, network settings, and operator levels will be reset.
 
    * Delete the Root Certificate: Deletes the root certificate saved in the device.
 
-4. Executing Initialize will restart the device.
+4. Executing Restore Default will restart the device.
 
 Info
 
@@ -11604,7 +11608,7 @@ You can change the authentication method of the Master Admin.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Master Admin.
+2. Select DEVICE → Master Admin.
 
 3. Configure the desired authentication methods.
 
@@ -11624,7 +11628,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Admin 2-step Authentication.
+2. Select DEVICE → Admin 2-step Authentication.
 
    ![](/docs/en/img/en/device/bs2a-administrator-two-step-auth.png)
 
@@ -11650,7 +11654,7 @@ You can check the regulatory certifications and compliance marks on the product.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Regulatory and then press **OK**. You can check the regulatory certifications.
+2. Select DEVICE → Regulatory and then press **OK**. You can check the regulatory certifications.
 
    ![](/docs/en/img/en/device/bs2a-regulatory.png)
 
@@ -11660,7 +11664,7 @@ You can check the license on the product.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → Open-Source Software Licenses and then press **OK**. You can check the license.
+2. Select DEVICE → Open-Source Software Licenses and then press **OK**. You can check the license.
 
    ![](/docs/en/img/en/device/bs2a-open-license.png)
 
@@ -11672,7 +11676,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → Daylight Saving Time and then press **OK**.
+2. Select DEVICE → More Settings → Daylight Saving Time and then press **OK**.
 
 3. Select Add DST and then press **OK**.
 
@@ -11694,7 +11698,7 @@ Select the type of user ID to register to the device.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → User ID Type and then press **OK**.
+2. Select DEVICE → More Settings → User ID Type and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-userid.png)
 
@@ -11712,13 +11716,13 @@ You can set the input ports of Open Time and Exit Button on the device. Useful w
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → Relay Port and then press **OK**.
+2. Select DEVICE → More Settings → Relay and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-relay.png)
 
 3. Press / to change the settings.
 
-   * Relay Port: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
+   * Relay: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
@@ -11732,11 +11736,11 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → Secure Tamper and then press **OK**.
+2. Select DEVICE → More Settings → Secure Tamper and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-secure-tamper.png)
 
-3. To set it to delete all users, logs, and secure keys when a tamper event occurs, press / and set Use.
+3. To set it to delete all users, logs, and secure keys when a tamper event occurs, press / and set Enabled.
 
 4. Press **OK** to save the settings.
 
@@ -11746,7 +11750,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → Device Info and then press **OK**. You can view the information for Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC, and WiFi MAC.
+2. Select DEVICE → More Settings → Device Info and then press **OK**. You can view the information for Model Name, Device ID, Serial No., HW, FW, Kernel, MAC, and WiFi MAC.
 
    ![](/docs/en/img/en/device/bs2a-info.png)
 
@@ -11756,7 +11760,7 @@ View the status of memory usage.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Device → More Settings → Memory Info and then press **OK**. You can view the memory usage status of the device.
+2. Select DEVICE → More Settings → Memory Info and then press **OK**. You can view the memory usage status of the device.
 
    ![](/docs/en/img/en/device/bs2a-memory.png)
 
@@ -11770,7 +11774,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Communication → TCP/IP and then press **OK**.
+2. Select NETWORK → TCP/IP and then press **OK**.
 
 3. Press the / button in Type and select Ethernet.
 
@@ -11778,7 +11782,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 4. Change the desired item.
 
-   * Port: You can set the ports of the device.
+   * PORT: You can set the ports of the device.
 
    * DHCP: Set whether to use DHCP. If DHCP setting is disabled, the user can modify IP Address, Gateway, and Subnet Mask.
 
@@ -11794,7 +11798,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 Info
 
-* Ethernet cannot be used with WLAN.
+* Ethernet cannot be used with Wireless.
 
 * IP Address, Gateway, Subnet Mask can be entered by pressing the numeric buttons. You can delete the entered value with the  button and enter the delimiter with the  button.
 
@@ -11802,9 +11806,9 @@ Info
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Communication → TCP/IP and then press **OK**.
+2. Select NETWORK → TCP/IP and then press **OK**.
 
-3. Press the / button in Type and select WLAN.
+3. Press the / button in Type and select Wireless.
 
    ![](/docs/en/img/en/device/bs2a-network-wifi.png)
 
@@ -11816,7 +11820,7 @@ Info
 
    * Password: Enter the access password for the AP.
 
-   * Port: You can set the ports of the device.
+   * PORT: You can set the ports of the device.
 
    * DHCP: Set whether to use DHCP. If DHCP setting is disabled, the user can modify IP Address, Gateway, and Subnet Mask.
 
@@ -11832,19 +11836,19 @@ Info
 
 Info
 
-* WLAN is only available for the BS2A-OAPWB model.
+* Wireless is only available for the BS2A-OAPWB model.
 
-* WLAN cannot be used with Ethernet.
+* Wireless cannot be used with Ethernet.
 
 * IP Address, Gateway, Subnet Mask can be entered by pressing the numeric buttons. You can delete the entered value with the  button and enter the delimiter with the  button.
 
-* To connect to WLAN, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
+* To connect to Wireless, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
 
 ##### Server[​](#server "Direct link to Server")
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Communication → Server and then press **OK**.
+2. Select NETWORK → Server and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-network-server.png)
 
@@ -11868,7 +11872,7 @@ Server IP, Server Port can be entered by pressing the numeric buttons. You can d
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select Communication → RS485 and then press **OK**.
+2. Select NETWORK → RS485 and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-network-serial.png)
 
@@ -11928,7 +11932,7 @@ Q.Suddenly fingerprint authentication cannot be done.
 
 Q.The fingerprint sensor does not turn on.
 
-* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTH → Fingerprint → Sensor Mode and then select Always On.
+* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTHENTICATION → Fingerprint → Sensor Mode and then select Always On.
 
 ##### Door lock[​](#doorlock)
 
@@ -11968,7 +11972,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select User Role → Add User and then press **OK**.
+2. Select USER → Add User and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-user-add.png)
 
@@ -11990,17 +11994,17 @@ You can register user information that includes biometric authentication data.
 
      Available menus vary according to the set user level.
 
-     * Unauthorized: This is a general user level, and the menu is not available.
+     * None: This is a general user level, and the menu is not available.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Communication, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Mgmt: You can use the menus USER, EVENT LOG.
 
    * Start Date: You can set the date to start using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
 
-   * Expiry date: You can set the date to stop using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
+   * Expiration Date: You can set the date to stop using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
 
    * Security level: You can set the security level for 1:1 authentication.
 
@@ -12014,7 +12018,7 @@ The user administrator or super administrator can modify registered user informa
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select User Role → Search User and then press **OK**.
+2. Select USER → Search User and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-user-edt.png)
 
@@ -12028,7 +12032,7 @@ The user administrator or super administrator can modify registered user informa
 
 Info
 
-Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -12036,7 +12040,7 @@ You can delete all registered users at once.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select User Role → Delete User and then press **OK**.
+2. Select USER → Delete User and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-delete-user.png)
 
@@ -12048,7 +12052,7 @@ You can view the number of enrolled users, fingerprints, and cards at a glance.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select User Role → User Usage and then press **OK**. User usage information appears.
+2. Select USER → User Usage and then press **OK**. User usage information appears.
 
    ![](/docs/en/img/en/device/bs2a-user-usage.png)
 
@@ -12134,7 +12138,7 @@ Provides guidance on the main menus and features accessible with administrator p
 
 #### DASHBOARD[​](#dashboard "Direct link to DASHBOARD")
 
-1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.<br />You can check the status and information of the device at Dashboard. Alternatively, you can press Enroll Wizard to directly enroll a user.
+1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.<br />You can check the status and information of the device at DASHBOARD. Alternatively, you can press Enroll Wizard to directly enroll a user.
 
 2. To register a user or set up a device, select the desired menu from the bottom of the dashboard.
 
@@ -12142,7 +12146,7 @@ Provides guidance on the main menus and features accessible with administrator p
 
 Info
 
-* If an administrator is not designated, pressing ![](/docs/en/img/common/ico-menu.svg) will display the Dashboard screen.
+* If an administrator is not designated, pressing ![](/docs/en/img/common/ico-menu.svg) will display the DASHBOARD screen.
 
 * WiFi MAC can only be confirmed on the BS3-APWB model.
 
@@ -12260,7 +12264,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Press ![](/docs/en/img/common/ico-add.svg).
 
@@ -12282,7 +12286,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
    * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
 
-   * To use QR Code authentication, Authentication must be clicked and Operation must have QR Authentication activated, and a separate device license is required. For more information, refer to [License](/docs/en/device/biostation_3/settings#license).
+   * To use QR Code authentication, AUTHENTICATION must be clicked and Operation must have QR Authentication activated, and a separate device license is required. For more information, refer to [License](/docs/en/device/biostation_3/settings#license).
 
 6. To save the settings, press OK.
 
@@ -12290,7 +12294,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select the authentication mode to modify.
 
@@ -12300,7 +12304,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Press ![](/docs/en/img/common/ico-delete.svg) and select the authentication mode to delete. You can select multiple options.
 
@@ -12314,7 +12318,7 @@ You can set up server matching.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. After pressing Authentication, activate Operation in Server Matching (Card, ID).
+2. After pressing AUTHENTICATION, activate Operation in Server Matching (Card, ID).
 
    ![](/docs/en/img/en/device/bs3-auth-option.png)
 
@@ -12332,7 +12336,7 @@ You can activate QR code authentication.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. After pressing Authentication, activate Operation for QR Authentication.
+2. After pressing AUTHENTICATION, activate Operation for QR Authentication.
 
    ![](/docs/en/img/en/device/bs3-auth-option-qr.png)
 
@@ -12350,7 +12354,7 @@ Set whether to use the scramble keypad when entering passwords.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. After pressing Authentication, set whether to use PIN in Scramble Keypad.
+2. After pressing AUTHENTICATION, set whether to use PIN in Scramble Keypad.
 
    ![](/docs/en/img/en/device/bs3-pin.png)
 
@@ -12362,7 +12366,7 @@ You can set the auth result display option.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. After pressing Authentication, change the desired items in Auth Result Display Option.
+2. After pressing AUTHENTICATION, change the desired items in Auth Result Display Option.
 
    ![](/docs/en/img/en/device/bs3-auth-result-display-option.png)
 
@@ -12388,7 +12392,7 @@ You can change the configuration for facial authentication.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication → Face.
+2. Select AUTHENTICATION → Face.
 
 3. Change the desired item.
 
@@ -12462,7 +12466,7 @@ You can change the configuration for facial authentication.
 
      Info
 
-     * Check after authentication: After authentication, check whether the user is wearing a mask.
+     * Check After Authentication: After authentication, check whether the user is wearing a mask.
 
      * Check Before Authentication: Authenticate after checking whether the user is wearing a mask.
 
@@ -12474,7 +12478,7 @@ You can set how to register T\&A mode.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication → T\&A.
+2. Select AUTHENTICATION → T\&A.
 
 3. Change the desired item.
 
@@ -12503,7 +12507,7 @@ Set conditions to search logs.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-eventlog.png) in Dashboard. All event logs appear.
+2. Select ![](/docs/en/img/common/ico-eventlog.png) in DASHBOARD. All event logs appear.
 
 3. Press ![](/docs/en/img/common/ico-search.svg) to search a specific log and change the condition.
 
@@ -12517,9 +12521,9 @@ You can delete all saved logs.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-eventlog.png) in Dashboard. All event logs appear.
+2. Select ![](/docs/en/img/common/ico-eventlog.png) in DASHBOARD. All event logs appear.
 
-3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click Confirm. Press Cancel to return to the previous screen.
+3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click OK. Press Cancel to return to the previous screen.
 
 #### View log usage[​](#view-log-usage "Direct link to View log usage")
 
@@ -12527,7 +12531,7 @@ You can check the status of log usage.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press ![](/docs/en/img/common/ico-eventlog.png) → ![](/docs/en/img/common/ico-info.svg) in Dashboard. Check the device's event log and image log usage.
+2. Press ![](/docs/en/img/common/ico-eventlog.png) → ![](/docs/en/img/common/ico-info.svg) in DASHBOARD. Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/bs3-eventlog1.png)
 
@@ -13687,13 +13691,13 @@ You can check the license, regulatory certification, and compliance marks on the
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Touch Dashboard in the upper right corner and touch ![](/docs/en/img/common/ico-regulatory.svg) to check Regulatory & Licenses.
+2. Touch DASHBOARD in the upper right corner and touch ![](/docs/en/img/common/ico-regulatory.svg) to check Regulatory & Licenses.
 
    ![](/docs/en/img/en/device/bs3-regulatory-licenses.png)
 
 Info
 
-If an administrator is not designated, pressing ![](/docs/en/img/common/ico-menu.svg) will display the Dashboard screen.
+If an administrator is not designated, pressing ![](/docs/en/img/common/ico-menu.svg) will display the DASHBOARD screen.
 
 <!-- -->
 
@@ -14699,7 +14703,7 @@ You can change the display and sound settings of the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Setting → DISPLAY & SOUND.
+2. Press SETTINGS → DISPLAY & SOUND.
 
 3. Change the desired item.
 
@@ -14711,7 +14715,7 @@ You can change the display and sound settings of the device.
 
    * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
-   * Server Private\</br>Message: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private\</br>Message can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private\</br>Message is enabled on the device.
+   * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
    * Screen Saver: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
 
@@ -14741,7 +14745,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Communication → Ethernet.
+2. Select SETTINGS → NETWORK → Ethernet.
 
 3. Change the desired item.
 
@@ -14763,13 +14767,13 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 Info
 
-Ethernet cannot be used with WLAN.
+Ethernet cannot be used with Wireless.
 
 ##### Wireless[​](#wireless "Direct link to Wireless")
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Communication → WLAN.
+2. Select SETTINGS → NETWORK → Wireless.
 
 3. The list of networks available to connect will be displayed.
 
@@ -14787,17 +14791,17 @@ Ethernet cannot be used with WLAN.
 
 Info
 
-* WLAN is only available for BS3-APWB model.
+* Wireless is only available for BS3-APWB model.
 
-* WLAN cannot be used with Ethernet.
+* Wireless cannot be used with Ethernet.
 
-* To connect to WLAN, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
+* To connect to Wireless, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
 
 ##### Server[​](#server "Direct link to Server")
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Communication → Server.
+2. Select SETTINGS → NETWORK → Server.
 
 3. Change the desired item.
 
@@ -14817,7 +14821,7 @@ Info
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Communication.
+2. Select SETTINGS → NETWORK.
 
 3. Set the desired item in OSDP Setting.
 
@@ -14837,7 +14841,7 @@ Set the account and extensions of intercom.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Intercom.
+2. Select SETTINGS → DEVICE → Intercom.
 
    ![](/docs/en/img/en/device/bs3-network-intercom.png)
 
@@ -14849,7 +14853,7 @@ Set the account and extensions of intercom.
 
    * Extensions: Add, delete, or edit extension numbers.
 
-   * Display ExtensionNumber: Set whether to display extension numbers.
+   * Display Extension Number: Set whether to display extension numbers.
 
    Info
 
@@ -14865,7 +14869,7 @@ You can activate the device license or check Licenses in Slave Devices and Activ
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → License.
+2. Select SETTINGS → DEVICE → License.
 
 3. To activate the device license, connect the USB with the license to the device and select ![](/docs/en/img/common/ico-add.svg).
 
@@ -14893,17 +14897,17 @@ You can set the input ports of Open Time and Exit Button in the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Relay Port.
+2. Select SETTINGS → DEVICE → Relay.
 
    ![](/docs/en/img/en/device/bs3-network-relay.png)
 
-   * Relay Port: You can set whether relay is enabled or not. To set Open Time and Exit Button, activate this option.
+   * Relay: You can set whether relay is enabled or not. To set Open Time and Exit Button, activate this option.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
    * Exit Button: Select the input port where the exit button is connected.
 
-   * Switch: Select the type of switch (SwitchN/O or Normally ClosedN/CNormally Open) for the Exit Button's input port.
+   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -14911,7 +14915,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Date & Time.
+2. Select SETTINGS → DEVICE → Date & Time.
 
 3. Change the desired item.
 
@@ -14933,7 +14937,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Daylight Saving Time and then press ![](/docs/en/img/common/ico-add.svg) to add additional daylight-saving time.
+2. Select SETTINGS → DEVICE → Daylight Saving Time and then press ![](/docs/en/img/common/ico-add.svg) to add additional daylight-saving time.
 
 3. Change the desired item.
 
@@ -14953,7 +14957,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Device Info. You can view the information for Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC, and WiFi MAC.
+2. Select SETTINGS → DEVICE → Device Info. You can view the information for Model Name, Device ID, Serial No., HW, FW, Kernel, MAC, and WiFi MAC.
 
    ![](/docs/en/img/en/device/bs3-info.png)
 
@@ -14969,7 +14973,7 @@ View the status of memory usage.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Memory Info. You can view the memory usage status of the device.
+2. Select SETTINGS → DEVICE → Memory Info. You can view the memory usage status of the device.
 
    ![](/docs/en/img/en/device/bs3-memory.png)
 
@@ -14979,7 +14983,7 @@ Connect USB Memory and import user information to the device or export log and u
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → USB Memory.
+2. Select SETTINGS → DEVICE → USB Memory.
 
 3. Select the desired item and change the setting.
 
@@ -14989,7 +14993,7 @@ Connect USB Memory and import user information to the device or export log and u
 
    * Export: Select information you wish to export to the connected USB memory.
 
-   * Firmware Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+   * FW Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
 
 Caution
 
@@ -15025,7 +15029,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device.
+2. Select SETTINGS → DEVICE.
 
 3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
@@ -15035,7 +15039,7 @@ A video management system (VMS) of another brand may be connected to monitor vid
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → RTSP.
+2. Select SETTINGS → DEVICE → RTSP.
 
 3. Select the desired item and change the setting.
 
@@ -15063,7 +15067,7 @@ You can change the authentication method of the Master Admin.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Master Admin.
+2. Select SETTINGS → DEVICE → Master Admin.
 
 3. Configure the desired authentication methods.
 
@@ -15083,7 +15087,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Admin 2-step Authentication.
+2. Select SETTINGS → DEVICE → Admin 2-step Authentication.
 
    ![](/docs/en/img/en/how-to/setting-two-step-authentication.png)
 
@@ -15107,9 +15111,9 @@ The user can restart the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Restart Device.
+2. Select SETTINGS → DEVICE → Restart Device.
 
-3. Press Confirm to restart the device. Press Cancel to return to the previous screen.
+3. Press OK to restart the device. Press Cancel to return to the previous screen.
 
 ##### Restore default[​](#restore-default "Direct link to Restore default")
 
@@ -15117,11 +15121,11 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → Restore Default.
+2. Select SETTINGS → DEVICE → Restore Default.
 
-   * All settings: Initializes all settings stored on the device. Press Confirm to initialize all device settings. Press Cancel to return to the previous screen.
+   * All settings: Initializes all settings stored on the device. Press OK to initialize all device settings. Press Cancel to return to the previous screen.
 
-   * Keep Network Settings: Initializes all settings except for network settings. Press Confirm to initialize all settings except for network settings. Press Cancel to return to the previous screen.
+   * Keep Network Settings: Initializes all settings except for network settings. Press OK to initialize all settings except for network settings. Press Cancel to return to the previous screen.
 
    * Factory Default: Deletes all information saved in the device and the root certificate, restoring settings to default.
 
@@ -15145,7 +15149,7 @@ Select the type of user ID to register to the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Setting → Device → User ID Type.
+2. Select SETTINGS → DEVICE → User ID Type.
 
    * Number: You can enter a user ID with numbers only.
 
@@ -15237,7 +15241,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select User Role → ![](/docs/en/img/common/ico-add.svg) and set the desired item. User usage information appears.
+2. Select USER → ![](/docs/en/img/common/ico-add.svg) and set the desired item. User usage information appears.
 
    ![](/docs/en/img/en/device/bs3-user-add.png)
 
@@ -15253,19 +15257,19 @@ You can register user information that includes biometric authentication data.
 
    * PIN: You can enter the PIN you want to use. Press PIN → Next and enter the PIN you want to use. For confirmation, enter the PIN once more and then press OK. Please enter an 8-16 digit number for the PIN to prevent leakage.
 
-   * User Level: You can select permissions to assign to the user.
+   * Operator Level: You can select permissions to assign to the user.
 
      Info
 
      Available menus vary according to the set user level.
 
-     * Unauthorized: This is a general user level, and the menu is not available.
+     * None: This is a general user level, and the menu is not available.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Network, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Management: You can use the menus USER, EVENT LOG.
 
    * Period: You can set the duration for using the user account.
 
@@ -15279,13 +15283,13 @@ You can register user information that includes biometric authentication data.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select User Role → ![](/docs/en/img/common/ico-add.svg).
+2. Select USER → ![](/docs/en/img/common/ico-add.svg).
 
 3. Press Face → Next.
 
 4. Adjust a distance between the face and screen and look straight at the camera of the device.
 
-5. After the shooting is complete, press Confirm → Save. To retake your face picture, press Re-Shot.
+5. After the shooting is complete, press OK → Save. To retake your face picture, press Re-Shot.
 
    Info
 
@@ -15325,7 +15329,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to User Role.
+2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
 
 3. Select your search terms. You can search for users using All , User ID , Name , Face , Card.
 
@@ -15333,11 +15337,11 @@ User Management or Administrator can modify the registered user information. A c
 
 5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
 
-   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press Confirm.
+   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
 Info
 
-Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -15345,11 +15349,11 @@ You can delete all registered users at once.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to User Role.
+2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
 
 3. Select Delete All to check, then press OK.
 
-4. To delete all users, press Confirm.
+4. To delete all users, press OK.
 
 #### View User Usage[​](#view-user-usage "Direct link to View User Usage")
 
@@ -15357,7 +15361,7 @@ You can see the number of registered users, faces, and cards at a glance.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press User Role → ![](/docs/en/img/common/ico-info.svg). User usage information appears.
+2. Press USER → ![](/docs/en/img/common/ico-info.svg). User usage information appears.
 
    ![](/docs/en/img/en/device/bs3-user-usage.png)
 
@@ -18804,7 +18808,7 @@ Biometric devices only support network and server settings.
 
 3. Check the device ID to select the device from the list of connectable devices, or bring the mobile device closer to the device to connect.
 
-4. After setting the device password, press Confirm. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
+4. After setting the device password, press OK. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
 
    Info
 
@@ -18818,7 +18822,7 @@ Biometric devices only support network and server settings.
 
 ![](/docs/en/img/en/device/ip-device-network.png)
 
-* Port: Enter the port that the device will use.
+* PORT: Enter the port that the device will use.
 
 * DHCP: Enable this to allow the device to use dynamic IP. If you enable this option, you cannot enter network information manually.
 
@@ -18886,7 +18890,7 @@ You can search for and connect to installed IP devices nearby. When connected to
 
 4. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
 
-5. Press Confirm to complete the device connection.
+5. Press OK to complete the device connection.
 
 Info
 
@@ -18910,7 +18914,7 @@ Info
 
 3. Select the firmware from the path where the firmware file is saved. The firmware upgrade is in progress.
 
-4. Press Confirm to complete the firmware upgrade.
+4. Press OK to complete the firmware upgrade.
 
 #### Restart device[​](#restart-device "Direct link to Restart device")
 
@@ -18934,7 +18938,7 @@ You can initialize device settings.
 
    ![](/docs/en/img/en/device/ip-device-restore-default.png)
 
-3. If you initialize the device, all settings applied to the device will be restored to factory defaults. Press Confirm to continue.
+3. If you initialize the device, all settings applied to the device will be restored to factory defaults. Press OK to continue.
 
 #### Initialize device settings excluding network[​](#initialize-device-settings-excluding-network "Direct link to Initialize device settings excluding network")
 
@@ -18946,7 +18950,7 @@ You can initialize device settings excluding network settings.
 
    ![](/docs/en/img/en/device/ip-device-restore-default-network.png)
 
-3. If you initialize device settings excluding network, the remaining settings excluding the network will be initialized. Press Confirm to continue.
+3. If you initialize device settings excluding network, the remaining settings excluding the network will be initialized. Press OK to continue.
 
 #### Change device password[​](#change-device-password "Direct link to Change device password")
 
@@ -18962,7 +18966,7 @@ You can change the device's password.
 
    ![](/docs/en/img/en/device/device-manager-change-password.png)
 
-4. Press Confirm to complete the password change.
+4. Press OK to complete the password change.
 
 Info
 
@@ -19227,7 +19231,7 @@ Some settings may not apply if the device's firmware version is low. To apply al
 
 6. Make sure the back of your mobile device touches the device to which you want to apply the template.
 
-7. Once the template application is complete, click Confirm.
+7. Once the template application is complete, click OK.
 
 Info
 
@@ -19265,7 +19269,7 @@ Info
 
 4. Select the template you wish to delete from the list of templates.
 
-5. To delete the template, click ![](/docs/en/img/en/common/ico-delete.svg) → Confirm.
+5. To delete the template, click ![](/docs/en/img/en/common/ico-delete.svg) → OK.
 
    ![](/docs/en/img/en/device/xpd2-template-management-select-del.png)
 
@@ -19327,7 +19331,7 @@ You can search for and connect to XPass D2 installed nearby. By connecting to Su
 
 5. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
 
-6. Press Confirm to complete the device connection.
+6. Press OK to complete the device connection.
 
 #### Upgrade device firmware[​](#device-firmware-upgrade "Direct link to Upgrade device firmware")
 
@@ -19347,7 +19351,7 @@ Info
 
 3. Select the firmware from the path where the firmware file is saved. The firmware upgrade is in progress.
 
-4. Press Confirm to complete the firmware upgrade.
+4. Press OK to complete the firmware upgrade.
 
 #### Restart device[​](#restart-device "Direct link to Restart device")
 
@@ -19375,7 +19379,7 @@ You can change the admin password of the template.
 
    ![](/docs/en/img/en/device/device-manager-change-password.png)
 
-4. Press Confirm to complete the password change.
+4. Press OK to complete the password change.
 
 Info
 
@@ -23126,7 +23130,7 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select ![](/docs/en/img/common/ico-add2.svg).
 
@@ -23154,7 +23158,7 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select the authentication mode to modify.
 
@@ -23164,7 +23168,7 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Press ![](/docs/en/img/common/ico-delete.svg) and select the authentication mode to delete. You can select multiple options.
 
@@ -23174,7 +23178,7 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired item in Operation.
+2. After pressing AUTHENTICATION, change the desired item in Operation.
 
    ![](/docs/en/img/en/device/fs2-auth-option.png)
 
@@ -23204,7 +23208,7 @@ You can change the configuration for facial authentication.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired item in Face Recognition.
+2. After pressing AUTHENTICATION, change the desired item in Face Recognition.
 
    ![](/docs/en/img/en/device/fs2-auth.png)
 
@@ -23232,17 +23236,17 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired item in T\&A Mode.
+2. After pressing AUTHENTICATION, change the desired item in <!-- -->.
 
    ![](/docs/en/img/en/device/fs2-auth1.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * : Set how to use time and attendance mode.
 
    * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) and set the icons to be displayed on the screen, T\&A Event Name, and Schedule.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -23259,7 +23263,7 @@ Set conditions to search logs.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
 3. Press ![](/docs/en/img/common/ico-search.svg) to search a specific log and change the condition.
 
@@ -23273,7 +23277,7 @@ You can check the details of the logs.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
 3. Click the log to check the details.
 
@@ -23285,9 +23289,9 @@ You can delete all saved logs.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
-3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click Confirm. Press Cancel to return to the previous screen.
+3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click OK. Press Cancel to return to the previous screen.
 
 #### View log usage[​](#view-log-usage "Direct link to View log usage")
 
@@ -23295,7 +23299,7 @@ You can check the status of log usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Event Log → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
+2. EVENT LOG → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/fs2-eventlog2.png)
 
@@ -25555,7 +25559,7 @@ You can change the display and sound settings of the device.
 
    * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
-   * Server Private\</br>Message: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private\</br>Message can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private\</br>Message is enabled on the device.
+   * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
    * Screen Saver: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
 
@@ -25581,7 +25585,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Communication → Ethernet.
+2. Select NETWORK → Ethernet.
 
 3. Change the desired item.
 
@@ -25603,13 +25607,13 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 Info
 
-Ethernet cannot be used with WLAN.
+Ethernet cannot be used with Wireless.
 
 ##### Wireless[​](#wireless "Direct link to Wireless")
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Communication → WLAN.
+2. Select NETWORK → Wireless.
 
 3. The list of networks available to connect will be displayed.
 
@@ -25621,17 +25625,17 @@ Ethernet cannot be used with WLAN.
 
 Info
 
-* WLAN is only available for the FS2-AWB model.
+* Wireless is only available for the FS2-AWB model.
 
-* WLAN cannot be used with Ethernet.
+* Wireless cannot be used with Ethernet.
 
-* To connect to WLAN, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
+* To connect to Wireless, a wireless router is required. For content regarding the installation and configuration of wireless router, refer to the user’s manual of the wireless router.
 
 ##### Server[​](#server "Direct link to Server")
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Communication → Server.
+2. Select NETWORK → Server.
 
 3. Change the desired item.
 
@@ -25651,7 +25655,7 @@ Info
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Communication and change the desired item in Serial Setting.
+2. Press NETWORK and change the desired item in Serial Setting.
 
    ![](/docs/en/img/en/device/fs2-network-serial.png)
 
@@ -25667,7 +25671,7 @@ You can configure the account and extensions of the SIP intercom.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → VOIP.
+2. Click DEVICE → VOIP.
 
    ![](/docs/en/img/en/device/fs2-interphone.png)
 
@@ -25683,15 +25687,15 @@ You can set the input ports of Open Time and Exit Button on the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Relay Port.
+2. Click DEVICE → Relay.
 
-   * Relay Port: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
+   * Relay: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or Normally ClosedN/CNormally Open) for the Exit Button's input port.
+   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -25699,7 +25703,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Date & Time.
+2. Click DEVICE → Date & Time.
 
 3. Change the desired item.
 
@@ -25721,7 +25725,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
+2. Click DEVICE → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
 
 3. Change the desired item.
 
@@ -25739,7 +25743,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Device Info. You can view the information for Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC, and WiFi MAC.
+2. Select DEVICE → Device Info. You can view the information for Model Name, Device ID, Serial No., HW, FW, Kernel, MAC, and WiFi MAC.
 
 Info
 
@@ -25751,7 +25755,7 @@ View the status of memory usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Memory Info. You can view the memory usage status of the device.
+2. Select DEVICE → Memory Info. You can view the memory usage status of the device.
 
 ##### USB memory[​](#usb-memory "Direct link to USB memory")
 
@@ -25759,7 +25763,7 @@ Connect USB Memory and import user information to the device or export log and u
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → USB Memory.
+2. Select DEVICE → USB Memory.
 
 3. Select the desired item and change the setting.
 
@@ -25767,7 +25771,7 @@ Connect USB Memory and import user information to the device or export log and u
 
    * Export: Select information you wish to export to the connected USB memory.
 
-   * Firmware Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+   * FW Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
 
 Caution
 
@@ -25799,7 +25803,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device.
+2. Select DEVICE.
 
 3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
@@ -25809,9 +25813,9 @@ The user can restart the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Restart Device.
+2. Select DEVICE → Restart Device.
 
-3. Press Confirm to restart the device. Press Cancel to return to the previous screen.
+3. Press OK to restart the device. Press Cancel to return to the previous screen.
 
 ##### Restore default[​](#restore-default "Direct link to Restore default")
 
@@ -25819,11 +25823,11 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Restore Default.
+2. Select DEVICE → Restore Default.
 
-   * All settings: Initializes all settings stored on the device. To initialize all device settings, press OK → Confirm. Press Cancel to return to the previous screen.
+   * All settings: Initializes all settings stored on the device. To initialize all device settings, press OK → OK. Press Cancel to return to the previous screen.
 
-   * Keep Network Settings: Initializes all settings except for network settings. To initialize all settings except network settings, press OK → Confirm. Press Cancel to return to the previous screen.
+   * Keep Network Settings: Initializes all settings except for network settings. To initialize all settings except network settings, press OK → OK. Press Cancel to return to the previous screen.
 
    * Factory Default: Deletes all information saved in the device and the root certificate, restoring settings to default.
 
@@ -25847,7 +25851,7 @@ Select the type of user ID to register to the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → User ID Type.
+2. Select DEVICE → User ID Type.
 
    ![](/docs/en/img/en/device/fs2-user-id-type.png)
 
@@ -25863,7 +25867,7 @@ The device can measure the temperature of users passing through the entrance by 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Thermal Camera.
+2. Select DEVICE → Thermal Camera.
 
 3. Change the desired item.
 
@@ -25995,7 +25999,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-add2.svg) to User Role. The face registration wizard will start.
+2. Click ![](/docs/en/img/common/ico-add2.svg) to USER. The face registration wizard will start.
 
    ![](/docs/en/img/en/device/fs2-user-enroll-face.png)
 
@@ -26057,23 +26061,23 @@ You can register user information that includes biometric authentication data.
 
    * PIN: You can enter the PIN you want to use. Enter the PIN you want to use, then confirm by entering the PIN again, and press OK. To prevent leaks, input a PIN of 4 to 16 digits.
 
-   * User Level: You can select permissions to assign to the user.
+   * Operator Level: You can select permissions to assign to the user.
 
      Info
 
      Available menus vary according to the set user level.
 
-     * Unauthorized: This is a general user level, and the menu is not available.
+     * None: This is a general user level, and the menu is not available.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Communication, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Management: You can use the menus USER, EVENT LOG.
 
    * Face Group: You can select a group for the user's face. Face groups can only be used if Group Matching is enabled and can only be registered in BioStar X.
 
-   * Access\<br/>Group: You can check the user's access group. Access groups can only be registered in BioStar X.
+   * Access Group: You can check the user's access group. Access groups can only be registered in BioStar X.
 
    * Private Auth Mode: You can set a personal authentication mode. Using personal authentication mode allows you to combine authentication methods including face authentication for each user. Otherwise, you can use the device’s basic authentication mode.
 
@@ -26085,7 +26089,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to User Role.
+2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
 
 3. Select your search terms. You can search for users using All , User ID , Name , Face , Card.
 
@@ -26093,11 +26097,11 @@ User Management or Administrator can modify the registered user information. A c
 
 5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
 
-   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press Confirm.
+   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
 Info
 
-Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -26105,11 +26109,11 @@ You can delete all registered users at once.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to User Role.
+2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
 
 3. Select Delete All to check, then press OK.
 
-4. To delete all users, press Confirm.
+4. To delete all users, press OK.
 
 #### View User Usage[​](#view-user-usage "Direct link to View User Usage")
 
@@ -26117,7 +26121,7 @@ You can see the number of registered users, faces, and cards at a glance.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-info2.svg) to User Role. User usage information appears.
+2. Click ![](/docs/en/img/common/ico-info2.svg) to USER. User usage information appears.
 
    ![](/docs/en/img/en/device/fs2-user-usage.png)
 
@@ -26331,7 +26335,7 @@ Fingerprint authentication is only available on the FSF2-ODB product.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode → ![](/docs/en/img/common/ico-add2.svg).
+2. Press AUTHENTICATION → Auth Mode → ![](/docs/en/img/common/ico-add2.svg).
 
 3. Select ![](/docs/en/img/common/ico-add1.svg) and choose the authentication method you want to use. To set an additional authentication method, select it in the same way and combine it.
 
@@ -26351,7 +26355,7 @@ Fingerprint authentication is only available on the FSF2-ODB product.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select the authentication mode to modify.
 
@@ -26361,11 +26365,11 @@ Fingerprint authentication is only available on the FSF2-ODB product.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Press ![](/docs/en/img/common/ico-delete.svg) and select the authentication mode to delete. You can select multiple options.
 
-4. To delete the selected item, press OK, then press Confirm. Press Cancel to return to the previous screen.
+4. To delete the selected item, press OK, then press OK. Press Cancel to return to the previous screen.
 
 #### Server matching[​](#server-matching "Direct link to Server matching")
 
@@ -26373,7 +26377,7 @@ You can set up server matching. Using server matching means that user authentica
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Authentication then enable Server Matching.
+2. Press AUTHENTICATION then enable Server Matching.
 
    * FSF2-ODB: Server Matching (Fingerprint, Card, ID)
 
@@ -26391,7 +26395,7 @@ You can change the configuration for facial authentication.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication → Face.
+2. Select AUTHENTICATION → Face.
 
 3. Change the desired item.
 
@@ -26463,13 +26467,13 @@ Info
 
 * When using Mask Detection or Thermal Camera, you can set Check Mode according to the device's purpose.
 
-  * Check after authentication: After authentication, check whether the user is wearing a mask or measure temperature.
+  * Check After Authentication: After authentication, check whether the user is wearing a mask or measure temperature.
 
   * Check Before Authentication: After checking whether the user is wearing a mask or measuring temperature, perform authentication. When using this mode, users without masks or exceeding the standard temperature cannot perform authentication.
 
   * Check Only: The device can only be used for checking whether a mask is worn or for measuring temperature. When using this mode, users wearing masks or below the standard temperature can enter regardless of authentication.
 
-* When Thermal Camera is set to Use, advanced setting options for thermal imaging cameras are activated.
+* When Thermal Camera is set to Enabled, advanced setting options for thermal imaging cameras are activated.
 
   * Celsius/Fahrenheit: You can set the temperature display unit.
 
@@ -26485,7 +26489,7 @@ Info
 
   * Camera Configuration: Set detailed options for the camera for accurate measurement.
 
-* When Thermal Camera is set to Use, you can set detailed options for the thermal imaging camera for accurate measurement according to the installation environment.
+* When Thermal Camera is set to Enabled, you can set detailed options for the thermal imaging camera for accurate measurement according to the installation environment.
 
   * Distance(cm): Set the distance between the user and the thermal camera.
 
@@ -26541,7 +26545,7 @@ You can change the settings for fingerprint authentication.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication → Fingerprint.
+2. Select AUTHENTICATION → Fingerprint.
 
 3. Change the desired item.
 
@@ -26561,7 +26565,7 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Mode: Set to Auto On to turn on the fingerprint sensor when it detects the user’s finger. Set to Always On to keep the sensor always on, even when not scanning fingerprints.
 
-   * Fake Fingerprint Detected: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+   * Live Finger Detection: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
 
    * Advanced Enrollment: Inspect the quality of the scanned fingerprint to save high-quality fingerprint data. When enabled, the device notifies the user if the fingerprint quality is low, helping them scan correctly.
 
@@ -26573,19 +26577,19 @@ You can set how to register T\&A mode.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication → T\&A.
+2. Select AUTHENTICATION → T\&A.
 
 3. Change the desired item.
 
    ![](/docs/en/img/en/device/auth-tna.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * : Set how to use time and attendance mode.
 
    * T\&A Code: Add time and attendance events. Select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) to add a time and attendance event, then set the icon to display, the event name, and the schedule.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -26595,7 +26599,7 @@ You can set the auth result display option.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Authentication.
+2. Select AUTHENTICATION.
 
 3. Set the desired items in Auth Result Display Option.
 
@@ -26630,7 +26634,7 @@ Set conditions to search logs.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
 3. Press ![](/docs/en/img/common/ico-search.svg) to search a specific log and change the condition.
 
@@ -26644,9 +26648,9 @@ You can delete all saved logs.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Event Log.
+2. Select EVENT LOG.
 
-3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click Confirm. Press Cancel to return to the previous screen.
+3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click OK. Press Cancel to return to the previous screen.
 
 #### View log usage[​](#view-log-usage "Direct link to View log usage")
 
@@ -26654,7 +26658,7 @@ You can check the status of log usage.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-info1.svg) to Event Log. Check the device's event log and image log usage.
+2. Click ![](/docs/en/img/common/ico-info1.svg) to EVENT LOG. Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/fsf2-eventlog1.png)
 
@@ -28946,7 +28950,7 @@ You can change the display and sound settings of the device.
 
    * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
-   * Server Private\</br>Message: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private\</br>Message can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private\</br>Message is enabled on the device.
+   * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
    * Screen Saver: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
 
@@ -28972,7 +28976,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Communication → Ethernet.
+2. Select NETWORK → Ethernet.
 
 3. Change the desired item.
 
@@ -28996,7 +29000,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Communication → Server.
+2. Select NETWORK → Server.
 
 3. Change the desired item.
 
@@ -29016,7 +29020,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Communication.
+2. Select NETWORK.
 
 3. Set the desired item in OSDP Setting.
 
@@ -29036,7 +29040,7 @@ You can set the frequency to prevent the video from flickering.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press Device → Camera Frequency.
+2. Press DEVICE → Camera Frequency.
 
    ![](/docs/en/img/en/device/fsf2-device-camera.png)
 
@@ -29048,11 +29052,11 @@ You can set the input ports of Open Time and Exit Button on the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click Device → Relay Port.
+2. Click DEVICE → Relay.
 
    ![](/docs/en/img/en/device/fsf2-network-relay.png)
 
-   * Relay Port: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
+   * Relay: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
@@ -29066,7 +29070,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click Device → Date & Time.
+2. Click DEVICE → Date & Time.
 
 3. Change the desired item.
 
@@ -29088,7 +29092,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click Device → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
+2. Click DEVICE → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
 
 3. Change the desired item.
 
@@ -29108,7 +29112,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → Device Info. You can check the information of Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC.
+2. Select DEVICE → Device Info. You can check the information of Model Name, Device ID, Serial No., HW, FW, Kernel, MAC.
 
    ![](/docs/en/img/en/device/fsf2-info.png)
 
@@ -29118,7 +29122,7 @@ View the status of memory usage.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → Memory Info. You can view the memory usage status of the device.
+2. Select DEVICE → Memory Info. You can view the memory usage status of the device.
 
    ![](/docs/en/img/en/device/fsf2-memory.png)
 
@@ -29128,7 +29132,7 @@ Connect USB Memory and import user information to the device or export log and u
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → USB Memory.
+2. Select DEVICE → USB Memory.
 
 3. Select the desired item and change the setting.
 
@@ -29138,7 +29142,7 @@ Connect USB Memory and import user information to the device or export log and u
 
    * Export: Select information you wish to export to the connected USB memory.
 
-   * Firmware Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+   * FW Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
 
 Caution
 
@@ -29164,7 +29168,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device.
+2. Select DEVICE.
 
 3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
@@ -29174,9 +29178,9 @@ The user can restart the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → Restart Device.
+2. Select DEVICE → Restart Device.
 
-3. Press Confirm to restart the device. Press Cancel to return to the previous screen.
+3. Press OK to restart the device. Press Cancel to return to the previous screen.
 
 ##### Restore default[​](#restore-default "Direct link to Restore default")
 
@@ -29184,11 +29188,11 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → Restore Default.
+2. Select DEVICE → Restore Default.
 
-   * All settings: Initializes all settings stored on the device. Press Confirm to initialize all device settings. Press Cancel to return to the previous screen.
+   * All settings: Initializes all settings stored on the device. Press OK to initialize all device settings. Press Cancel to return to the previous screen.
 
-   * Keep Network Settings: Initializes all settings except for network settings. Press Confirm to initialize all settings except for network settings. Press Cancel to return to the previous screen.
+   * Keep Network Settings: Initializes all settings except for network settings. Press OK to initialize all settings except for network settings. Press Cancel to return to the previous screen.
 
    * Factory Default: Deletes all information saved in the device and the root certificate, restoring settings to default.
 
@@ -29212,7 +29216,7 @@ Select the type of user ID to register to the device.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select Device → User ID Type.
+2. Select DEVICE → User ID Type.
 
    * Number: You can enter a user ID with numbers only.
 
@@ -29294,12 +29298,6 @@ Q.I lost my Admin PIN, so I cannot access the Admin mode.
 * The administrator grants an access permission in the device, so only the administrator can access the Admin menu.
 * If you have lost the Admin PIN, contact the installation company.
 
-##### Master Admin[​](#admin)
-
-Q.After upgrading the firmware on existing devices, the Master Admin setting does not appear.
-
-* Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the Admin 2-Step Authentication option. For more detailed information, refer to [Admin 2-step Authentication](settings#admin-2-step-authentication).
-
 
 ---
 
@@ -29331,19 +29329,19 @@ You can register user information that includes biometric authentication data.
 
    * PIN: You can enter the PIN you want to use. Press PIN → Next and enter the PIN you want to use. For confirmation, enter the PIN once more and then press OK. To prevent leaks, input a PIN of 4 to 16 digits.
 
-   * User Level: You can select permissions to assign to the user.
+   * Operator Level: You can select permissions to assign to the user.
 
      Info
 
      Available menus vary according to the set user level.
 
-     * Unauthorized: This is a general user level, and the menu is not available.
+     * None: This is a general user level, and the menu is not available.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Network, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Management: You can use the menus USER, EVENT LOG.
 
    * Period: You can set the duration for using the user account.
 
@@ -29369,7 +29367,7 @@ You can register user information that includes biometric authentication data.
 
 4. Adjust a distance between the face and screen and look straight at the camera of the device.
 
-5. After the shooting is complete, press Confirm → Save. To retake your face picture, press Re-Shot.
+5. After the shooting is complete, press OK → Save. To retake your face picture, press Re-Shot.
 
 Info
 
@@ -29433,7 +29431,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to User Role.
+2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
 
 3. Select your search terms. You can search for users using All, User ID, Name, Face, Fingerprint, Card.
 
@@ -29441,13 +29439,13 @@ User Management or Administrator can modify the registered user information. A c
 
 5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
 
-   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press Confirm.
+   * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
 Info
 
 * Fingerprint searching is only available on the FSF2-ODB product.
 
-* Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+* Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -29455,11 +29453,11 @@ You can delete all registered users at once.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to User Role.
+2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
 
 3. Select Delete All to check, then press OK.
 
-4. To delete all users, press Confirm.
+4. To delete all users, press OK.
 
 #### View User Usage[​](#view-user-usage "Direct link to View User Usage")
 
@@ -29467,7 +29465,7 @@ View the number of enrolled users, faces, fingerprints, and cards at a glance.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press User Role → ![](/docs/en/img/common/ico-info1.svg). User usage information appears.
+2. Press USER → ![](/docs/en/img/common/ico-info1.svg). User usage information appears.
 
    ![](/docs/en/img/en/device/fsf2-user-usage.png)
 
@@ -37868,7 +37866,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select ![](/docs/en/img/common/ico-add2.svg).
 
@@ -37890,7 +37888,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
 
-   * To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in Authentication → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
+   * To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
 
 6. To save the settings, press OK.
 
@@ -37898,7 +37896,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Select the authentication mode to modify.
 
@@ -37908,7 +37906,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Authentication → Auth Mode.
+2. Press AUTHENTICATION → Auth Mode.
 
 3. Press ![](/docs/en/img/common/ico-delete.svg) and select the authentication mode to delete. You can select multiple options.
 
@@ -37918,7 +37916,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired item in Operation.
+2. After pressing AUTHENTICATION, change the desired item in Operation.
 
    ![](/docs/en/img/en/device/xs2-auth.png)
 
@@ -37936,7 +37934,7 @@ Set whether to use the scramble keypad when entering passwords.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, set whether to use PIN in Scramble Keypad.
+2. After pressing AUTHENTICATION, set whether to use PIN in Scramble Keypad.
 
    ![](/docs/en/img/en/device/xs2-auth1.png)
 
@@ -37948,7 +37946,7 @@ You can set the auth result display option.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired items in Auth Result Display Option.
+2. After pressing AUTHENTICATION, change the desired items in Auth Result Display Option.
 
    ![](/docs/en/img/en/device/xs2-auth2.png)
 
@@ -37974,7 +37972,7 @@ You can set QR/Barcode authentication.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, enable QR in QR/Barcode Operation.
+2. After pressing AUTHENTICATION, enable QR in QR/Barcode Operation.
 
 XS2-QDPB, XS2-QAPB
 
@@ -38000,7 +37998,7 @@ XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB
 
 Info
 
-To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in Authentication → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
+To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
 
 #### Fingerprint settings XS2-ODPB, XS2-OAPB[​](#fingerprint-settings-xs2-odpb-xs2-oapb "Direct link to fingerprint-settings-xs2-odpb-xs2-oapb")
 
@@ -38008,7 +38006,7 @@ You can change the settings for fingerprint authentication.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired items in Fingerprint.
+2. After pressing AUTHENTICATION, change the desired items in Fingerprint.
 
    ![](/docs/en/img/en/device/xs2-auth4.png)
 
@@ -38020,7 +38018,7 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Sensitivity: Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information.
 
-   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Automatic, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Auto, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
 
    * Template Format: Set the fingerprint template format. The default is SUPREMA. Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution.
 
@@ -38030,7 +38028,7 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Mode: Set to Auto On to turn on the fingerprint sensor when it detects the user’s finger. Set to Always On to keep the sensor always on, even when not scanning fingerprints.
 
-   * Fake Fingerprint Detected: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+   * Live Finger Detection: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
 
    * Advanced Enrollment: Inspect the quality of the scanned fingerprint to save high-quality fingerprint data. When enabled, the device notifies the user if the fingerprint quality is low, helping them scan correctly.
 
@@ -38042,17 +38040,17 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing Authentication, change the desired item in T\&A Mode.
+2. After pressing AUTHENTICATION, change the desired item in <!-- -->.
 
    ![](/docs/en/img/en/device/xs2-auth5.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * : Set how to use time and attendance mode.
 
    * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) and set the icons to be displayed on the screen, T\&A Event Name, and Schedule.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -38069,7 +38067,7 @@ Set conditions to search logs.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
 3. Press ![](/docs/en/img/common/ico-search.svg) to search a specific log and change the condition.
 
@@ -38083,9 +38081,9 @@ You can delete all saved logs.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Event Log. All event logs appear.
+2. Select EVENT LOG. All event logs appear.
 
-3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click Confirm. Press Cancel to return to the previous screen.
+3. To delete all logs, select ![](/docs/en/img/common/ico-delete.svg) and click OK. Press Cancel to return to the previous screen.
 
 #### View log usage[​](#view-log-usage "Direct link to View log usage")
 
@@ -38093,7 +38091,7 @@ You can check the status of log usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Event Log → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
+2. EVENT LOG → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/xs2-eventlog1.png)
 
@@ -40009,7 +40007,7 @@ You can change the display and sound settings of the device.
 
    * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
-   * Server Private\</br>Message: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private\</br>Message can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private\</br>Message is enabled on the device.
+   * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
    * Screen Saver: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
 
@@ -40035,7 +40033,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Communication → Ethernet.
+2. Select NETWORK → Ethernet.
 
 3. Change the desired item.
 
@@ -40059,7 +40057,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Communication → Server.
+2. Select NETWORK → Server.
 
 3. Change the desired item.
 
@@ -40079,7 +40077,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Communication and set the desired item in OSDP Setting.
+2. Click NETWORK and set the desired item in OSDP Setting.
 
    ![](/docs/en/img/en/device/xs2-network-osdp.png)
 
@@ -40099,7 +40097,7 @@ You can activate the device license or check Licenses in Slave Devices and Activ
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Press Device → License.
+2. Press DEVICE → License.
 
 3. To activate the device license, connect the USB containing the license to the device and select ![](/docs/en/img/common/ico-add2.svg).
 
@@ -40127,17 +40125,17 @@ You can set the input ports of Open Time and Exit Button on the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Relay Port.
+2. Click DEVICE → Relay.
 
    ![](/docs/en/img/en/device/xs2-relay.png)
 
-   * Relay Port: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
+   * Relay: You can set whether relay is enabled or not. Enabling relay settings will allow you to configure Open Time and Exit Button.
 
    * Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or Normally ClosedN/CNormally Open) for the Exit Button's input port.
+   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -40145,7 +40143,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Date & Time.
+2. Click DEVICE → Date & Time.
 
 3. Change the desired item.
 
@@ -40167,7 +40165,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click Device → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
+2. Click DEVICE → Daylight Saving Time, then press ![](/docs/en/img/common/ico-add2.svg) to add daylight savings time.
 
 3. Change the desired item.
 
@@ -40187,7 +40185,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Device Info. You can check the information of Product Name, Device ID, Serial Number, HW, FW, Kernel, MAC.
+2. Select DEVICE → Device Info. You can check the information of Model Name, Device ID, Serial No., HW, FW, Kernel, MAC.
 
    ![](/docs/en/img/en/device/xs2-info.png)
 
@@ -40197,7 +40195,7 @@ View the status of memory usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Memory Info. You can view the memory usage status of the device.
+2. Select DEVICE → Memory Info. You can view the memory usage status of the device.
 
    ![](/docs/en/img/en/device/xs2-memory.png)
 
@@ -40207,7 +40205,7 @@ Connect USB Memory and import user information to the device or export log and u
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → USB Memory.
+2. Select DEVICE → USB Memory.
 
 3. Select the desired item and change the setting.
 
@@ -40217,7 +40215,7 @@ Connect USB Memory and import user information to the device or export log and u
 
    * Export: Select information you wish to export to the connected USB memory.
 
-   * Firmware Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+   * FW Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
 
 Caution
 
@@ -40253,7 +40251,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device.
+2. Select DEVICE.
 
 3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
@@ -40265,9 +40263,9 @@ The user can restart the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Restart Device.
+2. Select DEVICE → Restart Device.
 
-3. Press Confirm to restart the device. Press Cancel to return to the previous screen.
+3. Press OK to restart the device. Press Cancel to return to the previous screen.
 
 ##### Restore default[​](#restore-default "Direct link to Restore default")
 
@@ -40275,11 +40273,11 @@ Device settings, network settings, and operator levels will be reset.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → Restore Default.
+2. Select DEVICE → Restore Default.
 
-   * All settings: Initializes all settings stored on the device. Press Confirm to initialize all device settings. Press Cancel to return to the previous screen.
+   * All settings: Initializes all settings stored on the device. Press OK to initialize all device settings. Press Cancel to return to the previous screen.
 
-   * Keep Network Settings: Initializes all settings except for network settings. Press Confirm to initialize all settings except for network settings. Press Cancel to return to the previous screen.
+   * Keep Network Settings: Initializes all settings except for network settings. Press OK to initialize all settings except for network settings. Press Cancel to return to the previous screen.
 
    * Factory Default: Deletes all information saved in the device and the root certificate, restoring settings to default.
 
@@ -40303,7 +40301,7 @@ Select the type of user ID to register to the device.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select Device → User ID Type.
+2. Select DEVICE → User ID Type.
 
    * Number: You can enter a user ID with numbers only.
 
@@ -40371,12 +40369,6 @@ Q.I lost my Admin PIN, so I cannot access the Admin mode.
 * The administrator grants an access permission in the device, so only the administrator can access the Admin menu.
 * If you have lost the Admin PIN, contact the installation company.
 
-##### Master Admin[​](#admin)
-
-Q.After upgrading the firmware on existing devices, the Master Admin setting does not appear.
-
-* Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the Admin 2-Step Authentication option. For more detailed information, refer to [Admin 2-step Authentication](settings#admin-2-step-authentication).
-
 
 ---
 
@@ -40406,19 +40398,19 @@ You can register user information that includes biometric authentication data.
 
    * PIN: You can enter the PIN you want to use. Press PIN → Next and enter the PIN you want to use. For confirmation, enter the PIN once more and then press OK. To prevent leaks, input a PIN of 4 to 16 digits.
 
-   * User Level: You can select permissions to assign to the user.
+   * Operator Level: You can select permissions to assign to the user.
 
      Info
 
      Available menus vary according to the set user level.
 
-     * Unauthorized: This is a general user level, and the menu is not available.
+     * None: This is a general user level, and the menu is not available.
 
-     * Administrator Role: You can use all menus.
+     * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus Authentication, DISPLAY & SOUND, Device, Communication, Event Log.
+     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Administrator Role: You can use the menus User Role, Event Log.
+     * User Management: You can use the menus USER, EVENT LOG.
 
    * Period: You can set the duration for using the user account.
 
@@ -40432,7 +40424,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-add2.svg) to User Role.
+2. Click ![](/docs/en/img/common/ico-add2.svg) to USER.
 
 3. ![](/docs/en/img/common/ico-add-finger-xs2.png) Press Fingerprint → Next.
 
@@ -40458,7 +40450,7 @@ User Management or Administrator can modify the registered user information. You
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to User Role.
+2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
 
 3. Select your search terms. You can search for users with All, User ID, Name, Fingerprint, Card / QR Code.
 
@@ -40474,7 +40466,7 @@ User Management or Administrator can modify the registered user information. You
 
 Info
 
-Access\<br/>Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -40482,11 +40474,11 @@ You can delete all registered users at once.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to User Role.
+2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
 
 3. Select Delete All to check, then press OK.
 
-4. To delete all users, press Confirm.
+4. To delete all users, press OK.
 
 #### View User Usage[​](#view-user-usage "Direct link to View User Usage")
 
@@ -40494,7 +40486,7 @@ You can see registered users and card counts at a glance.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-info2.svg) to User Role. User usage information appears.
+2. Click ![](/docs/en/img/common/ico-info2.svg) to USER. User usage information appears.
 
    ![](/docs/en/img/en/device/xs2-user-usage.png)
 
@@ -43872,21 +43864,21 @@ BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리
 
 #### 장치 그룹 추가[​](#장치-그룹-추가 "Direct link to 장치 그룹 추가")
 
-1. 화면 왼쪽 사이드바에서 Device Management → Device Groups을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->을 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-device-mng-group-init.png)
 
-2. 화면 오른쪽 상단의 Add Device Group 버튼을 클릭하세요.
+2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
 
-3. Add Device Group 창이 나타나면 그룹 이름을 입력하세요.
+3. 창이 나타나면 그룹 이름을 입력하세요.
 
    ![](/docs/en/img/en/air/bsair-device-mng-group-add-group.png)
 
-   특정 그룹의 하위 그룹으로 장치 그룹을 추가하려면 Add as a Subgroup 옵션을 클릭하고, 상위 그룹을 선택하세요.
+   특정 그룹의 하위 그룹으로 장치 그룹을 추가하려면 <!-- -->옵션을 클릭하고, 상위 그룹을 선택하세요.
 
-4. Add Devices에서 그룹에 포함할 장치를 선택하세요.
+4. 에서 그룹에 포함할 장치를 선택하세요.
 
-5. 장치를 모두 선택했다면 OK 버튼을 클릭하세요.
+5. 장치를 모두 선택했다면 <!-- -->버튼을 클릭하세요.
 
 장치 그룹 목록에서 새로 추가된 그룹과 해당 그룹에 속한 장치의 개수를 확인할 수 있습니다. 장치 그룹을 클릭하면 해당 그룹에 속한 장치를 확인할 수 있습니다.
 
@@ -43894,27 +43886,27 @@ BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리
 
 #### 장치 그룹 이름 변경[​](#장치-그룹-이름-변경 "Direct link to 장치 그룹 이름 변경")
 
-1. 화면 왼쪽 사이드바에서 Device Management → Device Groups을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->을 클릭하세요.
 
 2. 장치 그룹 목록에서 이름을 변경하려는 장치 그룹의 체크박스를 클릭하세요.
 
 3. 장치 그룹 목록 상단의  버튼을 클릭하세요.
 
-4. Edit Device Group 창이 나타나면 새 그룹 이름을 입력하세요.
+4. 창이 나타나면 새 그룹 이름을 입력하세요.
 
    ![](/docs/en/img/en/air/bsair-device-mng-edit-group.png)
 
-5. 변경한 그룹 이름을 저장하려면 OK 버튼을 클릭하세요.
+5. 변경한 그룹 이름을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 #### 장치 그룹 삭제[​](#장치-그룹-삭제 "Direct link to 장치 그룹 삭제")
 
-1. 화면 왼쪽 사이드바에서 Device Management → Device Groups을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->을 클릭하세요.
 
 2. 장치 그룹 목록에서 삭제하려는 장치 그룹의 체크박스를 클릭하세요.
 
 3. 장치 그룹 목록 상단의  버튼을 클릭하세요.
 
-4. 경고 메시지 창이 나타나면 Yes 버튼을 클릭하세요.
+4. 경고 메시지 창이 나타나면 <!-- -->버튼을 클릭하세요.
 
 장치 그룹 목록에서 선택한 장치 그룹이 삭제됩니다. 해당 그룹의 하위 그룹까지 모두 삭제됩니다. 그룹을 삭제하더라도 장치는 삭제되지 않습니다.
 
@@ -43922,33 +43914,33 @@ BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리
 
 장치 목록에서 개별 장치를 선택하여 장치 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
 
-1. 화면 왼쪽 사이드바에서 Device Management → <!-- -->을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->을 클릭하세요.
 
 2. 장치 그룹 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요.
 
 3. 장치 그룹 목록 상단의  버튼을 클릭하세요.
 
-4. Manage Device Groups 창이 나타나면 선택한 장치를 그룹에 추가하거나 제거하세요.
+4. 창이 나타나면 선택한 장치를 그룹에 추가하거나 제거하세요.
 
    ![](/docs/en/img/en/air/bsair-device-mng-list-group-mng.png)
 
-   Device Groups의 체크박스 상태는 아래와 같은 의미를 가집니다.
+   의 체크박스 상태는 아래와 같은 의미를 가집니다.
 
-   * None: 선택한 장치를 그룹에서 제거합니다.
+   * : 선택한 장치를 그룹에서 제거합니다.
 
-   * Some: 선택한 장치 중 일부가 그룹에 포함된 상태입니다.
+   * : 선택한 장치 중 일부가 그룹에 포함된 상태입니다.
 
-   * All: 선택한 장치를 그룹에 추가합니다.
+   * : 선택한 장치를 그룹에 추가합니다.
 
-5. 변경한 내용을 저장하려면 OK 버튼을 클릭하세요.
+5. 변경한 내용을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 Info
 
-* Manage Device Groups 창에서 다른 그룹을 선택하면 선택한 장치는 해당 그룹으로 이동합니다.
+* 창에서 다른 그룹을 선택하면 선택한 장치는 해당 그룹으로 이동합니다.
 
 * 장치는 그룹에 중복으로 속할 수 있습니다. 하나의 장치를 여러 그룹에 할당할 수 있습니다.
 
-* 변경한 내용을 초기화하려면 Reset 버튼을 클릭하세요.
+* 변경한 내용을 초기화하려면 <!-- -->버튼을 클릭하세요.
 
 
 ---
@@ -44014,35 +44006,35 @@ Tip
 
 ##### 장치와 모듈 연결[​](#장치와-모듈-연결 "Direct link to 장치와 모듈 연결")
 
-1. 화면 왼쪽 사이드바에서 Device Management → Registered Devices를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 장치 목록에서 OM-120 모듈이 연결된 출입 통제 장치를 클릭하세요.
 
-3. Modules 섹션에서 OM-120 모듈을 선택하고 Save 버튼을 클릭하세요.
+3. 섹션에서 OM-120 모듈을 선택하고 <!-- -->버튼을 클릭하세요.
 
-OM-120 모듈이 감지되지 않으면 Search OM-120 버튼을 클릭하세요.
+OM-120 모듈이 감지되지 않으면 <!-- -->버튼을 클릭하세요.
 
 ##### 엘리베이터 등록[​](#엘리베이터-등록 "Direct link to 엘리베이터 등록")
 
-1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-elevator-mng.png)
 
-3. Add Elevator 패널이 나타나면 Elevator Name 및 Description(선택 사항)을 입력하세요.
+3. 패널이 나타나면 <!-- -->및 <!-- -->(선택 사항)을 입력하세요.
 
    ![](/docs/en/img/en/air/bsair-elevator-mng-add.png)
 
-4. Assign Device and Modules 섹션에서 출입 인증을 위한 장치와 모듈을 선택하세요.
+4. 섹션에서 출입 인증을 위한 장치와 모듈을 선택하세요.
 
-   * Device: 출입 인증에 사용할 장치를 선택하세요.
+   * : 출입 인증에 사용할 장치를 선택하세요.
 
-   * Modules: 엘리베이터 버튼 릴레이를 제어할 OM-120 모듈을 선택하세요.
+   * : 엘리베이터 버튼 릴레이를 제어할 OM-120 모듈을 선택하세요.
 
-   * Relay Time Out: 인증 완료 후 층 버튼이 활성화된 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 릴레이는 층 버튼에 신호를 보내지 않습니다.
+   * : 인증 완료 후 층 버튼이 활성화된 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 릴레이는 층 버튼에 신호를 보내지 않습니다.
 
-5. Floors Configuration 섹션에서 제어할 수 있는 층 수를 입력하고 Apply 버튼을 클릭하세요.
+5. 섹션에서 제어할 수 있는 층 수를 입력하고 <!-- -->버튼을 클릭하세요.
 
 6. 각 층의 이름과 릴레이 번호, 스케줄을 설정하세요.
 
@@ -44050,19 +44042,19 @@ OM-120 모듈이 감지되지 않으면 Search OM-120 버튼을 클릭하세요.
 
    The image above is an example screen and may differ from the actual screen.
 
-   * Floor Name: 층 이름을 입력하세요. 1층, 로비, 컨퍼런스 층과 같이 식별하기 쉬운 이름을 사용하는 것이 좋습니다.
+   * : 층 이름을 입력하세요. 1층, 로비, 컨퍼런스 층과 같이 식별하기 쉬운 이름을 사용하는 것이 좋습니다.
 
-   * Relay Number: 엘리베이터 제어판에서 각 층의 버튼에 해당하는 릴레이 출력을 선택하세요.
+   * : 엘리베이터 제어판에서 각 층의 버튼에 해당하는 릴레이 출력을 선택하세요.
 
-   * Schedule: 각 층에 접근할 수 있는 일정을 설정하세요. 예를 들어, 근무 시간 외에는 유지 관리 층에 접근하지 못하도록 제한할 수 있습니다.
+   * : 각 층에 접근할 수 있는 일정을 설정하세요. 예를 들어, 근무 시간 외에는 유지 관리 층에 접근하지 못하도록 제한할 수 있습니다.
 
-7. 엘리베이터 설정을 저장하고 등록하려면 Save 버튼을 클릭하세요.
+7. 엘리베이터 설정을 저장하고 등록하려면 <!-- -->버튼을 클릭하세요.
 
 Info
 
 * OM-120 모듈당 최대 12층을 지원합니다. 여러 OM-120 모듈을 데이지 체인 방식으로 연결하여 최대 144층까지 확장할 수 있습니다.
 
-* Floors Configuration 섹션에서 층을 삭제하려면  버튼을 클릭하세요.
+* 섹션에서 층을 삭제하려면  버튼을 클릭하세요.
 
 * 스케줄을 추가로 등록하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요
 
@@ -44070,41 +44062,41 @@ Info
 
 층별 출입 권한을 설정해 특정 사용자 또는 그룹이 어떤 층에 출입할 수 있는지 관리할 수 있습니다.
 
-1. 화면 왼쪽 사이드바에서 Access Management → Floor Levels을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->을 클릭하세요.
 
-2. 화면 오른쪽 상단의 Add Floor Level 버튼을 클릭하세요.
+2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-elevator-mng-add-floor.png)
 
-3. 패널이 나타나면 Name 및 Description(선택 사항)을 입력하세요.
+3. 패널이 나타나면 <!-- -->및 <!-- -->(선택 사항)을 입력하세요.
 
    > 예, 보안팀, 청소 인력
 
    ![](/docs/en/img/en/air/bsair-elevator-mng-add-floor-config.png)
 
-4. Add Floors 섹션에서 출입 권한을 적용할 층을 선택하세요.
+4. 섹션에서 출입 권한을 적용할 층을 선택하세요.
 
-5. Schedule 섹션에서 출입 스케줄을 설정하세요.
+5. 섹션에서 출입 스케줄을 설정하세요.
 
    > 예, 청소 인력의 경우 업무 시간 외에만 출입을 허용하세요.
 
-6. 필요하다면 Holiday Groups을 추가해 특정 일자의 출입을 제한하세요.
+6. 필요하다면 <!-- -->을 추가해 특정 일자의 출입을 제한하세요.
 
-7. 층별 출입 권한 설정을 저장하려면 Save 버튼을 클릭하세요.
+7. 층별 출입 권한 설정을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 #### 엘리베이터 수정[​](#엘리베이터-수정 "Direct link to 엘리베이터 수정")
 
 등록된 엘리베이터의 세부 정보를 변경하거나 설정을 수정하려면 다음 단계를 따르세요.
 
-1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 엘리베이터 목록에서 수정할 엘리베이터를 클릭하세요. 또는 엘리베이터의 체크박스를 클릭하고 목록 상단의  버튼을 클릭하세요.
 
-3. Edit Elevator 패널이 나타나면 필요한 정보를 변경하거나 설정을 수정하세요.
+3. 패널이 나타나면 필요한 정보를 변경하거나 설정을 수정하세요.
 
    ![](/docs/en/img/en/air/bsair-elevator-mng-edit.png)
 
-4. 수정 사항을 저장하려면 Save 버튼을 클릭하세요.
+4. 수정 사항을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 Info
 
@@ -44114,13 +44106,13 @@ Info
 
 등록된 엘리베이터를 삭제하려면 다음 단계를 따르세요.
 
-1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 엘리베이터 목록에서 삭제할 엘리베이터의 체크박스를 클릭하세요. 1개 이상의 엘리베이터를 선택할 수 있습니다.
 
 3. 목록 상단의  버튼을 클릭하세요.
 
-4. 경고 메시지 창이 나타나면 Yes 버튼을 클릭하세요.
+4. 경고 메시지 창이 나타나면 <!-- -->버튼을 클릭하세요.
 
 
 ---
@@ -44147,29 +44139,29 @@ Tip
 
 휴일 그룹은 매년 반복되는 공휴일과 특정 기간의 휴일을 정의하여 해당 기간 동안 출입 권한을 제한하거나 변경하는 데 사용됩니다.
 
-1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
-2. 화면 오른쪽 상단의 Add Holiday Group 버튼을 클릭하세요.
+2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-access-mng-holiday.png)
 
-3. Add Holiday Group 패널이 나타나면 그룹 이름을 입력하세요.
+3. 패널이 나타나면 그룹 이름을 입력하세요.
 
    ![](/docs/en/img/en/air/bsair-access-mng-holiday-add.png)
 
-4. Add Holidays 섹션에서 휴일 이름과 날짜를 지정하세요.
+4. 섹션에서 휴일 이름과 날짜를 지정하세요.
 
-   * 날짜가 고정된 공휴일을 추가하려면 이름과 날짜를 설정하고, Repeat Annually 옵션을 선택하세요.
+   * 날짜가 고정된 공휴일을 추가하려면 이름과 날짜를 설정하고, <!-- -->옵션을 선택하세요.
 
      > 예, 1월 1일 신정, 5월 5일 어린이날
 
-   * 매년 반복되지만 일정한 기간을 갖는 휴일이라면 이름과 날짜를 설정하고, Date Range 옵션을 선택하세요.
+   * 매년 반복되지만 일정한 기간을 갖는 휴일이라면 이름과 날짜를 설정하고, <!-- -->옵션을 선택하세요.
 
      > 예, 10월 5일 ~ 10월 8일 추석 연휴
 
-5. 또 다른 휴일을 추가하려면 Add 버튼을 클릭하세요.
+5. 또 다른 휴일을 추가하려면 <!-- -->버튼을 클릭하세요.
 
-6. 휴일 그룹 설정을 저장하려면 Save 버튼을 클릭하세요.
+6. 휴일 그룹 설정을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 Info
 
@@ -44179,25 +44171,25 @@ Info
 
 #### 휴일 그룹 수정[​](#휴일-그룹-수정 "Direct link to 휴일 그룹 수정")
 
-1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 목록에서 수정할 휴일 그룹을 클릭하세요. 또는 휴일 그룹의 체크박스를 클릭해 선택한 후 목록 상단의  버튼을 클릭하세요.
 
-3. Edit Holiday Group 패널이 나타나면 원하는 항목을 수정하세요.
+3. 패널이 나타나면 원하는 항목을 수정하세요.
 
    ![](/docs/en/img/en/air/bsair-access-mng-holiday-edit.png)
 
-4. 수정 사항을 저장하려면 Save 버튼을 클릭하세요.
+4. 수정 사항을 저장하려면 <!-- -->버튼을 클릭하세요.
 
 #### 휴일 그룹 삭제[​](#휴일-그룹-삭제 "Direct link to 휴일 그룹 삭제")
 
-1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 목록에서 휴일 그룹의 체크박스를 클릭하세요. 1개 이상의 휴일 그룹을 선택할 수 있습니다.
 
 3. 목록 상단의  버튼을 클릭하세요.
 
-4. 경고 메시지 창이 나타나면 Yes 버튼을 클릭하세요.
+4. 경고 메시지 창이 나타나면 <!-- -->버튼을 클릭하세요.
 
 
 ---
@@ -46003,13 +45995,13 @@ BioStar Air 모바일 앱을 사용하여 장치를 등록할 수 있습니다. 
 
 1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
 
-2. Devices 카드를 탭하세요.
+2. 카드를 탭하세요.
 
 3. 화면 오른쪽 상단의  버튼을 탭하세요.
 
 4. 장치 검색 화면에서 등록하려는 장치의 Register 버튼을 탭하세요.
 
-5. 장치 등록 창이 나타나면 OK 버튼을 탭하세요.
+5. 장치 등록 창이 나타나면 <!-- -->버튼을 탭하세요.
 
 장치 목록으로 돌아가 추가된 장치를 확인하세요.
 
@@ -47164,29 +47156,29 @@ This page is currently being translated. We will complete the translation as soo
 
 ![](/docs/en/img/en/air/bsair-user-list-overview.png)
 
-화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 ##### 사용자 정보[​](#사용자-정보 "Direct link to 사용자 정보")
 
 사용자 목록의 테이블에서 제공하는 정보는 아래와 같습니다.
 
-* User Type: 사용자가 일반 사용자인지 임시 사용자인지 나타냅니다. 일반 및 임시 사용자에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
+* : 사용자가 일반 사용자인지 임시 사용자인지 나타냅니다. 일반 및 임시 사용자에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
 
-* Name: 사용자의 이름입니다.
+* : 사용자의 이름입니다.
 
-* ID: 사용자의 고유 아이디입니다.
+* : 사용자의 고유 아이디입니다.
 
-* Credential Type: 사용자에게 발급한 크리덴셜을 나타냅니다. 크리덴셜의 종류에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
+* : 사용자에게 발급한 크리덴셜을 나타냅니다. 크리덴셜의 종류에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/user-card-types)를 참고하세요.
 
-* Valid Through: 사용자에게 발급한 크리덴셜의 유효 기간입니다.
+* : 사용자에게 발급한 크리덴셜의 유효 기간입니다.
 
-* User Status: 해당 사용자의 활성화 또는 비활성화 상태를 나타냅니다.
+* : 해당 사용자의 활성화 또는 비활성화 상태를 나타냅니다.
 
-* User Group: 사용자가 속한 그룹입니다. 사용자 그룹에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/managing-user-groups)를 참고하세요.
+* : 사용자가 속한 그룹입니다. 사용자 그룹에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/managing-user-groups)를 참고하세요.
 
-* Access Level: 사용자에게 할당한 출입 레벨입니다. 출입 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+* : 사용자에게 할당한 출입 레벨입니다. 출입 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
-* Floor level: 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
+* : 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 [다음 문서](#)를 참고하세요.
 
 ##### 필터링[​](#userFiltering "Direct link to 필터링")
 
@@ -47240,7 +47232,7 @@ Info
 
 사용자의 세부 정보를 수정하거나 크리덴셜을 변경하려면 다음 단계를 따르세요.
 
-1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 사용자 목록에서 수정할 사용자를 클릭하세요.
 
@@ -47250,11 +47242,11 @@ Info
 
    ![](/docs/en/img/en/air/bsair-user-details.png)
 
-4. Edit User 창이 나타나면 필요한 세부 정보를 수정하세요.
+4. 창이 나타나면 필요한 세부 정보를 수정하세요.
 
    ![](/docs/en/img/en/air/bsair-user-details-edit-info.png)
 
-5. 수정을 완료하면 오른쪽 하단의 Save 버튼을 클릭하세요.
+5. 수정을 완료하면 오른쪽 하단의 <!-- -->버튼을 클릭하세요.
 
 #### 사용자 상태 관리[​](#manageUserStatus "Direct link to 사용자 상태 관리")
 
@@ -47262,7 +47254,7 @@ Info
 
 ##### 개별 사용자[​](#개별-사용자 "Direct link to 개별 사용자")
 
-1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 사용자 목록에서 상태를 변경할 사용자를 클릭하세요.
 
@@ -47278,7 +47270,7 @@ Info
 
 ##### 일괄 작업[​](#일괄-작업 "Direct link to 일괄 작업")
 
-1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 사용자 목록에서 상태를 변경할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
 
@@ -47286,11 +47278,11 @@ Info
 
 ![](/docs/en/img/en/air/bsair-user-list-multi-user-batch-action.png)
 
-* Activate: 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
+* : 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다.
 
-* Reissue: 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
+* : 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
 
-* Suspend: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+* : 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
 
 #### 사용자 삭제[​](#deleteUser "Direct link to 사용자 삭제")
 
@@ -47300,7 +47292,7 @@ Caution
 
 ##### 개별 사용자[​](#deleteSingleUser "Direct link to 개별 사용자")
 
-1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 사용자 목록에서 삭제할 사용자를 클릭하세요.
 
@@ -47310,21 +47302,21 @@ Caution
 
    ![](/docs/en/img/en/air/bsair-user-details-remove.png)
 
-4. 경고 메시지 창이 나타나면 OK 버튼을 클릭하세요.
+4. 경고 메시지 창이 나타나면 <!-- -->버튼을 클릭하세요.
 
 ##### 일괄 삭제[​](#deleteMultipleUsers "Direct link to 일괄 삭제")
 
-1. 화면 왼쪽 사이드바에서 User Management → Users를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <!-- -->→ <!-- -->를 클릭하세요.
 
 2. 사용자 목록에서 삭제할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
 
    ![](/docs/en/img/en/air/bsair-user-list-multi-select.png)
 
-3. 화면 왼쪽 상단의  → Delete를 클릭하세요.
+3. 화면 왼쪽 상단의  → <!-- -->를 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-user-list-multi-select-remove-opt.png)
 
-4. 경고 메시지 창이 나타나면 OK 버튼을 클릭하세요.
+4. 경고 메시지 창이 나타나면 <!-- -->버튼을 클릭하세요.
 
 #### 사용자 리포트 설정[​](#userReportSettings "Direct link to 사용자 리포트 설정")
 
@@ -47332,21 +47324,21 @@ Caution
 
 1. 사용자 목록 상단의  버튼을 클릭하세요.
 
-2. Report Settings 창이 나타나면 리포트 이름을 입력하세요.
+2. 창이 나타나면 리포트 이름을 입력하세요.
 
    ![](/docs/en/img/en/air/bsair-user-report-setting.png)
 
 3. 리포트에 포함할 항목을 선택하세요.
 
-4. 생성한 리포트를 저장하려면 Add Report 버튼을 클릭하세요.
+4. 생성한 리포트를 저장하려면 <!-- -->버튼을 클릭하세요.
 
-5. Report List이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다.
+5. 이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다.
 
 ![](/docs/en/img/en/air/bsair-user-report-setting-list.png)
 
 Info
 
-Report List에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다.
+에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다.
 
 #### 사용자 검색[​](#searchUsers "Direct link to 사용자 검색")
 
@@ -66952,6 +66944,42 @@ if (readCard.header.hdrCRC != calculatedHdrCRC) {
 [![Suprema Docs](/docs/en/img/suprema-logo.svg)![Suprema Docs](/docs/en/img/suprema-logo-white.svg)](/docs/en/)
 
 [**Docs**](/docs/en/)
+
+[Platforms](#)
+
+* [BioStar X](/docs/en/platform/biostar_x)
+* [BioStar Air](/docs/en/platform/biostar_air)
+
+[Devices](#)
+
+* [BioEntry W3](/docs/en/device/bioentry_w3)
+* [BioStation 2a](/docs/en/device/biostation_2a)
+* [BioStation 3](/docs/en/device/biostation_3)
+* [FaceStation F2](/docs/en/device/facestation_f2)
+* [FaceStation 2](/docs/en/device/facestation_2)
+* [BioLite N2](/docs/en/device/biolite_n2)
+* [BioEntry W2](/docs/en/device/bioentry_w2)
+* [BioEntry P2](/docs/en/device/bioentry_p2)
+* [BioEntry R2](/docs/en/device/bioentry_r2)
+* [X-Station 2](/docs/en/device/xstation_2)
+* [XPass Q2](/docs/en/device/xpass_q2)
+* [XPass 2](/docs/en/device/xpass_2)
+* [XPass D2](/docs/en/device/xpass_d2)
+* [XPass S2](/docs/en/device/xpass_s2)
+* [CoreStation 20](/docs/en/device/corestation_20)
+* [CoreStation](/docs/en/device/corestation_40)
+* [Enclosure](/docs/en/device/enclosure)
+* [Door Interface](/docs/en/device/doorinterface)
+* [Input Module](/docs/en/device/inputmodule)
+* [Output Module](/docs/en/device/outputmodule)
+* [Door Module](/docs/en/device/doormodule)
+* [Secure Module](/docs/en/device/securemodule)
+* [Extended Module](/docs/en/device/extendedmodule)
+* [Extended Module-SC](/docs/en/device/extendedmodule_sc)
+* [Device Manager](/docs/en/device/device_manager)
+* [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager)
+
+[How-to Articles](/docs/en/how-to)
 
 [Platforms](#)
 
