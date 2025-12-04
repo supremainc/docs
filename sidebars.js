@@ -112,12 +112,17 @@ const sidebars = {
             {
               type: 'category',
               label: 'Door Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-door',
+              },
               items: [
                 'platform/biostar_air/managing-registered-doors',
                 'platform/biostar_air/managing-door-and-device-groups',
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
+            'platform/biostar_air/manage-elevator',
             {
               type: 'category',
               label: 'Monitoring',
