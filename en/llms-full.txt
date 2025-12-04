@@ -41537,7 +41537,7 @@ BioStar Air is a cloud-based access control solution that offers a range of feat
 * [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking)
 * [BioStar Air Migration](/docs/en/platform/biostar_air/biostar-air-migration)
 
-#### [Site Management→9 items](/docs/en/platform/biostar_air/site-management)
+#### [Site Management→10 items](/docs/en/platform/biostar_air/site-management)
 
 BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
 
@@ -41545,7 +41545,8 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [BioStar Air Login](/docs/en/platform/biostar_air/biostar-air-login)
 * [User Management](/docs/en/platform/biostar_air/managing-users)
 * [Device Management](/docs/en/platform/biostar_air/manage-device)
-* [Door Management](/docs/en/platform/biostar_air/managing-registered-doors)
+* [Door Management](/docs/en/platform/biostar_air/manage-door)
+* [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator)
 * [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
 * [Settings](/docs/en/platform/biostar_air/managing-administrators)
@@ -43951,6 +43952,148 @@ Info
 
 ---
 
+### 출입문 관리
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air의 출입문 관리는 보안과 접근 통제를 효율적으로 운영하는 핵심입니다. 출입문을 등록하고 입구 및 출구 장치를 구성하며, 그룹과 스케줄을 통해 대규모 출입 통제를 관리할 수 있습니다. 또한 자동화된 잠금/해제 정책과 인증 기반 접근 통제로 보안을 강화할 수 있습니다.
+
+***
+
+#### [📄️<!-- --> <!-- -->Managing Registered Doors](/docs/en/platform/biostar_air/managing-registered-doors)
+
+[Learn how to manage registered doors, configure entry and exit devices, set up relays, and organize door schedules in BioStar Air.](/docs/en/platform/biostar_air/managing-registered-doors)
+
+#### [📄️<!-- --> <!-- -->Managing Door & Device Groups](/docs/en/platform/biostar_air/managing-door-and-device-groups)
+
+[Learn how to organize and manage door groups and device groups in BioStar Air for streamlined access control configuration and efficient system administration.](/docs/en/platform/biostar_air/managing-door-and-device-groups)
+
+#### [📄️<!-- --> <!-- -->Managing Door Schedules](/docs/en/platform/biostar_air/managing-door-schedules)
+
+[Learn how to create and configure automated door schedules, set up unlock and lock timings, and manage authentication-based access control in BioStar Air.](/docs/en/platform/biostar_air/managing-door-schedules)
+
+
+---
+
+### 엘리베이터 관리
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air는 슈프리마의 OM-120 모듈을 사용하여 엘리베이터 출입 통제를 지원합니다. OM-120 모듈을 통해 관리자는 슈프리마 또는 에어팝(Airfob) 출입 통제 장치와 통합하여 층별 출입을 제어할 수 있습니다. 데이지 체인 방식으로 연결된 OM-120 장치를 통해 최대 144층까지 지원합니다.
+
+2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
+
+Tip
+
+엘리베이터 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+
+#### 엘리베이터 출입 통제 요구사항[​](#엘리베이터-출입-통제-요구사항 "Direct link to 엘리베이터 출입 통제 요구사항")
+
+엘리베이터 출입 통제 기능을 활성화하려면 다음 요구사항을 충족해야 합니다.
+
+* [슈프리마 OM-120 모듈](https://supremainc.com/en/hardware/pd_om-120.asp): 각 모듈은 최대 12층까지 지원합니다. 최대 12개의 OM-120 모듈을 하나의 출입 통제 장치에 연결하여 최대 144층까지 지원할 수 있습니다.
+
+* OM-120과 연결할 수 있는 슈프리마 또는 에어팝(Airfob) 출입 통제 장치가 필요합니다.
+
+* 엘리베이터 제어판에 대한 적절한 배선 작업이 필요합니다. 배선 세부 사항은 엘리베이터 제조업체에 문의하세요.
+
+* 층별 출입 스케줄이 우선 적용되며, 휴일 설정으로 일반 출입 규칙을 재정의할 수 있습니다.
+
+#### 엘리베이터 출입 통제 설정[​](#엘리베이터-출입-통제-설정 "Direct link to 엘리베이터 출입 통제 설정")
+
+엘리베이터 출입 통제를 설정하려면 다음 단계를 따르세요.
+
+##### 장치와 모듈 연결[​](#장치와-모듈-연결 "Direct link to 장치와 모듈 연결")
+
+1. 화면 왼쪽 사이드바에서 Device Management → Registered Devices를 클릭하세요.
+
+2. 장치 목록에서 OM-120 모듈이 연결된 출입 통제 장치를 클릭하세요.
+
+3. Modules 섹션에서 OM-120 모듈을 선택하고 Save 버튼을 클릭하세요.
+
+OM-120 모듈이 감지되지 않으면 Search OM-120 버튼을 클릭하세요.
+
+##### 엘리베이터 등록[​](#엘리베이터-등록 "Direct link to 엘리베이터 등록")
+
+1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+
+2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-elevator-mng.png)
+
+3. Add Elevator 패널이 나타나면 Elevator Name 및 Description(선택 사항)을 입력하세요.
+
+   ![](/docs/en/img/en/air/bsair-elevator-mng-add.png)
+
+4. Assign Device and Modules 섹션에서 출입 인증을 위한 장치와 모듈을 선택하세요.
+
+   * Device: 출입 인증에 사용할 장치를 선택하세요.
+
+   * Modules: 엘리베이터 버튼 릴레이를 제어할 OM-120 모듈을 선택하세요.
+
+   * Relay Time Out: 인증 완료 후 층 버튼이 활성화된 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 릴레이는 층 버튼에 신호를 보내지 않습니다.
+
+5. Floors Configuration 섹션에서 제어할 수 있는 층 수를 입력하고 Apply 버튼을 클릭하세요.
+
+6. 각 층의 이름과 릴레이 번호, 스케줄을 설정하세요.
+
+   ![](/docs/en/img/air/bsair-elevator-mng-add-config-floor.png)
+
+   The image above is an example screen and may differ from the actual screen.
+
+   * Floor Name: 층 이름을 입력하세요. 1층, 로비, 컨퍼런스 층과 같이 식별하기 쉬운 이름을 사용하는 것이 좋습니다.
+
+   * Relay Number: 엘리베이터 제어판에서 각 층의 버튼에 해당하는 릴레이 출력을 선택하세요.
+
+   * Schedule: 각 층에 접근할 수 있는 일정을 설정하세요. 예를 들어, 근무 시간 외에는 유지 관리 층에 접근하지 못하도록 제한할 수 있습니다.
+
+7. 엘리베이터 설정을 저장하고 등록하려면 Save 버튼을 클릭하세요.
+
+Info
+
+* OM-120 모듈당 최대 12층을 지원합니다. 여러 OM-120 모듈을 데이지 체인 방식으로 연결하여 최대 144층까지 확장할 수 있습니다.
+
+* Floors Configuration 섹션에서 층을 삭제하려면  버튼을 클릭하세요.
+
+* 스케줄을 추가로 등록하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요
+
+#### 층별 출입 권한 설정[​](#층별-출입-권한-설정 "Direct link to 층별 출입 권한 설정")
+
+층별 출입 권한을 설정해 특정 사용자 또는 그룹이 어떤 층에 출입할 수 있는지 관리할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 Access Management → Floor Levels을 클릭하세요.
+
+2. 화면 오른쪽 상단의 Add Floor Level 버튼을 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-elevator-mng-add-floor.png)
+
+3. 패널이 나타나면 Name 및 Description(선택 사항)을 입력하세요.
+
+   > 예, 보안팀, 청소 인력
+
+   ![](/docs/en/img/en/air/bsair-elevator-mng-add-floor-config.png)
+
+4. Add Floors 섹션에서 출입 권한을 적용할 층을 선택하세요.
+
+5. Schedule 섹션에서 출입 스케줄을 설정하세요.
+
+   > 예, 청소 인력의 경우 업무 시간 외에만 출입을 허용하세요.
+
+6. 필요하다면 Holiday Groups을 추가해 특정 일자의 출입을 제한하세요.
+
+7. 층별 출입 권한 설정을 저장하려면 Save 버튼을 클릭하세요.
+
+
+---
+
 ### Managing and Adding Users in the BioStar Air App
 
 #### Feature Overview[​](#feature-overview "Direct link to Feature Overview")
@@ -46123,11 +46266,17 @@ BioStar Air에서 장치 생명주기를 관리하는 모든 방법을 안내합
 * [How to Upgrade Firmware](/docs/en/platform/biostar_air/how-to-upgrade-firmware)
 * [Biometric Readers and Credentials](/docs/en/platform/biostar_air/biometric-readers-and-credentials)
 
-#### Door Management→3 items
+#### [Door Management→3 items](/docs/en/platform/biostar_air/manage-door)
+
+BioStar Air에서 출입문을 등록하고 설정하며, 그룹과 스케줄을 통해 효율적으로 관리하는 방법을 안내합니다.
 
 * [Managing Registered Doors](/docs/en/platform/biostar_air/managing-registered-doors)
 * [Managing Door & Device Groups](/docs/en/platform/biostar_air/managing-door-and-device-groups)
 * [Managing Door Schedules](/docs/en/platform/biostar_air/managing-door-schedules)
+
+#### [엘리베이터 관리→ <!-- -->Read more](/docs/en/platform/biostar_air/manage-elevator)
+
+Description
 
 #### Monitoring→2 items
 

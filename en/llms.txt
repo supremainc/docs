@@ -496,6 +496,8 @@
 - [Why Do I Need to Enable Location Services?](/docs/en/platform/biostar_air/location-services-issues): Learn how to enable location services in the Suprema Pass app for secure Bluetooth communication and mobile access card functionality.
 - [장치 관리](/docs/en/platform/biostar_air/manage-device): BioStar Air에서 장치 생명주기를 관리하는 모든 방법을 안내합니다. 장치 등록부터 세부 설정 구성, 그룹 관리, 펌웨어 업그레이드, 그리고 생체 인식 및 보안 모듈 구성까지 장치를 효율적으로 운영하는 전체 과정을 다룹니다.
 - [장치 그룹 관리하기](/docs/en/platform/biostar_air/manage-device-group): 장치를 그룹으로 묶어 효율적으로 관리하는 방법을 안내합니다.
+- [출입문 관리](/docs/en/platform/biostar_air/manage-door): BioStar Air에서 출입문을 등록하고 설정하며, 그룹과 스케줄을 통해 효율적으로 관리하는 방법을 안내합니다.
+- [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator): Description
 - [Managing and Adding Users in the BioStar Air App](/docs/en/platform/biostar_air/managing-adding-users): Learn how to manage users, edit profiles, perform batch operations, and add new users with credentials through the BioStar Air mobile app.
 - [Managing Administrators](/docs/en/platform/biostar_air/managing-administrators): Learn how to invite administrators, assign role levels, manage permissions, and understand access controls for Observer, Operator, Administrator, and Master levels in BioStar Air.
 - [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates): Learn how to create, customize, and manage mobile card templates with branding elements including logos, colors, and user properties in BioStar Air.
