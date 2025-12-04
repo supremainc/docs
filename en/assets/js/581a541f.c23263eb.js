@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["84101"], {
-84597: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["71853"], {
+29892: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_581_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-system-requirements-mdx-ff0.json
-var site_docs_platform_biostar_x_system_requirements_mdx_ff0_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"시스템 최소 요구사항","description":"BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","source":"@site/docs/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"시스템 최소 요구사항","description":"BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.","keywords":["시스템 최소 요구사항","운영체제","데이터베이스","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/before-start"},"next":{"title":"시작하기","permalink":"/docs/platform/biostar_x/getting-started"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-system-requirements-mdx-581.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_581_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"System Minimum Requirements","description":"Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/en/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"System Minimum Requirements","description":"Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.","keywords":["System Minimum Requirements","Operating System","Database","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Before Start","permalink":"/docs/en/platform/biostar_x/before-start"},"next":{"title":"Getting Started","permalink":"/docs/en/platform/biostar_x/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/system-requirements.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx
 
 
 const frontMatter = {
 	id: 'system-requirements',
-	title: '시스템 최소 요구사항',
-	description: 'BioStar X를 설치하기 위한 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요.',
+	title: 'System Minimum Requirements',
+	description: 'Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.',
 	keywords: [
-		'시스템 최소 요구사항',
-		'운영체제',
-		'데이터베이스',
+		'System Minimum Requirements',
+		'Operating System',
+		'Database',
 		'CPU',
 		'RAM'
 	],
@@ -45,27 +45,27 @@ const assets = {
 
 
 const toc = [{
-  "value": "메인 서버",
+  "value": "Main server",
   "id": "main-server",
   "level": 2
 }, {
-  "value": "SQL Server 라이선스 요구사항",
+  "value": "SQL Server license requirements",
   "id": "sqlserver-requriements",
   "level": 3
 }, {
-  "value": "일반 사용",
+  "value": "General usage",
   "id": "general",
   "level": 4
 }, {
-  "value": "BioStar X API 사용",
+  "value": "Using the BioStar X API",
   "id": "useapi",
   "level": 4
 }, {
-  "value": "커뮤니케이션 서버",
+  "value": "Communication server",
   "id": "communication-server",
   "level": 2
 }, {
-  "value": "클라이언트",
+  "value": "Client",
   "id": "client",
   "level": 2
 }];
@@ -94,24 +94,24 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "는 대규모 엔터프라이즈 환경에서 안정적이고 확장 가능한 통합 보안 관리 솔루션을 제공합니다. 시스템은 메인 서버와 커뮤니케이션 서버로 구성되는 분산 아키텍처를 통해 최대 천대 이상의 장치를 효율적으로 관리할 수 있습니다."]
+      }), " provides a reliable and scalable integrated security management solution for large enterprise environments. The system can efficiently manage over a thousand devices through a distributed architecture consisting of a main server and a communication server."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "메인 서버는 시스템의 핵심 관리 기능을, 커뮤니케이션 서버는 장치 통신을 전담하여 부하를 분산시키고 성능을 최적화합니다. 또한 관리자는 클라이언트 PC에서 웹 브라우저를 통해 시스템에 접속하여 모든 관리 업무를 수행할 수 있습니다. 아래의 시스템 요구사항을 확인하여 조직 규모에 맞는 최적의 환경을 구성하세요."
+      children: "The main server manages the core management features of the system, while the communication server is responsible for device communication, distributing the load and optimizing performance. Additionally, administrators can access the system via a web browser on client PCs and perform all management tasks. Check the system requirements below to configure the optimal environment for your organization size."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["라이선스 구성 및 최적화에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["For more information on license configuration and optimization, contact the ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://support.supremainc.com",
-          children: "슈프리마 기술 지원팀"
-        }), "으로 문의하세요."]
+          children: "Suprema Technical Support"
+        }), "."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "main-server",
-      children: "메인 서버"
+      children: "Main server"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["메인 서버는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["The main server is the server where the central management system of ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 중앙 관리 시스템이 설치되는 서버입니다. 사용자가 웹 브라우저로 접속하여 시스템을 관리하고, 사용자 정보나 출입 권한 설정 등의 모든 업무를 처리합니다. 또한 시스템 전체의 상태를 모니터링하고, 이벤트 로그나 알람을 관리하는 역할을 담당합니다."]
+      }), " is installed. The user accesses the system through a web browser to manage it and handle all tasks such as setting user information or access permissions. It is also responsible for monitoring the overall status of the system and managing event logs or alarms."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x col5--15-10-25",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -119,41 +119,41 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "항목"
+              children: "Item"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "소규모 조직"
+              children: "Small"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "중규모 조직"
+              children: "Mid-sized organization"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "대규모 조직"
+              children: "Enterprise"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "사용 환경"
+              children: "Usage Environment"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "장치 수"
+              children: "Total Devices"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 - 50 대"
+              children: "1 to 50"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "51 - 100 대"
+              children: "51 to 100"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "101 - 1,000 대"
+              children: "101 to 1,000"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "6",
-              children: "시스템 환경"
+              children: "System Requirement"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "운영체제"
+              children: "Operating System"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
               children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "데이터베이스"
+              children: "Database"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
               children: "MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022"
@@ -162,41 +162,41 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3GHz 6코어"
+              children: "2.3 GHz 6-core"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3GHz 8코어"
+              children: "2.3 GHz 8-core"
             }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["최소 2.3GHz", (0,jsx_runtime.jsx)("br", {}), "권장 4.0GHz 16코어"]
+              children: ["Minimum 2.3 GHz", (0,jsx_runtime.jsx)("br", {}), "Recommended 4.0 GHz 16-core"]
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16GB"
+              children: "16 GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32GB"
+              children: "32 GB"
             }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["최소 64GB", (0,jsx_runtime.jsx)("br", {}), "권장 128GB"]
+              children: ["Minimum 64 GB", (0,jsx_runtime.jsx)("br", {}), "Recommended 128 GB"]
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "SSD"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "512GB"
+              children: "512 GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "512GB"
+              children: "512 GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1TB"
+              children: "1 TB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "HDD"
             }), (0,jsx_runtime.jsxs)(_components.td, {
               colSpan: "3",
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["When using the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.imageLog",
                 product: "2"
-              }), " 기능을 사용 시, 1,000만 개의 이미지 로그 기준 200GB 필요"]
+              }), " feature, 200 GB is required for 10 million image logs."]
             })]
           })]
         })]
@@ -208,102 +208,93 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "는 64비트 운영체제에서만 설치할 수 있습니다."]
+            }), " can only be installed on 64-bit operating systems."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "MS SQL Server 보안 통신은 TLS 1.2를 지원합니다."
+            children: "MS SQL Server communication security supports TLS 1.2."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["MS SQL Server와 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["If MS SQL Server and ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "가 서로 다른 PC에 설치되어 있으면 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), "가 설치된 PC에 ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " are installed on different PCs, you should install the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server",
               children: "Microsoft OLE DB Driver for SQL Server"
-            }), "를 설치해야 합니다."]
+            }), " on a PC with ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " installed."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "대규모 조직에서는 MS SQL Server 데이터베이스를 설치하는 것을 권장합니다."
+            children: "For enterprise environment, it is recommended to install an MS SQL Server database."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["데이터베이스를 MS SQL Server를 사용하고, ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["If you are using an MS SQL Server database and ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X T&A"
-            }), "를 사용한다면 ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
+            }), ", you will need to install the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
               children: "Microsoft ODBC Driver 17 for SQL Server"
-            }), "가 필요하므로 사용자의 환경에 적합한 드라이버를 설치하세요."]
+            }), " appropriate for your environment."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Mac 운영체제에서 제공하는 부트 캠프의 Windows 가상 환경은 지원하지 않습니다."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다. 더 많은 장치를 연결하려면 커뮤니케이션 서버를 추가하세요."
+            children: "The Windows virtual environment provided by Boot Camp on macOS is not supported."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "sqlserver-requriements",
-      children: "SQL Server 라이선스 요구사항"
+      children: "SQL Server license requirements"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["데이터베이스로 SQL Server를 사용하는 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["If using SQL Server as the database, a proper SQL Server license is required depending on the number of connected devices for stable operation of ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 각 환경별 권장 라이선스 구성을 참고하여 조직의 규모와 필요에 맞는 라이선스를 선택하세요."]
+      }), ". Refer to the recommended license configurations for each environment to select a license suitable for the size and needs of your organization."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["SQL Server 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["For more information on SQL Server licenses, refer to ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://www.microsoft.com/sql-server/sql-server-2022-pricing",
-          children: "Microsoft SQL Server 라이선스"
-        }), "를 참고하세요."]
+          children: "Microsoft SQL Server Licensing"
+        }), "."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "general",
-      children: "일반 사용"
+      children: "General usage"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "조직"
+            children: "Organization"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "장치 수"
+            children: "Total Devices"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "코어 수"
-          }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "SQL Server 라이선스"
+            children: "Number of cores"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "소규모 조직"
+            children: "Small"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "1 - 50 대"
+            children: "1 to 50"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "4 - 6"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "3",
-            children: "SQL Server Standard Edition (Core-based)"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "중규모 조직"
+            children: "Mid-sized organization"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "50 - 300 대"
+            children: "50 - 300 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "8 - 12"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "대규모 조직"
+            children: "Enterprise"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "300 - 1,000 대"
+            children: "300 - 1,000 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "16 - 24"
           })]
@@ -311,45 +302,40 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "useapi",
-      children: "BioStar X API 사용"
+      children: "Using the BioStar X API"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "조직"
+            children: "Organization"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "장치 수"
+            children: "Total Devices"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "코어 수"
-          }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "SQL Server 라이선스"
+            children: "Number of cores"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "소규모 조직"
+            children: "Small"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "1 - 50 대"
+            children: "1 to 50"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "4 - 6"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "3",
-            children: "SQL Server Standard Edition (Core-based)"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "중규모 조직"
+            children: "Mid-sized organization"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "50 - 300 대"
+            children: "50 - 300 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "8 - 12"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "대규모 조직"
+            children: "Enterprise"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "300 - 1,000 대"
+            children: "300 - 1,000 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "16 - 24"
           })]
@@ -357,9 +343,9 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "communication-server",
-      children: "커뮤니케이션 서버"
+      children: "Communication server"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다."
+      children: "The communication server is a server dedicated to communication with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single communication server can connect up to 1,000 devices, and you can add multiple communication servers as needed."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -367,18 +353,18 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "항목"
+              children: "Item"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "사양"
+              children: "Specification"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "4",
-              children: "시스템 환경"
+              children: "System Requirement"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "운영체제"
+              children: "Operating System"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
             })]
@@ -386,35 +372,30 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 2.3GHz, 권장 4.0GHz 16코어"
+              children: "Minimum 2.3 GHz, recommended 4.0 GHz 16-core"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 64GB, 권장 128GB"
+              children: "Minimum 64 GB, recommended 128 GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "SSD"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1TB"
+              children: "1 TB"
             })]
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다."
-      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "client",
-      children: "클라이언트"
+      children: "Client"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["클라이언트는 관리자가 웹 브라우저를 통해 ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["The client is the PC where administrators access ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "에 접속하여 시스템을 운영하는 PC입니다."]
+      }), " through a web browser to operate the system."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -422,52 +403,52 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "항목"
+              children: "Item"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "소규모 조직"
+              children: "Small"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "중규모 조직"
+              children: "Mid-sized organization"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "대규모 조직"
+              children: "Enterprise"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "4",
-              children: "시스템 환경"
+              children: "System Requirement"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.5GHz"
+              children: "2.5 GHz"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.5GHz"
+              children: "2.5 GHz"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 2.5GHz"
+              children: "Minimum 2.5 GHz"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16GB"
+              children: "16 GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32GB"
+              children: "32 GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "최소 32GB"
+              children: "Minimum 32 GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "GPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "VMS 사용 시, 최소 NVIDIA GeForce RTX 4060"
+              children: "Minimum NVIDIA GeForce RTX 4060 when using VMS"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "웹 브라우저"
+              children: "web browser"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "Google 크롬 100 버전 이상"
+              children: "Google Chrome version 100 or higher"
             })]
           })]
         })]
@@ -479,13 +460,13 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "는 Google 크롬에 최적화되어 있습니다."]
+            }), " is optimized for Google Chrome."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: ["The web interface of ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), "의 웹 인터페이스는 모바일 브라우저에 대한 지원을 제공하지 않습니다."]
+            }), " does not provide support for mobile browsers."]
           }), "\n"]
         }), "\n"]
       })
