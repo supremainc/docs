@@ -1,0 +1,122 @@
+---
+id: manage-elevator
+title: 엘리베이터 관리
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+BioStar Air는 슈프리마의 OM-120 모듈을 사용하여 엘리베이터 출입 통제를 지원합니다. OM-120 모듈을 통해 관리자는 슈프리마 또는 에어팝(Airfob) 출입 통제 장치와 통합하여 층별 출입을 제어할 수 있습니다. 데이지 체인 방식으로 연결된 OM-120 장치를 통해 최대 144층까지 지원합니다.
+
+<CustomerNote />
+
+:::tip
+
+엘리베이터 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+
+<YouTube videoId="szCBlVFdrBo" />
+
+:::
+
+
+## 엘리베이터 출입 통제 요구사항
+
+엘리베이터 출입 통제 기능을 활성화하려면 다음 요구사항을 충족해야 합니다.
+
+* [슈프리마 OM-120 모듈](https://supremainc.com/en/hardware/pd_om-120.asp): 각 모듈은 최대 12층까지 지원합니다. 최대 12개의 OM-120 모듈을 하나의 출입 통제 장치에 연결하여 최대 144층까지 지원할 수 있습니다.
+
+* OM-120과 연결할 수 있는 슈프리마 또는 에어팝(Airfob) 출입 통제 장치가 필요합니다.
+
+* 엘리베이터 제어판에 대한 적절한 배선 작업이 필요합니다. 배선 세부 사항은 엘리베이터 제조업체에 문의하세요.
+
+* 층별 출입 스케줄이 우선 적용되며, 휴일 설정으로 일반 출입 규칙을 재정의할 수 있습니다.
+
+
+## 엘리베이터 출입 통제 설정
+
+엘리베이터 출입 통제를 설정하려면 다음 단계를 따르세요.
+
+### 장치와 모듈 연결
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. 장치 목록에서 OM-120 모듈이 연결된 출입 통제 장치를 클릭하세요.
+
+1. <Cmd sid='module_found_slots_title' product='air' /> 섹션에서 OM-120 모듈을 선택하고 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::note
+
+OM-120 모듈이 감지되지 않으면 <Cmd sid='module_found_module_search_button' product='air' /> 버튼을 클릭하세요.
+
+:::
+
+### 엘리베이터 등록
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='elevator_menu' product='air' /> → <Cmd sid='elevators_submenu' product='air' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_elevator_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-elevator-mng.png' />
+
+1. <Cmd sid='add_elevator.title' product='air' /> 패널이 나타나면 <Cmd sid='add_elevator.device_info.field1' product='air' /> 및 <Cmd sid='add_elevator.device_info.field2' product='air' />(선택 사항)을 입력하세요.
+
+   <Image src='/img/air/bsair-elevator-mng-add.png' />
+
+1. <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' /> 섹션에서 출입 인증을 위한 장치와 모듈을 선택하세요.
+
+   * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />: 출입 인증에 사용할 장치를 선택하세요.
+
+   * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />: 엘리베이터 버튼 릴레이를 제어할 OM-120 모듈을 선택하세요.
+
+   * <Cmd sid='add_elevator.assign_device_and_modules.field3' product='air' />: 인증 완료 후 층 버튼이 활성화된 상태로 유지되는 시간을 설정하세요. 이 시간이 지나면 릴레이는 층 버튼에 신호를 보내지 않습니다.
+
+1. <Cmd sid='add_elevator.floors_configuration.title' product='air' /> 섹션에서 제어할 수 있는 층 수를 입력하고 <Cmd sid='add_elevator.floors_configuration.apply_btn' product='air' /> 버튼을 클릭하세요.
+
+1. 각 층의 이름과 릴레이 번호, 스케줄을 설정하세요.
+
+   <Image src='/img/air/bsair-elevator-mng-add-config-floor.png' alone caption />
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column1' product='air' />: 층 이름을 입력하세요. 1층, 로비, 컨퍼런스 층과 같이 식별하기 쉬운 이름을 사용하는 것이 좋습니다.
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column2' product='air' />: 엘리베이터 제어판에서 각 층의 버튼에 해당하는 릴레이 출력을 선택하세요.
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column3' product='air' />: 각 층에 접근할 수 있는 일정을 설정하세요. 예를 들어, 근무 시간 외에는 유지 관리 층에 접근하지 못하도록 제한할 수 있습니다.
+
+1. 엘리베이터 설정을 저장하고 등록하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+* OM-120 모듈당 최대 12층을 지원합니다. 여러 OM-120 모듈을 데이지 체인 방식으로 연결하여 최대 144층까지 확장할 수 있습니다.
+
+* <Cmd sid='add_elevator.floors_configuration.title' product='air' /> 섹션에서 층을 삭제하려면 <IcAirRemove /> 버튼을 클릭하세요.
+
+* 스케줄을 추가로 등록하는 방법에 대한 자세한 내용은 [다음 문서](#)를 참고하세요
+
+:::
+
+## 층별 출입 권한 설정
+
+층별 출입 권한을 설정해 특정 사용자 또는 그룹이 어떤 층에 출입할 수 있는지 관리할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='access_menu' product='air' /> → <Cmd sid='floor_levels_submenu' product='air' />을 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='floor_levels_title_add_button' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-elevator-mng-add-floor.png' />
+
+1. <Cmd sid='bsair-elevator-mng-add-floor-config.png' product='air' /> 패널이 나타나면 <Cmd sid='floor_levels_list_column_name' product='air' /> 및 <Cmd sid='add_floor_levels_description_column' product='air' />(선택 사항)을 입력하세요.
+
+   > 예, 보안팀, 청소 인력
+
+   <Image src='/img/air/bsair-elevator-mng-add-floor-config.png' />
+
+1. <Cmd sid='add_floor_levels_add_floors' product='air' /> 섹션에서 출입 권한을 적용할 층을 선택하세요.
+
+1. <Cmd sid='floor_levels_list_column_schedule_name' product='air' /> 섹션에서 출입 스케줄을 설정하세요. 
+
+   > 예, 청소 인력의 경우 업무 시간 외에만 출입을 허용하세요.
+
+1. 필요하다면 <Cmd sid='floor_levels_label_holiday_grp' product='air' />을 추가해 특정 일자의 출입을 제한하세요.
+
+1. 층별 출입 권한 설정을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.

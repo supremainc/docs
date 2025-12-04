@@ -122,6 +122,7 @@ const sidebars = {
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
+            'platform/biostar_air/manage-elevator',
             {
               type: 'category',
               label: 'Monitoring',
