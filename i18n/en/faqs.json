@@ -132,7 +132,7 @@
           "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
           "question": "The fingerprint sensor does not turn on.",
           "answer": [
-            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to <span class='cmd'>AUTH</span> → <span class='cmd'>Fingerprint</span> → <span class='cmd'>Sensor Mode</span> and then select <span class='cmd'>Always On</span>."
+            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to <span class='cmd'>AUTHENTICATION</span> → <span class='cmd'>Fingerprint</span> → <span class='cmd'>Sensor Mode</span> and then select <span class='cmd'>Always On</span>."
           ]
         }
       ]
@@ -190,7 +190,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "bioentry_w3", "biostation_2a", "facestation_f2", "biolite_n2", "xstation_2" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a" ],
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
