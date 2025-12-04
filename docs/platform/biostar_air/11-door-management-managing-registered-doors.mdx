@@ -43,7 +43,9 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 
 :::info
 
-BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다음 문서](register-device)를 참고하세요.
+* 출입문 목록에서 필터링 옵셥은 <Cmd sid='door_product_column4' product='air' /> 열만 제공합니다. <IcAirFilter /> 버튼을 클릭하고 원하는 조건을 설정하세요.
+
+* BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다음 문서](register-device)를 참고하세요.
 
 :::
 
@@ -60,9 +62,12 @@ BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다
 
 * <IcAirRemove width='24px' height='24px' />: 출입문 목록에서 선택한 출입문을 사이트에서 제거합니다.
 
-* <IcAirSchedule width='24px' height='24px' />: 출입문 잠금 및 해제를 위한 스케줄을 설정합니다.
+* <IcAirSchedule width='24px' height='24px' />: 출입문 열림 및 잠김 상태를 위한 스케줄을 설정합니다. 자세한 내용은 [다음 문서](managing-door-schedules)를 참고하세요.
 
 * <IcAirGroup width='24px' height='24px' />: 출입문 목록에서 선택한 출입문을 그룹으로 구성할 수 있습니다.
+
+* <IcAirReport width='24px' height='24px' />: 출입문 리포트를 생성할 수 있습니다.
+
 
 ## 출입문 추가 {#addingDoor}
 
@@ -81,6 +86,16 @@ BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다
 1. 설치한 카메라가 있다면 <Cmd sid='door_product_column6' product='air' />를 할당하세요.
 
 1. 출입문 설정을 저장하고 추가하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::note
+
+**출입문의 장치 할당 규칙**
+
+* 각 장치는 **하나의 출입문**에만 할당할 수 있습니다.
+
+* 장치가 이미 등록되어 있지만 사용할 수 있는 장치 목록에 나타나지 않는다면, 해당 장치가 다른 출입문에 할당되어 있는지 확인하세요. 다른 장치에 할당되어 있다면 해당 출입문에서 제거한 후 다시 시도하세요.
+
+:::
 
 
 ## 출입문 수정 {#editingDoors}
@@ -130,26 +145,6 @@ BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다
 :::
 
 
-## 출입문 스케줄 설정 {#settingDoorSchedules}
-
-출입문에 자동 잠금 및 해제를 위한 스케줄을 할당할 수 있습니다. 출입문 목록에서 스케줄을 설정할 출입문을 하나 이상 선택하고 상단의 <IcAirSchedule /> 버튼을 클릭하세요.
-
-<Image src='/img/air/bsair-door-mng-registered-door-schedule.png' />
-
-* <Cmd sid='unlock_schedule' product='air' />: 설정한 시간 동안 출입문이 열려 있습니다.
-
-* <Cmd sid='lock_schedule' product='air' />: 설정한 시간 동안 출입문이 잠겨 있습니다.
-
-* <Cmd sid='unlock_after_first_auth' product='air' />: 첫 번째 사용자가 인증한 후 출입문이 열림 상태를 유지합니다. 이 옵션은 사무실 및 소매점에서 사용하기에 유용합니다.
-
-
-## 출입문의 장치 할당 규칙 {#device-assignment-rules}
-
-* 각 장치는 **하나의 출입문**에만 할당할 수 있습니다.
-
-* 장치가 이미 등록되어 있지만 사용할 수 있는 장치 목록에 나타나지 않는다면, 해당 장치가 다른 출입문에 할당되어 있는지 확인하세요. 다른 장치에 할당되어 있다면 해당 출입문에서 제거한 후 다시 시도하세요.
-
-
 ## 모바일 기기에서 출입문 관리 {#managingDoorsOnMobile}
 
 관리자는 BioStar Air 모바일 앱에서 직접 출입문을 관리할 수 있습니다.
@@ -175,3 +170,30 @@ BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 [다
 * 릴레이 설정
 
 * 퇴출 버튼 및 출입문 센서 구성
+
+
+## 출입문 리포트 생성 {#generatingDoorReports}
+
+출입문 리포트를 생성하여 관리자의 이메일로 전송할 수 있습니다. 출입문 리포트는 출입문을 통해 출입한 사용자에 대한 정보를 제공합니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
+
+1. 출입문 목록 상단의 <IcAirReport /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
+
+   <Image src='/img/air/bsair-door-mng-registered-door-report.png' />
+
+1. 리포트에 포함할 항목을 선택하세요.
+
+1. 생성한 리포트를 저장하려면 <Cmd sid='report_form_text_add' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_form_text_title' product='air' />이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다.
+
+<Image src='/img/air/bsair-door-mng-registered-door-report-list.png' />
+
+:::info
+
+<Cmd sid='report_form_text_title' product='air' />에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다.
+
+:::
