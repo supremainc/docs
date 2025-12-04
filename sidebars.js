@@ -125,6 +125,13 @@ const sidebars = {
             'platform/biostar_air/manage-elevator',
             {
               type: 'category',
+              label: '출입 권한 관리',
+              items: [
+                'platform/biostar_air/manage-holiday-group',
+              ]
+            },
+            {
+              type: 'category',
               label: 'Monitoring',
               items: [
                 'platform/biostar_air/event-and-audit-logs',
