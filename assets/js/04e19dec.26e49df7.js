@@ -43,8 +43,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "장치 그룹 만들기",
-  "id": "장치-그룹-만들기",
+  "value": "장치 그룹 추가",
+  "id": "장치-그룹-추가",
   "level": 2
 }, {
   "value": "장치 그룹 이름 변경",
@@ -79,8 +79,8 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리할 수 있습니다. 장치 그룹을 사용하면 동일한 설정을 여러 장치에 일괄 적용하거나, 특정 그룹의 장치 상태를 쉽게 모니터링할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "장치-그룹-만들기",
-      children: "장치 그룹 만들기"
+      id: "장치-그룹-추가",
+      children: "장치 그룹 추가"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -112,7 +112,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["특정 그룹의 하위 그룹으로 장치 그룹을 생성하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["특정 그룹의 하위 그룹으로 장치 그룹을 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "add_sub_group_text",
               product: "air"
             }), " 옵션을 클릭하고, 상위 그룹을 선택하세요."]
@@ -123,7 +123,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "device_group_label_add_device",
             product: "air"
-          }), "에서 그룹에 추가할 장치를 선택하세요."]
+          }), "에서 그룹에 포함할 장치를 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -134,7 +134,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치 그룹 목록에서 새로 생성된 그룹과 해당 그룹에 속한 장치의 개수를 확인할 수 있습니다. 장치 그룹 목록의 그룹을 클릭하면 해당 그룹에 속한 장치를 확인할 수 있습니다."
+      children: "장치 그룹 목록에서 새로 추가된 그룹과 해당 그룹에 속한 장치의 개수를 확인할 수 있습니다. 장치 그룹을 클릭하면 해당 그룹에 속한 장치를 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-device-mng-group-list.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -153,11 +153,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 목록에서 이름을 변경하려는 장치 그룹의 체크박스를 클릭하세요."
+          children: "장치 그룹 목록에서 이름을 변경하려는 장치 그룹의 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirEdit, {}), " 버튼을 클릭하세요."]
+          children: ["장치 그룹 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirEdit, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -192,11 +192,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 목록에서 삭제하려는 장치 그룹의 체크박스를 클릭하세요."
+          children: "장치 그룹 목록에서 삭제하려는 장치 그룹의 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirRemove, {}), " 버튼을 클릭하세요."]
+          children: ["장치 그룹 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirRemove, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -207,7 +207,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치 그룹 목록에서 선택한 장치 그룹이 삭제됩니다. 해당 그룹의 하위 그룹까지 모두 삭제됩니다. 그룹을 삭제하더라도 장치는 삭제되지 않고 그룹에 포함되지 않습니다."
+      children: "장치 그룹 목록에서 선택한 장치 그룹이 삭제됩니다. 해당 그룹의 하위 그룹까지 모두 삭제됩니다. 그룹을 삭제하더라도 장치는 삭제되지 않습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "device_group_in_device_list",
       children: "장치 목록에서 그룹 관리"
@@ -226,11 +226,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요."
+          children: "장치 그룹 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["장치 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirGroup, {}), " 버튼을 클릭하세요."]
+          children: ["장치 그룹 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirGroup, {}), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

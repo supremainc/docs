@@ -676,7 +676,7 @@ function user_management_user_list_createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "report_form_text_title",
           product: "air"
-        }), "에서 생성된 리포트를 수정하거나 다운로드, 삭제할 수 있습니다."]
+        }), "에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "searchUsers",

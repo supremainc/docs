@@ -512,8 +512,8 @@
 - [관리자 관리하기](/docs/platform/biostar_air/managing-administrators): BioStar Air에서 관리자 초대, 역할 등급 지정, 권한 관리, Observer, Operator, Administrator 및 Master 역할에 대한 출입 통제 설정 방법을 안내합니다.
 - [카드 템플릿 관리하기](/docs/platform/biostar_air/managing-card-templates): BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.
 - [출입문 관리하기](/docs/platform/biostar_air/managing-door-access): BioStar Air에서 출입 등급을 생성하고, 일정과 휴일 그룹 구성, 사용자에게 출입 권한을 할당하는 방법을 안내합니다.
-- [출입문 및 장치 그룹 관리하기](/docs/platform/biostar_air/managing-door-and-device-groups): BioStar Air에서 출입문 및 장치 그룹을 구성하고 관리하는 방법을 안내합니다. 이를 통해 출입 통제 구성을 간소화하고 시스템을 효율적으로 관리할 수 있습니다.
-- [출입문 스케줄 관리하기](/docs/platform/biostar_air/managing-door-schedules): BioStar Air에서 자동화 출입문 스케줄을 만들고 구성하는 방법, 잠금 해제 및 잠금 시간 설정 방법, 인증 기반 출입 통제를 관리하는 방법을 안내합니다.
+- [출입문 그룹 관리하기](/docs/platform/biostar_air/managing-door-and-device-groups): BioStar Air에서 출입문 그룹을 구성하고 관리하는 방법을 안내합니다. 이를 통해 출입 통제 구성을 간소화하고 시스템을 효율적으로 관리할 수 있습니다.
+- [출입문 스케줄 관리하기](/docs/platform/biostar_air/managing-door-schedules): BioStar Air에서 자동화 출입문 스케줄을 만들고 구성하는 방법, 잠김 해제 및 잠김 시간 설정 방법, 인증 기반 출입 통제를 관리하는 방법을 안내합니다.
 - [엘리베이터 출입 관리하기](/docs/platform/biostar_air/managing-elevator-access): BioStar Air에서 슈프리마의 OM120 모듈을 사용해 엘리베이터 출입 통제 구성, 층 권한 설정, 사용자 출입 등급 관리 방법을 안내합니다.
 - [등록 장치 관리하기](/docs/platform/biostar_air/managing-registered-devices): BioStar Air 포털에서 등록된 슈프리마 장치의 연결 상태를 확인하고, 생체 인증, 카드 설정, 네트워크, 펌웨어 등 세부 설정을 구성하는 방법을 안내합니다. 개별 장치 관리 및 대량 작업을 통해 효율적으로 여러 장치를 관리할 수 있습니다.
 - [등록 출입문 관리하기](/docs/platform/biostar_air/managing-registered-doors): BioStar Air에서 등록한 출입문 관리, 출입 장치 구성, 릴레이 설정 및 출입문 스케줄을 구성하는 방법을 안내합니다.

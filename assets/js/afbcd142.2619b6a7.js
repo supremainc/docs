@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-11-door-management-managing-registered-doors-mdx-afb.json
-var site_docs_platform_biostar_air_11_door_management_managing_registered_doors_mdx_afb_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-registered-doors","title":"등록 출입문 관리하기","description":"BioStar Air에서 등록한 출입문 관리, 출입 장치 구성, 릴레이 설정 및 출입문 스케줄을 구성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/11-door-management-managing-registered-doors.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-registered-doors","permalink":"/docs/platform/biostar_air/managing-registered-doors","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/11-door-management-managing-registered-doors.mdx","tags":[],"version":"current","sidebarPosition":11,"frontMatter":{"id":"managing-registered-doors","title":"등록 출입문 관리하기","description":"BioStar Air에서 등록한 출입문 관리, 출입 장치 구성, 릴레이 설정 및 출입문 스케줄을 구성하는 방법을 안내합니다.","keywords":["출입문 관리","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"바이오인식 장치와 크리덴셜","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"},"next":{"title":"출입문 및 장치 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-door-and-device-groups"}}')
+var site_docs_platform_biostar_air_11_door_management_managing_registered_doors_mdx_afb_namespaceObject = JSON.parse('{"id":"platform/biostar_air/managing-registered-doors","title":"등록 출입문 관리하기","description":"BioStar Air에서 등록한 출입문 관리, 출입 장치 구성, 릴레이 설정 및 출입문 스케줄을 구성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/11-door-management-managing-registered-doors.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/managing-registered-doors","permalink":"/docs/platform/biostar_air/managing-registered-doors","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/11-door-management-managing-registered-doors.mdx","tags":[],"version":"current","sidebarPosition":11,"frontMatter":{"id":"managing-registered-doors","title":"등록 출입문 관리하기","description":"BioStar Air에서 등록한 출입문 관리, 출입 장치 구성, 릴레이 설정 및 출입문 스케줄을 구성하는 방법을 안내합니다.","keywords":["출입문 관리","BioStar Air"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"바이오인식 장치와 크리덴셜","permalink":"/docs/platform/biostar_air/biometric-readers-and-credentials"},"next":{"title":"출입문 그룹 관리하기","permalink":"/docs/platform/biostar_air/managing-door-and-device-groups"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -108,14 +108,6 @@ const toc = [..._biostarair_customer_notice/* .toc */.RM, {
   "id": "editingDoors",
   "level": 2
 }, {
-  "value": "출입문 스케줄 설정",
-  "id": "settingDoorSchedules",
-  "level": 2
-}, {
-  "value": "출입문의 장치 할당 규칙",
-  "id": "device-assignment-rules",
-  "level": 2
-}, {
   "value": "모바일 기기에서 출입문 관리",
   "id": "managingDoorsOnMobile",
   "level": 2
@@ -127,6 +119,10 @@ const toc = [..._biostarair_customer_notice/* .toc */.RM, {
   "value": "출입문 수정",
   "id": "출입문-수정",
   "level": 3
+}, {
+  "value": "출입문 리포트 생성",
+  "id": "generatingDoorReports",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -141,13 +137,15 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, IcAdd, IcAirEdit, IcAirGroup, IcAirRef, IcAirRemove, IcAirSchedule, Image, YouTube} = _components;
+  }, {Cmd, IcAdd, IcAirEdit, IcAirFilter, IcAirGroup, IcAirRef, IcAirRemove, IcAirReport, IcAirSchedule, Image, YouTube} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!IcAdd) _missingMdxReference("IcAdd", true);
   if (!IcAirEdit) _missingMdxReference("IcAirEdit", true);
+  if (!IcAirFilter) _missingMdxReference("IcAirFilter", true);
   if (!IcAirGroup) _missingMdxReference("IcAirGroup", true);
   if (!IcAirRef) _missingMdxReference("IcAirRef", true);
   if (!IcAirRemove) _missingMdxReference("IcAirRemove", true);
+  if (!IcAirReport) _missingMdxReference("IcAirReport", true);
   if (!IcAirSchedule) _missingMdxReference("IcAirSchedule", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!YouTube) _missingMdxReference("YouTube", true);
@@ -227,11 +225,22 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "register-device",
-          children: "다음 문서"
-        }), "를 참고하세요."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["출입문 목록에서 필터링 옵셥은 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "door_product_column4",
+              product: "air"
+            }), " 열만 제공합니다. ", (0,jsx_runtime.jsx)(IcAirFilter, {}), " 버튼을 클릭하고 원하는 조건을 설정하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "register-device",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "doorManagementTools",
@@ -268,7 +277,10 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirSchedule, {
             width: "24px",
             height: "24px"
-          }), ": 출입문 잠금 및 해제를 위한 스케줄을 설정합니다."]
+          }), ": 출입문 열림 및 잠김 상태를 위한 스케줄을 설정합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "managing-door-schedules",
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -276,6 +288,13 @@ function _createMdxContent(props) {
             width: "24px",
             height: "24px"
           }), ": 출입문 목록에서 선택한 출입문을 그룹으로 구성할 수 있습니다."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(IcAirReport, {
+            width: "24px",
+            height: "24px"
+          }), ": 출입문 리포트를 생성할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -338,6 +357,25 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "출입문의 장치 할당 규칙"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["각 장치는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "하나의 출입문"
+            }), "에만 할당할 수 있습니다."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "장치가 이미 등록되어 있지만 사용할 수 있는 장치 목록에 나타나지 않는다면, 해당 장치가 다른 출입문에 할당되어 있는지 확인하세요. 다른 장치에 할당되어 있다면 해당 출입문에서 제거한 후 다시 시도하세요."
+          }), "\n"]
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "editingDoors",
       children: "출입문 수정"
@@ -493,51 +531,6 @@ function _createMdxContent(props) {
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "settingDoorSchedules",
-      children: "출입문 스케줄 설정"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["출입문에 자동 잠금 및 해제를 위한 스케줄을 할당할 수 있습니다. 출입문 목록에서 스케줄을 설정할 출입문을 하나 이상 선택하고 상단의 ", (0,jsx_runtime.jsx)(IcAirSchedule, {}), " 버튼을 클릭하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/bsair-door-mng-registered-door-schedule.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "unlock_schedule",
-            product: "air"
-          }), ": 설정한 시간 동안 출입문이 열려 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "lock_schedule",
-            product: "air"
-          }), ": 설정한 시간 동안 출입문이 잠겨 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "unlock_after_first_auth",
-            product: "air"
-          }), ": 첫 번째 사용자가 인증한 후 출입문이 열림 상태를 유지합니다. 이 옵션은 사무실 및 소매점에서 사용하기에 유용합니다."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "device-assignment-rules",
-      children: "출입문의 장치 할당 규칙"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["각 장치는 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "하나의 출입문"
-          }), "에만 할당할 수 있습니다."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치가 이미 등록되어 있지만 사용할 수 있는 장치 목록에 나타나지 않는다면, 해당 장치가 다른 출입문에 할당되어 있는지 확인하세요. 다른 장치에 할당되어 있다면 해당 출입문에서 제거한 후 다시 시도하세요."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "managingDoorsOnMobile",
       children: "모바일 기기에서 출입문 관리"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -590,6 +583,64 @@ function _createMdxContent(props) {
           children: "퇴출 버튼 및 출입문 센서 구성"
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "generatingDoorReports",
+      children: "출입문 리포트 생성"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "출입문 리포트를 생성하여 관리자의 이메일로 전송할 수 있습니다. 출입문 리포트는 출입문을 통해 출입한 사용자에 대한 정보를 제공합니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "door_menu",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "door_submenu",
+            product: "air"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["출입문 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirReport, {}), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "report_popup_title",
+            product: "air"
+          }), " 창이 나타나면 리포트 이름을 입력하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-door-mng-registered-door-report.png"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "리포트에 포함할 항목을 선택하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["생성한 리포트를 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "report_form_text_add",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "report_form_text_title",
+            product: "air"
+          }), "이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-door-mng-registered-door-report-list.png"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
+          sid: "report_form_text_title",
+          product: "air"
+        }), "에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다."]
+      })
     })]
   });
 }
