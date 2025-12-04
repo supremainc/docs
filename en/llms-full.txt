@@ -41537,7 +41537,7 @@ BioStar Air is a cloud-based access control solution that offers a range of feat
 * [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking)
 * [BioStar Air Migration](/docs/en/platform/biostar_air/biostar-air-migration)
 
-#### [Site Management→10 items](/docs/en/platform/biostar_air/site-management)
+#### [Site Management→11 items](/docs/en/platform/biostar_air/site-management)
 
 BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
 
@@ -41547,6 +41547,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [Device Management](/docs/en/platform/biostar_air/manage-device)
 * [Door Management](/docs/en/platform/biostar_air/manage-door)
 * [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator)
+* [출입 권한 관리](/docs/en/platform/biostar_air/manage-holiday-group)
 * [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
 * [Settings](/docs/en/platform/biostar_air/managing-administrators)
@@ -43995,7 +43996,7 @@ Tip
 
 엘리베이터 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
 
-#### 엘리베이터 출입 통제 요구사항[​](#엘리베이터-출입-통제-요구사항 "Direct link to 엘리베이터 출입 통제 요구사항")
+#### 요구사항[​](#요구사항 "Direct link to 요구사항")
 
 엘리베이터 출입 통제 기능을 활성화하려면 다음 요구사항을 충족해야 합니다.
 
@@ -44090,6 +44091,113 @@ Info
 6. 필요하다면 Holiday Groups을 추가해 특정 일자의 출입을 제한하세요.
 
 7. 층별 출입 권한 설정을 저장하려면 Save 버튼을 클릭하세요.
+
+#### 엘리베이터 수정[​](#엘리베이터-수정 "Direct link to 엘리베이터 수정")
+
+등록된 엘리베이터의 세부 정보를 변경하거나 설정을 수정하려면 다음 단계를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+
+2. 엘리베이터 목록에서 수정할 엘리베이터를 클릭하세요. 또는 엘리베이터의 체크박스를 클릭하고 목록 상단의  버튼을 클릭하세요.
+
+3. Edit Elevator 패널이 나타나면 필요한 정보를 변경하거나 설정을 수정하세요.
+
+   ![](/docs/en/img/en/air/bsair-elevator-mng-edit.png)
+
+4. 수정 사항을 저장하려면 Save 버튼을 클릭하세요.
+
+Info
+
+엘리베이터 목록에서 엘리베이터 상태를 업데이트하려면 엘리베이터의 체크박스를 클릭해 선택한 후 목록 상단의  버튼을 클릭하세요.
+
+#### 엘리베이터 삭제[​](#엘리베이터-삭제 "Direct link to 엘리베이터 삭제")
+
+등록된 엘리베이터를 삭제하려면 다음 단계를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
+
+2. 엘리베이터 목록에서 삭제할 엘리베이터의 체크박스를 클릭하세요. 1개 이상의 엘리베이터를 선택할 수 있습니다.
+
+3. 목록 상단의  버튼을 클릭하세요.
+
+4. 경고 메시지 창이 나타나면 Yes 버튼을 클릭하세요.
+
+
+---
+
+### 휴일 그룹 관리하기
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar Air에서 휴일 그룹은 특정 날짜나 기간 동안 출입 규칙을 조정하는 데 사용됩니다. 휴일 그룹을 설정하면 관리자는 공휴일이나 특별한 날에 출입 권한을 제한하거나 변경할 수 있습니다. 이를 통해 보안 수준을 유지하면서도 유연한 출입 통제를 구현할 수 있습니다.
+
+<!-- -->
+
+2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
+
+Tip
+
+출입 통제 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+
+#### 휴일 그룹 추가[​](#휴일-그룹-추가 "Direct link to 휴일 그룹 추가")
+
+휴일 그룹은 매년 반복되는 공휴일과 특정 기간의 휴일을 정의하여 해당 기간 동안 출입 권한을 제한하거나 변경하는 데 사용됩니다.
+
+1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+
+2. 화면 오른쪽 상단의 Add Holiday Group 버튼을 클릭하세요.
+
+   ![](/docs/en/img/en/air/bsair-access-mng-holiday.png)
+
+3. Add Holiday Group 패널이 나타나면 그룹 이름을 입력하세요.
+
+   ![](/docs/en/img/en/air/bsair-access-mng-holiday-add.png)
+
+4. Add Holidays 섹션에서 휴일 이름과 날짜를 지정하세요.
+
+   * 날짜가 고정된 공휴일을 추가하려면 이름과 날짜를 설정하고, Repeat Annually 옵션을 선택하세요.
+
+     > 예, 1월 1일 신정, 5월 5일 어린이날
+
+   * 매년 반복되지만 일정한 기간을 갖는 휴일이라면 이름과 날짜를 설정하고, Date Range 옵션을 선택하세요.
+
+     > 예, 10월 5일 ~ 10월 8일 추석 연휴
+
+5. 또 다른 휴일을 추가하려면 Add 버튼을 클릭하세요.
+
+6. 휴일 그룹 설정을 저장하려면 Save 버튼을 클릭하세요.
+
+Info
+
+* 휴일 그룹은 스케줄 보다 우선합니다. 항상 출입이 필요한 사용자에게는 제한 없는 출입 권한을 부여하세요.
+
+* 매년 같은 날짜에 반복되는 공휴일(예, 신정, 어린이날)과 매년 날짜가 달라지는 휴일(예, 추석, 설날)을 별도의 그룹으로 관리하는 것을 권장합니다.
+
+#### 휴일 그룹 수정[​](#휴일-그룹-수정 "Direct link to 휴일 그룹 수정")
+
+1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+
+2. 목록에서 수정할 휴일 그룹을 클릭하세요. 또는 휴일 그룹의 체크박스를 클릭해 선택한 후 목록 상단의  버튼을 클릭하세요.
+
+3. Edit Holiday Group 패널이 나타나면 원하는 항목을 수정하세요.
+
+   ![](/docs/en/img/en/air/bsair-access-mng-holiday-edit.png)
+
+4. 수정 사항을 저장하려면 Save 버튼을 클릭하세요.
+
+#### 휴일 그룹 삭제[​](#휴일-그룹-삭제 "Direct link to 휴일 그룹 삭제")
+
+1. 화면 왼쪽 사이드바에서 Access Management → Holiday Groups를 클릭하세요.
+
+2. 목록에서 휴일 그룹의 체크박스를 클릭하세요. 1개 이상의 휴일 그룹을 선택할 수 있습니다.
+
+3. 목록 상단의  버튼을 클릭하세요.
+
+4. 경고 메시지 창이 나타나면 Yes 버튼을 클릭하세요.
 
 
 ---
@@ -46276,7 +46384,11 @@ BioStar Air에서 출입문을 등록하고 설정하며, 그룹과 스케줄을
 
 #### [엘리베이터 관리→ <!-- -->Read more](/docs/en/platform/biostar_air/manage-elevator)
 
-Description
+BioStar Air는 슈프리마의 OM-120 모듈을 사용하여 엘리베이터 출입 통제를 지원합니다.
+
+#### 출입 권한 관리→1 item
+
+* [휴일 그룹 관리하기](/docs/en/platform/biostar_air/manage-holiday-group)
 
 #### Monitoring→2 items
 
