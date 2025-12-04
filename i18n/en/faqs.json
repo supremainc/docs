@@ -132,7 +132,7 @@
           "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
           "question": "The fingerprint sensor does not turn on.",
           "answer": [
-            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to <span class='cmd'>AUTHENTICATION</span> → <span class='cmd'>Fingerprint</span> → <span class='cmd'>Sensor Mode</span> and then select <span class='cmd'>Always On</span>."
+            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want the fingerprint sensor to always be on, set <span class='cmd'>Sensor Mode</span> to <span class='cmd'>Always On</span>."
           ]
         }
       ]
