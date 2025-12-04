@@ -136,7 +136,7 @@
   "ui_133": "Memory Usage",
   "ui_134": "Memory Info",
   "ui_135": {
-    "biostation_3": "Message Timeout",
+    "common": "Message Timeout",
     "biostation_2a": "Msg Timeout"
   },
   "ui_136": "Model Name",
@@ -175,11 +175,11 @@
   "ui_169": "User ID Display",
   "ui_170": "Search User",
   "ui_171": {
-    "biostation_3": "User Management",
+    "common": "User Management",
     "biostation_2a": "User Mgmt"
   },
   "ui_172": {
-    "biostation_3": "Operator Level",
+    "common": "Operator Level",
     "biolite_n2": "Operator Level",
     "biostation_2a": "User Level"
   },
