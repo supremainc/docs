@@ -81,7 +81,11 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
 
       if (sidValue) {
         const isGroupType = typeof sidValue === 'object' && !Array.isArray(sidValue);
-        localeText = isGroupType ? sidValue[cProd] : sidValue;
+        if (isGroupType) {
+          localeText = sidValue[cProd] || sidValue['common'] || null;
+        } else {
+          localeText = sidValue;
+        }
         localeText = localeText ? localeText.replace('<br>', '') : null;
       }
     } else {
