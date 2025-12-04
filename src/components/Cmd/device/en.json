@@ -180,6 +180,7 @@
   },
   "ui_172": {
     "biostation_3": "Operator Level",
+    "biolite_n2": "Operator Level",
     "biostation_2a": "User Level"
   },
   "ui_173": "Add User",
@@ -379,9 +380,5 @@
   "ui_370": "Check Only",
   "ui_371": "Extended Private Auth Mode",
   "ui_372": "On",
-  "ui_373": "Complete",
-  "ui_374": "T&A",
-  "ui_375": "User Level",
-  "ui_376": "User Mgmt",
-  "ui_377": "Msg Timeout"
+  "ui_373": "Complete"
 }
