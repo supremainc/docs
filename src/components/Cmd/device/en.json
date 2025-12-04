@@ -80,7 +80,10 @@
   "ui_080": "T&A Fixed",
   "ui_081": "Fixed T&A Key",
   "ui_082": "T&A Required",
-  "ui_083": "T&A Mode",
+  "ui_083": {
+    "biostation_3": "T&A Mode",
+    "biostation_2a": "T&A"
+  },
   "ui_084": "T&A Event",
   "ui_085": "T&A Event Name",
   "ui_086": "T&A Code",
@@ -132,7 +135,10 @@
   "ui_132": "Memory",
   "ui_133": "Memory Usage",
   "ui_134": "Memory Info",
-  "ui_135": "Message Timeout",
+  "ui_135": {
+    "biostation_3": "Message Timeout",
+    "biostation_2a": "Msg Timeout"
+  },
   "ui_136": "Model Name",
   "ui_137": "All",
   "ui_138": "Display All",
@@ -168,8 +174,14 @@
   "ui_168": "User ID Type",
   "ui_169": "User ID Display",
   "ui_170": "Search User",
-  "ui_171": "User Management",
-  "ui_172": "Operator Level",
+  "ui_171": {
+    "biostation_3": "User Management",
+    "biostation_2a": "User Mgmt"
+  },
+  "ui_172": {
+    "biostation_3": "Operator Level",
+    "biostation_2a": "User Level"
+  },
   "ui_173": "Add User",
   "ui_174": "Enroll Wizard",
   "ui_175": "User Usage",

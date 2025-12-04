@@ -1,5 +1,6 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {useLocation} from '@docusaurus/router';
 import { translate } from '@docusaurus/Translate';
 import clsx from 'clsx';
 import koLocale from './ko.json';
@@ -73,8 +74,16 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
           : null;
       }
     } else if (product === 'dev') {
+      const location = useLocation();
+      const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
       const locale = deviceLocaleMap[currentLocale] || deviceLocaleMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br>', '') : null;
+      const sidValue = locale[sid];
+
+      if (sidValue) {
+        const isGroupType = typeof sidValue === 'object' && !Array.isArray(sidValue);
+        localeText = isGroupType ? sidValue[cProd] : sidValue;
+        localeText = localeText ? localeText.replace('<br>', '') : null;
+      }
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
