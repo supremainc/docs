@@ -4463,6 +4463,7 @@ TODO merge this logic back in Infima?
 .externalLink_fSga {
   color: var(--main-text-color);
   border: 1px solid;
+  border-radius: 5px;
 }
 
 .externalLink_fSga:hover, .productLink_G9bI:hover {
@@ -4471,10 +4472,16 @@ TODO merge this logic back in Infima?
   color: var(--main-text-color);
 }
 
+.externalLink_fSga:hover {
+  outline: 1px solid var(--main-text-color);
+  transition: .1s;
+}
+
 .externalLinkitem_hC7Q {
   display: grid;
   grid-template-columns: 95px 1fr;
   background: var(--main-black);
+  border-radius: 5px;
 }
 
 .externalLinkLogo_F32N {
@@ -4544,6 +4551,7 @@ TODO merge this logic back in Infima?
 
 .product_n29p.grid_Emyk .cardItem_IQRN:hover {
   outline: 2px solid var(--main-text-color);
+  transition: .1s;
 }
 
 .product_n29p.grid_Emyk {
