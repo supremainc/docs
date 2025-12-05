@@ -67541,42 +67541,6 @@ if (readCard.header.hdrCRC != calculatedHdrCRC) {
 * [Device Manager](/docs/device/device_manager)
 * [CoreStation Setup Manager](/docs/device/corestation_setup_manager)
 
-[How-to Articles](/docs/how-to)
-
-[Platforms](#)
-
-* [BioStar X](/docs/platform/biostar_x)
-* [BioStar Air](/docs/platform/biostar_air)
-
-[Devices](#)
-
-* [BioEntry W3](/docs/device/bioentry_w3)
-* [BioStation 2a](/docs/device/biostation_2a)
-* [BioStation 3](/docs/device/biostation_3)
-* [FaceStation F2](/docs/device/facestation_f2)
-* [FaceStation 2](/docs/device/facestation_2)
-* [BioLite N2](/docs/device/biolite_n2)
-* [BioEntry W2](/docs/device/bioentry_w2)
-* [BioEntry P2](/docs/device/bioentry_p2)
-* [BioEntry R2](/docs/device/bioentry_r2)
-* [X-Station 2](/docs/device/xstation_2)
-* [XPass Q2](/docs/device/xpass_q2)
-* [XPass 2](/docs/device/xpass_2)
-* [XPass D2](/docs/device/xpass_d2)
-* [XPass S2](/docs/device/xpass_s2)
-* [CoreStation 20](/docs/device/corestation_20)
-* [CoreStation](/docs/device/corestation_40)
-* [Enclosure](/docs/device/enclosure)
-* [Door Interface](/docs/device/doorinterface)
-* [Input Module](/docs/device/inputmodule)
-* [Output Module](/docs/device/outputmodule)
-* [Door Module](/docs/device/doormodule)
-* [Secure Module](/docs/device/securemodule)
-* [Extended Module](/docs/device/extendedmodule)
-* [Extended Module-SC](/docs/device/extendedmodule_sc)
-* [Device Manager](/docs/device/device_manager)
-* [CoreStation Setup Manager](/docs/device/corestation_setup_manager)
-
 [How-to Articles](/docs/how-to)[API](/docs/api/bsxapi)[Reference](/docs/reference)[Legal](/docs/legal/disclaimers)
 
 검색
