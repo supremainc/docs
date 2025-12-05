@@ -54816,9 +54816,9 @@ The details for setting the fire alarm are as follows.
 
 * Enabled/Disabled: You can activate or temporarily deactivate the settings.
 
-* Select the access door to designate the fire alarm rules in Door.
+* Door: Select the doors to designate for the fire alarm rule.
 
-* Select the elevator to designate the fire alarm rules in Elevator.
+* Elevator: Select the elevators to designate for the fire alarm rule.
 
 * Click + Add and set the devices to trigger fire alarm signals with Device / Input.
 
@@ -54946,7 +54946,7 @@ The details for intrusion alarm settings are as follows.
 
 * Enabled/Disabled: You can activate or temporarily deactivate the settings.
 
-* Select the door to apply the intrusion alarm function at Door.
+* Door: Select the door to apply the intrusion alarm feature.
 
 #### Arming or disarming settings[​](#armConfiguration "Direct link to Arming or disarming settings")
 
