@@ -128,6 +128,8 @@ const sidebars = {
               label: '출입 권한 관리',
               items: [
                 'platform/biostar_air/manage-holiday-group',
+                'platform/biostar_air/manage-schedule',
+                'platform/biostar_air/manage-access-level',
               ]
             },
             {
