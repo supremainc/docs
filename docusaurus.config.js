@@ -243,6 +243,7 @@ const config = {
           // {
           //   type: 'doc',
           //   label: 'BioStar X',
+          //   label: 'BioStar X',
           //   position: 'right',
           //   docId: 'platform/biostar_x/index'
           // },
