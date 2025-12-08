@@ -129,6 +129,7 @@ const sidebars = {
               items: [
                 'platform/biostar_air/manage-holiday-group',
                 'platform/biostar_air/manage-schedule',
+                'platform/biostar_air/manage-access-level',
               ]
             },
             {
