@@ -126,10 +126,15 @@ const sidebars = {
             {
               type: 'category',
               label: '출입 권한 관리',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-access-authority',
+              },
               items: [
                 'platform/biostar_air/manage-holiday-group',
                 'platform/biostar_air/manage-schedule',
                 'platform/biostar_air/manage-access-level',
+                'platform/biostar_air/manage-floor-level',
               ]
             },
             {
