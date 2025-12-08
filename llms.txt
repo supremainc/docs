@@ -506,11 +506,13 @@
 - [IP 카메라 지원 및 설정하기](/docs/platform/biostar_air/ip-camera-support-and-configuration): BioStar Air에서 ONVIF 호환 IP 카메라 설정, 라이브 및 녹화된 비디오 스트림 구성, 카메라 영상을 출입 이벤트와 통합하는 방법을 안내합니다.
 - [링크패스 크리덴셜](/docs/platform/biostar_air/linkpass-credentials): BioStar Air의 클라우드 기반 출입문 제어를 통해 게스트 출입, 배달 등 앱이 없는 임시 사용자를 위해 링크패스 크리덴셜을 발급하고 관리하는 방법을 안내합니다.
 - [위치 서비스를 활성화해야 하나요?](/docs/platform/biostar_air/location-services-issues): 슈프리마 패스 앱에서 안전한 블루투스 통신 및 모바일 출입 카드 기능을 위해 위치 서비스를 활성화하는 방법을 안내합니다.
+- [출입 레벨 관리하기](/docs/platform/biostar_air/manage-access-level): BioStar Air에서 출입 레벨을 생성하고 관리하는 방법입니다.
 - [장치 관리](/docs/platform/biostar_air/manage-device): BioStar Air에서 장치 생명주기를 관리하는 모든 방법을 안내합니다. 장치 등록부터 세부 설정 구성, 그룹 관리, 펌웨어 업그레이드, 그리고 생체 인식 및 보안 모듈 구성까지 장치를 효율적으로 운영하는 전체 과정을 다룹니다.
 - [장치 그룹 관리하기](/docs/platform/biostar_air/manage-device-group): 장치를 그룹으로 묶어 효율적으로 관리하는 방법을 안내합니다.
 - [출입문 관리](/docs/platform/biostar_air/manage-door): BioStar Air에서 출입문을 등록하고 설정하며, 그룹과 스케줄을 통해 효율적으로 관리하는 방법을 안내합니다.
 - [엘리베이터 관리](/docs/platform/biostar_air/manage-elevator): BioStar Air는 슈프리마의 OM-120 모듈을 사용하여 엘리베이터 출입 통제를 지원합니다.
 - [휴일 그룹 관리하기](/docs/platform/biostar_air/manage-holiday-group): 휴일을 그룹으로 구성하여 출입 통제에 적용하는 방법을 안내합니다.
+- [스케줄 관리하기](/docs/platform/biostar_air/manage-schedule): BioStar Air에서 출입문과 엘리베이터의 접근을 제어하기 위해 스케줄을 생성하고 관리하는 방법입니다.
 - [모바일 앱에서 사용자 관리하기](/docs/platform/biostar_air/managing-adding-users): BioStar Air 모바일 앱을 통해 사용자 관리 및 일괄 작업 수행, 새 사용자 추가 방법을 안내합니다.
 - [관리자 관리하기](/docs/platform/biostar_air/managing-administrators): BioStar Air에서 관리자 초대, 역할 등급 지정, 권한 관리, Observer, Operator, Administrator 및 Master 역할에 대한 출입 통제 설정 방법을 안내합니다.
 - [카드 템플릿 관리하기](/docs/platform/biostar_air/managing-card-templates): BioStar Air에서 로고, 색상, 사용자 속성 등의 브랜딩 요소를 사용하여 모바일 카드 템플릿을 만들고, 사용자 지정 및 관리 방법을 안내합니다.
