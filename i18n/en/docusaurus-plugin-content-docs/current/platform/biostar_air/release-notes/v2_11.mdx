@@ -1,0 +1,116 @@
+---
+id: v2_11
+title: v2.11
+description: Release notes for BioStar Air v2.11
+keywords: [BioStar Air, release notes, v2.11]
+---
+
+# BioStar Air 2.11 - Release Highlights
+
+November 25, 2025
+
+BioStar Air 2.11 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3.
+
+Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments.
+
+---
+
+## RFID Card Active Sync on XPass 2 and XStation 2
+
+As part of our long-term goal to exceed the reliability of on-premise access control, we’ve fully re-engineered how BioStar Air handles credential redundancy. With the new **Active Sync** architecture, readers continue working normally even when disconnected from the network.
+
+All primary credential types remain fully functional during network outages:
+
+- **RF Cards**
+
+- **Biometric Templates**
+
+- **Mobile Credentials**
+
+- **PINs**
+
+**You'll still need a network connection to use Dynamic QR and LinkPass Credentials**.
+
+Readers still plug in and sync automatically, with no new installation steps. Credential data is continuously synchronized in the background.
+
+This feature is being rolled out by device type:
+
+- **BioStation 3 / BioEntry W3**
+
+   Available now. No firmware update required.
+
+- **XPass 2**
+
+   Rolling out beginning **Nov 25, 2025**.
+
+   If firmware v2.11 is not visible yet, please be patient. All customers will receive it by **Dec 9**.
+
+- **XStation 2**
+
+   Scheduled for release on **Dec 23, 2025**.
+
+---
+
+## Interface Updates
+
+We've made several UI enhancements to simplify everyday administration and reduce repetitive actions.
+
+### Device List
+
+- Added a **Refresh Status**(<IcAirRef width='24px' height='24px' />) button for situations where the displayed status may be out of date.
+
+- You can now **delete devices directly from the web portal** without using the mobile app. _Note: Devices must have an active network connection or they will still need to be deleted with the mobile app. Supported on the same schedule as firmware updates listed above._
+
+### Personal Information Masking
+
+A new **Mask Personal Information** button hides sensitive user details while viewing event logs, admin logs, or user information on-screen. Helpful for audits or shared-screen reviews.
+
+### Reports
+
+All dropdown filters are now **searchable**, making it easier to build report templates quickly.
+
+### User List
+
+Improved the user-selection UI. Admins now see a **visual count of selected users** before performing batch actions.
+
+### Partner Portal
+
+- Improved **user and device counts**.
+
+- Improved **site deletion workflow** warns you if devices are still registered to the site.
+
+---
+
+## BioStation 3 – Video Gateway Support
+
+BioStation 3 can now operate as a **video gateway**, allowing it to process and relay video streams from multiple 4K cameras simultaneously. This gives sites a powerful and flexible way to deploy video without additional hardware.
+
+To enable:
+
+1.  Update your BioStation 3 firmware.
+
+1.  Open Device Settings for your BioStation 3.
+
+1.  Toggle **Video Gateway** on.
+
+:::info
+
+Refer to our knowledge base article on [IP Camera Support and Configuration for BioStar Air](../ip-camera-support-and-configuration).
+
+:::
+
+---
+
+## Event Logs & Alerts
+
+Previously, some network-disconnection logs were stored on the device and only uploaded once the reader reconnected. This caused delays in alert visibility.
+
+With v2.11:
+
+- **Network disconnection events are now generated server-side**
+
+- Alerts appear immediately when a reader loses connectivity
+
+- Admins can respond more quickly to wiring issues, outages, or unexpected device behavior
+
+This ensures consistent, real-time awareness, even when devices go offline.
