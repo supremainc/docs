@@ -21,4 +21,94 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ---
 
-<DocCardList />
+휴일을 설정하고, 출입 레벨 생성, 사용자에게 출입 레벨을 할당하는 방법에 대한 자세한 내용은 다음 절차를 참고하세요.
+
+import AddHolidayGroup from '../../common/_add-holiday-group.mdx';
+import AddScheduleItem from '../../common/_add-schedule-item.mdx';
+import AddAccessLevel from '../../common/_add-access-level.mdx';
+
+<Steps>
+<Step>
+
+## 휴일 그룹 설정
+
+출입을 제한할 수 있는 기간 또는 날짜를 휴일 그룹을 설정하세요.
+
+<AddHolidayGroup />
+
+:::info
+
+휴일 그룹 관리에 대한 자세한 내용은 [다음 문서](manage-holiday-group)를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+## 스케줄 추가
+
+스케줄은 사용자가 출입문에 출입할 수 있는 시간입니다. 스케줄을 추가해 출입 시간을 정의하세요.
+
+<AddScheduleItem />
+
+:::info
+
+스케줄 관리에 대한 자세한 내용은 [다음 문서](manage-schedule)를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+## 출입 레벨 추가
+
+출입 레벨을 통해 출입문, 스케줄 및 휴일에 따라 사용자의 권한을 설정할 수 있습니다.
+
+<AddAccessLevel />
+
+:::info
+
+출입 레벨 관리에 대한 자세한 내용은 [다음 문서](manage-access-level)를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+## 사용자에게 출입 레벨 할당
+
+사용자에게 출입 레벨을 할당하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
+
+1. 목록에서 출입 레벨을 할당할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다.
+
+1. 목록 상단의 <IcAirLock /> 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 원하는 출입 레벨을 선택하세요.
+
+   <Image src='/img/air/bsair-access-authority-set.png' />
+
+1. <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+사용자 관리에 대한 자세한 내용은 [다음 문서](user-management-user-list)를 참고하세요.
+
+:::
+
+</Step>
+</Steps>
+
+
+## 층 레벨 설정 {#setFloorLevel}
+
+층 레벨을 사용하면 특정 층에 대한 출입 권한을 관리할 수 있습니다. 
+
+:::info
+
+* 층 레벨 관리에 대한 자세한 내용은 [다음 문서](manage-floor-level)를 참고하세요.
+
+* 엘리베이터를 통해 층별 출입을 제어 방법에 대한 자세한 내용은 [다음 문서](manage-elevator)를 참고하세요.
+
+:::
