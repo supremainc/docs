@@ -44030,7 +44030,9 @@ This page is currently being translated. We will complete the translation as soo
 
 Info
 
-**Intrusion Alarm Zone**: A zone set to emit a warning sound or relay signal if an unauthorized person attempts an intrusion after Arm. This zone normally begins monitoring after the day's work, and emits a preset alarm or signal when an intrusion attempt is detected.
+* **Intrusion Alarm Zone**: A zone set to emit a warning sound or relay signal if an unauthorized person attempts an intrusion after Arm. This zone normally begins monitoring after the day's work, and emits a preset alarm or signal when an intrusion attempt is detected.
+
+* 경비 구역 관리 기능은 설정한 언어에 따라 지원하지 않을 수 있습니다.
 
 2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
 
@@ -44040,15 +44042,23 @@ Info
 
 2. 화면 오른쪽 상단의 Add Intrusion Alarm 버튼을 클릭하세요.
 
+   ![](/docs/en/img/air/bsair-zone-alarm.png)
+
 3. Add Intrusion Alarm 창이 나타나면 Activate Intrusion Zone 옵션의 토글 버튼을 클릭해 기능을 활성화하세요.
 
+   ![](/docs/en/img/air/bsair-zone-alarm-add.png)
+
 4. 각 섹션별 설정을 완료하고 Save 버튼을 클릭하세요.
+
+각 섹션별 설정 옵션은 다음 안내를 참고하세요.
 
 ##### Basic setup
 
 경비 구역의 기본 설정을 구성할 수 있습니다.
 
-* Activate Intrusion Zone: 경비 구역 기능을 활성화합니다.
+![](/docs/en/img/air/bsair-zone-alarm-add-basic-config.png)
+
+* Activate Intrusion Zone: 경비 구역 기능을 활성화하거나 비활성화합니다.
 
 * Zone Name: 경비 구역의 이름을 입력합니다.
 
@@ -44056,9 +44066,9 @@ Info
 
 * Access level with arm/disarm permission: 경비 시작이나 해제 권한을 부여할 출입 레벨을 선택하세요.
 
-* Arm Delay Time: 경비 시작까지의 지연 시간을 설정할 수 있습니다. 경비 시작을 위한 관리자 인증 후 경비 시작까지의 지연 시간입니다.
+* Arm Delay Time: 경비 시작까지의 지연 시간을 초 단위로 설정할 수 있습니다. 경비 시작을 위한 관리자 인증 후 경비 시작까지의 지연 시간입니다.
 
-* Disarm Delay Time: 경비 해제까지의 지연 시간을 설정할 수 있습니다. 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다.
+* Disarm Delay Time: 경비 해제까지의 지연 시간을 초 단위로 설정할 수 있습니다. 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다.
 
 Info
 
@@ -44068,23 +44078,65 @@ Info
 
 경비 시작 및 해제 방식을 선택하세요. 카드 또는 장치, 외부 입력 방식을 선택할 수 있습니다.
 
-* Card: 경비를 시작하거나 해제할 때 사용할 카드를 추가하거나 설정할 수 있습니다.
+![](/docs/en/img/air/bsair-zone-alarm-add-method.png)
 
-* Devices: 경비를 시작하거나 해제할 때 사용할 장치를 추가하거나 설정할 수 있습니다. Input Type에서 원하는 인증 방식을 선택하세요.
+* Card: 경비를 시작하거나 해제할 때 사용할 카드를 추가하거나 설정할 수 있습니다. Add 버튼을 클릭하고 카드를 등록하세요.
+
+  ![](/docs/en/img/air/bsair-zone-alarm-add-method-card.png)
+
+* Devices: 경비를 시작하거나 해제할 때 사용할 장치를 추가하거나 설정할 수 있습니다. Add 버튼을 클릭하고, Arm Type를 선택하세요. Input Type에서 원하는 인증 방식을 선택하세요.
+
+  ![](/docs/en/img/air/bsair-zone-alarm-add-method-device.png)
 
   LCD 화면이 없는 장치는 입력 종류를 카드만 사용할 수 있습니다.
 
-* Input: 경비 기능을 제어할 장치를 선택하고, 선택한 장치의 입력 포트를 선택하세요. 스위치 종류(N/O, N/C)와 신호의 지속 시간을 설정하세요.
+* Input: 입력 신호를 통해서 경비를 시작하거나 해제할 수 있습니다. Add 버튼을 클릭하고, 경비 기능을 제어할 장치를 선택하세요. 선택한 장치의 입력 포트 및 스위치 종류(N/O, N/C)와 신호의 지속 시간을 설정하세요.
+
+  ![](/docs/en/img/air/bsair-zone-alarm-add-method-input.png)
 
 ##### Intrusion Detection Method[​](#-2 "Direct link to -2")
 
 침입 감지 신호를 설정할 수 있습니다. Add 버튼을 클릭하고 외부 입력 설정을 구성하세요.
 
-예를 들어, BioStation 3 장치의 0번 입력 포트에 연결된 N/O 센서가 100ms 동안 신호를 보낸다면 침입으로 감지됩니다.
+![](/docs/en/img/air/bsair-zone-alarm-add-method-detect.png)
+
+예를 들어, **BioStation 3** 장치의 **0**번 입력 포트에 연결된 **N/O** 센서가 **100**ms 동안 신호를 보낸다면 침입으로 감지됩니다.
 
 ##### Alarm Action[​](#-3 "Direct link to -3")
 
 장치 신호나 경고음에 따라 특정 이벤트가 발생했을 때 수행할 동작을 구성하세요.
+
+![](/docs/en/img/air/bsair-zone-alarm-add-set-alarm.png)
+
+#### 경비 구역 활성/비활성[​](#경비-구역-활성비활성 "Direct link to 경비 구역 활성/비활성")
+
+경비 구역 목록에서 특정 경비 구역을 활성화하거나 비활성화할 수 있습니다. 목록에서 특정 경비 구역의 체크박스를 클릭해 선택한 후 화면 상단의 Active 또는 Inactive 버튼을 클릭하세요.
+
+![](/docs/en/img/air/bsair-zone-alarm-list.png)
+
+Info
+
+경비 구역 목록에서 경비 구역 이름을 클릭하면 Edit Intrusion Alarm 창이 나타납니다. Activate Intrusion Zone 옵션을 클릭해 경비 구역 기능을 활성화하거나 비활성화할 수 있습니다.
+
+#### 경비 구역 수정[​](#경비-구역-수정 "Direct link to 경비 구역 수정")
+
+1. 화면 왼쪽 사이드바에서 Zone → Intrusion Alarm을 클릭하세요.
+
+2. 경비 구역 목록에서 수정할 경비 구역의 이름을 클릭하세요.
+
+3. Edit Intrusion Alarm 창이 나타나면 각 섹션별 설정을 수정하세요.
+
+   ![](/docs/en/img/air/bsair-zone-alarm-edit.png)
+
+4. 수정 사항을 저장하려면 Save 버튼을 클릭하세요.
+
+#### 경비 구역 삭제[​](#경비-구역-삭제 "Direct link to 경비 구역 삭제")
+
+1. 화면 왼쪽 사이드바에서 Zone → Intrusion Alarm을 클릭하세요.
+
+2. 경비 구역 목록에서 삭제할 경비 구역의 체크박스를 클릭해 선택하세요. 1개 이상의 경비 구역을 선택할 수 있습니다.
+
+3. 화면 상단의 Delete 버튼을 클릭하세요.
 
 
 ---

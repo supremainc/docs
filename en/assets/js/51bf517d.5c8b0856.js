@@ -95,6 +95,18 @@ const toc = [..._biostarair_customer_notice/* .toc */.RM, {
   "value": "경비 구역 설정",
   "id": "setIntrusionAlarmZone",
   "level": 2
+}, {
+  "value": "경비 구역 활성/비활성",
+  "id": "경비-구역-활성비활성",
+  "level": 2
+}, {
+  "value": "경비 구역 수정",
+  "id": "경비-구역-수정",
+  "level": 2
+}, {
+  "value": "경비 구역 삭제",
+  "id": "경비-구역-삭제",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -105,19 +117,29 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Glossary} = _components;
+  }, {Cmd, Glossary, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Glossary) _missingMdxReference("Glossary", true);
+  if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "경비 구역은 특정 구역에 대한 출입을 제한하거나 경비 상태를 설정하는 데 사용됩니다. 경비 설정은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다. 경비 구역을 효과적으로 관리하여 보안 수준을 향상시키세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsx)(Glossary, {
-        termid: "intrusion_alarm_zone"
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(Glossary, {
+            termid: "intrusion_alarm_zone"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "경비 구역 관리 기능은 설정한 언어에 따라 지원하지 않을 수 있습니다."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "setIntrusionAlarmZone",
@@ -139,6 +161,9 @@ function _createMdxContent(props) {
             sid: "add_intrusion_zone",
             product: "air"
           }), " 버튼을 클릭하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm.png",
+          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -149,6 +174,9 @@ function _createMdxContent(props) {
             sid: "enable_intrusion_zone",
             product: "air"
           }), " 옵션의 토글 버튼을 클릭해 기능을 활성화하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm-add.png",
+          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -158,6 +186,8 @@ function _createMdxContent(props) {
           }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "각 섹션별 설정 옵션은 다음 안내를 참고하세요."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "",
       children: (0,jsx_runtime.jsx)(Cmd, {
@@ -167,13 +197,16 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "경비 구역의 기본 설정을 구성할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-zone-alarm-add-basic-config.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "enable_intrusion_zone",
             product: "air"
-          }), ": 경비 구역 기능을 활성화합니다."]
+          }), ": 경비 구역 기능을 활성화하거나 비활성화합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -201,14 +234,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "intrusion_arm_delay_time",
             product: "air"
-          }), ": 경비 시작까지의 지연 시간을 설정할 수 있습니다. 경비 시작을 위한 관리자 인증 후 경비 시작까지의 지연 시간입니다."]
+          }), ": 경비 시작까지의 지연 시간을 초 단위로 설정할 수 있습니다. 경비 시작을 위한 관리자 인증 후 경비 시작까지의 지연 시간입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "intrusion_disarm_delay_time",
             product: "air"
-          }), ": 경비 해제까지의 지연 시간을 설정할 수 있습니다. 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다."]
+          }), ": 경비 해제까지의 지연 시간을 초 단위로 설정할 수 있습니다. 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -228,13 +261,23 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "경비 시작 및 해제 방식을 선택하세요. 카드 또는 장치, 외부 입력 방식을 선택할 수 있습니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-zone-alarm-add-method.png",
+      alone: true
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "card",
             product: "air"
-          }), ": 경비를 시작하거나 해제할 때 사용할 카드를 추가하거나 설정할 수 있습니다."]
+          }), ": 경비를 시작하거나 해제할 때 사용할 카드를 추가하거나 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_btn",
+            product: "air"
+          }), " 버튼을 클릭하고 카드를 등록하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm-add-method-card.png",
+          width: "30%",
+          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -242,9 +285,19 @@ function _createMdxContent(props) {
             sid: "devices",
             product: "air"
           }), ": 경비를 시작하거나 해제할 때 사용할 장치를 추가하거나 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_btn",
+            product: "air"
+          }), " 버튼을 클릭하고, ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "arm_type",
+            product: "air"
+          }), "를 선택하세요. ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "input_type",
             product: "air"
           }), "에서 원하는 인증 방식을 선택하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm-add-method-device.png",
+          width: "30%",
+          alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
@@ -256,7 +309,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "input_label",
             product: "air"
-          }), ": 경비 기능을 제어할 장치를 선택하고, 선택한 장치의 입력 포트를 선택하세요. 스위치 종류(N/O, N/C)와 신호의 지속 시간을 설정하세요."]
+          }), ": 입력 신호를 통해서 경비를 시작하거나 해제할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "add_btn",
+            product: "air"
+          }), " 버튼을 클릭하고, 경비 기능을 제어할 장치를 선택하세요. 선택한 장치의 입력 포트 및 스위치 종류(N/O, N/C)와 신호의 지속 시간을 설정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm-add-method-input.png",
+          width: "30%",
+          alone: true
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -271,8 +331,20 @@ function _createMdxContent(props) {
         sid: "add_btn",
         product: "air"
       }), " 버튼을 클릭하고 외부 입력 설정을 구성하세요."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "예를 들어, BioStation 3 장치의 0번 입력 포트에 연결된 N/O 센서가 100ms 동안 신호를 보낸다면 침입으로 감지됩니다."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-zone-alarm-add-method-detect.png",
+      width: "30%",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["예를 들어, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStation 3"
+      }), " 장치의 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "0"
+      }), "번 입력 포트에 연결된 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "N/O"
+      }), " 센서가 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "100"
+      }), "ms 동안 신호를 보낸다면 침입으로 감지됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "-3",
       children: (0,jsx_runtime.jsx)(Cmd, {
@@ -282,6 +354,97 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "장치 신호나 경고음에 따라 특정 이벤트가 발생했을 때 수행할 동작을 구성하세요."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-zone-alarm-add-set-alarm.png",
+      width: "30%",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "경비-구역-활성비활성",
+      children: "경비 구역 활성/비활성"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["경비 구역 목록에서 특정 경비 구역을 활성화하거나 비활성화할 수 있습니다. 목록에서 특정 경비 구역의 체크박스를 클릭해 선택한 후 화면 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "zone_active_btn",
+        product: "air"
+      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "zone_inactive_btn",
+        product: "air"
+      }), " 버튼을 클릭하세요."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-zone-alarm-list.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["경비 구역 목록에서 경비 구역 이름을 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "edit_intrusion_zone",
+          product: "air"
+        }), " 창이 나타납니다. ", (0,jsx_runtime.jsx)(Cmd, {
+          sid: "enable_intrusion_zone",
+          product: "air"
+        }), " 옵션을 클릭해 경비 구역 기능을 활성화하거나 비활성화할 수 있습니다."]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "경비-구역-수정",
+      children: "경비 구역 수정"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "zone",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "zone_intruction",
+            product: "air"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "경비 구역 목록에서 수정할 경비 구역의 이름을 클릭하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "edit_intrusion_zone",
+            product: "air"
+          }), " 창이 나타나면 각 섹션별 설정을 수정하세요."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/air/bsair-zone-alarm-edit.png",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["수정 사항을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "save_btn",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "경비-구역-삭제",
+      children: "경비 구역 삭제"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "zone",
+            product: "air"
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "zone_intruction",
+            product: "air"
+          }), "을 클릭하세요."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "경비 구역 목록에서 삭제할 경비 구역의 체크박스를 클릭해 선택하세요. 1개 이상의 경비 구역을 선택할 수 있습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["화면 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "btn_delete",
+            product: "air"
+          }), " 버튼을 클릭하세요."]
+        }), "\n"]
+      }), "\n"]
     })]
   });
 }
