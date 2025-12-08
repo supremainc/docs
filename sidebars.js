@@ -137,6 +137,7 @@ const sidebars = {
                 'platform/biostar_air/manage-floor-level',
               ]
             },
+            'platform/biostar_air/manage-alarm-zone',
             {
               type: 'category',
               label: 'Monitoring',
@@ -229,6 +230,7 @@ const sidebars = {
           type: 'category',
           label: 'Release Notes',
           items: [
+            'platform/biostar_air/release-notes/v2_11',
             'platform/biostar_air/release-notes/v2_10'
           ]
         }
