@@ -97,6 +97,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
         }
         localeText = localeText ? localeText.replace('<br>', '') : null;
       }
+    } else if (product === 'air') {
+      const locale = airLocaleMap[currentLocale] || airLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
