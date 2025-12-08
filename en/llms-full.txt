@@ -41529,7 +41529,7 @@ BioStar Air is a cloud-based access control solution that offers a range of feat
 * [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking)
 * [BioStar Air Migration](/docs/en/platform/biostar_air/biostar-air-migration)
 
-#### [Site Management→11 items](/docs/en/platform/biostar_air/site-management)
+#### [Site Management→12 items](/docs/en/platform/biostar_air/site-management)
 
 BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
 
@@ -41540,6 +41540,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [Door Management](/docs/en/platform/biostar_air/manage-door)
 * [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator)
 * [출입 권한 관리](/docs/en/platform/biostar_air/manage-access-authority)
+* [경비 구역 관리](/docs/en/platform/biostar_air/manage-alarm-zone)
 * [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
 * [Settings](/docs/en/platform/biostar_air/managing-administrators)
@@ -44017,6 +44018,77 @@ This page is currently being translated. We will complete the translation as soo
 
 ---
 
+### 경비 구역 관리
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+경비 구역은 특정 구역에 대한 출입을 제한하거나 경비 상태를 설정하는 데 사용됩니다. 경비 설정은 침입 감지 시 출입문을 잠그거나 알람을 발생시키는 기능을 제공합니다. 경비 구역을 효과적으로 관리하여 보안 수준을 향상시키세요.
+
+Info
+
+**Intrusion Alarm Zone**: A zone set to emit a warning sound or relay signal if an unauthorized person attempts an intrusion after Arm. This zone normally begins monitoring after the day's work, and emits a preset alarm or signal when an intrusion attempt is detected.
+
+2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다.
+
+#### 경비 구역 설정[​](#setIntrusionAlarmZone "Direct link to 경비 구역 설정")
+
+1. 화면 왼쪽 사이드바에서 Zone → Intrusion Alarm을 클릭하세요.
+
+2. 화면 오른쪽 상단의 Add Intrusion Alarm 버튼을 클릭하세요.
+
+3. Add Intrusion Alarm 창이 나타나면 Activate Intrusion Zone 옵션의 토글 버튼을 클릭해 기능을 활성화하세요.
+
+4. 각 섹션별 설정을 완료하고 Save 버튼을 클릭하세요.
+
+##### Basic setup
+
+경비 구역의 기본 설정을 구성할 수 있습니다.
+
+* Activate Intrusion Zone: 경비 구역 기능을 활성화합니다.
+
+* Zone Name: 경비 구역의 이름을 입력합니다.
+
+* Door: 경비 구역으로 설정할 출입문을 선택하세요. 해당 출입문의 센서는 침입 감지에 사용됩니다.
+
+* Access level with arm/disarm permission: 경비 시작이나 해제 권한을 부여할 출입 레벨을 선택하세요.
+
+* Arm Delay Time: 경비 시작까지의 지연 시간을 설정할 수 있습니다. 경비 시작을 위한 관리자 인증 후 경비 시작까지의 지연 시간입니다.
+
+* Disarm Delay Time: 경비 해제까지의 지연 시간을 설정할 수 있습니다. 침입 감지 후 경보가 발생하기 전까지의 지연 시간입니다.
+
+Info
+
+출입 레벨 관리에 대한 자세한 내용은 [다음 문서](/docs/en/platform/biostar_air/manage-access-level)를 참고하세요.
+
+##### Arm and Disarm Method[​](#-1 "Direct link to -1")
+
+경비 시작 및 해제 방식을 선택하세요. 카드 또는 장치, 외부 입력 방식을 선택할 수 있습니다.
+
+* Card: 경비를 시작하거나 해제할 때 사용할 카드를 추가하거나 설정할 수 있습니다.
+
+* Devices: 경비를 시작하거나 해제할 때 사용할 장치를 추가하거나 설정할 수 있습니다. Input Type에서 원하는 인증 방식을 선택하세요.
+
+  LCD 화면이 없는 장치는 입력 종류를 카드만 사용할 수 있습니다.
+
+* Input: 경비 기능을 제어할 장치를 선택하고, 선택한 장치의 입력 포트를 선택하세요. 스위치 종류(N/O, N/C)와 신호의 지속 시간을 설정하세요.
+
+##### Intrusion Detection Method[​](#-2 "Direct link to -2")
+
+침입 감지 신호를 설정할 수 있습니다. Add 버튼을 클릭하고 외부 입력 설정을 구성하세요.
+
+예를 들어, BioStation 3 장치의 0번 입력 포트에 연결된 N/O 센서가 100ms 동안 신호를 보낸다면 침입으로 감지됩니다.
+
+##### Alarm Action[​](#-3 "Direct link to -3")
+
+장치 신호나 경고음에 따라 특정 이벤트가 발생했을 때 수행할 동작을 구성하세요.
+
+
+---
+
 ### 장치 관리
 
 **Not translated**
@@ -46469,6 +46541,117 @@ When registering Airfob Patch, the system now displays live voltage and RSSI rea
 
 ---
 
+### BioStar Air 2.11 - Release Highlights
+
+November 25, 2025
+
+BioStar Air 2.11 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3.
+
+Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments.
+
+***
+
+#### RFID Card Active Sync on XPass 2 and XStation 2[​](#rfid-card-active-sync-on-xpass-2-and-xstation-2 "Direct link to RFID Card Active Sync on XPass 2 and XStation 2")
+
+As part of our long-term goal to exceed the reliability of on-premise access control, we’ve fully re-engineered how BioStar Air handles credential redundancy. With the new **Active Sync** architecture, readers continue working normally even when disconnected from the network.
+
+All primary credential types remain fully functional during network outages:
+
+* **RF Cards**
+
+* **Biometric Templates**
+
+* **Mobile Credentials**
+
+* **PINs**
+
+**You'll still need a network connection to use Dynamic QR and LinkPass Credentials**.
+
+Readers still plug in and sync automatically, with no new installation steps. Credential data is continuously synchronized in the background.
+
+This feature is being rolled out by device type:
+
+* **BioStation 3 / BioEntry W3**
+
+  Available now. No firmware update required.
+
+* **XPass 2**
+
+  Rolling out beginning **Nov 25, 2025**.
+
+  If firmware v2.11 is not visible yet, please be patient. All customers will receive it by **Dec 9**.
+
+* **XStation 2**
+
+  Scheduled for release on **Dec 23, 2025**.
+
+***
+
+#### Interface Updates[​](#interface-updates "Direct link to Interface Updates")
+
+We've made several UI enhancements to simplify everyday administration and reduce repetitive actions.
+
+##### Device List[​](#device-list "Direct link to Device List")
+
+* Added a **Refresh Status**() button for situations where the displayed status may be out of date.
+
+* You can now **delete devices directly from the web portal** without using the mobile app. *Note: Devices must have an active network connection or they will still need to be deleted with the mobile app. Supported on the same schedule as firmware updates listed above.*
+
+##### Personal Information Masking[​](#personal-information-masking "Direct link to Personal Information Masking")
+
+A new **Mask Personal Information** button hides sensitive user details while viewing event logs, admin logs, or user information on-screen. Helpful for audits or shared-screen reviews.
+
+##### Reports[​](#reports "Direct link to Reports")
+
+All dropdown filters are now **searchable**, making it easier to build report templates quickly.
+
+##### User List[​](#user-list "Direct link to User List")
+
+Improved the user-selection UI. Admins now see a **visual count of selected users** before performing batch actions.
+
+##### Partner Portal[​](#partner-portal "Direct link to Partner Portal")
+
+* Improved **user and device counts**.
+
+* Improved **site deletion workflow** warns you if devices are still registered to the site.
+
+***
+
+#### BioStation 3 – Video Gateway Support[​](#biostation-3--video-gateway-support "Direct link to BioStation 3 – Video Gateway Support")
+
+BioStation 3 can now operate as a **video gateway**, allowing it to process and relay video streams from multiple 4K cameras simultaneously. This gives sites a powerful and flexible way to deploy video without additional hardware.
+
+To enable:
+
+1. Update your BioStation 3 firmware.
+
+2. Open Device Settings for your BioStation 3.
+
+3. Toggle **Video Gateway** on.
+
+Info
+
+Refer to our knowledge base article on [IP Camera Support and Configuration for BioStar Air](/docs/en/platform/biostar_air/ip-camera-support-and-configuration).
+
+***
+
+#### Event Logs & Alerts[​](#event-logs--alerts "Direct link to Event Logs & Alerts")
+
+Previously, some network-disconnection logs were stored on the device and only uploaded once the reader reconnected. This caused delays in alert visibility.
+
+With v2.11:
+
+* **Network disconnection events are now generated server-side**
+
+* Alerts appear immediately when a reader loses connectivity
+
+* Admins can respond more quickly to wiring issues, outages, or unexpected device behavior
+
+This ensures consistent, real-time awareness, even when devices go offline.
+
+
+---
+
 ### Time and Attendance Reports
 
 #### Feature Overview[​](#feature-overview "Direct link to Feature Overview")
@@ -46748,6 +46931,10 @@ BioStar Air에서 사용자의 출입 권한을 효과적으로 관리하는 방
 * [스케줄 관리하기](/docs/en/platform/biostar_air/manage-schedule)
 * [출입 레벨 관리하기](/docs/en/platform/biostar_air/manage-access-level)
 * [층 레벨 관리하기](/docs/en/platform/biostar_air/manage-floor-level)
+
+#### [경비 구역 관리→ <!-- -->Read more](/docs/en/platform/biostar_air/manage-alarm-zone)
+
+경비 구역을 추가하고 수정, 삭제하는 관리 방법을 안내합니다.
 
 #### Monitoring→2 items
 
