@@ -42,14 +42,14 @@
   },
   {
     "category": {
-      "title": "QR/바코드",
+      "title": "QR/Barcode",
       "hid": "qrbarcode",
       "contents": [
         {
           "product": [ "xstation_2" ],
-          "question": "QR/바코드 인식이 잘 되지 않습니다.",
+          "question": "It fails to scan a QR/Barcode.",
           "answer": [
-            "Refer to <a href='getting-started#how-to-scan-qrbarcode'>How to scan a QR/Barcode</a> and try again.",
+            "Refer to <a href='getting-started#how-to-scan-qrbarcode'>Correct QR/Barcode Authentication Method</a> and try again.",
             "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Place the guide beam at the center of the QR code.",
             "<b>XS2-DPB</b>, <b>XS2-APB</b>: Position the QR/Barcode in the center of the scan screen of the device.",
             "Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.",
