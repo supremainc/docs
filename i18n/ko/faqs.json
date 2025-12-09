@@ -132,7 +132,7 @@
           "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
           "question": "지문 센서가 켜지지 않습니다.",
           "answer": [
-            "<span class='cmd'>센서 모드</span>가 <span class='cmd'>자동 켜짐</span>으로 설정되어 있을 경우 지문 센서에 손가락을 댈 경우에만 센서가 켜집니다. 항상 지문 센서가 켜져 있길 원한다면 <span class='cmd'>인증</span> → <span class='cmd'>지문</span> → <span class='cmd'>센서 모드</span>를 <span class='cmd'>항상 켜짐</span>으로 설정하세요."
+            "<span class='cmd'>센서 모드</span>가 <span class='cmd'>자동 켜짐</span>으로 설정되어 있을 경우 지문 센서에 손가락을 댈 경우에만 센서가 켜집니다. 항상 지문 센서가 켜져 있길 원한다면 <span class='cmd'>센서 모드</span>를 <span class='cmd'>항상 켜짐</span>으로 설정하세요."
           ]
         }
       ]

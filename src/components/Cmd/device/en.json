@@ -18,7 +18,10 @@
   "ui_017": "FW",
   "ui_018": "FW upgrade",
   "ui_019": "HW",
-  "ui_020": "ID",
+  "ui_020": {
+    "common": "ID",
+    "biolite_n2": "User ID"
+  },
   "ui_021": "ID Mode",
   "ui_023": "ID",
   "ui_024": "ID Fields",
@@ -46,7 +49,11 @@
   "ui_046": "ROI Y(%)",
   "ui_047": "ROI Height(%)",
   "ui_048": "ROI Width(%)",
-  "ui_049": "RS485",
+  "ui_049": {
+    "common": "RS-485",
+    "corestation_setup_manager": "RS485",
+    "device_manager": "RS485"
+  },
   "ui_050": "RS485 Mode",
   "ui_051": "RTSP",
   "ui_052": "RTSP Video Resolution",
@@ -55,7 +62,6 @@
   "ui_055": "SIP Account",
   "ui_056": "SSID",
   "ui_057": "SUPREMA",
-  "ui_058": "Suprema",
   "ui_059": "TCP/IP",
   "ui_060": "ToM Enrollment",
   "ui_061": "USB Memory",
@@ -80,10 +86,8 @@
   "ui_080": "T&A Fixed",
   "ui_081": "Fixed T&A Key",
   "ui_082": "T&A Required",
-  "ui_083": {
-    "biostation_3": "T&A Mode",
-    "biostation_2a": "T&A"
-  },
+  "ui_083_title": "T&A",
+  "ui_083_list": "T&A Mode",
   "ui_084": "T&A Event",
   "ui_085": "T&A Event Name",
   "ui_086": "T&A Code",
@@ -112,10 +116,13 @@
   "ui_109": "DASHBOARD",
   "ui_110": "Data Size",
   "ui_111": "DNS",
-  "ui_112": "Operation Mode",
+  "ui_112": {
+    "common": "Operation Mode",
+    "biolite_n2": "Mode"
+  },
   "ui_113": "Baud Rate",
   "ui_114": "Dynamic ROI",
-  "ui_115": "Enrollment Time",
+  "ui_115": "Enroll Timeout",
   "ui_116": "Advanced Enrollment",
   "ui_117": "Duplicate Check",
   "ui_118": "Duplicate Check",
@@ -129,7 +136,10 @@
   "ui_126": "Require Mask (Soft)",
   "ui_127": "Require Mask (Hard)",
   "ui_128": "Master Admin",
-  "ui_129": "Expiration Date",
+  "ui_129": {
+    "common": "Expiration Date",
+    "biolite_n2": "Expiry Date"
+  },
   "ui_130": "Matching Timeout",
   "ui_131": "Menu Timeout",
   "ui_132": "Memory",
@@ -152,7 +162,7 @@
   "ui_146": "Byte Order",
   "ui_147": "Backlight",
   "ui_148": "Backlight Timeout",
-  "ui_149": "Security level",
+  "ui_149": "Security Level",
   "ui_150": "Secure Tamper",
   "ui_151": "Use Secondary Key",
   "ui_152": "Normal",
@@ -165,22 +175,25 @@
   "ui_159": "Fast Matching",
   "ui_160": "Quick Reset",
   "ui_161": "Enabled",
-  "ui_162": "Deactive",
+  "ui_162": "Never",
   "ui_163": "Not Use",
   "ui_164": "Enabled (Soft)",
   "ui_165": "Enabled (Hard)",
-  "ui_166": "USER",
+  "ui_166": {
+    "common": "USER",
+    "facestation_2": "User"
+  },
   "ui_167": "User ID",
   "ui_168": "User ID Type",
   "ui_169": "User ID Display",
   "ui_170": "Search User",
   "ui_171": {
     "common": "User Management",
-    "biostation_2a": "User Mgmt"
+    "biostation_2a": "User Mgmt",
+    "biolite_n2": "User Mgmt."
   },
   "ui_172": {
     "common": "Operator Level",
-    "biolite_n2": "Operator Level",
     "biostation_2a": "User Level"
   },
   "ui_173": "Add User",
@@ -249,9 +262,9 @@
   "ui_237": "Alphanumeric",
   "ui_238": "AM/PM",
   "ui_239": "Open-Source Software Licenses",
-  "ui_240": "Save Temp. Data",
-  "ui_241": "Temp. Compensation",
-  "ui_242": "Temp. Correction",
+  "ui_240": "Save Temperature Data",
+  "ui_241": "Skin Temperature Compensation",
+  "ui_242": "Skin Temperature Correction",
   "ui_243": "Distance(cm)",
   "ui_244": "Check Temperature Mode",
   "ui_245": "Temperature Check Before Authentication",
@@ -262,11 +275,20 @@
   "ui_250": "Period",
   "ui_251": "Voice Instruction",
   "ui_252": "Ethernet",
-  "ui_253": "Name",
+  "ui_253": {
+    "common": "Name",
+    "biolite_n2": "User Name"
+  },
   "ui_254": "View Image",
   "ui_255": "EVENT LOG",
-  "ui_256": "AUTHENTICATION",
-  "ui_257": "Authentication Result",
+  "ui_256": {
+    "common": "AUTHENTICATION",
+    "biolite_n2": "AUTH"
+  },
+  "ui_257": {
+    "common": "Authentication Result",
+    "biolite_n2": "Auth Result"
+  },
   "ui_259": "Auth Result Display Option",
   "ui_260": "Auth Timeout",
   "ui_261": "Auth Mode",
@@ -276,9 +298,12 @@
   "ui_265": "Operation",
   "ui_266": "Temperature Check After Authentication",
   "ui_267": "Check After Authentication",
-  "ui_268": "VOIP",
+  "ui_268": "Interphone",
   "ui_269": "Intelligent Slave",
-  "ui_270": "Daylight Saving Time",
+  "ui_270": {
+    "common": "Daylight Saving Time",
+    "biolite_n2": "DST"
+  },
   "ui_271": "Add DST",
   "ui_272": "Normal",
   "ui_273": "Normal User",
@@ -303,7 +328,10 @@
   "ui_292": "Activated Licenses in Device",
   "ui_294": "Re-Shot",
   "ui_295": "Save",
-  "ui_296": "Emissivity",
+  "ui_296": {
+    "common": "Emissivity",
+    "facestation_2": "Emission Rate"
+  },
   "ui_297": "Baud Rate",
   "ui_298": "Baudrate",
   "ui_299": "All",
@@ -323,7 +351,10 @@
   "ui_313": "Fingerprint Mode",
   "ui_314": "Fingerprint",
   "ui_315": "Finger",
-  "ui_316": "Mask All but First Letter",
+  "ui_316": {
+    "common": "First Letter Only",
+    "biostation_3": "Mask All but First Letter"
+  },
   "ui_317": "Restore Default",
   "ui_318": "Total Bits",
   "ui_319": "Add",
@@ -362,7 +393,10 @@
   "ui_352": "Pulse Width(μs)",
   "ui_353": "FW Upgrade",
   "ui_354": "Format",
-  "ui_355": "PORT",
+  "ui_355": {
+    "common": "PORT",
+    "biolite_n2": "Port"
+  },
   "ui_356": "Display Name",
   "ui_357": "Hide All",
   "ui_358": "Time Zone",
@@ -373,12 +407,15 @@
   "ui_363": "Duress",
   "ui_364": "Home Screen",
   "ui_365": "Screen Saver",
-  "ui_366": "DISPLAY & SOUND",
+  "ui_366": {
+    "common": "DISPLAY & SOUND",
+    "biolite_n2": "DISPLAY"
+  },
   "ui_367": "OK",
   "ui_368": "Check Mode",
   "ui_369": "Check Before Authentication",
   "ui_370": "Check Only",
   "ui_371": "Extended Private Auth Mode",
-  "ui_372": "On",
+  "ui_372": "Enabled",
   "ui_373": "Complete"
 }
