@@ -196,13 +196,8 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
-<<<<<<< HEAD
     Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify,
     IcSvTime, IcAccount, IcHelp, IcAibtn,
-=======
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, koJson,
-    IcSvTime, IcAccout, IcHelp, IcAibtn,
->>>>>>> air@re
     IcLicense,
     IcAdd, IcMinus,
     IcClose,
