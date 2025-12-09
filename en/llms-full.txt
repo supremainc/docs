@@ -41541,7 +41541,7 @@ BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사�
 * [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator)
 * [출입 권한 관리](/docs/en/platform/biostar_air/manage-access-authority)
 * [경비 구역 관리](/docs/en/platform/biostar_air/manage-alarm-zone)
-* [Monitoring](/docs/en/platform/biostar_air/event-and-audit-logs)
+* [Monitoring](/docs/en/platform/biostar_air/monitoring-event-and-audit-logs)
 * [Reports](/docs/en/platform/biostar_air/configuring-reports)
 * [Settings](/docs/en/platform/biostar_air/managing-administrators)
 * [Advanced Features](/docs/en/platform/biostar_air/managing-door-access)
@@ -42723,115 +42723,6 @@ In **Event Logs**:
 * If device time is set, event log timestamps will be coordinated with the DST time for each individual device.
 
 * If site time is set, timestamps will be adjusted according to the site's DST configuration rather than per device.
-
-
----
-
-### Event Logs and Audit Logs
-
-#### Feature Overview[​](#feature-overview "Direct link to Feature Overview")
-
-One of the main advantages of a Cloud Access Control Platform is the ability to monitor site activity from anywhere. This guide covers how to use **Event Logs** and **Audit Logs** in BioStar Air. Note: Door status monitoring is covered separately.
-
-Customers who began using BioStar Air access control before May 2025 may still be using the Airfob Space app, which has since been rebranded as the Suprema Pass app. Both apps offer identical functionality and are fully compatible. There is no need for existing users to switch — mobile credentials work seamlessly across both.
-
-#### Navigating to Event Logs[​](#navigating-to-event-logs "Direct link to Navigating to Event Logs")
-
-To check event logs:
-
-1. Navigate to **Monitoring** → **Event Logs**.
-
-2. The interface displays a table with details such as event time, event name, door location, device nickname, user type, and username.
-
-3. Customize columns by clicking **Customize**, toggling columns on or off, and clicking **Apply**.
-
-#### Filtering Event Logs[​](#filtering-event-logs "Direct link to Filtering Event Logs")
-
-To filter logs:
-
-1. Click **Filter**.
-
-2. Select event types (e.g., Access Denied, Authentication Failed, Door Open, etc.).
-
-3. Filter by user groups, user types (regular or temporary), device groups, device ID, or device nickname.
-
-4. Click **Apply** to update the logs.
-
-#### Sorting and Managing Logs[​](#sorting-and-managing-logs "Direct link to Sorting and Managing Logs")
-
-* Sort logs by date by selecting a date and time range, then clicking **Apply**.
-
-* Reset filters by clicking **Filters** → **Clear all** → **Apply**.
-
-* Reset date filters by clicking **Reset**.
-
-* Save specific views by applying filters and clicking **Save**.
-
-* Export logs by clicking **Export**.
-
-* Refresh logs by clicking **Refresh** or enabling **Auto Refresh** (adjustable between 5 seconds and 1 minute).
-
-#### Using Audit Logs[​](#using-audit-logs "Direct link to Using Audit Logs")
-
-Audit logs track actions performed by admins on the platform.
-
-##### Accessing Audit Logs[​](#accessing-audit-logs "Direct link to Accessing Audit Logs")
-
-1. Navigate to **Monitoring** → **Audit Logs**.
-
-2. The interface displays information such as:
-
-   * Admin name
-
-   * Action time
-
-   * Source account
-
-   * Admin role
-
-   * Action type
-
-   * Details of the action
-
-##### Filtering and Managing Audit Logs[​](#filtering-and-managing-audit-logs "Direct link to Filtering and Managing Audit Logs")
-
-1. Click **Filter**.
-
-2. Select filters such as account names, admin types, action types, and categories.
-
-3. Click **Apply Filter** to update the logs.
-
-4. Sort logs by date range.
-
-5. Save filter selections for future use.
-
-6. Clear filters by clicking **Clear Filter**.
-
-7. Refresh logs by clicking **Refresh** to load the latest entries.
-
-#### Using Event Logs in the BioStar Air Mobile App[​](#using-event-logs-in-the-biostar-air-mobile-app "Direct link to Using Event Logs in the BioStar Air Mobile App")
-
-1. Tap **Monitoring** at the bottom of the screen.
-
-2. Select **Event Logs**.
-
-3. Scroll through the event logs.
-
-4. Modify the view by tapping **Filter** and selecting:
-
-   * Event period
-
-   * Event types
-
-   * User groups
-
-   * User types
-
-5. Clear or save filter selections for later use.
-
-6. Update event logs by tapping **Update** at the top of the page.
-
-7. Search logs to find specific events.
 
 
 ---
@@ -44252,7 +44143,7 @@ BioStar Air에서는 여러 장치를 그룹으로 묶어 효율적으로 관리
 
 장치 목록에서 개별 장치를 선택하여 장치 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
 
-1. 화면 왼쪽 사이드바에서 Device Management → <!-- -->을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 Device Management → Registered Devices을 클릭하세요.
 
 2. 장치 그룹 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요.
 
@@ -44358,7 +44249,7 @@ OM-120 모듈이 감지되지 않으면 Search OM-120 버튼을 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 Elevator Management → Registered Elevators를 클릭하세요.
 
-2. 화면 오른쪽 상단의 <!-- -->버튼을 클릭하세요.
+2. 화면 오른쪽 상단의 Add Elevator 버튼을 클릭하세요.
 
    ![](/docs/en/img/en/air/bsair-elevator-mng.png)
 
@@ -46408,6 +46299,115 @@ To update the current status of doors:
 
 ---
 
+### Event Logs and Audit Logs
+
+#### Feature Overview[​](#feature-overview "Direct link to Feature Overview")
+
+One of the main advantages of a Cloud Access Control Platform is the ability to monitor site activity from anywhere. This guide covers how to use **Event Logs** and **Audit Logs** in BioStar Air. Note: Door status monitoring is covered separately.
+
+Customers who began using BioStar Air access control before May 2025 may still be using the Airfob Space app, which has since been rebranded as the Suprema Pass app. Both apps offer identical functionality and are fully compatible. There is no need for existing users to switch — mobile credentials work seamlessly across both.
+
+#### Navigating to Event Logs[​](#navigating-to-event-logs "Direct link to Navigating to Event Logs")
+
+To check event logs:
+
+1. Navigate to **Monitoring** → **Event Logs**.
+
+2. The interface displays a table with details such as event time, event name, door location, device nickname, user type, and username.
+
+3. Customize columns by clicking **Customize**, toggling columns on or off, and clicking **Apply**.
+
+#### Filtering Event Logs[​](#filtering-event-logs "Direct link to Filtering Event Logs")
+
+To filter logs:
+
+1. Click **Filter**.
+
+2. Select event types (e.g., Access Denied, Authentication Failed, Door Open, etc.).
+
+3. Filter by user groups, user types (regular or temporary), device groups, device ID, or device nickname.
+
+4. Click **Apply** to update the logs.
+
+#### Sorting and Managing Logs[​](#sorting-and-managing-logs "Direct link to Sorting and Managing Logs")
+
+* Sort logs by date by selecting a date and time range, then clicking **Apply**.
+
+* Reset filters by clicking **Filters** → **Clear all** → **Apply**.
+
+* Reset date filters by clicking **Reset**.
+
+* Save specific views by applying filters and clicking **Save**.
+
+* Export logs by clicking **Export**.
+
+* Refresh logs by clicking **Refresh** or enabling **Auto Refresh** (adjustable between 5 seconds and 1 minute).
+
+#### Using Audit Logs[​](#using-audit-logs "Direct link to Using Audit Logs")
+
+Audit logs track actions performed by admins on the platform.
+
+##### Accessing Audit Logs[​](#accessing-audit-logs "Direct link to Accessing Audit Logs")
+
+1. Navigate to **Monitoring** → **Audit Logs**.
+
+2. The interface displays information such as:
+
+   * Admin name
+
+   * Action time
+
+   * Source account
+
+   * Admin role
+
+   * Action type
+
+   * Details of the action
+
+##### Filtering and Managing Audit Logs[​](#filtering-and-managing-audit-logs "Direct link to Filtering and Managing Audit Logs")
+
+1. Click **Filter**.
+
+2. Select filters such as account names, admin types, action types, and categories.
+
+3. Click **Apply Filter** to update the logs.
+
+4. Sort logs by date range.
+
+5. Save filter selections for future use.
+
+6. Clear filters by clicking **Clear Filter**.
+
+7. Refresh logs by clicking **Refresh** to load the latest entries.
+
+#### Using Event Logs in the BioStar Air Mobile App[​](#using-event-logs-in-the-biostar-air-mobile-app "Direct link to Using Event Logs in the BioStar Air Mobile App")
+
+1. Tap **Monitoring** at the bottom of the screen.
+
+2. Select **Event Logs**.
+
+3. Scroll through the event logs.
+
+4. Modify the view by tapping **Filter** and selecting:
+
+   * Event period
+
+   * Event types
+
+   * User groups
+
+   * User types
+
+5. Clear or save filter selections for later use.
+
+6. Update event logs by tapping **Update** at the top of the page.
+
+7. Search logs to find specific events.
+
+
+---
+
 ### Opening Doors with Mobile Credentials
 
 #### Feature Overview[​](#feature-overview "Direct link to Feature Overview")
@@ -46990,7 +46990,7 @@ BioStar Air에서 사용자의 출입 권한을 효과적으로 관리하는 방
 
 #### Monitoring→2 items
 
-* [Event Logs and Audit Logs](/docs/en/platform/biostar_air/event-and-audit-logs)
+* [Event Logs and Audit Logs](/docs/en/platform/biostar_air/monitoring-event-and-audit-logs)
 * [Monitoring Door Status](/docs/en/platform/biostar_air/monitoring-door-status)
 
 #### Reports→2 items

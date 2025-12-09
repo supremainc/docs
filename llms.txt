@@ -497,7 +497,6 @@
 - [커스텀 Wiegand 카드 형식](/docs/platform/biostar_air/custom-wiegand-card-formats): 기존 출입 통제 시스템에서 원활하게 마이그레이션하기 위한 시설 코드, ID 세그먼트, 패리티 비트, 비트 할당을 비롯하여 BioStar Air v2.10에서 사용자 정의 Wiegand 카드 형식을 만들고 구성하는 방법을 안내합니다.
 - [이메일 템플릿 사용자 정의하기](/docs/platform/biostar_air/customizing-email-templates): BioStar Air에서 로고, 개인화된 콘텐츠, 다국어 지원을 활용하여 사용자 초대, 활성화, 알림을 위한 브랜드 이메일 템플릿을 만들고 사용자 지정하는 방법을 안내합니다.
 - [일광 절약 시간(DST) 설정하기](/docs/platform/biostar_air/daylight-saving-time): BioStar Air에서 자동 및 수동 DST 설정 구성 방법, 장치에 대한 DST 활성화 방법, 여러 위치에서 표준 시간대 조정 관리 방법을 안내합니다.
-- [이벤트 로그와 감사 로그](/docs/platform/biostar_air/event-and-audit-logs): BioStar Air에서 이벤트 로그와 감사 로그를 모니터링 및 분석하고, 필터 적용, 데이터 내보내기 및 관리 활동 추적 방법을 안내합니다.
 - [Federated 사이트](/docs/platform/biostar_air/federated-sites): 중앙 집중식 제어를 통해 다중 테넌트 빌딩과 다중 지점 조직을 위한 BioStar Air에서 Federated 사이트를 설정하고 관리하는 방법을 알아보세요.
 - [시작하기](/docs/platform/biostar_air/getting-started): 관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.
 - [펌웨어 업그레이드](/docs/platform/biostar_air/how-to-upgrade-firmware): 웹 포털과 모바일 앱을 통해 장치 펌웨어를 일괄 또는 개별적으로 업그레이드하는 방법을 안내합니다. BioStar Air의 버전 확인 및 문제 해결 팁도 포함되어 있습니다.
@@ -530,6 +529,7 @@
 - [사용자 그룹 관리하기](/docs/platform/biostar_air/managing-user-groups): BioStar Air에서 효율적인 사용자 분류 및 출입 통제 관리를 위해 사용자 그룹과 하위 그룹을 생성 및 구성, 관리하는 방법을 안내합니다.
 - [사용자 관리하기](/docs/platform/biostar_air/managing-users): BioStar Air 포털에서 사용자 관리 및 대량 작업 수행, 자격 증명(모바일 카드, RFID, 얼굴 인식, PIN, 웹 카드)을 추가 및 구성, 액세스 등급 설정, 사용자 그룹 관리, 유효 기간 구성 방법을 안내합니다.
 - [출입문 상태 모니터링](/docs/platform/biostar_air/monitoring-door-status): BioStar Air에서 웹 포털과 모바일 앱을 사용하여 실시간 출입문 상태를 모니터링하고, 잠금을 원격으로 제어하며, 출입문 접근을 관리하는 방법을 안내합니다.
+- [이벤트 및 변경 로그 사용하기](/docs/platform/biostar_air/monitoring-event-and-audit-logs): BioStar Air에서 이벤트 로그와 변경 로그를 모니터링 및 분석하고, 필터 적용, 데이터 내보내기 및 관리 활동 추적 방법을 안내합니다.
 - [모바일 크리덴셜로 출입문 열기](/docs/platform/biostar_air/opening-doors-with-mobile-credentials): Bluetooth 및 NFC 태그 기능이 있는 슈프리마 패스 모바일 크리덴셜을 사용하여 문을 여는 방법, 포그라운드 및 백그라운드 모드 구성 방법, 핸즈프리 출입 기능 사용 방법을 안내합니다.
 - [장치 등록하기](/docs/platform/biostar_air/register-device): BioStar Air 모바일 앱을 통해 장치 등록 방법을 안내합니다.
 - [BioStar Air 2.10 릴리스 노트](/docs/platform/biostar_air/release-notes/v2_10): BioStar Air v2.10 릴리스 노트
