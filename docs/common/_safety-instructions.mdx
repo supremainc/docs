@@ -126,7 +126,8 @@
 
 * 고장의 원인이 됩니다.
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,xpass_q2'>
+{/* IP67 이상 제품만 적용 */}
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
 
 **제품을 벽면에 설치할 경우 실리콘 등으로 제품 주위를 밀봉하지 마세요**.
 
@@ -152,6 +153,7 @@
 
 </Xclude>
 
+{/* SIO2 연결 가능한 제품만 적용 */}
 <Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
 
 **제품과 Secure I/O 2, 전기정(전기식 잠금 장치)은 반드시 개별 전원을 사용하세요**.
@@ -168,6 +170,7 @@
 
 </Include>
 
+{/* PoE 가능한 제품만 적용 */}
 <Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2,xpass_q2'>
 
 **전원 장치와 PoE 전원을 함께 연결하지 마세요**.
@@ -176,6 +179,7 @@
 
 </Include>
 
+{/* PoE+ 가능한 제품만 적용 */}
 <Include product='biostation_3,corestation_20'>
 
 **전원 장치와 PoE+ 전원을 함께 연결하지 마세요**.
@@ -184,6 +188,7 @@
 
 </Include>
 
+{/* 방수, 방진 + 케이블 커버있는 제품만 적용 */}
 <Include product='biostation_3,biostation_2a,xstation_2,facestation_f2,xpass_q2'>
 
 **IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다. 완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
@@ -192,7 +197,8 @@
 
 </Include>
 
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2'>
+{/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2'>
 
 **완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
 
@@ -224,6 +230,7 @@
 
 </Xclude>
 
+{/* LCD 화면, 키패드가 있는 제품에만 적용 */}
 <Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
 
 **비밀번호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요**.
@@ -264,6 +271,7 @@
 
 * 소독제를 제품에 직접 분사하지 마세요.
 
+{/* 정전식 방식 버튼 사용하는 제품만 적용 */}
 <Include product='biostation_2,biostation_2a,biostation_a2'>
 
 **이 제품은 정전식 방식 버튼을 사용합니다. 비 오는 날씨와 같이 습기가 높거나 제품 표면에 물이 많이 묻은 경우 마른 천으로 닦은 뒤 사용하세요**.
