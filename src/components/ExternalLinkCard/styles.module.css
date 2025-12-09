@@ -15,6 +15,7 @@
 .externalLink {
   color: var(--main-text-color);
   border: 1px solid;
+  border-radius: 5px;
 }
 
 .externalLink:hover, .productLink:hover {
@@ -22,10 +23,16 @@
   color: var(--main-text-color);
 }
 
+.externalLink:hover {
+  outline: 1px solid var(--main-text-color);
+  transition: .1s;
+}
+
 .externalLinkitem {
   display: grid;
   grid-template-columns: 95px 1fr;
   background: var(--main-black);
+  border-radius: 5px;
 }
 
 .externalLinkLogo {
@@ -42,6 +49,7 @@
   font-family: 'Montserrat', sans-serif !important;
   font-size: 1.2rem;
   margin-bottom: .3rem;
+  letter-spacing: -0.059rem;
 }
 
 .circle {
@@ -93,6 +101,7 @@
 
 .product.grid .cardItem:hover {
   outline: 2px solid var(--main-text-color);
+  transition: .1s;
 }
 
 .product.grid {
