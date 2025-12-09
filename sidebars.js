@@ -142,7 +142,7 @@ const sidebars = {
               type: 'category',
               label: 'Monitoring',
               items: [
-                'platform/biostar_air/event-and-audit-logs',
+                'platform/biostar_air/monitoring-event-and-audit-logs',
                 'platform/biostar_air/monitoring-door-status',
               ]
             },
