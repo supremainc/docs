@@ -68,6 +68,18 @@ const toc = [{
   "id": "create-a-user-and-database",
   "level": 4
 }, {
+  "value": "Small (under 10 GB)",
+  "id": "small-under-10-gb",
+  "level": 4
+}, {
+  "value": "Mid-sized organization (10 ~ 500 GB)",
+  "id": "mid-sized-organization-10--500-gb",
+  "level": 4
+}, {
+  "value": "Enterprise (500 GB or higher)",
+  "id": "enterprise-500-gb-or-higher",
+  "level": 4
+}, {
   "value": "Setting the Windows Authentication database",
   "id": "windows-authentication-database-settings",
   "level": 4
@@ -102,7 +114,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {NextItem, NextStep, Step, Steps} = _components;
+  }, {Image, NextItem, NextStep, Step, Steps} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
   if (!Step) _missingMdxReference("Step", true);
@@ -350,30 +363,132 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "tip",
       children: [(0,jsx_runtime.jsxs)(_components.p, {
-        children: ["It is recommended to set up the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["Set the following recommended values in the ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Database Files"
-        }), " section as shown below."]
+        }), " section. Configure ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " using fixed sizes (MB/GB) rather than percentages, and avoid very small increments that would cause frequent growth events."]
+      }), (0,jsx_runtime.jsx)(Image, {
+        src: "/img/biostarx-before-start-new-database.png",
+        caption: true
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "small-under-10-gb",
+        children: "Small (under 10 GB)"
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Initial Size (MB)"
-            }), ": 3000"]
+            children: ["Data: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 1 - 5 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 100 - 512 MB"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Autogrowth/Maxsize"
-            }), ": 10MB, ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Unlimited"
-            })]
+            children: ["Log: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 512 MB - 2 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 100 - 512 MB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 512 MB - 1 GB"]
           }), "\n"]
         }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["e.g. Data 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 256 MB) / Log 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 128 MB) / TempDB 512 MB"]
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "mid-sized-organization-10--500-gb",
+        children: "Mid-sized organization (10 ~ 500 GB)"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Data: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 10 - 50 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 512 MB - 1 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Log: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 5 - 10 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 512 MB - 1 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 2 - 8 GB"]
+          }), "\n"]
+        }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["e.g. Data 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 1 GB) / Log 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 512 MB) / TempDB 4 GB"]
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "enterprise-500-gb-or-higher",
+        children: "Enterprise (500 GB or higher)"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Data: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 100 GB or higher, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 1 - 4 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Log: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 20 ~ 100 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " 1 ~ 4 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Size"
+            }), " 8 - 32 GB"]
+          }), "\n"]
+        }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["e.g. Data 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 2 GB) / Log 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Autogrowth"
+        }), " 2 GB) / TempDB 16 GB"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "In environments with many transactions, backup the logs periodically to ensure that the size of the log files does not increase."
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Do not set ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Autogrowth"
+            }), " to very small increments or leave the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Maxsize"
+            }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Unlimited"
+            }), ". Instead, set appropriate limits based on expected growth and monitor usage."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "In environments with many transactions, backup the logs periodically to ensure that the size of the log files does not increase."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "windows-authentication-database-settings",

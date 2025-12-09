@@ -68,6 +68,18 @@ const toc = [{
   "id": "create-a-user-and-database",
   "level": 4
 }, {
+  "value": "소규모 조직 (10 GB 이하)",
+  "id": "소규모-조직-10-gb-이하",
+  "level": 4
+}, {
+  "value": "중규모 조직 (10 ~ 500 GB)",
+  "id": "중규모-조직-10--500-gb",
+  "level": 4
+}, {
+  "value": "대규모 조직 (500 GB 이상)",
+  "id": "대규모-조직-500-gb-이상",
+  "level": 4
+}, {
   "value": "Windows Authentication 데이터베이스 설정",
   "id": "windows-authentication-database-settings",
   "level": 4
@@ -102,7 +114,8 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {NextItem, NextStep, Step, Steps} = _components;
+  }, {Image, NextItem, NextStep, Step, Steps} = _components;
+  if (!Image) _missingMdxReference("Image", true);
   if (!NextItem) _missingMdxReference("NextItem", true);
   if (!NextStep) _missingMdxReference("NextStep", true);
   if (!Step) _missingMdxReference("Step", true);
@@ -352,28 +365,130 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "데이터베이스 파일"
-        }), " 섹션에서 아래와 같이 설정할 것을 권장합니다."]
+        }), " 섹션에서 아래 권장값으로 설정하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), "는 퍼센트 대신 고정 크기(MB/GB)로 설정하되, 지나치게 작은 단위로 잦은 증가가 일어나지 않도록 주의하세요."]
+      }), (0,jsx_runtime.jsx)(Image, {
+        src: "/img/biostarx-before-start-new-database.png",
+        caption: true
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "소규모-조직-10-gb-이하",
+        children: "소규모 조직 (10 GB 이하)"
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "처음 크기(MB)"
-            }), ": 3000"]
+            children: ["데이터: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 1 ~ 5 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 100 ~ 512 MB"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "자동 증가/최대 크기"
-            }), ": 10MB 단위, ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "제한 없음"
-            })]
+            children: ["로그: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 512 MB ~ 2 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 100 ~ 512 MB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 512 MB ~ 1 GB"]
           }), "\n"]
         }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["예: 데이터 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 256 MB) / 로그 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 128 MB) / TempDB 512 MB"]
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "중규모-조직-10--500-gb",
+        children: "중규모 조직 (10 ~ 500 GB)"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["데이터: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 10 ~ 50 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 512 MB ~ 1 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["로그: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 5 ~ 10 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 512 MB ~ 1 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 2 ~ 8 GB"]
+          }), "\n"]
+        }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["예: 데이터 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 1 GB) / 로그 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 512 MB) / TempDB 4 GB"]
+      }), (0,jsx_runtime.jsx)(_components.h4, {
+        id: "대규모-조직-500-gb-이상",
+        children: "대규모 조직 (500 GB 이상)"
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["데이터: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 100 GB 이상, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 1 ~ 4 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["로그: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 20 ~ 100 GB, ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), " 1 ~ 4 GB"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["TempDB: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "처음 크기"
+            }), " 8 ~ 32 GB"]
+          }), "\n"]
+        }), "\n"]
+      }), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["예: 데이터 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 2 GB) / 로그 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "자동 증가"
+        }), " 2 GB) / TempDB 16 GB"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "트랜잭션이 많은 환경에서는 로그를 주기적으로 백업하여 로그 파일의 크기가 증가하지 않도록 주의하세요."
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "자동 증가"
+            }), "를 매우 작은 단위로 설정하거나 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "최대 크기"
+            }), "를 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "무제한"
+            }), "으로 설정하지 말고, 예상 증가량에 따라 적절히 설정하거나 모니터링하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "트랜잭션이 많은 환경에서는 로그를 주기적으로 백업하여 로그 파일의 크기가 증가하지 않도록 주의하세요."
+          }), "\n"]
+        }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "windows-authentication-database-settings",
