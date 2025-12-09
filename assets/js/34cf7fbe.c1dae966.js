@@ -791,12 +791,8 @@ const toc = [{
   "id": "how-to-scan-qrbarcode",
   "level": 3
 }, {
-  "value": "장치 라이선스 참고 사항",
-  "id": "장치-라이선스-참고-사항",
-  "level": 3
-}, {
-  "value": "바코드 최소 인식 크기",
-  "id": "바코드-최소-인식-크기",
+  "value": "바코드 종류 및 최소 인식 크기",
+  "id": "바코드-종류-및-최소-인식-크기",
   "level": 3
 }, {
   "value": "기본 지원",
@@ -806,6 +802,10 @@ const toc = [{
   "value": "Camera QR 라이선스 적용 시",
   "id": "camera-qr-라이선스-적용-시",
   "level": 4
+}, {
+  "value": "장치 라이선스 참고 사항",
+  "id": "장치-라이선스-참고-사항",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -1125,27 +1125,10 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "장치-라이선스-참고-사항",
-      children: "장치 라이선스 참고 사항"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "더 다양한 QR/바코드 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "바코드-최소-인식-크기",
-      children: "바코드 최소 인식 크기"
+      id: "바코드-종류-및-최소-인식-크기",
+      children: "바코드 종류 및 최소 인식 크기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "바코드별 최소 인식 크기 예시입니다."
+      children: "바코드 종류 별로 인식할 수 있는 최소 바코드 크기 예시입니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
@@ -1202,11 +1185,6 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "camera-qr-라이선스-적용-시",
       children: "Camera QR 라이선스 적용 시"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["장치 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "../../platform/biostar_x/settings-license-device-license",
-        children: "BioStar X 관리자 설명서"
-      }), "를 참조하세요."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x cols3--20-20-60",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -1420,6 +1398,30 @@ function _createMdxContent(props) {
           })]
         })]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "장치-라이선스-참고-사항",
+      children: "장치 라이선스 참고 사항"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "더 다양한 QR/바코드 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["장치 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "../../platform/biostar_x/settings-license-device-license",
+            children: "BioStar X 관리자 설명서"
+          }), "를 참조하세요."]
+        }), "\n"]
+      }), "\n"]
     })]
   });
 }

@@ -11988,7 +11988,7 @@ You can register user information that includes biometric authentication data.
 
    * Card: You can enroll a card for user authentication. Scan the card to assign to the user.
 
-   * T\&A Mode: You can select permissions to assign to the user.
+   * User Level: You can select permissions to assign to the user.
 
      Info
 
@@ -12000,7 +12000,7 @@ You can register user information that includes biometric authentication data.
 
      * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * : You can use the menus USER, EVENT LOG.
+     * User Mgmt: You can use the menus USER, EVENT LOG.
 
    * Start Date: You can set the date to start using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
 

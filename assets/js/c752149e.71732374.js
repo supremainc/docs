@@ -173,7 +173,7 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_083_list",
+                sid: "ui_172",
                 product: "dev"
               }), ": 사용자에게 할당할 권한을 선택할 수 있습니다."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {

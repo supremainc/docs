@@ -173,7 +173,7 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_083_list",
+                sid: "ui_172",
                 product: "dev"
               }), ": You can select permissions to assign to the user."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
@@ -220,7 +220,7 @@ function _createMdxContent(props) {
                 }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                   children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                     children: [(0,jsx_runtime.jsx)(Cmd, {
-                      sid: "ui_376",
+                      sid: "ui_171",
                       product: "dev"
                     }), ": You can use the menus ", (0,jsx_runtime.jsx)(Cmd, {
                       sid: "ui_166",

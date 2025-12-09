@@ -108,7 +108,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Anno, {
           id: "anno3",
           children: "3)"
-        }), " QR 스캔에 최적화되어 빠르고 안정적인 QR Code 인증을 제공합니다."]
+        }), " 최대 32개의 ASCII 코드 문자열로 구성된 QR 코드를 지원합니다."]
       }), (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(Anno, {
           id: "anno4",
