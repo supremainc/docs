@@ -100,6 +100,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    blockquote: "blockquote",
     code: "code",
     em: "em",
     h2: "h2",
@@ -398,12 +399,14 @@ function _createMdxContent(props) {
             }), " 512 MB ~ 1 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["예: 데이터 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 256 MB) / 로그 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 128 MB) / TempDB 512 MB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["예: 데이터 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 256 MB) / 로그 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 128 MB) / TempDB 512 MB"]
+        }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "중규모-조직-10--500-gb",
         children: "중규모 조직 (10 ~ 500 GB)"
@@ -431,12 +434,14 @@ function _createMdxContent(props) {
             }), " 2 ~ 8 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["예: 데이터 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 1 GB) / 로그 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 512 MB) / TempDB 4 GB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["예: 데이터 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 1 GB) / 로그 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 512 MB) / TempDB 4 GB"]
+        }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "대규모-조직-500-gb-이상",
         children: "대규모 조직 (500 GB 이상)"
@@ -464,12 +469,14 @@ function _createMdxContent(props) {
             }), " 8 ~ 32 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["예: 데이터 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 2 GB) / 로그 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "자동 증가"
-        }), " 2 GB) / TempDB 16 GB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["예: 데이터 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 2 GB) / 로그 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "자동 증가"
+          }), " 2 GB) / TempDB 16 GB"]
+        }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",

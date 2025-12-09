@@ -100,6 +100,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
+    blockquote: "blockquote",
     code: "code",
     em: "em",
     h2: "h2",
@@ -398,12 +399,14 @@ function _createMdxContent(props) {
             }), " 512 MB - 1 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["e.g. Data 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 256 MB) / Log 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 128 MB) / TempDB 512 MB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["e.g. Data 2 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 256 MB) / Log 1 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 128 MB) / TempDB 512 MB"]
+        }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "mid-sized-organization-10--500-gb",
         children: "Mid-sized organization (10 ~ 500 GB)"
@@ -431,12 +434,14 @@ function _createMdxContent(props) {
             }), " 2 - 8 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["e.g. Data 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 1 GB) / Log 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 512 MB) / TempDB 4 GB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["e.g. Data 20 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 1 GB) / Log 5 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 512 MB) / TempDB 4 GB"]
+        }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.h4, {
         id: "enterprise-500-gb-or-higher",
         children: "Enterprise (500 GB or higher)"
@@ -464,12 +469,14 @@ function _createMdxContent(props) {
             }), " 8 - 32 GB"]
           }), "\n"]
         }), "\n"]
-      }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["e.g. Data 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 2 GB) / Log 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Autogrowth"
-        }), " 2 GB) / TempDB 16 GB"]
+      }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["e.g. Data 100 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 2 GB) / Log 50 GB (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Autogrowth"
+          }), " 2 GB) / TempDB 16 GB"]
+        }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
