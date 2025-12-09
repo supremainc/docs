@@ -61810,7 +61810,7 @@ All activities recorded in the audit trail are organized by category. Click each
 
 * **User Status**: Status, Start Datetime, Expiry Datetime
 
-* **Data Management**: CSV Import, CSV Export, Data file Import, Data file export
+* **Data Management**: CSV Import, CSV Export, Data File Import, Data File Export
 
 * **Device Integration**: Transfer To Device, Delete From Device
 

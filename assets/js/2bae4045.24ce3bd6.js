@@ -421,8 +421,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "auth.passwordChange.title",
-            product: "2"
+            sid: "auth.passwordChange.title"
           }), " 창이 나타나면 현재 비밀번호와 새 비밀번호를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-change-pw.png"
