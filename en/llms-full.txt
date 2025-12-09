@@ -167,7 +167,7 @@ Provides initial procedures for getting started with the device.
 |                                                             |                                                    |                                                  |
 | ----------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ |
 | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) | ![](/docs/en/img/device/component-quick-guide.svg) | ![](/docs/en/img/device/component-oss-guide.svg) |
-| Bracket Fixing Screw<br />(Star Shaped)                     | Quick Guide                                        | Open Source Software Guide                       |
+| Bracket Fixing Screw (Star Shaped)                          | Quick Guide                                        | Open Source Software Guide                       |
 
 <!-- -->
 
@@ -2101,7 +2101,7 @@ Provides initial procedures for getting started with the device.
 |                                                             |                                                    |                                                  |
 | ----------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ |
 | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) | ![](/docs/en/img/device/component-quick-guide.svg) | ![](/docs/en/img/device/component-oss-guide.svg) |
-| Bracket Fixing Screw<br />(Star Shaped)                     | Quick Guide                                        | Open Source Software Guide                       |
+| Bracket Fixing Screw (Star Shaped)                          | Quick Guide                                        | Open Source Software Guide                       |
 
 <!-- -->
 
@@ -3087,7 +3087,7 @@ Provides initial procedures for getting started with the device.
 |                                                    |                                                       |                                                             |                                               |                                                 |
 | -------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------- |
 | ![](/docs/en/img/device/component-shrink-tube.svg) | ![](/docs/en/img/device/component-fixing-screws2.svg) | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) | ![](/docs/en/img/device/component-diode1.svg) | ![](/docs/en/img/device/component-resistor.svg) |
-| Shrink Tube                                        | Fixing Screws x2                                      | Bracket Fixing Screw<br />(Star Shaped)                     | Diode                                         | 120 Ω Resistor                                  |
+| Shrink Tube                                        | Fixing Screws x2                                      | Bracket Fixing Screw (Star Shaped)                          | Diode                                         | 120 Ω Resistor                                  |
 
 <!-- -->
 
@@ -6085,7 +6085,7 @@ You can connect a USB memory stick to upgrade the firmware.
 
    Info
 
-   Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/set-permission).
+   Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/set-permission).
 
 4. Once the administrator authentication is successful, the firmware file will be transferred to the device.
 
@@ -6877,7 +6877,7 @@ Describes the supported authentication methods and authentication procedures.
 
 #### Authentication mode[​](#authentication-mode "Direct link to Authentication mode")
 
-Set the authentication mode. You can combine Fingerprint, PIN, Card, and ID for authentication mode, and you can also set schedules for each authentication mode.
+Set the authentication mode. You can combine Fingerprint, PIN, Card, and User ID for authentication mode, and you can also set schedules for each authentication mode.
 
 ##### Fingerprint authentication mode[​](#fingerprint-authentication-mode "Direct link to Fingerprint authentication mode")
 
@@ -6885,7 +6885,7 @@ You can set schedules for each authentication method that uses fingerprints.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → Auth Mode → Fingerprint Mode.
+2. Press **6** after selecting AUTH → Auth Mode → Fingerprint Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6899,9 +6899,9 @@ You can set schedules for each authentication method that uses fingerprints.
 
 Info
 
-* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Deactive and Always.
+* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Never and Always.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 ##### Card Authentication Mode[​](#card-authentication-mode "Direct link to Card Authentication Mode")
 
@@ -6909,7 +6909,7 @@ You can set schedules for each authentication method that uses cards.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → Auth Mode → Card Mode.
+2. Press **6** after selecting AUTH → Auth Mode → Card Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6929,9 +6929,9 @@ You can set schedules for each authentication method that uses cards.
 
 Info
 
-* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Deactive and Always.
+* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Never and Always.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 ##### ID Authentication Mode[​](#id-authentication-mode "Direct link to ID Authentication Mode")
 
@@ -6939,7 +6939,7 @@ You can set schedules for each authentication method that uses IDs.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → Auth Mode → ID Mode.
+2. Press **6** after selecting AUTH → Auth Mode → ID Mode.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6957,9 +6957,9 @@ You can set schedules for each authentication method that uses IDs.
 
 Info
 
-* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Deactive and Always.
+* Schedule can be set in BioStar X. If you have no scheduled settings, you can only select Never and Always.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 #### Attendance Mode[​](#attendance-mode "Direct link to Attendance Mode")
 
@@ -6967,7 +6967,7 @@ You can set how to register T\&A mode.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → <!-- -->.
+2. Press **6** after selecting AUTH → T\&A.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6975,11 +6975,11 @@ You can set how to register T\&A mode.
 
    * T\&A Event: You can check attendance events.
 
-   * : Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use time and attendance mode.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Setting On allows you to require selecting a time and attendance event when authenticating.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Setting Enabled allows you to require selecting a time and attendance event when authenticating.
 
-   * T\&A Fixed: You can configure to use only time and attendance events selected by an administrator. Available when <!-- -->is set to Fixed.
+   * T\&A Fixed: You can configure to use only time and attendance events selected by an administrator. Available when T\&A Mode is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -6987,7 +6987,7 @@ You can set how to register T\&A mode.
 
 Info
 
-When set to On, you can change the user's work code. Long press **OK** then authenticate to select the desired work code.
+When set to Enabled, you can change the user's work code. Long press **OK** then authenticate to select the desired work code.
 
 #### Fingerprint Settings[​](#fingerprint-settings "Direct link to Fingerprint Settings")
 
@@ -6995,13 +6995,13 @@ You can change the settings for fingerprint authentication.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → Fingerprint.
+2. Press **6** after selecting AUTH → Fingerprint.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
    ![](/docs/en/img/en/device/bln2-auth3.png)
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Matching Timeout: Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails.
 
@@ -7033,7 +7033,7 @@ You can set up server matching. When server matching is used, authentication is 
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION → Server Matching.
+2. Press **6** after selecting AUTH → Server Matching.
 
    ![](/docs/en/img/en/device/bln2-auth4.png)
 
@@ -7043,9 +7043,9 @@ You can set up server matching. When server matching is used, authentication is 
 
 Info
 
-* Server Matching can only use Fingerprint, Card, and ID.
+* Server Matching can only use Fingerprint, Card, and User ID.
 
-* If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+* If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
 #### Auth result display option[​](#auth-result-display-option "Direct link to Auth result display option")
 
@@ -7053,7 +7053,7 @@ You can set the auth result display option.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTHENTICATION.
+2. Press **6** after selecting AUTH.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
@@ -7063,7 +7063,7 @@ You can set the auth result display option.
 
      * Display All: Displays all user IDs.
 
-     * Mask All but First Letter: Show only the first character of the user ID.
+     * First Letter Only: Show only the first character of the user ID.
 
      * Hide All: Do not show the user ID.
 
@@ -7071,7 +7071,7 @@ You can set the auth result display option.
 
      * Display All: Displays all user names.
 
-     * Mask All but First Letter: Show only the first character of the user name.
+     * First Letter Only: Show only the first character of the user name.
 
      * Hide All: Do not show the user name.
 
@@ -7139,7 +7139,7 @@ Provides initial procedures for getting started with the device.
 |                                                             |                                                 |                                               |
 | ----------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
 | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) | ![](/docs/en/img/device/component-resistor.svg) | ![](/docs/en/img/device/component-diode1.svg) |
-| Bracket Fixing Screw<br />(Star Shaped)                     | 120 Ω Resistor                                  | Diode                                         |
+| Bracket Fixing Screw (Star Shaped)                          | 120 Ω Resistor                                  | Diode                                         |
 
 <!-- -->
 
@@ -9126,7 +9126,7 @@ You can change the display and sound settings of the device.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select DISPLAY & SOUND and press **6**.
+2. Select DISPLAY and press **6**.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -9182,11 +9182,11 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select DEVICE → Daylight Saving Time and press **6**.
+2. Select DEVICE → DST and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
-   * Name: Set the name of daylight-saving time.
+   * User Name: Set the name of daylight-saving time.
 
    * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
 
@@ -9208,7 +9208,7 @@ You can set the input ports of Open Time and Exit Button on the device. Useful w
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
+   * Switch: Select the type of switch (N/O or N/C) for the Exit Button's input port.
 
 3. Press **OK** to save the settings.
 
@@ -9302,7 +9302,7 @@ Info
 
 ##### Administrator two-step authentication[​](#admin-2-step-authentication "Direct link to Administrator two-step authentication")
 
-Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings, but you can enhance the security of the device by strengthening the administrator's permissions through the Admin 2-step Authentication option.
+Devices with upgraded firmware do not provide Master Admin Setting; enhance device security by elevating full admin privileges through the Admin 2-step Authentication option.
 
 1. Press **ESC** and authenticate as an administrator.
 
@@ -9352,7 +9352,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
    ![](/docs/en/img/en/device/bln2-network-ethernet.png)
 
-   * PORT: You can set the ports of the device.
+   * Port: You can set the ports of the device.
 
    * DHCP: Set whether to use DHCP. If DHCP setting is disabled, the user can modify IP Address, Gateway, and Subnet Mask.
 
@@ -9378,7 +9378,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
    * Connection Mode: Selecting Device → Server sends a direct connection signal to the server with the information entered on the device. Users can input Server URL, Server IP, and Server Port.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
@@ -9390,17 +9390,17 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Select NETWORK → RS485 and press **6**.
+2. Select NETWORK → RS-485 and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
    ![](/docs/en/img/en/device/bln2-network-rs485.png)
 
-   * Operation Mode: You can select the RS-485 operation mode.
+   * Mode: You can select the RS-485 operation mode.
 
    * Baud Rate: You can select the desired communication performance.
 
-   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS485 mode is set to Default or Slave.
+   * Auth Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS-485 mode is set to Default or Slave.
 
 4. Press **OK** to save the settings.
 
@@ -9452,7 +9452,7 @@ Q.Suddenly fingerprint authentication cannot be done.
 
 Q.The fingerprint sensor does not turn on.
 
-* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTHENTICATION → Fingerprint → Sensor Mode and then select Always On.
+* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want the fingerprint sensor to always be on, set Sensor Mode to Always On.
 
 ##### Door lock[​](#doorlock)
 
@@ -9498,9 +9498,9 @@ You can register user information that includes biometric authentication data.
 
 3. Select the desired item and press **4** or **6** to set it. Press **OK** to register user information.
 
-   * You can enter a user ID by inputting a number from 1 to 4294967294 with ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * User ID: Enter a number between 1 and 4294967294 to register a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * Name: You can enter a username using numeric and function buttons.
+   * User Name: You can enter a username using numeric and function buttons.
 
    * Fingerprint: You can enroll a fingerprint for user authentication. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint once more. Select the fingerprint to be deleted and press **4** to delete the fingerprint, or press **6** to scan the fingerprint again. To add more fingerprints, select + Add Finger and then press **6**.
 
@@ -9518,13 +9518,13 @@ You can register user information that includes biometric authentication data.
 
      * Administrator: You can use all menus.
 
-     * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
+     * Configuration: You can use the menus AUTH, DISPLAY, DEVICE, NETWORK, EVENT LOG.
 
-     * User Management: You can use the menus USER, EVENT LOG.
+     * User Mgmt.: You can use the menus USER, EVENT LOG.
 
    * Start Date: You can set the date to start using the user account.
 
-   * Expiration Date: You can set the date to stop using the user account.
+   * Expiry Date: You can set the date to stop using the user account.
 
    * 1:1 Security Level: You can set the security level for 1:1 authentication.
 
@@ -9542,7 +9542,7 @@ User Management or Administrator can modify the registered user information. You
 
 2. Select USER → Search User and then press **6**.
 
-3. Select your search terms. You can search for users using All, ID, Name, Fingerprint, Card.
+3. Select your search terms. You can search for users using All, User ID, User Name, Fingerprint, Card.
 
    ![](/docs/en/img/en/device/bln2-user-search.png)
 
@@ -9552,7 +9552,7 @@ User Management or Administrator can modify the registered user information. You
 
 Info
 
-Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -9826,7 +9826,7 @@ Info
 
 * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 ##### Card Authentication Mode[​](#card-authentication-mode "Direct link to Card Authentication Mode")
 
@@ -9856,7 +9856,7 @@ Info
 
 * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 ##### ID Authentication Mode[​](#id-authentication-mode "Direct link to ID Authentication Mode")
 
@@ -9884,7 +9884,7 @@ Info
 
 * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-* For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+* For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 #### Attendance Mode[​](#attendance-mode "Direct link to Attendance Mode")
 
@@ -9898,7 +9898,7 @@ You can set how to register T\&A mode.
 
 3. Select the desired item and press / to change the settings.
 
-   * T\&A: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use time and attendance mode.
 
    * T\&A Event: You can check attendance events.
 
@@ -9926,7 +9926,7 @@ Info
 
 * You can only use Server Matching with Fingerprint, Card, and ID.
 
-* If using Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+* If using Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
 #### Fingerprint Settings[​](#fingerprint-settings "Direct link to Fingerprint Settings")
 
@@ -9940,7 +9940,7 @@ You can change the settings for fingerprint authentication.
 
 3. Select the desired item and press / to change the settings.
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Matching Timeout: Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails.
 
@@ -10028,7 +10028,7 @@ Provides initial procedures for getting started with the device.
 |                                                             |                                                 |                                               |
 | ----------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
 | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) | ![](/docs/en/img/device/component-resistor.svg) | ![](/docs/en/img/device/component-diode1.svg) |
-| Bracket Fixing Screw<br />(Star Shaped)                     | 120 Ω Resistor                                  | Diode                                         |
+| Bracket Fixing Screw (Star Shaped)                          | 120 Ω Resistor                                  | Diode                                         |
 
 <!-- -->
 
@@ -10094,9 +10094,9 @@ Info
 
 * **Speaker**: Delivers sound.
 
-* **Wiegand input (4-pin)**: Connect the Wiegand Input cable.
+* **Wiegand Input (4-pin)**: Connect the Wiegand Input cable.
 
-* **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
+* **Wiegand Output (4-pin)**: Connect the Wiegand Output cable.
 
 * **RS-485 (4-pin)**: Connect the RS-485 cable.
 
@@ -11624,7 +11624,7 @@ Info
 
 ##### Administrator two-step authentication[​](#admin-2-step-authentication "Direct link to Administrator two-step authentication")
 
-Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings, but you can enhance the security of the device by strengthening the administrator's permissions through the Admin 2-step Authentication option.
+Devices with upgraded firmware do not provide Master Admin Setting; enhance device security by elevating full admin privileges through the Admin 2-step Authentication option.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
@@ -11634,7 +11634,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 Info
 
-* Use Admin 2-step Authentication after upgrading the firmware to v1.2.0 or higher. After upgrading to v1.2.0 or higher, downgrading to a lower version is not possible.
+* Admin 2-step Authentication is available after upgrading the firmware to v1.2.0 or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
 
 * The first step of authentication is default unless the Admin 2-step Authentication option is enabled.
 
@@ -11856,7 +11856,7 @@ Info
 
    * Connection Mode: Selecting Device > Server will send a connection signal directly to a server with the input information from the device. When the Device > Server setting is enabled, the user can enter Server URL, Server IP, Server Port.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
@@ -11872,7 +11872,7 @@ Server IP, Server Port can be entered by pressing the numeric buttons. You can d
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select NETWORK → RS485 and then press **OK**.
+2. Select NETWORK → RS-485 and then press **OK**.
 
    ![](/docs/en/img/en/device/bs2a-network-serial.png)
 
@@ -11932,7 +11932,7 @@ Q.Suddenly fingerprint authentication cannot be done.
 
 Q.The fingerprint sensor does not turn on.
 
-* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to AUTHENTICATION → Fingerprint → Sensor Mode and then select Always On.
+* When Sensor Mode is set to Auto On, the sensor will only turn on when you place finger on the fingerprint sensor. If you want the fingerprint sensor to always be on, set Sensor Mode to Always On.
 
 ##### Door lock[​](#doorlock)
 
@@ -11988,7 +11988,7 @@ You can register user information that includes biometric authentication data.
 
    * Card: You can enroll a card for user authentication. Scan the card to assign to the user.
 
-   * User Level: You can select permissions to assign to the user.
+   * T\&A Mode: You can select permissions to assign to the user.
 
      Info
 
@@ -12000,13 +12000,13 @@ You can register user information that includes biometric authentication data.
 
      * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Mgmt: You can use the menus USER, EVENT LOG.
+     * : You can use the menus USER, EVENT LOG.
 
    * Start Date: You can set the date to start using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
 
    * Expiration Date: You can set the date to stop using the user account. Press the numeric buttons to enter the date. You can delete the entered date with the  button. You can enter delimiters with the  button.
 
-   * Security level: You can set the security level for 1:1 authentication.
+   * Security Level: You can set the security level for 1:1 authentication.
 
    * Duress: Select to enroll a duress fingerprint. If you are coerced by someone or need to open the door forcefully, authenticating with this fingerprint can send an alarm signal to BioStar X.
 
@@ -12032,7 +12032,7 @@ The user administrator or super administrator can modify registered user informa
 
 Info
 
-Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -12274,17 +12274,17 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 5. After setting the desired authentication mode, set Schedule.
 
-   | Category       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-   | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Face           | \* ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode uses only facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires facial authentication followed by PIN entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-   | Card / QR Code | \* ![](/docs/en/img/common/ico-authmode-card-bs3.png): This mode uses only card / QR code authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode requires card / QR code authentication followed by facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by either facial authentication or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both facial authentication and PIN entry after card / QR code authentication. |
-   | ID             | \* ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode requires ID entry followed by facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by either facial authentication or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both facial authentication and PIN entry after ID entry.                                                                                                                                                                                                           |
+   | Category       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+   | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Face           | - ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode uses only facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires facial authentication followed by PIN entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   | Card / QR Code | - ![](/docs/en/img/common/ico-authmode-card-bs3.png): This mode uses only card / QR code authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode requires card / QR code authentication followed by facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by either facial authentication or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both facial authentication and PIN entry after card / QR code authentication. |
+   | ID             | - ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png): This mode requires ID entry followed by facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by either facial authentication or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-face-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both facial authentication and PIN entry after ID entry.                                                                                                                                                                                                           |
 
    Info
 
    * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-   * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+   * For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
    * To use QR Code authentication, AUTHENTICATION must be clicked and Operation must have QR Authentication activated, and a separate device license is required. For more information, refer to [License](/docs/en/device/biostation_3/settings#license).
 
@@ -12328,7 +12328,7 @@ You can set up server matching.
 
    * Server Matching can only use cards and IDs.
 
-   * If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+   * If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
 ##### QR authentication[​](#qr-authentication "Direct link to QR authentication")
 
@@ -12400,7 +12400,7 @@ You can change the configuration for facial authentication.
 
    * Motion Sensor: Set the sensitivity to detect motion around the device. When Motion Sensor is set to Off, touch the screen to authenticate your face.
 
-   * Enrollment Time: If the face is not enrolled within the set time, the face registration will be canceled.
+   * Enroll Timeout: If the face is not enrolled within the set time, the face registration will be canceled.
 
    * Auth Timeout: If authentication is not completed within the set time, authentication fails.
 
@@ -12422,7 +12422,7 @@ You can change the configuration for facial authentication.
 
      Info
 
-     For more information about Template on Mobile, refer to [the following](/docs/en/platform/biostar_x/enroll-credential-mobile#template-on-mobile) BioStar X Administrator Manual.
+     For more information about Template on Mobile, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/enroll-credential-mobile#template-on-mobile).
 
    * Store Visual Face Image: You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
 
@@ -12430,7 +12430,7 @@ You can change the configuration for facial authentication.
 
      After disabling this setting, use BioStar 2 v2.9.7 or higher.
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Operation Mode: You can set the operating mode of the device for face authentication.
 
@@ -12450,7 +12450,7 @@ You can change the configuration for facial authentication.
 
      * Mask Detection: You can set whether to use mask detection.
 
-     * Detection Mode: You can set the method to check if a mask is worn. This will be activated if set to Mask Detection.
+     * Detection Mode: You can set the method to check if a mask is worn. This is activated when the Mask Detection is set to Enabled.
 
      Info
 
@@ -12460,7 +12460,7 @@ You can change the configuration for facial authentication.
 
      * Require No Mask: Only users without masks can authenticate, and if this mode is used, the mask verification mode will be fixed to Check Before Authentication.
 
-   * Mask Detection Level: Set the sensitivity for detecting mask usage. This will be activated if set to Mask Detection.
+   * Mask Detection Level: Set the sensitivity for detecting mask usage. This is activated when the Mask Detection Level is set to Enabled.
 
    * Check Mode: Set the confirmation mode according to the purpose of the device.
 
@@ -12549,7 +12549,7 @@ Provides initial procedures for getting started with the device.
 | ![](/docs/en/img/device/component-device-bs3.svg) | ![](/docs/en/img/device/component-wall-bracket-bs3.svg) | ![](/docs/en/img/device/component-drilling-template-bs3.svg) | ![](/docs/en/img/device/component-quick-guide.svg)    | ![](/docs/en/img/device/component-connection-cables-bs3.svg) |
 | BioStation 3                                      | Wall Bracket                                            | Drilling Template                                            | Quick Guide                                           | Connection Cables                                            |
 | ![](/docs/en/img/device/component-diode1.svg)     | ![](/docs/en/img/device/component-resistor.svg)         | ![](/docs/en/img/device/component-pvc-anchors2.svg)          | ![](/docs/en/img/device/component-fixing-screws2.svg) | ![](/docs/en/img/device/component-bracket-fixing-screw.svg)  |
-| Diode                                             | 120 Ω Resistor                                          | PVC Anchors x2                                               | Fixing Screws x2                                      | Bracket Fixing Screw<br />(Star Shaped)                      |
+| Diode                                             | 120 Ω Resistor                                          | PVC Anchors x2                                               | Fixing Screws x2                                      | Bracket Fixing Screw (Star Shaped)                           |
 
 <!-- -->
 
@@ -12603,9 +12603,9 @@ Info
 
 * **USB Expansion Port (5-pin)**: Connect other accessory products.
 
-* **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
+* **Wiegand Output (4-pin)**: Connect the Wiegand Output cable.
 
-* **Wiegand input (4-pin)**: Connect the Wiegand Input cable.
+* **Wiegand Input (4-pin)**: Connect the Wiegand Input cable.
 
 * **RS-485 (4-pin)**: Connect the RS-485 cable.
 
@@ -14811,7 +14811,7 @@ Info
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server Port: Enter the port of the PC on which BioStar X is installed.
 
@@ -14827,11 +14827,11 @@ Info
 
    ![](/docs/en/img/en/device/bs3-network-osdp.png)
 
-   * RS485: Select the RS-485 mode.
+   * RS-485: Select the RS-485 mode.
 
    * Baud Rate: Select the desired baud rate.
 
-   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS485 mode is set to Default or Slave.
+   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS-485 mode is set to Default or Slave.
 
 #### Device[​](#device "Direct link to Device")
 
@@ -14845,7 +14845,7 @@ Set the account and extensions of intercom.
 
    ![](/docs/en/img/en/device/bs3-network-intercom.png)
 
-   * Intercom: Set whether the intercom is enabled or not. To set the SIP Account and the SIP AccountExtensionsExtensions, activate this option.
+   * Intercom: Set whether the intercom is enabled or not. Enabling intercom settings allows you to configure SIP Account and Extensions.
 
    * SIP Account: Enter each item so that the device can be registered on the SIP server.
 
@@ -14857,7 +14857,7 @@ Set the account and extensions of intercom.
 
    Info
 
-   * If Display NameDisplay Name is not set, it will not be possible to distinguish receivers.
+   * If Display Name is not set, it will not be possible to distinguish receivers.
 
    * Extension numbers can only enter alphanumeric (case sensitive), and special characters `+` `-` `@` `.`.
 
@@ -14907,7 +14907,7 @@ You can set the input ports of Open Time and Exit Button in the device.
 
    * Exit Button: Select the input port where the exit button is connected.
 
-   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
+   * Switch: Select the type of switch (N/O or N/C) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -15083,7 +15083,7 @@ Info
 
 ##### Administrator two-step authentication[​](#admin-2-step-authentication "Direct link to Administrator two-step authentication")
 
-Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings, but you can enhance the security of the device by strengthening the administrator's permissions through the Admin 2-step Authentication option.
+Devices with upgraded firmware do not provide Master Admin Setting; enhance device security by elevating full admin privileges through the Admin 2-step Authentication option.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
@@ -15093,7 +15093,7 @@ Devices upgraded to firmware version 1.4.0 do not provide Master Admin settings,
 
 Info
 
-* The Admin 2-step Authentication option is available only after upgrading the firmware to version 1.4.0 or higher, and you cannot downgrade to a lower version after upgrading to version 1.4.0 or higher.
+* Admin 2-step Authentication is available after upgrading the firmware to v1.4.0 or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
 
 * The first step of authentication is default unless the Admin 2-step Authentication option is enabled.
 
@@ -15295,7 +15295,7 @@ You can register user information that includes biometric authentication data.
 
    * The visual face data of BioStation 3 are not compatible with face templates of FaceStation 2 or FaceLite.
 
-   * Face information for BioStation 3 can also be batch enrolled by uploading a photo in BioStar X or importing a CSV file, not just on the device. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/enroll-credential-face).
+   * Face information for BioStation 3 can also be batch enrolled by uploading a photo in BioStar X or importing a CSV file, not just on the device. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/enroll-credential-face).
 
    * To use a Visual Face feature correctly, take a picture by following instructions below.
 
@@ -15331,7 +15331,7 @@ User Management or Administrator can modify the registered user information. A c
 
 2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
 
-3. Select your search terms. You can search for users using All , User ID , Name , Face , Card.
+3. Select your search terms. You can search for users using All, User ID, Name, Face, Card.
 
 4. Select the user to modify.
 
@@ -15341,7 +15341,7 @@ User Management or Administrator can modify the registered user information. A c
 
 Info
 
-Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -15550,7 +15550,7 @@ Info
 
 #### Name and function of each part[​](#name-and-function-of-each-part "Direct link to Name and function of each part")
 
-![](/docs/en/img/en/device/product-part-cs20.svg)
+![](/docs/en/img/device/product-part-cs20.svg)
 
 | No. | Name                                                     |
 | --- | -------------------------------------------------------- |
@@ -18728,9 +18728,9 @@ Check if the mobile device supports BLE communication.
 
 Check compatible devices and firmware versions.
 
-* XPass D2 firmware version 1.1.0 or higher
+* [**XPass D2**](/docs/en/device/xpass_d2) firmware version 1.1.0 or higher
 
-* XPass 2
+* [**XPass 2**](/docs/en/device/xpass_2)
 
   * XP2-MDPB, XP2-GDPB, XP2-GKDPB: firmware version 1.0.0 or higher
 
@@ -18738,7 +18738,7 @@ Check compatible devices and firmware versions.
 
   * XP2-MAPB-H: firmware version 1.4.3 or higher
 
-* BioEntry W3 firmware version 1.0.1 or higher
+* [**BioEntry W3**](/docs/en/device/bioentry_w3) firmware version 1.0.1 or higher
 
 Info
 
@@ -18746,7 +18746,7 @@ Info
 
 * If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. If you are using the device as a slave device, the firmware of the connected master device must also be the latest version compatible with BioStar X.7.0 or higher.
 
-* For more information about upgrading device firmware, please refer to [IP Device (Upgrade device firmware)](/docs/en/device/device_manager/ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](/docs/en/device/device_manager/xpd2-settings#device-firmware-upgrade), or the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/settings-device-upgrade-firmware).
+* For more information about upgrading device firmware, please refer to [IP Device (Upgrade device firmware)](/docs/en/device/device_manager/ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](/docs/en/device/device_manager/xpd2-settings#device-firmware-upgrade), or the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-device-upgrade-firmware).
 
 
 ---
@@ -18808,7 +18808,7 @@ Biometric devices only support network and server settings.
 
 3. Check the device ID to select the device from the list of connectable devices, or bring the mobile device closer to the device to connect.
 
-4. After setting the device password, press OK. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
+4. After setting the device password, press OK. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
 
    Info
 
@@ -18874,7 +18874,7 @@ Info
 
 * LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
 
-* ![](/docs/en/img/en/common/ico-cancel2.svg)Selecting this slot will skip displaying the color set for that slot and display the color set for the next slot.
+* When you select ![](/docs/en/img/common/ico-cancel2.svg), that slot is skipped in the color sequence, and the color assigned to the next slot appears.
 
 #### Connect device[​](#connect-device "Direct link to Connect device")
 
@@ -18888,7 +18888,7 @@ You can search for and connect to installed IP devices nearby. When connected to
 
 3. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
 
-4. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
+4. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
 
 5. Press OK to complete the device connection.
 
@@ -18908,7 +18908,7 @@ Info
 
 1. Refer to [connect device](#connect-device) to connect to the device for firmware upgrade.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → FW upgrade.
+2. Press ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
 
    ![](/docs/en/img/en/device/ip-device-fwupgrade.png)
 
@@ -18922,7 +18922,7 @@ You can restart the device.
 
 1. Refer to [connect device](#connect-device) to connect to the device to restart.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → Device Reboot.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Device Reboot.
 
    ![](/docs/en/img/en/device/ip-device-restart.png)
 
@@ -18934,7 +18934,7 @@ You can initialize device settings.
 
 1. Refer to [connect device](#connect-device) to connect to the device to initialize the settings.
 
-2. ![](/docs/en/img/en/common/ico-option.svg) → Press Restore to default.
+2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to default.
 
    ![](/docs/en/img/en/device/ip-device-restore-default.png)
 
@@ -18946,7 +18946,7 @@ You can initialize device settings excluding network settings.
 
 1. Refer to [connect device](#connect-device) to connect to the device to initialize device settings excluding network settings.
 
-2. ![](/docs/en/img/en/common/ico-option.svg) → Press Restore to Default without network settings.
+2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to Default without network settings.
 
    ![](/docs/en/img/en/device/ip-device-restore-default-network.png)
 
@@ -18958,7 +18958,7 @@ You can change the device's password.
 
 1. Refer to [connect device](#connect-device) to connect to the device to change password.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → Change Password.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Change Password.
 
    ![](/docs/en/img/en/device/ip-device-change-password.png)
 
@@ -18993,7 +18993,7 @@ You can set RS-485 communication, card format, keypad settings, PIN, LED, and bu
 
 2. Select XPass D2 on the main screen.
 
-3. Click Template Management → ![](/docs/en/img/en/common/ico-add.svg).
+3. Click Template Management → ![](/docs/en/img/common/ico-add.svg).
 
    ![](/docs/en/img/en/device/xpd2-template-management-add.png)
 
@@ -19061,9 +19061,9 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
     * Total Bits: Enter the total number of bits.
 
-    * ID Fields: Enter the start and end bits of the ID you wish to use. ![](/docs/en/img/en/common/ico-add3.svg) You can press Add to add an ID field.
+    * ID Fields: Enter the start and end bits of the ID you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add an ID field.
 
-    * Parity field: Enter the position of the parity field and the start and end bits you wish to use. ![](/docs/en/img/en/common/ico-add3.svg) You can press Add to add a parity field.
+    * Parity field: Enter the position of the parity field and the start and end bits you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add a parity field.
 
       Info
 
@@ -19205,7 +19205,7 @@ Info
 
 * LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
 
-* ![](/docs/en/img/en/common/ico-cancel2.svg)Selecting this slot will skip displaying the color set for that slot and display the color set for the next slot.
+* When you select ![](/docs/en/img/common/ico-cancel2.svg), that slot is skipped in the color sequence, and the color assigned to the next slot appears.
 
 #### Apply template[​](#apply-template "Direct link to Apply template")
 
@@ -19269,7 +19269,7 @@ Info
 
 4. Select the template you wish to delete from the list of templates.
 
-5. To delete the template, click ![](/docs/en/img/en/common/ico-delete.svg) → OK.
+5. To delete the template, click ![](/docs/en/img/common/ico-delete.svg) → OK.
 
    ![](/docs/en/img/en/device/xpd2-template-management-select-del.png)
 
@@ -19285,9 +19285,9 @@ You can export templates for XPass D2 settings from the app.
 
    ![](/docs/en/img/en/device/xpd2-template-management-export1.png)
 
-4. At the top of the template list screen, click ![](/docs/en/img/en/common/ico-menu1.svg) and select Template Export.
+4. At the top of the template list screen, click ![](/docs/en/img/common/ico-menu1.svg) and select Template Export.
 
-5. Select the template to export, then click ![](/docs/en/img/en/common/ico-check.svg).
+5. Select the template to export, then click ![](/docs/en/img/common/ico-check.svg).
 
    ![](/docs/en/img/en/device/xpd2-template-management-export2.png)
 
@@ -19307,7 +19307,7 @@ You can import templates for XPass D2 settings into the app.
 
    ![](/docs/en/img/en/device/xpd2-template-management-import.png)
 
-4. At the top of the template list screen, click ![](/docs/en/img/en/common/ico-menu1.svg) and select Template Import.
+4. At the top of the template list screen, click ![](/docs/en/img/common/ico-menu1.svg) and select Template Import.
 
 5. Select the template you want to import from the folder where the templates are stored.
 
@@ -19329,7 +19329,7 @@ You can search for and connect to XPass D2 installed nearby. By connecting to Su
 
 4. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
 
-5. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/en/common/ico-password.svg).
+5. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
 
 6. Press OK to complete the device connection.
 
@@ -19345,7 +19345,7 @@ Info
 
 1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to upgrade the firmware.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → FW upgrade.
+2. Press ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
 
    ![](/docs/en/img/en/device/xpd2-template-management-fwupgrade.png)
 
@@ -19359,7 +19359,7 @@ You can restart the device.
 
 1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to restart.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → Device Reboot.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Device Reboot.
 
    ![](/docs/en/img/en/device/xpd2-template-management-restart.png)
 
@@ -19371,7 +19371,7 @@ You can change the admin password of the template.
 
 1. Refer to [device search and connect](#device-search-connect) to connect to the device with the template where you want to change the password.
 
-2. Press ![](/docs/en/img/en/common/ico-option.svg) → Change Password.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Change Password.
 
    ![](/docs/en/img/en/device/xpd2-template-management-password.png)
 
@@ -22112,9 +22112,9 @@ Mounting the expansion module on the Suprema allows the use of additional RS-485
 
 The Suprema devices that can accommodate the expansion module are as follows.
 
-* BioStation 3
+* [**BioStation 3**](/docs/en/device/biostation_3)
 
-* BioStation 2a
+* [**BioStation 2a**](/docs/en/device/biostation_2a)
 
 ![](/docs/en/img/en/device/installation-example-extm.png)
 
@@ -22642,9 +22642,9 @@ By equipping the Suprema device with an expansion module, you can additionally u
 
 The Suprema devices that can accommodate the expansion module are as follows.
 
-* BioStation 3
+* [**BioStation 3**](/docs/en/device/biostation_3)
 
-* BioStation 2a
+* [**BioStation 2a**](/docs/en/device/biostation_2a)
 
 ![](/docs/en/img/en/device/installation-example-extm-sc.png)
 
@@ -23140,17 +23140,17 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 5. After setting the desired authentication mode, set Schedule.
 
-   | Category | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-   | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Face     | \* ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode uses only facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with face and then enters the PIN.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-   | card     | \* ![](/docs/en/img/common/ico-authmode-card-bs2a.png): This mode uses only card authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode authenticates with card and then with face.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with card and then enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) / ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with card and then with face or enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode uses both face authentication and PIN entry after authenticating with the card. |
-   | ID       | \* ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode enters the ID and then authenticates with face.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode enters the ID and then enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) / ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode enters the ID and then either authenticates with face or enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode uses both face authentication and PIN entry after entering the ID.                                                                                                                      |
+   | Category | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+   | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Face     | - ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode uses only facial authentication.<br />- ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with face and then enters the PIN.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+   | Card     | - ![](/docs/en/img/common/ico-authmode-card-bs2a.png): This mode uses only card authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode authenticates with card and then with face.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with card and then enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) / ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode authenticates with card and then with face or enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-card-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode uses both face authentication and PIN entry after authenticating with the card. |
+   | ID       | - ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png): This mode enters the ID and then authenticates with face.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode enters the ID and then enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) / ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode enters the ID and then either authenticates with face or enters the PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs2a.png) + ![](/docs/en/img/common/ico-authmode-face-fs2.png) + ![](/docs/en/img/common/ico-authmode-pin-bs2a.png): This mode uses both face authentication and PIN entry after entering the ID.                                                                                                                      |
 
    Info
 
    * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-   * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+   * For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 6. To save the settings, press OK.
 
@@ -23194,11 +23194,11 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
      * Server Matching can only use cards and IDs.
 
-     * If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+     * If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
    * Face Pose Variation: Set the sensitivity for face position, angle, and distance when registering a face. Set high for precise face templates.
 
-   * Enrollment Time: If the face is not enrolled within the set time, the face registration will be canceled.
+   * Enroll Timeout: If the face is not enrolled within the set time, the face registration will be canceled.
 
    * Duplicate Check: You can check for duplicate faces during face registration.
 
@@ -23212,7 +23212,7 @@ You can change the configuration for facial authentication.
 
    ![](/docs/en/img/en/device/fs2-auth.png)
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Group Matching: You can check whether group matching is used. Using group matching allows you to group multiple users' faces to increase authentication speed.
 
@@ -23236,17 +23236,17 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, change the desired item in <!-- -->.
+2. After pressing AUTHENTICATION, change the desired item in T\&A Mode.
 
    ![](/docs/en/img/en/device/fs2-auth1.png)
 
-   * : Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use time and attendance mode.
 
-   * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) and set the icons to be displayed on the screen, T\&A Event Name, and Schedule.
+   * T\&A Code: Add time and attendance events.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -23299,7 +23299,7 @@ You can check the status of log usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. EVENT LOG → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
+2. Click EVENT LOG → ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/fs2-eventlog2.png)
 
@@ -23320,7 +23320,7 @@ Provides initial procedures for getting started with the device.
 |                                                              |                                                       |                                                    |                                                             |
 | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------- |
 | ![](/docs/en/img/device/component-connection-cables-fs2.svg) | ![](/docs/en/img/device/component-diode1.svg)         | ![](/docs/en/img/device/component-resistor.svg)    | ![](/docs/en/img/device/component-bracket-fixing-screw.svg) |
-| Connection Cables                                            | Diode                                                 | 120 Ω Resistor                                     | Bracket Fixing Screw<br />(Star Shaped)                     |
+| Connection Cables                                            | Diode                                                 | 120 Ω Resistor                                     | Bracket Fixing Screw (Star Shaped)                          |
 | ![](/docs/en/img/device/component-pvc-anchors4.svg)          | ![](/docs/en/img/device/component-fixing-screws4.svg) | ![](/docs/en/img/device/component-quick-guide.svg) | ![](/docs/en/img/device/component-oss-guide.svg)            |
 | PVC Anchor x4                                                | Fixing Screw x4                                       | Quick Guide                                        | Open Source Software Guide                                  |
 
@@ -23368,9 +23368,9 @@ Info
 
 * **Ethernet**: Connect the Ethernet cable.
 
-* **Wiegand input (4-pin)**: Connect the Wiegand Input cable.
+* **Wiegand Input (4-pin)**: Connect the Wiegand Input cable.
 
-* **Wiegand output (4-pin)**: Connect the Wiegand Output cable.
+* **Wiegand Output (4-pin)**: Connect the Wiegand Output cable.
 
 <!-- -->
 
@@ -25645,7 +25645,7 @@ Info
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server Port: Enter the port of the PC on which BioStar X is installed.
 
@@ -25659,7 +25659,7 @@ Info
 
    ![](/docs/en/img/en/device/fs2-network-serial.png)
 
-   * RS485: Select the RS-485 mode.
+   * RS-485: Select the RS-485 mode.
 
    * Baud Rate: Select the desired baud rate.
 
@@ -25671,11 +25671,11 @@ You can configure the account and extensions of the SIP intercom.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click DEVICE → VOIP.
+2. Click DEVICE → Interphone.
 
    ![](/docs/en/img/en/device/fs2-interphone.png)
 
-   * VOIP: You can set whether to enable the intercom. Enabling intercom settings allows you to configure SIP Account and Extensions.
+   * Interphone: You can set whether to enable the intercom. Enabling intercom settings allows you to configure SIP Account and Extensions.
 
    * SIP Account: Enter each item so that the device can be registered on the SIP server.
 
@@ -25695,7 +25695,7 @@ You can set the input ports of Open Time and Exit Button on the device.
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
+   * Switch: Select the type of switch (N/O or N/C) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -25861,7 +25861,7 @@ Select the type of user ID to register to the device.
 
 3. After changing to the desired item, press OK.
 
-##### thermal camera[​](#thermal-camera "Direct link to thermal camera")
+##### Thermal camera[​](#thermal-camera "Direct link to Thermal camera")
 
 The device can measure the temperature of users passing through the entrance by linking with the thermal camera and restrict access for users exceeding the reference temperature.
 
@@ -25889,7 +25889,7 @@ The device can measure the temperature of users passing through the entrance by 
 
    * High Threshold Temperature: You can set the maximum reference temperature to restrict access. Users with a surface temperature higher than the maximum reference temperature will be denied authentication.<br />The maximum reference temperature can be set in the range of 1 °C to 45 °C, and must be lower than the minimum reference temperature.
 
-   * Save Temp. Data: You can set whether to save the user's temperature log. Using this option, both the success of authentication and the user's temperature value will be saved in the log; if not used, only the success of authentication will be logged.
+   * Save Temperature Data: You can set whether to save the user's temperature log. Using this option, both the success of authentication and the user's temperature value will be saved in the log; if not used, only the success of authentication will be logged.
 
    * Show Thermal Infrared Image: You can set whether to display the thermal image on the device screen.
 
@@ -25897,13 +25897,13 @@ The device can measure the temperature of users passing through the entrance by 
 
      * Distance(cm): Set the distance between the user and the thermal camera.
 
-     * Emissivity: Set the infrared emissivity.
+     * Emission Rate: Set the infrared emissivity.
 
      * ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): If additional lighting is installed nearby, the thermal camera can be set to measure the user's temperature instead of that lighting. Adjust the position and size of the ROI (Region of Interest) to manually set the area where the thermal camera will measure the temperature.
 
-     * Temp. Compensation: You can set the thermal camera to automatically calibrate the temperature based on the usage environment and ambient temperature.
+     * Skin Temperature Compensation: You can set the thermal camera to automatically calibrate the temperature based on the usage environment and ambient temperature.
 
-     * Temp. Correction: You can adjust the temperature readings to a fixed value based on the usage environment. For example, in environments where the temperature is always measured as 0.1 °C higher, set the temperature calibration value to -0.1.
+     * Skin Temperature Correction: You can adjust the temperature readings to a fixed value based on the usage environment. For example, in environments where the temperature is always measured as 0.1 °C higher, set the temperature calibration value to -0.1.
 
 Info
 
@@ -25911,7 +25911,7 @@ Info
 
   * Distance(cm): 100
 
-  * Emissivity: 0.98
+  * Emission Rate: 0.98
 
   * ROI X(%): 47
 
@@ -25999,7 +25999,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-add2.svg) to USER. The face registration wizard will start.
+2. Click ![](/docs/en/img/common/ico-add2.svg) to User. The face registration wizard will start.
 
    ![](/docs/en/img/en/device/fs2-user-enroll-face.png)
 
@@ -26073,7 +26073,7 @@ You can register user information that includes biometric authentication data.
 
      * Configuration: You can use the menus AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, EVENT LOG.
 
-     * User Management: You can use the menus USER, EVENT LOG.
+     * User Management: You can use the menus User, EVENT LOG.
 
    * Face Group: You can select a group for the user's face. Face groups can only be used if Group Matching is enabled and can only be registered in BioStar X.
 
@@ -26089,9 +26089,9 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
+2. Click ![](/docs/en/img/common/ico-search.svg) to User.
 
-3. Select your search terms. You can search for users using All , User ID , Name , Face , Card.
+3. Select your search terms. You can search for users using All, User ID, Name, Face, Card.
 
 4. Select the user to modify.
 
@@ -26101,7 +26101,7 @@ User Management or Administrator can modify the registered user information. A c
 
 Info
 
-Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -26109,7 +26109,7 @@ You can delete all registered users at once.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
+2. Select ![](/docs/en/img/common/ico-delete.svg) to User.
 
 3. Select Delete All to check, then press OK.
 
@@ -26121,7 +26121,7 @@ You can see the number of registered users, faces, and cards at a glance.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-info2.svg) to USER. User usage information appears.
+2. Click ![](/docs/en/img/common/ico-info2.svg) to User. User usage information appears.
 
    ![](/docs/en/img/en/device/fs2-user-usage.png)
 
@@ -26347,7 +26347,7 @@ Fingerprint authentication is only available on the FSF2-ODB product.
 
    * Schedule can be set in BioStar X. If there is no schedule set, only Not Use and Always can be selected.
 
-   * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+   * For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
 5. To save the settings, press OK.
 
@@ -26387,7 +26387,7 @@ Info
 
 * Server Matching can only use fingerprint, card, and ID.
 
-* If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+* If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
 #### Face[​](#face "Direct link to Face")
 
@@ -26401,11 +26401,11 @@ You can change the configuration for facial authentication.
 
    ![](/docs/en/img/en/device/fsf2-auth.png)
 
-   * Light Brightness: You can manually adjust the brightness of the device light. Set the brightness with Normal or High or select Deactive to turn the light off.
+   * Light Brightness: You can manually adjust the brightness of the device light. Set the brightness with Normal or High or select Never to turn the light off.
 
    * Motion Sensor: Set the sensitivity to detect motion around the device. When Motion Sensor is set to Off, touch the screen to authenticate your face.
 
-   * Enrollment Time: If the face is not enrolled within the set time, the face registration will be canceled.
+   * Enroll Timeout: If the face is not enrolled within the set time, the face registration will be canceled.
 
    * Auth Timeout: If authentication is not completed within the set time, authentication fails.
 
@@ -26427,7 +26427,7 @@ You can change the configuration for facial authentication.
 
      Info
 
-     For more information about Template on Mobile, refer to [the following](/docs/en/platform/biostar_x/enroll-credential-mobile#template-on-mobile) BioStar X Administrator Manual.
+     For more information about Template on Mobile, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/enroll-credential-mobile#template-on-mobile).
 
    * Store Visual Face Image: You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
 
@@ -26435,7 +26435,7 @@ You can change the configuration for facial authentication.
 
      After disabling this setting, use BioStar 2 v2.9.7 or higher.
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Operation Mode: You can set the operating mode of the device for face authentication.
 
@@ -26481,7 +26481,7 @@ Info
 
   * High Threshold Temperature: You can set the maximum reference temperature to restrict access. Users with surface temperatures higher than High Threshold Temperature will be denied authentication. High Threshold Temperature can be set in the range of 1℃~45℃ and cannot be set lower than Low Threshold Temperature.
 
-  * Save Temp. Data: You can set whether to save the user's temperature log. Using this option, both the success of authentication and the user's temperature value will be saved in the log; if not used, only the success of authentication will be logged.
+  * Save Temperature Data: You can set whether to save the user's temperature log. Using this option, both the success of authentication and the user's temperature value will be saved in the log; if not used, only the success of authentication will be logged.
 
   * Show Thermal Infrared Image: Set whether to display infrared video on the device screen.
 
@@ -26495,7 +26495,7 @@ Info
 
   * Emissivity: Set the infrared emissivity.
 
-  * ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): You can set the ROI (Region of Interest) manually when Dynamic ROI is set to Deactive. Adjust the ROI location and size to specify the area where the thermal camera will measure temperature. ROI X(%) indicates the left and right positions of the region of interest, and the larger this value, the further the region moves to the right of the screen. ROI Y(%) indicates the top and bottom positions of the region of interest, and the larger this value, the further the region moves up. ROI Width(%) and ROI Height(%) indicate the size of the region of interest; as both values increase, the area for measuring temperature widens. For example, if the values of ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%) are changed from default values to 40, 15, 70, 40 respectively, the region of interest will change as shown below.
+  * ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): You can set the ROI (Region of Interest) manually when Dynamic ROI is set to Never. Adjust the ROI location and size to specify the area where the thermal camera will measure temperature. ROI X(%) indicates the left and right positions of the region of interest, and the larger this value, the further the region moves to the right of the screen. ROI Y(%) indicates the top and bottom positions of the region of interest, and the larger this value, the further the region moves up. ROI Width(%) and ROI Height(%) indicate the size of the region of interest; as both values increase, the area for measuring temperature widens. For example, if the values of ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%) are changed from default values to 40, 15, 70, 40 respectively, the region of interest will change as shown below.
 
   ![](/docs/en/img/device/auth-roi1.png)
 
@@ -26505,9 +26505,9 @@ Info
 
   ROI X(%), ROI Y(%), ROI width(%), ROI height(%)<br />When the values are changed to 40, 15, 70, and 40, respectively
 
-  * Temp. Compensation: You can set the thermal imaging camera to correct the temperature autonomously, considering the environmental usage of the device and the surrounding temperature.
+  * Skin Temperature Compensation: You can set the thermal imaging camera to correct the temperature autonomously, considering the environmental usage of the device and the surrounding temperature.
 
-  * Temp. Correction: Depending on the product usage environment, you can adjust the temperature measures to be increased or decreased by a constant value. For example, if the temperature reading is always measured 0.1℃ higher, set the temperature correction value to -0.1.
+  * Skin Temperature Correction: Depending on the product usage environment, you can adjust the temperature measures to be increased or decreased by a constant value. For example, if the temperature reading is always measured 0.1℃ higher, set the temperature correction value to -0.1.
 
   * FW: If the thermal imaging camera is properly connected, the firmware version of that camera will be displayed.
 
@@ -26527,11 +26527,11 @@ Info
 
   When using the ROI as the default setting, a yellow guide will be displayed in the ROI area of the screen during authentication as shown below. When the user's face is aligned within that area during authentication, accurate temperature measurements can be made. When manually changing the settings or using dynamic ROI, the yellow guide is not displayed.
 
-  ![](/docs/en/img/device/auth-static-roi.png)
+  ![](/docs/en/img/en/device/auth-static-roi.png)
 
   If the ROI is set to the default value
 
-  ![](/docs/en/img/device/auth-dynamic-roi.png)
+  ![](/docs/en/img/en/device/auth-dynamic-roi.png)
 
   When changing ROI settings or using dynamic ROI
 
@@ -26551,7 +26551,7 @@ You can change the settings for fingerprint authentication.
 
    ![](/docs/en/img/en/device/auth-fingerprint.png)
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Matching Timeout: Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails.
 
@@ -26583,13 +26583,13 @@ You can set how to register T\&A mode.
 
    ![](/docs/en/img/en/device/auth-tna.png)
 
-   * : Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use time and attendance mode.
 
    * T\&A Code: Add time and attendance events. Select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) to add a time and attendance event, then set the icon to display, the event name, and the schedule.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -26609,7 +26609,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user ID.
 
-     * Mask All but First Letter: Show only the first character of the user ID.
+     * First Letter Only: Show only the first character of the user ID.
 
      * Hide All: Do not show the user ID.
 
@@ -26617,7 +26617,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user name.
 
-     * Mask All but First Letter: Show only the first character of the user name.
+     * First Letter Only: Show only the first character of the user name.
 
      * Hide All: Do not show the user name.
 
@@ -26658,7 +26658,7 @@ You can check the status of log usage.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-info1.svg) to EVENT LOG. Check the device's event log and image log usage.
+2. Click EVENT LOG → ![](/docs/en/img/common/ico-info1.svg). Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/fsf2-eventlog1.png)
 
@@ -29010,7 +29010,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server Port: Enter the port of the PC on which BioStar X is installed.
 
@@ -29026,11 +29026,11 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
    ![](/docs/en/img/en/device/fsf2-network-osdp.png)
 
-   * RS485: Select the RS-485 mode.
+   * RS-485: Select the RS-485 mode.
 
    * Baud Rate: Select the desired baud rate.
 
-   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS485 mode is set to Default or Slave.
+   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS-485 mode is set to Default or Slave.
 
 #### Device[​](#device "Direct link to Device")
 
@@ -29311,7 +29311,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-add2.svg) and set the desired items. User usage information appears.
+2. Select USER → ![](/docs/en/img/common/ico-add2.svg) and set the desired items. User usage information appears.
 
    ![](/docs/en/img/en/device/fsf2-user-add.png)
 
@@ -29361,7 +29361,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-add2.svg).
+2. Select USER → ![](/docs/en/img/common/ico-add2.svg).
 
 3. ![](/docs/en/img/common/ico-authmode-face-bs3.png) Press Face → Next.
 
@@ -29373,7 +29373,7 @@ Info
 
 * Face information from FaceStation F2 is not compatible with face templates from FaceStation 2 and FaceLite.
 
-* You can also batch enroll face information from FaceStation F2 by uploading photos from the device or importing from a CSV in BioStar X. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/enroll-credential-face).
+* You can also batch enroll face information from FaceStation F2 by uploading photos from the device or importing from a CSV in BioStar X. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/enroll-credential-face).
 
 * To use a Visual Face feature correctly, take a picture by following instructions below.
 
@@ -29445,7 +29445,7 @@ Info
 
 * Fingerprint searching is only available on the FSF2-ODB product.
 
-* Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+* Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
@@ -34929,7 +34929,7 @@ Replacing with unauthorized or incorrect types of batteries may pose a risk of e
 
 Access control device that supports card and QR/Barcode authentication.
 
-<!-- -->
+![Example banner](/docs/en/assets/images/xpassq2-main-06b7d6b3f49a04e40064a8b3953c4c36.png)
 
 #### [Safety Instructions→ <!-- -->Read more](/docs/en/device/xpass_q2/safety-instructions)
 
@@ -35790,7 +35790,7 @@ You can connect a USB memory stick to upgrade the firmware.
 
    Info
 
-   * Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/set-permission).
+   * Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/set-permission).
 
    * Only one authentication attempt is allowed per USB memory insertion.
 
@@ -36050,7 +36050,7 @@ Relay
 
 * Supported QR/barcode types: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417
 
-[4)](#anno4_dest) Camera QR license is required to use more diverse QR/barcode authentication. For more information on device licenses, refer to the [BioStar X Administrator Manual](/docs/en/platform/biostar_x/settings-license-device-license).
+[4)](#anno4_dest) Camera QR license is required to use more diverse QR/barcode authentication. For more information on device licenses, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-license-device-license).
 
 * Barcode types supported by the Camera QR license: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
 
@@ -37876,17 +37876,17 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 5. After setting the desired authentication mode, set Schedule.
 
-   | Category       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-   | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | Fingerprint    | \* ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode uses only fingerprint.- ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-   | Card / QR Code | \* ![](/docs/en/img/common/ico-authmode-card-bs3.png): This mode uses only card / QR code authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires authentication via card/QR code followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code. |
-   | ID             | \* ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires entering an ID followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after entering an ID.                                                                                                                                                                           |
+   | Category       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Fingerprint    | - ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode uses only fingerprint.- ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | Card / QR Code | - ![](/docs/en/img/common/ico-authmode-card-bs3.png): This mode uses only card / QR code authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires authentication via card/QR code followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code. |
+   | ID             | - ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires entering an ID followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after entering an ID.                                                                                                                                                                           |
 
    Info
 
    * Schedule can be set in BioStar X. If no schedule is set, only Always can be selected.
 
-   * For more information about Schedule settings, refer to [the following](/docs/en/platform/biostar_x/settings-schedule) BioStar X Administrator Manual.
+   * For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
    * To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
 
@@ -37926,7 +37926,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    Info
 
-   If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to [the following](/docs/en/platform/biostar_x/settings-server-server#servermatching) BioStar X Administrator Manual.
+   If you use Server Matching, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-server-server#servermatching).
 
 #### PIN[​](#pin "Direct link to PIN")
 
@@ -37954,7 +37954,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user ID.
 
-     * Mask All but First Letter: Show only the first character of the user ID.
+     * First Letter Only: Show only the first character of the user ID.
 
      * Hide All: Do not show the user ID.
 
@@ -37962,7 +37962,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user name.
 
-     * Mask All but First Letter: Show only the first character of the user name.
+     * First Letter Only: Show only the first character of the user name.
 
      * Hide All: Do not show the user name.
 
@@ -38010,7 +38010,7 @@ You can change the settings for fingerprint authentication.
 
    ![](/docs/en/img/en/device/xs2-auth4.png)
 
-   * Security level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
+   * Security Level: You can set the security level for 1<!-- -->:N<!-- --> authentication.
 
    * Matching Timeout: Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails.
 
@@ -38040,17 +38040,17 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, change the desired item in <!-- -->.
+2. After pressing AUTHENTICATION, change the desired item in T\&A.
 
    ![](/docs/en/img/en/device/xs2-auth5.png)
 
-   * : Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use time and attendance mode.
 
    * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) and set the icons to be displayed on the screen, T\&A Event Name, and Schedule.
 
-   * T\&A Required: Require users to select a time and attendance event during authentication. Available when <!-- -->is set to By User.
+   * T\&A Required: Require users to select a time and attendance event during authentication. Available when T\&A Mode is set to By User.
 
-   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when <!-- -->is set to Fixed.
+   * Fixed T\&A Key: Allow users to use only time and attendance events selected by the administrator. Available when T\&A Mode is set to Fixed.
 
    * Job Code: Select whether to use job codes.
 
@@ -38091,7 +38091,7 @@ You can check the status of log usage.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. EVENT LOG → Click ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
+2. Click EVENT LOG → ![](/docs/en/img/common/ico-info2.svg). Check the device's event log and image log usage.
 
    ![](/docs/en/img/en/device/xs2-eventlog1.png)
 
@@ -38257,7 +38257,7 @@ XS2-DPB, XS2-APB
 
 ![](/docs/en/img/device/qr-scanning-xs2.svg)
 
-* Keep the distance between the device's camera and the QR/barcode at 5~20 cm.
+* Keep the distance between the device's camera and the QR/barcode at 5-20 cm.
 
 * Position the QR/barcode so that it is centered in the device's scanning screen.
 
@@ -38269,7 +38269,7 @@ XS2-QDPB, XS2-QAPB
 
 ![](/docs/en/img/device/qr-scanning-xs2-q.svg)
 
-* Keep the distance between the device's QR/barcode recognition unit and the QR/barcode at 5~20 cm.
+* Keep the distance between the device's QR/barcode recognition unit and the QR/barcode at 5-20 cm.
 
 * Ensure the device's QR/barcode recognition unit is horizontal to the QR/barcode being scanned, and position the guide beam in the center of the QR/barcode.
 
@@ -38281,7 +38281,7 @@ XS2-ODPB, XS2-OAPB
 
 ![](/docs/en/img/device/qr-scanning-xs2-finger.svg)
 
-* Keep the distance between the device's camera and the QR/barcode at 5~20 cm.
+* Keep the distance between the device's camera and the QR/barcode at 5-20 cm.
 
 * Position the QR/barcode so that it is centered in the device's scanning screen.
 
@@ -40067,7 +40067,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
    * Server IP: Enter the IP address of the PC on which BioStar X is installed.
 
-   * You can enter Server URL instead of Server IP.
+   * Server URL: You can enter Server URL instead of Server IP.
 
    * Server Port: Enter the port of the PC on which BioStar X is installed.
 
@@ -40081,11 +40081,11 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
    ![](/docs/en/img/en/device/xs2-network-osdp.png)
 
-   * RS485: Select the RS-485 mode.
+   * RS-485: Select the RS-485 mode.
 
    * Baud Rate: Select the desired baud rate.
 
-   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS485 mode is set to Default or Slave.
+   * Authentication Result: When using Intelligent Slave, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when RS-485 mode is set to Default or Slave.
 
 3. To save the settings, press OK.
 
@@ -40135,7 +40135,7 @@ You can set the input ports of Open Time and Exit Button on the device.
 
    * Exit Button: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (SwitchN/O or N/CN/CN/O) for the Exit Button's input port.
+   * Switch: Select the type of switch (N/O or N/C) for the Exit Button's input port.
 
 ##### Date & Time[​](#date-time "Direct link to Date & Time")
 
@@ -40382,7 +40382,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-add2.svg) and set the desired items. User usage information appears.
+2. Select USER → ![](/docs/en/img/common/ico-add2.svg) and set the desired items. User usage information appears.
 
    ![](/docs/en/img/en/device/xs2-user-add.png)
 
@@ -40426,7 +40426,7 @@ You can register user information that includes biometric authentication data.
 
 2. Click ![](/docs/en/img/common/ico-add2.svg) to USER.
 
-3. ![](/docs/en/img/common/ico-add-finger-xs2.png) Press Fingerprint → Next.
+3. Select ![](/docs/en/img/common/ico-add-finger-xs2.png) Fingerprint → Next.
 
 4. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint again.
 
@@ -40466,7 +40466,7 @@ User Management or Administrator can modify the registered user information. You
 
 Info
 
-Access Group can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+Access Group can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 #### Delete All Users[​](#delete-all-users "Direct link to Delete All Users")
 
