@@ -137,6 +137,8 @@ const config = {
         svgr: {
           svgrConfig: {
             /* SVGR config */
+            role: 'img',
+            titleProp: true,
           },
         },
       }),
