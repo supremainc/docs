@@ -1876,6 +1876,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -1886,9 +1888,19 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/bioentry_p2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -1914,6 +1926,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **Manage the password so others do not know it, and change it regularly**.
 
 * This may lead to unauthorized access.
@@ -1935,6 +1949,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -2868,6 +2884,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -2878,9 +2896,19 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/bioentry_r2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -2906,6 +2934,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **Manage the password so others do not know it, and change it regularly**.
 
 * This may lead to unauthorized access.
@@ -2927,6 +2957,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -4069,6 +4101,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -5187,6 +5243,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
 * The device may malfunction.
@@ -5201,15 +5259,25 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/bioentry_w2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
 
 <!-- -->
 
+<!-- -->
+
 **Do not connect the power supply and PoE power together**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -5237,6 +5305,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use the product within <!-- -->-20 °C to 50 °C<!-- --> and store it at appropriate temperatures, not too low or too high**.
 
 * The device may malfunction.
@@ -5250,6 +5320,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -6410,6 +6482,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -6630,6 +6726,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
 * The device may malfunction.
@@ -6644,15 +6742,25 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/bioentry_w3/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
 
 <!-- -->
 
+<!-- -->
+
 **Do not connect the power supply and PoE power together**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -6680,6 +6788,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use the product within <!-- -->-20 °C to 50 °C<!-- --> and store it at appropriate temperatures, not too low or too high**.
 
 * The device may malfunction.
@@ -6693,6 +6803,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -6731,7 +6843,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/biolite_n2/admin-menu)
 * [User](/docs/en/device/biolite_n2/user)
-* [Certifications](/docs/en/device/biolite_n2/authentication)
+* [Authentication](/docs/en/device/biolite_n2/authentication)
   [ <!-- -->5 items](/docs/en/device/biolite_n2/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/biolite_n2/troubleshooting)
@@ -6871,7 +6983,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -6967,7 +7079,7 @@ You can set how to register T\&A mode.
 
 1. Press **ESC** and authenticate as an administrator.
 
-2. Press **6** after selecting AUTH → T\&A.
+2. Select AUTH → T\&A, then press **6**.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
@@ -6975,7 +7087,7 @@ You can set how to register T\&A mode.
 
    * T\&A Event: You can check attendance events.
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Required: Require users to select a time and attendance event during authentication. Setting Enabled allows you to require selecting a time and attendance event when authenticating.
 
@@ -6987,7 +7099,7 @@ You can set how to register T\&A mode.
 
 Info
 
-When set to Enabled, you can change the user's work code. Long press **OK** then authenticate to select the desired work code.
+Set Job Code to Enabled to change the user's action code. Long press **OK** then authenticate to select the desired work code.
 
 #### Fingerprint Settings[​](#fingerprint-settings "Direct link to Fingerprint Settings")
 
@@ -7209,7 +7321,7 @@ Info
 
 #### Set master administrator[​](#set-master-administrator "Direct link to Set master administrator")
 
-The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. You must **enroll credentials** for the Master Administrator with a new device, and only registered master administrators can access the administrator menu to change device settings.
+The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. **Enroll a master administrator** on new devices using this feature. Only the enrolled master administrator can access the administrator menu to change device setting.
 
 What is a master administrator?
 
@@ -8098,6 +8210,30 @@ Any changes or modifications not expressly approved by the party responsible for
 This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter.
 
 This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20 cm between the radiator and your body. Do not install or operate this device and its antenna in conjunction with any other antenna or RF transmission device.
+
+<!-- -->
+
+<!-- -->
+
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
 
 <!-- -->
 
@@ -9039,6 +9175,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
 * The device may malfunction.
@@ -9052,6 +9190,8 @@ Used to provide notes or additional information while using the product.
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/biolite_n2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
 
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
@@ -9069,6 +9209,16 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
+**It is recommended to use an enclosure when installed outdoors with full exposure**.
+
+* Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
+
 ***
 
 ##### Usage[​](#usage-1 "Direct link to Usage")
@@ -9080,6 +9230,8 @@ Used to provide notes or additional information while using the product.
 **Ensure the power supply is not interrupted during firmware upgrades of the product**.
 
 * The device may malfunction.
+
+<!-- -->
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -9102,6 +9254,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -9440,7 +9594,7 @@ Q.I entered my PIN and pressed the OK button, but I still cannot open the door.
 Q.The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.
 
 * Check [How to enroll a fingerprint](getting-started#cautions-enrolling-fingers) and enroll the fingerprint again.
-* If your fingerprint has a cut, the device may recognize your fingerprint as someone else\\'s fingerprint.
+* If your fingerprint has a cut, the device may recognize your fingerprint as someone else's fingerprint.
 * If there are a large number of enrolled fingerprints, change Matching Timeout and try again.
 * The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger.
 
@@ -9506,7 +9660,7 @@ You can register user information that includes biometric authentication data.
 
    * Card: You can enroll a card for user authentication. Scan the card to be assigned to the user at the RF card recognition unit.
 
-   * PIN: You can enter the PIN you want to use. After entering the desired PIN, enter the PIN again for confirmation. To prevent leaks, input a PIN of 4 to 16 digits.
+   * PIN: You can enter the PIN you want to use. After entering the desired PIN, enter the PIN again for confirmation. Enter a number between 8 and 16 digits to prevent leaking.
 
    * Operator Level: You can select permissions to assign to the user.
 
@@ -9587,7 +9741,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/biolite_n2/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/biolite_n2/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/biolite_n2/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/biolite_n2/authentication)
 
@@ -9626,7 +9780,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/biostation_2a/admin-menu)
 * [User](/docs/en/device/biostation_2a/user)
-* [Certifications](/docs/en/device/biostation_2a/authentication)
+* [Authentication](/docs/en/device/biostation_2a/authentication)
   [ <!-- -->5 items](/docs/en/device/biostation_2a/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/biostation_2a/troubleshooting)
@@ -9684,7 +9838,7 @@ Press the **OK** button to display the key menu screen. You can enter by pressin
 
 * ID: ID authentication can be performed as set in ID.
 
-* T\&A: You can select attendance events to authenticate.
+* T\&A: Select a T\&A event to authenticate.
 
 * Job Code: You can select the user's work code.
 
@@ -9796,7 +9950,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -9892,13 +10046,13 @@ You can set how to register T\&A mode.
 
 1. Press ![](/docs/en/img/common/ico-menu1.svg) and authenticate with the administrator credential.
 
-2. Select AUTHENTICATION → T\&A and then press **OK**.
+2. Select AUTHENTICATION → T\&A, then click **OK**.
 
    ![](/docs/en/img/en/device/bs2a-auth.png)
 
 3. Select the desired item and press / to change the settings.
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Event: You can check attendance events.
 
@@ -10196,7 +10350,7 @@ Info
 
 #### Set master administrator[​](#set-master-administrator "Direct link to Set master administrator")
 
-The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. You must **enroll credentials** for the Master Administrator with a new device, and only registered master administrators can access the administrator menu to change device settings.
+The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. **Enroll a master administrator** on new devices using this feature. Only the enrolled master administrator can access the administrator menu to change device setting.
 
 What is a master administrator?
 
@@ -11110,6 +11264,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -11369,6 +11547,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -11379,9 +11559,13 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/biostation_2a/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -11391,9 +11575,15 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -11410,6 +11600,8 @@ Used to provide notes or additional information while using the product.
 **Ensure the power supply is not interrupted during firmware upgrades of the product**.
 
 * The device may malfunction.
+
+<!-- -->
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -11432,6 +11624,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 **This product uses a capacitive button**. **If the weather is rainy or there is a lot of moisture on the product surface, wipe it with a dry cloth before use**.
 
@@ -11466,7 +11660,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -11484,7 +11678,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 #### Device[​](#device "Direct link to Device")
 
@@ -11758,7 +11952,7 @@ You can change the communication settings of devices such as Ethernet, server, a
 
 2. Select NETWORK → TCP/IP and then press **OK**.
 
-3. Press the / button in Type and select Ethernet.
+3. Press  /  in Type and select Ethernet.
 
    ![](/docs/en/img/en/device/bs2a-network-ethernet.png)
 
@@ -11790,7 +11984,7 @@ Info
 
 2. Select NETWORK → TCP/IP and then press **OK**.
 
-3. Press the / button in Type and select Wireless.
+3. Press  /  in Type and select Wireless.
 
    ![](/docs/en/img/en/device/bs2a-network-wifi.png)
 
@@ -11902,7 +12096,7 @@ Q.I entered my PIN and pressed the OK button, but I still cannot open the door.
 Q.The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.
 
 * Check [How to enroll a fingerprint](getting-started#cautions-enrolling-fingers) and enroll the fingerprint again.
-* If your fingerprint has a cut, the device may recognize your fingerprint as someone else\\'s fingerprint.
+* If your fingerprint has a cut, the device may recognize your fingerprint as someone else's fingerprint.
 * If there are a large number of enrolled fingerprints, change Matching Timeout and try again.
 * The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger.
 
@@ -11960,11 +12154,11 @@ You can register user information that includes biometric authentication data.
 
 3. Select the desired item and press the  button. After configuring the item, press **OK** to register user information.
 
-   * ID: Enter a number from 1-4294967295 to enroll a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * ID: Enter a number between 1 and 4294967295 to register a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
    * Name: You can enter the user name using the numeric buttons. Press the / buttons to select letters or numbers, and press **F1**/**F2** to see more characters.
 
-   * PIN: You can enter the PIN you want to use. Enter the PIN and press **OK**. To confirm, enter the PIN again and press **OK**. Enter a number between 4 and 16 digits to prevent leaking.
+   * PIN: You can enter the PIN you want to use. Enter the PIN and press **OK**. To confirm, enter the PIN again and press **OK**. Enter a number between 8 and 16 digits to prevent leaking.
 
    * Fingerprint: You can enroll a fingerprint for user authentication. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint once more.
 
@@ -12053,7 +12247,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/biostation_2a/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/biostation_2a/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/biostation_2a/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/biostation_2a/authentication)
 
@@ -12092,7 +12286,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/biostation_3/admin-menu)
 * [User](/docs/en/device/biostation_3/user)
-* [Certifications](/docs/en/device/biostation_3/authentication)
+* [Authentication](/docs/en/device/biostation_3/authentication)
   [ <!-- -->5 items](/docs/en/device/biostation_3/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/biostation_3/troubleshooting)
@@ -12234,7 +12428,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -12248,7 +12442,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 2. Press AUTHENTICATION → Auth Mode.
 
-3. Press ![](/docs/en/img/common/ico-add.svg).
+3. Select ![](/docs/en/img/common/ico-add.svg).
 
 4. Pressing ![](/docs/en/img/common/ico-add1.svg) will display the credential that can be added on the screen. Select the credentials to add. Press the ![](/docs/en/img/common/ico-cancel.svg) while the credential is added, and the added credential will be deleted.
 
@@ -12442,7 +12636,7 @@ You can change the configuration for facial authentication.
 
      * Require No Mask: Only users without masks can authenticate, and if this mode is used, the mask verification mode will be fixed to Check Before Authentication.
 
-   * Mask Detection Level: Set the sensitivity for detecting mask usage. This is activated when the Mask Detection Level is set to Enabled.
+   * Mask Detection Level: Set the sensitivity for detecting mask usage. This is activated when the Mask Detection is set to Enabled.
 
    * Check Mode: Set the confirmation mode according to the purpose of the device.
 
@@ -12466,7 +12660,7 @@ You can set how to register T\&A mode.
 
    ![](/docs/en/img/en/device/bs3-auth2.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add.svg) and then set the icon to display on the screen, T\&A Event Name, and Schedule.
 
@@ -12683,7 +12877,7 @@ Info
 
 #### Set master administrator[​](#set-master-administrator "Direct link to Set master administrator")
 
-The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. You must **enroll credentials** for the Master Administrator with a new device, and only registered master administrators can access the administrator menu to change device settings.
+The Master Admin feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. **Enroll a master administrator** on new devices using this feature. Only the enrolled master administrator can access the administrator menu to change device setting.
 
 What is a master administrator?
 
@@ -13709,6 +13903,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -14596,6 +14814,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -14606,9 +14826,15 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/biostation_3/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -14618,9 +14844,13 @@ Used to provide notes or additional information while using the product.
 
 * Devices may malfunction.
 
+<!-- -->
+
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -14639,6 +14869,8 @@ Used to provide notes or additional information while using the product.
 **Ensure the power supply is not interrupted during firmware upgrades of the product**.
 
 * The device may malfunction.
+
+<!-- -->
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -14661,6 +14893,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -14695,7 +14929,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -14717,7 +14951,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 #### Network[​](#network "Direct link to Network")
 
@@ -14945,7 +15179,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 Info
 
-* When long-pressing the MAC, MAC will be displayed, showing the version of the face anti-spoofing algorithm. If you press FAS\_IR\_SP, you can check the entire hash value in a pop-up message.
+* Long-press MAC to display FAS\_IR\_SP information showing the version of the face anti-spoofing algorithm. If you press FAS\_IR\_SP, you can check the entire hash value in a pop-up message.
 
 * WiFi MAC can only be confirmed on the BS3-APWB model.
 
@@ -15219,7 +15453,7 @@ You can register user information that includes biometric authentication data.
 
    * Card / QR Code: You can enroll a card for user authentication. Press Card / QR Code → Next, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, press Card / QR Code → ![](/docs/en/img/common/ico-add.svg).
 
-   * PIN: You can enter the PIN you want to use. Press PIN → Next and enter the PIN you want to use. For confirmation, enter the PIN once more and then press OK. Please enter an 8-16 digit number for the PIN to prevent leakage.
+   * PIN: You can enter the PIN you want to use. Press PIN → Next and enter the PIN you want to use. For confirmation, enter the PIN once more and then press OK. Enter a number between 8 and 16 digits to prevent leaking.
 
    * Operator Level: You can select permissions to assign to the user.
 
@@ -15293,7 +15527,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
+2. Click USER → ![](/docs/en/img/common/ico-search.svg).
 
 3. Select your search terms. You can search for users using All, User ID, Name, Face, Card.
 
@@ -15313,7 +15547,7 @@ You can delete all registered users at once.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
+2. Select USER → ![](/docs/en/img/common/ico-delete.svg).
 
 3. Select Delete All to check, then press OK.
 
@@ -15344,7 +15578,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/biostation_3/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/biostation_3/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/biostation_3/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/biostation_3/authentication)
 
@@ -16401,6 +16635,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
@@ -16413,9 +16649,19 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
 **Do not connect the power supply and PoE+ power together**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -16439,6 +16685,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -16456,6 +16704,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -18053,11 +18303,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/corestation_40/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -18087,6 +18349,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -18104,6 +18368,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -18328,7 +18594,7 @@ The **Factory Default** menu can be used when a root certificate is stored on th
 | **RS485**                       | Only master mode is available.                                                                                                    |
 | **Baud Rate**                   | You can set the transmission speed for each RS-485 port.                                                                          |
 
-##### Certifications[​](#certifications "Direct link to Certifications")
+##### Authentication[​](#authentication "Direct link to Authentication")
 
 ![](/docs/en/img/device/config-auth.png)
 
@@ -18422,9 +18688,9 @@ If you are using CoreStation Setup Manager for the first time, connect CoreStati
 
 5. Run the **cs\_client.crt** file.
 
-6. When the **Open file** - **Security warning** window appears, click **Open**.
+6. When the **Open File** - **Security Warning** window appears, click **Open**.
 
-7. In the **Certificate** window, click **Install certificate**. The **Certificate Import Wizard** will be launched.
+7. In the **Certificate details** window, click **Install Certificate…**. The **Certificate Import Wizard** will be launched.
 
 8. Click **Next** to continue.
 
@@ -18499,7 +18765,7 @@ You can edit the admin account of the CoreStation Setup Manager.
 
    ![](/docs/en/img/device/settings-admin-accounts.png)
 
-3. Refer to [initial setup](/docs/en/device/corestation_setup_manager/initial-setup), edit each item, and then click **OK**.
+3. Refer to [Initial Setup of the Device](/docs/en/device/corestation_setup_manager/initial-setup), edit each item, and then click **OK**.
 
    ![](/docs/en/img/device/settings-edit-user.png)
 
@@ -18684,31 +18950,31 @@ Using Suprema Device Manager allows on-site modification of the settings of XPas
 
 Check if the mobile device supports BLE communication.
 
-* Android 5.0 Lollipop or higher
+* Android 5.0 Lollipop or later
 
-* iOS 9.0 or higher
+* iOS 9.0 or later
 
 ##### Device and Firmware[​](#device-and-firmware "Direct link to Device and Firmware")
 
 Check compatible devices and firmware versions.
 
-* [**XPass D2**](/docs/en/device/xpass_d2) firmware version 1.1.0 or higher
+* [**XPass D2**](/docs/en/device/xpass_d2) firmware version 1.1.0 or later
 
 * [**XPass 2**](/docs/en/device/xpass_2)
 
-  * XP2-MDPB, XP2-GDPB, XP2-GKDPB: firmware version 1.0.0 or higher
+  * XP2-MDPB, XP2-GDPB, XP2-GKDPB: firmware version 1.0.0 or later
 
-  * XP2-MAPB: firmware version 1.4.1 or higher
+  * XP2-MAPB: firmware version 1.4.1 or later
 
-  * XP2-MAPB-H: firmware version 1.4.3 or higher
+  * XP2-MAPB-H: firmware version 1.4.3 or later
 
-* [**BioEntry W3**](/docs/en/device/bioentry_w3) firmware version 1.0.1 or higher
+* [**BioEntry W3**](/docs/en/device/bioentry_w3) firmware version 1.0.1 or later
 
 Info
 
 * Compatible devices and firmware are subject to change.
 
-* If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. If you are using the device as a slave device, the firmware of the connected master device must also be the latest version compatible with BioStar 2 2.7.0 or higher.
+* If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. When using the device as a slave, the connected master's firmware must also be the latest version compatible with BioStar 2 2.7.0 or later.
 
 * For more information about upgrading device firmware, please refer to [IP Device (Upgrade device firmware)](/docs/en/device/device_manager/ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](/docs/en/device/device_manager/xpd2-settings#device-firmware-upgrade), or the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-device-upgrade-firmware).
 
@@ -18756,7 +19022,7 @@ You can change the settings of the IP device. You can change settings quickly an
 
 Info
 
-Some settings may not apply if the device's firmware version is low. To apply all settings, please refer to [the following](#device-firmware-upgrade) to upgrade the firmware.
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [Upgrade device firmware](#device-firmware-upgrade) to upgrade the firmware.
 
 #### Change device settings[​](#change-device-settings "Direct link to Change device settings")
 
@@ -18772,11 +19038,11 @@ Biometric devices only support network and server settings.
 
 3. Check the device ID to select the device from the list of connectable devices, or bring the mobile device closer to the device to connect.
 
-4. After setting the device password, press OK. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
+4. After setting the device password, press OK. Tap ![](/docs/en/img/common/ico-password.svg) to display the entered password.
 
    Info
 
-   * The device password can be set to a number of 6~32 characters.
+   * The device password can be set to a number of 6-32 characters.
 
    * Be careful not to lose the device password. If you lose the device password, you must initialize the device to connect to it.
 
@@ -18838,7 +19104,7 @@ Info
 
 * LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
 
-* When you select ![](/docs/en/img/common/ico-cancel2.svg), that slot is skipped in the color sequence, and the color assigned to the next slot appears.
+* Selecting ![](/docs/en/img/common/ico-cancel2.svg) skips the color sequence for that slot and displays the color set for the next slot.
 
 #### Connect device[​](#connect-device "Direct link to Connect device")
 
@@ -18852,7 +19118,7 @@ You can search for and connect to installed IP devices nearby. When connected to
 
 3. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
 
-4. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
+4. Enter the connection password. Tap ![](/docs/en/img/common/ico-password.svg) to display the entered password.
 
 5. Press OK to complete the device connection.
 
@@ -18870,9 +19136,9 @@ Info
 
 * During the firmware upgrade, keep the distance between the device and mobile device within 1m.
 
-1. Refer to [connect device](#connect-device) to connect to the device for firmware upgrade.
+1. Refer to [Connect device](#connect-device) to connect to the device for firmware upgrade.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
 
    ![](/docs/en/img/en/device/ip-device-fwupgrade.png)
 
@@ -18884,21 +19150,21 @@ Info
 
 You can restart the device.
 
-1. Refer to [connect device](#connect-device) to connect to the device to restart.
+1. Refer to [Connect device](#connect-device) to connect to the device to restart.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Device Restart.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Device Restart.
 
    ![](/docs/en/img/en/device/ip-device-restart.png)
 
-3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [Configuring app settings](/docs/en/device/device_manager/initial-setup#app-settings).
 
 #### Initialize settings[​](#initialize-settings "Direct link to Initialize settings")
 
 You can initialize device settings.
 
-1. Refer to [connect device](#connect-device) to connect to the device to initialize the settings.
+1. Refer to [Connect device](#connect-device) to connect to the device to initialize the settings.
 
-2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to Default.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Restore to Default.
 
    ![](/docs/en/img/en/device/ip-device-restore-default.png)
 
@@ -18908,9 +19174,9 @@ You can initialize device settings.
 
 You can initialize device settings excluding network settings.
 
-1. Refer to [connect device](#connect-device) to connect to the device to initialize device settings excluding network settings.
+1. Refer to [Connect device](#connect-device) to connect to the device to initialize device settings excluding network settings.
 
-2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to Default without network settings.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Restore to Default without network settings.
 
    ![](/docs/en/img/en/device/ip-device-restore-default-network.png)
 
@@ -18920,9 +19186,9 @@ You can initialize device settings excluding network settings.
 
 You can change the device's password.
 
-1. Refer to [connect device](#connect-device) to connect to the device to change password.
+1. Refer to [Connect device](#connect-device) to connect to the device to change password.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Change Password.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Change Password.
 
    ![](/docs/en/img/en/device/ip-device-change-password.png)
 
@@ -18934,7 +19200,7 @@ You can change the device's password.
 
 Info
 
-* The device password can be set to a number of 6~32 characters.
+* The device password can be set to a number of 6-32 characters.
 
 * Be careful not to lose the device password. If you lose the device password, you must initialize the device to connect to it.
 
@@ -18947,7 +19213,7 @@ You can configure settings to apply to XPass D2 as a template and then directly 
 
 Info
 
-Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [Upgrade device firmware](#device-firmware-upgrade) to upgrade the firmware.
 
 #### Add template[​](#template-add "Direct link to Add template")
 
@@ -18957,7 +19223,7 @@ You can set RS-485 communication, card format, keypad settings, PIN, LED, and bu
 
 2. Select XPass D2 on the main screen.
 
-3. Click Template Management → ![](/docs/en/img/common/ico-add.svg).
+3. Tap Template Management → ![](/docs/en/img/common/ico-add.svg).
 
    ![](/docs/en/img/en/device/xpd2-template-management-add.png)
 
@@ -18969,7 +19235,7 @@ Info
 
 You can add up to 100 templates.
 
-##### Set template name and administrator password[​](#set-template-name-and-administrator-password "Direct link to Set template name and administrator password")
+##### Set Template Name and Admin Password[​](#set-template-name-and-admin-password "Direct link to Set Template Name and Admin Password")
 
 ![](/docs/en/img/en/device/xpd2-template-name-pw.png)
 
@@ -18979,13 +19245,13 @@ You can add up to 100 templates.
 
 Info
 
-* The administrator password can be set to 6~32 digits.
+* The administrator password can be set to 6-32 digits.
 
 * Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
 
-* For more information on changing the administrator password, refer to [changing the administrator password](#admin-password-change).
+* For more information on changing the administrator password, refer to [Change admin password](#admin-password-change).
 
-##### Interfaces[​](#interfaces "Direct link to Interfaces")
+##### Interface[​](#interface "Direct link to Interface")
 
 ![](/docs/en/img/en/device/xpd2-template-interface.png)
 
@@ -18993,7 +19259,7 @@ Info
 
 * Baudrate: Set the RS-485 transmission speed.
 
-##### Certifications[​](#certifications "Direct link to Certifications")
+##### Authentication[​](#authentication "Direct link to Authentication")
 
 ![](/docs/en/img/en/device/xpd2-template-auth-cardtype.png)
 
@@ -19011,7 +19277,7 @@ Info
 
 When set to MSB, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). LSB processes the card's serial number (CSN) from small byte to large byte order when saving it.
 
-##### Wiegand card format[​](#wiegand-card-format "Direct link to Wiegand card format")
+##### Wiegand Card Format[​](#wiegand-card-format "Direct link to Wiegand Card Format")
 
 ![](/docs/en/img/en/device/xpd2-template-wiegand-card.png)
 
@@ -19025,9 +19291,9 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
     * Total Bits: Enter the total number of bits.
 
-    * ID field: Enter the start and end bits of the ID you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add an ID field.
+    * ID field: Enter the start and end bits of the ID you wish to use. Tap ![](/docs/en/img/common/ico-add3.svg) Add to add an ID field.
 
-    * Parity field: Enter the position of the parity field and the start and end bits you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add a parity field.
+    * Parity field: Enter the position of the parity field and the start and end bits you wish to use. Tap ![](/docs/en/img/common/ico-add3.svg) Add to add a parity field.
 
       Info
 
@@ -19037,7 +19303,7 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
 * Pulse interval (μs): You can set the pulse interval of the Wiegand signal.
 
-##### Suprema smart card layout[​](#suprema-smart-card-layout "Direct link to Suprema smart card layout")
+##### Suprema Smart Card Layout[​](#suprema-smart-card-layout "Direct link to Suprema Smart Card Layout")
 
 ![](/docs/en/img/en/device/xpd2-template-suprema-card.png)
 
@@ -19077,7 +19343,7 @@ Info
 
 * When set to MSB, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). LSB processes the card's serial number (CSN) from small byte to large byte order when saving it.
 
-##### Custom smart card layout[​](#custom-smart-card-layout "Direct link to Custom smart card layout")
+##### Custom Smart Card Layout[​](#custom-smart-card-layout "Direct link to Custom Smart Card Layout")
 
 ![](/docs/en/img/en/device/xpd2-template-custom-card.png)
 
@@ -19125,7 +19391,7 @@ Info
 
 * When set to MSB, card data is processed in left-to-right order, sequentially processing from large byte to small byte order when saving the card's serial number (CSN). LSB processes the card's serial number (CSN) from small byte to large byte order when saving it.
 
-##### Keypad settings[​](#keypad-settings "Direct link to Keypad settings")
+##### Keypad Setting[​](#keypad-setting "Direct link to Keypad Setting")
 
 ![](/docs/en/img/en/device/xpd2-template-keypad.png)
 
@@ -19169,7 +19435,7 @@ Info
 
 * LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
 
-* When you select ![](/docs/en/img/common/ico-cancel2.svg), that slot is skipped in the color sequence, and the color assigned to the next slot appears.
+* Selecting ![](/docs/en/img/common/ico-cancel2.svg) skips the color sequence for that slot and displays the color set for the next slot.
 
 #### Apply template[​](#apply-template "Direct link to Apply template")
 
@@ -19177,7 +19443,7 @@ The added templates can be applied uniformly to multiple devices via BLE communi
 
 Info
 
-Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [Upgrade device firmware](#device-firmware-upgrade) to upgrade the firmware.
 
 1. Enable Bluetooth on your mobile device and run Suprema Device Manager.
 
@@ -19217,7 +19483,7 @@ Info
 
 4. Select the template you want to edit from the list of templates.
 
-5. Refer to [add template](#template-add) to edit the template.
+5. Refer to [Add template](#template-add) to edit the template.
 
 6. To save the changed settings, click Save; to save as a new template, click Save as new template.
 
@@ -19233,7 +19499,7 @@ Info
 
 4. Select the template you wish to delete from the list of templates.
 
-5. To delete the template, click ![](/docs/en/img/common/ico-delete.svg) → OK.
+5. Tap ![](/docs/en/img/common/ico-delete.svg) → OK to delete a template.
 
    ![](/docs/en/img/en/device/xpd2-template-management-select-del.png)
 
@@ -19249,9 +19515,9 @@ You can export templates for XPass D2 settings from the app.
 
    ![](/docs/en/img/en/device/xpd2-template-management-export1.png)
 
-4. At the top of the template list screen, click ![](/docs/en/img/common/ico-menu1.svg) and select Template Export.
+4. At the top of the template list, tap ![](/docs/en/img/common/ico-menu1.svg) and select Template Export.
 
-5. Select the template to export, then click ![](/docs/en/img/common/ico-check.svg).
+5. After selecting the template to export, tap ![](/docs/en/img/common/ico-check.svg).
 
    ![](/docs/en/img/en/device/xpd2-template-management-export2.png)
 
@@ -19271,7 +19537,7 @@ You can import templates for XPass D2 settings into the app.
 
    ![](/docs/en/img/en/device/xpd2-template-management-import.png)
 
-4. At the top of the template list screen, click ![](/docs/en/img/common/ico-menu1.svg) and select Template Import.
+4. At the top of the template list, tap ![](/docs/en/img/common/ico-menu1.svg) and select Template Import.
 
 5. Select the template you want to import from the folder where the templates are stored.
 
@@ -19293,7 +19559,7 @@ You can search for and connect to XPass D2 installed nearby. By connecting to Su
 
 4. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
 
-5. Enter the connection password. To display the entered password on the screen, press ![](/docs/en/img/common/ico-password.svg).
+5. Enter the connection password. Tap ![](/docs/en/img/common/ico-password.svg) to display the entered password.
 
 6. Press OK to complete the device connection.
 
@@ -19307,9 +19573,9 @@ Info
 
 * During the firmware upgrade, keep the distance between the device and mobile device within 1m.
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to upgrade the firmware.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device you want to upgrade the firmware.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → FW upgrade.
 
    ![](/docs/en/img/en/device/xpd2-template-management-fwupgrade.png)
 
@@ -19321,21 +19587,21 @@ Info
 
 You can restart the device.
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to restart.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device you want to restart.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Device Restart.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Device Restart.
 
    ![](/docs/en/img/en/device/xpd2-template-management-restart.png)
 
-3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [Configuring app settings](/docs/en/device/device_manager/initial-setup#app-settings).
 
 #### Change admin password[​](#admin-password-change "Direct link to Change admin password")
 
 You can change the admin password of the template.
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device with the template where you want to change the password.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device with the template where you want to change the password.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Change Password.
+2. Tap ![](/docs/en/img/common/ico-option.svg) → Change Password.
 
    ![](/docs/en/img/en/device/xpd2-template-management-password.png)
 
@@ -19347,7 +19613,7 @@ You can change the admin password of the template.
 
 Info
 
-* The administrator password can be set to 6~32 digits.
+* The administrator password can be set to 6-32 digits.
 
 * Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
 
@@ -20167,11 +20433,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/doorinterface/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -20201,6 +20479,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -20218,6 +20498,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -21107,11 +21389,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/doormodule/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -21141,6 +21435,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -21158,6 +21454,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -21801,11 +22099,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/enclosure/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -21833,6 +22143,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -21850,6 +22162,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -22357,6 +22671,18 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
 ***
 
 ##### Usage[​](#usage-1 "Direct link to Usage")
@@ -22375,6 +22701,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Be careful when cleaning the product**.
 
 * Gently wipe the product surface with a clean, dry cloth.
@@ -22382,6 +22710,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -22883,6 +23213,18 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
 ***
 
 ##### Usage[​](#usage-1 "Direct link to Usage")
@@ -22901,6 +23243,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Be careful when cleaning the product**.
 
 * Gently wipe the product surface with a clean, dry cloth.
@@ -22908,6 +23252,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -22942,7 +23288,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/facestation_2/admin-menu)
 * [User](/docs/en/device/facestation_2/user)
-* [Certifications](/docs/en/device/facestation_2/authentication)
+* [Authentication](/docs/en/device/facestation_2/authentication)
   [ <!-- -->5 items](/docs/en/device/facestation_2/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/facestation_2/troubleshooting)
@@ -23082,7 +23428,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -23200,11 +23546,11 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, change the desired item in T\&A Mode.
+2. Click AUTHENTICATION, then change the desired item in T\&A Mode.
 
    ![](/docs/en/img/en/device/fs2-auth1.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Code: Add time and attendance events.
 
@@ -23621,11 +23967,11 @@ Caution
 
 * When connecting the power supply, be aware of the distance between the device and the power supply. The device should be connected as close as possible to the power supply so that the length of the connecting cable is kept to a minimum. If cable connections are made improperly it may cause the device to malfunction. It is recommended to use a 16 AWG or 18 AWG cable if the product is far from the power supply. The connection distance may differ depending on the standard of the cable used and the installation environment.
 
-  | Cable standard | Max. extended length |       |       |
-  | -------------- | -------------------- | ----- | ----- |
-  |                | 16 AWG               | 50 m  | 150 m |
-  | 18 AWG         | 30 m                 | 136 m |       |
-  | 20 AWG         | 20 m                 | 90 m  |       |
+  | Cable standard | Max. extended length |       |
+  | -------------- | -------------------- | ----- |
+  |                | 16 AWG               | 150 m |
+  | 18 AWG         | 136 m                |       |
+  | 20 AWG         | 90 m                 |       |
 
 - DO NOT extend the length of power cable when using the power adapter.
 
@@ -24287,6 +24633,30 @@ Any changes or modifications not expressly approved by the party responsible for
 This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter.
 
 This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20 cm between the radiator and your body. Do not install or operate this device and its antenna in conjunction with any other antenna or RF transmission device.
+
+<!-- -->
+
+<!-- -->
+
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
 
 <!-- -->
 
@@ -25426,6 +25796,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -25436,9 +25808,19 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/facestation_2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -25464,6 +25846,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **Manage the password so others do not know it, and change it regularly**.
 
 * This may lead to unauthorized access.
@@ -25485,6 +25869,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -25521,7 +25907,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -25539,7 +25925,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 #### Network[​](#network "Direct link to Network")
 
@@ -25943,7 +26329,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-add2.svg) to User. The face registration wizard will start.
+2. Click User → ![](/docs/en/img/common/ico-add2.svg). The face registration wizard will start.
 
    ![](/docs/en/img/en/device/fs2-user-enroll-face.png)
 
@@ -25997,7 +26383,7 @@ You can register user information that includes biometric authentication data.
 
    * **Name**: Enter the user name.
 
-   * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
    * Face: You can register a face for user authentication. Press ![](/docs/en/img/common/ico-add2.svg) and follow the instructions on the screen to register your face. To register more faces, please click ![](/docs/en/img/common/ico-add2.svg).
 
@@ -26033,7 +26419,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to User.
+2. Click User → ![](/docs/en/img/common/ico-search.svg).
 
 3. Select your search terms. You can search for users using All, User ID, Name, Face, Card.
 
@@ -26053,7 +26439,7 @@ You can delete all registered users at once.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to User.
+2. Select User → ![](/docs/en/img/common/ico-delete.svg).
 
 3. Select Delete All to check, then press OK.
 
@@ -26065,7 +26451,7 @@ You can see the number of registered users, faces, and cards at a glance.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-info2.svg) to User. User usage information appears.
+2. Click User → ![](/docs/en/img/common/ico-info2.svg). User usage information appears.
 
    ![](/docs/en/img/en/device/fs2-user-usage.png)
 
@@ -26084,7 +26470,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/facestation_2/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/facestation_2/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/facestation_2/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/facestation_2/authentication)
 
@@ -26123,7 +26509,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/facestation_f2/admin-menu)
 * [User](/docs/en/device/facestation_f2/user)
-* [Certifications](/docs/en/device/facestation_f2/authentication)
+* [Authentication](/docs/en/device/facestation_f2/authentication)
   [ <!-- -->5 items](/docs/en/device/facestation_f2/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/facestation_f2/troubleshooting)
@@ -26263,7 +26649,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -26503,7 +26889,7 @@ You can change the settings for fingerprint authentication.
 
    * Sensor Sensitivity: Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information.
 
-   * 1:N Fast Mode: Set the fingerprint authentication performance. Selecting automatic will set the authentication speed according to the total number of fingerprint templates enrolled on the device.
+   * 1:N Fast Mode: Set the fingerprint authentication performance. When you select Auto, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
 
    * Template Format: Set the fingerprint template format. The default is SUPREMA. Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution.
 
@@ -26527,7 +26913,7 @@ You can set how to register T\&A mode.
 
    ![](/docs/en/img/en/device/auth-tna.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Code: Add time and attendance events. Select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) to add a time and attendance event, then set the icon to display, the event name, and the schedule.
 
@@ -27733,6 +28119,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -28797,6 +29207,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -28806,6 +29218,8 @@ Used to provide notes or additional information while using the product.
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/facestation_f2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
 
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
@@ -28817,9 +29231,17 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -28836,6 +29258,8 @@ Used to provide notes or additional information while using the product.
 **Ensure the power supply is not interrupted during firmware upgrades of the product**.
 
 * The device may malfunction.
+
+<!-- -->
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -28858,6 +29282,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -28892,7 +29318,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -28910,7 +29336,7 @@ You can change the display and sound settings of the device.
 
    Info
 
-   For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+   For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 #### Communication Settings[​](#communication-settings "Direct link to Communication Settings")
 
@@ -29092,7 +29518,7 @@ Caution
 
 * Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
 
-* It is recommended to use BioStar X or BioStar Device SDK when upgrading firmware from v1.x.x to v2.x.x.
+* Use BioStar X or BioStar Device SDK to upgrade firmware from v1.x.x to v2.x.x.
 
 * When upgrading firmware using a USB drive, first set DISPLAY & SOUND menu to Menu Timeout Always On and then proceed with the upgrade. Also, do not remove the USB drive even if a failure message appears during the upgrade process; wait until a success message is displayed. Once the upgrade is completed, the device will automatically restart.
 
@@ -29223,6 +29649,15 @@ Q.The thermal camera measures lower temperature than actual temperature.
 
 * If a user measures the temperature after being exposed to cold temperatures for a long time, the temperature may be measured lower than the actual temperature. Wait for 1 to 2 minutes indoors and try again. If the problem persists, contact the installation company.
 
+##### Fingerprint[​](#fingerprint)
+
+Q.The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.
+
+* Check [How to enroll a fingerprint](getting-started#cautions-enrolling-fingers) and enroll the fingerprint again.
+* If your fingerprint has a cut, the device may recognize your fingerprint as someone else's fingerprint.
+* If there are a large number of enrolled fingerprints, change Matching Timeout and try again.
+* The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger.
+
 ##### Door lock[​](#doorlock)
 
 Q.The door cannot be locked when I close the door.
@@ -29263,7 +29698,7 @@ You can register user information that includes biometric authentication data.
 
    * **Name**: Enter the user name.
 
-   * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
    * Face: You can register a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To enroll more faces, click ![](/docs/en/img/common/ico-add2.svg). Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
 
@@ -29375,7 +29810,7 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
+2. Click USER → ![](/docs/en/img/common/ico-search.svg).
 
 3. Select your search terms. You can search for users using All, User ID, Name, Face, Fingerprint, Card.
 
@@ -29397,7 +29832,7 @@ You can delete all registered users at once.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
+2. Select USER → ![](/docs/en/img/common/ico-delete.svg).
 
 3. Select Delete All to check, then press OK.
 
@@ -29432,7 +29867,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/facestation_f2/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/facestation_f2/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/facestation_f2/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/facestation_f2/authentication)
 
@@ -30243,11 +30678,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/inputmodule/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -30277,6 +30724,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -30294,6 +30743,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -31062,11 +31513,23 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/outputmodule/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -31096,6 +31559,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -31113,6 +31578,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -31952,6 +32419,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
@@ -31960,9 +32429,19 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Ensure that Secure I/O 2, electric lock (electronic locking device), and access control devices use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -31988,6 +32467,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -32005,6 +32486,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -33009,6 +33492,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -33686,6 +34193,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
 * The device may malfunction.
@@ -33700,15 +34209,25 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/xpass_2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
 
 <!-- -->
 
+<!-- -->
+
 **Do not connect the power supply and PoE power together**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -33732,6 +34251,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **Manage the password so others do not know it, and change it regularly**.
 
 * This may lead to unauthorized access.
@@ -33753,6 +34274,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -34311,6 +34834,30 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 <!-- -->
 
+#### IC information[​](#ic-information "Direct link to IC information")
+
+This device complies with Industry Canada’s licence-exempt RSSs.
+
+Operation is subject to the following two conditions:
+
+1. This device may not cause interference; and
+
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### EU Declaration of Conformity (CE)[​](#eu-declaration-of-conformity-ce "Direct link to EU Declaration of Conformity (CE)")
 
 This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU.
@@ -34794,6 +35341,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
 * The device may malfunction.
@@ -34807,6 +35356,16 @@ Used to provide notes or additional information while using the product.
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/xpass_d2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -34836,6 +35395,8 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
+<!-- -->
+
 **Manage the password so others do not know it, and change it regularly**.
 
 * This may lead to unauthorized access.
@@ -34855,6 +35416,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -35174,6 +35737,38 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 
 * QR/Barcode scanning may take longer or fail if the position, distance, or lighting is inadequate.
 
+##### Barcode types and minimum readable size[​](#barcode-types-and-minimum-readable-size "Direct link to Barcode types and minimum readable size")
+
+The following are examples of the minimum barcode sizes that can be read for each barcode type.
+
+Info
+
+Actual read rates may vary depending on print quality, encoding, lighting, camera resolution, shooting distance, and other conditions.
+
+###### Basic support[​](#basic-support "Direct link to Basic support")
+
+This product natively supports QR Code.
+
+| Barcode type | Minimum readable size | Example value (character count)                 |
+| ------------ | --------------------- | ----------------------------------------------- |
+| QR Code      | 1 cm                  | 32 characters: 12345678901234567890123456789012 |
+
+###### When the Camera QR license is applied[​](#when-the-camera-qr-license-is-applied "Direct link to When the Camera QR license is applied")
+
+| Barcode type  | Minimum readable size | Example value (character count)                     |
+| ------------- | --------------------- | --------------------------------------------------- |
+| QR Code       | 1 cm                  | 32 characters: 12345678901234567890123456789012     |
+| Micro QR Code | 1 cm                  | 32 characters: 12345678901234567890123456789012     |
+| Aztec         | 1 cm                  | 32 characters: 12345678901234567890123456789012     |
+| PDF417        | 3 cm                  | 32 characters: 12345678901234567890123456789012     |
+| Data Matrix   | 1 cm                  | 32 characters: 12345678901234567890123456789012     |
+| Code 39       | 5 cm                  | 16 characters: 1234567890123456                     |
+| Code 128      | 3 cm                  | 16 characters: 1234567890123456                     |
+| EAN-8         | 1.5 cm                | 8 characters (7 data + 1 checksum): 12345670        |
+| EAN-13        | 2 cm                  | 13 characters (12 data + 1 checksum): 1234567890128 |
+| UPC-A         | 2 cm                  | 12 characters (11 data + 1 checksum): 123456789012  |
+| UPC-E         | 1.5 cm                | 8 characters (7 data + 1 checksum): 12345670        |
+
 ##### Notes for device license[​](#notes-for-device-license "Direct link to Notes for device license")
 
 * Using additional QR/Barcode authentication methods requires a separate device license. Contact the place of purchase to issue a device license.
@@ -35181,6 +35776,8 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 * The device license file is an encrypted file and cannot be modified arbitrarily.
 
 * Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
+
+* For more information on device licenses, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-license-device-license).
 
 
 ---
@@ -35990,13 +36587,11 @@ Relay
 
 [2)](#anno2_dest) RF read range will vary depending on installation environment.
 
-[3)](#anno3_dest) Supports 2D barcodes, including QR Code.
-
-* Supported QR/barcode types: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417
+[3)](#anno3_dest) Supports QR codes with up to 32 ASCII characters.
 
 [4)](#anno4_dest) Camera QR license is required to use more diverse QR/barcode authentication. For more information on device licenses, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-license-device-license).
 
-* Barcode types supported by the Camera QR license: DataMatrix, QR Code, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
+* Barcode types supported by the Camera QR license: QR Code, DataMatrix, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
 
 [5)](#anno5_dest) Based on users registered without credentials.
 
@@ -36188,9 +36783,9 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
-**When installing the product on a wall, do not seal around the product with silicone or similar materials**.
+<!-- -->
 
-* The device may malfunction.
+<!-- -->
 
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
@@ -36202,9 +36797,13 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/xpass_q2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -36214,9 +36813,15 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -36240,6 +36845,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use the product within <!-- -->-20 °C ~ 60 °C<!-- --> and store it at appropriate temperatures, not too low or too high**. **Use only within <!-- -->-20 °C ~ 50 °C<!-- --> when using PoE**.
 
 * The device may malfunction.
@@ -36251,6 +36858,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -37565,15 +38174,27 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
 * Using an unsuitable power supply may cause devices to malfunction.
 
 * Refer to the [Power](/docs/en/device/xpass_s2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
+
+<!-- -->
 
 <!-- -->
 
@@ -37603,6 +38224,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **Do not press the product's buttons (touchpad) forcefully or use sharp tools to press them**.
 
 * The device may malfunction.
@@ -37620,6 +38243,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -37654,7 +38279,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 * [Admin Menu](/docs/en/device/xstation_2/admin-menu)
 * [User](/docs/en/device/xstation_2/user)
-* [Certifications](/docs/en/device/xstation_2/authentication)
+* [Authentication](/docs/en/device/xstation_2/authentication)
   [ <!-- -->5 items](/docs/en/device/xstation_2/using-device)
 
 #### [Troubleshooting→ <!-- -->Read more](/docs/en/device/xstation_2/troubleshooting)
@@ -37794,7 +38419,7 @@ The copyright for this website is owned by Suprema. Rights to other product name
 
 ---
 
-### Certifications
+### Authentication
 
 Describes the supported authentication methods and authentication procedures.
 
@@ -37922,23 +38547,23 @@ XS2-QDPB, XS2-QAPB
 
 ![](/docs/en/img/en/device/xs2-auth3.png)
 
-* QR/Barcode: You can choose whether to use QR/Barcode authentication.
+* QR/Barcode: Select whether to use QR/Barcode authentication.
 
-* QR/Barcode Scan Timeout: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 4 to 10 seconds.
+* QR/Barcode Scan Timeout: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds.
 
-* Use QR as Card: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user.
+* Use QR as Card: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
 XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB
 
 ![](/docs/en/img/en/device/xs2-auth3-1.png)
 
-* QR/Barcode: You can choose whether to use QR/Barcode authentication.
+* QR/Barcode: Select whether to use QR/Barcode authentication.
 
-* Camera Timeout: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 3 to 20 seconds. Can only be set when QR/Barcode is enabled.
+* Camera Timeout: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available only when QR/Barcode is enabled.
 
-* Motion Sensor: Set the sensitivity that detects movement around the device. Can only be set when QR/Barcode is enabled.
+* Motion Sensor: Set the sensitivity for detecting movement around the device. Available only when QR/Barcode is enabled.
 
-* Use QR as Card: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user. Can only be set when QR/Barcode is enabled.
+* Use QR as Card: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available only when QR/Barcode is enabled.
 
 Info
 
@@ -37984,11 +38609,11 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, change the desired item in T\&A Mode.
+2. Click AUTHENTICATION, then change the desired item in T\&A Mode.
 
    ![](/docs/en/img/en/device/xs2-auth5.png)
 
-   * T\&A Mode: Set how to use time and attendance mode.
+   * T\&A Mode: Set how to use attendance mode.
 
    * T\&A Code: Add time and attendance events. To register attendance events, select T\&A Code → ![](/docs/en/img/common/ico-add2.svg) and set the icons to be displayed on the screen, T\&A Event Name, and Schedule.
 
@@ -39854,6 +40479,8 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
 **When installing multiple devices, ensure the minimum spacing distance is observed**.
 
 * May affect the RF and BLE performance of other devices, causing them to malfunction.
@@ -39864,9 +40491,13 @@ Used to provide notes or additional information while using the product.
 
 * Refer to the [Power](/docs/en/device/xstation_2/product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
+<!-- -->
+
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
 * Devices may malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -39876,9 +40507,15 @@ Used to provide notes or additional information while using the product.
 
 <!-- -->
 
+<!-- -->
+
+<!-- -->
+
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
 * Decreased waterproof and dustproof performance may cause malfunction.
+
+<!-- -->
 
 <!-- -->
 
@@ -39895,6 +40532,8 @@ Used to provide notes or additional information while using the product.
 **Ensure the power supply is not interrupted during firmware upgrades of the product**.
 
 * The device may malfunction.
+
+<!-- -->
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -39917,6 +40556,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+<!-- -->
 
 <!-- -->
 
@@ -39949,7 +40590,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -39967,7 +40608,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 #### Network[​](#network "Direct link to Network")
 
@@ -40310,7 +40951,7 @@ You can register user information that includes biometric authentication data.
 
    * **Name**: Enter the user name.
 
-   * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
    * Fingerprint: XS2-ODPB, XS2-OAPB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
 
@@ -40344,7 +40985,7 @@ You can register user information that includes biometric authentication data.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-add2.svg) to USER.
+2. Click USER → ![](/docs/en/img/common/ico-add2.svg).
 
 3. Select ![](/docs/en/img/common/ico-add-finger-xs2.png) Fingerprint → Next.
 
@@ -40370,7 +41011,7 @@ User Management or Administrator can modify the registered user information. You
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-search.svg) to USER.
+2. Click USER → ![](/docs/en/img/common/ico-search.svg).
 
 3. Select your search terms. You can search for users with All, User ID, Name, Fingerprint, Card / QR Code.
 
@@ -40394,7 +41035,7 @@ You can delete all registered users at once.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Select ![](/docs/en/img/common/ico-delete.svg) to USER.
+2. Select USER → ![](/docs/en/img/common/ico-delete.svg).
 
 3. Select Delete All to check, then press OK.
 
@@ -40406,7 +41047,7 @@ You can see registered users and card counts at a glance.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. Click ![](/docs/en/img/common/ico-info2.svg) to USER. User usage information appears.
+2. Click USER → ![](/docs/en/img/common/ico-info2.svg). User usage information appears.
 
    ![](/docs/en/img/en/device/xs2-user-usage.png)
 
@@ -40429,7 +41070,7 @@ Provides guidance on how to use the main features of the device effectively.
 
 [Describes how to register, edit, delete, and manage users.](/docs/en/device/xstation_2/user)
 
-#### [📄️<!-- --> <!-- -->Certifications](/docs/en/device/xstation_2/authentication)
+#### [📄️<!-- --> <!-- -->Authentication](/docs/en/device/xstation_2/authentication)
 
 [Describes the supported authentication methods and authentication procedures.](/docs/en/device/xstation_2/authentication)
 
@@ -40620,7 +41261,7 @@ A new device without a registered Master Admin cannot perform authentication or 
 
 Q.Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?
 
-No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the **Admin 2-Step Authentication** option. For details about the [Admin 2-Step Authentication](#admin-two-step-authentication) option, see the following document.
+No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the Admin 2-Step Authentication option. For more information, refer to the [Admin 2-Step Authentication](#admin-two-step-authentication).
 
 Q.Can you register a Master Administrator on a slave device?
 
@@ -51838,7 +52479,7 @@ You can issue CSN mobile access cards to users.
 
    ![](/docs/en/img/en/biostarx-new-user-credential-mobile-csn-assign.png)
 
-   The Period item is activated when setting a **dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
+   The Period item is activated when setting a **Dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
 
 4. Select or search for the card desired to assign from the card list.
 
@@ -51860,7 +52501,7 @@ Info
 
    ![](/docs/en/img/en/biostarx-new-user-credential-mobile-csn.png)
 
-   The Period item is activated when setting a **dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
+   The Period item is activated when setting a **Dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
 
 4. Select Input Type.
 
@@ -51894,7 +52535,7 @@ This feature is useful for environments that want to use biometrics as credentia
 
    ![](/docs/en/img/en/biostarx-new-user-credential-mobile-tom.png)
 
-   The Period item is activated when setting a **dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
+   The Period item is activated when setting a **Dynamic** site upon site creation in the AirPop portal. You can set the expiration duration and usage period for the mobile access cards. For more information about the Airfob Portal, refer to the [following link](https://airfob.zohodesk.com/portal).
 
 3. Select the desired card type from Smart Card Type.
 
@@ -52910,6 +53551,8 @@ Info
 **BioStar X** is the next generation access control software developed as a successor to **BioStar 2**. Supports various deployment environments of today and the future through an enhanced system architecture, expanded features, and a more flexible licensing model.
 
 **BioStar X** offers a total of five scalable license levels ranging from **Starter** to **Elite**, allowing you to choose according to various environments from small businesses to large corporate settings. Designed in a modular structure, it can add a variety of optional features such as video integration, mobile access, and multi-server support.
+
+[Try the **BioStar X License Calculator** to help you determine the license types and quantities that match your needs. This tool helps you resolve complex licensing requirements.](/docs/en/bsx-license-calculator)
 
 #### Base License[​](#base-license "Direct link to Base License")
 
@@ -54225,7 +54868,7 @@ Plugin Address cannot be edited when Session Bridge is enabled.
 
 Info
 
-* Plugins added with attendance management licenses cannot be deleted.
+* The time and attendance (T\&A) plugin added with the time and attendance license cannot be deleted.
 
 * The attendance management plugin can be used through additional options in the **Advanced** license or higher. For more information on licensing policies, refer to [the following](/docs/en/platform/biostar_x/licensing#features-add-ons).
 
@@ -56985,7 +57628,7 @@ Felica
 
 * Service Code: Enter the service code to read FeliCa cards in hexadecimal, with a maximum of 4 characters.
 
-* App ID: Set the application ID, serving as a type of directory that includes File ID. You can set up to 8 blocks to read by clicking + Add.
+* ID Field: Set to read a certain area on the card. You can set up to 8 blocks to read by clicking + Add.
 
   Block Number: Set the block to read from the card. (0-150)
 
@@ -66071,7 +66714,7 @@ Plugin Address cannot be edited when Session Bridge is enabled.
 
 Info
 
-* Plugins added with attendance management licenses cannot be deleted.
+* The time and attendance (T\&A) plugin added with the time and attendance license cannot be deleted.
 
 * The attendance management plugin can be used through additional options in the **Advanced** license or higher. For more information on licensing policies, refer to [the following](/docs/en/platform/biostar_x/licensing#features-add-ons).
 

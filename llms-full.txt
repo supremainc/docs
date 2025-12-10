@@ -4090,6 +4090,30 @@ Wiegand 출력 풀업 저항
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -6447,6 +6471,30 @@ Wiegand 출력 풀업 저항
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -8151,6 +8199,30 @@ Wiegand 출력 풀업 저항
 이 송신기는 다른 안테나 또는 송신기와 함께 배치하거나 작동해서는 안 됩니다.
 
 이 기기는 통제되지 않은 환경에 대해 규정된 FCC 방사 노출 제한을 준수합니다. 사용자(또는 근처의 다른 사람)와 제품의 안테나간에 최소 20cm의 거리를 유지하세요. 이 기기와 기기의 안테나를 다른 안테나 또는 RF 전송 장치와 함께 설치하거나 작동하지 마세요.
+
+<!-- -->
+
+<!-- -->
+
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
 
 <!-- -->
 
@@ -11181,6 +11253,30 @@ Wiegand 출력 풀업 저항
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -13791,6 +13887,30 @@ Wiegand 출력 풀업 저항
 이 송신기는 다른 안테나 또는 송신기와 함께 배치하거나 작동해서는 안 됩니다.
 
 이 기기는 통제되지 않은 환경에 대해 규정된 FCC 방사 노출 제한을 준수합니다. 사용자(또는 근처의 다른 사람)와 제품의 안테나간에 최소 20cm의 거리를 유지하세요. 이 기기와 기기의 안테나를 다른 안테나 또는 RF 전송 장치와 함께 설치하거나 작동하지 마세요.
+
+<!-- -->
+
+<!-- -->
+
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
 
 <!-- -->
 
@@ -24509,6 +24629,30 @@ Wiegand 출력 풀업 저항
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -27966,6 +28110,30 @@ FSF2-DB, FSF2-AB
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -29471,6 +29639,15 @@ Q.열화상 카메라 사용 시 온도가 정상적으로 측정되지 않습�
 Q.열화상 카메라 사용 시 온도가 너무 낮게 측정됩니다.
 
 * 동절기에 사용자가 장시간 동안 실외의 낮은 온도에 노출된 상태에서 온도를 측정할 경우 체온보다 낮게 측정될 수 있습니다. 실내에서 1~2분 대기한 뒤 다시 시도하세요. 문제가 지속될 경우 설치 업체에 문의하세요.
+
+##### 지문[​](#fingerprint)
+
+Q.등록은 되었으나 지문 인식이 잘 되지 않고 오류가 많이 납니다.
+
+* [올바른 지문 입력 방법](getting-started#cautions-enrolling-fingers)을 확인한 뒤 지문을 다시 등록하세요.
+* 지문에 상처가 생기는 경우 기기는 다른 사람의 지문으로 잘못 인식될 수 있습니다.
+* 등록된 지문 개수가 많다면 매칭 대기 시간을 변경한 뒤 다시 시도하세요.
+* 지문마다 특징의 차이로 인해 인식률에 차이가 있으니 다른 손가락의 지문을 등록하세요.
 
 ##### 문 잠금[​](#doorlock)
 
@@ -33306,6 +33483,30 @@ XP2-GDPB, XP2-GKDPB
 
 <!-- -->
 
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
+
+<!-- -->
+
+<!-- -->
+
 #### 유럽 연합 적합성 선언 (CE)[​](#유럽-연합-적합성-선언-ce "유럽 연합 적합성 선언 (CE)에 대한 직접 링크")
 
 이 제품은 라디오 및 통신 단말기 장치 지침(RED) 2014/53/EU의 규정에 따라 CE 마크를 제공합니다.
@@ -34619,6 +34820,30 @@ XPD2-GDB, XPD2-GKDB
 이 송신기는 다른 안테나 또는 송신기와 함께 배치하거나 작동해서는 안 됩니다.
 
 이 기기는 통제되지 않은 환경에 대해 규정된 FCC 방사 노출 제한을 준수합니다. 사용자(또는 근처의 다른 사람)와 제품의 안테나간에 최소 20cm의 거리를 유지하세요. 이 기기와 기기의 안테나를 다른 안테나 또는 RF 전송 장치와 함께 설치하거나 작동하지 마세요.
+
+<!-- -->
+
+<!-- -->
+
+#### IC 정보[​](#ic-정보 "IC 정보에 대한 직접 링크")
+
+이 기기는 Industry Canada의 라이선스 면제 RSS를 준수합니다.
+
+작동은 다음의 두 조건을 따릅니다.
+
+1. 이 기기는 간섭을 발생시키지 않습니다.
+
+2. 이 기기는 원치 않는 작동을 일으키는 간섭을 포함한 어떠한 간섭도 수용합니다.
+
+***
+
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+
+L’exploitation est autorisée aux deux conditions suivantes :
+
+1. l’appareil ne doit pas produire de brouillage ;
+
+2. l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en compromettre le fonctionnement.
 
 <!-- -->
 
@@ -53764,6 +53989,8 @@ SERVICE SETTINGS에 대한 자세한 내용은 [다음 문서](/docs/platform/bi
 **BioStar X**는 **BioStar 2**의 후속 버전으로 개발된 차세대 출입통제 소프트웨어입니다. 향상된 시스템 아키텍처와 확장된 기능, 그리고 더욱 유연한 라이선스 모델을 통해 현재와 미래의 다양한 구축 환경을 지원합니다.
 
 **BioStar X**는 **스타터**부터 **엘리트**까지 총 다섯 가지 확장 가능한 라이선스 등급을 제공하며, 소규모 사업장부터 대규모 기업 환경까지 다양한 환경에 맞춰 선택할 수 있습니다. 모듈형 구조로 설계되어 비디오 연동, 모바일 출입, 멀티 서버 지원 등 다양한 옵션 기능을 추가할 수 있습니다.
+
+[복잡한 라이선스 요구 사항을 해결하는 데 도움이 되는 **BioStar X 라이선스 계산기**를 사용해 보세요. 이 도구는 필요에 맞는 라이선스 유형과 수량을 결정하는 데 도움을 줍니다.](/docs/bsx-license-calculator)
 
 #### 기본 라이선스[​](#base-license "기본 라이선스에 대한 직접 링크")
 
