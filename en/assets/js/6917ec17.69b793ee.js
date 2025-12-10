@@ -1071,355 +1071,357 @@ function LicenseForm() {
                 className: "text-2xl font-bold mb-4",
                 children: "BioStar X License Calculator"
             }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: "relative lg:h-fit lg:self-start lg:col-span-4 mb-5 text-black",
-                children: result ? /*#__PURE__*/ (0,jsx_runtime.jsx)(LicenseResult, {
-                    licenseResult: result,
-                    onReset: handleReset
-                }) : /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                    className: "px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg",
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                            className: "flex items-center justify-between",
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: "grid grid-cols-1 lg:grid-cols-10 gap-4 text-black",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: "space-y-2 lg:col-span-6",
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
+                                className: "px-4 pt-1 pb-2 rounded-lg bg-white shadow",
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
+                                        className: "text-lg font-semibold mb-1",
+                                        children: "Site Information"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: "grid grid-cols-3 gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
+                                                        className: "block text-xs font-medium mb-2",
+                                                        children: "Number of Doors"
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                        type: "number",
+                                                        min: "0",
+                                                        value: input.door,
+                                                        onChange: (e)=>handleCapacityChange('door', parseInt(e.target.value)),
+                                                        className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
+                                                        className: "block text-xs font-medium mb-2",
+                                                        children: "Number of Users"
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                        type: "number",
+                                                        min: "0",
+                                                        value: input.user,
+                                                        onChange: (e)=>handleCapacityChange('user', parseInt(e.target.value)),
+                                                        className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
+                                                        className: "block text-xs font-medium mb-2",
+                                                        children: "Number of Operators"
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                        type: "number",
+                                                        min: "0",
+                                                        value: input.operator,
+                                                        onChange: (e)=>handleCapacityChange('operator', parseInt(e.target.value)),
+                                                        className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
+                                className: "bg-white px-4 pt-1 pb-2 rounded-lg shadow",
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
+                                        className: "text-lg font-semibold mb-1",
+                                        children: "Feature Add-ons"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: "space-y-1",
+                                        children: [
+                                            [
+                                                {
+                                                    name: 'Map Monitoring',
+                                                    description: featureAddonDescriptions['Map Monitoring']
+                                                },
+                                                {
+                                                    name: 'Video Monitoring',
+                                                    description: featureAddonDescriptions['Video Monitoring']
+                                                },
+                                                {
+                                                    name: 'Advanced AC',
+                                                    description: featureAddonDescriptions['Advanced AC'],
+                                                    isPackage: true
+                                                },
+                                                {
+                                                    name: 'GIS Map Monitoring',
+                                                    description: featureAddonDescriptions['GIS Map Monitoring']
+                                                },
+                                                {
+                                                    name: 'Server Matching',
+                                                    description: featureAddonDescriptions['Server Matching']
+                                                },
+                                                {
+                                                    name: 'Visitor',
+                                                    description: featureAddonDescriptions['Visitor']
+                                                },
+                                                {
+                                                    name: 'Directory Integration',
+                                                    description: featureAddonDescriptions['Directory Integration']
+                                                },
+                                                {
+                                                    name: 'Roll Call',
+                                                    description: featureAddonDescriptions['Roll Call']
+                                                }
+                                            ].map(({ name, description, isPackage = false })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                                                        className: "flex items-start space-x-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                                type: "checkbox",
+                                                                checked: isPackage ? input.packages[name] : input.featureAddons[name],
+                                                                onChange: (e)=>{
+                                                                    if (isPackage) {
+                                                                        handlePackageChange(name, e.target.checked);
+                                                                    } else {
+                                                                        handleFeatureAddonChange(name, e.target.checked);
+                                                                    }
+                                                                },
+                                                                className: "w-4 h-4 mt-2"
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                                className: "flex-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                                        className: "text-sm",
+                                                                        children: name
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        className: "text-xs text-gray-600",
+                                                                        children: description
+                                                                    })
+                                                                ]
+                                                            })
+                                                        ]
+                                                    })
+                                                }, name)),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                                                        className: "flex items-start space-x-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                                type: "checkbox",
+                                                                checked: isTAChecked,
+                                                                onChange: (e)=>{
+                                                                    setIsTAChecked(e.target.checked);
+                                                                    if (e.target.checked) {
+                                                                        if (input.featureAddons['T&A'] === 0) {
+                                                                            handleFeatureAddonChange('T&A', 1);
+                                                                        }
+                                                                    } else {
+                                                                        handleFeatureAddonChange('T&A', 0);
+                                                                    }
+                                                                },
+                                                                className: "w-4 h-4 mt-2"
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                                className: "flex-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                                        className: "text-sm",
+                                                                        children: "T&A (Number of Users)"
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        className: "text-xs text-gray-600",
+                                                                        children: featureAddonDescriptions['T&A']
+                                                                    })
+                                                                ]
+                                                            })
+                                                        ]
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                                        className: "ml-6",
+                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                            type: "number",
+                                                            min: "1",
+                                                            value: input.featureAddons['T&A'],
+                                                            onChange: (e)=>handleFeatureAddonChange('T&A', parseInt(e.target.value) || 0),
+                                                            disabled: !isTAChecked,
+                                                            className: "w-30 mt-1 px-2 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
+                                                        })
+                                                    })
+                                                ]
+                                            }),
+                                            [
+                                                {
+                                                    name: 'Mobile App',
+                                                    description: featureAddonDescriptions['Mobile App']
+                                                }
+                                            ].map(({ name, description })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                                                        className: "flex items-start space-x-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                                type: "checkbox",
+                                                                checked: input.featureAddons[name],
+                                                                onChange: (e)=>handleFeatureAddonChange(name, e.target.checked),
+                                                                className: "w-4 h-4 mt-2"
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                                className: "flex-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                                        className: "text-sm",
+                                                                        children: name
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        className: "text-xs text-gray-600",
+                                                                        children: description
+                                                                    })
+                                                                ]
+                                                            })
+                                                        ]
+                                                    })
+                                                }, name)),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                                                        className: "flex items-start space-x-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                                type: "checkbox",
+                                                                checked: isMultiCommServerChecked,
+                                                                onChange: (e)=>{
+                                                                    setIsMultiCommServerChecked(e.target.checked);
+                                                                    if (e.target.checked) {
+                                                                        if (input.featureAddons['Multi Communications Server'] === 0) {
+                                                                            handleFeatureAddonChange('Multi Communications Server', 2);
+                                                                        }
+                                                                    } else {
+                                                                        handleFeatureAddonChange('Multi Communications Server', 0);
+                                                                    }
+                                                                },
+                                                                className: "w-4 h-4 mt-2"
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                                className: "flex-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                                        className: "text-sm",
+                                                                        children: "Multi Communications Server (Number of Servers)"
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        className: "text-xs text-gray-600",
+                                                                        children: featureAddonDescriptions['Multi Communications Server']
+                                                                    })
+                                                                ]
+                                                            })
+                                                        ]
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                                        className: "ml-6",
+                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                            type: "number",
+                                                            min: "2",
+                                                            value: input.featureAddons['Multi Communications Server'],
+                                                            onChange: (e)=>{
+                                                                const value = parseInt(e.target.value) || 0;
+                                                                handleFeatureAddonChange('Multi Communications Server', value);
+                                                            },
+                                                            disabled: !isMultiCommServerChecked,
+                                                            className: "w-30 px-2 mt-1 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
+                                                        })
+                                                    })
+                                                ]
+                                            }),
+                                            [
+                                                {
+                                                    name: 'Event Log API',
+                                                    description: featureAddonDescriptions['Event Log API']
+                                                },
+                                                {
+                                                    name: 'Remote Access',
+                                                    description: featureAddonDescriptions['Remote Access']
+                                                },
+                                                {
+                                                    name: 'External Remote Access',
+                                                    description: featureAddonDescriptions['External Remote Access']
+                                                },
+                                                {
+                                                    name: 'BioStar X Plugin',
+                                                    description: featureAddonDescriptions['BioStar X Plugin']
+                                                }
+                                            ].map(({ name, description })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                                                        className: "flex items-start space-x-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
+                                                                type: "checkbox",
+                                                                checked: input.featureAddons[name],
+                                                                onChange: (e)=>handleFeatureAddonChange(name, e.target.checked),
+                                                                className: "w-4 h-4 mt-2"
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                                                className: "flex-1",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                                        className: "text-sm",
+                                                                        children: name
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        className: "text-xs text-gray-600",
+                                                                        children: description
+                                                                    })
+                                                                ]
+                                                            })
+                                                        ]
+                                                    })
+                                                }, name))
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: "lg:sticky lg:top-6 lg:h-fit lg:self-start lg:col-span-4",
+                        children: result ? /*#__PURE__*/ (0,jsx_runtime.jsx)(LicenseResult, {
+                            licenseResult: result,
+                            onReset: handleReset
+                        }) : /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: "px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg",
                             children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
-                                    className: "text-lg font-bold",
-                                    children: "Recommended License"
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                                    type: "button",
-                                    onClick: handleReset,
-                                    className: "text-xs bg-gray-500 text-white px-3 py-1 rounded-md font-medium hover:bg-gray-600 transition",
-                                    children: "Reset All"
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                            className: "text-sm text-gray-500 text-center p-5",
-                            children: "Enter license requirements to see results."
-                        })
-                    ]
-                })
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: "max-w relative mt-5 text-black",
-                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                    className: "space-y-2 lg:col-span-6",
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
-                            className: "px-4 pt-1 pb-2 rounded-lg bg-white shadow",
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
-                                    className: "text-lg font-semibold mb-1",
-                                    children: "Site Information"
-                                }),
                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: "grid grid-cols-3 gap-3",
+                                    className: "flex items-center justify-between",
                                     children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
-                                                    className: "block text-xs font-medium mb-2",
-                                                    children: "Number of Doors"
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                    type: "number",
-                                                    min: "0",
-                                                    value: input.door,
-                                                    onChange: (e)=>handleCapacityChange('door', parseInt(e.target.value)),
-                                                    className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
-                                                })
-                                            ]
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
+                                            className: "text-lg font-bold",
+                                            children: "Recommended License"
                                         }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
-                                                    className: "block text-xs font-medium mb-2",
-                                                    children: "Number of Users"
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                    type: "number",
-                                                    min: "0",
-                                                    value: input.user,
-                                                    onChange: (e)=>handleCapacityChange('user', parseInt(e.target.value)),
-                                                    className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
-                                                })
-                                            ]
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("label", {
-                                                    className: "block text-xs font-medium mb-2",
-                                                    children: "Number of Operators"
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                    type: "number",
-                                                    min: "0",
-                                                    value: input.operator,
-                                                    onChange: (e)=>handleCapacityChange('operator', parseInt(e.target.value)),
-                                                    className: "w-full px-2 py-1 border border-gray-300 rounded-md text-sm"
-                                                })
-                                            ]
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                                            type: "button",
+                                            onClick: handleReset,
+                                            className: "text-xs bg-gray-500 text-white px-3 py-1 rounded-md font-medium hover:bg-gray-600 transition",
+                                            children: "Reset All"
                                         })
                                     ]
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
-                            className: "bg-white px-4 pt-1 pb-2 rounded-lg shadow",
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
-                                    className: "text-lg font-semibold mb-1",
-                                    children: "Feature Add-ons"
                                 }),
-                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: "space-y-1",
-                                    children: [
-                                        [
-                                            {
-                                                name: 'Map Monitoring',
-                                                description: featureAddonDescriptions['Map Monitoring']
-                                            },
-                                            {
-                                                name: 'Video Monitoring',
-                                                description: featureAddonDescriptions['Video Monitoring']
-                                            },
-                                            {
-                                                name: 'Advanced AC',
-                                                description: featureAddonDescriptions['Advanced AC'],
-                                                isPackage: true
-                                            },
-                                            {
-                                                name: 'GIS Map Monitoring',
-                                                description: featureAddonDescriptions['GIS Map Monitoring']
-                                            },
-                                            {
-                                                name: 'Server Matching',
-                                                description: featureAddonDescriptions['Server Matching']
-                                            },
-                                            {
-                                                name: 'Visitor',
-                                                description: featureAddonDescriptions['Visitor']
-                                            },
-                                            {
-                                                name: 'Directory Integration',
-                                                description: featureAddonDescriptions['Directory Integration']
-                                            },
-                                            {
-                                                name: 'Roll Call',
-                                                description: featureAddonDescriptions['Roll Call']
-                                            }
-                                        ].map(({ name, description, isPackage = false })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                    className: "flex items-start space-x-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "checkbox",
-                                                            checked: isPackage ? input.packages[name] : input.featureAddons[name],
-                                                            onChange: (e)=>{
-                                                                if (isPackage) {
-                                                                    handlePackageChange(name, e.target.checked);
-                                                                } else {
-                                                                    handleFeatureAddonChange(name, e.target.checked);
-                                                                }
-                                                            },
-                                                            className: "w-4 h-4 mt-2"
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                            className: "flex-1",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                    className: "text-sm",
-                                                                    children: name
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                    className: "text-xs text-gray-600",
-                                                                    children: description
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            }, name)),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                    className: "flex items-start space-x-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "checkbox",
-                                                            checked: isTAChecked,
-                                                            onChange: (e)=>{
-                                                                setIsTAChecked(e.target.checked);
-                                                                if (e.target.checked) {
-                                                                    if (input.featureAddons['T&A'] === 0) {
-                                                                        handleFeatureAddonChange('T&A', 1);
-                                                                    }
-                                                                } else {
-                                                                    handleFeatureAddonChange('T&A', 0);
-                                                                }
-                                                            },
-                                                            className: "w-4 h-4 mt-2"
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                            className: "flex-1",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                    className: "text-sm",
-                                                                    children: "T&A (Number of Users)"
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                    className: "text-xs text-gray-600",
-                                                                    children: featureAddonDescriptions['T&A']
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                    className: "ml-6",
-                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                        type: "number",
-                                                        min: "1",
-                                                        value: input.featureAddons['T&A'],
-                                                        onChange: (e)=>handleFeatureAddonChange('T&A', parseInt(e.target.value) || 0),
-                                                        disabled: !isTAChecked,
-                                                        className: "w-30 mt-1 px-2 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                                                    })
-                                                })
-                                            ]
-                                        }),
-                                        [
-                                            {
-                                                name: 'Mobile App',
-                                                description: featureAddonDescriptions['Mobile App']
-                                            }
-                                        ].map(({ name, description })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                    className: "flex items-start space-x-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "checkbox",
-                                                            checked: input.featureAddons[name],
-                                                            onChange: (e)=>handleFeatureAddonChange(name, e.target.checked),
-                                                            className: "w-4 h-4 mt-2"
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                            className: "flex-1",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                    className: "text-sm",
-                                                                    children: name
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                    className: "text-xs text-gray-600",
-                                                                    children: description
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            }, name)),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                    className: "flex items-start space-x-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "checkbox",
-                                                            checked: isMultiCommServerChecked,
-                                                            onChange: (e)=>{
-                                                                setIsMultiCommServerChecked(e.target.checked);
-                                                                if (e.target.checked) {
-                                                                    if (input.featureAddons['Multi Communications Server'] === 0) {
-                                                                        handleFeatureAddonChange('Multi Communications Server', 2);
-                                                                    }
-                                                                } else {
-                                                                    handleFeatureAddonChange('Multi Communications Server', 0);
-                                                                }
-                                                            },
-                                                            className: "w-4 h-4 mt-2"
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                            className: "flex-1",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                    className: "text-sm",
-                                                                    children: "Multi Communications Server (Number of Servers)"
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                    className: "text-xs text-gray-600",
-                                                                    children: featureAddonDescriptions['Multi Communications Server']
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                    className: "ml-6",
-                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                        type: "number",
-                                                        min: "2",
-                                                        value: input.featureAddons['Multi Communications Server'],
-                                                        onChange: (e)=>{
-                                                            const value = parseInt(e.target.value) || 0;
-                                                            handleFeatureAddonChange('Multi Communications Server', value);
-                                                        },
-                                                        disabled: !isMultiCommServerChecked,
-                                                        className: "w-30 px-2 mt-1 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                                                    })
-                                                })
-                                            ]
-                                        }),
-                                        [
-                                            {
-                                                name: 'Event Log API',
-                                                description: featureAddonDescriptions['Event Log API']
-                                            },
-                                            {
-                                                name: 'Remote Access',
-                                                description: featureAddonDescriptions['Remote Access']
-                                            },
-                                            {
-                                                name: 'External Remote Access',
-                                                description: featureAddonDescriptions['External Remote Access']
-                                            },
-                                            {
-                                                name: 'BioStar X Plugin',
-                                                description: featureAddonDescriptions['BioStar X Plugin']
-                                            }
-                                        ].map(({ name, description })=>/*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                    className: "flex items-start space-x-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "checkbox",
-                                                            checked: input.featureAddons[name],
-                                                            onChange: (e)=>handleFeatureAddonChange(name, e.target.checked),
-                                                            className: "w-4 h-4 mt-2"
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                            className: "flex-1",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                    className: "text-sm",
-                                                                    children: name
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                    className: "text-xs text-gray-600",
-                                                                    children: description
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            }, name))
-                                    ]
+                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                    className: "text-sm text-gray-500 text-center p-5",
+                                    children: "Enter license requirements to see results."
                                 })
                             ]
                         })
-                    ]
-                })
+                    })
+                ]
             })
         ]
     });

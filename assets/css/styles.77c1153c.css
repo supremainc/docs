@@ -4235,9 +4235,6 @@ body {
         max-width: 1536px
     }
 }
-.license-calculator_vCX_ :is(.relative_PamT) {
-    position: relative
-}
 .license-calculator_vCX_ :is(.mx-auto_PvKB) {
     margin-left: auto;
     margin-right: auto
@@ -4266,9 +4263,6 @@ body {
 .license-calculator_vCX_ :is(.mt-4_F_xm) {
     margin-top: 1rem
 }
-.license-calculator_vCX_ :is(.mt-5_it8E) {
-    margin-top: 1.25rem
-}
 .license-calculator_vCX_ :is(.block_qXeX) {
     display: block
 }
@@ -4296,6 +4290,9 @@ body {
 .license-calculator_vCX_ :is(.list-disc_OL0O) {
     list-style-type: disc
 }
+.license-calculator_vCX_ :is(.grid-cols-1_igGY) {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+}
 .license-calculator_vCX_ :is(.grid-cols-3_ucdb) {
     grid-template-columns: repeat(3, minmax(0, 1fr))
 }
@@ -4313,6 +4310,9 @@ body {
 }
 .license-calculator_vCX_ :is(.gap-3_W1XA) {
     gap: 0.75rem
+}
+.license-calculator_vCX_ :is(.gap-4_b078) {
+    gap: 1rem
 }
 .license-calculator_vCX_ :is(.space-x-2_CxuJ > :not([hidden]) ~ :not([hidden])) {
     --tw-space-x-reverse: 0;
@@ -4493,6 +4493,12 @@ body {
     background-color: rgb(243 244 246 / var(--tw-bg-opacity))
 }
 @media (min-width: 1024px) {
+    .license-calculator_vCX_ :is(.lg\:sticky_Tn6B) {
+        position: sticky
+    }
+    .license-calculator_vCX_ :is(.lg\:top-6_GCnc) {
+        top: 1.5rem
+    }
     .license-calculator_vCX_ :is(.lg\:col-span-4_dHgJ) {
         grid-column: span 4 / span 4
     }
@@ -4501,6 +4507,9 @@ body {
     }
     .license-calculator_vCX_ :is(.lg\:h-fit_oo5P) {
         height: fit-content
+    }
+    .license-calculator_vCX_ :is(.lg\:grid-cols-10_buut) {
+        grid-template-columns: repeat(10, minmax(0, 1fr))
     }
     .license-calculator_vCX_ :is(.lg\:self-start_THH1) {
         align-self: flex-start
@@ -4641,9 +4650,6 @@ body {
     max-width: 1536px;
   }
 }
-.license-calculator :is(.relative) {
-  position: relative;
-}
 .license-calculator :is(.mx-auto) {
   margin-left: auto;
   margin-right: auto;
@@ -4672,9 +4678,6 @@ body {
 .license-calculator :is(.mt-4) {
   margin-top: 1rem;
 }
-.license-calculator :is(.mt-5) {
-  margin-top: 1.25rem;
-}
 .license-calculator :is(.block) {
   display: block;
 }
@@ -4702,6 +4705,9 @@ body {
 .license-calculator :is(.list-disc) {
   list-style-type: disc;
 }
+.license-calculator :is(.grid-cols-1) {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .license-calculator :is(.grid-cols-3) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -4719,6 +4725,9 @@ body {
 }
 .license-calculator :is(.gap-3) {
   gap: 0.75rem;
+}
+.license-calculator :is(.gap-4) {
+  gap: 1rem;
 }
 .license-calculator :is(.space-x-2 > :not([hidden]) ~ :not([hidden])) {
   --tw-space-x-reverse: 0;
@@ -4909,6 +4918,12 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .license-calculator :is(.lg\:sticky) {
+    position: sticky;
+  }
+  .license-calculator :is(.lg\:top-6) {
+    top: 1.5rem;
+  }
   .license-calculator :is(.lg\:col-span-4) {
     grid-column: span 4 / span 4;
   }
@@ -4917,6 +4932,9 @@ body {
   }
   .license-calculator :is(.lg\:h-fit) {
     height: fit-content;
+  }
+  .license-calculator :is(.lg\:grid-cols-10) {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
   .license-calculator :is(.lg\:self-start) {
     align-self: flex-start;

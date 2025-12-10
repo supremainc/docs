@@ -2579,10 +2579,11 @@ function NextStep({ notitle, children }) {
         ]
     });
 }
-function NextItem({ children, to }) {
+function NextItem({ children, to, target }) {
     return /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* ["default"] */.A, {
         to: to,
         className: NextStep_styles_module.nextStepContent,
+        target: target,
         children: children
     });
 }
