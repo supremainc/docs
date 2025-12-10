@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Certifications
+title: Authentication
 description: Describes the supported authentication methods and authentication procedures.
 keywords:
   - Authentication mode
@@ -40,7 +40,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    |    Category    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
    | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   |   Fingerprint  | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode uses only fingerprint.<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+   |   Fingerprint  | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode uses only fingerprint.<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
    | Card / QR Code | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: This mode uses only card / QR code authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode requires authentication via card/QR code followed by fingerprint authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code. |
    |       ID       | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />: This mode requires entering an ID followed by fingerprint authentication.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both fingerprint authentication and PIN entry after entering an ID.                                                                                                                                                                                       |
 
@@ -146,23 +146,23 @@ You can set QR/Barcode authentication.
 
 <Image src='/img/device/xs2-auth3.png' />
 
-* <Cmd sid='ui_043' product='dev' />: You can choose whether to use QR/Barcode authentication.
+* <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
 
-* <Cmd sid='ui_374' product='dev' />: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 4 to 10 seconds.
+* <Cmd sid='ui_374' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds.
 
-* <Cmd sid='ui_329' product='dev' />: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user.
+* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
 <Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
 
 <Image src='/img/device/xs2-auth3-1.png' />
 
-* <Cmd sid='ui_043' product='dev' />: You can choose whether to use QR/Barcode authentication.
+* <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
 
-* <Cmd sid='ui_375' product='dev' />: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 3 to 20 seconds. Can only be set when <Cmd sid='ui_043' product='dev' /> is enabled.
+* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
-* <Cmd sid='ui_140' product='dev' />: Set the sensitivity that detects movement around the device. Can only be set when <Cmd sid='ui_043' product='dev' /> is enabled.
+* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
-* <Cmd sid='ui_329' product='dev' />: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user. Can only be set when <Cmd sid='ui_043' product='dev' /> is enabled.
+* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
 :::info
 
@@ -212,11 +212,11 @@ You can set how to register T&A mode.
 
 1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
 
-2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired item in <Cmd sid='ui_083_list' product='dev' />.
+2. Click <Cmd sid='ui_256' product='dev' />, then change the desired item in <Cmd sid='ui_083_list' product='dev' />.
 
    <Image src='/img/device/xs2-auth5.png' />
 
-   * <Cmd sid='ui_083_list' product='dev' />: Set how to use time and attendance mode.
+   * <Cmd sid='ui_083_list' product='dev' />: Set how to use attendance mode.
 
    * <Cmd sid='ui_086' product='dev' />: Add time and attendance events. To register attendance events, select <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> and set the icons to be displayed on the screen, <Cmd sid='ui_085' product='dev' />, and <Cmd sid='ui_203' product='dev' />.
 

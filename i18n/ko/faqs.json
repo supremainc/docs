@@ -110,7 +110,7 @@
       "hid": "fingerprint",
       "contents": [
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2", "facestation_f2" ],
           "question": "등록은 되었으나 지문 인식이 잘 되지 않고 오류가 많이 납니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-fingers'>올바른 지문 입력 방법</a>을 확인한 뒤 지문을 다시 등록하세요.",
