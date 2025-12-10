@@ -185,14 +185,28 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
             alt: "XPass 2",
-            src: (__webpack_require__(53879)/* ["default"] */.A) + "",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "XPass 2 / XPass D2"
+          children: "XPass 2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
+        className: "text--center bold",
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.img, {
+            alt: "XPass D2",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
+            width: "384",
+            height: "384"
+          })
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "XPass D2"
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
@@ -204,9 +218,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "CoreStation 20"
         })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
-      children: [(0,jsx_runtime.jsxs)(Column, {
+      }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
@@ -242,7 +254,9 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "Input Module"
         })]
-      }), (0,jsx_runtime.jsxs)(Column, {
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
@@ -254,9 +268,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "Output Module"
         })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
-      children: [(0,jsx_runtime.jsxs)(Column, {
+      }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
@@ -280,11 +292,6 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "Secure Module"
         })]
-      }), (0,jsx_runtime.jsx)(Column, {
-        className: "text--center bold",
-        children: (0,jsx_runtime.jsx)(_components.p, {
-          children: " "
-        })
       }), (0,jsx_runtime.jsx)(Column, {
         className: "text--center bold",
         children: (0,jsx_runtime.jsx)(_components.p, {
@@ -394,7 +401,7 @@ __webpack_require__.d(__webpack_exports__, {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 });
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/facestation-2-32b17809bd48757102a1ce3d46b08bd4.png");
+/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/facestation-2-10aabcbad8e8a9f8784c7d4dd9e0e2c6.png");
 
 }),
 17543: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -425,11 +432,11 @@ __webpack_require__.d(__webpack_exports__, {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/sio2-d7ec61ef12a58b1077621a781b5b25d7.png");
 
 }),
-53879: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+56727: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 });
-/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/xpass-d2-f17ac694de22f79975a0a68581ee5ad8.png");
+/* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/xpass-2-1bd390be3a94e698584591d0e37833c5.png");
 
 }),
 5740: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {

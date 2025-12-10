@@ -64122,7 +64122,7 @@ FaceStation F2
 
 ***
 
-![FaceStation 2](/docs/assets/images/facestation-2-32b17809bd48757102a1ce3d46b08bd4.png)
+![FaceStation 2](/docs/assets/images/facestation-2-10aabcbad8e8a9f8784c7d4dd9e0e2c6.png)
 
 FaceStation 2
 
@@ -64148,15 +64148,19 @@ BioEntry R2
 
 X-Station 2
 
-![XPass 2](/docs/assets/images/xpass-d2-f17ac694de22f79975a0a68581ee5ad8.png)
+![XPass 2](/docs/assets/images/xpass-2-1bd390be3a94e698584591d0e37833c5.png)
 
-XPass 2 / XPass D2
+XPass 2
+
+![XPass D2](/docs/assets/images/xpass-2-1bd390be3a94e698584591d0e37833c5.png)
+
+XPass D2
+
+***
 
 ![CoreStation 20](/docs/assets/images/corestation-20-c7246720f558c12c860bcf1ad31a2ded.png)
 
 CoreStation 20
-
-***
 
 ![CoreStation](/docs/assets/images/corestation-6211b01639831101250d6667458006f3.png)
 
@@ -64170,11 +64174,11 @@ Door Interface
 
 Input Module
 
+***
+
 ![Output Module](/docs/assets/images/om-120-72c96a00be92e8811e09ef72d0c87561.png)
 
 Output Module
-
-***
 
 ![Door Module](/docs/assets/images/dm-20-28ffc48574b2080ffe187199f4750bb4.png)
 
@@ -64183,8 +64187,6 @@ Door Module
 ![Secure Module](/docs/assets/images/sio2-d7ec61ef12a58b1077621a781b5b25d7.png)
 
 Secure Module
-
- 
 
  
 
