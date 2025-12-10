@@ -183,12 +183,9 @@ const config = {
             '/common/**',
             '/_unused/**',
             '/products/**',
-            '/bsx-license-calculator/**',
             '/en/products/**',
             '/en/common/**',
             '/en/_unused/**',
-            '/en/platform/biostar_air/**',
-            '/en/device/**'
           ],
           autoSectionDepth: 2
         }
