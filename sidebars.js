@@ -258,6 +258,7 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/before-start',
+            'platform/biostar_x/supported-device',
             'platform/biostar_x/system-requirements',
           ],
         },
