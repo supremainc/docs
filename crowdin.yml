@@ -52,6 +52,7 @@ files: [
       "/docs/how-to/**/*.mdx",
       "/docs/reference/**/*.mdx",
       "/docs/*/*/release-notes/*.mdx",
+      "/docs/common/_ic-information.mdx",
     ]
   }
 ]

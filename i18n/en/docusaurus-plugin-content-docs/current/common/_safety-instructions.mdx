@@ -126,7 +126,9 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,xpass_q2'>
+{/* IP67 이상 제품만 적용 */}
+
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
 
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
@@ -152,6 +154,8 @@ Used to provide notes or additional information while using the product.
 
 </Xclude>
 
+{/* SIO2 연결 가능한 제품만 적용 */}
+
 <Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
 
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
@@ -168,6 +172,8 @@ Used to provide notes or additional information while using the product.
 
 </Include>
 
+{/* PoE 가능한 제품만 적용 */}
+
 <Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2,xpass_q2'>
 
 **Do not connect the power supply and PoE power together**.
@@ -175,6 +181,8 @@ Used to provide notes or additional information while using the product.
 * Devices may malfunction.
 
 </Include>
+
+{/* PoE+ 가능한 제품만 적용 */}
 
 <Include product='biostation_3,corestation_20'>
 
@@ -184,6 +192,8 @@ Used to provide notes or additional information while using the product.
 
 </Include>
 
+{/* 방수, 방진 + 케이블 커버있는 제품만 적용 */}
+
 <Include product='biostation_3,biostation_2a,xstation_2,facestation_f2,xpass_q2'>
 
 **To meet IP65 standards, make sure to use a cable cover after connecting the product and cable**. **It is recommended to use an enclosure when installed outdoors with full exposure**.
@@ -192,7 +202,9 @@ Used to provide notes or additional information while using the product.
 
 </Include>
 
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2'>
+{/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
+
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2'>
 
 **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
@@ -223,6 +235,8 @@ Used to provide notes or additional information while using the product.
 * The device may malfunction.
 
 </Xclude>
+
+{/* LCD 화면, 키패드가 있는 제품에만 적용 */}
 
 <Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
 
@@ -263,6 +277,8 @@ Used to provide notes or additional information while using the product.
 * If disinfecting the product, dampen a clean cloth with a suitable amount of disinfectant alcohol and gently wipe the product surface. Use disinfectant alcohol that contains 70-75% isopropyl alcohol and a clean, lint-free soft cloth.
 
 * Do not spray disinfectant directly onto the product.
+
+{/* 정전식 방식 버튼 사용하는 제품만 적용 */}
 
 <Include product='biostation_2,biostation_2a,biostation_a2'>
 

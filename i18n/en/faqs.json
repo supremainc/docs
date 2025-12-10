@@ -110,11 +110,11 @@
       "hid": "fingerprint",
       "contents": [
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2", "facestation_f2" ],
           "question": "The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.",
           "answer": [
             "Check <a href='getting-started#cautions-enrolling-fingers'>How to enroll a fingerprint</a> and enroll the fingerprint again.",
-            "If your fingerprint has a cut, the device may recognize your fingerprint as someone else\\'s fingerprint.",
+            "If your fingerprint has a cut, the device may recognize your fingerprint as someone else's fingerprint.",
             "If there are a large number of enrolled fingerprints, change <span class='cmd'>Matching Timeout</span> and try again.",
             "The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger."
           ]
