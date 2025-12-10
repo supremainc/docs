@@ -5,7 +5,7 @@
   },
   {
     "question": "Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?",
-    "answer": "No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the <b>Admin 2-Step Authentication</b> option. For details about the <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a> option, see the following document."
+    "answer": "No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the Admin 2-Step Authentication option. For more information, refer to the <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a>."
   },
   {
     "question": "Can you register a Master Administrator on a slave device?",

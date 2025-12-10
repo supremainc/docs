@@ -156,6 +156,48 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 
 * QR/Barcode scanning may take longer or fail if the position, distance, or lighting is inadequate.
 
+### Barcode types and minimum readable size
+
+The following are examples of the minimum barcode sizes that can be read for each barcode type.
+
+:::info
+
+Actual read rates may vary depending on print quality, encoding, lighting, camera resolution, shooting distance, and other conditions.
+
+:::
+
+#### Basic support
+
+This product natively supports QR Code.
+
+<div className='overflow-x cols3--20-20-60'>
+
+| Barcode type | Minimum readable size | Example value (character count)                 |
+| :----------: | :-------------------: | :---------------------------------------------- |
+|    QR Code   |          1 cm         | 32 characters: 12345678901234567890123456789012 |
+
+</div>
+
+#### When the Camera QR license is applied
+
+<div className='overflow-x cols3--20-20-60'>
+
+|  Barcode type | Minimum readable size | Example value (character count)                     |
+| :-----------: | :-------------------: | :-------------------------------------------------- |
+|    QR Code    |          1 cm         | 32 characters: 12345678901234567890123456789012     |
+| Micro QR Code |          1 cm         | 32 characters: 12345678901234567890123456789012     |
+|     Aztec     |          1 cm         | 32 characters: 12345678901234567890123456789012     |
+|     PDF417    |          3 cm         | 32 characters: 12345678901234567890123456789012     |
+|  Data Matrix  |          1 cm         | 32 characters: 12345678901234567890123456789012     |
+|    Code 39    |          5 cm         | 16 characters: 1234567890123456                     |
+|    Code 128   |          3 cm         | 16 characters: 1234567890123456                     |
+|     EAN-8     |         1.5 cm        | 8 characters (7 data + 1 checksum): 12345670        |
+|     EAN-13    |          2 cm         | 13 characters (12 data + 1 checksum): 1234567890128 |
+|     UPC-A     |          2 cm         | 12 characters (11 data + 1 checksum): 123456789012  |
+|     UPC-E     |         1.5 cm        | 8 characters (7 data + 1 checksum): 12345670        |
+
+</div>
+
 ### Notes for device license
 
 * Using additional QR/Barcode authentication methods requires a separate device license. Contact the place of purchase to issue a device license.
@@ -163,3 +205,5 @@ You can issue a QR/barcode to the user for use as a means of authentication. Sca
 * The device license file is an encrypted file and cannot be modified arbitrarily.
 
 * Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.
+
+* For more information on device licenses, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-license-device-license).
