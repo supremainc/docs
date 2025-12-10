@@ -24,7 +24,7 @@
   },
   "ui_021": "ID Mode",
   "ui_023": "ID",
-  "ui_024": "ID Fields",
+  "ui_024": "ID field",
   "ui_025": "Intercom",
   "ui_026": "Intercom Microphone Volume",
   "ui_027": "Intercom Video Resolution",
@@ -43,7 +43,7 @@
   "ui_040": "PIN",
   "ui_041": "QR Authentication",
   "ui_042": "QR Code",
-  "ui_043": "QR",
+  "ui_043": "QR/Barcode",
   "ui_044": "QR/Barcode Operation",
   "ui_045": "ROI X(%)",
   "ui_046": "ROI Y(%)",
@@ -82,7 +82,10 @@
   "ui_076": "Regulatory",
   "ui_077": "Regulatory & Licenses",
   "ui_078": "Group Matching",
-  "ui_079": "T&A",
+  "ui_079": {
+    "common": "T&A",
+    "facestation_f2": "T&A Mode"
+  },
   "ui_080": "T&A Fixed",
   "ui_081": "Fixed T&A Key",
   "ui_082": "T&A Required",
@@ -95,7 +98,10 @@
   "ui_088": "Default",
   "ui_089": "Restore Default",
   "ui_090": "More Settings",
-  "ui_091": "Off",
+  "ui_091": {
+    "common": "Off",
+    "facestation_f2": "OFF"
+  },
   "ui_092": "End Time",
   "ui_093": "End Day",
   "ui_094": "End Month",
@@ -118,7 +124,8 @@
   "ui_111": "DNS",
   "ui_112": {
     "common": "Operation Mode",
-    "biolite_n2": "Mode"
+    "biolite_n2": "Mode",
+    "biostation_2a": "Mode"
   },
   "ui_113": "Baud Rate",
   "ui_114": "Dynamic ROI",
@@ -164,7 +171,7 @@
   "ui_148": "Backlight Timeout",
   "ui_149": "Security Level",
   "ui_150": "Secure Tamper",
-  "ui_151": "Use Secondary Key",
+  "ui_151": "Secondary Key",
   "ui_152": "Normal",
   "ui_153": "Volume",
   "ui_154": "Block Index",
@@ -175,7 +182,10 @@
   "ui_159": "Fast Matching",
   "ui_160": "Quick Reset",
   "ui_161": "Enabled",
-  "ui_162": "Never",
+  "ui_162": {
+    "common": "Never",
+    "facestation_f2": "Not Use"
+  },
   "ui_163": "Not Use",
   "ui_164": "Enabled (Soft)",
   "ui_165": "Enabled (Hard)",
@@ -211,20 +221,26 @@
   "ui_185": "Server Matching",
   "ui_186": "Server Matching (Fingerprint, Card, ID)",
   "ui_187": "Server Matching (Card, ID)",
-  "ui_188": "Device to Server Connection",
+  "ui_188": {
+    "common": "Device to Server Connection",
+    "device_manager": "Server Connection"
+  },
   "ui_189": "Server Port",
   "ui_190": "Server Matching",
   "ui_191": "Subnet",
   "ui_192": "Subnet Mask",
   "ui_193": "SETTINGS",
   "ui_194": "Configuration",
-  "ui_195": "Restore to default",
+  "ui_195": "Restore to Default",
   "ui_196": "Celsius/Fahrenheit",
   "ui_197": "Sensor Sensitivity",
   "ui_198": "Sensor Mode",
   "ui_199": "By User",
   "ui_200": "Number",
-  "ui_201": "Suprema Smart Card",
+  "ui_201": {
+    "common": "Suprema Smart Card",
+    "device_manager": "Suprema Smart Card Layout"
+  },
   "ui_202": "Output Byte Order",
   "ui_203": "Schedule",
   "ui_204": "Scramble Keypad",
@@ -238,7 +254,7 @@
   "ui_212": "Start",
   "ui_213": "Start Date",
   "ui_214": "Start Block Index",
-  "ui_215": "Start time",
+  "ui_215": "Start Time",
   "ui_216": "Start Day",
   "ui_217": "Start Month",
   "ui_218": "Start Week",
@@ -292,9 +308,18 @@
   "ui_259": "Auth Result Display Option",
   "ui_260": "Auth Timeout",
   "ui_261": "Auth Mode",
-  "ui_262": "Verify Successful",
-  "ui_263": "Verify Failed",
-  "ui_264": "Temp. Fail Sound",
+  "ui_262": {
+    "common": "Verify Successful",
+    "device_manager": "Auth Sucess"
+  },
+  "ui_263": {
+    "common": "Verify Failed",
+    "device_manager": "Auth Fail"
+  },
+  "ui_264": {
+    "common": "Temp. Fail Sound",
+    "facestation_f2": "Authentication Fail Sound"
+  },
   "ui_265": "Operation",
   "ui_266": "Temperature Check After Authentication",
   "ui_267": "Check After Authentication",
@@ -309,7 +334,10 @@
   "ui_273": "Normal User",
   "ui_274": "Switch",
   "ui_275": "Auto",
-  "ui_276": "Auto Connection",
+  "ui_276": {
+    "common": "Auto Connection",
+    "device_manager": "Auto Connect"
+  },
   "ui_277": "Auto On",
   "ui_278": "Operation Mode",
   "ui_279": "Job Code",
@@ -320,7 +348,10 @@
   "ui_284": "Device Private Msg.",
   "ui_285": "Search Device",
   "ui_286": "Restart Device",
-  "ui_287": "Device Reboot",
+  "ui_287": {
+    "common": "Device Reboot",
+    "device_manager": "Device Restart"
+  },
   "ui_288": "Apply Device",
   "ui_289": "Device Info",
   "ui_290": "Device Port",
@@ -352,8 +383,8 @@
   "ui_314": "Fingerprint",
   "ui_315": "Finger",
   "ui_316": {
-    "common": "First Letter Only",
-    "biostation_3": "Mask All but First Letter"
+    "common": "Mask All but First Letter",
+    "biolite_n2": "First Letter Only"
   },
   "ui_317": "Restore Default",
   "ui_318": "Total Bits",
@@ -368,10 +399,16 @@
   "ui_327": "Blink LED for PIN after tagging card",
   "ui_328": "Card Type",
   "ui_329": "Use QR as Card",
-  "ui_330": "Camera Frequency",
+  "ui_330": {
+    "common": "Camera Frequency",
+    "facestation_f2": "Camera"
+  },
   "ui_331": "Camera Configuration",
   "ui_332": "Kernel",
-  "ui_333": "Custom Smart Card",
+  "ui_333": {
+    "common": "Custom Smart Card",
+    "device_manager": "Custom Smart Card Layout"
+  },
   "ui_334": "Key Menu",
   "ui_335": "Keypad",
   "ui_336": "Keypad Setting",
@@ -389,13 +426,14 @@
   "ui_348": "File Read Access Key",
   "ui_349": "File Read Access Key Index",
   "ui_350": "Parity field",
-  "ui_351": "Pulse Interval(μs)",
-  "ui_352": "Pulse Width(μs)",
+  "ui_351": "Pulse interval (μs)",
+  "ui_352": "Pulse width (μs)",
   "ui_353": "FW Upgrade",
   "ui_354": "Format",
   "ui_355": {
     "common": "PORT",
-    "biolite_n2": "Port"
+    "biolite_n2": "Port",
+    "device_manager": "Port"
   },
   "ui_356": "Display Name",
   "ui_357": "Hide All",
@@ -417,5 +455,7 @@
   "ui_370": "Check Only",
   "ui_371": "Extended Private Auth Mode",
   "ui_372": "Enabled",
-  "ui_373": "Complete"
+  "ui_373": "Complete",
+  "ui_374": "QR/Barcode Scan Timeout",
+  "ui_375": "Camera Timeout"
 }
