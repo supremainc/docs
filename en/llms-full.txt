@@ -48120,13 +48120,14 @@ This document provides various features and configuration methods of **BioStar X
 
 ***
 
-#### [Overview→2 items](/docs/en/platform/biostar_x/overview)
+#### [Overview→3 items](/docs/en/platform/biostar_x/overview)
 
 This guide provides an overview of the key features of BioStar X, essential considerations before implementation, and the applicability across various environments. Understand the key technologies and advantages of BioStar X, such as AI-based access control, intelligent video analytics, and integrated security management, and review in advance whether implementation is optimized for your security infrastructure.
 
 * [Before Start](/docs/en/platform/biostar_x/before-start)
+* [지원 장치](/docs/en/platform/biostar_x/supported-device)
 * [System Minimum Requirements](/docs/en/platform/biostar_x/system-requirements)
-  [ <!-- -->2 items](/docs/en/platform/biostar_x/overview)
+  [ <!-- -->3 items](/docs/en/platform/biostar_x/overview)
 
 #### [Getting Started→8 items](/docs/en/platform/biostar_x/getting-started)
 
@@ -63326,6 +63327,127 @@ Info
 * For a Number Input Box, numbers are allowed and characters are not allowed.
 
 * For a Combo Box, the items that have been set to the field are displayed as item. If you want to configure a combo box field as shown in the screenshot below, you need to enter **Option 1**; **Option 2**; **Option 3**; **Option 4** in the data field.
+
+
+---
+
+### 지원 장치
+
+**Not translated**
+
+<br />
+
+This page is currently being translated. We will complete the translation as soon as possible.
+
+BioStar X 플랫폼에서 지원하는 장치 목록입니다.
+
+#### 지문 인증 장치[​](#지문-인증-장치 "Direct link to 지문 인증 장치")
+
+![BioStation A2](/docs/en/assets/images/biostation-a2-60ba960919ffd4d3b90afe84dc750b1f.png)
+
+BioStation A2
+
+![BioStation 2](/docs/en/assets/images/biostation-2-e13ab67a4a4e8764cfbd5e8f9b480d32.png)
+
+BioStation 2
+
+![BioStation 2a](/docs/en/assets/images/biostation-2a-fdf7c16d92b4e23774f46bb7f801f850.png)
+
+BioStation 2a
+
+![BioStation L2](/docs/en/assets/images/biostation-l2-991c94af37fb08c53678c54cfc05d1e3.png)
+
+BioStation L2
+
+***
+
+![BioLite N2](/docs/en/assets/images/biolite-n2-a3d699778ede31f9810d67a2b8b33182.png)
+
+BioLite N2
+
+![BioEntry W2](/docs/en/assets/images/bioentry-w2-46d297de7110e78ca90f87b2e73f31d2.png)
+
+BioEntry W2
+
+![BioEntry P2](/docs/en/assets/images/bioentry-p2-924e2d219c60daf7cfe55f6c7f5c076a.png)
+
+BioEntry P2
+
+![X-Station 2 Finger](/docs/en/assets/images/xstation2finger-761e3209ba773a5a968252d7a006ee22.png)
+
+X-Station 2 Finger
+
+#### 얼굴 인증 장치[​](#얼굴-인증-장치 "Direct link to 얼굴 인증 장치")
+
+![FaceStation 2](/docs/en/assets/images/facestation-2-32b17809bd48757102a1ce3d46b08bd4.png)
+
+FaceStation 2
+
+![FaceLite](/docs/en/assets/images/facelite-37cb8d2b34f622b2f8675eb15354992f.png)
+
+FaceLite
+
+![FaceStation F2](/docs/en/assets/images/facestation-f2-bca2ce0eafad480229e294a301669c6d.png)
+
+FaceStation F2
+
+***
+
+![BioStation 3](/docs/en/assets/images/biostation-3-5162585499363e967e31e6ae8e725ed8.png)
+
+BioStation 3
+
+![Bioentry W3](/docs/en/assets/images/bioentry-w3-4118a8124a0d912119639ce2f0ba21ca.png)
+
+Bioentry W3
+
+#### RFID 장치[​](#rfid-장치 "Direct link to RFID 장치")
+
+![X-Station 2](/docs/en/assets/images/xstation-2-c55d7bd20ec2c1af1f02ca39ec0f2af8.png)
+
+X-Station 2
+
+#### 지문 및 RFID 리더[​](#지문-및-rfid-리더 "Direct link to 지문 및 RFID 리더")
+
+![BioEntry R2](/docs/en/assets/images/bioentry-r2-924e2d219c60daf7cfe55f6c7f5c076a.png)
+
+BioEntry R2
+
+![XPass D2](/docs/en/assets/images/xpass-d2-f17ac694de22f79975a0a68581ee5ad8.png)
+
+XPass D2
+
+#### 지능형 컨트롤러 및 주변 장치[​](#지능형-컨트롤러-및-주변-장치 "Direct link to 지능형 컨트롤러 및 주변 장치")
+
+![CoreStation](/docs/en/assets/images/corestation-6211b01639831101250d6667458006f3.png)
+
+CoreStation
+
+![CoreStation 20](/docs/en/assets/images/corestation-20-c7246720f558c12c860bcf1ad31a2ded.png)
+
+CoreStation 20
+
+![Door Module](/docs/en/assets/images/dm-20-28ffc48574b2080ffe187199f4750bb4.png)
+
+Door Module
+
+![Door Interface](/docs/en/assets/images/di-24-7b0f1c047f2e4f95e64e21bb51b9f7e9.png)
+
+Door Interface
+
+***
+
+![Input Module](/docs/en/assets/images/im-120-dac10705626c8569bd3d817e5dd0f65f.png)
+
+Input Module
+
+![Output Module](/docs/en/assets/images/om-120-72c96a00be92e8811e09ef72d0c87561.png)
+
+Output Module
+
+![Secure Module](/docs/en/assets/images/sio2-d7ec61ef12a58b1077621a781b5b25d7.png)
+
+Secure Module
 
 
 ---

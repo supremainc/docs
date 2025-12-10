@@ -690,6 +690,7 @@
 - [Set Video Rules](/docs/en/platform/biostar_x/settings-videos-rule): This guide shows how to set video rules using VMS integrated with BioStar X.
 - [Integrate Virtual Device Event Log](/docs/en/platform/biostar_x/settings-virtual-device-event-log): This guide explains how to enroll a virtual device and log events that occur in external systems to BioStar X.
 - [Set Visitor](/docs/en/platform/biostar_x/settings-visitor): You can configure visiting sites and PCs. You can also set the terms and conditions for visitors. And You can create the information fields that you want to know from the visitors by using the Custom Visitor Field.
+- [지원 장치](/docs/en/platform/biostar_x/supported-device): BioStar X 플랫폼에서 지원하는 장치 목록을 확인할 수 있습니다.
 - [System Minimum Requirements](/docs/en/platform/biostar_x/system-requirements): Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.
 - [How to Use Time & Attendance](/docs/en/platform/biostar_x/tna): Set the attendance management rules and check the recorded work history through the device or output it as a report
 - [View the Report](/docs/en/platform/biostar_x/tna-report): You can generate T&A reports from user attendance events collected through the system, and edit time records or export them as CSV or PDF files.
