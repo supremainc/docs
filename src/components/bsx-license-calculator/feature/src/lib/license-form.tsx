@@ -112,26 +112,7 @@ export function LicenseForm() {
   return (
     <div className="max-w-8xl mx-auto p-3 pt-6 pb-10">
       <h1 className="text-2xl font-bold mb-4">BioStar X License Calculator</h1>
-      <div className="relative lg:h-fit lg:self-start lg:col-span-4 mb-5 text-black">
-        {result ? (
-          <LicenseResult licenseResult={result} onReset={handleReset} />
-        ) : (
-          <div className="px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-bold">Recommended License</h2>
-              <button
-                type="button"
-                onClick={handleReset}
-                className="text-xs bg-gray-500 text-white px-3 py-1 rounded-md font-medium hover:bg-gray-600 transition"
-              >
-                Reset All
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 text-center p-5">Enter license requirements to see results.</p>
-          </div>
-        )}
-      </div>
-      <div className="max-w relative mt-5 text-black">
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 text-black">
         <div className="space-y-2 lg:col-span-6">
         {/* Capacity Input */}
         <section className="px-4 pt-1 pb-2 rounded-lg bg-white shadow">
@@ -352,7 +333,27 @@ export function LicenseForm() {
             ))}
           </div>
         </section>
+        
+        </div>
 
+        <div className="lg:sticky lg:top-6 lg:h-fit lg:self-start lg:col-span-4">
+          {result ? (
+            <LicenseResult licenseResult={result} onReset={handleReset} />
+          ) : (
+            <div className="px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-bold">Recommended License</h2>
+                <button
+                  type="button"
+                  onClick={handleReset}
+                  className="text-xs bg-gray-500 text-white px-3 py-1 rounded-md font-medium hover:bg-gray-600 transition"
+                >
+                  Reset All
+                </button>
+              </div>
+              <p className="text-sm text-gray-500 text-center p-5">Enter license requirements to see results.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
