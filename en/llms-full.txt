@@ -1574,7 +1574,7 @@ Release|2021-06-01
 
 ***
 
-1. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar 2 Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
+1. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
 
 2. Card data were output with the wrong BitCount while the device was communicating with a 3rd party controller via OSDP. Affects version<!-- -->: <!-- -->1.0.0
 
@@ -4845,7 +4845,7 @@ Release|2021-04-20
 
 1. Card data were output with the wrong BitCount when the device was connected to a 3rd-party system via OSDP. Affects version<!-- -->: <!-- -->1.0.0
 
-2. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar 2 Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
+2. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
 
 3. It was not able to communicate with a 3rd-party controller via OSDP with the default key before network initialization. (only for devices released with the firmware version 1.5.0 or later) Affects version<!-- -->: <!-- -->1.0.0
 
@@ -9188,7 +9188,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * User Name: Set the name of daylight-saving time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -11466,7 +11466,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -11484,7 +11484,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
 
 #### Device[​](#device "Direct link to Device")
 
@@ -11539,24 +11539,6 @@ Connect USB Memory and import user information to the device or export log and u
 Caution
 
 Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
-
-Info
-
-The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally.
-
-* Samsung Electronics: SUM-BSG 32GB
-
-* LG Electronics: MU 1 USB 32GB, MU28GBC 32GB
-
-* SanDisk: Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB
-
-* Sony: USM-SA1 32GB
-
-* Transcend: JetFlash 760 32GB
-
-<!-- -->
-
-The supported USB flash drives listed above were all tested with USB Type-A. A separate USB Type-C adapter is required to connect each USB memory to the device.
 
 ##### Restart device[​](#restart-device "Direct link to Restart device")
 
@@ -11686,7 +11668,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * Name: Set the name of daylight-saving time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -11878,7 +11860,7 @@ Server IP, Server Port can be entered by pressing the numeric buttons. You can d
 
 3. Select the desired item and press / to change the settings.
 
-   * Operation Mode: You can select the RS-485 operation mode.
+   * Mode: You can select the RS-485 operation mode.
 
    * Baud Rate: You can select the desired communication performance.
 
@@ -12298,7 +12280,7 @@ Set the authentication mode. You can use Face, PIN, Card / QR Code, and ID in co
 
 3. Select the authentication mode to modify.
 
-4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press OK.
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press OK.
 
 ##### Delete auth mode[​](#delete-auth-mode "Direct link to Delete auth mode")
 
@@ -14713,7 +14695,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -14735,7 +14717,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
 
 #### Network[​](#network "Direct link to Network")
 
@@ -14945,7 +14927,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * Name: Set the name of daylight-saving time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -14999,29 +14981,11 @@ Caution
 
 Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
 
-<!-- -->
-
 Info
 
 * It is recommended to use a USB flash drive formatted in exFAT. USB flash drives in FAT32 format may malfunction when more than 50,000 face credentials are stored.
 
 * Check the amount of free space on your USB flash drive. To save 100,000 face credentials, a minimum of 15 GB of free space is required.
-
-* The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally.
-
-  * Samsung Electronics: SUM-BSG 32GB
-
-  * LG Electronics: MU 1 USB 32GB, MU28GBC 32GB
-
-  * SanDisk: Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB
-
-  * Sony: USM-SA1 32GB
-
-  * Transcend: JetFlash 760 32GB
-
-  <!-- -->
-
-  The supported USB flash drives listed above were all tested with USB Type-A. A separate USB Type-C adapter is required to connect each USB memory to the device.
 
 ##### Secure Tamper[​](#secure-tamper "Direct link to Secure Tamper")
 
@@ -15251,7 +15215,7 @@ You can register user information that includes biometric authentication data.
 
    * **ID**: You can enroll a user ID by entering a number from 1 to 4294967295. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * Face: You can enroll a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To add more faces, press ![](/docs/en/img/common/ico-add.svg). Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
+   * Face: You can enroll a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To add more faces, press ![](/docs/en/img/common/ico-add.svg). Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
 
    * Card / QR Code: You can enroll a card for user authentication. Press Card / QR Code → Next, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, press Card / QR Code → ![](/docs/en/img/common/ico-add.svg).
 
@@ -15335,7 +15299,7 @@ User Management or Administrator can modify the registered user information. A c
 
 4. Select the user to modify.
 
-5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press OK.
 
    * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
@@ -17860,7 +17824,7 @@ Release|2021-05-24
 
 1. The device rebooted when the Supervised Input short circuit occurred without the CoreStation SETUP Manager IP being completely saved. Affects version<!-- -->: <!-- -->1.3.1
 
-2. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar 2 Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
+2. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
 
 3. It failed to transfer user data during user synchronization as the face data size exceeded the maximum size allowed for the system. Affects version<!-- -->: <!-- -->1.4.0
 
@@ -18744,7 +18708,7 @@ Info
 
 * Compatible devices and firmware are subject to change.
 
-* If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. If you are using the device as a slave device, the firmware of the connected master device must also be the latest version compatible with BioStar X.7.0 or higher.
+* If the device firmware version is lower than the versions listed above, upgrade the device firmware in BioStar X. If you are using the device as a slave device, the firmware of the connected master device must also be the latest version compatible with BioStar 2 2.7.0 or higher.
 
 * For more information about upgrading device firmware, please refer to [IP Device (Upgrade device firmware)](/docs/en/device/device_manager/ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](/docs/en/device/device_manager/xpd2-settings#device-firmware-upgrade), or the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-device-upgrade-firmware).
 
@@ -18779,7 +18743,7 @@ You can configure the automatic device connection feature or check the app versi
 
    ![](/docs/en/img/en/device/device-manager-app-setting.png)
 
-   * Auto Connection: You can enable or disable the automatic device connection feature.
+   * Auto Connect: You can enable or disable the automatic device connection feature.
 
    * App Version Info: You can check the current app version and license information.
 
@@ -18822,7 +18786,7 @@ Biometric devices only support network and server settings.
 
 ![](/docs/en/img/en/device/ip-device-network.png)
 
-* PORT: Enter the port that the device will use.
+* Port: Enter the port that the device will use.
 
 * DHCP: Enable this to allow the device to use dynamic IP. If you enable this option, you cannot enter network information manually.
 
@@ -18834,7 +18798,7 @@ Biometric devices only support network and server settings.
 
 ![](/docs/en/img/en/device/ip-device-server.png)
 
-* Device to Server Connection: You can set the server communication method. To search and connect the device from the server, select Server > Device. To set the server information to connect the device, select Device > Server.
+* Server Connection: You can set the server communication method. To search and connect the device from the server, select Server > Device. To set the server information to connect the device, select Device > Server.
 
 * Server IP: Enter the server's IP address.
 
@@ -18866,9 +18830,9 @@ Biometric devices only support network and server settings.
 
 * Scan Card: You can set the color displayed on the device LED and the number of times the buzzer sound plays when scanning a card.
 
-* Verify Successful: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
+* Auth Sucess: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
 
-* Verify Failed: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
+* Auth Fail: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
 
 Info
 
@@ -18922,11 +18886,11 @@ You can restart the device.
 
 1. Refer to [connect device](#connect-device) to connect to the device to restart.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Device Reboot.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Device Restart.
 
    ![](/docs/en/img/en/device/ip-device-restart.png)
 
-3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connection feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
 
 #### Initialize settings[​](#initialize-settings "Direct link to Initialize settings")
 
@@ -18934,7 +18898,7 @@ You can initialize device settings.
 
 1. Refer to [connect device](#connect-device) to connect to the device to initialize the settings.
 
-2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to default.
+2. ![](/docs/en/img/common/ico-option.svg) → Press Restore to Default.
 
    ![](/docs/en/img/en/device/ip-device-restore-default.png)
 
@@ -19037,9 +19001,9 @@ Info
 
   * CSN Card: You can select the CSN card type and set the byte order.
 
-  * Suprema Smart Card: You can select the types of smart cards issued by Suprema.
+  * Suprema Smart Card Layout: You can select the types of smart cards issued by Suprema.
 
-  * Custom Smart Card: You can select the types of smart cards issued by third parties.
+  * Custom Smart Card Layout: You can select the types of smart cards issued by third parties.
 
   * Mobile: You can set the mobile card type.
 
@@ -19061,7 +19025,7 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
     * Total Bits: Enter the total number of bits.
 
-    * ID Fields: Enter the start and end bits of the ID you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add an ID field.
+    * ID field: Enter the start and end bits of the ID you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add an ID field.
 
     * Parity field: Enter the position of the parity field and the start and end bits you wish to use. ![](/docs/en/img/common/ico-add3.svg) You can press Add to add a parity field.
 
@@ -19069,15 +19033,15 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
       To add a parity field, enter the total bits.
 
-* Pulse Width(μs): You can set the pulse width of the Wiegand signal.
+* Pulse width (μs): You can set the pulse width of the Wiegand signal.
 
-* Pulse Interval(μs): You can set the pulse interval of the Wiegand signal.
+* Pulse interval (μs): You can set the pulse interval of the Wiegand signal.
 
 ##### Suprema smart card layout[​](#suprema-smart-card-layout "Direct link to Suprema smart card layout")
 
 ![](/docs/en/img/en/device/xpd2-template-suprema-card.png)
 
-* Use Secondary Key: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
+* Secondary Key: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
 
 * MIFARE: You can set up MIFARE cards.
 
@@ -19085,7 +19049,7 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
   * Primary Key: The key that encrypts communication between smart cards and the device.
 
-  * Use Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Use Secondary Key from the previous depth is activated.
+  * Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Secondary Key from the previous depth is activated.
 
   * Start Block Index: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
 
@@ -19095,7 +19059,7 @@ When set to MSB, card data is processed in left-to-right order, sequentially pro
 
   * Primary Key: The key that encrypts communication between smart cards and the device.
 
-  * Use Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Use Secondary Key from the previous depth is activated.
+  * Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Secondary Key from the previous depth is activated.
 
   * App ID: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESCire can be configured.
 
@@ -19117,7 +19081,7 @@ Info
 
 ![](/docs/en/img/en/device/xpd2-template-custom-card.png)
 
-* Use Secondary Key: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
+* Secondary Key: You can set whether to use the auxiliary site key. By setting the auxiliary site key, you can use it for authentication when the card's main key does not match.
 
 * MIFARE: You can set up MIFARE cards.
 
@@ -19125,13 +19089,13 @@ Info
 
   * Primary Key: The key that encrypts communication between smart cards and the device.
 
-  * Use Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Use Secondary Key from the previous depth is activated.
+  * Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Secondary Key from the previous depth is activated.
 
   * Block Index: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
 
   * Skip Bytes: You can set the starting point for reading the card number.
 
-  * Data Size: (If the set values of Primary Key and Use Secondary Key are the same as the values of the card) You can set the size of the data to read from the card.
+  * Data Size: (If the set values of Primary Key and Secondary Key are the same as the values of the card) You can set the size of the data to read from the card.
 
 * DESFire: You can set up DESFire cards.
 
@@ -19139,7 +19103,7 @@ Info
 
   * Primary Key: The key that encrypts communication between smart cards and the device.
 
-  * Use Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Use Secondary Key from the previous depth is activated.
+  * Secondary Key: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when Secondary Key from the previous depth is activated.
 
   * App ID: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESCire can be configured.
 
@@ -19149,7 +19113,7 @@ Info
 
   * Skip Bytes: You can set the starting point for reading the card number.
 
-  * Data Size: (If the set values of Primary Key and Use Secondary Key are the same as the values of the card) You can set the size of the data to read from the card.
+  * Data Size: (If the set values of Primary Key and Secondary Key are the same as the values of the card) You can set the size of the data to read from the card.
 
 * Byte Order: You can set the byte order for smart card output.
 
@@ -19197,9 +19161,9 @@ Info
 
 * Scan Card: You can set the color displayed on the device LED and the number of times the buzzer sound plays when scanning a card.
 
-* Verify Successful: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
+* Auth Sucess: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon successful authentication.
 
-* Verify Failed: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
+* Auth Fail: You can set the color displayed on the device LED and the number of times the buzzer sound plays upon failed authentication.
 
 Info
 
@@ -19359,11 +19323,11 @@ You can restart the device.
 
 1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to restart.
 
-2. Press ![](/docs/en/img/common/ico-option.svg) → Device Reboot.
+2. Press ![](/docs/en/img/common/ico-option.svg) → Device Restart.
 
    ![](/docs/en/img/en/device/xpd2-template-management-restart.png)
 
-3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connection feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the Auto Connect feature. For detailed configuration instructions, refer to [app settings](/docs/en/device/device_manager/initial-setup#app-settings).
 
 #### Change admin password[​](#admin-password-change "Direct link to Change admin password")
 
@@ -23162,7 +23126,7 @@ Set the authentication mode. You can use Face, PIN, Card, and ID in combination 
 
 3. Select the authentication mode to modify.
 
-4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press OK.
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press OK.
 
 ##### Delete auth mode[​](#delete-auth-mode "Direct link to Delete auth mode")
 
@@ -25557,7 +25521,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -25575,7 +25539,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
 
 #### Network[​](#network "Direct link to Network")
 
@@ -25731,7 +25695,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * Name: You can view the name of the daylight savings time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -25776,26 +25740,6 @@ Connect USB Memory and import user information to the device or export log and u
 Caution
 
 Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
-
-Info
-
-The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally.
-
-<!-- -->
-
-* Samsung Electronics: SUM-LSB 8GB, SUM-PSB 8GB, SUM-PSB 16GB, SUM-BSG 32GB
-
-* LG Electronics: XTICK J3 WINDY 8GB, SMART USB MU1 White 8GB, MU 1 USB 32GB, MU28GBC 32GB, XTICK MOBY J1 16GB
-
-* SanDisk: Cruzer 16GB, Cruzer Blade CZ50 4GB, Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB
-
-* Sony: Micro Vault Click 8GB, MicroVault CLICK 16GB, USM-SA1 32GB
-
-* Transcend: JetFlash 760 8GB, JetFlash 760 32GB, JetFlash 500 8GB
-
-* Memorex: MINI500 8GB
-
-* A-DATA: S102 PRO 8GB
 
 ##### Secure Tamper[​](#secure-tamper "Direct link to Secure Tamper")
 
@@ -26095,7 +26039,7 @@ User Management or Administrator can modify the registered user information. A c
 
 4. Select the user to modify.
 
-5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press OK.
 
    * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
@@ -26359,7 +26303,7 @@ Fingerprint authentication is only available on the FSF2-ODB product.
 
 3. Select the authentication mode to modify.
 
-4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press OK.
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press OK.
 
 ##### Delete auth mode[​](#delete-auth-mode "Direct link to Delete auth mode")
 
@@ -26401,9 +26345,9 @@ You can change the configuration for facial authentication.
 
    ![](/docs/en/img/en/device/fsf2-auth.png)
 
-   * Light Brightness: You can manually adjust the brightness of the device light. Set the brightness with Normal or High or select Never to turn the light off.
+   * Light Brightness: You can manually adjust the brightness of the device light. Set the brightness with Normal or High or select Not Use to turn the light off.
 
-   * Motion Sensor: Set the sensitivity to detect motion around the device. When Motion Sensor is set to Off, touch the screen to authenticate your face.
+   * Motion Sensor: Set the sensitivity to detect motion around the device. When Motion Sensor is set to OFF, touch the screen to authenticate your face.
 
    * Enroll Timeout: If the face is not enrolled within the set time, the face registration will be canceled.
 
@@ -26449,7 +26393,7 @@ You can change the configuration for facial authentication.
 
      * Check Mode: You can set the confirmation mode according to the purpose.
 
-     * Temp. Fail Sound: You can set the notification status for authentication failures due to no mask worn or exceeding the standard temperature.
+     * Authentication Fail Sound: You can set the notification status for authentication failures due to no mask worn or exceeding the standard temperature.
 
      * Mask Detection: You can set whether to use mask detection.
 
@@ -26495,7 +26439,7 @@ Info
 
   * Emissivity: Set the infrared emissivity.
 
-  * ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): You can set the ROI (Region of Interest) manually when Dynamic ROI is set to Never. Adjust the ROI location and size to specify the area where the thermal camera will measure temperature. ROI X(%) indicates the left and right positions of the region of interest, and the larger this value, the further the region moves to the right of the screen. ROI Y(%) indicates the top and bottom positions of the region of interest, and the larger this value, the further the region moves up. ROI Width(%) and ROI Height(%) indicate the size of the region of interest; as both values increase, the area for measuring temperature widens. For example, if the values of ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%) are changed from default values to 40, 15, 70, 40 respectively, the region of interest will change as shown below.
+  * ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): You can set the ROI (Region of Interest) manually when Dynamic ROI is set to Not Use. Adjust the ROI location and size to specify the area where the thermal camera will measure temperature. ROI X(%) indicates the left and right positions of the region of interest, and the larger this value, the further the region moves to the right of the screen. ROI Y(%) indicates the top and bottom positions of the region of interest, and the larger this value, the further the region moves up. ROI Width(%) and ROI Height(%) indicate the size of the region of interest; as both values increase, the area for measuring temperature widens. For example, if the values of ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%) are changed from default values to 40, 15, 70, 40 respectively, the region of interest will change as shown below.
 
   ![](/docs/en/img/device/auth-roi1.png)
 
@@ -26577,7 +26521,7 @@ You can set how to register T\&A mode.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select AUTHENTICATION → T\&A.
+2. Select AUTHENTICATION → T\&A Mode.
 
 3. Change the desired item.
 
@@ -26609,7 +26553,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user ID.
 
-     * First Letter Only: Show only the first character of the user ID.
+     * Mask All but First Letter: Show only the first character of the user ID.
 
      * Hide All: Do not show the user ID.
 
@@ -26617,7 +26561,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user name.
 
-     * First Letter Only: Show only the first character of the user name.
+     * Mask All but First Letter: Show only the first character of the user name.
 
      * Hide All: Do not show the user name.
 
@@ -27840,7 +27784,7 @@ Caution
 
 * After upgrading the firmware to v2.x.x, it is not able to downgrade to an earlier version (v1.x.x) firmware.
 
-* When upgrading the firmware from v1.x.x to v2.x.x, it is recommended to use BioStar 2 or BioStar 2 Device SDK.
+* When upgrading the firmware from v1.x.x to v2.x.x, it is recommended to use BioStar 2 or BioStar Device SDK.
 
 * When upgrading the firmware using a USB memory inevitably, first set **Menu Timeout** to **Always On** in the **Display & Sound** menu before proceeding with the upgrade. Also, even if a failure message is displayed during the upgrade, DO NOT remove the USB memory and wait until a success message is displayed. The device will restart automatically when the upgrade is complete.
 
@@ -27966,9 +27910,9 @@ Release|2020-11-13
 
 1. The performed action, such as temperature output, was different from the intended action responding to the input signal set in the Trigger & Action feature when using the Suprema Thermal Camera.
 
-2. Time shown on the device was displayed incorrectly when setting up time with the BioStar 2 Device SDK.
+2. Time shown on the device was displayed incorrectly when setting up time with the BioStar Device SDK.
 
-3. An abnormal device shutdown occurred when sending face templates of FaceStation 2 or FaceLite to the device by using the BioStar 2 Device SDK.
+3. An abnormal device shutdown occurred when sending face templates of FaceStation 2 or FaceLite to the device by using the BioStar Device SDK.
 
 4. The text on the Advanced tab was displayed abnormally when entering the detailed page of the device on BioStar 2 after the device database initialized for Security Tamper.
 
@@ -28025,7 +27969,7 @@ Release|2021-01-05
 
 ***
 
-1. The device stoped working when calling the BS2AuthConfig of a device using BioStar 2 Device SDK.
+1. The device stoped working when calling the BS2AuthConfig of a device using BioStar Device SDK.
 
 2. The slave device restarted abnormally when connected as master-slave.
 
@@ -28281,7 +28225,7 @@ Before upgrading this firmware, proceed with 'Delete Data & Sync Device' to prev
 
 1. Changed firmware upgrade method according to dualization for the front cover (LCD & touchpad).
 
-2. Improved to extract a new visual face template from the warped image only if necessary after checking the template version (Algorithm compatibility) when sending templates from BioStar 2 or BioStar 2 Device SDK.
+2. Improved to extract a new visual face template from the warped image only if necessary after checking the template version (Algorithm compatibility) when sending templates from BioStar 2 or BioStar Device SDK.
 
 #### Bug Fixes[​](#bug-fixes "Direct link to Bug Fixes")
 
@@ -28948,7 +28892,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -28966,7 +28910,7 @@ You can change the display and sound settings of the device.
 
    Info
 
-   For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+   For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
 
 #### Communication Settings[​](#communication-settings "Direct link to Communication Settings")
 
@@ -29040,7 +28984,7 @@ You can set the frequency to prevent the video from flickering.
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Press DEVICE → Camera Frequency.
+2. Press DEVICE → Camera.
 
    ![](/docs/en/img/en/device/fsf2-device-camera.png)
 
@@ -29100,7 +29044,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * Name: Set the name of daylight-saving time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -29148,7 +29092,7 @@ Caution
 
 * Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
 
-* It is recommended to use BioStar X or BioStar X Device SDK when upgrading firmware from v1.x.x to v2.x.x.
+* It is recommended to use BioStar X or BioStar Device SDK when upgrading firmware from v1.x.x to v2.x.x.
 
 * When upgrading firmware using a USB drive, first set DISPLAY & SOUND menu to Menu Timeout Always On and then proceed with the upgrade. Also, do not remove the USB drive even if a failure message appears during the upgrade process; wait until a success message is displayed. Once the upgrade is completed, the device will automatically restart.
 
@@ -29321,9 +29265,9 @@ You can register user information that includes biometric authentication data.
 
    * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * Face: You can register a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To enroll more faces, click ![](/docs/en/img/common/ico-add2.svg). Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
+   * Face: You can register a face for user authentication. Press Face → Next and follow the instructions on the screen to enroll your face. To enroll more faces, click ![](/docs/en/img/common/ico-add2.svg). Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
 
-   * Fingerprint: FSF2-ODB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
+   * Fingerprint: FSF2-ODB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
 
    * Card: You can enroll a card for user authentication. Press Card → Next and scan the card to assign to the user in the RF card authentication section. To enroll more cards, click ![](/docs/en/img/common/ico-add2.svg).
 
@@ -29363,7 +29307,7 @@ You can register user information that includes biometric authentication data.
 
 2. Select USER → ![](/docs/en/img/common/ico-add2.svg).
 
-3. ![](/docs/en/img/common/ico-authmode-face-bs3.png) Press Face → Next.
+3. Press ![](/docs/en/img/common/ico-authmode-face-bs3.png) Face → Next.
 
 4. Adjust a distance between the face and screen and look straight at the camera of the device.
 
@@ -29405,9 +29349,9 @@ Info
 
 1. Press ![](/docs/en/img/common/ico-menu.svg) and authenticate with the Admin level credential.
 
-2. Select ![](/docs/en/img/common/ico-add2.svg).
+2. Select USER → ![](/docs/en/img/common/ico-add2.svg).
 
-3. ![](/docs/en/img/common/ico-authmode-fingerprint.png) Press Fingerprint → Next.
+3. Press ![](/docs/en/img/common/ico-authmode-fingerprint.png) Fingerprint → Next.
 
 4. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint again.
 
@@ -29437,7 +29381,7 @@ User Management or Administrator can modify the registered user information. A c
 
 4. Select the user to modify.
 
-5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press OK.
 
    * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and then press OK.
 
@@ -33342,7 +33286,7 @@ Release|2021-05-24
 
 5. Device responded that it supported transparent mode by OSDP\_PDCAP when connecting as a slave while it did not support it. Affects version<!-- -->: <!-- -->1.0.0
 
-6. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar 2 Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
+6. When calling the BS2\_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. Affects version<!-- -->: <!-- -->1.0.0
 
 7. The OSDP LED Temporary command did not work properly. Affects version<!-- -->: <!-- -->1.0.0
 
@@ -37878,7 +37822,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    | Category       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
    | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Fingerprint    | - ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode uses only fingerprint.- ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | Fingerprint    | - ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode uses only fingerprint.<br />- ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires entering a PIN after authenticating via fingerprint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
    | Card / QR Code | - ![](/docs/en/img/common/ico-authmode-card-bs3.png): This mode uses only card / QR code authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires authentication via card/QR code followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires card / QR code authentication followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-card-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code. |
    | ID             | - ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png): This mode requires entering an ID followed by fingerprint authentication.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode requires ID entry followed by PIN entry.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) / ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.<br />- ![](/docs/en/img/common/ico-authmode-id-bs3.png) + ![](/docs/en/img/common/ico-authmode-fingerprint.png) + ![](/docs/en/img/common/ico-authmode-pin-bs3.png): This mode uses both fingerprint authentication and PIN entry after entering an ID.                                                                                                                                                                           |
 
@@ -37888,7 +37832,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    * For more information about Schedule settings, refer to the [BioStar X Administrator Guide](/docs/en/platform/biostar_x/settings-schedule).
 
-   * To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
+   * To use QR/Barcode authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR/Barcode must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
 
 6. To save the settings, press OK.
 
@@ -37900,7 +37844,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 3. Select the authentication mode to modify.
 
-4. Refer to [registering auth mode](#registering-auth-mode) to modify the authentication mode, then press OK.
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press OK.
 
 ##### Delete auth mode[​](#delete-auth-mode "Direct link to Delete auth mode")
 
@@ -37954,7 +37898,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user ID.
 
-     * First Letter Only: Show only the first character of the user ID.
+     * Mask All but First Letter: Show only the first character of the user ID.
 
      * Hide All: Do not show the user ID.
 
@@ -37962,7 +37906,7 @@ You can set the auth result display option.
 
      * Display All: Show the entire user name.
 
-     * First Letter Only: Show only the first character of the user name.
+     * Mask All but First Letter: Show only the first character of the user name.
 
      * Hide All: Do not show the user name.
 
@@ -37972,33 +37916,33 @@ You can set QR/Barcode authentication.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, enable QR in QR/Barcode Operation.
+2. After pressing AUTHENTICATION, enable QR/Barcode in QR/Barcode Operation.
 
 XS2-QDPB, XS2-QAPB
 
 ![](/docs/en/img/en/device/xs2-auth3.png)
 
-* **QR/Barcode**: You can choose whether to use QR/Barcode authentication.
+* QR/Barcode: You can choose whether to use QR/Barcode authentication.
 
-* **QR/Barcode Scan Wait Time**: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 4 to 10 seconds.
+* QR/Barcode Scan Timeout: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 4 to 10 seconds.
 
-* **Card Authentication via QR**: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user.
+* Use QR as Card: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
 XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB
 
 ![](/docs/en/img/en/device/xs2-auth3-1.png)
 
-* **QR/Barcode**: You can choose whether to use QR/Barcode authentication.
+* QR/Barcode: You can choose whether to use QR/Barcode authentication.
 
-* **Camera Wait Time**: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 3 to 20 seconds. Can only be set when **QR/Barcode** is enabled.
+* Camera Timeout: If a QR/Barcode is not scanned within the set time, recognition will fail. It can be set to 3 to 20 seconds. Can only be set when QR/Barcode is enabled.
 
-* **Motion Sensor Sensitivity**: Set the sensitivity that detects movement around the device. Can only be set when **QR/Barcode** is enabled.
+* Motion Sensor: Set the sensitivity that detects movement around the device. Can only be set when QR/Barcode is enabled.
 
-* **Card Authentication via QR**: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user. Can only be set when **QR/Barcode** is enabled.
+* Use QR as Card: You can set it to authenticate using a QR code that has the same data as the CSN card or Wiegand card issued to the user. Can only be set when QR/Barcode is enabled.
 
 Info
 
-To use QR authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
+To use QR/Barcode authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, QR/Barcode must be activated in AUTHENTICATION → QR/Barcode Operation, and a separate device license is required. For more information, refer to [License](/docs/en/device/xstation_2/settings#license).
 
 #### Fingerprint settings XS2-ODPB, XS2-OAPB[​](#fingerprint-settings-xs2-odpb-xs2-oapb "Direct link to fingerprint-settings-xs2-odpb-xs2-oapb")
 
@@ -38040,7 +37984,7 @@ You can set how to register T\&A mode.
 
 1. Click ![](/docs/en/img/common/ico-menu2.svg) and authenticate with administrator privileges.
 
-2. After pressing AUTHENTICATION, change the desired item in T\&A.
+2. After pressing AUTHENTICATION, change the desired item in T\&A Mode.
 
    ![](/docs/en/img/en/device/xs2-auth5.png)
 
@@ -40005,7 +39949,7 @@ You can change the display and sound settings of the device.
 
    * Language: You can select the language that will be displayed on the screen.
 
-   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
+   * Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Device Private Msg. can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if Device Private Msg. is enabled on the device.
 
    * Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. Server Private Msg. can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
 
@@ -40023,7 +39967,7 @@ You can change the display and sound settings of the device.
 
 Info
 
-For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information about the BioStar Device SDK, visit the [BioStar Device SDK web page](https://kb.supremainc.com/bs2sdk/).
 
 #### Network[​](#network "Direct link to Network")
 
@@ -40173,7 +40117,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
    * Name: You can view the name of the daylight savings time.
 
-   * Start Month / Start Week / Start Day / Start time: Set details of when daylight-saving time begins.
+   * Start Month / Start Week / Start Day / Start Time: Set details of when daylight-saving time begins.
 
    * End Month / End Week / End Day / End Time: Set details of when daylight-saving time ends.
 
@@ -40220,30 +40164,6 @@ Connect USB Memory and import user information to the device or export log and u
 Caution
 
 Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
-
-<!-- -->
-
-Info
-
-The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally.
-
-<!-- -->
-
-* Samsung Electronics: SUM-LSB 8GB, SUM-PSB 8GB, SUM-PSB 16GB, SUM-BSG 32GB
-
-* LG Electronics: XTICK J3 WINDY 8GB, SMART USB MU1 White 8GB, MU 1 USB 32GB, MU28GBC 32GB, XTICK MOBY J1 16GB
-
-* SanDisk: Cruzer 16GB, Cruzer Blade CZ50 4GB, Cruzer Blade CZ50 32GB, CZ48 Ultra USB 3.0 64GB, CZ80 USB3.0 64GB, CZ52 64GB, Cruzer Glide Z60 128GB, Cruzer Force CZ71 32GB
-
-* Sony: Micro Vault Click 8GB, MicroVault CLICK 16GB, USM-SA1 32GB
-
-* Transcend: JetFlash 760 8GB, JetFlash 760 32GB, JetFlash 500 8GB
-
-* Memorex: MINI500 8GB
-
-* A-DATA: S102 PRO 8GB
-
-The supported USB flash drives listed above were all tested with USB Type-A. A separate USB Type-C adapter is required to connect each USB memory to the device.
 
 ##### Secure Tamper[​](#secure-tamper "Direct link to Secure Tamper")
 
@@ -40340,11 +40260,11 @@ Q.I entered my PIN and pressed the OK button, but I still cannot open the door.
 * Check if you have changed the PIN recently.
 * If you cannot remember the PIN, request it from the administrator and enter it again.
 
-##### QR/바코드[​](#qrbarcode)
+##### QR/Barcode[​](#qrbarcode)
 
-Q.QR/바코드 인식이 잘 되지 않습니다.
+Q.It fails to scan a QR/Barcode.
 
-* Refer to [How to scan a QR/Barcode](getting-started#how-to-scan-qrbarcode) and try again.
+* Refer to [Correct QR/Barcode Authentication Method](getting-started#how-to-scan-qrbarcode) and try again.
 * **XS2-QDPB**, **XS2-QAPB**: Place the guide beam at the center of the QR code.
 * **XS2-DPB**, **XS2-APB**: Position the QR/Barcode in the center of the scan screen of the device.
 * Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.
@@ -40392,7 +40312,7 @@ You can register user information that includes biometric authentication data.
 
    * **ID**: Enter a number between 1-4294967295 to register the user ID. If User ID Type is set to Alphanumeric, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * Fingerprint: XS2-ODPB, XS2-OAPB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
+   * Fingerprint: XS2-ODPB, XS2-OAPB You can enroll a fingerprint for user authentication. Press Fingerprint → Next and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press ![](/docs/en/img/common/ico-add2.svg). For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
 
    * Card / QR Code: You can enroll a card for user authentication. Press Card / QR Code → Next, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, click ![](/docs/en/img/common/ico-add2.svg).
 
@@ -40460,7 +40380,7 @@ User Management or Administrator can modify the registered user information. You
 
 4. Select the user to modify.
 
-5. Refer to [the following](#registering-user-information) to modify the information and then press OK.
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press OK.
 
    * To delete a user, select ![](/docs/en/img/common/ico-delete.svg) and press OK.
 
@@ -63341,25 +63261,27 @@ This page is currently being translated. We will complete the translation as soo
 
 BioStar X 플랫폼에서 지원하는 장치 목록입니다.
 
-#### 지문 인증 장치[​](#지문-인증-장치 "Direct link to 지문 인증 장치")
+![BioEntry W3](/docs/en/assets/images/bioentry-w3-4118a8124a0d912119639ce2f0ba21ca.png)
 
-![BioStation A2](/docs/en/assets/images/biostation-a2-60ba960919ffd4d3b90afe84dc750b1f.png)
-
-BioStation A2
-
-![BioStation 2](/docs/en/assets/images/biostation-2-e13ab67a4a4e8764cfbd5e8f9b480d32.png)
-
-BioStation 2
+BioEntry W3
 
 ![BioStation 2a](/docs/en/assets/images/biostation-2a-fdf7c16d92b4e23774f46bb7f801f850.png)
 
 BioStation 2a
 
-![BioStation L2](/docs/en/assets/images/biostation-l2-991c94af37fb08c53678c54cfc05d1e3.png)
+![BioStation 3](/docs/en/assets/images/biostation-3-5162585499363e967e31e6ae8e725ed8.png)
 
-BioStation L2
+BioStation 3
+
+![FaceStation F2](/docs/en/assets/images/facestation-f2-bca2ce0eafad480229e294a301669c6d.png)
+
+FaceStation F2
 
 ***
+
+![FaceStation 2](/docs/en/assets/images/facestation-2-32b17809bd48757102a1ce3d46b08bd4.png)
+
+FaceStation 2
 
 ![BioLite N2](/docs/en/assets/images/biolite-n2-a3d699778ede31f9810d67a2b8b33182.png)
 
@@ -63373,69 +63295,33 @@ BioEntry W2
 
 BioEntry P2
 
-![X-Station 2 Finger](/docs/en/assets/images/xstation2finger-761e3209ba773a5a968252d7a006ee22.png)
-
-X-Station 2 Finger
-
-#### 얼굴 인증 장치[​](#얼굴-인증-장치 "Direct link to 얼굴 인증 장치")
-
-![FaceStation 2](/docs/en/assets/images/facestation-2-32b17809bd48757102a1ce3d46b08bd4.png)
-
-FaceStation 2
-
-![FaceLite](/docs/en/assets/images/facelite-37cb8d2b34f622b2f8675eb15354992f.png)
-
-FaceLite
-
-![FaceStation F2](/docs/en/assets/images/facestation-f2-bca2ce0eafad480229e294a301669c6d.png)
-
-FaceStation F2
-
 ***
-
-![BioStation 3](/docs/en/assets/images/biostation-3-5162585499363e967e31e6ae8e725ed8.png)
-
-BioStation 3
-
-![Bioentry W3](/docs/en/assets/images/bioentry-w3-4118a8124a0d912119639ce2f0ba21ca.png)
-
-Bioentry W3
-
-#### RFID 장치[​](#rfid-장치 "Direct link to RFID 장치")
-
-![X-Station 2](/docs/en/assets/images/xstation-2-c55d7bd20ec2c1af1f02ca39ec0f2af8.png)
-
-X-Station 2
-
-#### 지문 및 RFID 리더[​](#지문-및-rfid-리더 "Direct link to 지문 및 RFID 리더")
 
 ![BioEntry R2](/docs/en/assets/images/bioentry-r2-924e2d219c60daf7cfe55f6c7f5c076a.png)
 
 BioEntry R2
 
-![XPass D2](/docs/en/assets/images/xpass-d2-f17ac694de22f79975a0a68581ee5ad8.png)
+![X-Station 2](/docs/en/assets/images/xstation-2-4f1f01eef5027d5ee759152f9d6cc695.png)
 
-XPass D2
+X-Station 2
 
-#### 지능형 컨트롤러 및 주변 장치[​](#지능형-컨트롤러-및-주변-장치 "Direct link to 지능형 컨트롤러 및 주변 장치")
+![XPass 2](/docs/en/assets/images/xpass-d2-f17ac694de22f79975a0a68581ee5ad8.png)
 
-![CoreStation](/docs/en/assets/images/corestation-6211b01639831101250d6667458006f3.png)
-
-CoreStation
+XPass 2 / XPass D2
 
 ![CoreStation 20](/docs/en/assets/images/corestation-20-c7246720f558c12c860bcf1ad31a2ded.png)
 
 CoreStation 20
 
-![Door Module](/docs/en/assets/images/dm-20-28ffc48574b2080ffe187199f4750bb4.png)
+***
 
-Door Module
+![CoreStation](/docs/en/assets/images/corestation-6211b01639831101250d6667458006f3.png)
+
+CoreStation
 
 ![Door Interface](/docs/en/assets/images/di-24-7b0f1c047f2e4f95e64e21bb51b9f7e9.png)
 
 Door Interface
-
-***
 
 ![Input Module](/docs/en/assets/images/im-120-dac10705626c8569bd3d817e5dd0f65f.png)
 
@@ -63445,9 +63331,19 @@ Input Module
 
 Output Module
 
+***
+
+![Door Module](/docs/en/assets/images/dm-20-28ffc48574b2080ffe187199f4750bb4.png)
+
+Door Module
+
 ![Secure Module](/docs/en/assets/images/sio2-d7ec61ef12a58b1077621a781b5b25d7.png)
 
 Secure Module
+
+ 
+
+ 
 
 
 ---
