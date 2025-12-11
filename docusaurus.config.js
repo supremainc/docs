@@ -108,8 +108,8 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            // 'platform/biostar_air/**/**.{md,mdx}',
-            // 'device/**/**.{md,mdx}'
+            'device/xpass_q2/**.{md,mdx}',
+            'platform/biostar_air/**/**.{md,mdx}',
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -194,9 +194,8 @@ const config = {
           excludeRoutes: [
             '/common/**',
             '/_unused/**',
-            '/platform/biostar_air/**',
-            '/device/**',
             '/products/**',
+            '/platform/biostar_air/**',
           ],
           autoSectionDepth: 2
         }
@@ -249,29 +248,29 @@ const config = {
           width: '120px',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   label: 'BioStar X',
-          //   position: 'right',
-          //   docId: 'platform/biostar_x/index'
-          // },
           {
-            type: 'dropdown',
-            label: 'Platforms',
+            type: 'doc',
+            label: 'BioStar X',
             position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'BioStar X',
-                docId: 'platform/biostar_x/index'
-              },
-              {
-                type: 'doc',
-                label: 'BioStar Air',
-                docId: 'platform/biostar_air/index'
-              }
-            ]
+            docId: 'platform/biostar_x/index'
           },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Platforms',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar X',
+          //       docId: 'platform/biostar_x/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'BioStar Air',
+          //       docId: 'platform/biostar_air/index'
+          //     }
+          //   ]
+          // },
           {
             type: 'dropdown',
             label: 'Devices',
@@ -327,11 +326,11 @@ const config = {
                 label: 'X-Station 2',
                 docId: 'device/xstation_2/index'
               },
-              {
-                type: 'doc',
-                label: 'XPass Q2',
-                docId: 'device/xpass_q2/index'
-              },
+              // {
+              //   type: 'doc',
+              //   label: 'XPass Q2',
+              //   docId: 'device/xpass_q2/index'
+              // },
               {
                 type: 'doc',
                 label: 'XPass 2',
