@@ -16,7 +16,7 @@ You can configure settings to apply to XPass D2 as a template and then directly 
 
 :::info
 
-Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [Upgrade device firmware](#device-firmware-upgrade) to upgrade the firmware.
 
 :::
 
@@ -28,7 +28,7 @@ You can set RS-485 communication, card format, keypad settings, PIN, LED, and bu
 
 2. Select XPass D2 on the main screen.
 
-3. Click <Cmd sid='ui_338' product='dev' /> → <Image src='/img/common/ico-add.svg' ico />.
+3. Tap <Cmd sid='ui_338' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />.
 
    <Image src='/img/device/xpd2-template-management-add.png' className='none' width={540} />
 
@@ -42,7 +42,7 @@ You can add up to 100 templates.
 
 :::
 
-### Set template name and administrator password
+### Set Template Name and Admin Password
 
 <Image src='/img/device/xpd2-template-name-pw.png' width={250} />
 
@@ -52,15 +52,15 @@ You can add up to 100 templates.
 
 :::info
 
-* The administrator password can be set to 6~32 digits.
+* The administrator password can be set to 6-32 digits.
 
 * Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
 
-* For more information on changing the administrator password, refer to [changing the administrator password](#admin-password-change).
+* For more information on changing the administrator password, refer to [Change admin password](#admin-password-change).
 
 :::
 
-### Interfaces
+### Interface
 
 <Image src='/img/device/xpd2-template-interface.png' width={250} />
 
@@ -68,7 +68,7 @@ You can add up to 100 templates.
 
 * <Cmd sid='ui_298' product='dev' />: Set the RS-485 transmission speed.
 
-### Certifications
+### Authentication
 
 <Image src='/img/device/xpd2-template-auth-cardtype.png' width={250} />
 
@@ -88,7 +88,7 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 :::
 
-### Wiegand card format
+### Wiegand Card Format
 
 <Image src='/img/device/xpd2-template-wiegand-card.png' width={250} />
 
@@ -102,9 +102,9 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
     * <Cmd sid='ui_318' product='dev' />: Enter the total number of bits.
 
-    * <Cmd sid='ui_024' product='dev' />: Enter the start and end bits of the ID you wish to use. <Image src='/img/common/ico-add3.svg' ico /> You can press <Cmd sid='ui_319' product='dev' /> to add an ID field.
+    * <Cmd sid='ui_024' product='dev' />: Enter the start and end bits of the ID you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add an ID field.
 
-    * <Cmd sid='ui_350' product='dev' />: Enter the position of the parity field and the start and end bits you wish to use. <Image src='/img/common/ico-add3.svg' ico /> You can press <Cmd sid='ui_319' product='dev' /> to add a parity field.
+    * <Cmd sid='ui_350' product='dev' />: Enter the position of the parity field and the start and end bits you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add a parity field.
 
       :::info
 
@@ -116,7 +116,7 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 * <Cmd sid='ui_351' product='dev' />: You can set the pulse interval of the Wiegand signal.
 
-### Suprema smart card layout
+### Suprema Smart Card Layout
 
 <Image src='/img/device/xpd2-template-suprema-card.png' width={250} />
 
@@ -158,7 +158,7 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 :::
 
-### Custom smart card layout
+### Custom Smart Card Layout
 
 <Image src='/img/device/xpd2-template-custom-card.png' width={250} />
 
@@ -208,7 +208,7 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 :::
 
-### Keypad settings
+### Keypad Setting
 
 <Image src='/img/device/xpd2-template-keypad.png' width={250} />
 
@@ -254,7 +254,7 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 * LED can be set to display a maximum of three colors in alternating patterns. Press the slot to choose a color.
 
-* <Image src='/img/common/ico-cancel2.svg' ico />Selecting this slot will skip displaying the color set for that slot and display the color set for the next slot.
+* Selecting <Image src='/img/common/ico-cancel2.svg' ico alone /> skips the color sequence for that slot and displays the color set for the next slot.
 
 :::
 
@@ -264,7 +264,7 @@ The added templates can be applied uniformly to multiple devices via BLE communi
 
 :::info
 
-Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [upgrading device firmware](#device-firmware-upgrade) to upgrade the firmware.
+Some settings may not apply if the device's firmware version is low. To apply all settings, refer to [Upgrade device firmware](#device-firmware-upgrade) to upgrade the firmware.
 
 :::
 
@@ -308,7 +308,7 @@ Some settings may not apply if the device's firmware version is low. To apply al
 
 4. Select the template you want to edit from the list of templates.
 
-5. Refer to [add template](#template-add) to edit the template.
+5. Refer to [Add template](#template-add) to edit the template.
 
 6. To save the changed settings, click <Cmd sid='ui_295' product='dev' />; to save as a new template, click <Cmd sid='ui_178' product='dev' />.
 
@@ -324,7 +324,7 @@ Some settings may not apply if the device's firmware version is low. To apply al
 
 4. Select the template you wish to delete from the list of templates.
 
-5. To delete the template, click <Image src='/img/common/ico-delete.svg' ico /> → <Cmd sid='ui_367' product='dev' />.
+5. Tap <Image src='/img/common/ico-delete.svg' ico alone /> → <Cmd sid='ui_367' product='dev' /> to delete a template.
 
    <Image src='/img/device/xpd2-template-management-select-del.png' width={250} />
 
@@ -340,9 +340,9 @@ You can export templates for XPass D2 settings from the app.
 
    <Image src='/img/device/xpd2-template-management-export1.png' className='none' width={840} />
 
-4. At the top of the template list screen, click <Image src='/img/common/ico-menu1.svg' ico /> and select <Cmd sid='ui_339' product='dev' />.
+4. At the top of the template list, tap <Image src='/img/common/ico-menu1.svg' ico alone /> and select <Cmd sid='ui_339' product='dev' />.
 
-5. Select the template to export, then click <Image src='/img/common/ico-check.svg' ico />.
+5. After selecting the template to export, tap <Image src='/img/common/ico-check.svg' ico alone />.
 
    <Image src='/img/device/xpd2-template-management-export2.png' width={250} />
 
@@ -364,7 +364,7 @@ You can import templates for XPass D2 settings into the app.
 
    <Image src='/img/device/xpd2-template-management-import.png' className='none' width={840} />
 
-4. At the top of the template list screen, click <Image src='/img/common/ico-menu1.svg' ico /> and select <Cmd sid='ui_337' product='dev' />.
+4. At the top of the template list, tap <Image src='/img/common/ico-menu1.svg' ico alone /> and select <Cmd sid='ui_337' product='dev' />.
 
 5. Select the template you want to import from the folder where the templates are stored.
 
@@ -388,7 +388,7 @@ You can search for and connect to XPass D2 installed nearby. By connecting to Su
 
 4. Select a device by checking the device ID in the device list or bring your mobile device close to the device to connect.
 
-5. Enter the connection password. To display the entered password on the screen, press <Image src='/img/common/ico-password.svg' ico />.
+5. Enter the connection password. Tap <Image src='/img/common/ico-password.svg' ico alone /> to display the entered password.
 
 6. Press <Cmd sid='ui_367' product='dev' /> to complete the device connection.
 
@@ -404,9 +404,9 @@ You can easily upgrade the device's firmware.
 
 :::
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to upgrade the firmware.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device you want to upgrade the firmware.
 
-2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_018' product='dev' />.
+2. Tap <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_018' product='dev' />.
 
    <Image src='/img/device/xpd2-template-management-fwupgrade.png' width={250} />
 
@@ -418,21 +418,21 @@ You can easily upgrade the device's firmware.
 
 You can restart the device.
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device you want to restart.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device you want to restart.
 
-2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_287' product='dev' />.
+2. Tap <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_287' product='dev' />.
 
    <Image src='/img/device/xpd2-template-management-restart.png' width={250} />
 
-3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the <Cmd sid='ui_276' product='dev' /> feature. For detailed configuration instructions, refer to [app settings](initial-setup#app-settings).
+3. When you restart the device, the BLE communication connection with the mobile device will be disconnected. To reconnect automatically, enable the <Cmd sid='ui_276' product='dev' /> feature. For detailed configuration instructions, refer to [Configuring app settings](initial-setup#app-settings).
 
 ## Change admin password {#admin-password-change}
 
 You can change the admin password of the template.
 
-1. Refer to [device search and connect](#device-search-connect) to connect to the device with the template where you want to change the password.
+1. Refer to [Search and connect device](#device-search-connect) to connect to the device with the template where you want to change the password.
 
-2. Press <Image src='/img/common/ico-option.svg' ico /> → <Cmd sid='ui_156' product='dev' />.
+2. Tap <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_156' product='dev' />.
 
    <Image src='/img/device/xpd2-template-management-password.png' width={250} />
 
@@ -444,7 +444,7 @@ You can change the admin password of the template.
 
 :::info
 
-* The administrator password can be set to 6~32 digits.
+* The administrator password can be set to 6-32 digits.
 
 * Be careful not to lose the administrator password. If you lose the administrator password, you will need to initialize the device to connect to the device with the applied template.
 

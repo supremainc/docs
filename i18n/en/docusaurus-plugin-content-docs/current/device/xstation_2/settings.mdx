@@ -25,7 +25,7 @@ You can change the display and sound settings of the device.
 
    * <Cmd sid='ui_227' product='dev' />: You can select the language that will be displayed on the screen.
 
-   * <Cmd sid='ui_284' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. <Cmd sid='ui_284' product='dev' /> can be set using the BioStar X Device SDK. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_284' product='dev' /> is enabled on the device.
+   * <Cmd sid='ui_284' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. The <Cmd sid='ui_284' product='dev' /> can be set using the BioStar Device SDK. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_284' product='dev' /> is enabled on the device.
 
    * <Cmd sid='ui_184' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. <Cmd sid='ui_184' product='dev' /> can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_184' product='dev' /> is enabled on the device.
 
@@ -43,7 +43,7 @@ You can change the display and sound settings of the device.
 
 :::info
 
-For more information about the BioStar X Device SDK, visit the [BioStar X Device SDK web page](https://kb.supremainc.com/bs2sdk/).
+For more information on the BioStar Device SDK, refer to the [BioStar Device SDK page](https://kb.supremainc.com/bs2sdk/doku.php) on the Suprema Knowledge Base.
 
 :::
 
@@ -89,7 +89,7 @@ You can change the network settings of the device, such as Ethernet, server, OSD
 
    * <Cmd sid='ui_182' product='dev' />: Enter the IP address of the PC on which BioStar X is installed.
 
-   * You can enter <Cmd sid='ui_183' product='dev' /> instead of <Cmd sid='ui_182' product='dev' />.
+   * <Cmd sid='ui_183' product='dev' />: You can enter <Cmd sid='ui_183' product='dev' /> instead of <Cmd sid='ui_182' product='dev' />.
 
    * <Cmd sid='ui_189' product='dev' />: Enter the port of the PC on which BioStar X is installed.
 
@@ -153,7 +153,7 @@ You can set the input ports of <Cmd sid='ui_144' product='dev' /> and <Cmd sid='
 
    * <Cmd sid='ui_015' product='dev' />: Select the input port connected to the exit button.
 
-   * Switch: Select the type of switch (<Cmd sid='ui_274' product='dev' />N/O or <Cmd sid='ui_035' product='dev' />N/C<Cmd sid='ui_036' product='dev' />) for the Exit Button's input port.
+   * <Cmd sid='ui_274' product='dev' />: Select the type of switch (<Cmd sid='ui_036' product='dev' /> or <Cmd sid='ui_035' product='dev' />) for the Exit Button's input port.
 
 ### Date & Time {#date-time}
 
@@ -241,14 +241,6 @@ Do not disconnect the power supply while upgrading the firmware of the device. T
 
 :::
 
-import SupportedMemoryInfo from '../../common/_installation-supported-memory-devices-info.mdx';
-
-:::info
-
-<SupportedMemoryInfo />
-
-:::
-
 ### Secure Tamper
 
 You can set whether to use security tamper. When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key.
@@ -289,7 +281,7 @@ You can change the authentication method of the Master Admin.
 
 ### Administrator two-step authentication {#admin-2-step-authentication}
 
-Devices upgraded to firmware version 1.4.0 do not provide <Cmd sid='ui_128' product='dev' /> settings, but you can enhance the security of the device by strengthening the administrator's permissions through the <Cmd sid='ui_073' product='dev' /> option.
+Devices with upgraded firmware do not provide <Cmd sid='ui_128' product='dev' /> Setting; enhance device security by elevating full admin privileges through the <Cmd sid='ui_073' product='dev' /> option.
 
 1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
 
@@ -299,7 +291,7 @@ Devices upgraded to firmware version 1.4.0 do not provide <Cmd sid='ui_128' prod
 
 :::info
 
-* <Cmd sid='ui_073' product='dev' /> becomes available after upgrading the firmware to v#.#.# or later, and after upgrading to v#.#.# or later, you cannot downgrade to a lower version.
+* <Cmd sid='ui_073' product='dev' /> is available after upgrading the firmware to v#.#.# or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
 
 * The first step of authentication is default unless the <Cmd sid='ui_073' product='dev' /> option is enabled.
 

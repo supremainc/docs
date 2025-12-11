@@ -192,15 +192,15 @@ export function BiometricReader({ productLinks: productLinksProp }) {
 export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
-    {
-      title: 'XPass Q2',
-      url: `/device/xpass_q2`,
-      img: '#',
-      desc: `${translate({
-        id: "externalLinks.XPassQ2.desc",
-        message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
-      })}`
-    },
+    // {
+    //   title: 'XPass Q2',
+    //   url: `/device/xpass_q2`,
+    //   img: require('@site/static/img/device/xpass_q2.png').default,
+    //   desc: `${translate({
+    //     id: "externalLinks.XPassQ2.desc",
+    //     message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
+    //   })}`
+    // },
     {
       title: 'X-Station 2',
       url: `/device/xstation_2`,

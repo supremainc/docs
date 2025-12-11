@@ -17,7 +17,7 @@ You can register user information that includes biometric authentication data.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Image src='/img/common/ico-add2.svg' ico alone /> and set the desired items. User usage information appears.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> and set the desired items. User usage information appears.
 
    <Image src='/img/device/fsf2-user-add.png' className='none' width={650} />
 
@@ -25,11 +25,11 @@ You can register user information that includes biometric authentication data.
 
    * **Name**: Enter the user name.
 
-   * **ID**: Enter a number between 1-4294967295 to register the user ID. If <Cmd sid='ui_168' product='dev' /> is set to <Cmd sid='ui_237' product='dev' />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+   * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If <Cmd sid='ui_168' product='dev' /> is set to <Cmd sid='ui_237' product='dev' />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
-   * <Cmd sid='ui_228' product='dev' />: You can register a face for user authentication. Press <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and follow the instructions on the screen to enroll your face. To enroll more faces, click <Image src='/img/common/ico-add2.svg' ico alone />. Please refer to [Enrolling User Faces](#enrolling-user-faces) to learn more about face enrollment.
+   * <Cmd sid='ui_228' product='dev' />: You can register a face for user authentication. Press <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and follow the instructions on the screen to enroll your face. To enroll more faces, click <Image src='/img/common/ico-add2.svg' ico alone />. Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
 
-   * <Cmd sid='ui_312' product='dev' />: <Badge only>FSF2-ODB</Badge> You can enroll a fingerprint for user authentication. Press <Cmd sid='ui_312' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press <Image src='/img/common/ico-add2.svg' ico alone />. For more information on fingerprint registration, refer to [enrolling user fingerprint](#enrolling-user-fingerprint).
+   * <Cmd sid='ui_312' product='dev' />: <Badge only>FSF2-ODB</Badge> You can enroll a fingerprint for user authentication. Press <Cmd sid='ui_312' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and follow the on-screen instructions to enroll a fingerprint. To enroll more fingerprints, press <Image src='/img/common/ico-add2.svg' ico alone />. For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
 
    * <Cmd sid='ui_322' product='dev' />: You can enroll a card for user authentication. Press <Cmd sid='ui_322' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and scan the card to assign to the user in the RF card authentication section. To enroll more cards, click <Image src='/img/common/ico-add2.svg' ico alone />.
 
@@ -71,9 +71,9 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Image src='/img/common/ico-add2.svg' ico alone />.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone />.
 
-3. <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> Press <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' />.
+3. Press <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' />.
 
 4. Adjust a distance between the face and screen and look straight at the camera of the device.
 
@@ -83,7 +83,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 * Face information from FaceStation F2 is not compatible with face templates from FaceStation 2 and FaceLite.
 
-* You can also batch enroll face information from FaceStation F2 by uploading photos from the device or importing from a CSV in BioStar X. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Manual](../../platform/biostar_x/enroll-credential-face).
+* You can also batch enroll face information from FaceStation F2 by uploading photos from the device or importing from a CSV in BioStar X. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-face).
 
 * To use a Visual Face feature correctly, take a picture by following instructions below.
 
@@ -95,9 +95,9 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Image src='/img/common/ico-add2.svg' ico alone />.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone />.
 
-3. <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> Press <Cmd sid='ui_312' product='dev' /> → <Cmd sid='ui_108' product='dev' />.
+3. Press <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> <Cmd sid='ui_312' product='dev' /> → <Cmd sid='ui_108' product='dev' />.
 
 4. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint again.
 
@@ -123,13 +123,13 @@ User Management or Administrator can modify the registered user information. A c
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Click <Image src='/img/common/ico-search.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
+2. Click <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-search.svg' ico alone />.
 
 3. Select your search terms. You can search for users using <Cmd sid='ui_299' product='dev' />, <Cmd sid='ui_167' product='dev' />, <Cmd sid='ui_253' product='dev' />, <Cmd sid='ui_228' product='dev' />, <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />.
 
 4. Select the user to modify.
 
-5. Refer to [the following](#registering-user-information) to modify the information and then press <Cmd sid='ui_037' product='dev' />.
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press <Cmd sid='ui_037' product='dev' />.
 
    * To delete a user, select <Image src='/img/common/ico-delete.svg' ico alone /> and then press <Cmd sid='ui_367' product='dev' />.
 
@@ -137,7 +137,7 @@ User Management or Administrator can modify the registered user information. A c
 
 * Fingerprint searching is only available on the FSF2-ODB product.
 
-* <Cmd sid='ui_320' product='dev' /> can be registered in BioStar X. For more information on registering access groups, refer to [the BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+* <Cmd sid='ui_320' product='dev' /> can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 :::
 
@@ -147,7 +147,7 @@ You can delete all registered users at once.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Image src='/img/common/ico-delete.svg' ico alone /> to <Cmd sid='ui_166' product='dev' />.
+2. Select <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-delete.svg' ico alone />.
 
 3. Select <Cmd sid='ui_303' product='dev' /> to check, then press <Cmd sid='ui_037' product='dev' />.
 

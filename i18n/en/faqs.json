@@ -42,14 +42,14 @@
   },
   {
     "category": {
-      "title": "QR/바코드",
+      "title": "QR/Barcode",
       "hid": "qrbarcode",
       "contents": [
         {
           "product": [ "xstation_2" ],
-          "question": "QR/바코드 인식이 잘 되지 않습니다.",
+          "question": "It fails to scan a QR/Barcode.",
           "answer": [
-            "Refer to <a href='getting-started#how-to-scan-qrbarcode'>How to scan a QR/Barcode</a> and try again.",
+            "Refer to <a href='getting-started#how-to-scan-qrbarcode'>Correct QR/Barcode Authentication Method</a> and try again.",
             "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Place the guide beam at the center of the QR code.",
             "<b>XS2-DPB</b>, <b>XS2-APB</b>: Position the QR/Barcode in the center of the scan screen of the device.",
             "Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.",
@@ -110,11 +110,11 @@
       "hid": "fingerprint",
       "contents": [
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2", "facestation_f2" ],
           "question": "The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.",
           "answer": [
             "Check <a href='getting-started#cautions-enrolling-fingers'>How to enroll a fingerprint</a> and enroll the fingerprint again.",
-            "If your fingerprint has a cut, the device may recognize your fingerprint as someone else\\'s fingerprint.",
+            "If your fingerprint has a cut, the device may recognize your fingerprint as someone else's fingerprint.",
             "If there are a large number of enrolled fingerprints, change <span class='cmd'>Matching Timeout</span> and try again.",
             "The authentication rate may vary for each fingerprint due to different characteristics. Enroll the fingerprint of another finger."
           ]
@@ -132,7 +132,7 @@
           "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
           "question": "The fingerprint sensor does not turn on.",
           "answer": [
-            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want to keep the fingerprint sensor on, go to <span class='cmd'>AUTH</span> → <span class='cmd'>Fingerprint</span> → <span class='cmd'>Sensor Mode</span> and then select <span class='cmd'>Always On</span>."
+            "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want the fingerprint sensor to always be on, set <span class='cmd'>Sensor Mode</span> to <span class='cmd'>Always On</span>."
           ]
         }
       ]
@@ -190,7 +190,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "bioentry_w3", "biostation_2a", "facestation_f2", "biolite_n2", "xstation_2" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a" ],
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
