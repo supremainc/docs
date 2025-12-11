@@ -158,42 +158,6 @@ const config = {
         anonymizeIP: true,
       },
     ],
-    [
-      '@signalwire/docusaurus-plugin-llms-txt',
-      {
-        // v2.0 API 구조로 수정
-        markdown: {
-          enableFiles: false,
-          // relativePaths: true,
-          // includeBlog: false,
-          // includePages: false,
-          // includeDocs: true,
-          // includeVersionedDocs: false,
-          // excludeRoutes: ['/platform/biostar_air/**', '/device/**'],
-        },
-        llmsTxt: {
-          siteTitle: 'Suprema Docs',
-          siteDescription: "Check out all of Suprema's products and BioStar related information here.",
-          enableLlmsFullTxt: true,
-          includeBlog: false,
-          includePages: false,
-          includeDocs: true,
-          includeVersionedDocs: false, // llms.txt에서는 기본값이 false
-          excludeRoutes: [
-            '/common/**',
-            '/_unused/**',
-            '/products/**',
-            '/bsx-license-calculator/**',
-            '/en/products/**',
-            '/en/common/**',
-            '/en/_unused/**',
-            '/en/platform/biostar_air/**',
-            '/en/device/**'
-          ],
-          autoSectionDepth: 2
-        }
-      },
-    ],
   ],
   markdown: {
     mermaid: true,
