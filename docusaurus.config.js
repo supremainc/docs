@@ -151,13 +151,6 @@ const config = {
     ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
-    [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-98B2Y5C3H6',
-        anonymizeIP: true,
-      },
-    ],
   ],
   markdown: {
     mermaid: true,
