@@ -137,13 +137,17 @@ const sidebars = {
                 'platform/biostar_air/manage-floor-level',
               ]
             },
-            'platform/biostar_air/manage-alarm-zone',
             {
               type: 'category',
               label: 'Monitoring',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/monitoring',
+              },
               items: [
                 'platform/biostar_air/monitoring-event-and-audit-logs',
                 'platform/biostar_air/monitoring-door-status',
+                'platform/biostar_air/monitoring-alert-report-history',
               ]
             },
             {
