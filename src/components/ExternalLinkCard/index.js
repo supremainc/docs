@@ -87,6 +87,13 @@ export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'BioStation 3 Max',
+      url: `/device/biostation_3_max`,
+      img: '#',
+      //img: require('@site/static/img/device/xpass_q2.png').default,
+      desc: 'BioStation 3 Max',
+    },
+    {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
