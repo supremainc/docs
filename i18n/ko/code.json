@@ -1089,5 +1089,20 @@
   },
   "externalLinks.XPassQ2.desc": {
     "message": "카드 및 QR/바코드 인증 지원 출입 통제 장치"
+  },
+  "externalLinks.dev.sdk.desc": {
+    "message": "지문 인식 장치의 핵심 기능을<br/>타사 소프트웨어와 완벽한 통합 지원"
+  },
+  "externalLinks.dev.xapi.desc": {
+    "message": "BioStar X의 모든 API를<br/>한눈에 볼 수 있는 API 문서"
+  },
+  "externalLinks.dev.2api.desc": {
+    "message": "BioStar 2의 모든 API를<br/>한눈에 볼 수 있는 API 문서"
+  },
+  "externalLinks.dev.gsdk.desc": {
+    "message": "다양한 프로그래밍 언어 지원하는<br/>크로스 플랫폼 솔루션"
+  },
+  "externalLinks.dev.svpsdk.desc": {
+    "message": "슈프리마 장치의 핵심 기능을<br/>타 소프트웨어에서 지원"
   }
 }
