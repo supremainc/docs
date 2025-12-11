@@ -326,11 +326,11 @@ const config = {
                 label: 'X-Station 2',
                 docId: 'device/xstation_2/index'
               },
-              // {
-              //   type: 'doc',
-              //   label: 'XPass Q2',
-              //   docId: 'device/xpass_q2/index'
-              // },
+              {
+                type: 'doc',
+                label: 'XPass Q2',
+                docId: 'device/xpass_q2/index'
+              },
               {
                 type: 'doc',
                 label: 'XPass 2',
