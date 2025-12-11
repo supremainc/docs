@@ -1,0 +1,745 @@
+# Suprema Docs
+
+> Check out all of Suprema's products and BioStar related information here.
+
+
+## En
+
+- [Suprema Docs](/docs/en/): Check out all of Suprema's products and BioStar related information here.
+- [BioEntry P2](/docs/en/device/bioentry_p2): BioEntry P2 is a compact access control device based on Suprema's next-generation biometric technology and security platform. Equipped with a class-leading 1.0GHz CPU, it offers ultra-fast authentication performance and rapid boot speed, while applying Suprema's latest fingerprint recognition algorithm for enhanced performance. Additionally, using multi-RFID card technology that can read both 125kHz and 13.56MHz frequencies, it can recognize various standards such as MIFARE, HID iCLASS, DESFire, FeliCa, HID Prox, and EM with a single device. Designed in a mullion-type, the BioEntry P2 can be perfectly installed in narrow spaces such as door frames.
+- [Appendices](/docs/en/device/bioentry_p2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/bioentry_p2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/bioentry_p2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/bioentry_p2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/bioentry_p2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioEntry P2 Release Notes](/docs/en/device/bioentry_p2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioEntry P2 firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_170904)](/docs/en/device/bioentry_p2/release-notes/100): Release2017-09-04
+- [Firmware Version 1.1.0 (Build No. 1.1.0_180317)](/docs/en/device/bioentry_p2/release-notes/110): Release2018-03-26
+- [Firmware Version 1.1.1 (Build No. 1.1.1_180720)](/docs/en/device/bioentry_p2/release-notes/111): Release2018-07-25
+- [Firmware Version 1.1.2 (Build No. 1.1.2_180907)](/docs/en/device/bioentry_p2/release-notes/112): Release2018-09-20
+- [Firmware Version 1.2.0 (Build No. 1.2.0_181119)](/docs/en/device/bioentry_p2/release-notes/120): Release2018-11-29
+- [Firmware Version 1.2.1 (Build No. 1.2.1_190304)](/docs/en/device/bioentry_p2/release-notes/121): Release2019-03-12
+- [Firmware Version 1.3.0 (Build No. 1.3.0_190626)](/docs/en/device/bioentry_p2/release-notes/130): Release2019-07-12
+- [Firmware Version 1.3.1 (Build No. 1.3.1_190911)](/docs/en/device/bioentry_p2/release-notes/131): Release2019-09-19
+- [Firmware Version 1.4.0 (Build No. 1.4.0_200625)](/docs/en/device/bioentry_p2/release-notes/140): Release2020-07-13
+- [Firmware Version 1.4.1 (Build No. 1.4.1_210511)](/docs/en/device/bioentry_p2/release-notes/141): Release2021-06-01
+- [Firmware Version 1.4.2 (Build No. 1.4.2_211018)](/docs/en/device/bioentry_p2/release-notes/142): Release2021-10-22
+- [Firmware Version 1.4.3 (Build No. 1.4.3_211213)](/docs/en/device/bioentry_p2/release-notes/143): Release2022-01-25
+- [Firmware Version 1.4.4 (Build No. 1.4.4_220914)](/docs/en/device/bioentry_p2/release-notes/144): Release2022-09-14
+- [Firmware Version 1.5.1 (Build No. 1.5.1_231113)](/docs/en/device/bioentry_p2/release-notes/151): Release2023-11-20
+- [Firmware Version 1.5.2 (Build No. 1.5.2_240508)](/docs/en/device/bioentry_p2/release-notes/152): Release2024-05-09
+- [Safety Instructions](/docs/en/device/bioentry_p2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [BioEntry R2](/docs/en/device/bioentry_r2): BioEntry R2 is a compact fingerprint reader designed for ACU systems. Using the latest Suprema fingerprint recognition algorithms and sensors, it can acquire high-resolution fingerprint images and utilize multi RFID card technology that can simultaneously read 125kHz and 13.56MHz frequencies, recognizing various standard cards in one device. Additionally, with its Mullion-type design, it can be perfectly installed even in narrow spaces like door frames, and can build an enhanced ACU system together with Suprema's intelligent biometric controller, CoreStation.
+- [Appendices](/docs/en/device/bioentry_r2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/bioentry_r2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/bioentry_r2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/bioentry_r2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/bioentry_r2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioEntry R2 Release Notes](/docs/en/device/bioentry_r2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioEntry R2 firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_170904)](/docs/en/device/bioentry_r2/release-notes/100): Release2017-09-04
+- [Firmware Version 1.1.0 (Build No. 1.1.0_180311)](/docs/en/device/bioentry_r2/release-notes/110): Release2018-03-23
+- [Firmware Version 1.1.1 (Build No. 1.1.1_180720)](/docs/en/device/bioentry_r2/release-notes/111): Release2018-07-25
+- [Firmware Version 1.2.0 (Build No. 1.2.0_181106)](/docs/en/device/bioentry_r2/release-notes/120): Release2018-11-29
+- [Firmware Version 1.3.0 (Build No. 1.3.0_190626)](/docs/en/device/bioentry_r2/release-notes/130): Release2019-07-12
+- [Firmware Version 1.3.1 (Build No. 1.3.1_190829)](/docs/en/device/bioentry_r2/release-notes/131): Release2019-09-19
+- [Firmware Version 1.4.0 (Build No. 1.4.0_200521)](/docs/en/device/bioentry_r2/release-notes/140): Release2020-05-27
+- [Firmware Version 1.4.1 (Build No. 1.4.1_210511)](/docs/en/device/bioentry_r2/release-notes/141): Release2021-06-01
+- [Safety Instructions](/docs/en/device/bioentry_r2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [BioEntry W2](/docs/en/device/bioentry_w2): BioEntry W2 is an outdoor fingerprint access control device based on Suprema's latest fingerprint authentication technology and hardware platform. Equipped with a class-leading 1.2GHz quad-core CPU, it offers ultra-fast authentication performance and quick startup speed, employing Suprema's next-generation fingerprint recognition algorithm and Live Finger Detection technology to provide enhanced security performance. Additionally, it supports both 125kHz and 13.56MHz frequency RFID cards simultaneously, allowing it to read various cards such as EM, HID Prox, MIFARE, iCLASS, DESFire, and FeliCa, and its IP67 rated waterproof and dustproof design along with IK09 rated impact resistance makes it easy to install in outdoor environments.
+- [Appendices](/docs/en/device/bioentry_w2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/bioentry_w2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/bioentry_w2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/bioentry_w2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/bioentry_w2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioEntry W2 Release Notes](/docs/en/device/bioentry_w2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioEntry W2 firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_160531)](/docs/en/device/bioentry_w2/release-notes/100): Release2016-05-31
+- [Firmware Version 1.0.1 (Build No. 1.0.1_160921)](/docs/en/device/bioentry_w2/release-notes/101): Release2016-09-22
+- [Firmware Version 1.1.0 (Build No. 1.1.0_161201)](/docs/en/device/bioentry_w2/release-notes/110): Release2016-12-13
+- [Firmware Version 1.1.1 (Build No. 1.1.1_161213)](/docs/en/device/bioentry_w2/release-notes/111): Release2016-12-20
+- [Firmware Version 1.1.2 (Build No. 1.1.2_170213)](/docs/en/device/bioentry_w2/release-notes/112): Release2017-02-27
+- [Firmware Version 1.1.3 (Build No. 1.1.3_170717)](/docs/en/device/bioentry_w2/release-notes/113): Release2017-08-07
+- [Firmware Version 1.1.4 (Build No. 1.1.4_170830)](/docs/en/device/bioentry_w2/release-notes/114): Release2017-09-06
+- [Firmware Version 1.1.5 (Build No. 1.1.5_171026)](/docs/en/device/bioentry_w2/release-notes/115): Release2017-10-30
+- [Firmware Version 1.2.0 (Build No. 1.2.0_180317)](/docs/en/device/bioentry_w2/release-notes/120): Release2018-03-26
+- [Firmware Version 1.2.1 (Build No. 1.2.1_180523)](/docs/en/device/bioentry_w2/release-notes/121): Release2018-06-20
+- [Firmware Version 1.2.2 (Build No. 1.2.2_180710)](/docs/en/device/bioentry_w2/release-notes/122): Release2018-07-24
+- [Firmware Version 1.2.3 (Build No. 1.2.3_180907)](/docs/en/device/bioentry_w2/release-notes/123): Release2018-09-20
+- [Firmware Version 1.3.0 (Build No. 1.3.0_181115)](/docs/en/device/bioentry_w2/release-notes/130): Release2018-11-29
+- [Firmware Version 1.3.1 (Build No. 1.3.1_190228)](/docs/en/device/bioentry_w2/release-notes/131): Release2019-03-12
+- [Firmware Version 1.4.0 (Build No. 1.4.0_190708)](/docs/en/device/bioentry_w2/release-notes/140): Release2019-07-12
+- [Firmware Version 1.4.1 (Build No. 1.4.1_190911)](/docs/en/device/bioentry_w2/release-notes/141): Release2019-09-18
+- [Firmware Version 1.5.0 (Build No. 1.5.0_200722)](/docs/en/device/bioentry_w2/release-notes/150): Release2020-07-29
+- [Firmware Version 1.6.0 (Build No. 1.6.0_200902)](/docs/en/device/bioentry_w2/release-notes/160): Release2020-09-10
+- [Firmware Version 1.6.1 (Build No. 1.6.1_201113)](/docs/en/device/bioentry_w2/release-notes/161): Release2020-11-13
+- [Firmware Version 1.6.2 (Build No. 1.6.2_201202)](/docs/en/device/bioentry_w2/release-notes/162): Release2020-12-02
+- [Firmware Version 1.6.3 (Build No. 1.6.3_210419)](/docs/en/device/bioentry_w2/release-notes/163): Release2021-04-20
+- [Firmware Version 1.7.0 (Build No. 1.7.0_220509)](/docs/en/device/bioentry_w2/release-notes/170): Release2022-06-16
+- [Firmware Version 1.7.1 (Build No. 1.7.1_20230502_210200_tw)](/docs/en/device/bioentry_w2/release-notes/171): Release2023-06-08
+- [Firmware Version 1.8.0 (Build No. 1.8.0_231023)](/docs/en/device/bioentry_w2/release-notes/180): Release2023-10-23
+- [Firmware Version 1.8.1 (Build No. 1.8.1_240508)](/docs/en/device/bioentry_w2/release-notes/181): Release2024-05-09
+- [Firmware Version 1.8.2 (Build No. 1.8.2_241025)](/docs/en/device/bioentry_w2/release-notes/182): Release2024-11-01
+- [Safety Instructions](/docs/en/device/bioentry_w2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [BioEntry W3](/docs/en/device/bioentry_w3): BioEntry W3 is a next-generation facial authentication access control device equipped with Suprema's advanced AI technology. It features an AI processor (NPU) optimized for deep learning, boasting high accuracy and ultra-fast facial authentication performance. It can withstand harsh environments like deserts and strong external impacts, providing excellent installation convenience with its slim and compact design.
+- [Appendices](/docs/en/device/bioentry_w3/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/bioentry_w3/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/bioentry_w3/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/bioentry_w3/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/bioentry_w3/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioEntry W3 Release Notes](/docs/en/device/bioentry_w3/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioEntry W3 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_240807)](/docs/en/device/bioentry_w3/release-notes/100): Release2024-08-07
+- [Firmware Version 1.0.1 (Build No. 1.0.1_241024)](/docs/en/device/bioentry_w3/release-notes/101): Release2024-11-07
+- [Safety Instructions](/docs/en/device/bioentry_w3/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [BioLite N2](/docs/en/device/biolite_n2): BioLite N2 is an outdoor fingerprint recognition access control device based on Suprema's latest fingerprint recognition technology and hardware platform. Equipped with a class-leading 1.2GHz CPU, it offers ultra-fast authentication performance and quick startup speed, and applies Suprema's next-generation fingerprint recognition algorithm to provide enhanced security performance. Additionally, it supports 125kHz and 13.56MHz frequency RFID simultaneously, allowing it to read various cards such as EM, HID Prox, MIFARE, iCLASS, DESFire, FeliCa, NFC, and 2.4GHz BLE, and the IP67 rated waterproof and dustproof design makes it easy to install outdoors.
+- [Admin Menu](/docs/en/device/biolite_n2/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/biolite_n2/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/biolite_n2/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/biolite_n2/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/biolite_n2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/biolite_n2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/biolite_n2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/biolite_n2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioLite N2 Release Notes](/docs/en/device/biolite_n2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioLite N2 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_180403)](/docs/en/device/biolite_n2/release-notes/100): Release2018-04-04
+- [Firmware Version 1.0.1 (Build No. 1.0.1_180426)](/docs/en/device/biolite_n2/release-notes/101): Release2018-04-27
+- [Firmware Version 1.0.2 (Build No. 1.0.2_180709)](/docs/en/device/biolite_n2/release-notes/102): Release2018-07-20
+- [Firmware Version 1.1.0 (Build No. 1.1.0_181210)](/docs/en/device/biolite_n2/release-notes/110): Release2018-12-11
+- [Firmware Version 1.2.0 (Build No. 1.2.0_190806)](/docs/en/device/biolite_n2/release-notes/120): Release2019-08-09
+- [Firmware Version 1.3.0 (Build No. 1.3.0_200609)](/docs/en/device/biolite_n2/release-notes/130): Release2020-06-11
+- [Firmware Version 1.3.1 (Build No. 1.3.1_200702)](/docs/en/device/biolite_n2/release-notes/131): Release2020-07-14
+- [Firmware Version 1.3.2 (Build No. 1.3.2_200917)](/docs/en/device/biolite_n2/release-notes/132): Release2020-09-28
+- [Firmware Version 1.4.0 (Build No. 1.4.0_210617)](/docs/en/device/biolite_n2/release-notes/140): Release2021-06-25
+- [Firmware Version 1.4.1 (Build No. 1.4.1_210917)](/docs/en/device/biolite_n2/release-notes/141): Release2021-09-28
+- [Firmware Version 1.4.2 (Build No. 1.4.2_220125)](/docs/en/device/biolite_n2/release-notes/142): Release2022-02-11
+- [Firmware Version 1.5.0 (Build No. 1.5.0_220621)](/docs/en/device/biolite_n2/release-notes/150): Release2022-06-21
+- [Firmware Version 1.6.0 (Build No. 1.6.0_230602)](/docs/en/device/biolite_n2/release-notes/160): Release2023-06-08
+- [Firmware Version 1.6.1 (Build No. 1.6.1_240628)](/docs/en/device/biolite_n2/release-notes/161): Release2024-07-10
+- [Firmware Version 1.6.2 (Build No. 1.6.2_241113)](/docs/en/device/biolite_n2/release-notes/162): Release2024-11-14
+- [Firmware Version 1.7.0 (Build No. 1.7.0_251027)](/docs/en/device/biolite_n2/release-notes/170): Release2025-10-29
+- [Safety Instructions](/docs/en/device/biolite_n2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/biolite_n2/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/biolite_n2/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/biolite_n2/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/biolite_n2/using-device): Provides guidance on how to use the main features of the device effectively.
+- [BioStation 2a](/docs/en/device/biostation_2a): BioStation 2a is a product that showcases Suprema's advanced security technology. It is the world's first to introduce deep learning technology for fingerprint authentication, enhancing the authentication function and significantly improving security performance. It is also equipped with an AI processor, NPU (Neural Processing Unit), which can implement optimal performance through deep learning, innovatively enhancing fingerprint authentication accuracy and performance.
+- [Admin Menu](/docs/en/device/biostation_2a/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/biostation_2a/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/biostation_2a/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/biostation_2a/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/biostation_2a/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/biostation_2a/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/biostation_2a/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/biostation_2a/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioStation 2a Release Notes](/docs/en/device/biostation_2a/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioStation 2a firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_230830)](/docs/en/device/biostation_2a/release-notes/100): Release2023-09-14
+- [Firmware Version 1.1.0 (Build No. 1.1.0_240104)](/docs/en/device/biostation_2a/release-notes/110): Release2024-01-04
+- [Firmware Version 1.1.1 (Build No. 1.1.1_240319)](/docs/en/device/biostation_2a/release-notes/111): Release2024-03-20
+- [Safety Instructions](/docs/en/device/biostation_2a/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/biostation_2a/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/biostation_2a/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/biostation_2a/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/biostation_2a/using-device): Provides guidance on how to use the main features of the device effectively.
+- [BioStation 3](/docs/en/device/biostation_3): BioStation 3 sets a new standard in access control, providing a new door access experience that enables improved security across all doors, for organizations of all sizes. This terminal is smaller than previous model, yet it has the largest variety of features.
+- [Admin Menu](/docs/en/device/biostation_3/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/biostation_3/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/biostation_3/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/biostation_3/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/biostation_3/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/biostation_3/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/biostation_3/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/biostation_3/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [BioStation 3 Release Notes](/docs/en/device/biostation_3/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the BioStation 3 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_220901)](/docs/en/device/biostation_3/release-notes/100): Release2022-09-01
+- [Firmware Version 1.0.1 (Build No. 1.0.1_221020)](/docs/en/device/biostation_3/release-notes/101): Release2022-10-21
+- [Firmware Version 1.0.2 (Build No. 1.0.2_230111)](/docs/en/device/biostation_3/release-notes/102): Release2023-01-20
+- [Firmware Version 1.1.0 (Build No. 1.1.0_230414)](/docs/en/device/biostation_3/release-notes/110): Release2023-04-19
+- [Firmware Version 1.1.1 (Build No. 1.1.1_230621)](/docs/en/device/biostation_3/release-notes/111): Release2023-06-28
+- [Firmware Version 1.2.0 (Build No. 1.2.0_231005)](/docs/en/device/biostation_3/release-notes/120): Release2023-10-05
+- [Firmware Version 1.2.1 (Build No. 1.2.1_231113)](/docs/en/device/biostation_3/release-notes/121): Release2023-11-27
+- [Firmware Version 1.3.0 (Build No. 1.3.0_240514)](/docs/en/device/biostation_3/release-notes/130): Release2024-06-28
+- [Firmware Version 1.3.1 (Build No. 1.3.1_240902)](/docs/en/device/biostation_3/release-notes/131): Release2024-09-03
+- [Firmware Version 1.4.0 (Build No. 1.4.0_250909)](/docs/en/device/biostation_3/release-notes/140): Release2025-09-09
+- [Firmware Version 1.4.1 (Build No. 1.4.1_250929)](/docs/en/device/biostation_3/release-notes/141): Release2025-09-29
+- [Safety Instructions](/docs/en/device/biostation_3/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/biostation_3/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/biostation_3/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/biostation_3/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/biostation_3/using-device): Provides guidance on how to use the main features of the device effectively.
+- [CoreStation 20](/docs/en/device/corestation_20): CoreStation 20 is a 2-door access control controller designed for enterprise-grade security.
+- [Appendices](/docs/en/device/corestation_20/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/corestation_20/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/corestation_20/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/corestation_20/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/corestation_20/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [CoreStation 20 Release Notes](/docs/en/device/corestation_20/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the CoreStation 20 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_250218)](/docs/en/device/corestation_20/release-notes/100): Release2025-02-18
+- [Firmware Version 1.0.1 (Build No. 1.0.1_250604)](/docs/en/device/corestation_20/release-notes/101): Release2025-06-05
+- [Firmware Version 1.0.2 (Build No. 1.0.2_250714)](/docs/en/device/corestation_20/release-notes/102): Release2025-07-15
+- [Safety Instructions](/docs/en/device/corestation_20/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [CoreStation](/docs/en/device/corestation_40): CoreStation is a controller that surpasses the limitations of a typical ACU access control system and provides the advantages of biometric authentication.
+- [Appendices](/docs/en/device/corestation_40/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/corestation_40/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/corestation_40/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/corestation_40/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/corestation_40/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [CoreStation Release Notes](/docs/en/device/corestation_40/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the CoreStation firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_170919)](/docs/en/device/corestation_40/release-notes/100): Release2017-09-19
+- [Firmware Version 1.1.0 (Build No. 1.1.0_180317)](/docs/en/device/corestation_40/release-notes/110): Release2018-03-26
+- [Firmware Version 1.1.1 (Build No. 1.1.1_180523)](/docs/en/device/corestation_40/release-notes/111): Release2018-06-20
+- [Firmware Version 1.1.2 (Build No. 1.1.2_180706)](/docs/en/device/corestation_40/release-notes/112): Release2018-07-24
+- [Firmware Version 1.2.0 (Build No. 1.2.0_181112)](/docs/en/device/corestation_40/release-notes/120): Release2018-11-29
+- [Firmware Version 1.3.0 (Build No. 1.3.0_190626)](/docs/en/device/corestation_40/release-notes/130): Release2019-07-12
+- [Firmware Version 1.3.1 (Build No. 1.3.1_191203)](/docs/en/device/corestation_40/release-notes/131): Release2019-12-03
+- [Firmware Version 1.4.0 (Build No. 1.4.0_200525)](/docs/en/device/corestation_40/release-notes/140): Release2020-05-29
+- [Firmware Version 1.4.1 (Build No. 1.4.1_200902)](/docs/en/device/corestation_40/release-notes/141): Release2020-09-25
+- [Firmware Version 1.5.1 (Build No. 1.5.1_210511)](/docs/en/device/corestation_40/release-notes/151): Release2021-05-24
+- [Firmware Version 1.5.2 (Build No. 1.5.2_211105)](/docs/en/device/corestation_40/release-notes/152): Release2021-11-09
+- [Firmware Version 1.5.3 (Build No. 1.5.3_221026)](/docs/en/device/corestation_40/release-notes/153): Release2022-11-02
+- [Firmware Version 1.6.1 (Build No. 1.6.1_230217)](/docs/en/device/corestation_40/release-notes/161): Release2023-02-21
+- [Firmware Version 1.7.1 (Build No. 1.7.1_240130)](/docs/en/device/corestation_40/release-notes/171): Release2024-02-06
+- [Safety Instructions](/docs/en/device/corestation_40/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [CoreStation Setup Manager](/docs/en/device/corestation_setup_manager): CoreStation Setup Manager is a web server that manages the network settings of CoreStation or checks the connection status of slave devices, input and output ports, and Wiegand ports. With CoreStation Setup Manager, you can check the status of the network and wiring on-site without having to go to the BioStar X server location while configuring the access control system using CoreStation.
+- [Appendices](/docs/en/device/corestation_setup_manager/appendices): Includes legal notices contained in the product.
+- [Device Settings](/docs/en/device/corestation_setup_manager/configuration): Guide for device settings and management.
+- [Getting Started](/docs/en/device/corestation_setup_manager/getting-started): Guidelines for minimum requirements to use CoreStation Setup Manager.
+- [Initial Setup of the Device](/docs/en/device/corestation_setup_manager/initial-setup): Guidelines for initial procedures to use CoreStation Setup Manager.
+- [Monitoring](/docs/en/device/corestation_setup_manager/monitoring): Guidance on how to check and control the real-time status of input, output, and Wiegand ports.
+- [Settings](/docs/en/device/corestation_setup_manager/settings): Guidance on how to set up the admin account and web server network settings.
+- [Device Manager](/docs/en/device/device_manager): Suprema Device Manager is a mobile application that allows configuration of Suprema's XPass D2, XPass 2, and BioEntry W3 using BLE communication.
+- [Appendices](/docs/en/device/device_manager/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/device_manager/getting-started): Guidelines for minimum requirements for using Device Manager.
+- [Initial Setup of the Device](/docs/en/device/device_manager/initial-setup): Guidance on how to select a device and manage app settings.
+- [Set Up IP Device](/docs/en/device/device_manager/ip-device-settings): You can change the settings of the IP device.
+- [Set Up XPass D2](/docs/en/device/device_manager/xpd2-settings): You can configure settings to apply to XPass D2 as a template and then directly apply them to individual devices.
+- [Door Interface](/docs/en/device/doorinterface): Door Interface is a robust 2-door, 4-reader interface designed for reliable access control.
+- [Appendices](/docs/en/device/doorinterface/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/doorinterface/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/doorinterface/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/doorinterface/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/doorinterface/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Door Interface Release Notes](/docs/en/device/doorinterface/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the Door Interface firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_250509)](/docs/en/device/doorinterface/release-notes/100): Release2025-05-15
+- [Firmware Version 1.0.1 (Build No. 1.0.1_250625)](/docs/en/device/doorinterface/release-notes/101): Release2025-06-26
+- [Safety Instructions](/docs/en/device/doorinterface/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Door Module](/docs/en/device/doormodule): The Door Module controls up to 2 access points through encrypted communication and provides 2 Wiegand reader interfaces for integration with third-party readers. The Door Module can be utilized in various system configurations through multiple I/O interfaces.
+- [Appendices](/docs/en/device/doormodule/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/doormodule/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/doormodule/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/doormodule/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/doormodule/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Door Module Release Notes](/docs/en/device/doormodule/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the Door Module firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_150130)](/docs/en/device/doormodule/release-notes/100): Release2015-01-30
+- [Firmware Version 1.0.13 (Build No. 1.0.13_150810)](/docs/en/device/doormodule/release-notes/1013): Release2015-08-10
+- [Firmware Version 1.0.14 (Build No. 1.0.14_160111)](/docs/en/device/doormodule/release-notes/1014): Release2016-01-19
+- [Firmware Version 1.0.15 (Build No. 1.0.15_160429)](/docs/en/device/doormodule/release-notes/1015): Release2016-12-08
+- [Firmware Version 1.1.2 (Build No. 1.1.2_170103)](/docs/en/device/doormodule/release-notes/112): Release2017-02-13
+- [Firmware Version 1.1.3 (Build No. 1.1.3_171229)](/docs/en/device/doormodule/release-notes/113): Release2018-04-13
+- [Firmware Version 1.1.4 (Build No. 1.1.4_181031)](/docs/en/device/doormodule/release-notes/114): Release2018-11-28
+- [Firmware Version 1.1.5 (Build No. 1.1.5_190306)](/docs/en/device/doormodule/release-notes/115): Release2019-06-14
+- [Firmware Version 1.2.0 (Build No. 1.2.0_200604)](/docs/en/device/doormodule/release-notes/120): Release2020-06-05
+- [Firmware Version 1.2.1 (Build No. 1.2.1_210323)](/docs/en/device/doormodule/release-notes/121): Release2021-03-29
+- [Firmware Version 1.2.2 (Build No. 1.2.2_220103)](/docs/en/device/doormodule/release-notes/122): Release2022-01-05
+- [Safety Instructions](/docs/en/device/doormodule/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Enclosure](/docs/en/device/enclosure): Enclosure is a housing dedicated to CoreStation. It provides backup battery, tamper switch, 8-channel power distribution board, and power status LED, ensuring excellent performance with CoreStation.
+- [Appendices](/docs/en/device/enclosure/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/enclosure/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/enclosure/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/enclosure/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Safety Instructions](/docs/en/device/enclosure/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Extended Module](/docs/en/device/extendedmodule): Mounting the expansion module on the Suprema allows the use of additional RS-485, RS-232C ports, and SAM cards.
+- [Appendices](/docs/en/device/extendedmodule/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/extendedmodule/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/extendedmodule/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/extendedmodule/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Safety Instructions](/docs/en/device/extendedmodule/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Extended Module-SC](/docs/en/device/extendedmodule_sc): By equipping the Suprema device with an expansion module, you can additionally use RS-485 and RS-232C ports.
+- [Appendices](/docs/en/device/extendedmodule_sc/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/extendedmodule_sc/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/extendedmodule_sc/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/extendedmodule_sc/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Safety Instructions](/docs/en/device/extendedmodule_sc/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [FaceStation 2](/docs/en/device/facestation_2): FaceStation 2 is Suprema's next-generation facial authentication device equipped with the world's highest performance facial authentication algorithm. It provides ultra-fast authentication performance of matching up to 4,000 individuals per second using a powerful quad-core CPU.
+- [Admin Menu](/docs/en/device/facestation_2/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/facestation_2/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/facestation_2/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/facestation_2/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/facestation_2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/facestation_2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/facestation_2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/facestation_2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [FaceStation 2 Release Notes](/docs/en/device/facestation_2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the FaceStation 2 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_170330)](/docs/en/device/facestation_2/release-notes/100): Release2017-03-30
+- [Firmware Version 1.0.1 (Build No. 1.0.1_170515)](/docs/en/device/facestation_2/release-notes/101): Release2017-05-17
+- [Firmware Version 1.0.2 (Build No. 1.0.2_170830)](/docs/en/device/facestation_2/release-notes/102): Release2017-09-04
+- [Firmware Version 1.0.3 (Build No. 1.0.3_171017)](/docs/en/device/facestation_2/release-notes/103): Release2017-10-25
+- [Firmware Version 1.0.4 (Build No. 1.0.4_180116)](/docs/en/device/facestation_2/release-notes/104): Release2018-01-17
+- [Firmware Version 1.1.0 (Build No. 1.1.0_180304)](/docs/en/device/facestation_2/release-notes/110): Release2018-03-26
+- [Firmware Version 1.1.1 (Build No. 1.1.1_180801)](/docs/en/device/facestation_2/release-notes/111): Release2018-08-10
+- [Firmware Version 1.2.0 (Build No. 1.2.0_181119)](/docs/en/device/facestation_2/release-notes/120): Release2018-11-29
+- [Firmware Version 1.2.1 (Build No. 1.2.1_190115)](/docs/en/device/facestation_2/release-notes/121): Release2019-01-23
+- [Firmware Version 1.3.0 (Build No. 1.3.0_190805)](/docs/en/device/facestation_2/release-notes/130): Release2019-09-25
+- [Firmware Version 1.3.1 (Build No. 1.3.1_200422)](/docs/en/device/facestation_2/release-notes/131): Release2020-04-27
+- [Firmware Version 1.4.0 (Build No. 1.4.0_200918)](/docs/en/device/facestation_2/release-notes/140): Release2020-09-28
+- [Firmware Version 1.4.1 (Build No. 1.4.1_210203)](/docs/en/device/facestation_2/release-notes/141): Release2021-02-16
+- [Firmware Version 1.4.2 (Build No. 1.4.2_210409)](/docs/en/device/facestation_2/release-notes/142): Release2021-04-12
+- [Firmware Version 1.5.0 (Build No. 1.5.0_210628)](/docs/en/device/facestation_2/release-notes/150): Release2021-07-08
+- [Firmware Version 1.5.1 (Build No. 1.5.1_211203)](/docs/en/device/facestation_2/release-notes/151): Release2021-12-13
+- [Firmware Version 1.5.2 (Build No. 1.5.2_220614)](/docs/en/device/facestation_2/release-notes/152): Release2022-06-16
+- [Firmware Version 1.5.3 (Build No. 1.5.3_221005)](/docs/en/device/facestation_2/release-notes/153): Release2022-11-01
+- [Firmware Version 1.5.4 (Build No. 1.5.4_230927)](/docs/en/device/facestation_2/release-notes/154): Release2023-10-24
+- [Firmware Version 1.5.5 (Build No. 1.5.5_240821)](/docs/en/device/facestation_2/release-notes/155): Release2024-08-26
+- [Safety Instructions](/docs/en/device/facestation_2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/facestation_2/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/facestation_2/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/facestation_2/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/facestation_2/using-device): Provides guidance on how to use the main features of the device effectively.
+- [FaceStation F2](/docs/en/device/facestation_f2): FaceStation F2 provides the best facial authentication accuracy and counterfeit face detection capabilities through Suprema's unique fusion matching technology that integrates visual recognition and infrared (IR) recognition.
+- [Admin Menu](/docs/en/device/facestation_f2/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/facestation_f2/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/facestation_f2/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/facestation_f2/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/facestation_f2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/facestation_f2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/facestation_f2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/facestation_f2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [FaceStation F2 Release Notes](/docs/en/device/facestation_f2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the FaceStation F2 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_200915)](/docs/en/device/facestation_f2/release-notes/100): Release2020-09-15
+- [Firmware Version 1.0.1 (Build No. 1.0.1_201110)](/docs/en/device/facestation_f2/release-notes/101): Release2020-11-13
+- [Firmware Version 1.0.2 (Build No. 1.0.2_210104)](/docs/en/device/facestation_f2/release-notes/102): Release2021-01-05
+- [Firmware Version 1.0.3 (Build No. 1.0.3_210126)](/docs/en/device/facestation_f2/release-notes/103): Release2021-02-02
+- [Firmware Version 1.0.4 (Build No. 1.0.4_210303)](/docs/en/device/facestation_f2/release-notes/104): Release2021-03-10
+- [Firmware Version 1.0.5 (Build No. 1.0.5_210422)](/docs/en/device/facestation_f2/release-notes/105): Release2021-05-06
+- [Firmware Version 1.1.1 (Build No. 1.1.1_210623)](/docs/en/device/facestation_f2/release-notes/111): Release2021-06-25
+- [Firmware Version 1.1.2 (Build No. 1.1.2_210903)](/docs/en/device/facestation_f2/release-notes/112): Release2021-10-01
+- [Firmware Version 1.1.4 (Build No. 1.1.4_220315)](/docs/en/device/facestation_f2/release-notes/114): Release2022-03-22
+- [Firmware Version 2.0.2 (Build No. 2.0.2_220502)](/docs/en/device/facestation_f2/release-notes/202): Release2022-05-10
+- [Firmware Version 2.0.3 (Build No. 2.0.3_220705)](/docs/en/device/facestation_f2/release-notes/203): Release2022-07-15
+- [Firmware Version 2.1.0 (Build No. 2.1.0_221005)](/docs/en/device/facestation_f2/release-notes/210): Release2022-10-05
+- [Firmware Version 2.1.1 (Build No. 2.1.1_221130)](/docs/en/device/facestation_f2/release-notes/211): Release2022-11-30
+- [Firmware Version 2.1.2 (Build No. 2.1.2_230130)](/docs/en/device/facestation_f2/release-notes/212): Release2023-02-01
+- [Firmware Version 2.1.3 (Build No. 2.1.3_230525)](/docs/en/device/facestation_f2/release-notes/213): Release2023-05-30
+- [Firmware Version 2.1.4 (Build No. 2.1.4_230810)](/docs/en/device/facestation_f2/release-notes/214): Release2023-08-11
+- [Firmware Version 2.2.0 (Build No. 2.2.0_240704)](/docs/en/device/facestation_f2/release-notes/220): Release2024-07-10
+- [Firmware Version 2.2.1 (Build No. 2.2.1_241204)](/docs/en/device/facestation_f2/release-notes/221): Release2024-12-09
+- [Safety Instructions](/docs/en/device/facestation_f2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/facestation_f2/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/facestation_f2/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/facestation_f2/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/facestation_f2/using-device): Provides guidance on how to use the main features of the device effectively.
+- [Input Module](/docs/en/device/inputmodule): The Input Module supports Supervised Input (12 channels), relay (2 channels), AUX input (2 channels), and tamper input (1 channel), and can be connected to a single master device in an RS-485 chain of up to 31 devices. Can be used in conjunction with detection sensors or access doors, and can be easily integrated with other systems using dry contact method.
+- [Appendices](/docs/en/device/inputmodule/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/inputmodule/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/inputmodule/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/inputmodule/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/inputmodule/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Input Module Release Notes](/docs/en/device/inputmodule/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the Input Module firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_211022)](/docs/en/device/inputmodule/release-notes/100): Release2021-10-22
+- [Safety Instructions](/docs/en/device/inputmodule/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Output Module](/docs/en/device/outputmodule): The Output Module is a multi-output control module that can use 12 relay outputs. When configured with BioStar X, it can be used for floor access control. A maximum of 31 devices can be connected to a single master device via RS-485 chain, and AUX inputs can also be used. Additionally, it can be utilized in various ways in conjunction with anti-passback areas or fire alarm zones.
+- [Appendices](/docs/en/device/outputmodule/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/outputmodule/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/outputmodule/installation): Provides the complete process and connection examples required for product installation.
+- [Product Specifications](/docs/en/device/outputmodule/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/outputmodule/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Output Module Release Notes](/docs/en/device/outputmodule/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the Output Module firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_170103)](/docs/en/device/outputmodule/release-notes/100): Release2017-01-03
+- [Firmware Version 1.1.0 (Build No.1.1.0_181031)](/docs/en/device/outputmodule/release-notes/110): Release2018-11-26
+- [Firmware Version 1.2.0 (Build No.1.2.0_200624)](/docs/en/device/outputmodule/release-notes/120): Release2020-07-09
+- [Firmware Version 1.2.1 (Build No.1.2.1_220103)](/docs/en/device/outputmodule/release-notes/121): Release2022-01-05
+- [Safety Instructions](/docs/en/device/outputmodule/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Secure Module](/docs/en/device/securemodule): Secure Module is a separate controller for controlling one external door relay and expanding input/output. It can be used with Suprema IP access control devices for encrypted communication, enhancing security and providing a solution optimized for the usage environment.
+- [Appendices](/docs/en/device/securemodule/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/securemodule/getting-started): Provides initial procedures for getting started with the device.
+- [Connect](/docs/en/device/securemodule/installation): You can check examples of connecting the product.
+- [Product Specifications](/docs/en/device/securemodule/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/securemodule/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Secure Module Release Notes](/docs/en/device/securemodule/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the Secure Module firmware.
+- [Firmware Version 1.0.0 (Build No.1.0.0_141110)](/docs/en/device/securemodule/release-notes/100): Release2014-11-10
+- [Firmware Version 1.1.2 (Build No. 1.1.2_150129)](/docs/en/device/securemodule/release-notes/112): Release2015-01-29
+- [Firmware Version 1.1.4 (Build No. 1.1.4_150626)](/docs/en/device/securemodule/release-notes/114): Release2015-06-26
+- [Firmware Version 1.1.7 (Build No. 1.1.7_150805)](/docs/en/device/securemodule/release-notes/117): Release2015-08-05
+- [Firmware Version 1.1.8 (Build No. 1.1.8_160119)](/docs/en/device/securemodule/release-notes/118): Release2016-01-19
+- [Firmware Version 1.1.9 (Build No. 1.1.9_161208)](/docs/en/device/securemodule/release-notes/119): Release2016-12-08
+- [Firmware Version 1.2.1 (Build No. 1.2.1_170103)](/docs/en/device/securemodule/release-notes/121): Release2017-02-13
+- [Firmware Version 1.2.3 (Build No. 1.2.3_171229)](/docs/en/device/securemodule/release-notes/123): Release2018-04-13
+- [Firmware Version 1.2.4 (Build No. 1.2.4_181031)](/docs/en/device/securemodule/release-notes/124): Release2018-11-29
+- [Firmware Version 1.3.0 (Build No. 1.3.0_200604)](/docs/en/device/securemodule/release-notes/130): Release2020-06-05
+- [Firmware Version 1.3.1 (Build No. 1.3.1_220103)](/docs/en/device/securemodule/release-notes/131): Release2022-01-05
+- [Safety Instructions](/docs/en/device/securemodule/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [XPass 2](/docs/en/device/xpass_2): XPass 2 is a compact outdoor RFID device based on Suprema's latest RFID technology and multi-hardware platform. It supports mullion type that can be installed on door frames, gangbox type that can be installed on switch boxes, and keypad type, enabling perfect adaptation to various installation environments. Additionally, it applies Dual-Frequency (125kHz / 13.56MHz) RFID technology, supporting various standards of cards including EM, MIFARE, DESFire EV1, as well as mobile cards using NFC and BLE, optimized for outdoor installation with IP67 rated waterproof and dustproof performance and IK08 rated vandal-proof structure, allowing installation anywhere users need.
+- [Appendices](/docs/en/device/xpass_2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/xpass_2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xpass_2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xpass_2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xpass_2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [XPass 2 Release Notes](/docs/en/device/xpass_2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the XPass 2 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_190530)](/docs/en/device/xpass_2/release-notes/100): Release2019-05-30
+- [Firmware Version 1.1.0 (Build No. 1.1.0_190911)](/docs/en/device/xpass_2/release-notes/110): Release2019-09-18
+- [Firmware Version 1.2.0 (Build No. 1.2.0_200409)](/docs/en/device/xpass_2/release-notes/120): Release2020-04-13
+- [Firmware Version 1.2.1 (Build No. 1.2.1_200612)](/docs/en/device/xpass_2/release-notes/121): Release2020-06-26
+- [Firmware Version 1.2.2 (Build No. 1.2.2_201006)](/docs/en/device/xpass_2/release-notes/122): Release2020-10-15
+- [Firmware Version 1.2.3 (Build No. 1.2.3_210518)](/docs/en/device/xpass_2/release-notes/123): Release2021-05-24
+- [Firmware Version 1.2.4 (Build No. 1.2.4_211112)](/docs/en/device/xpass_2/release-notes/124): Release2021-11-17
+- [Firmware Version 1.3.1 (Build No. 1.3.1_220607)](/docs/en/device/xpass_2/release-notes/131): Release2022-06-13
+- [Firmware Version 1.3.2 (Build No. 1.3.2_230116)](/docs/en/device/xpass_2/release-notes/132): Release2023-01-26
+- [Firmware Version 1.4.1 (Build No. 1.4.1_240319)](/docs/en/device/xpass_2/release-notes/141): Release2024-07-25
+- [Firmware Version 1.4.2 (Build No. 1.4.2_241025)](/docs/en/device/xpass_2/release-notes/142): Release2024-10-28
+- [Firmware Version 1.4.3 (Build No. 1.4.3_250602)](/docs/en/device/xpass_2/release-notes/143): Release2025-06-04
+- [Firmware Version 1.5.0 (Build No. 1.5.0_250811)](/docs/en/device/xpass_2/release-notes/150): Release2025-08-14
+- [Safety Instructions](/docs/en/device/xpass_2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [XPass D2](/docs/en/device/xpass_d2): XPass D2 is an outdoor compact RFID reader optimized for centralized access control systems with Suprema's CoreStation. It supports a variety of RFID cards and mobile cards using Suprema's multi-RFID technology and patented latest mobile card technology utilizing NFC and BLE. It features an IP67 waterproof and dustproof design as well as an IK08 impact-resistant design, providing robust durability, and offers various options depending on the installation environment, such as door frames or switch boxes.
+- [Appendices](/docs/en/device/xpass_d2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/xpass_d2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xpass_d2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xpass_d2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xpass_d2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [XPass D2 Release Notes](/docs/en/device/xpass_d2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the XPass D2 firmware.
+- [Firmware Version 1.4.0 (Build No. 1.4.0_200429)](/docs/en/device/xpass_d2/release-notes/140): Release2020-05-15
+- [Firmware Version 1.4.1 (Build No. 1.4.1_200721)](/docs/en/device/xpass_d2/release-notes/141): Release2020-07-22
+- [Firmware Version 1.4.2 (Build No. 1.4.2_201012)](/docs/en/device/xpass_d2/release-notes/142): Release2020-10-15
+- [Firmware Version 1.5.0 (Build No. 1.5.0_210408)](/docs/en/device/xpass_d2/release-notes/150): Release2021-04-12
+- [Firmware Version 1.6.0 (Build No. 1.6.0_220223)](/docs/en/device/xpass_d2/release-notes/160): Release2022-03-02
+- [Firmware Version 1.7.0 (Build No. 1.7.0_220921)](/docs/en/device/xpass_d2/release-notes/170): Release2022-09-21
+- [Firmware Version 1.7.1 (Build No. 1.7.1_230405)](/docs/en/device/xpass_d2/release-notes/171): Release2023-04-05
+- [Firmware Version 1.7.2 (Build No. 1.7.2_231102)](/docs/en/device/xpass_d2/release-notes/172): Release2023-11-03
+- [Firmware Version 1.8.0 (Build No. 1.8.0_241015)](/docs/en/device/xpass_d2/release-notes/180): Release2024-10-15
+- [Firmware Version 1.8.1 (Build No. 1.8.1_250520)](/docs/en/device/xpass_d2/release-notes/181): Release2025-05-21
+- [Firmware Version 1.8.2 (Build No. 1.8.2_250916)](/docs/en/device/xpass_d2/release-notes/182): Release2025-09-22
+- [Safety Instructions](/docs/en/device/xpass_d2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [XPass Q2](/docs/en/device/xpass_q2): Access control device that supports card and QR/Barcode authentication.
+- [Appendices](/docs/en/device/xpass_q2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/xpass_q2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xpass_q2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xpass_q2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xpass_q2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [Safety Instructions](/docs/en/device/xpass_q2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [XPass S2](/docs/en/device/xpass_s2): XPass S2 is a network-based access control terminal that provides high-efficiency and high-performance access security features. It is applicable not only to small and medium-sized enterprises but also to large corporations and large workplaces, and it has excellent durability with an IP65-rated waterproof and dustproof design. Additionally, it is equipped with an adaptive heater, allowing use in a wide range of environments from -35°C to 65°C.
+- [Appendices](/docs/en/device/xpass_s2/appendices): Includes legal notices contained in the product.
+- [Getting Started](/docs/en/device/xpass_s2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xpass_s2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xpass_s2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xpass_s2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [XPass S2 Release Notes](/docs/en/device/xpass_s2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the XPass S2 firmware.
+- [Firmware Version 2.0.2 (Build No. 2.0.2_150222)](/docs/en/device/xpass_s2/release-notes/202): Release2015-02-22
+- [Firmware Version 2.1.2 (Build No. 2.1.2_150819)](/docs/en/device/xpass_s2/release-notes/212): Release2015-08-19
+- [Firmware Version 2.1.3 (Build No. 2.1.3_150908)](/docs/en/device/xpass_s2/release-notes/213): Release2015-09-09
+- [Firmware Version 2.2.0 (Build No. 2.2.0_160107)](/docs/en/device/xpass_s2/release-notes/220): Release2016-01-07
+- [Firmware Version 2.2.1 (Build No. 2.2.1_160119)](/docs/en/device/xpass_s2/release-notes/221): Release2016-01-19
+- [Firmware Version 2.2.3 (Build No. 2.2.3_160204)](/docs/en/device/xpass_s2/release-notes/223): Release2016-02-04
+- [Firmware Version 2.2.5 (Build No. 2.2.5_160408)](/docs/en/device/xpass_s2/release-notes/225): Release2016-04-08
+- [Firmware Version 2.2.6 (Build No. 2.2.6_160509)](/docs/en/device/xpass_s2/release-notes/226): Release2016-05-09
+- [Firmware Version 2.3.0 (Build No. 2.3.0_160704)](/docs/en/device/xpass_s2/release-notes/230): Release2016-09-07
+- [Firmware Version 2.3.1 (Build No. 2.3.1_160921)](/docs/en/device/xpass_s2/release-notes/231): Release2016-09-22
+- [Firmware Version 2.4.0 (Build No. 2.4.0_170202)](/docs/en/device/xpass_s2/release-notes/240): Release2017-02-06
+- [Firmware Version 2.4.1 (Build No. 2.4.1_170217)](/docs/en/device/xpass_s2/release-notes/241): Release2017-02-20
+- [Firmware Version 2.4.2 (Build No. 2.4.2_170420)](/docs/en/device/xpass_s2/release-notes/242): Release2017-04-27
+- [Firmware Version 2.4.3 (Build No. 2.4.3_170724)](/docs/en/device/xpass_s2/release-notes/243): Release2017-07-25
+- [Firmware Version 2.4.4 (Build No. 2.4.4_180724)](/docs/en/device/xpass_s2/release-notes/244): Release2018-09-04
+- [Safety Instructions](/docs/en/device/xpass_s2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [X-Station 2](/docs/en/device/xstation_2): X-Station 2 is an intelligent access terminal that supports various authentication methods, from mobile access cards to QR codes, barcodes, RFID cards, and fingerprints. Equipped with secure boot features, OSDP, and a camera for image logging, X-Station 2 enhances access security while protecting user data. X-Station 2 is easy to install, use, and maintain, featuring PoE, an intuitive UI with a 4-inch touchscreen, and an IP65 rating for waterproof and dustproof capabilities.
+- [Admin Menu](/docs/en/device/xstation_2/admin-menu): Provides guidance on the main menus and features accessible with administrator privileges.
+- [Appendices](/docs/en/device/xstation_2/appendices): Includes legal notices contained in the product.
+- [Authentication](/docs/en/device/xstation_2/authentication): Describes the supported authentication methods and authentication procedures.
+- [Event Logs](/docs/en/device/xstation_2/event-log): Describes how to view event logs generated by the device.
+- [Getting Started](/docs/en/device/xstation_2/getting-started): Provides initial procedures for getting started with the device.
+- [Installation](/docs/en/device/xstation_2/installation): Provides the complete installation procedures and connection examples required for the device.
+- [Product Specifications](/docs/en/device/xstation_2/product-specifications): Provides key specifications of the product, including size, features, and performance.
+- [Regulatory Information](/docs/en/device/xstation_2/regulatory-information): Provides information on regulations and certifications complied with by the product.
+- [X-Station 2 Release Notes](/docs/en/device/xstation_2/release-notes): This document provides a summary of feature improvements, bug fixes, and major changes applied to each version of the X-Station 2 firmware.
+- [Firmware Version 1.0.0 (Build No. 1.0.0_210311)](/docs/en/device/xstation_2/release-notes/100): Release2021-03-15
+- [Firmware Version 1.0.1 (Build No. 1.0.1_210329)](/docs/en/device/xstation_2/release-notes/101): Release2021-04-09
+- [Firmware Version 1.0.2 (Build No. 1.0.2_210614)](/docs/en/device/xstation_2/release-notes/102): Release2021-06-18
+- [Firmware Version 1.0.3 (Build No. 1.0.3_210705)](/docs/en/device/xstation_2/release-notes/103): Release2021-07-12
+- [Firmware Version 1.1.0 (Build No. 1.1.0_210813)](/docs/en/device/xstation_2/release-notes/110): Release2021-08-13
+- [Firmware Version 1.1.1 (Build No. 1.1.1_211123)](/docs/en/device/xstation_2/release-notes/111): Release2021-11-29
+- [Firmware Version 1.1.2 (Build No. 1.1.2_211220)](/docs/en/device/xstation_2/release-notes/112): Release2021-12-22
+- [Firmware Version 1.1.3 (Build No. 1.1.3_220225)](/docs/en/device/xstation_2/release-notes/113): Release2022-03-08
+- [Firmware Version 1.1.4 (Build No. 1.1.4_220805)](/docs/en/device/xstation_2/release-notes/114): Release2022-08-05
+- [Firmware Version 1.2.0 (Build No. 1.2.0_221209)](/docs/en/device/xstation_2/release-notes/120): Release2022-12-13
+- [Firmware Version 1.2.1 (Build No. 1.2.1_230418)](/docs/en/device/xstation_2/release-notes/121): Release2023-04-26
+- [Firmware Version 1.2.2 (Build No. 1.2.2_230602)](/docs/en/device/xstation_2/release-notes/122): Release2023-06-08
+- [Firmware Version 1.2.3 (Build No. 1.2.3_230926)](/docs/en/device/xstation_2/release-notes/123): Release2023-09-27
+- [Firmware Version 1.3.0 (Build No. 1.3.0_240318)](/docs/en/device/xstation_2/release-notes/130): Release2024-03-26
+- [Firmware Version 1.3.1 (Build No. 1.3.1_250120)](/docs/en/device/xstation_2/release-notes/131): Release2025-01-21
+- [Safety Instructions](/docs/en/device/xstation_2/safety-instructions): This section provides essential safety guidelines that must be read and followed before installing and using the device.
+- [Settings](/docs/en/device/xstation_2/settings): Provides instructions on how to set system and device configurations.
+- [Troubleshooting](/docs/en/device/xstation_2/troubleshooting): This document provides information to solve unexpected issues that you may encounter when using the device.
+- [User](/docs/en/device/xstation_2/user): Describes how to register, edit, delete, and manage users.
+- [How to Use](/docs/en/device/xstation_2/using-device): Provides guidance on how to use the main features of the device effectively.
+- [How-to Articles](/docs/en/how-to): Guides and configuration instructions for utilizing Suprema products.
+- [Introduction to Master Admin Feature and Setup Guide](/docs/en/how-to/master-admin): Provides a guide to configuring the Master Admin, which enhances device security by strengthening administrator permissions.
+- [Disclaimers](/docs/en/legal/disclaimers): Provides disclaimer information in connection with Suprema products.
+- [Software End User License Agreement(EULA)](/docs/en/legal/eula): SUPREMA INC.SOFTWARE LICENSE AGREEMENT
+- [Open Source License](/docs/en/legal/open-source-licenses): ---
+- [BioStar Air](/docs/en/platform/biostar_air): BioStar Air is a fully cloud-native access control solution built by Suprema, the global leader in biometric security.
+- [Access Control Hardware Compatibility](/docs/en/platform/biostar_air/access-control-hardware-compatibility): BioStar Air is compatible with a variety of access control devices from Suprema and MOCA System, ensuring seamless integration with cloud-based access management.
+- [Adding Individual Users](/docs/en/platform/biostar_air/adding-individual-users): Learn how to add individual users to BioStar Air, configure user information, assign credentials and access levels, and manage regular and temporary user types.
+- [Adding Users in Bulk](/docs/en/platform/biostar_air/adding-users-in-bulk): Learn how to efficiently add multiple users at once using CSV file upload, configure bulk access levels, and manage profile images in BioStar Air Portal.
+- [Biometric Readers and Credentials](/docs/en/platform/biostar_air/biometric-readers-and-credentials): Learn how to register and configure biometric readers, enroll facial recognition credentials, and set up single or two-factor authentication for BioStation 3 and BioEntry W3 devices in BioStar Air.
+- [BioStar Air Login - Using the Site Selector](/docs/en/platform/biostar_air/biostar-air-login): Learn how to use the Site Selector feature to manage multiple BioStar Air sites with a single email address and streamline your login process.
+- [BioStar Air Migration](/docs/en/platform/biostar_air/biostar-air-migration): Learn about the rebranding from Airfob Space to BioStar Air, compare platform features, understand compatibility, and access frequently asked questions about the transition.
+- [BioStar Air Partner Portal Detailed Use](/docs/en/platform/biostar_air/biostar-air-partner-portal-detailed-use): Learn how to manage customer sites, distribute credits, track credit history, invite administrators, and understand role permissions in the BioStar Air Partner Portal.
+- [Configuring User and Log Reports](/docs/en/platform/biostar_air/configuring-reports): Learn how to create, filter, and schedule user reports, event log reports, and audit log reports with automated email delivery in BioStar Air.
+- [Configuring Time & Attendance (T&A)](/docs/en/platform/biostar_air/configuring-ta): Learn how to configure Time & Attendance settings, enable mobile T&A tracking, assign T&A to devices, and export attendance logs in BioStar Air.
+- [Configuring the Airfob Patch and Tag](/docs/en/platform/biostar_air/configuring-the-airfob-patch-and-tag): Learn how to configure Airfob Patch and Tag devices, set up BLE mode, and customize card ID output methods for upgrading existing access control systems to BioStar Air.
+- [Configuring the SIO2 Secure Module](/docs/en/platform/biostar_air/configuring-the-sio2-secure-module): Learn how to configure the SIO2 Secure Module for enhanced security in your access control system.
+- [Custom Wiegand Card Formats](/docs/en/platform/biostar_air/custom-wiegand-card-formats): Learn how to create and configure custom Wiegand card formats in BioStar Air v2.10, including facility codes, ID segments, parity bits, and bit assignments for seamless migration from existing access control systems.
+- [Customizing Email Templates](/docs/en/platform/biostar_air/customizing-email-templates): Learn how to create and customize branded email templates for user invitations, activations, and notifications with logos, personalized content, and multi-language support in BioStar Air.
+- [Daylight Saving Time (DST) Configuration](/docs/en/platform/biostar_air/daylight-saving-time): Learn how to configure automatic and manual DST settings, enable DST for devices, and manage time zone adjustments across multiple locations in BioStar Air.
+- [Federated Sites](/docs/en/platform/biostar_air/federated-sites): Learn how to set up and manage federated sites in BioStar Air for multi-tenant buildings and multi-branch organizations with centralized control.
+- [Getting Started](/docs/en/platform/biostar_air/getting-started): Learn how to set up your first BioStar Air site by adding administrators, registering devices, creating doors, configuring access rights, and managing users step by step.
+- [How to Upgrade Firmware](/docs/en/platform/biostar_air/how-to-upgrade-firmware): Learn how to upgrade device firmware in bulk or individually using the web portal and mobile app, with version checking and troubleshooting tips for BioStar Air.
+- [Getting Started with API Integrations](/docs/en/platform/biostar_air/integration-quickstart): Learn how to set up a BioStar Air demo site, register compatible readers, generate API keys, and start testing integrations with cloud APIs.
+- [Intro to the BioStar Air Partner Portal](/docs/en/platform/biostar_air/intro-to-partner-portal): Learn how to access and use the BioStar Air Partner Portal to set up customer sites, distribute credits, and manage reseller operations.
+- [IP Camera Support and Configuration](/docs/en/platform/biostar_air/ip-camera-support-and-configuration): Learn how to set up ONVIF-compatible IP cameras, configure live and recorded video streams, and integrate camera footage with access events in BioStar Air.
+- [LinkPass Credentials](/docs/en/platform/biostar_air/linkpass-credentials): Learn how to issue and manage app-free LinkPass credentials for guest access, deliveries, and temporary users with cloud-based door control in BioStar Air.
+- [Why Do I Need to Enable Location Services?](/docs/en/platform/biostar_air/location-services-issues): Learn how to enable location services in the Suprema Pass app for secure Bluetooth communication and mobile access card functionality.
+- [출입 권한 관리](/docs/en/platform/biostar_air/manage-access-authority): BioStar Air에서 사용자의 출입 권한을 효과적으로 관리하는 방법을 안내합니다.
+- [출입 레벨 관리하기](/docs/en/platform/biostar_air/manage-access-level): BioStar Air에서 출입 레벨을 생성하고 관리하는 방법입니다.
+- [경비 구역 관리](/docs/en/platform/biostar_air/manage-alarm-zone): 경비 구역을 추가하고 수정, 삭제하는 관리 방법을 안내합니다.
+- [장치 관리](/docs/en/platform/biostar_air/manage-device): BioStar Air에서 장치 생명주기를 관리하는 모든 방법을 안내합니다. 장치 등록부터 세부 설정 구성, 그룹 관리, 펌웨어 업그레이드, 그리고 생체 인식 및 보안 모듈 구성까지 장치를 효율적으로 운영하는 전체 과정을 다룹니다.
+- [장치 그룹 관리하기](/docs/en/platform/biostar_air/manage-device-group): 장치를 그룹으로 묶어 효율적으로 관리하는 방법을 안내합니다.
+- [출입문 관리](/docs/en/platform/biostar_air/manage-door): BioStar Air에서 출입문을 등록하고 설정하며, 그룹과 스케줄을 통해 효율적으로 관리하는 방법을 안내합니다.
+- [엘리베이터 관리](/docs/en/platform/biostar_air/manage-elevator): BioStar Air는 슈프리마의 OM-120 모듈을 사용하여 엘리베이터 출입 통제를 지원합니다.
+- [층 레벨 관리하기](/docs/en/platform/biostar_air/manage-floor-level): 층 레벨을 생성하고 관리하는 방법을 안내합니다.
+- [휴일 그룹 관리하기](/docs/en/platform/biostar_air/manage-holiday-group): 휴일을 그룹으로 구성하여 출입 통제에 적용하는 방법을 안내합니다.
+- [스케줄 관리하기](/docs/en/platform/biostar_air/manage-schedule): BioStar Air에서 출입문과 엘리베이터의 접근을 제어하기 위해 스케줄을 생성하고 관리하는 방법입니다.
+- [Managing and Adding Users in the BioStar Air App](/docs/en/platform/biostar_air/managing-adding-users): Learn how to manage users, edit profiles, perform batch operations, and add new users with credentials through the BioStar Air mobile app.
+- [Managing Administrators](/docs/en/platform/biostar_air/managing-administrators): Learn how to invite administrators, assign role levels, manage permissions, and understand access controls for Observer, Operator, Administrator, and Master levels in BioStar Air.
+- [Managing Card Templates](/docs/en/platform/biostar_air/managing-card-templates): Learn how to create, customize, and manage mobile card templates with branding elements including logos, colors, and user properties in BioStar Air.
+- [Managing Door Access](/docs/en/platform/biostar_air/managing-door-access): Learn how to create access levels, configure schedules and holiday groups, and assign door permissions to users in BioStar Air.
+- [Managing Door & Device Groups](/docs/en/platform/biostar_air/managing-door-and-device-groups): Learn how to organize and manage door groups and device groups in BioStar Air for streamlined access control configuration and efficient system administration.
+- [Managing Door Schedules](/docs/en/platform/biostar_air/managing-door-schedules): Learn how to create and configure automated door schedules, set up unlock and lock timings, and manage authentication-based access control in BioStar Air.
+- [Managing Elevator Access](/docs/en/platform/biostar_air/managing-elevator-access): Learn how to configure elevator access control, set floor permissions, and manage user access levels using Suprema's OM120 module in BioStar Air.
+- [Managing Registered Devices](/docs/en/platform/biostar_air/managing-registered-devices): Learn how to manage, update, and configure compatible Suprema readers in BioStar Air.
+- [Managing Registered Doors](/docs/en/platform/biostar_air/managing-registered-doors): Learn how to manage registered doors, configure entry and exit devices, set up relays, and organize door schedules in BioStar Air.
+- [Managing Roll Call & Fire Muster](/docs/en/platform/biostar_air/managing-roll-call-fire-muster): Learn how to set up muster points, initiate emergency roll calls, track user safety status, and generate roll call history reports in BioStar Air.
+- [Managing Sites with your Phone](/docs/en/platform/biostar_air/managing-sites-with-phone): Learn how to use the BioStar Air mobile app to manage users, monitor events, control devices, and perform administrative tasks from your mobile device.
+- [Managing User Groups](/docs/en/platform/biostar_air/managing-user-groups): Learn how to create, organize, and manage user groups and subgroups for efficient user categorization and access control administration in BioStar Air.
+- [Managing Users](/docs/en/platform/biostar_air/managing-users): Learn how to manage users in BioStar Air Portal, perform bulk operations, add and configure credentials (mobile cards, RFID, face, PIN, web cards), set access levels, manage user groups, and configure validity periods.
+- [Monitoring Door Status](/docs/en/platform/biostar_air/monitoring-door-status): Learn how to monitor real-time door status, remotely control locks, and manage door access using both web portal and mobile app in BioStar Air.
+- [Event Logs and Audit Logs](/docs/en/platform/biostar_air/monitoring-event-and-audit-logs): Learn how to monitor and analyze event logs and audit logs, apply filters, export data, and track admin activities in BioStar Air.
+- [Opening Doors with Mobile Credentials](/docs/en/platform/biostar_air/opening-doors-with-mobile-credentials): Learn how to open doors using Suprema Pass mobile credentials with Bluetooth and NFC tagging, configure foreground and background modes, and use the long-press feature for hands-free access.
+- [장치 등록하기](/docs/en/platform/biostar_air/register-device): BioStar Air 모바일 앱을 통해 장치 등록 방법을 안내합니다.
+- [BioStar Air 2.10 – Release Highlights](/docs/en/platform/biostar_air/release-notes/v2_10): Release notes for BioStar Air v2.10
+- [BioStar Air 2.11 - Release Highlights](/docs/en/platform/biostar_air/release-notes/v2_11): Release notes for BioStar Air v2.11
+- [Time and Attendance Reports](/docs/en/platform/biostar_air/reports-time-attendance-reports): Learn how to configure basic time and attendance reports in BioStar Air, including Hours on Site tracking, CSV export options, API integration.
+- [Security Measures for BioStar Air and Suprema Pass Mobile Access](/docs/en/platform/biostar_air/security-overview): Learn about comprehensive security measures in BioStar Air, including end-to-end encryption, ISO 27001 certification, mobile credential protection, and vulnerability management practices that safeguard your access control system.
+- [SIP Intercom Configuration](/docs/en/platform/biostar_air/sip-intercom-for-biostation3): Learn how to configure SIP intercom functionality in BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through BioStar Air Web and mobile app.
+- [사이트 관리](/docs/en/platform/biostar_air/site-management): BioStar Air에서 사이트는 출입 통제 시스템의 핵심 단위로, 사용자가 출입할 수 있는 물리적 위치를 의미합니다. 각 사이트는 고유한 설정, 사용자, 장치 및 접근 권한을 가질 수 있습니다. 관리자는 여러 사이트를 생성하고 관리하여 다양한 위치에서 출입 통제를 효율적으로 운영할 수 있습니다.
+- [Site Settings](/docs/en/platform/biostar_air/site-settings): Learn how to configure site profile, security settings, time zones, authentication options, and additional features for optimal BioStar Air administration.
+- [Network Ports and Device Identification](/docs/en/platform/biostar_air/site-setup-networking): Set up network ports and determine MAC addresses for BioStar Air compatible readers.
+- [Advanced Features](/docs/en/platform/biostar_air/suprema-pass-app-advanced-features): Learn how to configure Bluetooth and NFC authentication modes, set up two-factor authentication with PIN or biometric options, review access logs, and access support features in the Suprema Pass app.
+- [Overview](/docs/en/platform/biostar_air/suprema-pass-app-overview): Learn how to use the Suprema Pass mobile app for digital credentials, access control, two-factor authentication, QR codes, time attendance, and remote door unlocking in BioStar Air.
+- [Sensitivity Settings](/docs/en/platform/biostar_air/suprema-pass-app-sensitivity-settings): Learn how to adjust Bluetooth recognition sensitivity in the Suprema Pass app to prevent unintended authentication, improve recognition distance, and resolve Apple Pay interference issues.
+- [Troubleshooting Adding Users in Bulk](/docs/en/platform/biostar_air/troubleshooting-adding-users-in-bulk): Learn how to troubleshoot common issues when adding users in bulk using the BioStar Air Portal.
+- [Troubleshooting - My Mobile Card Isn't Working](/docs/en/platform/biostar_air/troubleshooting-suprema-pass-app): Learn how to troubleshoot mobile card authentication issues, fix Bluetooth and location permission problems, and resolve connection failures in the Suprema Pass app.
+- [User Card and Credential Types](/docs/en/platform/biostar_air/user-card-types): Comprehensive guide to user card types including mobile cards, QR codes, RF cards for regular users and web-based credentials for temporary users in BioStar Air.
+- [사용자 관리하기](/docs/en/platform/biostar_air/user-management-user-list): 사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.
+- [Checking if a Camera Supports Recorded Video Playback](/docs/en/platform/biostar_air/video-troubleshooting): Learn how to troubleshoot video playback issues, verify ONVIF Profile G support, check codec compatibility, and resolve SD card formatting problems in BioStar Air.
+- [What is BioStar Air?](/docs/en/platform/biostar_air/what-is-biostar-air): BioStar Air is a cloud-based access control solution that offers a range of features to enhance security and streamline management.
+- [E200 QR Scanner - Wiring and Configuration](/docs/en/platform/biostar_air/wiring-and-configuration): Learn how to wire and configure BioStar Air devices for optimal performance.
+- [BioStar X](/docs/en/platform/biostar_x): BioStar X is Suprema’s unified security platform, featuring best-in-class biometric access, integrated monitoring, and an enterprise-ready backbone built for scale, uptime, and compliance.
+- [Active Directory Encryption](/docs/en/platform/biostar_x/ad-encrypt): You can use the encryption when communicating with a Windows Active Directory server.
+- [Add Auxiliary Database](/docs/en/platform/biostar_x/add-sub-db): When adding a communication server, add and connect an auxiliary database to reduce the load on the main server.
+- [Register Users](/docs/en/platform/biostar_x/add-user): Guidelines for registering new users.
+- [Enter Basic User Information](/docs/en/platform/biostar_x/add-user-basic-info): This section describes how to enter basic user information.
+- [Appendices](/docs/en/platform/biostar_x/appendices): Includes legal notices contained in the product.
+- [Batch Enroll Faces](/docs/en/platform/biostar_x/batch-import-face): Learn how to batch enroll users' faces.
+- [Before Start](/docs/en/platform/biostar_x/before-start): This guide covers what you need to know before starting BioStar X.
+- [Change the Database](/docs/en/platform/biostar_x/change-db): Change the database setting.
+- [Change the Port](/docs/en/platform/biostar_x/change-port): Guide to change the port when the default port (443) of BioStar X is unavailable.
+- [Check Door Status](/docs/en/platform/biostar_x/check-door-status): You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
+- [Check Network Priority](/docs/en/platform/biostar_x/check-ethernet): Instructions for checking and setting the server's network priority before installing BioStar X.
+- [Door Control](/docs/en/platform/biostar_x/control-door): Control the door and check the detailed information.
+- [Control Slave Devices](/docs/en/platform/biostar_x/control-door-slave-device): This guides how to control devices connected to the entrance door.
+- [Control Elevators](/docs/en/platform/biostar_x/control-elevator): Control elevators and check detailed information.
+- [Control Advanced Access Control](/docs/en/platform/biostar_x/control-zone): Control advanced access control and check detailed information.
+- [Custom Installation](/docs/en/platform/biostar_x/custom-install): This guides the user on how to set up a custom installation to integrate with a database that the user has already installed.
+- [Add Widgets](/docs/en/platform/biostar_x/dashboard-adding-widget): The dashboard is a customizable monitoring screen where users can freely arrange the information they want.
+- [Delete Widget](/docs/en/platform/biostar_x/dashboard-delete-widget): Delete widgets added to the dashboard.
+- [Edit Widget](/docs/en/platform/biostar_x/dashboard-edit-widget): Edit widgets added to the dashboard.
+- [Automatic Report Schedule](/docs/en/platform/biostar_x/data-automatic-report-schedule): Set a schedule to automatically generate custom reports created by setting the DYNAMIC period.
+- [Generate Report](/docs/en/platform/biostar_x/data-generate-reports): Reports are created in the desired format.
+- [Settings](/docs/en/platform/biostar_x/data-settings): Set the path where the report will be saved if you have set up an auto-generated schedule.
+- [Delete User](/docs/en/platform/biostar_x/delete-user): Describes how to delete a registered user.
+- [Edit User Information](/docs/en/platform/biostar_x/edit-user): Guide the process of modifying the information of individual users or multiple users and changing access permissions.
+- [Enroll User's Credential](/docs/en/platform/biostar_x/enroll-credential): You can enroll credentials such as fingerprint, face, card information, and PIN.
+- [Authentication Mode Settings](/docs/en/platform/biostar_x/enroll-credential-authmode): Set the device default or individual private authentication mode to apply different authentication methods for each user.
+- [Enroll Access Card](/docs/en/platform/biostar_x/enroll-credential-card): Guide users on how to enroll CSN, Wiegand, and smart cards.
+- [Enroll Face](/docs/en/platform/biostar_x/enroll-credential-face): You can enroll the user's face as a means of authentication for access control. Facial enrollment is an authentication method that captures the user's face with a camera.
+- [Enroll Fingerprint](/docs/en/platform/biostar_x/enroll-credential-fingerprint): You can enroll the user's fingerprint as a means of authentication for access control. Enroll the user's fingerprint information through a device that supports fingerprint authentication.
+- [IR 페이스 등록하기](/docs/en/platform/biostar_x/enroll-credential-ir-face): 출입을 위한 인증 수단으로 사용자의 얼굴을 등록해 사용할 수 있습니다. IR 페이스 등록은 사용자의 얼굴을 적외선 카메라로 촬영한 인증 수단입니다.
+- [Enroll Mobile Access Cards](/docs/en/platform/biostar_x/enroll-credential-mobile): Integrating with Suprema's Airfob Portal enables issuing mobile access cards to users.
+- [Enroll PIN](/docs/en/platform/biostar_x/enroll-credential-pin): Guide users on how to individually enroll a PIN or bulk enroll via CSV import.
+- [Enroll QR/Barcode](/docs/en/platform/biostar_x/enroll-credential-qrbarcode): Guide to registering BioStar X QR generation and external issuance QR/Barcode as user authentication methods.
+- [Set Security Level](/docs/en/platform/biostar_x/enroll-credential-securitylevel): You can grant separate security levels to users regardless of the biometric 1:N security level set on the device.
+- [Export/Import User Information](/docs/en/platform/biostar_x/export-import-user-info): You can utilize user information from a previous version or a different server by exporting or importing user data.
+- [Express Installation](/docs/en/platform/biostar_x/express-install): This guide provides steps to quickly install BioStar X by automatically creating the embedded MariaDB server and database.
+- [Getting Started](/docs/en/platform/biostar_x/getting-started): This is a collection of guide documents that walk you through the basic procedures required for the installation, upgrade, and initial setup of BioStar X step by step.
+- [Advanced Settings](/docs/en/platform/biostar_x/how-to-guide-advanced-settings): Guide for advanced settings feature available when activating a license of Advanced or higher.
+- [Dashboard](/docs/en/platform/biostar_x/how-to-guide-dashboard): The dashboard can be customized to suit individual preferences by allowing each user to select the information they want, add widgets, and freely configure and arrange the widgets.
+- [Data](/docs/en/platform/biostar_x/how-to-guide-data): You can query user information or events that meet specific criteria, and generate reports on a regular schedule.
+- [Monitoring](/docs/en/platform/biostar_x/how-to-guide-monitoring): This guide covers the features available on the Monitoring page, one of BioStar X's core features.
+- [Settings](/docs/en/platform/biostar_x/how-to-guide-settings): This guides you through various features that can be configured on the settings page of BioStar X.
+- [User](/docs/en/platform/biostar_x/how-to-guide-user): This guide covers the features available on the User page, one of BioStar X's core features.
+- [Initial Setup Guide](/docs/en/platform/biostar_x/initial-setup-guide): This document provides step-by-step instructions for the initial setup and operation of the BioStar X access control system.
+- [Install Communication Server](/docs/en/platform/biostar_x/install-communication-server): This document guides the process of installing the communication server.
+- [License Policy](/docs/en/platform/biostar_x/licensing): This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.
+- [Set Emergency Open Permissions](/docs/en/platform/biostar_x/lockoverride): This guide explains how to grant emergency open permissions to card credentials for specific users to open all doors in emergency situations.
+- [How to Log in](/docs/en/platform/biostar_x/login): Access **BioStar X** through a web browser.
+- [Login in with Multi-Factor Authentication](/docs/en/platform/biostar_x/login-with-mfa): Using multi-factor authentication when logging into BioStar X can enhance the security of your account.
+- [Start and Stop Server](/docs/en/platform/biostar_x/manage-server): Learn how to start and stop services of the BioStar X server using BioStar X Service Manager.
+- [Face Migration](/docs/en/platform/biostar_x/migration-face): You can upgrade the faces enrolled in the previous version of BioStar X to enhance recognition performance using the latest algorithm.
+- [Upgrade](/docs/en/platform/biostar_x/migration-x): This document guides the procedure for upgrading BioStar 2 to BioStar X and the requirements to check before the upgrade.
+- [Monitor Device](/docs/en/platform/biostar_x/monitoring-device): Monitor devices and cameras connected to all areas and doors in real time. Efficient management is possible through various features, including checking the status of devices and cameras, viewing detailed information, and playing camera video.
+- [Monitor Doors](/docs/en/platform/biostar_x/monitoring-door): Monitor doors, elevators, and advanced access control. Guides how to control related features and monitor in real time through live video.
+- [Monitor Event](/docs/en/platform/biostar_x/monitoring-event): This guide provides methods for monitoring and managing real-time events through the event monitoring feature. Utilize various functions such as alarm events, warning events, filtering, and status management to efficiently handle events.
+- [Monitor Map](/docs/en/platform/biostar_x/monitoring-map): This guide explains how to monitor and control the real-time status of doors and cameras by zone and floor using the map monitoring feature. Visually manage areas and floor structures linked to the GIS map, utilizing various features such as access control and camera video playback.
+- [Monitor Video](/docs/en/platform/biostar_x/monitoring-video): This document provides step-by-step instructions for the main operations of the video monitoring feature, including adding video, resizing, repositioning, and checking alarms.
+- [Overview](/docs/en/platform/biostar_x/overview): This guide provides an overview of the key features of BioStar X, essential considerations before implementation, and the applicability across various environments. Understand the key technologies and advantages of BioStar X, such as AI-based access control, intelligent video analytics, and integrated security management, and review in advance whether implementation is optimized for your security infrastructure.
+- [Plugin](/docs/en/platform/biostar_x/plugins): BioStar X plugins enhance the BioStar X platform with additional features to meet specific customer requirements or integrate with existing systems.
+- [Register License Key](/docs/en/platform/biostar_x/register-license-key): Activate the BioStar X license to use additional features.
+- [BioStar X Release Notes](/docs/en/platform/biostar_x/release-notes): This document summarizes the feature improvements, bug fixes, and major changes applied to each version of BioStar X.
+- [Version 1.0.0 (Build No. 1.0.0.294)](/docs/en/platform/biostar_x/release-notes/100): Release2025-11-07
+- [Server Management](/docs/en/platform/biostar_x/server-management): This document guides you on how to manage the services of the BioStar X server, change ports, and modify the database using the BioStar X Service Manager.
+- [Service Settings](/docs/en/platform/biostar_x/service-settings): In the Service Settings of BioStar X Service Manager, you can configure and manage the core services of the system.
+- [Setting User Permissions](/docs/en/platform/biostar_x/set-permission): This guide explains how to set the administrator privileges and access permissions for BioStar X users.
+- [Configure User Advanced Settings](/docs/en/platform/biostar_x/set-user-advanced): Learn how to set messages to display on the device when the user enters and how to exclude directory integration features.
+- [Access Control Settings](/docs/en/platform/biostar_x/settings-access-control): This guide describes how to set up access control system
+- [Check Access Permission Status](/docs/en/platform/biostar_x/settings-access-control-ac-status): Check the list of doors that users can access.
+- [Manage Access Groups](/docs/en/platform/biostar_x/settings-access-control-manage-access-group): Set access groups using access levels and user group information.
+- [Manage Access Levels](/docs/en/platform/biostar_x/settings-access-control-manage-access-level): Set the time periods during which a user may access a door and register them as an access level.
+- [Manage Floor Levels](/docs/en/platform/biostar_x/settings-access-control-manage-floor-level): Set floor levels using the configured elevator and floor information.
+- [Add Custom Permissions](/docs/en/platform/biostar_x/settings-adding-custom-account): This guide describes how to add the desired permission level.
+- [Register Device](/docs/en/platform/biostar_x/settings-adding-devices): This guide describes how to register a device in BioStar X.
+- [Register Slave](/docs/en/platform/biostar_x/settings-adding-slave-device): This provides guidance on adding a slave to the master.
+- [Register Wiegand Credentials](/docs/en/platform/biostar_x/settings-adding-wiegand): This guide outlines how to add a Wiegand device to the registered master or slave device.
+- [Advanced Access Control Settings](/docs/en/platform/biostar_x/settings-advanced-ac): You can control access through advanced access control settings.
+- [Anti-passback](/docs/en/platform/biostar_x/settings-advanced-ac-apb): Guidelines for setting up anti-passback. Anti-passback provides enhanced features compared to anti-passback generated based on doors or devices.
+- [Fire Alarm](/docs/en/platform/biostar_x/settings-advanced-ac-fire-alarm): Guidelines on how to set up fire alarms. The fire alarm is a feature that allows you to set all access doors or elevators to open or lock when a fire occurs.
+- [Interlock](/docs/en/platform/biostar_x/settings-advanced-ac-interlock): Guidance on how to set interlock. Interlock is a method of access control that enhances security by blocking access to other doors when one door is open among multiple doors.
+- [Intrusion Alarm](/docs/en/platform/biostar_x/settings-advanced-ac-intrusion-alarm): This guides you on how to set up security. The intrusion alarm feature provides capabilities to lock doors or trigger alarms when intrusion is detected.
+- [Muster](/docs/en/platform/biostar_x/settings-advanced-ac-muster): This guide describes how to configure muster settings. Set the location where users will gather in case of an emergency and monitor the number of people in that specific location.
+- [Occupancy Limit](/docs/en/platform/biostar_x/settings-advanced-ac-occupancy): This guide describes how to set occupancy limit settings. Monitor occupancy status and limit the maximum number of occupants in certain places.
+- [Roll Call](/docs/en/platform/biostar_x/settings-advanced-ac-roll-call): This guides how to set up roll call.
+- [Scheduled Lock](/docs/en/platform/biostar_x/settings-advanced-ac-scheduled-lock): Guidance on how to set up schedule lock. Schedule lock provides the ability to lock doors at specific times.
+- [Scheduled Unlock](/docs/en/platform/biostar_x/settings-advanced-ac-scheduled-unlock): Guidelines for schedule unlock settings. Schedule unlock provides the feature of opening doors at specific times.
+- [Alert Settings](/docs/en/platform/biostar_x/settings-alert): Set the types of alert and messages to appear on the screen when events occur in the device, door, or area.
+- [Card Printer](/docs/en/platform/biostar_x/settings-card-printer): You can print cards with the desired design by integrating BioStar X and cardPresso.
+- [Manage Cards](/docs/en/platform/biostar_x/settings-credential-card-manage): This guide explains how to check card issuance status, change Wiegand card data format, and manage the deletion history for CSN mobile cards.
+- [IR 페이스 그룹 매칭 설정하기](/docs/en/platform/biostar_x/settings-credential-ir-face-group-matching): 사용자 그룹을 기반으로 매칭 그룹을 설정하여 사용자를 인증하는 IR 페이스 그룹 매칭 기능을 안내합니다.
+- [Manage Credentials](/docs/en/platform/biostar_x/settings-credential-manage): This guide describes how to manage credentials for access authentication.
+- [Manage Mobile Access Cards](/docs/en/platform/biostar_x/settings-credential-mobile-access-card): This guide describes how to manage mobile access cards for users in BioStar X by integrating Airfob Portal.
+- [Set Smart Card Format](/docs/en/platform/biostar_x/settings-credential-smart-format): Set layout of smart cards such as MIFARE, iCLASS, DESFire, iCLASS Seos.
+- [Set Wiegand Card Format](/docs/en/platform/biostar_x/settings-credential-wiegand-format): This guide describes how to set Wiegand card format.
+- [How to Use the Quick Action](/docs/en/platform/biostar_x/settings-custom-interface): You can add Quick Action button to the main screen.
+- [Device Connection Management Settings](/docs/en/platform/biostar_x/settings-device-connection-manager): This document provides guidance on connecting and managing a large number of devices through the communication server in BioStar X. You can manage up to 3,000 network devices by distributing them across multiple servers.
+- [Device Settings](/docs/en/platform/biostar_x/settings-device-details): This provides guidance on how to set and manage the detailed features of the registered device.
+- [Advanced Settings](/docs/en/platform/biostar_x/settings-device-details-advanced): In the Advanced Settings section, configure Master Administrator, Device Management, Display/Sound, Operating Conditions, and Actions.
+- [Authentication Settings](/docs/en/platform/biostar_x/settings-device-details-auth): Instructions for various settings related to user authentication on the device are provided.
+- [Basic Information Setting](/docs/en/platform/biostar_x/settings-device-details-info): This provides guidance on checking and setting the device name, group, time zone, hardware, and firmware version.
+- [Intercom Settings](/docs/en/platform/biostar_x/settings-device-details-interphone): This provides guidance on setting detailed items for intercom use.
+- [Network Settings](/docs/en/platform/biostar_x/settings-device-details-network): Guidelines for network settings such as TCP/IP, RS-485, and server communication for the device.
+- [RTSP Settings](/docs/en/platform/biostar_x/settings-device-details-rtsp): Instructions for configuring detailed settings for RTSP streaming are provided.
+- [Thermal and Mask Settings](/docs/en/platform/biostar_x/settings-device-details-thermal-mask): This provides guidance for setting details on thermal cameras and mask usage.
+- [Image Log Settings](/docs/en/platform/biostar_x/settings-device-image-log): This document provides instructions for setting events and schedules to generate image logs, options for deleting image logs, and methods for configuring storage paths.
+- [Manage Users Registered on Device](/docs/en/platform/biostar_x/settings-device-manage-device-users): This document provides guidance on managing users stored in the device.
+- [Upgrade Firmware](/docs/en/platform/biostar_x/settings-device-upgrade-firmware): Instructions for upgrading the firmware of devices connected to BioStar X.
+- [USB Agent Settings](/docs/en/platform/biostar_x/settings-device-usb-agent): This document provides instructions for using the USB fingerprint enrollment device and card enrollment device when accessing BioStar X on the client PC.
+- [Use Device Management Feature](/docs/en/platform/biostar_x/settings-device-using-functions): Instructions for reconnecting the device, synchronizing, and batch editing functionality.
+- [Directory Integration Settings](/docs/en/platform/biostar_x/settings-diretory-integration): This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.
+- [Register Door](/docs/en/platform/biostar_x/settings-door-add): Set the door for access control. Select the entrance/exit device based on the door or set up anti-passback to enhance security, and configure alarms.
+- [Delete Door](/docs/en/platform/biostar_x/settings-door-delete): This guide describes how to delete registered doors.
+- [Modify Door Information](/docs/en/platform/biostar_x/settings-door-edit-info): This guide describes how to modify the settings information of the registered access door.
+- [Register Elevator](/docs/en/platform/biostar_x/settings-elevators-add): This guide describes how to register an elevator for floor control.
+- [Delete Elevator](/docs/en/platform/biostar_x/settings-elevators-delete): This guide describes how to delete registered elevators.
+- [Edit Elevator Information](/docs/en/platform/biostar_x/settings-elevators-edit-info): This guide describes how to edit the setting information of the registered elevator.
+- [Email Setting](/docs/en/platform/biostar_x/settings-email-setting): You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
+- [Import Event Logs](/docs/en/platform/biostar_x/settings-event-log-import): Learn how to import event logs.
+- [사용자 리모트 액세스 설정하기](/docs/en/platform/biostar_x/settings-external-remote-access): ngrok 서비스를 통해 사용자 리모트 액세스 설정 방법을 안내합니다.
+- [Activate License](/docs/en/platform/biostar_x/settings-license): Activate BioStar X license and device license.
+- [BioStar X License](/docs/en/platform/biostar_x/settings-license-biostar-x-license): You can activate the purchased BioStar X license.
+- [Device License](/docs/en/platform/biostar_x/settings-license-device-license): Activating a device license issued by Suprema allows using specific features corresponding to the license.
+- [Manage Operation Permissions](/docs/en/platform/biostar_x/settings-manage-account): This guide describes how to assign operator permissions and add and configure custom permissions to registered users.
+- [Manage Device Groups](/docs/en/platform/biostar_x/settings-manage-device-group): This guide describes to the device group feature for efficiently managing multiple devices.
+- [Manage Devices](/docs/en/platform/biostar_x/settings-manage-devices): This guide describes hot to manage addition, deletion, and modification of devices.
+- [Manage Doors](/docs/en/platform/biostar_x/settings-manage-door): This guide describes how to set up and manage the access door information for the registered device.
+- [Manage Door Group](/docs/en/platform/biostar_x/settings-manage-door-group): This guide describes how to set up groups to easily manage multiple doors.
+- [Manage Elevators](/docs/en/platform/biostar_x/settings-manage-elevators): This guide describes how to group register and manage elevators.
+- [Manage Elevator Group](/docs/en/platform/biostar_x/settings-manage-elevators-group): This guide describes how to set up groups to manage multiple elevators easily.
+- [Configure Area](/docs/en/platform/biostar_x/settings-map-manage-area): Complete the floor and facility configuration to set up the area. Verify secured areas through the map.
+- [Configure Facility](/docs/en/platform/biostar_x/settings-map-manage-facility): Configure facilities and arrange floors. Arrange floors sequentially to represent the actual layout of the facility.
+- [Configure Floors](/docs/en/platform/biostar_x/settings-map-manage-floor): Configure floors before configuring zones and facilities. Place doors and cameras on the floor image to visually confirm.
+- [Manage Map](/docs/en/platform/biostar_x/settings-map-management): Guide how to set and manage floors, facilities, and areas.
+- [Configure Settings](/docs/en/platform/biostar_x/settings-preferences): This guide covers how to set the language and time zone, date/time format, and notification sound when you first install BioStar X or change your usage environment.
+- [Set up Remote Access](/docs/en/platform/biostar_x/settings-remote-access): This guide explains how to set up remote access via the ngrok service.
+- [Schedule Settings](/docs/en/platform/biostar_x/settings-schedule): Set entry and holiday schedules to efficiently manage access control and attendance.
+- [Server Settings](/docs/en/platform/biostar_x/settings-server): Provides various methods for configuring essential server settings in BioStar X, including basic server information, user and device management, automatic upgrades, and HTTPS certificates.
+- [Install HTTPS Certificate](/docs/en/platform/biostar_x/settings-server-https): To connect BioStar X via HTTPS, you must register the IP address of the server where BioStar X is installed to install the certificate.
+- [Server Detailed Settings](/docs/en/platform/biostar_x/settings-server-server): Guidance on the basic information of the BioStar X server, user and device management, server matching, system log levels, and settings for saving facial images.
+- [System Settings](/docs/en/platform/biostar_x/settings-system): Learn how to configure key system settings in the BioStar X platform.
+- [Audit Trail](/docs/en/platform/biostar_x/settings-system-audit-trail): You can track not only user access information but also all information changed in the system.
+- [Daylight Saving Time](/docs/en/platform/biostar_x/settings-system-daylight-saving-time): You can set Daylight Saving Time (DST) to automatically adjust system time to local legal time.
+- [Enhance System Security](/docs/en/platform/biostar_x/settings-system-security): Enhance system security by configuring the password policy, personal data encryption, and communication security between devices in BioStar X.
+- [System Backup](/docs/en/platform/biostar_x/settings-system-system-backup): You can back up key information such as the database of **BioStar X**, various settings, and keys using the system backup menu.
+- [System Restore](/docs/en/platform/biostar_x/settings-system-system-restore): This guide explains how to restore the database, settings, licenses, etc. of BioStar X to a previous state using a system backup file.
+- [Trigger and Action Settings](/docs/en/platform/biostar_x/settings-triger-and-action): You can set the device or BioStar X to perform the desired action when a certain event occurs at the device, entrance, or area.
+- [Integrate VMS](/docs/en/platform/biostar_x/settings-video-integration): This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.
+- [Video Settings](/docs/en/platform/biostar_x/settings-videos): Step-by-step guidance on how to build an integrated video security management system by linking BioStar X and VMS. Covers the entire process from VMS server integration to camera settings and rule configuration.
+- [Set up the camera](/docs/en/platform/biostar_x/settings-videos-camera): Learn how to add a camera to BioStar X after VMS integration and efficiently manage it by grouping. This covers how to set up cameras for real-time monitoring and video search.
+- [Set Video Rules](/docs/en/platform/biostar_x/settings-videos-rule): This guide shows how to set video rules using VMS integrated with BioStar X.
+- [Integrate Virtual Device Event Log](/docs/en/platform/biostar_x/settings-virtual-device-event-log): This guide explains how to enroll a virtual device and log events that occur in external systems to BioStar X.
+- [Set Visitor](/docs/en/platform/biostar_x/settings-visitor): You can configure visiting sites and PCs. You can also set the terms and conditions for visitors. And You can create the information fields that you want to know from the visitors by using the Custom Visitor Field.
+- [지원 장치](/docs/en/platform/biostar_x/supported-device): BioStar X 플랫폼에서 지원하는 장치 목록을 확인하세요.
+- [System Minimum Requirements](/docs/en/platform/biostar_x/system-requirements): Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.
+- [How to Use Time & Attendance](/docs/en/platform/biostar_x/tna): Set the attendance management rules and check the recorded work history through the device or output it as a report
+- [View the Report](/docs/en/platform/biostar_x/tna-report): You can generate T&A reports from user attendance events collected through the system, and edit time records or export them as CSV or PDF files.
+- [Edit T&A Report](/docs/en/platform/biostar_x/tna-report-edit): This guide explains how to modify attendance records in generated reports.
+- [Set the Schedule](/docs/en/platform/biostar_x/tna-rule-schedule): Guide users on how to create work schedules by specifying the set work rules, other work rules, duration, and holidays.
+- [Set Shift](/docs/en/platform/biostar_x/tna-rule-setting): This guide explains how to configure the attendance management rules by setting the work schedule in hourly, daily, and weekly units.
+- [Set Daily Shift](/docs/en/platform/biostar_x/tna-rule-shift-day): Create work rules by applying different time rules based on time for a 24-hour period.
+- [Set Other Work Rules](/docs/en/platform/biostar_x/tna-rule-shift-overtime): This provides methods to add additional work rules that can be useful when overtime rules are not added to the daily work rules.
+- [Set Time Code](/docs/en/platform/biostar_x/tna-rule-shift-paycode): This guides the configuration of time codes used for working hour calculations.
+- [Set Weekly Shifts](/docs/en/platform/biostar_x/tna-rule-shift-schedule): This guides how to create weekly shift rules based on the configured daily shift rules.
+- [Set Time & Attendance](/docs/en/platform/biostar_x/tna-settings): You can register devices to use for attendance management or set the sender information to be used when sending notification emails.
+- [Track User Access History](/docs/en/platform/biostar_x/trace-user-access-log): This guide explains how to track and verify user access logs.
+- [Transfer User Information to the Device](/docs/en/platform/biostar_x/transfer-user-info-to-device): This guides on how to transfer user information to the registered device.
+- [Learn Common UI](/docs/en/platform/biostar_x/ui-common): This guide describes the common user interface of BioStar X.
+- [Dashboard](/docs/en/platform/biostar_x/ui-dashboard): Here is an overview of the User Interface of the dashboard page.
+- [Launcher](/docs/en/platform/biostar_x/ui-launcher): This guide describes the user interface of the launcher page.
+- [Monitoring](/docs/en/platform/biostar_x/ui-monitoring): This guide describes the user interface of the monitoring page.
+- [Explore UI](/docs/en/platform/biostar_x/ui-overview): Explore the UI of each page of BioStar X and guide on how to use it.
+- [Settings](/docs/en/platform/biostar_x/ui-settings): This guide describes the user interface of the setting page.
+- [User](/docs/en/platform/biostar_x/ui-user): This guide describes the user interface of the user page.
+- [Manage User Groups](/docs/en/platform/biostar_x/user-group-manage): Enhance management efficiency, scalability by leveraging user groups and optimize access control operations.
+- [Manage Users](/docs/en/platform/biostar_x/user-manage): Guides user management features such as modifying and deleting user information, device synchronization, tracking access history, and exporting/importing data.
+- [Manage Access Groups](/docs/en/platform/biostar_x/view-user-by-access): This guide shows how to query users by access group and explore the access permission structure.
+- [Explore Users](/docs/en/platform/biostar_x/view-users): This guide explains how to use the features for viewing, searching, sorting, and managing the user list.
+- [Manage Visitors](/docs/en/platform/biostar_x/visitor): Create a visitor application page through the visitor plugin and guide how to manage visitor access.
+- [Apply to Visit](/docs/en/platform/biostar_x/visitor-register): This guides how visitors can apply for entry using the visitor application PC.
+- [Manage All Visitors](/docs/en/platform/biostar_x/visitor-register-all-manage): You can check the status of all visitor requests, check-ins, and check-outs for the configured period. You can also add visitors from the list.
+- [Manage Check-In Visitors](/docs/en/platform/biostar_x/visitor-register-checkin-manage): Check the visitors in check-in status and modify visit information or process check-out.
+- [Manage Visitor Checkouts](/docs/en/platform/biostar_x/visitor-register-checkout-manage): Check the visitors in checkout status and use their visit application information to register a repeat visit.
+- [Manage Visitors](/docs/en/platform/biostar_x/visitor-register-manage): You can approve, modify, add, or delete visitor requests.
+- [Delete Expired Personal Data](/docs/en/platform/biostar_x/visitor-remove-expire-personal): You can delete visitor information that has exceeded the personal data retention period.
+- [BioStar X Plugin Developer Guide](/docs/en/platform/plugins): This is a comprehensive guide for developing plugins integrated with the BioStar X platform.
+- [Development Guide](/docs/en/platform/plugins/development-guide): Provides actual development methods and implementation examples of the BioStar X plugin.
+- [Getting Started](/docs/en/platform/plugins/getting-started): This guides the requirements and basic concepts for starting BioStar X plugin development.
+- [Overview](/docs/en/platform/plugins/plugins-overview): Introduction to the BioStar X plugin system and overall concept.
+- [Registration and Management](/docs/en/platform/plugins/registration-guide): Guide on how to register and manage plugins in BioStar X.
+- [Troubleshooting](/docs/en/platform/plugins/troubleshooting): Provides solutions for issues that may occur during the development, registration, and operation of the BioStar X plugin.
+- [Reference](/docs/en/reference): This section is a references for Suprema's products and services.
+- [제품 기능 및 사양 비교](/docs/en/reference/compares): 슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교하세요.
+- [Compare Intelligent Controller & Peripheral Features](/docs/en/reference/compares/controller-devices-funcs)
+- [Compare Intelligent Controller & Peripheral Specifications](/docs/en/reference/compares/controller-devices-specs): \* If a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
+- [Compare Face Authentication Device Features](/docs/en/reference/compares/face-devices-funcs): 🔶: Support may vary depending on the product model.
+- [Compare Face Authentication Device Specifications](/docs/en/reference/compares/face-devices-specs): \* If a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
+- [Compare Fingerprint & RFID Reader Features](/docs/en/reference/compares/finger-rfid-devices-funcs): 🔶: Support may vary depending on the product model.
+- [Compare Fingerprint & RFID Reader Specifications](/docs/en/reference/compares/finger-rfid-devices-specs)
+- [Compare Fingerprint Authentication Device Features](/docs/en/reference/compares/fingerprint-devices-funcs): 🔶: Support may vary depending on the product model.
+- [Compare Fingerprint Authentication Device Specifications](/docs/en/reference/compares/fingerprint-devices-specs)
+- [Compare RFID Devices Features](/docs/en/reference/compares/rfid-devices-funcs): 🔶: Support may vary depending on the product model.
+- [Compare RFID Devices Specifications](/docs/en/reference/compares/rfid-devices-specs)
+- [Glossary](/docs/en/reference/glossary): This document provides a glossary of terms used in Suprema’s products and services.
+- [How to Issue Suprema Smart Cards](/docs/en/reference/smartcardissue): This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform.
+- [Searching for documents.](/docs/en/search)
