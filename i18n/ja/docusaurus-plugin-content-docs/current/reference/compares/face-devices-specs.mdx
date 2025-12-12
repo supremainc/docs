@@ -1,0 +1,18 @@
+---
+id: face-devices-specs
+title: Compare Specifications
+hide_table_of_contents: true
+---
+
+# Compare Face Authentication Device Specifications
+
+import fData from '@site/src/components/CompareTable/face-device-specs.json';
+import { RenderTableSpecs } from '@site/src/components/CompareTable';
+
+:::note
+
+\* If a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
+
+:::
+
+<RenderTableSpecs data={fData} />

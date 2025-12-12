@@ -304,7 +304,7 @@
     "description": "The label for category 릴리스 노트 in sidebar biostation3"
   },
   "sidebar.biostarx.category.Release Notes": {
-    "message": "리リースノート",
+    "message": "リリースノート",
     "description": "The label for category 'Release Notes' in sidebar 'biostarx'"
   },
   "sidebar.corestation.category.CoreStation": {

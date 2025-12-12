@@ -1089,5 +1089,20 @@
   },
   "externalLinks.XPassQ2.desc": {
     "message": "Access control supporting card and QR/Barcode authentication"
+  },
+  "externalLinks.dev.sdk.desc": {
+    "message": "Integrate fingerprint device core functions with third-party software"
+  },
+  "externalLinks.dev.xapi.desc": {
+    "message": "API documentation that allows you to see all APIs of BioStar X at a glance"
+  },
+  "externalLinks.dev.2api.desc": {
+    "message": "API documentation that allows you to see all APIs of BioStar 2 at a glance"
+  },
+  "externalLinks.dev.gsdk.desc": {
+    "message": "Cross-platform solution supporting various programming languages"
+  },
+  "externalLinks.dev.svpsdk.desc": {
+    "message": "Core functions of Suprema devices<br/>Supported by third-party software"
   }
 }

@@ -1,0 +1,32 @@
+---
+id: 122
+title: Firmware Version 1.2.2
+---
+
+# Firmware Version 1.2.2 (Build No. 1.2.2_230602)
+
+Release<Separator/>2023-06-08
+
+:::caution
+
+XS2-APB, XS2-QAPB and XS2-OAPB types of X-Station 2 model support HID iClass card type through SE processor.
+
+For devices with the new SE processor, after upgrading the firmware to v1.1.4 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Device abnormally restarts when **Image Log** is **Enabled** and image log is logged on the device. <Badge>1.2.0</Badge>
+
+1. When authenticating with a BLE mobile card running on iOS, authentication fails and the device restarts intermittently. <Badge>1.0.0</Badge>
+
+</BugLists>

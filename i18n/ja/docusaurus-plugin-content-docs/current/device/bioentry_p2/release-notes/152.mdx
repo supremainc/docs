@@ -1,0 +1,48 @@
+---
+id: 152
+title: Firmware Version 1.5.2
+---
+
+# Firmware Version 1.5.2 (Build No. 1.5.2_240508)
+
+Release<Separator/>2024-05-09
+
+:::caution
+
+- BEP2-OA type of BioEntry P2 model support HID iCLASS card type through SE processor.<br/>For devices with the new SE processor, after upgrading the firmware to v1.4.4 or later, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version. Devices with existing SE processor can be downgraded to a lower version.
+
+- Devices with the software based **Live Finger Detection** cannot downgrade to a lower version after upgrading the firmware to v1.5.1 or later.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to get user update succeeded event log using the GetLogWithFilter function in the SDK.
+
+1. Supports new device.
+
+    - BioStation 2a (BS2A-ODPB, BS2A-OAPWB)
+
+1. Improved to allow the use of **Secure Tamper** regardless of the **Device Hashkey Management** option.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When authenticating an iClass AoC card and a fingerprint simultaneously, the device restarts abnormally. <Badge>1.0.0</Badge>
+
+1. The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. <Badge>1.0.0</Badge>
+
+1. When a user with a 32-character user ID authenticates to the device while the device is not connected to the server, the authentication event log is not updated in BioStar 2 even after the device is reconnected to the server. <Badge>1.0.0</Badge>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>1.5.1</Badge>
+
+1. Disabling the **Time Synchronization with Server** setting on the device details page in BioStar 2, then getting the device time, subsequently changing the device time to a previous time, and clicking **Set Time** results in the device restarting abnormally. <Badge>1.5.1</Badge>
+
+</BugLists>

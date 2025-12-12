@@ -1,0 +1,60 @@
+---
+id: 101
+title: Firmware Version 1.0.1
+---
+
+# Firmware Version 1.0.1 (Build No. 1.0.1_201110)
+
+Release<Separator/>2020-11-13
+
+## New Features and Improvements
+
+---
+
+1. Improved the algorithm for the Visual Face matching.
+
+    - Improved to update templates not only the first one but the others when authenticating faces after registering face templates with photos and setting up the Face Matching mode.
+
+    - Improved authentication failures due to quality issues in infrared templates when authenticating faces with the Fusion Matching mode on after registering face templates with photos.
+
+    - Improved authentication failures when authenticating faces getting backlight in the dark environment after registering face templates with photos.
+
+    - Improved both the algorithm for Mask Detection and usability.
+
+1. Added the feature to configure the Screen Saver setting.
+
+1. Changed the default ROI values of the Suprema Thermal Camera.
+
+    - ROI X(%): 30
+
+    - ROI Y(%): 25
+
+    - ROI Width(%): 50
+
+    - ROI Height(%): 55
+
+    - If the firmware has been upgraded from version 1.0.0, modified ROI values are not applied automatically. To set the default settings for ROI, enter the values manually as shown above.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The performed action, such as temperature output, was different from the intended action responding to the input signal set in the Trigger & Action feature when using the Suprema Thermal Camera.
+
+1. Time shown on the device was displayed incorrectly when setting up time with the BioStar Device SDK.
+
+1. An abnormal device shutdown occurred when sending face templates of FaceStation 2 or FaceLite to the device by using the BioStar Device SDK.
+
+1. The text on the Advanced tab was displayed abnormally when entering the detailed page of the device on BioStar 2 after the device database initialized for Security Tamper.
+
+1. It was not able to register a device on the Dynamic site when registering devices directly from Airfob Pass.
+
+1. The image log function was not working properly.
+
+1. Modified the Check Mode to operate depending on the Check Mode of the Suprema Thermal Camera when the Suprema Thermal Camera was in use and the Wiegand Output mode was set to Bypass.
+
+1. The firmware upgrade of XPass D2 (Rev 2) connected as a slave did not work properly.
+
+</BugLists>

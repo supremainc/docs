@@ -5,10 +5,10 @@ import { translate } from '@docusaurus/Translate';
 import clsx from 'clsx';
 import koLocale from './ko.json';
 import enLocale from './en.json';
-import jaLocale from './js.json';
+import jaLocale from './ja.json';
 import xkoLocale from './x/ko.json';
 import xenLocale from './x/en.json';
-import xjsLocale from './x/js.json';
+import xjaLocale from './x/ja.json';
 import devkoLocale from './device/ko.json';
 import devenLocale from './device/en.json';
 import glossary_ko from '@site/i18n/ko/glossary.json';
@@ -52,6 +52,7 @@ const xlocaleMap = {
 const glossaryMap = {
   ko: glossary_ko,
   en: glossary_en,
+  ja: glossary_ja,
 };
 
 // 중첩된 JSON 값에 접근하기 위한 함수

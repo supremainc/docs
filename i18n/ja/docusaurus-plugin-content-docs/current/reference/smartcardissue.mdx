@@ -1,0 +1,373 @@
+---
+id: smartcardissue
+title: How to Issue Suprema Smart Cards
+toc_max_heading_level: 3
+---
+
+import TypedefStruct from '@site/src/components/TypedefStruct';
+import ResponsiveImageMap from '@site/src/components/ResponsiveImageMap';
+
+This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform.
+
+* **Card data structure**: Data structure required for the issuance of SCC (Secure Credential Card) and AOC (Access on Card)
+
+* **Structure specification**: Detailed requirements for each field that must be complied with during card issuance
+
+* **Data integrity**: Method for ensuring the quality of card data through CRC validation
+
+* **Implementation reference**: Relationships between structures and how to correctly set data
+
+Smart cards issued according to this document operate normally on all BioStar compatible devices from Suprema.
+
+:::info
+
+Check the following before issuing smart cards.
+
+* **Compatible devices**: All Suprema devices supported by BioStar
+
+* **Card types**: SCC (Secure Credential Card), AOC (Access on Card)
+
+:::
+
+
+## Structure Relationship Diagram
+
+<ResponsiveImageMap 
+  src="/img/common/smartcardapi-structure.png"
+  alt="SmartCard API structure relationship diagram"
+  className="useMap"
+  mapName="imgmap2025813133616"
+  originalWidth={2072}
+  originalHeight={1192}
+  areas={[
+    {
+      shape: "rect", 
+      title: "BS2SmartCardData",
+      coords: "489,507,971,765",
+      href: "#bs2smartcarddata"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardHeader", 
+      coords: "1115,34,1597,609",
+      href: "#bs2smartcardheader"
+    },
+    {
+      shape: "rect",
+      title: "BS2SmartCardCredentials",
+      coords: "1115,655,1597,868", 
+      href: "#bs2smartcardcredentials"
+    },
+    {
+      shape: "rect",
+      title: "BS2AccessOnCardData",
+      coords: "1115,914,1597,1154",
+      href: "#bs2accessoncarddata"
+    }
+  ]}
+/>
+
+:::note
+
+Clicking on the structure in the image will take you to the details of that structure.
+
+:::
+
+<div className='page-break' />
+
+## Structure Hierarchy
+
+<TypedefStruct 
+  name="BS2SmartCardData"
+  description="Composite structure containing all data of SmartCard."
+  category="Smart Card"
+  size="1656"
+  hierarchy={[
+    {
+      name: "BS2SmartCardData",
+      type: "composite struct",
+      size: 1656,
+      description: "Container for all SmartCard data",
+      children: [
+        {
+          name: "BS2SmartCardHeader",
+          type: "struct",
+          size: 16,
+          description: "SmartCard header structure",
+          children: [
+            {
+              name: "Checksum Area",
+              description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
+              children: [
+                { name: "hdrCRC", type: "uint16_t", size: 2, description: "Checksum value of the card header. (cardCRC - reserved)" },
+                { name: "cardCRC", type: "uint16_t", size: 2, description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)" }
+              ]
+            },
+            {
+              name: "Card Metadata",
+              description: "Card type and template information",
+              children: [
+                { name: "cardType", type: "BS2_CARD_TYPE", size: 1, description: "Code value of card type.",
+                  constants: [
+                  { value: "0x02", description: "Secure Credential Card (SCC)" },
+                  { value: "0x03", description: "Access on Card (AOC)" }
+                ]},
+                { 
+                  name: "numOfTemplate", 
+                  type: "uint8_t", 
+                  size: 1, 
+                  description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
+                  notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."],
+                },
+                { name: "templateSize", 
+                  type: "uint16_t", 
+                  size: 2, 
+                  description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
+                  notes: [
+                    "When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.",
+                    "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."
+                  ]
+                },
+                {
+                  name: "issueCount", type: "uint16_t", size: 2, description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
+                },
+                {
+                  name: "duressMask",
+                  type: "uint8_t",
+                  size: 1,
+                  description: "Mask for whether there is a duress fingerprint."
+                },
+                { name: "numOfFaceTemplate", type: "uint8_t", size: 1, description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
+                notes: [
+                  "Supports up to 1 face template."
+                ] },
+                {
+                  name: "reserved",
+                  type: "uint8_t[1]",
+                  size: 1,
+                  description: "Reserved."
+                }
+              ]
+            },
+            {
+              name: "Authentication Settings",
+              description: "Card authentication modes and options",
+              children: [
+                { name: "cardAuthMode", type: "uint8_t", size: 1, description: "Uses the authentication mode stored on the card instead of the one set on the device.", 
+                notes: [
+                  "<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."
+                ],
+                constants: [
+                  { value: "2", description: "Card authentication only" },
+                  { value: "3", description: "Card and fingerprint authentication" },
+                  { value: "4", description: "Card and PIN authentication" },
+                  { value: "5", description: "Fingerprint or PIN authentication after card authentication" },
+                  { value: "6", description: "Card, fingerprint, and PIN authentication" },
+                  { value: "254", description: "Not usable" },
+                  { value: "255", description: "Undefined (operates in a mode defined by the system)" }
+                ]},
+                { name: "cardAuthModeEx", 
+                  type: "uint8_t", 
+                  size: 1, 
+                  description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
+                  notes: [
+                    "Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.",
+                    "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."
+                  ],
+                  constants: [
+                    { value: "21", description: "Card" },
+                    { value: "22", description: "Card + Face" },
+                    { value: "23", description: "Card + Fingerprint" },
+                    { value: "24", description: "Card + PIN" },
+                    { value: "26", description: "Card + Face or PIN" },
+                    { value: "27", description: "Card + Fingerprint or PIN" },
+                    { value: "28", description: "Card + Face or Fingerprint or PIN" },
+                    { value: "30", description: "Card + Face + PIN" },
+                    { value: "32", description: "Card + Fingerprint + PIN" },
+                    { value: "33", description: "Card + Face or Fingerprint + PIN" },
+                    { value: "254", description: "Not usable" },
+                    { value: "255", description: "Undefined (system-defined mode)" }
+                  ]
+                },
+                { name: "useAlphanumericID", type: "uint8_t", size: 1, description: "Flag indicating whether to use Alphanumeric ID." }
+              ]
+            }
+          ]
+        },
+        {
+          name: "cardID",
+          type: "uint8_t[BS2_CARD_DATA_SIZE]",
+          size: 32,
+          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
+          children: [
+            { name: "cardID: Access on Card (AOC)", type: "bytes[0-31]", size: 32, description: "AOC: Uses the entire 32 bytes." },
+            { name: "cardID: Secure Credential Card (SCC)", 
+              type: "bytes[0-31]", 
+              size: 32,
+              description: "SCC: Card ID (32 bytes)",
+              children: [
+                { name: "cardID (SCC)", type: "bytes[0-23]", size: 24, description: "SCC: Card ID (24 bytes)" },
+                { name: "issueCount (SCC)", type: "bytes[24-27]", size: 4, description: "SCC: Issue count" },
+                { name: "timeStamp (SCC)", type: "bytes[28-31]", size: 4, description: "SCC: Issue time" }
+              ]
+            },
+          ]
+        },
+        {
+          name: "BS2SmartCardCredentials",
+          type: "struct",
+          size: 1568,
+          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
+          children: [
+            {
+              name: "pin",
+              type: "uint8_t[BS2_PIN_HASH_SIZE]",
+              size: 32,
+              description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
+              notes: [
+                "PIN codes cannot be used in third-party tools."
+              ]
+            },
+            {
+              name: "templateData",
+              type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]", 
+              size: 1536,
+              description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
+              children: [
+                {
+                  name: "Fingerprint Templates",
+                  description: "Supports up to 4 fingerprint templates.",
+                  children: [
+                    { name: "Template 1", type: "uint8_t[384]", size: 384, description: "First fingerprint template" },
+                    { name: "Template 2", type: "uint8_t[384]", size: 384, description: "Second fingerprint template" },
+                    { name: "Template 3", type: "uint8_t[384]", size: 384, description: "Third fingerprint template" },
+                    { name: "Template 4", type: "uint8_t[384]", size: 384, description: "Fourth fingerprint template" }
+                  ]
+                },
+                {
+                  name: "Face Template",
+                  description: "Supports up to 1 face template with size 552.",
+                  children: [
+                    { name: "Template 1", type: "uint8_t[552]", size: 552, description: "Face template" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "BS2AccessOnCardData",
+          type: "struct",
+          size: 40,
+          description: "Area used in AOC cards that contains access group information.",
+          children: [
+            {
+              name: "accessGroupID",
+              type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
+              size: 32,
+              description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
+              children: [
+                { name: "Group ID 1", type: "uint16_t", size: 2, description: "First access group" },
+                { name: "Group ID 2", type: "uint16_t", size: 2, description: "Second access group" },
+                { name: "...", type: "uint16_t", size: 2, description: "..." },
+                { name: "Group ID 16", type: "uint16_t", size: 2, description: "Last access group" }
+              ]
+            },
+            {
+              name: "Time Restrictions",
+              description: "Time range for access permissions.",
+              children: [
+                { name: "startTime", type: "BS2_DATETIME", size: 4, description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds." },
+                { name: "endTime", type: "BS2_DATETIME", size: 4, description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]}
+/>
+
+
+## CRC Calculation and Validation {#crc}
+
+CRC-16 CCITT checksums (`hdrCRC`, `cardCRC`) are used for the header and card data respectively, to ensure the integrity of SmartCard data.
+
+### What are hdrCRC and cardCRC? {#hdrcrc-cardcrc}
+
+- `hdrCRC`: The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the `cardCRC` to `reserved` (14 bytes total) of `BS2SmartCardHeader`.
+
+- `cardCRC`: The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from `cardType` to `BS2SmartCardData.accessOnData` (total card data excluding the header).
+
+### How to Calculate CRC {#crc-calculation}
+
+The [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php) provides the **BS2_ComputeCRC16CCITT** function. Below is an example of its use.
+
+```csharp title='Calculate checksum'
+// Calculate card data checksum (cardCRC)
+uint16_t cardCRC = 0xFFFF;
+int result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);
+
+// Calculate header checksum (hdrCRC)
+card.header.cardCRC = cardCRC;  // Set the cardCRC value first
+uint16_t hdrCRC = 0xFFFF;
+result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);
+```
+
+:::note
+
+- `cardCRC` is calculated from `cardType` to `accessOnData`.
+
+- `hdrCRC` is calculated from `cardCRC` to `reserved`.
+
+- Always calculate `cardCRC` first, set it in the header, then calculate `hdrCRC`.
+
+:::
+
+
+### How to Validate {#crc-validation}
+
+To validate the integrity of card data when reading, do the following:
+
+1. Recalculate CRC using data read from the card.
+
+1. Compare the stored CRC value with the calculated CRC value.
+
+```csharp title='CRC Validation'
+// CRC validation example
+BS2SmartCardData readCard;  // Data read from card
+
+// 1. cardCRC validation
+uint16_t calculatedCardCRC = 0xFFFF;
+BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);
+
+if (readCard.header.cardCRC != calculatedCardCRC) {
+    // Card data corruption
+    return ERROR_CARD_DATA_CORRUPTED;
+}
+
+// 2. hdrCRC validation
+uint16_t calculatedHdrCRC = 0xFFFF;
+BS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);
+
+if (readCard.header.hdrCRC != calculatedHdrCRC) {
+    // Header data corruption
+    return ERROR_HEADER_DATA_CORRUPTED;
+}
+```
+
+:::note
+
+**Cautions for CRC Calculation**
+
+* **Calculation Order**: Calculate `cardCRC` first, set it in the header, and then calculate `hdrCRC`.
+
+* **Structure Alignment**: Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment.
+
+* **Initial Value**: CRC-16 CCITT uses polynomial 0x1021 and **initial value 0xFFFF**.
+
+* **SDK Function**: The `BS2_ComputeCRC16CCITT` function is provided in the [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php).
+
+* **Data Order**: Input data is processed in little-endian byte order.
+
+:::

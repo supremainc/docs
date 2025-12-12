@@ -1,0 +1,238 @@
+---
+id: master-admin
+title: Introduction to Master Admin Feature and Setup Guide
+description: Provides a guide to configuring the Master Admin, which enhances device security by strengthening administrator permissions.
+keywords: [ Master Admin, Administrator, Master ]
+---
+
+The **Master Admin** feature is designed to **enhance device security** by **strengthening overall administrator privileges** and **preventing unauthorized access and configuration changes**.<br/>With this feature, you **must register a Master Admin** on the new device, and only registered Master Admins can access the administrator menu and change device settings.
+
+The **Master Admin** feature is available **only on Suprema products that support user interface via LCD screen**.
+
+:::info
+
+* This feature is an essential policy to enhance device security.
+
+* The Master Admin cannot be deleted directly, and they are **deleted only through factory reset**.
+
+:::
+
+## Setting Up the Master Admin
+
+### What is a Master Admin?
+
+If you use the device without setting up a administrator, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator.
+
+### Supported Products for Master Admin
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
+
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
+
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
+
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>**BioStation 3**<br/>Firmware v1.4.0 or later</Td>
+
+<Td>**BioStation 2a**<br/>Firmware v1.2.0 or later</Td>
+
+<Td>**BioLite N2**<br/>Firmware v1.7.0 or later</Td>
+
+<Td>**X-Station 2**<br/>Firmware v1.4.0 or later</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+## How to Enhance Administrator Security on New Devices or Existing Devices with Upgraded Firmware
+
+### New Devices
+
+For new devices, registering a **Master Admin** is mandatory from the beginning. If you do not register a Master Admin, device usage will be restricted.
+
+:::info
+
+* On new devices, the **Master Admin** registration screen appears upon initial boot. You cannot proceed to the next screen unless you register a Master Admin.
+
+* Even if you assign an overall device administrator via BioStar 2, you must register a **Master Admin** to use all device functions.
+
+* The new device cannot be downgraded to a lower version.
+
+:::
+
+<details>
+<summary>**Registering Master Admin on a New Device**</summary>
+
+#### Registering Master Admin on a New Device
+
+1. When you boot a new device for the first time, the **Master Admin** registration screen appears.
+
+    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
+
+1. To register a **Master Admin**, you must enroll at least two types of credentials. Select and enroll your preferred two credential types.
+
+    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
+
+    Credentials that can be enrolled for **Master Admin** are as follows:
+
+    <Table>
+      <Tbody>
+      <Row>
+        <Th>Credential Type</Th>
+        <Th>Max Quantity</Th>
+        <Th>Details</Th>
+      </Row>
+      <Row>
+        <Td>Card</Td>
+        <Td>Up to 4</Td>
+        <Td>Supports CSN and Wiegand type only<br/>No duplicate enrollment within the same type</Td>
+      </Row>
+      <Row>
+        <Td>Face</Td>
+        <Td>Up to 2</Td>
+        <Td>Available only on devices with the same algorithm</Td>
+      </Row>
+      <Row>
+        <Td>Fingerprint</Td>
+        <Td>Up to 2</Td>
+        <Td>-</Td>
+      </Row>
+      <Row>
+        <Td>PIN</Td>
+        <Td>1</Td>
+        <Td>Minimum 8 digits</Td>
+      </Row>
+      </Tbody>
+    </Table>
+
+    :::note
+
+    **Enrollment Conditions**
+
+    * At least two different types of credentials must be enrolled.
+
+    * The same conditions apply to both new and firmware upgraded devices.
+
+    * All credentials supported by the device can be used for authentication.
+
+    :::
+
+1. After enrolling at least two types of credentials, press the **Complete** button to finish **Master Admin** registration.
+
+    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
+
+{/* :::warning
+
+**Warning Message When Master Admin Is Not Registered**
+
+If neither a Master Admin nor an equivalent setting is configured, a warning popup message will appear when saving settings.
+
+<Image src='/img/how-to/no-register-master-admin.png' alone caption />
+
+::: */}
+
+</details>
+
+<details>
+<summary>**Managing Master Admin on a New Device**</summary>
+
+#### Managing Master Admin on a New Device
+
+On new devices, you can modify **Master Admin** settings in the **Settings → Device → Master Admin** menu.
+
+<div className='grid-container'>
+
+<Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
+
+<Image src='/img/how-to/setting-master-admin-4.png' caption width='300px' />
+
+</div>
+
+</details>
+
+### Upgraded Devices {#admin-two-step-authentication}
+
+Devices upgraded via firmware do not provide **Master Admin** settings, but you can enhance administrator security by enabling the **Admin 2-step Authentication** option.
+
+:::info
+
+* The default value for **Admin 2-step Authentication** is single-step authentication.
+
+* Two-step authentication can be activated only if all registered administrators have at least two types of credentials.
+
+* The firmware upgrade device cannot be downgraded to a lower version after upgrading the firmware.
+
+:::
+
+<details>
+<summary>**Setting Admin 2-step Authentication on Upgraded Devices**</summary>
+
+#### Setting Admin 2-step Authentication on Upgraded Devices
+
+You can activate Admin 2-step Authentication in the **Settings → Device → Admin 2-step Authentication** menu.
+
+* The **Admin 2-step Authentication** option appears only on devices upgraded to the latest firmware.
+
+<Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
+
+:::info
+
+* If not all administrators have at least two types of credentials, activation will fail and an error message will appear.<br/>Enroll at least two types of credentials for all administrators, and then try again.
+
+<Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
+
+:::
+
+:::warning
+
+* If you activate **Admin 2-step Authentication** and then delete credentials so that all administrators have fewer than two types, you will not be able to access the administrator menu if BioStar 2 connection is also unavailable. Therefore, exercise caution when deleting administrator credentials.
+
+:::
+
+</details>
+
+## Additional Information
+
+* **Manual Device Hash Key Change**
+
+  * When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding.
+
+* **RS-485 Biometric Image Transmission Restriction**
+
+  * Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
+
+## Frequently Asked Questions
+
+import FaqData from './faqs.json';
+
+<FaqsItems data={FaqData} />
+
+{/* ## [TBD] Setting Master Admin via BioStar 2
+
+:::info
+
+* The Master Admin feature is supported from BioStar 2 v2.9.11.
+
+* Devices upgraded via firmware do not display the Master Admin menu in BioStar 2 administrator settings.
+
+:::
+
+## [TBD] Batch Edit Master Admin
+
+* You can batch edit Admin 2-step Authentication and credential enrollment.
+
+* Batch editing overwrites with the enrolled credentials.
+
+* You can enroll a face, fingerprint, card, and PIN credentials.
+
+* If a selected device does not support a credential type, batch editing will fail for that device.
+
+* New devices must also meet the minimum two-credential condition; if not, batch editing for that device will fail. */}

@@ -11,7 +11,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const imagePath = 
         currentLocale === 'ko' || alone ? 
             useBaseUrl(src) : 
-            useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
+            useBaseUrl(src.replace('/img/', `/img/en/`));
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);

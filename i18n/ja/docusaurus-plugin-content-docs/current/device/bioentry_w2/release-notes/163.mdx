@@ -1,0 +1,40 @@
+---
+id: 163
+title: Firmware Version 1.6.3
+---
+
+# Firmware Version 1.6.3 (Build No. 1.6.3_210419)
+
+Release<Separator/>2021-04-20
+
+## New Features and Improvements
+
+---
+
+1. Upgraded to the 1.1.1i version of OpenSSL.
+
+1. Intelligent Slave Support
+
+    - Intelligent Slave: A function that enables 1:1 or 1:N matching directly from the Suprema device and transmits the authentication result as OSDP card data to the third-party controller.
+
+1. Improved that LFD Driver IC damage does not affect fingerprint recognition performance.
+
+1. The transmission power level for Bluetooth Low Energy (BLE) has been adjusted.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Card data were output with the wrong BitCount when the device was connected to a 3rd-party system via OSDP. <Badge>1.0.0</Badge>
+
+1. When calling the BS2_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. <Badge>1.0.0</Badge>
+
+1. It was not able to communicate with a 3rd-party controller via OSDP with the default key before network initialization. (only for devices released with the firmware version 1.5.0 or later) <Badge>1.0.0</Badge>
+
+1. It was able to communicate using default keys after changing the key settings when the device was connected to a 3rd-party device via OSDP. <Badge>1.0.0</Badge>
+
+1. After initializing the slave device's settings, it was not able to connect it to a 3rd-party controller. <Badge>1.6.0</Badge>
+
+</BugLists>
