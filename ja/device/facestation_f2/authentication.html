@@ -1,0 +1,457 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-device/facestation_f2/authentication" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>認証 | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremainc.github.io/docs/ja/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremainc.github.io/docs/ja/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/device/facestation_f2/authentication /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="認証 | Suprema Docs"/><meta data-rh=true name=description content=サポートする認証方式と認証手順について説明します。 /><meta data-rh=true property=og:description content=サポートする認証方式と認証手順について説明します。 /><meta data-rh=true name=keywords content=認証モード,認証オプション,PIN,顔,勤怠 /><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/device/facestation_f2/authentication /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/device/facestation_f2/authentication hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/device/facestation_f2/authentication hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/device/facestation_f2/authentication hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/device/facestation_f2/authentication hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/device/facestation_f2/","name":"FaceStation F2","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/device/facestation_f2/using-device","name":"使用","position":2},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/device/facestation_f2/authentication","name":"認証","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.918275d8.css /><script src=/docs/ja/assets/js/runtime~main.6300cd27.js defer></script><script src=/docs/ja/assets/js/main.db831d9a.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/suprema-logo.svg /><link rel=preload as=image href=/docs/ja/img/suprema-logo-white.svg /><link rel=preload as=image href=/docs/ja/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_knG7 announcementBarContent_xLdY"><b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 <a href=https://docs.supremainc.com/ target=_blank>다음 링크</a>에서 확인하세요.</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/suprema-logo.svg alt="Suprema ドキュメント" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=/docs/ja/img/suprema-logo-white.svg alt="Suprema ドキュメント" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>Platforms</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>Devices</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/how-to>How-to Articles</a><a class="navbar__item navbar__link" href=/docs/ja/api/bsxapi>API</a><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>Legal</a><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="検索 (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>検索</span></span><span class=DocSearch-Button-Keys></span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/device/facestation_f2/authentication target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/device/facestation_f2/authentication target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/ja/device/facestation_f2/authentication target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/device/facestation_f2><span title="FaceStation F2" class=categoryLinkLabel_W154>FaceStation F2</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/safety-instructions><span title=安全のための注意事項 class=linkLabel_WmDU>安全のための注意事項</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/getting-started><span title=はじめに class=linkLabel_WmDU>はじめに</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/installation><span title=インストール class=linkLabel_WmDU>インストール</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/ja/device/facestation_f2/using-device><span title=使用 class=categoryLinkLabel_W154>使用</span></a><button aria-label="サイドバー分類 '使用' を折りたたむ" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/admin-menu><span title=管理者メニュー class=linkLabel_WmDU>管理者メニュー</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/user><span title=ユーザー class=linkLabel_WmDU>ユーザー</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/device/facestation_f2/authentication><span title=認証 class=linkLabel_WmDU>認証</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/settings><span title=設定 class=linkLabel_WmDU>設定</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/event-log><span title=イベントログ class=linkLabel_WmDU>イベントログ</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/troubleshooting><span title=トラブルシューティング class=linkLabel_WmDU>トラブルシューティング</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/product-specifications><span title=製品仕様 class=linkLabel_WmDU>製品仕様</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/regulatory-information><span title=規制認証情報 class=linkLabel_WmDU>規制認証情報</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/device/facestation_f2/appendices><span title=付録 class=linkLabel_WmDU>付録</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2"><hr/><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/ja/device/facestation_f2/release-notes><span title=リリースノート class=categoryLinkLabel_W154>リリースノート</span></a><button aria-label="サイドバー分類 'リリースノート' を展開" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/device/facestation_f2><span>FaceStation F2</span></a><li class="breadcrumbs__item item-2"><a class=breadcrumbs__link href=/docs/ja/device/facestation_f2/using-device><span>使用</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-3"><span class=breadcrumbs__link>認証</span></ul><div class=btnprint_MOIq><button disabled class=printbtn_FzsH>PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>認証</h1></header><p>サポートする認証方式と認証手順について説明します。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=認証モード>認証モード<a href=#認証モード class=hash-link aria-label="認証モード への直接リンク" title="認証モード への直接リンク" translate=no>​</a></h2>
+<p>デバイスの認証モードを設定できます。 顔、指紋、PIN、カード、ID を組み合わせて認証モードとして使用でき、各認証モードごとに利用するスケジュールを設定することもできます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>指紋認証は FSF2-ODB 製品でのみ使用できます。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=registering-auth-mode>認証モードの登録<a href=#registering-auth-mode class=hash-link aria-label="認証モードの登録 への直接リンク" title="認証モードの登録 への直接リンク" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>Auth Mode</span> → <img loading=lazy decoding=async src=/docs/ja/img/common/ico-add2.svg width=auto height=auto class=ico /> を押します。</p>
+</li>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-add1.svg width=auto height=auto class=ico /> を選択した後、実行する認証方法を選択します。 認証方法を追加で設定する場合は、同じ手順で選択してから組み合わせます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Schedule</span> を設定します。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。 例えば、<img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-card.png width=auto height=auto class=ico /> + <img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-face-bs3.png width=auto height=auto class=ico /> + <img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-pin-bs3.png width=auto height=auto class=ico /> の組み合わせでは、カード・顔・PIN のすべてで認証する必要があります。<img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-card.png width=auto height=auto class=ico /> + <img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-face-bs3.png width=auto height=auto class=ico /> / <img loading=lazy decoding=async src=/docs/ja/img/common/ico-authmode-pin-bs3.png width=auto height=auto class=ico /> の組み合わせでは、カードで認証した後に顔または PIN を入力する必要があります。</p>
+</li>
+<li class="">
+<p><span class=cmd>Schedule</span> は BioStar X で設定できます。 設定済みのスケジュールがない場合は、<span class=cmd>Not Use</span> と <span class=cmd>Always</span> だけを選択できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Schedule</span> の設定について詳しくは、<a class="" href=/docs/ja/platform/biostar_x/settings-schedule>BioStar X 管理者マニュアル</a> を参照してください。</p>
+</li>
+</ul></div></div>
+</li>
+<li class="">
+<p>設定を保存するには<span class=cmd>OK</span>を押します。</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=認証モードの編集>認証モードの編集<a href=#認証モードの編集 class=hash-link aria-label="認証モードの編集 への直接リンク" title="認証モードの編集 への直接リンク" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>Auth Mode</span> を押します。</p>
+</li>
+<li class="">
+<p>編集する認証モードを選択します。</p>
+</li>
+<li class="">
+<p><a href=#registering-auth-mode class="">認証モードの登録</a> を参照して認証モードを修正した後、<span class=cmd>OK</span> を押します。</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=認証モードの削除>認証モードの削除<a href=#認証モードの削除 class=hash-link aria-label="認証モードの削除 への直接リンク" title="認証モードの削除 への直接リンク" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>Auth Mode</span> を押します。</p>
+</li>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-delete.svg width=auto height=auto class=ico />をクリックして削除する項目を選択します。 複数選択することもできます。</p>
+</li>
+<li class="">
+<p>選択した項目を削除するには、<span class=cmd>OK</span> を押してから <span class=cmd>OK</span> を押します。 前の画面に戻るには <span class=cmd>Cancel</span> を押してください。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=サーバーマッチング>サーバーマッチング<a href=#サーバーマッチング class=hash-link aria-label="サーバーマッチング への直接リンク" title="サーバーマッチング への直接リンク" translate=no>​</a></h2>
+<p>サーバーマッチングを設定できます。 サーバーマッチングを使用すると、デバイスではなく BioStar X でユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、デバイスを出入口の外側に設置する場合に便利です。</p>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> を押してから <span class=cmd>Server Matching</span> を有効にします。</p>
+<ul>
+<li class="">
+<p><span class="badge only">FSF2-ODB</span>：<span class=cmd>Server Matching (Fingerprint, Card, ID)</span></p>
+</li>
+<li class="">
+<p><span class="badge only">FSF2-DB, FSF2-AB</span>：<span class=cmd>Server Matching (Card, ID)</span></p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><span class=cmd>Server Matching</span> では、指紋・カード・ID だけを使用できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Server Matching</span> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、<a class="" href=/docs/ja/platform/biostar_x/settings-server-server#servermatching>BioStar X 管理者マニュアル</a> を参照してください。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=face>顔<a href=#face class=hash-link aria-label="顔 への直接リンク" title="顔 への直接リンク" translate=no>​</a></h2>
+<p>顔認証に関する設定を変更できます。</p>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>Face</span> を選択します。</p>
+</li>
+<li class="">
+<p>必要な項目を変更してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/fsf2-auth.png width=300 height=auto /></p>
+<ul>
+<li class="">
+<p><span class=cmd>Light Brightness</span>：デバイスの照明の明るさを手動で調整できます。 <span class=cmd>Normal</span> または <span class=cmd>High</span> で明るさを設定するか、<span class=cmd>Not Use</span> を選択して照明をオフにできます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Motion Sensor</span>：デバイス周辺の動きを検知する感度を設定します。 <span class=cmd>Motion Sensor</span> を <span class=cmd>OFF</span> に設定した場合、顔認証を行うには画面をタッチしてから認証を進めてください。</p>
+</li>
+<li class="">
+<p><span class=cmd>Enroll Timeout</span>：設定した時間内に顔を登録できないと、顔登録がキャンセルされます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Auth Timeout</span>：設定した時間内に認証を完了できないと、認証失敗となります。</p>
+</li>
+<li class="">
+<p><span class=cmd>Duplicate Check</span>：顔登録時に重複顔をチェックできます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Face Detect Setting</span>：顔認証時にデバイスが顔を検出する領域の位置とサイズを設定できます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>最適な性能を得るために、<span class=cmd>Face Detect Setting</span> のサブオプションはデフォルト値のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。<ul>
+<li class="">
+<p>最大顔回転角度：15</p>
+</li>
+<li class="">
+<p>顔認識距離：最小30 cm、最大100 cm</p>
+</li>
+<li class="">
+<p>顔認識領域拡張：無効</p>
+</li>
+</ul></div></div>
+</li>
+<li class="">
+<p><span class=cmd>ToM Enrollment</span>：<span class=cmd>ToM Enrollment</span> を有効にすると、BioStar X で発行された <span class=cmd>Template on Mobile</span> を登録できます。 <span class=cmd>Template on Mobile</span> は、ユーザーのバイオメトリックテンプレートをモバイル端末に保存するモバイルアクセスカードであり、BioStar X サーバー、Airfob Portal、デバイスにユーザーデータを保存せずにバイオメトリック認証を行えます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p><span class=cmd>Template on Mobile</span> の詳細については、<a class="" href=/docs/ja/platform/biostar_x/enroll-credential-mobile#template-on-mobile>BioStar X 管理者マニュアル</a> を参照してください。</div></div>
+</li>
+<li class="">
+<p><span class=cmd>Store Visual Face Image</span>：ビジュアルフェイスに実際の画像とテンプレートの両方を保存するか、画像を保存せずテンプレートのみを保存するかを設定できます。 無効にすると、保存されているビジュアルフェイスの画像はすべて削除され、今後登録されるビジュアルフェイスも画像を除いたテンプレートのみ保存されます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>この設定を無効にした後は、BioStar 2 v2.9.7 以上に接続して使用してください。</div></div>
+</li>
+<li class="">
+<p><span class=cmd>Security Level</span>：1<!-- -->:N<!-- --> 認証のセキュリティレベルを設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Operation Mode</span>：顔認証時のデバイス動作モードを設定できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Fusion Matching</span>：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Fast Matching</span>：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>Fake Detection</span>：写真などの偽造顔を用いたユーザー認証を防止できます。 <span class=cmd>Operation Mode</span>を<span class=cmd>Fusion Matching</span>に設定すると有効になります。</p>
+</li>
+<li class="">
+<p><span class=cmd>Advanced Settings</span>：マスク検出、サーマルカメラ機能など、顔認証に関する高度な設定を変更できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Check Mode</span>：用途に応じて確認モードを設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Authentication Fail Sound</span>：マスク未着用または基準温度超過による認証失敗時の通知有無を設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Mask Detection</span>：マスク検出の使用有無を設定できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Enabled (Hard)</span>：マスクを着用していないユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Enabled (Soft)</span>：マスクを着用していないユーザーも認証可能ですが、マスク未着用イベントがログに記録されます。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>Thermal Camera</span>：サーマルカメラの使用可否を設定できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Enabled (Hard)</span>：基準温度範囲を超えたユーザーは認証が拒否され、基準温度超過イベントがログに記録されます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Enabled (Soft)</span>：基準温度範囲を超えたユーザーも認証可能ですが、温度超過イベントがログに記録されます。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><span class=cmd>Mask Detection</span> または <span class=cmd>Thermal Camera</span>を使用する場合、装置の用途に応じて <span class=cmd>Check Mode</span> を設定できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Check After Authentication</span>：認証を実行した後、ユーザーのマスク着用有無を確認または温度を測定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Check Before Authentication</span>：ユーザーのマスク着用有無を確認または温度を測定した後に認証を行います。 このモードを使用すると、マスクを着用していない、または基準温度を超えたユーザーは認証できません。</p>
+</li>
+<li class="">
+<p><span class=cmd>Check Only</span>：装置をマスク着用有無の確認または温度測定専用として使用できます。 このモードを使用すると、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>Thermal Camera</span>を<span class=cmd>Enabled</span>に設定すると、サーマルカメラの高度な設定オプションが有効になります。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Celsius/Fahrenheit</span>：温度表示単位を設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Low Threshold Temperature</span>：入場を制限する最低基準温度を設定できます。 表面温度が<span class=cmd>Low Threshold Temperature</span>より低いユーザーは認証が拒否されます。 <span class=cmd>Low Threshold Temperature</span>は1℃～45℃の範囲で設定でき、<span class=cmd>High Threshold Temperature</span>より高く設定することはできません。</p>
+</li>
+<li class="">
+<p><span class=cmd>High Threshold Temperature</span>：入室を制限するための最高基準温度を設定します。 表面温度が<span class=cmd>High Threshold Temperature</span>より高いユーザーは認証が拒否されます。 <span class=cmd>High Threshold Temperature</span>は1℃～45℃の範囲で設定でき、<span class=cmd>Low Threshold Temperature</span>より低く設定することはできません。</p>
+</li>
+<li class="">
+<p><span class=cmd>Save Temperature Data</span>：ユーザーの温度ログを保存するかどうかを設定します。 このオプションを有効にすると、認証の成否とユーザーの温度値の両方がログに保存され、無効にすると認証の成否のみがログに保存されます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Show Thermal Infrared Image</span>：装置画面に赤外線映像を表示するかどうかを設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Dynamic ROI</span>：装置がユーザーの温度を測定する関心領域（ROI）を自動検出するよう設定できます。 たとえば、周囲に他の照明が設置されている場合でも、このオプションを有効にすると、サーマルカメラは照明ではなくユーザーの温度を検知して測定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Camera Configuration</span>：正確な測定のためにカメラの詳細オプションを設定してください。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>Thermal Camera</span>を<span class=cmd>Enabled</span>に設定すると、設置環境に応じて正確に測定できるようサーマルカメラの詳細オプションを設定できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Distance(cm)</span>：ユーザーとサーマルカメラの距離を設定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Emissivity</span>：赤外線放射率を設定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ROI X(%)</span>、<span class=cmd>ROI Y(%)</span>、<span class=cmd>ROI Width(%)</span>、<span class=cmd>ROI Height(%)</span>：<span class=cmd>Dynamic ROI</span>を<span class=cmd>Not Use</span>に設定した場合、ROI（関心領域）を手動で設定できます。 ROI の位置とサイズを調整し、熱画像カメラが温度を測定する領域を手動で設定します。 <span class=cmd>ROI X(%)</span>は関心領域の左右位置を示し、この値を大きくすると領域は画面の右側へ移動します。 <span class=cmd>ROI Y(%)</span>は関心領域の上下位置を示し、この値を大きくすると領域は上側へ移動します。 <span class=cmd>ROI Width(%)</span>と<span class=cmd>ROI Height(%)</span>は関心領域のサイズを示し、両方の値を大きくすると温度を測定する領域が広がります。 たとえば、<span class=cmd>ROI X(%)</span>、<span class=cmd>ROI Y(%)</span>、<span class=cmd>ROI Width(%)</span>、<span class=cmd>ROI Height(%)</span>の値をデフォルトからそれぞれ40、15、70、40に変更すると、関心領域は以下のように変更されます。</p>
+</li>
+</ul>
+<div class="container center columns"><div class=row><div class="col text--center"><p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/device/auth-roi1.png width=200 height=auto /><p>ROIをデフォルト値に設定した場合</div><div class="col text--center"><p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/device/auth-roi2.png width=200 height=auto /><p>ROI X(%), ROI Y(%), ROI 幅(%), ROI 高さ(%)<br/>値をそれぞれ 40、15、70、40 に変更した場合</div></div></div>
+<ul>
+<li class="">
+<p><span class=cmd>Skin Temperature Compensation</span>：装置の使用環境と周囲温度を考慮し、サーマルカメラが自動で温度を補正するよう設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Skin Temperature Correction</span>：製品の使用環境に合わせて、温度を一定値だけ高くまたは低く測定するよう補正できます。 たとえば、温度が常に0.1℃高く測定される環境では、温度補正値を-0.1に設定してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>FW</span>：サーマルカメラが正常に接続されている場合、そのカメラのファームウェアバージョンが表示されます。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>最適な性能を得るために、<span class=cmd>Camera Configuration</span>のサブオプションはデフォルト設定のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Distance(cm)</span>：100</p>
+</li>
+<li class="">
+<p><span class=cmd>Emissivity</span>：0.98</p>
+</li>
+<li class="">
+<p><span class=cmd>ROI X(%)</span>：30</p>
+</li>
+<li class="">
+<p><span class=cmd>ROI Y(%)</span>：25</p>
+</li>
+<li class="">
+<p><span class=cmd>ROI Width(%)</span>：50</p>
+</li>
+<li class="">
+<p><span class=cmd>ROI Height(%)</span>：55</p>
+</li>
+</ul>
+<p>ROI をデフォルト設定値として使用する場合、認証時に画面の ROI 領域に以下のような黄色いガイドが表示されます。 ユーザーがその領域に顔を合わせて認証すると、正確な温度を測定できます。 設定値を手動で変更するか、ダイナミック ROI を設定した場合、黄色いガイドは表示されません。</p>
+<div class="container center columns"><div class=row><div class="col text--center"><p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/auth-static-roi.png width=200 height=auto /><p>ROIをデフォルト値に設定した場合</div><div class="col text--center"><p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/auth-dynamic-roi.png width=200 height=auto /><p>ROI 設定値を変更するか、ダイナミック ROI を使用する場合</div></div></div>
+</li>
+<li class="">
+<p>スレーブ装置ではマスク認証およびサーマルカメラ機能を使用できません。</p>
+</li>
+<li class="">
+<p>サーマルカメラは TCM10-FSF2 をサポートしています。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=fingerprint>指紋 <span class="badge only">FSF2-ODB</span><a href=#fingerprint class=hash-link aria-label="fingerprint への直接リンク" title="fingerprint への直接リンク" translate=no>​</a></h2>
+<p>指紋認証に関する設定を変更できます。</p>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>Fingerprint</span> を選択します。</p>
+</li>
+<li class="">
+<p>必要な項目を変更してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/auth-fingerprint.png width=300 height=auto /></p>
+<ul>
+<li class="">
+<p><span class=cmd>Security Level</span>：1<!-- -->:N<!-- --> 認証のセキュリティレベルを設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Matching Timeout</span>：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証が完了しない場合、認証は失敗します。</p>
+</li>
+<li class="">
+<p><span class=cmd>View Image</span>：指紋をスキャンしたときに元画像を表示できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Sensor Sensitivity</span>：指紋センサーの感度を設定できます。 より精密な指紋情報を取得するには、センサー感度を高く設定してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>1:N Fast Mode</span>：指紋認証速度を設定できます。 <span class=cmd>Auto</span> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Template Format</span>：指紋テンプレート形式を設定できます。 <span class=cmd>SUPREMA</span>がデフォルトで設定されています。テンプレート形式を変更すると、以前に保存されたすべての指紋が使用できなくなるため、変更時は注意してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>Sensor Mode</span>：<span class=cmd>Auto On</span> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <span class=cmd>Always On</span> に設定すると、指紋をスキャンしていないときでも常にセンサーがオンになります。</p>
+</li>
+<li class="">
+<p><span class=cmd>Live Finger Detection</span>：偽造指紋検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。</p>
+</li>
+<li class="">
+<p><span class=cmd>Advanced Enrollment</span>：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Duplicate Check</span>：指紋登録時に重複指紋かどうかを検査できます。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=勤怠>勤怠<a href=#勤怠 class=hash-link aria-label="勤怠 への直接リンク" title="勤怠 への直接リンク" translate=no>​</a></h2>
+<p>勤怠モードの登録方法を設定できます。</p>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> → <span class=cmd>T&A Mode</span> を選択します。</p>
+</li>
+<li class="">
+<p>必要な項目を設定してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/auth-tna.png width=300 height=auto /></p>
+<ul>
+<li class="">
+<p><span class=cmd>T&A Mode</span>：勤怠モードの使用方法を設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>T&A Code</span>：勤怠イベントを登録できます。 勤怠イベントを登録するには、<span class=cmd>T&A Code</span> → <img loading=lazy decoding=async src=/docs/ja/img/common/ico-add2.svg width=auto height=auto class=ico /> を選択し、画面に表示するアイコン、勤怠イベント名、スケジュールを設定してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>T&A Required</span>：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <span class=cmd>T&A Mode</span> を <span class=cmd>By User</span> に設定したときに使用できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Fixed T&A Key</span>：管理者が選択した勤怠イベントのみ使用するよう設定できます。 <span class=cmd>T&A Mode</span> を <span class=cmd>Fixed</span> に設定したときに使用できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>Job Code</span>：作業コードの使用有無を選択できます。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=認証結果表示オプション>認証結果表示オプション<a href=#認証結果表示オプション class=hash-link aria-label="認証結果表示オプション への直接リンク" title="認証結果表示オプション への直接リンク" translate=no>​</a></h2>
+<p>認証結果表示オプションを設定できます。</p>
+<ol>
+<li class="">
+<p><img loading=lazy decoding=async src=/docs/ja/img/common/ico-menu.svg width=auto height=auto class=ico />を選択し、管理者権限の認証手段で認証します。</p>
+</li>
+<li class="">
+<p><span class=cmd>AUTHENTICATION</span> を選択します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Auth Result Display Option</span> で目的の項目を設定します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/ja/img/en/device/auth-result-display-option.png width=300 height=auto /></p>
+<ul>
+<li class="">
+<p><span class=cmd>User ID Display</span>：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Display All</span>：ユーザー ID をすべて表示します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Mask All but First Letter</span>：ユーザー ID の先頭文字のみ表示します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Hide All</span>：ユーザー ID を表示しません。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>User Name Display</span>：デバイスの認証結果画面でユーザー名の表示方法を選択できます。</p>
+<ul>
+<li class="">
+<p><span class=cmd>Display All</span>：ユーザー名をすべて表示します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Mask All but First Letter</span>：ユーザー名の先頭文字のみ表示します。</p>
+</li>
+<li class="">
+<p><span class=cmd>Hide All</span>：ユーザー名を表示しません。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/device/facestation_f2/user><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>ユーザー</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/device/facestation_f2/settings><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>設定</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=/docs/ja/img/suprema-logo-bottom.svg alt="Suprema セキュリティ＆バイオメトリクス" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=/docs/ja/img/suprema-logo-bottom.svg alt="Suprema セキュリティ＆バイオメトリクス" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQ0IwQkZEMEMyMjQxMUU4OUM4Nzk1RUVFMDgyNjZCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQ0IwQkZEMUMyMjQxMUU4OUM4Nzk1RUVFMDgyNjZCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDQjBCRkNFQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDQjBCRkNGQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+xeh/HgAAAOdJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOGZaOYSFGUVdXlyeQWgTEb4DYC4jvk2JJWVkZVUOmAIhFgFgDiOMGOpo2AzGo3vgOxLsHNJqAYCkQHwXir0D8GCrGDcRsUPY/IP6IZu4fWoXMOyA+B8Q3gbgOKjYLKg7Cl4DYBYg3AfEHIP4NVRtAi5AhBGSwRJ8aEK8BYjsgPkbPrI3LHGYgLh6IcmYlNDRUgfgqkrglvaPpHTTL/4LydwGxNpQtSu+Q+YLkEBD4SY6HR+umUceMOoZagHG0EzfqmFHHjDpm1DEDBAACDAD7viyuz0vxVwAAAABJRU5ErkJggg=="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMThGRUI1Q0MyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMThGRUI1REMyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIxOEZFQjVBQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIxOEZFQjVCQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+x8dqJAAAAKZJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOoRZgIVVDV1cXupAqENcBsSMQSwHxbyD+WlZWJkRzx6ABDSA+AcT8SGJsUEz3aGpGc8iAphl7NH40ELMDMSNd0gwaEEVifwHiZYMlN/0d2VkbCHC1OfjR5BiHdMgM+Wh6j8QWRIu+D/R2jBCO9PMJTW601h51zKhjRh0Drj9Gu7ejjhl1zKhjaAwAAgwAHVwYSDKP6cIAAAAASUVORK5CYII="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQzBFRTY4NUMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQzBFRTY4NkMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJDMEVFNjgzQzIyNDExRThBNDJGRENFOTU0NDhGMUY4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJDMEVFNjg0QzIyNDExRThBNDJGRENFOTU0NDhGMUY4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pP+52gAAASRJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOGXUMrQELIQVdXV2MQKoYiIOBWAyIOYCYE4j5sXjmHxB/BOLvQPwDiF8C8Tog7i0rK/tPsWOAIAWIu0kIaUEoBgElILaEOnA2NaIpnAoxEEatNKOEQ/weED8n0jHK1HKMEA7x60CsBQ3+/2SaQbJjuPDIfQDiNCC2B+KbeNRxU8sxrESoOQzE+qDMR0FGIU4REQCU3VOBOJqm5QwQ/MYTOqDyJh2IS4FYioAZVHHMN2gBhw70gPg+EIsTaQZVHPMOh2NkSYiBt9RKwLepkKbuUMsxq6ngmNXUiqa50AQMqigl0CpJ9MoSlDZ+QivJT9CKcg3UDIKAcbTfNOqYUceMOmbUMaOOYWAACDAAe9Ew/dLdOIYAAAAASUVORK5CYII="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKOSURBVHgB7VbLceJAEB0+BQUXE4I2A28EKyKAjQCIYM2FghPSid8BNgIgAxzBighMBqsQ5BMU333PO+MaU+hr++LSqxr1aKbV86anuzVCpEiR4gsiE0d5MBgYEGY2m62cz+eKnx7mvdPp5GYymU2v13PFR5IhCRieo5kiJi6Xi4PWikIqlAyJ5HK5JxikJ9ZoK3jF4xw9oPry/dVj7EPU0X6gUe97GKG8CAGIzEkExmwYs0Q8zEajkQXZp2chq0HKgZ6hV7DDvyCyBhFTRITyJr7bdLvd6ng8/oMNmXj/FuSdQM+AyD0lDK18FjUh6tj1HXSe0V9hMQfSoDcxbsjvHyFM2RYiCRka5QNGPX3QsqxKuVyeYpGmGoMOxS8cy2y73dqlUuknxlwOMq6wMSHjTiQiw2CkEQaqPl4sFmcw3EB3g2ZzUaTyPfT6eH8A0Uqn02ld24NecjIaqVcyPBosSiIuPFCFl9TcZjqdrg6HA+OjCb2lPDLCjbJOVsQEdleXBG2NyAva7bYHIrauFwexyahzZ6bcmj8ej67s3onPJqOCOZ/PGzcNygwEnkVMJPGMSvM+s0qf47sMYt9yEIRIASxkihMMSqTvEt0G0vcJgWrzyFhTUOhIhDXmtxa86tfwPjLXKa1QKBQe9vs9uw3ozJn+Gpa73c7SB1SJAElPJCXjV6yYNRBM3wWzRlZbZtJK94i2qZfv4TlXJCUDONJYDWJ2PSkXdkJsMOhrIOqbgQqBAcyfGgw5vMcgTvoiASaTSV/+JNfvvkKgzLfkfcYaDocmiD3qFVm8ra6G6vBo8E0NuqYsB00Rgsg3PRhfiP8XpbhYg1DzQ256N0ixqBlhd2DpPSfOHThFihRfEv8AgtdZ9bpVTAkAAAAASUVORK5CYII=" width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(e,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"sessionStorage",storeAuthStateInCookie:!1},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,i;if(!(!function(){if("undefined"==typeof window||"undefined"==typeof navigator)return!1;let e=window.navigator.userAgent,o=e.includes("Algolia Crawler"),n=e.includes("jsdom");return o&&console.log("Algolia Crawler detected - Authentication disabled"),n&&console.log("JSDOM (PDF generation) detected - Authentication disabled"),o||n}()&&(console.log("Authentication enabled for all environments"),1)))return;let r=(t=(n=window.navigator.userAgent).indexOf("MSIE "),i=n.indexOf("Trident/"),t>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!r.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${r.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function l(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Microsoft 계정으로 로그인
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function a(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):l()}c.initialize().then(()=>{c.handleRedirectPromise().then(a).catch(e=>{console.error("Redirect handling error:",e)}),l()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(a).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()}()</script></body>

@@ -1,0 +1,126 @@
+{
+  "enclosure": {
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "ENCR-10"
+        },
+        "supported_products": {
+          "label": "지원 제품",
+          "label_id": "specs.general.supported_products",
+          "value": [ "CoreStation (CS-40)", "Output Module (OM-120)", "Input Module (IM-120)" ]
+        },
+        "led_type": {
+          "label": "LED",
+          "label_id": "specs.general.led_type",
+          "value": {
+            "ko": [ "배터리 상태 표시등", "AC 상태 표시등" ],
+            "en": [ "Battery status LED", "AC status LED" ]
+          }
+        },
+        "material": {
+          "label": "재질",
+          "label_id": "specs.general.material",
+          "value": {
+            "ko": "ABS 플라스틱",
+            "en": "ABS Plastic"
+          }
+        },
+        "operating_temp": {
+          "label": "동작 온도",
+          "label_id": "specs.general.operating_temp",
+          "value": "0 °C ~ 50 °C"
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": "-40 °C ~ 70 °C"
+        },
+        "operating_humidity": {
+          "label": "동작 습도",
+          "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 80 %, 비응축",
+            "en": "0 % ~ 80 %, non-condensing"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 95 %, 비응축",
+            "en": "0 % ~ 95 %, non-condensing"
+          }
+        }
+      }
+    },
+    "power_supply": {
+      "label": "전원 공급 장치",
+      "label_id": "specs.power_supply",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.power_supply.modelName",
+          "value": "PSC-160A-C"
+        },
+        "vendor": {
+          "label": "공급 업체",
+          "label_id": "specs.power_supply.vendor",
+          "value": "MEANWELL"
+        },
+        "input": {
+          "label": "Input",
+          "label_id": "specs.power_supply.input",
+          "value": {
+            "ko": [ "전압 범위: 110 ~ 240 VAC", "주파수 범위: 50/60 Hz" ],
+            "en": [ "Voltage range: 110 ~ 240 VAC", "Frequency range: 50/60 Hz" ]
+          }
+        },
+        "output": {
+          "label": "Output",
+          "label_id": "specs.power_supply.output",
+          "type": "model",
+          "items": {
+            "138vdc": {
+              "label": "13.8 Vdc",
+              "value": {
+                "ko": [ "정격 전류: 11.6 A", "정격 전력: 160 W" ],
+                "en": [ "Rated Current: 11.6 A", "Rated Power: 160 W" ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "backup_battery": {
+      "label": "백업 배터리",
+      "label_id": "specs.backup_battery",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.backup_battery.modelName",
+          "value": "ES7-12"
+        },
+        "vendor": {
+          "label": "공급 업체",
+          "label_id": "specs.backup_battery.vendor",
+          "value": "ROCKET"
+        },
+        "voltage": {
+          "label": "전압",
+          "label_id": "specs.backup_battery.voltage",
+          "value": "12 VDC"
+        },
+        "capacity": {
+          "label": "용량",
+          "label_id": "specs.backup_battery.capacity",
+          "value": "7 Ah"
+        }
+      }
+    }
+  }
+}

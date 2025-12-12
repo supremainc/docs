@@ -1,0 +1,324 @@
+{
+  "corestation20": {
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "CS-20, CS-20P"
+        },
+        "cpu": {
+          "label": "CPU",
+          "label_id": "specs.general.cpu",
+          "value": "1.2 GHz Single Core"
+        },
+        "memory": {
+          "label": "메모리",
+          "label_id": "specs.general.memory",
+          "value": "4 GB Flash + 256 MB RAM"
+        },
+        "crypto_chip": {
+          "label": "크립토 칩",
+          "label_id": "specs.general.crypto_chip",
+          "value": true
+        },
+        "led_type": {
+          "label": "LED",
+          "label_id": "specs.general.led_type",
+          "value": {
+            "ko": [
+              "POWER: 빨간색 단일 색상",
+              "STATUS: 다중 색상"
+            ],
+            "en": [
+              "POWER: RED single-color",
+              "STATUS: Multi-color"
+            ]
+          }
+        },
+        "operating_temp": {
+          "label": "동작 온도",
+          "label_id": "specs.general.operating_temp",
+          "value": "0 °C ~ 50 °C"
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": "-40 °C ~ 70 °C"
+        },
+        "operating_humidity": {
+          "label": "동작 습도",
+          "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 80 %, 비응축",
+            "en": "0 % ~ 80 %, non-condensing"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 95 %, 비응축",
+            "en": "0 % ~ 95 %, non-condensing"
+          }
+        },
+        "operating_condition": {
+          "label": "동작 환경 조건",
+          "label_id": "specs.general.operating_condition",
+          "value": "0 °C ~ 49 °C"
+        },
+        "certifications": {
+          "label": "인증",
+          "label_id": "specs.general.certifications",
+          "value": "CE, UKCA, KC, FCC, RCM, IC, RoHS, REACH, WEEE, EAC"
+        }
+      }
+    },
+    "storage": {
+      "label": "저장 용량",
+      "label_id": "specs.storage",
+      "items": {
+        "max_users": {
+          "label": "최대 사용자 수",
+          "label_id": "specs.storage.max_users",
+          "value": "500,000"
+        },
+        "max_credentials_1on1": {
+          "label": "최대 크리덴셜 수 (1:1)",
+          "label_id": "specs.storage.max_credentials_1on1",
+          "value": {
+            "ko": [
+              "카드: 500,000",
+              "PIN: 500,000"
+            ],
+            "en": [
+              "Card: 500,000",
+              "PIN: 500,000"
+            ]
+          }
+        },
+        "max_text_logs": {
+          "label": "최대 텍스트 로그 수",
+          "label_id": "specs.storage.max_text_logs",
+          "value": "5,000,000"
+        }
+      }
+    },
+    "interface": {
+      "label": "인터페이스",
+      "label_id": "specs.interface",
+      "items": {
+        "ethernet": {
+          "label": "이더넷",
+          "label_id": "specs.interface.ethernet",
+          "value": {
+            "ko": "지원 (10/100 Mbps, 자동 MDI/MDI-X)",
+            "en": "Supported (10/100 Mbps, auto MDI/MDI-X)"
+          }
+        },
+        "network_protocol": {
+          "label": "네트워크 프로토콜",
+          "label_id": "specs.interface.network_protocol",
+          "value": "TCP, UDP"
+        },
+        "rs485": {
+          "label": "RS-485",
+          "label_id": "specs.interface.rs485",
+          "value": {
+            "ko": "3채널",
+            "en": "3 ch"
+          }
+        },
+        "rs485_protocol": {
+          "label": "RS-485 통신 프로토콜",
+          "label_id": "specs.interface.rs485_protocol",
+          "value": {
+            "ko": "OSDP V2 호환",
+            "en": "OSDP V2 compliant"
+          }
+        },
+        "wiegand": {
+          "label": "Wiegand",
+          "label_id": "specs.interface.wiegand",
+          "value": {
+            "ko": "2채널",
+            "en": "2 ch"
+          }
+        },
+        "relay": {
+          "label": "릴레이",
+          "label_id": "specs.interface.relay",
+          "value": {
+            "ko": "4개",
+            "en": "4 relays"
+          }
+        },
+        "input": {
+          "label": "Input",
+          "label_id": "specs.interface.input",
+          "value": {
+            "ko": "6채널",
+            "en": "6 ch"
+          },
+          "annotation_value": "anno1"
+        },
+        "output": {
+          "label": "Output",
+          "label_id": "specs.interface.output",
+          "value": {
+            "ko": "6채널",
+            "en": "6 ch"
+          }
+        },
+        "supervised": {
+          "label": "Supervised 입력",
+          "label_id": "specs.interface.supervised",
+          "value": {
+            "ko": "6채널<sup id='dupl'><a href='#anno1'></a></sup>",
+            "en": "6 ch<sup id='dupl'><a href='#anno1'></a></sup>"
+          }
+        },
+        "auxInput": {
+          "label": "AUX 입력",
+          "label_id": "specs.interface.auxInput",
+          "value": {
+            "ko": "3채널 (AC POWER FAIL, Tamper, Fire 연결 지원)",
+            "en": "3 ch (AC POWER FAIL, Tamper, Fire)"
+          }
+        },
+        "poe_plus": {
+          "label": "PoE+",
+          "label_id": "specs.interface.poe_plus",
+          "annotation_label": "anno2",
+          "value": {
+            "ko": [
+              "CS-20: 미지원",
+              "CS-20P: 지원 (IEEE 802.3at 호환)"
+            ],
+            "en": [
+              "CS-20: Not supported",
+              "CS-20P: Supported (IEEE 802.3at compliant)"
+            ]
+          }
+        },
+        "samSlot": {
+          "label": "SAM 카드 슬롯",
+          "label_id": "specs.interface.samSlot",
+          "value": {
+            "ko": [
+              "CS-20: 미지원",
+              "CS-20P: 지원"
+            ],
+            "en": [
+              "CS-20: Not supported",
+              "CS-20P: Supported"
+            ]
+          }
+        }
+      }
+    },
+    "power": {
+      "label": "전기 규격",
+      "label_id": "specs.power",
+      "items": {
+        "power": {
+          "label": "전원",
+          "label_id": "specs.power.power",
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 2.8 A",
+                "en": "Current: Max. 2.8 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 1.4 A",
+                "en": "Current: Max. 1.4 A"
+              }
+            }
+          }
+        },
+        "power_output": {
+          "label": "전원 출력",
+          "label_id": "specs.power.power_output",
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": [
+                  "리더: 최대 0.6 A (0.3 A x 2개)",
+                  "락: 최대 1.2 A (0.6 A x 2개)"
+                ],
+                "en": [
+                  "Reader: Max. 0.6 A (0.3 A x 2)",
+                  "Lock: Max. 1.2 A (0.6 A x 2)"
+                ]
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": [
+                  "리더: 최대 0.3 A (0.15 A x 2개)",
+                  "락: 최대 0.6 A (0.3 A x 2개)"
+                ],
+                "en": [
+                  "Reader: Max. 0.3 A (0.15 A x 2)",
+                  "Lock: Max. 0.6 A (0.3 A x 2)"
+                ]
+              }
+            },
+            "poe_plus12vout": {
+              "label": "PoE+ (12V 출력)",
+              "label_id": "specs.power.poe_plus12vout",
+              "value": {
+                "ko": [
+                  "리더: 최대 0.6 A (0.3 A x 2개)",
+                  "락: 최대 0.6 A (0.6 A x 1개)"
+                ],
+                "en": [
+                  "Reader: Max. 0.6 A (0.3 A x 2)",
+                  "Lock: Max. 0.6 A (0.6 A x 1)"
+                ]
+              }
+            }
+          }
+        },
+        "switch_input_vih": {
+          "label": "스위치 입력 VIH",
+          "label_id": "specs.power.switch_input_vih",
+          "value": {
+            "ko": [
+              "최대: 5 V",
+              "최소: 3 V"
+            ],
+            "en": [
+              "Max.: 5 V",
+              "Min.: 3 V"
+            ]
+          }
+        },
+        "switch_input_vil": {
+          "label": "스위치 입력 VIL",
+          "label_id": "specs.power.switch_input_vil",
+          "value": {
+            "ko": "최대: 1 V",
+            "en": "Max.: 1 V"
+          }
+        },
+        "relay": {
+          "label": "릴레이",
+          "label_id": "specs.power.relay",
+          "value": "5 A @ 30 VDC Resistive load"
+        }
+      }
+    }
+  }
+}
