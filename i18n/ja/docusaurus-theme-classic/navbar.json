@@ -108,7 +108,7 @@
     "description": "Navbar item with label XPass D2"
   },
   "item.label.Enclosure": {
-    "message": "エンクロージャ",
+    "message": "Enclosure",
     "description": "Navbar item with label Enclosure"
   },
   "item.label.Input Module": {
