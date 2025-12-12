@@ -1110,6 +1110,7 @@
   "setting.menu.preferences.root": "設定",
   "setting.menu.idScanner.root": "IDスキャナー",
   "setting.menu.remoteAccess.root": "リモートアクセス",
+  "setting.menu.remoteAccessExternal.root": "External Remote Access",
   "setting.area.table.title": "すべてのエリア",
   "setting.area.table.selectArea": "選択したアイテム",
   "setting.area.table.action.newArea": "新しいエリア",
