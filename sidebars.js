@@ -152,10 +152,9 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Reports',
+              label: 'Advanced Features',
               items: [
-                'platform/biostar_air/configuring-reports',
-                'platform/biostar_air/reports-time-attendance-reports',
+                'platform/biostar_air/managing-roll-call-fire-muster',
               ]
             },
             {
@@ -169,17 +168,28 @@ const sidebars = {
                 'platform/biostar_air/managing-sites-with-phone',
                 'platform/biostar_air/custom-wiegand-card-formats'
               ]
-            },
+            }
+          ]
+        },
+        {
+          type: 'category',
+          label: 'How-to Guides',
+          items: [
+            'platform/biostar_air/configuring-reports',
+            'platform/biostar_air/reports-time-attendance-reports',
             {
               type: 'category',
-              label: 'Advanced Features',
+              label: 'Using Mobile Credentials',
               items: [
-                'platform/biostar_air/managing-door-access',
-                'platform/biostar_air/managing-elevator-access',
-                'platform/biostar_air/managing-roll-call-fire-muster',
-                'platform/biostar_air/sip-intercom-for-biostation3'
+                'platform/biostar_air/suprema-pass-app-overview',
+                'platform/biostar_air/opening-doors-with-mobile-credentials',
+                'platform/biostar_air/suprema-pass-app-advanced-features',
+                'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+                'platform/biostar_air/troubleshooting-suprema-pass-app',
+                'platform/biostar_air/location-services-issues',
               ]
             },
+            'platform/biostar_air/sip-intercom-for-biostation3',
           ]
         },
         {
@@ -188,18 +198,6 @@ const sidebars = {
           items: [
             'platform/biostar_air/ip-camera-support-and-configuration',
             'platform/biostar_air/video-troubleshooting',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Using Mobile Credentials',
-          items: [
-            'platform/biostar_air/suprema-pass-app-overview',
-            'platform/biostar_air/opening-doors-with-mobile-credentials',
-            'platform/biostar_air/suprema-pass-app-advanced-features',
-            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-            'platform/biostar_air/troubleshooting-suprema-pass-app',
-            'platform/biostar_air/location-services-issues',
           ]
         },
         {
